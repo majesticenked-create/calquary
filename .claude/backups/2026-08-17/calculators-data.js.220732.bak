@@ -1357,67 +1357,7 @@ const CALCULATORS = [
     faq: [
       { q: "Why does 1 cup of flour and 1 cup of sugar weigh different amounts?", a: "Cups measure volume, not weight — denser ingredients like sugar weigh more per cup than lighter ones like flour." },
     ],
-    related: ["unit-length-converter", "volume-converter", "paint-calculator"],
-  },
-  {
-    id: "speed-converter",
-    category: "conversions",
-    title: "Speed Converter",
-    keyword: "speed converter",
-    description: "Convert between mph, km/h, m/s, and knots.",
-    intro: "Enter a speed and choose a starting unit to convert between mph, km/h, m/s, and knots.",
-    fields: [
-      { id: "value", label: "Value", type: "number", default: 60, step: 0.1 },
-      { id: "from", label: "From", type: "select", default: "mph", options: [
-        { v: "mph", l: "Miles per hour" }, { v: "kph", l: "Kilometers per hour" }, { v: "ms", l: "Meters per second" }, { v: "knot", l: "Knots" },
-      ] },
-    ],
-    compute: (v) => {
-      const toMph = { mph: 1, kph: 0.621371, ms: 2.23694, knot: 1.15078 };
-      const mphValue = v.value * toMph[v.from];
-      return {
-        primary: { label: "In mph", value: `${round(mphValue, 2)} mph` },
-        secondary: [
-          { l: "km/h", v: round(mphValue / toMph.kph, 2) },
-          { l: "m/s", v: round(mphValue / toMph.ms, 2) },
-          { l: "Knots", v: round(mphValue / toMph.knot, 2) },
-        ],
-      };
-    },
-    faq: [
-      { q: "How many km/h is 60 mph?", a: "60 mph equals about 96.56 km/h. To convert mph to km/h, divide by 0.621371 (or multiply by about 1.60934)." },
-    ],
-    related: ["unit-length-converter", "weight-converter", "pace-calculator"],
-  },
-  {
-    id: "area-converter",
-    category: "conversions",
-    title: "Area Converter",
-    keyword: "area converter",
-    description: "Convert between square feet, square meters, acres, and square yards.",
-    intro: "Enter an area and choose a starting unit to convert between square feet, square meters, acres, and square yards.",
-    fields: [
-      { id: "value", label: "Value", type: "number", default: 1000, step: 1 },
-      { id: "from", label: "From", type: "select", default: "sqft", options: [
-        { v: "sqft", l: "Square feet" }, { v: "sqm", l: "Square meters" }, { v: "acre", l: "Acres" }, { v: "sqyd", l: "Square yards" },
-      ] },
-    ],
-    compute: (v) => {
-      const toSqFt = { sqft: 1, sqm: 10.7639, acre: 43560, sqyd: 9 };
-      const sqftValue = v.value * toSqFt[v.from];
-      return {
-        primary: { label: "In square feet", value: `${round(sqftValue, 2)} sq ft` },
-        secondary: [
-          { l: "Square meters", v: round(sqftValue / toSqFt.sqm, 2) },
-          { l: "Acres", v: round(sqftValue / toSqFt.acre, 5) },
-          { l: "Square yards", v: round(sqftValue / toSqFt.sqyd, 2) },
-        ],
-      };
-    },
-    faq: [
-      { q: "How many acres is 1,000 square feet?", a: "1,000 sq ft equals about 0.023 acres. To convert square feet to acres, divide by 43,560." },
-    ],
-    related: ["unit-length-converter", "concrete-calculator", "flooring-calculator"],
+    related: ["unit-length-converter", "paint-calculator"],
   },
 
   // ---------------- TEXT & DIGITAL ----------------
