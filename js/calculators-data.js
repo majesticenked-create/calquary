@@ -170,7 +170,7 @@ const CALCULATORS = [
       { q: "How much concrete do I need for a 10x10 slab?", a: "At 4 inches thick, a 10×10 ft slab needs about 1.23 cubic yards before waste allowance — roughly 74 bags of 80 lb mix." },
       { q: "Why add a waste allowance?", a: "Uneven subgrade, spillage, and over-excavation typically use 5–10% more material than the exact math suggests." },
     ],
-    related: ["paint-calculator", "percentage-calculator"],
+    related: ["paint-calculator", "gravel-calculator", "mulch-calculator", "percentage-calculator"],
   },
   {
     id: "paint-calculator",
@@ -197,7 +197,100 @@ const CALCULATORS = [
     faq: [
       { q: "How much paint covers 400 sq ft?", a: "At standard 350 sq ft per gallon coverage, one coat over 400 sq ft needs about 1.14 gallons — round up to be safe." },
     ],
-    related: ["concrete-calculator", "unit-length-converter"],
+    related: ["concrete-calculator", "flooring-calculator", "unit-length-converter"],
+  },
+  {
+    id: "mulch-calculator",
+    category: "construction",
+    title: "Mulch Calculator",
+    keyword: "mulch calculator",
+    description: "Estimate cubic yards and bags of mulch needed for a bed.",
+    intro: "Enter the area you're covering and your desired depth to estimate how much mulch you'll need, in cubic yards or standard 2 cu ft bags.",
+    fields: [
+      { id: "area", label: "Bed area", type: "number", unit: "sq ft", default: 200, step: 1 },
+      { id: "depth", label: "Depth", type: "number", unit: "in", default: 3, step: 0.5 },
+      { id: "waste", label: "Waste allowance", type: "number", unit: "%", default: 10, step: 1 },
+    ],
+    compute: (v) => {
+      const cubicFeet = v.area * (v.depth / 12);
+      const cubicYards = (cubicFeet / 27) * (1 + v.waste / 100);
+      const bags2cf = Math.ceil((cubicFeet * (1 + v.waste / 100)) / 2); // standard 2 cu ft mulch bags
+      return {
+        primary: { label: "Mulch needed", value: `${round(cubicYards, 2)} cu yd` },
+        secondary: [
+          { l: "2 cu ft bags (approx.)", v: bags2cf },
+          { l: "Cubic feet", v: round(cubicFeet, 1) },
+        ],
+        note: "A 2–3 inch depth is standard for weed suppression. Order slightly more for uneven beds or settling.",
+      };
+    },
+    faq: [
+      { q: "How much mulch do I need for 200 sq ft?", a: "At 3 inches deep, 200 sq ft needs about 1.85 cubic yards before waste allowance — roughly 28 bags of 2 cu ft mulch." },
+      { q: "How deep should mulch be?", a: "2–3 inches is standard for most garden beds. Less than 2 inches won't suppress weeds well; more than 4 inches can smother roots and hold too much moisture." },
+    ],
+    related: ["gravel-calculator", "concrete-calculator", "unit-length-converter"],
+  },
+  {
+    id: "gravel-calculator",
+    category: "construction",
+    title: "Gravel Calculator",
+    keyword: "gravel calculator",
+    description: "Estimate cubic yards and tons of gravel needed for a project.",
+    intro: "Enter your area's length, width, and depth to estimate how much gravel you'll need, in cubic yards and tons.",
+    fields: [
+      { id: "length", label: "Length", type: "number", unit: "ft", default: 20, step: 0.1 },
+      { id: "width", label: "Width", type: "number", unit: "ft", default: 10, step: 0.1 },
+      { id: "depth", label: "Depth", type: "number", unit: "in", default: 4, step: 0.5 },
+      { id: "waste", label: "Waste allowance", type: "number", unit: "%", default: 10, step: 1 },
+    ],
+    compute: (v) => {
+      const cubicFeet = v.length * v.width * (v.depth / 12);
+      const cubicYards = (cubicFeet / 27) * (1 + v.waste / 100);
+      const tons = cubicYards * 1.4; // ~1.4 tons per cubic yard for typical gravel
+      return {
+        primary: { label: "Gravel needed", value: `${round(cubicYards, 2)} cu yd` },
+        secondary: [
+          { l: "Tons (approx.)", v: round(tons, 2) },
+          { l: "Cubic feet", v: round(cubicFeet, 1) },
+        ],
+        note: "Tonnage is based on a typical density of 1.4 tons per cubic yard — this varies by gravel type, so confirm with your supplier for large orders.",
+      };
+    },
+    faq: [
+      { q: "How much gravel do I need for a 20x10 driveway?", a: "At 4 inches deep, a 20×10 ft area needs about 2.47 cubic yards before waste allowance — roughly 3.46 tons at typical gravel density." },
+      { q: "How many tons is a cubic yard of gravel?", a: "About 1.4 tons per cubic yard for most crushed stone and gravel, though density varies by material — pea gravel and crushed granite can differ slightly." },
+    ],
+    related: ["mulch-calculator", "concrete-calculator", "unit-length-converter"],
+  },
+  {
+    id: "flooring-calculator",
+    category: "construction",
+    title: "Flooring Calculator",
+    keyword: "flooring calculator",
+    description: "Estimate how many boxes of flooring you need for a room.",
+    intro: "Enter your room area, coverage per box, and a waste allowance to estimate how many boxes of flooring to buy.",
+    fields: [
+      { id: "roomArea", label: "Room area", type: "number", unit: "sq ft", default: 250, step: 1 },
+      { id: "coveragePerBox", label: "Coverage per box", type: "number", unit: "sq ft", default: 22, step: 0.5 },
+      { id: "waste", label: "Waste allowance", type: "number", unit: "%", default: 10, step: 1 },
+    ],
+    compute: (v) => {
+      const totalAreaNeeded = v.roomArea * (1 + v.waste / 100);
+      const boxes = Math.ceil(totalAreaNeeded / v.coveragePerBox);
+      return {
+        primary: { label: "Boxes needed", value: boxes },
+        secondary: [
+          { l: "Total area with waste", v: `${round(totalAreaNeeded, 1)} sq ft` },
+          { l: "Total coverage bought", v: `${round(boxes * v.coveragePerBox, 1)} sq ft` },
+        ],
+        note: "A 10% waste allowance covers cuts and pattern matching. Increase to 15% for diagonal layouts or rooms with lots of angles.",
+      };
+    },
+    faq: [
+      { q: "How many boxes of flooring do I need for 250 sq ft?", a: "At 22 sq ft per box with a 10% waste allowance, 250 sq ft needs about 13 boxes." },
+      { q: "Why do I need extra flooring for waste?", a: "Cuts around doorways, closets, and pattern matching use extra material — a 10–15% allowance keeps you from running short mid-project." },
+    ],
+    related: ["paint-calculator", "concrete-calculator", "unit-length-converter"],
   },
 
   // ---------------- HEALTH & FITNESS ----------------
