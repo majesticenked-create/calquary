@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Square Root Calculator | Calquary</title>
+  <meta name="description" content="Calculate the square root, square, and cube root of a number." />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <script src="../js/calculators-data.js" defer></script>
+  <script src="../js/engine.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      const calc = getCalculator("square-root-calculator");
+      const cat = getCategory(calc.category);
+
+      document.getElementById("breadcrumb-cat").textContent = cat.name;
+      document.getElementById("breadcrumb-cat").href = `../category/${cat.id}.html`;
+      document.getElementById("tool-title").textContent = calc.title;
+      document.getElementById("tool-intro").textContent = calc.intro;
+
+      // FAQ
+      const faqWrap = document.getElementById("faq-list");
+      calc.faq.forEach((item) => {
+        const div = document.createElement("div");
+        div.className = "faq-item";
+        div.innerHTML = `<h3>${item.q}</h3><p>${item.a}</p>`;
+        faqWrap.appendChild(div);
+      });
+
+      // Related tools
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("square-root-calculator");
+    });
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="../index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <nav class="header-nav">
+        <a href="../index.html#categories">Categories</a>
+        <a href="../index.html#tools">All tools</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="../index.html">Calquary</a> / <a id="breadcrumb-cat" href="#"></a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1 id="tool-title"></h1>
+        <p id="tool-intro" style="max-width:60ch;"></p>
+
+        <div class="calc-panel">
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculate</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reset</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Frequently asked questions</h2>
+          <div id="faq-list"></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Related tools</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>A note on accuracy</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquary's calculators are built for quick, reliable estimates. For decisions with real financial, structural, or medical stakes, confirm with a qualified professional.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="../index.html">← Back to all calculators</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

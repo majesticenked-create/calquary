@@ -4,6 +4,7 @@
 - (none yet)
 
 ## Backlog
+- Build standard-deviation-calculator, square-root-calculator, ratio-calculator (Math — Batch 2, medium priority, per seo/keyword-research-math.md)
 - Build exponent-calculator, quadratic-formula-calculator (Math — Batch 3, medium-low priority)
 - random-number-generator deferred — overlaps with Text & Digital's password-generator, scope there instead
 - currency-converter and timezone-converter excluded — need live external data, poor fit for static no-backend site
@@ -36,4 +37,3 @@
 - Date & Time Batch 1: date-duration-calculator, business-days-calculator, time-duration-calculator
 - Date & Time Batch 2: week-number-calculator, day-of-week-calculator, leap-year-calculator — Date & Time category now complete at 8/8
 - Math Batch 1: average-calculator, fraction-calculator, gcd-lcm-calculator (added shared gcd() helper)
-- Math Batch 2: standard-deviation-calculator, square-root-calculator, ratio-calculator
