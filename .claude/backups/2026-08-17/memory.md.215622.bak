@@ -10,8 +10,7 @@
   - `build.js` — Node script (uses `vm` to load the browser-global data file), generates `tool/*.html` + `category/*.html` from `_templates/*.html`, plus `sitemap.xml`
   - `_templates/tool.template.html`, `_templates/category.template.html`
 - **Categories** (call-number codes): M Math, F Finance, C Construction & Home, H Health & Fitness, D Date & Time, V Everyday Conversions, T Text & Digital, P Pet & Lifestyle
-- **Current content**: 38 calculators live. Construction & Home complete at 12/12. Finance at 10/11 (retirement-calculator deferred). Health & Fitness at 5/11 (bmi, pace, bmr, calorie, body-fat — Batch 1 done; macro/water-intake/one-rep-max next, then heart-rate-zone/ideal-weight; pregnancy-due-date deferred pending accuracy/liability review). Other categories (Math, Date & Time, Conversions, Text, Pets) still at 2 each.
-- **Select field gotcha**: `type: "select"` options must be `{v, l}` objects (value/label), NOT plain strings — engine.js reads `opt.v`/`opt.l`. Caught and fixed when first added to bmr/calorie/body-fat calculators (no prior select-field example existed in the codebase to copy from; checkbox-group already used this shape).
+- **Current content**: 35 calculators live. Construction & Home complete at 12/12. Finance at 10/11 (loan, tip, mortgage, savings, compound-interest, sales-tax, discount, debt-payoff, credit-card-payoff, auto-loan, investment — all 3 batches done; only retirement-calculator deferred as its own scope/content brief). Other categories (Math, Health, Date & Time, Conversions, Text, Pets) still at 2 each — next candidates for the same keyword-research-first workflow.
 - **Dev loop**: `node build.js` then `npx serve` for local preview (localhost:4173)
 - **Git**: initialized, 2 commits (site scaffold; Claudify toolkit install)
 
