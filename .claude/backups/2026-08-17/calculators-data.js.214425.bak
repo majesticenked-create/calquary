@@ -494,7 +494,7 @@ const CALCULATORS = [
     compute: (v) => {
       const paverSqFt = (v.paverLength * v.paverWidth) / 144;
       const totalAreaNeeded = v.area * (1 + v.waste / 100);
-      const pavers = Math.ceil(round(totalAreaNeeded / paverSqFt, 6));
+      const pavers = Math.ceil(totalAreaNeeded / paverSqFt);
       return {
         primary: { label: "Pavers needed", value: pavers },
         secondary: [

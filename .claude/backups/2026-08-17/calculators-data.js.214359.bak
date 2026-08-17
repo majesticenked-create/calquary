@@ -260,7 +260,7 @@ const CALCULATORS = [
       { q: "How much gravel do I need for a 20x10 driveway?", a: "At 4 inches deep, a 20×10 ft area needs about 2.47 cubic yards before waste allowance — roughly 3.46 tons at typical gravel density." },
       { q: "How many tons is a cubic yard of gravel?", a: "About 1.4 tons per cubic yard for most crushed stone and gravel, though density varies by material — pea gravel and crushed granite can differ slightly." },
     ],
-    related: ["mulch-calculator", "paver-calculator", "concrete-calculator"],
+    related: ["mulch-calculator", "concrete-calculator", "unit-length-converter"],
   },
   {
     id: "flooring-calculator",
@@ -494,7 +494,7 @@ const CALCULATORS = [
     compute: (v) => {
       const paverSqFt = (v.paverLength * v.paverWidth) / 144;
       const totalAreaNeeded = v.area * (1 + v.waste / 100);
-      const pavers = Math.ceil(round(totalAreaNeeded / paverSqFt, 6));
+      const pavers = Math.ceil(totalAreaNeeded / paverSqFt);
       return {
         primary: { label: "Pavers needed", value: pavers },
         secondary: [
