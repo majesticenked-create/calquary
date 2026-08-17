@@ -40,6 +40,39 @@
       initCalculator("paint-calculator");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Paint Calculator",
+      "description": "Estimate how many gallons of paint you need for a room.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/paint-calculator.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much paint covers 400 sq ft?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "At standard 350 sq ft per gallon coverage, one coat over 400 sq ft needs about 1.14 gallons — round up to be safe."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

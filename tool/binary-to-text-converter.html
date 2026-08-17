@@ -40,6 +40,47 @@
       initCalculator("binary-to-text-converter");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Binary to Text Converter",
+      "description": "Convert text to binary or binary back to text.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/binary-to-text-converter.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How is text converted to binary?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each character's numeric code (from the ASCII/Unicode table) is converted to base-2 and padded to 8 bits — 'H' has code 72, which is 01001000 in binary."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why 8 bits per character?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "8 bits (1 byte) covers the standard ASCII character set (0-255), which includes all English letters, numbers, and common symbols."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

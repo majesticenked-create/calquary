@@ -40,6 +40,47 @@
       initCalculator("leap-year-calculator");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Leap Year Calculator",
+      "description": "Check whether a year is a leap year and find the next one.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/leap-year-calculator.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is 2024 a leap year?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — 2024 is divisible by 4 and not a century year, so it's a leap year with 366 days. The next leap year after 2024 is 2028."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the rule for leap years?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A year is a leap year if it's divisible by 4, except century years (divisible by 100), which must also be divisible by 400 — so 2000 was a leap year, but 1900 and 2100 are not."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

@@ -40,6 +40,47 @@
       initCalculator("flooring-calculator");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Flooring Calculator",
+      "description": "Estimate how many boxes of flooring you need for a room.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/flooring-calculator.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many boxes of flooring do I need for 250 sq ft?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "At 22 sq ft per box with a 10% waste allowance, 250 sq ft needs about 13 boxes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do I need extra flooring for waste?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cuts around doorways, closets, and pattern matching use extra material — a 10–15% allowance keeps you from running short mid-project."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

@@ -40,6 +40,39 @@
       initCalculator("loan-calculator");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Loan Payment Calculator",
+      "description": "Estimate your monthly payment on a fixed-rate loan.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/loan-calculator.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How is a loan payment calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fixed-rate loans use an amortization formula based on the principal, the periodic interest rate, and the number of payments, so each payment is the same size but the interest/principal split changes over time."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

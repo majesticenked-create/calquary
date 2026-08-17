@@ -40,6 +40,47 @@
       initCalculator("body-fat-calculator");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Body Fat Calculator",
+      "description": "Estimate your body fat percentage using the U.S. Navy circumference method.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/body-fat-calculator.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How accurate is the U.S. Navy body fat method?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It's generally within 3–4% of more precise methods like DEXA scans for most body types, making it a reasonably reliable estimate without special equipment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does the formula use neck and waist measurements?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Navy method correlates body fat with the ratio between waist (and hip, for women) circumference relative to neck circumference and height — larger waist-to-neck ratios generally indicate higher body fat."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

@@ -40,6 +40,47 @@
       initCalculator("sales-tax-calculator");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Sales Tax Calculator",
+      "description": "Calculate the sales tax and total price on a purchase.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/sales-tax-calculator.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I calculate sales tax on a purchase?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Multiply the price by the tax rate as a decimal, then add that to the original price. For $49.99 at 7.25% tax: $49.99 × 0.0725 = $3.62 tax, for a total of $53.61."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does sales tax rate vary by location?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — sales tax rates are set by state, county, and sometimes city, so the combined rate can vary significantly even within the same state. Check your local rate before relying on a default."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

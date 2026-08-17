@@ -40,6 +40,47 @@
       initCalculator("average-calculator");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Average Calculator",
+      "description": "Calculate the mean, median, and sum of a list of numbers.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/average-calculator.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I calculate the average of a list of numbers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Add all the numbers together, then divide by how many numbers there are. For 4, 8, 15, 16, 23, 42: the sum is 108, divided by 6 numbers = an average of 18."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between mean and median?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The mean is the sum divided by the count (the 'average'); the median is the middle value when the numbers are sorted. The median is less affected by outliers than the mean."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

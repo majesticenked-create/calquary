@@ -40,6 +40,47 @@
       initCalculator("random-number-generator");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Random Number Generator",
+      "description": "Generate one or more random numbers within a range.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/random-number-generator.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is this random number generator truly random?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It uses your browser's built-in Math.random(), which is pseudo-random and suitable for games, giveaways, and everyday decisions — but not for cryptographic or security purposes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I generate multiple random numbers at once?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — set 'how many numbers' to any value up to 50 to generate a list of random numbers within your chosen range in one click."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

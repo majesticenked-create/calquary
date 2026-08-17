@@ -40,6 +40,47 @@
       initCalculator("fuel-economy-converter");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Fuel Economy Converter",
+      "description": "Convert between MPG and L/100km fuel economy.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/fuel-economy-converter.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I convert MPG to L/100km?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Divide 235.214 by the MPG value. A car getting 25 MPG uses about 9.41 L/100km — the relationship is inverse, so higher MPG means lower L/100km."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is the MPG to L/100km conversion not a simple multiplication?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MPG measures distance per unit of fuel, while L/100km measures fuel per unit of distance — they're reciprocals of each other, so the conversion involves division rather than a fixed multiplier."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

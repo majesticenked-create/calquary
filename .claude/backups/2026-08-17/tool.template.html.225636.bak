@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Macro Calculator | Calquary</title>
-  <meta name="description" content="Split your daily calorie target into protein, fat, and carb grams." />
+  <title>{{TITLE}} | Calquary</title>
+  <meta name="description" content="{{DESCRIPTION}}" />
   <link rel="stylesheet" href="../css/styles.css" />
   <script src="../js/calculators-data.js" defer></script>
   <script src="../js/engine.js" defer></script>
   <script defer>
     document.addEventListener("DOMContentLoaded", () => {
-      const calc = getCalculator("macro-calculator");
+      const calc = getCalculator("{{CALC_ID}}");
       const cat = getCategory(calc.category);
 
       document.getElementById("breadcrumb-cat").textContent = cat.name;
@@ -37,50 +37,9 @@
         relWrap.appendChild(li);
       });
 
-      initCalculator("macro-calculator");
+      initCalculator("{{CALC_ID}}");
     });
   </script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "name": "Macro Calculator",
-      "description": "Split your daily calorie target into protein, fat, and carb grams.",
-      "applicationCategory": "UtilitiesApplication",
-      "operatingSystem": "Any",
-      "url": "https://calquary.com/tool/macro-calculator.html",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How do I convert macro percentages to grams?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Multiply your daily calories by the macro's percentage, then divide by its calories per gram — 4 for protein and carbs, 9 for fat. At 2,500 calories with a 30/30/40 split: 188g protein, 83g fat, 250g carbs."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What's a good macro split for weight loss?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A higher-protein split (30-40% protein) is common for weight loss to help preserve muscle mass, but the right split depends on your activity level, goals, and personal preference — there's no single universal ratio."
-          }
-        }
-      ]
-    }
-  ]
-}
-</script>
 </head>
 <body>
 

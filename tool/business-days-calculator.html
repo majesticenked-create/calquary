@@ -40,6 +40,47 @@
       initCalculator("business-days-calculator");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Business Days Calculator",
+      "description": "Count the number of weekdays between two dates.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/business-days-calculator.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many business days are in January 2024?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "23 business days between January 1 and January 31, 2024 — the month has 31 calendar days, 8 of which fall on a weekend."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this include public holidays?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No — this calculator only excludes Saturdays and Sundays. Public holidays vary by country and organization, so subtract any that apply to your situation separately."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

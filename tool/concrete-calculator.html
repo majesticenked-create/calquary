@@ -40,6 +40,47 @@
       initCalculator("concrete-calculator");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Concrete Calculator",
+      "description": "Estimate cubic yards and bag count for a concrete slab.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/concrete-calculator.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much concrete do I need for a 10x10 slab?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "At 4 inches thick, a 10×10 ft slab needs about 1.23 cubic yards before waste allowance — roughly 74 bags of 80 lb mix."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why add a waste allowance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Uneven subgrade, spillage, and over-excavation typically use 5–10% more material than the exact math suggests."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

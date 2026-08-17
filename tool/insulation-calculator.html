@@ -40,6 +40,47 @@
       initCalculator("insulation-calculator");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Insulation Calculator",
+      "description": "Estimate bags of blown-in insulation needed to reach a target R-value.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/insulation-calculator.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many bags of insulation do I need for R-49 in an 800 sq ft attic?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "At 2.5 R-value per inch, R-49 needs about 19.6 inches of depth — roughly 46 bags at a 30 cu ft yield per bag, including a 5% waste allowance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does R-value per inch matter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Different insulation types cover different R-value per inch — fiberglass and cellulose have different coverage charts, so using the wrong figure will throw off your bag count."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

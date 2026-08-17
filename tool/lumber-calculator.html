@@ -40,6 +40,47 @@
       initCalculator("lumber-calculator");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Lumber Calculator",
+      "description": "Calculate total board feet needed for a lumber order.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/lumber-calculator.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I calculate board feet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Multiply thickness in inches × width in inches × length in feet, then divide by 12. A 1.5×5.5×8 ft board (actual dimensions of a nominal 2×6×8) works out to 5.5 board feet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why use actual dimensions instead of nominal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A nominal 2×6 actually measures about 1.5×5.5 inches after milling and drying — using nominal dimensions overstates board feet and your order."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

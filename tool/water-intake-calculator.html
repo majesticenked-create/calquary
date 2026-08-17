@@ -40,6 +40,47 @@
       initCalculator("water-intake-calculator");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Water Intake Calculator",
+      "description": "Estimate your daily water intake target based on body weight and activity.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/water-intake-calculator.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much water should I drink based on my weight?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A common guideline is half your body weight in pounds, converted to ounces — a 180 lb person would target about 90 oz per day before accounting for exercise."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does exercise increase how much water I need?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — sweat losses during exercise increase your fluid needs. This calculator adds roughly 12 oz for every 30 minutes of activity as a general estimate."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

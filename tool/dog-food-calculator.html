@@ -40,6 +40,47 @@
       initCalculator("dog-food-calculator");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Dog Food Calculator",
+      "description": "Estimate how much food to feed your dog each day.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/dog-food-calculator.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much food does a 40 lb dog need per day?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A moderately active 40 lb dog needs roughly 985 calories per day, or about 2.8 cups of a food with 350 calories per cup."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is RER for dog food calculations?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Resting energy requirement (RER) is the calories a dog needs at complete rest, calculated as 70 × (weight in kg)^0.75 — daily needs are then scaled up from RER based on activity level."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

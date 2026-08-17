@@ -40,6 +40,47 @@
       initCalculator("auto-loan-calculator");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Auto Loan Calculator",
+      "description": "Estimate your monthly car payment, including trade-in value and sales tax.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/auto-loan-calculator.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does a trade-in affect my auto loan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A trade-in reduces both your amount financed and, in most states, the taxable amount — a $5,000 trade-in on a $32,000 car with 6.5% tax saves you $325 in sales tax compared to paying tax on the full price."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I finance the sales tax on my car loan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Many buyers roll sales tax into the loan rather than paying it upfront — this increases your amount financed and total interest paid, but keeps more cash on hand at purchase."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

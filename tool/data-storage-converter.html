@@ -40,6 +40,47 @@
       initCalculator("data-storage-converter");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Data Storage Converter",
+      "description": "Convert between bytes, KB, MB, GB, and TB.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/data-storage-converter.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many MB is a GB?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1 GB equals 1,024 MB using the binary convention this calculator uses (1 KB = 1,024 bytes) — this is standard for computing contexts like file sizes and RAM."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do storage sizes sometimes not match what I expect?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Storage manufacturers often use decimal units (1 GB = 1,000 MB) for marketing, while operating systems typically report binary units (1 GB = 1,024 MB) — this is why a \"1 TB\" drive shows less space than expected in your file explorer."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

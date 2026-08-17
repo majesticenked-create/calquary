@@ -40,6 +40,47 @@
       initCalculator("word-frequency-counter");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Word Frequency Counter",
+      "description": "Find the most frequently used words in a block of text.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/word-frequency-counter.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How is word frequency calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The text is split into individual words (case-insensitive, punctuation ignored), then each unique word is counted and sorted by how often it appears."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is word frequency analysis used for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It's used for SEO keyword density checks, writing style analysis, and finding overused words or phrases in a document."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

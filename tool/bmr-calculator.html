@@ -40,6 +40,47 @@
       initCalculator("bmr-calculator");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "BMR Calculator",
+      "description": "Calculate your basal metabolic rate — the calories your body burns at rest.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/bmr-calculator.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is BMR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Basal metabolic rate is the number of calories your body burns at complete rest just to maintain vital functions like breathing and circulation — it doesn't include any activity."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How accurate is the Mifflin-St Jeor formula?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It's considered one of the more accurate BMR formulas for the general population, typically within about 10% of measured values, though individual metabolism varies with muscle mass and other factors."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

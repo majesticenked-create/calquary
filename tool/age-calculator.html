@@ -40,6 +40,39 @@
       initCalculator("age-calculator");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Age Calculator",
+      "description": "Calculate exact age in years, months, and days.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/age-calculator.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How is exact age calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "By counting full years, then remaining months, then remaining days between the birth date and today — not just subtracting birth year from the current year."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

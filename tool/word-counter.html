@@ -40,6 +40,39 @@
       initCalculator("word-counter");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Word Counter",
+      "description": "Count words, characters, and sentences in your text.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/word-counter.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does this word counter save my text?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No — the count runs entirely in your browser and nothing is sent or stored."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

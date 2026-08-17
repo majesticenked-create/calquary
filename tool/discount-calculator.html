@@ -40,6 +40,47 @@
       initCalculator("discount-calculator");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Discount Calculator",
+      "description": "Calculate the sale price and savings on a discounted item.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/discount-calculator.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I calculate a sale price from a discount percentage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Multiply the original price by the discount percentage as a decimal to get the amount saved, then subtract that from the original price. For $80 at 25% off: $80 × 0.25 = $20 saved, for a sale price of $60."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I stack multiple discounts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Apply each discount to the price remaining after the previous one, not to the original price — two 20% discounts stacked equal a 36% total discount, not 40%."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

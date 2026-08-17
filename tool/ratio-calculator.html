@@ -40,6 +40,47 @@
       initCalculator("ratio-calculator");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Ratio Calculator",
+      "description": "Simplify a ratio to its lowest terms.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/ratio-calculator.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I simplify a ratio like 8:12?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Divide both numbers by their greatest common divisor. GCD(8, 12) = 4, so 8:12 simplifies to 2:3."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is a ratio different from a fraction?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A ratio compares two quantities directly (like 2:3), while a fraction expresses one quantity as a part of a whole (like 2/3) — though the simplification math is the same."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

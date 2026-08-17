@@ -40,6 +40,47 @@
       initCalculator("temperature-converter");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Temperature Converter",
+      "description": "Convert between Fahrenheit, Celsius, and Kelvin.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/temperature-converter.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I convert Fahrenheit to Celsius?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Subtract 32, then multiply by 5/9. 98.6°F: (98.6 − 32) × 5/9 = 37°C — normal human body temperature."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does temperature conversion need an offset, not just multiplication?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fahrenheit and Celsius have different zero points (freezing water is 0°C but 32°F), so converting requires shifting the scale first, unlike length or weight conversions which only need a multiplier."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

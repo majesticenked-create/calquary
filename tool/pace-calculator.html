@@ -40,6 +40,39 @@
       initCalculator("pace-calculator");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Running Pace Calculator",
+      "description": "Calculate your running pace per mile or kilometer.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/pace-calculator.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I calculate running pace?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Divide your total time by your total distance. For a 5K in 28 minutes, pace per mile = 28 ÷ 3.1 ≈ 9:02 per mile."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

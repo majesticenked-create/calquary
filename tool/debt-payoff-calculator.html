@@ -40,6 +40,47 @@
       initCalculator("debt-payoff-calculator");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Debt Payoff Calculator",
+      "description": "Calculate how long it will take to pay off a debt with fixed monthly payments.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/debt-payoff-calculator.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long will it take to pay off $8,000 at 19.99% with $250/month payments?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "About 47 months (just under 4 years), paying roughly $3,750 in total interest on top of the original $8,000 balance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does my payment need to exceed the monthly interest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If your payment is less than the interest charged that month, the balance grows instead of shrinking — this is why credit cards with low minimum payments can take decades to pay off."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

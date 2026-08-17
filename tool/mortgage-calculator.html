@@ -40,6 +40,47 @@
       initCalculator("mortgage-calculator");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Mortgage Calculator",
+      "description": "Estimate your total monthly mortgage payment, including taxes and insurance.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/mortgage-calculator.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What's included in a mortgage payment estimate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This calculator estimates PITI — principal, interest, property taxes, and homeowners insurance. It doesn't include PMI (if your down payment is under 20%) or HOA fees, which vary by lender and property."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does down payment affect my monthly payment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A larger down payment reduces your loan amount, which lowers both the principal & interest portion of your payment and your total interest paid over the loan term."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

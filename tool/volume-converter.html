@@ -40,6 +40,47 @@
       initCalculator("volume-converter");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Volume Converter",
+      "description": "Convert between liters, gallons, cups, and milliliters.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/volume-converter.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many liters is a gallon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1 US gallon equals about 3.785 liters. To convert gallons to liters, multiply by 3.78541."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a US gallon the same as a UK gallon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No — a US gallon (3.785 L) is smaller than a UK/imperial gallon (4.546 L). This converter uses US gallons; adjust accordingly if you need imperial units."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

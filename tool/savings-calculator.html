@@ -40,6 +40,47 @@
       initCalculator("savings-calculator");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Savings Calculator",
+      "description": "Estimate the future value of your savings with regular contributions.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/savings-calculator.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does compound growth affect savings over time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Interest earns interest on itself, so the longer your money stays invested, the larger the share of your balance that comes from growth rather than contributions — this effect accelerates in later years."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What interest rate should I use for a savings calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use your actual account's APY for savings accounts, or a conservative long-term average (historically 4–7%) for investment accounts — check your specific account terms for the current rate."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

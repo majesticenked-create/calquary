@@ -40,6 +40,47 @@
       initCalculator("date-duration-calculator");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Date Duration Calculator",
+      "description": "Calculate the number of days, weeks, months, and years between two dates.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/date-duration-calculator.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many days are between January 1 and December 31, 2024?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "365 days — 2024 is a leap year, but since the range doesn't cross into a new year past the leap day cutoff for this specific pair of dates, the count is a standard 365."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this calculator count the start or end date?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It counts the number of full days elapsed between the two dates — the start date itself is day zero, not day one."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

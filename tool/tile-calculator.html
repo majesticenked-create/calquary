@@ -40,6 +40,47 @@
       initCalculator("tile-calculator");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Tile Calculator",
+      "description": "Estimate how many tiles you need for a room, including grout lines.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/tile-calculator.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many 12x12 tiles do I need for 100 sq ft?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "With a 1/8 inch grout line and 10% waste allowance, 100 sq ft needs about 108 tiles."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does grout line width affect tile count?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Grout lines add space between tiles, slightly increasing each tile's effective footprint — over a large room this adds up to a few extra tiles beyond a simple area ÷ tile size calculation."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

@@ -40,6 +40,47 @@
       initCalculator("investment-calculator");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Investment Calculator",
+      "description": "Estimate the future value of an investment, adjusted for inflation.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/investment-calculator.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why does inflation matter for investment projections?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A dollar in 20 years buys less than a dollar today — showing only the nominal future value overstates how much better off you'll actually be, so adjusting for inflation gives a more honest picture."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What return rate should I use for an investment calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "7% is a commonly used long-term average for a diversified stock portfolio after inflation is roughly accounted for in nominal terms, but actual returns vary significantly year to year — use a conservative estimate for planning."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

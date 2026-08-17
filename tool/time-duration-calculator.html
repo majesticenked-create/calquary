@@ -40,6 +40,47 @@
       initCalculator("time-duration-calculator");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Time Duration Calculator",
+      "description": "Calculate the duration between two times of day, including overnight spans.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/time-duration-calculator.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many hours between 9:00 AM and 5:30 PM?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "8 hours and 30 minutes — a common full work day with a half-hour beyond the standard 8-hour shift."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if the end time is earlier than the start time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The calculator assumes the span crosses midnight into the next day — for example, 10 PM to 6 AM is treated as an 8-hour overnight duration, not a negative number."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

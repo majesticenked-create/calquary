@@ -40,6 +40,47 @@
       initCalculator("fence-calculator");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Fence Calculator",
+      "description": "Estimate how many posts and panels you need for a fence line.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/fence-calculator.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many posts do I need for 100 feet of fence?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "At 8 ft panel spacing, 100 ft of fence needs 13 panels and 14 posts — one extra post to close both ends of the run."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is post count one more than panel count?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each panel needs a post at both ends, but adjacent panels share a post, so total posts always equal panels plus one for a straight run."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

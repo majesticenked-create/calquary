@@ -40,6 +40,47 @@
       initCalculator("calorie-calculator");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calorie Calculator",
+      "description": "Calculate your daily calorie needs to maintain, lose, or gain weight.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/calorie-calculator.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many calories do I need to maintain my weight?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on your BMR and activity level — for a 30-year-old, 5'10\", 180 lb male at moderate activity, maintenance is roughly 2,763 calories per day."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many calories should I cut to lose weight?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A deficit of about 500 calories per day below maintenance is a common target for roughly 1 lb of weight loss per week, since 1 lb of body fat is approximately 3,500 calories."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

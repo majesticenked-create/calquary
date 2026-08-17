@@ -40,6 +40,47 @@
       initCalculator("heart-rate-zone-calculator");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Heart Rate Zone Calculator",
+      "description": "Calculate your maximum heart rate and target training zones by age.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/heart-rate-zone-calculator.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I calculate my maximum heart rate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The most common estimate is 220 minus your age — for a 30-year-old, that's 190 bpm. It's a population average, not a precise individual measurement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What heart rate zone should I train in to burn fat?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The 60-70% zone of your max heart rate is often called the 'fat-burn' zone — for a 30-year-old with a 190 bpm max, that's roughly 114-133 bpm. Higher zones burn more total calories despite a lower fat percentage."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

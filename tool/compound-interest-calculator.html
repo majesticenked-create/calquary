@@ -40,6 +40,47 @@
       initCalculator("compound-interest-calculator");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Compound Interest Calculator",
+      "description": "Calculate how a lump sum grows over time with compound interest.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/compound-interest-calculator.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What's the formula for compound interest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A = P(1 + r/n)^(nt) — where P is principal, r is the annual rate, n is compounds per year, and t is time in years."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does compounding frequency affect growth?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "More frequent compounding (daily vs. annually) produces slightly higher returns at the same stated rate, since interest starts earning interest sooner — though the difference is usually small at typical savings rates."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

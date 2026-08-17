@@ -40,6 +40,47 @@
       initCalculator("gcd-lcm-calculator");
     });
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "GCD and LCM Calculator",
+      "description": "Find the greatest common divisor and least common multiple of two numbers.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/gcd-lcm-calculator.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What's the GCD of 24 and 36?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "12 — the largest number that divides evenly into both 24 and 36."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is LCM related to GCD?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "LCM = (a × b) ÷ GCD(a, b). For 24 and 36: (24 × 36) ÷ 12 = 72, the smallest number both 24 and 36 divide into evenly."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
