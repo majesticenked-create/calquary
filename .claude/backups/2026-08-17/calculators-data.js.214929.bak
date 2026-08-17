@@ -248,62 +248,6 @@ const CALCULATORS = [
     ],
     related: ["savings-calculator", "mortgage-calculator", "loan-calculator"],
   },
-  {
-    id: "sales-tax-calculator",
-    category: "finance",
-    title: "Sales Tax Calculator",
-    keyword: "sales tax calculator",
-    description: "Calculate the sales tax and total price on a purchase.",
-    intro: "Enter a price and your local sales tax rate to calculate the tax amount and total cost.",
-    fields: [
-      { id: "price", label: "Price", type: "number", unit: "$", default: 49.99, step: 0.01 },
-      { id: "taxRate", label: "Sales tax rate", type: "number", unit: "%", default: 7.25, step: 0.01 },
-    ],
-    compute: (v) => {
-      const tax = v.price * (v.taxRate / 100);
-      const total = v.price + tax;
-      return {
-        primary: { label: "Total with tax", value: `$${round(total, 2)}` },
-        secondary: [
-          { l: "Tax amount", v: `$${round(tax, 2)}` },
-          { l: "Pre-tax price", v: `$${round(v.price, 2)}` },
-        ],
-      };
-    },
-    faq: [
-      { q: "How do I calculate sales tax on a purchase?", a: "Multiply the price by the tax rate as a decimal, then add that to the original price. For $49.99 at 7.25% tax: $49.99 × 0.0725 = $3.62 tax, for a total of $53.61." },
-      { q: "Does sales tax rate vary by location?", a: "Yes — sales tax rates are set by state, county, and sometimes city, so the combined rate can vary significantly even within the same state. Check your local rate before relying on a default." },
-    ],
-    related: ["discount-calculator", "tip-calculator", "percentage-calculator"],
-  },
-  {
-    id: "discount-calculator",
-    category: "finance",
-    title: "Discount Calculator",
-    keyword: "discount calculator",
-    description: "Calculate the sale price and savings on a discounted item.",
-    intro: "Enter the original price and discount percentage to calculate the sale price and how much you're saving.",
-    fields: [
-      { id: "originalPrice", label: "Original price", type: "number", unit: "$", default: 80, step: 0.01 },
-      { id: "discountPercent", label: "Discount", type: "number", unit: "%", default: 25, step: 1 },
-    ],
-    compute: (v) => {
-      const discountAmount = v.originalPrice * (v.discountPercent / 100);
-      const salePrice = v.originalPrice - discountAmount;
-      return {
-        primary: { label: "Sale price", value: `$${round(salePrice, 2)}` },
-        secondary: [
-          { l: "Amount saved", v: `$${round(discountAmount, 2)}` },
-          { l: "Original price", v: `$${round(v.originalPrice, 2)}` },
-        ],
-      };
-    },
-    faq: [
-      { q: "How do I calculate a sale price from a discount percentage?", a: "Multiply the original price by the discount percentage as a decimal to get the amount saved, then subtract that from the original price. For $80 at 25% off: $80 × 0.25 = $20 saved, for a sale price of $60." },
-      { q: "How do I stack multiple discounts?", a: "Apply each discount to the price remaining after the previous one, not to the original price — two 20% discounts stacked equal a 36% total discount, not 40%." },
-    ],
-    related: ["sales-tax-calculator", "tip-calculator", "percentage-calculator"],
-  },
 
   // ---------------- CONSTRUCTION & HOME ----------------
   {
