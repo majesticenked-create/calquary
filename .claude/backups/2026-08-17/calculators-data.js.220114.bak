@@ -1056,63 +1056,6 @@ const CALCULATORS = [
     related: ["macro-calculator", "bmr-calculator", "pace-calculator"],
   },
   {
-    id: "heart-rate-zone-calculator",
-    category: "health",
-    title: "Heart Rate Zone Calculator",
-    keyword: "heart rate zone calculator",
-    description: "Calculate your maximum heart rate and target training zones by age.",
-    intro: "Enter your age to calculate your estimated maximum heart rate and target zones for different training intensities.",
-    fields: [
-      { id: "age", label: "Age", type: "number", unit: "years", default: 30, step: 1 },
-    ],
-    compute: (v) => {
-      const maxHR = 220 - v.age;
-      const zone = (lo, hi) => `${round(maxHR * lo, 0)}–${round(maxHR * hi, 0)} bpm`;
-      return {
-        primary: { label: "Estimated max heart rate", value: `${maxHR} bpm` },
-        secondary: [
-          { l: "Fat-burn zone (60–70%)", v: zone(0.6, 0.7) },
-          { l: "Anaerobic zone (80–90%)", v: zone(0.8, 0.9) },
-        ],
-        note: "Based on the common 220 minus age formula. This is a population estimate — individual max heart rate can vary by 10-20 bpm, so use a fitness tracker's measured value if available.",
-      };
-    },
-    faq: [
-      { q: "How do I calculate my maximum heart rate?", a: "The most common estimate is 220 minus your age — for a 30-year-old, that's 190 bpm. It's a population average, not a precise individual measurement." },
-      { q: "What heart rate zone should I train in to burn fat?", a: "The 60-70% zone of your max heart rate is often called the 'fat-burn' zone — for a 30-year-old with a 190 bpm max, that's roughly 114-133 bpm. Higher zones burn more total calories despite a lower fat percentage." },
-    ],
-    related: ["pace-calculator", "bmr-calculator", "one-rep-max-calculator"],
-  },
-  {
-    id: "ideal-weight-calculator",
-    category: "health",
-    title: "Ideal Weight Calculator",
-    keyword: "ideal weight calculator",
-    description: "Estimate a healthy target weight based on height and gender.",
-    intro: "Enter your height and gender to estimate an ideal body weight range using the Devine formula.",
-    fields: [
-      { id: "gender", label: "Gender", type: "select", options: [{ v: "male", l: "Male" }, { v: "female", l: "Female" }], default: "male" },
-      { id: "heightIn", label: "Height", type: "number", unit: "inches", default: 70, step: 0.1 },
-    ],
-    compute: (v) => {
-      const inchesOver5ft = v.heightIn - 60;
-      const ibwKg = v.gender === "male"
-        ? 50 + 2.3 * inchesOver5ft
-        : 45.5 + 2.3 * inchesOver5ft;
-      const ibwLb = ibwKg * 2.20462;
-      return {
-        primary: { label: "Estimated ideal weight", value: `${round(ibwLb, 1)} lb` },
-        secondary: [{ l: "Formula used", v: "Devine formula" }],
-        note: "The Devine formula was originally developed for medication dosing, not fitness goals — it's a rough reference point, not a target you need to hit. Frame size and muscle mass aren't accounted for.",
-      };
-    },
-    faq: [
-      { q: "How is ideal body weight calculated?", a: "The Devine formula starts at a base weight for 5 feet of height (50 kg for men, 45.5 kg for women) and adds 2.3 kg for each inch over 5 feet — a 5'10\" man works out to about 161 lb." },
-      { q: "Is the Devine formula a good weight-loss target?", a: "Not necessarily — it doesn't account for muscle mass, frame size, or individual body composition, so it's better used as a rough medical reference than a personal fitness goal." },
-    ],
-    related: ["bmi-calculator", "body-fat-calculator", "calorie-calculator"],
-  },
-  {
     id: "pace-calculator",
     category: "health",
     title: "Running Pace Calculator",
