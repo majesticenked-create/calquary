@@ -2313,59 +2313,7 @@ const CALCULATORS = [
     faq: [
       { q: "Do cats age the same way regardless of breed?", a: "Aging patterns are fairly consistent across most cat breeds, unlike dogs where size drives large aging differences." },
     ],
-    related: ["dog-age-calculator", "rabbit-age-calculator", "age-calculator"],
-  },
-  {
-    id: "rabbit-age-calculator",
-    category: "pets",
-    title: "Rabbit Age Calculator",
-    keyword: "rabbit age calculator",
-    description: "Convert your rabbit's age into human years.",
-    intro: "Enter your rabbit's age to estimate the equivalent human age, based on typical lagomorph aging patterns.",
-    fields: [
-      { id: "rabbitYears", label: "Rabbit's age", type: "number", unit: "years", default: 3, step: 0.5 },
-    ],
-    compute: (v) => {
-      const humanAge = v.rabbitYears <= 1 ? v.rabbitYears * 21 : 21 + (v.rabbitYears - 1) * 6;
-      return {
-        primary: { label: "Human-equivalent age", value: `${round(humanAge, 0)} years` },
-        secondary: [{ l: "Rabbit's actual age", v: `${v.rabbitYears} years` }],
-        note: "This is an estimate based on typical rabbit development, not a veterinary assessment. Rabbits can live 8-12 years with good care.",
-      };
-    },
-    faq: [
-      { q: "How fast do rabbits age compared to humans?", a: "Rabbits mature very quickly — a 1-year-old rabbit is roughly equivalent to a 21-year-old human, then aging slows to about 6 human years per rabbit year after that." },
-      { q: "How long do pet rabbits typically live?", a: "Well-cared-for house rabbits commonly live 8-12 years, with some living longer depending on breed and health." },
-    ],
-    related: ["cat-age-calculator", "dog-age-calculator", "age-calculator"],
-  },
-  {
-    id: "dog-pregnancy-calculator",
-    category: "pets",
-    title: "Dog Pregnancy Calculator",
-    keyword: "dog pregnancy calculator",
-    description: "Estimate your dog's due date based on the mating date.",
-    intro: "Enter the mating date to estimate your dog's due date, based on the typical 63-day canine gestation period.",
-    fields: [
-      { id: "matingDate", label: "Mating date", type: "date", default: "2024-01-01" },
-      { id: "gestationDays", label: "Gestation length", type: "number", unit: "days", default: 63, step: 1 },
-    ],
-    compute: (v) => {
-      const [y, m, d] = v.matingDate.split("-").map(Number);
-      const dueDate = new Date(y, m - 1, d);
-      dueDate.setDate(dueDate.getDate() + v.gestationDays);
-      const dueDateStr = dueDate.toISOString().slice(0, 10);
-      return {
-        primary: { label: "Estimated due date", value: dueDateStr },
-        secondary: [{ l: "Gestation length", v: `${v.gestationDays} days` }],
-        note: "The typical canine gestation period is 58-68 days (about 63 days on average). Confirm timing with a veterinarian, especially as the due date approaches.",
-      };
-    },
-    faq: [
-      { q: "How long are dogs pregnant?", a: "The average canine gestation period is about 63 days from conception, though it can range from 58 to 68 days depending on the dog and litter size." },
-      { q: "How accurate is a due date estimate from the mating date?", a: "It's a reasonable estimate, but actual whelping dates can vary by several days — a veterinarian can confirm timing more precisely using ultrasound or progesterone testing." },
-    ],
-    related: ["days-until-calculator", "date-duration-calculator", "dog-age-calculator"],
+    related: ["dog-age-calculator", "age-calculator"],
   },
 ];
 

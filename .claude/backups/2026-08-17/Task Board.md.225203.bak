@@ -40,7 +40,6 @@
 - Date & Time Batch 2: week-number-calculator, day-of-week-calculator, leap-year-calculator — Date & Time category now complete at 8/8
 - Math Batch 1: average-calculator, fraction-calculator, gcd-lcm-calculator (added shared gcd() helper)
 - Math Batch 2: standard-deviation-calculator, square-root-calculator, ratio-calculator
-- Math Batch 3: exponent-calculator, quadratic-formula-calculator — Math category now complete at 10 tools (random-number-generator deferred to Text & Digital)
+- Math Batch 3: exponent-calculator, quadratic-formula-calculator — Math category now complete at 9/9 (random-number-generator deferred to Text & Digital)
 - Text & Digital Batch 1: random-number-generator, case-converter, lorem-ipsum-generator
 - Text & Digital Batch 2: text-to-slug-generator, binary-to-text-converter, word-frequency-counter — Text & Digital category now complete at 8/8
-- Pet & Lifestyle Batch 1: dog-food-calculator, rabbit-age-calculator, dog-pregnancy-calculator

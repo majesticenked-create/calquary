@@ -4,8 +4,6 @@
 - (none yet)
 
 ## Backlog
-- Build horse-age-calculator, ideal-dog-weight-calculator, cat-pregnancy-calculator (Pet & Lifestyle — Batch 2, low priority, per seo/keyword-research-pets.md)
-- puppy-weight-predictor deferred — needs a growth curve model, meaningfully more complex than other pet tools
 - character-counter excluded — duplicate of word-counter's existing output
 - hash-generator excluded — needs async crypto.subtle API, mismatch with engine's synchronous compute()
 - QR-code-generator excluded — needs image/rendering output, not a fit for current engine
@@ -15,7 +13,8 @@
 - anniversary-calculator excluded — same math as days-until-calculator, low differentiation
 - pregnancy-due-date-calculator deferred — needs dedicated accuracy/liability review before building (medical-adjacent stakes)
 - retirement-calculator deferred — scope large enough to need its own content brief
-- Re-run keyword-research with live DataForSEO data once account balance is restored (402 on ten separate attempts across every category run this session)
+- Re-run keyword-research with live DataForSEO data once account balance is restored (402 on nine separate attempts)
+- Add more calculators to fill out Pet & Lifestyle (2 tools currently)
 - Run SEO skills (keyword-research, content-seo-brief) ahead of each new calculator batch
 - schema-markup-generator pass for FAQPage/SoftwareApplication structured data on tool pages
 - category-page-optimization pass — category pages are currently thin (auto-generated grid only)
@@ -29,7 +28,7 @@
 - Batch 3: roofing-calculator, fence-calculator, insulation-calculator, lumber-calculator, paver-calculator (Construction & Home) — Construction & Home category now complete at 12/12 from keyword research
 - Finance Batch 1: mortgage-calculator, savings-calculator, compound-interest-calculator
 - Finance Batch 2: sales-tax-calculator, discount-calculator
-- Finance Batch 3: debt-payoff-calculator, credit-card-payoff-calculator, auto-loan-calculator, investment-calculator — Finance category now at 11 tools (retirement-calculator deferred)
+- Finance Batch 3: debt-payoff-calculator, credit-card-payoff-calculator, auto-loan-calculator, investment-calculator — Finance category now at 10/11 (retirement-calculator deferred)
 - Health Batch 1: bmr-calculator, calorie-calculator, body-fat-calculator
 - Health Batch 2: macro-calculator, water-intake-calculator, one-rep-max-calculator
 - Health Batch 3: heart-rate-zone-calculator, ideal-weight-calculator — Health & Fitness category now at 10/11 (pregnancy-due-date deferred)
@@ -40,7 +39,6 @@
 - Date & Time Batch 2: week-number-calculator, day-of-week-calculator, leap-year-calculator — Date & Time category now complete at 8/8
 - Math Batch 1: average-calculator, fraction-calculator, gcd-lcm-calculator (added shared gcd() helper)
 - Math Batch 2: standard-deviation-calculator, square-root-calculator, ratio-calculator
-- Math Batch 3: exponent-calculator, quadratic-formula-calculator — Math category now complete at 10 tools (random-number-generator deferred to Text & Digital)
+- Math Batch 3: exponent-calculator, quadratic-formula-calculator — Math category now complete at 9/9 (random-number-generator deferred to Text & Digital)
 - Text & Digital Batch 1: random-number-generator, case-converter, lorem-ipsum-generator
 - Text & Digital Batch 2: text-to-slug-generator, binary-to-text-converter, word-frequency-counter — Text & Digital category now complete at 8/8
-- Pet & Lifestyle Batch 1: dog-food-calculator, rabbit-age-calculator, dog-pregnancy-calculator
