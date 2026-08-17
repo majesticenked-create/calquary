@@ -10,7 +10,7 @@
   - `build.js` — Node script (uses `vm` to load the browser-global data file), generates `tool/*.html` + `category/*.html` from `_templates/*.html`, plus `sitemap.xml`
   - `_templates/tool.template.html`, `_templates/category.template.html`
 - **Categories** (call-number codes): M Math, F Finance, C Construction & Home, H Health & Fitness, D Date & Time, V Everyday Conversions, T Text & Digital, P Pet & Lifestyle
-- **Current content**: 16 calculators live, 2 per category (thin — priority to expand)
+- **Current content**: 21 calculators live. Construction & Home now has 7 (concrete, paint, mulch, gravel, flooring, drywall, tile) — Batch 3 remaining (roofing, fence, insulation, lumber, paver). Other categories still at 2 each (thin — priority to expand next).
 - **Dev loop**: `node build.js` then `npx serve` for local preview (localhost:4173)
 - **Git**: initialized, 2 commits (site scaffold; Claudify toolkit install)
 

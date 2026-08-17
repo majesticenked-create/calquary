@@ -290,7 +290,70 @@ const CALCULATORS = [
       { q: "How many boxes of flooring do I need for 250 sq ft?", a: "At 22 sq ft per box with a 10% waste allowance, 250 sq ft needs about 13 boxes." },
       { q: "Why do I need extra flooring for waste?", a: "Cuts around doorways, closets, and pattern matching use extra material — a 10–15% allowance keeps you from running short mid-project." },
     ],
-    related: ["paint-calculator", "concrete-calculator", "unit-length-converter"],
+    related: ["paint-calculator", "tile-calculator", "concrete-calculator", "unit-length-converter"],
+  },
+  {
+    id: "drywall-calculator",
+    category: "construction",
+    title: "Drywall Calculator",
+    keyword: "drywall calculator",
+    description: "Estimate how many sheets of drywall you need for a wall area.",
+    intro: "Enter your total wall area and a waste allowance to estimate how many standard 4×8 drywall sheets to buy.",
+    fields: [
+      { id: "wallArea", label: "Wall area", type: "number", unit: "sq ft", default: 400, step: 1 },
+      { id: "waste", label: "Waste allowance", type: "number", unit: "%", default: 10, step: 1 },
+    ],
+    compute: (v) => {
+      const sheetSize = 32; // standard 4x8 ft sheet = 32 sq ft
+      const totalAreaNeeded = v.wallArea * (1 + v.waste / 100);
+      const sheets = Math.ceil(totalAreaNeeded / sheetSize);
+      return {
+        primary: { label: "Sheets needed", value: sheets },
+        secondary: [
+          { l: "Total area with waste", v: `${round(totalAreaNeeded, 1)} sq ft` },
+          { l: "Sheet size", v: "4×8 ft (32 sq ft)" },
+        ],
+        note: "Based on standard 4×8 ft sheets. Larger sheets (4×10, 4×12) reduce seams but cost more and need more room to maneuver.",
+      };
+    },
+    faq: [
+      { q: "How many sheets of drywall do I need for 400 sq ft of wall?", a: "At a 10% waste allowance, 400 sq ft needs about 14 standard 4×8 ft sheets (32 sq ft each)." },
+      { q: "Why do I need extra drywall for waste?", a: "Cuts around outlets, corners, doorways, and windows use extra material — a 10% allowance keeps you from running short mid-job." },
+    ],
+    related: ["paint-calculator", "flooring-calculator", "concrete-calculator"],
+  },
+  {
+    id: "tile-calculator",
+    category: "construction",
+    title: "Tile Calculator",
+    keyword: "tile calculator",
+    description: "Estimate how many tiles you need for a room, including grout lines.",
+    intro: "Enter your room area, tile size, and grout line width to estimate how many tiles to buy, with a waste allowance built in.",
+    fields: [
+      { id: "roomArea", label: "Room area", type: "number", unit: "sq ft", default: 100, step: 1 },
+      { id: "tileLength", label: "Tile length", type: "number", unit: "in", default: 12, step: 0.5 },
+      { id: "tileWidth", label: "Tile width", type: "number", unit: "in", default: 12, step: 0.5 },
+      { id: "groutLine", label: "Grout line width", type: "number", unit: "in", default: 0.125, step: 0.0625 },
+      { id: "waste", label: "Waste allowance", type: "number", unit: "%", default: 10, step: 1 },
+    ],
+    compute: (v) => {
+      const effectiveTileSqFt = ((v.tileLength + v.groutLine) * (v.tileWidth + v.groutLine)) / 144;
+      const totalAreaNeeded = v.roomArea * (1 + v.waste / 100);
+      const tiles = Math.ceil(totalAreaNeeded / effectiveTileSqFt);
+      return {
+        primary: { label: "Tiles needed", value: tiles },
+        secondary: [
+          { l: "Total area with waste", v: `${round(totalAreaNeeded, 1)} sq ft` },
+          { l: "Coverage per tile (with grout)", v: `${round(effectiveTileSqFt, 3)} sq ft` },
+        ],
+        note: "Grout lines add a small amount to each tile's footprint, so tile count is slightly higher than a simple area-divided-by-tile-size estimate.",
+      };
+    },
+    faq: [
+      { q: "How many 12x12 tiles do I need for 100 sq ft?", a: "With a 1/8 inch grout line and 10% waste allowance, 100 sq ft needs about 108 tiles." },
+      { q: "Why does grout line width affect tile count?", a: "Grout lines add space between tiles, slightly increasing each tile's effective footprint — over a large room this adds up to a few extra tiles beyond a simple area ÷ tile size calculation." },
+    ],
+    related: ["flooring-calculator", "paint-calculator", "unit-length-converter"],
   },
 
   // ---------------- HEALTH & FITNESS ----------------
