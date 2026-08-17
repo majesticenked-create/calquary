@@ -4,6 +4,7 @@
 - (none yet)
 
 ## Backlog
+- Build data-storage-converter, pressure-converter, fuel-economy-converter (Everyday Conversions — Batch 3, low priority)
 - currency-converter and timezone-converter excluded — need live external data, poor fit for static no-backend site
 - pregnancy-due-date-calculator deferred — needs dedicated accuracy/liability review before building (medical-adjacent stakes)
 - retirement-calculator deferred — scope large enough to need its own content brief
@@ -28,4 +29,3 @@
 - Health Batch 3: heart-rate-zone-calculator, ideal-weight-calculator — Health & Fitness category now at 10/11 (pregnancy-due-date deferred)
 - Conversions Batch 1: temperature-converter, weight-converter, volume-converter
 - Conversions Batch 2: speed-converter, area-converter
-- Conversions Batch 3: data-storage-converter, pressure-converter, fuel-economy-converter — Everyday Conversions category now complete at 10/10 (currency/timezone excluded by design)
