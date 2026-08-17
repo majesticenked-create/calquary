@@ -86,7 +86,7 @@ const CALCULATORS = [
       { id: "numbers", label: "Numbers (comma or space separated)", type: "textarea", default: "4, 8, 15, 16, 23, 42" },
     ],
     compute: (v) => {
-      const nums = v.numbers.trim().split(/[,\s]+/).filter((s) => s !== "").map(Number).filter((n) => !isNaN(n));
+      const nums = v.numbers.split(/[,\s]+/).map(Number).filter((n) => !isNaN(n) && v.numbers.trim() !== "");
       const count = nums.length;
       const sum = nums.reduce((a, b) => a + b, 0);
       const mean = count ? sum / count : 0;

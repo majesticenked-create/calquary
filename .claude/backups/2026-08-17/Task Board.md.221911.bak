@@ -4,16 +4,13 @@
 - (none yet)
 
 ## Backlog
-- Build standard-deviation-calculator, square-root-calculator, ratio-calculator (Math — Batch 2, medium priority, per seo/keyword-research-math.md)
-- Build exponent-calculator, quadratic-formula-calculator (Math — Batch 3, medium-low priority)
-- random-number-generator deferred — overlaps with Text & Digital's password-generator, scope there instead
 - currency-converter and timezone-converter excluded — need live external data, poor fit for static no-backend site
 - countdown-timer excluded — too close to days-until-calculator without a live-updating JS component
 - anniversary-calculator excluded — same math as days-until-calculator, low differentiation
 - pregnancy-due-date-calculator deferred — needs dedicated accuracy/liability review before building (medical-adjacent stakes)
 - retirement-calculator deferred — scope large enough to need its own content brief
-- Re-run keyword-research with live DataForSEO data once account balance is restored (402 on eight separate attempts)
-- Add more calculators to fill out other thin categories (2 per category) — Text, Pets
+- Re-run keyword-research with live DataForSEO data once account balance is restored (402 on seven separate attempts)
+- Add more calculators to fill out other thin categories (2 per category) — Math, Text, Pets
 - Run SEO skills (keyword-research, content-seo-brief) ahead of each new calculator batch
 - schema-markup-generator pass for FAQPage/SoftwareApplication structured data on tool pages
 - category-page-optimization pass — category pages are currently thin (auto-generated grid only)
@@ -36,4 +33,3 @@
 - Conversions Batch 3: data-storage-converter, pressure-converter, fuel-economy-converter — Everyday Conversions category now complete at 10/10 (currency/timezone excluded by design)
 - Date & Time Batch 1: date-duration-calculator, business-days-calculator, time-duration-calculator
 - Date & Time Batch 2: week-number-calculator, day-of-week-calculator, leap-year-calculator — Date & Time category now complete at 8/8
-- Math Batch 1: average-calculator, fraction-calculator, gcd-lcm-calculator (added shared gcd() helper)

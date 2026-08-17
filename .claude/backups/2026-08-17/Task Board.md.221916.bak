@@ -36,4 +36,3 @@
 - Conversions Batch 3: data-storage-converter, pressure-converter, fuel-economy-converter — Everyday Conversions category now complete at 10/10 (currency/timezone excluded by design)
 - Date & Time Batch 1: date-duration-calculator, business-days-calculator, time-duration-calculator
 - Date & Time Batch 2: week-number-calculator, day-of-week-calculator, leap-year-calculator — Date & Time category now complete at 8/8
-- Math Batch 1: average-calculator, fraction-calculator, gcd-lcm-calculator (added shared gcd() helper)
