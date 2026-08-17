@@ -4,13 +4,10 @@
 - (none yet)
 
 ## Backlog
-- Build speed-converter, area-converter (Everyday Conversions — Batch 2, medium priority, per seo/keyword-research-conversions.md)
-- Build data-storage-converter, pressure-converter, fuel-economy-converter (Everyday Conversions — Batch 3, low priority)
-- currency-converter and timezone-converter excluded — need live external data, poor fit for static no-backend site
 - pregnancy-due-date-calculator deferred — needs dedicated accuracy/liability review before building (medical-adjacent stakes)
 - retirement-calculator deferred — scope large enough to need its own content brief
-- Re-run keyword-research with live DataForSEO data once account balance is restored (402 on six separate attempts)
-- Add more calculators to fill out other thin categories (2 per category) — Math, Date & Time, Text, Pets
+- Re-run keyword-research with live DataForSEO data once account balance is restored (402 on five separate attempts)
+- Add more calculators to fill out other thin categories (2 per category) — Math, Date & Time, Conversions, Text, Pets
 - Run SEO skills (keyword-research, content-seo-brief) ahead of each new calculator batch
 - schema-markup-generator pass for FAQPage/SoftwareApplication structured data on tool pages
 - category-page-optimization pass — category pages are currently thin (auto-generated grid only)
@@ -28,4 +25,3 @@
 - Health Batch 1: bmr-calculator, calorie-calculator, body-fat-calculator
 - Health Batch 2: macro-calculator, water-intake-calculator, one-rep-max-calculator
 - Health Batch 3: heart-rate-zone-calculator, ideal-weight-calculator — Health & Fitness category now at 10/11 (pregnancy-due-date deferred)
-- Conversions Batch 1: temperature-converter, weight-converter, volume-converter
