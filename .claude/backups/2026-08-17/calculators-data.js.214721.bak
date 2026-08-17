@@ -108,48 +108,7 @@ const CALCULATORS = [
     faq: [
       { q: "How is a loan payment calculated?", a: "Fixed-rate loans use an amortization formula based on the principal, the periodic interest rate, and the number of payments, so each payment is the same size but the interest/principal split changes over time." },
     ],
-    related: ["mortgage-calculator", "percentage-calculator", "tip-calculator"],
-  },
-  {
-    id: "mortgage-calculator",
-    category: "finance",
-    title: "Mortgage Calculator",
-    keyword: "mortgage calculator",
-    description: "Estimate your total monthly mortgage payment, including taxes and insurance.",
-    intro: "Enter your home price, down payment, rate, and term to estimate your full monthly payment — principal, interest, property tax, and insurance.",
-    fields: [
-      { id: "homePrice", label: "Home price", type: "number", unit: "$", default: 350000, step: 1000 },
-      { id: "downPaymentPercent", label: "Down payment", type: "number", unit: "%", default: 20, step: 1 },
-      { id: "rate", label: "Annual interest rate", type: "number", unit: "%", default: 6.5, step: 0.01 },
-      { id: "years", label: "Loan term", type: "number", unit: "years", default: 30, step: 1 },
-      { id: "propertyTaxRate", label: "Annual property tax rate", type: "number", unit: "%", default: 1.1, step: 0.05 },
-      { id: "annualInsurance", label: "Annual home insurance", type: "number", unit: "$", default: 1400, step: 50 },
-    ],
-    compute: (v) => {
-      const loanAmount = v.homePrice * (1 - v.downPaymentPercent / 100);
-      const monthlyRate = v.rate / 100 / 12;
-      const n = v.years * 12;
-      const principalInterest = monthlyRate === 0
-        ? loanAmount / n
-        : (loanAmount * monthlyRate * Math.pow(1 + monthlyRate, n)) / (Math.pow(1 + monthlyRate, n) - 1);
-      const monthlyTax = (v.homePrice * (v.propertyTaxRate / 100)) / 12;
-      const monthlyInsurance = v.annualInsurance / 12;
-      const totalMonthly = principalInterest + monthlyTax + monthlyInsurance;
-      return {
-        primary: { label: "Estimated monthly payment", value: `$${round(totalMonthly, 2).toLocaleString()}` },
-        secondary: [
-          { l: "Principal & interest", v: `$${round(principalInterest, 2).toLocaleString()}` },
-          { l: "Taxes + insurance", v: `$${round(monthlyTax + monthlyInsurance, 2).toLocaleString()}` },
-          { l: "Loan amount", v: `$${round(loanAmount, 0).toLocaleString()}` },
-        ],
-        note: "This estimate covers principal, interest, taxes, and insurance (PITI). It doesn't include PMI, HOA fees, or other lender-specific costs.",
-      };
-    },
-    faq: [
-      { q: "What's included in a mortgage payment estimate?", a: "This calculator estimates PITI — principal, interest, property taxes, and homeowners insurance. It doesn't include PMI (if your down payment is under 20%) or HOA fees, which vary by lender and property." },
-      { q: "How does down payment affect my monthly payment?", a: "A larger down payment reduces your loan amount, which lowers both the principal & interest portion of your payment and your total interest paid over the loan term." },
-    ],
-    related: ["loan-calculator", "savings-calculator", "compound-interest-calculator"],
+    related: ["percentage-calculator", "tip-calculator"],
   },
   {
     id: "tip-calculator",
@@ -178,75 +137,6 @@ const CALCULATORS = [
       { q: "What's a standard tip percentage?", a: "In the US, 15–20% is typical for sit-down service; some people tip more for excellent service." },
     ],
     related: ["loan-calculator", "percentage-calculator"],
-  },
-  {
-    id: "savings-calculator",
-    category: "finance",
-    title: "Savings Calculator",
-    keyword: "savings calculator",
-    description: "Estimate the future value of your savings with regular contributions.",
-    intro: "Enter your starting balance, monthly contribution, interest rate, and time frame to see how your savings could grow.",
-    fields: [
-      { id: "initialDeposit", label: "Starting balance", type: "number", unit: "$", default: 1000, step: 100 },
-      { id: "monthlyContribution", label: "Monthly contribution", type: "number", unit: "$", default: 200, step: 10 },
-      { id: "rate", label: "Annual interest rate", type: "number", unit: "%", default: 4.5, step: 0.1 },
-      { id: "years", label: "Time frame", type: "number", unit: "years", default: 10, step: 1 },
-    ],
-    compute: (v) => {
-      const monthlyRate = v.rate / 100 / 12;
-      const n = v.years * 12;
-      const growthFactor = Math.pow(1 + monthlyRate, n);
-      const fvPrincipal = v.initialDeposit * growthFactor;
-      const fvContributions = monthlyRate === 0
-        ? v.monthlyContribution * n
-        : v.monthlyContribution * ((growthFactor - 1) / monthlyRate);
-      const total = fvPrincipal + fvContributions;
-      const totalContributed = v.initialDeposit + v.monthlyContribution * n;
-      return {
-        primary: { label: "Estimated future value", value: `$${round(total, 2).toLocaleString()}` },
-        secondary: [
-          { l: "Total contributed", v: `$${round(totalContributed, 2).toLocaleString()}` },
-          { l: "Interest earned", v: `$${round(total - totalContributed, 2).toLocaleString()}` },
-        ],
-        note: "Assumes interest compounds monthly and contributions are made at a consistent monthly amount. Actual returns vary with account type and market conditions.",
-      };
-    },
-    faq: [
-      { q: "How does compound growth affect savings over time?", a: "Interest earns interest on itself, so the longer your money stays invested, the larger the share of your balance that comes from growth rather than contributions — this effect accelerates in later years." },
-      { q: "What interest rate should I use for a savings calculator?", a: "Use your actual account's APY for savings accounts, or a conservative long-term average (historically 4–7%) for investment accounts — check your specific account terms for the current rate." },
-    ],
-    related: ["compound-interest-calculator", "mortgage-calculator", "loan-calculator"],
-  },
-  {
-    id: "compound-interest-calculator",
-    category: "finance",
-    title: "Compound Interest Calculator",
-    keyword: "compound interest calculator",
-    description: "Calculate how a lump sum grows over time with compound interest.",
-    intro: "Enter a principal amount, interest rate, compounding frequency, and time frame to see how much your money could grow.",
-    fields: [
-      { id: "principal", label: "Principal", type: "number", unit: "$", default: 5000, step: 100 },
-      { id: "rate", label: "Annual interest rate", type: "number", unit: "%", default: 5, step: 0.1 },
-      { id: "compoundsPerYear", label: "Compounds per year", type: "number", default: 12, step: 1 },
-      { id: "years", label: "Time frame", type: "number", unit: "years", default: 10, step: 1 },
-    ],
-    compute: (v) => {
-      const total = v.principal * Math.pow(1 + (v.rate / 100) / v.compoundsPerYear, v.compoundsPerYear * v.years);
-      const interestEarned = total - v.principal;
-      return {
-        primary: { label: "Future value", value: `$${round(total, 2).toLocaleString()}` },
-        secondary: [
-          { l: "Interest earned", v: `$${round(interestEarned, 2).toLocaleString()}` },
-          { l: "Principal", v: `$${round(v.principal, 2).toLocaleString()}` },
-        ],
-        note: "This calculates a single lump-sum deposit with no additional contributions — use the Savings Calculator if you're adding money regularly.",
-      };
-    },
-    faq: [
-      { q: "What's the formula for compound interest?", a: "A = P(1 + r/n)^(nt) — where P is principal, r is the annual rate, n is compounds per year, and t is time in years." },
-      { q: "How does compounding frequency affect growth?", a: "More frequent compounding (daily vs. annually) produces slightly higher returns at the same stated rate, since interest starts earning interest sooner — though the difference is usually small at typical savings rates." },
-    ],
-    related: ["savings-calculator", "mortgage-calculator", "loan-calculator"],
   },
 
   // ---------------- CONSTRUCTION & HOME ----------------
