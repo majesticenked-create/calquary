@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Date & Time Calculators | Calquary</title>
+  <meta name="description" content="Countdowns, durations, and age in days." />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <script src="../js/calculators-data.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      const cat = getCategory("datetime");
+      document.getElementById("cat-code").textContent = cat.code;
+      document.getElementById("cat-name").textContent = cat.name + " Calculators";
+      document.getElementById("cat-desc").textContent = cat.description;
+
+      const tools = calculatorsInCategory(cat.id);
+      const grid = document.getElementById("cat-tool-grid");
+      tools.forEach((calc, i) => {
+        const sampleResult = calc.compute(
+          Object.fromEntries(calc.fields.map((f) => [f.id, f.type === "checkbox-group" ? (f.default || []) : f.default]))
+        );
+        const a = document.createElement("a");
+        a.href = `../tool/${calc.id}.html`;
+        a.className = "tool-card";
+        a.innerHTML = `
+          <div class="cat-label">${calc.keyword}</div>
+          <h3>${calc.title}</h3>
+          <div class="readout">
+            <span class="rlabel">${sampleResult.primary.label}</span>
+            <span class="rvalue" style="--delay:${0.05 * i}s">${sampleResult.primary.value}</span>
+          </div>
+        `;
+        grid.appendChild(a);
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="../index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <nav class="header-nav">
+        <a href="../index.html#categories">Categories</a>
+        <a href="../index.html#tools">All tools</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="category-hero">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="../index.html">Calquary</a> / Categories</div>
+      <span class="code-badge" id="cat-code"></span>
+      <h1 id="cat-name"></h1>
+      <p id="cat-desc" style="max-width:56ch;"></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="tool-grid" id="cat-tool-grid"></div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="../index.html">← Back to all calculators</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
