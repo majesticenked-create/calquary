@@ -41,4 +41,3 @@
 - Math Batch 1: average-calculator, fraction-calculator, gcd-lcm-calculator (added shared gcd() helper)
 - Math Batch 2: standard-deviation-calculator, square-root-calculator, ratio-calculator
 - Math Batch 3: exponent-calculator, quadratic-formula-calculator — Math category now complete at 9/9 (random-number-generator deferred to Text & Digital)
-- Text & Digital Batch 1: random-number-generator, case-converter, lorem-ipsum-generator

@@ -4,18 +4,14 @@
 - (none yet)
 
 ## Backlog
-- Build text-to-slug-generator, binary-to-text-converter, word-frequency-counter (Text & Digital — Batch 2, medium priority, per seo/keyword-research-text.md)
-- character-counter excluded — duplicate of word-counter's existing output
-- hash-generator excluded — needs async crypto.subtle API, mismatch with engine's synchronous compute()
-- QR-code-generator excluded — needs image/rendering output, not a fit for current engine
-- text-reverser excluded — too trivial to justify a dedicated page
+- random-number-generator deferred — overlaps with Text & Digital's password-generator, scope there instead
 - currency-converter and timezone-converter excluded — need live external data, poor fit for static no-backend site
 - countdown-timer excluded — too close to days-until-calculator without a live-updating JS component
 - anniversary-calculator excluded — same math as days-until-calculator, low differentiation
 - pregnancy-due-date-calculator deferred — needs dedicated accuracy/liability review before building (medical-adjacent stakes)
 - retirement-calculator deferred — scope large enough to need its own content brief
-- Re-run keyword-research with live DataForSEO data once account balance is restored (402 on nine separate attempts)
-- Add more calculators to fill out Pet & Lifestyle (2 tools currently)
+- Re-run keyword-research with live DataForSEO data once account balance is restored (402 on eight separate attempts)
+- Add more calculators to fill out other thin categories (2 per category) — Text, Pets
 - Run SEO skills (keyword-research, content-seo-brief) ahead of each new calculator batch
 - schema-markup-generator pass for FAQPage/SoftwareApplication structured data on tool pages
 - category-page-optimization pass — category pages are currently thin (auto-generated grid only)
@@ -41,4 +37,3 @@
 - Math Batch 1: average-calculator, fraction-calculator, gcd-lcm-calculator (added shared gcd() helper)
 - Math Batch 2: standard-deviation-calculator, square-root-calculator, ratio-calculator
 - Math Batch 3: exponent-calculator, quadratic-formula-calculator — Math category now complete at 9/9 (random-number-generator deferred to Text & Digital)
-- Text & Digital Batch 1: random-number-generator, case-converter, lorem-ipsum-generator
