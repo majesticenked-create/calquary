@@ -4,6 +4,7 @@
 - (none yet)
 
 ## Backlog
+- Build text-to-slug-generator, binary-to-text-converter, word-frequency-counter (Text & Digital — Batch 2, medium priority, per seo/keyword-research-text.md)
 - character-counter excluded — duplicate of word-counter's existing output
 - hash-generator excluded — needs async crypto.subtle API, mismatch with engine's synchronous compute()
 - QR-code-generator excluded — needs image/rendering output, not a fit for current engine
@@ -41,4 +42,3 @@
 - Math Batch 2: standard-deviation-calculator, square-root-calculator, ratio-calculator
 - Math Batch 3: exponent-calculator, quadratic-formula-calculator — Math category now complete at 9/9 (random-number-generator deferred to Text & Digital)
 - Text & Digital Batch 1: random-number-generator, case-converter, lorem-ipsum-generator
-- Text & Digital Batch 2: text-to-slug-generator, binary-to-text-converter, word-frequency-counter — Text & Digital category now complete at 8/8
