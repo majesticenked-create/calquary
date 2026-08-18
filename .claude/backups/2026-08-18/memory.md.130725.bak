@@ -11,8 +11,7 @@
   - `_templates/tool.template.html`, `_templates/category.template.html`
 - **Categories** (call-number codes): M Math, F Finance, C Construction & Home, H Health & Fitness, D Date & Time, V Everyday Conversions, T Text & Digital, P Pet & Lifestyle
 - **Current content**: 77 calculators live across all 8 categories, EVERY category now fully built out per its keyword research doc (`seo/keyword-research-*.md`). Verified via `calculatorsInCategory().length`: Math 10, Finance 11 (retirement-calculator deferred), Construction & Home 12, Health & Fitness 10 (pregnancy-due-date deferred), Date & Time 8, Everyday Conversions 10, Text & Digital 8, Pet & Lifestyle 8 (puppy-weight-predictor deferred). This was the last category (Pet & Lifestyle) — the systematic per-category keyword-research-then-build sweep that ran through this whole session is now complete.
-- **SEO passes done**: FAQPage/SoftwareApplication JSON-LD on all 77 tool pages (generated in build.js via buildSchema(), not hand-added — see `_templates/tool.template.html`'s `{{SCHEMA_JSON}}` placeholder). Internal-linking review completed — fixed 14 orphaned pages (zero inbound `related` links) via targeted array edits; see `seo/internal-linking-review.md`.
-- **Next phase candidates** (not yet started): category-page-optimization pass (category pages are still just an auto-generated grid), Google Analytics/Search Console setup, re-running all 10 keyword-research docs once DataForSEO's account balance is restored (402 on every attempt this session — worth checking billing).
+- **Next phase candidates** (not yet started): schema-markup-generator pass for FAQPage/SoftwareApplication structured data, category-page-optimization pass (category pages are still just an auto-generated grid), Google Analytics/Search Console setup, re-running all 10 keyword-research docs once DataForSEO's account balance is restored (402 on every attempt this session — worth checking billing).
 - **Non-deterministic tool verification pattern**: for random-output tools (password-generator, random-number-generator), don't expect a fixed compute() output like other calculators — verify structurally instead (correct range, count, format) via a many-iteration loop, e.g. 1000 runs checking bounds/integer-ness.
 - **Shared `gcd()` helper** added to the helpers section (alongside `round`) — used by fraction-calculator and gcd-lcm-calculator; reuse for any future number-theory tools instead of redefining.
 - **Date parsing gotcha**: `new Date("YYYY-MM-DD")` parses as UTC midnight, then `.getDay()`/local getters can read back a different calendar day depending on the browser's timezone (classic off-by-one bug). Fixed in day-of-week-calculator and week-number-calculator by splitting the date string into y/m/d integers and using local (`new Date(y, m-1, d)`) or explicit UTC (`Date.UTC(y, m-1, d)`) construction instead of re-parsing the ISO string. Not retroactively fixed in earlier date tools (days-until, age, date-duration, business-days) since their outputs are differences where the error tends to cancel out — worth revisiting if it ever surfaces as a real bug report.
@@ -30,8 +29,8 @@
 - Claudify installed and initialized. Ready to expand calculator catalog with SEO skills in the loop.
 
 ## Open Threads
-- DataForSEO MCP still returns 402 (no account balance) — every keyword-research doc this session used pattern-matched estimates, not live data. Re-run all 10 docs once resolved.
-- `unit-length-converter` has in-degree 18 in the internal-link graph (2.4x next-highest) — not broken, but prefer topically specific converters over it as the default cross-category link in future `related` array edits.
+- DataForSEO MCP still returns 402 (no account balance) as of second retry — live keyword data unavailable until resolved
+- 10 exact-match calculator opportunities identified for Construction & Home, ranked, all confirmed distinct from concrete/paint-calculator — see seo/keyword-research-construction-home.md; re-run with live data once DataForSEO works
 
 ## Recent Decisions
 - Keep project dependency-free, no package.json (user choice)

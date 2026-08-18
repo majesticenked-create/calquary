@@ -45,5 +45,3 @@
 - Text & Digital Batch 2: text-to-slug-generator, binary-to-text-converter, word-frequency-counter — Text & Digital category now complete at 8/8
 - Pet & Lifestyle Batch 1: dog-food-calculator, rabbit-age-calculator, dog-pregnancy-calculator
 - Pet & Lifestyle Batch 2: horse-age-calculator, ideal-dog-weight-calculator, cat-pregnancy-calculator — Pet & Lifestyle category now complete at 8/8. ALL 8 CATEGORIES NOW HAVE A FULL KEYWORD-RESEARCH + BUILD PASS.
-- schema-markup-generator pass — FAQPage/SoftwareApplication JSON-LD generated in build.js for all 77 tool pages (not hand-added; automatic for future calculators)
-- internal-linking-strategy review — fixed 14 orphaned pages (zero inbound related links) via targeted array edits; see seo/internal-linking-review.md

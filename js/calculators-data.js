@@ -46,7 +46,7 @@ const CALCULATORS = [
       { q: "How do I calculate a percentage of a number by hand?", a: "Divide the percent by 100, then multiply by the number. For 20% of 150: 0.20 × 150 = 30." },
       { q: "How do I find what percent one number is of another?", a: "Divide the part by the whole, then multiply by 100. For example, 30 is what percent of 150? 30 ÷ 150 × 100 = 20%." },
     ],
-    related: ["percentage-change-calculator", "tip-calculator"],
+    related: ["percentage-change-calculator", "tip-calculator", "ratio-calculator"],
   },
   {
     id: "percentage-change-calculator",
@@ -362,7 +362,7 @@ const CALCULATORS = [
     faq: [
       { q: "How is a loan payment calculated?", a: "Fixed-rate loans use an amortization formula based on the principal, the periodic interest rate, and the number of payments, so each payment is the same size but the interest/principal split changes over time." },
     ],
-    related: ["mortgage-calculator", "percentage-calculator", "tip-calculator"],
+    related: ["mortgage-calculator", "auto-loan-calculator", "percentage-calculator", "tip-calculator"],
   },
   {
     id: "mortgage-calculator",
@@ -500,7 +500,7 @@ const CALCULATORS = [
       { q: "What's the formula for compound interest?", a: "A = P(1 + r/n)^(nt) — where P is principal, r is the annual rate, n is compounds per year, and t is time in years." },
       { q: "How does compounding frequency affect growth?", a: "More frequent compounding (daily vs. annually) produces slightly higher returns at the same stated rate, since interest starts earning interest sooner — though the difference is usually small at typical savings rates." },
     ],
-    related: ["savings-calculator", "mortgage-calculator", "loan-calculator"],
+    related: ["savings-calculator", "mortgage-calculator", "loan-calculator", "investment-calculator"],
   },
   {
     id: "sales-tax-calculator",
@@ -743,7 +743,7 @@ const CALCULATORS = [
       { q: "How much concrete do I need for a 10x10 slab?", a: "At 4 inches thick, a 10×10 ft slab needs about 1.23 cubic yards before waste allowance — roughly 74 bags of 80 lb mix." },
       { q: "Why add a waste allowance?", a: "Uneven subgrade, spillage, and over-excavation typically use 5–10% more material than the exact math suggests." },
     ],
-    related: ["paint-calculator", "gravel-calculator", "mulch-calculator", "percentage-calculator"],
+    related: ["paint-calculator", "gravel-calculator", "mulch-calculator", "area-converter"],
   },
   {
     id: "paint-calculator",
@@ -893,7 +893,7 @@ const CALCULATORS = [
       { q: "How many sheets of drywall do I need for 400 sq ft of wall?", a: "At a 10% waste allowance, 400 sq ft needs about 14 standard 4×8 ft sheets (32 sq ft each)." },
       { q: "Why do I need extra drywall for waste?", a: "Cuts around outlets, corners, doorways, and windows use extra material — a 10% allowance keeps you from running short mid-job." },
     ],
-    related: ["paint-calculator", "flooring-calculator", "concrete-calculator"],
+    related: ["paint-calculator", "flooring-calculator", "concrete-calculator", "insulation-calculator"],
   },
   {
     id: "tile-calculator",
@@ -1112,7 +1112,7 @@ const CALCULATORS = [
     faq: [
       { q: "Is BMI accurate for everyone?", a: "No — BMI doesn't distinguish muscle from fat and can be misleading for athletes, older adults, and some body types. It's a screening tool, not a diagnosis." },
     ],
-    related: ["body-fat-calculator", "calorie-calculator", "pace-calculator"],
+    related: ["body-fat-calculator", "calorie-calculator", "pace-calculator", "water-intake-calculator"],
   },
   {
     id: "bmr-calculator",
@@ -1216,7 +1216,7 @@ const CALCULATORS = [
       { q: "How accurate is the U.S. Navy body fat method?", a: "It's generally within 3–4% of more precise methods like DEXA scans for most body types, making it a reasonably reliable estimate without special equipment." },
       { q: "Why does the formula use neck and waist measurements?", a: "The Navy method correlates body fat with the ratio between waist (and hip, for women) circumference relative to neck circumference and height — larger waist-to-neck ratios generally indicate higher body fat." },
     ],
-    related: ["bmi-calculator", "calorie-calculator", "bmr-calculator"],
+    related: ["bmi-calculator", "calorie-calculator", "bmr-calculator", "ideal-weight-calculator"],
   },
   {
     id: "macro-calculator",
@@ -1394,7 +1394,7 @@ const CALCULATORS = [
     faq: [
       { q: "How do I calculate running pace?", a: "Divide your total time by your total distance. For a 5K in 28 minutes, pace per mile = 28 ÷ 3.1 ≈ 9:02 per mile." },
     ],
-    related: ["bmi-calculator", "days-until-calculator"],
+    related: ["bmi-calculator", "heart-rate-zone-calculator", "days-until-calculator"],
   },
 
   // ---------------- DATE & TIME ----------------
@@ -1740,7 +1740,7 @@ const CALCULATORS = [
     faq: [
       { q: "How many kilograms is 150 pounds?", a: "150 lb equals about 68.04 kg. To convert pounds to kilograms, multiply by 0.453592." },
     ],
-    related: ["unit-length-converter", "volume-converter", "temperature-converter"],
+    related: ["unit-length-converter", "volume-converter", "temperature-converter", "speed-converter"],
   },
   {
     id: "volume-converter",
@@ -1992,7 +1992,7 @@ const CALCULATORS = [
     faq: [
       { q: "Does this word counter save my text?", a: "No — the count runs entirely in your browser and nothing is sent or stored." },
     ],
-    related: ["password-generator", "days-until-calculator"],
+    related: ["password-generator", "data-storage-converter", "days-until-calculator"],
   },
   {
     id: "password-generator",
@@ -2094,7 +2094,7 @@ const CALCULATORS = [
       { q: "What's the difference between title case and sentence case?", a: "Title case capitalizes the first letter of every major word (\"Hello World Example\"), while sentence case only capitalizes the first letter of the whole text (\"Hello world example\")." },
       { q: "Does this case converter save my text?", a: "No — the conversion runs entirely in your browser and nothing is sent or stored." },
     ],
-    related: ["word-counter", "lorem-ipsum-generator", "password-generator"],
+    related: ["word-counter", "lorem-ipsum-generator", "password-generator", "binary-to-text-converter"],
   },
   {
     id: "lorem-ipsum-generator",
@@ -2251,7 +2251,7 @@ const CALCULATORS = [
     faq: [
       { q: "Is 'one dog year equals seven human years' accurate?", a: "No — that old rule is a rough myth. Dogs age faster in their first two years, and larger breeds age faster in later years than small breeds." },
     ],
-    related: ["cat-age-calculator", "dog-food-calculator", "bmi-calculator"],
+    related: ["cat-age-calculator", "dog-food-calculator", "bmi-calculator", "ideal-dog-weight-calculator"],
   },
   {
     id: "dog-food-calculator",
@@ -2313,7 +2313,7 @@ const CALCULATORS = [
     faq: [
       { q: "Do cats age the same way regardless of breed?", a: "Aging patterns are fairly consistent across most cat breeds, unlike dogs where size drives large aging differences." },
     ],
-    related: ["dog-age-calculator", "rabbit-age-calculator", "age-calculator"],
+    related: ["dog-age-calculator", "rabbit-age-calculator", "age-calculator", "horse-age-calculator"],
   },
   {
     id: "rabbit-age-calculator",
@@ -2365,7 +2365,7 @@ const CALCULATORS = [
       { q: "How long are dogs pregnant?", a: "The average canine gestation period is about 63 days from conception, though it can range from 58 to 68 days depending on the dog and litter size." },
       { q: "How accurate is a due date estimate from the mating date?", a: "It's a reasonable estimate, but actual whelping dates can vary by several days — a veterinarian can confirm timing more precisely using ultrasound or progesterone testing." },
     ],
-    related: ["days-until-calculator", "date-duration-calculator", "dog-age-calculator"],
+    related: ["days-until-calculator", "date-duration-calculator", "dog-age-calculator", "cat-pregnancy-calculator"],
   },
   {
     id: "horse-age-calculator",

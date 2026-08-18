@@ -30,8 +30,8 @@
 - Claudify installed and initialized. Ready to expand calculator catalog with SEO skills in the loop.
 
 ## Open Threads
-- DataForSEO MCP still returns 402 (no account balance) — every keyword-research doc this session used pattern-matched estimates, not live data. Re-run all 10 docs once resolved.
-- `unit-length-converter` has in-degree 18 in the internal-link graph (2.4x next-highest) — not broken, but prefer topically specific converters over it as the default cross-category link in future `related` array edits.
+- DataForSEO MCP still returns 402 (no account balance) as of second retry — live keyword data unavailable until resolved
+- 10 exact-match calculator opportunities identified for Construction & Home, ranked, all confirmed distinct from concrete/paint-calculator — see seo/keyword-research-construction-home.md; re-run with live data once DataForSEO works
 
 ## Recent Decisions
 - Keep project dependency-free, no package.json (user choice)

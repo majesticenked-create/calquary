@@ -93,3 +93,8 @@
 - `2026-08-17 22:56:36` | Edit | _templates/tool.template.html
 - `2026-08-17 22:56:50` | Edit | build.js
 - `2026-08-17 22:57:00` | Edit | build.js
+- `2026-08-18 13:06:57` | Write | seo/internal-linking-review.md
+- `2026-08-18 13:07:30` | Edit | .claude/memory.md
+- `2026-08-18 13:07:51` | Edit | .claude/memory.md
+- `2026-08-18 13:08:18` | Edit | Task Board.md
+- `2026-08-18 13:08:25` | Edit | Task Board.md

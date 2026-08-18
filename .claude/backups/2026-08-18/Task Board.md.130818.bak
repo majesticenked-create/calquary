@@ -15,10 +15,9 @@
 - pregnancy-due-date-calculator deferred — needs dedicated accuracy/liability review before building (medical-adjacent stakes)
 - retirement-calculator deferred — scope large enough to need its own content brief
 - Re-run keyword-research with live DataForSEO data once account balance is restored (402 on ten separate attempts across every category run this session)
+- Run SEO skills (keyword-research, content-seo-brief) ahead of each new calculator batch
+- schema-markup-generator pass for FAQPage/SoftwareApplication structured data on tool pages
 - category-page-optimization pass — category pages are currently thin (auto-generated grid only)
-- Google Analytics / Search Console setup — no analytics installed, growth from this session's build-out is currently unmeasurable
-- Prefer topically specific converters (weight-converter, temperature-converter, etc.) over unit-length-converter as the default cross-category related link going forward — it's absorbed 18 inbound links vs. next-highest at 10
-- Re-run internal-linking review after the next batch of new calculators — new tools can reintroduce orphans
 
 ## Blocked
 - (none)
@@ -45,5 +44,3 @@
 - Text & Digital Batch 2: text-to-slug-generator, binary-to-text-converter, word-frequency-counter — Text & Digital category now complete at 8/8
 - Pet & Lifestyle Batch 1: dog-food-calculator, rabbit-age-calculator, dog-pregnancy-calculator
 - Pet & Lifestyle Batch 2: horse-age-calculator, ideal-dog-weight-calculator, cat-pregnancy-calculator — Pet & Lifestyle category now complete at 8/8. ALL 8 CATEGORIES NOW HAVE A FULL KEYWORD-RESEARCH + BUILD PASS.
-- schema-markup-generator pass — FAQPage/SoftwareApplication JSON-LD generated in build.js for all 77 tool pages (not hand-added; automatic for future calculators)
-- internal-linking-strategy review — fixed 14 orphaned pages (zero inbound related links) via targeted array edits; see seo/internal-linking-review.md
