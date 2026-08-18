@@ -231,10 +231,11 @@ select:focus-visible {
   padding: var(--space-3) var(--space-5);
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s var(--ease-smooth);
+  transition: background 0.2s var(--ease-smooth), transform 0.12s var(--ease-smooth);
 }
 
 .lookup-field button:hover { background: var(--brand-dark); }
+.lookup-field button:active { transform: scale(0.95); }
 
 .lookup-hint {
   margin-top: var(--space-2);
@@ -294,6 +295,16 @@ select:focus-visible {
   box-shadow: 0 8px 28px color-mix(in srgb, var(--ink) 10%, transparent);
 }
 
+.catalog-card:active {
+  transform: scale(0.95);
+  transition: transform 0.12s var(--ease-smooth);
+}
+
+.catalog-card:hover:active {
+  transform: translateY(-2px) scale(0.95);
+  transition: transform 0.12s var(--ease-smooth);
+}
+
 .catalog-card .code {
   font-family: var(--font-mono);
   font-size: 0.72rem;
@@ -348,6 +359,16 @@ select:focus-visible {
   text-decoration: none;
   transform: translateY(-2px);
   box-shadow: 0 8px 28px color-mix(in srgb, var(--ink) 10%, transparent);
+}
+
+.tool-card:active {
+  transform: scale(0.95);
+  transition: transform 0.12s var(--ease-smooth);
+}
+
+.tool-card:hover:active {
+  transform: translateY(-2px) scale(0.95);
+  transition: transform 0.12s var(--ease-smooth);
 }
 
 .tool-card .cat-label {
@@ -549,11 +570,11 @@ select:focus-visible {
   border-radius: var(--radius-sm);
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s var(--ease-smooth), transform 0.2s var(--ease-smooth);
+  transition: background 0.2s var(--ease-smooth), transform 0.12s var(--ease-smooth);
 }
 
 .btn-primary:hover { background: var(--brand-dark); }
-.btn-primary:active { transform: scale(0.98); }
+.btn-primary:active { transform: scale(0.95); }
 
 .btn-ghost {
   display: inline-flex;
@@ -567,10 +588,11 @@ select:focus-visible {
   border-radius: var(--radius-sm);
   font-weight: 500;
   cursor: pointer;
-  transition: border-color 0.2s var(--ease-smooth), color 0.2s var(--ease-smooth);
+  transition: border-color 0.2s var(--ease-smooth), color 0.2s var(--ease-smooth), transform 0.12s var(--ease-smooth);
 }
 
 .btn-ghost:hover { border-color: var(--ink); color: var(--ink); }
+.btn-ghost:active { transform: scale(0.95); }
 
 /* Result display */
 
