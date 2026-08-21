@@ -127,3 +127,8 @@
 - `2026-08-18 14:32:58` | Write | terms.html
 - `2026-08-18 14:33:09` | Write | contact.html
 - `2026-08-18 14:33:20` | Write | 404.html
+- `2026-08-21 12:57:27` | Edit | build.js
+- `2026-08-21 12:57:40` | Edit | build.js
+- `2026-08-21 12:57:46` | Edit | _templates/category.template.html
+- `2026-08-21 12:58:04` | Edit | index.html
+- `2026-08-21 13:00:33` | Edit | index.html

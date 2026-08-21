@@ -34,11 +34,12 @@ function build() {
   fs.mkdirSync(categoryDir, { recursive: true });
 
   calculators.forEach((calc) => {
+    const cat = categories.find((c) => c.id === calc.category);
     const html = toolTemplate
       .split("{{CALC_ID}}").join(calc.id)
       .split("{{TITLE}}").join(calc.title)
       .split("{{DESCRIPTION}}").join(calc.description)
-      .split("{{SCHEMA_JSON}}").join(buildSchema(calc));
+      .split("{{SCHEMA_JSON}}").join(buildToolSchema(calc, cat));
     fs.writeFileSync(path.join(toolDir, `${calc.id}.html`), html);
   });
 
@@ -46,7 +47,8 @@ function build() {
     const html = categoryTemplate
       .split("{{CAT_ID}}").join(cat.id)
       .split("{{CAT_NAME}}").join(cat.name)
-      .split("{{CAT_DESCRIPTION}}").join(cat.description);
+      .split("{{CAT_DESCRIPTION}}").join(cat.description)
+      .split("{{SCHEMA_JSON}}").join(buildCategorySchema(cat));
     fs.writeFileSync(path.join(categoryDir, `${cat.id}.html`), html);
   });
 
@@ -55,7 +57,14 @@ function build() {
   console.log(`Built ${calculators.length} tool pages and ${categories.length} category pages`);
 }
 
-function buildSchema(calc) {
+function toLdJsonScript(graph) {
+  const schema = { "@context": "https://schema.org", "@graph": graph };
+  // Escape "</" so no FAQ answer or description can accidentally close the script tag early.
+  const json = JSON.stringify(schema, null, 2).split("</").join("<\\/");
+  return `<script type="application/ld+json">\n${json}\n</script>`;
+}
+
+function buildToolSchema(calc, cat) {
   const url = `${SITE_URL}/tool/${calc.id}.html`;
   const graph = [
     {
@@ -65,7 +74,16 @@ function buildSchema(calc) {
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": url,
+      "isAccessibleForFree": true,
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Calquary", "item": `${SITE_URL}/index.html` },
+        { "@type": "ListItem", "position": 2, "name": cat.name, "item": `${SITE_URL}/category/${cat.id}.html` },
+        { "@type": "ListItem", "position": 3, "name": calc.title, "item": url },
+      ],
     },
   ];
 
@@ -80,10 +98,20 @@ function buildSchema(calc) {
     });
   }
 
-  const schema = { "@context": "https://schema.org", "@graph": graph };
-  // Escape "</" so no FAQ answer can accidentally close the script tag early.
-  const json = JSON.stringify(schema, null, 2).split("</").join("<\\/");
-  return `<script type="application/ld+json">\n${json}\n</script>`;
+  return toLdJsonScript(graph);
+}
+
+function buildCategorySchema(cat) {
+  const graph = [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Calquary", "item": `${SITE_URL}/index.html` },
+        { "@type": "ListItem", "position": 2, "name": cat.name, "item": `${SITE_URL}/category/${cat.id}.html` },
+      ],
+    },
+  ];
+  return toLdJsonScript(graph);
 }
 
 function buildSitemap(categories, calculators) {

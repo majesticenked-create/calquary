@@ -52,18 +52,45 @@
       });
 
       // Lookup field: simple client-side filter/redirect to first match
+      const findMatch = (q) => CALCULATORS.find(
+        (c) => c.title.toLowerCase().includes(q) || c.keyword.toLowerCase().includes(q)
+      );
+
       const form = document.getElementById("lookup-form");
       form.addEventListener("submit", (e) => {
         e.preventDefault();
         const q = document.getElementById("lookup-input").value.toLowerCase().trim();
-        const match = CALCULATORS.find(
-          (c) => c.title.toLowerCase().includes(q) || c.keyword.toLowerCase().includes(q)
-        );
+        const match = findMatch(q);
         if (match) {
           window.location.href = `tool/${match.id}.html`;
         }
       });
+
+      // Support ?q= so the SearchAction in this page's WebSite schema
+      // (below) points at a URL that actually works, not an aspirational one.
+      const qParam = new URLSearchParams(window.location.search).get("q");
+      if (qParam) {
+        document.getElementById("lookup-input").value = qParam;
+        const match = findMatch(qParam.toLowerCase().trim());
+        if (match) window.location.href = `tool/${match.id}.html`;
+      }
     });
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Calquary",
+    "url": "https://calquary.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://calquary.com/?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
   </script>
 </head>
 <body>
