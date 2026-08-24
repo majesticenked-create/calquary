@@ -210,6 +210,189 @@ const I18N_UI = {
       { q: "Wie oft werden neue Rechner hinzugefügt?", a: "Es gibt keinen festen Zeitplan, aber der Katalog ist seit dem Start stetig gewachsen - neue Rechner werden kategorieweise in Gruppen hinzugefügt, jeder einzelne gebaut und geprüft, bevor er veröffentlicht wird." },
     ],
   },
+
+  pt: {
+    catSuffix: "Calculadoras",
+    nav: { categories: "Categorias", allTools: "Todas as ferramentas", about: "Sobre" },
+    footer: {
+      categoriesHeader: "Categorias",
+      popularHeader: "Populares",
+      siteHeader: "Site",
+      allCategories: "Todas as categorias",
+      allTools: "Todas as ferramentas",
+      allCalculators: "Todas as calculadoras",
+      about: "Sobre",
+      contact: "Contato",
+      privacy: "Privacidade",
+      terms: "Termos",
+      tagline: "Um índice de referência de calculadoras rápidas e precisas - feito para quem só precisa da resposta.",
+      copyright: "© 2026 Calquary. As calculadoras são fornecidas para fins informativos e não substituem o aconselhamento profissional.",
+    },
+    buttons: {
+      findIt: "Buscar",
+      browseAll: "Ver todas →",
+      calculate: "Calcular",
+      reset: "Redefinir",
+      backToAll: "← Voltar a todas as calculadoras",
+    },
+    labels: {
+      relatedTools: "Ferramentas relacionadas",
+      accuracyTitle: "Nota sobre precisão",
+      accuracyText: "As calculadoras da Calquary são feitas para estimativas rápidas e confiáveis. Para decisões com implicações financeiras, estruturais ou médicas reais, consulte um profissional qualificado.",
+      lastUpdated: "Última atualização:",
+      faqTitle: "Perguntas frequentes",
+      breadcrumbHome: "Calquary",
+    },
+    hero: {
+      eyebrow: "Índice de referência · calculadoras para tudo",
+      h1: "Encontre a calculadora exata que você precisa - rápido.",
+      lede: "A Calquary organiza calculadoras como uma boa biblioteca de referência organiza livros: por assunto, com respostas claras e sem confusão. Matemática, dinheiro, projetos domésticos, saúde e muito mais.",
+      statLabel: "calculadoras disponíveis e em crescimento",
+      lookupTag: "BUSCAR",
+      placeholder: "Experimente 'concreto', 'IMC', 'empréstimo'...",
+      hint: "Ou explore por categoria abaixo.",
+    },
+    sections: {
+      browseKicker: "Explorar",
+      browseH2: "Cada categoria, sua própria prateleira",
+      popularKicker: "Popular agora",
+      popularH2: "Ferramentas em destaque",
+      recentKicker: "Adicionado recentemente",
+      recentH2: "Adicionadas recentemente",
+      faqKicker: "Bom saber",
+      faqH2: "Perguntas frequentes",
+    },
+    homeFaq: [
+      { q: "O que é a Calquary?", a: "A Calquary é um índice de referência de calculadoras rápidas e precisas, organizadas por assunto como em uma biblioteca, em vez de espalhadas entre anúncios e conteúdo não relacionado. Escolha uma categoria, abra uma ferramenta e obtenha sua resposta." },
+      { q: "Essas calculadoras são gratuitas?", a: "Sim - todas as calculadoras da Calquary são gratuitas, sem necessidade de conta, cadastro ou pagamento. Basta abrir uma ferramenta e usá-la." },
+      { q: "Quão precisas são as calculadoras da Calquary?", a: "Cada calculadora usa uma fórmula padrão e verificada para sua categoria, e cada ferramenta é conferida com resultados calculados manualmente antes de ser publicada. Para decisões com implicações financeiras, estruturais ou médicas reais, consulte um profissional qualificado." },
+      { q: "Vocês armazenam algum dos meus dados?", a: "Não - todas as calculadoras funcionam inteiramente no seu navegador. Os números que você insere nunca são enviados a um servidor nem armazenados; fechar a aba apaga tudo." },
+      { q: "Quantas calculadoras a Calquary tem?", a: 'Atualmente, a Calquary tem <span id="faq-tool-count">—</span> calculadoras em 8 categorias, e o catálogo continua crescendo.' },
+      { q: "Com que frequência novas calculadoras são adicionadas?", a: "Não há um cronograma fixo, mas o catálogo tem crescido de forma constante desde o lançamento - novas calculadoras são adicionadas em lotes por categoria, cada uma construída e verificada antes de ser publicada." },
+    ],
+  },
+
+  it: {
+    catSuffix: "Calcolatrici",
+    nav: { categories: "Categorie", allTools: "Tutti gli strumenti", about: "Chi siamo" },
+    footer: {
+      categoriesHeader: "Categorie",
+      popularHeader: "Popolari",
+      siteHeader: "Sito",
+      allCategories: "Tutte le categorie",
+      allTools: "Tutti gli strumenti",
+      allCalculators: "Tutte le calcolatrici",
+      about: "Chi siamo",
+      contact: "Contatti",
+      privacy: "Privacy",
+      terms: "Termini",
+      tagline: "Un indice di riferimento di calcolatrici rapide e precise - pensato per chi ha solo bisogno della risposta.",
+      copyright: "© 2026 Calquary. Le calcolatrici sono fornite a scopo informativo e non sostituiscono una consulenza professionale.",
+    },
+    buttons: {
+      findIt: "Cerca",
+      browseAll: "Vedi tutte →",
+      calculate: "Calcola",
+      reset: "Reimposta",
+      backToAll: "← Torna a tutte le calcolatrici",
+    },
+    labels: {
+      relatedTools: "Strumenti correlati",
+      accuracyTitle: "Nota sulla precisione",
+      accuracyText: "Le calcolatrici di Calquary sono pensate per stime rapide e affidabili. Per decisioni con reali implicazioni finanziarie, strutturali o mediche, consulta un professionista qualificato.",
+      lastUpdated: "Ultimo aggiornamento:",
+      faqTitle: "Domande frequenti",
+      breadcrumbHome: "Calquary",
+    },
+    hero: {
+      eyebrow: "Indice di riferimento · calcolatrici per tutto",
+      h1: "Trova esattamente la calcolatrice di cui hai bisogno - velocemente.",
+      lede: "Calquary organizza le calcolatrici come una buona biblioteca di riferimento organizza i libri: per argomento, con risposte chiare e senza confusione. Matematica, denaro, progetti per la casa, salute e altro ancora.",
+      statLabel: "calcolatrici disponibili e in aumento",
+      lookupTag: "CERCA",
+      placeholder: "Prova 'cemento', 'IMC', 'prestito'...",
+      hint: "Oppure sfoglia per categoria qui sotto.",
+    },
+    sections: {
+      browseKicker: "Sfoglia",
+      browseH2: "Ogni categoria, il suo scaffale",
+      popularKicker: "Popolari ora",
+      popularH2: "Strumenti in evidenza",
+      recentKicker: "Aggiunte recenti",
+      recentH2: "Aggiunte di recente",
+      faqKicker: "Utile sapere",
+      faqH2: "Domande frequenti",
+    },
+    homeFaq: [
+      { q: "Cos'è Calquary?", a: "Calquary è un indice di riferimento di calcolatrici rapide e precise, organizzate per argomento come in una biblioteca, invece di essere sparse tra annunci e contenuti non correlati. Scegli una categoria, apri uno strumento, ottieni la tua risposta." },
+      { q: "Queste calcolatrici sono gratuite?", a: "Sì - ogni calcolatrice su Calquary è gratuita, senza account, registrazione o abbonamento. Basta aprire uno strumento e usarlo." },
+      { q: "Quanto sono precise le calcolatrici di Calquary?", a: "Ogni calcolatrice utilizza una formula standard e verificata per la sua categoria, e ogni strumento viene controllato rispetto a risultati calcolati a mano prima della pubblicazione. Per decisioni con reali implicazioni finanziarie, strutturali o mediche, consulta un professionista qualificato." },
+      { q: "Conservate i miei dati?", a: "No - ogni calcolatrice funziona interamente nel tuo browser. I numeri che inserisci non vengono mai inviati a un server né memorizzati; chiudendo la scheda tutto viene cancellato." },
+      { q: "Quante calcolatrici ha Calquary?", a: 'Ad oggi, Calquary ha <span id="faq-tool-count">—</span> calcolatrici in 8 categorie, e il catalogo continua a crescere.' },
+      { q: "Con quale frequenza vengono aggiunte nuove calcolatrici?", a: "Non c'è un programma fisso, ma il catalogo è cresciuto costantemente dal lancio - nuove calcolatrici vengono aggiunte a gruppi per categoria, ciascuna costruita e verificata prima della pubblicazione." },
+    ],
+  },
+
+  ja: {
+    catSuffix: "計算ツール",
+    nav: { categories: "カテゴリー", allTools: "すべてのツール", about: "このサイトについて" },
+    footer: {
+      categoriesHeader: "カテゴリー",
+      popularHeader: "人気",
+      siteHeader: "サイト",
+      allCategories: "すべてのカテゴリー",
+      allTools: "すべてのツール",
+      allCalculators: "すべての計算ツール",
+      about: "このサイトについて",
+      contact: "お問い合わせ",
+      privacy: "プライバシー",
+      terms: "利用規約",
+      tagline: "必要な答えだけが欲しい人のために作られた、速く正確な計算ツールのリファレンスインデックスです。",
+      copyright: "© 2026 Calquary. 計算結果は情報提供のみを目的としており、専門家によるアドバイスに代わるものではありません。",
+    },
+    buttons: {
+      findIt: "検索",
+      browseAll: "すべて見る →",
+      calculate: "計算する",
+      reset: "リセット",
+      backToAll: "← すべての計算ツールに戻る",
+    },
+    labels: {
+      relatedTools: "関連ツール",
+      accuracyTitle: "精度について",
+      accuracyText: "Calquaryの計算ツールは、迅速で信頼できる概算を目的としています。実際の財務、構造、医療に関わる重要な決定を行う前には、必ず専門家にご確認ください。",
+      lastUpdated: "最終更新日：",
+      faqTitle: "よくある質問",
+      breadcrumbHome: "Calquary",
+    },
+    hero: {
+      eyebrow: "リファレンスインデックス・あらゆる計算ツール",
+      h1: "必要な計算ツールがすぐに見つかる。",
+      lede: "Calquaryは、優れた参考図書館が本を整理するように計算ツールを整理します。項目別に、わかりやすい答えを、無駄なく。数学、お金、住まいのプロジェクト、健康など。",
+      statLabel: "件の計算ツールが公開中、さらに増加中",
+      lookupTag: "検索",
+      placeholder: "「コンクリート」「BMI」「ローン」などで検索...",
+      hint: "または、下のカテゴリーから探す。",
+    },
+    sections: {
+      browseKicker: "カテゴリー",
+      browseH2: "カテゴリーごとに整理された計算ツール",
+      popularKicker: "人気の計算ツール",
+      popularH2: "注目の計算ツール",
+      recentKicker: "新着",
+      recentH2: "最近追加されたツール",
+      faqKicker: "知っておくと便利",
+      faqH2: "よくある質問",
+    },
+    homeFaq: [
+      { q: "Calquaryとは何ですか？", a: "Calquaryは、広告や無関係なコンテンツの中に埋もれることなく、図書館のように項目別に整理された、速く正確な計算ツールのリファレンスインデックスです。カテゴリーを選び、ツールを開くだけで答えが得られます。" },
+      { q: "これらの計算ツールは無料で使えますか？", a: "はい。Calquaryのすべての計算ツールは無料で、アカウント登録や支払いは一切不要です。ツールを開いてすぐにお使いいただけます。" },
+      { q: "Calquaryの計算ツールはどのくらい正確ですか？", a: "各計算ツールはそのカテゴリーに応じた標準的で検証済みの数式を使用しており、公開前に手計算による結果と照合して確認されています。実際の財務、構造、医療に関わる重要な決定を行う前には、必ず専門家にご確認ください。" },
+      { q: "入力したデータは保存されますか？", a: "いいえ。すべての計算ツールはブラウザ内で完結して動作します。入力した数値がサーバーに送信されたり保存されたりすることは一切なく、タブを閉じればすべて消去されます。" },
+      { q: "Calquaryにはいくつの計算ツールがありますか？", a: '現在、Calquaryには8つのカテゴリーにわたり<span id="faq-tool-count">—</span>件の計算ツールがあり、カタログは今も増え続けています。' },
+      { q: "新しい計算ツールはどのくらいの頻度で追加されますか？", a: "決まったスケジュールはありませんが、公開以来カタログは着実に成長しています。新しい計算ツールはカテゴリーごとにまとめて追加され、公開前に一つひとつ構築・検証されています。" },
+    ],
+  },
 };
 
 const I18N_CATEGORIES = {
@@ -217,41 +400,65 @@ const I18N_CATEGORIES = {
     es: { name: "Matemáticas", description: "Porcentajes, proporciones y aritmética cotidiana." },
     fr: { name: "Mathématiques", description: "Pourcentages, ratios et calculs du quotidien." },
     de: { name: "Mathematik", description: "Prozentsätze, Verhältnisse und alltägliche Arithmetik." },
+    pt: { name: "Matemática", description: "Porcentagens, proporções e aritmética do dia a dia." },
+    it: { name: "Matematica", description: "Percentuali, rapporti e calcoli quotidiani." },
+    ja: { name: "数学", description: "パーセント、比率、日常の計算。" },
   },
   finance: {
     es: { name: "Finanzas", description: "Préstamos, propinas y matemáticas del dinero cotidianas." },
     fr: { name: "Finance", description: "Prêts, pourboires et calculs financiers du quotidien." },
     de: { name: "Finanzen", description: "Kredite, Trinkgeld und alltägliche Geldrechnungen." },
+    pt: { name: "Finanças", description: "Empréstimos, gorjetas e cálculos financeiros do dia a dia." },
+    it: { name: "Finanza", description: "Prestiti, mance e calcoli finanziari quotidiani." },
+    ja: { name: "お金・金融", description: "ローン、チップ、日常のお金の計算。" },
   },
   construction: {
     es: { name: "Construcción y Hogar", description: "Materiales, cobertura y presupuestos de proyectos." },
     fr: { name: "Construction et Maison", description: "Matériaux, couverture et estimations de projets." },
     de: { name: "Bau & Heimwerken", description: "Materialien, Flächenbedarf und Projektschätzungen." },
+    pt: { name: "Construção e Casa", description: "Materiais, cobertura e orçamentos de projetos." },
+    it: { name: "Costruzione e Casa", description: "Materiali, copertura e stime di progetto." },
+    ja: { name: "建築・住まい", description: "材料、施工面積、プロジェクトの見積もり。" },
   },
   health: {
     es: { name: "Salud y Fitness", description: "Métricas corporales, ritmo y datos de entrenamiento." },
     fr: { name: "Santé et Forme", description: "Mesures corporelles, allure et données d'entraînement." },
     de: { name: "Gesundheit & Fitness", description: "Körperwerte, Tempo und Trainingsdaten." },
+    pt: { name: "Saúde e Fitness", description: "Métricas corporais, ritmo e dados de treino." },
+    it: { name: "Salute e Fitness", description: "Parametri corporei, ritmo e dati di allenamento." },
+    ja: { name: "健康・フィットネス", description: "身体指標、ペース、トレーニングデータ。" },
   },
   datetime: {
     es: { name: "Fecha y Hora", description: "Cuentas regresivas, duraciones y edad en días." },
     fr: { name: "Date et Heure", description: "Comptes à rebours, durées et âge en jours." },
     de: { name: "Datum & Uhrzeit", description: "Countdowns, Zeitspannen und Alter in Tagen." },
+    pt: { name: "Data e Hora", description: "Contagens regressivas, durações e idade em dias." },
+    it: { name: "Data e Ora", description: "Conti alla rovescia, durate ed età in giorni." },
+    ja: { name: "日付・時間", description: "カウントダウン、期間、日数での年齢。" },
   },
   conversions: {
     es: { name: "Conversiones Cotidianas", description: "Unidades, medidas y equivalencias de cocina." },
     fr: { name: "Conversions Courantes", description: "Unités, mesures et équivalences de cuisine." },
     de: { name: "Alltagsumrechnungen", description: "Einheiten, Maße und Küchenumrechnungen." },
+    pt: { name: "Conversões do Dia a Dia", description: "Unidades, medidas e equivalências de cozinha." },
+    it: { name: "Conversioni Quotidiane", description: "Unità, misure ed equivalenze di cucina." },
+    ja: { name: "日常の単位換算", description: "単位、計測、料理の換算。" },
   },
   text: {
     es: { name: "Texto y Digital", description: "Conteo de palabras y generadores para tareas cotidianas." },
     fr: { name: "Texte et Numérique", description: "Comptage de mots et générateurs pour les tâches courantes." },
     de: { name: "Text & Digital", description: "Wortzählung und Generatoren für alltägliche Aufgaben." },
+    pt: { name: "Texto e Digital", description: "Contagem de palavras e geradores para tarefas do dia a dia." },
+    it: { name: "Testo e Digitale", description: "Conteggio parole e generatori per attività quotidiane." },
+    ja: { name: "テキスト・デジタル", description: "日常的な作業のための文字数カウントや生成ツール。" },
   },
   pets: {
     es: { name: "Mascotas y Estilo de Vida", description: "Tablas de edad y matemáticas cotidianas para mascotas." },
     fr: { name: "Animaux et Style de Vie", description: "Tableaux d'âge et calculs courants pour animaux." },
     de: { name: "Haustiere & Lifestyle", description: "Altersrechner und alltägliche Berechnungen für Haustiere." },
+    pt: { name: "Animais de Estimação e Estilo de Vida", description: "Tabelas de idade e cálculos do dia a dia para pets." },
+    it: { name: "Animali Domestici e Stile di Vita", description: "Tabelle d'età e calcoli quotidiani per animali domestici." },
+    ja: { name: "ペット・ライフスタイル", description: "年齢早見表や日常のペット計算。" },
   },
 };
 
@@ -288,6 +495,33 @@ const I18N_TOOLS = {
         { q: "Wie finde ich heraus, wie viel Prozent eine Zahl von einer anderen ist?", a: "Teilen Sie den Teil durch das Ganze und multiplizieren Sie mit 100. Beispiel: Wie viel Prozent von 150 sind 30? 30 ÷ 150 × 100 = 20%." },
       ],
     },
+    pt: {
+      title: "Calculadora de Porcentagem",
+      intro: "Insira uma porcentagem e um número para encontrar o valor resultante - útil para gorjetas, descontos, notas e cálculos do dia a dia.",
+      description: "Descubra quanto é X por cento de um número, em uma etapa.",
+      faq: [
+        { q: "Como calculo a porcentagem de um número manualmente?", a: "Divida a porcentagem por 100 e multiplique pelo número. Para 20% de 150: 0,20 × 150 = 30." },
+        { q: "Como descubro que porcentagem um número representa de outro?", a: "Divida a parte pelo todo e multiplique por 100. Por exemplo, 30 é que porcentagem de 150? 30 ÷ 150 × 100 = 20%." },
+      ],
+    },
+    it: {
+      title: "Calcolatrice di Percentuale",
+      intro: "Inserisci una percentuale e un numero per trovare il valore risultante - utile per mance, sconti, voti e calcoli quotidiani.",
+      description: "Scopri quanto è il X per cento di un numero, in un solo passaggio.",
+      faq: [
+        { q: "Come calcolo la percentuale di un numero a mano?", a: "Dividi la percentuale per 100, poi moltiplica per il numero. Per il 20% di 150: 0,20 × 150 = 30." },
+        { q: "Come trovo che percentuale rappresenta un numero rispetto a un altro?", a: "Dividi la parte per il totale, poi moltiplica per 100. Ad esempio, 30 che percentuale è di 150? 30 ÷ 150 × 100 = 20%." },
+      ],
+    },
+    ja: {
+      title: "パーセント計算機",
+      intro: "パーセントと数値を入力すると、計算結果が表示されます。チップ、割引、成績など日常の計算に便利です。",
+      description: "ある数のXパーセントが何かを、一度の計算で求めます。",
+      faq: [
+        { q: "パーセントを手計算する方法は？", a: "パーセントを100で割り、その数を掛けます。150の20%の場合：0.20 × 150 = 30。" },
+        { q: "ある数が別の数の何パーセントかを求める方法は？", a: "部分を全体で割り、100を掛けます。例えば、30は150の何パーセントですか？30 ÷ 150 × 100 = 20%。" },
+      ],
+    },
   },
 
   "average-calculator": {
@@ -318,9 +552,63 @@ const I18N_TOOLS = {
         { q: "Was ist der Unterschied zwischen Mittelwert und Median?", a: "Der Mittelwert ist die Summe geteilt durch die Anzahl (der „Durchschnitt“); der Median ist der mittlere Wert der sortierten Zahlen. Der Median reagiert weniger empfindlich auf Ausreißer als der Mittelwert." },
       ],
     },
+    pt: {
+      title: "Calculadora de Média",
+      intro: "Insira uma lista de números separados por vírgulas ou espaços para calcular a média, a mediana e a soma.",
+      description: "Calcule a média, a mediana e a soma de uma lista de números.",
+      faq: [
+        { q: "Como calculo a média de uma lista de números?", a: "Some todos os números e divida pela quantidade de números. Para 4, 8, 15, 16, 23, 42: a soma é 108, dividida por 6 números = média de 18." },
+        { q: "Qual é a diferença entre média e mediana?", a: "A média é a soma dividida pela quantidade (a 'média'); a mediana é o valor central quando os números estão ordenados. A mediana é menos afetada por valores extremos do que a média." },
+      ],
+    },
+    it: {
+      title: "Calcolatrice della Media",
+      intro: "Inserisci un elenco di numeri separati da virgole o spazi per calcolare media, mediana e somma.",
+      description: "Calcola la media, la mediana e la somma di un elenco di numeri.",
+      faq: [
+        { q: "Come calcolo la media di un elenco di numeri?", a: "Somma tutti i numeri, poi dividi per quanti numeri ci sono. Per 4, 8, 15, 16, 23, 42: la somma è 108, divisa per 6 numeri = una media di 18." },
+        { q: "Qual è la differenza tra media e mediana?", a: "La media è la somma divisa per il conteggio (la 'media'); la mediana è il valore centrale quando i numeri sono ordinati. La mediana è meno influenzata dai valori anomali rispetto alla media." },
+      ],
+    },
+    ja: {
+      title: "平均計算機",
+      intro: "カンマまたはスペースで区切った数値のリストを入力すると、平均値・中央値・合計を計算します。",
+      description: "数値のリストの平均値、中央値、合計を計算します。",
+      faq: [
+        { q: "数値のリストの平均を計算する方法は？", a: "すべての数値を合計し、数値の個数で割ります。4, 8, 15, 16, 23, 42の場合：合計は108、6個で割ると平均は18になります。" },
+        { q: "平均値と中央値の違いは何ですか？", a: "平均値は合計を個数で割ったもの（「平均」）で、中央値は数値を並べたときの中央の値です。中央値は平均値よりも外れ値の影響を受けにくいです。" },
+      ],
+    },
   },
 
   "mortgage-calculator": {
+    pt: {
+      title: "Calculadora de Média",
+      intro: "Insira uma lista de números separados por vírgulas ou espaços para calcular a média, a mediana e a soma.",
+      description: "Calcule a média, a mediana e a soma de uma lista de números.",
+      faq: [
+        { q: "Como calculo a média de uma lista de números?", a: "Some todos os números e divida pela quantidade de números. Para 4, 8, 15, 16, 23, 42: a soma é 108, dividida por 6 números = média de 18." },
+        { q: "Qual é a diferença entre média e mediana?", a: "A média é a soma dividida pela quantidade (a 'média'); a mediana é o valor central quando os números estão ordenados. A mediana é menos afetada por valores extremos do que a média." },
+      ],
+    },
+    it: {
+      title: "Calcolatrice della Media",
+      intro: "Inserisci un elenco di numeri separati da virgole o spazi per calcolare media, mediana e somma.",
+      description: "Calcola la media, la mediana e la somma di un elenco di numeri.",
+      faq: [
+        { q: "Come calcolo la media di un elenco di numeri?", a: "Somma tutti i numeri, poi dividi per quanti numeri ci sono. Per 4, 8, 15, 16, 23, 42: la somma è 108, divisa per 6 numeri = una media di 18." },
+        { q: "Qual è la differenza tra media e mediana?", a: "La media è la somma divisa per il conteggio (la 'media'); la mediana è il valore centrale quando i numeri sono ordinati. La mediana è meno influenzata dai valori anomali rispetto alla media." },
+      ],
+    },
+    ja: {
+      title: "平均計算機",
+      intro: "カンマまたはスペースで区切った数値のリストを入力すると、平均値・中央値・合計を計算します。",
+      description: "数値のリストの平均値、中央値、合計を計算します。",
+      faq: [
+        { q: "数値のリストの平均を計算する方法は？", a: "すべての数値を合計し、数値の個数で割ります。4, 8, 15, 16, 23, 42の場合：合計は108、6個で割ると平均は18になります。" },
+        { q: "平均値と中央値の違いは何ですか？", a: "平均値は合計を個数で割ったもの（「平均」）で、中央値は数値を並べたときの中央の値です。中央値は平均値よりも外れ値の影響を受けにくいです。" },
+      ],
+    },
     es: {
       title: "Calculadora de Hipoteca",
       intro: "Introduce el precio de la vivienda, el pago inicial, la tasa y el plazo para estimar tu pago mensual completo - capital, interés, impuesto predial y seguro.",
@@ -346,6 +634,33 @@ const I18N_TOOLS = {
       faq: [
         { q: "Was ist in dieser Hypothekenraten-Schätzung enthalten?", a: "Dieser Rechner schätzt PITI - Tilgung, Zinsen, Grundsteuer und Wohngebäudeversicherung. Nicht enthalten sind PMI (falls die Anzahlung unter 20% liegt) oder HOA-Gebühren, die je nach Kreditgeber und Immobilie variieren." },
         { q: "Wie wirkt sich die Anzahlung auf meine monatliche Rate aus?", a: "Eine höhere Anzahlung verringert die Darlehenssumme, was sowohl den Tilgungs- und Zinsanteil Ihrer Rate als auch die insgesamt über die Laufzeit gezahlten Zinsen senkt." },
+      ],
+    },
+    pt: {
+      title: "Calculadora de Financiamento Imobiliário",
+      intro: "Insira o preço do imóvel, a entrada, a taxa e o prazo para estimar seu pagamento mensal completo - principal, juros, imposto predial e seguro.",
+      description: "Estime seu pagamento mensal total do financiamento imobiliário, incluindo impostos e seguro.",
+      faq: [
+        { q: "O que está incluído nesta estimativa de pagamento?", a: "Esta calculadora estima o PITI - principal, juros, imposto predial e seguro residencial. Não inclui o PMI (se a entrada for inferior a 20%) nem taxas de condomínio, que variam conforme o credor e o imóvel." },
+        { q: "Como a entrada afeta meu pagamento mensal?", a: "Uma entrada maior reduz o valor do empréstimo, o que diminui tanto a parte de principal e juros do pagamento quanto o total de juros pagos ao longo do prazo do financiamento." },
+      ],
+    },
+    it: {
+      title: "Calcolatrice del Mutuo",
+      intro: "Inserisci prezzo dell'immobile, acconto, tasso e durata per stimare la rata mensile completa - capitale, interessi, imposta sulla proprietà e assicurazione.",
+      description: "Stima la rata mensile totale del mutuo, comprese tasse e assicurazione.",
+      faq: [
+        { q: "Cosa include questa stima della rata del mutuo?", a: "Questa calcolatrice stima il PITI - capitale, interessi, imposta sulla proprietà e assicurazione sulla casa. Non include il PMI (se l'acconto è inferiore al 20%) né le spese condominiali, che variano in base al prestatore e all'immobile." },
+        { q: "Come influisce l'acconto sulla mia rata mensile?", a: "Un acconto maggiore riduce l'importo del prestito, il che abbassa sia la quota capitale e interessi della rata sia il totale degli interessi pagati durante la durata del mutuo." },
+      ],
+    },
+    ja: {
+      title: "住宅ローン計算機",
+      intro: "物件価格、頭金、金利、返済期間を入力すると、元金・利息・固定資産税・保険料を含めた毎月の返済額の概算がわかります。",
+      description: "税金と保険料を含めた住宅ローンの月々の総返済額を概算します。",
+      faq: [
+        { q: "この住宅ローン返済額の見積もりには何が含まれますか？", a: "この計算機はPITI（元金・利息・固定資産税・住宅保険）を概算します。頭金が20%未満の場合のPMI（民間住宅ローン保険）やHOA（管理費）は含まれておらず、これらは貸し手や物件によって異なります。" },
+        { q: "頭金は月々の返済額にどう影響しますか？", a: "頭金が多いほど借入額が減り、返済額のうち元金・利息部分と、返済期間全体で支払う利息の総額の両方が少なくなります。" },
       ],
     },
   },
@@ -381,6 +696,36 @@ const I18N_TOOLS = {
         { q: "Senkt eine zusätzliche monatliche Zahlung die Gesamtzinsen?", a: "Ja - jede Zahlung über dem erforderlichen Betrag fließt direkt in die Tilgung, was das Darlehen verkürzt und die insgesamt gezahlten Zinsen senkt, da die Zinsen jede Periode auf den verbleibenden Saldo berechnet werden." },
       ],
     },
+    pt: {
+      title: "Calculadora de Pagamento de Empréstimo",
+      intro: "Esta calculadora de empréstimo estima seu pagamento mensal fixo - basta inserir o valor do empréstimo, a taxa de juros anual e o prazo.",
+      description: "Estime seu pagamento mensal em um empréstimo de taxa fixa.",
+      faq: [
+        { q: "Como é calculado o pagamento de um empréstimo?", a: "Empréstimos de taxa fixa usam uma fórmula de amortização baseada no principal, na taxa de juros periódica e no número de pagamentos, então cada pagamento tem o mesmo valor, mas a proporção entre juros e principal muda ao longo do tempo." },
+        { q: "Isso inclui impostos e seguro?", a: "Não - isso é apenas principal e juros. Financiamentos imobiliários, em particular, costumam incluir imposto predial e seguro no pagamento mensal (PITI), então sua conta real do credor pode ser maior do que o valor mostrado aqui." },
+        { q: "Pagar a mais todo mês reduz os juros totais?", a: "Sim - qualquer pagamento acima do valor exigido vai diretamente para o principal, o que encurta o empréstimo e reduz o total de juros pagos, já que os juros são calculados sobre o saldo restante a cada período." },
+      ],
+    },
+    it: {
+      title: "Calcolatrice della Rata del Prestito",
+      intro: "Questa calcolatrice di prestito stima la tua rata mensile fissa - inserisci solo l'importo del prestito, il tasso di interesse annuo e la durata.",
+      description: "Stima la tua rata mensile su un prestito a tasso fisso.",
+      faq: [
+        { q: "Come viene calcolata la rata di un prestito?", a: "I prestiti a tasso fisso usano una formula di ammortamento basata sul capitale, sul tasso di interesse periodico e sul numero di rate, quindi ogni rata ha lo stesso importo, ma la ripartizione tra interessi e capitale cambia nel tempo." },
+        { q: "Questo include tasse e assicurazione?", a: "No - questo è solo capitale e interessi. I mutui, in particolare, spesso includono imposta sulla proprietà e assicurazione nella rata mensile (PITI), quindi la fattura reale del tuo prestatore potrebbe essere superiore all'importo mostrato qui." },
+        { q: "Pagare di più ogni mese riduce gli interessi totali?", a: "Sì - qualsiasi pagamento superiore all'importo richiesto va direttamente al capitale, il che accorcia il prestito e riduce il totale degli interessi pagati, poiché gli interessi vengono calcolati sul saldo residuo ogni periodo." },
+      ],
+    },
+    ja: {
+      title: "ローン返済額計算機",
+      intro: "このローン計算機は毎月の固定返済額を概算します。借入額、年利、返済期間を入力するだけです。",
+      description: "固定金利ローンの毎月の返済額を概算します。",
+      faq: [
+        { q: "ローンの返済額はどのように計算されますか？", a: "固定金利ローンは、元金、期間ごとの金利、返済回数に基づく元利均等返済の計算式を使用するため、毎回の返済額は同じですが、利息と元金の割合は時間とともに変化します。" },
+        { q: "これには税金や保険料が含まれますか？", a: "いいえ、これは元金と利息のみです。特に住宅ローンでは、固定資産税や保険料が毎月の返済額（PITI）に含まれることが多いため、実際の貸し手からの請求額はここに表示される金額より高くなる場合があります。" },
+        { q: "毎月多めに支払うと総利息は減りますか？", a: "はい。必要額を超える支払い分はすべて元金に充てられるため、ローン期間が短縮され、支払う総利息が減ります。これは各期間の利息が残高に対して計算されるためです。" },
+      ],
+    },
   },
 
   "compound-interest-calculator": {
@@ -409,6 +754,33 @@ const I18N_TOOLS = {
       faq: [
         { q: "Wie lautet die Formel für Zinseszins?", a: "A = P(1 + r/n)^(nt) - wobei P das Kapital, r der Jahreszins, n die Anzahl der Zinsperioden pro Jahr und t die Zeit in Jahren ist." },
         { q: "Wie wirkt sich die Zinsperiode auf das Wachstum aus?", a: "Häufigere Verzinsung (täglich statt jährlich) führt bei gleichem Nominalzins zu etwas höheren Erträgen, da Zinsen früher beginnen, selbst Zinsen zu erwirtschaften - der Unterschied ist bei üblichen Sparzinsen aber meist gering." },
+      ],
+    },
+    pt: {
+      title: "Calculadora de Juros Compostos",
+      intro: "Insira um valor principal, taxa de juros, frequência de capitalização e período de tempo para ver quanto seu dinheiro pode crescer.",
+      description: "Calcule como uma quantia cresce ao longo do tempo com juros compostos.",
+      faq: [
+        { q: "Qual é a fórmula dos juros compostos?", a: "A = P(1 + r/n)^(nt) - onde P é o principal, r é a taxa anual, n é o número de capitalizações por ano e t é o tempo em anos." },
+        { q: "Como a frequência de capitalização afeta o crescimento?", a: "Uma capitalização mais frequente (diária em vez de anual) produz retornos ligeiramente maiores com a mesma taxa nominal, já que os juros começam a render juros mais cedo - embora a diferença costume ser pequena em taxas de poupança típicas." },
+      ],
+    },
+    it: {
+      title: "Calcolatrice dell'Interesse Composto",
+      intro: "Inserisci un capitale iniziale, un tasso di interesse, la frequenza di capitalizzazione e un periodo di tempo per vedere quanto potrebbe crescere il tuo denaro.",
+      description: "Calcola come una somma cresce nel tempo con l'interesse composto.",
+      faq: [
+        { q: "Qual è la formula dell'interesse composto?", a: "A = P(1 + r/n)^(nt) - dove P è il capitale, r è il tasso annuo, n è il numero di capitalizzazioni all'anno e t è il tempo in anni." },
+        { q: "Come influisce la frequenza di capitalizzazione sulla crescita?", a: "Una capitalizzazione più frequente (giornaliera anziché annuale) produce rendimenti leggermente più alti allo stesso tasso nominale, poiché gli interessi iniziano a generare interessi prima - anche se la differenza è solitamente piccola ai tassi di risparmio tipici." },
+      ],
+    },
+    ja: {
+      title: "複利計算機",
+      intro: "元金、金利、複利計算の頻度、期間を入力すると、お金がどれだけ増える可能性があるかがわかります。",
+      description: "複利によって、まとまった金額が時間とともにどう増えるかを計算します。",
+      faq: [
+        { q: "複利の計算式は？", a: "A = P(1 + r/n)^(nt) - Pは元金、rは年利、nは年間の複利計算回数、tは年数です。" },
+        { q: "複利計算の頻度は増え方にどう影響しますか？", a: "複利計算の頻度が高いほど（年1回より毎日など）、同じ表示金利でもわずかに高いリターンになります。これは利息がより早く利息を生み始めるためですが、一般的な貯蓄金利では差はわずかです。" },
       ],
     },
   },
@@ -441,6 +813,33 @@ const I18N_TOOLS = {
         { q: "Warum einen Verschnittzuschlag hinzufügen?", a: "Unebener Untergrund, Verschütten und Übererdaushub verbrauchen typischerweise 5-10% mehr Material, als die reine Rechnung nahelegt." },
       ],
     },
+    pt: {
+      title: "Calculadora de Concreto",
+      intro: "Insira as dimensões da laje para estimar quanto concreto pré-misturado ou quantos sacos você vai precisar, com uma margem de desperdício incluída.",
+      description: "Estime o volume em metros cúbicos e a quantidade de sacos para uma laje de concreto.",
+      faq: [
+        { q: "Quanto concreto preciso para uma laje de 3x3 m?", a: "Com 10 cm de espessura, uma laje de 3×3 m precisa de aproximadamente 0,9 m³ antes da margem de desperdício - cerca de 36 sacos de mistura de 35 kg." },
+        { q: "Por que adicionar uma margem de desperdício?", a: "Subleito irregular, derramamentos e escavação em excesso normalmente usam de 5% a 10% mais material do que o cálculo exato sugere." },
+      ],
+    },
+    it: {
+      title: "Calcolatrice del Calcestruzzo",
+      intro: "Inserisci le dimensioni della soletta per stimare quanto calcestruzzo pronto o quanti sacchi ti serviranno, con un margine di spreco incluso.",
+      description: "Stima i metri cubi e il numero di sacchi per una soletta di calcestruzzo.",
+      faq: [
+        { q: "Quanto calcestruzzo mi serve per una soletta di 3x3 m?", a: "Con uno spessore di 10 cm, una soletta di 3×3 m richiede circa 0,9 m³ prima del margine di spreco - circa 36 sacchi di miscela da 35 kg." },
+        { q: "Perché aggiungere un margine di spreco?", a: "Un sottofondo irregolare, versamenti e scavo eccessivo generalmente utilizzano dal 5% al 10% di materiale in più rispetto a quanto suggerisce il calcolo esatto." },
+      ],
+    },
+    ja: {
+      title: "コンクリート計算機",
+      intro: "スラブの寸法を入力すると、必要な生コンクリートの量、または必要な袋数の概算がわかります（ロス分も考慮済み）。",
+      description: "コンクリートスラブに必要な立方メートル数と袋数を概算します。",
+      faq: [
+        { q: "3×3mのスラブにはどれくらいのコンクリートが必要ですか？", a: "厚さ10cmの場合、3×3mのスラブにはロス分を除いて約0.9m³必要です - 35kg入りの袋で約36袋分です。" },
+        { q: "なぜロス分の余裕を見る必要がありますか？", a: "下地の不陸、こぼれ、余分な掘削などにより、通常は正確な計算よりも5〜10%多くの材料が必要になります。" },
+      ],
+    },
   },
 
   "flooring-calculator": {
@@ -469,6 +868,33 @@ const I18N_TOOLS = {
       faq: [
         { q: "Wie viele Kartons Bodenbelag brauche ich für 25 m²?", a: "Bei 2 m² pro Karton und 10% Verschnittzuschlag benötigen 25 m² etwa 14 Kartons." },
         { q: "Warum brauche ich zusätzlichen Bodenbelag für Verschnitt?", a: "Zuschnitte an Türen, Schränken und der Musterausrichtung verbrauchen zusätzliches Material - ein Zuschlag von 10-15% verhindert, dass Ihnen mitten im Projekt das Material ausgeht." },
+      ],
+    },
+    pt: {
+      title: "Calculadora de Piso",
+      intro: "Insira a área do seu cômodo, a cobertura por caixa e uma margem de desperdício para estimar quantas caixas de piso comprar.",
+      description: "Estime quantas caixas de piso você precisa para um cômodo.",
+      faq: [
+        { q: "Quantas caixas de piso preciso para 25 m²?", a: "Com 2 m² por caixa e uma margem de desperdício de 10%, 25 m² precisam de aproximadamente 14 caixas." },
+        { q: "Por que preciso de piso extra para o desperdício?", a: "Cortes ao redor de portas, armários e o encaixe de padrões consomem material extra - uma margem de 10-15% evita que você fique sem material no meio do projeto." },
+      ],
+    },
+    it: {
+      title: "Calcolatrice del Pavimento",
+      intro: "Inserisci la superficie della stanza, la copertura per scatola e un margine di spreco per stimare quante scatole di pavimento acquistare.",
+      description: "Stima quante scatole di pavimento ti servono per una stanza.",
+      faq: [
+        { q: "Quante scatole di pavimento mi servono per 25 m²?", a: "Con 2 m² per scatola e un margine di spreco del 10%, 25 m² richiedono circa 14 scatole." },
+        { q: "Perché mi serve del pavimento extra per lo spreco?", a: "I tagli intorno a porte, armadi e l'abbinamento dei motivi consumano materiale extra - un margine del 10-15% evita di rimanere senza materiale a metà progetto." },
+      ],
+    },
+    ja: {
+      title: "床材計算機",
+      intro: "部屋の面積、1箱あたりの施工可能面積、ロス率を入力すると、必要な床材の箱数の概算がわかります。",
+      description: "部屋に必要な床材の箱数を概算します。",
+      faq: [
+        { q: "25m²の部屋には床材が何箱必要ですか？", a: "1箱あたり2m²、ロス率10%の場合、25m²には約14箱必要です。" },
+        { q: "なぜ余分に床材が必要なのですか？", a: "ドアや収納の周りのカットや柄合わせで余分な材料が必要になります。10〜15%の余裕を見ておくことで、施工途中で材料が足りなくなるのを防げます。" },
       ],
     },
   },
@@ -501,6 +927,33 @@ const I18N_TOOLS = {
         { q: "Wie viele Kalorien sollte ich zum Abnehmen einsparen?", a: "Ein Defizit von etwa 500 Kalorien pro Tag unter dem Erhaltungsbedarf ist ein gängiges Ziel für rund 0,45 kg Gewichtsverlust pro Woche, da 0,45 kg Körperfett etwa 3.500 Kalorien entsprechen." },
       ],
     },
+    pt: {
+      title: "Calculadora de Calorias",
+      intro: "Insira sua idade, sexo, altura, peso e nível de atividade para estimar suas necessidades calóricas diárias para manter, perder ou ganhar peso.",
+      description: "Calcule suas necessidades calóricas diárias para manter, perder ou ganhar peso.",
+      faq: [
+        { q: "Quantas calorias preciso para manter meu peso?", a: "Depende da sua TMB e nível de atividade - para um homem de 30 anos, 1,78 m e 82 kg com atividade moderada, a manutenção é de aproximadamente 2.763 calorias por dia." },
+        { q: "Quantas calorias devo cortar para perder peso?", a: "Um déficit de cerca de 500 calorias por dia abaixo da manutenção é uma meta comum para perder aproximadamente 0,45 kg por semana, já que 0,45 kg de gordura corporal equivale a cerca de 3.500 calorias." },
+      ],
+    },
+    it: {
+      title: "Calcolatrice delle Calorie",
+      intro: "Inserisci età, sesso, altezza, peso e livello di attività per stimare il tuo fabbisogno calorico giornaliero per mantenere, perdere o aumentare peso.",
+      description: "Calcola il tuo fabbisogno calorico giornaliero per mantenere, perdere o aumentare peso.",
+      faq: [
+        { q: "Quante calorie mi servono per mantenere il mio peso?", a: "Dipende dal tuo metabolismo basale e dal livello di attività - per un uomo di 30 anni, 1,78 m, 82 kg con attività moderata, il mantenimento è di circa 2.763 calorie al giorno." },
+        { q: "Quante calorie dovrei tagliare per perdere peso?", a: "Un deficit di circa 500 calorie al giorno sotto il livello di mantenimento è un obiettivo comune per perdere circa 0,45 kg a settimana, poiché 0,45 kg di grasso corporeo equivale a circa 3.500 calorie." },
+      ],
+    },
+    ja: {
+      title: "カロリー計算機",
+      intro: "年齢、性別、身長、体重、活動レベルを入力すると、体重を維持・減量・増量するための1日の必要カロリーがわかります。",
+      description: "体重を維持・減量・増量するための1日の必要カロリーを計算します。",
+      faq: [
+        { q: "体重を維持するには何カロリー必要ですか？", a: "基礎代謝量と活動レベルによります - 30歳、身長178cm、体重82kgの男性で活動量が中程度の場合、維持カロリーは1日約2,763kcalです。" },
+        { q: "減量にはどれくらいカロリーを減らせばいいですか？", a: "維持カロリーから1日約500kcal減らすのが、週に約0.45kgの減量を目指す一般的な目安です。体脂肪0.45kgは約3,500kcalに相当します。" },
+      ],
+    },
   },
 
   "bmi-calculator": {
@@ -529,6 +982,33 @@ const I18N_TOOLS = {
       faq: [
         { q: "Ist der BMI für jeden genau?", a: "Nein - der BMI unterscheidet nicht zwischen Muskel- und Fettmasse und kann bei Sportlern, älteren Erwachsenen und bestimmten Körpertypen irreführend sein. Er ist ein Screening-Instrument, keine Diagnose." },
         { q: "Was gilt als gesunder BMI-Bereich?", a: "18,5-24,9 gilt allgemein als gesunder Bereich, unter 18,5 als Untergewicht, 25-29,9 als Übergewicht und 30+ als Adipositas-Bereich - diese Grenzwerte sind jedoch Bevölkerungsdurchschnitte, keine individuellen Gesundheitsurteile." },
+      ],
+    },
+    pt: {
+      title: "Calculadora de IMC",
+      intro: "Insira sua altura e peso para calcular o IMC, uma medida geral de triagem (não um diagnóstico).",
+      description: "Calcule seu índice de massa corporal a partir da altura e do peso.",
+      faq: [
+        { q: "O IMC é preciso para todos?", a: "Não - o IMC não distingue músculo de gordura e pode ser enganoso para atletas, idosos e alguns tipos de corpo. É uma ferramenta de triagem, não um diagnóstico." },
+        { q: "O que é considerado uma faixa de IMC saudável?", a: "18,5-24,9 é geralmente classificado como a faixa saudável, abaixo de 18,5 como abaixo do peso, 25-29,9 como sobrepeso e 30+ como a faixa de obesidade - mas esses limites são médias populacionais, não veredictos individuais de saúde." },
+      ],
+    },
+    it: {
+      title: "Calcolatrice dell'IMC",
+      intro: "Inserisci altezza e peso per calcolare l'IMC, una misura generale di screening (non una diagnosi).",
+      description: "Calcola il tuo indice di massa corporea da altezza e peso.",
+      faq: [
+        { q: "L'IMC è accurato per tutti?", a: "No - l'IMC non distingue tra massa muscolare e grassa e può essere fuorviante per atleti, anziani e alcuni tipi di corpo. È uno strumento di screening, non una diagnosi." },
+        { q: "Cosa si considera un intervallo di IMC sano?", a: "18,5-24,9 è generalmente classificato come l'intervallo sano, sotto 18,5 come sottopeso, 25-29,9 come sovrappeso e 30+ come l'intervallo dell'obesità - ma queste soglie sono medie di popolazione, non verdetti di salute individuali." },
+      ],
+    },
+    ja: {
+      title: "BMI計算機",
+      intro: "身長と体重を入力してBMI（体格指数）を計算します。これは一般的なスクリーニング指標であり、診断ではありません。",
+      description: "身長と体重からBMI（体格指数）を計算します。",
+      faq: [
+        { q: "BMIは誰にでも正確ですか？", a: "いいえ。BMIは筋肉と脂肪を区別できないため、アスリートや高齢者、一部の体型の人には誤解を招くことがあります。診断ではなく、スクリーニングツールです。" },
+        { q: "健康的なBMIの範囲は？", a: "一般的に18.5〜24.9が健康的な範囲、18.5未満はやせすぎ、25〜29.9は肥満（軽度）、30以上は肥満の範囲とされていますが、これらは集団の平均値であり、個人の健康を判定するものではありません。" },
       ],
     },
   },
@@ -561,6 +1041,33 @@ const I18N_TOOLS = {
         { q: "Wie genau ist die Mifflin-St-Jeor-Formel?", a: "Sie gilt als eine der genaueren Grundumsatzformeln für die Allgemeinbevölkerung, meist innerhalb von etwa 10% der gemessenen Werte, wobei der individuelle Stoffwechsel je nach Muskelmasse und anderen Faktoren variiert." },
       ],
     },
+    pt: {
+      title: "Calculadora de TMB",
+      intro: "Insira sua idade, sexo, altura e peso para estimar sua taxa metabólica basal (TMB) usando a fórmula de Mifflin-St Jeor.",
+      description: "Calcule sua taxa metabólica basal - as calorias que seu corpo queima em repouso.",
+      faq: [
+        { q: "O que é a TMB?", a: "A taxa metabólica basal é o número de calorias que seu corpo queima em repouso absoluto apenas para manter funções vitais como respiração e circulação - não inclui nenhuma atividade." },
+        { q: "Quão precisa é a fórmula de Mifflin-St Jeor?", a: "É considerada uma das fórmulas de TMB mais precisas para a população em geral, geralmente dentro de cerca de 10% dos valores medidos, embora o metabolismo individual varie conforme a massa muscular e outros fatores." },
+      ],
+    },
+    it: {
+      title: "Calcolatrice del Metabolismo Basale",
+      intro: "Inserisci età, sesso, altezza e peso per stimare il tuo metabolismo basale (BMR) usando la formula di Mifflin-St Jeor.",
+      description: "Calcola il tuo metabolismo basale - le calorie che il tuo corpo brucia a riposo.",
+      faq: [
+        { q: "Cos'è il metabolismo basale?", a: "Il metabolismo basale è il numero di calorie che il tuo corpo brucia a riposo completo solo per mantenere le funzioni vitali come la respirazione e la circolazione - non include alcuna attività." },
+        { q: "Quanto è accurata la formula di Mifflin-St Jeor?", a: "È considerata una delle formule del metabolismo basale più accurate per la popolazione generale, di solito entro circa il 10% dei valori misurati, anche se il metabolismo individuale varia in base alla massa muscolare e ad altri fattori." },
+      ],
+    },
+    ja: {
+      title: "基礎代謝量計算機",
+      intro: "年齢、性別、身長、体重を入力すると、Mifflin-St Jeor式を用いて基礎代謝量（BMR）を概算します。",
+      description: "安静時に体が消費するカロリーである基礎代謝量を計算します。",
+      faq: [
+        { q: "基礎代謝量とは何ですか？", a: "基礎代謝量とは、呼吸や血液循環など生命維持に必要な機能を保つためだけに、完全な安静状態で体が消費するカロリーのことです。活動によるカロリー消費は含まれません。" },
+        { q: "Mifflin-St Jeor式はどのくらい正確ですか？", a: "一般集団に対して比較的精度の高い基礎代謝量の計算式の一つとされ、通常は実測値の約10%以内に収まりますが、個人の代謝は筋肉量などの要因によって異なります。" },
+      ],
+    },
   },
 
   "age-calculator": {
@@ -589,6 +1096,33 @@ const I18N_TOOLS = {
       faq: [
         { q: "Wie wird das genaue Alter berechnet?", a: "Durch Zählen der vollen Jahre, dann der verbleibenden Monate, dann der verbleibenden Tage zwischen Geburtsdatum und heute - nicht durch einfaches Subtrahieren des Geburtsjahrs vom aktuellen Jahr." },
         { q: "Werden Schaltjahre berücksichtigt?", a: "Ja - die Berechnung erfolgt direkt anhand von Kalenderdaten statt eines festen 365-Tage-Jahres, sodass Schaltjahre korrekt ohne zusätzliche Anpassung berücksichtigt werden." },
+      ],
+    },
+    pt: {
+      title: "Calculadora de Idade",
+      intro: "Insira uma data de nascimento para calcular a idade exata até hoje, com precisão de dias.",
+      description: "Calcule a idade exata em anos, meses e dias.",
+      faq: [
+        { q: "Como a idade exata é calculada?", a: "Contando os anos completos, depois os meses restantes e depois os dias restantes entre a data de nascimento e hoje - não apenas subtraindo o ano de nascimento do ano atual." },
+        { q: "Isso considera anos bissextos?", a: "Sim - funciona diretamente com datas do calendário em vez de assumir um ano fixo de 365 dias, então os anos bissextos são tratados corretamente sem nenhum ajuste extra." },
+      ],
+    },
+    it: {
+      title: "Calcolatrice dell'Età",
+      intro: "Inserisci una data di nascita per calcolare l'età esatta ad oggi, fino al giorno.",
+      description: "Calcola l'età esatta in anni, mesi e giorni.",
+      faq: [
+        { q: "Come viene calcolata l'età esatta?", a: "Contando gli anni completi, poi i mesi rimanenti, poi i giorni rimanenti tra la data di nascita e oggi - non semplicemente sottraendo l'anno di nascita dall'anno corrente." },
+        { q: "Questo tiene conto degli anni bisestili?", a: "Sì - funziona direttamente con le date del calendario invece di assumere un anno fisso di 365 giorni, quindi gli anni bisestili vengono gestiti correttamente senza alcuna regolazione aggiuntiva." },
+      ],
+    },
+    ja: {
+      title: "年齢計算機",
+      intro: "生年月日を入力すると、今日時点での正確な年齢を日単位まで計算します。",
+      description: "正確な年齢を年・月・日で計算します。",
+      faq: [
+        { q: "正確な年齢はどのように計算されますか？", a: "生年月日から今日までの満年数、残りの月数、残りの日数を順に数えていきます。単純に現在の年から生まれた年を引くわけではありません。" },
+        { q: "うるう年は考慮されますか？", a: "はい。365日固定の年を前提とするのではなく、実際のカレンダーの日付をもとに計算するため、うるう年も特別な調整なしで正しく処理されます。" },
       ],
     },
   },
@@ -621,6 +1155,33 @@ const I18N_TOOLS = {
         { q: "Werden Wochenenden und Feiertage mitgezählt?", a: "Ja - hier werden alle Kalendertage gezählt, einschließlich Wochenenden und Feiertagen. Falls Sie nur Werktage benötigen (ohne Wochenenden), nutzen Sie stattdessen den Werktage-Rechner." },
       ],
     },
+    pt: {
+      title: "Calculadora de Dias Restantes",
+      intro: "Escolha uma data para ver exatamente quantos dias, semanas e meses faltam até ela chegar.",
+      description: "Descubra quantos dias faltam até qualquer data futura.",
+      faq: [
+        { q: "Como os 'dias restantes' são calculados?", a: "É o número de dias corridos entre hoje e a data escolhida, contando para frente ou para trás a partir da meia-noite." },
+        { q: "Isso conta fins de semana e feriados?", a: "Sim - isso conta todos os dias corridos, incluindo fins de semana e feriados. Se você precisar de uma contagem apenas de dias úteis (excluindo fins de semana), use a Calculadora de Dias Úteis." },
+      ],
+    },
+    it: {
+      title: "Calcolatrice dei Giorni Rimanenti",
+      intro: "Scegli una data per vedere esattamente quanti giorni, settimane e mesi mancano al suo arrivo.",
+      description: "Scopri quanti giorni mancano a una data futura qualsiasi.",
+      faq: [
+        { q: "Come vengono calcolati i 'giorni rimanenti'?", a: "È il numero di giorni di calendario tra oggi e la data scelta, contando in avanti o indietro dalla mezzanotte." },
+        { q: "Questo conta i weekend e le festività?", a: "Sì - questo conta ogni giorno di calendario, inclusi weekend e festività. Se hai bisogno di un conteggio solo di giorni lavorativi (esclusi i weekend), usa la Calcolatrice dei Giorni Lavorativi." },
+      ],
+    },
+    ja: {
+      title: "残り日数計算機",
+      intro: "日付を選択すると、その日までの残り日数・週数・月数が正確にわかります。",
+      description: "任意の未来の日付までの残り日数を調べます。",
+      faq: [
+        { q: "「残り日数」はどのように計算されますか？", a: "今日から選択した日付までの暦日数で、深夜0時を基準に前後を数えます。" },
+        { q: "週末や祝日もカウントされますか？", a: "はい。週末や祝日を含むすべての暦日をカウントします。週末を除いた営業日のみのカウントが必要な場合は、営業日計算機をご利用ください。" },
+      ],
+    },
   },
 
   "unit-length-converter": {
@@ -649,6 +1210,33 @@ const I18N_TOOLS = {
       faq: [
         { q: "Wie viele Zoll hat ein Zentimeter?", a: "1 Zentimeter entspricht etwa 0,3937 Zoll. Um cm in Zoll umzurechnen, teilen Sie durch 2,54." },
         { q: "Ist diese Umrechnung exakt oder gerundet?", a: "Der zugrunde liegende Umrechnungsfaktor (1 Zoll = 2,54 cm) ist per internationaler Definition exakt - jede sichtbare Rundung betrifft nur die Anzeige auf eine lesbare Anzahl Dezimalstellen." },
+      ],
+    },
+    pt: {
+      title: "Conversor de CM para Polegadas",
+      intro: "Insira um valor e escolha as unidades para converter entre medidas de comprimento comuns.",
+      description: "Converta entre centímetros, polegadas, pés e metros.",
+      faq: [
+        { q: "Quantas polegadas tem um centímetro?", a: "1 centímetro equivale a cerca de 0,3937 polegadas. Para converter cm em polegadas, divida por 2,54." },
+        { q: "Essa conversão é exata ou arredondada?", a: "O fator de conversão subjacente (1 polegada = 2,54 cm) é exato por definição internacional - qualquer arredondamento que você vê é apenas o resultado exibido ajustado para um número legível de casas decimais." },
+      ],
+    },
+    it: {
+      title: "Convertitore da CM a Pollici",
+      intro: "Inserisci un valore e scegli le unità per convertire tra le misure di lunghezza più comuni.",
+      description: "Converti tra centimetri, pollici, piedi e metri.",
+      faq: [
+        { q: "Quanti pollici ha un centimetro?", a: "1 centimetro equivale a circa 0,3937 pollici. Per convertire cm in pollici, dividi per 2,54." },
+        { q: "Questa conversione è esatta o arrotondata?", a: "Il fattore di conversione sottostante (1 pollice = 2,54 cm) è esatto per definizione internazionale - qualsiasi arrotondamento che vedi è solo il risultato mostrato adattato a un numero leggibile di cifre decimali." },
+      ],
+    },
+    ja: {
+      title: "cm・インチ変換ツール",
+      intro: "数値を入力し、単位を選択すると、一般的な長さの単位間で変換できます。",
+      description: "センチメートル、インチ、フィート、メートルの間で変換します。",
+      faq: [
+        { q: "1センチメートルは何インチですか？", a: "1センチメートルは約0.3937インチです。cmをインチに変換するには2.54で割ります。" },
+        { q: "この変換は正確ですか、それとも四捨五入されていますか？", a: "変換係数そのもの（1インチ＝2.54cm）は国際的な定義により厳密な値です。表示上見える丸めは、結果を読みやすい小数点以下の桁数に調整しているだけです。" },
       ],
     },
   },
@@ -681,6 +1269,33 @@ const I18N_TOOLS = {
         { q: "Warum braucht die Temperaturumrechnung eine Verschiebung statt nur eine Multiplikation?", a: "Fahrenheit und Celsius haben unterschiedliche Nullpunkte (gefrierendes Wasser liegt bei 0°C, aber 32°F), daher muss die Skala zuerst verschoben werden - anders als bei Längen- oder Gewichtsumrechnungen, die nur einen Multiplikator benötigen." },
       ],
     },
+    pt: {
+      title: "Conversor de Temperatura",
+      intro: "Insira uma temperatura e escolha uma unidade de partida para converter entre Fahrenheit, Celsius e Kelvin.",
+      description: "Converta entre Fahrenheit, Celsius e Kelvin.",
+      faq: [
+        { q: "Como converto Fahrenheit para Celsius?", a: "Subtraia 32 e depois multiplique por 5/9. 98,6°F: (98,6 − 32) × 5/9 = 37°C - temperatura corporal humana normal." },
+        { q: "Por que a conversão de temperatura precisa de um deslocamento e não apenas de multiplicação?", a: "Fahrenheit e Celsius têm pontos zero diferentes (a água congela a 0°C, mas a 32°F), então a conversão exige deslocar a escala primeiro, diferente das conversões de comprimento ou peso, que precisam apenas de um multiplicador." },
+      ],
+    },
+    it: {
+      title: "Convertitore di Temperatura",
+      intro: "Inserisci una temperatura e scegli un'unità di partenza per convertire tra Fahrenheit, Celsius e Kelvin.",
+      description: "Converti tra Fahrenheit, Celsius e Kelvin.",
+      faq: [
+        { q: "Come converto i Fahrenheit in Celsius?", a: "Sottrai 32, poi moltiplica per 5/9. 98,6°F: (98,6 − 32) × 5/9 = 37°C - temperatura corporea umana normale." },
+        { q: "Perché la conversione della temperatura richiede uno spostamento e non solo una moltiplicazione?", a: "Fahrenheit e Celsius hanno punti zero diversi (l'acqua congela a 0°C ma a 32°F), quindi la conversione richiede prima di spostare la scala, a differenza delle conversioni di lunghezza o peso che richiedono solo un moltiplicatore." },
+      ],
+    },
+    ja: {
+      title: "温度変換ツール",
+      intro: "温度と変換元の単位を入力すると、華氏・摂氏・ケルビンの間で変換できます。",
+      description: "華氏、摂氏、ケルビンの間で変換します。",
+      faq: [
+        { q: "華氏から摂氏への変換方法は？", a: "32を引いてから5/9を掛けます。98.6°Fの場合：(98.6 − 32) × 5/9 = 37°C（人間の平熱）です。" },
+        { q: "なぜ温度変換には掛け算だけでなくオフセットが必要なのですか？", a: "華氏と摂氏では基準点（0度）が異なるため（水は0°Cで凍りますが、華氏では32°F）、まずスケールをずらす必要があります。これは掛け算だけで済む長さや重さの変換とは異なる点です。" },
+      ],
+    },
   },
 
   "word-counter": {
@@ -709,6 +1324,33 @@ const I18N_TOOLS = {
       faq: [
         { q: "Speichert dieser Wortzähler meinen Text?", a: "Nein - die Zählung läuft vollständig in Ihrem Browser, es wird nichts gesendet oder gespeichert." },
         { q: "Zählt er Wörter genauso wie Microsoft Word?", a: "Sehr ähnlich, aber nicht immer identisch - dieser Zähler trennt anhand von Leerzeichen, wie es die meisten Textverarbeitungen tun, aber Grenzfälle wie Bindestrich-Wörter oder Zahlen können je nach Tool leicht unterschiedlich gezählt werden." },
+      ],
+    },
+    pt: {
+      title: "Contador de Palavras",
+      intro: "Cole ou digite o texto abaixo para contar instantaneamente palavras, caracteres e frases.",
+      description: "Conte palavras, caracteres e frases no seu texto.",
+      faq: [
+        { q: "Este contador de palavras salva meu texto?", a: "Não - a contagem é feita inteiramente no seu navegador e nada é enviado ou armazenado." },
+        { q: "Ele conta palavras da mesma forma que o Microsoft Word?", a: "Bem próximo, mas nem sempre idêntico - este contador divide por espaços em branco, que é como a maioria dos processadores de texto conta também, mas casos específicos como palavras com hífen ou números podem ser contados de forma ligeiramente diferente entre ferramentas." },
+      ],
+    },
+    it: {
+      title: "Contatore di Parole",
+      intro: "Incolla o digita il testo qui sotto per contare istantaneamente parole, caratteri e frasi.",
+      description: "Conta parole, caratteri e frasi nel tuo testo.",
+      faq: [
+        { q: "Questo contatore di parole salva il mio testo?", a: "No - il conteggio avviene interamente nel tuo browser e nulla viene inviato o memorizzato." },
+        { q: "Conta le parole allo stesso modo di Microsoft Word?", a: "Molto simile, ma non sempre identico - questo contatore divide in base agli spazi bianchi, come fanno anche la maggior parte degli elaboratori di testo, ma casi limite come parole con trattino o numeri possono essere conteggiati in modo leggermente diverso tra i vari strumenti." },
+      ],
+    },
+    ja: {
+      title: "文字数・単語数カウンター",
+      intro: "以下にテキストを貼り付けるか入力すると、単語数・文字数・文の数を即座にカウントします。",
+      description: "テキストの単語数、文字数、文の数をカウントします。",
+      faq: [
+        { q: "このツールは入力したテキストを保存しますか？", a: "いいえ。カウントはすべてブラウザ内で行われ、データが送信・保存されることはありません。" },
+        { q: "Microsoft Wordと同じ数え方ですか？", a: "非常に近いですが、常に同じとは限りません。このツールは空白で区切って数える、多くのワープロソフトと同様の方式ですが、ハイフン付きの単語や数字などの境界的なケースでは、ツールによって数え方がわずかに異なることがあります。" },
       ],
     },
   },
@@ -741,6 +1383,33 @@ const I18N_TOOLS = {
         { q: "Speichert dieser Konverter meinen Text?", a: "Nein - die Umwandlung läuft vollständig in Ihrem Browser, es wird nichts gesendet oder gespeichert." },
       ],
     },
+    pt: {
+      title: "Conversor de Maiúsculas e Minúsculas",
+      intro: "Cole seu texto e escolha um formato para convertê-lo para MAIÚSCULAS, minúsculas, Formato de Título ou Formato de frase.",
+      description: "Converta texto entre maiúsculas, minúsculas, formato de título e formato de frase.",
+      faq: [
+        { q: "Qual é a diferença entre formato de título e formato de frase?", a: "O formato de título coloca em maiúscula a primeira letra de cada palavra principal ('Olá Mundo Exemplo'), enquanto o formato de frase coloca em maiúscula apenas a primeira letra de todo o texto ('Olá mundo exemplo')." },
+        { q: "Este conversor salva meu texto?", a: "Não - a conversão é feita inteiramente no seu navegador e nada é enviado ou armazenado." },
+      ],
+    },
+    it: {
+      title: "Convertitore di Maiuscole/Minuscole",
+      intro: "Incolla il tuo testo e scegli un formato per convertirlo in MAIUSCOLO, minuscolo, Formato Titolo o Formato frase.",
+      description: "Converti il testo tra maiuscolo, minuscolo, formato titolo e formato frase.",
+      faq: [
+        { q: "Qual è la differenza tra formato titolo e formato frase?", a: "Il formato titolo mette in maiuscolo la prima lettera di ogni parola principale ('Ciao Mondo Esempio'), mentre il formato frase mette in maiuscolo solo la prima lettera dell'intero testo ('Ciao mondo esempio')." },
+        { q: "Questo convertitore salva il mio testo?", a: "No - la conversione avviene interamente nel tuo browser e nulla viene inviato o memorizzato." },
+      ],
+    },
+    ja: {
+      title: "大文字・小文字変換ツール",
+      intro: "テキストを貼り付けて形式を選ぶと、大文字、小文字、タイトルケース、文頭大文字に変換できます。",
+      description: "テキストを大文字、小文字、タイトルケース、文頭大文字の間で変換します。",
+      faq: [
+        { q: "タイトルケースと文頭大文字の違いは何ですか？", a: "タイトルケースは主要な単語ごとに先頭を大文字にします（例：「Hello World Example」）。文頭大文字はテキスト全体の最初の文字だけを大文字にします（例：「Hello world example」）。" },
+        { q: "このツールは入力したテキストを保存しますか？", a: "いいえ。変換はすべてブラウザ内で行われ、データが送信・保存されることはありません。" },
+      ],
+    },
   },
 
   "dog-age-calculator": {
@@ -771,6 +1440,33 @@ const I18N_TOOLS = {
         { q: "Warum altern große Hunderassen schneller als kleine?", a: "Große und Riesenrassen wachsen schneller und erreichen die körperliche Reife früher, was mit kürzeren Lebenserwartungen und schnellerem Altern in den mittleren und höheren Jahren verbunden ist - das Gegenteil des Musters bei den meisten anderen Säugetieren." },
       ],
     },
+    pt: {
+      title: "Calculadora de Idade de Cães",
+      intro: "O envelhecimento dos cães varia conforme o porte da raça - insira a idade e o porte do seu cão para obter uma estimativa em anos humanos mais precisa do que a antiga regra de 'multiplicar por 7'.",
+      description: "Converta a idade do seu cão em anos humanos de acordo com o porte.",
+      faq: [
+        { q: "A regra de que 'um ano de cão equivale a sete anos humanos' é precisa?", a: "Não - essa velha regra é um mito aproximado. Cães envelhecem mais rápido nos primeiros dois anos, e raças grandes envelhecem mais rápido em anos posteriores do que raças pequenas." },
+        { q: "Por que raças de cães maiores envelhecem mais rápido que as pequenas?", a: "Raças grandes e gigantes crescem mais rápido e atingem a maturidade física mais cedo, o que está ligado a expectativas de vida mais curtas e a um envelhecimento mais rápido em seus anos intermediários e avançados - o oposto do padrão da maioria dos outros mamíferos." },
+      ],
+    },
+    it: {
+      title: "Calcolatrice dell'Età del Cane",
+      intro: "L'invecchiamento dei cani varia in base alla taglia della razza - inserisci l'età e la taglia del tuo cane per ottenere una stima in anni umani più accurata della vecchia regola del 'moltiplica per 7'.",
+      description: "Converti l'età del tuo cane in anni umani in base alla taglia.",
+      faq: [
+        { q: "La regola 'un anno di cane equivale a sette anni umani' è accurata?", a: "No - quella vecchia regola è un mito approssimativo. I cani invecchiano più velocemente nei primi due anni, e le razze più grandi invecchiano più velocemente negli anni successivi rispetto alle razze piccole." },
+        { q: "Perché le razze di cani più grandi invecchiano più velocemente di quelle piccole?", a: "Le razze grandi e giganti crescono più velocemente e raggiungono la maturità fisica prima, il che è collegato a una durata di vita più breve e a un invecchiamento più rapido negli anni intermedi e senior - l'opposto dello schema della maggior parte degli altri mammiferi." },
+      ],
+    },
+    ja: {
+      title: "犬の年齢計算機",
+      intro: "犬の老化は犬種のサイズによって異なります。犬の年齢とサイズを入力すると、昔ながらの「7倍」ルールよりも正確な人間年齢の目安がわかります。",
+      description: "サイズに応じて犬の年齢を人間の年齢に換算します。",
+      faq: [
+        { q: "「犬の1年は人間の7年」というルールは正確ですか？", a: "いいえ、それはおおまかな俗説です。犬は最初の2年で急速に年をとり、大型犬は小型犬に比べて後年になるほど老化が早まります。" },
+        { q: "なぜ大型犬は小型犬より早く老化するのですか？", a: "大型犬・超大型犬は成長が早く、身体的な成熟も早く迎えます。これは寿命の短さと、中年期・シニア期における老化の速さに関連しており、他の多くの哺乳類とは逆の傾向です。" },
+      ],
+    },
   },
 
   "cat-age-calculator": {
@@ -799,6 +1495,33 @@ const I18N_TOOLS = {
       faq: [
         { q: "Altern alle Katzen unabhängig von der Rasse gleich?", a: "Die Alterungsmuster sind bei den meisten Katzenrassen recht einheitlich, anders als bei Hunden, wo die Größe große Alterungsunterschiede verursacht." },
         { q: "Beeinflusst Wohnen drinnen oder draußen die Altersberechnung einer Katze?", a: "Dieser Rechner berücksichtigt das nicht - es handelt sich um eine allgemeine Schätzung basierend auf typischer Entwicklung. In der Praxis leben Wohnungskatzen aufgrund geringerer Verletzungs- und Krankheitsgefahr tendenziell länger als Freigänger, aber das beeinflusst die Lebenserwartung, nicht die Alters-Äquivalenzrechnung selbst." },
+      ],
+    },
+    pt: {
+      title: "Calculadora de Idade de Gatos",
+      intro: "Insira a idade do seu gato para estimar a idade humana equivalente, com base em padrões típicos de envelhecimento felino.",
+      description: "Converta a idade do seu gato em anos humanos.",
+      faq: [
+        { q: "Todos os gatos envelhecem da mesma forma, independentemente da raça?", a: "Os padrões de envelhecimento são bastante consistentes na maioria das raças de gatos, ao contrário dos cães, onde o porte gera grandes diferenças no envelhecimento." },
+        { q: "O estilo de vida interno ou externo afeta o cálculo da idade de um gato?", a: "Esta calculadora não leva isso em conta - é uma estimativa geral baseada no desenvolvimento típico. Na prática, gatos domésticos tendem a viver mais do que gatos que ficam ao ar livre devido à menor exposição a lesões e doenças, mas isso afeta a expectativa de vida, não o cálculo de equivalência de idade em si." },
+      ],
+    },
+    it: {
+      title: "Calcolatrice dell'Età del Gatto",
+      intro: "Inserisci l'età del tuo gatto per stimare l'età umana equivalente, in base ai tipici modelli di invecchiamento felino.",
+      description: "Converti l'età del tuo gatto in anni umani.",
+      faq: [
+        { q: "Tutti i gatti invecchiano allo stesso modo indipendentemente dalla razza?", a: "I modelli di invecchiamento sono abbastanza costanti nella maggior parte delle razze di gatti, a differenza dei cani, dove la taglia genera grandi differenze di invecchiamento." },
+        { q: "Lo stile di vita in casa o all'aperto influisce sul calcolo dell'età di un gatto?", a: "Questa calcolatrice non ne tiene conto - è una stima generale basata sullo sviluppo tipico. In pratica, i gatti d'appartamento tendono a vivere più a lungo di quelli che vivono all'aperto per la minore esposizione a lesioni e malattie, ma questo influisce sull'aspettativa di vita, non sul calcolo dell'equivalenza dell'età in sé." },
+      ],
+    },
+    ja: {
+      title: "猫の年齢計算機",
+      intro: "猫の年齢を入力すると、一般的な猫の老化パターンに基づいて人間年齢の目安を計算します。",
+      description: "猫の年齢を人間の年齢に換算します。",
+      faq: [
+        { q: "猫は犬種のような違いに関係なく同じように年をとりますか？", a: "猫の老化パターンはほとんどの猫種でかなり一定しています。犬のようにサイズによって老化の違いが大きく出ることはありません。" },
+        { q: "室内飼いか屋外飼いかで年齢の計算は変わりますか？", a: "この計算機ではその点は考慮していません。あくまで一般的な発育に基づいた目安です。実際には、室内飼いの猫はケガや病気にさらされる機会が少ないため屋外飼いの猫より長生きする傾向がありますが、それは寿命に影響するものであり、年齢換算の計算自体には影響しません。" },
       ],
     },
   },
@@ -832,6 +1555,21 @@ const I18N_STATIC = {
       lede: "Ein Referenzindex schneller, präziser Rechner - organisiert wie eine gute Bibliothek ihre Bücher ordnet, nicht wie die meisten Rechner-Websites, die alles auf eine Seite werfen.",
       body: "Calquary ist eine Sammlung von Einzelzweck-Rechnern - für Mathematik, Geld, Hausprojekte, Gesundheit, Termine, Umrechnungen, alltägliche Textaufgaben und Haustiere - entwickelt, um eine Frage gut zu beantworten, statt sie zwischen Anzeigen und themenfremden Inhalten zu vergraben. Jedes Tool läuft vollständig in Ihrem Browser: Zahlen eingeben, Antwort erhalten, nichts wird an einen Server gesendet. Die Rechner sind in 8 Kategorien gruppiert, und der Katalog wächst stetig weiter - jedes Tool wird auf eine funktionierende Formel und eine verständliche Erklärung geprüft, bevor es hinzugefügt wird, damit Sie sich auf die Antwort verlassen können. Bei Entscheidungen mit echten finanziellen, baulichen oder medizinischen Konsequenzen wenden Sie sich bitte an eine qualifizierte Fachperson.",
     },
+    pt: {
+      title: "Sobre a Calquary",
+      lede: "Um índice de referência de calculadoras rápidas e precisas - organizado como uma boa biblioteca organiza os livros, não como a maioria dos sites de calculadoras que jogam tudo em uma única página.",
+      body: "A Calquary é uma coleção de calculadoras de propósito único - para matemática, dinheiro, projetos domésticos, saúde, datas, conversões, tarefas de texto do dia a dia e pets - feitas para responder bem a uma pergunta, em vez de enterrá-la em anúncios e conteúdo não relacionado. Cada ferramenta funciona inteiramente no seu navegador: você insere seus números, obtém sua resposta, nada é enviado a um servidor. As calculadoras são agrupadas em 8 categorias, e o catálogo continua crescendo - cada ferramenta é revisada quanto a uma fórmula funcional e uma explicação em linguagem simples antes de ser adicionada, para que a resposta que você obtém seja confiável. Para decisões com implicações financeiras, estruturais ou médicas reais, consulte um profissional qualificado.",
+    },
+    it: {
+      title: "Chi siamo - Calquary",
+      lede: "Un indice di riferimento di calcolatrici rapide e precise - organizzato come una buona biblioteca organizza i libri, non come la maggior parte dei siti di calcolatrici che ammassano tutto in una sola pagina.",
+      body: "Calquary è una raccolta di calcolatrici a scopo unico - per matematica, denaro, progetti per la casa, salute, date, conversioni, attività di testo quotidiane e animali domestici - pensate per rispondere bene a una domanda invece di seppellirla tra annunci e contenuti non correlati. Ogni strumento funziona interamente nel tuo browser: inserisci i tuoi numeri, ottieni la tua risposta, nulla viene inviato a un server. Le calcolatrici sono raggruppate in 8 categorie, e il catalogo continua a crescere - ogni strumento viene verificato per avere una formula funzionante e una spiegazione in linguaggio semplice prima di essere aggiunto, così la risposta che ottieni è affidabile. Per decisioni con reali implicazioni finanziarie, strutturali o mediche, consulta un professionista qualificato.",
+    },
+    ja: {
+      title: "Calquaryについて",
+      lede: "速く正確な計算ツールのリファレンスインデックス - 多くの計算ツールサイトのようにすべてを1ページに詰め込むのではなく、優れた図書館が本を整理するように構成されています。",
+      body: "Calquaryは、数学、お金、住まいのプロジェクト、健康、日付、単位換算、日常的なテキスト作業、ペットなど、単一の目的に特化した計算ツールのコレクションです。広告や無関係なコンテンツに埋もれさせるのではなく、一つの質問にしっかり答えることを目指して作られています。すべてのツールはブラウザ内で完結して動作します。数値を入力すると答えが得られ、サーバーには何も送信されません。計算ツールは8つのカテゴリーに分類されており、カタログは今も増え続けています。公開前にはそれぞれのツールについて、正しく動作する数式とわかりやすい説明があるかを確認しているため、得られる答えを信頼していただけます。実際の財務、構造、医療に関わる重要な決定を行う前には、必ず専門家にご確認ください。",
+    },
   },
   contact: {
     en: {
@@ -850,6 +1588,18 @@ const I18N_STATIC = {
       title: "Kontaktieren Sie uns",
       body: "Einen Fehler gefunden, eine Idee für einen Rechner, oder eine Frage zu unserem Umgang mit Daten? Schreiben Sie uns an hello@calquary.com - wir lesen jede Nachricht, auch wenn Antworten ein paar Tage dauern können.",
     },
+    pt: {
+      title: "Entre em contato",
+      body: "Encontrou um bug, tem uma ideia de calculadora ou uma dúvida sobre como tratamos os dados? Escreva para hello@calquary.com - lemos todas as mensagens, embora as respostas possam levar alguns dias.",
+    },
+    it: {
+      title: "Contattaci",
+      body: "Hai trovato un bug, hai un'idea per una calcolatrice o una domanda su come gestiamo i dati? Scrivici a hello@calquary.com - leggiamo ogni messaggio, anche se le risposte potrebbero richiedere alcuni giorni.",
+    },
+    ja: {
+      title: "お問い合わせ",
+      body: "不具合の報告、計算ツールのアイデア、データの取り扱いについてのご質問などがございましたら、hello@calquary.com までご連絡ください。すべてのメッセージに目を通しておりますが、返信までに数日かかる場合があります。",
+    },
   },
 
   // Legal-facing pages: translated in full (not summarized), but each
@@ -863,6 +1613,9 @@ const I18N_STATIC = {
     es: 'Esta es una traducción de la Política de Privacidad y los Términos de Servicio originales en inglés, ofrecida por comodidad. En caso de discrepancia, prevalece la <a href="/privacy.html">versión en inglés</a>. Esta traducción no ha pasado por una revisión legal independiente.',
     fr: 'Ceci est une traduction de la Politique de Confidentialité et des Conditions d\'Utilisation originales en anglais, fournie par commodité. En cas de divergence, la <a href="/privacy.html">version anglaise</a> fait foi. Cette traduction n\'a pas fait l\'objet d\'une relecture juridique indépendante.',
     de: 'Dies ist eine Übersetzung der ursprünglichen englischen Datenschutzerklärung und Nutzungsbedingungen, bereitgestellt aus Gründen der Übersichtlichkeit. Bei Abweichungen ist die <a href="/privacy.html">englische Fassung</a> maßgeblich. Diese Übersetzung wurde keiner separaten rechtlichen Prüfung unterzogen.',
+    pt: 'Esta é uma tradução da Política de Privacidade e dos Termos de Serviço originais em inglês, oferecida por conveniência. Em caso de divergência, prevalece a <a href="/privacy.html">versão em inglês</a>. Esta tradução não passou por uma revisão jurídica independente.',
+    it: 'Questa è una traduzione dell\'Informativa sulla Privacy e dei Termini di Servizio originali in inglese, fornita per comodità. In caso di discrepanza, prevale la <a href="/privacy.html">versione inglese</a>. Questa traduzione non è stata sottoposta a una revisione legale indipendente.',
+    ja: 'これは英語版のプライバシーポリシーおよび利用規約の翻訳であり、利便性のために提供されています。内容に相違がある場合は、<a href="/privacy.html">英語版</a>が優先されます。この翻訳は独立した法的レビューを受けていません。',
   },
 
   privacy: {
@@ -946,6 +1699,66 @@ const I18N_STATIC = {
         { h2: "Kontakt", p: ['Wenn Sie Fragen zu dieser Datenschutzerklärung haben, <a href="/contact.html">kontaktieren Sie uns bitte</a>.'] },
       ],
     },
+    pt: {
+      title: "Política de Privacidade",
+      effectiveDateLabel: "Data de vigência: 18 de agosto de 2026",
+      sections: [
+        { h2: "Visão geral", p: ['Esta Política de Privacidade explica quais informações a Calquary ("nós", "nosso") coleta quando você usa calquary.com (o "Site"), como as usamos e as opções disponíveis para você. Ao usar o Site, você concorda com as práticas aqui descritas.'] },
+        { h2: "Informações que coletamos", p: [
+          "As calculadoras da Calquary funcionam inteiramente no seu navegador. Quando você insere números ou outros valores em uma calculadora, esses dados são processados localmente no seu dispositivo usando JavaScript - nunca são transmitidos aos nossos servidores, armazenados em um banco de dados ou vistos por nós de qualquer forma. Não exigimos contas, logins ou qualquer informação pessoal para usar qualquer calculadora deste Site.",
+          "Podemos coletar automaticamente informações técnicas limitadas e não identificáveis, como tipo de navegador, tipo geral de dispositivo e páginas visitadas, por meio de registros padrão de servidor web e ferramentas de análise (por exemplo, para entender quais calculadoras são mais úteis e corrigir erros). Essas informações não incluem os valores que você insere em uma calculadora.",
+        ] },
+        { h2: "Cookies e tecnologias de rastreamento", p: ["A Calquary atualmente não usa cookies para as próprias calculadoras - sem estado de login, sem preferências salvas, sem rastreamento das suas entradas na calculadora. Nós usamos, ou planejamos usar, os serviços de terceiros descritos abaixo, que podem definir seus próprios cookies no seu navegador, inclusive para fins de publicidade."] },
+        { h2: "Publicidade", p: [
+          'A Calquary pode exibir publicidade por meio do Google AdSense ou serviços de publicidade de terceiros semelhantes. Esses serviços podem usar cookies, identificadores de dispositivo ou tecnologias semelhantes para veicular anúncios com base em suas visitas anteriores a este ou outros sites (publicidade "baseada em interesses" ou "personalizada").',
+          'O uso de cookies de publicidade pelo Google permite que ele e seus parceiros veiculem anúncios com base em suas visitas a este e a outros sites. Você pode optar por não receber publicidade personalizada visitando as <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">Configurações de anúncios do Google</a>, ou recusar o uso de cookies de alguns fornecedores terceirizados para publicidade personalizada visitando <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer">www.aboutads.info</a>. Para saber mais sobre como o Google usa os dados quando você usa nosso Site, consulte <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">Como o Google usa informações de sites ou apps que usam os serviços do Google</a>.',
+        ] },
+        { h2: "Serviços de terceiros", p: ["Podemos usar serviços de terceiros para análise, hospedagem e publicidade (como Google AdSense e Google Analytics). Esses provedores podem coletar informações enviadas pelo seu navegador como parte de uma solicitação de página da web, como cookies ou seu endereço IP, e são regidos por suas próprias políticas de privacidade, não por esta."] },
+        { h2: "Privacidade infantil", p: ["A Calquary não é direcionada a crianças menores de 13 anos, e não coletamos intencionalmente informações pessoais de crianças menores de 13 anos. Se você acredita que uma criança nos forneceu informações pessoais, entre em contato conosco para que possamos resolver a situação."] },
+        { h2: "Alterações a esta política", p: ['Podemos atualizar esta Política de Privacidade periodicamente para refletir mudanças em nossas práticas ou por motivos legais, operacionais ou regulatórios. A "Data de vigência" no topo desta página refletirá a revisão mais recente. O uso continuado do Site após a entrada em vigor das alterações constitui aceitação da política revisada.'] },
+        { h2: "Fale conosco", p: ['Se você tiver dúvidas sobre esta Política de Privacidade, por favor <a href="/contact.html">entre em contato conosco</a>.'] },
+      ],
+    },
+    it: {
+      title: "Informativa sulla Privacy",
+      effectiveDateLabel: "Data di entrata in vigore: 18 agosto 2026",
+      sections: [
+        { h2: "Panoramica", p: ['Questa Informativa sulla Privacy spiega quali informazioni Calquary ("noi", "nostro") raccoglie quando utilizzi calquary.com (il "Sito"), come le utilizziamo e le scelte a tua disposizione. Utilizzando il Sito, accetti le pratiche qui descritte.'] },
+        { h2: "Informazioni che raccogliamo", p: [
+          "Le calcolatrici di Calquary funzionano interamente nel tuo browser. Quando inserisci numeri o altri valori in una calcolatrice, quei dati vengono elaborati localmente sul tuo dispositivo tramite JavaScript - non vengono mai trasmessi ai nostri server, memorizzati in un database o visti da noi in alcuna forma. Non richiediamo account, accessi o alcuna informazione personale per utilizzare qualsiasi calcolatrice di questo Sito.",
+          "Potremmo raccogliere automaticamente informazioni tecniche limitate e non identificative, come il tipo di browser, il tipo generale di dispositivo e le pagine visitate, tramite log standard del server web e strumenti di analisi (ad esempio, per capire quali calcolatrici sono più utili e correggere bug). Queste informazioni non includono i valori che inserisci in una calcolatrice.",
+        ] },
+        { h2: "Cookie e tecnologie di tracciamento", p: ["Calquary attualmente non utilizza cookie per le calcolatrici stesse - nessuno stato di accesso, nessuna preferenza salvata, nessun tracciamento dei tuoi input nelle calcolatrici. Utilizziamo, o prevediamo di utilizzare, i servizi di terze parti descritti di seguito, che potrebbero impostare i propri cookie nel tuo browser, anche a scopo pubblicitario."] },
+        { h2: "Pubblicità", p: [
+          'Calquary potrebbe mostrare pubblicità tramite Google AdSense o servizi pubblicitari di terze parti simili. Questi servizi potrebbero utilizzare cookie, identificatori del dispositivo o tecnologie simili per mostrare annunci basati sulle tue visite precedenti a questo o ad altri siti web (pubblicità "basata sugli interessi" o "personalizzata").',
+          'L\'uso da parte di Google dei cookie pubblicitari consente a Google e ai suoi partner di mostrare annunci in base alle tue visite a questo e ad altri siti. Puoi disattivare la pubblicità personalizzata visitando le <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">Impostazioni annunci Google</a>, oppure rifiutare l\'uso dei cookie da parte di alcuni fornitori terzi per la pubblicità personalizzata visitando <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer">www.aboutads.info</a>. Per saperne di più su come Google utilizza i dati quando usi il nostro Sito, consulta <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">Come Google utilizza le informazioni dei siti o delle app che utilizzano i suoi servizi</a>.',
+        ] },
+        { h2: "Servizi di terze parti", p: ["Potremmo utilizzare servizi di terze parti per analisi, hosting e pubblicità (come Google AdSense e Google Analytics). Questi fornitori potrebbero raccogliere informazioni inviate dal tuo browser come parte di una richiesta di pagina web, come cookie o il tuo indirizzo IP, e sono regolati dalle proprie informative sulla privacy, non da questa."] },
+        { h2: "Privacy dei minori", p: ["Calquary non è rivolto a bambini di età inferiore ai 13 anni, e non raccogliamo consapevolmente informazioni personali da bambini di età inferiore ai 13 anni. Se ritieni che un bambino ci abbia fornito informazioni personali, contattaci in modo da poter risolvere la situazione."] },
+        { h2: "Modifiche a questa informativa", p: ['Potremmo aggiornare questa Informativa sulla Privacy di tanto in tanto per riflettere cambiamenti nelle nostre pratiche o per motivi legali, operativi o normativi. La "Data di entrata in vigore" in cima a questa pagina rifletterà la revisione più recente. L\'uso continuato del Sito dopo l\'entrata in vigore delle modifiche costituisce accettazione dell\'informativa rivista.'] },
+        { h2: "Contattaci", p: ['Se hai domande su questa Informativa sulla Privacy, <a href="/contact.html">contattaci</a>.'] },
+      ],
+    },
+    ja: {
+      title: "プライバシーポリシー",
+      effectiveDateLabel: "発効日：2026年8月18日",
+      sections: [
+        { h2: "概要", p: ["本プライバシーポリシーは、calquary.com（以下「本サイト」）をご利用の際にCalquary（以下「当社」）が収集する情報、その利用方法、およびお客様が選択できる事項について説明するものです。本サイトをご利用いただくことで、ここに記載された取り扱いに同意したものとみなされます。"] },
+        { h2: "当社が収集する情報", p: [
+          "Calquaryの計算ツールはすべてお客様のブラウザ内で動作します。計算ツールに数値などの値を入力すると、そのデータはJavaScriptを使用してお客様のデバイス上でローカルに処理されます。当社のサーバーに送信されたり、データベースに保存されたり、当社が何らかの形で閲覧したりすることは一切ありません。本サイトのいずれの計算ツールを利用する際にも、アカウント登録、ログイン、個人情報の入力は不要です。",
+          "当社は、ブラウザの種類、一般的なデバイスの種類、閲覧したページなど、個人を特定しない限定的な技術情報を、標準的なウェブサーバーのログや分析ツールを通じて自動的に収集する場合があります（例：どの計算ツールが最も利用されているかを把握し、不具合を修正するため）。この情報には、計算ツールに入力した値は含まれません。",
+        ] },
+        { h2: "Cookieおよびトラッキング技術", p: ["Calquaryは現在、計算ツール自体にはCookieを使用していません - ログイン状態の保持、設定の保存、入力内容の追跡は行っていません。当社は、以下で説明する第三者サービスを利用する、または利用を予定しており、それらは広告目的を含め、お客様のブラウザに独自のCookieを設定する場合があります。"] },
+        { h2: "広告", p: [
+          "Calquaryは、Google AdSenseまたは類似の第三者広告サービスを通じて広告を表示する場合があります。これらのサービスは、Cookie、デバイス識別子、または類似の技術を使用して、お客様の本サイトまたは他のサイトへの過去の訪問履歴に基づいた広告（「興味関心に基づく」または「パーソナライズされた」広告）を配信する場合があります。",
+          'Googleが広告用Cookieを使用することで、Googleおよびそのパートナーは、お客様のこのサイトおよび他のサイトへの訪問に基づいた広告を配信できます。パーソナライズ広告を無効にするには<a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">Google広告設定</a>をご覧ください。また、一部の第三者ベンダーによるパーソナライズ広告用Cookieの使用を無効にするには<a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer">www.aboutads.info</a>をご覧ください。Googleが本サイトのご利用時にデータをどのように使用するかについては、<a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">Googleのサービスを使用するサイトやアプリからの情報の使用方法について</a>をご覧ください。',
+        ] },
+        { h2: "第三者サービス", p: ["当社は、分析、ホスティング、広告のために第三者サービス（Google AdSenseやGoogle Analyticsなど）を利用する場合があります。これらのプロバイダーは、Cookieやお客様のIPアドレスなど、ウェブページのリクエストの一部としてブラウザから送信される情報を収集する場合があり、本ポリシーではなく、各社独自のプライバシーポリシーに準拠します。"] },
+        { h2: "児童のプライバシー", p: ["Calquaryは13歳未満のお子様を対象としておらず、13歳未満のお子様の個人情報を意図的に収集することはありません。お子様が当社に個人情報を提供したと思われる場合は、対応いたしますので当社までご連絡ください。"] },
+        { h2: "本ポリシーの変更", p: ["当社は、実務内容の変更、または法的・運用上・規制上の理由により、本プライバシーポリシーを随時更新する場合があります。本ページ上部の「発効日」は最新の改定日を反映しています。変更の発効後も本サイトをご利用いただいた場合、改定後のポリシーに同意したものとみなされます。"] },
+        { h2: "お問い合わせ", p: ['本プライバシーポリシーに関するご質問は、<a href="/contact.html">お問い合わせ</a>ください。'] },
+      ],
+    },
   },
 
   terms: {
@@ -1015,6 +1828,57 @@ const I18N_STATIC = {
         { h2: "Links Dritter und Werbung", p: ["Die Website kann Links zu Websites Dritter enthalten oder Werbung Dritter anzeigen. Wir sind nicht verantwortlich für den Inhalt, die Genauigkeit oder die Praktiken einer Website Dritter, und die Aufnahme eines Links oder einer Anzeige impliziert keine Empfehlung unsererseits."] },
         { h2: "Änderungen dieser Bedingungen", p: ['Wir können diese Nutzungsbedingungen von Zeit zu Zeit aktualisieren. Das „Datum des Inkrafttretens" oben auf dieser Seite spiegelt die jüngste Überarbeitung wider. Die fortgesetzte Nutzung der Website nach Inkrafttreten der Änderungen stellt die Annahme der überarbeiteten Bedingungen dar.'] },
         { h2: "Kontakt", p: ['Wenn Sie Fragen zu diesen Nutzungsbedingungen haben, <a href="/contact.html">kontaktieren Sie uns bitte</a>.'] },
+      ],
+    },
+    pt: {
+      title: "Termos de Serviço",
+      effectiveDateLabel: "Data de vigência: 18 de agosto de 2026",
+      sections: [
+        { h2: "Aceitação dos termos", p: ['Ao acessar ou utilizar calquary.com (o "Site"), você concorda em ficar vinculado a estes Termos de Serviço. Se você não concordar, não use o Site.'] },
+        { h2: "Apenas para fins informativos", p: [
+          "As calculadoras da Calquary são fornecidas apenas para fins gerais de informação e estimativa. Elas não são, e não devem ser tomadas como, aconselhamento financeiro, estrutural, de engenharia, médico, jurídico ou de qualquer outra natureza profissional. Os resultados são estimativas baseadas nas fórmulas e suposições incorporadas em cada ferramenta, e podem não considerar suas circunstâncias específicas.",
+          "Sempre confirme resultados importantes - um pagamento de empréstimo, uma estimativa de material para um projeto de construção, um cálculo relacionado à saúde - com um profissional qualificado antes de tomar uma decisão baseada neles.",
+        ] },
+        { h2: "Sem garantia", p: ['O Site e suas calculadoras são fornecidos "como estão" e "conforme disponíveis", sem garantia de qualquer tipo, expressa ou implícita, incluindo, mas não se limitando a, garantias de precisão, comercialização, adequação a um propósito específico ou não violação. Não garantimos que qualquer calculadora estará livre de erros, será ininterrupta ou produzirá resultados adequados à sua situação específica.'] },
+        { h2: "Limitação de responsabilidade", p: ["Na máxima extensão permitida por lei, a Calquary e seus operadores não serão responsáveis por quaisquer danos diretos, indiretos, incidentais, consequenciais ou especiais decorrentes de, ou relacionados a, seu uso ou incapacidade de usar o Site ou os resultados de qualquer calculadora - incluindo, mas não se limitando a, perda financeira, danos materiais ou lesões pessoais - mesmo que avisados da possibilidade de tais danos."] },
+        { h2: "Uso aceitável", p: ["Você concorda em não fazer uso indevido do Site, incluindo, mas não se limitando a: tentar interromper ou sobrecarregar a infraestrutura do Site, extrair conteúdo em um ritmo que degrade o serviço para outros usuários, ou usar o Site para qualquer propósito ilegal. Reservamo-nos o direito de restringir o acesso para qualquer uso que viole estes termos."] },
+        { h2: "Links de terceiros e publicidade", p: ["O Site pode conter links para sites de terceiros ou exibir publicidade de terceiros. Não somos responsáveis pelo conteúdo, precisão ou práticas de qualquer site de terceiros, e a inclusão de um link ou anúncio não implica endosso."] },
+        { h2: "Alterações a estes termos", p: ['Podemos atualizar estes Termos de Serviço periodicamente. A "Data de vigência" no topo desta página reflete a revisão mais recente. O uso continuado do Site após a entrada em vigor das alterações constitui aceitação dos termos revisados.'] },
+        { h2: "Fale conosco", p: ['Se você tiver dúvidas sobre estes Termos de Serviço, por favor <a href="/contact.html">entre em contato conosco</a>.'] },
+      ],
+    },
+    it: {
+      title: "Termini di Servizio",
+      effectiveDateLabel: "Data di entrata in vigore: 18 agosto 2026",
+      sections: [
+        { h2: "Accettazione dei termini", p: ['Accedendo o utilizzando calquary.com (il "Sito"), accetti di essere vincolato da questi Termini di Servizio. Se non sei d\'accordo, ti preghiamo di non utilizzare il Sito.'] },
+        { h2: "Solo a scopo informativo", p: [
+          "Le calcolatrici di Calquary sono fornite solo a scopo generale informativo e di stima. Non costituiscono, e non devono essere considerate, una consulenza finanziaria, strutturale, ingegneristica, medica, legale o di altro tipo professionale. I risultati sono stime basate sulle formule e sulle ipotesi integrate in ciascuno strumento, e potrebbero non tenere conto delle tue circostanze specifiche.",
+          "Conferma sempre i risultati importanti - una rata di un prestito, una stima dei materiali per un progetto edile, un calcolo relativo alla salute - con un professionista qualificato prima di prendere una decisione basata su di essi.",
+        ] },
+        { h2: "Nessuna garanzia", p: ['Il Sito e le sue calcolatrici sono forniti "così come sono" e "come disponibili", senza garanzia di alcun tipo, espressa o implicita, incluse, a titolo esemplificativo ma non esaustivo, le garanzie di accuratezza, commerciabilità, idoneità a uno scopo particolare o non violazione. Non garantiamo che una calcolatrice sarà priva di errori, ininterrotta o produrrà risultati adatti alla tua situazione specifica.'] },
+        { h2: "Limitazione di responsabilità", p: ["Nella misura massima consentita dalla legge, Calquary e i suoi gestori non saranno responsabili per eventuali danni diretti, indiretti, incidentali, consequenziali o speciali derivanti da, o in connessione con, l'uso o l'impossibilità di utilizzare il Sito o i risultati di qualsiasi calcolatrice - inclusi, a titolo esemplificativo ma non esaustivo, perdite finanziarie, danni materiali o lesioni personali - anche se avvisati della possibilità di tali danni."] },
+        { h2: "Uso consentito", p: ["Accetti di non fare un uso improprio del Sito, incluso, a titolo esemplificativo ma non esaustivo: tentare di interrompere o sovraccaricare l'infrastruttura del Sito, effettuare scraping di contenuti a un ritmo che degradi il servizio per altri utenti, o utilizzare il Sito per scopi illeciti. Ci riserviamo il diritto di limitare l'accesso per qualsiasi uso che violi questi termini."] },
+        { h2: "Link di terze parti e pubblicità", p: ["Il Sito potrebbe contenere link a siti web di terze parti o mostrare pubblicità di terze parti. Non siamo responsabili per il contenuto, l'accuratezza o le pratiche di alcun sito di terze parti, e l'inclusione di un link o di un annuncio non implica alcuna approvazione."] },
+        { h2: "Modifiche a questi termini", p: ['Potremmo aggiornare questi Termini di Servizio di tanto in tanto. La "Data di entrata in vigore" in cima a questa pagina riflette la revisione più recente. L\'uso continuato del Sito dopo l\'entrata in vigore delle modifiche costituisce accettazione dei termini rivisti.'] },
+        { h2: "Contattaci", p: ['Se hai domande su questi Termini di Servizio, <a href="/contact.html">contattaci</a>.'] },
+      ],
+    },
+    ja: {
+      title: "利用規約",
+      effectiveDateLabel: "発効日：2026年8月18日",
+      sections: [
+        { h2: "規約への同意", p: ["calquary.com（以下「本サイト」）にアクセスまたはこれを利用することにより、お客様は本利用規約に拘束されることに同意したものとみなされます。同意されない場合は、本サイトをご利用にならないでください。"] },
+        { h2: "情報提供のみを目的とした利用", p: [
+          "Calquaryの計算ツールは、一般的な情報提供および概算のみを目的として提供されています。これらは専門的な財務、構造、工学、医療、法律、その他の専門的アドバイスではなく、そのようなものとして利用されるべきではありません。計算結果は、各ツールに組み込まれた数式や前提条件に基づく概算であり、お客様固有の状況を反映していない場合があります。",
+          "ローンの返済額、建築プロジェクトの資材見積もり、健康に関する計算など、重要な意味を持つ結果については、それに基づいて判断を行う前に、必ず有資格の専門家にご確認ください。",
+        ] },
+        { h2: "保証の免責", p: ["本サイトおよびその計算ツールは「現状有姿」および「提供可能な状態のまま」で提供され、正確性、商品性、特定目的への適合性、権利非侵害を含むいかなる保証も、明示的か黙示的かを問わず一切行いません。いずれの計算ツールについても、エラーがないこと、中断なく利用できること、またはお客様固有の状況に適した結果を生成することを保証するものではありません。"] },
+        { h2: "責任の制限", p: ["法律で認められる最大限の範囲において、Calquaryおよびその運営者は、本サイトまたはいずれかの計算ツールの結果の利用または利用不能に起因または関連して生じる、直接的、間接的、付随的、結果的、または特別な損害（金銭的損失、物的損害、人身傷害を含むがこれらに限定されない）について、たとえそのような損害の可能性を通知されていた場合でも、一切責任を負いません。"] },
+        { h2: "許容される利用", p: ["お客様は、本サイトのインフラの妨害または過負荷を試みること、他のユーザーのサービスを低下させる速度でのコンテンツのスクレイピング、または違法な目的での本サイトの利用を含むがこれらに限定されない、本サイトの不正利用を行わないことに同意するものとします。当社は、これらの規約に違反する利用に対してアクセスを制限する権利を留保します。"] },
+        { h2: "第三者リンクおよび広告", p: ["本サイトには、第三者ウェブサイトへのリンクが含まれている場合や、第三者の広告が表示される場合があります。当社は、いかなる第三者サイトのコンテンツ、正確性、または取り扱いについても責任を負わず、リンクや広告の掲載は推奨を意味するものではありません。"] },
+        { h2: "本規約の変更", p: ["当社は、本利用規約を随時更新する場合があります。本ページ上部の「発効日」は最新の改定日を反映しています。変更の発効後も本サイトをご利用いただいた場合、改定後の規約に同意したものとみなされます。"] },
+        { h2: "お問い合わせ", p: ['本利用規約に関するご質問は、<a href="/contact.html">お問い合わせ</a>ください。'] },
       ],
     },
   },

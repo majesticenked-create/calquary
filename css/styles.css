@@ -6,6 +6,16 @@
    system entirely — see git history for the previous tokens.
    ============================================================ */
 
+/* Japanese pages load Noto Sans JP alongside Inter (see build.js's
+   fontsLink()) since Inter has no CJK glyphs — this prefers Noto Sans JP
+   for Japanese pages specifically rather than leaving glyph coverage to
+   whatever generic sans-serif fallback the visitor's OS happens to ship,
+   while every other locale is untouched (no extra font weight loaded). */
+html[lang="ja"] {
+  --font-display: 'Noto Sans JP', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Noto Sans JP', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
 :root {
   /* Color tokens */
   --paper: #FFFFFF;
@@ -252,6 +262,8 @@ select:focus-visible {
   right: 0;
   z-index: 30;
   min-width: 140px;
+  max-height: min(60vh, 320px);
+  overflow-y: auto;
   padding: 6px;
   background: var(--paper-raised);
   border: 1px solid var(--line);

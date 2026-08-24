@@ -537,3 +537,98 @@ EOF
 cd /Users/beyouenked/projects/formatiq
 node shot-dropdown-routes.js
 rm shot-dropdown-routes.js
+- `2026-08-24 23:03:31` | FAILURE | ERROR | OTHER | Bash | Exit code 1
+- `2026-08-24 23:33:41` | FAILURE | ERROR | OTHER | Bash | Exit code 1
+- `2026-08-24 23:43:37` | FAILURE | ERROR | OTHER | Bash | Exit code 1
+- `2026-08-24 23:48:10` | FAILURE | ERROR | OTHER | Bash | Exit code 1
+- `2026-08-25 02:26:50` | GUARD | LOW | WARNING: rm command allowed → mkdir -p /Users/beyouenked/Documents/Calquary/.review-screenshots
+cat > /Users/beyouenked/projects/formatiq/shot-wave2.js <<'EOF'
+const { chromium } = require('playwright');
+(async () => {
+  const browser = await chromium.launch();
+  const errors = [];
+
+  const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+  const page = await ctx.newPage();
+  page.on('console', m => { if (m.type() === 'error') errors.push(`[ja home] ${m.text()}`); });
+  page.on('pageerror', e => errors.push(`[ja home] ${e.message}`));
+  await page.goto('http://localhost:8000/ja/index.html', { waitUntil: 'networkidle' });
+  await page.waitForTimeout(400);
+  await page.screenshot({ path: '/Users/beyouenked/Documents/Calquary/.review-screenshots/wave2-ja-home-1440.png', fullPage: true });
+
+  const page2 = await ctx.newPage();
+  page2.on('console', m => { if (m.type() === 'error') errors.push(`[pt tool] ${m.text()}`); });
+  page2.on('pageerror', e => errors.push(`[pt tool] ${e.message}`));
+  await page2.goto('http://localhost:8000/pt/tool/mortgage-calculator.html', { waitUntil: 'networkidle' });
+  await page2.waitForTimeout(400);
+  await page2.screenshot({ path: '/Users/beyouenked/Documents/Calquary/.review-screenshots/wave2-pt-tool-1440.png', fullPage: true });
+
+  // Dropdown with 7 options - expanded state
+  const page3 = await ctx.newPage();
+  await page3.goto('http://localhost:8000/index.html', { waitUntil: 'networkidle' });
+  await page3.waitForTimeout(300);
+  await page3.click('.locale-trigger');
+  await page3.waitForTimeout(200);
+  const menuItemCount = await page3.$$eval('.locale-item', els => els.length);
+  await page3.screenshot({ path: '/Users/beyouenked/Documents/Calquary/.review-screenshots/wave2-dropdown-7options.png', clip: { x: 900, y: 0, width: 540, height: 400 } });
+
+  // Click-test 3 new locale paths through the dropdown
+  const results = [];
+  const cases = [
+    { start: 'http://localhost:8000/index.html', label: "Português" },
+    { start: 'http://localhost:8000/tool/bmi-calculator.html', label: "Italiano" },
+    { start: 'http://localhost:8000/category/finance.html', label: "日本語" },
+  ];
+  for (const c of cases) {
+    const p = await browser.newPage();
+    const errs = [];
+    p.on('pageerror', e => errs.push(e.message));
+    await p.goto(c.start, { waitUntil: 'networkidle' });
+    await p.click('.locale-trigger');
+    await p.waitForTimeout(150);
+    await p.click(`.locale-item:has-text("${c.label}")`);
+    await p.waitForTimeout(500);
+    const finalUrl = p.url();
+    const htmlLang = await p.$eval('html', el => el.getAttribute('lang'));
+    const h1 = await p.$eval('h1', el => el.textContent);
+    results.push({ start: c.start, target: c.label, finalUrl, htmlLang, h1, errs });
+    await p.close();
+  }
+
+  await browser.close();
+  console.log(JSON.stringify({ errors, menuItemCount, results }, null, 2));
+})();
+EOF
+cd /Users/beyouenked/projects/formatiq
+node shot-wave2.js
+rm shot-wave2.js
+- `2026-08-25 02:28:39` | GUARD | LOW | WARNING: rm command allowed → cat > /Users/beyouenked/projects/formatiq/shot-wave2-sweep.js <<'EOF'
+const { chromium } = require('playwright');
+(async () => {
+  const browser = await chromium.launch();
+  const errors = [];
+  const pages = [
+    'http://localhost:8000/pt/privacy.html',
+    'http://localhost:8000/it/terms.html',
+    'http://localhost:8000/ja/about.html',
+    'http://localhost:8000/ja/contact.html',
+    'http://localhost:8000/pt/category/pets.html',
+    'http://localhost:8000/it/tool/case-converter.html',
+  ];
+  for (const url of pages) {
+    const page = await browser.newPage();
+    page.on('console', m => { if (m.type() === 'error') errors.push(`${url}: ${m.text()}`); });
+    page.on('pageerror', e => errors.push(`${url}: ${e.message}`));
+    await page.goto(url, { waitUntil: 'networkidle' });
+    await page.waitForTimeout(200);
+    const hasSwitcher = await page.$('.locale-switcher') !== null;
+    if (!hasSwitcher) errors.push(`${url}: NO locale-switcher`);
+    await page.close();
+  }
+  await browser.close();
+  console.log(JSON.stringify({ errors }, null, 2));
+})();
+EOF
+cd /Users/beyouenked/projects/formatiq
+node shot-wave2-sweep.js
+rm shot-wave2-sweep.js

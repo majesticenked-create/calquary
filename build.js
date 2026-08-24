@@ -32,8 +32,8 @@ const MONTHS = ["January","February","March","April","May","June","July","August
 
 // "en" = site root (no prefix). Locale build order also controls hreflang
 // link order in the <head> of every generated page.
-const LOCALES = ["en", "es", "fr", "de"];
-const OG_LOCALE = { en: "en_US", es: "es_ES", fr: "fr_FR", de: "de_DE" };
+const LOCALES = ["en", "es", "fr", "de", "pt", "it", "ja"];
+const OG_LOCALE = { en: "en_US", es: "es_ES", fr: "fr_FR", de: "de_DE", pt: "pt_PT", it: "it_IT", ja: "ja_JP" };
 
 // Wave-one tool batch: prioritized from the qualitative volume signals in
 // seo/keyword-research-*.md (DataForSEO was down for that whole research
@@ -234,7 +234,7 @@ function staticUrl(locale, page) {
 // of LOCALES) — reciprocal by construction, since every page in the set
 // links to every other page in the same set plus x-default (English).
 function hreflangLinks(urlFor, builtLocales) {
-  const HREFLANG_CODE = { en: "en", es: "es", fr: "fr", de: "de" };
+  const HREFLANG_CODE = { en: "en", es: "es", fr: "fr", de: "de", pt: "pt", it: "it", ja: "ja" };
   const lines = builtLocales.map(
     (loc) => `  <link rel="alternate" hreflang="${HREFLANG_CODE[loc]}" href="${urlFor(loc)}">`
   );
@@ -248,8 +248,8 @@ function hreflangLinks(urlFor, builtLocales) {
 // same tool/category/static page, not just that locale's homepage), and
 // only offers locales that actually exist for this page (an untranslated
 // tool page only ever built "en", so no dead links to a missing translation).
-const LOCALE_LABEL = { en: "EN", es: "ES", fr: "FR", de: "DE" };
-const LOCALE_LABEL_FULL = { en: "English", es: "Español", fr: "Français", de: "Deutsch" };
+const LOCALE_LABEL = { en: "EN", es: "ES", fr: "FR", de: "DE", pt: "PT", it: "IT", ja: "JA" };
+const LOCALE_LABEL_FULL = { en: "English", es: "Español", fr: "Français", de: "Deutsch", pt: "Português", it: "Italiano", ja: "日本語" };
 const GLOBE_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>';
 
 // One dropdown control, not an always-visible EN·ES·FR·DE link row — the
@@ -368,6 +368,23 @@ function faviconLinks() {
   ].join("\n  ");
 }
 
+// Inter has no Japanese glyphs at all — without an explicit CJK-capable
+// face, the browser would silently fall back to whatever generic sans-serif
+// the OS provides (Hiragino/Yu Gothic/Noto Sans CJK depending on platform),
+// which is *usually* fine but is a different typeface family than the rest
+// of the site and isn't guaranteed everywhere. ja pages load Noto Sans JP
+// alongside Inter (in one request) rather than relying on that fallback;
+// css/styles.css then prefers it via an `html[lang="ja"]` override so
+// Japanese text renders in a face actually chosen for this brand, not
+// whatever the visitor's OS happens to ship. Every other locale keeps the
+// original Inter-only request — no extra font weight for non-Japanese pages.
+function fontsLink(locale) {
+  if (locale === "ja") {
+    return `<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap">`;
+  }
+  return `<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">`;
+}
+
 function escapeAttr(s) {
   return String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;");
 }
@@ -465,6 +482,7 @@ function buildToolPage(template, locale, calc, cat, I18N) {
 
   return template
     .split("{{LANG}}").join(locale)
+    .split("{{FONTS_LINK}}").join(fontsLink(locale))
     .split("{{CALC_ID}}").join(calc.id)
     .split("{{TITLE}}").join(t.title)
     .split("{{INTRO}}").join(t.intro)
@@ -506,11 +524,13 @@ function buildToolPage(template, locale, calc, cat, I18N) {
 // two locales front the category-word instead ("Calculadoras de Salud y Fitness"),
 // with the French partitive "de" elided to "d'" before a vowel-initial name.
 function categoryNameFull(locale, name, ui) {
-  if (locale === "es") return `${ui.catSuffix} de ${name}`;
+  if (locale === "es" || locale === "pt") return `${ui.catSuffix} de ${name}`;
+  if (locale === "it") return `${ui.catSuffix} di ${name}`;
   if (locale === "fr") {
     const de = /^[AEIOUÀÂÉÈÊËÎÏÔÙÛÜ]/i.test(name) ? "d'" : "de ";
     return `${ui.catSuffix} ${de}${name}`;
   }
+  if (locale === "ja") return `${name}${ui.catSuffix}`; // Japanese compounds without a separator
   return `${name} ${ui.catSuffix}`;
 }
 
@@ -527,6 +547,7 @@ function buildCategoryPage(template, locale, cat, calculators, I18N) {
 
   return template
     .split("{{LANG}}").join(locale)
+    .split("{{FONTS_LINK}}").join(fontsLink(locale))
     .split("{{CAT_ID}}").join(cat.id)
     .split("{{CAT_NAME_FULL}}").join(nameFull)
     .split("{{CAT_DESCRIPTION}}").join(description)
@@ -599,6 +620,7 @@ function buildHomePage(template, locale, categories, calculators, I18N) {
 
   return template
     .split("{{LANG}}").join(locale)
+    .split("{{FONTS_LINK}}").join(fontsLink(locale))
     .split("{{LOCALE_CODE}}").join(locale)
     .split("{{LOCALE_PATH}}").join(localePath(locale))
     .split("{{TITLE}}").join(title)
@@ -650,6 +672,7 @@ function buildAboutPage(template, locale, I18N) {
 
   return template
     .split("{{LANG}}").join(locale)
+    .split("{{FONTS_LINK}}").join(fontsLink(locale))
     .split("{{LOCALE_PATH}}").join(localePath(locale))
     .split("{{TITLE}}").join(`${s.title} | Calquary`)
     .split("{{DESCRIPTION}}").join(s.lede)
@@ -677,6 +700,7 @@ function buildContactPage(template, locale, I18N) {
 
   return template
     .split("{{LANG}}").join(locale)
+    .split("{{FONTS_LINK}}").join(fontsLink(locale))
     .split("{{LOCALE_PATH}}").join(localePath(locale))
     .split("{{TITLE}}").join(`${s.title} | Calquary`)
     .split("{{DESCRIPTION}}").join(s.body)
@@ -717,6 +741,7 @@ function buildLegalPage(template, locale, docKey, I18N) {
 
   return template
     .split("{{LANG}}").join(locale)
+    .split("{{FONTS_LINK}}").join(fontsLink(locale))
     .split("{{LOCALE_PATH}}").join(localePath(locale))
     .split("{{TITLE}}").join(doc.title)
     .split("{{DESCRIPTION}}").join(doc.sections[0].p[0])
@@ -805,8 +830,8 @@ function build() {
 
   buildSitemap(categories, calculators);
 
-  console.log(`Built ${toolPageCount} tool pages (${calculators.length} EN + ${WAVE_ONE_TOOL_IDS.length} × 3 locales) and ${categoryPageCount} category pages (${categories.length} × ${LOCALES.length} locales)`);
-  console.log(`Built ${LOCALES.length} homepage / about / contact page sets (en, es, fr, de)`);
+  console.log(`Built ${toolPageCount} tool pages (${calculators.length} EN + ${WAVE_ONE_TOOL_IDS.length} × ${LOCALES.length - 1} locales) and ${categoryPageCount} category pages (${categories.length} × ${LOCALES.length} locales)`);
+  console.log(`Built ${LOCALES.length} homepage / about / contact / privacy / terms page sets (${LOCALES.join(", ")})`);
   console.log(`Generated ${calculators.length + categories.length + 1} OG images in ${ogMs}ms`);
 }
 
@@ -821,7 +846,7 @@ function buildSitemap(categories, calculators) {
   // sibling locale URLs (+ x-default) per the sitemap hreflang spec, mirroring
   // the <head> hreflang tags rather than duplicating a separate source of
   // truth for them.
-  const HREFLANG_CODE = { en: "en", es: "es", fr: "fr", de: "de" };
+  const HREFLANG_CODE = { en: "en", es: "es", fr: "fr", de: "de", pt: "pt", it: "it", ja: "ja" };
 
   function xhtmlBlock(urlFor, builtLocales) {
     const lines = builtLocales.map(

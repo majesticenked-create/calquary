@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calquary - Encontre a calculadora exata que você precisa - rápido.</title>
+  <meta name="description" content="A Calquary organiza calculadoras como uma boa biblioteca de referência organiza livros: por assunto, com respostas claras e sem confusão. Matemática, dinheiro, projetos domésticos, saúde e muito mais." />
+  <meta property="og:title" content="Calquary - Encontre a calculadora exata que você precisa - rápido.">
+  <meta property="og:description" content="A Calquary organiza calculadoras como uma boa biblioteca de referência organiza livros: por assunto, com respostas claras e sem confusão. Matemática, dinheiro, projetos domésticos, saúde e muito mais.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/pt/index.html">
+  <meta property="og:locale" content="pt_PT">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/site.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calquary - Encontre a calculadora exata que você precisa - rápido.">
+  <meta name="twitter:description" content="A Calquary organiza calculadoras como uma boa biblioteca de referência organiza livros: por assunto, com respostas claras e sem confusão. Matemática, dinheiro, projetos domésticos, saúde e muito mais.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/site.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/index.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/index.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/index.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/index.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/index.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/index.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/index.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/index.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/i18n.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script>window.CALQ_LOCALE = "pt"; window.CALQ_LOCALE_PATH = "pt/";</script>
+  <script defer>
+    // Category line-icons live on each CATEGORIES entry (cat.icon) in
+    // calculators-data.js — single source shared with category pages and
+    // all-calculators.html, rather than a duplicated map per file.
+    function categoryIconSvg(cat) {
+      return `<svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${cat.icon || ""}</svg>`;
+    }
+
+    // Locale-aware lookups, falling back to English when no translation
+    // exists for a given category/tool — the underlying compute()/fields
+    // data is never forked per locale, only these display strings are.
+    const LOC = window.CALQ_LOCALE;
+    const LPATH = window.CALQ_LOCALE_PATH;
+    function catName(cat) {
+      return (LOC !== "en" && window.I18N_CATEGORIES && window.I18N_CATEGORIES[cat.id] && window.I18N_CATEGORIES[cat.id][LOC])
+        ? window.I18N_CATEGORIES[cat.id][LOC].name : cat.name;
+    }
+    function catDesc(cat) {
+      return (LOC !== "en" && window.I18N_CATEGORIES && window.I18N_CATEGORIES[cat.id] && window.I18N_CATEGORIES[cat.id][LOC])
+        ? window.I18N_CATEGORIES[cat.id][LOC].description : cat.description;
+    }
+    function toolTitle(calc) {
+      return (LOC !== "en" && window.I18N_TOOLS && window.I18N_TOOLS[calc.id] && window.I18N_TOOLS[calc.id][LOC])
+        ? window.I18N_TOOLS[calc.id][LOC].title : calc.title;
+    }
+    function isTranslated(calcId) {
+      return LOC !== "en" && window.I18N_TOOLS && window.I18N_TOOLS[calcId] && window.I18N_TOOLS[calcId][LOC];
+    }
+    function toolHref(calcId) {
+      return isTranslated(calcId) ? `/${LPATH}tool/${calcId}.html` : `https://calquary.com/tool/${calcId}.html`;
+    }
+    function catHref(catId) {
+      return `/${LPATH}category/${catId}.html`;
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      // Populate category grid
+      const catGrid = document.getElementById("catalog-grid");
+      CATEGORIES.forEach((cat) => {
+        const count = calculatorsInCategory(cat.id).length;
+        const a = document.createElement("a");
+        a.href = catHref(cat.id);
+        a.className = "catalog-card";
+        a.innerHTML = `
+          <div class="catalog-card-head">
+            <span class="code">${categoryIconSvg(cat)}</span>
+          </div>
+          <h3>${catName(cat)}</h3>
+          <p style="margin:0 0 8px;font-size:0.88rem;">${catDesc(cat)}</p>
+          <span class="count">${count} tool${count === 1 ? "" : "s"}</span>
+        `;
+        catGrid.appendChild(a);
+      });
+
+      // Populate featured tools with live "readout" preview
+      const featuredIds = [
+        "percentage-calculator", "loan-calculator", "concrete-calculator", "bmi-calculator",
+        "days-until-calculator", "unit-length-converter", "word-counter", "dog-age-calculator",
+      ];
+      const toolGrid = document.getElementById("tool-grid");
+      featuredIds.forEach((id, i) => {
+        const calc = getCalculator(id);
+        const cat = getCategory(calc.category);
+        const sampleResult = calc.compute(
+          Object.fromEntries(calc.fields.map((f) => [f.id, f.type === "checkbox-group" ? (f.default || []) : f.default]))
+        );
+        const a = document.createElement("a");
+        a.href = toolHref(calc.id);
+        a.className = "tool-card";
+        a.innerHTML = `
+          <div class="cat-label">${categoryIconSvg(cat)}<span>${catName(cat)}</span></div>
+          <h3>${toolTitle(calc)}</h3>
+          <div class="readout">
+            <span class="rlabel">${sampleResult.primary.label}</span>
+            <span class="rvalue" style="--delay:${0.05 * i}s">${sampleResult.primary.value}</span>
+          </div>
+        `;
+        toolGrid.appendChild(a);
+      });
+
+      // Recently Added: CALCULATORS array order reflects true addition order (verified against
+      // git history — each build batch was appended, never reordered by later edits), so reverse
+      // order is a reliable recency proxy without needing a dateAdded field. Excludes anything
+      // already shown in Featured Tools above, and reads live from calculators-data.js so this stays
+      // accurate automatically as new calculators are added in future sessions.
+      //
+      // Pure recency alone isn't enough here: whole categories get built in back-to-back batches
+      // (see Task Board), so a naive "last 8" pull can land almost entirely inside one category —
+      // that's exactly what happened (7 of 8 were Pet & Lifestyle) once Pets was the most recently
+      // built category. Cap each category at 2 entries so no single category can dominate the grid
+      // (worst case ~22% of 9 slots vs. the 89% it hit before), while still pulling in recency order
+      // within that cap. If capping leaves slots unfilled (not enough distinct recent categories to
+      // go around), a second pass relaxes the cap and fills remaining slots from whichever eligible
+      // calculators are left, still in recency order — diversity when there's enough to diversify,
+      // recency as the tiebreaker/fallback otherwise.
+      const RECENT_TARGET = 9;
+      const RECENT_PER_CATEGORY_CAP = 2;
+      const recentEligible = CALCULATORS.slice().reverse()
+        .map((c) => c.id)
+        .filter((id) => !featuredIds.includes(id));
+
+      const recentIds = [];
+      const recentPerCategoryCount = {};
+      const recentUsed = new Set();
+      for (const id of recentEligible) {
+        if (recentIds.length >= RECENT_TARGET) break;
+        const category = getCalculator(id).category;
+        const count = recentPerCategoryCount[category] || 0;
+        if (count < RECENT_PER_CATEGORY_CAP) {
+          recentIds.push(id);
+          recentUsed.add(id);
+          recentPerCategoryCount[category] = count + 1;
+        }
+      }
+      if (recentIds.length < RECENT_TARGET) {
+        for (const id of recentEligible) {
+          if (recentIds.length >= RECENT_TARGET) break;
+          if (recentUsed.has(id)) continue;
+          recentIds.push(id);
+        }
+      }
+      const recentGrid = document.getElementById("recent-grid");
+      recentIds.forEach((id, i) => {
+        const calc = getCalculator(id);
+        const cat = getCategory(calc.category);
+        const sampleResult = calc.compute(
+          Object.fromEntries(calc.fields.map((f) => [f.id, f.type === "checkbox-group" ? (f.default || []) : f.default]))
+        );
+        const a = document.createElement("a");
+        a.href = toolHref(calc.id);
+        a.className = "tool-card";
+        a.innerHTML = `
+          <div class="cat-label">${categoryIconSvg(cat)}<span>${catName(cat)}</span></div>
+          <h3>${toolTitle(calc)}</h3>
+          <div class="readout">
+            <span class="rlabel">${sampleResult.primary.label}</span>
+            <span class="rvalue" style="--delay:${0.05 * i}s">${sampleResult.primary.value}</span>
+          </div>
+        `;
+        recentGrid.appendChild(a);
+      });
+
+      // Live tool-count readout — same CALCULATORS.length pattern already used on about.html
+      document.getElementById("hero-tool-count").textContent = CALCULATORS.length;
+      document.getElementById("faq-tool-count").textContent = CALCULATORS.length;
+
+      // Hero specimen-card collage: real .tool-card elements (same markup/
+      // live-readout animation as Featured Tools) fanned out like index
+      // cards on a desk. Each card gets a slightly different rotation/offset
+      // baseline so the stack doesn't read as a symmetric, obviously-templated
+      // pattern — varied on purpose, not randomized (keeps it deterministic
+      // across reloads). y-steps are 130px, sized against the tallest
+      // 2-line-title card so title text never overlaps the card behind it.
+      const collageIds = ["concrete-calculator", "bmi-calculator", "loan-calculator", "dog-age-calculator"];
+      const collageTransforms = [
+        { rotate: -5, x: -40, y: -390 },
+        { rotate: 4, x: -25, y: -260 },
+        { rotate: -3, x: -10, y: -130 },
+        { rotate: 1, x: 0, y: 0 },
+      ];
+      const collageEl = document.getElementById("hero-collage");
+      if (collageEl) {
+        collageIds.forEach((id, i) => {
+          const calc = getCalculator(id);
+          const cat = getCategory(calc.category);
+          const sampleResult = calc.compute(
+            Object.fromEntries(calc.fields.map((f) => [f.id, f.type === "checkbox-group" ? (f.default || []) : f.default]))
+          );
+          const t = collageTransforms[i];
+          const a = document.createElement("a");
+          a.href = toolHref(calc.id);
+          a.className = "tool-card hero-collage-card";
+          a.style.setProperty("--rotate", `${t.rotate}deg`);
+          a.style.setProperty("--tx", `${t.x}px`);
+          a.style.setProperty("--ty", `${t.y}px`);
+          a.style.zIndex = i + 1;
+          a.innerHTML = `
+            <div class="cat-label">${categoryIconSvg(cat)}<span>${catName(cat)}</span></div>
+            <h3>${toolTitle(calc)}</h3>
+            <div class="readout">
+              <span class="rlabel">${sampleResult.primary.label}</span>
+              <span class="rvalue" style="--delay:${0.08 * i}s">${sampleResult.primary.value}</span>
+            </div>
+          `;
+          collageEl.appendChild(a);
+        });
+      }
+
+      // Lookup field: simple client-side filter/redirect to first match
+      const findMatch = (q) => CALCULATORS.find(
+        (c) => c.title.toLowerCase().includes(q) || c.keyword.toLowerCase().includes(q)
+      );
+
+      const form = document.getElementById("lookup-form");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const q = document.getElementById("lookup-input").value.toLowerCase().trim();
+        const match = findMatch(q);
+        if (match) {
+          window.location.href = toolHref(match.id);
+        }
+      });
+
+      // Support ?q= so the SearchAction in this page's WebSite schema
+      // (below) points at a URL that actually works, not an aspirational one.
+      const qParam = new URLSearchParams(window.location.search).get("q");
+      if (qParam) {
+        document.getElementById("lookup-input").value = qParam;
+        const match = findMatch(qParam.toLowerCase().trim());
+        if (match) window.location.href = toolHref(match.id);
+      }
+
+      // Footer category list
+      const footerCats = document.getElementById("footer-categories");
+      CATEGORIES.forEach((cat) => {
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="${catHref(cat.id)}">${catName(cat)}</a>`;
+        footerCats.appendChild(li);
+      });
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "Calquary",
+      "url": "https://calquary.com/pt/index.html",
+      "inLanguage": "pt",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://calquary.com/pt/index.html?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "O que é a Calquary?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Calquary é um índice de referência de calculadoras rápidas e precisas, organizadas por assunto como em uma biblioteca, em vez de espalhadas entre anúncios e conteúdo não relacionado. Escolha uma categoria, abra uma ferramenta e obtenha sua resposta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Essas calculadoras são gratuitas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim - todas as calculadoras da Calquary são gratuitas, sem necessidade de conta, cadastro ou pagamento. Basta abrir uma ferramenta e usá-la."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quão precisas são as calculadoras da Calquary?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cada calculadora usa uma fórmula padrão e verificada para sua categoria, e cada ferramenta é conferida com resultados calculados manualmente antes de ser publicada. Para decisões com implicações financeiras, estruturais ou médicas reais, consulte um profissional qualificado."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vocês armazenam algum dos meus dados?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não - todas as calculadoras funcionam inteiramente no seu navegador. Os números que você insere nunca são enviados a um servidor nem armazenados; fechar a aba apaga tudo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quantas calculadoras a Calquary tem?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Atualmente, a Calquary tem — calculadoras em 8 categorias, e o catálogo continua crescendo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Com que frequência novas calculadoras são adicionadas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não há um cronograma fixo, mas o catálogo tem crescido de forma constante desde o lançamento - novas calculadoras são adicionadas em lotes por categoria, cada uma construída e verificada antes de ser publicada."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/pt/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="#categories">Categorias</a>
+          <a href="#tools">Todas as ferramentas</a>
+          <a href="/pt/about.html">Sobre</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Português">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>PT</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/index.html">English</a><a class="locale-item" role="menuitem" href="/es/index.html">Español</a><a class="locale-item" role="menuitem" href="/fr/index.html">Français</a><a class="locale-item" role="menuitem" href="/de/index.html">Deutsch</a><span class="locale-item current" role="menuitem" aria-current="true">Português</span><a class="locale-item" role="menuitem" href="/it/index.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/index.html">日本語</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-main">
+        <div class="hero-eyebrow">Índice de referência · calculadoras para tudo</div>
+        <h1>Encontre a calculadora exata que você precisa - rápido.</h1>
+        <p class="lede">A Calquary organiza calculadoras como uma boa biblioteca de referência organiza livros: por assunto, com respostas claras e sem confusão. Matemática, dinheiro, projetos domésticos, saúde e muito mais.</p>
+        <p class="hero-stat"><span class="rvalue" id="hero-tool-count"></span><span class="rlabel">calculadoras disponíveis e em crescimento</span></p>
+
+        <div class="lookup">
+          <form id="lookup-form" class="lookup-field">
+            <span class="tag">BUSCAR</span>
+            <input id="lookup-input" type="text" placeholder="Experimente 'concreto', 'IMC', 'empréstimo'..." aria-label="Search calculators" />
+            <button type="submit">Buscar</button>
+          </form>
+          <div class="lookup-hint">Ou explore por categoria abaixo.</div>
+        </div>
+      </div>
+
+      <div class="hero-collage" id="hero-collage" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <section class="section section--raised" id="categories">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Explorar</div>
+          <h2>Cada categoria, sua própria prateleira</h2>
+        </div>
+        <a href="/pt/all-calculators.html">Ver todas →</a>
+      </div>
+      <div class="catalog-grid" id="catalog-grid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="tools">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Popular agora</div>
+          <h2>Ferramentas em destaque</h2>
+        </div>
+      </div>
+      <div class="tool-grid" id="tool-grid"></div>
+    </div>
+  </section>
+
+  <section class="section section--raised" id="recent">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Adicionado recentemente</div>
+          <h2>Adicionadas recentemente</h2>
+        </div>
+      </div>
+      <div class="tool-grid" id="recent-grid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Bom saber</div>
+          <h2>Perguntas frequentes</h2>
+        </div>
+      </div>
+      <div class="article-block" style="margin-top:0;max-width:72ch;">
+        <div class="faq-item">
+<h3>O que é a Calquary?</h3>
+<p>A Calquary é um índice de referência de calculadoras rápidas e precisas, organizadas por assunto como em uma biblioteca, em vez de espalhadas entre anúncios e conteúdo não relacionado. Escolha uma categoria, abra uma ferramenta e obtenha sua resposta.</p>
+</div>
+        <div class="faq-item">
+<h3>Essas calculadoras são gratuitas?</h3>
+<p>Sim - todas as calculadoras da Calquary são gratuitas, sem necessidade de conta, cadastro ou pagamento. Basta abrir uma ferramenta e usá-la.</p>
+</div>
+        <div class="faq-item">
+<h3>Quão precisas são as calculadoras da Calquary?</h3>
+<p>Cada calculadora usa uma fórmula padrão e verificada para sua categoria, e cada ferramenta é conferida com resultados calculados manualmente antes de ser publicada. Para decisões com implicações financeiras, estruturais ou médicas reais, consulte um profissional qualificado.</p>
+</div>
+        <div class="faq-item">
+<h3>Vocês armazenam algum dos meus dados?</h3>
+<p>Não - todas as calculadoras funcionam inteiramente no seu navegador. Os números que você insere nunca são enviados a um servidor nem armazenados; fechar a aba apaga tudo.</p>
+</div>
+        <div class="faq-item">
+<h3>Quantas calculadoras a Calquary tem?</h3>
+<p>Atualmente, a Calquary tem <span id="faq-tool-count">—</span> calculadoras em 8 categorias, e o catálogo continua crescendo.</p>
+</div>
+        <div class="faq-item">
+<h3>Com que frequência novas calculadoras são adicionadas?</h3>
+<p>Não há um cronograma fixo, mas o catálogo tem crescido de forma constante desde o lançamento - novas calculadoras são adicionadas em lotes por categoria, cada uma construída e verificada antes de ser publicada.</p>
+</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="cols">
+        <div>
+          <h4>Calquary</h4>
+          <p style="max-width:32ch;">Um índice de referência de calculadoras rápidas e precisas - feito para quem só precisa da resposta.</p>
+        </div>
+        <div>
+          <h4>Categorias</h4>
+          <ul id="footer-categories"></ul>
+        </div>
+        <div>
+          <h4>Populares</h4>
+          <ul>
+            <li><a href="/pt/tool/percentage-calculator.html">Calculadora de Porcentagem</a></li>
+            <li><a href="/pt/tool/loan-calculator.html">Calculadora de Pagamento de Empréstimo</a></li>
+            <li><a href="/pt/tool/bmi-calculator.html">Calculadora de IMC</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Site</h4>
+          <ul>
+            <li><a href="#categories">Todas as categorias</a></li>
+            <li><a href="#tools">Todas as ferramentas</a></li>
+            <li><a href="/pt/all-calculators.html">Todas as calculadoras</a></li>
+            <li><a href="/pt/about.html">Sobre</a></li>
+            <li><a href="/pt/contact.html">Contato</a></li>
+            <li><a href="/pt/privacy.html">Privacidade</a></li>
+            <li><a href="/pt/terms.html">Termos</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <p style="margin:0;">© 2026 Calquary. As calculadoras são fornecidas para fins informativos e não substituem o aconselhamento profissional.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
