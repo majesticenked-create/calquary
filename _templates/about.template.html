@@ -17,14 +17,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="/css/styles.css" />
-  <script src="/js/calculators-data.js" defer></script>
   <script src="/js/theme.js" defer></script>
-  <script defer>
-    document.addEventListener("DOMContentLoaded", () => {
-      document.getElementById("tool-count").textContent = CALCULATORS.length;
-      document.getElementById("category-count").textContent = CATEGORIES.length;
-    });
-  </script>
 </head>
 <body>
 
@@ -37,6 +30,7 @@
           <a href="/{{LOCALE_PATH}}index.html#tools">{{NAV_ALL_TOOLS}}</a>
           <a href="/{{LOCALE_PATH}}about.html">{{NAV_ABOUT}}</a>
         </nav>
+        {{LOCALE_SWITCHER}}
         <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
       </div>
     </div>

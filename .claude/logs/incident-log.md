@@ -205,3 +205,160 @@ EOF
 cd /Users/beyouenked/projects/formatiq
 node shot-i18n-verify.js
 rm shot-i18n-verify.js
+- `2026-08-24 21:54:31` | GUARD | LOW | WARNING: rm command allowed → cat > /Users/beyouenked/projects/formatiq/shot-troubleshoot.js <<'EOF'
+const { chromium } = require('playwright');
+
+(async () => {
+  const browser = await chromium.launch();
+  const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+  const consoleMsgs = [];
+  page.on('console', msg => consoleMsgs.push(`[${msg.type()}] ${msg.text()}`));
+  page.on('pageerror', err => consoleMsgs.push(`[pageerror] ${err.message}`));
+  page.on('requestfailed', req => consoleMsgs.push(`[requestfailed] ${req.url()} - ${req.failure()?.errorText}`));
+
+  await page.goto('http://localhost:8000/es/index.html', { waitUntil: 'networkidle' });
+  await page.waitForTimeout(500);
+
+  const h1 = await page.$eval('h1', el => el.textContent).catch(() => 'NOT FOUND');
+  const htmlLang = await page.$eval('html', el => el.getAttribute('lang'));
+  const i18nLoaded = await page.evaluate(() => typeof I18N_CATEGORIES !== 'undefined');
+  const switcherExists = await page.$$eval('a, button', els =>
+    els.filter(e => /\/es\/|\/fr\/|\/de\/|español|français|deutsch/i.test(e.outerHTML)).map(e => e.outerHTML.slice(0,120))
+  );
+
+  await page.screenshot({ path: '/Users/beyouenked/Documents/Calquary/.review-screenshots/troubleshoot-es-home.png', fullPage: false });
+
+  console.log(JSON.stringify({ h1, htmlLang, i18nLoaded, switcherExists, consoleMsgs }, null, 2));
+  await browser.close();
+})();
+EOF
+cd /Users/beyouenked/projects/formatiq
+node shot-troubleshoot.js
+rm shot-troubleshoot.js
+- `2026-08-24 22:01:53` | GUARD | LOW | WARNING: rm command allowed → pkill -f "http.server 8000" 2>/dev/null; sleep 1
+cd /Users/beyouenked/Documents/Calquary
+python3 -m http.server 8000 > /tmp/calquary-server.log 2>&1 &
+sleep 1
+cat > /Users/beyouenked/projects/formatiq/shot-switcher.js <<'EOF'
+const { chromium } = require('playwright');
+(async () => {
+  const browser = await chromium.launch();
+  const page = await browser.newPage({ viewport: { width: 1440, height: 200 } });
+  const errors = [];
+  page.on('pageerror', e => errors.push(e.message));
+
+  await page.goto('http://localhost:8000/index.html', { waitUntil: 'networkidle' });
+  await page.waitForTimeout(300);
+  await page.screenshot({ path: '/Users/beyouenked/Documents/Calquary/.review-screenshots/switcher-en-header.png' });
+
+  await page.goto('http://localhost:8000/es/tool/mortgage-calculator.html', { waitUntil: 'networkidle' });
+  await page.waitForTimeout(300);
+  await page.screenshot({ path: '/Users/beyouenked/Documents/Calquary/.review-screenshots/switcher-es-header.png' });
+
+  // Click FR link from the ES page and confirm it lands on the French version
+  await page.click('.locale-switcher a[href*="/fr/"]');
+  await page.waitForLoadState('networkidle');
+  const url = page.url();
+  const lang = await page.$eval('html', el => el.getAttribute('lang'));
+
+  await browser.close();
+  console.log(JSON.stringify({ landedUrl: url, htmlLang: lang, errors }, null, 2));
+})();
+EOF
+cd /Users/beyouenked/projects/formatiq
+node shot-switcher.js
+rm shot-switcher.js
+- `2026-08-24 22:02:46` | GUARD | LOW | WARNING: rm command allowed → cd /Users/beyouenked/Documents/Calquary
+cat > /Users/beyouenked/projects/formatiq/shot-switcher2.js <<'EOF'
+const { chromium } = require('playwright');
+(async () => {
+  const browser = await chromium.launch();
+  const page = await browser.newPage({ viewport: { width: 1440, height: 200 } });
+  const errors = [];
+  page.on('pageerror', e => errors.push(e.message));
+
+  await page.goto('http://localhost:8000/index.html', { waitUntil: 'networkidle' });
+  await page.waitForTimeout(300);
+  await page.screenshot({ path: '/Users/beyouenked/Documents/Calquary/.review-screenshots/switcher-en-header.png' });
+
+  await page.goto('http://localhost:8000/es/tool/mortgage-calculator.html', { waitUntil: 'networkidle' });
+  await page.waitForTimeout(300);
+  await page.screenshot({ path: '/Users/beyouenked/Documents/Calquary/.review-screenshots/switcher-es-header.png' });
+
+  await page.click('.locale-switcher a[href*="/fr/"]');
+  await page.waitForLoadState('networkidle');
+  const url = page.url();
+  const lang = await page.$eval('html', el => el.getAttribute('lang'));
+  const h1 = await page.$eval('h1', el => el.textContent);
+  await page.screenshot({ path: '/Users/beyouenked/Documents/Calquary/.review-screenshots/switcher-fr-after-click.png' });
+
+  await browser.close();
+  console.log(JSON.stringify({ landedUrl: url, htmlLang: lang, h1, errors }, null, 2));
+})();
+EOF
+cd /Users/beyouenked/projects/formatiq
+node shot-switcher2.js
+rm shot-switcher2.js
+- `2026-08-24 22:04:03` | GUARD | LOW | WARNING: rm command allowed → cat > /Users/beyouenked/projects/formatiq/shot-final-sweep.js <<'EOF'
+const { chromium } = require('playwright');
+(async () => {
+  const browser = await chromium.launch();
+  const errors = [];
+  const pages = [
+    'http://localhost:8000/index.html',
+    'http://localhost:8000/es/index.html',
+    'http://localhost:8000/fr/category/health.html',
+    'http://localhost:8000/de/tool/mortgage-calculator.html',
+    'http://localhost:8000/es/privacy.html',
+    'http://localhost:8000/de/about.html',
+  ];
+  for (const url of pages) {
+    const page = await browser.newPage();
+    page.on('console', m => { if (m.type() === 'error') errors.push(`${url}: ${m.text()}`); });
+    page.on('pageerror', e => errors.push(`${url}: ${e.message}`));
+    await page.goto(url, { waitUntil: 'networkidle' });
+    await page.waitForTimeout(200);
+    const hasSwitcher = await page.$('.locale-switcher') !== null;
+    if (!hasSwitcher) errors.push(`${url}: NO locale-switcher found`);
+    await page.close();
+  }
+  await browser.close();
+  console.log(JSON.stringify({ errors }, null, 2));
+})();
+EOF
+cd /Users/beyouenked/projects/formatiq
+node shot-final-sweep.js
+rm shot-final-sweep.js
+- `2026-08-24 22:07:31` | GUARD | LOW | WARNING: rm command allowed → cat > /Users/beyouenked/projects/formatiq/shot-final-sweep2.js <<'EOF'
+const { chromium } = require('playwright');
+(async () => {
+  const browser = await chromium.launch();
+  const errors = [];
+  const pages = [
+    'http://localhost:8000/index.html',
+    'http://localhost:8000/about.html',
+    'http://localhost:8000/es/index.html',
+    'http://localhost:8000/fr/category/health.html',
+    'http://localhost:8000/de/tool/mortgage-calculator.html',
+    'http://localhost:8000/es/privacy.html',
+    'http://localhost:8000/de/about.html',
+    'http://localhost:8000/fr/contact.html',
+    'http://localhost:8000/es/terms.html',
+  ];
+  for (const url of pages) {
+    const page = await browser.newPage();
+    page.on('console', m => { if (m.type() === 'error') errors.push(`${url}: ${m.text()}`); });
+    page.on('pageerror', e => errors.push(`${url}: ${e.message}`));
+    await page.goto(url, { waitUntil: 'networkidle' });
+    await page.waitForTimeout(200);
+    const hasSwitcher = await page.$('.locale-switcher') !== null;
+    if (!hasSwitcher) errors.push(`${url}: NO locale-switcher found`);
+    await page.close();
+  }
+  await browser.close();
+  console.log(JSON.stringify({ errors }, null, 2));
+})();
+EOF
+cd /Users/beyouenked/projects/formatiq
+node shot-final-sweep2.js
+rm shot-final-sweep2.js

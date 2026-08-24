@@ -208,6 +208,27 @@ select:focus-visible {
 }
 .header-nav a:hover { color: var(--brand); text-decoration: none; }
 
+/* Locale switcher: plain-text link group (EN · ES · FR · DE), each linking
+   to the equivalent page in that locale (same tool/category/static page,
+   not just that locale's homepage — reuses the same urlFor() callback
+   build.js already computes for each page's hreflang links). The current
+   locale renders as plain non-link text so it's clear which one is active. */
+.locale-switcher {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.locale-switcher a {
+  color: var(--ink-soft);
+  transition: color 0.2s var(--ease-smooth);
+}
+.locale-switcher a:hover { color: var(--brand); text-decoration: none; }
+.locale-switcher .current { color: var(--brand); }
+.locale-switcher .sep { color: var(--line); }
+
 /* Circular icon button — ring border + centered icon, matching the shape of
    the requested reference. Ring uses --brand (not the gold in the reference
    image), keeping single-accent discipline from the rebrand rather than

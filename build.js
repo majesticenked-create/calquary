@@ -242,6 +242,26 @@ function hreflangLinks(urlFor, builtLocales) {
   return lines.join("\n");
 }
 
+// Visible language switcher for the header — reuses the exact same
+// urlFor()/builtLocales pair each page already computes for its hreflang
+// block, so it always points at the equivalent page in each locale (the
+// same tool/category/static page, not just that locale's homepage), and
+// only offers locales that actually exist for this page (an untranslated
+// tool page only ever built "en", so no dead links to a missing translation).
+const LOCALE_LABEL = { en: "EN", es: "ES", fr: "FR", de: "DE" };
+function localeSwitcherHtml(currentLocale, urlFor, builtLocales) {
+  // Root-relative, not the full https://calquary.com/... URL urlFor()
+  // returns for hreflang (which correctly wants an absolute URL there) —
+  // an absolute href here would jump a local/staging preview off to the
+  // real production domain instead of staying on the current host.
+  const parts = builtLocales.map((loc) =>
+    loc === currentLocale
+      ? `<span class="current">${LOCALE_LABEL[loc]}</span>`
+      : `<a href="${urlFor(loc).replace(SITE_URL, "")}">${LOCALE_LABEL[loc]}</a>`
+  );
+  return `<div class="locale-switcher">${parts.join('<span class="sep">·</span>')}</div>`;
+}
+
 // ---- Shared meta/schema helpers (unchanged behavior for English) -------
 
 function toLdJsonScript(graph) {
@@ -460,6 +480,7 @@ function buildToolPage(template, locale, calc, cat, I18N) {
     .split("{{THEME_INIT}}").join(themeInitScript())
     .split("{{OG_META}}").join(ogMetaTags({ title: `${t.title} | Calquary`, description: t.description, url, image, locale }))
     .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => toolUrl(loc, calc.id), calc.builtLocales))
+    .split("{{LOCALE_SWITCHER}}").join(localeSwitcherHtml(locale, (loc) => toolUrl(loc, calc.id), calc.builtLocales))
     .split("{{SCHEMA_JSON}}").join(buildToolSchema(locale, calc, cat, t.title, t.description, t.faq));
 }
 
@@ -512,6 +533,7 @@ function buildCategoryPage(template, locale, cat, calculators, I18N) {
     .split("{{THEME_INIT}}").join(themeInitScript())
     .split("{{OG_META}}").join(ogMetaTags({ title: `${nameFull} | Calquary`, description, url, image, locale }))
     .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => categoryUrl(loc, cat.id), LOCALES))
+    .split("{{LOCALE_SWITCHER}}").join(localeSwitcherHtml(locale, (loc) => categoryUrl(loc, cat.id), LOCALES))
     .split("{{SCHEMA_JSON}}").join(buildCategorySchema(locale, cat, nameFull));
 }
 
@@ -599,6 +621,7 @@ function buildHomePage(template, locale, categories, calculators, I18N) {
     .split("{{FOOTER_COPYRIGHT}}").join(ui.footer.copyright)
     .split("{{OG_META}}").join(ogMetaTags({ title, description, url, image, locale }))
     .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => homeUrl(loc), LOCALES))
+    .split("{{LOCALE_SWITCHER}}").join(localeSwitcherHtml(locale, (loc) => homeUrl(loc), LOCALES))
     .split("{{SCHEMA_JSON}}").join(toLdJsonScript(schemaGraph));
 }
 
@@ -625,7 +648,8 @@ function buildAboutPage(template, locale, I18N) {
     .split("{{FOOTER_TERMS}}").join(ui.footer.terms)
     .split("{{BTN_BACK_TO_ALL}}").join(ui.buttons.backToAll)
     .split("{{OG_META}}").join(ogMetaTags({ title: `${s.title} | Calquary`, description: s.lede, url, image, locale }))
-    .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => staticUrl(loc, "about.html"), LOCALES));
+    .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => staticUrl(loc, "about.html"), LOCALES))
+    .split("{{LOCALE_SWITCHER}}").join(localeSwitcherHtml(locale, (loc) => staticUrl(loc, "about.html"), LOCALES));
 }
 
 function buildContactPage(template, locale, I18N) {
@@ -650,7 +674,8 @@ function buildContactPage(template, locale, I18N) {
     .split("{{FOOTER_CONTACT}}").join(ui.footer.contact)
     .split("{{BTN_BACK_TO_ALL}}").join(ui.buttons.backToAll)
     .split("{{OG_META}}").join(ogMetaTags({ title: `${s.title} | Calquary`, description: s.body, url, image, locale }))
-    .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => staticUrl(loc, "contact.html"), LOCALES));
+    .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => staticUrl(loc, "contact.html"), LOCALES))
+    .split("{{LOCALE_SWITCHER}}").join(localeSwitcherHtml(locale, (loc) => staticUrl(loc, "contact.html"), LOCALES));
 }
 
 // Shared by privacy.html and terms.html — same section-array shape, same
@@ -690,7 +715,8 @@ function buildLegalPage(template, locale, docKey, I18N) {
     .split("{{OTHER_LEGAL_HREF}}").join(`/${localePath(locale)}${otherDocKey}.html`)
     .split("{{OTHER_LEGAL_LABEL}}").join(otherLabel)
     .split("{{OG_META}}").join(ogMetaTags({ title: `${doc.title} | Calquary`, description: doc.sections[0].p[0], url, image, locale }))
-    .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => staticUrl(loc, `${docKey}.html`), LOCALES));
+    .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => staticUrl(loc, `${docKey}.html`), LOCALES))
+    .split("{{LOCALE_SWITCHER}}").join(localeSwitcherHtml(locale, (loc) => staticUrl(loc, `${docKey}.html`), LOCALES));
 }
 
 // ---- Build ---------------------------------------------------------------
