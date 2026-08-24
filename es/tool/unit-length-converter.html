@@ -36,6 +36,7 @@
   <script src="/js/calculators-data.js" defer></script>
   <script src="/js/engine.js" defer></script>
   <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
   <script defer>
     document.addEventListener("DOMContentLoaded", () => {
       // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
@@ -141,7 +142,13 @@
           <a href="/es/index.html#tools">Todas las herramientas</a>
           <a href="/es/about.html">Acerca de</a>
         </nav>
-        <div class="locale-switcher"><a href="/tool/unit-length-converter.html">EN</a><span class="sep">·</span><span class="current">ES</span><span class="sep">·</span><a href="/fr/tool/unit-length-converter.html">FR</a><span class="sep">·</span><a href="/de/tool/unit-length-converter.html">DE</a></div>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Español">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>ES</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/unit-length-converter.html">English</a><span class="locale-item current" role="menuitem" aria-current="true">Español</span><a class="locale-item" role="menuitem" href="/fr/tool/unit-length-converter.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/unit-length-converter.html">Deutsch</a></div>
+        </div>
         <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
       </div>
     </div>

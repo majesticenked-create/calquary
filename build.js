@@ -249,17 +249,34 @@ function hreflangLinks(urlFor, builtLocales) {
 // only offers locales that actually exist for this page (an untranslated
 // tool page only ever built "en", so no dead links to a missing translation).
 const LOCALE_LABEL = { en: "EN", es: "ES", fr: "FR", de: "DE" };
+const LOCALE_LABEL_FULL = { en: "English", es: "Español", fr: "Français", de: "Deutsch" };
+const GLOBE_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>';
+
+// One dropdown control, not an always-visible EN·ES·FR·DE link row — the
+// trigger shows only the current locale; the menu (hidden until the
+// trigger is clicked — see js/locale-switcher.js) lists the others. Root-
+// relative hrefs, not the full https://calquary.com/... URL urlFor()
+// returns for hreflang (which correctly wants an absolute URL there) — an
+// absolute href here would jump a local/staging preview off to the real
+// production domain instead of staying on the current host (this was a
+// real bug caught and fixed in an earlier pass — root-relative here is
+// deliberate, not an oversight).
 function localeSwitcherHtml(currentLocale, urlFor, builtLocales) {
-  // Root-relative, not the full https://calquary.com/... URL urlFor()
-  // returns for hreflang (which correctly wants an absolute URL there) —
-  // an absolute href here would jump a local/staging preview off to the
-  // real production domain instead of staying on the current host.
-  const parts = builtLocales.map((loc) =>
-    loc === currentLocale
-      ? `<span class="current">${LOCALE_LABEL[loc]}</span>`
-      : `<a href="${urlFor(loc).replace(SITE_URL, "")}">${LOCALE_LABEL[loc]}</a>`
-  );
-  return `<div class="locale-switcher">${parts.join('<span class="sep">·</span>')}</div>`;
+  if (builtLocales.length <= 1) return ""; // nothing to switch to on an untranslated page
+  const items = builtLocales
+    .map((loc) =>
+      loc === currentLocale
+        ? `<span class="locale-item current" role="menuitem" aria-current="true">${LOCALE_LABEL_FULL[loc]}</span>`
+        : `<a class="locale-item" role="menuitem" href="${urlFor(loc).replace(SITE_URL, "")}">${LOCALE_LABEL_FULL[loc]}</a>`
+    )
+    .join("");
+  return `<div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: ${LOCALE_LABEL_FULL[currentLocale]}">
+            ${GLOBE_ICON}
+            <span>${LOCALE_LABEL[currentLocale]}</span>
+          </button>
+          <div class="locale-menu" role="menu">${items}</div>
+        </div>`;
 }
 
 // ---- Shared meta/schema helpers (unchanged behavior for English) -------

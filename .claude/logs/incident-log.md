@@ -362,3 +362,178 @@ EOF
 cd /Users/beyouenked/projects/formatiq
 node shot-final-sweep2.js
 rm shot-final-sweep2.js
+- `2026-08-24 22:34:45` | GUARD | LOW | WARNING: rm command allowed → cat > /Users/beyouenked/projects/formatiq/shot-switcher-trace.js <<'EOF'
+const { chromium } = require('playwright');
+(async () => {
+  const browser = await chromium.launch();
+  const results = [];
+
+  const testCases = [
+    { start: 'http://localhost:8000/index.html', clickSel: '.locale-switcher a[href*="/es/"]' },
+    { start: 'http://localhost:8000/category/health.html', clickSel: '.locale-switcher a[href*="/es/"]' },
+    { start: 'http://localhost:8000/tool/mortgage-calculator.html', clickSel: '.locale-switcher a[href*="/es/"]' },
+    { start: 'http://localhost:8000/about.html', clickSel: '.locale-switcher a[href*="/es/"]' },
+    { start: 'http://localhost:8000/contact.html', clickSel: '.locale-switcher a[href*="/es/"]' },
+    { start: 'http://localhost:8000/privacy.html', clickSel: '.locale-switcher a[href*="/es/"]' },
+    { start: 'http://localhost:8000/terms.html', clickSel: '.locale-switcher a[href*="/es/"]' },
+  ];
+
+  for (const tc of testCases) {
+    const page = await browser.newPage();
+    const netLog = [];
+    const consoleErrors = [];
+    page.on('request', req => netLog.push(`REQ ${req.method()} ${req.url()}`));
+    page.on('response', res => { if (res.status() >= 300) netLog.push(`RESP ${res.status()} ${res.url()}`); });
+    page.on('console', m => { if (m.type() === 'error') consoleErrors.push(m.text()); });
+    page.on('pageerror', e => consoleErrors.push(e.message));
+
+    await page.goto(tc.start, { waitUntil: 'networkidle' });
+    const linkHref = await page.$eval(tc.clickSel, el => el.getAttribute('href')).catch(() => 'SELECTOR NOT FOUND');
+    await page.click(tc.clickSel);
+    await page.waitForTimeout(600);
+    const finalUrl = page.url();
+    const htmlLang = await page.$eval('html', el => el.getAttribute('lang')).catch(() => 'N/A');
+    const h1 = await page.$eval('h1', el => el.textContent).catch(() => 'N/A');
+
+    results.push({ start: tc.start, linkHref, finalUrl, htmlLang, h1, consoleErrors, redirects: netLog.filter(l => l.startsWith('RESP')) });
+    await page.close();
+  }
+
+  await browser.close();
+  console.log(JSON.stringify(results, null, 2));
+})();
+EOF
+cd /Users/beyouenked/projects/formatiq
+node shot-switcher-trace.js
+rm shot-switcher-trace.js
+- `2026-08-24 22:37:41` | GUARD | LOW | WARNING: rm command allowed → cat > /Users/beyouenked/projects/formatiq/shot-switcher-trace2.js <<'EOF'
+const { chromium } = require('playwright');
+(async () => {
+  const browser = await chromium.launch();
+  const results = [];
+
+  const testCases = [
+    { start: 'http://localhost:8000/tool/mortgage-calculator.html', sel: '.locale-switcher a[href*="/fr/"]' },
+    { start: 'http://localhost:8000/tool/mortgage-calculator.html', sel: '.locale-switcher a[href*="/de/"]' },
+    { start: 'http://localhost:8000/es/tool/mortgage-calculator.html', sel: '.locale-switcher a[href="/tool/mortgage-calculator.html"]' },
+    { start: 'http://localhost:8000/fr/index.html', sel: '.locale-switcher a[href="/index.html"]' },
+    { start: 'http://localhost:8000/de/category/health.html', sel: '.locale-switcher a[href="/category/health.html"]' },
+  ];
+
+  for (const tc of testCases) {
+    const page = await browser.newPage();
+    const consoleErrors = [];
+    page.on('console', m => { if (m.type() === 'error') consoleErrors.push(m.text()); });
+    page.on('pageerror', e => consoleErrors.push(e.message));
+    await page.goto(tc.start, { waitUntil: 'networkidle' });
+    const href = await page.$eval(tc.sel, el => el.getAttribute('href')).catch(() => 'SELECTOR NOT FOUND');
+    await page.click(tc.sel);
+    await page.waitForTimeout(500);
+    const finalUrl = page.url();
+    const htmlLang = await page.$eval('html', el => el.getAttribute('lang')).catch(() => 'N/A');
+    const h1 = await page.$eval('h1', el => el.textContent).catch(() => 'N/A');
+    results.push({ start: tc.start, expectedHref: href, finalUrl, htmlLang, h1, consoleErrors });
+    await page.close();
+  }
+  await browser.close();
+  console.log(JSON.stringify(results, null, 2));
+})();
+EOF
+cd /Users/beyouenked/projects/formatiq
+node shot-switcher-trace2.js
+rm shot-switcher-trace2.js
+- `2026-08-24 22:46:53` | GUARD | LOW | WARNING: rm command allowed → mkdir -p /Users/beyouenked/Documents/Calquary/.review-screenshots
+cat > /Users/beyouenked/projects/formatiq/shot-dropdown.js <<'EOF'
+const { chromium } = require('playwright');
+(async () => {
+  const browser = await chromium.launch();
+  const errors = [];
+
+  // Desktop collapsed
+  const ctx = await browser.newContext({ viewport: { width: 1440, height: 300 } });
+  const page = await ctx.newPage();
+  page.on('console', m => { if (m.type() === 'error') errors.push(`[desktop] ${m.text()}`); });
+  page.on('pageerror', e => errors.push(`[desktop] ${e.message}`));
+  await page.goto('http://localhost:8000/index.html', { waitUntil: 'networkidle' });
+  await page.waitForTimeout(300);
+  await page.screenshot({ path: '/Users/beyouenked/Documents/Calquary/.review-screenshots/dropdown-desktop-collapsed.png' });
+
+  // Desktop expanded
+  await page.click('.locale-trigger');
+  await page.waitForTimeout(200);
+  const expandedAttr = await page.$eval('.locale-trigger', el => el.getAttribute('aria-expanded'));
+  await page.screenshot({ path: '/Users/beyouenked/Documents/Calquary/.review-screenshots/dropdown-desktop-expanded.png' });
+
+  // click outside closes it
+  await page.mouse.click(700, 250);
+  await page.waitForTimeout(200);
+  const closedAfterOutsideClick = await page.$eval('.locale-trigger', el => el.getAttribute('aria-expanded'));
+
+  // Keyboard: focus trigger, press Enter to open, Escape to close
+  await page.focus('.locale-trigger');
+  await page.keyboard.press('Enter');
+  await page.waitForTimeout(200);
+  const openedViaKeyboard = await page.$eval('.locale-trigger', el => el.getAttribute('aria-expanded'));
+  await page.keyboard.press('Escape');
+  await page.waitForTimeout(200);
+  const closedViaEscape = await page.$eval('.locale-trigger', el => el.getAttribute('aria-expanded'));
+  const focusedAfterEscape = await page.evaluate(() => document.activeElement.className);
+
+  await ctx.close();
+
+  // Mobile collapsed + expanded
+  const mctx = await browser.newContext({ viewport: { width: 375, height: 300 } });
+  const mpage = await mctx.newPage();
+  mpage.on('console', m => { if (m.type() === 'error') errors.push(`[mobile] ${m.text()}`); });
+  await mpage.goto('http://localhost:8000/index.html', { waitUntil: 'networkidle' });
+  await mpage.waitForTimeout(300);
+  await mpage.screenshot({ path: '/Users/beyouenked/Documents/Calquary/.review-screenshots/dropdown-mobile-collapsed.png' });
+  await mpage.click('.locale-trigger');
+  await mpage.waitForTimeout(200);
+  await mpage.screenshot({ path: '/Users/beyouenked/Documents/Calquary/.review-screenshots/dropdown-mobile-expanded.png' });
+  await mctx.close();
+
+  await browser.close();
+  console.log(JSON.stringify({ expandedAttr, closedAfterOutsideClick, openedViaKeyboard, closedViaEscape, focusedAfterEscape, errors }, null, 2));
+})();
+EOF
+cd /Users/beyouenked/projects/formatiq
+node shot-dropdown.js
+rm shot-dropdown.js
+- `2026-08-24 22:47:42` | GUARD | LOW | WARNING: rm command allowed → cat > /Users/beyouenked/projects/formatiq/shot-dropdown-routes.js <<'EOF'
+const { chromium } = require('playwright');
+(async () => {
+  const browser = await chromium.launch();
+  const results = [];
+
+  const cases = [
+    { start: 'http://localhost:8000/index.html', target: 'ES' },
+    { start: 'http://localhost:8000/tool/mortgage-calculator.html', target: 'DE' },
+    { start: 'http://localhost:8000/es/category/health.html', target: 'FR' },
+  ];
+
+  for (const c of cases) {
+    const page = await browser.newPage();
+    const errors = [];
+    page.on('pageerror', e => errors.push(e.message));
+    page.on('console', m => { if (m.type() === 'error') errors.push(m.text()); });
+    await page.goto(c.start, { waitUntil: 'networkidle' });
+    await page.click('.locale-trigger');
+    await page.waitForTimeout(150);
+    const targetHref = await page.$eval(`.locale-item:has-text("${{ES:'Español',DE:'Deutsch',FR:'Français'}[c.target]}")`, el => el.getAttribute('href'));
+    await page.click(`.locale-item:has-text("${{ES:'Español',DE:'Deutsch',FR:'Français'}[c.target]}")`);
+    await page.waitForTimeout(500);
+    const finalUrl = page.url();
+    const htmlLang = await page.$eval('html', el => el.getAttribute('lang'));
+    const h1 = await page.$eval('h1', el => el.textContent);
+    results.push({ start: c.start, targetHref, finalUrl, htmlLang, h1, errors });
+    await page.close();
+  }
+
+  await browser.close();
+  console.log(JSON.stringify(results, null, 2));
+})();
+EOF
+cd /Users/beyouenked/projects/formatiq
+node shot-dropdown-routes.js
+rm shot-dropdown-routes.js

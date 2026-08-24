@@ -208,26 +208,68 @@ select:focus-visible {
 }
 .header-nav a:hover { color: var(--brand); text-decoration: none; }
 
-/* Locale switcher: plain-text link group (EN · ES · FR · DE), each linking
-   to the equivalent page in that locale (same tool/category/static page,
-   not just that locale's homepage — reuses the same urlFor() callback
-   build.js already computes for each page's hreflang links). The current
-   locale renders as plain non-link text so it's clear which one is active. */
+/* Locale switcher: single dropdown control, not an always-visible link list.
+   Trigger shows the current locale code + globe icon; clicking opens a menu
+   of the equivalent page in each other locale (same urlFor() callback
+   build.js already computes for each page's hreflang links, so the target
+   is always the matching tool/category/static page, not just that locale's
+   homepage). Toggle behavior lives in js/locale-switcher.js, mirroring the
+   #theme-toggle click-handler pattern already used for the theme button
+   right next to it. Menu positioning matches this site's card language
+   (paper-raised bg, soft shadow, radius-sm) rather than inventing a new one. */
 .locale-switcher {
-  display: flex;
+  position: relative;
+}
+
+.locale-trigger {
+  display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
+  height: var(--touch-min);
+  padding: 0 10px;
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.02em;
-}
-.locale-switcher a {
   color: var(--ink-soft);
-  transition: color 0.2s var(--ease-smooth);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: color 0.2s var(--ease-smooth), border-color 0.2s var(--ease-smooth), background 0.2s var(--ease-smooth);
 }
-.locale-switcher a:hover { color: var(--brand); text-decoration: none; }
-.locale-switcher .current { color: var(--brand); }
-.locale-switcher .sep { color: var(--line); }
+.locale-trigger svg { width: 15px; height: 15px; flex-shrink: 0; }
+.locale-trigger:hover,
+.locale-switcher.open .locale-trigger {
+  color: var(--brand);
+  border-color: var(--brand);
+  background: var(--paper-mint);
+}
+
+.locale-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 30;
+  min-width: 140px;
+  padding: 6px;
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 8px color-mix(in srgb, var(--shadow-ink) 5%, transparent), 0 20px 45px color-mix(in srgb, var(--shadow-ink) 12%, transparent);
+}
+.locale-switcher.open .locale-menu { display: block; }
+
+.locale-item {
+  display: block;
+  padding: 8px 10px;
+  border-radius: calc(var(--radius-sm) - 4px);
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  transition: background 0.15s var(--ease-smooth), color 0.15s var(--ease-smooth);
+}
+a.locale-item:hover { color: var(--brand); background: var(--paper-mint); text-decoration: none; }
+.locale-item.current { color: var(--brand); font-weight: 600; cursor: default; }
 
 /* Circular icon button — ring border + centered icon, matching the shape of
    the requested reference. Ring uses --brand (not the gold in the reference
