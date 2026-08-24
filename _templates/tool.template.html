@@ -1,39 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{LANG}}">
 <head>
+  {{THEME_INIT}}
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{TITLE}} | Calquary</title>
   <meta name="description" content="{{DESCRIPTION}}" />
-  <link rel="stylesheet" href="../css/styles.css" />
-  <script src="../js/calculators-data.js" defer></script>
-  <script src="../js/engine.js" defer></script>
+  {{OG_META}}
+  {{HREFLANG_LINKS}}
+  {{FAVICON_LINKS}}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
   <script defer>
     document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
       const calc = getCalculator("{{CALC_ID}}");
-      const cat = getCategory(calc.category);
 
-      document.getElementById("breadcrumb-cat").textContent = cat.name;
-      document.getElementById("breadcrumb-cat").href = `../category/${cat.id}.html`;
-      document.getElementById("tool-title").textContent = calc.title;
-      document.getElementById("tool-intro").textContent = calc.intro;
-
-      // FAQ
-      const faqWrap = document.getElementById("faq-list");
-      calc.faq.forEach((item) => {
-        const div = document.createElement("div");
-        div.className = "faq-item";
-        div.innerHTML = `<h3>${item.q}</h3><p>${item.a}</p>`;
-        faqWrap.appendChild(div);
-      });
-
-      // Related tools
       const relWrap = document.getElementById("related-list");
       calc.related.forEach((relId) => {
         const rel = getCalculator(relId);
         if (!rel) return;
         const li = document.createElement("li");
-        li.innerHTML = `<a href="${rel.id}.html">${rel.title}</a>`;
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
         relWrap.appendChild(li);
       });
 
@@ -42,37 +44,43 @@
   </script>
   {{SCHEMA_JSON}}
 </head>
-<body>
+<body class="tool-page">
 
   <header class="site-header">
     <div class="wrap">
-      <a href="../index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
-      <nav class="header-nav">
-        <a href="../index.html#categories">Categories</a>
-        <a href="../index.html#tools">All tools</a>
-        <a href="../about.html">About</a>
-      </nav>
+      <a href="{{HOME_HREF}}" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="{{HOME_HREF}}#categories">{{NAV_CATEGORIES}}</a>
+          <a href="{{HOME_HREF}}#tools">{{NAV_ALL_TOOLS}}</a>
+          <a href="{{ABOUT_HREF}}">{{NAV_ABOUT}}</a>
+        </nav>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
     </div>
   </header>
 
   <div class="wrap" style="padding-top:32px;">
     <div class="breadcrumb">
-      <a href="../index.html">Calquary</a> / <a id="breadcrumb-cat" href="#"></a>
+      <a href="{{HOME_HREF}}">{{BREADCRUMB_HOME}}</a> / <a href="{{CAT_HREF}}">{{CAT_NAME}}</a>
     </div>
   </div>
 
   <div class="wrap" style="padding-bottom:64px;">
     <div class="tool-layout">
       <main>
-        <h1 id="tool-title"></h1>
-        <p id="tool-intro" style="max-width:60ch;"></p>
+        <h1>{{TITLE}}</h1>
+        <p style="max-width:60ch;">{{INTRO}}</p>
+        <p class="last-updated">{{LAST_UPDATED_LABEL}} {{LAST_UPDATED}}</p>
+        <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
           <form id="calc-form">
             <div id="calc-fields"></div>
             <div class="calc-actions">
-              <button type="submit" class="btn-primary">Calculate</button>
-              <button type="button" id="calc-reset" class="btn-ghost">Reset</button>
+              <button type="submit" class="btn-primary">{{BTN_CALCULATE}}</button>
+              <button type="button" id="calc-reset" class="btn-ghost">{{BTN_RESET}}</button>
             </div>
           </form>
 
@@ -87,19 +95,19 @@
         </div>
 
         <div class="article-block">
-          <h2>Frequently asked questions</h2>
-          <div id="faq-list"></div>
+          <h2>{{FAQ_TITLE}}</h2>
+          <div id="faq-list">{{FAQ_HTML}}</div>
         </div>
       </main>
 
       <aside>
         <div class="sidebar-block">
-          <h4>Related tools</h4>
+          <h4>{{RELATED_TOOLS_LABEL}}</h4>
           <ul class="related-list" id="related-list"></ul>
         </div>
         <div class="sidebar-block">
-          <h4>A note on accuracy</h4>
-          <p style="margin:0;font-size:0.85rem;">Calquary's calculators are built for quick, reliable estimates. For decisions with real financial, structural, or medical stakes, confirm with a qualified professional.</p>
+          <h4>{{ACCURACY_TITLE}}</h4>
+          <p style="margin:0;font-size:0.85rem;">{{ACCURACY_TEXT}}</p>
         </div>
       </aside>
     </div>
@@ -108,10 +116,12 @@
   <footer class="site-footer">
     <div class="wrap">
       <div class="footer-base">
-        <p style="margin:0;"><a href="../index.html">← Back to all calculators</a> · <a href="../about.html">About</a> · <a href="../contact.html">Contact</a> · <a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a> · © 2026 Calquary</p>
+        <p style="margin:0;"><a href="{{HOME_HREF}}">{{BTN_BACK_TO_ALL}}</a> · <a href="{{ABOUT_HREF}}">{{NAV_ABOUT}}</a> · <a href="{{CONTACT_HREF}}">{{FOOTER_CONTACT}}</a> · <a href="{{PRIVACY_HREF}}">{{FOOTER_PRIVACY}}</a> · <a href="{{TERMS_HREF}}">{{FOOTER_TERMS}}</a> · © 2026 Calquary</p>
       </div>
     </div>
   </footer>
+
+  <div id="print-footer" class="print-footer"></div>
 
 </body>
 </html>

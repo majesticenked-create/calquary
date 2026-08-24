@@ -4,15 +4,53 @@
    module.exports) and generates one HTML page per tool and
    per category from the templates in _templates/, plus a
    sitemap.xml listing every generated page.
+
+   Wave-one i18n (es/fr/de): every generated page is STATIC per
+   locale — title, h1, intro, FAQ, and meta are baked into the HTML
+   string at build time from js/i18n.js, not swapped in by
+   client-side JS after load. That distinction is deliberate: an
+   earlier prototype approach (proven wrong on a sibling project)
+   populated this content via JS reading from a live data object,
+   which means a crawler only ever sees the English page source.
+   The interactive calculator widget itself (fields/compute/results)
+   stays JS-rendered and English-labeled across all locales for wave
+   one — see js/i18n.js's header comment for why that's a deliberate
+   scope line, not an oversight.
+
    Run with: node build.js
    ============================================================ */
 
 const fs = require("fs");
 const path = require("path");
 const vm = require("vm");
+const { execSync } = require("child_process");
 
 const ROOT = __dirname;
 const SITE_URL = "https://calquary.com";
+
+const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+// "en" = site root (no prefix). Locale build order also controls hreflang
+// link order in the <head> of every generated page.
+const LOCALES = ["en", "es", "fr", "de"];
+const OG_LOCALE = { en: "en_US", es: "es_ES", fr: "fr_FR", de: "de_DE" };
+
+// Wave-one tool batch: prioritized from the qualitative volume signals in
+// seo/keyword-research-*.md (DataForSEO was down for that whole research
+// pass, so these are "Very High"/"High" tier calls, not sourced numbers —
+// see those files' own data-note). Picked to also spread across all 8
+// categories rather than clustering in Finance/Health, so every category
+// hub has at least one working localized tool page in wave one.
+const WAVE_ONE_TOOL_IDS = [
+  "percentage-calculator", "average-calculator",
+  "mortgage-calculator", "loan-calculator", "compound-interest-calculator",
+  "concrete-calculator", "flooring-calculator",
+  "calorie-calculator", "bmi-calculator", "bmr-calculator",
+  "age-calculator", "days-until-calculator",
+  "unit-length-converter", "temperature-converter",
+  "word-counter", "case-converter",
+  "dog-age-calculator", "cat-age-calculator",
+];
 
 function loadData() {
   const src = fs.readFileSync(path.join(ROOT, "js/calculators-data.js"), "utf8");
@@ -22,40 +60,189 @@ function loadData() {
   return { categories: sandbox.CATEGORIES, calculators: sandbox.CALCULATORS };
 }
 
-function build() {
-  const { categories, calculators } = loadData();
-
-  const toolTemplate = fs.readFileSync(path.join(ROOT, "_templates/tool.template.html"), "utf8");
-  const categoryTemplate = fs.readFileSync(path.join(ROOT, "_templates/category.template.html"), "utf8");
-
-  const toolDir = path.join(ROOT, "tool");
-  const categoryDir = path.join(ROOT, "category");
-  fs.mkdirSync(toolDir, { recursive: true });
-  fs.mkdirSync(categoryDir, { recursive: true });
-
-  calculators.forEach((calc) => {
-    const cat = categories.find((c) => c.id === calc.category);
-    const html = toolTemplate
-      .split("{{CALC_ID}}").join(calc.id)
-      .split("{{TITLE}}").join(calc.title)
-      .split("{{DESCRIPTION}}").join(calc.description)
-      .split("{{SCHEMA_JSON}}").join(buildToolSchema(calc, cat));
-    fs.writeFileSync(path.join(toolDir, `${calc.id}.html`), html);
-  });
-
-  categories.forEach((cat) => {
-    const html = categoryTemplate
-      .split("{{CAT_ID}}").join(cat.id)
-      .split("{{CAT_NAME}}").join(cat.name)
-      .split("{{CAT_DESCRIPTION}}").join(cat.description)
-      .split("{{SCHEMA_JSON}}").join(buildCategorySchema(cat));
-    fs.writeFileSync(path.join(categoryDir, `${cat.id}.html`), html);
-  });
-
-  buildSitemap(categories, calculators);
-
-  console.log(`Built ${calculators.length} tool pages and ${categories.length} category pages`);
+function loadI18n() {
+  const src = fs.readFileSync(path.join(ROOT, "js/i18n.js"), "utf8");
+  const sandbox = { module: {} };
+  vm.createContext(sandbox);
+  vm.runInContext(
+    src + "\nthis.I18N_UI = I18N_UI; this.I18N_CATEGORIES = I18N_CATEGORIES; this.I18N_TOOLS = I18N_TOOLS; this.I18N_STATIC = I18N_STATIC;",
+    sandbox
+  );
+  return {
+    ui: sandbox.I18N_UI,
+    categories: sandbox.I18N_CATEGORIES,
+    tools: sandbox.I18N_TOOLS,
+    static: sandbox.I18N_STATIC,
+  };
 }
+
+// English UI strings, kept in the same shape as I18N_UI[locale] so every
+// template-filling function can treat "en" uniformly instead of branching.
+const EN_UI = {
+  catSuffix: "Calculators",
+  nav: { categories: "Categories", allTools: "All tools", about: "About" },
+  footer: {
+    categoriesHeader: "Categories", popularHeader: "Popular", siteHeader: "Site",
+    allCategories: "All categories", allTools: "All tools", allCalculators: "All calculators",
+    about: "About", contact: "Contact", privacy: "Privacy", terms: "Terms",
+    tagline: "A reference index of fast, accurate calculators - built for people who just need the answer.",
+    copyright: "© 2026 Calquary. Calculators are provided for informational purposes and are not a substitute for professional advice.",
+  },
+  buttons: { findIt: "Find it", browseAll: "Browse all →", calculate: "Calculate", reset: "Reset", backToAll: "← Back to all calculators" },
+  labels: {
+    relatedTools: "Related tools",
+    accuracyTitle: "A note on accuracy",
+    accuracyText: "Calquary's calculators are built for quick, reliable estimates. For decisions with real financial, structural, or medical stakes, confirm with a qualified professional.",
+    lastUpdated: "Last updated:",
+    faqTitle: "Frequently asked questions",
+    breadcrumbHome: "Calquary",
+  },
+  hero: {
+    eyebrow: "Reference index · calculators for everything",
+    h1: "Find the exact calculator you need - fast.",
+    lede: "Calquary organizes calculators the way a good reference library organizes books: by subject, with plain answers and no clutter. Math, money, home projects, health, and more.",
+    statLabel: "calculators live and counting",
+    lookupTag: "LOOKUP",
+    placeholder: "Try 'concrete', 'BMI', 'loan'...",
+    hint: "Or browse by category below.",
+  },
+  sections: {
+    browseKicker: "Browse", browseH2: "Every category, one shelf each",
+    popularKicker: "Popular right now", popularH2: "Featured tools",
+    recentKicker: "Just added", recentH2: "Recently added",
+    faqKicker: "Good to know", faqH2: "Frequently asked questions",
+  },
+  homeFaq: [
+    { q: "What is Calquary?", a: "Calquary is a reference index of fast, accurate calculators, organized by subject like a library instead of scattered across ads and unrelated content. Pick a category, open a tool, get your answer." },
+    { q: "Are these calculators free to use?", a: "Yes - every calculator on Calquary is free, with no account, sign-up, or paywall. Just open a tool and use it." },
+    { q: "How accurate are Calquary's calculators?", a: "Each calculator uses a standard, verified formula for its category, and every tool is checked against hand-calculated results before it's published. For decisions with real financial, structural, or medical stakes, confirm with a qualified professional." },
+    { q: "Do you store any of my data?", a: "No - every calculator runs entirely in your browser. The numbers you enter are never sent to a server or stored anywhere; closing the tab clears everything." },
+    { q: "How many calculators does Calquary have?", a: 'As of today, Calquary has <span id="faq-tool-count">—</span> calculators across 8 categories, and the catalog keeps growing.' },
+    { q: "How often are new calculators added?", a: "There's no fixed schedule, but the catalog has grown steadily since launch - new calculators are added in batches by category, each one built and verified before it's published." },
+  ],
+};
+
+function uiFor(I18N, locale) {
+  return locale === "en" ? EN_UI : I18N.ui[locale];
+}
+
+function isoToDisplay(iso) {
+  const [y, m, d] = iso.split("-").map(Number);
+  return `${MONTHS[m - 1]} ${d}, ${y}`;
+}
+
+// Per-calculator "last updated" date, sourced from real git history rather
+// than file mtime (which would just show "today" for every page after any
+// rebuild, since tool/*.html regenerates every run). Each calculator's date
+// is the max (most recent) commit time across the line range of its own
+// object in the array — so an FAQ edit or a diagram added to just that one
+// calculator correctly updates only its own date.
+//
+// This deliberately runs one `git blame -L <range>` call PER calculator
+// rather than a single whole-file blame pass. Reason (found by testing, not
+// assumed): every uncommitted working-tree line shares the same all-zero
+// "Not Committed Yet" pseudo-commit hash, and git's porcelain output only
+// prints full metadata (including committer-time) the FIRST time a given
+// hash appears — every later uncommitted hunk elsewhere in the file gets
+// silently collapsed to a hash-only line with no timestamp. A single
+// whole-file parse therefore stamps every uncommitted calculator with
+// whichever uncommitted edit happens to appear earliest in the file, not its
+// own actual edit time. Scoping the blame call per calculator sidesteps this
+// since each call independently sees its own range's first occurrence.
+function computeCalculatorDates(calculators) {
+  const filePath = "js/calculators-data.js";
+  const lines = fs.readFileSync(path.join(ROOT, filePath), "utf8").split("\n");
+
+  const idLineNumbers = [];
+  lines.forEach((line, i) => {
+    const m = line.match(/^\s*id:\s*"([^"]+)"/);
+    if (m) idLineNumbers.push({ id: m[1], line: i + 1 });
+  });
+
+  const dates = {};
+  idLineNumbers.forEach((entry, i) => {
+    const start = entry.line;
+    const end = i + 1 < idLineNumbers.length ? idLineNumbers[i + 1].line - 2 : lines.length;
+    const blameOut = execSync(
+      `git blame --porcelain -L ${start},${end} -- ${filePath}`,
+      { cwd: ROOT, maxBuffer: 1024 * 1024 * 20 }
+    ).toString();
+    let maxTime = 0;
+    for (const bl of blameOut.split("\n")) {
+      if (bl.startsWith("committer-time ")) {
+        const t = parseInt(bl.slice("committer-time ".length), 10);
+        if (t > maxTime) maxTime = t;
+      }
+    }
+    dates[entry.id] = new Date(maxTime * 1000).toISOString().slice(0, 10);
+  });
+
+  calculators.forEach((c) => {
+    c.dateModified = dates[c.id] || new Date().toISOString().slice(0, 10);
+  });
+  return dates;
+}
+
+// Same git-history approach for standalone files (homepage, static pages) —
+// keeps the whole sitemap on one real date source instead of a mix of real
+// dates for some pages and "today" for others. `git log` alone only sees
+// committed history, so a file with uncommitted working-tree edits (true for
+// most of this project's files right now) would otherwise show its last
+// *commit* date rather than reflecting the newer uncommitted content —
+// checked for and dated as "today" first.
+function getFileLastModDate(relPath) {
+  try {
+    const status = execSync(`git status --porcelain -- ${relPath}`, { cwd: ROOT }).toString().trim();
+    if (status) return new Date().toISOString().slice(0, 10);
+    const out = execSync(`git log -1 --format=%cd --date=short -- ${relPath}`, { cwd: ROOT }).toString().trim();
+    return out || new Date().toISOString().slice(0, 10);
+  } catch (e) {
+    return new Date().toISOString().slice(0, 10);
+  }
+}
+
+// Same default-values-in, compute()-out pattern index.html's JS uses to
+// preview a live readout on each tool card, reused here at build time so the
+// OG image can show a real sample result instead of a blank/generic card.
+function computeSampleResult(calc) {
+  const inputs = {};
+  calc.fields.forEach((f) => {
+    inputs[f.id] = f.type === "checkbox-group" ? (f.default || []) : f.default;
+  });
+  return calc.compute(inputs);
+}
+
+// ---- URL helpers -------------------------------------------------------
+
+function localePath(locale) {
+  return locale === "en" ? "" : `${locale}/`;
+}
+function toolUrl(locale, id) {
+  return `${SITE_URL}/${localePath(locale)}tool/${id}.html`;
+}
+function categoryUrl(locale, id) {
+  return `${SITE_URL}/${localePath(locale)}category/${id}.html`;
+}
+function homeUrl(locale) {
+  return `${SITE_URL}/${localePath(locale)}index.html`;
+}
+function staticUrl(locale, page) {
+  return `${SITE_URL}/${localePath(locale)}${page}`;
+}
+
+// hreflang <link> block for a page that exists in `builtLocales` (a subset
+// of LOCALES) — reciprocal by construction, since every page in the set
+// links to every other page in the same set plus x-default (English).
+function hreflangLinks(urlFor, builtLocales) {
+  const HREFLANG_CODE = { en: "en", es: "es", fr: "fr", de: "de" };
+  const lines = builtLocales.map(
+    (loc) => `  <link rel="alternate" hreflang="${HREFLANG_CODE[loc]}" href="${urlFor(loc)}">`
+  );
+  lines.push(`  <link rel="alternate" hreflang="x-default" href="${urlFor("en")}">`);
+  return lines.join("\n");
+}
+
+// ---- Shared meta/schema helpers (unchanged behavior for English) -------
 
 function toLdJsonScript(graph) {
   const schema = { "@context": "https://schema.org", "@graph": graph };
@@ -64,33 +251,35 @@ function toLdJsonScript(graph) {
   return `<script type="application/ld+json">\n${json}\n</script>`;
 }
 
-function buildToolSchema(calc, cat) {
-  const url = `${SITE_URL}/tool/${calc.id}.html`;
+function buildToolSchema(locale, calc, cat, title, description, faq) {
+  const url = toolUrl(locale, calc.id);
   const graph = [
     {
       "@type": "SoftwareApplication",
-      "name": calc.title,
-      "description": calc.description,
+      "name": title,
+      "description": description,
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": url,
       "isAccessibleForFree": true,
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "dateModified": calc.dateModified,
+      "inLanguage": locale,
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Calquary", "item": `${SITE_URL}/index.html` },
-        { "@type": "ListItem", "position": 2, "name": cat.name, "item": `${SITE_URL}/category/${cat.id}.html` },
-        { "@type": "ListItem", "position": 3, "name": calc.title, "item": url },
+        { "@type": "ListItem", "position": 1, "name": "Calquary", "item": homeUrl(locale) },
+        { "@type": "ListItem", "position": 2, "name": cat.name, "item": categoryUrl(locale, cat.id) },
+        { "@type": "ListItem", "position": 3, "name": title, "item": url },
       ],
     },
   ];
 
-  if (calc.faq && calc.faq.length) {
+  if (faq && faq.length) {
     graph.push({
       "@type": "FAQPage",
-      "mainEntity": calc.faq.map((item) => ({
+      "mainEntity": faq.map((item) => ({
         "@type": "Question",
         "name": item.q,
         "acceptedAnswer": { "@type": "Answer", "text": item.a },
@@ -101,32 +290,501 @@ function buildToolSchema(calc, cat) {
   return toLdJsonScript(graph);
 }
 
-function buildCategorySchema(cat) {
+function buildCategorySchema(locale, cat, nameFull) {
   const graph = [
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Calquary", "item": `${SITE_URL}/index.html` },
-        { "@type": "ListItem", "position": 2, "name": cat.name, "item": `${SITE_URL}/category/${cat.id}.html` },
+        { "@type": "ListItem", "position": 1, "name": "Calquary", "item": homeUrl(locale) },
+        { "@type": "ListItem", "position": 2, "name": nameFull, "item": categoryUrl(locale, cat.id) },
       ],
     },
   ];
   return toLdJsonScript(graph);
 }
 
-function buildSitemap(categories, calculators) {
-  const today = new Date().toISOString().slice(0, 10);
-  const urls = [
-    `${SITE_URL}/index.html`,
-    ...categories.map((c) => `${SITE_URL}/category/${c.id}.html`),
-    ...calculators.map((c) => `${SITE_URL}/tool/${c.id}.html`),
+// Privacy/Terms/all-calculators.html stay English-only in wave one (see
+// build() below and the completion report) — Privacy and Terms in
+// particular need a native-speaker/legal review pass before it makes sense
+// to publish a translated version of a legal document, not just a build
+// pipeline that CAN produce one.
+const STANDARD_PAGES = ["privacy.html", "terms.html", "all-calculators.html"];
+
+// Tiny blocking (non-deferred) script — must run before first paint so a
+// stored dark/light preference applies immediately, not after a flash of
+// the wrong theme. Kept inline rather than an external file specifically
+// because an external <script> (even deferred-adjacent) would add a
+// request that must complete before this can run, defeating the point.
+function themeInitScript() {
+  return `<script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>`;
+}
+
+function faviconLinks() {
+  return [
+    `<link rel="icon" href="/favicon.svg" type="image/svg+xml">`,
+    `<link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">`,
+    `<link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">`,
+    `<link rel="icon" href="/favicon.ico" sizes="any">`,
+    `<link rel="apple-touch-icon" href="/apple-touch-icon.png">`,
+  ].join("\n  ");
+}
+
+function escapeAttr(s) {
+  return String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;");
+}
+function escapeHtml(s) {
+  return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+function ogMetaTags({ title, description, url, image, locale }) {
+  return [
+    `<meta property="og:title" content="${escapeAttr(title)}">`,
+    `<meta property="og:description" content="${escapeAttr(description)}">`,
+    `<meta property="og:type" content="website">`,
+    `<meta property="og:url" content="${escapeAttr(url)}">`,
+    `<meta property="og:locale" content="${OG_LOCALE[locale]}">`,
+    `<meta property="og:site_name" content="Calquary">`,
+    `<meta property="og:image" content="${escapeAttr(image)}">`,
+    `<meta property="og:image:width" content="1200">`,
+    `<meta property="og:image:height" content="630">`,
+    `<meta name="twitter:card" content="summary_large_image">`,
+    `<meta name="twitter:title" content="${escapeAttr(title)}">`,
+    `<meta name="twitter:description" content="${escapeAttr(description)}">`,
+    `<meta name="twitter:image" content="${escapeAttr(image)}">`,
+  ].join("\n  ");
+}
+
+// ---- OG images (unchanged — English source strings only; see report) --
+
+const OG_SAMPLE_OVERRIDES = {
+  "password-generator": { label: "Generated password", value: "••••••••••••••••" },
+};
+
+function generateOgImages(ogDir, categories, calculators) {
+  const specs = [];
+
+  calculators.forEach((calc) => {
+    const cat = categories.find((c) => c.id === calc.category);
+    let result;
+    if (OG_SAMPLE_OVERRIDES[calc.id]) {
+      result = { primary: OG_SAMPLE_OVERRIDES[calc.id] };
+    } else {
+      try {
+        result = computeSampleResult(calc);
+      } catch (e) {
+        result = { primary: { label: "Result", value: "—" } };
+      }
+    }
+    specs.push({
+      kind: "tool",
+      output: path.join(ogDir, `${calc.id}.png`),
+      categoryId: cat.id,
+      categoryName: cat.name,
+      title: calc.title,
+      primaryLabel: result.primary.label,
+      primaryValue: String(result.primary.value),
+    });
+  });
+
+  categories.forEach((cat) => {
+    specs.push({
+      kind: "category",
+      output: path.join(ogDir, `category-${cat.id}.png`),
+      categoryId: cat.id,
+      categoryName: cat.name,
+      title: `${cat.name} Calculators`,
+      toolCount: calculators.filter((c) => c.category === cat.id).length,
+    });
+  });
+
+  specs.push({
+    kind: "site",
+    output: path.join(ogDir, "site.png"),
+    categoryId: null,
+    categoryName: "Reference Index",
+    title: "Calquary - Calculators, Organized Like a Library",
+    tagline: `${calculators.length} calculators across ${categories.length} categories, and growing`,
+  });
+
+  const batchFile = path.join(ROOT, ".og-batch.json");
+  fs.writeFileSync(batchFile, JSON.stringify(specs));
+  execSync(`python3 scripts/generate-og-image.py ${batchFile}`, { cwd: ROOT, stdio: "inherit" });
+  fs.unlinkSync(batchFile);
+}
+
+// ---- Page builders -------------------------------------------------------
+
+function buildToolPage(template, locale, calc, cat, I18N) {
+  const ui = uiFor(I18N, locale);
+  const t = locale === "en"
+    ? { title: calc.title, intro: calc.intro, description: calc.description, faq: calc.faq }
+    : I18N.tools[calc.id][locale];
+
+  const url = toolUrl(locale, calc.id);
+  const image = `${SITE_URL}/og-images/${calc.id}.png`;
+  const faqHtml = t.faq.map((item) => `<div class="faq-item">\n<h3>${escapeHtml(item.q)}</h3>\n<p>${item.a}</p>\n</div>`).join("\n");
+
+  return template
+    .split("{{LANG}}").join(locale)
+    .split("{{CALC_ID}}").join(calc.id)
+    .split("{{TITLE}}").join(t.title)
+    .split("{{INTRO}}").join(t.intro)
+    .split("{{DESCRIPTION}}").join(t.description)
+    .split("{{FAQ_HTML}}").join(faqHtml)
+    .split("{{FAQ_TITLE}}").join(ui.labels.faqTitle)
+    .split("{{LAST_UPDATED_LABEL}}").join(ui.labels.lastUpdated)
+    .split("{{LAST_UPDATED}}").join(isoToDisplay(calc.dateModified))
+    .split("{{BTN_CALCULATE}}").join(ui.buttons.calculate)
+    .split("{{BTN_RESET}}").join(ui.buttons.reset)
+    .split("{{BTN_BACK_TO_ALL}}").join(ui.buttons.backToAll)
+    .split("{{RELATED_TOOLS_LABEL}}").join(ui.labels.relatedTools)
+    .split("{{ACCURACY_TITLE}}").join(ui.labels.accuracyTitle)
+    .split("{{ACCURACY_TEXT}}").join(ui.labels.accuracyText)
+    .split("{{BREADCRUMB_HOME}}").join(ui.labels.breadcrumbHome)
+    .split("{{NAV_CATEGORIES}}").join(ui.nav.categories)
+    .split("{{NAV_ALL_TOOLS}}").join(ui.nav.allTools)
+    .split("{{NAV_ABOUT}}").join(ui.nav.about)
+    .split("{{FOOTER_CONTACT}}").join(ui.footer.contact)
+    .split("{{FOOTER_PRIVACY}}").join(ui.footer.privacy)
+    .split("{{FOOTER_TERMS}}").join(ui.footer.terms)
+    .split("{{HOME_HREF}}").join(`/${localePath(locale)}index.html`)
+    .split("{{ABOUT_HREF}}").join(`/${localePath(locale)}about.html`)
+    .split("{{CONTACT_HREF}}").join(`/${localePath(locale)}contact.html`)
+    .split("{{PRIVACY_HREF}}").join("/privacy.html")
+    .split("{{TERMS_HREF}}").join("/terms.html")
+    .split("{{CAT_HREF}}").join(`/${localePath(locale)}category/${cat.id}.html`)
+    .split("{{CAT_NAME}}").join(locale === "en" ? cat.name : I18N.categories[cat.id][locale].name)
+    .split("{{FAVICON_LINKS}}").join(faviconLinks())
+    .split("{{THEME_INIT}}").join(themeInitScript())
+    .split("{{OG_META}}").join(ogMetaTags({ title: `${t.title} | Calquary`, description: t.description, url, image, locale }))
+    .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => toolUrl(loc, calc.id), calc.builtLocales))
+    .split("{{SCHEMA_JSON}}").join(buildToolSchema(locale, calc, cat, t.title, t.description, t.faq));
+}
+
+// "{name} Calculators" (en/de suffix pattern) reads as backwards, ungrammatical
+// noun-adjective order in Spanish/French ("Salud y Fitness Calculadoras") — those
+// two locales front the category-word instead ("Calculadoras de Salud y Fitness"),
+// with the French partitive "de" elided to "d'" before a vowel-initial name.
+function categoryNameFull(locale, name, ui) {
+  if (locale === "es") return `${ui.catSuffix} de ${name}`;
+  if (locale === "fr") {
+    const de = /^[AEIOUÀÂÉÈÊËÎÏÔÙÛÜ]/i.test(name) ? "d'" : "de ";
+    return `${ui.catSuffix} ${de}${name}`;
+  }
+  return `${name} ${ui.catSuffix}`;
+}
+
+function buildCategoryPage(template, locale, cat, calculators, I18N) {
+  const ui = uiFor(I18N, locale);
+  const name = locale === "en" ? cat.name : I18N.categories[cat.id][locale].name;
+  const description = locale === "en" ? cat.description : I18N.categories[cat.id][locale].description;
+  const nameFull = categoryNameFull(locale, name, ui);
+  const url = categoryUrl(locale, cat.id);
+  const image = `${SITE_URL}/og-images/category-${cat.id}.png`;
+
+  const translatedIds = {};
+  WAVE_ONE_TOOL_IDS.forEach((id) => { translatedIds[id] = true; });
+
+  return template
+    .split("{{LANG}}").join(locale)
+    .split("{{CAT_ID}}").join(cat.id)
+    .split("{{CAT_NAME_FULL}}").join(nameFull)
+    .split("{{CAT_DESCRIPTION}}").join(description)
+    .split("{{TRANSLATED_TOOL_IDS_JSON}}").join(JSON.stringify(translatedIds))
+    .split("{{LOCALE_PATH}}").join(localePath(locale))
+    .split("{{BREADCRUMB_HOME}}").join(ui.labels.breadcrumbHome)
+    .split("{{BREADCRUMB_CATEGORIES}}").join(ui.nav.categories)
+    .split("{{NAV_CATEGORIES}}").join(ui.nav.categories)
+    .split("{{NAV_ALL_TOOLS}}").join(ui.nav.allTools)
+    .split("{{NAV_ABOUT}}").join(ui.nav.about)
+    .split("{{FOOTER_CONTACT}}").join(ui.footer.contact)
+    .split("{{FOOTER_PRIVACY}}").join(ui.footer.privacy)
+    .split("{{FOOTER_TERMS}}").join(ui.footer.terms)
+    .split("{{BTN_BACK_TO_ALL}}").join(ui.buttons.backToAll)
+    .split("{{HOME_HREF}}").join(`/${localePath(locale)}index.html`)
+    .split("{{ABOUT_HREF}}").join(`/${localePath(locale)}about.html`)
+    .split("{{CONTACT_HREF}}").join(`/${localePath(locale)}contact.html`)
+    .split("{{PRIVACY_HREF}}").join("/privacy.html")
+    .split("{{TERMS_HREF}}").join("/terms.html")
+    .split("{{FAVICON_LINKS}}").join(faviconLinks())
+    .split("{{THEME_INIT}}").join(themeInitScript())
+    .split("{{OG_META}}").join(ogMetaTags({ title: `${nameFull} | Calquary`, description, url, image, locale }))
+    .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => categoryUrl(loc, cat.id), LOCALES))
+    .split("{{SCHEMA_JSON}}").join(buildCategorySchema(locale, cat, nameFull));
+}
+
+function buildHomePage(template, locale, categories, calculators, I18N) {
+  const ui = uiFor(I18N, locale);
+  const title = locale === "en"
+    ? "Calquary - Calculators, Organized Like a Library"
+    : `Calquary - ${ui.hero.h1}`;
+  const description = locale === "en"
+    ? "Fast, accurate calculators for math, finance, home improvement, health, and everyday life - organized so you can actually find the one you need."
+    : ui.hero.lede;
+  const url = homeUrl(locale);
+  const image = `${SITE_URL}/og-images/site.png`;
+
+  const homeFaqHtml = ui.homeFaq.map((item) => `<div class="faq-item">\n<h3>${escapeHtml(item.q)}</h3>\n<p>${item.a}</p>\n</div>`).join("\n        ");
+
+  const popularIds = ["percentage-calculator", "loan-calculator", "bmi-calculator"];
+  const footerPopularLinks = popularIds.map((id) => {
+    const calc = calculators.find((c) => c.id === id);
+    const label = locale === "en" ? calc.title : I18N.tools[id][locale].title;
+    const href = locale === "en" ? `/tool/${id}.html` : `/${localePath(locale)}tool/${id}.html`;
+    return `<li><a href="${href}">${label}</a></li>`;
+  }).join("\n            ");
+
+  const schemaGraph = [
+    {
+      "@type": "WebSite",
+      "name": "Calquary",
+      "url": url,
+      "inLanguage": locale,
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": { "@type": "EntryPoint", "urlTemplate": `${url}?q={search_term_string}` },
+        "query-input": "required name=search_term_string",
+      },
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": ui.homeFaq.map((item) => ({
+        "@type": "Question",
+        "name": item.q,
+        "acceptedAnswer": { "@type": "Answer", "text": item.a.replace(/<[^>]+>/g, "") },
+      })),
+    },
   ];
 
-  const body = urls
-    .map((u) => `  <url>\n    <loc>${u}</loc>\n    <lastmod>${today}</lastmod>\n  </url>`)
+  return template
+    .split("{{LANG}}").join(locale)
+    .split("{{LOCALE_CODE}}").join(locale)
+    .split("{{LOCALE_PATH}}").join(localePath(locale))
+    .split("{{TITLE}}").join(title)
+    .split("{{DESCRIPTION}}").join(description)
+    .split("{{HOME_FAQ_HTML}}").join(homeFaqHtml)
+    .split("{{HERO_EYEBROW}}").join(ui.hero.eyebrow)
+    .split("{{HERO_H1}}").join(ui.hero.h1)
+    .split("{{HERO_LEDE}}").join(ui.hero.lede)
+    .split("{{HERO_STAT_LABEL}}").join(ui.hero.statLabel)
+    .split("{{HERO_LOOKUP_TAG}}").join(ui.hero.lookupTag)
+    .split("{{HERO_PLACEHOLDER}}").join(escapeAttr(ui.hero.placeholder))
+    .split("{{HERO_HINT}}").join(ui.hero.hint)
+    .split("{{BTN_FIND_IT}}").join(ui.buttons.findIt)
+    .split("{{BTN_BROWSE_ALL}}").join(ui.buttons.browseAll)
+    .split("{{SEC_BROWSE_KICKER}}").join(ui.sections.browseKicker)
+    .split("{{SEC_BROWSE_H2}}").join(ui.sections.browseH2)
+    .split("{{SEC_POPULAR_KICKER}}").join(ui.sections.popularKicker)
+    .split("{{SEC_POPULAR_H2}}").join(ui.sections.popularH2)
+    .split("{{SEC_RECENT_KICKER}}").join(ui.sections.recentKicker)
+    .split("{{SEC_RECENT_H2}}").join(ui.sections.recentH2)
+    .split("{{SEC_FAQ_KICKER}}").join(ui.sections.faqKicker)
+    .split("{{SEC_FAQ_H2}}").join(ui.sections.faqH2)
+    .split("{{NAV_CATEGORIES}}").join(ui.nav.categories)
+    .split("{{NAV_ALL_TOOLS}}").join(ui.nav.allTools)
+    .split("{{NAV_ABOUT}}").join(ui.nav.about)
+    .split("{{FOOTER_TAGLINE}}").join(ui.footer.tagline)
+    .split("{{FOOTER_CATEGORIES_HEADER}}").join(ui.footer.categoriesHeader)
+    .split("{{FOOTER_POPULAR_HEADER}}").join(ui.footer.popularHeader)
+    .split("{{FOOTER_POPULAR_LINKS}}").join(footerPopularLinks)
+    .split("{{FOOTER_SITE_HEADER}}").join(ui.footer.siteHeader)
+    .split("{{FOOTER_ALL_CATEGORIES}}").join(ui.footer.allCategories)
+    .split("{{FOOTER_ALL_TOOLS}}").join(ui.footer.allTools)
+    .split("{{FOOTER_ALL_CALCULATORS}}").join(ui.footer.allCalculators)
+    .split("{{FOOTER_CONTACT}}").join(ui.footer.contact)
+    .split("{{FOOTER_PRIVACY}}").join(ui.footer.privacy)
+    .split("{{FOOTER_TERMS}}").join(ui.footer.terms)
+    .split("{{FOOTER_COPYRIGHT}}").join(ui.footer.copyright)
+    .split("{{OG_META}}").join(ogMetaTags({ title, description, url, image, locale }))
+    .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => homeUrl(loc), LOCALES))
+    .split("{{SCHEMA_JSON}}").join(toLdJsonScript(schemaGraph));
+}
+
+function buildAboutPage(template, locale, I18N) {
+  const ui = uiFor(I18N, locale);
+  const s = I18N.static.about[locale];
+  const url = staticUrl(locale, "about.html");
+  const image = `${SITE_URL}/og-images/site.png`;
+
+  return template
+    .split("{{LANG}}").join(locale)
+    .split("{{LOCALE_PATH}}").join(localePath(locale))
+    .split("{{TITLE}}").join(`${s.title} | Calquary`)
+    .split("{{DESCRIPTION}}").join(s.lede)
+    .split("{{ABOUT_TITLE}}").join(s.title)
+    .split("{{ABOUT_LEDE}}").join(s.lede)
+    .split("{{ABOUT_BODY}}").join(s.body)
+    .split("{{BREADCRUMB_HOME}}").join(ui.labels.breadcrumbHome)
+    .split("{{NAV_CATEGORIES}}").join(ui.nav.categories)
+    .split("{{NAV_ALL_TOOLS}}").join(ui.nav.allTools)
+    .split("{{NAV_ABOUT}}").join(ui.nav.about)
+    .split("{{FOOTER_CONTACT}}").join(ui.footer.contact)
+    .split("{{FOOTER_PRIVACY}}").join(ui.footer.privacy)
+    .split("{{FOOTER_TERMS}}").join(ui.footer.terms)
+    .split("{{BTN_BACK_TO_ALL}}").join(ui.buttons.backToAll)
+    .split("{{OG_META}}").join(ogMetaTags({ title: `${s.title} | Calquary`, description: s.lede, url, image, locale }))
+    .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => staticUrl(loc, "about.html"), LOCALES));
+}
+
+function buildContactPage(template, locale, I18N) {
+  const ui = uiFor(I18N, locale);
+  const s = I18N.static.contact[locale];
+  const url = staticUrl(locale, "contact.html");
+  const image = `${SITE_URL}/og-images/site.png`;
+
+  return template
+    .split("{{LANG}}").join(locale)
+    .split("{{LOCALE_PATH}}").join(localePath(locale))
+    .split("{{TITLE}}").join(`${s.title} | Calquary`)
+    .split("{{DESCRIPTION}}").join(s.body)
+    .split("{{CONTACT_TITLE}}").join(s.title)
+    .split("{{CONTACT_BODY}}").join(s.body)
+    .split("{{BREADCRUMB_HOME}}").join(ui.labels.breadcrumbHome)
+    .split("{{NAV_CATEGORIES}}").join(ui.nav.categories)
+    .split("{{NAV_ALL_TOOLS}}").join(ui.nav.allTools)
+    .split("{{NAV_ABOUT}}").join(ui.nav.about)
+    .split("{{FOOTER_PRIVACY}}").join(ui.footer.privacy)
+    .split("{{FOOTER_TERMS}}").join(ui.footer.terms)
+    .split("{{FOOTER_CONTACT}}").join(ui.footer.contact)
+    .split("{{BTN_BACK_TO_ALL}}").join(ui.buttons.backToAll)
+    .split("{{OG_META}}").join(ogMetaTags({ title: `${s.title} | Calquary`, description: s.body, url, image, locale }))
+    .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => staticUrl(loc, "contact.html"), LOCALES));
+}
+
+// ---- Build ---------------------------------------------------------------
+
+function build() {
+  const { categories, calculators } = loadData();
+  const I18N = loadI18n();
+  computeCalculatorDates(calculators); // sets calc.dateModified on every calculator
+
+  // Which locales actually get a page for each tool — English always;
+  // es/fr/de only for the wave-one batch. Stashed on the calc object so
+  // hreflangLinks() can build a correct (non-reciprocal-to-nowhere) set.
+  calculators.forEach((c) => {
+    c.builtLocales = WAVE_ONE_TOOL_IDS.includes(c.id) ? LOCALES : ["en"];
+  });
+
+  const ogDir = path.join(ROOT, "og-images");
+  fs.mkdirSync(ogDir, { recursive: true });
+  const ogStart = Date.now();
+  generateOgImages(ogDir, categories, calculators);
+  const ogMs = Date.now() - ogStart;
+
+  const toolTemplate = fs.readFileSync(path.join(ROOT, "_templates/tool.template.html"), "utf8");
+  const categoryTemplate = fs.readFileSync(path.join(ROOT, "_templates/category.template.html"), "utf8");
+  const indexTemplate = fs.readFileSync(path.join(ROOT, "_templates/index.template.html"), "utf8");
+  const aboutTemplate = fs.readFileSync(path.join(ROOT, "_templates/about.template.html"), "utf8");
+  const contactTemplate = fs.readFileSync(path.join(ROOT, "_templates/contact.template.html"), "utf8");
+
+  let toolPageCount = 0;
+  let categoryPageCount = 0;
+
+  LOCALES.forEach((locale) => {
+    const prefix = localePath(locale);
+    const toolDir = path.join(ROOT, prefix, "tool");
+    const categoryDir = path.join(ROOT, prefix, "category");
+    fs.mkdirSync(toolDir, { recursive: true });
+    fs.mkdirSync(categoryDir, { recursive: true });
+
+    calculators.forEach((calc) => {
+      if (!calc.builtLocales.includes(locale)) return;
+      const cat = categories.find((c) => c.id === calc.category);
+      const html = buildToolPage(toolTemplate, locale, calc, cat, I18N);
+      fs.writeFileSync(path.join(toolDir, `${calc.id}.html`), html);
+      toolPageCount++;
+    });
+
+    categories.forEach((cat) => {
+      const html = buildCategoryPage(categoryTemplate, locale, cat, calculators, I18N);
+      fs.writeFileSync(path.join(categoryDir, `${cat.id}.html`), html);
+      categoryPageCount++;
+    });
+
+    const homeHtml = buildHomePage(indexTemplate, locale, categories, calculators, I18N);
+    fs.writeFileSync(path.join(ROOT, prefix, "index.html"), homeHtml);
+
+    const aboutHtml = buildAboutPage(aboutTemplate, locale, I18N);
+    fs.writeFileSync(path.join(ROOT, prefix, "about.html"), aboutHtml);
+
+    const contactHtml = buildContactPage(contactTemplate, locale, I18N);
+    fs.writeFileSync(path.join(ROOT, prefix, "contact.html"), contactHtml);
+  });
+
+  buildSitemap(categories, calculators);
+
+  console.log(`Built ${toolPageCount} tool pages (${calculators.length} EN + ${WAVE_ONE_TOOL_IDS.length} × 3 locales) and ${categoryPageCount} category pages (${categories.length} × ${LOCALES.length} locales)`);
+  console.log(`Built ${LOCALES.length} homepage / about / contact page sets (en, es, fr, de)`);
+  console.log(`Generated ${calculators.length + categories.length + 1} OG images in ${ogMs}ms`);
+}
+
+function buildSitemap(categories, calculators) {
+  // Real per-page dates, not a single "today" stamped on every URL every
+  // build. Tool pages use their own git-history dateModified (computed
+  // above); category pages use the most recent date among their own
+  // calculators (a category is only as fresh as its newest content change);
+  // the homepage and static pages use their own file's git log date.
+  //
+  // Every localized URL carries an <xhtml:link> block cross-referencing its
+  // sibling locale URLs (+ x-default) per the sitemap hreflang spec, mirroring
+  // the <head> hreflang tags rather than duplicating a separate source of
+  // truth for them.
+  const HREFLANG_CODE = { en: "en", es: "es", fr: "fr", de: "de" };
+
+  function xhtmlBlock(urlFor, builtLocales) {
+    const lines = builtLocales.map(
+      (loc) => `    <xhtml:link rel="alternate" hreflang="${HREFLANG_CODE[loc]}" href="${urlFor(loc)}"/>`
+    );
+    lines.push(`    <xhtml:link rel="alternate" hreflang="x-default" href="${urlFor("en")}"/>`);
+    return lines.join("\n");
+  }
+
+  const entries = [];
+
+  LOCALES.forEach((locale) => {
+    entries.push({
+      loc: homeUrl(locale),
+      lastmod: getFileLastModDate(locale === "en" ? "index.html" : `${locale}/index.html`),
+      xhtml: xhtmlBlock((loc) => homeUrl(loc), LOCALES),
+    });
+    entries.push({
+      loc: staticUrl(locale, "about.html"),
+      lastmod: getFileLastModDate(locale === "en" ? "about.html" : `${locale}/about.html`),
+      xhtml: xhtmlBlock((loc) => staticUrl(loc, "about.html"), LOCALES),
+    });
+    entries.push({
+      loc: staticUrl(locale, "contact.html"),
+      lastmod: getFileLastModDate(locale === "en" ? "contact.html" : `${locale}/contact.html`),
+      xhtml: xhtmlBlock((loc) => staticUrl(loc, "contact.html"), LOCALES),
+    });
+    categories.forEach((c) => {
+      const catCalcs = calculators.filter((calc) => calc.category === c.id);
+      const lastmod = catCalcs.reduce((max, calc) => (calc.dateModified > max ? calc.dateModified : max), "0000-00-00");
+      entries.push({
+        loc: categoryUrl(locale, c.id),
+        lastmod,
+        xhtml: xhtmlBlock((loc) => categoryUrl(loc, c.id), LOCALES),
+      });
+    });
+    calculators.forEach((c) => {
+      if (!c.builtLocales.includes(locale)) return;
+      entries.push({
+        loc: toolUrl(locale, c.id),
+        lastmod: c.dateModified,
+        xhtml: xhtmlBlock((loc) => toolUrl(loc, c.id), c.builtLocales),
+      });
+    });
+  });
+
+  // English-only pages (no locale siblings): homepage-adjacent standard
+  // pages plus privacy/terms/all-calculators, unchanged single-locale URLs.
+  entries.push(...STANDARD_PAGES.map((p) => ({ loc: `${SITE_URL}/${p}`, lastmod: getFileLastModDate(p), xhtml: "" })));
+
+  const body = entries
+    .map((e) => `  <url>\n    <loc>${e.loc}</loc>\n    <lastmod>${e.lastmod}</lastmod>\n${e.xhtml ? e.xhtml + "\n" : ""}  </url>`)
     .join("\n");
 
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${body}\n</urlset>\n`;
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${body}\n</urlset>\n`;
 
   fs.writeFileSync(path.join(ROOT, "sitemap.xml"), xml);
 }

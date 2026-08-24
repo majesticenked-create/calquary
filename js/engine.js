@@ -82,19 +82,29 @@ function collectValues(calc) {
   return values;
 }
 
+function retriggerSettle(el, delay) {
+  el.style.setProperty("--delay", `${delay}s`);
+  // Removing the class, forcing a reflow, then re-adding it restarts the CSS
+  // animation — re-adding the same class alone is a no-op once it's already run.
+  el.classList.remove("settle-in");
+  void el.offsetWidth;
+  el.classList.add("settle-in");
+}
+
 function renderResult(panel, result) {
   panel.classList.add("visible");
   const primaryValue = panel.querySelector(".result-primary .value");
   const primaryLabel = panel.querySelector(".result-primary .label");
   primaryValue.textContent = result.primary.value;
   primaryLabel.textContent = result.primary.label;
+  retriggerSettle(primaryValue, 0);
 
   const secWrap = panel.querySelector(".result-secondary");
   secWrap.innerHTML = "";
-  (result.secondary || []).forEach((item) => {
+  (result.secondary || []).forEach((item, i) => {
     const div = document.createElement("div");
     div.className = "item";
-    div.innerHTML = `<div class="v">${item.v}</div><div class="l">${item.l}</div>`;
+    div.innerHTML = `<div class="v settle-in" style="--delay:${0.05 + i * 0.05}s">${item.v}</div><div class="l">${item.l}</div>`;
     secWrap.appendChild(div);
   });
 
@@ -107,14 +117,143 @@ function renderResult(panel, result) {
   }
 }
 
-function initCalculator(calcId) {
+/* ---------- Dimension diagrams ----------
+   Simple technical-style line diagrams showing what each input field refers
+   to on the real-world object being measured. Single-color (styled via CSS,
+   not inline), no fill — matches the category icon stroke treatment. */
+
+function dimLineH(x1, x2, y, label) {
+  return `
+    <line x1="${x1}" y1="${y}" x2="${x2}" y2="${y}"/>
+    <line x1="${x1}" y1="${y - 4}" x2="${x1}" y2="${y + 4}"/>
+    <line x1="${x2}" y1="${y - 4}" x2="${x2}" y2="${y + 4}"/>
+    <text x="${(x1 + x2) / 2}" y="${y + 13}" text-anchor="middle">${label}</text>
+  `;
+}
+
+function dimLineV(y1, y2, x, label) {
+  return `
+    <line x1="${x}" y1="${y1}" x2="${x}" y2="${y2}"/>
+    <line x1="${x - 4}" y1="${y1}" x2="${x + 4}" y2="${y1}"/>
+    <line x1="${x - 4}" y1="${y2}" x2="${x + 4}" y2="${y2}"/>
+    <text x="${x - 6}" y="${(y1 + y2) / 2}" text-anchor="end" dominant-baseline="middle">${label}</text>
+  `;
+}
+
+function diagramWrap(inner) {
+  return `<svg viewBox="0 0 300 150" class="calc-diagram-svg" aria-hidden="true">${inner}</svg>`;
+}
+
+// Slab/bed diagrams: concrete, gravel, mulch — a plan-view rectangle (one or
+// two labeled edges) plus a thin side-elevation panel showing depth/thickness.
+function diagramSlab(topLabels, depthLabel) {
+  const rectX = 50, rectY = 18, rectW = 114, rectH = 88;
+  let topPart;
+  if (topLabels.length === 2) {
+    topPart = `
+      <rect x="${rectX}" y="${rectY}" width="${rectW}" height="${rectH}"/>
+      ${dimLineH(rectX, rectX + rectW, rectY + rectH + 14, topLabels[0])}
+      ${dimLineV(rectY, rectY + rectH, rectX - 14, topLabels[1])}
+    `;
+  } else {
+    topPart = `
+      <rect x="${rectX}" y="${rectY}" width="${rectW}" height="${rectH}"/>
+      <text x="${rectX + rectW / 2}" y="${rectY + rectH / 2 + 4}" text-anchor="middle">${topLabels[0]}</text>
+    `;
+  }
+  const sideX = 245, sideY = 78, sideW = 50, sideH = 14;
+  const sidePart = `
+    <rect x="${sideX}" y="${sideY}" width="${sideW}" height="${sideH}"/>
+    ${dimLineV(sideY, sideY + sideH, sideX - 14, depthLabel)}
+  `;
+  return diagramWrap(topPart + sidePart);
+}
+
+// Area diagrams: paint, flooring, drywall, roofing, insulation, tile, paver —
+// a plain rectangle showing length x width composing the area field's value.
+function diagramArea(areaLabel) {
+  const x = 60, y = 16, w = 180, h = 92;
+  const inner = `
+    <rect x="${x}" y="${y}" width="${w}" height="${h}"/>
+    ${dimLineH(x, x + w, y + h + 14, "length")}
+    ${dimLineV(y, y + h, x - 14, "width")}
+    <text x="${x + w / 2}" y="${y + h / 2 + 4}" text-anchor="middle">${areaLabel}</text>
+  `;
+  return diagramWrap(inner);
+}
+
+// Fence diagram: a run divided into repeating panels.
+function diagramFence() {
+  const x1 = 24, x2 = 276, y = 78, panelCount = 4;
+  const step = (x2 - x1) / panelCount;
+  let ticks = "";
+  for (let i = 0; i <= panelCount; i++) {
+    const x = x1 + i * step;
+    ticks += `<line x1="${x}" y1="${y - 16}" x2="${x}" y2="${y + 16}"/>`;
+  }
+  const rail = `<line x1="${x1}" y1="${y}" x2="${x2}" y2="${y}"/>`;
+  const overall = dimLineH(x1, x2, y - 32, "fence length");
+  const panel = dimLineH(x1 + step, x1 + step * 2, y + 32, "panel width");
+  return diagramWrap(ticks + rail + overall + panel);
+}
+
+// Board diagram: lumber — a side elevation (length) plus an end-view
+// cross-section (width x thickness), since a board's dimensions aren't a
+// flat area the way a slab or wall is.
+function diagramBoard() {
+  const bx = 20, by = 60, bw = 120, bh = 18;
+  const side = `
+    <rect x="${bx}" y="${by}" width="${bw}" height="${bh}"/>
+    ${dimLineH(bx, bx + bw, by + bh + 14, "length")}
+  `;
+  const ex = 210, ey = 48, ew = 42, eh = 42;
+  const end = `
+    <rect x="${ex}" y="${ey}" width="${ew}" height="${eh}"/>
+    ${dimLineH(ex, ex + ew, ey + eh + 14, "width")}
+    ${dimLineV(ey, ey + eh, ex - 14, "thickness")}
+  `;
+  return diagramWrap(side + end);
+}
+
+function renderDiagram(calc) {
+  const container = document.getElementById("calc-diagram");
+  if (!container || !calc.diagram) return;
+  const d = calc.diagram;
+  let svg = "";
+  if (d.type === "slab") svg = diagramSlab(d.topLabels, d.depthLabel);
+  else if (d.type === "area") svg = diagramArea(d.label);
+  else if (d.type === "fence") svg = diagramFence();
+  else if (d.type === "board") svg = diagramBoard();
+  if (svg) {
+    container.innerHTML = svg;
+    container.style.display = "block";
+  }
+}
+
+// opts lets a page mount more than one live instance without ID collisions
+// (renderFieldsInto generates fixed `f-${field.id}` input IDs) — every tool
+// page calls this with no opts, so the defaults below must keep matching the
+// tool template's element IDs exactly. `live: true` also recalculates on
+// every input/change, not just submit — for a compact instance meant to feel
+// immediate (e.g. a homepage preview) rather than click-to-calculate.
+function initCalculator(calcId, opts = {}) {
+  const {
+    fieldsId = "calc-fields",
+    resultId = "calc-result",
+    formId = "calc-form",
+    resetId = "calc-reset",
+    live = false,
+  } = opts;
+
   const calc = getCalculator(calcId);
   if (!calc) return;
 
-  const fieldsContainer = document.getElementById("calc-fields");
-  const resultPanel = document.getElementById("calc-result");
-  const form = document.getElementById("calc-form");
+  const fieldsContainer = document.getElementById(fieldsId);
+  const resultPanel = document.getElementById(resultId);
+  const form = document.getElementById(formId);
+  if (!fieldsContainer || !resultPanel || !form) return;
 
+  renderDiagram(calc);
   renderFieldsInto(fieldsContainer, calc);
 
   function runCalculation() {
@@ -128,11 +267,43 @@ function initCalculator(calcId) {
     runCalculation();
   });
 
-  document.getElementById("calc-reset")?.addEventListener("click", () => {
+  document.getElementById(resetId)?.addEventListener("click", () => {
     renderFieldsInto(fieldsContainer, calc);
     resultPanel.classList.remove("visible");
   });
 
+  if (live) {
+    fieldsContainer.addEventListener("input", runCalculation);
+    fieldsContainer.addEventListener("change", runCalculation);
+  }
+
   // Auto-calculate once on load with defaults so the page never feels empty
   runCalculation();
+
+  // Print support: build a compact "what you entered" summary and a small
+  // site-identifier footer right before the print dialog opens, so a printed
+  // page reflects whatever is currently in the form, not stale defaults.
+  window.addEventListener("beforeprint", () => {
+    const summaryEl = document.getElementById("print-summary");
+    if (summaryEl) {
+      const parts = calc.fields
+        .filter((f) => f.type !== "checkbox-group" && f.type !== "textarea")
+        .map((f) => {
+          const input = document.getElementById(`f-${f.id}`);
+          if (!input) return null;
+          let val = input.value;
+          if (f.type === "select") {
+            const opt = f.options.find((o) => o.v === input.value);
+            val = opt ? opt.l : input.value;
+          }
+          return `${f.label}: ${val}${f.unit ? ` ${f.unit}` : ""}`;
+        })
+        .filter(Boolean);
+      summaryEl.textContent = "You entered — " + parts.join(" · ");
+    }
+    const footerEl = document.getElementById("print-footer");
+    if (footerEl) {
+      footerEl.textContent = `Calquary — calquary.com${window.location.pathname}`;
+    }
+  });
 }

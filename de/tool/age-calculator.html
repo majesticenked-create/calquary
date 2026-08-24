@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Altersrechner | Calquary</title>
+  <meta name="description" content="Berechnen Sie das genaue Alter in Jahren, Monaten und Tagen." />
+  <meta property="og:title" content="Altersrechner | Calquary">
+  <meta property="og:description" content="Berechnen Sie das genaue Alter in Jahren, Monaten und Tagen.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/de/tool/age-calculator.html">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/age-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Altersrechner | Calquary">
+  <meta name="twitter:description" content="Berechnen Sie das genaue Alter in Jahren, Monaten und Tagen.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/age-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/age-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/age-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/age-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/age-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/age-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("age-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("age-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Altersrechner",
+      "description": "Berechnen Sie das genaue Alter in Jahren, Monaten und Tagen.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/de/tool/age-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-24",
+      "inLanguage": "de"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/de/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Date & Time",
+          "item": "https://calquary.com/de/category/datetime.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Altersrechner",
+          "item": "https://calquary.com/de/tool/age-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Wie wird das genaue Alter berechnet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Durch Zählen der vollen Jahre, dann der verbleibenden Monate, dann der verbleibenden Tage zwischen Geburtsdatum und heute - nicht durch einfaches Subtrahieren des Geburtsjahrs vom aktuellen Jahr."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Werden Schaltjahre berücksichtigt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja - die Berechnung erfolgt direkt anhand von Kalenderdaten statt eines festen 365-Tage-Jahres, sodass Schaltjahre korrekt ohne zusätzliche Anpassung berücksichtigt werden."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/de/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/de/index.html#categories">Kategorien</a>
+          <a href="/de/index.html#tools">Alle Tools</a>
+          <a href="/de/about.html">Über uns</a>
+        </nav>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/de/index.html">Calquary</a> / <a href="/de/category/datetime.html">Datum & Uhrzeit</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Altersrechner</h1>
+        <p style="max-width:60ch;">Geben Sie ein Geburtsdatum ein, um das genaue Alter bis heute, tagesgenau, zu berechnen.</p>
+        <p class="last-updated">Zuletzt aktualisiert: August 24, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Berechnen</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Zurücksetzen</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Häufig gestellte Fragen</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Wie wird das genaue Alter berechnet?</h3>
+<p>Durch Zählen der vollen Jahre, dann der verbleibenden Monate, dann der verbleibenden Tage zwischen Geburtsdatum und heute - nicht durch einfaches Subtrahieren des Geburtsjahrs vom aktuellen Jahr.</p>
+</div>
+<div class="faq-item">
+<h3>Werden Schaltjahre berücksichtigt?</h3>
+<p>Ja - die Berechnung erfolgt direkt anhand von Kalenderdaten statt eines festen 365-Tage-Jahres, sodass Schaltjahre korrekt ohne zusätzliche Anpassung berücksichtigt werden.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Ähnliche Rechner</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Hinweis zur Genauigkeit</h4>
+          <p style="margin:0;font-size:0.85rem;">Die Rechner von Calquary sind für schnelle, zuverlässige Schätzungen ausgelegt. Bei Entscheidungen mit echten finanziellen, baulichen oder medizinischen Konsequenzen wenden Sie sich bitte an eine qualifizierte Fachperson.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/de/index.html">← Zurück zu allen Rechnern</a> · <a href="/de/about.html">Über uns</a> · <a href="/de/contact.html">Kontakt</a> · <a href="/privacy.html">Datenschutz</a> · <a href="/terms.html">Nutzungsbedingungen</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

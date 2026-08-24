@@ -1,39 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Body Fat Calculator | Calquary</title>
   <meta name="description" content="Estimate your body fat percentage using the U.S. Navy circumference method." />
-  <link rel="stylesheet" href="../css/styles.css" />
-  <script src="../js/calculators-data.js" defer></script>
-  <script src="../js/engine.js" defer></script>
+  <meta property="og:title" content="Body Fat Calculator | Calquary">
+  <meta property="og:description" content="Estimate your body fat percentage using the U.S. Navy circumference method.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/tool/body-fat-calculator.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/body-fat-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Body Fat Calculator | Calquary">
+  <meta name="twitter:description" content="Estimate your body fat percentage using the U.S. Navy circumference method.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/body-fat-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/body-fat-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/body-fat-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
   <script defer>
     document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
       const calc = getCalculator("body-fat-calculator");
-      const cat = getCategory(calc.category);
 
-      document.getElementById("breadcrumb-cat").textContent = cat.name;
-      document.getElementById("breadcrumb-cat").href = `../category/${cat.id}.html`;
-      document.getElementById("tool-title").textContent = calc.title;
-      document.getElementById("tool-intro").textContent = calc.intro;
-
-      // FAQ
-      const faqWrap = document.getElementById("faq-list");
-      calc.faq.forEach((item) => {
-        const div = document.createElement("div");
-        div.className = "faq-item";
-        div.innerHTML = `<h3>${item.q}</h3><p>${item.a}</p>`;
-        faqWrap.appendChild(div);
-      });
-
-      // Related tools
       const relWrap = document.getElementById("related-list");
       calc.related.forEach((relId) => {
         const rel = getCalculator(relId);
         if (!rel) return;
         const li = document.createElement("li");
-        li.innerHTML = `<a href="${rel.id}.html">${rel.title}</a>`;
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
         relWrap.appendChild(li);
       });
 
@@ -56,7 +75,9 @@
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "USD"
-      }
+      },
+      "dateModified": "2026-08-24",
+      "inLanguage": "en"
     },
     {
       "@type": "BreadcrumbList",
@@ -97,7 +118,7 @@
           "name": "Why does the formula use neck and waist measurements?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The Navy method correlates body fat with the ratio between waist (and hip, for women) circumference relative to neck circumference and height — larger waist-to-neck ratios generally indicate higher body fat."
+            "text": "The Navy method correlates body fat with the ratio between waist (and hip, for women) circumference relative to neck circumference and height - larger waist-to-neck ratios generally indicate higher body fat."
           }
         }
       ]
@@ -106,32 +127,38 @@
 }
 </script>
 </head>
-<body>
+<body class="tool-page">
 
   <header class="site-header">
     <div class="wrap">
-      <a href="../index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
-      <nav class="header-nav">
-        <a href="../index.html#categories">Categories</a>
-        <a href="../index.html#tools">All tools</a>
-        <a href="../about.html">About</a>
-      </nav>
+      <a href="/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/index.html#categories">Categories</a>
+          <a href="/index.html#tools">All tools</a>
+          <a href="/about.html">About</a>
+        </nav>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
     </div>
   </header>
 
   <div class="wrap" style="padding-top:32px;">
     <div class="breadcrumb">
-      <a href="../index.html">Calquary</a> / <a id="breadcrumb-cat" href="#"></a>
+      <a href="/index.html">Calquary</a> / <a href="/category/health.html">Health & Fitness</a>
     </div>
   </div>
 
   <div class="wrap" style="padding-bottom:64px;">
     <div class="tool-layout">
       <main>
-        <h1 id="tool-title"></h1>
-        <p id="tool-intro" style="max-width:60ch;"></p>
+        <h1>Body Fat Calculator</h1>
+        <p style="max-width:60ch;">Enter your height and body measurements to estimate your body fat percentage using the U.S. Navy method.</p>
+        <p class="last-updated">Last updated: August 24, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
           <form id="calc-form">
             <div id="calc-fields"></div>
             <div class="calc-actions">
@@ -152,7 +179,14 @@
 
         <div class="article-block">
           <h2>Frequently asked questions</h2>
-          <div id="faq-list"></div>
+          <div id="faq-list"><div class="faq-item">
+<h3>How accurate is the U.S. Navy body fat method?</h3>
+<p>It's generally within 3–4% of more precise methods like DEXA scans for most body types, making it a reasonably reliable estimate without special equipment.</p>
+</div>
+<div class="faq-item">
+<h3>Why does the formula use neck and waist measurements?</h3>
+<p>The Navy method correlates body fat with the ratio between waist (and hip, for women) circumference relative to neck circumference and height - larger waist-to-neck ratios generally indicate higher body fat.</p>
+</div></div>
         </div>
       </main>
 
@@ -172,10 +206,12 @@
   <footer class="site-footer">
     <div class="wrap">
       <div class="footer-base">
-        <p style="margin:0;"><a href="../index.html">← Back to all calculators</a> · <a href="../about.html">About</a> · <a href="../contact.html">Contact</a> · <a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a> · © 2026 Calquary</p>
+        <p style="margin:0;"><a href="/index.html">← Back to all calculators</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · © 2026 Calquary</p>
       </div>
     </div>
   </footer>
+
+  <div id="print-footer" class="print-footer"></div>
 
 </body>
 </html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kreditratenrechner | Calquary</title>
+  <meta name="description" content="Schätzen Sie Ihre monatliche Rate für ein Darlehen mit festem Zinssatz." />
+  <meta property="og:title" content="Kreditratenrechner | Calquary">
+  <meta property="og:description" content="Schätzen Sie Ihre monatliche Rate für ein Darlehen mit festem Zinssatz.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/de/tool/loan-calculator.html">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/loan-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kreditratenrechner | Calquary">
+  <meta name="twitter:description" content="Schätzen Sie Ihre monatliche Rate für ein Darlehen mit festem Zinssatz.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/loan-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/loan-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/loan-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/loan-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/loan-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/loan-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("loan-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("loan-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Kreditratenrechner",
+      "description": "Schätzen Sie Ihre monatliche Rate für ein Darlehen mit festem Zinssatz.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/de/tool/loan-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-24",
+      "inLanguage": "de"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/de/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Finance",
+          "item": "https://calquary.com/de/category/finance.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Kreditratenrechner",
+          "item": "https://calquary.com/de/tool/loan-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Wie wird eine Kreditrate berechnet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Darlehen mit festem Zinssatz verwenden eine Tilgungsformel basierend auf der Darlehenssumme, dem periodischen Zinssatz und der Anzahl der Raten, sodass jede Rate gleich hoch ist, sich aber der Anteil von Zins und Tilgung im Zeitverlauf verschiebt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Sind Steuern und Versicherung enthalten?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein - dies sind nur Tilgung und Zinsen. Insbesondere Hypotheken bündeln Grundsteuer und Versicherung oft in der monatlichen Rate (PITI), sodass Ihre tatsächliche Rechnung des Kreditgebers höher ausfallen kann als der hier angezeigte Betrag."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Senkt eine zusätzliche monatliche Zahlung die Gesamtzinsen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja - jede Zahlung über dem erforderlichen Betrag fließt direkt in die Tilgung, was das Darlehen verkürzt und die insgesamt gezahlten Zinsen senkt, da die Zinsen jede Periode auf den verbleibenden Saldo berechnet werden."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/de/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/de/index.html#categories">Kategorien</a>
+          <a href="/de/index.html#tools">Alle Tools</a>
+          <a href="/de/about.html">Über uns</a>
+        </nav>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/de/index.html">Calquary</a> / <a href="/de/category/finance.html">Finanzen</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Kreditratenrechner</h1>
+        <p style="max-width:60ch;">Dieser Kreditrechner schätzt Ihre feste monatliche Rate - geben Sie einfach die Darlehenssumme, den Jahreszins und die Laufzeit ein.</p>
+        <p class="last-updated">Zuletzt aktualisiert: August 24, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Berechnen</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Zurücksetzen</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Häufig gestellte Fragen</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Wie wird eine Kreditrate berechnet?</h3>
+<p>Darlehen mit festem Zinssatz verwenden eine Tilgungsformel basierend auf der Darlehenssumme, dem periodischen Zinssatz und der Anzahl der Raten, sodass jede Rate gleich hoch ist, sich aber der Anteil von Zins und Tilgung im Zeitverlauf verschiebt.</p>
+</div>
+<div class="faq-item">
+<h3>Sind Steuern und Versicherung enthalten?</h3>
+<p>Nein - dies sind nur Tilgung und Zinsen. Insbesondere Hypotheken bündeln Grundsteuer und Versicherung oft in der monatlichen Rate (PITI), sodass Ihre tatsächliche Rechnung des Kreditgebers höher ausfallen kann als der hier angezeigte Betrag.</p>
+</div>
+<div class="faq-item">
+<h3>Senkt eine zusätzliche monatliche Zahlung die Gesamtzinsen?</h3>
+<p>Ja - jede Zahlung über dem erforderlichen Betrag fließt direkt in die Tilgung, was das Darlehen verkürzt und die insgesamt gezahlten Zinsen senkt, da die Zinsen jede Periode auf den verbleibenden Saldo berechnet werden.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Ähnliche Rechner</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Hinweis zur Genauigkeit</h4>
+          <p style="margin:0;font-size:0.85rem;">Die Rechner von Calquary sind für schnelle, zuverlässige Schätzungen ausgelegt. Bei Entscheidungen mit echten finanziellen, baulichen oder medizinischen Konsequenzen wenden Sie sich bitte an eine qualifizierte Fachperson.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/de/index.html">← Zurück zu allen Rechnern</a> · <a href="/de/about.html">Über uns</a> · <a href="/de/contact.html">Kontakt</a> · <a href="/privacy.html">Datenschutz</a> · <a href="/terms.html">Nutzungsbedingungen</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

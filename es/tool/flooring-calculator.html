@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Piso | Calquary</title>
+  <meta name="description" content="Estima cuántas cajas de piso necesitas para una habitación." />
+  <meta property="og:title" content="Calculadora de Piso | Calquary">
+  <meta property="og:description" content="Estima cuántas cajas de piso necesitas para una habitación.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/es/tool/flooring-calculator.html">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/flooring-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculadora de Piso | Calquary">
+  <meta name="twitter:description" content="Estima cuántas cajas de piso necesitas para una habitación.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/flooring-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/flooring-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/flooring-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/flooring-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/flooring-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/flooring-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("flooring-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("flooring-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calculadora de Piso",
+      "description": "Estima cuántas cajas de piso necesitas para una habitación.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/es/tool/flooring-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-24",
+      "inLanguage": "es"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/es/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Construction & Home",
+          "item": "https://calquary.com/es/category/construction.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calculadora de Piso",
+          "item": "https://calquary.com/es/tool/flooring-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cuántas cajas de piso necesito para 25 m²?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Con 2 m² por caja y un margen de desperdicio del 10%, 25 m² necesitan aproximadamente 14 cajas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué necesito piso adicional para el desperdicio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los cortes alrededor de puertas, armarios y el ajuste de patrones consumen material extra - un margen del 10-15% evita que te quedes corto a mitad del proyecto."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/es/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/es/index.html#categories">Categorías</a>
+          <a href="/es/index.html#tools">Todas las herramientas</a>
+          <a href="/es/about.html">Acerca de</a>
+        </nav>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/es/index.html">Calquary</a> / <a href="/es/category/construction.html">Construcción y Hogar</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calculadora de Piso</h1>
+        <p style="max-width:60ch;">Introduce el área de tu habitación, la cobertura por caja y un margen de desperdicio para estimar cuántas cajas de piso comprar.</p>
+        <p class="last-updated">Última actualización: August 24, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calcular</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reiniciar</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Preguntas frecuentes</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>¿Cuántas cajas de piso necesito para 25 m²?</h3>
+<p>Con 2 m² por caja y un margen de desperdicio del 10%, 25 m² necesitan aproximadamente 14 cajas.</p>
+</div>
+<div class="faq-item">
+<h3>¿Por qué necesito piso adicional para el desperdicio?</h3>
+<p>Los cortes alrededor de puertas, armarios y el ajuste de patrones consumen material extra - un margen del 10-15% evita que te quedes corto a mitad del proyecto.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Herramientas relacionadas</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Nota sobre precisión</h4>
+          <p style="margin:0;font-size:0.85rem;">Las calculadoras de Calquary están diseñadas para ofrecer estimaciones rápidas y fiables. Para decisiones con implicaciones financieras, estructurales o médicas reales, consulta con un profesional cualificado.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/es/index.html">← Volver a todas las calculadoras</a> · <a href="/es/about.html">Acerca de</a> · <a href="/es/contact.html">Contacto</a> · <a href="/privacy.html">Privacidad</a> · <a href="/terms.html">Términos</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

@@ -1,29 +1,34 @@
 /* ============================================================
-   Calquary Design System
-   Concept: reference instrument / card-catalog for calculators
+   Calquary Design System — DataWise-style rebrand (082326)
+   Clean SaaS: white/pale-mint alternating sections, bold sans
+   headlines, pill buttons, soft diffuse shadows, single green
+   accent. Replaces the earlier card-catalog/reference-instrument
+   system entirely — see git history for the previous tokens.
    ============================================================ */
-
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
 
 :root {
   /* Color tokens */
-  --paper: #F7F5F0;
+  --paper: #FFFFFF;
+  --paper-mint: #EAF3EC;
   --paper-raised: #FFFFFF;
-  --ink: #1F2A24;
-  --ink-soft: #3D4A42;
-  --brand: #2F6F4E;
-  --brand-dark: #234F38;
-  --accent: #C97A2B;
-  --accent-soft: #E8C097;
-  --muted: #5F6E63; /* darkened from #8B9A8F — original was 2.7:1 against --paper, fails WCAG AA (4.5:1); this hits ~4.9:1, same sage hue family */
-  --line: #D9D4C7;
-  --line-soft: #E7E3D8;
+  --ink: #171717;
+  --ink-soft: #4B5563;
+  --brand: #1B7A4B;
+  --brand-dark: #0F3D2B;
+  /* No secondary accent — the reference uses one green throughout
+     (buttons, links, icons, focus rings). Kept as a single token so
+     nothing can drift into a second accent color by mistake. */
+  --muted: #5F6B72; /* verified ≥4.5:1 against both --paper and --paper-mint, not just one */
+  --line: #E5E7EB;
+  --line-soft: #F0F1F2;
   --error: #B3452C;
+  --shadow-ink: #101112;
 
-  /* Type */
-  --font-display: 'Fraunces', Georgia, serif;
+  /* Type — single sans-serif family for both display and body, per
+     reference (no serif, no mono anywhere). Inter was already loaded
+     for body text, so no new font family needed. */
+  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-mono: 'IBM Plex Mono', 'SF Mono', monospace;
 
   /* Scale */
   --space-1: 4px;
@@ -36,12 +41,56 @@
   --space-8: 64px;
   --space-9: 96px;
 
-  --radius-sm: 3px;
-  --radius-md: 6px;
-  --radius-lg: 10px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
 
   --ease-smooth: cubic-bezier(0.25, 0.1, 0.25, 1);
   --touch-min: 44px;
+}
+
+/* ============================================================
+   Dark mode
+   Deliberate dark equivalents, not an auto-inversion — a deep warm
+   pine-charcoal (not pure black) keeps the "reference instrument" identity,
+   with --brand brightened and re-verified at ≥4.5:1 against the dark
+   surfaces (computed, not eyeballed). --accent was removed project-wide in
+   the 082326 DataWise-style rebrand — single-accent discipline now, no
+   dark-mode equivalent needed.
+   Two selectors by design: prefers-color-scheme covers users who never
+   touch the toggle; [data-theme] is the explicit override once they do,
+   and wins in both directions regardless of system preference. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #15201A;
+    --paper-mint: #1B2820;
+    --paper-raised: #1E2B24;
+    --ink: #F1EFE8;
+    --ink-soft: #C7D0C8;
+    --brand: #57A67D;
+    --brand-dark: #6DBB92;
+    --muted: #96AA9E;
+    --line: #2C3A32;
+    --line-soft: #26332C;
+    --error: #E2795A;
+    --shadow-ink: #000000;
+  }
+}
+
+:root[data-theme="dark"] {
+  --paper: #15201A;
+  --paper-mint: #1B2820;
+  --paper-raised: #1E2B24;
+  --ink: #F1EFE8;
+  --ink-soft: #C7D0C8;
+  --brand: #57A67D;
+  --brand-dark: #6DBB92;
+  --muted: #96AA9E;
+  --line: #2C3A32;
+  --line-soft: #26332C;
+  --error: #E2795A;
+  --shadow-ink: #000000;
 }
 
 * { box-sizing: border-box; }
@@ -56,17 +105,18 @@ body {
   font-size: 16px;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s var(--ease-smooth), color 0.2s var(--ease-smooth);
 }
 
 h1, h2, h3, h4 {
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 700;
   color: var(--ink);
   margin: 0 0 var(--space-3);
   letter-spacing: -0.01em;
 }
 
-h1 { font-size: clamp(2.2rem, 4vw, 3.4rem); font-weight: 600; line-height: 1.05; letter-spacing: -0.022em; }
+h1 { font-size: clamp(2.2rem, 4vw, 3.4rem); font-weight: 800; line-height: 1.05; letter-spacing: -0.022em; }
 h2 { font-size: clamp(1.5rem, 2.4vw, 2rem); line-height: 1.15; letter-spacing: -0.013em; }
 h3 { font-size: 1.25rem; }
 
@@ -75,7 +125,7 @@ p { margin: 0 0 var(--space-4); color: var(--ink-soft); }
 a { color: var(--brand); text-decoration: none; }
 a:hover { color: var(--brand-dark); text-decoration: underline; }
 
-.mono { font-family: var(--font-mono); }
+.mono { font-family: var(--font-body); }
 
 button, input, select {
   font-family: inherit;
@@ -134,7 +184,13 @@ select:focus-visible {
 
 .brand-mark:hover { text-decoration: none; color: var(--ink); }
 
-.brand-mark .dot { color: var(--accent); }
+.brand-mark .dot { color: var(--brand); }
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+}
 
 .header-nav {
   display: flex;
@@ -152,15 +208,108 @@ select:focus-visible {
 }
 .header-nav a:hover { color: var(--brand); text-decoration: none; }
 
+/* Circular icon button — ring border + centered icon, matching the shape of
+   the requested reference. Ring uses --brand (not the gold in the reference
+   image), keeping single-accent discipline from the rebrand rather than
+   reintroducing a second accent color for one button. */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--touch-min);
+  height: var(--touch-min);
+  padding: 0;
+  color: var(--ink-soft);
+  background: var(--paper-raised);
+  border: 2px solid var(--brand);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: color 0.2s var(--ease-smooth), border-color 0.2s var(--ease-smooth), background 0.2s var(--ease-smooth);
+}
+
+.theme-toggle svg { width: 19px; height: 19px; }
+
+.theme-toggle:hover {
+  color: var(--brand);
+  background: var(--paper-mint);
+}
+
 /* ---------- Hero / search ---------- */
 
 .hero {
   padding: var(--space-8) 0 var(--space-7);
   border-bottom: 1px solid var(--line);
+  background-color: var(--paper);
+  background-image:
+    repeating-linear-gradient(
+      to right,
+      color-mix(in srgb, var(--line) 6%, transparent) 0,
+      color-mix(in srgb, var(--line) 6%, transparent) 1px,
+      transparent 1px,
+      transparent var(--space-6)
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      color-mix(in srgb, var(--line) 6%, transparent) 0,
+      color-mix(in srgb, var(--line) 6%, transparent) 1px,
+      transparent 1px,
+      transparent var(--space-6)
+    );
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-7);
+  align-items: center;
+}
+
+.hero-grid > * { min-width: 0; }
+
+@media (min-width: 860px) {
+  .hero-grid { grid-template-columns: 1.05fr 1fr; }
+}
+
+/* Hero specimen-card collage: real .tool-card elements fanned out like
+   index cards on a desk. Centered via the classic translate(-50%,-50%) +
+   px-offset + rotate combo so each card centers on itself regardless of its
+   exact rendered height (title length varies card to card). */
+.hero-collage {
+  position: relative;
+  min-height: 560px;
+  margin-top: 200px;
+}
+
+.hero-collage-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 210px;
+  transform: translate(-50%, -50%) translate(var(--tx), var(--ty)) rotate(var(--rotate));
+  transition: transform 0.25s var(--ease-smooth), box-shadow 0.25s var(--ease-smooth);
+}
+
+.hero-collage-card:hover {
+  transform: translate(-50%, -50%) translate(0, -6px) rotate(0deg);
+  z-index: 10 !important;
+  box-shadow: 0 8px 16px color-mix(in srgb, var(--shadow-ink) 6%, transparent), 0 28px 60px color-mix(in srgb, var(--shadow-ink) 16%, transparent);
+}
+
+@media (max-width: 480px) {
+  /* Scaling the whole fan (rather than recomputing per-card offsets) keeps
+     the cascade's relative geometry identical at any width — the desktop
+     px offsets pushed the back-most card's badge past the viewport's left
+     edge at 375px before this was added (confirmed clipped in a real
+     screenshot, not just theoretical). */
+  .hero-collage {
+    min-height: 340px;
+    transform: scale(0.68);
+    transform-origin: center;
+  }
 }
 
 .hero-eyebrow {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 0.78rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -175,7 +324,7 @@ select:focus-visible {
   content: '';
   width: 18px;
   height: 1px;
-  background: var(--accent);
+  background: var(--brand);
   display: inline-block;
 }
 
@@ -185,6 +334,25 @@ select:focus-visible {
   max-width: 46ch;
   font-size: 1.1rem;
   margin-top: var(--space-4);
+}
+
+.hero-stat {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  font-family: var(--font-body);
+  margin-top: var(--space-3);
+}
+
+.hero-stat .rvalue {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.hero-stat .rlabel {
+  font-size: 0.85rem;
+  color: var(--muted);
 }
 
 /* Lookup field: styled like a catalog search, not a generic pill search bar */
@@ -197,14 +365,14 @@ select:focus-visible {
   display: flex;
   align-items: center;
   background: var(--paper-raised);
-  border: 1.5px solid var(--ink);
-  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-pill);
   padding: 0;
   overflow: hidden;
 }
 
 .lookup-field .tag {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 0.78rem;
   color: var(--paper);
   background: var(--ink);
@@ -214,6 +382,7 @@ select:focus-visible {
 
 .lookup-field input {
   flex: 1;
+  min-width: 0;
   border: none;
   background: transparent;
   padding: var(--space-3) var(--space-4);
@@ -250,6 +419,21 @@ select:focus-visible {
   border-bottom: 1px solid var(--line);
 }
 
+/* Alternating full-bleed "shelf" backgrounds, so scrolling reads as moving
+   between distinct sections rather than one continuous page — full-bleed on
+   the .section element itself (not just .wrap) so the color reaches the
+   viewport edge.
+   A literal --paper-raised (solid white) full section background was tried
+   first and rejected: .catalog-card/.tool-card are ALSO paper-raised-based,
+   so the cards nearly disappeared into their own section background,
+   losing the pop they get sitting on --paper. A very subtle brand tint
+   (same color-mix technique as the hero grid texture, at comparable low
+   opacity) reads as "a different shelf" while leaving --paper-raised free
+   for cards to contrast against. 3% brand-mix over --paper keeps luminance
+   close enough to --paper that --muted's WCAG-fixed contrast ratio isn't
+   meaningfully affected (verified below, not assumed). */
+.section--raised { background: var(--paper-mint); }
+
 .section-head {
   display: flex;
   align-items: baseline;
@@ -260,7 +444,7 @@ select:focus-visible {
 }
 
 .section-head .kicker {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 0.78rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -283,7 +467,7 @@ select:focus-visible {
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   padding: var(--space-5);
-  box-shadow: 0 2px 10px color-mix(in srgb, var(--ink) 5%, transparent);
+  box-shadow: 0 1px 2px color-mix(in srgb, var(--shadow-ink) 4%, transparent), 0 8px 24px color-mix(in srgb, var(--shadow-ink) 6%, transparent);
   transition: border-color 0.2s var(--ease-smooth), transform 0.2s var(--ease-smooth), box-shadow 0.2s var(--ease-smooth);
   position: relative;
 }
@@ -292,7 +476,7 @@ select:focus-visible {
   border-color: var(--brand);
   text-decoration: none;
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px color-mix(in srgb, var(--ink) 10%, transparent);
+  box-shadow: 0 4px 8px color-mix(in srgb, var(--shadow-ink) 5%, transparent), 0 20px 45px color-mix(in srgb, var(--shadow-ink) 12%, transparent);
 }
 
 .catalog-card:active {
@@ -305,19 +489,24 @@ select:focus-visible {
   transition: transform 0.12s var(--ease-smooth);
 }
 
+.catalog-card-head {
+  margin-bottom: var(--space-3);
+}
+
 .catalog-card .code {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--paper-raised);
-  background: var(--brand);
+  color: var(--brand);
+  background: var(--paper-mint);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 26px;
-  height: 26px;
+  width: 40px;
+  height: 40px;
   border-radius: var(--radius-sm);
-  margin-bottom: var(--space-3);
-  font-weight: 600;
+}
+
+.catalog-card .code .cat-icon {
+  width: 20px;
+  height: 20px;
 }
 
 .catalog-card h3 {
@@ -329,7 +518,7 @@ select:focus-visible {
 }
 
 .catalog-card .count {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 0.8rem;
   color: var(--muted);
 }
@@ -350,7 +539,7 @@ select:focus-visible {
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   padding: var(--space-4) var(--space-4) var(--space-5);
-  box-shadow: 0 2px 10px color-mix(in srgb, var(--ink) 5%, transparent);
+  box-shadow: 0 1px 2px color-mix(in srgb, var(--shadow-ink) 4%, transparent), 0 8px 24px color-mix(in srgb, var(--shadow-ink) 6%, transparent);
   transition: border-color 0.2s var(--ease-smooth), transform 0.2s var(--ease-smooth), box-shadow 0.2s var(--ease-smooth);
 }
 
@@ -358,7 +547,7 @@ select:focus-visible {
   border-color: var(--brand);
   text-decoration: none;
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px color-mix(in srgb, var(--ink) 10%, transparent);
+  box-shadow: 0 4px 8px color-mix(in srgb, var(--shadow-ink) 5%, transparent), 0 20px 45px color-mix(in srgb, var(--shadow-ink) 12%, transparent);
 }
 
 .tool-card:active {
@@ -372,12 +561,22 @@ select:focus-visible {
 }
 
 .tool-card .cat-label {
-  font-family: var(--font-mono);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body);
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--muted);
   margin-bottom: var(--space-2);
+}
+
+.tool-card .cat-label .cat-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  color: var(--brand);
 }
 
 .tool-card h3 {
@@ -387,7 +586,7 @@ select:focus-visible {
 }
 
 .readout {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   background: var(--paper);
   border: 1px solid var(--line-soft);
   border-radius: var(--radius-sm);
@@ -400,8 +599,8 @@ select:focus-visible {
 
 .readout .rvalue {
   font-size: 1.15rem;
-  font-weight: 600;
-  color: var(--brand);
+  font-weight: 700;
+  color: var(--ink);
   opacity: 0;
   transform: translateY(3px);
   animation: settle 0.5s var(--ease-smooth) forwards;
@@ -410,6 +609,13 @@ select:focus-visible {
 
 @keyframes settle {
   to { opacity: 1; transform: translateY(0); }
+}
+
+.settle-in {
+  opacity: 0;
+  transform: translateY(3px);
+  animation: settle 0.5s var(--ease-smooth) forwards;
+  animation-delay: var(--delay, 0s);
 }
 
 .readout .rlabel { color: var(--muted); }
@@ -430,7 +636,7 @@ select:focus-visible {
 }
 
 .site-footer h4 {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -458,7 +664,7 @@ select:focus-visible {
    ============================================================ */
 
 .breadcrumb {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 0.78rem;
   color: var(--muted);
   margin-bottom: var(--space-5);
@@ -478,6 +684,12 @@ select:focus-visible {
   .tool-layout { grid-template-columns: 1fr; }
 }
 
+.last-updated {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin: var(--space-2) 0 var(--space-5);
+}
+
 .calc-panel {
   background: color-mix(in srgb, var(--paper-raised) 96%, transparent);
   backdrop-filter: blur(8px);
@@ -485,7 +697,35 @@ select:focus-visible {
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   padding: var(--space-6);
-  box-shadow: 0 4px 20px color-mix(in srgb, var(--ink) 6%, transparent);
+  box-shadow: 0 1px 2px color-mix(in srgb, var(--shadow-ink) 4%, transparent), 0 8px 24px color-mix(in srgb, var(--shadow-ink) 6%, transparent);
+}
+
+.calc-diagram {
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid var(--line);
+}
+
+.calc-diagram-svg {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.calc-diagram-svg line,
+.calc-diagram-svg rect {
+  stroke: var(--ink-soft);
+  stroke-width: 1.25;
+  fill: none;
+  vector-effect: non-scaling-stroke;
+}
+
+.calc-diagram-svg text {
+  font-family: var(--font-body);
+  font-size: 9px;
+  fill: var(--ink-soft);
 }
 
 .field-row {
@@ -567,7 +807,7 @@ select:focus-visible {
   color: var(--paper-raised);
   border: none;
   padding: var(--space-3) var(--space-6);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-pill);
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s var(--ease-smooth), transform 0.12s var(--ease-smooth);
@@ -585,7 +825,7 @@ select:focus-visible {
   border: 1.5px solid var(--line);
   color: var(--ink-soft);
   padding: var(--space-3) var(--space-5);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-pill);
   font-weight: 500;
   cursor: pointer;
   transition: border-color 0.2s var(--ease-smooth), color 0.2s var(--ease-smooth), transform 0.12s var(--ease-smooth);
@@ -613,10 +853,10 @@ select:focus-visible {
 }
 
 .result-primary .value {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 2.4rem;
-  font-weight: 600;
-  color: var(--brand);
+  font-weight: 800;
+  color: var(--ink);
 }
 
 .result-primary .label {
@@ -639,7 +879,7 @@ select:focus-visible {
 }
 
 .result-secondary .item .v {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-weight: 600;
   font-size: 1.1rem;
   color: var(--ink);
@@ -655,7 +895,7 @@ select:focus-visible {
   font-size: 0.88rem;
   color: var(--ink-soft);
   background: var(--paper);
-  border-left: 3px solid var(--accent);
+  border-left: 3px solid var(--brand);
   padding: var(--space-3) var(--space-4);
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
 }
@@ -671,7 +911,7 @@ select:focus-visible {
 }
 
 .sidebar-block h4 {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -692,6 +932,60 @@ select:focus-visible {
   transition: color 0.2s var(--ease-smooth);
 }
 .related-list a:hover { color: var(--brand); text-decoration: none; }
+
+/* All Calculators index page */
+
+.index-category { margin-bottom: var(--space-8); }
+.index-category:last-child { margin-bottom: 0; }
+
+.index-category-head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--line);
+}
+
+.index-category-head .code-badge {
+  color: var(--brand);
+  background: var(--paper-mint);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.index-category-head .code-badge .cat-icon { width: 18px; height: 18px; }
+
+.index-category-head h2 { margin: 0; font-size: 1.15rem; }
+.index-category-head h2 a { color: var(--ink); }
+.index-category-head h2 a:hover { color: var(--brand); text-decoration: none; }
+
+.index-category-head .count {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-left: auto;
+}
+
+.index-columns {
+  column-count: 3;
+  column-gap: var(--space-6);
+}
+
+.index-columns li { break-inside: avoid; }
+
+@media (max-width: 860px) {
+  .index-columns { column-count: 2; }
+}
+
+@media (max-width: 480px) {
+  .index-columns { column-count: 1; }
+}
 
 /* Content sections below calculator */
 
@@ -714,16 +1008,113 @@ select:focus-visible {
 }
 
 .category-hero .code-badge {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  color: var(--paper-raised);
-  background: var(--brand);
+  color: var(--brand);
+  background: var(--paper-mint);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 44px;
+  height: 44px;
   border-radius: var(--radius-sm);
   margin-bottom: var(--space-4);
-  font-weight: 700;
+}
+
+.category-hero .code-badge .cat-icon { width: 22px; height: 22px; }
+
+/* ============================================================
+   Print — tool pages only ("shopping list to take to the store")
+   Scoped to body.tool-page so category pages, the homepage, and
+   static pages are completely untouched.
+   ============================================================ */
+
+.print-summary,
+.print-footer { display: none; }
+
+@media print {
+  body.tool-page {
+    background: #fff;
+    color: #000;
+  }
+
+  body.tool-page .site-header,
+  body.tool-page .site-footer,
+  body.tool-page .breadcrumb,
+  body.tool-page #calc-diagram,
+  body.tool-page #calc-form,
+  body.tool-page .article-block,
+  body.tool-page aside {
+    display: none !important;
+  }
+
+  body.tool-page .tool-layout { display: block; }
+
+  body.tool-page h1 {
+    color: #000;
+    font-size: 22pt;
+  }
+
+  body.tool-page #tool-intro { color: #000; }
+  body.tool-page .last-updated { color: #000; }
+
+  body.tool-page .calc-panel {
+    background: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  body.tool-page .print-summary {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 10pt;
+    color: #000;
+    margin: 12pt 0 18pt;
+    padding-bottom: 10pt;
+    border-bottom: 1px solid #000;
+  }
+
+  body.tool-page .result-panel {
+    margin-top: 0;
+    border-top: 2px solid #000;
+    padding-top: 14pt;
+  }
+
+  body.tool-page .result-primary .value {
+    color: #000;
+    font-size: 48pt;
+  }
+
+  body.tool-page .result-primary .label {
+    color: #000;
+    font-size: 13pt;
+  }
+
+  body.tool-page .result-secondary .item {
+    background: none;
+    border: 1px solid #000;
+  }
+
+  body.tool-page .result-secondary .item .v,
+  body.tool-page .result-secondary .item .l {
+    color: #000;
+  }
+
+  body.tool-page .result-notes {
+    color: #000;
+    background: none;
+    border-left: 2px solid #000;
+  }
+
+  body.tool-page .print-footer {
+    display: block;
+    margin-top: 28pt;
+    padding-top: 10pt;
+    border-top: 1px solid #000;
+    font-family: var(--font-body);
+    font-size: 9pt;
+    color: #000;
+    text-align: center;
+  }
 }

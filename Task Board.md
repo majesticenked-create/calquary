@@ -1,7 +1,9 @@
 # Task Board
 
 ## Today
-- (none yet)
+- [HIGH] Fix Stop hook verdict logging — `log-stop-verdict.sh` has recorded "unknown" for 32/32 sessions (08-17 through 08-21), meaning the haiku `type:prompt` verdict JSON is never actually reaching it. The quality-gate/block-rate tracking has never worked. See System Audit — 082126 in Daily Notes.
+- Refresh memory.md's "SEO passes done" bullet — still doesn't mention BreadcrumbList/WebSite schema, the 5 standard pages, or the apple-ui-design UX pass, all committed since it was last written.
+- Seed knowledge-base.md with at least 2 confirmed learnings from this session (the `serve` clean-URL query-string-stripping quirk; SEO skill files under `.claude/skills/seo/` are report templates, not code generators) — knowledge-nominations.md has never fed the pipeline.
 
 ## Backlog
 - puppy-weight-predictor deferred — needs a growth curve model, meaningfully more complex than other pet tools
@@ -24,6 +26,8 @@
 - (none)
 
 ## Done
+- Content-score fixes (082126): added 2nd/3rd FAQ questions to all 18 single-question calculators, retitled unit-length-converter/days-until-calculator/cooking-converter to match their target keyword; then fixed the final 2 sub-70 pages (gcd-lcm-calculator, date-duration-calculator) by adding a 3rd FAQ + weaving the exact keyword phrase into each intro. **Site-wide result: 77/77 (100%) score 70+.** See `seo/seo-content-audit-082126.md` for before/after scores.
+- Technical SEO audit fixes (082126): added robots.txt, fixed build.js's buildSitemap() to include the 4 standard pages, shortened homepage title 74→48 chars, replaced Google Fonts @import with preconnect+link tags across both templates + 6 static pages — see `seo/technical-seo-audit-082126.md` for the re-audit confirming crawlability and page-speed sections now PASS
 - Batch 1: mulch-calculator, gravel-calculator, flooring-calculator (Construction & Home)
 - Batch 2: drywall-calculator, tile-calculator (Construction & Home)
 - Batch 3: roofing-calculator, fence-calculator, insulation-calculator, lumber-calculator, paver-calculator (Construction & Home) — Construction & Home category now complete at 12/12 from keyword research

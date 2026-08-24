@@ -77,3 +77,93 @@ Everything flagged above was analyzed against the **current, fully-built state**
 - [x] Verify zero broken links, rebuild, spot-check rendered related lists
 - [ ] When adding future calculators, prefer topically specific converters over `unit-length-converter` as the default cross-category link
 - [ ] Re-run this analysis after the next batch of new calculators, since new tools can reintroduce orphans
+
+## Re-run — 082126
+No new calculators were added since the original review — the last several sessions were content-score
+and technical-SEO fixes (FAQ additions, 3 title changes, robots.txt/sitemap/font-loading) on the
+existing 77, none of which touch the `related` array. Re-ran the same graph script to confirm the link
+structure itself hasn't drifted:
+- **Broken related refs**: 0 (unchanged)
+- **Orphaned pages (in-degree 0)**: 0 (unchanged — still fixed)
+- **Pages with <3 related links**: still the same 3 — `percentage-change-calculator`, `tip-calculator`,
+  `age-calculator` (2 each). Not a new finding; these were below the informal 3-link target at the time
+  of the original review too but weren't orphans, so weren't in scope for that pass.
+- **Link concentration**: `unit-length-converter` still at in-degree 18 (unchanged, as expected — no new
+  calculators means no new inbound-link decisions were made either way).
+- **New static pages** (about/privacy/terms/contact/404) added since the original review: not part of
+  the calculator `related`-array graph (by design — they're not calculators), but confirmed reachable
+  from every tool/category page via the shared footer, and confirmed to have zero broken links in the
+  082126 technical SEO audit (997/997 hrefs resolved).
+
+**Verdict: no action needed this pass.** The graph is exactly as healthy as it was after the original
+fix — nothing regressed, and nothing new was introduced to fix. The two still-open backlog items
+(diversify `unit-length-converter`'s inbound concentration; bump the 3 pages under the 3-link target)
+remain valid follow-ups but aren't urgent — same status as before, not newly discovered problems.
+
+## Recently Added homepage section — 082126
+Added a "Recently added" section to the homepage (`index.html`), reusing the existing `.tool-grid`/
+`.tool-card` live-readout pattern from Featured Tools. Selection logic reads `CALCULATORS.slice()
+.reverse()`, filtered to exclude anything already in Featured Tools, sliced to 8 — dynamic, not a
+hardcoded list, so it stays accurate as new calculators are appended in future sessions.
+
+**Recency source**: no `dateAdded` field was needed. Verified against `git log --reverse -- 
+js/calculators-data.js` that the CALCULATORS array's current order exactly matches true addition
+order — the last commit that added new calculator entries (Pet & Lifestyle Batch 2) puts its 3
+calculators at the very tail of the array, with nothing reordering entries since (the only later
+commit touching the file, the orphan-fix pass, only edited `related` arrays in place). Array order is
+a reliable recency proxy as-is; adding a redundant `dateAdded` field would have been unnecessary
+schema churn.
+
+**Effect on link concentration** — re-ran the graph check, this time extended beyond the original
+`related`-array-only methodology to also count homepage entry points (Featured Tools + Recently
+Added) as real inbound links, since that's the honest way to evaluate this feature's actual effect
+(a `related`-array-only check can't move, since Recently Added doesn't touch `related` arrays at all):
+
+| Metric | related-array-only (original methodology) | + homepage entry points |
+|---|---|---|
+| `unit-length-converter` in-degree | 18 | 19 |
+| `unit-length-converter` share of all inbound edges | 7.50% | **7.42%** |
+| Total inbound edges in graph | 240 | 256 |
+
+`unit-length-converter`'s absolute in-degree actually ticks up by 1 in the full-graph view, because
+it was already in Featured Tools (that link just wasn't being counted before). But its *share* of
+total inbound link equity — the actual concentration metric that matters — genuinely decreased,
+because Recently Added introduced 8 new homepage-sourced inbound links to 8 *other* pages (7 Pet &
+Lifestyle calculators + word-frequency-counter) without adding any new link to
+`unit-length-converter` itself. That's a small, real, honest effect, not a large fix — the underlying
+`related`-array concentration this was partly motivated by is unchanged and still logged as an open
+backlog item.
+
+## All Calculators index page — 082126
+Added `all-calculators.html`: one page listing every calculator, grouped by category, generated
+dynamically from `CATEGORIES`/`calculatorsInCategory()` (not hardcoded — stays accurate as new
+calculators are added). This directly targets the underlying issue Recently Added couldn't touch:
+every one of the 77 calculators now gets exactly one guaranteed additional inbound link, regardless
+of its `related`-array position.
+
+**Concentration effect** (same extended methodology as the Recently Added measurement — `related`
+arrays + all homepage/index entry points counted as real inbound edges):
+
+| Stage | `unit-length-converter` in-degree | Share of total inbound edges | Total inbound edges |
+|---|---|---|---|
+| `related`-array only (original baseline) | 18 | 7.50% | 240 |
+| + Featured Tools + Recently Added (previous measurement) | 19 | 7.42% | 256 |
+| + All Calculators index page (this pass) | 20 | **6.01%** | 333 |
+
+Concentration share dropped meaningfully this time (7.42% → 6.01%) — a real, larger effect than
+Recently Added's, because this page adds one link to literally every calculator rather than a
+rotating subset of 8.
+
+**The more important number, arguably**: the site-wide **minimum** in-degree. Before this page, 29
+calculators sat at in-degree 1 (a single inbound link each, from `related` + Featured + Recently
+Added combined) — including `standard-deviation-calculator`, `ratio-calculator`, `drywall-calculator`,
+`heart-rate-zone-calculator`, `speed-converter`, and 24 others. After adding `all-calculators.html`,
+**every calculator on the site has in-degree ≥2** — the index page's guaranteed link puts a floor
+under every page, not just redistributes weight away from the one over-linked page. That's the
+concentration problem actually being fixed, not just diluted.
+
+**Verdict**: this closes the loop the Recently Added feature correctly didn't try to close on its
+own. The underlying `related`-array-only concentration (18, unchanged, still the number that governs
+topical/contextual link relevance) is left as-is per the original review's recommendation — but the
+site-wide reachability floor this was really about is now solved structurally, via a page that will
+never go stale since it's generated from live data.

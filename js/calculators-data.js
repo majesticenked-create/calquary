@@ -5,15 +5,21 @@
    and homepage cards from ONE source of truth.
    ============================================================ */
 
+// `code` (M/F/C/H/D/V/T/P) is kept as a stable machine-readable id for things
+// like sitemap/OG image generation, but is no longer shown as a visible
+// letter badge anywhere post-rebrand — `icon` (an SVG path fragment for the
+// shared line-icon treatment) is the single source of truth so every page
+// type (homepage, category pages, all-calculators) renders the same icon
+// without duplicating this map per file.
 const CATEGORIES = [
-  { id: "math", code: "M", name: "Math", description: "Percentages, ratios, and everyday arithmetic." },
-  { id: "finance", code: "F", name: "Finance", description: "Loans, tipping, and everyday money math." },
-  { id: "construction", code: "C", name: "Construction & Home", description: "Materials, coverage, and project estimates." },
-  { id: "health", code: "H", name: "Health & Fitness", description: "Body metrics, pace, and training numbers." },
-  { id: "datetime", code: "D", name: "Date & Time", description: "Countdowns, durations, and age in days." },
-  { id: "conversions", code: "V", name: "Everyday Conversions", description: "Units, measurements, and kitchen swaps." },
-  { id: "text", code: "T", name: "Text & Digital", description: "Word counts and generators for everyday tasks." },
-  { id: "pets", code: "P", name: "Pet & Lifestyle", description: "Age charts and everyday pet math." },
+  { id: "math", code: "M", name: "Math", description: "Percentages, ratios, and everyday arithmetic.", icon: '<circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/><line x1="18" y1="6" x2="6" y2="18"/>' },
+  { id: "finance", code: "F", name: "Finance", description: "Loans, tipping, and everyday money math.", icon: '<line x1="5" y1="19" x2="5" y2="13"/><line x1="12" y1="19" x2="12" y2="9"/><line x1="19" y1="19" x2="19" y2="5"/>' },
+  { id: "construction", code: "C", name: "Construction & Home", description: "Materials, coverage, and project estimates.", icon: '<path d="M4 11.5 12 5l8 6.5"/><path d="M6 10v9h12v-9"/>' },
+  { id: "health", code: "H", name: "Health & Fitness", description: "Body metrics, pace, and training numbers.", icon: '<polyline points="3,12 8,12 10,6 14,18 16,12 21,12"/>' },
+  { id: "datetime", code: "D", name: "Date & Time", description: "Countdowns, durations, and age in days.", icon: '<circle cx="12" cy="12" r="8"/><line x1="12" y1="12" x2="12" y2="7"/><line x1="12" y1="12" x2="16" y2="14"/>' },
+  { id: "conversions", code: "V", name: "Everyday Conversions", description: "Units, measurements, and kitchen swaps.", icon: '<polyline points="16,3 20,7 16,11"/><line x1="20" y1="7" x2="4" y2="7"/><polyline points="8,13 4,17 8,21"/><line x1="4" y1="17" x2="20" y2="17"/>' },
+  { id: "text", code: "T", name: "Text & Digital", description: "Word counts and generators for everyday tasks.", icon: '<path d="M9 4h6M12 4v16M9 20h6"/>' },
+  { id: "pets", code: "P", name: "Pet & Lifestyle", description: "Age charts and everyday pet math.", icon: '<circle cx="12" cy="15.5" r="4"/><circle cx="5.5" cy="9" r="2"/><circle cx="10" cy="4.5" r="2"/><circle cx="14" cy="4.5" r="2"/><circle cx="18.5" cy="9" r="2"/>' },
 ];
 
 /* Each field: { id, label, type: number|select|date|text|textarea|checkbox-group,
@@ -27,7 +33,7 @@ const CALCULATORS = [
     title: "Percentage Calculator",
     keyword: "percentage calculator",
     description: "Find what X percent of a number is, in one step.",
-    intro: "Enter a percentage and a number to find the resulting value — useful for tips, discounts, grades, and quick everyday math.",
+    intro: "Enter a percentage and a number to find the resulting value - useful for tips, discounts, grades, and quick everyday math.",
     fields: [
       { id: "percent", label: "Percent", type: "number", unit: "%", default: 20, step: 0.1 },
       { id: "base", label: "Of this number", type: "number", default: 150, step: 0.01 },
@@ -72,6 +78,7 @@ const CALCULATORS = [
     },
     faq: [
       { q: "What's the formula for percentage change?", a: "(New value − Old value) ÷ Old value × 100. A positive result is an increase; a negative result is a decrease." },
+      { q: "Is percentage change the same as percentage point change?", a: "No - if a rate goes from 20% to 25%, that's a 5 percentage point increase, but a 25% percentage change ((25−20)÷20×100). Mixing the two up is a common reporting mistake." },
     ],
     related: ["percentage-calculator", "loan-calculator"],
   },
@@ -154,7 +161,7 @@ const CALCULATORS = [
     title: "GCD and LCM Calculator",
     keyword: "gcd calculator",
     description: "Find the greatest common divisor and least common multiple of two numbers.",
-    intro: "Enter two whole numbers to find their greatest common divisor (GCD) and least common multiple (LCM).",
+    intro: "This GCD calculator finds the greatest common divisor and least common multiple (LCM) of two whole numbers in one step.",
     fields: [
       { id: "a", label: "First number", type: "number", default: 24, step: 1 },
       { id: "b", label: "Second number", type: "number", default: 36, step: 1 },
@@ -168,8 +175,9 @@ const CALCULATORS = [
       };
     },
     faq: [
-      { q: "What's the GCD of 24 and 36?", a: "12 — the largest number that divides evenly into both 24 and 36." },
+      { q: "What's the GCD of 24 and 36?", a: "12 - the largest number that divides evenly into both 24 and 36." },
       { q: "How is LCM related to GCD?", a: "LCM = (a × b) ÷ GCD(a, b). For 24 and 36: (24 × 36) ÷ 12 = 72, the smallest number both 24 and 36 divide into evenly." },
+      { q: "How is GCD used to simplify a fraction?", a: "Divide the numerator and denominator by their GCD to reduce a fraction to lowest terms - for example, 24/36 shares a GCD of 12, so dividing both by 12 gives the simplified fraction 2/3. See the Fraction Calculator for simplifying fractions directly." },
     ],
     related: ["fraction-calculator", "average-calculator", "percentage-calculator"],
   },
@@ -201,7 +209,7 @@ const CALCULATORS = [
       };
     },
     faq: [
-      { q: "What's the standard deviation of 4, 8, 15, 16, 23, 42?", a: "About 13.49 using the sample formula (dividing by n−1), or 12.32 using the population formula (dividing by n) — the mean of this set is 18." },
+      { q: "What's the standard deviation of 4, 8, 15, 16, 23, 42?", a: "About 13.49 using the sample formula (dividing by n−1), or 12.32 using the population formula (dividing by n) - the mean of this set is 18." },
       { q: "When should I use sample vs. population standard deviation?", a: "Use population standard deviation when your numbers represent the entire group you care about; use sample standard deviation when your numbers are a subset used to estimate a larger population's spread." },
     ],
     related: ["average-calculator", "fraction-calculator", "gcd-lcm-calculator"],
@@ -226,12 +234,12 @@ const CALCULATORS = [
           { l: "Square", v: round(square, 4) },
           { l: "Cube root", v: round(cbrtValue, 4) },
         ],
-        note: v.value < 0 ? "Negative numbers don't have a real square root — the result is an imaginary number." : undefined,
+        note: v.value < 0 ? "Negative numbers don't have a real square root - the result is an imaginary number." : undefined,
       };
     },
     faq: [
-      { q: "What's the square root of 144?", a: "12 — since 12 × 12 = 144, making 144 a perfect square." },
-      { q: "Why don't negative numbers have a real square root?", a: "Any real number squared is positive (or zero), so no real number multiplied by itself can produce a negative result — negative square roots require imaginary numbers." },
+      { q: "What's the square root of 144?", a: "12 - since 12 × 12 = 144, making 144 a perfect square." },
+      { q: "Why don't negative numbers have a real square root?", a: "Any real number squared is positive (or zero), so no real number multiplied by itself can produce a negative result - negative square roots require imaginary numbers." },
     ],
     related: ["gcd-lcm-calculator", "fraction-calculator", "average-calculator"],
   },
@@ -255,7 +263,7 @@ const CALCULATORS = [
     },
     faq: [
       { q: "How do I simplify a ratio like 8:12?", a: "Divide both numbers by their greatest common divisor. GCD(8, 12) = 4, so 8:12 simplifies to 2:3." },
-      { q: "How is a ratio different from a fraction?", a: "A ratio compares two quantities directly (like 2:3), while a fraction expresses one quantity as a part of a whole (like 2/3) — though the simplification math is the same." },
+      { q: "How is a ratio different from a fraction?", a: "A ratio compares two quantities directly (like 2:3), while a fraction expresses one quantity as a part of a whole (like 2/3) - though the simplification math is the same." },
     ],
     related: ["fraction-calculator", "gcd-lcm-calculator", "percentage-calculator"],
   },
@@ -278,8 +286,8 @@ const CALCULATORS = [
       };
     },
     faq: [
-      { q: "What is 2 to the 10th power?", a: "1,024 — doubling 2 ten times (2 × 2 × 2... ten times) gives 1,024." },
-      { q: "What does a negative exponent mean?", a: "A negative exponent means the reciprocal of the positive power — for example, 2^-3 = 1 ÷ 2^3 = 1/8 = 0.125." },
+      { q: "What is 2 to the 10th power?", a: "1,024 - doubling 2 ten times (2 × 2 × 2... ten times) gives 1,024." },
+      { q: "What does a negative exponent mean?", a: "A negative exponent means the reciprocal of the positive power - for example, 2^-3 = 1 ÷ 2^3 = 1/8 = 0.125." },
     ],
     related: ["square-root-calculator", "gcd-lcm-calculator", "quadratic-formula-calculator"],
   },
@@ -304,14 +312,14 @@ const CALCULATORS = [
         return {
           primary: { label: "x =", value: `${round(x1, 4)} or ${round(x2, 4)}` },
           secondary: [{ l: "Discriminant", v: round(discriminant, 4) }],
-          note: "Two distinct real roots — the discriminant (b² − 4ac) is positive.",
+          note: "Two distinct real roots - the discriminant (b² − 4ac) is positive.",
         };
       } else if (discriminant === 0) {
         const x = -v.b / (2 * v.a);
         return {
           primary: { label: "x =", value: round(x, 4) },
           secondary: [{ l: "Discriminant", v: 0 }],
-          note: "One repeated real root — the discriminant (b² − 4ac) is zero.",
+          note: "One repeated real root - the discriminant (b² − 4ac) is zero.",
         };
       } else {
         const realPart = -v.b / (2 * v.a);
@@ -319,13 +327,13 @@ const CALCULATORS = [
         return {
           primary: { label: "x =", value: `${round(realPart, 4)} ± ${round(imagPart, 4)}i` },
           secondary: [{ l: "Discriminant", v: round(discriminant, 4) }],
-          note: "Two complex roots — the discriminant (b² − 4ac) is negative, so there are no real solutions.",
+          note: "Two complex roots - the discriminant (b² − 4ac) is negative, so there are no real solutions.",
         };
       }
     },
     faq: [
       { q: "How do I solve x² − 3x + 2 = 0?", a: "Using the quadratic formula with a=1, b=−3, c=2: the discriminant is 9 − 8 = 1, giving two real roots x = 2 and x = 1." },
-      { q: "What does a negative discriminant mean?", a: "A negative discriminant means the equation has no real solutions — the roots are complex numbers, since you'd need the square root of a negative number." },
+      { q: "What does a negative discriminant mean?", a: "A negative discriminant means the equation has no real solutions - the roots are complex numbers, since you'd need the square root of a negative number." },
     ],
     related: ["exponent-calculator", "square-root-calculator", "fraction-calculator"],
   },
@@ -337,7 +345,7 @@ const CALCULATORS = [
     title: "Loan Payment Calculator",
     keyword: "loan calculator",
     description: "Estimate your monthly payment on a fixed-rate loan.",
-    intro: "Enter the loan amount, annual interest rate, and term to estimate your fixed monthly payment.",
+    intro: "This loan calculator estimates your fixed monthly payment - just enter the loan amount, annual interest rate, and term.",
     fields: [
       { id: "principal", label: "Loan amount", type: "number", unit: "$", default: 20000, step: 100 },
       { id: "rate", label: "Annual interest rate", type: "number", unit: "%", default: 6.5, step: 0.01 },
@@ -361,6 +369,8 @@ const CALCULATORS = [
     },
     faq: [
       { q: "How is a loan payment calculated?", a: "Fixed-rate loans use an amortization formula based on the principal, the periodic interest rate, and the number of payments, so each payment is the same size but the interest/principal split changes over time." },
+      { q: "Does this include taxes and insurance?", a: "No - this is principal and interest only. Mortgages in particular often bundle property tax and insurance into the monthly payment (PITI), so your actual bill from a lender may be higher than the number shown here." },
+      { q: "Does paying extra each month reduce the total interest?", a: "Yes - any payment above the required amount goes straight to principal, which shortens the loan and cuts total interest paid, since interest is calculated on the remaining balance each period." },
     ],
     related: ["mortgage-calculator", "auto-loan-calculator", "percentage-calculator", "tip-calculator"],
   },
@@ -370,7 +380,7 @@ const CALCULATORS = [
     title: "Mortgage Calculator",
     keyword: "mortgage calculator",
     description: "Estimate your total monthly mortgage payment, including taxes and insurance.",
-    intro: "Enter your home price, down payment, rate, and term to estimate your full monthly payment — principal, interest, property tax, and insurance.",
+    intro: "Enter your home price, down payment, rate, and term to estimate your full monthly payment - principal, interest, property tax, and insurance.",
     fields: [
       { id: "homePrice", label: "Home price", type: "number", unit: "$", default: 350000, step: 1000 },
       { id: "downPaymentPercent", label: "Down payment", type: "number", unit: "%", default: 20, step: 1 },
@@ -400,7 +410,7 @@ const CALCULATORS = [
       };
     },
     faq: [
-      { q: "What's included in a mortgage payment estimate?", a: "This calculator estimates PITI — principal, interest, property taxes, and homeowners insurance. It doesn't include PMI (if your down payment is under 20%) or HOA fees, which vary by lender and property." },
+      { q: "What's included in a mortgage payment estimate?", a: "This calculator estimates PITI - principal, interest, property taxes, and homeowners insurance. It doesn't include PMI (if your down payment is under 20%) or HOA fees, which vary by lender and property." },
       { q: "How does down payment affect my monthly payment?", a: "A larger down payment reduces your loan amount, which lowers both the principal & interest portion of your payment and your total interest paid over the loan term." },
     ],
     related: ["loan-calculator", "savings-calculator", "compound-interest-calculator"],
@@ -430,6 +440,7 @@ const CALCULATORS = [
     },
     faq: [
       { q: "What's a standard tip percentage?", a: "In the US, 15–20% is typical for sit-down service; some people tip more for excellent service." },
+      { q: "Should I tip on the pre-tax or post-tax total?", a: "Etiquette guides generally say tip on the pre-tax subtotal, but most people just tip on the total shown on the receipt - the difference is usually small enough not to matter." },
     ],
     related: ["loan-calculator", "percentage-calculator"],
   },
@@ -466,8 +477,8 @@ const CALCULATORS = [
       };
     },
     faq: [
-      { q: "How does compound growth affect savings over time?", a: "Interest earns interest on itself, so the longer your money stays invested, the larger the share of your balance that comes from growth rather than contributions — this effect accelerates in later years." },
-      { q: "What interest rate should I use for a savings calculator?", a: "Use your actual account's APY for savings accounts, or a conservative long-term average (historically 4–7%) for investment accounts — check your specific account terms for the current rate." },
+      { q: "How does compound growth affect savings over time?", a: "Interest earns interest on itself, so the longer your money stays invested, the larger the share of your balance that comes from growth rather than contributions - this effect accelerates in later years." },
+      { q: "What interest rate should I use for a savings calculator?", a: "Use your actual account's APY for savings accounts, or a conservative long-term average (historically 4–7%) for investment accounts - check your specific account terms for the current rate." },
     ],
     related: ["compound-interest-calculator", "mortgage-calculator", "loan-calculator"],
   },
@@ -493,12 +504,12 @@ const CALCULATORS = [
           { l: "Interest earned", v: `$${round(interestEarned, 2).toLocaleString()}` },
           { l: "Principal", v: `$${round(v.principal, 2).toLocaleString()}` },
         ],
-        note: "This calculates a single lump-sum deposit with no additional contributions — use the Savings Calculator if you're adding money regularly.",
+        note: "This calculates a single lump-sum deposit with no additional contributions - use the Savings Calculator if you're adding money regularly.",
       };
     },
     faq: [
-      { q: "What's the formula for compound interest?", a: "A = P(1 + r/n)^(nt) — where P is principal, r is the annual rate, n is compounds per year, and t is time in years." },
-      { q: "How does compounding frequency affect growth?", a: "More frequent compounding (daily vs. annually) produces slightly higher returns at the same stated rate, since interest starts earning interest sooner — though the difference is usually small at typical savings rates." },
+      { q: "What's the formula for compound interest?", a: "A = P(1 + r/n)^(nt) - where P is principal, r is the annual rate, n is compounds per year, and t is time in years." },
+      { q: "How does compounding frequency affect growth?", a: "More frequent compounding (daily vs. annually) produces slightly higher returns at the same stated rate, since interest starts earning interest sooner - though the difference is usually small at typical savings rates." },
     ],
     related: ["savings-calculator", "mortgage-calculator", "loan-calculator", "investment-calculator"],
   },
@@ -526,7 +537,7 @@ const CALCULATORS = [
     },
     faq: [
       { q: "How do I calculate sales tax on a purchase?", a: "Multiply the price by the tax rate as a decimal, then add that to the original price. For $49.99 at 7.25% tax: $49.99 × 0.0725 = $3.62 tax, for a total of $53.61." },
-      { q: "Does sales tax rate vary by location?", a: "Yes — sales tax rates are set by state, county, and sometimes city, so the combined rate can vary significantly even within the same state. Check your local rate before relying on a default." },
+      { q: "Does sales tax rate vary by location?", a: "Yes - sales tax rates are set by state, county, and sometimes city, so the combined rate can vary significantly even within the same state. Check your local rate before relying on a default." },
     ],
     related: ["discount-calculator", "tip-calculator", "percentage-calculator"],
   },
@@ -554,7 +565,7 @@ const CALCULATORS = [
     },
     faq: [
       { q: "How do I calculate a sale price from a discount percentage?", a: "Multiply the original price by the discount percentage as a decimal to get the amount saved, then subtract that from the original price. For $80 at 25% off: $80 × 0.25 = $20 saved, for a sale price of $60." },
-      { q: "How do I stack multiple discounts?", a: "Apply each discount to the price remaining after the previous one, not to the original price — two 20% discounts stacked equal a 36% total discount, not 40%." },
+      { q: "How do I stack multiple discounts?", a: "Apply each discount to the price remaining after the previous one, not to the original price - two 20% discounts stacked equal a 36% total discount, not 40%." },
     ],
     related: ["sales-tax-calculator", "tip-calculator", "percentage-calculator"],
   },
@@ -587,7 +598,7 @@ const CALCULATORS = [
     },
     faq: [
       { q: "How long will it take to pay off $8,000 at 19.99% with $250/month payments?", a: "About 47 months (just under 4 years), paying roughly $3,750 in total interest on top of the original $8,000 balance." },
-      { q: "Why does my payment need to exceed the monthly interest?", a: "If your payment is less than the interest charged that month, the balance grows instead of shrinking — this is why credit cards with low minimum payments can take decades to pay off." },
+      { q: "Why does my payment need to exceed the monthly interest?", a: "If your payment is less than the interest charged that month, the balance grows instead of shrinking - this is why credit cards with low minimum payments can take decades to pay off." },
     ],
     related: ["credit-card-payoff-calculator", "loan-calculator", "compound-interest-calculator"],
   },
@@ -597,7 +608,7 @@ const CALCULATORS = [
     title: "Credit Card Payoff Calculator",
     keyword: "credit card payoff calculator",
     description: "See how long a credit card balance takes to pay off with a declining minimum payment.",
-    intro: "Enter your balance, APR, and minimum payment structure to see how long it takes to pay off — and how much interest you'll pay — if you only pay the minimum.",
+    intro: "Enter your balance, APR, and minimum payment structure to see how long it takes to pay off - and how much interest you'll pay - if you only pay the minimum.",
     fields: [
       { id: "balance", label: "Current balance", type: "number", unit: "$", default: 5000, step: 100 },
       { id: "apr", label: "APR", type: "number", unit: "%", default: 22.99, step: 0.01 },
@@ -623,12 +634,12 @@ const CALCULATORS = [
           { l: "Years to pay off", v: round(months / 12, 1) },
           { l: "Total interest paid", v: `$${round(totalInterest, 2).toLocaleString()}` },
         ],
-        note: "Minimum payment is modeled as the greater of a flat floor or (interest + a percentage of balance) — the common structure most card issuers use. Actual formulas vary by issuer.",
+        note: "Minimum payment is modeled as the greater of a flat floor or (interest + a percentage of balance) - the common structure most card issuers use. Actual formulas vary by issuer.",
       };
     },
     faq: [
-      { q: "How long does it take to pay off $5,000 in credit card debt with minimum payments?", a: "At 22.99% APR with a typical minimum payment structure (interest + 1% of balance), about 232 months — over 19 years — paying roughly $8,489 in interest on a $5,000 balance." },
-      { q: "Why do minimum payments take so long to pay off a balance?", a: "Minimum payments are calculated as a small percentage of the balance, so as the balance shrinks, the required payment shrinks too — most of each payment goes to interest early on, dramatically stretching out payoff time." },
+      { q: "How long does it take to pay off $5,000 in credit card debt with minimum payments?", a: "At 22.99% APR with a typical minimum payment structure (interest + 1% of balance), about 232 months - over 19 years - paying roughly $8,489 in interest on a $5,000 balance." },
+      { q: "Why do minimum payments take so long to pay off a balance?", a: "Minimum payments are calculated as a small percentage of the balance, so as the balance shrinks, the required payment shrinks too - most of each payment goes to interest early on, dramatically stretching out payoff time." },
     ],
     related: ["debt-payoff-calculator", "loan-calculator", "savings-calculator"],
   },
@@ -662,12 +673,12 @@ const CALCULATORS = [
           { l: "Amount financed", v: `$${round(amountFinanced, 2).toLocaleString()}` },
           { l: "Sales tax", v: `$${round(salesTax, 2).toLocaleString()}` },
         ],
-        note: "Most states tax the vehicle price minus trade-in value, not the full purchase price — this varies by state, so confirm your local rule.",
+        note: "Most states tax the vehicle price minus trade-in value, not the full purchase price - this varies by state, so confirm your local rule.",
       };
     },
     faq: [
-      { q: "How does a trade-in affect my auto loan?", a: "A trade-in reduces both your amount financed and, in most states, the taxable amount — a $5,000 trade-in on a $32,000 car with 6.5% tax saves you $325 in sales tax compared to paying tax on the full price." },
-      { q: "Should I finance the sales tax on my car loan?", a: "Many buyers roll sales tax into the loan rather than paying it upfront — this increases your amount financed and total interest paid, but keeps more cash on hand at purchase." },
+      { q: "How does a trade-in affect my auto loan?", a: "A trade-in reduces both your amount financed and, in most states, the taxable amount - a $5,000 trade-in on a $32,000 car with 6.5% tax saves you $325 in sales tax compared to paying tax on the full price." },
+      { q: "Should I finance the sales tax on my car loan?", a: "Many buyers roll sales tax into the loan rather than paying it upfront - this increases your amount financed and total interest paid, but keeps more cash on hand at purchase." },
     ],
     related: ["loan-calculator", "sales-tax-calculator", "debt-payoff-calculator"],
   },
@@ -706,8 +717,8 @@ const CALCULATORS = [
       };
     },
     faq: [
-      { q: "Why does inflation matter for investment projections?", a: "A dollar in 20 years buys less than a dollar today — showing only the nominal future value overstates how much better off you'll actually be, so adjusting for inflation gives a more honest picture." },
-      { q: "What return rate should I use for an investment calculator?", a: "7% is a commonly used long-term average for a diversified stock portfolio after inflation is roughly accounted for in nominal terms, but actual returns vary significantly year to year — use a conservative estimate for planning." },
+      { q: "Why does inflation matter for investment projections?", a: "A dollar in 20 years buys less than a dollar today - showing only the nominal future value overstates how much better off you'll actually be, so adjusting for inflation gives a more honest picture." },
+      { q: "What return rate should I use for an investment calculator?", a: "7% is a commonly used long-term average for a diversified stock portfolio after inflation is roughly accounted for in nominal terms, but actual returns vary significantly year to year - use a conservative estimate for planning." },
     ],
     related: ["savings-calculator", "compound-interest-calculator", "mortgage-calculator"],
   },
@@ -720,6 +731,7 @@ const CALCULATORS = [
     keyword: "concrete calculator",
     description: "Estimate cubic yards and bag count for a concrete slab.",
     intro: "Enter the slab dimensions to estimate how much ready-mix concrete or how many bags you'll need, with a waste allowance built in.",
+    diagram: { type: "slab", topLabels: ["Length", "Width"], depthLabel: "Thickness" },
     fields: [
       { id: "length", label: "Length", type: "number", unit: "ft", default: 10, step: 0.1 },
       { id: "width", label: "Width", type: "number", unit: "ft", default: 10, step: 0.1 },
@@ -740,7 +752,7 @@ const CALCULATORS = [
       };
     },
     faq: [
-      { q: "How much concrete do I need for a 10x10 slab?", a: "At 4 inches thick, a 10×10 ft slab needs about 1.23 cubic yards before waste allowance — roughly 74 bags of 80 lb mix." },
+      { q: "How much concrete do I need for a 10x10 slab?", a: "At 4 inches thick, a 10×10 ft slab needs about 1.23 cubic yards before waste allowance - roughly 74 bags of 80 lb mix." },
       { q: "Why add a waste allowance?", a: "Uneven subgrade, spillage, and over-excavation typically use 5–10% more material than the exact math suggests." },
     ],
     related: ["paint-calculator", "gravel-calculator", "mulch-calculator", "area-converter"],
@@ -752,6 +764,7 @@ const CALCULATORS = [
     keyword: "paint calculator",
     description: "Estimate how many gallons of paint you need for a room.",
     intro: "Enter your wall area and number of coats to estimate gallons of paint needed, based on standard coverage rates.",
+    diagram: { type: "area", label: "Wall area" },
     fields: [
       { id: "wallArea", label: "Wall area", type: "number", unit: "sq ft", default: 400, step: 1 },
       { id: "coats", label: "Number of coats", type: "number", default: 2, step: 1, min: 1 },
@@ -768,7 +781,9 @@ const CALCULATORS = [
       };
     },
     faq: [
-      { q: "How much paint covers 400 sq ft?", a: "At standard 350 sq ft per gallon coverage, one coat over 400 sq ft needs about 1.14 gallons — round up to be safe." },
+      { q: "How much paint covers 400 sq ft?", a: "At standard 350 sq ft per gallon coverage, one coat over 400 sq ft needs about 1.14 gallons - round up to be safe." },
+      { q: "Should I subtract doors and windows from wall area?", a: "For a rough estimate, no - most painters skip this since the extra paint from not subtracting covers trim work and touch-ups. For large window/door areas, subtracting them can save you from buying more than you need." },
+      { q: "How much extra paint should I buy for touch-ups later?", a: "Buy a little more than the calculated amount - rounding up to the next full gallon or quart covers touch-ups and accounts for uneven coverage on textured surfaces." },
     ],
     related: ["concrete-calculator", "flooring-calculator", "unit-length-converter"],
   },
@@ -779,6 +794,7 @@ const CALCULATORS = [
     keyword: "mulch calculator",
     description: "Estimate cubic yards and bags of mulch needed for a bed.",
     intro: "Enter the area you're covering and your desired depth to estimate how much mulch you'll need, in cubic yards or standard 2 cu ft bags.",
+    diagram: { type: "slab", topLabels: ["Bed area"], depthLabel: "Depth" },
     fields: [
       { id: "area", label: "Bed area", type: "number", unit: "sq ft", default: 200, step: 1 },
       { id: "depth", label: "Depth", type: "number", unit: "in", default: 3, step: 0.5 },
@@ -798,7 +814,7 @@ const CALCULATORS = [
       };
     },
     faq: [
-      { q: "How much mulch do I need for 200 sq ft?", a: "At 3 inches deep, 200 sq ft needs about 1.85 cubic yards before waste allowance — roughly 28 bags of 2 cu ft mulch." },
+      { q: "How much mulch do I need for 200 sq ft?", a: "At 3 inches deep, 200 sq ft needs about 1.85 cubic yards before waste allowance - roughly 28 bags of 2 cu ft mulch." },
       { q: "How deep should mulch be?", a: "2–3 inches is standard for most garden beds. Less than 2 inches won't suppress weeds well; more than 4 inches can smother roots and hold too much moisture." },
     ],
     related: ["gravel-calculator", "concrete-calculator", "unit-length-converter"],
@@ -810,6 +826,7 @@ const CALCULATORS = [
     keyword: "gravel calculator",
     description: "Estimate cubic yards and tons of gravel needed for a project.",
     intro: "Enter your area's length, width, and depth to estimate how much gravel you'll need, in cubic yards and tons.",
+    diagram: { type: "slab", topLabels: ["Length", "Width"], depthLabel: "Depth" },
     fields: [
       { id: "length", label: "Length", type: "number", unit: "ft", default: 20, step: 0.1 },
       { id: "width", label: "Width", type: "number", unit: "ft", default: 10, step: 0.1 },
@@ -826,12 +843,12 @@ const CALCULATORS = [
           { l: "Tons (approx.)", v: round(tons, 2) },
           { l: "Cubic feet", v: round(cubicFeet, 1) },
         ],
-        note: "Tonnage is based on a typical density of 1.4 tons per cubic yard — this varies by gravel type, so confirm with your supplier for large orders.",
+        note: "Tonnage is based on a typical density of 1.4 tons per cubic yard - this varies by gravel type, so confirm with your supplier for large orders.",
       };
     },
     faq: [
-      { q: "How much gravel do I need for a 20x10 driveway?", a: "At 4 inches deep, a 20×10 ft area needs about 2.47 cubic yards before waste allowance — roughly 3.46 tons at typical gravel density." },
-      { q: "How many tons is a cubic yard of gravel?", a: "About 1.4 tons per cubic yard for most crushed stone and gravel, though density varies by material — pea gravel and crushed granite can differ slightly." },
+      { q: "How much gravel do I need for a 20x10 driveway?", a: "At 4 inches deep, a 20×10 ft area needs about 2.47 cubic yards before waste allowance - roughly 3.46 tons at typical gravel density." },
+      { q: "How many tons is a cubic yard of gravel?", a: "About 1.4 tons per cubic yard for most crushed stone and gravel, though density varies by material - pea gravel and crushed granite can differ slightly." },
     ],
     related: ["mulch-calculator", "paver-calculator", "concrete-calculator"],
   },
@@ -842,6 +859,7 @@ const CALCULATORS = [
     keyword: "flooring calculator",
     description: "Estimate how many boxes of flooring you need for a room.",
     intro: "Enter your room area, coverage per box, and a waste allowance to estimate how many boxes of flooring to buy.",
+    diagram: { type: "area", label: "Room area" },
     fields: [
       { id: "roomArea", label: "Room area", type: "number", unit: "sq ft", default: 250, step: 1 },
       { id: "coveragePerBox", label: "Coverage per box", type: "number", unit: "sq ft", default: 22, step: 0.5 },
@@ -861,7 +879,7 @@ const CALCULATORS = [
     },
     faq: [
       { q: "How many boxes of flooring do I need for 250 sq ft?", a: "At 22 sq ft per box with a 10% waste allowance, 250 sq ft needs about 13 boxes." },
-      { q: "Why do I need extra flooring for waste?", a: "Cuts around doorways, closets, and pattern matching use extra material — a 10–15% allowance keeps you from running short mid-project." },
+      { q: "Why do I need extra flooring for waste?", a: "Cuts around doorways, closets, and pattern matching use extra material - a 10–15% allowance keeps you from running short mid-project." },
     ],
     related: ["paint-calculator", "tile-calculator", "concrete-calculator", "unit-length-converter"],
   },
@@ -872,6 +890,7 @@ const CALCULATORS = [
     keyword: "drywall calculator",
     description: "Estimate how many sheets of drywall you need for a wall area.",
     intro: "Enter your total wall area and a waste allowance to estimate how many standard 4×8 drywall sheets to buy.",
+    diagram: { type: "area", label: "Wall area" },
     fields: [
       { id: "wallArea", label: "Wall area", type: "number", unit: "sq ft", default: 400, step: 1 },
       { id: "waste", label: "Waste allowance", type: "number", unit: "%", default: 10, step: 1 },
@@ -891,7 +910,7 @@ const CALCULATORS = [
     },
     faq: [
       { q: "How many sheets of drywall do I need for 400 sq ft of wall?", a: "At a 10% waste allowance, 400 sq ft needs about 14 standard 4×8 ft sheets (32 sq ft each)." },
-      { q: "Why do I need extra drywall for waste?", a: "Cuts around outlets, corners, doorways, and windows use extra material — a 10% allowance keeps you from running short mid-job." },
+      { q: "Why do I need extra drywall for waste?", a: "Cuts around outlets, corners, doorways, and windows use extra material - a 10% allowance keeps you from running short mid-job." },
     ],
     related: ["paint-calculator", "flooring-calculator", "concrete-calculator", "insulation-calculator"],
   },
@@ -902,6 +921,7 @@ const CALCULATORS = [
     keyword: "tile calculator",
     description: "Estimate how many tiles you need for a room, including grout lines.",
     intro: "Enter your room area, tile size, and grout line width to estimate how many tiles to buy, with a waste allowance built in.",
+    diagram: { type: "area", label: "Room area" },
     fields: [
       { id: "roomArea", label: "Room area", type: "number", unit: "sq ft", default: 100, step: 1 },
       { id: "tileLength", label: "Tile length", type: "number", unit: "in", default: 12, step: 0.5 },
@@ -924,7 +944,7 @@ const CALCULATORS = [
     },
     faq: [
       { q: "How many 12x12 tiles do I need for 100 sq ft?", a: "With a 1/8 inch grout line and 10% waste allowance, 100 sq ft needs about 108 tiles." },
-      { q: "Why does grout line width affect tile count?", a: "Grout lines add space between tiles, slightly increasing each tile's effective footprint — over a large room this adds up to a few extra tiles beyond a simple area ÷ tile size calculation." },
+      { q: "Why does grout line width affect tile count?", a: "Grout lines add space between tiles, slightly increasing each tile's effective footprint - over a large room this adds up to a few extra tiles beyond a simple area ÷ tile size calculation." },
     ],
     related: ["flooring-calculator", "paint-calculator", "unit-length-converter"],
   },
@@ -935,6 +955,7 @@ const CALCULATORS = [
     keyword: "roofing calculator",
     description: "Estimate roofing squares needed from footprint area and roof pitch.",
     intro: "Enter your roof's footprint area and pitch to estimate the actual sloped roof area and how many squares of shingles you'll need.",
+    diagram: { type: "area", label: "Roof footprint" },
     fields: [
       { id: "footprintArea", label: "Roof footprint area", type: "number", unit: "sq ft", default: 1500, step: 10 },
       { id: "pitch", label: "Pitch (rise per 12&quot; run)", type: "number", unit: "/12", default: 6, step: 0.5 },
@@ -954,8 +975,8 @@ const CALCULATORS = [
       };
     },
     faq: [
-      { q: "How many squares of shingles do I need for a 1500 sq ft roof with a 6/12 pitch?", a: "A 6/12 pitch increases the flat footprint area by about 11.8% — 1500 sq ft becomes roughly 1677 sq ft of actual roof, or about 19 squares including a 10% waste allowance." },
-      { q: "What is a roofing square?", a: "A roofing square is a standard unit equal to 100 sq ft of roof area — shingles and other roofing materials are typically priced and sold by the square." },
+      { q: "How many squares of shingles do I need for a 1500 sq ft roof with a 6/12 pitch?", a: "A 6/12 pitch increases the flat footprint area by about 11.8% - 1500 sq ft becomes roughly 1677 sq ft of actual roof, or about 19 squares including a 10% waste allowance." },
+      { q: "What is a roofing square?", a: "A roofing square is a standard unit equal to 100 sq ft of roof area - shingles and other roofing materials are typically priced and sold by the square." },
     ],
     related: ["lumber-calculator", "concrete-calculator", "unit-length-converter"],
   },
@@ -966,6 +987,7 @@ const CALCULATORS = [
     keyword: "fence calculator",
     description: "Estimate how many posts and panels you need for a fence line.",
     intro: "Enter your total fence length and panel width to estimate how many panels and posts to buy.",
+    diagram: { type: "fence" },
     fields: [
       { id: "fenceLength", label: "Fence length", type: "number", unit: "ft", default: 100, step: 1 },
       { id: "panelWidth", label: "Panel width", type: "number", unit: "ft", default: 8, step: 0.5 },
@@ -983,7 +1005,7 @@ const CALCULATORS = [
       };
     },
     faq: [
-      { q: "How many posts do I need for 100 feet of fence?", a: "At 8 ft panel spacing, 100 ft of fence needs 13 panels and 14 posts — one extra post to close both ends of the run." },
+      { q: "How many posts do I need for 100 feet of fence?", a: "At 8 ft panel spacing, 100 ft of fence needs 13 panels and 14 posts - one extra post to close both ends of the run." },
       { q: "Why is post count one more than panel count?", a: "Each panel needs a post at both ends, but adjacent panels share a post, so total posts always equal panels plus one for a straight run." },
     ],
     related: ["lumber-calculator", "gravel-calculator", "unit-length-converter"],
@@ -995,6 +1017,7 @@ const CALCULATORS = [
     keyword: "insulation calculator",
     description: "Estimate bags of blown-in insulation needed to reach a target R-value.",
     intro: "Enter your attic area and target R-value to estimate the required depth and how many bags of insulation to buy.",
+    diagram: { type: "area", label: "Attic area" },
     fields: [
       { id: "atticArea", label: "Attic area", type: "number", unit: "sq ft", default: 800, step: 10 },
       { id: "targetRValue", label: "Target R-value", type: "number", default: 49, step: 1 },
@@ -1012,12 +1035,12 @@ const CALCULATORS = [
           { l: "Required depth", v: `${round(requiredDepthIn, 1)} in` },
           { l: "Total volume", v: `${round(volumeCuFt, 0)} cu ft` },
         ],
-        note: "R-value per inch and bag yield vary by insulation type — check your product's coverage chart for exact figures before buying.",
+        note: "R-value per inch and bag yield vary by insulation type - check your product's coverage chart for exact figures before buying.",
       };
     },
     faq: [
-      { q: "How many bags of insulation do I need for R-49 in an 800 sq ft attic?", a: "At 2.5 R-value per inch, R-49 needs about 19.6 inches of depth — roughly 46 bags at a 30 cu ft yield per bag, including a 5% waste allowance." },
-      { q: "Why does R-value per inch matter?", a: "Different insulation types cover different R-value per inch — fiberglass and cellulose have different coverage charts, so using the wrong figure will throw off your bag count." },
+      { q: "How many bags of insulation do I need for R-49 in an 800 sq ft attic?", a: "At 2.5 R-value per inch, R-49 needs about 19.6 inches of depth - roughly 46 bags at a 30 cu ft yield per bag, including a 5% waste allowance." },
+      { q: "Why does R-value per inch matter?", a: "Different insulation types cover different R-value per inch - fiberglass and cellulose have different coverage charts, so using the wrong figure will throw off your bag count." },
     ],
     related: ["drywall-calculator", "paint-calculator", "unit-length-converter"],
   },
@@ -1027,7 +1050,8 @@ const CALCULATORS = [
     title: "Lumber Calculator",
     keyword: "lumber calculator",
     description: "Calculate total board feet needed for a lumber order.",
-    intro: "Enter your board dimensions and quantity to calculate total board feet — the standard unit lumber is priced and sold by.",
+    intro: "Enter your board dimensions and quantity to calculate total board feet - the standard unit lumber is priced and sold by.",
+    diagram: { type: "board" },
     fields: [
       { id: "quantity", label: "Number of boards", type: "number", default: 20, step: 1 },
       { id: "thickness", label: "Thickness", type: "number", unit: "in", default: 1.5, step: 0.25 },
@@ -1047,7 +1071,7 @@ const CALCULATORS = [
     },
     faq: [
       { q: "How do I calculate board feet?", a: "Multiply thickness in inches × width in inches × length in feet, then divide by 12. A 1.5×5.5×8 ft board (actual dimensions of a nominal 2×6×8) works out to 5.5 board feet." },
-      { q: "Why use actual dimensions instead of nominal?", a: "A nominal 2×6 actually measures about 1.5×5.5 inches after milling and drying — using nominal dimensions overstates board feet and your order." },
+      { q: "Why use actual dimensions instead of nominal?", a: "A nominal 2×6 actually measures about 1.5×5.5 inches after milling and drying - using nominal dimensions overstates board feet and your order." },
     ],
     related: ["fence-calculator", "roofing-calculator", "concrete-calculator"],
   },
@@ -1058,6 +1082,7 @@ const CALCULATORS = [
     keyword: "paver calculator",
     description: "Estimate how many pavers you need for a patio or walkway.",
     intro: "Enter your area and paver size to estimate how many pavers to buy, with a waste allowance for cuts and breakage.",
+    diagram: { type: "area", label: "Patio area" },
     fields: [
       { id: "area", label: "Area", type: "number", unit: "sq ft", default: 200, step: 1 },
       { id: "paverLength", label: "Paver length", type: "number", unit: "in", default: 12, step: 0.5 },
@@ -1079,7 +1104,7 @@ const CALCULATORS = [
     },
     faq: [
       { q: "How many 12x12 pavers do I need for 200 sq ft?", a: "At a 10% waste allowance, 200 sq ft needs about 220 pavers of 12×12 inch size." },
-      { q: "Why add waste for pavers?", a: "Cuts around edges, curves, and borders — plus occasional breakage during installation — typically use about 10% more pavers than the flat area math suggests." },
+      { q: "Why add waste for pavers?", a: "Cuts around edges, curves, and borders - plus occasional breakage during installation - typically use about 10% more pavers than the flat area math suggests." },
     ],
     related: ["gravel-calculator", "concrete-calculator", "unit-length-converter"],
   },
@@ -1110,7 +1135,8 @@ const CALCULATORS = [
       };
     },
     faq: [
-      { q: "Is BMI accurate for everyone?", a: "No — BMI doesn't distinguish muscle from fat and can be misleading for athletes, older adults, and some body types. It's a screening tool, not a diagnosis." },
+      { q: "Is BMI accurate for everyone?", a: "No - BMI doesn't distinguish muscle from fat and can be misleading for athletes, older adults, and some body types. It's a screening tool, not a diagnosis." },
+      { q: "What counts as a healthy BMI range?", a: "18.5–24.9 is generally classified as the healthy range, under 18.5 as underweight, 25–29.9 as overweight, and 30+ as the obesity range - but these cutoffs are population averages, not individual health verdicts." },
     ],
     related: ["body-fat-calculator", "calorie-calculator", "pace-calculator", "water-intake-calculator"],
   },
@@ -1119,7 +1145,7 @@ const CALCULATORS = [
     category: "health",
     title: "BMR Calculator",
     keyword: "bmr calculator",
-    description: "Calculate your basal metabolic rate — the calories your body burns at rest.",
+    description: "Calculate your basal metabolic rate - the calories your body burns at rest.",
     intro: "Enter your age, gender, height, and weight to estimate your basal metabolic rate (BMR) using the Mifflin-St Jeor formula.",
     fields: [
       { id: "gender", label: "Gender", type: "select", options: [{ v: "male", l: "Male" }, { v: "female", l: "Female" }], default: "male" },
@@ -1140,7 +1166,7 @@ const CALCULATORS = [
       };
     },
     faq: [
-      { q: "What is BMR?", a: "Basal metabolic rate is the number of calories your body burns at complete rest just to maintain vital functions like breathing and circulation — it doesn't include any activity." },
+      { q: "What is BMR?", a: "Basal metabolic rate is the number of calories your body burns at complete rest just to maintain vital functions like breathing and circulation - it doesn't include any activity." },
       { q: "How accurate is the Mifflin-St Jeor formula?", a: "It's considered one of the more accurate BMR formulas for the general population, typically within about 10% of measured values, though individual metabolism varies with muscle mass and other factors." },
     ],
     related: ["calorie-calculator", "body-fat-calculator", "bmi-calculator"],
@@ -1183,7 +1209,7 @@ const CALCULATORS = [
       };
     },
     faq: [
-      { q: "How many calories do I need to maintain my weight?", a: "It depends on your BMR and activity level — for a 30-year-old, 5'10\", 180 lb male at moderate activity, maintenance is roughly 2,763 calories per day." },
+      { q: "How many calories do I need to maintain my weight?", a: "It depends on your BMR and activity level - for a 30-year-old, 5'10\", 180 lb male at moderate activity, maintenance is roughly 2,763 calories per day." },
       { q: "How many calories should I cut to lose weight?", a: "A deficit of about 500 calories per day below maintenance is a common target for roughly 1 lb of weight loss per week, since 1 lb of body fat is approximately 3,500 calories." },
     ],
     related: ["bmr-calculator", "body-fat-calculator", "bmi-calculator"],
@@ -1209,12 +1235,12 @@ const CALCULATORS = [
       return {
         primary: { label: "Estimated body fat", value: `${round(bodyFat, 1)}%` },
         secondary: [{ l: "Method", v: "U.S. Navy circumference formula" }],
-        note: "The U.S. Navy method is an estimate based on body circumference, not a direct measurement — it's typically within a few percentage points of more precise methods like DEXA scans.",
+        note: "The U.S. Navy method is an estimate based on body circumference, not a direct measurement - it's typically within a few percentage points of more precise methods like DEXA scans.",
       };
     },
     faq: [
       { q: "How accurate is the U.S. Navy body fat method?", a: "It's generally within 3–4% of more precise methods like DEXA scans for most body types, making it a reasonably reliable estimate without special equipment." },
-      { q: "Why does the formula use neck and waist measurements?", a: "The Navy method correlates body fat with the ratio between waist (and hip, for women) circumference relative to neck circumference and height — larger waist-to-neck ratios generally indicate higher body fat." },
+      { q: "Why does the formula use neck and waist measurements?", a: "The Navy method correlates body fat with the ratio between waist (and hip, for women) circumference relative to neck circumference and height - larger waist-to-neck ratios generally indicate higher body fat." },
     ],
     related: ["bmi-calculator", "calorie-calculator", "bmr-calculator", "ideal-weight-calculator"],
   },
@@ -1241,12 +1267,12 @@ const CALCULATORS = [
           { l: "Fat", v: `${round(fatGrams, 0)}g` },
           { l: "Carbs", v: `${round(carbGrams, 0)}g` },
         ],
-        note: "Protein and carbs provide 4 calories per gram; fat provides 9 calories per gram. Adjust the percentage split to match your goals — percentages should sum to 100%.",
+        note: "Protein and carbs provide 4 calories per gram; fat provides 9 calories per gram. Adjust the percentage split to match your goals - percentages should sum to 100%.",
       };
     },
     faq: [
-      { q: "How do I convert macro percentages to grams?", a: "Multiply your daily calories by the macro's percentage, then divide by its calories per gram — 4 for protein and carbs, 9 for fat. At 2,500 calories with a 30/30/40 split: 188g protein, 83g fat, 250g carbs." },
-      { q: "What's a good macro split for weight loss?", a: "A higher-protein split (30-40% protein) is common for weight loss to help preserve muscle mass, but the right split depends on your activity level, goals, and personal preference — there's no single universal ratio." },
+      { q: "How do I convert macro percentages to grams?", a: "Multiply your daily calories by the macro's percentage, then divide by its calories per gram - 4 for protein and carbs, 9 for fat. At 2,500 calories with a 30/30/40 split: 188g protein, 83g fat, 250g carbs." },
+      { q: "What's a good macro split for weight loss?", a: "A higher-protein split (30-40% protein) is common for weight loss to help preserve muscle mass, but the right split depends on your activity level, goals, and personal preference - there's no single universal ratio." },
     ],
     related: ["calorie-calculator", "bmr-calculator", "one-rep-max-calculator"],
   },
@@ -1276,8 +1302,8 @@ const CALCULATORS = [
       };
     },
     faq: [
-      { q: "How much water should I drink based on my weight?", a: "A common guideline is half your body weight in pounds, converted to ounces — a 180 lb person would target about 90 oz per day before accounting for exercise." },
-      { q: "Does exercise increase how much water I need?", a: "Yes — sweat losses during exercise increase your fluid needs. This calculator adds roughly 12 oz for every 30 minutes of activity as a general estimate." },
+      { q: "How much water should I drink based on my weight?", a: "A common guideline is half your body weight in pounds, converted to ounces - a 180 lb person would target about 90 oz per day before accounting for exercise." },
+      { q: "Does exercise increase how much water I need?", a: "Yes - sweat losses during exercise increase your fluid needs. This calculator adds roughly 12 oz for every 30 minutes of activity as a general estimate." },
     ],
     related: ["calorie-calculator", "bmi-calculator", "bmr-calculator"],
   },
@@ -1305,7 +1331,7 @@ const CALCULATORS = [
     },
     faq: [
       { q: "What's the formula for estimating one-rep max?", a: "The Epley formula: 1RM = weight × (1 + reps ÷ 30). Lifting 185 lb for 5 reps estimates a one-rep max of about 216 lb." },
-      { q: "Why use percentages of 1RM for training?", a: "Training programs often prescribe a percentage of your 1RM (like 80% for strength work) to target specific adaptations — knowing your estimated max lets you calculate the right weight for any given percentage." },
+      { q: "Why use percentages of 1RM for training?", a: "Training programs often prescribe a percentage of your 1RM (like 80% for strength work) to target specific adaptations - knowing your estimated max lets you calculate the right weight for any given percentage." },
     ],
     related: ["macro-calculator", "bmr-calculator", "pace-calculator"],
   },
@@ -1328,12 +1354,12 @@ const CALCULATORS = [
           { l: "Fat-burn zone (60–70%)", v: zone(0.6, 0.7) },
           { l: "Anaerobic zone (80–90%)", v: zone(0.8, 0.9) },
         ],
-        note: "Based on the common 220 minus age formula. This is a population estimate — individual max heart rate can vary by 10-20 bpm, so use a fitness tracker's measured value if available.",
+        note: "Based on the common 220 minus age formula. This is a population estimate - individual max heart rate can vary by 10-20 bpm, so use a fitness tracker's measured value if available.",
       };
     },
     faq: [
-      { q: "How do I calculate my maximum heart rate?", a: "The most common estimate is 220 minus your age — for a 30-year-old, that's 190 bpm. It's a population average, not a precise individual measurement." },
-      { q: "What heart rate zone should I train in to burn fat?", a: "The 60-70% zone of your max heart rate is often called the 'fat-burn' zone — for a 30-year-old with a 190 bpm max, that's roughly 114-133 bpm. Higher zones burn more total calories despite a lower fat percentage." },
+      { q: "How do I calculate my maximum heart rate?", a: "The most common estimate is 220 minus your age - for a 30-year-old, that's 190 bpm. It's a population average, not a precise individual measurement." },
+      { q: "What heart rate zone should I train in to burn fat?", a: "The 60-70% zone of your max heart rate is often called the 'fat-burn' zone - for a 30-year-old with a 190 bpm max, that's roughly 114-133 bpm. Higher zones burn more total calories despite a lower fat percentage." },
     ],
     related: ["pace-calculator", "bmr-calculator", "one-rep-max-calculator"],
   },
@@ -1357,12 +1383,12 @@ const CALCULATORS = [
       return {
         primary: { label: "Estimated ideal weight", value: `${round(ibwLb, 1)} lb` },
         secondary: [{ l: "Formula used", v: "Devine formula" }],
-        note: "The Devine formula was originally developed for medication dosing, not fitness goals — it's a rough reference point, not a target you need to hit. Frame size and muscle mass aren't accounted for.",
+        note: "The Devine formula was originally developed for medication dosing, not fitness goals - it's a rough reference point, not a target you need to hit. Frame size and muscle mass aren't accounted for.",
       };
     },
     faq: [
-      { q: "How is ideal body weight calculated?", a: "The Devine formula starts at a base weight for 5 feet of height (50 kg for men, 45.5 kg for women) and adds 2.3 kg for each inch over 5 feet — a 5'10\" man works out to about 161 lb." },
-      { q: "Is the Devine formula a good weight-loss target?", a: "Not necessarily — it doesn't account for muscle mass, frame size, or individual body composition, so it's better used as a rough medical reference than a personal fitness goal." },
+      { q: "How is ideal body weight calculated?", a: "The Devine formula starts at a base weight for 5 feet of height (50 kg for men, 45.5 kg for women) and adds 2.3 kg for each inch over 5 feet - a 5'10\" man works out to about 161 lb." },
+      { q: "Is the Devine formula a good weight-loss target?", a: "Not necessarily - it doesn't account for muscle mass, frame size, or individual body composition, so it's better used as a rough medical reference than a personal fitness goal." },
     ],
     related: ["bmi-calculator", "body-fat-calculator", "calorie-calculator"],
   },
@@ -1393,6 +1419,7 @@ const CALCULATORS = [
     },
     faq: [
       { q: "How do I calculate running pace?", a: "Divide your total time by your total distance. For a 5K in 28 minutes, pace per mile = 28 ÷ 3.1 ≈ 9:02 per mile." },
+      { q: "How do I convert pace to speed?", a: "Divide 60 by your pace in minutes per mile (or km) to get mph (or km/h). A 9:00/mile pace is 60 ÷ 9 ≈ 6.7 mph." },
     ],
     related: ["bmi-calculator", "heart-rate-zone-calculator", "days-until-calculator"],
   },
@@ -1401,7 +1428,7 @@ const CALCULATORS = [
   {
     id: "days-until-calculator",
     category: "datetime",
-    title: "Days Until Calculator",
+    title: "How Many Days Until Calculator",
     keyword: "how many days until",
     description: "Find out how many days remain until any future date.",
     intro: "Pick a date to see exactly how many days, weeks, and months remain until it arrives.",
@@ -1424,6 +1451,7 @@ const CALCULATORS = [
     },
     faq: [
       { q: "How is 'days until' calculated?", a: "It's the number of calendar days between today and your chosen date, counting forward or backward from midnight." },
+      { q: "Does this count weekends and holidays?", a: "Yes - this counts every calendar day, including weekends and holidays. If you need business-day-only counts (excluding weekends), use the Business Days Calculator instead." },
     ],
     related: ["date-duration-calculator", "age-calculator", "pace-calculator"],
   },
@@ -1433,7 +1461,7 @@ const CALCULATORS = [
     title: "Date Duration Calculator",
     keyword: "date calculator",
     description: "Calculate the number of days, weeks, months, and years between two dates.",
-    intro: "Enter a start and end date to calculate the exact duration between them, in days, weeks, months, and years.",
+    intro: "This date calculator finds the exact duration between a start and end date - in days, weeks, months, and years.",
     fields: [
       { id: "startDate", label: "Start date", type: "date", default: "2024-01-01" },
       { id: "endDate", label: "End date", type: "date", default: "2024-12-31" },
@@ -1453,8 +1481,9 @@ const CALCULATORS = [
       };
     },
     faq: [
-      { q: "How many days are between January 1 and December 31, 2024?", a: "365 days — 2024 is a leap year, but since the range doesn't cross into a new year past the leap day cutoff for this specific pair of dates, the count is a standard 365." },
-      { q: "Does this calculator count the start or end date?", a: "It counts the number of full days elapsed between the two dates — the start date itself is day zero, not day one." },
+      { q: "How many days are between January 1 and December 31, 2024?", a: "365 days - 2024 is a leap year, but since the range doesn't cross into a new year past the leap day cutoff for this specific pair of dates, the count is a standard 365." },
+      { q: "Does this calculator count the start or end date?", a: "It counts the number of full days elapsed between the two dates - the start date itself is day zero, not day one." },
+      { q: "Does this account for leap years?", a: "Yes - it works directly from real calendar dates rather than assuming a fixed 365-day year, so a February 29 falling between your start and end date is counted correctly without any extra adjustment." },
     ],
     related: ["days-until-calculator", "business-days-calculator", "age-calculator"],
   },
@@ -1487,12 +1516,12 @@ const CALCULATORS = [
           { l: "Total calendar days", v: totalDays },
           { l: "Weekend days", v: totalDays - businessDays },
         ],
-        note: "Counts Monday through Friday only — this doesn't exclude public holidays, so subtract those separately if needed.",
+        note: "Counts Monday through Friday only - this doesn't exclude public holidays, so subtract those separately if needed.",
       };
     },
     faq: [
-      { q: "How many business days are in January 2024?", a: "23 business days between January 1 and January 31, 2024 — the month has 31 calendar days, 8 of which fall on a weekend." },
-      { q: "Does this include public holidays?", a: "No — this calculator only excludes Saturdays and Sundays. Public holidays vary by country and organization, so subtract any that apply to your situation separately." },
+      { q: "How many business days are in January 2024?", a: "23 business days between January 1 and January 31, 2024 - the month has 31 calendar days, 8 of which fall on a weekend." },
+      { q: "Does this include public holidays?", a: "No - this calculator only excludes Saturdays and Sundays. Public holidays vary by country and organization, so subtract any that apply to your situation separately." },
     ],
     related: ["date-duration-calculator", "days-until-calculator", "time-duration-calculator"],
   },
@@ -1530,8 +1559,8 @@ const CALCULATORS = [
       };
     },
     faq: [
-      { q: "How many hours between 9:00 AM and 5:30 PM?", a: "8 hours and 30 minutes — a common full work day with a half-hour beyond the standard 8-hour shift." },
-      { q: "What happens if the end time is earlier than the start time?", a: "The calculator assumes the span crosses midnight into the next day — for example, 10 PM to 6 AM is treated as an 8-hour overnight duration, not a negative number." },
+      { q: "How many hours between 9:00 AM and 5:30 PM?", a: "8 hours and 30 minutes - a common full work day with a half-hour beyond the standard 8-hour shift." },
+      { q: "What happens if the end time is earlier than the start time?", a: "The calculator assumes the span crosses midnight into the next day - for example, 10 PM to 6 AM is treated as an 8-hour overnight duration, not a negative number." },
     ],
     related: ["business-days-calculator", "date-duration-calculator", "pace-calculator"],
   },
@@ -1541,7 +1570,7 @@ const CALCULATORS = [
     title: "Week Number Calculator",
     keyword: "week number calculator",
     description: "Find the ISO week number for any date.",
-    intro: "Enter a date to find its ISO week number — the standard system used by businesses, schedules, and international standards.",
+    intro: "Enter a date to find its ISO week number - the standard system used by businesses, schedules, and international standards.",
     fields: [
       { id: "date", label: "Date", type: "date", default: "2024-06-15" },
     ],
@@ -1570,7 +1599,7 @@ const CALCULATORS = [
     title: "Day of the Week Calculator",
     keyword: "day of the week calculator",
     description: "Find what day of the week any date falls on.",
-    intro: "Enter a date to find out what day of the week it falls on — past, present, or future.",
+    intro: "Enter a date to find out what day of the week it falls on - past, present, or future.",
     fields: [
       { id: "date", label: "Date", type: "date", default: "2000-01-01" },
     ],
@@ -1585,7 +1614,7 @@ const CALCULATORS = [
     },
     faq: [
       { q: "What day of the week was January 1, 2000?", a: "Saturday. The new millennium began on a Saturday." },
-      { q: "How is the day of the week calculated for any date?", a: "It follows the standard Gregorian calendar's repeating 7-day cycle, accounting for leap years — the same logic your phone or computer's calendar app uses internally." },
+      { q: "How is the day of the week calculated for any date?", a: "It follows the standard Gregorian calendar's repeating 7-day cycle, accounting for leap years - the same logic your phone or computer's calendar app uses internally." },
     ],
     related: ["week-number-calculator", "date-duration-calculator", "leap-year-calculator"],
   },
@@ -1612,8 +1641,8 @@ const CALCULATORS = [
       };
     },
     faq: [
-      { q: "Is 2024 a leap year?", a: "Yes — 2024 is divisible by 4 and not a century year, so it's a leap year with 366 days. The next leap year after 2024 is 2028." },
-      { q: "What's the rule for leap years?", a: "A year is a leap year if it's divisible by 4, except century years (divisible by 100), which must also be divisible by 400 — so 2000 was a leap year, but 1900 and 2100 are not." },
+      { q: "Is 2024 a leap year?", a: "Yes - 2024 is divisible by 4 and not a century year, so it's a leap year with 366 days. The next leap year after 2024 is 2028." },
+      { q: "What's the rule for leap years?", a: "A year is a leap year if it's divisible by 4, except century years (divisible by 100), which must also be divisible by 400 - so 2000 was a leap year, but 1900 and 2100 are not." },
     ],
     related: ["week-number-calculator", "day-of-week-calculator", "date-duration-calculator"],
   },
@@ -1642,7 +1671,8 @@ const CALCULATORS = [
       };
     },
     faq: [
-      { q: "How is exact age calculated?", a: "By counting full years, then remaining months, then remaining days between the birth date and today — not just subtracting birth year from the current year." },
+      { q: "How is exact age calculated?", a: "By counting full years, then remaining months, then remaining days between the birth date and today - not just subtracting birth year from the current year." },
+      { q: "Does this account for leap years?", a: "Yes - it works directly from calendar dates rather than assuming a fixed 365-day year, so leap years are handled correctly without any extra adjustment." },
     ],
     related: ["days-until-calculator", "dog-age-calculator"],
   },
@@ -1651,7 +1681,7 @@ const CALCULATORS = [
   {
     id: "unit-length-converter",
     category: "conversions",
-    title: "Length Unit Converter",
+    title: "CM to Inches Converter",
     keyword: "cm to inches converter",
     description: "Convert between centimeters, inches, feet, and meters.",
     intro: "Enter a value and choose units to convert between common length measurements.",
@@ -1675,6 +1705,7 @@ const CALCULATORS = [
     },
     faq: [
       { q: "How many inches is a centimeter?", a: "1 centimeter equals about 0.3937 inches. To convert cm to inches, divide by 2.54." },
+      { q: "Is this conversion exact or rounded?", a: "The underlying conversion factor (1 inch = 2.54 cm) is exact by international definition - any rounding you see is just the displayed result being trimmed to a readable number of decimal places." },
     ],
     related: ["weight-converter", "cooking-converter", "concrete-calculator"],
   },
@@ -1707,7 +1738,7 @@ const CALCULATORS = [
       };
     },
     faq: [
-      { q: "How do I convert Fahrenheit to Celsius?", a: "Subtract 32, then multiply by 5/9. 98.6°F: (98.6 − 32) × 5/9 = 37°C — normal human body temperature." },
+      { q: "How do I convert Fahrenheit to Celsius?", a: "Subtract 32, then multiply by 5/9. 98.6°F: (98.6 − 32) × 5/9 = 37°C - normal human body temperature." },
       { q: "Why does temperature conversion need an offset, not just multiplication?", a: "Fahrenheit and Celsius have different zero points (freezing water is 0°C but 32°F), so converting requires shifting the scale first, unlike length or weight conversions which only need a multiplier." },
     ],
     related: ["weight-converter", "volume-converter", "unit-length-converter"],
@@ -1739,6 +1770,7 @@ const CALCULATORS = [
     },
     faq: [
       { q: "How many kilograms is 150 pounds?", a: "150 lb equals about 68.04 kg. To convert pounds to kilograms, multiply by 0.453592." },
+      { q: "What's the difference between weight and mass?", a: "In everyday use they're treated as the same - this converter, like most scales and recipes, converts weight units (kg, lb, oz, g) directly without distinguishing mass from gravitational weight, which is accurate for anything happening on Earth's surface." },
     ],
     related: ["unit-length-converter", "volume-converter", "temperature-converter", "speed-converter"],
   },
@@ -1769,17 +1801,17 @@ const CALCULATORS = [
     },
     faq: [
       { q: "How many liters is a gallon?", a: "1 US gallon equals about 3.785 liters. To convert gallons to liters, multiply by 3.78541." },
-      { q: "Is a US gallon the same as a UK gallon?", a: "No — a US gallon (3.785 L) is smaller than a UK/imperial gallon (4.546 L). This converter uses US gallons; adjust accordingly if you need imperial units." },
+      { q: "Is a US gallon the same as a UK gallon?", a: "No - a US gallon (3.785 L) is smaller than a UK/imperial gallon (4.546 L). This converter uses US gallons; adjust accordingly if you need imperial units." },
     ],
     related: ["cooking-converter", "weight-converter", "unit-length-converter"],
   },
   {
     id: "cooking-converter",
     category: "conversions",
-    title: "Cups to Grams Converter",
+    title: "Grams to Cups Converter",
     keyword: "grams to cups",
     description: "Convert common baking ingredients between cups and grams.",
-    intro: "Choose an ingredient and enter cups to see the equivalent weight in grams — ingredient density affects the conversion.",
+    intro: "Choose an ingredient and enter cups to see the equivalent weight in grams - ingredient density affects the conversion.",
     fields: [
       { id: "cups", label: "Cups", type: "number", default: 1, step: 0.25 },
       { id: "ingredient", label: "Ingredient", type: "select", default: "flour", options: [
@@ -1795,11 +1827,12 @@ const CALCULATORS = [
       return {
         primary: { label: "Grams", value: round(grams, 0) },
         secondary: [{ l: "Ounces", v: round(grams / 28.35, 1) }],
-        note: "Weights vary by brand and how ingredients are packed/scooped — for baking precision, a kitchen scale is most accurate.",
+        note: "Weights vary by brand and how ingredients are packed/scooped - for baking precision, a kitchen scale is most accurate.",
       };
     },
     faq: [
-      { q: "Why does 1 cup of flour and 1 cup of sugar weigh different amounts?", a: "Cups measure volume, not weight — denser ingredients like sugar weigh more per cup than lighter ones like flour." },
+      { q: "Why does 1 cup of flour and 1 cup of sugar weigh different amounts?", a: "Cups measure volume, not weight - denser ingredients like sugar weigh more per cup than lighter ones like flour." },
+      { q: "How much does a stick of butter weigh in this converter?", a: "A standard US stick of butter is 1/2 cup, which converts to about 113.5g - half of the 227g-per-cup figure this calculator uses." },
     ],
     related: ["unit-length-converter", "volume-converter", "paint-calculator"],
   },
@@ -1830,6 +1863,7 @@ const CALCULATORS = [
     },
     faq: [
       { q: "How many km/h is 60 mph?", a: "60 mph equals about 96.56 km/h. To convert mph to km/h, divide by 0.621371 (or multiply by about 1.60934)." },
+      { q: "What's the difference between knots and mph?", a: "A knot is one nautical mile per hour, which is slightly longer than a statute mile - 1 knot ≈ 1.15 mph. Knots are standard in marine and aviation navigation; mph is standard for road speeds in the US." },
     ],
     related: ["unit-length-converter", "weight-converter", "pace-calculator"],
   },
@@ -1860,6 +1894,7 @@ const CALCULATORS = [
     },
     faq: [
       { q: "How many acres is 1,000 square feet?", a: "1,000 sq ft equals about 0.023 acres. To convert square feet to acres, divide by 43,560." },
+      { q: "How big is an acre in more relatable terms?", a: "An acre is about 43,560 sq ft - roughly the size of a standard American football field without the end zones, or about 90% of one." },
     ],
     related: ["unit-length-converter", "concrete-calculator", "flooring-calculator"],
   },
@@ -1889,8 +1924,8 @@ const CALCULATORS = [
       };
     },
     faq: [
-      { q: "How many MB is a GB?", a: "1 GB equals 1,024 MB using the binary convention this calculator uses (1 KB = 1,024 bytes) — this is standard for computing contexts like file sizes and RAM." },
-      { q: "Why do storage sizes sometimes not match what I expect?", a: "Storage manufacturers often use decimal units (1 GB = 1,000 MB) for marketing, while operating systems typically report binary units (1 GB = 1,024 MB) — this is why a \"1 TB\" drive shows less space than expected in your file explorer." },
+      { q: "How many MB is a GB?", a: "1 GB equals 1,024 MB using the binary convention this calculator uses (1 KB = 1,024 bytes) - this is standard for computing contexts like file sizes and RAM." },
+      { q: "Why do storage sizes sometimes not match what I expect?", a: "Storage manufacturers often use decimal units (1 GB = 1,000 MB) for marketing, while operating systems typically report binary units (1 GB = 1,024 MB) - this is why a \"1 TB\" drive shows less space than expected in your file explorer." },
     ],
     related: ["unit-length-converter", "word-counter", "password-generator"],
   },
@@ -1920,7 +1955,8 @@ const CALCULATORS = [
       };
     },
     faq: [
-      { q: "How many PSI is 2 bar?", a: "2 bar equals about 29 PSI. To convert bar to PSI, multiply by 14.5038 — useful for checking tire pressure specs listed in bar." },
+      { q: "How many PSI is 2 bar?", a: "2 bar equals about 29 PSI. To convert bar to PSI, multiply by 14.5038 - useful for checking tire pressure specs listed in bar." },
+      { q: "What tire pressure unit does my car use?", a: "US vehicles almost always list tire pressure in PSI (on the door jamb sticker); most other countries use bar or kPa. If your car's manual or tire spec is in bar or kPa, convert it to PSI here before checking with a US-standard gauge." },
     ],
     related: ["unit-length-converter", "weight-converter", "fuel-economy-converter"],
   },
@@ -1953,12 +1989,12 @@ const CALCULATORS = [
           { l: "L/100km", v: round(l100km, 2) },
           { l: "km/L", v: round(kmL, 2) },
         ],
-        note: "MPG and L/100km measure fuel economy inversely — a lower L/100km or a higher MPG both mean better efficiency.",
+        note: "MPG and L/100km measure fuel economy inversely - a lower L/100km or a higher MPG both mean better efficiency.",
       };
     },
     faq: [
-      { q: "How do I convert MPG to L/100km?", a: "Divide 235.214 by the MPG value. A car getting 25 MPG uses about 9.41 L/100km — the relationship is inverse, so higher MPG means lower L/100km." },
-      { q: "Why is the MPG to L/100km conversion not a simple multiplication?", a: "MPG measures distance per unit of fuel, while L/100km measures fuel per unit of distance — they're reciprocals of each other, so the conversion involves division rather than a fixed multiplier." },
+      { q: "How do I convert MPG to L/100km?", a: "Divide 235.214 by the MPG value. A car getting 25 MPG uses about 9.41 L/100km - the relationship is inverse, so higher MPG means lower L/100km." },
+      { q: "Why is the MPG to L/100km conversion not a simple multiplication?", a: "MPG measures distance per unit of fuel, while L/100km measures fuel per unit of distance - they're reciprocals of each other, so the conversion involves division rather than a fixed multiplier." },
     ],
     related: ["unit-length-converter", "pressure-converter", "volume-converter"],
   },
@@ -1990,7 +2026,8 @@ const CALCULATORS = [
       };
     },
     faq: [
-      { q: "Does this word counter save my text?", a: "No — the count runs entirely in your browser and nothing is sent or stored." },
+      { q: "Does this word counter save my text?", a: "No - the count runs entirely in your browser and nothing is sent or stored." },
+      { q: "Does this count words the same way Microsoft Word does?", a: "Very close, but not always identical - this counter splits on whitespace, which is how most word processors count too, but edge cases like hyphenated words or numbers can be tallied slightly differently between tools." },
     ],
     related: ["password-generator", "data-storage-converter", "days-until-calculator"],
   },
@@ -2023,11 +2060,13 @@ const CALCULATORS = [
       return {
         primary: { label: "Generated password", value: pw },
         secondary: [{ l: "Length", v: v.length }],
-        note: "Generated locally in your browser — nothing is transmitted or stored. Use a password manager to save it securely.",
+        note: "Generated locally in your browser - nothing is transmitted or stored. Use a password manager to save it securely.",
       };
     },
     faq: [
       { q: "Is this password generator secure?", a: "Passwords are generated entirely client-side using your browser's random number generator and are never sent to a server." },
+      { q: "How long should my password be?", a: "12 characters minimum is a common baseline; 16+ is better if the site allows it. Longer passwords are exponentially harder to brute-force than adding more character types to a short one." },
+      { q: "Why are similar-looking characters like 'l', '1', 'I', and 'O' excluded?", a: "This generator leaves out visually ambiguous characters so a password you have to type or read off a screen (rather than copy-paste) isn't confused between a lowercase L, an uppercase I, and the digit 1." },
     ],
     related: ["word-counter", "random-number-generator", "unit-length-converter"],
   },
@@ -2056,12 +2095,12 @@ const CALCULATORS = [
           { l: "Range", v: `${lo} to ${hi}` },
           { l: "Count", v: v.count },
         ],
-        note: "Generated locally in your browser using Math.random() — not cryptographically secure. For security-sensitive randomness, use the Password Generator instead.",
+        note: "Generated locally in your browser using Math.random() - not cryptographically secure. For security-sensitive randomness, use the Password Generator instead.",
       };
     },
     faq: [
-      { q: "Is this random number generator truly random?", a: "It uses your browser's built-in Math.random(), which is pseudo-random and suitable for games, giveaways, and everyday decisions — but not for cryptographic or security purposes." },
-      { q: "Can I generate multiple random numbers at once?", a: "Yes — set 'how many numbers' to any value up to 50 to generate a list of random numbers within your chosen range in one click." },
+      { q: "Is this random number generator truly random?", a: "It uses your browser's built-in Math.random(), which is pseudo-random and suitable for games, giveaways, and everyday decisions - but not for cryptographic or security purposes." },
+      { q: "Can I generate multiple random numbers at once?", a: "Yes - set 'how many numbers' to any value up to 50 to generate a list of random numbers within your chosen range in one click." },
     ],
     related: ["password-generator", "word-counter", "gcd-lcm-calculator"],
   },
@@ -2092,7 +2131,7 @@ const CALCULATORS = [
     },
     faq: [
       { q: "What's the difference between title case and sentence case?", a: "Title case capitalizes the first letter of every major word (\"Hello World Example\"), while sentence case only capitalizes the first letter of the whole text (\"Hello world example\")." },
-      { q: "Does this case converter save my text?", a: "No — the conversion runs entirely in your browser and nothing is sent or stored." },
+      { q: "Does this case converter save my text?", a: "No - the conversion runs entirely in your browser and nothing is sent or stored." },
     ],
     related: ["word-counter", "lorem-ipsum-generator", "password-generator", "binary-to-text-converter"],
   },
@@ -2128,7 +2167,7 @@ const CALCULATORS = [
     },
     faq: [
       { q: "What is Lorem Ipsum text used for?", a: "It's placeholder text used in design mockups and layouts so viewers focus on visual design rather than being distracted by readable content." },
-      { q: "Why does Lorem Ipsum look like Latin?", a: "It's derived from a passage of Cicero's 1st-century BC text on Latin ethics — the words were scrambled and altered over centuries of use in printing and typesetting to become the standard placeholder text used today." },
+      { q: "Why does Lorem Ipsum look like Latin?", a: "It's derived from a passage of Cicero's 1st-century BC text on Latin ethics - the words were scrambled and altered over centuries of use in printing and typesetting to become the standard placeholder text used today." },
     ],
     related: ["case-converter", "word-counter", "password-generator"],
   },
@@ -2154,7 +2193,7 @@ const CALCULATORS = [
       };
     },
     faq: [
-      { q: "What makes a good URL slug?", a: "Lowercase letters, numbers, and hyphens only — no spaces, punctuation, or special characters. Slugs should be short, readable, and describe the page content." },
+      { q: "What makes a good URL slug?", a: "Lowercase letters, numbers, and hyphens only - no spaces, punctuation, or special characters. Slugs should be short, readable, and describe the page content." },
       { q: "Why are spaces replaced with hyphens instead of underscores?", a: "Search engines generally treat hyphens as word separators but not underscores, so hyphens are the standard choice for SEO-friendly URLs." },
     ],
     related: ["case-converter", "word-counter", "word-frequency-counter"],
@@ -2186,7 +2225,7 @@ const CALCULATORS = [
       };
     },
     faq: [
-      { q: "How is text converted to binary?", a: "Each character's numeric code (from the ASCII/Unicode table) is converted to base-2 and padded to 8 bits — 'H' has code 72, which is 01001000 in binary." },
+      { q: "How is text converted to binary?", a: "Each character's numeric code (from the ASCII/Unicode table) is converted to base-2 and padded to 8 bits - 'H' has code 72, which is 01001000 in binary." },
       { q: "Why 8 bits per character?", a: "8 bits (1 byte) covers the standard ASCII character set (0-255), which includes all English letters, numbers, and common symbols." },
     ],
     related: ["case-converter", "word-counter", "text-to-slug-generator"],
@@ -2228,7 +2267,7 @@ const CALCULATORS = [
     title: "Dog Age Calculator",
     keyword: "dog age calculator",
     description: "Convert your dog's age into human years by size.",
-    intro: "Dog aging varies by breed size — enter your dog's age and size to get a more accurate human-year estimate than the old 'multiply by 7' rule.",
+    intro: "Dog aging varies by breed size - enter your dog's age and size to get a more accurate human-year estimate than the old 'multiply by 7' rule.",
     fields: [
       { id: "dogYears", label: "Dog's age", type: "number", unit: "years", default: 3, step: 0.5 },
       { id: "size", label: "Size", type: "select", default: "medium", options: [
@@ -2245,11 +2284,12 @@ const CALCULATORS = [
       return {
         primary: { label: "Human-equivalent age", value: `${round(humanAge, 0)} years` },
         secondary: [{ l: "Dog's actual age", v: `${v.dogYears} years` }],
-        note: "This is an estimate — actual aging varies by breed and individual health, not just size.",
+        note: "This is an estimate - actual aging varies by breed and individual health, not just size.",
       };
     },
     faq: [
-      { q: "Is 'one dog year equals seven human years' accurate?", a: "No — that old rule is a rough myth. Dogs age faster in their first two years, and larger breeds age faster in later years than small breeds." },
+      { q: "Is 'one dog year equals seven human years' accurate?", a: "No - that old rule is a rough myth. Dogs age faster in their first two years, and larger breeds age faster in later years than small breeds." },
+      { q: "Why do larger dog breeds age faster than small breeds?", a: "Large and giant breeds grow faster and hit physical maturity sooner, which is linked to shorter lifespans and faster aging in their middle and senior years - the opposite of the pattern in most other mammals." },
     ],
     related: ["cat-age-calculator", "dog-food-calculator", "bmi-calculator", "ideal-dog-weight-calculator"],
   },
@@ -2280,12 +2320,12 @@ const CALCULATORS = [
           { l: "Daily calories", v: `${round(dailyCalories, 0)} kcal` },
           { l: "Resting energy requirement", v: `${round(rer, 0)} kcal` },
         ],
-        note: "This is a general estimate based on resting energy requirements. Individual needs vary — check your food's feeding guide and consult a vet for specific dietary advice.",
+        note: "This is a general estimate based on resting energy requirements. Individual needs vary - check your food's feeding guide and consult a vet for specific dietary advice.",
       };
     },
     faq: [
       { q: "How much food does a 40 lb dog need per day?", a: "A moderately active 40 lb dog needs roughly 985 calories per day, or about 2.8 cups of a food with 350 calories per cup." },
-      { q: "What is RER for dog food calculations?", a: "Resting energy requirement (RER) is the calories a dog needs at complete rest, calculated as 70 × (weight in kg)^0.75 — daily needs are then scaled up from RER based on activity level." },
+      { q: "What is RER for dog food calculations?", a: "Resting energy requirement (RER) is the calories a dog needs at complete rest, calculated as 70 × (weight in kg)^0.75 - daily needs are then scaled up from RER based on activity level." },
     ],
     related: ["dog-age-calculator", "calorie-calculator", "bmr-calculator"],
   },
@@ -2312,6 +2352,7 @@ const CALCULATORS = [
     },
     faq: [
       { q: "Do cats age the same way regardless of breed?", a: "Aging patterns are fairly consistent across most cat breeds, unlike dogs where size drives large aging differences." },
+      { q: "Does indoor vs. outdoor lifestyle affect a cat's age calculation?", a: "This calculator doesn't factor that in - it's a general estimate based on typical development. In practice, indoor cats tend to live longer than outdoor cats due to lower exposure to injury and disease, but that affects lifespan, not the age-equivalence math itself." },
     ],
     related: ["dog-age-calculator", "rabbit-age-calculator", "age-calculator", "horse-age-calculator"],
   },
@@ -2334,7 +2375,7 @@ const CALCULATORS = [
       };
     },
     faq: [
-      { q: "How fast do rabbits age compared to humans?", a: "Rabbits mature very quickly — a 1-year-old rabbit is roughly equivalent to a 21-year-old human, then aging slows to about 6 human years per rabbit year after that." },
+      { q: "How fast do rabbits age compared to humans?", a: "Rabbits mature very quickly - a 1-year-old rabbit is roughly equivalent to a 21-year-old human, then aging slows to about 6 human years per rabbit year after that." },
       { q: "How long do pet rabbits typically live?", a: "Well-cared-for house rabbits commonly live 8-12 years, with some living longer depending on breed and health." },
     ],
     related: ["cat-age-calculator", "dog-age-calculator", "age-calculator"],
@@ -2363,7 +2404,7 @@ const CALCULATORS = [
     },
     faq: [
       { q: "How long are dogs pregnant?", a: "The average canine gestation period is about 63 days from conception, though it can range from 58 to 68 days depending on the dog and litter size." },
-      { q: "How accurate is a due date estimate from the mating date?", a: "It's a reasonable estimate, but actual whelping dates can vary by several days — a veterinarian can confirm timing more precisely using ultrasound or progesterone testing." },
+      { q: "How accurate is a due date estimate from the mating date?", a: "It's a reasonable estimate, but actual whelping dates can vary by several days - a veterinarian can confirm timing more precisely using ultrasound or progesterone testing." },
     ],
     related: ["days-until-calculator", "date-duration-calculator", "dog-age-calculator", "cat-pregnancy-calculator"],
   },
@@ -2389,7 +2430,7 @@ const CALCULATORS = [
       };
     },
     faq: [
-      { q: "How old is a 10-year-old horse in human years?", a: "About 33 human years — horses mature very quickly in their first two years (reaching roughly age 13 by year two), then age more gradually afterward." },
+      { q: "How old is a 10-year-old horse in human years?", a: "About 33 human years - horses mature very quickly in their first two years (reaching roughly age 13 by year two), then age more gradually afterward." },
       { q: "What's considered old age for a horse?", a: "Horses are often considered seniors starting around age 15-20, with many living into their late 20s or early 30s with good care." },
     ],
     related: ["dog-age-calculator", "cat-age-calculator", "rabbit-age-calculator"],
@@ -2410,12 +2451,12 @@ const CALCULATORS = [
       return {
         primary: { label: "Estimated ideal weight", value: `${round(idealWeight, 1)} lb` },
         secondary: [{ l: "Weight to lose/gain", v: `${round(v.currentWeight - idealWeight, 1)} lb` }],
-        note: "Body condition score (BCS) is a 1-9 scale where 5 is ideal — each point above or below adjusts the estimate by about 10% of current weight. Ask your vet for an accurate BCS assessment.",
+        note: "Body condition score (BCS) is a 1-9 scale where 5 is ideal - each point above or below adjusts the estimate by about 10% of current weight. Ask your vet for an accurate BCS assessment.",
       };
     },
     faq: [
-      { q: "What is a body condition score for dogs?", a: "A 1-9 scale vets use to assess a dog's fat coverage by look and feel — 4-5 is ideal, with each point above indicating roughly 10% excess body weight." },
-      { q: "How much weight should a dog with a BCS of 7 lose?", a: "A BCS of 7 (moderately overweight) suggests roughly 20% excess weight — a 60 lb dog would have an estimated ideal weight around 48 lb, a loss of about 12 lb." },
+      { q: "What is a body condition score for dogs?", a: "A 1-9 scale vets use to assess a dog's fat coverage by look and feel - 4-5 is ideal, with each point above indicating roughly 10% excess body weight." },
+      { q: "How much weight should a dog with a BCS of 7 lose?", a: "A BCS of 7 (moderately overweight) suggests roughly 20% excess weight - a 60 lb dog would have an estimated ideal weight around 48 lb, a loss of about 12 lb." },
     ],
     related: ["dog-food-calculator", "dog-age-calculator", "bmi-calculator"],
   },

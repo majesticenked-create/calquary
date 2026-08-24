@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="{{LANG}}">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{TITLE}}</title>
+  <meta name="description" content="{{DESCRIPTION}}" />
+  {{OG_META}}
+  {{HREFLANG_LINKS}}
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("tool-count").textContent = CALCULATORS.length;
+      document.getElementById("category-count").textContent = CATEGORIES.length;
+    });
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/{{LOCALE_PATH}}index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/{{LOCALE_PATH}}index.html#categories">{{NAV_CATEGORIES}}</a>
+          <a href="/{{LOCALE_PATH}}index.html#tools">{{NAV_ALL_TOOLS}}</a>
+          <a href="/{{LOCALE_PATH}}about.html">{{NAV_ABOUT}}</a>
+        </nav>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="category-hero">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="/{{LOCALE_PATH}}index.html">{{BREADCRUMB_HOME}}</a> / {{NAV_ABOUT}}</div>
+      <h1>{{ABOUT_TITLE}}</h1>
+      <p style="max-width:56ch;">{{ABOUT_LEDE}}</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="article-block" style="margin-top:0;max-width:72ch;">
+        <p>{{ABOUT_BODY}}</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/{{LOCALE_PATH}}index.html">{{BTN_BACK_TO_ALL}}</a> · <a href="/{{LOCALE_PATH}}contact.html">{{FOOTER_CONTACT}}</a> · <a href="/privacy.html">{{FOOTER_PRIVACY}}</a> · <a href="/terms.html">{{FOOTER_TERMS}}</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
