@@ -851,6 +851,173 @@ const I18N_STATIC = {
       body: "Einen Fehler gefunden, eine Idee für einen Rechner, oder eine Frage zu unserem Umgang mit Daten? Schreiben Sie uns an hello@calquary.com - wir lesen jede Nachricht, auch wenn Antworten ein paar Tage dauern können.",
     },
   },
+
+  // Legal-facing pages: translated in full (not summarized), but each
+  // locale version carries a visible translationNotice banner stating the
+  // English original governs any conflict and that this translation has
+  // not had a separate native-speaker/legal review pass — the honest
+  // middle ground between silently omitting these pages from wave one and
+  // publishing a translated legal document as if it carried the same
+  // authority as the reviewed English source.
+  translationNotice: {
+    es: 'Esta es una traducción de la Política de Privacidad y los Términos de Servicio originales en inglés, ofrecida por comodidad. En caso de discrepancia, prevalece la <a href="/privacy.html">versión en inglés</a>. Esta traducción no ha pasado por una revisión legal independiente.',
+    fr: 'Ceci est une traduction de la Politique de Confidentialité et des Conditions d\'Utilisation originales en anglais, fournie par commodité. En cas de divergence, la <a href="/privacy.html">version anglaise</a> fait foi. Cette traduction n\'a pas fait l\'objet d\'une relecture juridique indépendante.',
+    de: 'Dies ist eine Übersetzung der ursprünglichen englischen Datenschutzerklärung und Nutzungsbedingungen, bereitgestellt aus Gründen der Übersichtlichkeit. Bei Abweichungen ist die <a href="/privacy.html">englische Fassung</a> maßgeblich. Diese Übersetzung wurde keiner separaten rechtlichen Prüfung unterzogen.',
+  },
+
+  privacy: {
+    en: {
+      title: "Privacy Policy",
+      effectiveDateLabel: "Effective date: August 18, 2026",
+      sections: [
+        { h2: "Overview", p: ['This Privacy Policy explains what information Calquary ("we," "us," "our") collects when you use calquary.com (the "Site"), how we use it, and the choices available to you. By using the Site, you agree to the practices described here.'] },
+        { h2: "Information we collect", p: [
+          "Calquary's calculators run entirely in your browser. When you enter numbers or other values into a calculator, that data is processed locally on your device using JavaScript - it is never transmitted to our servers, stored in a database, or seen by us in any form. We do not require accounts, logins, or any personal information to use any calculator on this Site.",
+          "We may collect limited, non-identifying technical information automatically, such as your browser type, general device type, and pages visited, through standard web server logs and analytics tools (for example, to understand which calculators are most useful and to fix bugs). This information does not include the values you enter into a calculator.",
+        ] },
+        { h2: "Cookies and tracking technologies", p: ["Calquary does not currently use cookies for the calculators themselves - no login state, no saved preferences, no tracking of your calculator inputs. We do use, or plan to use, third-party services described below that may set their own cookies in your browser, including for advertising purposes."] },
+        { h2: "Advertising", p: [
+          'Calquary may display advertising through Google AdSense or similar third-party advertising services. These services may use cookies, device identifiers, or similar technologies to serve ads based on your prior visits to this or other websites ("interest-based" or "personalized" advertising).',
+          'Google\'s use of advertising cookies enables it and its partners to serve ads based on your visits to this and other sites. You can opt out of personalized advertising by visiting <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">Google Ads Settings</a>, or opt out of some third-party vendors\' use of cookies for personalized advertising by visiting <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer">www.aboutads.info</a>. For more on how Google uses data when you use our Site, see <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">How Google uses information from sites or apps that use our services</a>.',
+        ] },
+        { h2: "Third-party services", p: ["We may use third-party services for analytics, hosting, and advertising (such as Google AdSense and Google Analytics). These providers may collect information sent by your browser as part of a web page request, such as cookies or your IP address, and are governed by their own privacy policies, not this one."] },
+        { h2: "Children's privacy", p: ["Calquary is not directed at children under 13, and we do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us so we can address it."] },
+        { h2: "Changes to this policy", p: ['We may update this Privacy Policy from time to time to reflect changes in our practices or for legal, operational, or regulatory reasons. The "Effective date" at the top of this page will reflect the most recent revision. Continued use of the Site after changes take effect constitutes acceptance of the revised policy.'] },
+        { h2: "Contact us", p: ['If you have questions about this Privacy Policy, please <a href="/contact.html">contact us</a>.'] },
+      ],
+    },
+    es: {
+      title: "Política de Privacidad",
+      effectiveDateLabel: "Fecha de vigencia: 18 de agosto de 2026",
+      sections: [
+        { h2: "Resumen", p: ['Esta Política de Privacidad explica qué información recopila Calquary ("nosotros", "nos", "nuestro") cuando utilizas calquary.com (el "Sitio"), cómo la usamos y las opciones disponibles para ti. Al usar el Sitio, aceptas las prácticas aquí descritas.'] },
+        { h2: "Información que recopilamos", p: [
+          "Las calculadoras de Calquary funcionan enteramente en tu navegador. Cuando introduces números u otros valores en una calculadora, esos datos se procesan localmente en tu dispositivo mediante JavaScript - nunca se transmiten a nuestros servidores, ni se almacenan en una base de datos, ni los vemos de ninguna forma. No requerimos cuentas, inicios de sesión ni ninguna información personal para usar ninguna calculadora de este Sitio.",
+          "Podemos recopilar automáticamente información técnica limitada y no identificable, como el tipo de navegador, el tipo general de dispositivo y las páginas visitadas, mediante registros estándar del servidor web y herramientas de análisis (por ejemplo, para entender qué calculadoras son más útiles y corregir errores). Esta información no incluye los valores que introduces en una calculadora.",
+        ] },
+        { h2: "Cookies y tecnologías de seguimiento", p: ["Calquary actualmente no utiliza cookies para las calculadoras en sí - sin estado de sesión, sin preferencias guardadas, sin seguimiento de tus entradas en la calculadora. Utilizamos, o planeamos utilizar, los servicios de terceros descritos a continuación, que pueden establecer sus propias cookies en tu navegador, incluso con fines publicitarios."] },
+        { h2: "Publicidad", p: [
+          'Calquary puede mostrar publicidad a través de Google AdSense o servicios publicitarios de terceros similares. Estos servicios pueden usar cookies, identificadores de dispositivo o tecnologías similares para mostrar anuncios basados en tus visitas anteriores a este u otros sitios web (publicidad "basada en intereses" o "personalizada").',
+          'El uso que hace Google de las cookies publicitarias le permite a Google y a sus socios mostrar anuncios basados en tus visitas a este y otros sitios. Puedes optar por no recibir publicidad personalizada visitando <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">la Configuración de anuncios de Google</a>, o rechazar el uso de cookies de algunos proveedores externos para publicidad personalizada visitando <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer">www.aboutads.info</a>. Para más información sobre cómo Google usa los datos cuando utilizas nuestro Sitio, consulta <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">Cómo usa Google la información de los sitios o aplicaciones que utilizan sus servicios</a>.',
+        ] },
+        { h2: "Servicios de terceros", p: ["Podemos utilizar servicios de terceros para análisis, alojamiento y publicidad (como Google AdSense y Google Analytics). Estos proveedores pueden recopilar información enviada por tu navegador como parte de una solicitud de página web, como cookies o tu dirección IP, y se rigen por sus propias políticas de privacidad, no por esta."] },
+        { h2: "Privacidad de menores", p: ["Calquary no está dirigido a menores de 13 años, y no recopilamos conscientemente información personal de menores de 13 años. Si crees que un menor nos ha proporcionado información personal, por favor contáctanos para que podamos resolverlo."] },
+        { h2: "Cambios a esta política", p: ['Podemos actualizar esta Política de Privacidad periódicamente para reflejar cambios en nuestras prácticas o por razones legales, operativas o regulatorias. La "Fecha de vigencia" en la parte superior de esta página reflejará la revisión más reciente. El uso continuado del Sitio después de que los cambios entren en vigor constituye la aceptación de la política revisada.'] },
+        { h2: "Contáctanos", p: ['Si tienes preguntas sobre esta Política de Privacidad, por favor <a href="/contact.html">contáctanos</a>.'] },
+      ],
+    },
+    fr: {
+      title: "Politique de Confidentialité",
+      effectiveDateLabel: "Date d'entrée en vigueur : 18 août 2026",
+      sections: [
+        { h2: "Aperçu", p: ['Cette Politique de Confidentialité explique quelles informations Calquary (« nous », « notre ») collecte lorsque vous utilisez calquary.com (le « Site »), comment nous les utilisons, et les choix qui s\'offrent à vous. En utilisant le Site, vous acceptez les pratiques décrites ici.'] },
+        { h2: "Informations que nous collectons", p: [
+          "Les calculatrices de Calquary fonctionnent entièrement dans votre navigateur. Lorsque vous saisissez des chiffres ou d'autres valeurs dans une calculatrice, ces données sont traitées localement sur votre appareil via JavaScript - elles ne sont jamais transmises à nos serveurs, ni stockées dans une base de données, ni consultées par nous sous quelque forme que ce soit. Aucun compte, identifiant ou information personnelle n'est requis pour utiliser une calculatrice de ce Site.",
+          "Nous pouvons collecter automatiquement des informations techniques limitées et non identifiantes, telles que le type de navigateur, le type général d'appareil et les pages visitées, via des journaux de serveur web standard et des outils d'analyse (par exemple, pour comprendre quelles calculatrices sont les plus utiles et corriger des bugs). Ces informations n'incluent pas les valeurs que vous saisissez dans une calculatrice.",
+        ] },
+        { h2: "Cookies et technologies de suivi", p: ["Calquary n'utilise actuellement pas de cookies pour les calculatrices elles-mêmes - pas d'état de connexion, pas de préférences enregistrées, aucun suivi de vos saisies dans les calculatrices. Nous utilisons, ou prévoyons d'utiliser, les services tiers décrits ci-dessous, qui peuvent déposer leurs propres cookies dans votre navigateur, y compris à des fins publicitaires."] },
+        { h2: "Publicité", p: [
+          "Calquary peut afficher des publicités via Google AdSense ou des services publicitaires tiers similaires. Ces services peuvent utiliser des cookies, des identifiants d'appareil ou des technologies similaires pour diffuser des publicités basées sur vos visites précédentes sur ce site ou d'autres (publicité « basée sur les centres d'intérêt » ou « personnalisée »).",
+          'L\'utilisation par Google de cookies publicitaires permet à Google et à ses partenaires de diffuser des publicités en fonction de vos visites sur ce site et d\'autres sites. Vous pouvez refuser la publicité personnalisée en consultant les <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">Paramètres des annonces Google</a>, ou refuser l\'utilisation de cookies par certains fournisseurs tiers à des fins de publicité personnalisée en consultant <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer">www.aboutads.info</a>. Pour en savoir plus sur la façon dont Google utilise les données lorsque vous utilisez notre Site, consultez <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">Comment Google utilise les informations provenant de sites ou d\'applications qui utilisent ses services</a>.',
+        ] },
+        { h2: "Services tiers", p: ["Nous pouvons utiliser des services tiers pour l'analyse, l'hébergement et la publicité (comme Google AdSense et Google Analytics). Ces prestataires peuvent collecter des informations envoyées par votre navigateur dans le cadre d'une requête de page web, telles que des cookies ou votre adresse IP, et sont régis par leurs propres politiques de confidentialité, et non par la présente."] },
+        { h2: "Confidentialité des mineurs", p: ["Calquary ne s'adresse pas aux enfants de moins de 13 ans, et nous ne collectons pas sciemment d'informations personnelles auprès d'enfants de moins de 13 ans. Si vous pensez qu'un enfant nous a fourni des informations personnelles, veuillez nous contacter afin que nous puissions y remédier."] },
+        { h2: "Modifications de cette politique", p: ['Nous pouvons mettre à jour cette Politique de Confidentialité de temps à autre pour refléter des changements dans nos pratiques ou pour des raisons légales, opérationnelles ou réglementaires. La « Date d\'entrée en vigueur » en haut de cette page reflétera la révision la plus récente. La poursuite de l\'utilisation du Site après l\'entrée en vigueur des modifications constitue une acceptation de la politique révisée.'] },
+        { h2: "Nous contacter", p: ['Si vous avez des questions concernant cette Politique de Confidentialité, veuillez <a href="/contact.html">nous contacter</a>.'] },
+      ],
+    },
+    de: {
+      title: "Datenschutzerklärung",
+      effectiveDateLabel: "Datum des Inkrafttretens: 18. August 2026",
+      sections: [
+        { h2: "Überblick", p: ['Diese Datenschutzerklärung erläutert, welche Informationen Calquary („wir", „uns", „unser") erhebt, wenn Sie calquary.com (die „Website") nutzen, wie wir diese verwenden und welche Wahlmöglichkeiten Ihnen zur Verfügung stehen. Durch die Nutzung der Website stimmen Sie den hier beschriebenen Praktiken zu.'] },
+        { h2: "Von uns erhobene Informationen", p: [
+          "Die Rechner von Calquary laufen vollständig in Ihrem Browser. Wenn Sie Zahlen oder andere Werte in einen Rechner eingeben, werden diese Daten lokal auf Ihrem Gerät mittels JavaScript verarbeitet - sie werden niemals an unsere Server übertragen, in einer Datenbank gespeichert oder von uns in irgendeiner Form eingesehen. Für die Nutzung eines Rechners auf dieser Website sind kein Konto, kein Login und keine persönlichen Informationen erforderlich.",
+          "Wir können automatisch begrenzte, nicht identifizierende technische Informationen erheben, wie Ihren Browsertyp, den allgemeinen Gerätetyp und besuchte Seiten, über Standard-Webserver-Protokolle und Analysetools (zum Beispiel, um zu verstehen, welche Rechner am nützlichsten sind, und um Fehler zu beheben). Diese Informationen umfassen nicht die Werte, die Sie in einen Rechner eingeben.",
+        ] },
+        { h2: "Cookies und Tracking-Technologien", p: ["Calquary verwendet derzeit keine Cookies für die Rechner selbst - kein Anmeldestatus, keine gespeicherten Präferenzen, kein Tracking Ihrer Rechner-Eingaben. Wir nutzen, oder planen zu nutzen, die unten beschriebenen Dienste Dritter, die möglicherweise eigene Cookies in Ihrem Browser setzen, auch zu Werbezwecken."] },
+        { h2: "Werbung", p: [
+          'Calquary kann Werbung über Google AdSense oder ähnliche Werbedienste Dritter anzeigen. Diese Dienste können Cookies, Geräte-IDs oder ähnliche Technologien verwenden, um Anzeigen basierend auf Ihren früheren Besuchen dieser oder anderer Websites auszuliefern („interessenbasierte" oder „personalisierte" Werbung).',
+          'Durch die Verwendung von Werbe-Cookies können Google und seine Partner Anzeigen basierend auf Ihren Besuchen dieser und anderer Websites schalten. Sie können personalisierte Werbung ablehnen, indem Sie die <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">Google-Anzeigeneinstellungen</a> besuchen, oder die Verwendung von Cookies einiger Drittanbieter für personalisierte Werbung ablehnen, indem Sie <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer">www.aboutads.info</a> besuchen. Weitere Informationen dazu, wie Google Daten verwendet, wenn Sie unsere Website nutzen, finden Sie unter <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">Wie Google Daten verwendet, wenn Sie Websites oder Apps unserer Partner nutzen</a>.',
+        ] },
+        { h2: "Dienste Dritter", p: ["Wir können Dienste Dritter für Analyse, Hosting und Werbung nutzen (wie Google AdSense und Google Analytics). Diese Anbieter können Informationen erheben, die Ihr Browser im Rahmen einer Webseitenanfrage sendet, wie Cookies oder Ihre IP-Adresse, und unterliegen ihren eigenen Datenschutzerklärungen, nicht dieser."] },
+        { h2: "Datenschutz von Kindern", p: ["Calquary richtet sich nicht an Kinder unter 13 Jahren, und wir erheben wissentlich keine personenbezogenen Daten von Kindern unter 13 Jahren. Wenn Sie glauben, dass ein Kind uns persönliche Informationen mitgeteilt hat, kontaktieren Sie uns bitte, damit wir dies klären können."] },
+        { h2: "Änderungen dieser Richtlinie", p: ['Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren, um Änderungen unserer Praktiken oder aus rechtlichen, betrieblichen oder regulatorischen Gründen widerzuspiegeln. Das „Datum des Inkrafttretens" oben auf dieser Seite spiegelt die jüngste Überarbeitung wider. Die fortgesetzte Nutzung der Website nach Inkrafttreten der Änderungen stellt die Annahme der überarbeiteten Richtlinie dar.'] },
+        { h2: "Kontakt", p: ['Wenn Sie Fragen zu dieser Datenschutzerklärung haben, <a href="/contact.html">kontaktieren Sie uns bitte</a>.'] },
+      ],
+    },
+  },
+
+  terms: {
+    en: {
+      title: "Terms of Service",
+      effectiveDateLabel: "Effective date: August 18, 2026",
+      sections: [
+        { h2: "Acceptance of terms", p: ['By accessing or using calquary.com (the "Site"), you agree to be bound by these Terms of Service. If you do not agree, please do not use the Site.'] },
+        { h2: "Informational purposes only", p: [
+          "Calquary's calculators are provided for general informational and estimation purposes only. They are not, and should not be relied upon as, professional financial, structural, engineering, medical, legal, or other expert advice. Results are estimates based on the formulas and assumptions built into each tool, and may not account for your specific circumstances.",
+          "Always confirm results that matter - a loan payment, a material estimate for a construction project, a health-related calculation - with a qualified professional before making a decision based on them.",
+        ] },
+        { h2: "No warranty", p: ['The Site and its calculators are provided "as is" and "as available," without warranty of any kind, express or implied, including but not limited to warranties of accuracy, merchantability, fitness for a particular purpose, or non-infringement. We do not guarantee that any calculator will be error-free, uninterrupted, or produce results suitable for your specific situation.'] },
+        { h2: "Limitation of liability", p: ["To the fullest extent permitted by law, Calquary and its operators shall not be liable for any direct, indirect, incidental, consequential, or special damages arising out of or in connection with your use of, or inability to use, the Site or any calculator's results - including but not limited to financial loss, property damage, or personal injury - even if advised of the possibility of such damages."] },
+        { h2: "Acceptable use", p: ["You agree not to misuse the Site, including but not limited to: attempting to disrupt or overload the Site's infrastructure, scraping content at a rate that degrades service for other users, or using the Site for any unlawful purpose. We reserve the right to restrict access for any use that violates these terms."] },
+        { h2: "Third-party links and advertising", p: ["The Site may contain links to third-party websites or display third-party advertising. We are not responsible for the content, accuracy, or practices of any third-party site, and inclusion of a link or advertisement does not imply endorsement."] },
+        { h2: "Changes to these terms", p: ['We may update these Terms of Service from time to time. The "Effective date" at the top of this page reflects the most recent revision. Continued use of the Site after changes take effect constitutes acceptance of the revised terms.'] },
+        { h2: "Contact us", p: ['If you have questions about these Terms of Service, please <a href="/contact.html">contact us</a>.'] },
+      ],
+    },
+    es: {
+      title: "Términos de Servicio",
+      effectiveDateLabel: "Fecha de vigencia: 18 de agosto de 2026",
+      sections: [
+        { h2: "Aceptación de los términos", p: ['Al acceder o utilizar calquary.com (el "Sitio"), aceptas quedar sujeto a estos Términos de Servicio. Si no estás de acuerdo, por favor no utilices el Sitio.'] },
+        { h2: "Solo con fines informativos", p: [
+          "Las calculadoras de Calquary se proporcionan únicamente con fines informativos y de estimación general. No son, y no deben tomarse como, asesoramiento financiero, estructural, de ingeniería, médico, legal ni de ningún otro tipo profesional. Los resultados son estimaciones basadas en las fórmulas y supuestos incorporados en cada herramienta, y pueden no tener en cuenta tus circunstancias específicas.",
+          "Confirma siempre los resultados importantes - un pago de préstamo, una estimación de materiales para un proyecto de construcción, un cálculo relacionado con la salud - con un profesional cualificado antes de tomar una decisión basada en ellos.",
+        ] },
+        { h2: "Sin garantía", p: ['El Sitio y sus calculadoras se proporcionan "tal cual" y "según disponibilidad", sin garantía de ningún tipo, expresa o implícita, incluyendo entre otras las garantías de precisión, comerciabilidad, idoneidad para un propósito particular o no infracción. No garantizamos que ninguna calculadora esté libre de errores, sea ininterrumpida o produzca resultados adecuados para tu situación específica.'] },
+        { h2: "Limitación de responsabilidad", p: ["En la medida máxima permitida por la ley, Calquary y sus operadores no serán responsables de ningún daño directo, indirecto, incidental, consecuente o especial que surja de, o esté relacionado con, tu uso o incapacidad de usar el Sitio o los resultados de cualquier calculadora - incluyendo, entre otros, pérdidas financieras, daños materiales o lesiones personales - incluso si se les advirtió de la posibilidad de tales daños."] },
+        { h2: "Uso aceptable", p: ["Aceptas no hacer un uso indebido del Sitio, incluyendo, entre otros: intentar interrumpir o sobrecargar la infraestructura del Sitio, extraer contenido a un ritmo que degrade el servicio para otros usuarios, o utilizar el Sitio para cualquier propósito ilegal. Nos reservamos el derecho de restringir el acceso por cualquier uso que viole estos términos."] },
+        { h2: "Enlaces de terceros y publicidad", p: ["El Sitio puede contener enlaces a sitios web de terceros o mostrar publicidad de terceros. No somos responsables del contenido, la precisión ni las prácticas de ningún sitio de terceros, y la inclusión de un enlace o anuncio no implica respaldo."] },
+        { h2: "Cambios a estos términos", p: ['Podemos actualizar estos Términos de Servicio periódicamente. La "Fecha de vigencia" en la parte superior de esta página refleja la revisión más reciente. El uso continuado del Sitio después de que los cambios entren en vigor constituye la aceptación de los términos revisados.'] },
+        { h2: "Contáctanos", p: ['Si tienes preguntas sobre estos Términos de Servicio, por favor <a href="/contact.html">contáctanos</a>.'] },
+      ],
+    },
+    fr: {
+      title: "Conditions d'Utilisation",
+      effectiveDateLabel: "Date d'entrée en vigueur : 18 août 2026",
+      sections: [
+        { h2: "Acceptation des conditions", p: ['En accédant à calquary.com ou en l\'utilisant (le « Site »), vous acceptez d\'être lié par les présentes Conditions d\'Utilisation. Si vous n\'êtes pas d\'accord, veuillez ne pas utiliser le Site.'] },
+        { h2: "À des fins informatives uniquement", p: [
+          "Les calculatrices de Calquary sont fournies uniquement à des fins générales d'information et d'estimation. Elles ne constituent pas, et ne doivent pas être considérées comme, des conseils financiers, structurels, d'ingénierie, médicaux, juridiques ou autres conseils professionnels. Les résultats sont des estimations basées sur les formules et hypothèses intégrées à chaque outil, et peuvent ne pas tenir compte de votre situation particulière.",
+          "Confirmez toujours les résultats importants - une mensualité de prêt, une estimation de matériaux pour un projet de construction, un calcul lié à la santé - auprès d'un professionnel qualifié avant de prendre une décision fondée sur ceux-ci.",
+        ] },
+        { h2: "Absence de garantie", p: ['Le Site et ses calculatrices sont fournis « en l\'état » et « selon disponibilité », sans garantie d\'aucune sorte, expresse ou implicite, y compris, sans s\'y limiter, les garanties d\'exactitude, de qualité marchande, d\'adéquation à un usage particulier ou de non-contrefaçon. Nous ne garantissons pas qu\'une calculatrice sera exempte d\'erreurs, ininterrompue, ou produira des résultats adaptés à votre situation particulière.'] },
+        { h2: "Limitation de responsabilité", p: ["Dans toute la mesure permise par la loi, Calquary et ses exploitants ne pourront être tenus responsables de dommages directs, indirects, accessoires, consécutifs ou spéciaux découlant de, ou liés à, votre utilisation ou incapacité à utiliser le Site ou les résultats d'une calculatrice - y compris, sans s'y limiter, une perte financière, des dommages matériels ou des blessures corporelles - même si la possibilité de tels dommages a été signalée."] },
+        { h2: "Utilisation acceptable", p: ["Vous acceptez de ne pas faire un usage abusif du Site, y compris, sans s'y limiter : tenter de perturber ou de surcharger l'infrastructure du Site, extraire du contenu à un rythme qui dégrade le service pour les autres utilisateurs, ou utiliser le Site à des fins illégales. Nous nous réservons le droit de restreindre l'accès pour tout usage contraire à ces conditions."] },
+        { h2: "Liens tiers et publicité", p: ["Le Site peut contenir des liens vers des sites web tiers ou afficher de la publicité tierce. Nous ne sommes pas responsables du contenu, de l'exactitude ni des pratiques d'un site tiers, et l'inclusion d'un lien ou d'une publicité n'implique aucun soutien de notre part."] },
+        { h2: "Modifications de ces conditions", p: ['Nous pouvons mettre à jour ces Conditions d\'Utilisation de temps à autre. La « Date d\'entrée en vigueur » en haut de cette page reflète la révision la plus récente. La poursuite de l\'utilisation du Site après l\'entrée en vigueur des modifications constitue une acceptation des conditions révisées.'] },
+        { h2: "Nous contacter", p: ['Si vous avez des questions concernant ces Conditions d\'Utilisation, veuillez <a href="/contact.html">nous contacter</a>.'] },
+      ],
+    },
+    de: {
+      title: "Nutzungsbedingungen",
+      effectiveDateLabel: "Datum des Inkrafttretens: 18. August 2026",
+      sections: [
+        { h2: "Annahme der Bedingungen", p: ['Durch den Zugriff auf calquary.com oder dessen Nutzung (die „Website") erklären Sie sich mit diesen Nutzungsbedingungen einverstanden. Falls Sie nicht zustimmen, nutzen Sie die Website bitte nicht.'] },
+        { h2: "Nur zu Informationszwecken", p: [
+          "Die Rechner von Calquary dienen ausschließlich allgemeinen Informations- und Schätzzwecken. Sie stellen keine professionelle Finanz-, Bau-, Ingenieurs-, medizinische, rechtliche oder sonstige fachliche Beratung dar und sollten nicht als solche verstanden werden. Die Ergebnisse sind Schätzungen, die auf den in jedem Tool hinterlegten Formeln und Annahmen basieren, und berücksichtigen möglicherweise nicht Ihre individuellen Umstände.",
+          "Bestätigen Sie wichtige Ergebnisse - eine Kreditrate, eine Materialschätzung für ein Bauprojekt, eine gesundheitsbezogene Berechnung - stets bei einer qualifizierten Fachperson, bevor Sie eine darauf basierende Entscheidung treffen.",
+        ] },
+        { h2: "Keine Gewährleistung", p: ['Die Website und ihre Rechner werden „wie besehen" und „wie verfügbar" bereitgestellt, ohne jegliche ausdrückliche oder stillschweigende Gewährleistung, einschließlich, aber nicht beschränkt auf Gewährleistungen der Genauigkeit, der Marktgängigkeit, der Eignung für einen bestimmten Zweck oder der Nichtverletzung von Rechten Dritter. Wir garantieren nicht, dass ein Rechner fehlerfrei oder unterbrechungsfrei arbeitet oder für Ihre individuelle Situation geeignete Ergebnisse liefert.'] },
+        { h2: "Haftungsbeschränkung", p: ["Im gesetzlich zulässigen Umfang haften Calquary und seine Betreiber nicht für direkte, indirekte, beiläufig entstandene, Folge- oder besondere Schäden, die sich aus oder im Zusammenhang mit Ihrer Nutzung oder Nichtnutzungsmöglichkeit der Website oder der Ergebnisse eines Rechners ergeben - einschließlich, aber nicht beschränkt auf finanzielle Verluste, Sachschäden oder Personenschäden - selbst wenn auf die Möglichkeit solcher Schäden hingewiesen wurde."] },
+        { h2: "Zulässige Nutzung", p: ["Sie verpflichten sich, die Website nicht missbräuchlich zu nutzen, einschließlich, aber nicht beschränkt auf: Versuche, die Infrastruktur der Website zu stören oder zu überlasten, Inhalte in einem Umfang zu scrapen, der den Dienst für andere Nutzer beeinträchtigt, oder die Website für rechtswidrige Zwecke zu nutzen. Wir behalten uns das Recht vor, den Zugang bei jeder Nutzung, die gegen diese Bedingungen verstößt, einzuschränken."] },
+        { h2: "Links Dritter und Werbung", p: ["Die Website kann Links zu Websites Dritter enthalten oder Werbung Dritter anzeigen. Wir sind nicht verantwortlich für den Inhalt, die Genauigkeit oder die Praktiken einer Website Dritter, und die Aufnahme eines Links oder einer Anzeige impliziert keine Empfehlung unsererseits."] },
+        { h2: "Änderungen dieser Bedingungen", p: ['Wir können diese Nutzungsbedingungen von Zeit zu Zeit aktualisieren. Das „Datum des Inkrafttretens" oben auf dieser Seite spiegelt die jüngste Überarbeitung wider. Die fortgesetzte Nutzung der Website nach Inkrafttreten der Änderungen stellt die Annahme der überarbeiteten Bedingungen dar.'] },
+        { h2: "Kontakt", p: ['Wenn Sie Fragen zu diesen Nutzungsbedingungen haben, <a href="/contact.html">kontaktieren Sie uns bitte</a>.'] },
+      ],
+    },
+  },
 };
 
 if (typeof module !== "undefined" && module.exports) {

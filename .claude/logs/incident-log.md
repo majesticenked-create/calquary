@@ -164,3 +164,44 @@ EOF
 cd /Users/beyouenked/projects/formatiq
 node shot-i18n.js
 rm shot-i18n.js
+- `2026-08-24 19:30:46` | GUARD | LOW | WARNING: rm command allowed → mkdir -p /Users/beyouenked/Documents/Calquary/.review-screenshots
+cat > /Users/beyouenked/projects/formatiq/shot-i18n-verify.js <<'EOF'
+const { chromium } = require('playwright');
+
+(async () => {
+  const browser = await chromium.launch();
+  const errors = [];
+
+  const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+  const page = await ctx.newPage();
+  page.on('console', msg => { if (msg.type() === 'error') errors.push(`[ES home] ${msg.text()}`); });
+  page.on('pageerror', err => errors.push(`[ES home] ${err.message}`));
+  await page.goto('http://localhost:8000/es/index.html', { waitUntil: 'networkidle' });
+  await page.waitForTimeout(400);
+  await page.screenshot({ path: '/Users/beyouenked/Documents/Calquary/.review-screenshots/verify-es-home-1440.png', fullPage: true });
+
+  const page2 = await ctx.newPage();
+  page2.on('console', msg => { if (msg.type() === 'error') errors.push(`[DE tool] ${msg.text()}`); });
+  page2.on('pageerror', err => errors.push(`[DE tool] ${err.message}`));
+  await page2.goto('http://localhost:8000/de/tool/bmr-calculator.html', { waitUntil: 'networkidle' });
+  await page2.waitForTimeout(400);
+  await page2.screenshot({ path: '/Users/beyouenked/Documents/Calquary/.review-screenshots/verify-de-tool-1440.png', fullPage: true });
+
+  const calcBtn = await page2.$('.btn-primary');
+  if (calcBtn) await calcBtn.click();
+  await page2.waitForTimeout(300);
+  const resultText = await page2.$eval('#calc-result .result-primary .value', el => el.textContent).catch(() => 'N/A');
+
+  const page3 = await ctx.newPage();
+  page3.on('console', msg => { if (msg.type() === 'error') errors.push(`[ES privacy] ${msg.text()}`); });
+  await page3.goto('http://localhost:8000/es/privacy.html', { waitUntil: 'networkidle' });
+  await page3.waitForTimeout(300);
+  await page3.screenshot({ path: '/Users/beyouenked/Documents/Calquary/.review-screenshots/verify-es-privacy-1440.png', fullPage: true });
+
+  await browser.close();
+  console.log(JSON.stringify({ errors, resultText }, null, 2));
+})();
+EOF
+cd /Users/beyouenked/projects/formatiq
+node shot-i18n-verify.js
+rm shot-i18n-verify.js

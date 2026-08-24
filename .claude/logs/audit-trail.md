@@ -412,3 +412,13 @@
 - `2026-08-24 18:20:21` | Edit | build.js
 - `2026-08-24 18:22:01` | Edit | build.js
 - `2026-08-24 18:22:11` | Edit | build.js
+- `2026-08-24 18:50:43` | Edit | js/i18n.js
+- `2026-08-24 18:51:03` | Write | _templates/legal.template.html
+- `2026-08-24 18:51:29` | Edit | _templates/index.template.html
+- `2026-08-24 18:52:05` | Edit | _templates/about.template.html
+- `2026-08-24 18:52:33` | Edit | _templates/contact.template.html
+- `2026-08-24 18:56:30` | Edit | build.js
+- `2026-08-24 19:01:04` | Edit | build.js
+- `2026-08-24 19:06:22` | Edit | build.js
+- `2026-08-24 19:08:50` | Edit | build.js
+- `2026-08-24 19:15:39` | Edit | build.js
