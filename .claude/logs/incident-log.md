@@ -646,3 +646,113 @@ Risk: fragile by accident, not by design — any future edit that removes/reorde
 Required action: delete the stray first pt/it/ja block at js/i18n.js:585-611, leaving only the correct es/fr/de/pt/it/ja set that starts at line 612.
 Adjacent vulnerability (antifragile check): this is the THIRD instance of the same anchor-insertion misplacement bug pattern in one session (2 caught during the session, this one missed). The Node.js syntax/structure check used to catch the first two only validated parse-ability, not duplicate-key detection — a plain `node -e "require(...)"` parses fine even with silently-shadowed duplicate keys. Recommend adding a duplicate-key lint check (e.g. regex/AST scan for repeated locale keys within the same top-level tool block) to the pre-commit verification step for any future anchor-based insertion into js/i18n.js.
 Status: RESOLVED 2026-08-25 — deleted js/i18n.js:585-611 (stray first pt/it/ja block). Re-ran a corrected full-file duplicate-key sweep (the original regex script had a bug of its own: it only reset `curTool` on quoted top-level keys, so it produced 27 false-positive "cat-age-calculator" hits by misattributing every I18N_STATIC.about/contact/privacy/terms locale block that follows it in the file — fixed to also reset on unquoted `key: {` lines) — 0 real duplicate-key issues found anywhere in js/i18n.js. Rebuilt via node build.js and spot-checked pt/it/ja/tool/mortgage-calculator.html and pt/tool/average-calculator.html render their correct distinct titles.
+- `2026-08-25 13:52:46` | GUARD | LOW | WARNING: rm command allowed → mkdir -p /Users/beyouenked/Documents/Calquary/.review-screenshots
+cat > /Users/beyouenked/projects/formatiq/measure-hero.js <<'EOF'
+const { chromium } = require('playwright');
+(async () => {
+  const browser = await chromium.launch();
+  const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
+  await page.goto('http://localhost:8000/index.html', { waitUntil: 'networkidle' });
+  await page.waitForTimeout(300);
+
+  const heroMainBox = await page.$eval('.hero-main', el => el.getBoundingClientRect());
+  const collageBox = await page.$eval('.hero-collage', el => el.getBoundingClientRect());
+  const heroGridBox = await page.$eval('.hero-grid', el => el.getBoundingClientRect());
+  const cardBoxes = await page.$$eval('.hero-collage-card', els => els.map(e => e.getBoundingClientRect()));
+
+  console.log(JSON.stringify({ heroMainBox, collageBox, heroGridBox, cardBoxes }, null, 2));
+  await page.screenshot({ path: '/Users/beyouenked/Documents/Calquary/.review-screenshots/hero-before-1440.png' });
+  await browser.close();
+})();
+EOF
+cd /Users/beyouenked/projects/formatiq
+node measure-hero.js
+rm measure-hero.js
+- `2026-08-25 13:57:44` | GUARD | LOW | WARNING: rm command allowed → cat > /Users/beyouenked/projects/formatiq/measure-hero2.js <<'EOF'
+const { chromium } = require('playwright');
+(async () => {
+  const browser = await chromium.launch();
+  const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
+  await page.goto('http://localhost:8000/index.html', { waitUntil: 'networkidle' });
+  await page.waitForTimeout(300);
+
+  const heroMainBox = await page.$eval('.hero-main', el => el.getBoundingClientRect());
+  const collageBox = await page.$eval('.hero-collage', el => el.getBoundingClientRect());
+  const heroGridBox = await page.$eval('.hero-grid', el => el.getBoundingClientRect());
+  const cardBoxes = await page.$$eval('.hero-collage-card', els => els.map(e => e.getBoundingClientRect()));
+
+  console.log(JSON.stringify({ heroMainBox, collageBox, heroGridBox, cardBoxes }, null, 2));
+  await page.screenshot({ path: '/Users/beyouenked/Documents/Calquary/.review-screenshots/hero-after-1440.png' });
+
+  const heroEl = await page.$('.hero');
+  await heroEl.screenshot({ path: '/Users/beyouenked/Documents/Calquary/.review-screenshots/hero-after-crop-1440.png' });
+
+  const mctx = await browser.newContext({ viewport: { width: 375, height: 900 } });
+  const mpage = await mctx.newPage();
+  await mpage.goto('http://localhost:8000/index.html', { waitUntil: 'networkidle' });
+  await mpage.waitForTimeout(300);
+  const mHero = await mpage.$('.hero');
+  await mHero.screenshot({ path: '/Users/beyouenked/Documents/Calquary/.review-screenshots/hero-after-crop-375.png' });
+
+  await browser.close();
+})();
+EOF
+cd /Users/beyouenked/projects/formatiq
+node measure-hero2.js
+rm measure-hero2.js
+- `2026-08-25 14:04:39` | GUARD | LOW | WARNING: rm command allowed → cat > /Users/beyouenked/projects/formatiq/measure-hero3.js <<'EOF'
+const { chromium } = require('playwright');
+(async () => {
+  const browser = await chromium.launch();
+  const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
+  await page.goto('http://localhost:8000/index.html', { waitUntil: 'networkidle' });
+  await page.waitForTimeout(300);
+
+  const heroMainBox = await page.$eval('.hero-main', el => el.getBoundingClientRect());
+  const cardBoxes = await page.$$eval('.hero-collage-card', els => els.map(e => e.getBoundingClientRect()));
+  const header = await page.$eval('.site-header', el => el.getBoundingClientRect());
+
+  console.log(JSON.stringify({ headerBottom: header.bottom, heroMainTop: heroMainBox.top, heroMainBottom: heroMainBox.bottom, cardTops: cardBoxes.map(c=>c.top), cardBottoms: cardBoxes.map(c=>c.bottom) }, null, 2));
+  await page.screenshot({ path: '/Users/beyouenked/Documents/Calquary/.review-screenshots/hero-after-1440.png' });
+  const heroEl = await page.$('.hero');
+  await heroEl.screenshot({ path: '/Users/beyouenked/Documents/Calquary/.review-screenshots/hero-after-crop-1440.png' });
+
+  const mctx = await browser.newContext({ viewport: { width: 375, height: 900 } });
+  const mpage = await mctx.newPage();
+  await mpage.goto('http://localhost:8000/index.html', { waitUntil: 'networkidle' });
+  await mpage.waitForTimeout(300);
+  const mHero = await mpage.$('.hero');
+  await mHero.screenshot({ path: '/Users/beyouenked/Documents/Calquary/.review-screenshots/hero-after-crop-375.png' });
+  await mpage.screenshot({ path: '/Users/beyouenked/Documents/Calquary/.review-screenshots/hero-after-full-375.png', fullPage: true });
+
+  await browser.close();
+})();
+EOF
+cd /Users/beyouenked/projects/formatiq
+node measure-hero3.js
+rm measure-hero3.js
+- `2026-08-25 14:06:10` | GUARD | LOW | WARNING: rm command allowed → cat > /Users/beyouenked/projects/formatiq/verify-hero.js <<'EOF'
+const { chromium } = require('playwright');
+(async () => {
+  const browser = await chromium.launch();
+  const errors = [];
+  const pages = [
+    'http://localhost:8000/index.html',
+    'http://localhost:8000/es/index.html',
+    'http://localhost:8000/ja/index.html',
+  ];
+  for (const url of pages) {
+    const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+    page.on('console', m => { if (m.type() === 'error') errors.push(`${url}: ${m.text()}`); });
+    page.on('pageerror', e => errors.push(`${url}: ${e.message}`));
+    await page.goto(url, { waitUntil: 'networkidle' });
+    await page.waitForTimeout(300);
+    await page.close();
+  }
+  await browser.close();
+  console.log(JSON.stringify({ errors }, null, 2));
+})();
+EOF
+cd /Users/beyouenked/projects/formatiq
+node verify-hero.js
+rm verify-hero.js

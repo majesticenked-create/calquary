@@ -348,11 +348,24 @@ a.locale-item:hover { color: var(--brand); background: var(--paper-mint); text-d
 /* Hero specimen-card collage: real .tool-card elements fanned out like
    index cards on a desk. Centered via the classic translate(-50%,-50%) +
    px-offset + rotate combo so each card centers on itself regardless of its
-   exact rendered height (title length varies card to card). */
+   exact rendered height (title length varies card to card).
+
+   min-height used to be 560px with a 200px margin-top hack on top of that
+   (700+px total) to clear the site header — but .hero-grid centers this
+   box against the text column using align-items:center, and a box that
+   much taller than the ~450px text column just centers a huge amount of
+   dead space along with it. Trimmed to roughly match the text column's
+   real height instead, with header clearance now coming from the hero
+   section's own padding-top rather than a per-component margin hack.
+   --collage-scale enlarges the cards themselves (proportionally — text,
+   padding, everything, since it's a single transform: scale rather than
+   separately bumped font-size/padding values) without needing every card's
+   internal styles touched; the mobile media query below divides it back
+   out so 375px keeps the exact pre-enlargement rendered card size. */
 .hero-collage {
   position: relative;
-  min-height: 560px;
-  margin-top: 200px;
+  min-height: 680px;
+  --collage-scale: 1.18;
 }
 
 .hero-collage-card {
@@ -360,12 +373,12 @@ a.locale-item:hover { color: var(--brand); background: var(--paper-mint); text-d
   top: 50%;
   left: 50%;
   width: 210px;
-  transform: translate(-50%, -50%) translate(var(--tx), var(--ty)) rotate(var(--rotate));
+  transform: translate(-50%, -50%) translate(var(--tx), var(--ty)) rotate(var(--rotate)) scale(var(--collage-scale));
   transition: transform 0.25s var(--ease-smooth), box-shadow 0.25s var(--ease-smooth);
 }
 
 .hero-collage-card:hover {
-  transform: translate(-50%, -50%) translate(0, -6px) rotate(0deg);
+  transform: translate(-50%, -50%) translate(0, -6px) rotate(0deg) scale(var(--collage-scale));
   z-index: 10 !important;
   box-shadow: 0 8px 16px color-mix(in srgb, var(--shadow-ink) 6%, transparent), 0 28px 60px color-mix(in srgb, var(--shadow-ink) 16%, transparent);
 }
@@ -375,8 +388,13 @@ a.locale-item:hover { color: var(--brand); background: var(--paper-mint); text-d
      the cascade's relative geometry identical at any width — the desktop
      px offsets pushed the back-most card's badge past the viewport's left
      edge at 375px before this was added (confirmed clipped in a real
-     screenshot, not just theoretical). */
+     screenshot, not just theoretical). The outer 0.68 here multiplies with
+     each card's own --collage-scale, so it's divided back out (0.68/1.18)
+     to land mobile cards at the exact same rendered size the pre-enlargement
+     version verified — the desktop-only enlargement shouldn't change what
+     375px already had confirmed working. */
   .hero-collage {
+    --collage-scale: 0.576;
     min-height: 340px;
     transform: scale(0.68);
     transform-origin: center;

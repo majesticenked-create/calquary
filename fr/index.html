@@ -192,14 +192,21 @@
       // cards on a desk. Each card gets a slightly different rotation/offset
       // baseline so the stack doesn't read as a symmetric, obviously-templated
       // pattern — varied on purpose, not randomized (keeps it deterministic
-      // across reloads). y-steps are 130px, sized against the tallest
-      // 2-line-title card so title text never overlaps the card behind it.
+      // across reloads). y-offsets are spread symmetrically around 0 (not
+      // monotonically stacked toward one edge like the old -390..0 range) so
+      // the fan's visual center of mass lands near the collage box's own
+      // center — that's what .hero-grid's align-items:center actually
+      // centers against the text column, and an asymmetric spread was why
+      // the collage used to read as floating low with a big empty gap below
+      // it even though the box itself was "centered". 150px steps clear the
+      // enlarged card height (see --collage-scale in CSS) the same way the
+      // old 130px steps cleared the pre-enlargement card height.
       const collageIds = ["concrete-calculator", "bmi-calculator", "loan-calculator", "dog-age-calculator"];
       const collageTransforms = [
-        { rotate: -5, x: -40, y: -390 },
-        { rotate: 4, x: -25, y: -260 },
-        { rotate: -3, x: -10, y: -130 },
-        { rotate: 1, x: 0, y: 0 },
+        { rotate: -5, x: -35, y: -255 },
+        { rotate: 4, x: -15, y: -105 },
+        { rotate: -3, x: 10, y: 45 },
+        { rotate: 1, x: 25, y: 195 },
       ];
       const collageEl = document.getElementById("hero-collage");
       if (collageEl) {
