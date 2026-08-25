@@ -443,3 +443,8 @@
 - `2026-08-25 00:29:18` | Edit | css/styles.css
 - `2026-08-25 00:30:33` | Edit | build.js
 - `2026-08-25 00:45:26` | Edit | css/styles.css
+- `2026-08-25` | AUDIT (T2) | i18n wave-two (pt/it/ja) rollout — verdict: WARN. See incident-log for mortgage-calculator duplicate-key finding.
+- `2026-08-25 13:21:41` | Edit | .claude/knowledge-base.md
+- `2026-08-25 13:22:26` | Edit | js/i18n.js
+- `2026-08-25 13:30:31` | Edit | .claude/logs/incident-log.md
+- `2026-08-25 13:30:50` | Write | Daily Notes/082526.md

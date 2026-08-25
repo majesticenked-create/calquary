@@ -582,33 +582,6 @@ const I18N_TOOLS = {
   },
 
   "mortgage-calculator": {
-    pt: {
-      title: "Calculadora de Média",
-      intro: "Insira uma lista de números separados por vírgulas ou espaços para calcular a média, a mediana e a soma.",
-      description: "Calcule a média, a mediana e a soma de uma lista de números.",
-      faq: [
-        { q: "Como calculo a média de uma lista de números?", a: "Some todos os números e divida pela quantidade de números. Para 4, 8, 15, 16, 23, 42: a soma é 108, dividida por 6 números = média de 18." },
-        { q: "Qual é a diferença entre média e mediana?", a: "A média é a soma dividida pela quantidade (a 'média'); a mediana é o valor central quando os números estão ordenados. A mediana é menos afetada por valores extremos do que a média." },
-      ],
-    },
-    it: {
-      title: "Calcolatrice della Media",
-      intro: "Inserisci un elenco di numeri separati da virgole o spazi per calcolare media, mediana e somma.",
-      description: "Calcola la media, la mediana e la somma di un elenco di numeri.",
-      faq: [
-        { q: "Come calcolo la media di un elenco di numeri?", a: "Somma tutti i numeri, poi dividi per quanti numeri ci sono. Per 4, 8, 15, 16, 23, 42: la somma è 108, divisa per 6 numeri = una media di 18." },
-        { q: "Qual è la differenza tra media e mediana?", a: "La media è la somma divisa per il conteggio (la 'media'); la mediana è il valore centrale quando i numeri sono ordinati. La mediana è meno influenzata dai valori anomali rispetto alla media." },
-      ],
-    },
-    ja: {
-      title: "平均計算機",
-      intro: "カンマまたはスペースで区切った数値のリストを入力すると、平均値・中央値・合計を計算します。",
-      description: "数値のリストの平均値、中央値、合計を計算します。",
-      faq: [
-        { q: "数値のリストの平均を計算する方法は？", a: "すべての数値を合計し、数値の個数で割ります。4, 8, 15, 16, 23, 42の場合：合計は108、6個で割ると平均は18になります。" },
-        { q: "平均値と中央値の違いは何ですか？", a: "平均値は合計を個数で割ったもの（「平均」）で、中央値は数値を並べたときの中央の値です。中央値は平均値よりも外れ値の影響を受けにくいです。" },
-      ],
-    },
     es: {
       title: "Calculadora de Hipoteca",
       intro: "Introduce el precio de la vivienda, el pago inicial, la tasa y el plazo para estimar tu pago mensual completo - capital, interés, impuesto predial y seguro.",

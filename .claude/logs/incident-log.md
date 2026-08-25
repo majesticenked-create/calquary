@@ -632,3 +632,17 @@ EOF
 cd /Users/beyouenked/projects/formatiq
 node shot-wave2-sweep.js
 rm shot-wave2-sweep.js
+- `2026-08-25 13:03:27` | FAILURE | ERROR | OTHER | Bash | Exit code 1
+- `2026-08-25 13:11:08` | FAILURE | ERROR | OTHER | Bash | Exit code 1
+- `2026-08-25 13:19:54` | FAILURE | ERROR | OTHER | Bash | Exit code 1
+
+## [2026-08-25] NEAR-MISS: duplicate locale keys in js/i18n.js (mortgage-calculator)
+[session:0825-13] [task:i18n] [model:sonnet-5]
+Severity: low (no live user-facing breakage confirmed, but fragile/latent)
+Location: js/i18n.js:585-611 — `"mortgage-calculator"` object contains a first `pt`/`it`/`ja` block (lines 585, 594, 603) whose content is actually the **average-calculator** translation (title "Calculadora de Média" / "Calcolatrice della Media" / "平均計算機"), immediately followed by the correct `es`/`fr`/`de` mortgage content (line 612+) and then a SECOND, correct `pt`/`it`/`ja` block (lines 639, 648, 657) with the real mortgage-calculator content.
+Cause: same anchor-based Python insertion pattern already known to have caused 2 caught bugs this session — text was inserted after the wrong anchor, landing average-calculator content under the mortgage-calculator key before the real translation blocks.
+Why it didn't break the live site: JS object literals resolve duplicate keys "last write wins" — the second, correct pt/it/ja definitions overwrite the first at object-construction time. Verified empirically: pt/it/ja/tool/mortgage-calculator.html all render "Calculadora de Financiamento Imobiliário" / correct localized mortgage titles, not the average-calculator text.
+Risk: fragile by accident, not by design — any future edit that removes/reorders the second block (e.g. another anchor-insertion pass) would silently regress the live page to average-calculator content with no error thrown. Also ~27 lines of dead/duplicate content bloating an already-large file.
+Required action: delete the stray first pt/it/ja block at js/i18n.js:585-611, leaving only the correct es/fr/de/pt/it/ja set that starts at line 612.
+Adjacent vulnerability (antifragile check): this is the THIRD instance of the same anchor-insertion misplacement bug pattern in one session (2 caught during the session, this one missed). The Node.js syntax/structure check used to catch the first two only validated parse-ability, not duplicate-key detection — a plain `node -e "require(...)"` parses fine even with silently-shadowed duplicate keys. Recommend adding a duplicate-key lint check (e.g. regex/AST scan for repeated locale keys within the same top-level tool block) to the pre-commit verification step for any future anchor-based insertion into js/i18n.js.
+Status: RESOLVED 2026-08-25 — deleted js/i18n.js:585-611 (stray first pt/it/ja block). Re-ran a corrected full-file duplicate-key sweep (the original regex script had a bug of its own: it only reset `curTool` on quoted top-level keys, so it produced 27 false-positive "cat-age-calculator" hits by misattributing every I18N_STATIC.about/contact/privacy/terms locale block that follows it in the file — fixed to also reset on unquoted `key: {` lines) — 0 real duplicate-key issues found anywhere in js/i18n.js. Rebuilt via node build.js and spot-checked pt/it/ja/tool/mortgage-calculator.html and pt/tool/average-calculator.html render their correct distinct titles.
