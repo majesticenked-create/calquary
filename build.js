@@ -479,12 +479,19 @@ function buildToolPage(template, locale, calc, cat, I18N) {
   const url = toolUrl(locale, calc.id);
   const image = `${SITE_URL}/og-images/${calc.id}.png`;
   const faqHtml = t.faq.map((item) => `<div class="faq-item">\n<h3>${escapeHtml(item.q)}</h3>\n<p>${item.a}</p>\n</div>`).join("\n");
+  // Non-English tool titles run short (compact compound words/abbreviations
+  // in de/ja especially) and were flagged by an SEO audit for a too-short
+  // <title> tag; English titles are already long enough on their own.
+  const pageTitle = locale === "en"
+    ? `${t.title} | Calquary`
+    : `${t.title} - ${ui.labels.titleSuffix} | Calquary`;
 
   return template
     .split("{{LANG}}").join(locale)
     .split("{{FONTS_LINK}}").join(fontsLink(locale))
     .split("{{CALC_ID}}").join(calc.id)
     .split("{{TITLE}}").join(t.title)
+    .split("{{PAGE_TITLE}}").join(pageTitle)
     .split("{{INTRO}}").join(t.intro)
     .split("{{DESCRIPTION}}").join(t.description)
     .split("{{FAQ_HTML}}").join(faqHtml)

@@ -58,6 +58,7 @@ const I18N_UI = {
       accuracyText: "Las calculadoras de Calquary están diseñadas para ofrecer estimaciones rápidas y fiables. Para decisiones con implicaciones financieras, estructurales o médicas reales, consulta con un profesional cualificado.",
       lastUpdated: "Última actualización:",
       faqTitle: "Preguntas frecuentes",
+      titleSuffix: "Calculadora Gratis Online",
       breadcrumbHome: "Calquary",
     },
     hero: {
@@ -119,6 +120,7 @@ const I18N_UI = {
       accuracyText: "Les calculatrices de Calquary sont conçues pour fournir des estimations rapides et fiables. Pour toute décision ayant de réelles conséquences financières, structurelles ou médicales, consultez un professionnel qualifié.",
       lastUpdated: "Dernière mise à jour :",
       faqTitle: "Questions fréquentes",
+      titleSuffix: "Calculatrice Gratuite en Ligne",
       breadcrumbHome: "Calquary",
     },
     hero: {
@@ -180,6 +182,7 @@ const I18N_UI = {
       accuracyText: "Die Rechner von Calquary sind für schnelle, zuverlässige Schätzungen ausgelegt. Bei Entscheidungen mit echten finanziellen, baulichen oder medizinischen Konsequenzen wenden Sie sich bitte an eine qualifizierte Fachperson.",
       lastUpdated: "Zuletzt aktualisiert:",
       faqTitle: "Häufig gestellte Fragen",
+      titleSuffix: "Kostenloser Online-Rechner",
       breadcrumbHome: "Calquary",
     },
     hero: {
@@ -241,6 +244,7 @@ const I18N_UI = {
       accuracyText: "As calculadoras da Calquary são feitas para estimativas rápidas e confiáveis. Para decisões com implicações financeiras, estruturais ou médicas reais, consulte um profissional qualificado.",
       lastUpdated: "Última atualização:",
       faqTitle: "Perguntas frequentes",
+      titleSuffix: "Calculadora Gratuita Online",
       breadcrumbHome: "Calquary",
     },
     hero: {
@@ -302,6 +306,7 @@ const I18N_UI = {
       accuracyText: "Le calcolatrici di Calquary sono pensate per stime rapide e affidabili. Per decisioni con reali implicazioni finanziarie, strutturali o mediche, consulta un professionista qualificato.",
       lastUpdated: "Ultimo aggiornamento:",
       faqTitle: "Domande frequenti",
+      titleSuffix: "Calcolatrice Online Gratuita",
       breadcrumbHome: "Calquary",
     },
     hero: {
@@ -363,6 +368,7 @@ const I18N_UI = {
       accuracyText: "Calquaryの計算ツールは、迅速で信頼できる概算を目的としています。実際の財務、構造、医療に関わる重要な決定を行う前には、必ず専門家にご確認ください。",
       lastUpdated: "最終更新日：",
       faqTitle: "よくある質問",
+      titleSuffix: "無料オンライン計算ツール",
       breadcrumbHome: "Calquary",
     },
     hero: {
@@ -1719,68 +1725,68 @@ const I18N_TOOLS = {
 const I18N_STATIC = {
   about: {
     en: {
-      title: "About Calquary",
+      title: "About Calquary - Free Calculators & Conversion Tools",
       lede: "A reference index of fast, accurate calculators - organized the way a good library organizes books, not the way most calculator sites throw everything on one page.",
       body: "Calquary is a collection of single-purpose calculators - for math, money, home projects, health, dates, conversions, everyday text tasks, and pets - built to answer one question well rather than bury it in ads and unrelated content. Every tool runs entirely in your browser: enter your numbers, get your answer, nothing is sent to a server. Calculators are grouped into 8 categories, and the catalog keeps growing - every tool is reviewed for a working formula and a plain-language explanation before it's added, so the answer you get is one you can trust. For decisions with real financial, structural, or medical stakes, confirm with a qualified professional.",
     },
     es: {
-      title: "Acerca de Calquary",
+      title: "Acerca de Calquary - Calculadoras y Conversores Gratis",
       lede: "Un índice de referencia de calculadoras rápidas y precisas - organizado como una buena biblioteca organiza los libros, no como la mayoría de los sitios de calculadoras que amontonan todo en una sola página.",
       body: "Calquary es una colección de calculadoras de propósito único - para matemáticas, dinero, proyectos del hogar, salud, fechas, conversiones, tareas cotidianas de texto y mascotas - creadas para responder bien una pregunta en lugar de enterrarla entre anuncios y contenido no relacionado. Cada herramienta funciona enteramente en tu navegador: introduces tus números, obtienes tu respuesta, nada se envía a un servidor. Las calculadoras se agrupan en 8 categorías, y el catálogo sigue creciendo - cada herramienta se revisa para tener una fórmula funcional y una explicación en lenguaje claro antes de añadirse, para que la respuesta que obtengas sea confiable. Para decisiones con implicaciones financieras, estructurales o médicas reales, consulta con un profesional cualificado.",
     },
     fr: {
-      title: "À propos de Calquary",
+      title: "À propos de Calquary - Calculatrices et Convertisseurs Gratuits",
       lede: "Un index de référence de calculatrices rapides et précises - organisé comme une bonne bibliothèque organise les livres, et non comme la plupart des sites de calculatrices qui entassent tout sur une seule page.",
       body: "Calquary est une collection de calculatrices à usage unique - pour les mathématiques, l'argent, les travaux, la santé, les dates, les conversions, les tâches de texte courantes et les animaux - conçues pour répondre correctement à une seule question plutôt que de la noyer sous des publicités et des contenus sans rapport. Chaque outil fonctionne entièrement dans votre navigateur : vous saisissez vos chiffres, vous obtenez votre réponse, rien n'est envoyé à un serveur. Les calculatrices sont regroupées en 8 catégories, et le catalogue continue de s'agrandir - chaque outil est vérifié pour disposer d'une formule fonctionnelle et d'une explication en langage clair avant d'être ajouté, afin que la réponse obtenue soit fiable. Pour toute décision ayant de réelles conséquences financières, structurelles ou médicales, consultez un professionnel qualifié.",
     },
     de: {
-      title: "Über Calquary",
+      title: "Über Calquary - Kostenlose Rechner und Umrechner",
       lede: "Ein Referenzindex schneller, präziser Rechner - organisiert wie eine gute Bibliothek ihre Bücher ordnet, nicht wie die meisten Rechner-Websites, die alles auf eine Seite werfen.",
       body: "Calquary ist eine Sammlung von Einzelzweck-Rechnern - für Mathematik, Geld, Hausprojekte, Gesundheit, Termine, Umrechnungen, alltägliche Textaufgaben und Haustiere - entwickelt, um eine Frage gut zu beantworten, statt sie zwischen Anzeigen und themenfremden Inhalten zu vergraben. Jedes Tool läuft vollständig in Ihrem Browser: Zahlen eingeben, Antwort erhalten, nichts wird an einen Server gesendet. Die Rechner sind in 8 Kategorien gruppiert, und der Katalog wächst stetig weiter - jedes Tool wird auf eine funktionierende Formel und eine verständliche Erklärung geprüft, bevor es hinzugefügt wird, damit Sie sich auf die Antwort verlassen können. Bei Entscheidungen mit echten finanziellen, baulichen oder medizinischen Konsequenzen wenden Sie sich bitte an eine qualifizierte Fachperson.",
     },
     pt: {
-      title: "Sobre a Calquary",
+      title: "Sobre a Calquary - Calculadoras e Conversores Gratuitos",
       lede: "Um índice de referência de calculadoras rápidas e precisas - organizado como uma boa biblioteca organiza os livros, não como a maioria dos sites de calculadoras que jogam tudo em uma única página.",
       body: "A Calquary é uma coleção de calculadoras de propósito único - para matemática, dinheiro, projetos domésticos, saúde, datas, conversões, tarefas de texto do dia a dia e pets - feitas para responder bem a uma pergunta, em vez de enterrá-la em anúncios e conteúdo não relacionado. Cada ferramenta funciona inteiramente no seu navegador: você insere seus números, obtém sua resposta, nada é enviado a um servidor. As calculadoras são agrupadas em 8 categorias, e o catálogo continua crescendo - cada ferramenta é revisada quanto a uma fórmula funcional e uma explicação em linguagem simples antes de ser adicionada, para que a resposta que você obtém seja confiável. Para decisões com implicações financeiras, estruturais ou médicas reais, consulte um profissional qualificado.",
     },
     it: {
-      title: "Chi siamo - Calquary",
+      title: "Chi siamo - Calcolatrici e Convertitori Gratuiti Calquary",
       lede: "Un indice di riferimento di calcolatrici rapide e precise - organizzato come una buona biblioteca organizza i libri, non come la maggior parte dei siti di calcolatrici che ammassano tutto in una sola pagina.",
       body: "Calquary è una raccolta di calcolatrici a scopo unico - per matematica, denaro, progetti per la casa, salute, date, conversioni, attività di testo quotidiane e animali domestici - pensate per rispondere bene a una domanda invece di seppellirla tra annunci e contenuti non correlati. Ogni strumento funziona interamente nel tuo browser: inserisci i tuoi numeri, ottieni la tua risposta, nulla viene inviato a un server. Le calcolatrici sono raggruppate in 8 categorie, e il catalogo continua a crescere - ogni strumento viene verificato per avere una formula funzionante e una spiegazione in linguaggio semplice prima di essere aggiunto, così la risposta che ottieni è affidabile. Per decisioni con reali implicazioni finanziarie, strutturali o mediche, consulta un professionista qualificato.",
     },
     ja: {
-      title: "Calquaryについて",
+      title: "Calquaryについて - 無料の計算ツールと変換ツール",
       lede: "速く正確な計算ツールのリファレンスインデックス - 多くの計算ツールサイトのようにすべてを1ページに詰め込むのではなく、優れた図書館が本を整理するように構成されています。",
       body: "Calquaryは、数学、お金、住まいのプロジェクト、健康、日付、単位換算、日常的なテキスト作業、ペットなど、単一の目的に特化した計算ツールのコレクションです。広告や無関係なコンテンツに埋もれさせるのではなく、一つの質問にしっかり答えることを目指して作られています。すべてのツールはブラウザ内で完結して動作します。数値を入力すると答えが得られ、サーバーには何も送信されません。計算ツールは8つのカテゴリーに分類されており、カタログは今も増え続けています。公開前にはそれぞれのツールについて、正しく動作する数式とわかりやすい説明があるかを確認しているため、得られる答えを信頼していただけます。実際の財務、構造、医療に関わる重要な決定を行う前には、必ず専門家にご確認ください。",
     },
   },
   contact: {
     en: {
-      title: "Get in touch",
+      title: "Contact Calquary - Bugs, Ideas & Questions",
       body: "Found a bug, have a calculator idea, or have a question about how we handle data? Email us at hello@calquary.com - we read every message, though replies may take a few days. If you're reporting a bug, it helps to include the calculator name, the numbers you entered, and what result you expected versus what you saw. Calculator suggestions are especially welcome - most of the tools already on Calquary started as a reader request, and we track requested calculators against how often they come up before deciding what to build next.",
     },
     es: {
-      title: "Ponte en contacto",
+      title: "Contacto - Escríbenos a Calquary",
       body: "¿Encontraste un error, tienes una idea para una calculadora o una pregunta sobre cómo manejamos los datos? Escríbenos a hello@calquary.com - leemos todos los mensajes, aunque las respuestas pueden tardar unos días. Si reportas un error, ayuda incluir el nombre de la calculadora, los números que introdujiste y qué resultado esperabas frente al que obtuviste. Las sugerencias de calculadoras son especialmente bienvenidas - la mayoría de las herramientas de Calquary comenzaron como una petición de un lector, y llevamos seguimiento de las calculadoras solicitadas según su frecuencia antes de decidir qué construir a continuación.",
     },
     fr: {
-      title: "Contactez-nous",
+      title: "Contactez-nous - Écrivez à Calquary",
       body: "Vous avez trouvé un bug, une idée de calculatrice, ou une question sur la gestion de vos données ? Écrivez-nous à hello@calquary.com - nous lisons chaque message, même si les réponses peuvent prendre quelques jours. Si vous signalez un bug, il est utile d'indiquer le nom de la calculatrice, les chiffres saisis et le résultat attendu par rapport à celui obtenu. Les suggestions de calculatrices sont particulièrement bienvenues - la plupart des outils déjà présents sur Calquary sont nés d'une demande de lecteur, et nous suivons la fréquence des demandes avant de décider quoi développer ensuite.",
     },
     de: {
-      title: "Kontaktieren Sie uns",
+      title: "Kontaktieren Sie uns - Schreiben Sie Calquary",
       body: "Einen Fehler gefunden, eine Idee für einen Rechner, oder eine Frage zu unserem Umgang mit Daten? Schreiben Sie uns an hello@calquary.com - wir lesen jede Nachricht, auch wenn Antworten ein paar Tage dauern können. Bei einer Fehlermeldung hilft es, den Namen des Rechners, die eingegebenen Zahlen sowie das erwartete gegenüber dem tatsächlichen Ergebnis anzugeben. Vorschläge für neue Rechner sind besonders willkommen - die meisten Tools auf Calquary begannen als Leseranfrage, und wir verfolgen, wie oft ein Rechner gewünscht wird, bevor wir entscheiden, was als Nächstes entwickelt wird.",
     },
     pt: {
-      title: "Entre em contato",
+      title: "Entre em Contato com a Calquary",
       body: "Encontrou um bug, tem uma ideia de calculadora ou uma dúvida sobre como tratamos os dados? Escreva para hello@calquary.com - lemos todas as mensagens, embora as respostas possam levar alguns dias. Se estiver relatando um bug, ajuda incluir o nome da calculadora, os números que você inseriu e o resultado esperado em comparação ao obtido. Sugestões de calculadoras são especialmente bem-vindas - a maioria das ferramentas já disponíveis na Calquary começou como um pedido de leitor, e acompanhamos a frequência dos pedidos antes de decidir o que desenvolver a seguir.",
     },
     it: {
-      title: "Contattaci",
+      title: "Contattaci - Scrivi a Calquary",
       body: "Hai trovato un bug, hai un'idea per una calcolatrice o una domanda su come gestiamo i dati? Scrivici a hello@calquary.com - leggiamo ogni messaggio, anche se le risposte potrebbero richiedere alcuni giorni. Se stai segnalando un bug, è utile includere il nome della calcolatrice, i numeri inseriti e il risultato atteso rispetto a quello ottenuto. I suggerimenti per nuove calcolatrici sono particolarmente graditi - la maggior parte degli strumenti già presenti su Calquary è nata da una richiesta dei lettori, e teniamo traccia della frequenza delle richieste prima di decidere cosa sviluppare in seguito.",
     },
     ja: {
-      title: "お問い合わせ",
+      title: "お問い合わせ - Calquaryへのご連絡",
       body: "不具合の報告、計算ツールのアイデア、データの取り扱いについてのご質問などがございましたら、hello@calquary.com までご連絡ください。すべてのメッセージに目を通しておりますが、返信までに数日かかる場合があります。不具合を報告される際は、対象の計算ツール名、入力した数値、そして期待していた結果と実際の結果を書き添えていただけると助かります。新しい計算ツールのご提案も特に歓迎しています。Calquaryに掲載されているツールの多くは読者からのリクエストがきっかけで生まれており、リクエストの頻度を確認しながら次に開発するツールを決めています。",
     },
   },
@@ -1803,7 +1809,7 @@ const I18N_STATIC = {
 
   privacy: {
     en: {
-      title: "Privacy Policy",
+      title: "Privacy Policy - How Calquary Handles Your Data",
       effectiveDateLabel: "Effective date: August 18, 2026",
       sections: [
         { h2: "Overview", p: ['This Privacy Policy explains what information Calquary ("we," "us," "our") collects when you use calquary.com (the "Site"), how we use it, and the choices available to you. By using the Site, you agree to the practices described here.'] },
@@ -1823,7 +1829,7 @@ const I18N_STATIC = {
       ],
     },
     es: {
-      title: "Política de Privacidad",
+      title: "Política de Privacidad - Cómo Calquary Trata tus Datos",
       effectiveDateLabel: "Fecha de vigencia: 18 de agosto de 2026",
       sections: [
         { h2: "Resumen", p: ['Esta Política de Privacidad explica qué información recopila Calquary ("nosotros", "nos", "nuestro") cuando utilizas calquary.com (el "Sitio"), cómo la usamos y las opciones disponibles para ti. Al usar el Sitio, aceptas las prácticas aquí descritas.'] },
@@ -1843,7 +1849,7 @@ const I18N_STATIC = {
       ],
     },
     fr: {
-      title: "Politique de Confidentialité",
+      title: "Politique de Confidentialité - Vos Données chez Calquary",
       effectiveDateLabel: "Date d'entrée en vigueur : 18 août 2026",
       sections: [
         { h2: "Aperçu", p: ['Cette Politique de Confidentialité explique quelles informations Calquary (« nous », « notre ») collecte lorsque vous utilisez calquary.com (le « Site »), comment nous les utilisons, et les choix qui s\'offrent à vous. En utilisant le Site, vous acceptez les pratiques décrites ici.'] },
@@ -1863,7 +1869,7 @@ const I18N_STATIC = {
       ],
     },
     de: {
-      title: "Datenschutzerklärung",
+      title: "Datenschutzerklärung - Ihre Daten bei Calquary",
       effectiveDateLabel: "Datum des Inkrafttretens: 18. August 2026",
       sections: [
         { h2: "Überblick", p: ['Diese Datenschutzerklärung erläutert, welche Informationen Calquary („wir", „uns", „unser") erhebt, wenn Sie calquary.com (die „Website") nutzen, wie wir diese verwenden und welche Wahlmöglichkeiten Ihnen zur Verfügung stehen. Durch die Nutzung der Website stimmen Sie den hier beschriebenen Praktiken zu.'] },
@@ -1883,7 +1889,7 @@ const I18N_STATIC = {
       ],
     },
     pt: {
-      title: "Política de Privacidade",
+      title: "Política de Privacidade - Como a Calquary Trata seus Dados",
       effectiveDateLabel: "Data de vigência: 18 de agosto de 2026",
       sections: [
         { h2: "Visão geral", p: ['Esta Política de Privacidade explica quais informações a Calquary ("nós", "nosso") coleta quando você usa calquary.com (o "Site"), como as usamos e as opções disponíveis para você. Ao usar o Site, você concorda com as práticas aqui descritas.'] },
@@ -1903,7 +1909,7 @@ const I18N_STATIC = {
       ],
     },
     it: {
-      title: "Informativa sulla Privacy",
+      title: "Informativa sulla Privacy - I Tuoi Dati su Calquary",
       effectiveDateLabel: "Data di entrata in vigore: 18 agosto 2026",
       sections: [
         { h2: "Panoramica", p: ['Questa Informativa sulla Privacy spiega quali informazioni Calquary ("noi", "nostro") raccoglie quando utilizzi calquary.com (il "Sito"), come le utilizziamo e le scelte a tua disposizione. Utilizzando il Sito, accetti le pratiche qui descritte.'] },
@@ -1923,7 +1929,7 @@ const I18N_STATIC = {
       ],
     },
     ja: {
-      title: "プライバシーポリシー",
+      title: "プライバシーポリシー - Calquaryのデータの取り扱い",
       effectiveDateLabel: "発効日：2026年8月18日",
       sections: [
         { h2: "概要", p: ["本プライバシーポリシーは、calquary.com（以下「本サイト」）をご利用の際にCalquary（以下「当社」）が収集する情報、その利用方法、およびお客様が選択できる事項について説明するものです。本サイトをご利用いただくことで、ここに記載された取り扱いに同意したものとみなされます。"] },
@@ -1946,7 +1952,7 @@ const I18N_STATIC = {
 
   terms: {
     en: {
-      title: "Terms of Service",
+      title: "Terms of Service - Calquary Usage Terms",
       effectiveDateLabel: "Effective date: August 18, 2026",
       sections: [
         { h2: "Acceptance of terms", p: ['By accessing or using calquary.com (the "Site"), you agree to be bound by these Terms of Service. If you do not agree, please do not use the Site.'] },
@@ -1963,7 +1969,7 @@ const I18N_STATIC = {
       ],
     },
     es: {
-      title: "Términos de Servicio",
+      title: "Términos de Servicio - Condiciones de Uso de Calquary",
       effectiveDateLabel: "Fecha de vigencia: 18 de agosto de 2026",
       sections: [
         { h2: "Aceptación de los términos", p: ['Al acceder o utilizar calquary.com (el "Sitio"), aceptas quedar sujeto a estos Términos de Servicio. Si no estás de acuerdo, por favor no utilices el Sitio.'] },
@@ -1980,7 +1986,7 @@ const I18N_STATIC = {
       ],
     },
     fr: {
-      title: "Conditions d'Utilisation",
+      title: "Conditions d'Utilisation - Règles d'Usage de Calquary",
       effectiveDateLabel: "Date d'entrée en vigueur : 18 août 2026",
       sections: [
         { h2: "Acceptation des conditions", p: ['En accédant à calquary.com ou en l\'utilisant (le « Site »), vous acceptez d\'être lié par les présentes Conditions d\'Utilisation. Si vous n\'êtes pas d\'accord, veuillez ne pas utiliser le Site.'] },
@@ -1997,7 +2003,7 @@ const I18N_STATIC = {
       ],
     },
     de: {
-      title: "Nutzungsbedingungen",
+      title: "Nutzungsbedingungen - Regeln für Calquary",
       effectiveDateLabel: "Datum des Inkrafttretens: 18. August 2026",
       sections: [
         { h2: "Annahme der Bedingungen", p: ['Durch den Zugriff auf calquary.com oder dessen Nutzung (die „Website") erklären Sie sich mit diesen Nutzungsbedingungen einverstanden. Falls Sie nicht zustimmen, nutzen Sie die Website bitte nicht.'] },
@@ -2014,7 +2020,7 @@ const I18N_STATIC = {
       ],
     },
     pt: {
-      title: "Termos de Serviço",
+      title: "Termos de Serviço - Condições de Uso da Calquary",
       effectiveDateLabel: "Data de vigência: 18 de agosto de 2026",
       sections: [
         { h2: "Aceitação dos termos", p: ['Ao acessar ou utilizar calquary.com (o "Site"), você concorda em ficar vinculado a estes Termos de Serviço. Se você não concordar, não use o Site.'] },
@@ -2031,7 +2037,7 @@ const I18N_STATIC = {
       ],
     },
     it: {
-      title: "Termini di Servizio",
+      title: "Termini di Servizio - Regole d'Uso di Calquary",
       effectiveDateLabel: "Data di entrata in vigore: 18 agosto 2026",
       sections: [
         { h2: "Accettazione dei termini", p: ['Accedendo o utilizzando calquary.com (il "Sito"), accetti di essere vincolato da questi Termini di Servizio. Se non sei d\'accordo, ti preghiamo di non utilizzare il Sito.'] },
@@ -2048,7 +2054,7 @@ const I18N_STATIC = {
       ],
     },
     ja: {
-      title: "利用規約",
+      title: "利用規約 - Calquaryのご利用条件",
       effectiveDateLabel: "発効日：2026年8月18日",
       sections: [
         { h2: "規約への同意", p: ["calquary.com（以下「本サイト」）にアクセスまたはこれを利用することにより、お客様は本利用規約に拘束されることに同意したものとみなされます。同意されない場合は、本サイトをご利用にならないでください。"] },
