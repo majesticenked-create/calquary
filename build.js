@@ -538,6 +538,7 @@ function buildCategoryPage(template, locale, cat, calculators, I18N) {
   const ui = uiFor(I18N, locale);
   const name = locale === "en" ? cat.name : I18N.categories[cat.id][locale].name;
   const description = locale === "en" ? cat.description : I18N.categories[cat.id][locale].description;
+  const longDescription = locale === "en" ? cat.longDescription : I18N.categories[cat.id][locale].longDescription;
   const nameFull = categoryNameFull(locale, name, ui);
   const url = categoryUrl(locale, cat.id);
   const image = `${SITE_URL}/og-images/category-${cat.id}.png`;
@@ -551,6 +552,7 @@ function buildCategoryPage(template, locale, cat, calculators, I18N) {
     .split("{{CAT_ID}}").join(cat.id)
     .split("{{CAT_NAME_FULL}}").join(nameFull)
     .split("{{CAT_DESCRIPTION}}").join(description)
+    .split("{{CAT_LONG_DESCRIPTION}}").join(longDescription)
     .split("{{TRANSLATED_TOOL_IDS_JSON}}").join(JSON.stringify(translatedIds))
     .split("{{LOCALE_PATH}}").join(localePath(locale))
     .split("{{BREADCRUMB_HOME}}").join(ui.labels.breadcrumbHome)

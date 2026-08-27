@@ -77,7 +77,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-24",
+      "dateModified": "2026-08-27",
       "inLanguage": "en"
     },
     {
@@ -121,6 +121,14 @@
             "@type": "Answer",
             "text": "Search engines generally treat hyphens as word separators but not underscores, so hyphens are the standard choice for SEO-friendly URLs."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Should slugs include numbers or only letters?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Numbers are fine and commonly used in slugs (e.g., product model numbers or years), as long as they're separated by hyphens like other words - this generator preserves numbers while converting everything else to lowercase, hyphen-separated text."
+          }
         }
       ]
     }
@@ -156,7 +164,7 @@
       <main>
         <h1>Text to Slug Generator</h1>
         <p style="max-width:60ch;">Enter a title or phrase to convert it into a lowercase, hyphenated URL slug.</p>
-        <p class="last-updated">Last updated: August 24, 2026</p>
+        <p class="last-updated">Last updated: August 27, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -188,6 +196,10 @@
 <div class="faq-item">
 <h3>Why are spaces replaced with hyphens instead of underscores?</h3>
 <p>Search engines generally treat hyphens as word separators but not underscores, so hyphens are the standard choice for SEO-friendly URLs.</p>
+</div>
+<div class="faq-item">
+<h3>Should slugs include numbers or only letters?</h3>
+<p>Numbers are fine and commonly used in slugs (e.g., product model numbers or years), as long as they're separated by hyphens like other words - this generator preserves numbers while converting everything else to lowercase, hyphen-separated text.</p>
 </div></div>
         </div>
       </main>

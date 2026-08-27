@@ -77,7 +77,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-24",
+      "dateModified": "2026-08-27",
       "inLanguage": "en"
     },
     {
@@ -121,6 +121,14 @@
             "@type": "Answer",
             "text": "8 bits (1 byte) covers the standard ASCII character set (0-255), which includes all English letters, numbers, and common symbols."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if I enter a binary string that isn't a multiple of 8 bits?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Standard text encoding (ASCII/UTF-8) represents each character as a full 8-bit byte, so a binary string that isn't a clean multiple of 8 bits can't be converted to valid characters and will likely produce an error or unexpected result - double-check your binary input is grouped correctly."
+          }
         }
       ]
     }
@@ -156,7 +164,7 @@
       <main>
         <h1>Binary to Text Converter</h1>
         <p style="max-width:60ch;">Enter text or binary and choose a direction to convert between plain text and 8-bit binary.</p>
-        <p class="last-updated">Last updated: August 24, 2026</p>
+        <p class="last-updated">Last updated: August 27, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -188,6 +196,10 @@
 <div class="faq-item">
 <h3>Why 8 bits per character?</h3>
 <p>8 bits (1 byte) covers the standard ASCII character set (0-255), which includes all English letters, numbers, and common symbols.</p>
+</div>
+<div class="faq-item">
+<h3>What happens if I enter a binary string that isn't a multiple of 8 bits?</h3>
+<p>Standard text encoding (ASCII/UTF-8) represents each character as a full 8-bit byte, so a binary string that isn't a clean multiple of 8 bits can't be converted to valid characters and will likely produce an error or unexpected result - double-check your binary input is grouped correctly.</p>
 </div></div>
         </div>
       </main>

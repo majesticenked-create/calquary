@@ -77,7 +77,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-24",
+      "dateModified": "2026-08-27",
       "inLanguage": "en"
     },
     {
@@ -121,6 +121,14 @@
             "@type": "Answer",
             "text": "Storage manufacturers often use decimal units (1 GB = 1,000 MB) for marketing, while operating systems typically report binary units (1 GB = 1,024 MB) - this is why a \"1 TB\" drive shows less space than expected in your file explorer."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do hard drive capacities sometimes show less space than advertised?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Manufacturers typically calculate storage using decimal units (1 GB = 1,000,000,000 bytes), while operating systems often display capacity using binary units (1 GB = 1,073,741,824 bytes) - the same physical drive shows a smaller number under the binary convention, which is why advertised and displayed capacities don't always match."
+          }
         }
       ]
     }
@@ -156,7 +164,7 @@
       <main>
         <h1>Data Storage Converter</h1>
         <p style="max-width:60ch;">Enter a value and choose a starting unit to convert between bytes, kilobytes, megabytes, gigabytes, and terabytes.</p>
-        <p class="last-updated">Last updated: August 24, 2026</p>
+        <p class="last-updated">Last updated: August 27, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -188,6 +196,10 @@
 <div class="faq-item">
 <h3>Why do storage sizes sometimes not match what I expect?</h3>
 <p>Storage manufacturers often use decimal units (1 GB = 1,000 MB) for marketing, while operating systems typically report binary units (1 GB = 1,024 MB) - this is why a "1 TB" drive shows less space than expected in your file explorer.</p>
+</div>
+<div class="faq-item">
+<h3>Why do hard drive capacities sometimes show less space than advertised?</h3>
+<p>Manufacturers typically calculate storage using decimal units (1 GB = 1,000,000,000 bytes), while operating systems often display capacity using binary units (1 GB = 1,073,741,824 bytes) - the same physical drive shows a smaller number under the binary convention, which is why advertised and displayed capacities don't always match.</p>
 </div></div>
         </div>
       </main>

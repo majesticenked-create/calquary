@@ -797,3 +797,58 @@ EOF
 cd /Users/beyouenked/projects/formatiq
 node verify-faq3.js
 rm verify-faq3.js
+- `2026-08-27 15:06:06` | GUARD | LOW | WARNING: rm command allowed → cat > /Users/beyouenked/projects/formatiq/verify-full.js <<'EOF'
+const { chromium } = require('playwright');
+(async () => {
+  const browser = await chromium.launch();
+  const errors = [];
+  const pages = [
+    'http://localhost:8000/tool/leap-year-calculator.html',
+    'http://localhost:8000/tool/paver-calculator.html',
+    'http://localhost:8000/tool/cat-pregnancy-calculator.html',
+    'http://localhost:8000/tool/gcd-lcm-calculator.html',
+    'http://localhost:8000/category/construction.html',
+    'http://localhost:8000/es/category/pets.html',
+    'http://localhost:8000/de/category/finance.html',
+    'http://localhost:8000/ja/category/health.html',
+    'http://localhost:8000/pt/category/text.html',
+    'http://localhost:8000/it/category/conversions.html',
+    'http://localhost:8000/fr/category/datetime.html',
+  ];
+  for (const url of pages) {
+    const page = await browser.newPage();
+    page.on('console', m => { if (m.type() === 'error') errors.push(`${url}: ${m.text()}`); });
+    page.on('pageerror', e => errors.push(`${url}: ${e.message}`));
+    await page.goto(url, { waitUntil: 'networkidle' });
+    await page.waitForTimeout(200);
+    if (url.includes('/tool/')) {
+      const faqCount = await page.$$eval('.faq-item', els => els.length);
+      if (faqCount < 3) errors.push(`${url}: only ${faqCount} FAQ items`);
+    } else {
+      const paras = await page.$$eval('.category-hero p, .section p', els => els.map(e => e.textContent.length));
+      const hasLongText = paras.some(l => l > 100);
+      if (!hasLongText) errors.push(`${url}: no long-description paragraph found`);
+    }
+    await page.close();
+  }
+  await browser.close();
+  console.log(JSON.stringify({ errors }, null, 2));
+})();
+EOF
+cd /Users/beyouenked/projects/formatiq
+node verify-full.js
+rm verify-full.js
+- `2026-08-27 15:08:13` | GUARD | LOW | WARNING: rm command allowed → cat > /Users/beyouenked/projects/formatiq/shot-final.js <<'EOF'
+const { chromium } = require('playwright');
+(async () => {
+  const browser = await chromium.launch();
+  const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+  await page.goto('http://localhost:8000/category/construction.html', { waitUntil: 'networkidle' });
+  await page.waitForTimeout(300);
+  await page.screenshot({ path: '/Users/beyouenked/Documents/Calquary/.review-screenshots/category-longdesc.png', clip: { x: 0, y: 0, width: 1440, height: 500 } });
+  await browser.close();
+})();
+EOF
+cd /Users/beyouenked/projects/formatiq
+node shot-final.js
+rm shot-final.js

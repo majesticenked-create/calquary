@@ -12,14 +12,14 @@
 // type (homepage, category pages, all-calculators) renders the same icon
 // without duplicating this map per file.
 const CATEGORIES = [
-  { id: "math", code: "M", name: "Math", description: "Percentages, ratios, and everyday arithmetic.", icon: '<circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/><line x1="18" y1="6" x2="6" y2="18"/>' },
-  { id: "finance", code: "F", name: "Finance", description: "Loans, tipping, and everyday money math.", icon: '<line x1="5" y1="19" x2="5" y2="13"/><line x1="12" y1="19" x2="12" y2="9"/><line x1="19" y1="19" x2="19" y2="5"/>' },
-  { id: "construction", code: "C", name: "Construction & Home", description: "Materials, coverage, and project estimates.", icon: '<path d="M4 11.5 12 5l8 6.5"/><path d="M6 10v9h12v-9"/>' },
-  { id: "health", code: "H", name: "Health & Fitness", description: "Body metrics, pace, and training numbers.", icon: '<polyline points="3,12 8,12 10,6 14,18 16,12 21,12"/>' },
-  { id: "datetime", code: "D", name: "Date & Time", description: "Countdowns, durations, and age in days.", icon: '<circle cx="12" cy="12" r="8"/><line x1="12" y1="12" x2="12" y2="7"/><line x1="12" y1="12" x2="16" y2="14"/>' },
-  { id: "conversions", code: "V", name: "Everyday Conversions", description: "Units, measurements, and kitchen swaps.", icon: '<polyline points="16,3 20,7 16,11"/><line x1="20" y1="7" x2="4" y2="7"/><polyline points="8,13 4,17 8,21"/><line x1="4" y1="17" x2="20" y2="17"/>' },
-  { id: "text", code: "T", name: "Text & Digital", description: "Word counts and generators for everyday tasks.", icon: '<path d="M9 4h6M12 4v16M9 20h6"/>' },
-  { id: "pets", code: "P", name: "Pet & Lifestyle", description: "Age charts and everyday pet math.", icon: '<circle cx="12" cy="15.5" r="4"/><circle cx="5.5" cy="9" r="2"/><circle cx="10" cy="4.5" r="2"/><circle cx="14" cy="4.5" r="2"/><circle cx="18.5" cy="9" r="2"/>' },
+  { id: "math", code: "M", name: "Math", description: "Percentages, ratios, and everyday arithmetic.", longDescription: "From quick percentage calculations to statistics and algebra, this category covers the everyday math problems people actually search for - splitting a bill, checking a grade, or working out a ratio - without wading through a full scientific calculator's worth of unrelated functions.", icon: '<circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/><line x1="18" y1="6" x2="6" y2="18"/>' },
+  { id: "finance", code: "F", name: "Finance", description: "Loans, tipping, and everyday money math.", longDescription: "Loans, savings, taxes, and debt payoff all come down to a handful of well-known formulas - these calculators apply them to your actual numbers so you can see a real monthly payment, payoff timeline, or growth projection instead of reading about the formula in the abstract.", icon: '<line x1="5" y1="19" x2="5" y2="13"/><line x1="12" y1="19" x2="12" y2="9"/><line x1="19" y1="19" x2="19" y2="5"/>' },
+  { id: "construction", code: "C", name: "Construction & Home", description: "Materials, coverage, and project estimates.", longDescription: "Home improvement projects live or die on getting material quantities right - too little and you're back at the store mid-job, too much and you've overspent. These calculators turn room dimensions into concrete, flooring, paint, and lumber quantities, each with a waste allowance built in.", icon: '<path d="M4 11.5 12 5l8 6.5"/><path d="M6 10v9h12v-9"/>' },
+  { id: "health", code: "H", name: "Health & Fitness", description: "Body metrics, pace, and training numbers.", longDescription: "Body metrics like BMI, BMR, and body fat percentage are calculated from a handful of standard, published formulas - these tools apply them to your measurements so you get a number to work with, alongside a plain-language note on what that number does and doesn't tell you.", icon: '<polyline points="3,12 8,12 10,6 14,18 16,12 21,12"/>' },
+  { id: "datetime", code: "D", name: "Date & Time", description: "Countdowns, durations, and age in days.", longDescription: "Whether you're counting down to an event, figuring out how many business days are left, or working out someone's exact age, these calculators handle calendar math correctly - including leap years and weekday-only counts - so you don't have to count by hand.", icon: '<circle cx="12" cy="12" r="8"/><line x1="12" y1="12" x2="12" y2="7"/><line x1="12" y1="12" x2="16" y2="14"/>' },
+  { id: "conversions", code: "V", name: "Everyday Conversions", description: "Units, measurements, and kitchen swaps.", longDescription: "Unit conversions come up constantly in cooking, home projects, and everyday life - converting between metric and imperial, or figuring out how many cups a recipe's grams translate to. These tools handle the conversion instantly, with the underlying factor shown so you can trust the number.", icon: '<polyline points="16,3 20,7 16,11"/><line x1="20" y1="7" x2="4" y2="7"/><polyline points="8,13 4,17 8,21"/><line x1="4" y1="17" x2="20" y2="17"/>' },
+  { id: "text", code: "T", name: "Text & Digital", description: "Word counts and generators for everyday tasks.", longDescription: "Word counts, case conversion, and text generators handle the small text-processing tasks that come up while writing, coding, or formatting content - each one runs entirely in your browser, so nothing you type or paste is ever sent anywhere.", icon: '<path d="M9 4h6M12 4v16M9 20h6"/>' },
+  { id: "pets", code: "P", name: "Pet & Lifestyle", description: "Age charts and everyday pet math.", longDescription: "A dog year isn't really seven human years, and pregnancy length varies by species - these calculators use the actual age curves and gestation data for dogs, cats, rabbits, and horses instead of the oversimplified rules of thumb most people know.", icon: '<circle cx="12" cy="15.5" r="4"/><circle cx="5.5" cy="9" r="2"/><circle cx="10" cy="4.5" r="2"/><circle cx="14" cy="4.5" r="2"/><circle cx="18.5" cy="9" r="2"/>' },
 ];
 
 /* Each field: { id, label, type: number|select|date|text|textarea|checkbox-group,
@@ -80,6 +80,7 @@ const CALCULATORS = [
     faq: [
       { q: "What's the formula for percentage change?", a: "(New value − Old value) ÷ Old value × 100. A positive result is an increase; a negative result is a decrease." },
       { q: "Is percentage change the same as percentage point change?", a: "No - if a rate goes from 20% to 25%, that's a 5 percentage point increase, but a 25% percentage change ((25−20)÷20×100). Mixing the two up is a common reporting mistake." },
+      { q: "How do I calculate percentage change when the old value is negative?", a: "The formula still applies: (new − old) / |old| × 100, but using the absolute value of the old number in the denominator avoids a misleading sign flip - most financial and scientific contexts define percentage change this way specifically to keep the result intuitive." },
     ],
     related: ["percentage-calculator", "loan-calculator"],
   },
@@ -154,6 +155,7 @@ const CALCULATORS = [
     faq: [
       { q: "How do I add two fractions?", a: "Find a common denominator, convert both fractions, then add the numerators. 1/2 + 1/3 = 3/6 + 2/6 = 5/6." },
       { q: "How do I divide fractions?", a: "Multiply the first fraction by the reciprocal (flip) of the second. 1/2 ÷ 1/3 = 1/2 × 3/1 = 3/2." },
+      { q: "How do I convert a fraction to a decimal?", a: "Divide the numerator by the denominator. 3/4 becomes 3 ÷ 4 = 0.75. This calculator's fraction operations return a simplified fraction, which you can convert to a decimal the same way afterward." },
     ],
     related: ["gcd-lcm-calculator", "average-calculator", "percentage-calculator"],
   },
@@ -213,6 +215,7 @@ const CALCULATORS = [
     faq: [
       { q: "What's the standard deviation of 4, 8, 15, 16, 23, 42?", a: "About 13.49 using the sample formula (dividing by n−1), or 12.32 using the population formula (dividing by n) - the mean of this set is 18." },
       { q: "When should I use sample vs. population standard deviation?", a: "Use population standard deviation when your numbers represent the entire group you care about; use sample standard deviation when your numbers are a subset used to estimate a larger population's spread." },
+      { q: "What does a low vs. high standard deviation mean?", a: "A low standard deviation means the values cluster tightly around the mean, while a high standard deviation means they're spread out widely - it's a measure of consistency, not of the average itself." },
     ],
     related: ["average-calculator", "fraction-calculator", "gcd-lcm-calculator"],
   },
@@ -242,6 +245,7 @@ const CALCULATORS = [
     faq: [
       { q: "What's the square root of 144?", a: "12 - since 12 × 12 = 144, making 144 a perfect square." },
       { q: "Why don't negative numbers have a real square root?", a: "Any real number squared is positive (or zero), so no real number multiplied by itself can produce a negative result - negative square roots require imaginary numbers." },
+      { q: "How do I estimate a square root without a calculator?", a: "Find the two perfect squares your number falls between, then interpolate. For √50, it's between √49=7 and √64=8, closer to 7, so a reasonable estimate is about 7.07 - which matches the exact value." },
     ],
     related: ["gcd-lcm-calculator", "fraction-calculator", "average-calculator"],
   },
@@ -266,6 +270,7 @@ const CALCULATORS = [
     faq: [
       { q: "How do I simplify a ratio like 8:12?", a: "Divide both numbers by their greatest common divisor. GCD(8, 12) = 4, so 8:12 simplifies to 2:3." },
       { q: "How is a ratio different from a fraction?", a: "A ratio compares two quantities directly (like 2:3), while a fraction expresses one quantity as a part of a whole (like 2/3) - though the simplification math is the same." },
+      { q: "How do I scale a ratio to a different total?", a: "Divide the target total by the sum of the ratio parts, then multiply each part by that factor. To split $300 in a 2:3 ratio: 2+3=5 parts, $300÷5=$60 per part, so the split is $120 and $180." },
     ],
     related: ["fraction-calculator", "gcd-lcm-calculator", "percentage-calculator"],
   },
@@ -290,6 +295,7 @@ const CALCULATORS = [
     faq: [
       { q: "What is 2 to the 10th power?", a: "1,024 - doubling 2 ten times (2 × 2 × 2... ten times) gives 1,024." },
       { q: "What does a negative exponent mean?", a: "A negative exponent means the reciprocal of the positive power - for example, 2^-3 = 1 ÷ 2^3 = 1/8 = 0.125." },
+      { q: "What is any number raised to the power of 0?", a: "It equals 1, by definition, for any nonzero base - this isn't something you calculate from repeated multiplication, it's a mathematical convention that keeps the rules of exponents consistent (e.g., x^a ÷ x^a = x^0 = 1)." },
     ],
     related: ["square-root-calculator", "gcd-lcm-calculator", "quadratic-formula-calculator"],
   },
@@ -336,6 +342,7 @@ const CALCULATORS = [
     faq: [
       { q: "How do I solve x² − 3x + 2 = 0?", a: "Using the quadratic formula with a=1, b=−3, c=2: the discriminant is 9 − 8 = 1, giving two real roots x = 2 and x = 1." },
       { q: "What does a negative discriminant mean?", a: "A negative discriminant means the equation has no real solutions - the roots are complex numbers, since you'd need the square root of a negative number." },
+      { q: "What if a quadratic equation has no real solutions?", a: "That happens when the discriminant (b² − 4ac) is negative - the equation still has two solutions, but they're complex numbers involving the imaginary unit i, since you can't take the square root of a negative number within the real numbers." },
     ],
     related: ["exponent-calculator", "square-root-calculator", "fraction-calculator"],
   },
@@ -445,6 +452,7 @@ const CALCULATORS = [
     faq: [
       { q: "What's a standard tip percentage?", a: "In the US, 15–20% is typical for sit-down service; some people tip more for excellent service." },
       { q: "Should I tip on the pre-tax or post-tax total?", a: "Etiquette guides generally say tip on the pre-tax subtotal, but most people just tip on the total shown on the receipt - the difference is usually small enough not to matter." },
+      { q: "How do I split a tip evenly among a group?", a: "Add the tip to the bill first, then divide the total by the number of people - this calculator does that automatically once you enter the number of people, so everyone pays an equal share of both the bill and the tip." },
     ],
     related: ["loan-calculator", "percentage-calculator"],
   },
@@ -483,6 +491,7 @@ const CALCULATORS = [
     faq: [
       { q: "How does compound growth affect savings over time?", a: "Interest earns interest on itself, so the longer your money stays invested, the larger the share of your balance that comes from growth rather than contributions - this effect accelerates in later years." },
       { q: "What interest rate should I use for a savings calculator?", a: "Use your actual account's APY for savings accounts, or a conservative long-term average (historically 4–7%) for investment accounts - check your specific account terms for the current rate." },
+      { q: "How do monthly contributions compare to a one-time lump sum?", a: "Regular monthly contributions add up steadily and each one gets fewer years to compound than an early lump sum, so a lump sum invested early generally outgrows the same total amount contributed gradually - though most people find gradual saving far more realistic." },
     ],
     related: ["compound-interest-calculator", "mortgage-calculator", "loan-calculator"],
   },
@@ -543,6 +552,7 @@ const CALCULATORS = [
     faq: [
       { q: "How do I calculate sales tax on a purchase?", a: "Multiply the price by the tax rate as a decimal, then add that to the original price. For $49.99 at 7.25% tax: $49.99 × 0.0725 = $3.62 tax, for a total of $53.61." },
       { q: "Does sales tax rate vary by location?", a: "Yes - sales tax rates are set by state, county, and sometimes city, so the combined rate can vary significantly even within the same state. Check your local rate before relying on a default." },
+      { q: "Is sales tax calculated on the price before or after other discounts?", a: "Sales tax is almost always calculated on the final sale price after discounts are applied, not on the original list price - so apply any discount first, then calculate tax on the reduced amount." },
     ],
     related: ["discount-calculator", "tip-calculator", "percentage-calculator"],
   },
@@ -571,6 +581,7 @@ const CALCULATORS = [
     faq: [
       { q: "How do I calculate a sale price from a discount percentage?", a: "Multiply the original price by the discount percentage as a decimal to get the amount saved, then subtract that from the original price. For $80 at 25% off: $80 × 0.25 = $20 saved, for a sale price of $60." },
       { q: "How do I stack multiple discounts?", a: "Apply each discount to the price remaining after the previous one, not to the original price - two 20% discounts stacked equal a 36% total discount, not 40%." },
+      { q: "Is a 50% off then an additional 20% off the same as 70% off?", a: "No - stacked discounts multiply, they don't add. 50% off leaves 50%, then another 20% off that leaves 40% of the original price, which is a 60% total discount, not 70%." },
     ],
     related: ["sales-tax-calculator", "tip-calculator", "percentage-calculator"],
   },
@@ -604,6 +615,7 @@ const CALCULATORS = [
     faq: [
       { q: "How long will it take to pay off $8,000 at 19.99% with $250/month payments?", a: "About 47 months (just under 4 years), paying roughly $3,750 in total interest on top of the original $8,000 balance." },
       { q: "Why does my payment need to exceed the monthly interest?", a: "If your payment is less than the interest charged that month, the balance grows instead of shrinking - this is why credit cards with low minimum payments can take decades to pay off." },
+      { q: "Does paying off the highest-interest debt first save the most money?", a: "Generally yes - this is the 'avalanche' method, and it minimizes total interest paid over time since more of your payment goes toward the balance accruing interest fastest, though some people prefer the 'snowball' method (smallest balance first) for the psychological win of clearing accounts sooner." },
     ],
     related: ["credit-card-payoff-calculator", "loan-calculator", "compound-interest-calculator"],
   },
@@ -645,6 +657,7 @@ const CALCULATORS = [
     faq: [
       { q: "How long does it take to pay off $5,000 in credit card debt with minimum payments?", a: "At 22.99% APR with a typical minimum payment structure (interest + 1% of balance), about 232 months - over 19 years - paying roughly $8,489 in interest on a $5,000 balance." },
       { q: "Why do minimum payments take so long to pay off a balance?", a: "Minimum payments are calculated as a small percentage of the balance, so as the balance shrinks, the required payment shrinks too - most of each payment goes to interest early on, dramatically stretching out payoff time." },
+      { q: "Does making more than the minimum payment really make that big a difference?", a: "Yes, dramatically - because minimum payments on revolving credit are often set just above the monthly interest charge, even a modest extra payment each month can cut years off the payoff timeline and save substantial interest." },
     ],
     related: ["debt-payoff-calculator", "loan-calculator", "savings-calculator"],
   },
@@ -684,6 +697,7 @@ const CALCULATORS = [
     faq: [
       { q: "How does a trade-in affect my auto loan?", a: "A trade-in reduces both your amount financed and, in most states, the taxable amount - a $5,000 trade-in on a $32,000 car with 6.5% tax saves you $325 in sales tax compared to paying tax on the full price." },
       { q: "Should I finance the sales tax on my car loan?", a: "Many buyers roll sales tax into the loan rather than paying it upfront - this increases your amount financed and total interest paid, but keeps more cash on hand at purchase." },
+      { q: "Is it better to put more money down or take a longer loan term?", a: "A larger down payment reduces both your monthly payment and total interest paid, while a longer term only lowers the monthly payment while increasing total interest - a bigger down payment is almost always the better deal if you can afford it." },
     ],
     related: ["loan-calculator", "sales-tax-calculator", "debt-payoff-calculator"],
   },
@@ -724,6 +738,7 @@ const CALCULATORS = [
     faq: [
       { q: "Why does inflation matter for investment projections?", a: "A dollar in 20 years buys less than a dollar today - showing only the nominal future value overstates how much better off you'll actually be, so adjusting for inflation gives a more honest picture." },
       { q: "What return rate should I use for an investment calculator?", a: "7% is a commonly used long-term average for a diversified stock portfolio after inflation is roughly accounted for in nominal terms, but actual returns vary significantly year to year - use a conservative estimate for planning." },
+      { q: "How does contribution frequency affect long-term growth?", a: "More frequent contributions (monthly vs. annually) let your money start compounding sooner on average, which produces a modestly higher final balance for the same total amount contributed over the same period." },
     ],
     related: ["savings-calculator", "compound-interest-calculator", "mortgage-calculator"],
   },
@@ -822,6 +837,7 @@ const CALCULATORS = [
     faq: [
       { q: "How much mulch do I need for 200 sq ft?", a: "At 3 inches deep, 200 sq ft needs about 1.85 cubic yards before waste allowance - roughly 28 bags of 2 cu ft mulch." },
       { q: "How deep should mulch be?", a: "2–3 inches is standard for most garden beds. Less than 2 inches won't suppress weeds well; more than 4 inches can smother roots and hold too much moisture." },
+      { q: "Does mulch depth vary by type of mulch?", a: "Yes - shredded bark and wood chips typically work well at 2-3 inches deep, while finer materials like compost or straw are often applied thinner (1-2 inches) since they break down and compact faster." },
     ],
     related: ["gravel-calculator", "concrete-calculator", "unit-length-converter"],
   },
@@ -855,6 +871,7 @@ const CALCULATORS = [
     faq: [
       { q: "How much gravel do I need for a 20x10 driveway?", a: "At 4 inches deep, a 20×10 ft area needs about 2.47 cubic yards before waste allowance - roughly 3.46 tons at typical gravel density." },
       { q: "How many tons is a cubic yard of gravel?", a: "About 1.4 tons per cubic yard for most crushed stone and gravel, though density varies by material - pea gravel and crushed granite can differ slightly." },
+      { q: "Should I compact the base layer before adding gravel?", a: "Yes for most projects - a compacted sub-base (often crushed stone) prevents the gravel layer above it from settling unevenly over time, which is especially important under driveways and walkways that see regular weight." },
     ],
     related: ["mulch-calculator", "paver-calculator", "concrete-calculator"],
   },
@@ -918,6 +935,7 @@ const CALCULATORS = [
     faq: [
       { q: "How many sheets of drywall do I need for 400 sq ft of wall?", a: "At a 10% waste allowance, 400 sq ft needs about 14 standard 4×8 ft sheets (32 sq ft each)." },
       { q: "Why do I need extra drywall for waste?", a: "Cuts around outlets, corners, doorways, and windows use extra material - a 10% allowance keeps you from running short mid-job." },
+      { q: "What size drywall sheets are standard?", a: "4×8 feet (32 sq ft) is the most common size for walls and ceilings, though 4×12 sheets are also used on larger walls to reduce the number of seams - this calculator assumes the standard 4×8 sheet unless you adjust the coverage value." },
     ],
     related: ["paint-calculator", "flooring-calculator", "concrete-calculator", "insulation-calculator"],
   },
@@ -952,6 +970,7 @@ const CALCULATORS = [
     faq: [
       { q: "How many 12x12 tiles do I need for 100 sq ft?", a: "With a 1/8 inch grout line and 10% waste allowance, 100 sq ft needs about 108 tiles." },
       { q: "Why does grout line width affect tile count?", a: "Grout lines add space between tiles, slightly increasing each tile's effective footprint - over a large room this adds up to a few extra tiles beyond a simple area ÷ tile size calculation." },
+      { q: "Should I buy extra tile beyond the waste allowance for future repairs?", a: "It's a common practice to keep a few extra tiles from the same production batch/dye lot specifically for future repairs, since tile colors can vary slightly between manufacturing batches and an exact match may not be available later." },
     ],
     related: ["flooring-calculator", "paint-calculator", "unit-length-converter"],
   },
@@ -984,6 +1003,7 @@ const CALCULATORS = [
     faq: [
       { q: "How many squares of shingles do I need for a 1500 sq ft roof with a 6/12 pitch?", a: "A 6/12 pitch increases the flat footprint area by about 11.8% - 1500 sq ft becomes roughly 1677 sq ft of actual roof, or about 19 squares including a 10% waste allowance." },
       { q: "What is a roofing square?", a: "A roofing square is a standard unit equal to 100 sq ft of roof area - shingles and other roofing materials are typically priced and sold by the square." },
+      { q: "Why does roof pitch matter for material estimates?", a: "A steeper pitch means more actual roof surface area than the same footprint on a flatter roof, since the roof plane is longer at a steeper angle - this calculator's pitch factor accounts for that difference so the material estimate reflects the true surface, not just the building's footprint." },
     ],
     related: ["lumber-calculator", "concrete-calculator", "unit-length-converter"],
   },
@@ -1014,6 +1034,7 @@ const CALCULATORS = [
     faq: [
       { q: "How many posts do I need for 100 feet of fence?", a: "At 8 ft panel spacing, 100 ft of fence needs 13 panels and 14 posts - one extra post to close both ends of the run." },
       { q: "Why is post count one more than panel count?", a: "Each panel needs a post at both ends, but adjacent panels share a post, so total posts always equal panels plus one for a straight run." },
+      { q: "How far apart should fence posts be spaced?", a: "6 to 8 feet apart is typical for most residential fencing, though the exact spacing depends on the panel size you're using and local wind/soil conditions - check your specific fence panel's recommended spacing before finalizing post count." },
     ],
     related: ["lumber-calculator", "gravel-calculator", "unit-length-converter"],
   },
@@ -1048,6 +1069,7 @@ const CALCULATORS = [
     faq: [
       { q: "How many bags of insulation do I need for R-49 in an 800 sq ft attic?", a: "At 2.5 R-value per inch, R-49 needs about 19.6 inches of depth - roughly 46 bags at a 30 cu ft yield per bag, including a 5% waste allowance." },
       { q: "Why does R-value per inch matter?", a: "Different insulation types cover different R-value per inch - fiberglass and cellulose have different coverage charts, so using the wrong figure will throw off your bag count." },
+      { q: "What R-value do I need for my attic?", a: "Recommended attic R-values vary by climate zone, generally ranging from R-30 in warmer regions to R-49 or higher in colder ones - check your local building code or the U.S. Department of Energy's zone map for the recommended value in your area." },
     ],
     related: ["drywall-calculator", "paint-calculator", "unit-length-converter"],
   },
@@ -1079,6 +1101,7 @@ const CALCULATORS = [
     faq: [
       { q: "How do I calculate board feet?", a: "Multiply thickness in inches × width in inches × length in feet, then divide by 12. A 1.5×5.5×8 ft board (actual dimensions of a nominal 2×6×8) works out to 5.5 board feet." },
       { q: "Why use actual dimensions instead of nominal?", a: "A nominal 2×6 actually measures about 1.5×5.5 inches after milling and drying - using nominal dimensions overstates board feet and your order." },
+      { q: "Why is lumber priced and measured in board feet?", a: "A board foot is a volume measurement (12 in × 12 in × 1 in), which lets lumber of different lengths, widths, and thicknesses be compared and priced on a consistent basis - it's more useful than linear feet once boards vary in width or thickness." },
     ],
     related: ["fence-calculator", "roofing-calculator", "concrete-calculator"],
   },
@@ -1112,6 +1135,7 @@ const CALCULATORS = [
     faq: [
       { q: "How many 12x12 pavers do I need for 200 sq ft?", a: "At a 10% waste allowance, 200 sq ft needs about 220 pavers of 12×12 inch size." },
       { q: "Why add waste for pavers?", a: "Cuts around edges, curves, and borders - plus occasional breakage during installation - typically use about 10% more pavers than the flat area math suggests." },
+      { q: "How much sand or base material do I need under pavers?", a: "A typical base is 4-6 inches of compacted gravel topped with 1 inch of leveling sand, though exact depth depends on soil conditions and whether the area will bear vehicle weight - this calculator estimates paver count only, not base material." },
     ],
     related: ["gravel-calculator", "concrete-calculator", "unit-length-converter"],
   },
@@ -1251,6 +1275,7 @@ const CALCULATORS = [
     faq: [
       { q: "How accurate is the U.S. Navy body fat method?", a: "It's generally within 3–4% of more precise methods like DEXA scans for most body types, making it a reasonably reliable estimate without special equipment." },
       { q: "Why does the formula use neck and waist measurements?", a: "The Navy method correlates body fat with the ratio between waist (and hip, for women) circumference relative to neck circumference and height - larger waist-to-neck ratios generally indicate higher body fat." },
+      { q: "How does the U.S. Navy method compare to other body fat measurement methods?", a: "It's less precise than methods like DEXA scans or hydrostatic weighing, but it's far more accessible since it only needs a tape measure - it's generally considered reasonably accurate for tracking trends over time, even if the absolute number carries more error than a clinical method." },
     ],
     related: ["bmi-calculator", "calorie-calculator", "bmr-calculator", "ideal-weight-calculator"],
   },
@@ -1283,6 +1308,7 @@ const CALCULATORS = [
     faq: [
       { q: "How do I convert macro percentages to grams?", a: "Multiply your daily calories by the macro's percentage, then divide by its calories per gram - 4 for protein and carbs, 9 for fat. At 2,500 calories with a 30/30/40 split: 188g protein, 83g fat, 250g carbs." },
       { q: "What's a good macro split for weight loss?", a: "A higher-protein split (30-40% protein) is common for weight loss to help preserve muscle mass, but the right split depends on your activity level, goals, and personal preference - there's no single universal ratio." },
+      { q: "Should my macro split change based on my goal?", a: "Yes - a higher protein percentage is common when the goal is muscle retention during a calorie deficit, while a higher carbohydrate percentage often suits endurance training, so the ideal split shifts depending on whether you're cutting, maintaining, or focused on performance." },
     ],
     related: ["calorie-calculator", "bmr-calculator", "one-rep-max-calculator"],
   },
@@ -1314,6 +1340,7 @@ const CALCULATORS = [
     faq: [
       { q: "How much water should I drink based on my weight?", a: "A common guideline is half your body weight in pounds, converted to ounces - a 180 lb person would target about 90 oz per day before accounting for exercise." },
       { q: "Does exercise increase how much water I need?", a: "Yes - sweat losses during exercise increase your fluid needs. This calculator adds roughly 12 oz for every 30 minutes of activity as a general estimate." },
+      { q: "Does this account for water from food, not just drinks?", a: "No - this estimates fluid intake from drinking specifically; roughly 20% of daily water intake typically comes from food, so your actual total hydration needs are somewhat lower than the drinking-only figure this calculator returns." },
     ],
     related: ["calorie-calculator", "bmi-calculator", "bmr-calculator"],
   },
@@ -1342,6 +1369,7 @@ const CALCULATORS = [
     faq: [
       { q: "What's the formula for estimating one-rep max?", a: "The Epley formula: 1RM = weight × (1 + reps ÷ 30). Lifting 185 lb for 5 reps estimates a one-rep max of about 216 lb." },
       { q: "Why use percentages of 1RM for training?", a: "Training programs often prescribe a percentage of your 1RM (like 80% for strength work) to target specific adaptations - knowing your estimated max lets you calculate the right weight for any given percentage." },
+      { q: "How accurate are 1RM formulas for very low or very high rep counts?", a: "They're most accurate in the 2-10 rep range - estimates from sets of 1-2 reps are close to the true max by definition, but formulas become progressively less reliable above about 12 reps, since fatigue and endurance start to matter more than pure strength." },
     ],
     related: ["macro-calculator", "bmr-calculator", "pace-calculator"],
   },
@@ -1370,6 +1398,7 @@ const CALCULATORS = [
     faq: [
       { q: "How do I calculate my maximum heart rate?", a: "The most common estimate is 220 minus your age - for a 30-year-old, that's 190 bpm. It's a population average, not a precise individual measurement." },
       { q: "What heart rate zone should I train in to burn fat?", a: "The 60-70% zone of your max heart rate is often called the 'fat-burn' zone - for a 30-year-old with a 190 bpm max, that's roughly 114-133 bpm. Higher zones burn more total calories despite a lower fat percentage." },
+      { q: "Why use the Karvonen formula instead of just a percentage of max heart rate?", a: "The Karvonen formula factors in your resting heart rate, which accounts for individual fitness differences - two people with the same max heart rate but very different resting heart rates will get more personalized, accurate training zones from Karvonen than from a simple percentage of max alone." },
     ],
     related: ["pace-calculator", "bmr-calculator", "one-rep-max-calculator"],
   },
@@ -1399,6 +1428,7 @@ const CALCULATORS = [
     faq: [
       { q: "How is ideal body weight calculated?", a: "The Devine formula starts at a base weight for 5 feet of height (50 kg for men, 45.5 kg for women) and adds 2.3 kg for each inch over 5 feet - a 5'10\" man works out to about 161 lb." },
       { q: "Is the Devine formula a good weight-loss target?", a: "Not necessarily - it doesn't account for muscle mass, frame size, or individual body composition, so it's better used as a rough medical reference than a personal fitness goal." },
+      { q: "Why do ideal weight formulas differ from healthy BMI ranges?", a: "Ideal weight formulas like Devine were originally developed for medical dosing calculations, not as fitness or aesthetic targets, and they don't account for muscle mass or frame size the way a BMI range or body composition assessment might - they're a rough reference point, not a strict target." },
     ],
     related: ["bmi-calculator", "body-fat-calculator", "calorie-calculator"],
   },
@@ -1430,6 +1460,7 @@ const CALCULATORS = [
     faq: [
       { q: "How do I calculate running pace?", a: "Divide your total time by your total distance. For a 5K in 28 minutes, pace per mile = 28 ÷ 3.1 ≈ 9:02 per mile." },
       { q: "How do I convert pace to speed?", a: "Divide 60 by your pace in minutes per mile (or km) to get mph (or km/h). A 9:00/mile pace is 60 ÷ 9 ≈ 6.7 mph." },
+      { q: "How do I use pace to predict a race finish time?", a: "Multiply your per-mile or per-km pace by the total race distance - if your training pace is 9:00/mile, a 13.1-mile half marathon at that same pace would finish in roughly 1:58:00, though most runners' actual race pace differs somewhat from training pace." },
     ],
     related: ["bmi-calculator", "heart-rate-zone-calculator", "days-until-calculator"],
   },
@@ -1533,6 +1564,7 @@ const CALCULATORS = [
     faq: [
       { q: "How many business days are in January 2024?", a: "23 business days between January 1 and January 31, 2024 - the month has 31 calendar days, 8 of which fall on a weekend." },
       { q: "Does this include public holidays?", a: "No - this calculator only excludes Saturdays and Sundays. Public holidays vary by country and organization, so subtract any that apply to your situation separately." },
+      { q: "Can this account for a custom work week (not Monday-Friday)?", a: "This calculator assumes the standard Monday-through-Friday work week; if your business operates on a different schedule (e.g., Sunday-Thursday), you'd need to manually adjust the count for the days that differ from the standard assumption." },
     ],
     related: ["date-duration-calculator", "days-until-calculator", "time-duration-calculator"],
   },
@@ -1572,6 +1604,7 @@ const CALCULATORS = [
     faq: [
       { q: "How many hours between 9:00 AM and 5:30 PM?", a: "8 hours and 30 minutes - a common full work day with a half-hour beyond the standard 8-hour shift." },
       { q: "What happens if the end time is earlier than the start time?", a: "The calculator assumes the span crosses midnight into the next day - for example, 10 PM to 6 AM is treated as an 8-hour overnight duration, not a negative number." },
+      { q: "How do I calculate duration across a time zone change?", a: "This calculator assumes both times are in the same time zone; if you're comparing times across zones, convert both to the same time zone first (e.g., using a time zone converter), then calculate the duration between the converted times." },
     ],
     related: ["business-days-calculator", "date-duration-calculator", "pace-calculator"],
   },
@@ -1601,6 +1634,7 @@ const CALCULATORS = [
     faq: [
       { q: "What week number is June 15, 2024?", a: "Week 24 of 2024, using the ISO 8601 standard where weeks start on Monday." },
       { q: "Why does ISO week numbering matter?", a: "ISO 8601 week numbers are used widely in business, manufacturing, and international scheduling because they give every week a consistent, unambiguous number that doesn't reset awkwardly mid-week at year boundaries." },
+      { q: "Does every year have exactly 52 weeks?", a: "No - the ISO week-numbering system means most years have 52 weeks, but years where January 1 falls on a Thursday (or it's a leap year starting on Wednesday) get a 53rd week, since ISO weeks are defined by whole Monday-to-Sunday periods within the year." },
     ],
     related: ["date-duration-calculator", "day-of-week-calculator", "leap-year-calculator"],
   },
@@ -1626,6 +1660,7 @@ const CALCULATORS = [
     faq: [
       { q: "What day of the week was January 1, 2000?", a: "Saturday. The new millennium began on a Saturday." },
       { q: "How is the day of the week calculated for any date?", a: "It follows the standard Gregorian calendar's repeating 7-day cycle, accounting for leap years - the same logic your phone or computer's calendar app uses internally." },
+      { q: "Can this calculate the day of the week for historical dates, like the 1800s?", a: "Yes - the underlying calculation works directly from the Gregorian calendar's date rules, so it correctly returns the day of the week for any valid date, whether decades in the past or far in the future." },
     ],
     related: ["week-number-calculator", "date-duration-calculator", "leap-year-calculator"],
   },
@@ -1654,6 +1689,7 @@ const CALCULATORS = [
     faq: [
       { q: "Is 2024 a leap year?", a: "Yes - 2024 is divisible by 4 and not a century year, so it's a leap year with 366 days. The next leap year after 2024 is 2028." },
       { q: "What's the rule for leap years?", a: "A year is a leap year if it's divisible by 4, except century years (divisible by 100), which must also be divisible by 400 - so 2000 was a leap year, but 1900 and 2100 are not." },
+      { q: "Are century years always leap years?", a: "No - century years (like 1900 or 2100) are leap years only if divisible by 400, not just by 4. That's why 2000 was a leap year but 1900 and 2100 are not - this extra rule keeps the calendar aligned with the solar year over long periods." },
     ],
     related: ["week-number-calculator", "day-of-week-calculator", "date-duration-calculator"],
   },
@@ -1785,6 +1821,7 @@ const CALCULATORS = [
     faq: [
       { q: "How many kilograms is 150 pounds?", a: "150 lb equals about 68.04 kg. To convert pounds to kilograms, multiply by 0.453592." },
       { q: "What's the difference between weight and mass?", a: "In everyday use they're treated as the same - this converter, like most scales and recipes, converts weight units (kg, lb, oz, g) directly without distinguishing mass from gravitational weight, which is accurate for anything happening on Earth's surface." },
+      { q: "Why do some scales show a slightly different number than an exact conversion?", a: "Most bathroom and kitchen scales round to the nearest whole unit or a fixed decimal place for readability, so a small rounding gap between the scale's display and an exact mathematical conversion is normal and doesn't indicate an error in either one." },
     ],
     related: ["unit-length-converter", "volume-converter", "temperature-converter", "speed-converter"],
   },
@@ -1816,6 +1853,7 @@ const CALCULATORS = [
     faq: [
       { q: "How many liters is a gallon?", a: "1 US gallon equals about 3.785 liters. To convert gallons to liters, multiply by 3.78541." },
       { q: "Is a US gallon the same as a UK gallon?", a: "No - a US gallon (3.785 L) is smaller than a UK/imperial gallon (4.546 L). This converter uses US gallons; adjust accordingly if you need imperial units." },
+      { q: "Why is a US pint different from an imperial pint?", a: "The US and imperial (UK) systems define their base units differently - a US gallon is smaller than an imperial gallon, and since a pint is defined as a fraction of a gallon in each system, US pints (16 fl oz) end up smaller than imperial pints (20 fl oz)." },
     ],
     related: ["cooking-converter", "weight-converter", "unit-length-converter"],
   },
@@ -1847,6 +1885,7 @@ const CALCULATORS = [
     faq: [
       { q: "Why does 1 cup of flour and 1 cup of sugar weigh different amounts?", a: "Cups measure volume, not weight - denser ingredients like sugar weigh more per cup than lighter ones like flour." },
       { q: "How much does a stick of butter weigh in this converter?", a: "A standard US stick of butter is 1/2 cup, which converts to about 113.5g - half of the 227g-per-cup figure this calculator uses." },
+      { q: "Why does the type of flour affect its weight per cup?", a: "How densely the flour is packed into the measuring cup - and differences between flour types like all-purpose, bread, or cake flour - both affect weight per cup, which is why professional recipes often specify weight rather than cup measurements for consistency." },
     ],
     related: ["unit-length-converter", "volume-converter", "paint-calculator"],
   },
@@ -1878,6 +1917,7 @@ const CALCULATORS = [
     faq: [
       { q: "How many km/h is 60 mph?", a: "60 mph equals about 96.56 km/h. To convert mph to km/h, divide by 0.621371 (or multiply by about 1.60934)." },
       { q: "What's the difference between knots and mph?", a: "A knot is one nautical mile per hour, which is slightly longer than a statute mile - 1 knot ≈ 1.15 mph. Knots are standard in marine and aviation navigation; mph is standard for road speeds in the US." },
+      { q: "What's the difference between speed over ground and airspeed?", a: "This converter handles simple unit conversion (mph, km/h, knots, etc.) for a single speed value; it doesn't account for wind or current effects that separate 'speed over ground' from 'airspeed' or 'water speed' in aviation and marine contexts, which require additional variables beyond unit conversion." },
     ],
     related: ["unit-length-converter", "weight-converter", "pace-calculator"],
   },
@@ -1909,6 +1949,7 @@ const CALCULATORS = [
     faq: [
       { q: "How many acres is 1,000 square feet?", a: "1,000 sq ft equals about 0.023 acres. To convert square feet to acres, divide by 43,560." },
       { q: "How big is an acre in more relatable terms?", a: "An acre is about 43,560 sq ft - roughly the size of a standard American football field without the end zones, or about 90% of one." },
+      { q: "How is a hectare different from an acre?", a: "A hectare is a metric unit (10,000 square meters) commonly used outside the US, while an acre is an imperial unit (43,560 square feet) common in the US and UK - one hectare is approximately 2.47 acres." },
     ],
     related: ["unit-length-converter", "concrete-calculator", "flooring-calculator"],
   },
@@ -1940,6 +1981,7 @@ const CALCULATORS = [
     faq: [
       { q: "How many MB is a GB?", a: "1 GB equals 1,024 MB using the binary convention this calculator uses (1 KB = 1,024 bytes) - this is standard for computing contexts like file sizes and RAM." },
       { q: "Why do storage sizes sometimes not match what I expect?", a: "Storage manufacturers often use decimal units (1 GB = 1,000 MB) for marketing, while operating systems typically report binary units (1 GB = 1,024 MB) - this is why a \"1 TB\" drive shows less space than expected in your file explorer." },
+      { q: "Why do hard drive capacities sometimes show less space than advertised?", a: "Manufacturers typically calculate storage using decimal units (1 GB = 1,000,000,000 bytes), while operating systems often display capacity using binary units (1 GB = 1,073,741,824 bytes) - the same physical drive shows a smaller number under the binary convention, which is why advertised and displayed capacities don't always match." },
     ],
     related: ["unit-length-converter", "word-counter", "password-generator"],
   },
@@ -1971,6 +2013,7 @@ const CALCULATORS = [
     faq: [
       { q: "How many PSI is 2 bar?", a: "2 bar equals about 29 PSI. To convert bar to PSI, multiply by 14.5038 - useful for checking tire pressure specs listed in bar." },
       { q: "What tire pressure unit does my car use?", a: "US vehicles almost always list tire pressure in PSI (on the door jamb sticker); most other countries use bar or kPa. If your car's manual or tire spec is in bar or kPa, convert it to PSI here before checking with a US-standard gauge." },
+      { q: "Why are there so many different pressure units?", a: "Different fields settled on different standards historically - PSI is common in the US for tires and mechanical work, bar and kPa are common in metric countries and scientific contexts, and atmospheres (atm) are often used in chemistry - this converter handles the conversion between all of them." },
     ],
     related: ["unit-length-converter", "weight-converter", "fuel-economy-converter"],
   },
@@ -2009,6 +2052,7 @@ const CALCULATORS = [
     faq: [
       { q: "How do I convert MPG to L/100km?", a: "Divide 235.214 by the MPG value. A car getting 25 MPG uses about 9.41 L/100km - the relationship is inverse, so higher MPG means lower L/100km." },
       { q: "Why is the MPG to L/100km conversion not a simple multiplication?", a: "MPG measures distance per unit of fuel, while L/100km measures fuel per unit of distance - they're reciprocals of each other, so the conversion involves division rather than a fixed multiplier." },
+      { q: "Why does a higher MPG number mean a lower L/100km number?", a: "MPG measures distance per unit of fuel (higher is better), while L/100km measures fuel per unit of distance (lower is better) - they're inverse measurements, so the relationship between them isn't linear, which is also why the conversion isn't a simple multiplication." },
     ],
     related: ["unit-length-converter", "pressure-converter", "volume-converter"],
   },
@@ -2116,6 +2160,7 @@ const CALCULATORS = [
     faq: [
       { q: "Is this random number generator truly random?", a: "It uses your browser's built-in Math.random(), which is pseudo-random and suitable for games, giveaways, and everyday decisions - but not for cryptographic or security purposes." },
       { q: "Can I generate multiple random numbers at once?", a: "Yes - set 'how many numbers' to any value up to 50 to generate a list of random numbers within your chosen range in one click." },
+      { q: "Can I exclude specific numbers from the random range?", a: "This calculator generates uniformly from the full range you specify (minimum to maximum); to exclude specific values, generate a number and simply re-roll if it matches an excluded value, or narrow the range if the excluded values are all at one end." },
     ],
     related: ["password-generator", "word-counter", "gcd-lcm-calculator"],
   },
@@ -2184,6 +2229,7 @@ const CALCULATORS = [
     faq: [
       { q: "What is Lorem Ipsum text used for?", a: "It's placeholder text used in design mockups and layouts so viewers focus on visual design rather than being distracted by readable content." },
       { q: "Why does Lorem Ipsum look like Latin?", a: "It's derived from a passage of Cicero's 1st-century BC text on Latin ethics - the words were scrambled and altered over centuries of use in printing and typesetting to become the standard placeholder text used today." },
+      { q: "Is Lorem Ipsum actual Latin with real meaning?", a: "No - it's scrambled and altered from a passage of Cicero's writing from 45 BC, to the point that it no longer forms coherent Latin sentences. That's intentional: it needs to look like real language at a glance without any actual meaning that could distract from evaluating a design." },
     ],
     related: ["case-converter", "word-counter", "password-generator"],
   },
@@ -2211,6 +2257,7 @@ const CALCULATORS = [
     faq: [
       { q: "What makes a good URL slug?", a: "Lowercase letters, numbers, and hyphens only - no spaces, punctuation, or special characters. Slugs should be short, readable, and describe the page content." },
       { q: "Why are spaces replaced with hyphens instead of underscores?", a: "Search engines generally treat hyphens as word separators but not underscores, so hyphens are the standard choice for SEO-friendly URLs." },
+      { q: "Should slugs include numbers or only letters?", a: "Numbers are fine and commonly used in slugs (e.g., product model numbers or years), as long as they're separated by hyphens like other words - this generator preserves numbers while converting everything else to lowercase, hyphen-separated text." },
     ],
     related: ["case-converter", "word-counter", "word-frequency-counter"],
   },
@@ -2243,6 +2290,7 @@ const CALCULATORS = [
     faq: [
       { q: "How is text converted to binary?", a: "Each character's numeric code (from the ASCII/Unicode table) is converted to base-2 and padded to 8 bits - 'H' has code 72, which is 01001000 in binary." },
       { q: "Why 8 bits per character?", a: "8 bits (1 byte) covers the standard ASCII character set (0-255), which includes all English letters, numbers, and common symbols." },
+      { q: "What happens if I enter a binary string that isn't a multiple of 8 bits?", a: "Standard text encoding (ASCII/UTF-8) represents each character as a full 8-bit byte, so a binary string that isn't a clean multiple of 8 bits can't be converted to valid characters and will likely produce an error or unexpected result - double-check your binary input is grouped correctly." },
     ],
     related: ["case-converter", "word-counter", "text-to-slug-generator"],
   },
@@ -2272,6 +2320,7 @@ const CALCULATORS = [
     faq: [
       { q: "How is word frequency calculated?", a: "The text is split into individual words (case-insensitive, punctuation ignored), then each unique word is counted and sorted by how often it appears." },
       { q: "What is word frequency analysis used for?", a: "It's used for SEO keyword density checks, writing style analysis, and finding overused words or phrases in a document." },
+      { q: "Does this count 'the' and 'The' as the same word?", a: "Yes - word frequency counting is case-insensitive by default here, so capitalization at the start of a sentence doesn't split a word's count across two separate entries." },
     ],
     related: ["word-counter", "text-to-slug-generator", "case-converter"],
   },
@@ -2343,6 +2392,7 @@ const CALCULATORS = [
     faq: [
       { q: "How much food does a 40 lb dog need per day?", a: "A moderately active 40 lb dog needs roughly 985 calories per day, or about 2.8 cups of a food with 350 calories per cup." },
       { q: "What is RER for dog food calculations?", a: "Resting energy requirement (RER) is the calories a dog needs at complete rest, calculated as 70 × (weight in kg)^0.75 - daily needs are then scaled up from RER based on activity level." },
+      { q: "Should I adjust the amount for a spayed or neutered dog?", a: "Yes, generally - spayed and neutered dogs often have a slightly lower metabolic rate, so many veterinarians recommend reducing the calculated portion by roughly 10-20% to avoid gradual weight gain, then adjusting further based on your dog's actual body condition over time." },
     ],
     related: ["dog-age-calculator", "calorie-calculator", "bmr-calculator"],
   },
@@ -2395,6 +2445,7 @@ const CALCULATORS = [
     faq: [
       { q: "How fast do rabbits age compared to humans?", a: "Rabbits mature very quickly - a 1-year-old rabbit is roughly equivalent to a 21-year-old human, then aging slows to about 6 human years per rabbit year after that." },
       { q: "How long do pet rabbits typically live?", a: "Well-cared-for house rabbits commonly live 8-12 years, with some living longer depending on breed and health." },
+      { q: "Do different rabbit breeds age at different rates?", a: "Somewhat - larger rabbit breeds tend to have shorter lifespans and may show signs of aging earlier than smaller breeds, following a similar (though less dramatic) size-to-lifespan pattern seen in dogs, though this calculator uses a general estimate rather than breed-specific curves." },
     ],
     related: ["cat-age-calculator", "dog-age-calculator", "age-calculator"],
   },
@@ -2423,6 +2474,7 @@ const CALCULATORS = [
     faq: [
       { q: "How long are dogs pregnant?", a: "The average canine gestation period is about 63 days from conception, though it can range from 58 to 68 days depending on the dog and litter size." },
       { q: "How accurate is a due date estimate from the mating date?", a: "It's a reasonable estimate, but actual whelping dates can vary by several days - a veterinarian can confirm timing more precisely using ultrasound or progesterone testing." },
+      { q: "What are signs that a dog is nearing labor?", a: "A drop in body temperature (often below 100°F), nesting behavior, restlessness, and loss of appetite are common signs in the final 24 hours before labor - if you're unsure or your dog shows any concerning symptoms, contact your veterinarian rather than relying on date estimates alone." },
     ],
     related: ["days-until-calculator", "date-duration-calculator", "dog-age-calculator", "cat-pregnancy-calculator"],
   },
@@ -2450,6 +2502,7 @@ const CALCULATORS = [
     faq: [
       { q: "How old is a 10-year-old horse in human years?", a: "About 33 human years - horses mature very quickly in their first two years (reaching roughly age 13 by year two), then age more gradually afterward." },
       { q: "What's considered old age for a horse?", a: "Horses are often considered seniors starting around age 15-20, with many living into their late 20s or early 30s with good care." },
+      { q: "Do all horse breeds age at a similar rate?", a: "Aging patterns are fairly similar across most horse breeds compared to the size-driven differences seen in dogs, though very large draft breeds and miniature breeds can show somewhat different lifespan trends at the extremes." },
     ],
     related: ["dog-age-calculator", "cat-age-calculator", "rabbit-age-calculator"],
   },
@@ -2475,6 +2528,7 @@ const CALCULATORS = [
     faq: [
       { q: "What is a body condition score for dogs?", a: "A 1-9 scale vets use to assess a dog's fat coverage by look and feel - 4-5 is ideal, with each point above indicating roughly 10% excess body weight." },
       { q: "How much weight should a dog with a BCS of 7 lose?", a: "A BCS of 7 (moderately overweight) suggests roughly 20% excess weight - a 60 lb dog would have an estimated ideal weight around 48 lb, a loss of about 12 lb." },
+      { q: "Can I assess body condition score at home without a vet?", a: "Yes, to a reasonable degree - you can feel for your dog's ribs (should be easily felt but not visibly prominent) and check for a visible waist from above, but a veterinarian's hands-on assessment is more reliable, especially for breeds with thick coats that make visual and tactile assessment harder." },
     ],
     related: ["dog-food-calculator", "dog-age-calculator", "bmi-calculator"],
   },
@@ -2503,6 +2557,7 @@ const CALCULATORS = [
     faq: [
       { q: "How long are cats pregnant?", a: "The average feline gestation period is about 64 days from conception, typically ranging from 63 to 65 days." },
       { q: "How many kittens are in an average litter?", a: "Cat litters typically range from 3 to 5 kittens, though first litters and some breeds tend to be smaller." },
+      { q: "How can I tell if a cat is pregnant before the due date estimate matters?", a: "Signs include enlarged and pinker nipples ('pinking up') around 2-3 weeks, gradual abdominal enlargement after about 3-4 weeks, and increased appetite - a veterinarian can confirm pregnancy via palpation as early as day 17-25 or ultrasound, which is more reliable than estimating from mating date alone." },
     ],
     related: ["dog-pregnancy-calculator", "cat-age-calculator", "days-until-calculator"],
   },

@@ -77,7 +77,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-24",
+      "dateModified": "2026-08-27",
       "inLanguage": "en"
     },
     {
@@ -121,6 +121,14 @@
             "@type": "Answer",
             "text": "The calculator assumes the span crosses midnight into the next day - for example, 10 PM to 6 AM is treated as an 8-hour overnight duration, not a negative number."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate duration across a time zone change?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This calculator assumes both times are in the same time zone; if you're comparing times across zones, convert both to the same time zone first (e.g., using a time zone converter), then calculate the duration between the converted times."
+          }
         }
       ]
     }
@@ -156,7 +164,7 @@
       <main>
         <h1>Time Duration Calculator</h1>
         <p style="max-width:60ch;">Enter a start and end time to calculate the duration between them, in hours and minutes.</p>
-        <p class="last-updated">Last updated: August 24, 2026</p>
+        <p class="last-updated">Last updated: August 27, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -188,6 +196,10 @@
 <div class="faq-item">
 <h3>What happens if the end time is earlier than the start time?</h3>
 <p>The calculator assumes the span crosses midnight into the next day - for example, 10 PM to 6 AM is treated as an 8-hour overnight duration, not a negative number.</p>
+</div>
+<div class="faq-item">
+<h3>How do I calculate duration across a time zone change?</h3>
+<p>This calculator assumes both times are in the same time zone; if you're comparing times across zones, convert both to the same time zone first (e.g., using a time zone converter), then calculate the duration between the converted times.</p>
 </div></div>
         </div>
       </main>

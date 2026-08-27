@@ -77,7 +77,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-24",
+      "dateModified": "2026-08-27",
       "inLanguage": "en"
     },
     {
@@ -121,6 +121,14 @@
             "@type": "Answer",
             "text": "It follows the standard Gregorian calendar's repeating 7-day cycle, accounting for leap years - the same logic your phone or computer's calendar app uses internally."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Can this calculate the day of the week for historical dates, like the 1800s?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - the underlying calculation works directly from the Gregorian calendar's date rules, so it correctly returns the day of the week for any valid date, whether decades in the past or far in the future."
+          }
         }
       ]
     }
@@ -156,7 +164,7 @@
       <main>
         <h1>Day of the Week Calculator</h1>
         <p style="max-width:60ch;">Enter a date to find out what day of the week it falls on - past, present, or future.</p>
-        <p class="last-updated">Last updated: August 24, 2026</p>
+        <p class="last-updated">Last updated: August 27, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -188,6 +196,10 @@
 <div class="faq-item">
 <h3>How is the day of the week calculated for any date?</h3>
 <p>It follows the standard Gregorian calendar's repeating 7-day cycle, accounting for leap years - the same logic your phone or computer's calendar app uses internally.</p>
+</div>
+<div class="faq-item">
+<h3>Can this calculate the day of the week for historical dates, like the 1800s?</h3>
+<p>Yes - the underlying calculation works directly from the Gregorian calendar's date rules, so it correctly returns the day of the week for any valid date, whether decades in the past or far in the future.</p>
 </div></div>
         </div>
       </main>
