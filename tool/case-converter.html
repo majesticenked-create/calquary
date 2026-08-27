@@ -83,7 +83,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-24",
+      "dateModified": "2026-08-27",
       "inLanguage": "en"
     },
     {
@@ -127,6 +127,14 @@
             "@type": "Answer",
             "text": "No - the conversion runs entirely in your browser and nothing is sent or stored."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this handle accented letters and non-English characters correctly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - case conversion works on standard Unicode text, including accented letters (é, ñ, ü, etc.), so converting to uppercase or lowercase preserves accents correctly rather than stripping them."
+          }
         }
       ]
     }
@@ -168,7 +176,7 @@
       <main>
         <h1>Case Converter</h1>
         <p style="max-width:60ch;">Paste your text and choose a case to convert it to UPPERCASE, lowercase, Title Case, or Sentence case.</p>
-        <p class="last-updated">Last updated: August 24, 2026</p>
+        <p class="last-updated">Last updated: August 27, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -200,6 +208,10 @@
 <div class="faq-item">
 <h3>Does this case converter save my text?</h3>
 <p>No - the conversion runs entirely in your browser and nothing is sent or stored.</p>
+</div>
+<div class="faq-item">
+<h3>Does this handle accented letters and non-English characters correctly?</h3>
+<p>Yes - case conversion works on standard Unicode text, including accented letters (é, ñ, ü, etc.), so converting to uppercase or lowercase preserves accents correctly rather than stripping them.</p>
 </div></div>
         </div>
       </main>

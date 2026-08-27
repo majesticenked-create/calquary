@@ -51,6 +51,7 @@ const CALCULATORS = [
     faq: [
       { q: "How do I calculate a percentage of a number by hand?", a: "Divide the percent by 100, then multiply by the number. For 20% of 150: 0.20 × 150 = 30." },
       { q: "How do I find what percent one number is of another?", a: "Divide the part by the whole, then multiply by 100. For example, 30 is what percent of 150? 30 ÷ 150 × 100 = 20%." },
+      { q: "How do I calculate a percentage increase or decrease?", a: "Subtract the old value from the new value, divide by the old value, then multiply by 100. Going from 150 to 180 is (180−150)/150×100 = 20% increase; going from 150 to 120 is (120−150)/150×100 = −20%, a 20% decrease." },
     ],
     related: ["percentage-change-calculator", "tip-calculator", "ratio-calculator"],
   },
@@ -113,6 +114,7 @@ const CALCULATORS = [
     faq: [
       { q: "How do I calculate the average of a list of numbers?", a: "Add all the numbers together, then divide by how many numbers there are. For 4, 8, 15, 16, 23, 42: the sum is 108, divided by 6 numbers = an average of 18." },
       { q: "What's the difference between mean and median?", a: "The mean is the sum divided by the count (the 'average'); the median is the middle value when the numbers are sorted. The median is less affected by outliers than the mean." },
+      { q: "Does this handle negative numbers or decimals?", a: "Yes - enter negative numbers with a minus sign and decimals with a period, separated by commas or spaces just like any other value; the mean, median, and sum all calculate correctly with mixed positive, negative, and decimal values." },
     ],
     related: ["standard-deviation-calculator", "fraction-calculator", "gcd-lcm-calculator"],
   },
@@ -371,6 +373,7 @@ const CALCULATORS = [
       { q: "How is a loan payment calculated?", a: "Fixed-rate loans use an amortization formula based on the principal, the periodic interest rate, and the number of payments, so each payment is the same size but the interest/principal split changes over time." },
       { q: "Does this include taxes and insurance?", a: "No - this is principal and interest only. Mortgages in particular often bundle property tax and insurance into the monthly payment (PITI), so your actual bill from a lender may be higher than the number shown here." },
       { q: "Does paying extra each month reduce the total interest?", a: "Yes - any payment above the required amount goes straight to principal, which shortens the loan and cuts total interest paid, since interest is calculated on the remaining balance each period." },
+      { q: "How does the loan term affect the total interest paid?", a: "A longer term lowers your monthly payment but increases total interest paid, since you're borrowing the same amount for more periods; a shorter term raises the payment but cuts total interest - the trade-off depends on what monthly amount you can comfortably afford." },
     ],
     related: ["mortgage-calculator", "auto-loan-calculator", "percentage-calculator", "tip-calculator"],
   },
@@ -412,6 +415,7 @@ const CALCULATORS = [
     faq: [
       { q: "What's included in a mortgage payment estimate?", a: "This calculator estimates PITI - principal, interest, property taxes, and homeowners insurance. It doesn't include PMI (if your down payment is under 20%) or HOA fees, which vary by lender and property." },
       { q: "How does down payment affect my monthly payment?", a: "A larger down payment reduces your loan amount, which lowers both the principal & interest portion of your payment and your total interest paid over the loan term." },
+      { q: "What happens to my payment if I refinance to a lower rate later?", a: "Refinancing recalculates your loan from the new balance, rate, and remaining term - even a 1% rate drop meaningfully lowers the interest portion of each payment, though closing costs on the new loan need to be weighed against the savings." },
     ],
     related: ["loan-calculator", "savings-calculator", "compound-interest-calculator"],
   },
@@ -510,6 +514,7 @@ const CALCULATORS = [
     faq: [
       { q: "What's the formula for compound interest?", a: "A = P(1 + r/n)^(nt) - where P is principal, r is the annual rate, n is compounds per year, and t is time in years." },
       { q: "How does compounding frequency affect growth?", a: "More frequent compounding (daily vs. annually) produces slightly higher returns at the same stated rate, since interest starts earning interest sooner - though the difference is usually small at typical savings rates." },
+      { q: "How much difference does starting a few years earlier make?", a: "A significant one - because growth compounds on itself, money invested 5 or 10 years earlier at the same rate ends up substantially larger, not just proportionally larger, since the earlier contributions have more compounding periods working on them." },
     ],
     related: ["savings-calculator", "mortgage-calculator", "loan-calculator", "investment-calculator"],
   },
@@ -754,6 +759,7 @@ const CALCULATORS = [
     faq: [
       { q: "How much concrete do I need for a 10x10 slab?", a: "At 4 inches thick, a 10×10 ft slab needs about 1.23 cubic yards before waste allowance - roughly 74 bags of 80 lb mix." },
       { q: "Why add a waste allowance?", a: "Uneven subgrade, spillage, and over-excavation typically use 5–10% more material than the exact math suggests." },
+      { q: "Can I use this for a non-rectangular slab?", a: "Break an irregular shape into rectangular sections, calculate each one separately with this tool, then add the results together - the length × width × thickness math only works cleanly on rectangles, so splitting an L-shaped or curved area into simpler pieces is the standard workaround." },
     ],
     related: ["paint-calculator", "gravel-calculator", "mulch-calculator", "area-converter"],
   },
@@ -880,6 +886,7 @@ const CALCULATORS = [
     faq: [
       { q: "How many boxes of flooring do I need for 250 sq ft?", a: "At 22 sq ft per box with a 10% waste allowance, 250 sq ft needs about 13 boxes." },
       { q: "Why do I need extra flooring for waste?", a: "Cuts around doorways, closets, and pattern matching use extra material - a 10–15% allowance keeps you from running short mid-project." },
+      { q: "Does the waste percentage change based on the flooring pattern?", a: "Yes - a straight-lay pattern typically needs only 5-10% extra, while diagonal layouts or patterns requiring precise seam matching (like herringbone) can need 15-20% extra due to more angled cuts and discarded offcuts." },
     ],
     related: ["paint-calculator", "tile-calculator", "concrete-calculator", "unit-length-converter"],
   },
@@ -1137,6 +1144,7 @@ const CALCULATORS = [
     faq: [
       { q: "Is BMI accurate for everyone?", a: "No - BMI doesn't distinguish muscle from fat and can be misleading for athletes, older adults, and some body types. It's a screening tool, not a diagnosis." },
       { q: "What counts as a healthy BMI range?", a: "18.5–24.9 is generally classified as the healthy range, under 18.5 as underweight, 25–29.9 as overweight, and 30+ as the obesity range - but these cutoffs are population averages, not individual health verdicts." },
+      { q: "Does BMI apply the same way to children as adults?", a: "No - this calculator uses the adult BMI formula and adult healthy-range cutoffs; children and teens need age- and gender-specific growth-chart percentiles instead, since healthy body composition changes significantly throughout childhood development." },
     ],
     related: ["body-fat-calculator", "calorie-calculator", "pace-calculator", "water-intake-calculator"],
   },
@@ -1168,6 +1176,7 @@ const CALCULATORS = [
     faq: [
       { q: "What is BMR?", a: "Basal metabolic rate is the number of calories your body burns at complete rest just to maintain vital functions like breathing and circulation - it doesn't include any activity." },
       { q: "How accurate is the Mifflin-St Jeor formula?", a: "It's considered one of the more accurate BMR formulas for the general population, typically within about 10% of measured values, though individual metabolism varies with muscle mass and other factors." },
+      { q: "Does BMR change as I age?", a: "Yes - BMR gradually declines with age, largely due to a natural decrease in muscle mass over time, which is part of why calorie needs often trend down in later adulthood even at the same activity level." },
     ],
     related: ["calorie-calculator", "body-fat-calculator", "bmi-calculator"],
   },
@@ -1211,6 +1220,7 @@ const CALCULATORS = [
     faq: [
       { q: "How many calories do I need to maintain my weight?", a: "It depends on your BMR and activity level - for a 30-year-old, 5'10\", 180 lb male at moderate activity, maintenance is roughly 2,763 calories per day." },
       { q: "How many calories should I cut to lose weight?", a: "A deficit of about 500 calories per day below maintenance is a common target for roughly 1 lb of weight loss per week, since 1 lb of body fat is approximately 3,500 calories." },
+      { q: "Why do two people with the same age, height, and weight get different results?", a: "Activity level and gender both factor into the formula - a more active lifestyle raises the calorie target substantially above someone sedentary at the same stats, and the underlying BMR formula also accounts for typical differences in body composition between men and women." },
     ],
     related: ["bmr-calculator", "body-fat-calculator", "bmi-calculator"],
   },
@@ -1452,6 +1462,7 @@ const CALCULATORS = [
     faq: [
       { q: "How is 'days until' calculated?", a: "It's the number of calendar days between today and your chosen date, counting forward or backward from midnight." },
       { q: "Does this count weekends and holidays?", a: "Yes - this counts every calendar day, including weekends and holidays. If you need business-day-only counts (excluding weekends), use the Business Days Calculator instead." },
+      { q: "Can I calculate the days between two future dates, not just from today?", a: "Yes, indirectly - this tool anchors to today, but the Date Duration Calculator lets you pick any two arbitrary dates (past, present, or future) and returns the exact number of days between them." },
     ],
     related: ["date-duration-calculator", "age-calculator", "pace-calculator"],
   },
@@ -1673,6 +1684,7 @@ const CALCULATORS = [
     faq: [
       { q: "How is exact age calculated?", a: "By counting full years, then remaining months, then remaining days between the birth date and today - not just subtracting birth year from the current year." },
       { q: "Does this account for leap years?", a: "Yes - it works directly from calendar dates rather than assuming a fixed 365-day year, so leap years are handled correctly without any extra adjustment." },
+      { q: "Can I calculate age as of a specific future or past date instead of today?", a: "This calculator compares your birth date to today's date specifically; to find your age on another date, use the Days Until Calculator or Date Duration Calculator to measure the gap between your birth date and any date you choose." },
     ],
     related: ["days-until-calculator", "dog-age-calculator"],
   },
@@ -1706,6 +1718,7 @@ const CALCULATORS = [
     faq: [
       { q: "How many inches is a centimeter?", a: "1 centimeter equals about 0.3937 inches. To convert cm to inches, divide by 2.54." },
       { q: "Is this conversion exact or rounded?", a: "The underlying conversion factor (1 inch = 2.54 cm) is exact by international definition - any rounding you see is just the displayed result being trimmed to a readable number of decimal places." },
+      { q: "Why do some online converters give a slightly different answer?", a: "Small differences usually come from rounding at different decimal places, not a different conversion factor - the underlying 1 inch = 2.54 cm relationship is a fixed international standard, so any accurate converter should agree once you compare at the same precision." },
     ],
     related: ["weight-converter", "cooking-converter", "concrete-calculator"],
   },
@@ -1740,6 +1753,7 @@ const CALCULATORS = [
     faq: [
       { q: "How do I convert Fahrenheit to Celsius?", a: "Subtract 32, then multiply by 5/9. 98.6°F: (98.6 − 32) × 5/9 = 37°C - normal human body temperature." },
       { q: "Why does temperature conversion need an offset, not just multiplication?", a: "Fahrenheit and Celsius have different zero points (freezing water is 0°C but 32°F), so converting requires shifting the scale first, unlike length or weight conversions which only need a multiplier." },
+      { q: "What temperature is the same number in both Celsius and Fahrenheit?", a: "−40 degrees - it's the one point where the two scales intersect, since −40°C × 9/5 + 32 = −40°F exactly; every other temperature reads as a different number on each scale." },
     ],
     related: ["weight-converter", "volume-converter", "unit-length-converter"],
   },
@@ -2028,6 +2042,7 @@ const CALCULATORS = [
     faq: [
       { q: "Does this word counter save my text?", a: "No - the count runs entirely in your browser and nothing is sent or stored." },
       { q: "Does this count words the same way Microsoft Word does?", a: "Very close, but not always identical - this counter splits on whitespace, which is how most word processors count too, but edge cases like hyphenated words or numbers can be tallied slightly differently between tools." },
+      { q: "What counts as a 'sentence' in the sentence count?", a: "Text ending in a period, question mark, or exclamation point is counted as one sentence - abbreviations with periods (like 'Dr.' or 'e.g.') can occasionally inflate the count slightly, since the tool can't always distinguish a sentence-ending period from an abbreviation's period." },
     ],
     related: ["password-generator", "data-storage-converter", "days-until-calculator"],
   },
@@ -2132,6 +2147,7 @@ const CALCULATORS = [
     faq: [
       { q: "What's the difference between title case and sentence case?", a: "Title case capitalizes the first letter of every major word (\"Hello World Example\"), while sentence case only capitalizes the first letter of the whole text (\"Hello world example\")." },
       { q: "Does this case converter save my text?", a: "No - the conversion runs entirely in your browser and nothing is sent or stored." },
+      { q: "Does this handle accented letters and non-English characters correctly?", a: "Yes - case conversion works on standard Unicode text, including accented letters (é, ñ, ü, etc.), so converting to uppercase or lowercase preserves accents correctly rather than stripping them." },
     ],
     related: ["word-counter", "lorem-ipsum-generator", "password-generator", "binary-to-text-converter"],
   },
@@ -2290,6 +2306,7 @@ const CALCULATORS = [
     faq: [
       { q: "Is 'one dog year equals seven human years' accurate?", a: "No - that old rule is a rough myth. Dogs age faster in their first two years, and larger breeds age faster in later years than small breeds." },
       { q: "Why do larger dog breeds age faster than small breeds?", a: "Large and giant breeds grow faster and hit physical maturity sooner, which is linked to shorter lifespans and faster aging in their middle and senior years - the opposite of the pattern in most other mammals." },
+      { q: "At what age is a dog considered a 'senior'?", a: "It varies by size - small breeds are typically considered senior around 10-12 years, medium breeds around 8-10, and large or giant breeds as early as 6-7 years, since larger dogs both mature and age faster than smaller ones." },
     ],
     related: ["cat-age-calculator", "dog-food-calculator", "bmi-calculator", "ideal-dog-weight-calculator"],
   },
@@ -2353,6 +2370,7 @@ const CALCULATORS = [
     faq: [
       { q: "Do cats age the same way regardless of breed?", a: "Aging patterns are fairly consistent across most cat breeds, unlike dogs where size drives large aging differences." },
       { q: "Does indoor vs. outdoor lifestyle affect a cat's age calculation?", a: "This calculator doesn't factor that in - it's a general estimate based on typical development. In practice, indoor cats tend to live longer than outdoor cats due to lower exposure to injury and disease, but that affects lifespan, not the age-equivalence math itself." },
+      { q: "At what age is a cat considered a 'senior'?", a: "Most veterinary guidelines consider cats senior starting around 10-11 years old, with 'geriatric' typically used for cats 15 and older - though individual health varies more than a single age cutoff can capture." },
     ],
     related: ["dog-age-calculator", "rabbit-age-calculator", "age-calculator", "horse-age-calculator"],
   },

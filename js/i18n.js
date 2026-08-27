@@ -475,6 +475,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "¿Cómo calculo el porcentaje de un número a mano?", a: "Divide el porcentaje entre 100 y multiplica por el número. Para el 20% de 150: 0,20 × 150 = 30." },
         { q: "¿Cómo hallo qué porcentaje representa un número de otro?", a: "Divide la parte entre el total y multiplica por 100. Por ejemplo, ¿30 qué porcentaje es de 150? 30 ÷ 150 × 100 = 20%." },
+        { q: "¿Cómo calculo un aumento o una disminución porcentual?", a: "Resta el valor antiguo del nuevo valor, divide entre el valor antiguo y multiplica por 100. Pasar de 150 a 180 es (180−150)/150×100 = 20% de aumento; pasar de 150 a 120 es (120−150)/150×100 = −20%, una disminución del 20%." },
       ],
     },
     fr: {
@@ -484,6 +485,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Comment calculer un pourcentage d'un nombre à la main ?", a: "Divisez le pourcentage par 100, puis multipliez par le nombre. Pour 20% de 150 : 0,20 × 150 = 30." },
         { q: "Comment trouver quel pourcentage un nombre représente d'un autre ?", a: "Divisez la partie par le tout, puis multipliez par 100. Par exemple, 30 représente quel pourcentage de 150 ? 30 ÷ 150 × 100 = 20%." },
+        { q: "Comment calculer une augmentation ou une diminution en pourcentage ?", a: "Soustrayez l'ancienne valeur de la nouvelle, divisez par l'ancienne valeur, puis multipliez par 100. Passer de 150 à 180 donne (180−150)/150×100 = 20 % d'augmentation ; passer de 150 à 120 donne (120−150)/150×100 = −20 %, soit une diminution de 20 %." },
       ],
     },
     de: {
@@ -493,6 +495,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Wie berechne ich einen Prozentsatz einer Zahl von Hand?", a: "Teilen Sie den Prozentsatz durch 100 und multiplizieren Sie mit der Zahl. Für 20% von 150: 0,20 × 150 = 30." },
         { q: "Wie finde ich heraus, wie viel Prozent eine Zahl von einer anderen ist?", a: "Teilen Sie den Teil durch das Ganze und multiplizieren Sie mit 100. Beispiel: Wie viel Prozent von 150 sind 30? 30 ÷ 150 × 100 = 20%." },
+        { q: "Wie berechne ich eine prozentuale Zu- oder Abnahme?", a: "Ziehen Sie den alten Wert vom neuen Wert ab, teilen Sie durch den alten Wert und multiplizieren Sie mit 100. Von 150 auf 180 ergibt (180−150)/150×100 = 20 % Zunahme; von 150 auf 120 ergibt (120−150)/150×100 = −20 %, also eine Abnahme von 20 %." },
       ],
     },
     pt: {
@@ -502,6 +505,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Como calculo a porcentagem de um número manualmente?", a: "Divida a porcentagem por 100 e multiplique pelo número. Para 20% de 150: 0,20 × 150 = 30." },
         { q: "Como descubro que porcentagem um número representa de outro?", a: "Divida a parte pelo todo e multiplique por 100. Por exemplo, 30 é que porcentagem de 150? 30 ÷ 150 × 100 = 20%." },
+        { q: "Como calculo um aumento ou diminuição percentual?", a: "Subtraia o valor antigo do novo valor, divida pelo valor antigo e multiplique por 100. Ir de 150 para 180 é (180−150)/150×100 = 20% de aumento; ir de 150 para 120 é (120−150)/150×100 = −20%, uma diminuição de 20%." },
       ],
     },
     it: {
@@ -511,6 +515,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Come calcolo la percentuale di un numero a mano?", a: "Dividi la percentuale per 100, poi moltiplica per il numero. Per il 20% di 150: 0,20 × 150 = 30." },
         { q: "Come trovo che percentuale rappresenta un numero rispetto a un altro?", a: "Dividi la parte per il totale, poi moltiplica per 100. Ad esempio, 30 che percentuale è di 150? 30 ÷ 150 × 100 = 20%." },
+        { q: "Come calcolo un aumento o una diminuzione percentuale?", a: "Sottrai il vecchio valore dal nuovo valore, dividi per il vecchio valore, poi moltiplica per 100. Passare da 150 a 180 è (180−150)/150×100 = 20% di aumento; passare da 150 a 120 è (120−150)/150×100 = −20%, una diminuzione del 20%." },
       ],
     },
     ja: {
@@ -520,6 +525,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "パーセントを手計算する方法は？", a: "パーセントを100で割り、その数を掛けます。150の20%の場合：0.20 × 150 = 30。" },
         { q: "ある数が別の数の何パーセントかを求める方法は？", a: "部分を全体で割り、100を掛けます。例えば、30は150の何パーセントですか？30 ÷ 150 × 100 = 20%。" },
+        { q: "パーセントの増加や減少はどのように計算しますか？", a: "新しい値から元の値を引き、元の値で割ってから100を掛けます。150から180への変化は(180−150)/150×100 = 20%の増加、150から120への変化は(120−150)/150×100 = −20%、つまり20%の減少です。" },
       ],
     },
   },
@@ -532,6 +538,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "¿Cómo calculo el promedio de una lista de números?", a: "Suma todos los números y divide entre la cantidad de números. Para 4, 8, 15, 16, 23, 42: la suma es 108, dividida entre 6 números = un promedio de 18." },
         { q: "¿Cuál es la diferencia entre media y mediana?", a: "La media es la suma dividida entre la cantidad (el 'promedio'); la mediana es el valor central cuando los números están ordenados. La mediana se ve menos afectada por valores atípicos que la media." },
+        { q: "¿Esto admite números negativos o decimales?", a: "Sí: introduce los números negativos con un signo menos y los decimales con un punto, separados por comas o espacios como cualquier otro valor; la media, la mediana y la suma se calculan correctamente con valores positivos, negativos y decimales combinados." },
       ],
     },
     fr: {
@@ -541,6 +548,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Comment calculer la moyenne d'une liste de nombres ?", a: "Additionnez tous les nombres, puis divisez par leur nombre total. Pour 4, 8, 15, 16, 23, 42 : la somme est 108, divisée par 6 nombres = une moyenne de 18." },
         { q: "Quelle est la différence entre moyenne et médiane ?", a: "La moyenne est la somme divisée par le nombre total (la « moyenne »); la médiane est la valeur du milieu une fois les nombres triés. La médiane est moins sensible aux valeurs extrêmes que la moyenne." },
+        { q: "Cela gère-t-il les nombres négatifs ou décimaux ?", a: "Oui - saisissez les nombres négatifs avec un signe moins et les décimales avec un point, séparés par des virgules ou des espaces comme n'importe quelle autre valeur ; la moyenne, la médiane et la somme se calculent correctement avec un mélange de valeurs positives, négatives et décimales." },
       ],
     },
     de: {
@@ -550,6 +558,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Wie berechne ich den Durchschnitt einer Zahlenliste?", a: "Addieren Sie alle Zahlen und teilen Sie durch die Anzahl der Zahlen. Für 4, 8, 15, 16, 23, 42: die Summe ist 108, geteilt durch 6 Zahlen = ein Durchschnitt von 18." },
         { q: "Was ist der Unterschied zwischen Mittelwert und Median?", a: "Der Mittelwert ist die Summe geteilt durch die Anzahl (der „Durchschnitt“); der Median ist der mittlere Wert der sortierten Zahlen. Der Median reagiert weniger empfindlich auf Ausreißer als der Mittelwert." },
+        { q: "Werden negative Zahlen oder Dezimalzahlen unterstützt?", a: "Ja - geben Sie negative Zahlen mit einem Minuszeichen und Dezimalzahlen mit einem Punkt ein, getrennt durch Kommas oder Leerzeichen wie jeden anderen Wert; Mittelwert, Median und Summe werden auch bei einer Mischung aus positiven, negativen und Dezimalwerten korrekt berechnet." },
       ],
     },
     pt: {
@@ -559,6 +568,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Como calculo a média de uma lista de números?", a: "Some todos os números e divida pela quantidade de números. Para 4, 8, 15, 16, 23, 42: a soma é 108, dividida por 6 números = média de 18." },
         { q: "Qual é a diferença entre média e mediana?", a: "A média é a soma dividida pela quantidade (a 'média'); a mediana é o valor central quando os números estão ordenados. A mediana é menos afetada por valores extremos do que a média." },
+        { q: "Isso funciona com números negativos ou decimais?", a: "Sim - insira números negativos com um sinal de menos e decimais com um ponto, separados por vírgulas ou espaços como qualquer outro valor; a média, a mediana e a soma são calculadas corretamente mesmo com valores positivos, negativos e decimais combinados." },
       ],
     },
     it: {
@@ -568,6 +578,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Come calcolo la media di un elenco di numeri?", a: "Somma tutti i numeri, poi dividi per quanti numeri ci sono. Per 4, 8, 15, 16, 23, 42: la somma è 108, divisa per 6 numeri = una media di 18." },
         { q: "Qual è la differenza tra media e mediana?", a: "La media è la somma divisa per il conteggio (la 'media'); la mediana è il valore centrale quando i numeri sono ordinati. La mediana è meno influenzata dai valori anomali rispetto alla media." },
+        { q: "Funziona con numeri negativi o decimali?", a: "Sì - inserisci i numeri negativi con un segno meno e i decimali con un punto, separati da virgole o spazi come qualsiasi altro valore; media, mediana e somma vengono calcolate correttamente anche con valori positivi, negativi e decimali misti." },
       ],
     },
     ja: {
@@ -577,6 +588,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "数値のリストの平均を計算する方法は？", a: "すべての数値を合計し、数値の個数で割ります。4, 8, 15, 16, 23, 42の場合：合計は108、6個で割ると平均は18になります。" },
         { q: "平均値と中央値の違いは何ですか？", a: "平均値は合計を個数で割ったもの（「平均」）で、中央値は数値を並べたときの中央の値です。中央値は平均値よりも外れ値の影響を受けにくいです。" },
+        { q: "負の数や小数にも対応していますか？", a: "はい。負の数はマイナス記号を付けて、小数はピリオドを使って、他の値と同様にカンマまたはスペースで区切って入力してください。正の数、負の数、小数が混在していても、平均値・中央値・合計は正しく計算されます。" },
       ],
     },
   },
@@ -589,6 +601,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "¿Qué incluye esta estimación de pago hipotecario?", a: "Esta calculadora estima PITI: capital, interés, impuesto predial y seguro de vivienda. No incluye el PMI (si el pago inicial es menor al 20%) ni las cuotas de HOA, que varían según el prestamista y la propiedad." },
         { q: "¿Cómo afecta el pago inicial a mi pago mensual?", a: "Un pago inicial mayor reduce el monto del préstamo, lo que disminuye tanto la porción de capital e interés de tu pago como el interés total pagado durante el plazo del préstamo." },
+        { q: "¿Qué sucede con mi pago si más adelante refinancio a una tasa más baja?", a: "Refinanciar recalcula tu préstamo a partir del nuevo saldo, la tasa y el plazo restante - incluso una caída de 1 punto en la tasa reduce de forma notable la parte de interés de cada pago, aunque los costos de cierre del nuevo préstamo deben sopesarse frente al ahorro." },
       ],
     },
     fr: {
@@ -598,6 +611,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Qu'inclut cette estimation de mensualité ?", a: "Cette calculatrice estime le PITI - capital, intérêts, taxe foncière et assurance habitation. Elle n'inclut pas la PMI (si votre apport est inférieur à 20 %) ni les charges de copropriété, qui varient selon le prêteur et le bien." },
         { q: "Comment l'apport affecte-t-il ma mensualité ?", a: "Un apport plus élevé réduit le montant emprunté, ce qui diminue à la fois la part capital + intérêts de votre mensualité et le total des intérêts payés sur la durée du prêt." },
+        { q: "Qu'arrive-t-il à ma mensualité si je refinance plus tard à un taux plus bas ?", a: "Le refinancement recalcule votre prêt à partir du nouveau solde, du nouveau taux et de la durée restante - même une baisse de 1 point de taux réduit sensiblement la part d'intérêts de chaque mensualité, bien que les frais de clôture du nouveau prêt doivent être mis en balance avec les économies réalisées." },
       ],
     },
     de: {
@@ -607,6 +621,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Was ist in dieser Hypothekenraten-Schätzung enthalten?", a: "Dieser Rechner schätzt PITI - Tilgung, Zinsen, Grundsteuer und Wohngebäudeversicherung. Nicht enthalten sind PMI (falls die Anzahlung unter 20% liegt) oder HOA-Gebühren, die je nach Kreditgeber und Immobilie variieren." },
         { q: "Wie wirkt sich die Anzahlung auf meine monatliche Rate aus?", a: "Eine höhere Anzahlung verringert die Darlehenssumme, was sowohl den Tilgungs- und Zinsanteil Ihrer Rate als auch die insgesamt über die Laufzeit gezahlten Zinsen senkt." },
+        { q: "Was passiert mit meiner Rate, wenn ich später zu einem niedrigeren Zinssatz umschulde?", a: "Eine Umschuldung berechnet Ihr Darlehen anhand des neuen Saldos, Zinssatzes und der verbleibenden Laufzeit neu - selbst ein Rückgang des Zinssatzes um 1 % senkt den Zinsanteil jeder Rate spürbar, wobei die Abschlusskosten des neuen Darlehens gegen die Ersparnis abgewogen werden müssen." },
       ],
     },
     pt: {
@@ -616,6 +631,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "O que está incluído nesta estimativa de pagamento?", a: "Esta calculadora estima o PITI - principal, juros, imposto predial e seguro residencial. Não inclui o PMI (se a entrada for inferior a 20%) nem taxas de condomínio, que variam conforme o credor e o imóvel." },
         { q: "Como a entrada afeta meu pagamento mensal?", a: "Uma entrada maior reduz o valor do empréstimo, o que diminui tanto a parte de principal e juros do pagamento quanto o total de juros pagos ao longo do prazo do financiamento." },
+        { q: "O que acontece com meu pagamento se eu refinanciar para uma taxa menor mais tarde?", a: "O refinanciamento recalcula seu empréstimo com base no novo saldo, na nova taxa e no prazo restante - mesmo uma queda de 1 ponto percentual na taxa reduz significativamente a parte de juros de cada pagamento, embora os custos de fechamento do novo empréstimo precisem ser comparados com a economia." },
       ],
     },
     it: {
@@ -625,6 +641,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Cosa include questa stima della rata del mutuo?", a: "Questa calcolatrice stima il PITI - capitale, interessi, imposta sulla proprietà e assicurazione sulla casa. Non include il PMI (se l'acconto è inferiore al 20%) né le spese condominiali, che variano in base al prestatore e all'immobile." },
         { q: "Come influisce l'acconto sulla mia rata mensile?", a: "Un acconto maggiore riduce l'importo del prestito, il che abbassa sia la quota capitale e interessi della rata sia il totale degli interessi pagati durante la durata del mutuo." },
+        { q: "Cosa succede alla mia rata se in seguito rifinanzio a un tasso più basso?", a: "Il rifinanziamento ricalcola il tuo prestito in base al nuovo saldo, tasso e durata residua - anche un calo dell'1% del tasso riduce sensibilmente la quota interessi di ogni rata, anche se i costi di chiusura del nuovo prestito vanno soppesati rispetto al risparmio." },
       ],
     },
     ja: {
@@ -634,6 +651,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "この住宅ローン返済額の見積もりには何が含まれますか？", a: "この計算機はPITI（元金・利息・固定資産税・住宅保険）を概算します。頭金が20%未満の場合のPMI（民間住宅ローン保険）やHOA（管理費）は含まれておらず、これらは貸し手や物件によって異なります。" },
         { q: "頭金は月々の返済額にどう影響しますか？", a: "頭金が多いほど借入額が減り、返済額のうち元金・利息部分と、返済期間全体で支払う利息の総額の両方が少なくなります。" },
+        { q: "後でより低い金利に借り換えると、返済額はどうなりますか？", a: "借り換えでは、新しい残高・金利・残りの返済期間に基づいてローンが再計算されます。わずか1%の金利低下でも各回の利息部分は大きく下がりますが、新しいローンの諸費用と節約額を比較検討する必要があります。" },
       ],
     },
   },
@@ -647,6 +665,7 @@ const I18N_TOOLS = {
         { q: "¿Cómo se calcula el pago de un préstamo?", a: "Los préstamos de tasa fija usan una fórmula de amortización basada en el capital, la tasa de interés periódica y el número de pagos, por lo que cada pago tiene el mismo monto, pero la proporción entre interés y capital cambia con el tiempo." },
         { q: "¿Esto incluye impuestos y seguro?", a: "No - esto es solo capital e interés. Las hipotecas en particular suelen incluir el impuesto predial y el seguro en el pago mensual (PITI), así que tu factura real del prestamista puede ser mayor que el número mostrado aquí." },
         { q: "¿Pagar extra cada mes reduce el interés total?", a: "Sí - cualquier pago superior al monto requerido se destina directamente al capital, lo que acorta el préstamo y reduce el interés total pagado, ya que el interés se calcula sobre el saldo restante en cada período." },
+        { q: "¿Cómo afecta el plazo del préstamo al interés total pagado?", a: "Un plazo más largo reduce tu pago mensual pero aumenta el interés total pagado, ya que pides prestado el mismo monto durante más períodos; un plazo más corto sube el pago pero reduce el interés total - el equilibrio depende de qué monto mensual puedas afrontar cómodamente." },
       ],
     },
     fr: {
@@ -657,6 +676,7 @@ const I18N_TOOLS = {
         { q: "Comment la mensualité d'un prêt est-elle calculée ?", a: "Les prêts à taux fixe utilisent une formule d'amortissement basée sur le capital, le taux d'intérêt périodique et le nombre de versements, si bien que chaque mensualité a le même montant, mais la répartition intérêts/capital évolue dans le temps." },
         { q: "Cela inclut-il les taxes et l'assurance ?", a: "Non - il s'agit uniquement du capital et des intérêts. Les prêts immobiliers en particulier incluent souvent la taxe foncière et l'assurance dans la mensualité (PITI), donc votre facture réelle auprès du prêteur peut être supérieure au montant affiché ici." },
         { q: "Payer un supplément chaque mois réduit-il les intérêts totaux ?", a: "Oui - tout paiement au-delà du montant requis va directement au capital, ce qui raccourcit le prêt et réduit le total des intérêts payés, puisque les intérêts sont calculés sur le solde restant à chaque période." },
+        { q: "Comment la durée du prêt affecte-t-elle le total des intérêts payés ?", a: "Une durée plus longue réduit votre mensualité mais augmente le total des intérêts payés, puisque vous empruntez le même montant sur plus de périodes ; une durée plus courte augmente la mensualité mais réduit le total des intérêts - l'arbitrage dépend du montant mensuel que vous pouvez confortablement vous permettre." },
       ],
     },
     de: {
@@ -667,6 +687,7 @@ const I18N_TOOLS = {
         { q: "Wie wird eine Kreditrate berechnet?", a: "Darlehen mit festem Zinssatz verwenden eine Tilgungsformel basierend auf der Darlehenssumme, dem periodischen Zinssatz und der Anzahl der Raten, sodass jede Rate gleich hoch ist, sich aber der Anteil von Zins und Tilgung im Zeitverlauf verschiebt." },
         { q: "Sind Steuern und Versicherung enthalten?", a: "Nein - dies sind nur Tilgung und Zinsen. Insbesondere Hypotheken bündeln Grundsteuer und Versicherung oft in der monatlichen Rate (PITI), sodass Ihre tatsächliche Rechnung des Kreditgebers höher ausfallen kann als der hier angezeigte Betrag." },
         { q: "Senkt eine zusätzliche monatliche Zahlung die Gesamtzinsen?", a: "Ja - jede Zahlung über dem erforderlichen Betrag fließt direkt in die Tilgung, was das Darlehen verkürzt und die insgesamt gezahlten Zinsen senkt, da die Zinsen jede Periode auf den verbleibenden Saldo berechnet werden." },
+        { q: "Wie wirkt sich die Kreditlaufzeit auf die insgesamt gezahlten Zinsen aus?", a: "Eine längere Laufzeit senkt Ihre monatliche Rate, erhöht aber die insgesamt gezahlten Zinsen, da Sie denselben Betrag über mehr Perioden leihen; eine kürzere Laufzeit erhöht die Rate, senkt aber die Gesamtzinsen - der Kompromiss hängt davon ab, welchen monatlichen Betrag Sie sich bequem leisten können." },
       ],
     },
     pt: {
@@ -677,6 +698,7 @@ const I18N_TOOLS = {
         { q: "Como é calculado o pagamento de um empréstimo?", a: "Empréstimos de taxa fixa usam uma fórmula de amortização baseada no principal, na taxa de juros periódica e no número de pagamentos, então cada pagamento tem o mesmo valor, mas a proporção entre juros e principal muda ao longo do tempo." },
         { q: "Isso inclui impostos e seguro?", a: "Não - isso é apenas principal e juros. Financiamentos imobiliários, em particular, costumam incluir imposto predial e seguro no pagamento mensal (PITI), então sua conta real do credor pode ser maior do que o valor mostrado aqui." },
         { q: "Pagar a mais todo mês reduz os juros totais?", a: "Sim - qualquer pagamento acima do valor exigido vai diretamente para o principal, o que encurta o empréstimo e reduz o total de juros pagos, já que os juros são calculados sobre o saldo restante a cada período." },
+        { q: "Como o prazo do empréstimo afeta o total de juros pagos?", a: "Um prazo mais longo reduz seu pagamento mensal, mas aumenta o total de juros pagos, já que você toma emprestado o mesmo valor por mais períodos; um prazo mais curto aumenta o pagamento, mas reduz o total de juros - o equilíbrio depende de qual valor mensal você consegue pagar confortavelmente." },
       ],
     },
     it: {
@@ -687,6 +709,7 @@ const I18N_TOOLS = {
         { q: "Come viene calcolata la rata di un prestito?", a: "I prestiti a tasso fisso usano una formula di ammortamento basata sul capitale, sul tasso di interesse periodico e sul numero di rate, quindi ogni rata ha lo stesso importo, ma la ripartizione tra interessi e capitale cambia nel tempo." },
         { q: "Questo include tasse e assicurazione?", a: "No - questo è solo capitale e interessi. I mutui, in particolare, spesso includono imposta sulla proprietà e assicurazione nella rata mensile (PITI), quindi la fattura reale del tuo prestatore potrebbe essere superiore all'importo mostrato qui." },
         { q: "Pagare di più ogni mese riduce gli interessi totali?", a: "Sì - qualsiasi pagamento superiore all'importo richiesto va direttamente al capitale, il che accorcia il prestito e riduce il totale degli interessi pagati, poiché gli interessi vengono calcolati sul saldo residuo ogni periodo." },
+        { q: "In che modo la durata del prestito influisce sul totale degli interessi pagati?", a: "Una durata più lunga riduce la rata mensile ma aumenta il totale degli interessi pagati, poiché prendi in prestito lo stesso importo per più periodi; una durata più breve aumenta la rata ma riduce il totale degli interessi - il compromesso dipende da quale importo mensile puoi permetterti comodamente." },
       ],
     },
     ja: {
@@ -697,6 +720,7 @@ const I18N_TOOLS = {
         { q: "ローンの返済額はどのように計算されますか？", a: "固定金利ローンは、元金、期間ごとの金利、返済回数に基づく元利均等返済の計算式を使用するため、毎回の返済額は同じですが、利息と元金の割合は時間とともに変化します。" },
         { q: "これには税金や保険料が含まれますか？", a: "いいえ、これは元金と利息のみです。特に住宅ローンでは、固定資産税や保険料が毎月の返済額（PITI）に含まれることが多いため、実際の貸し手からの請求額はここに表示される金額より高くなる場合があります。" },
         { q: "毎月多めに支払うと総利息は減りますか？", a: "はい。必要額を超える支払い分はすべて元金に充てられるため、ローン期間が短縮され、支払う総利息が減ります。これは各期間の利息が残高に対して計算されるためです。" },
+        { q: "返済期間は支払う総利息にどう影響しますか？", a: "返済期間を長くすると毎月の返済額は下がりますが、同じ金額をより多くの期間借りることになるため総利息は増えます。期間を短くすると返済額は上がりますが総利息は減ります。どちらを選ぶかは、無理なく支払える毎月の金額次第です。" },
       ],
     },
   },
@@ -709,6 +733,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "¿Cuál es la fórmula del interés compuesto?", a: "A = P(1 + r/n)^(nt) - donde P es el capital, r es la tasa anual, n es el número de capitalizaciones por año y t es el tiempo en años." },
         { q: "¿Cómo afecta la frecuencia de capitalización al crecimiento?", a: "Una capitalización más frecuente (diaria frente a anual) produce rendimientos ligeramente mayores con la misma tasa nominal, ya que el interés empieza a generar interés antes - aunque la diferencia suele ser pequeña con tasas de ahorro típicas." },
+        { q: "¿Cuánta diferencia hace empezar unos años antes?", a: "Una diferencia significativa: como el crecimiento se compone sobre sí mismo, el dinero invertido 5 o 10 años antes a la misma tasa termina siendo sustancialmente mayor, no solo proporcionalmente mayor, ya que las aportaciones más tempranas tienen más períodos de capitalización trabajando sobre ellas." },
       ],
     },
     fr: {
@@ -718,6 +743,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Quelle est la formule des intérêts composés ?", a: "A = P(1 + r/n)^(nt) - où P est le capital, r le taux annuel, n le nombre de capitalisations par an et t la durée en années." },
         { q: "Comment la fréquence de capitalisation affecte-t-elle la croissance ?", a: "Une capitalisation plus fréquente (quotidienne plutôt qu'annuelle) produit des rendements légèrement supérieurs à taux nominal égal, car les intérêts commencent à produire des intérêts plus tôt - même si la différence reste généralement faible aux taux d'épargne courants." },
+        { q: "Quelle différence cela fait-il de commencer quelques années plus tôt ?", a: "Une différence significative : comme la croissance se compose sur elle-même, l'argent investi 5 ou 10 ans plus tôt au même taux finit par être nettement plus important, pas seulement proportionnellement plus important, car les apports plus anciens bénéficient de davantage de périodes de capitalisation." },
       ],
     },
     de: {
@@ -727,6 +753,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Wie lautet die Formel für Zinseszins?", a: "A = P(1 + r/n)^(nt) - wobei P das Kapital, r der Jahreszins, n die Anzahl der Zinsperioden pro Jahr und t die Zeit in Jahren ist." },
         { q: "Wie wirkt sich die Zinsperiode auf das Wachstum aus?", a: "Häufigere Verzinsung (täglich statt jährlich) führt bei gleichem Nominalzins zu etwas höheren Erträgen, da Zinsen früher beginnen, selbst Zinsen zu erwirtschaften - der Unterschied ist bei üblichen Sparzinsen aber meist gering." },
+        { q: "Wie groß ist der Unterschied, wenn man einige Jahre früher beginnt?", a: "Ein erheblicher - da das Wachstum sich selbst verstärkt, wird Geld, das 5 oder 10 Jahre früher zum gleichen Zinssatz angelegt wird, am Ende deutlich größer, nicht nur proportional größer, da die früheren Einzahlungen mehr Zinsperioden zur Verfügung haben." },
       ],
     },
     pt: {
@@ -736,6 +763,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Qual é a fórmula dos juros compostos?", a: "A = P(1 + r/n)^(nt) - onde P é o principal, r é a taxa anual, n é o número de capitalizações por ano e t é o tempo em anos." },
         { q: "Como a frequência de capitalização afeta o crescimento?", a: "Uma capitalização mais frequente (diária em vez de anual) produz retornos ligeiramente maiores com a mesma taxa nominal, já que os juros começam a render juros mais cedo - embora a diferença costume ser pequena em taxas de poupança típicas." },
+        { q: "Quanta diferença faz começar alguns anos antes?", a: "Uma diferença significativa: como o crescimento se compõe sobre si mesmo, o dinheiro investido 5 ou 10 anos antes na mesma taxa acaba sendo substancialmente maior, não apenas proporcionalmente maior, já que as contribuições mais antigas têm mais períodos de capitalização trabalhando a seu favor." },
       ],
     },
     it: {
@@ -745,6 +773,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Qual è la formula dell'interesse composto?", a: "A = P(1 + r/n)^(nt) - dove P è il capitale, r è il tasso annuo, n è il numero di capitalizzazioni all'anno e t è il tempo in anni." },
         { q: "Come influisce la frequenza di capitalizzazione sulla crescita?", a: "Una capitalizzazione più frequente (giornaliera anziché annuale) produce rendimenti leggermente più alti allo stesso tasso nominale, poiché gli interessi iniziano a generare interessi prima - anche se la differenza è solitamente piccola ai tassi di risparmio tipici." },
+        { q: "Quanta differenza fa iniziare qualche anno prima?", a: "Una differenza significativa: poiché la crescita si compone su se stessa, il denaro investito 5 o 10 anni prima allo stesso tasso finisce per essere sostanzialmente maggiore, non solo proporzionalmente maggiore, poiché i contributi più anticipati hanno più periodi di capitalizzazione a proprio favore." },
       ],
     },
     ja: {
@@ -754,6 +783,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "複利の計算式は？", a: "A = P(1 + r/n)^(nt) - Pは元金、rは年利、nは年間の複利計算回数、tは年数です。" },
         { q: "複利計算の頻度は増え方にどう影響しますか？", a: "複利計算の頻度が高いほど（年1回より毎日など）、同じ表示金利でもわずかに高いリターンになります。これは利息がより早く利息を生み始めるためですが、一般的な貯蓄金利では差はわずかです。" },
+        { q: "数年早く始めると、どれくらいの差が生まれますか？", a: "大きな差が生まれます。複利は自己増殖的に働くため、同じ利率でも5年、10年早く投資したお金は、比例的に大きくなるだけでなく、それ以上に大きく増える傾向があります。早い時期の資金ほど、複利が効く期間が長くなるためです。" },
       ],
     },
   },
@@ -766,6 +796,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "¿Cuánto concreto necesito para una losa de 10x10?", a: "Con un grosor de 4 pulgadas, una losa de 10×10 pies necesita aproximadamente 1,23 yardas cúbicas antes del margen de desperdicio - unas 74 bolsas de mezcla de 80 lb." },
         { q: "¿Por qué añadir un margen de desperdicio?", a: "Una subrasante irregular, derrames y excavación excesiva suelen usar entre un 5% y un 10% más de material del que sugieren los cálculos exactos." },
+        { q: "¿Puedo usar esto para una losa no rectangular?", a: "Divide la forma irregular en secciones rectangulares, calcula cada una por separado con esta herramienta y luego suma los resultados - el cálculo de largo × ancho × grosor solo funciona bien con rectángulos, así que dividir un área en forma de L o curva en piezas más simples es la solución habitual." },
       ],
     },
     fr: {
@@ -775,6 +806,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "De combien de béton ai-je besoin pour une dalle de 3x3 m ?", a: "Sur une épaisseur de 10 cm, une dalle de 3×3 m nécessite environ 0,9 m³ avant marge de perte - soit environ 36 sacs de mélange de 35 kg." },
         { q: "Pourquoi ajouter une marge de perte ?", a: "Un sous-sol irrégulier, les déversements et le surcreusement consomment généralement 5 à 10 % de matériau en plus que ce que suggère le calcul exact." },
+        { q: "Puis-je utiliser cet outil pour une dalle non rectangulaire ?", a: "Découpez la forme irrégulière en sections rectangulaires, calculez chacune séparément avec cet outil, puis additionnez les résultats - le calcul longueur × largeur × épaisseur ne fonctionne proprement que sur des rectangles, donc diviser une surface en L ou courbe en morceaux plus simples est la solution habituelle." },
       ],
     },
     de: {
@@ -784,6 +816,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Wie viel Beton brauche ich für eine 3x3-m-Platte?", a: "Bei 10 cm Dicke benötigt eine 3×3-m-Platte vor dem Verschnittzuschlag etwa 0,9 m³ - rund 36 Säcke einer 35-kg-Mischung." },
         { q: "Warum einen Verschnittzuschlag hinzufügen?", a: "Unebener Untergrund, Verschütten und Übererdaushub verbrauchen typischerweise 5-10% mehr Material, als die reine Rechnung nahelegt." },
+        { q: "Kann ich das für eine nicht rechteckige Platte verwenden?", a: "Teilen Sie eine unregelmäßige Form in rechteckige Abschnitte auf, berechnen Sie jeden Abschnitt separat mit diesem Tool und addieren Sie die Ergebnisse - die Rechnung Länge × Breite × Dicke funktioniert nur bei Rechtecken sauber, daher ist das Aufteilen einer L-förmigen oder gebogenen Fläche in einfachere Teile die übliche Lösung." },
       ],
     },
     pt: {
@@ -793,6 +826,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Quanto concreto preciso para uma laje de 3x3 m?", a: "Com 10 cm de espessura, uma laje de 3×3 m precisa de aproximadamente 0,9 m³ antes da margem de desperdício - cerca de 36 sacos de mistura de 35 kg." },
         { q: "Por que adicionar uma margem de desperdício?", a: "Subleito irregular, derramamentos e escavação em excesso normalmente usam de 5% a 10% mais material do que o cálculo exato sugere." },
+        { q: "Posso usar isso para uma laje não retangular?", a: "Divida o formato irregular em seções retangulares, calcule cada uma separadamente com esta ferramenta e depois some os resultados - o cálculo de comprimento × largura × espessura só funciona bem em retângulos, então dividir uma área em L ou curva em partes mais simples é a solução padrão." },
       ],
     },
     it: {
@@ -802,6 +836,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Quanto calcestruzzo mi serve per una soletta di 3x3 m?", a: "Con uno spessore di 10 cm, una soletta di 3×3 m richiede circa 0,9 m³ prima del margine di spreco - circa 36 sacchi di miscela da 35 kg." },
         { q: "Perché aggiungere un margine di spreco?", a: "Un sottofondo irregolare, versamenti e scavo eccessivo generalmente utilizzano dal 5% al 10% di materiale in più rispetto a quanto suggerisce il calcolo esatto." },
+        { q: "Posso usarlo per una soletta non rettangolare?", a: "Suddividi la forma irregolare in sezioni rettangolari, calcola ciascuna separatamente con questo strumento, poi somma i risultati - il calcolo lunghezza × larghezza × spessore funziona correttamente solo sui rettangoli, quindi dividere un'area a L o curva in parti più semplici è la soluzione standard." },
       ],
     },
     ja: {
@@ -811,6 +846,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "3×3mのスラブにはどれくらいのコンクリートが必要ですか？", a: "厚さ10cmの場合、3×3mのスラブにはロス分を除いて約0.9m³必要です - 35kg入りの袋で約36袋分です。" },
         { q: "なぜロス分の余裕を見る必要がありますか？", a: "下地の不陸、こぼれ、余分な掘削などにより、通常は正確な計算よりも5〜10%多くの材料が必要になります。" },
+        { q: "長方形以外の形のスラブにも使えますか？", a: "不規則な形状を長方形のセクションに分割し、それぞれをこのツールで個別に計算してから合計してください。長さ×幅×厚さの計算は長方形でのみ正確に機能するため、L字型や曲線状のエリアはより単純な形に分割するのが一般的な対処法です。" },
       ],
     },
   },
@@ -823,6 +859,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "¿Cuántas cajas de piso necesito para 25 m²?", a: "Con 2 m² por caja y un margen de desperdicio del 10%, 25 m² necesitan aproximadamente 14 cajas." },
         { q: "¿Por qué necesito piso adicional para el desperdicio?", a: "Los cortes alrededor de puertas, armarios y el ajuste de patrones consumen material extra - un margen del 10-15% evita que te quedes corto a mitad del proyecto." },
+        { q: "¿El porcentaje de desperdicio cambia según el patrón del piso?", a: "Sí: un patrón de colocación recta suele necesitar solo un 5-10% extra, mientras que los diseños en diagonal o los patrones que requieren un ajuste preciso de las juntas (como el espiga) pueden necesitar un 15-20% extra debido a más cortes angulados y recortes descartados." },
       ],
     },
     fr: {
@@ -832,6 +869,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Combien de boîtes de revêtement me faut-il pour 25 m² ?", a: "Avec 2 m² par boîte et une marge de perte de 10 %, 25 m² nécessitent environ 14 boîtes." },
         { q: "Pourquoi prévoir du revêtement supplémentaire pour la perte ?", a: "Les découpes autour des portes, des placards et le raccord des motifs consomment du matériau supplémentaire - une marge de 10 à 15 % évite de manquer de matériau en cours de projet." },
+        { q: "Le pourcentage de perte change-t-il selon le motif de pose ?", a: "Oui - une pose droite ne nécessite généralement que 5 à 10 % de surplus, tandis que les poses en diagonale ou les motifs nécessitant un raccord précis des joints (comme le chevron) peuvent nécessiter 15 à 20 % de surplus en raison de coupes plus angulées et de chutes rejetées." },
       ],
     },
     de: {
@@ -841,6 +879,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Wie viele Kartons Bodenbelag brauche ich für 25 m²?", a: "Bei 2 m² pro Karton und 10% Verschnittzuschlag benötigen 25 m² etwa 14 Kartons." },
         { q: "Warum brauche ich zusätzlichen Bodenbelag für Verschnitt?", a: "Zuschnitte an Türen, Schränken und der Musterausrichtung verbrauchen zusätzliches Material - ein Zuschlag von 10-15% verhindert, dass Ihnen mitten im Projekt das Material ausgeht." },
+        { q: "Ändert sich der Verschnittanteil je nach Verlegemuster?", a: "Ja - eine gerade Verlegung benötigt in der Regel nur 5-10 % zusätzlich, während diagonale Verlegungen oder Muster mit präzisem Fugenversatz (wie Fischgrät) aufgrund von mehr Winkelschnitten und verworfenen Reststücken 15-20 % zusätzlich benötigen können." },
       ],
     },
     pt: {
@@ -850,6 +889,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Quantas caixas de piso preciso para 25 m²?", a: "Com 2 m² por caixa e uma margem de desperdício de 10%, 25 m² precisam de aproximadamente 14 caixas." },
         { q: "Por que preciso de piso extra para o desperdício?", a: "Cortes ao redor de portas, armários e o encaixe de padrões consomem material extra - uma margem de 10-15% evita que você fique sem material no meio do projeto." },
+        { q: "A porcentagem de desperdício muda de acordo com o padrão do piso?", a: "Sim - um padrão de instalação reta geralmente precisa de apenas 5-10% a mais, enquanto layouts diagonais ou padrões que exigem encaixe preciso das juntas (como espinha de peixe) podem precisar de 15-20% a mais devido a mais cortes angulados e sobras descartadas." },
       ],
     },
     it: {
@@ -859,6 +899,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Quante scatole di pavimento mi servono per 25 m²?", a: "Con 2 m² per scatola e un margine di spreco del 10%, 25 m² richiedono circa 14 scatole." },
         { q: "Perché mi serve del pavimento extra per lo spreco?", a: "I tagli intorno a porte, armadi e l'abbinamento dei motivi consumano materiale extra - un margine del 10-15% evita di rimanere senza materiale a metà progetto." },
+        { q: "La percentuale di spreco cambia in base al motivo di posa del pavimento?", a: "Sì - una posa dritta di solito richiede solo il 5-10% in più, mentre le pose diagonali o i motivi che richiedono un abbinamento preciso delle giunture (come la spina di pesce) possono richiedere il 15-20% in più a causa di tagli più angolati e ritagli scartati." },
       ],
     },
     ja: {
@@ -868,6 +909,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "25m²の部屋には床材が何箱必要ですか？", a: "1箱あたり2m²、ロス率10%の場合、25m²には約14箱必要です。" },
         { q: "なぜ余分に床材が必要なのですか？", a: "ドアや収納の周りのカットや柄合わせで余分な材料が必要になります。10〜15%の余裕を見ておくことで、施工途中で材料が足りなくなるのを防げます。" },
+        { q: "床材のロス率は張り方によって変わりますか？", a: "はい。まっすぐ張る場合は通常5〜10%程度の余裕で済みますが、斜め張りやヘリンボーンのように継ぎ目を正確に合わせる必要があるパターンでは、角度のあるカットや廃棄する端材が増えるため15〜20%程度の余裕が必要になることがあります。" },
       ],
     },
   },
@@ -880,6 +922,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "¿Cuántas calorías necesito para mantener mi peso?", a: "Depende de tu TMB y nivel de actividad - para un hombre de 30 años, 1,78 m y 82 kg con actividad moderada, el mantenimiento es de aproximadamente 2.763 calorías al día." },
         { q: "¿Cuántas calorías debo reducir para perder peso?", a: "Un déficit de unas 500 calorías diarias por debajo del mantenimiento es un objetivo común para perder aproximadamente 0,45 kg de peso por semana, ya que 0,45 kg de grasa corporal equivalen a unas 3.500 calorías." },
+        { q: "¿Por qué dos personas con la misma edad, altura y peso obtienen resultados distintos?", a: "El nivel de actividad y el sexo influyen en la fórmula: un estilo de vida más activo eleva sustancialmente el objetivo calórico frente a alguien sedentario con las mismas medidas, y la fórmula de TMB subyacente también tiene en cuenta las diferencias típicas en la composición corporal entre hombres y mujeres." },
       ],
     },
     fr: {
@@ -889,6 +932,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Combien de calories me faut-il pour maintenir mon poids ?", a: "Cela dépend de votre métabolisme de base et de votre niveau d'activité - pour un homme de 30 ans, 1,78 m, 82 kg, à activité modérée, le maintien se situe autour de 2 763 calories par jour." },
         { q: "Combien de calories dois-je réduire pour perdre du poids ?", a: "Un déficit d'environ 500 calories par jour sous le niveau de maintien est un objectif courant pour perdre environ 0,45 kg par semaine, puisque 0,45 kg de graisse corporelle équivaut à environ 3 500 calories." },
+        { q: "Pourquoi deux personnes du même âge, de la même taille et du même poids obtiennent-elles des résultats différents ?", a: "Le niveau d'activité et le sexe entrent tous deux en compte dans la formule - un mode de vie plus actif augmente sensiblement l'objectif calorique par rapport à une personne sédentaire ayant les mêmes mesures, et la formule de métabolisme de base sous-jacente tient également compte des différences habituelles de composition corporelle entre hommes et femmes." },
       ],
     },
     de: {
@@ -898,6 +942,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Wie viele Kalorien brauche ich, um mein Gewicht zu halten?", a: "Das hängt von Ihrem Grundumsatz und Aktivitätslevel ab - für einen 30-jährigen Mann, 1,78 m, 82 kg, mit moderater Aktivität liegt der Erhaltungsbedarf bei etwa 2.763 Kalorien pro Tag." },
         { q: "Wie viele Kalorien sollte ich zum Abnehmen einsparen?", a: "Ein Defizit von etwa 500 Kalorien pro Tag unter dem Erhaltungsbedarf ist ein gängiges Ziel für rund 0,45 kg Gewichtsverlust pro Woche, da 0,45 kg Körperfett etwa 3.500 Kalorien entsprechen." },
+        { q: "Warum erhalten zwei Personen mit gleichem Alter, gleicher Größe und gleichem Gewicht unterschiedliche Ergebnisse?", a: "Aktivitätslevel und Geschlecht fließen beide in die Formel ein - ein aktiverer Lebensstil erhöht das Kalorienziel deutlich gegenüber einer sitzenden Person mit denselben Werten, und die zugrunde liegende Grundumsatzformel berücksichtigt zudem typische Unterschiede in der Körperzusammensetzung zwischen Männern und Frauen." },
       ],
     },
     pt: {
@@ -907,6 +952,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Quantas calorias preciso para manter meu peso?", a: "Depende da sua TMB e nível de atividade - para um homem de 30 anos, 1,78 m e 82 kg com atividade moderada, a manutenção é de aproximadamente 2.763 calorias por dia." },
         { q: "Quantas calorias devo cortar para perder peso?", a: "Um déficit de cerca de 500 calorias por dia abaixo da manutenção é uma meta comum para perder aproximadamente 0,45 kg por semana, já que 0,45 kg de gordura corporal equivale a cerca de 3.500 calorias." },
+        { q: "Por que duas pessoas com a mesma idade, altura e peso obtêm resultados diferentes?", a: "O nível de atividade e o sexo influenciam a fórmula - um estilo de vida mais ativo eleva substancialmente a meta calórica em relação a alguém sedentário com as mesmas medidas, e a fórmula de TMB subjacente também leva em conta as diferenças típicas de composição corporal entre homens e mulheres." },
       ],
     },
     it: {
@@ -916,6 +962,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Quante calorie mi servono per mantenere il mio peso?", a: "Dipende dal tuo metabolismo basale e dal livello di attività - per un uomo di 30 anni, 1,78 m, 82 kg con attività moderata, il mantenimento è di circa 2.763 calorie al giorno." },
         { q: "Quante calorie dovrei tagliare per perdere peso?", a: "Un deficit di circa 500 calorie al giorno sotto il livello di mantenimento è un obiettivo comune per perdere circa 0,45 kg a settimana, poiché 0,45 kg di grasso corporeo equivale a circa 3.500 calorie." },
+        { q: "Perché due persone della stessa età, altezza e peso ottengono risultati diversi?", a: "Il livello di attività e il sesso influiscono entrambi sulla formula - uno stile di vita più attivo aumenta notevolmente l'obiettivo calorico rispetto a una persona sedentaria con gli stessi parametri, e la formula del metabolismo basale sottostante tiene conto anche delle tipiche differenze di composizione corporea tra uomini e donne." },
       ],
     },
     ja: {
@@ -925,6 +972,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "体重を維持するには何カロリー必要ですか？", a: "基礎代謝量と活動レベルによります - 30歳、身長178cm、体重82kgの男性で活動量が中程度の場合、維持カロリーは1日約2,763kcalです。" },
         { q: "減量にはどれくらいカロリーを減らせばいいですか？", a: "維持カロリーから1日約500kcal減らすのが、週に約0.45kgの減量を目指す一般的な目安です。体脂肪0.45kgは約3,500kcalに相当します。" },
+        { q: "年齢・身長・体重が同じ2人でも結果が異なるのはなぜですか？", a: "活動レベルと性別の両方が計算式に影響します。活動量が多いライフスタイルは、同じ体格で座りがちな人と比べてカロリー目標を大きく引き上げます。また基礎代謝量の計算式自体も、男女間の一般的な体組成の違いを考慮しています。" },
       ],
     },
   },
@@ -937,6 +985,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "¿Es el IMC preciso para todas las personas?", a: "No - el IMC no distingue entre músculo y grasa, y puede resultar engañoso en deportistas, adultos mayores y ciertos tipos de cuerpo. Es una herramienta de detección, no un diagnóstico." },
         { q: "¿Qué se considera un rango de IMC saludable?", a: "18,5-24,9 se clasifica generalmente como rango saludable, menos de 18,5 como bajo peso, 25-29,9 como sobrepeso y 30+ como el rango de obesidad - pero estos límites son promedios poblacionales, no veredictos individuales de salud." },
+        { q: "¿El IMC se aplica igual a niños que a adultos?", a: "No: esta calculadora usa la fórmula de IMC para adultos y los rangos saludables para adultos; los niños y adolescentes necesitan percentiles de tablas de crecimiento específicos por edad y sexo, ya que la composición corporal saludable cambia significativamente durante el desarrollo infantil." },
       ],
     },
     fr: {
@@ -946,6 +995,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "L'IMC est-il précis pour tout le monde ?", a: "Non - l'IMC ne distingue pas la masse musculaire de la masse grasse et peut être trompeur pour les athlètes, les personnes âgées et certaines morphologies. C'est un outil de dépistage, pas un diagnostic." },
         { q: "Quelle est la plage d'IMC considérée comme saine ?", a: "18,5-24,9 est généralement classé comme la plage saine, moins de 18,5 comme insuffisance pondérale, 25-29,9 comme surpoids, et 30+ comme la plage d'obésité - mais ces seuils sont des moyennes de population, pas des verdicts de santé individuels." },
+        { q: "L'IMC s'applique-t-il de la même façon aux enfants qu'aux adultes ?", a: "Non - cette calculatrice utilise la formule d'IMC pour adultes et les seuils sains pour adultes ; les enfants et adolescents ont besoin de percentiles de courbes de croissance spécifiques à l'âge et au sexe, car la composition corporelle saine évolue considérablement au cours du développement de l'enfant." },
       ],
     },
     de: {
@@ -955,6 +1005,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Ist der BMI für jeden genau?", a: "Nein - der BMI unterscheidet nicht zwischen Muskel- und Fettmasse und kann bei Sportlern, älteren Erwachsenen und bestimmten Körpertypen irreführend sein. Er ist ein Screening-Instrument, keine Diagnose." },
         { q: "Was gilt als gesunder BMI-Bereich?", a: "18,5-24,9 gilt allgemein als gesunder Bereich, unter 18,5 als Untergewicht, 25-29,9 als Übergewicht und 30+ als Adipositas-Bereich - diese Grenzwerte sind jedoch Bevölkerungsdurchschnitte, keine individuellen Gesundheitsurteile." },
+        { q: "Gilt der BMI für Kinder genauso wie für Erwachsene?", a: "Nein - dieser Rechner verwendet die BMI-Formel und die gesunden Bereichsgrenzen für Erwachsene; Kinder und Jugendliche benötigen stattdessen alters- und geschlechtsspezifische Perzentile aus Wachstumskurven, da sich eine gesunde Körperzusammensetzung während der Kindheit deutlich verändert." },
       ],
     },
     pt: {
@@ -964,6 +1015,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "O IMC é preciso para todos?", a: "Não - o IMC não distingue músculo de gordura e pode ser enganoso para atletas, idosos e alguns tipos de corpo. É uma ferramenta de triagem, não um diagnóstico." },
         { q: "O que é considerado uma faixa de IMC saudável?", a: "18,5-24,9 é geralmente classificado como a faixa saudável, abaixo de 18,5 como abaixo do peso, 25-29,9 como sobrepeso e 30+ como a faixa de obesidade - mas esses limites são médias populacionais, não veredictos individuais de saúde." },
+        { q: "O IMC se aplica da mesma forma a crianças e adultos?", a: "Não - esta calculadora usa a fórmula de IMC para adultos e as faixas saudáveis para adultos; crianças e adolescentes precisam de percentis de curvas de crescimento específicos por idade e sexo, já que a composição corporal saudável muda significativamente ao longo do desenvolvimento infantil." },
       ],
     },
     it: {
@@ -973,6 +1025,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "L'IMC è accurato per tutti?", a: "No - l'IMC non distingue tra massa muscolare e grassa e può essere fuorviante per atleti, anziani e alcuni tipi di corpo. È uno strumento di screening, non una diagnosi." },
         { q: "Cosa si considera un intervallo di IMC sano?", a: "18,5-24,9 è generalmente classificato come l'intervallo sano, sotto 18,5 come sottopeso, 25-29,9 come sovrappeso e 30+ come l'intervallo dell'obesità - ma queste soglie sono medie di popolazione, non verdetti di salute individuali." },
+        { q: "L'IMC si applica allo stesso modo a bambini e adulti?", a: "No - questa calcolatrice utilizza la formula dell'IMC per adulti e gli intervalli sani per adulti; bambini e adolescenti necessitano invece di percentili delle curve di crescita specifici per età e sesso, poiché la composizione corporea sana cambia significativamente durante lo sviluppo infantile." },
       ],
     },
     ja: {
@@ -982,6 +1035,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "BMIは誰にでも正確ですか？", a: "いいえ。BMIは筋肉と脂肪を区別できないため、アスリートや高齢者、一部の体型の人には誤解を招くことがあります。診断ではなく、スクリーニングツールです。" },
         { q: "健康的なBMIの範囲は？", a: "一般的に18.5〜24.9が健康的な範囲、18.5未満はやせすぎ、25〜29.9は肥満（軽度）、30以上は肥満の範囲とされていますが、これらは集団の平均値であり、個人の健康を判定するものではありません。" },
+        { q: "BMIは子どもにも大人と同じように当てはまりますか？", a: "いいえ。この計算機は大人用のBMI計算式と健康範囲の基準を使用しています。子どもや青少年には、年齢・性別ごとの成長曲線パーセンタイルが必要です。これは、健やかな体組成が子どもの発達過程で大きく変化するためです。" },
       ],
     },
   },
@@ -994,6 +1048,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "¿Qué es la TMB?", a: "La tasa metabólica basal es el número de calorías que tu cuerpo quema en reposo absoluto solo para mantener funciones vitales como la respiración y la circulación - no incluye ninguna actividad." },
         { q: "¿Qué tan precisa es la fórmula de Mifflin-St Jeor?", a: "Se considera una de las fórmulas de TMB más precisas para la población general, típicamente dentro de un 10% de los valores medidos, aunque el metabolismo individual varía según la masa muscular y otros factores." },
+        { q: "¿La TMB cambia con la edad?", a: "Sí: la TMB disminuye gradualmente con la edad, en gran parte debido a una disminución natural de la masa muscular con el tiempo, lo que explica en parte por qué las necesidades calóricas suelen bajar en la edad adulta avanzada incluso con el mismo nivel de actividad." },
       ],
     },
     fr: {
@@ -1003,6 +1058,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Qu'est-ce que le métabolisme de base ?", a: "Le métabolisme de base est le nombre de calories que votre corps brûle au repos complet, uniquement pour maintenir des fonctions vitales comme la respiration et la circulation - il n'inclut aucune activité." },
         { q: "Quelle est la précision de la formule de Mifflin-St Jeor ?", a: "Elle est considérée comme l'une des formules de métabolisme de base les plus précises pour la population générale, généralement à environ 10 % près des valeurs mesurées, bien que le métabolisme individuel varie selon la masse musculaire et d'autres facteurs." },
+        { q: "Le métabolisme de base change-t-il avec l'âge ?", a: "Oui - le métabolisme de base diminue progressivement avec l'âge, en grande partie en raison d'une baisse naturelle de la masse musculaire au fil du temps, ce qui explique en partie pourquoi les besoins caloriques ont tendance à diminuer à un âge avancé, même à niveau d'activité identique." },
       ],
     },
     de: {
@@ -1012,6 +1068,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Was ist der Grundumsatz?", a: "Der Grundumsatz ist die Anzahl an Kalorien, die Ihr Körper in völliger Ruhe verbrennt, nur um lebenswichtige Funktionen wie Atmung und Kreislauf aufrechtzuerhalten - Aktivität ist nicht eingerechnet." },
         { q: "Wie genau ist die Mifflin-St-Jeor-Formel?", a: "Sie gilt als eine der genaueren Grundumsatzformeln für die Allgemeinbevölkerung, meist innerhalb von etwa 10% der gemessenen Werte, wobei der individuelle Stoffwechsel je nach Muskelmasse und anderen Faktoren variiert." },
+        { q: "Verändert sich der Grundumsatz mit dem Alter?", a: "Ja - der Grundumsatz sinkt mit zunehmendem Alter allmählich, größtenteils aufgrund einer natürlichen Abnahme der Muskelmasse im Laufe der Zeit, was mit erklärt, warum der Kalorienbedarf im höheren Erwachsenenalter oft sinkt, selbst bei gleichem Aktivitätslevel." },
       ],
     },
     pt: {
@@ -1021,6 +1078,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "O que é a TMB?", a: "A taxa metabólica basal é o número de calorias que seu corpo queima em repouso absoluto apenas para manter funções vitais como respiração e circulação - não inclui nenhuma atividade." },
         { q: "Quão precisa é a fórmula de Mifflin-St Jeor?", a: "É considerada uma das fórmulas de TMB mais precisas para a população em geral, geralmente dentro de cerca de 10% dos valores medidos, embora o metabolismo individual varie conforme a massa muscular e outros fatores." },
+        { q: "A TMB muda com a idade?", a: "Sim - a TMB diminui gradualmente com a idade, em grande parte devido a uma redução natural da massa muscular ao longo do tempo, o que explica em parte por que as necessidades calóricas costumam cair na idade adulta avançada, mesmo com o mesmo nível de atividade." },
       ],
     },
     it: {
@@ -1030,6 +1088,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Cos'è il metabolismo basale?", a: "Il metabolismo basale è il numero di calorie che il tuo corpo brucia a riposo completo solo per mantenere le funzioni vitali come la respirazione e la circolazione - non include alcuna attività." },
         { q: "Quanto è accurata la formula di Mifflin-St Jeor?", a: "È considerata una delle formule del metabolismo basale più accurate per la popolazione generale, di solito entro circa il 10% dei valori misurati, anche se il metabolismo individuale varia in base alla massa muscolare e ad altri fattori." },
+        { q: "Il metabolismo basale cambia con l'età?", a: "Sì - il metabolismo basale diminuisce gradualmente con l'età, in gran parte a causa di una naturale riduzione della massa muscolare nel tempo, il che spiega in parte perché il fabbisogno calorico tende a calare in età adulta avanzata anche a parità di livello di attività." },
       ],
     },
     ja: {
@@ -1039,6 +1098,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "基礎代謝量とは何ですか？", a: "基礎代謝量とは、呼吸や血液循環など生命維持に必要な機能を保つためだけに、完全な安静状態で体が消費するカロリーのことです。活動によるカロリー消費は含まれません。" },
         { q: "Mifflin-St Jeor式はどのくらい正確ですか？", a: "一般集団に対して比較的精度の高い基礎代謝量の計算式の一つとされ、通常は実測値の約10%以内に収まりますが、個人の代謝は筋肉量などの要因によって異なります。" },
+        { q: "基礎代謝量は年齢とともに変化しますか？", a: "はい。基礎代謝量は加齢とともに徐々に低下します。これは主に、時間の経過に伴う自然な筋肉量の減少によるもので、同じ活動レベルであっても年齢を重ねるとカロリー必要量が下がる傾向がある理由の一つです。" },
       ],
     },
   },
@@ -1051,6 +1111,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "¿Cómo se calcula la edad exacta?", a: "Contando los años completos, luego los meses restantes y luego los días restantes entre la fecha de nacimiento y hoy - no simplemente restando el año de nacimiento del año actual." },
         { q: "¿Esto tiene en cuenta los años bisiestos?", a: "Sí - funciona directamente con fechas de calendario en lugar de asumir un año fijo de 365 días, por lo que los años bisiestos se gestionan correctamente sin ningún ajuste adicional." },
+        { q: "¿Puedo calcular la edad en una fecha futura o pasada específica en lugar de hoy?", a: "Esta calculadora compara tu fecha de nacimiento específicamente con la fecha de hoy; para hallar tu edad en otra fecha, usa la Calculadora de Días Restantes o la Calculadora de Duración de Fecha para medir la diferencia entre tu fecha de nacimiento y cualquier fecha que elijas." },
       ],
     },
     fr: {
@@ -1060,6 +1121,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Comment l'âge exact est-il calculé ?", a: "En comptant les années complètes, puis les mois restants, puis les jours restants entre la date de naissance et aujourd'hui - pas simplement en soustrayant l'année de naissance de l'année en cours." },
         { q: "Cela tient-il compte des années bissextiles ?", a: "Oui - le calcul se fait directement à partir des dates du calendrier plutôt qu'en supposant une année fixe de 365 jours, les années bissextiles sont donc gérées correctement sans ajustement supplémentaire." },
+        { q: "Puis-je calculer mon âge à une date future ou passée précise plutôt qu'aujourd'hui ?", a: "Cette calculatrice compare spécifiquement votre date de naissance à la date d'aujourd'hui ; pour connaître votre âge à une autre date, utilisez la Calculatrice de Jours Restants ou la Calculatrice de Durée pour mesurer l'écart entre votre date de naissance et la date de votre choix." },
       ],
     },
     de: {
@@ -1069,6 +1131,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Wie wird das genaue Alter berechnet?", a: "Durch Zählen der vollen Jahre, dann der verbleibenden Monate, dann der verbleibenden Tage zwischen Geburtsdatum und heute - nicht durch einfaches Subtrahieren des Geburtsjahrs vom aktuellen Jahr." },
         { q: "Werden Schaltjahre berücksichtigt?", a: "Ja - die Berechnung erfolgt direkt anhand von Kalenderdaten statt eines festen 365-Tage-Jahres, sodass Schaltjahre korrekt ohne zusätzliche Anpassung berücksichtigt werden." },
+        { q: "Kann ich das Alter zu einem bestimmten zukünftigen oder vergangenen Datum statt heute berechnen?", a: "Dieser Rechner vergleicht Ihr Geburtsdatum speziell mit dem heutigen Datum; um Ihr Alter an einem anderen Datum zu ermitteln, nutzen Sie den Tage-bis-Rechner oder den Datumsdifferenz-Rechner, um den Abstand zwischen Ihrem Geburtsdatum und einem beliebigen Datum zu berechnen." },
       ],
     },
     pt: {
@@ -1078,6 +1141,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Como a idade exata é calculada?", a: "Contando os anos completos, depois os meses restantes e depois os dias restantes entre a data de nascimento e hoje - não apenas subtraindo o ano de nascimento do ano atual." },
         { q: "Isso considera anos bissextos?", a: "Sim - funciona diretamente com datas do calendário em vez de assumir um ano fixo de 365 dias, então os anos bissextos são tratados corretamente sem nenhum ajuste extra." },
+        { q: "Posso calcular a idade em uma data futura ou passada específica, em vez de hoje?", a: "Esta calculadora compara sua data de nascimento especificamente com a data de hoje; para descobrir sua idade em outra data, use a Calculadora de Dias Restantes ou a Calculadora de Duração de Data para medir a diferença entre sua data de nascimento e qualquer data escolhida." },
       ],
     },
     it: {
@@ -1087,6 +1151,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Come viene calcolata l'età esatta?", a: "Contando gli anni completi, poi i mesi rimanenti, poi i giorni rimanenti tra la data di nascita e oggi - non semplicemente sottraendo l'anno di nascita dall'anno corrente." },
         { q: "Questo tiene conto degli anni bisestili?", a: "Sì - funziona direttamente con le date del calendario invece di assumere un anno fisso di 365 giorni, quindi gli anni bisestili vengono gestiti correttamente senza alcuna regolazione aggiuntiva." },
+        { q: "Posso calcolare l'età a partire da una data futura o passata specifica anziché da oggi?", a: "Questa calcolatrice confronta la tua data di nascita specificamente con la data odierna; per trovare la tua età in un'altra data, usa la Calcolatrice dei Giorni Rimanenti o la Calcolatrice della Durata tra Date per misurare la differenza tra la tua data di nascita e qualsiasi data tu scelga." },
       ],
     },
     ja: {
@@ -1096,6 +1161,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "正確な年齢はどのように計算されますか？", a: "生年月日から今日までの満年数、残りの月数、残りの日数を順に数えていきます。単純に現在の年から生まれた年を引くわけではありません。" },
         { q: "うるう年は考慮されますか？", a: "はい。365日固定の年を前提とするのではなく、実際のカレンダーの日付をもとに計算するため、うるう年も特別な調整なしで正しく処理されます。" },
+        { q: "今日ではなく、特定の未来や過去の日付時点での年齢を計算できますか？", a: "この計算機は生年月日を今日の日付と比較する仕様です。別の日付での年齢を知りたい場合は、残り日数計算機や期間計算機を使って、生年月日と任意の日付との差を測ってください。" },
       ],
     },
   },
@@ -1108,6 +1174,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "¿Cómo se calculan los 'días restantes'?", a: "Es el número de días de calendario entre hoy y la fecha elegida, contando hacia adelante o hacia atrás desde la medianoche." },
         { q: "¿Esto cuenta fines de semana y festivos?", a: "Sí - esto cuenta todos los días de calendario, incluyendo fines de semana y festivos. Si necesitas un conteo solo de días hábiles (excluyendo fines de semana), usa la Calculadora de Días Hábiles." },
+        { q: "¿Puedo calcular los días entre dos fechas futuras, no solo desde hoy?", a: "Sí, de forma indirecta: esta herramienta parte de hoy, pero la Calculadora de Duración de Fecha te permite elegir dos fechas arbitrarias (pasadas, presentes o futuras) y devuelve el número exacto de días entre ellas." },
       ],
     },
     fr: {
@@ -1117,6 +1184,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Comment le nombre de « jours restants » est-il calculé ?", a: "C'est le nombre de jours calendaires entre aujourd'hui et la date choisie, en comptant à partir de minuit." },
         { q: "Cela compte-t-il les week-ends et jours fériés ?", a: "Oui - ce calcul compte chaque jour calendaire, y compris les week-ends et jours fériés. Si vous avez besoin d'un décompte en jours ouvrés uniquement (hors week-ends), utilisez la Calculatrice de Jours Ouvrés." },
+        { q: "Puis-je calculer le nombre de jours entre deux dates futures, pas seulement à partir d'aujourd'hui ?", a: "Oui, indirectement - cet outil part d'aujourd'hui, mais la Calculatrice de Durée vous permet de choisir deux dates quelconques (passées, présentes ou futures) et renvoie le nombre exact de jours entre elles." },
       ],
     },
     de: {
@@ -1126,6 +1194,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Wie werden die „verbleibenden Tage“ berechnet?", a: "Es ist die Anzahl der Kalendertage zwischen heute und dem gewählten Datum, gezählt ab Mitternacht." },
         { q: "Werden Wochenenden und Feiertage mitgezählt?", a: "Ja - hier werden alle Kalendertage gezählt, einschließlich Wochenenden und Feiertagen. Falls Sie nur Werktage benötigen (ohne Wochenenden), nutzen Sie stattdessen den Werktage-Rechner." },
+        { q: "Kann ich die Tage zwischen zwei zukünftigen Daten berechnen, nicht nur ab heute?", a: "Ja, indirekt - dieses Tool geht von heute aus, aber der Datumsdifferenz-Rechner lässt Sie zwei beliebige Daten (Vergangenheit, Gegenwart oder Zukunft) wählen und liefert die genaue Anzahl der Tage dazwischen." },
       ],
     },
     pt: {
@@ -1135,6 +1204,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Como os 'dias restantes' são calculados?", a: "É o número de dias corridos entre hoje e a data escolhida, contando para frente ou para trás a partir da meia-noite." },
         { q: "Isso conta fins de semana e feriados?", a: "Sim - isso conta todos os dias corridos, incluindo fins de semana e feriados. Se você precisar de uma contagem apenas de dias úteis (excluindo fins de semana), use a Calculadora de Dias Úteis." },
+        { q: "Posso calcular os dias entre duas datas futuras, não apenas a partir de hoje?", a: "Sim, indiretamente - esta ferramenta parte de hoje, mas a Calculadora de Duração de Data permite escolher duas datas arbitrárias (passadas, presentes ou futuras) e retorna o número exato de dias entre elas." },
       ],
     },
     it: {
@@ -1144,6 +1214,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Come vengono calcolati i 'giorni rimanenti'?", a: "È il numero di giorni di calendario tra oggi e la data scelta, contando in avanti o indietro dalla mezzanotte." },
         { q: "Questo conta i weekend e le festività?", a: "Sì - questo conta ogni giorno di calendario, inclusi weekend e festività. Se hai bisogno di un conteggio solo di giorni lavorativi (esclusi i weekend), usa la Calcolatrice dei Giorni Lavorativi." },
+        { q: "Posso calcolare i giorni tra due date future, non solo da oggi?", a: "Sì, indirettamente - questo strumento parte da oggi, ma la Calcolatrice della Durata tra Date ti permette di scegliere due date qualsiasi (passate, presenti o future) e restituisce il numero esatto di giorni tra loro." },
       ],
     },
     ja: {
@@ -1153,6 +1224,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "「残り日数」はどのように計算されますか？", a: "今日から選択した日付までの暦日数で、深夜0時を基準に前後を数えます。" },
         { q: "週末や祝日もカウントされますか？", a: "はい。週末や祝日を含むすべての暦日をカウントします。週末を除いた営業日のみのカウントが必要な場合は、営業日計算機をご利用ください。" },
+        { q: "今日からではなく、2つの未来の日付の間の日数を計算できますか？", a: "間接的には可能です。このツールは今日を基準にしていますが、期間計算機を使えば任意の2つの日付（過去・現在・未来）を選んで、その間の正確な日数を求めることができます。" },
       ],
     },
   },
@@ -1165,6 +1237,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "¿Cuántas pulgadas tiene un centímetro?", a: "1 centímetro equivale a unas 0,3937 pulgadas. Para convertir cm a pulgadas, divide entre 2,54." },
         { q: "¿Esta conversión es exacta o redondeada?", a: "El factor de conversión subyacente (1 pulgada = 2,54 cm) es exacto por definición internacional - cualquier redondeo que veas es solo el resultado mostrado ajustado a un número legible de decimales." },
+        { q: "¿Por qué algunos conversores en línea dan una respuesta ligeramente distinta?", a: "Las pequeñas diferencias suelen deberse al redondeo en distintos decimales, no a un factor de conversión distinto: la relación de 1 pulgada = 2,54 cm es un estándar internacional fijo, así que cualquier conversor preciso debería coincidir al comparar con la misma precisión." },
       ],
     },
     fr: {
@@ -1174,6 +1247,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Combien de pouces fait un centimètre ?", a: "1 centimètre équivaut à environ 0,3937 pouce. Pour convertir des cm en pouces, divisez par 2,54." },
         { q: "Cette conversion est-elle exacte ou arrondie ?", a: "Le facteur de conversion sous-jacent (1 pouce = 2,54 cm) est exact par définition internationale - tout arrondi que vous voyez correspond simplement au résultat affiché, ajusté à un nombre lisible de décimales." },
+        { q: "Pourquoi certains convertisseurs en ligne donnent-ils une réponse légèrement différente ?", a: "Les petites différences proviennent généralement d'un arrondi à des décimales différentes, et non d'un facteur de conversion différent - la relation sous-jacente de 1 pouce = 2,54 cm est une norme internationale fixe, donc tout convertisseur précis devrait concorder une fois comparé à la même précision." },
       ],
     },
     de: {
@@ -1183,6 +1257,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Wie viele Zoll hat ein Zentimeter?", a: "1 Zentimeter entspricht etwa 0,3937 Zoll. Um cm in Zoll umzurechnen, teilen Sie durch 2,54." },
         { q: "Ist diese Umrechnung exakt oder gerundet?", a: "Der zugrunde liegende Umrechnungsfaktor (1 Zoll = 2,54 cm) ist per internationaler Definition exakt - jede sichtbare Rundung betrifft nur die Anzeige auf eine lesbare Anzahl Dezimalstellen." },
+        { q: "Warum liefern manche Online-Umrechner ein leicht abweichendes Ergebnis?", a: "Kleine Abweichungen entstehen meist durch Rundung auf unterschiedliche Nachkommastellen, nicht durch einen anderen Umrechnungsfaktor - das zugrunde liegende Verhältnis 1 Zoll = 2,54 cm ist ein fester internationaler Standard, sodass jeder korrekte Umrechner bei gleicher Genauigkeit übereinstimmen sollte." },
       ],
     },
     pt: {
@@ -1192,6 +1267,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Quantas polegadas tem um centímetro?", a: "1 centímetro equivale a cerca de 0,3937 polegadas. Para converter cm em polegadas, divida por 2,54." },
         { q: "Essa conversão é exata ou arredondada?", a: "O fator de conversão subjacente (1 polegada = 2,54 cm) é exato por definição internacional - qualquer arredondamento que você vê é apenas o resultado exibido ajustado para um número legível de casas decimais." },
+        { q: "Por que alguns conversores online dão uma resposta ligeiramente diferente?", a: "Pequenas diferenças geralmente vêm do arredondamento em casas decimais diferentes, não de um fator de conversão diferente - a relação de 1 polegada = 2,54 cm é um padrão internacional fixo, então qualquer conversor preciso deve concordar ao comparar na mesma precisão." },
       ],
     },
     it: {
@@ -1201,6 +1277,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Quanti pollici ha un centimetro?", a: "1 centimetro equivale a circa 0,3937 pollici. Per convertire cm in pollici, dividi per 2,54." },
         { q: "Questa conversione è esatta o arrotondata?", a: "Il fattore di conversione sottostante (1 pollice = 2,54 cm) è esatto per definizione internazionale - qualsiasi arrotondamento che vedi è solo il risultato mostrato adattato a un numero leggibile di cifre decimali." },
+        { q: "Perché alcuni convertitori online danno una risposta leggermente diversa?", a: "Le piccole differenze di solito derivano dall'arrotondamento a decimali diversi, non da un fattore di conversione diverso - il rapporto di base 1 pollice = 2,54 cm è uno standard internazionale fisso, quindi qualsiasi convertitore accurato dovrebbe concordare se confrontato con la stessa precisione." },
       ],
     },
     ja: {
@@ -1210,6 +1287,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "1センチメートルは何インチですか？", a: "1センチメートルは約0.3937インチです。cmをインチに変換するには2.54で割ります。" },
         { q: "この変換は正確ですか、それとも四捨五入されていますか？", a: "変換係数そのもの（1インチ＝2.54cm）は国際的な定義により厳密な値です。表示上見える丸めは、結果を読みやすい小数点以下の桁数に調整しているだけです。" },
+        { q: "オンライン変換ツールによって答えがわずかに異なるのはなぜですか？", a: "わずかな違いは通常、変換係数の違いではなく、四捨五入する小数点以下の桁数の違いによるものです。1インチ＝2.54cmという関係は国際的に定められた固定値なので、同じ精度で比較すれば正確な変換ツールの結果は一致するはずです。" },
       ],
     },
   },
@@ -1222,6 +1300,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "¿Cómo convierto Fahrenheit a Celsius?", a: "Resta 32 y luego multiplica por 5/9. 98,6°F: (98,6 − 32) × 5/9 = 37°C - temperatura corporal humana normal." },
         { q: "¿Por qué la conversión de temperatura necesita un desplazamiento y no solo una multiplicación?", a: "Fahrenheit y Celsius tienen puntos cero distintos (el agua se congela a 0°C pero a 32°F), por lo que la conversión requiere desplazar la escala primero, a diferencia de las conversiones de longitud o peso, que solo necesitan un multiplicador." },
+        { q: "¿Qué temperatura tiene el mismo número en Celsius y en Fahrenheit?", a: "−40 grados: es el único punto donde ambas escalas coinciden, ya que −40 °C × 9/5 + 32 = −40 °F exactamente; cualquier otra temperatura muestra un número distinto en cada escala." },
       ],
     },
     fr: {
@@ -1231,6 +1310,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Comment convertir des Fahrenheit en Celsius ?", a: "Soustrayez 32, puis multipliez par 5/9. 98,6°F : (98,6 − 32) × 5/9 = 37°C - température corporelle humaine normale." },
         { q: "Pourquoi la conversion de température nécessite-t-elle un décalage et pas seulement une multiplication ?", a: "Fahrenheit et Celsius ont des points zéro différents (l'eau gèle à 0°C mais à 32°F), donc la conversion nécessite d'abord de décaler l'échelle, contrairement aux conversions de longueur ou de poids qui n'ont besoin que d'un multiplicateur." },
+        { q: "À quelle température le nombre est-il identique en Celsius et en Fahrenheit ?", a: "−40 degrés - c'est le seul point où les deux échelles se croisent, puisque −40 °C × 9/5 + 32 = −40 °F exactement ; toute autre température affiche un nombre différent sur chaque échelle." },
       ],
     },
     de: {
@@ -1240,6 +1320,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Wie rechne ich Fahrenheit in Celsius um?", a: "Ziehen Sie 32 ab und multiplizieren Sie dann mit 5/9. 98,6°F: (98,6 − 32) × 5/9 = 37°C - normale menschliche Körpertemperatur." },
         { q: "Warum braucht die Temperaturumrechnung eine Verschiebung statt nur eine Multiplikation?", a: "Fahrenheit und Celsius haben unterschiedliche Nullpunkte (gefrierendes Wasser liegt bei 0°C, aber 32°F), daher muss die Skala zuerst verschoben werden - anders als bei Längen- oder Gewichtsumrechnungen, die nur einen Multiplikator benötigen." },
+        { q: "Bei welcher Temperatur ist die Zahl in Celsius und Fahrenheit gleich?", a: "−40 Grad - das ist der einzige Punkt, an dem sich die beiden Skalen schneiden, da −40 °C × 9/5 + 32 exakt −40 °F ergibt; bei jeder anderen Temperatur zeigen beide Skalen eine unterschiedliche Zahl." },
       ],
     },
     pt: {
@@ -1249,6 +1330,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Como converto Fahrenheit para Celsius?", a: "Subtraia 32 e depois multiplique por 5/9. 98,6°F: (98,6 − 32) × 5/9 = 37°C - temperatura corporal humana normal." },
         { q: "Por que a conversão de temperatura precisa de um deslocamento e não apenas de multiplicação?", a: "Fahrenheit e Celsius têm pontos zero diferentes (a água congela a 0°C, mas a 32°F), então a conversão exige deslocar a escala primeiro, diferente das conversões de comprimento ou peso, que precisam apenas de um multiplicador." },
+        { q: "Em que temperatura o número é igual em Celsius e Fahrenheit?", a: "−40 graus - é o único ponto em que as duas escalas se cruzam, já que −40°C × 9/5 + 32 = −40°F exatamente; qualquer outra temperatura mostra um número diferente em cada escala." },
       ],
     },
     it: {
@@ -1258,6 +1340,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Come converto i Fahrenheit in Celsius?", a: "Sottrai 32, poi moltiplica per 5/9. 98,6°F: (98,6 − 32) × 5/9 = 37°C - temperatura corporea umana normale." },
         { q: "Perché la conversione della temperatura richiede uno spostamento e non solo una moltiplicazione?", a: "Fahrenheit e Celsius hanno punti zero diversi (l'acqua congela a 0°C ma a 32°F), quindi la conversione richiede prima di spostare la scala, a differenza delle conversioni di lunghezza o peso che richiedono solo un moltiplicatore." },
+        { q: "A quale temperatura il numero è uguale sia in Celsius che in Fahrenheit?", a: "−40 gradi - è l'unico punto in cui le due scale si incrociano, poiché −40°C × 9/5 + 32 = −40°F esattamente; ogni altra temperatura mostra un numero diverso su ciascuna scala." },
       ],
     },
     ja: {
@@ -1267,6 +1350,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "華氏から摂氏への変換方法は？", a: "32を引いてから5/9を掛けます。98.6°Fの場合：(98.6 − 32) × 5/9 = 37°C（人間の平熱）です。" },
         { q: "なぜ温度変換には掛け算だけでなくオフセットが必要なのですか？", a: "華氏と摂氏では基準点（0度）が異なるため（水は0°Cで凍りますが、華氏では32°F）、まずスケールをずらす必要があります。これは掛け算だけで済む長さや重さの変換とは異なる点です。" },
+        { q: "摂氏と華氏で同じ数値になる温度はありますか？", a: "−40度です。−40°C × 9/5 + 32 = −40°Fとなり、2つの目盛りが一致する唯一の点です。それ以外の温度では、両方の目盛りで異なる数値になります。" },
       ],
     },
   },
@@ -1279,6 +1363,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "¿Este contador de palabras guarda mi texto?", a: "No - el conteo se realiza enteramente en tu navegador y no se envía ni almacena nada." },
         { q: "¿Cuenta las palabras igual que Microsoft Word?", a: "Muy similar, pero no siempre idéntico - este contador divide por espacios en blanco, que es como cuentan la mayoría de los procesadores de texto, pero casos especiales como palabras con guion o números pueden contarse ligeramente distinto entre herramientas." },
+        { q: "¿Qué se considera una 'oración' en el conteo de oraciones?", a: "El texto que termina en punto, signo de interrogación o de exclamación se cuenta como una oración; las abreviaturas con punto (como 'Dr.' o 'p. ej.') pueden a veces inflar ligeramente el conteo, ya que la herramienta no siempre distingue un punto final de oración de un punto de abreviatura." },
       ],
     },
     fr: {
@@ -1288,6 +1373,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Ce compteur de mots enregistre-t-il mon texte ?", a: "Non - le comptage s'effectue entièrement dans votre navigateur et rien n'est envoyé ni stocké." },
         { q: "Compte-t-il les mots de la même façon que Microsoft Word ?", a: "Très proche, mais pas toujours identique - ce compteur se base sur les espaces, comme la plupart des traitements de texte, mais des cas particuliers comme les mots à trait d'union ou les nombres peuvent être comptés légèrement différemment d'un outil à l'autre." },
+        { q: "Qu'est-ce qui compte comme une « phrase » dans le comptage des phrases ?", a: "Un texte se terminant par un point, un point d'interrogation ou d'exclamation est compté comme une phrase - les abréviations avec point (comme « Dr. » ou « ex. ») peuvent parfois gonfler légèrement le compte, car l'outil ne peut pas toujours distinguer un point de fin de phrase d'un point d'abréviation." },
       ],
     },
     de: {
@@ -1297,6 +1383,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Speichert dieser Wortzähler meinen Text?", a: "Nein - die Zählung läuft vollständig in Ihrem Browser, es wird nichts gesendet oder gespeichert." },
         { q: "Zählt er Wörter genauso wie Microsoft Word?", a: "Sehr ähnlich, aber nicht immer identisch - dieser Zähler trennt anhand von Leerzeichen, wie es die meisten Textverarbeitungen tun, aber Grenzfälle wie Bindestrich-Wörter oder Zahlen können je nach Tool leicht unterschiedlich gezählt werden." },
+        { q: "Was zählt als „Satz“ bei der Satzzählung?", a: "Text, der mit einem Punkt, Frage- oder Ausrufezeichen endet, wird als ein Satz gezählt - Abkürzungen mit Punkt (wie „Dr.“ oder „z. B.“) können die Zählung gelegentlich leicht erhöhen, da das Tool einen satzabschließenden Punkt nicht immer von einem Abkürzungspunkt unterscheiden kann." },
       ],
     },
     pt: {
@@ -1306,6 +1393,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Este contador de palavras salva meu texto?", a: "Não - a contagem é feita inteiramente no seu navegador e nada é enviado ou armazenado." },
         { q: "Ele conta palavras da mesma forma que o Microsoft Word?", a: "Bem próximo, mas nem sempre idêntico - este contador divide por espaços em branco, que é como a maioria dos processadores de texto conta também, mas casos específicos como palavras com hífen ou números podem ser contados de forma ligeiramente diferente entre ferramentas." },
+        { q: "O que conta como uma 'frase' na contagem de frases?", a: "Um texto que termina em ponto final, ponto de interrogação ou exclamação é contado como uma frase - abreviações com ponto (como 'Dr.' ou 'ex.') podem ocasionalmente inflar um pouco a contagem, já que a ferramenta nem sempre consegue distinguir um ponto final de frase de um ponto de abreviação." },
       ],
     },
     it: {
@@ -1315,6 +1403,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Questo contatore di parole salva il mio testo?", a: "No - il conteggio avviene interamente nel tuo browser e nulla viene inviato o memorizzato." },
         { q: "Conta le parole allo stesso modo di Microsoft Word?", a: "Molto simile, ma non sempre identico - questo contatore divide in base agli spazi bianchi, come fanno anche la maggior parte degli elaboratori di testo, ma casi limite come parole con trattino o numeri possono essere conteggiati in modo leggermente diverso tra i vari strumenti." },
+        { q: "Cosa conta come 'frase' nel conteggio delle frasi?", a: "Un testo che termina con un punto, un punto interrogativo o esclamativo viene contato come una frase - le abbreviazioni con punto (come 'Dott.' o 'es.') possono a volte gonfiare leggermente il conteggio, poiché lo strumento non sempre riesce a distinguere un punto di fine frase da un punto di abbreviazione." },
       ],
     },
     ja: {
@@ -1324,6 +1413,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "このツールは入力したテキストを保存しますか？", a: "いいえ。カウントはすべてブラウザ内で行われ、データが送信・保存されることはありません。" },
         { q: "Microsoft Wordと同じ数え方ですか？", a: "非常に近いですが、常に同じとは限りません。このツールは空白で区切って数える、多くのワープロソフトと同様の方式ですが、ハイフン付きの単語や数字などの境界的なケースでは、ツールによって数え方がわずかに異なることがあります。" },
+        { q: "「文」のカウントでは何が1文としてカウントされますか？", a: "ピリオド、疑問符、感嘆符で終わるテキストが1文としてカウントされます。「Dr.」や「e.g.」のような省略記号のピリオドは、文末のピリオドと区別できない場合があるため、まれにカウントが少し多くなることがあります。" },
       ],
     },
   },
@@ -1336,6 +1426,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "¿Cuál es la diferencia entre tipo título y tipo oración?", a: "El tipo título pone en mayúscula la primera letra de cada palabra principal ('Hola Mundo Ejemplo'), mientras que el tipo oración solo pone en mayúscula la primera letra de todo el texto ('Hola mundo ejemplo')." },
         { q: "¿Este conversor guarda mi texto?", a: "No - la conversión se realiza enteramente en tu navegador y no se envía ni almacena nada." },
+        { q: "¿Esto maneja correctamente letras acentuadas y caracteres no ingleses?", a: "Sí: la conversión de mayúsculas y minúsculas funciona con texto Unicode estándar, incluidas letras acentuadas (é, ñ, ü, etc.), de modo que convertir a mayúsculas o minúsculas conserva los acentos correctamente en lugar de eliminarlos." },
       ],
     },
     fr: {
@@ -1345,6 +1436,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Quelle est la différence entre la casse de titre et la casse de phrase ?", a: "La casse de titre met une majuscule à la première lettre de chaque mot principal (« Bonjour Le Monde »), tandis que la casse de phrase ne met une majuscule qu'à la première lettre du texte entier (« Bonjour le monde »)." },
         { q: "Ce convertisseur enregistre-t-il mon texte ?", a: "Non - la conversion s'effectue entièrement dans votre navigateur et rien n'est envoyé ni stocké." },
+        { q: "Cela gère-t-il correctement les lettres accentuées et les caractères non anglais ?", a: "Oui - la conversion de casse fonctionne sur du texte Unicode standard, y compris les lettres accentuées (é, ñ, ü, etc.), de sorte que la conversion en majuscules ou minuscules préserve correctement les accents au lieu de les supprimer." },
       ],
     },
     de: {
@@ -1354,6 +1446,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Was ist der Unterschied zwischen Titelschreibweise und Satzschreibweise?", a: "Bei der Titelschreibweise wird der erste Buchstabe jedes wichtigen Wortes großgeschrieben („Hallo Welt Beispiel“), bei der Satzschreibweise nur der erste Buchstabe des gesamten Textes („Hallo welt beispiel“)." },
         { q: "Speichert dieser Konverter meinen Text?", a: "Nein - die Umwandlung läuft vollständig in Ihrem Browser, es wird nichts gesendet oder gespeichert." },
+        { q: "Werden Buchstaben mit Akzenten und nicht-englische Zeichen korrekt behandelt?", a: "Ja - die Groß-/Kleinschreibungsumwandlung funktioniert mit Standard-Unicode-Text, einschließlich Buchstaben mit Akzenten (é, ñ, ü usw.), sodass beim Umwandeln in Groß- oder Kleinbuchstaben Akzente korrekt erhalten bleiben, statt entfernt zu werden." },
       ],
     },
     pt: {
@@ -1363,6 +1456,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Qual é a diferença entre formato de título e formato de frase?", a: "O formato de título coloca em maiúscula a primeira letra de cada palavra principal ('Olá Mundo Exemplo'), enquanto o formato de frase coloca em maiúscula apenas a primeira letra de todo o texto ('Olá mundo exemplo')." },
         { q: "Este conversor salva meu texto?", a: "Não - a conversão é feita inteiramente no seu navegador e nada é enviado ou armazenado." },
+        { q: "Isso lida corretamente com letras acentuadas e caracteres não ingleses?", a: "Sim - a conversão de maiúsculas/minúsculas funciona com texto Unicode padrão, incluindo letras acentuadas (é, ñ, ü etc.), de modo que converter para maiúsculas ou minúsculas preserva os acentos corretamente em vez de removê-los." },
       ],
     },
     it: {
@@ -1372,6 +1466,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Qual è la differenza tra formato titolo e formato frase?", a: "Il formato titolo mette in maiuscolo la prima lettera di ogni parola principale ('Ciao Mondo Esempio'), mentre il formato frase mette in maiuscolo solo la prima lettera dell'intero testo ('Ciao mondo esempio')." },
         { q: "Questo convertitore salva il mio testo?", a: "No - la conversione avviene interamente nel tuo browser e nulla viene inviato o memorizzato." },
+        { q: "Gestisce correttamente lettere accentate e caratteri non inglesi?", a: "Sì - la conversione maiuscolo/minuscolo funziona su testo Unicode standard, incluse le lettere accentate (é, ñ, ü, ecc.), quindi convertire in maiuscolo o minuscolo preserva correttamente gli accenti invece di rimuoverli." },
       ],
     },
     ja: {
@@ -1381,6 +1476,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "タイトルケースと文頭大文字の違いは何ですか？", a: "タイトルケースは主要な単語ごとに先頭を大文字にします（例：「Hello World Example」）。文頭大文字はテキスト全体の最初の文字だけを大文字にします（例：「Hello world example」）。" },
         { q: "このツールは入力したテキストを保存しますか？", a: "いいえ。変換はすべてブラウザ内で行われ、データが送信・保存されることはありません。" },
+        { q: "アクセント付き文字や英語以外の文字も正しく処理されますか？", a: "はい。大文字・小文字の変換は標準的なUnicodeテキストに対応しており、アクセント付き文字（é、ñ、üなど）も含まれます。大文字または小文字に変換しても、アクセントが失われることなく正しく保持されます。" },
       ],
     },
   },
@@ -1393,6 +1489,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "¿Es precisa la regla de 'un año de perro equivale a siete años humanos'?", a: "No - esa vieja regla es un mito aproximado. Los perros envejecen más rápido en sus primeros dos años, y las razas grandes envejecen más rápido en años posteriores que las razas pequeñas." },
         { q: "¿Por qué las razas de perros grandes envejecen más rápido que las pequeñas?", a: "Las razas grandes y gigantes crecen más rápido y alcanzan la madurez física antes, lo cual está vinculado a vidas más cortas y un envejecimiento más rápido en sus años medios y avanzados - lo opuesto al patrón de la mayoría de los otros mamíferos." },
+        { q: "¿A qué edad se considera 'senior' a un perro?", a: "Varía según el tamaño: las razas pequeñas suelen considerarse senior alrededor de los 10-12 años, las medianas alrededor de los 8-10, y las razas grandes o gigantes desde los 6-7 años, ya que los perros más grandes maduran y envejecen más rápido que los pequeños." },
       ],
     },
     fr: {
@@ -1402,6 +1499,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "La règle « une année de chien équivaut à sept années humaines » est-elle exacte ?", a: "Non - cette vieille règle est un mythe approximatif. Les chiens vieillissent plus vite durant leurs deux premières années, et les grandes races vieillissent plus vite dans les années suivantes que les petites races." },
         { q: "Pourquoi les grandes races de chiens vieillissent-elles plus vite que les petites ?", a: "Les grandes et très grandes races grandissent plus vite et atteignent leur maturité physique plus tôt, ce qui est lié à des durées de vie plus courtes et un vieillissement plus rapide durant leurs années intermédiaires et seniors - l'inverse du schéma observé chez la plupart des autres mammifères." },
+        { q: "À quel âge un chien est-il considéré comme « senior » ?", a: "Cela varie selon la taille - les petites races sont généralement considérées comme seniors vers 10-12 ans, les races moyennes vers 8-10 ans, et les grandes ou très grandes races dès 6-7 ans, car les chiens plus grands mûrissent et vieillissent plus vite que les petits." },
       ],
     },
     de: {
@@ -1411,6 +1509,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Stimmt die Regel „ein Hundejahr entspricht sieben Menschenjahren“?", a: "Nein - diese alte Regel ist ein grober Mythos. Hunde altern in den ersten zwei Jahren schneller, und große Rassen altern in späteren Jahren schneller als kleine Rassen." },
         { q: "Warum altern große Hunderassen schneller als kleine?", a: "Große und Riesenrassen wachsen schneller und erreichen die körperliche Reife früher, was mit kürzeren Lebenserwartungen und schnellerem Altern in den mittleren und höheren Jahren verbunden ist - das Gegenteil des Musters bei den meisten anderen Säugetieren." },
+        { q: "Ab welchem Alter gilt ein Hund als „Senior“?", a: "Das hängt von der Größe ab - kleine Rassen gelten in der Regel ab etwa 10-12 Jahren als Senior, mittelgroße Rassen ab etwa 8-10 Jahren und große oder Riesenrassen schon ab 6-7 Jahren, da größere Hunde sowohl schneller reifen als auch schneller altern als kleinere." },
       ],
     },
     pt: {
@@ -1420,6 +1519,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "A regra de que 'um ano de cão equivale a sete anos humanos' é precisa?", a: "Não - essa velha regra é um mito aproximado. Cães envelhecem mais rápido nos primeiros dois anos, e raças grandes envelhecem mais rápido em anos posteriores do que raças pequenas." },
         { q: "Por que raças de cães maiores envelhecem mais rápido que as pequenas?", a: "Raças grandes e gigantes crescem mais rápido e atingem a maturidade física mais cedo, o que está ligado a expectativas de vida mais curtas e a um envelhecimento mais rápido em seus anos intermediários e avançados - o oposto do padrão da maioria dos outros mamíferos." },
+        { q: "Com que idade um cão é considerado 'idoso'?", a: "Varia conforme o porte - raças pequenas costumam ser consideradas idosas por volta dos 10-12 anos, raças médias por volta dos 8-10, e raças grandes ou gigantes já a partir dos 6-7 anos, já que cães maiores amadurecem e envelhecem mais rápido do que os menores." },
       ],
     },
     it: {
@@ -1429,6 +1529,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "La regola 'un anno di cane equivale a sette anni umani' è accurata?", a: "No - quella vecchia regola è un mito approssimativo. I cani invecchiano più velocemente nei primi due anni, e le razze più grandi invecchiano più velocemente negli anni successivi rispetto alle razze piccole." },
         { q: "Perché le razze di cani più grandi invecchiano più velocemente di quelle piccole?", a: "Le razze grandi e giganti crescono più velocemente e raggiungono la maturità fisica prima, il che è collegato a una durata di vita più breve e a un invecchiamento più rapido negli anni intermedi e senior - l'opposto dello schema della maggior parte degli altri mammiferi." },
+        { q: "A quale età un cane è considerato 'anziano'?", a: "Varia in base alla taglia - le razze piccole sono generalmente considerate anziane intorno ai 10-12 anni, le razze medie intorno agli 8-10, e le razze grandi o giganti già a 6-7 anni, poiché i cani più grandi maturano e invecchiano più velocemente di quelli piccoli." },
       ],
     },
     ja: {
@@ -1438,6 +1539,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "「犬の1年は人間の7年」というルールは正確ですか？", a: "いいえ、それはおおまかな俗説です。犬は最初の2年で急速に年をとり、大型犬は小型犬に比べて後年になるほど老化が早まります。" },
         { q: "なぜ大型犬は小型犬より早く老化するのですか？", a: "大型犬・超大型犬は成長が早く、身体的な成熟も早く迎えます。これは寿命の短さと、中年期・シニア期における老化の速さに関連しており、他の多くの哺乳類とは逆の傾向です。" },
+        { q: "犬は何歳から「シニア」と見なされますか？", a: "サイズによって異なります。小型犬は通常10〜12歳ごろ、中型犬は8〜10歳ごろ、大型犬・超大型犬は早ければ6〜7歳でシニアと見なされます。大型犬は小型犬よりも成長が早く、老化も早いためです。" },
       ],
     },
   },
@@ -1450,6 +1552,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "¿Envejecen todos los gatos de la misma manera sin importar la raza?", a: "Los patrones de envejecimiento son bastante consistentes en la mayoría de las razas de gatos, a diferencia de los perros, donde el tamaño impulsa grandes diferencias de envejecimiento." },
         { q: "¿El estilo de vida interior o exterior afecta el cálculo de la edad de un gato?", a: "Esta calculadora no tiene eso en cuenta - es una estimación general basada en el desarrollo típico. En la práctica, los gatos de interior suelen vivir más que los de exterior debido a una menor exposición a lesiones y enfermedades, pero eso afecta la esperanza de vida, no las matemáticas de equivalencia de edad en sí." },
+        { q: "¿A qué edad se considera 'senior' a un gato?", a: "La mayoría de las guías veterinarias consideran senior a los gatos a partir de los 10-11 años, y se suele usar el término 'geriátrico' para gatos de 15 años o más - aunque la salud individual varía más de lo que un único límite de edad puede reflejar." },
       ],
     },
     fr: {
@@ -1459,6 +1562,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Les chats vieillissent-ils tous de la même façon, quelle que soit leur race ?", a: "Les schémas de vieillissement sont assez homogènes chez la plupart des races de chats, contrairement aux chiens, où la taille entraîne de grandes différences de vieillissement." },
         { q: "Le mode de vie intérieur ou extérieur affecte-t-il le calcul de l'âge d'un chat ?", a: "Cette calculatrice n'en tient pas compte - c'est une estimation générale basée sur un développement typique. En pratique, les chats d'intérieur ont tendance à vivre plus longtemps que les chats d'extérieur en raison d'une moindre exposition aux blessures et aux maladies, mais cela affecte l'espérance de vie, pas le calcul d'équivalence d'âge lui-même." },
+        { q: "À quel âge un chat est-il considéré comme « senior » ?", a: "La plupart des recommandations vétérinaires considèrent les chats comme seniors à partir d'environ 10-11 ans, le terme « gériatrique » étant généralement utilisé pour les chats de 15 ans et plus - même si la santé individuelle varie davantage qu'un simple seuil d'âge ne peut le refléter." },
       ],
     },
     de: {
@@ -1468,6 +1572,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Altern alle Katzen unabhängig von der Rasse gleich?", a: "Die Alterungsmuster sind bei den meisten Katzenrassen recht einheitlich, anders als bei Hunden, wo die Größe große Alterungsunterschiede verursacht." },
         { q: "Beeinflusst Wohnen drinnen oder draußen die Altersberechnung einer Katze?", a: "Dieser Rechner berücksichtigt das nicht - es handelt sich um eine allgemeine Schätzung basierend auf typischer Entwicklung. In der Praxis leben Wohnungskatzen aufgrund geringerer Verletzungs- und Krankheitsgefahr tendenziell länger als Freigänger, aber das beeinflusst die Lebenserwartung, nicht die Alters-Äquivalenzrechnung selbst." },
+        { q: "Ab welchem Alter gilt eine Katze als „Senior“?", a: "Die meisten tiermedizinischen Richtlinien betrachten Katzen ab etwa 10-11 Jahren als Senior, wobei „geriatrisch“ üblicherweise für Katzen ab 15 Jahren verwendet wird - die individuelle Gesundheit variiert jedoch stärker, als eine einzelne Altersgrenze erfassen kann." },
       ],
     },
     pt: {
@@ -1477,6 +1582,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Todos os gatos envelhecem da mesma forma, independentemente da raça?", a: "Os padrões de envelhecimento são bastante consistentes na maioria das raças de gatos, ao contrário dos cães, onde o porte gera grandes diferenças no envelhecimento." },
         { q: "O estilo de vida interno ou externo afeta o cálculo da idade de um gato?", a: "Esta calculadora não leva isso em conta - é uma estimativa geral baseada no desenvolvimento típico. Na prática, gatos domésticos tendem a viver mais do que gatos que ficam ao ar livre devido à menor exposição a lesões e doenças, mas isso afeta a expectativa de vida, não o cálculo de equivalência de idade em si." },
+        { q: "Com que idade um gato é considerado 'idoso'?", a: "A maioria das diretrizes veterinárias considera os gatos idosos a partir de cerca de 10-11 anos, com o termo 'geriátrico' geralmente usado para gatos com 15 anos ou mais - embora a saúde individual varie mais do que um único limite de idade consegue captar." },
       ],
     },
     it: {
@@ -1486,6 +1592,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "Tutti i gatti invecchiano allo stesso modo indipendentemente dalla razza?", a: "I modelli di invecchiamento sono abbastanza costanti nella maggior parte delle razze di gatti, a differenza dei cani, dove la taglia genera grandi differenze di invecchiamento." },
         { q: "Lo stile di vita in casa o all'aperto influisce sul calcolo dell'età di un gatto?", a: "Questa calcolatrice non ne tiene conto - è una stima generale basata sullo sviluppo tipico. In pratica, i gatti d'appartamento tendono a vivere più a lungo di quelli che vivono all'aperto per la minore esposizione a lesioni e malattie, ma questo influisce sull'aspettativa di vita, non sul calcolo dell'equivalenza dell'età in sé." },
+        { q: "A quale età un gatto è considerato 'anziano'?", a: "La maggior parte delle linee guida veterinarie considera i gatti anziani a partire da circa 10-11 anni, con il termine 'geriatrico' generalmente usato per gatti di 15 anni o più - anche se la salute individuale varia più di quanto un singolo limite di età possa cogliere." },
       ],
     },
     ja: {
@@ -1495,6 +1602,7 @@ const I18N_TOOLS = {
       faq: [
         { q: "猫は犬種のような違いに関係なく同じように年をとりますか？", a: "猫の老化パターンはほとんどの猫種でかなり一定しています。犬のようにサイズによって老化の違いが大きく出ることはありません。" },
         { q: "室内飼いか屋外飼いかで年齢の計算は変わりますか？", a: "この計算機ではその点は考慮していません。あくまで一般的な発育に基づいた目安です。実際には、室内飼いの猫はケガや病気にさらされる機会が少ないため屋外飼いの猫より長生きする傾向がありますが、それは寿命に影響するものであり、年齢換算の計算自体には影響しません。" },
+        { q: "猫は何歳から「シニア」と見なされますか？", a: "多くの獣医学的な指針では、猫はおおよそ10〜11歳からシニアと見なされ、15歳以上は「老齢期」とされることが一般的です。ただし、個体差は単一の年齢基準で捉えられる以上に大きいことに注意してください。" },
       ],
     },
   },

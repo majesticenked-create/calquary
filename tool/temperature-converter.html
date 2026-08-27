@@ -83,7 +83,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-24",
+      "dateModified": "2026-08-27",
       "inLanguage": "en"
     },
     {
@@ -127,6 +127,14 @@
             "@type": "Answer",
             "text": "Fahrenheit and Celsius have different zero points (freezing water is 0°C but 32°F), so converting requires shifting the scale first, unlike length or weight conversions which only need a multiplier."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What temperature is the same number in both Celsius and Fahrenheit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "−40 degrees - it's the one point where the two scales intersect, since −40°C × 9/5 + 32 = −40°F exactly; every other temperature reads as a different number on each scale."
+          }
         }
       ]
     }
@@ -168,7 +176,7 @@
       <main>
         <h1>Temperature Converter</h1>
         <p style="max-width:60ch;">Enter a temperature and choose a starting unit to convert between Fahrenheit, Celsius, and Kelvin.</p>
-        <p class="last-updated">Last updated: August 24, 2026</p>
+        <p class="last-updated">Last updated: August 27, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -200,6 +208,10 @@
 <div class="faq-item">
 <h3>Why does temperature conversion need an offset, not just multiplication?</h3>
 <p>Fahrenheit and Celsius have different zero points (freezing water is 0°C but 32°F), so converting requires shifting the scale first, unlike length or weight conversions which only need a multiplier.</p>
+</div>
+<div class="faq-item">
+<h3>What temperature is the same number in both Celsius and Fahrenheit?</h3>
+<p>−40 degrees - it's the one point where the two scales intersect, since −40°C × 9/5 + 32 = −40°F exactly; every other temperature reads as a different number on each scale.</p>
 </div></div>
         </div>
       </main>

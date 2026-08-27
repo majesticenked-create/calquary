@@ -83,7 +83,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-24",
+      "dateModified": "2026-08-27",
       "inLanguage": "en"
     },
     {
@@ -127,6 +127,14 @@
             "@type": "Answer",
             "text": "Very close, but not always identical - this counter splits on whitespace, which is how most word processors count too, but edge cases like hyphenated words or numbers can be tallied slightly differently between tools."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What counts as a 'sentence' in the sentence count?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Text ending in a period, question mark, or exclamation point is counted as one sentence - abbreviations with periods (like 'Dr.' or 'e.g.') can occasionally inflate the count slightly, since the tool can't always distinguish a sentence-ending period from an abbreviation's period."
+          }
         }
       ]
     }
@@ -168,7 +176,7 @@
       <main>
         <h1>Word Counter</h1>
         <p style="max-width:60ch;">Paste or type text below to instantly count words, characters, and sentences.</p>
-        <p class="last-updated">Last updated: August 24, 2026</p>
+        <p class="last-updated">Last updated: August 27, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -200,6 +208,10 @@
 <div class="faq-item">
 <h3>Does this count words the same way Microsoft Word does?</h3>
 <p>Very close, but not always identical - this counter splits on whitespace, which is how most word processors count too, but edge cases like hyphenated words or numbers can be tallied slightly differently between tools.</p>
+</div>
+<div class="faq-item">
+<h3>What counts as a 'sentence' in the sentence count?</h3>
+<p>Text ending in a period, question mark, or exclamation point is counted as one sentence - abbreviations with periods (like 'Dr.' or 'e.g.') can occasionally inflate the count slightly, since the tool can't always distinguish a sentence-ending period from an abbreviation's period.</p>
 </div></div>
         </div>
       </main>

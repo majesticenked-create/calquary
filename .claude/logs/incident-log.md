@@ -756,3 +756,44 @@ EOF
 cd /Users/beyouenked/projects/formatiq
 node verify-hero.js
 rm verify-hero.js
+- `2026-08-25 16:54:17` | GUARD | MEDIUM | SOFT BLOCKED: recursive/force rm → cd /Users/beyouenked/Documents/Calquary
+rm -rf /tmp/calquary-deploy
+mkdir -p /tmp/calquary-deploy
+# Copy only public site files
+cp -R index.html about.html contact.html privacy.html terms.html all-calculators.html 404.html robots.txt sitemap.xml favicon.svg favicon.ico favicon-16x16.png favicon-32x32.png apple-touch-icon.png /tmp/calquary-deploy/ 2>&1
+cp -R css js tool category og-images es fr de pt it ja /tmp/calquary-deploy/ 2>&1
+ls /tmp/calquary-deploy | head -30
+echo "---size---"
+du -sh /tmp/calquary-deploy
+- `2026-08-27 12:16:04` | FAILURE | ERROR | OTHER | Bash | Exit code 1
+- `2026-08-27 14:06:15` | GUARD | LOW | WARNING: rm command allowed → cat > /Users/beyouenked/projects/formatiq/verify-faq3.js <<'EOF'
+const { chromium } = require('playwright');
+(async () => {
+  const browser = await chromium.launch();
+  const errors = [];
+  const pages = [
+    'http://localhost:8000/tool/percentage-calculator.html',
+    'http://localhost:8000/de/tool/mortgage-calculator.html',
+    'http://localhost:8000/es/tool/loan-calculator.html',
+    'http://localhost:8000/ja/tool/cat-age-calculator.html',
+    'http://localhost:8000/pt/tool/case-converter.html',
+    'http://localhost:8000/it/tool/bmr-calculator.html',
+    'http://localhost:8000/fr/tool/temperature-converter.html',
+  ];
+  for (const url of pages) {
+    const page = await browser.newPage();
+    page.on('console', m => { if (m.type() === 'error') errors.push(`${url}: ${m.text()}`); });
+    page.on('pageerror', e => errors.push(`${url}: ${e.message}`));
+    await page.goto(url, { waitUntil: 'networkidle' });
+    await page.waitForTimeout(200);
+    const faqCount = await page.$$eval('.faq-item', els => els.length);
+    if (faqCount !== 3) errors.push(`${url}: expected 3 FAQ items, got ${faqCount}`);
+    await page.close();
+  }
+  await browser.close();
+  console.log(JSON.stringify({ errors }, null, 2));
+})();
+EOF
+cd /Users/beyouenked/projects/formatiq
+node verify-faq3.js
+rm verify-faq3.js
