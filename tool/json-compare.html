@@ -4,23 +4,23 @@
   <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quadratic Formula Calculator | Calquary</title>
-  <meta name="description" content="Solve ax² + bx + c = 0 for x using the quadratic formula." />
-  <meta property="og:title" content="Quadratic Formula Calculator | Calquary">
-  <meta property="og:description" content="Solve ax² + bx + c = 0 for x using the quadratic formula.">
+  <title>JSON Compare - Free Online Calculator | Calquary</title>
+  <meta name="description" content="Compare two JSON objects and see exactly what's added, removed, or changed between them." />
+  <meta property="og:title" content="JSON Compare | Calquary">
+  <meta property="og:description" content="Compare two JSON objects and see exactly what's added, removed, or changed between them.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://calquary.com/tool/quadratic-formula-calculator.html">
+  <meta property="og:url" content="https://calquary.com/tool/json-compare.html">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Calquary">
-  <meta property="og:image" content="https://calquary.com/og-images/quadratic-formula-calculator.png">
+  <meta property="og:image" content="https://calquary.com/og-images/json-compare.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Quadratic Formula Calculator | Calquary">
-  <meta name="twitter:description" content="Solve ax² + bx + c = 0 for x using the quadratic formula.">
-  <meta name="twitter:image" content="https://calquary.com/og-images/quadratic-formula-calculator.png">
-    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/quadratic-formula-calculator.html">
-  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/quadratic-formula-calculator.html">
+  <meta name="twitter:title" content="JSON Compare | Calquary">
+  <meta name="twitter:description" content="Compare two JSON objects and see exactly what's added, removed, or changed between them.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/json-compare.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/json-compare.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/json-compare.html">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -46,7 +46,7 @@
       // still JS-driven here is the interactive calculator widget itself
       // (fields/compute/results) and the related-tools list, neither of
       // which is static SEO prose.
-      const calc = getCalculator("quadratic-formula-calculator");
+      const calc = getCalculator("json-compare");
 
       const relWrap = document.getElementById("related-list");
       calc.related.forEach((relId) => {
@@ -57,7 +57,7 @@
         relWrap.appendChild(li);
       });
 
-      initCalculator("quadratic-formula-calculator");
+      initCalculator("json-compare");
     });
   </script>
   <script type="application/ld+json">
@@ -66,11 +66,11 @@
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "Quadratic Formula Calculator",
-      "description": "Solve ax² + bx + c = 0 for x using the quadratic formula.",
+      "name": "JSON Compare",
+      "description": "Compare two JSON objects and see exactly what's added, removed, or changed between them.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
-      "url": "https://calquary.com/tool/quadratic-formula-calculator.html",
+      "url": "https://calquary.com/tool/json-compare.html",
       "isAccessibleForFree": true,
       "offers": {
         "@type": "Offer",
@@ -92,14 +92,14 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Math",
-          "item": "https://calquary.com/category/math.html"
+          "name": "Text & Digital",
+          "item": "https://calquary.com/category/text.html"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Quadratic Formula Calculator",
-          "item": "https://calquary.com/tool/quadratic-formula-calculator.html"
+          "name": "JSON Compare",
+          "item": "https://calquary.com/tool/json-compare.html"
         }
       ]
     },
@@ -108,50 +108,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "How do I solve x² − 3x + 2 = 0?",
+          "name": "How does this JSON compare tool work?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Using the quadratic formula with a=1, b=−3, c=2: the discriminant is 9 − 8 = 1, giving two real roots x = 2 and x = 1."
+            "text": "It parses both JSON objects, then recursively walks every key: keys only in the first are marked \"Removed,\" keys only in the second are marked \"Added,\" and keys present in both with different values are marked \"Changed.\" Nested objects are compared field by field, not as one big blob."
           }
         },
         {
           "@type": "Question",
-          "name": "What does a negative discriminant mean?",
+          "name": "Does this compare arrays element by element?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A negative discriminant means the equation has no real solutions - the roots are complex numbers, since you'd need the square root of a negative number."
+            "text": "Arrays are compared by exact value (the whole array is treated as \"changed\" if any element differs), not merged element-by-element like objects - this keeps the diff logic predictable for arrays where order matters."
           }
         },
         {
           "@type": "Question",
-          "name": "What if a quadratic equation has no real solutions?",
+          "name": "What happens if my JSON has a syntax error?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "That happens when the discriminant (b² − 4ac) is negative - the equation still has two solutions, but they're complex numbers involving the imaginary unit i, since you can't take the square root of a negative number within the real numbers."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What's the difference between the quadratic formula and factoring?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Factoring only works cleanly when a quadratic has simple, often whole-number roots; the quadratic formula always works, for any quadratic equation, whether the roots are whole numbers, fractions, decimals, or complex numbers. This calculator uses the formula directly, so it handles every case without needing to guess factors first."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is a 'quadratic equation formula calculator,' 'solve quadratic formula calculator,' and 'calculator for solving quadratic equations' the same as this tool?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes - every one of these names describes solving ax² + bx + c = 0 for x, which is exactly what this calculator does. Enter your a, b, and c coefficients above and it applies the quadratic formula automatically, real or complex roots included."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does this show the steps, like a 'math solver with steps'?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes - scroll the table below the result for the full step-by-step work: identifying a, b, c, computing the discriminant, taking the square root, and solving for x."
+            "text": "This tool reports which of the two JSON inputs is invalid, along with the parser's error message, rather than attempting a partial or guessed comparison - fix the syntax error first, then compare."
           }
         }
       ]
@@ -179,15 +155,15 @@
 
   <div class="wrap" style="padding-top:32px;">
     <div class="breadcrumb">
-      <a href="/index.html">Calquary</a> / <a href="/category/math.html">Math</a>
+      <a href="/index.html">Calquary</a> / <a href="/category/text.html">Text & Digital</a>
     </div>
   </div>
 
   <div class="wrap" style="padding-bottom:64px;">
     <div class="tool-layout">
       <main>
-        <h1>Quadratic Formula Calculator</h1>
-        <p style="max-width:60ch;">Enter the coefficients a, b, and c to solve a quadratic equation for x, including complex roots when needed.</p>
+        <h1>JSON Compare</h1>
+        <p style="max-width:60ch;">Paste two JSON objects to see a field-by-field diff - what's added, removed, or changed between them.</p>
         <p class="last-updated">Last updated: August 30, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -215,28 +191,16 @@
         <div class="article-block">
           <h2>Frequently asked questions</h2>
           <div id="faq-list"><div class="faq-item">
-<h3>How do I solve x² − 3x + 2 = 0?</h3>
-<p>Using the quadratic formula with a=1, b=−3, c=2: the discriminant is 9 − 8 = 1, giving two real roots x = 2 and x = 1.</p>
+<h3>How does this JSON compare tool work?</h3>
+<p>It parses both JSON objects, then recursively walks every key: keys only in the first are marked "Removed," keys only in the second are marked "Added," and keys present in both with different values are marked "Changed." Nested objects are compared field by field, not as one big blob.</p>
 </div>
 <div class="faq-item">
-<h3>What does a negative discriminant mean?</h3>
-<p>A negative discriminant means the equation has no real solutions - the roots are complex numbers, since you'd need the square root of a negative number.</p>
+<h3>Does this compare arrays element by element?</h3>
+<p>Arrays are compared by exact value (the whole array is treated as "changed" if any element differs), not merged element-by-element like objects - this keeps the diff logic predictable for arrays where order matters.</p>
 </div>
 <div class="faq-item">
-<h3>What if a quadratic equation has no real solutions?</h3>
-<p>That happens when the discriminant (b² − 4ac) is negative - the equation still has two solutions, but they're complex numbers involving the imaginary unit i, since you can't take the square root of a negative number within the real numbers.</p>
-</div>
-<div class="faq-item">
-<h3>What's the difference between the quadratic formula and factoring?</h3>
-<p>Factoring only works cleanly when a quadratic has simple, often whole-number roots; the quadratic formula always works, for any quadratic equation, whether the roots are whole numbers, fractions, decimals, or complex numbers. This calculator uses the formula directly, so it handles every case without needing to guess factors first.</p>
-</div>
-<div class="faq-item">
-<h3>Is a 'quadratic equation formula calculator,' 'solve quadratic formula calculator,' and 'calculator for solving quadratic equations' the same as this tool?</h3>
-<p>Yes - every one of these names describes solving ax² + bx + c = 0 for x, which is exactly what this calculator does. Enter your a, b, and c coefficients above and it applies the quadratic formula automatically, real or complex roots included.</p>
-</div>
-<div class="faq-item">
-<h3>Does this show the steps, like a 'math solver with steps'?</h3>
-<p>Yes - scroll the table below the result for the full step-by-step work: identifying a, b, c, computing the discriminant, taking the square root, and solving for x.</p>
+<h3>What happens if my JSON has a syntax error?</h3>
+<p>This tool reports which of the two JSON inputs is invalid, along with the parser's error message, rather than attempting a partial or guessed comparison - fix the syntax error first, then compare.</p>
 </div></div>
         </div>
       </main>

@@ -568,29 +568,43 @@ const CALCULATORS = [
     ],
     compute: (v) => {
       const discriminant = v.b * v.b - 4 * v.a * v.c;
+      const stepRows = [
+        ["1. Identify a, b, c", `a=${v.a}, b=${v.b}, c=${v.c}`],
+        ["2. Compute discriminant", `b² − 4ac = (${v.b})² − 4(${v.a})(${v.c}) = ${round(discriminant, 4)}`],
+      ];
       if (discriminant > 0) {
         const sq = Math.sqrt(discriminant);
         const x1 = (-v.b + sq) / (2 * v.a);
         const x2 = (-v.b - sq) / (2 * v.a);
+        stepRows.push(["3. Take square root", `√${round(discriminant, 4)} = ${round(sq, 4)}`]);
+        stepRows.push(["4. Apply x = (−b ± √disc) / 2a", `x = (${-v.b} ± ${round(sq, 4)}) / ${2 * v.a}`]);
+        stepRows.push(["5. Solve both roots", `x = ${round(x1, 4)} or x = ${round(x2, 4)}`]);
         return {
           primary: { label: "x =", value: `${round(x1, 4)} or ${round(x2, 4)}` },
           secondary: [{ l: "Discriminant", v: round(discriminant, 4) }],
           note: "Two distinct real roots - the discriminant (b² − 4ac) is positive.",
+          table: { columns: ["Step", "Work"], rows: stepRows },
         };
       } else if (discriminant === 0) {
         const x = -v.b / (2 * v.a);
+        stepRows.push(["3. Discriminant is 0", "One repeated root: x = −b / 2a"]);
+        stepRows.push(["4. Solve", `x = ${-v.b} / ${2 * v.a} = ${round(x, 4)}`]);
         return {
           primary: { label: "x =", value: round(x, 4) },
           secondary: [{ l: "Discriminant", v: 0 }],
           note: "One repeated real root - the discriminant (b² − 4ac) is zero.",
+          table: { columns: ["Step", "Work"], rows: stepRows },
         };
       } else {
         const realPart = -v.b / (2 * v.a);
         const imagPart = Math.sqrt(-discriminant) / (2 * v.a);
+        stepRows.push(["3. Discriminant is negative", "Roots are complex: x = −b/2a ± (√|disc|/2a)i"]);
+        stepRows.push(["4. Solve real and imaginary parts", `Real: ${round(realPart, 4)}, Imaginary: ±${round(imagPart, 4)}i`]);
         return {
           primary: { label: "x =", value: `${round(realPart, 4)} ± ${round(imagPart, 4)}i` },
           secondary: [{ l: "Discriminant", v: round(discriminant, 4) }],
           note: "Two complex roots - the discriminant (b² − 4ac) is negative, so there are no real solutions.",
+          table: { columns: ["Step", "Work"], rows: stepRows },
         };
       }
     },
@@ -600,6 +614,7 @@ const CALCULATORS = [
       { q: "What if a quadratic equation has no real solutions?", a: "That happens when the discriminant (b² − 4ac) is negative - the equation still has two solutions, but they're complex numbers involving the imaginary unit i, since you can't take the square root of a negative number within the real numbers." },
       { q: "What's the difference between the quadratic formula and factoring?", a: "Factoring only works cleanly when a quadratic has simple, often whole-number roots; the quadratic formula always works, for any quadratic equation, whether the roots are whole numbers, fractions, decimals, or complex numbers. This calculator uses the formula directly, so it handles every case without needing to guess factors first." },
       { q: "Is a 'quadratic equation formula calculator,' 'solve quadratic formula calculator,' and 'calculator for solving quadratic equations' the same as this tool?", a: "Yes - every one of these names describes solving ax² + bx + c = 0 for x, which is exactly what this calculator does. Enter your a, b, and c coefficients above and it applies the quadratic formula automatically, real or complex roots included." },
+      { q: "Does this show the steps, like a 'math solver with steps'?", a: "Yes - scroll the table below the result for the full step-by-step work: identifying a, b, c, computing the discriminant, taking the square root, and solving for x." },
     ],
     related: ["exponent-calculator", "square-root-calculator", "fraction-calculator"],
   },
@@ -4148,6 +4163,107 @@ const CALCULATORS = [
       { q: "How can word frequency analysis help with SEO or writing?", a: "Word frequency analysis reveals unintentional repetition, helps confirm target keywords appear at a natural density rather than being stuffed, and can surface overused filler words that weaken writing - useful for both editing prose and checking on-page SEO content before publishing." },
     ],
     related: ["word-counter", "text-to-slug-generator", "case-converter"],
+  },
+  {
+    id: "json-compare",
+    category: "text",
+    title: "JSON Compare",
+    keyword: "json compare",
+    description: "Compare two JSON objects and see exactly what's added, removed, or changed between them.",
+    intro: "Paste two JSON objects to see a field-by-field diff - what's added, removed, or changed between them.",
+    fields: [
+      { id: "json1", label: "First JSON", type: "textarea", default: '{\n  "name": "Alex",\n  "age": 30,\n  "city": "Austin"\n}' },
+      { id: "json2", label: "Second JSON", type: "textarea", default: '{\n  "name": "Alex",\n  "age": 31,\n  "country": "USA"\n}' },
+    ],
+    compute: (v) => {
+      let obj1, obj2;
+      try { obj1 = JSON.parse(v.json1 || "{}"); } catch (e) { return { primary: { label: "Result", value: "Invalid JSON" }, secondary: [], note: "First JSON is invalid: " + e.message }; }
+      try { obj2 = JSON.parse(v.json2 || "{}"); } catch (e) { return { primary: { label: "Result", value: "Invalid JSON" }, secondary: [], note: "Second JSON is invalid: " + e.message }; }
+
+      const rows = [];
+      function diff(a, b, path) {
+        const isObjA = a !== null && typeof a === "object" && !Array.isArray(a);
+        const isObjB = b !== null && typeof b === "object" && !Array.isArray(b);
+        if (isObjA && isObjB) {
+          const keys = new Set([...Object.keys(a), ...Object.keys(b)]);
+          for (const key of keys) {
+            const childPath = path ? `${path}.${key}` : key;
+            if (!(key in a)) rows.push([childPath, "—", JSON.stringify(b[key]), "Added"]);
+            else if (!(key in b)) rows.push([childPath, JSON.stringify(a[key]), "—", "Removed"]);
+            else diff(a[key], b[key], childPath);
+          }
+        } else if (JSON.stringify(a) !== JSON.stringify(b)) {
+          rows.push([path || "(root)", JSON.stringify(a), JSON.stringify(b), "Changed"]);
+        }
+      }
+      diff(obj1, obj2, "");
+
+      const added = rows.filter((r) => r[3] === "Added").length;
+      const removed = rows.filter((r) => r[3] === "Removed").length;
+      const changed = rows.filter((r) => r[3] === "Changed").length;
+      return {
+        primary: { label: "Differences found", value: rows.length },
+        secondary: [
+          { l: "Added", v: added },
+          { l: "Removed", v: removed },
+          { l: "Changed", v: changed },
+        ],
+        note: rows.length === 0 ? "The two JSON objects are identical." : "Scroll the table below for every field-level difference.",
+        table: rows.length ? { columns: ["Path", "First JSON", "Second JSON", "Status"], rows } : undefined,
+      };
+    },
+    faq: [
+      { q: "How does this JSON compare tool work?", a: "It parses both JSON objects, then recursively walks every key: keys only in the first are marked \"Removed,\" keys only in the second are marked \"Added,\" and keys present in both with different values are marked \"Changed.\" Nested objects are compared field by field, not as one big blob." },
+      { q: "Does this compare arrays element by element?", a: "Arrays are compared by exact value (the whole array is treated as \"changed\" if any element differs), not merged element-by-element like objects - this keeps the diff logic predictable for arrays where order matters." },
+      { q: "What happens if my JSON has a syntax error?", a: "This tool reports which of the two JSON inputs is invalid, along with the parser's error message, rather than attempting a partial or guessed comparison - fix the syntax error first, then compare." },
+    ],
+    related: ["word-counter", "text-to-slug-generator", "case-converter"],
+  },
+  {
+    id: "cidr-calculator",
+    category: "text",
+    title: "CIDR / Subnet Calculator",
+    keyword: "cidr calculation",
+    description: "Calculate the network address, broadcast address, subnet mask, and usable host range from a CIDR notation.",
+    intro: "Enter an IP address in CIDR notation (like 192.168.1.0/24) to calculate the subnet's network address, broadcast address, and usable host range.",
+    fields: [
+      { id: "cidr", label: "CIDR notation", type: "text", default: "192.168.1.0/24" },
+    ],
+    compute: (v) => {
+      const raw = (v.cidr || "").trim();
+      const match = raw.match(/^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\/(\d{1,2})$/);
+      if (!match) {
+        return { primary: { label: "Result", value: "Invalid CIDR" }, secondary: [], note: "Use the format IP/prefix, like 192.168.1.0/24." };
+      }
+      const octets = [1, 2, 3, 4].map((i) => parseInt(match[i], 10));
+      const prefix = parseInt(match[5], 10);
+      if (octets.some((o) => o > 255) || prefix > 32) {
+        return { primary: { label: "Result", value: "Invalid CIDR" }, secondary: [], note: "Each IP octet must be 0-255, and the prefix must be 0-32." };
+      }
+      const ipInt = ((octets[0] << 24) | (octets[1] << 16) | (octets[2] << 8) | octets[3]) >>> 0;
+      const maskInt = prefix === 0 ? 0 : (0xffffffff << (32 - prefix)) >>> 0;
+      const networkInt = (ipInt & maskInt) >>> 0;
+      const broadcastInt = (networkInt | (~maskInt >>> 0)) >>> 0;
+      const toIp = (n) => [(n >>> 24) & 255, (n >>> 16) & 255, (n >>> 8) & 255, n & 255].join(".");
+      const totalAddresses = Math.pow(2, 32 - prefix);
+      const usableHosts = prefix >= 31 ? 0 : totalAddresses - 2;
+      return {
+        primary: { label: "Network address", value: `${toIp(networkInt)}/${prefix}` },
+        secondary: [
+          { l: "Broadcast address", v: toIp(broadcastInt) },
+          { l: "Subnet mask", v: toIp(maskInt) },
+          { l: "Usable hosts", v: usableHosts.toLocaleString() },
+          { l: "Usable range", v: usableHosts > 0 ? `${toIp(networkInt + 1)} - ${toIp(broadcastInt - 1)}` : "N/A (point-to-point or single host)" },
+        ],
+        note: prefix >= 31 ? "A /31 or /32 has no separate network/broadcast address in the traditional sense - it's used for point-to-point links (/31) or a single host route (/32)." : undefined,
+      };
+    },
+    faq: [
+      { q: "What does CIDR notation mean, like /24?", a: "The number after the slash is the prefix length - how many leading bits of the 32-bit IP address are fixed as the network portion. /24 means the first 24 bits (the first three octets) identify the network, leaving 8 bits (256 addresses) for hosts." },
+      { q: "How do I calculate the number of usable hosts from a prefix?", a: "Usable hosts = 2^(32 − prefix) − 2, subtracting the network address and broadcast address, which can't be assigned to hosts. A /24 network has 2^8 − 2 = 254 usable host addresses." },
+      { q: "Why are there no usable hosts for a /31 or /32?", a: "A /32 is a single address with no room for a network/broadcast pair, and a /31 is a special case (defined in RFC 3021) used for point-to-point links where both addresses in the 2-address block are usable as host addresses, since there's no broadcast needed." },
+    ],
+    related: ["json-compare", "unit-length-converter", "uuid-generator"],
   },
   {
     id: "group-randomizer",

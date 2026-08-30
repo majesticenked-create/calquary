@@ -895,6 +895,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/word-frequency-counter.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/json-compare.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/json-compare.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/json-compare.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/cidr-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/cidr-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/cidr-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/group-randomizer.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/group-randomizer.html"/>
