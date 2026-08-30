@@ -4,23 +4,23 @@
   <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Group Randomizer - Free Online Calculator | Calquary</title>
-  <meta name="description" content="Randomly split a list of names into a set number of even groups or teams." />
-  <meta property="og:title" content="Group Randomizer | Calquary">
-  <meta property="og:description" content="Randomly split a list of names into a set number of even groups or teams.">
+  <title>Long Division Calculator | Calquary</title>
+  <meta name="description" content="Divide two whole numbers and see the full step-by-step long division work." />
+  <meta property="og:title" content="Long Division Calculator | Calquary">
+  <meta property="og:description" content="Divide two whole numbers and see the full step-by-step long division work.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://calquary.com/tool/group-randomizer.html">
+  <meta property="og:url" content="https://calquary.com/tool/long-division-calculator.html">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Calquary">
-  <meta property="og:image" content="https://calquary.com/og-images/group-randomizer.png">
+  <meta property="og:image" content="https://calquary.com/og-images/long-division-calculator.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Group Randomizer | Calquary">
-  <meta name="twitter:description" content="Randomly split a list of names into a set number of even groups or teams.">
-  <meta name="twitter:image" content="https://calquary.com/og-images/group-randomizer.png">
-    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/group-randomizer.html">
-  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/group-randomizer.html">
+  <meta name="twitter:title" content="Long Division Calculator | Calquary">
+  <meta name="twitter:description" content="Divide two whole numbers and see the full step-by-step long division work.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/long-division-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/long-division-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/long-division-calculator.html">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -46,7 +46,7 @@
       // still JS-driven here is the interactive calculator widget itself
       // (fields/compute/results) and the related-tools list, neither of
       // which is static SEO prose.
-      const calc = getCalculator("group-randomizer");
+      const calc = getCalculator("long-division-calculator");
 
       const relWrap = document.getElementById("related-list");
       calc.related.forEach((relId) => {
@@ -57,7 +57,7 @@
         relWrap.appendChild(li);
       });
 
-      initCalculator("group-randomizer");
+      initCalculator("long-division-calculator");
     });
   </script>
   <script type="application/ld+json">
@@ -66,11 +66,11 @@
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "Group Randomizer",
-      "description": "Randomly split a list of names into a set number of even groups or teams.",
+      "name": "Long Division Calculator",
+      "description": "Divide two whole numbers and see the full step-by-step long division work.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
-      "url": "https://calquary.com/tool/group-randomizer.html",
+      "url": "https://calquary.com/tool/long-division-calculator.html",
       "isAccessibleForFree": true,
       "offers": {
         "@type": "Offer",
@@ -92,14 +92,14 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Text & Digital",
-          "item": "https://calquary.com/category/text.html"
+          "name": "Math",
+          "item": "https://calquary.com/category/math.html"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Group Randomizer",
-          "item": "https://calquary.com/tool/group-randomizer.html"
+          "name": "Long Division Calculator",
+          "item": "https://calquary.com/tool/long-division-calculator.html"
         }
       ]
     },
@@ -108,34 +108,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "How does this randomize groups fairly?",
+          "name": "How do I do long division step by step?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It uses a Fisher-Yates shuffle - a well-established algorithm that gives every name an equal, unbiased chance of ending up in any position - then deals the shuffled list into groups in round-robin order, which keeps group sizes as even as possible."
+            "text": "Bring down one digit of the dividend at a time, divide the running value by the divisor to get a quotient digit, multiply that digit by the divisor and subtract it from the running value, then bring down the next digit and repeat - this calculator shows every one of those steps in the table."
           }
         },
         {
           "@type": "Question",
-          "name": "What happens if the number of people doesn't divide evenly into groups?",
+          "name": "What does the remainder mean?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The extra people are spread one-per-group starting from the first group, so group sizes differ by at most one person - for 10 people split into 3 groups, you'll get groups of 4, 3, and 3, not 4, 4, and 2."
+            "text": "The remainder is what's left over after dividing as many whole times as possible - for 23 ÷ 5, the quotient is 4 (5×4=20) with a remainder of 3 (23−20), since 5 doesn't divide evenly into 23."
           }
         },
         {
           "@type": "Question",
-          "name": "Can I use this for classroom teams or a work project split?",
+          "name": "Does this work with negative numbers?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes - this works for any scenario where you need an unbiased random split of a list of names into a fixed number of groups, whether that's classroom project teams, sports teams, or dividing up a task list at work."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I use this as a randomizer to pick one random winner or order names randomly?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes - set the number of groups to 1, and this calculator shuffles your entire list into a single random order (the fairest way to pick a random winner is to take whoever ends up first). Every reshuffle uses a fresh Fisher-Yates shuffle."
+            "text": "This calculator works with the absolute (positive) value of whatever you enter, since long division as a step-by-step method is defined for positive whole numbers - apply the sign rules separately (a negative dividend or divisor, but not both, gives a negative result) after getting the positive quotient and remainder here."
           }
         }
       ]
@@ -163,15 +155,15 @@
 
   <div class="wrap" style="padding-top:32px;">
     <div class="breadcrumb">
-      <a href="/index.html">Calquary</a> / <a href="/category/text.html">Text & Digital</a>
+      <a href="/index.html">Calquary</a> / <a href="/category/math.html">Math</a>
     </div>
   </div>
 
   <div class="wrap" style="padding-bottom:64px;">
     <div class="tool-layout">
       <main>
-        <h1>Group Randomizer</h1>
-        <p style="max-width:60ch;">Enter one name per line and choose how many groups to split them into - each group is randomly and evenly assigned.</p>
+        <h1>Long Division Calculator</h1>
+        <p style="max-width:60ch;">Enter a dividend and divisor to see the quotient, remainder, and the full step-by-step long division work.</p>
         <p class="last-updated">Last updated: August 30, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -199,20 +191,16 @@
         <div class="article-block">
           <h2>Frequently asked questions</h2>
           <div id="faq-list"><div class="faq-item">
-<h3>How does this randomize groups fairly?</h3>
-<p>It uses a Fisher-Yates shuffle - a well-established algorithm that gives every name an equal, unbiased chance of ending up in any position - then deals the shuffled list into groups in round-robin order, which keeps group sizes as even as possible.</p>
+<h3>How do I do long division step by step?</h3>
+<p>Bring down one digit of the dividend at a time, divide the running value by the divisor to get a quotient digit, multiply that digit by the divisor and subtract it from the running value, then bring down the next digit and repeat - this calculator shows every one of those steps in the table.</p>
 </div>
 <div class="faq-item">
-<h3>What happens if the number of people doesn't divide evenly into groups?</h3>
-<p>The extra people are spread one-per-group starting from the first group, so group sizes differ by at most one person - for 10 people split into 3 groups, you'll get groups of 4, 3, and 3, not 4, 4, and 2.</p>
+<h3>What does the remainder mean?</h3>
+<p>The remainder is what's left over after dividing as many whole times as possible - for 23 ÷ 5, the quotient is 4 (5×4=20) with a remainder of 3 (23−20), since 5 doesn't divide evenly into 23.</p>
 </div>
 <div class="faq-item">
-<h3>Can I use this for classroom teams or a work project split?</h3>
-<p>Yes - this works for any scenario where you need an unbiased random split of a list of names into a fixed number of groups, whether that's classroom project teams, sports teams, or dividing up a task list at work.</p>
-</div>
-<div class="faq-item">
-<h3>Can I use this as a randomizer to pick one random winner or order names randomly?</h3>
-<p>Yes - set the number of groups to 1, and this calculator shuffles your entire list into a single random order (the fairest way to pick a random winner is to take whoever ends up first). Every reshuffle uses a fresh Fisher-Yates shuffle.</p>
+<h3>Does this work with negative numbers?</h3>
+<p>This calculator works with the absolute (positive) value of whatever you enter, since long division as a step-by-step method is defined for positive whole numbers - apply the sign rules separately (a negative dividend or divisor, but not both, gives a negative result) after getting the positive quotient and remainder here.</p>
 </div></div>
         </div>
       </main>

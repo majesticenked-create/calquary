@@ -199,6 +199,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/pi-digits-calculator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/long-division-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/long-division-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/long-division-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/gcd-lcm-calculator.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/gcd-lcm-calculator.html"/>
@@ -659,6 +665,12 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/age-calculator.html"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/age-calculator.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/age-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/birth-year-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/birth-year-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/birth-year-calculator.html"/>
   </url>
   <url>
     <loc>https://calquary.com/tool/unit-length-converter.html</loc>

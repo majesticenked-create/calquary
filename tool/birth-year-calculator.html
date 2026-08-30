@@ -4,23 +4,23 @@
   <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Group Randomizer - Free Online Calculator | Calquary</title>
-  <meta name="description" content="Randomly split a list of names into a set number of even groups or teams." />
-  <meta property="og:title" content="Group Randomizer | Calquary">
-  <meta property="og:description" content="Randomly split a list of names into a set number of even groups or teams.">
+  <title>Birth Year Calculator | Calquary</title>
+  <meta name="description" content="Estimate someone's birth year (or year range) from their current age." />
+  <meta property="og:title" content="Birth Year Calculator | Calquary">
+  <meta property="og:description" content="Estimate someone's birth year (or year range) from their current age.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://calquary.com/tool/group-randomizer.html">
+  <meta property="og:url" content="https://calquary.com/tool/birth-year-calculator.html">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Calquary">
-  <meta property="og:image" content="https://calquary.com/og-images/group-randomizer.png">
+  <meta property="og:image" content="https://calquary.com/og-images/birth-year-calculator.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Group Randomizer | Calquary">
-  <meta name="twitter:description" content="Randomly split a list of names into a set number of even groups or teams.">
-  <meta name="twitter:image" content="https://calquary.com/og-images/group-randomizer.png">
-    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/group-randomizer.html">
-  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/group-randomizer.html">
+  <meta name="twitter:title" content="Birth Year Calculator | Calquary">
+  <meta name="twitter:description" content="Estimate someone's birth year (or year range) from their current age.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/birth-year-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/birth-year-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/birth-year-calculator.html">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -46,7 +46,7 @@
       // still JS-driven here is the interactive calculator widget itself
       // (fields/compute/results) and the related-tools list, neither of
       // which is static SEO prose.
-      const calc = getCalculator("group-randomizer");
+      const calc = getCalculator("birth-year-calculator");
 
       const relWrap = document.getElementById("related-list");
       calc.related.forEach((relId) => {
@@ -57,7 +57,7 @@
         relWrap.appendChild(li);
       });
 
-      initCalculator("group-randomizer");
+      initCalculator("birth-year-calculator");
     });
   </script>
   <script type="application/ld+json">
@@ -66,11 +66,11 @@
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "Group Randomizer",
-      "description": "Randomly split a list of names into a set number of even groups or teams.",
+      "name": "Birth Year Calculator",
+      "description": "Estimate someone's birth year (or year range) from their current age.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
-      "url": "https://calquary.com/tool/group-randomizer.html",
+      "url": "https://calquary.com/tool/birth-year-calculator.html",
       "isAccessibleForFree": true,
       "offers": {
         "@type": "Offer",
@@ -92,14 +92,14 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Text & Digital",
-          "item": "https://calquary.com/category/text.html"
+          "name": "Date & Time",
+          "item": "https://calquary.com/category/datetime.html"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Group Randomizer",
-          "item": "https://calquary.com/tool/group-randomizer.html"
+          "name": "Birth Year Calculator",
+          "item": "https://calquary.com/tool/birth-year-calculator.html"
         }
       ]
     },
@@ -108,34 +108,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "How does this randomize groups fairly?",
+          "name": "Why does this give two possible birth years instead of one?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It uses a Fisher-Yates shuffle - a well-established algorithm that gives every name an equal, unbiased chance of ending up in any position - then deals the shuffled list into groups in round-robin order, which keeps group sizes as even as possible."
+            "text": "Because \"age\" alone doesn't specify a birth date - someone who is 30 today was born in the current year minus 30 if their birthday already happened this year, or the current year minus 31 if it hasn't happened yet. Without knowing the birth month and day, both are equally valid."
           }
         },
         {
           "@type": "Question",
-          "name": "What happens if the number of people doesn't divide evenly into groups?",
+          "name": "How do I calculate my exact birth year if I know my birthday?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The extra people are spread one-per-group starting from the first group, so group sizes differ by at most one person - for 10 people split into 3 groups, you'll get groups of 4, 3, and 3, not 4, 4, and 2."
+            "text": "If you know the specific birth date, use the Age Calculator instead - enter the birth date directly and it tells you the exact age, rather than working backward from age alone with two possible years."
           }
         },
         {
           "@type": "Question",
-          "name": "Can I use this for classroom teams or a work project split?",
+          "name": "Is 'calculate DOB from age' the same as this tool?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes - this works for any scenario where you need an unbiased random split of a list of names into a fixed number of groups, whether that's classroom project teams, sports teams, or dividing up a task list at work."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I use this as a randomizer to pick one random winner or order names randomly?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes - set the number of groups to 1, and this calculator shuffles your entire list into a single random order (the fairest way to pick a random winner is to take whoever ends up first). Every reshuffle uses a fresh Fisher-Yates shuffle."
+            "text": "Not quite - DOB (date of birth) includes month and day, which age alone can't determine. This calculator estimates the birth year specifically; the exact day and month within that year isn't recoverable from age alone."
           }
         }
       ]
@@ -163,15 +155,15 @@
 
   <div class="wrap" style="padding-top:32px;">
     <div class="breadcrumb">
-      <a href="/index.html">Calquary</a> / <a href="/category/text.html">Text & Digital</a>
+      <a href="/index.html">Calquary</a> / <a href="/category/datetime.html">Date & Time</a>
     </div>
   </div>
 
   <div class="wrap" style="padding-bottom:64px;">
     <div class="tool-layout">
       <main>
-        <h1>Group Randomizer</h1>
-        <p style="max-width:60ch;">Enter one name per line and choose how many groups to split them into - each group is randomly and evenly assigned.</p>
+        <h1>Birth Year Calculator</h1>
+        <p style="max-width:60ch;">Enter a current age to estimate the birth year - since the exact birthday isn't known, this gives the two possible years.</p>
         <p class="last-updated">Last updated: August 30, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -199,20 +191,16 @@
         <div class="article-block">
           <h2>Frequently asked questions</h2>
           <div id="faq-list"><div class="faq-item">
-<h3>How does this randomize groups fairly?</h3>
-<p>It uses a Fisher-Yates shuffle - a well-established algorithm that gives every name an equal, unbiased chance of ending up in any position - then deals the shuffled list into groups in round-robin order, which keeps group sizes as even as possible.</p>
+<h3>Why does this give two possible birth years instead of one?</h3>
+<p>Because "age" alone doesn't specify a birth date - someone who is 30 today was born in the current year minus 30 if their birthday already happened this year, or the current year minus 31 if it hasn't happened yet. Without knowing the birth month and day, both are equally valid.</p>
 </div>
 <div class="faq-item">
-<h3>What happens if the number of people doesn't divide evenly into groups?</h3>
-<p>The extra people are spread one-per-group starting from the first group, so group sizes differ by at most one person - for 10 people split into 3 groups, you'll get groups of 4, 3, and 3, not 4, 4, and 2.</p>
+<h3>How do I calculate my exact birth year if I know my birthday?</h3>
+<p>If you know the specific birth date, use the Age Calculator instead - enter the birth date directly and it tells you the exact age, rather than working backward from age alone with two possible years.</p>
 </div>
 <div class="faq-item">
-<h3>Can I use this for classroom teams or a work project split?</h3>
-<p>Yes - this works for any scenario where you need an unbiased random split of a list of names into a fixed number of groups, whether that's classroom project teams, sports teams, or dividing up a task list at work.</p>
-</div>
-<div class="faq-item">
-<h3>Can I use this as a randomizer to pick one random winner or order names randomly?</h3>
-<p>Yes - set the number of groups to 1, and this calculator shuffles your entire list into a single random order (the fairest way to pick a random winner is to take whoever ends up first). Every reshuffle uses a fresh Fisher-Yates shuffle.</p>
+<h3>Is 'calculate DOB from age' the same as this tool?</h3>
+<p>Not quite - DOB (date of birth) includes month and day, which age alone can't determine. This calculator estimates the birth year specifically; the exact day and month within that year isn't recoverable from age alone.</p>
 </div></div>
         </div>
       </main>

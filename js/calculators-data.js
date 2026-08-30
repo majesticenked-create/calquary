@@ -193,6 +193,58 @@ const CALCULATORS = [
     related: ["square-root-calculator", "exponent-calculator", "random-number-generator"],
   },
   {
+    id: "long-division-calculator",
+    category: "math",
+    title: "Long Division Calculator",
+    keyword: "long division calculator",
+    description: "Divide two whole numbers and see the full step-by-step long division work.",
+    intro: "Enter a dividend and divisor to see the quotient, remainder, and the full step-by-step long division work.",
+    fields: [
+      { id: "dividend", label: "Dividend", type: "number", default: 987, step: 1 },
+      { id: "divisor", label: "Divisor", type: "number", default: 7, step: 1 },
+    ],
+    compute: (v) => {
+      const dividend = Math.round(Math.abs(v.dividend));
+      const divisor = Math.round(Math.abs(v.divisor));
+      if (divisor === 0) {
+        return { primary: { label: "Result", value: "Undefined" }, secondary: [], note: "Division by zero is undefined." };
+      }
+      const digits = String(dividend).split("").map(Number);
+      let remainder = 0;
+      let quotientDigits = [];
+      const rows = [];
+      for (const digit of digits) {
+        const current = remainder * 10 + digit;
+        const qDigit = Math.floor(current / divisor);
+        const subtract = qDigit * divisor;
+        const newRemainder = current - subtract;
+        quotientDigits.push(qDigit);
+        rows.push([digit, current, qDigit, subtract, newRemainder]);
+        remainder = newRemainder;
+      }
+      let quotientStr = quotientDigits.join("");
+      quotientStr = quotientStr.replace(/^0+(?=\d)/, "");
+      return {
+        primary: { label: "Quotient", value: quotientStr },
+        secondary: [
+          { l: "Remainder", v: remainder },
+          { l: "As a decimal", v: round(dividend / divisor, 6) },
+        ],
+        note: "Scroll the table below for the full digit-by-digit long division steps.",
+        table: {
+          columns: ["Digit brought down", "Value", "Quotient digit", "Subtract (digit × divisor)", "Remainder"],
+          rows,
+        },
+      };
+    },
+    faq: [
+      { q: "How do I do long division step by step?", a: "Bring down one digit of the dividend at a time, divide the running value by the divisor to get a quotient digit, multiply that digit by the divisor and subtract it from the running value, then bring down the next digit and repeat - this calculator shows every one of those steps in the table." },
+      { q: "What does the remainder mean?", a: "The remainder is what's left over after dividing as many whole times as possible - for 23 ÷ 5, the quotient is 4 (5×4=20) with a remainder of 3 (23−20), since 5 doesn't divide evenly into 23." },
+      { q: "Does this work with negative numbers?", a: "This calculator works with the absolute (positive) value of whatever you enter, since long division as a step-by-step method is defined for positive whole numbers - apply the sign rules separately (a negative dividend or divisor, but not both, gives a negative result) after getting the positive quotient and remainder here." },
+    ],
+    related: ["fraction-calculator", "gcd-lcm-calculator", "percentage-calculator"],
+  },
+  {
     id: "gcd-lcm-calculator",
     category: "math",
     title: "GCD and LCM Calculator",
@@ -739,6 +791,7 @@ const CALCULATORS = [
       { q: "How do I solve a system of two linear equations?", a: "Using Cramer's rule (what this calculator does): for ax+by=e and cx+dy=f, x = (ed−bf)/(ad−bc) and y = (af−ec)/(ad−bc), where ad−bc is the determinant of the coefficient matrix. This works as long as that determinant isn't zero." },
       { q: "What does it mean if there's no solution?", a: "The two equations represent parallel lines (the same slope, different intercepts) that never cross - so there's no (x, y) pair that makes both equations true at the same time." },
       { q: "What does it mean if there are infinitely many solutions?", a: "The two equations actually describe the exact same line (one might just be a multiple of the other) - every point on that line satisfies both equations, so there isn't one unique (x, y) answer." },
+      { q: "Is a 'systems of equations calculator' the same as this solver?", a: "Yes - \"systems of equations solver\" and \"systems of equations calculator\" both describe finding the (x, y) that satisfies two linear equations simultaneously, which is exactly what this tool does." },
     ],
     related: ["quadratic-formula-calculator", "ratio-calculator", "square-root-calculator"],
   },
@@ -2758,6 +2811,36 @@ const CALCULATORS = [
     ],
     related: ["days-until-calculator", "dog-age-calculator"],
   },
+  {
+    id: "birth-year-calculator",
+    category: "datetime",
+    title: "Birth Year Calculator",
+    keyword: "birth year calculator",
+    description: "Estimate someone's birth year (or year range) from their current age.",
+    intro: "Enter a current age to estimate the birth year - since the exact birthday isn't known, this gives the two possible years.",
+    fields: [
+      { id: "age", label: "Current age", type: "number", default: 30, step: 1, min: 0 },
+    ],
+    compute: (v) => {
+      const currentYear = new Date().getFullYear();
+      const earlierYear = currentYear - v.age - 1;
+      const laterYear = currentYear - v.age;
+      return {
+        primary: { label: "Possible birth year", value: `${earlierYear} or ${laterYear}` },
+        secondary: [
+          { l: "If birthday hasn't happened yet this year", v: earlierYear },
+          { l: "If birthday already happened this year", v: laterYear },
+        ],
+        note: "Age alone doesn't pin down an exact birth year without knowing whether this year's birthday has already passed - both years shown are equally possible.",
+      };
+    },
+    faq: [
+      { q: "Why does this give two possible birth years instead of one?", a: "Because \"age\" alone doesn't specify a birth date - someone who is 30 today was born in the current year minus 30 if their birthday already happened this year, or the current year minus 31 if it hasn't happened yet. Without knowing the birth month and day, both are equally valid." },
+      { q: "How do I calculate my exact birth year if I know my birthday?", a: "If you know the specific birth date, use the Age Calculator instead - enter the birth date directly and it tells you the exact age, rather than working backward from age alone with two possible years." },
+      { q: "Is 'calculate DOB from age' the same as this tool?", a: "Not quite - DOB (date of birth) includes month and day, which age alone can't determine. This calculator estimates the birth year specifically; the exact day and month within that year isn't recoverable from age alone." },
+    ],
+    related: ["age-calculator", "days-until-calculator", "date-duration-calculator"],
+  },
 
   // ---------------- EVERYDAY CONVERSIONS ----------------
   {
@@ -3503,11 +3586,11 @@ const CALCULATORS = [
     intro: "Enter one name per line and choose how many groups to split them into - each group is randomly and evenly assigned.",
     fields: [
       { id: "names", label: "Names (one per line)", type: "textarea", default: "Alex\nJordan\nTaylor\nMorgan\nCasey\nRiley\nSam\nJamie" },
-      { id: "numGroups", label: "Number of groups", type: "number", default: 2, step: 1, min: 2, max: 20 },
+      { id: "numGroups", label: "Number of groups", type: "number", default: 2, step: 1, min: 1, max: 20 },
     ],
     compute: (v) => {
       const names = (v.names || "").split("\n").map((n) => n.trim()).filter(Boolean);
-      const numGroups = Math.max(2, Math.min(20, Math.round(v.numGroups)));
+      const numGroups = Math.max(1, Math.min(20, Math.round(v.numGroups)));
       if (names.length === 0) {
         return { primary: { label: "Groups", value: "—" }, secondary: [], note: "Enter at least one name, one per line." };
       }
@@ -3540,6 +3623,7 @@ const CALCULATORS = [
       { q: "How does this randomize groups fairly?", a: "It uses a Fisher-Yates shuffle - a well-established algorithm that gives every name an equal, unbiased chance of ending up in any position - then deals the shuffled list into groups in round-robin order, which keeps group sizes as even as possible." },
       { q: "What happens if the number of people doesn't divide evenly into groups?", a: "The extra people are spread one-per-group starting from the first group, so group sizes differ by at most one person - for 10 people split into 3 groups, you'll get groups of 4, 3, and 3, not 4, 4, and 2." },
       { q: "Can I use this for classroom teams or a work project split?", a: "Yes - this works for any scenario where you need an unbiased random split of a list of names into a fixed number of groups, whether that's classroom project teams, sports teams, or dividing up a task list at work." },
+      { q: "Can I use this as a randomizer to pick one random winner or order names randomly?", a: "Yes - set the number of groups to 1, and this calculator shuffles your entire list into a single random order (the fairest way to pick a random winner is to take whoever ends up first). Every reshuffle uses a fresh Fisher-Yates shuffle." },
     ],
     related: ["random-number-generator", "word-counter", "text-to-slug-generator"],
   },
