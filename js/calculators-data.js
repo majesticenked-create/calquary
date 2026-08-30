@@ -358,6 +358,68 @@ const CALCULATORS = [
     ],
     related: ["exponent-calculator", "square-root-calculator", "fraction-calculator"],
   },
+  {
+    id: "cone-volume-calculator",
+    category: "math",
+    title: "Cone Volume Calculator",
+    keyword: "cone volume calculator",
+    description: "Calculate the volume, surface area, and slant height of a cone from its radius and height.",
+    intro: "Enter a cone's radius and height to calculate its volume, using V = (1/3)πr²h.",
+    fields: [
+      { id: "radius", label: "Radius", type: "number", default: 3, step: 0.1 },
+      { id: "height", label: "Height", type: "number", default: 8, step: 0.1 },
+    ],
+    compute: (v) => {
+      const volume = (1 / 3) * Math.PI * v.radius * v.radius * v.height;
+      const slantHeight = Math.sqrt(v.radius * v.radius + v.height * v.height);
+      const surfaceArea = Math.PI * v.radius * (v.radius + slantHeight);
+      return {
+        primary: { label: "Volume", value: round(volume, 4) },
+        secondary: [
+          { l: "Slant height", v: round(slantHeight, 4) },
+          { l: "Surface area", v: round(surfaceArea, 4) },
+        ],
+        note: "Volume uses V = (1/3)πr²h. Surface area includes both the base circle and the curved (lateral) surface.",
+      };
+    },
+    faq: [
+      { q: "What's the formula for the volume of a cone?", a: "V = (1/3)πr²h, where r is the radius of the circular base and h is the height from the base to the apex. It's exactly one-third the volume of a cylinder with the same base and height." },
+      { q: "Why is a cone's volume exactly 1/3 of a cylinder's?", a: "This is a geometric fact provable with calculus (integrating circular cross-sections that shrink linearly to a point) - for any cone and cylinder sharing the same base radius and height, the cone always encloses exactly one-third the volume, regardless of the specific radius or height." },
+      { q: "What's the difference between height and slant height?", a: "Height is the straight vertical distance from the base to the apex; slant height is the distance along the cone's curved surface from the base edge to the apex. Slant height is always longer than height (except in the degenerate case of zero radius), and is calculated as √(r² + h²)." },
+    ],
+    related: ["cylinder-volume-calculator", "square-root-calculator", "exponent-calculator"],
+  },
+  {
+    id: "cylinder-volume-calculator",
+    category: "math",
+    title: "Cylinder Volume Calculator",
+    keyword: "cylinder volume calculator",
+    description: "Calculate the volume and surface area of a cylinder from its radius and height.",
+    intro: "Enter a cylinder's radius and height to calculate its volume, using V = πr²h.",
+    fields: [
+      { id: "radius", label: "Radius", type: "number", default: 4, step: 0.1 },
+      { id: "height", label: "Height", type: "number", default: 10, step: 0.1 },
+    ],
+    compute: (v) => {
+      const volume = Math.PI * v.radius * v.radius * v.height;
+      const surfaceArea = 2 * Math.PI * v.radius * (v.radius + v.height);
+      const lateralArea = 2 * Math.PI * v.radius * v.height;
+      return {
+        primary: { label: "Volume", value: round(volume, 4) },
+        secondary: [
+          { l: "Surface area", v: round(surfaceArea, 4) },
+          { l: "Lateral (side) area", v: round(lateralArea, 4) },
+        ],
+        note: "Volume uses V = πr²h. Total surface area includes the two circular ends plus the curved side.",
+      };
+    },
+    faq: [
+      { q: "What's the formula for the volume of a cylinder?", a: "V = πr²h, where r is the radius of the circular base and h is the height. This comes from multiplying the area of the circular base (πr²) by the height, the same logic used for any prism." },
+      { q: "How do I find the volume of a cylinder if I only know the diameter?", a: "Divide the diameter by 2 to get the radius first, then use V = πr²h. For example, a cylinder with a 10 cm diameter and 20 cm height has a radius of 5 cm, giving a volume of π × 5² × 20 ≈ 1,570.8 cm³." },
+      { q: "What's the difference between total surface area and lateral surface area?", a: "Lateral (side) surface area only counts the curved wall of the cylinder (2πrh); total surface area adds the two flat circular ends (2πr²) on top of that. Use lateral area alone for things like labeling a can's wraparound label, and total area for anything covering the whole object." },
+    ],
+    related: ["cone-volume-calculator", "square-root-calculator", "area-converter"],
+  },
 
   // ---------------- FINANCE ----------------
   {

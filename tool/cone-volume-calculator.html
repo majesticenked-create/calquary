@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cone Volume Calculator | Calquary</title>
+  <meta name="description" content="Calculate the volume, surface area, and slant height of a cone from its radius and height." />
+  <meta property="og:title" content="Cone Volume Calculator | Calquary">
+  <meta property="og:description" content="Calculate the volume, surface area, and slant height of a cone from its radius and height.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/tool/cone-volume-calculator.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/cone-volume-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cone Volume Calculator | Calquary">
+  <meta name="twitter:description" content="Calculate the volume, surface area, and slant height of a cone from its radius and height.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/cone-volume-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/cone-volume-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/cone-volume-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("cone-volume-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("cone-volume-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Cone Volume Calculator",
+      "description": "Calculate the volume, surface area, and slant height of a cone from its radius and height.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/cone-volume-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-30",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Math",
+          "item": "https://calquary.com/category/math.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Cone Volume Calculator",
+          "item": "https://calquary.com/tool/cone-volume-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What's the formula for the volume of a cone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "V = (1/3)πr²h, where r is the radius of the circular base and h is the height from the base to the apex. It's exactly one-third the volume of a cylinder with the same base and height."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is a cone's volume exactly 1/3 of a cylinder's?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This is a geometric fact provable with calculus (integrating circular cross-sections that shrink linearly to a point) - for any cone and cylinder sharing the same base radius and height, the cone always encloses exactly one-third the volume, regardless of the specific radius or height."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between height and slant height?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Height is the straight vertical distance from the base to the apex; slant height is the distance along the cone's curved surface from the base edge to the apex. Slant height is always longer than height (except in the degenerate case of zero radius), and is calculated as √(r² + h²)."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/index.html#categories">Categories</a>
+          <a href="/index.html#tools">All tools</a>
+          <a href="/about.html">About</a>
+        </nav>
+        
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/index.html">Calquary</a> / <a href="/category/math.html">Math</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Cone Volume Calculator</h1>
+        <p style="max-width:60ch;">Enter a cone's radius and height to calculate its volume, using V = (1/3)πr²h.</p>
+        <p class="last-updated">Last updated: August 30, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculate</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reset</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Frequently asked questions</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>What's the formula for the volume of a cone?</h3>
+<p>V = (1/3)πr²h, where r is the radius of the circular base and h is the height from the base to the apex. It's exactly one-third the volume of a cylinder with the same base and height.</p>
+</div>
+<div class="faq-item">
+<h3>Why is a cone's volume exactly 1/3 of a cylinder's?</h3>
+<p>This is a geometric fact provable with calculus (integrating circular cross-sections that shrink linearly to a point) - for any cone and cylinder sharing the same base radius and height, the cone always encloses exactly one-third the volume, regardless of the specific radius or height.</p>
+</div>
+<div class="faq-item">
+<h3>What's the difference between height and slant height?</h3>
+<p>Height is the straight vertical distance from the base to the apex; slant height is the distance along the cone's curved surface from the base edge to the apex. Slant height is always longer than height (except in the degenerate case of zero radius), and is calculated as √(r² + h²).</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Related tools</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>A note on accuracy</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquary's calculators are built for quick, reliable estimates. For decisions with real financial, structural, or medical stakes, confirm with a qualified professional.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/index.html">← Back to all calculators</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>
