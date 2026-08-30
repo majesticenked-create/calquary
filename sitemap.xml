@@ -781,6 +781,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/password-generator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/uuid-generator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/uuid-generator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/uuid-generator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/random-number-generator.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/random-number-generator.html"/>

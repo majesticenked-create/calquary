@@ -2623,6 +2623,7 @@ const CALCULATORS = [
     faq: [
       { q: "What is a Unix timestamp?", a: "The number of seconds elapsed since January 1, 1970, 00:00:00 UTC (the \"Unix epoch\") - a single number that unambiguously represents a specific moment in time, widely used in programming and databases since it avoids time zone and calendar-formatting ambiguity." },
       { q: "How is this different from an epoch converter?", a: "Nothing - \"epoch time\" and \"Unix timestamp\" are the same thing, and \"epoch converter\" and \"Unix timestamp converter\" describe the same tool. This calculator handles both directions: timestamp to date, and date to timestamp." },
+      { q: "How do I convert a Unix timestamp to a readable time?", a: "Enter the timestamp in the \"Unix timestamp\" field above - the \"Date from timestamp\" result shows the exact UTC date and time it corresponds to." },
       { q: "Why does my timestamp look 3 or 10 digits different from what I expected?", a: "Some systems use milliseconds since the epoch instead of seconds - a timestamp in milliseconds has 3 extra digits (13 digits vs. 10 for a current-day timestamp in seconds). Divide a millisecond timestamp by 1,000 before entering it here." },
     ],
     related: ["date-duration-calculator", "time-unit-converter", "days-until-calculator"],
@@ -3099,6 +3100,7 @@ const CALCULATORS = [
       { q: "Why does the type of flour affect its weight per cup?", a: "How densely the flour is packed into the measuring cup - and differences between flour types like all-purpose, bread, or cake flour - both affect weight per cup, which is why professional recipes often specify weight rather than cup measurements for consistency." },
       { q: "How many grams are in a cup?", a: "It depends on the ingredient - a cup of flour is about 120g, a cup of granulated sugar is about 200g, and a cup of butter is about 227g, since cups measure volume and grams measure weight. Choose your ingredient above for the exact figure." },
       { q: "Is '1 cup in grams' or '1 cup to g' the same question as 'cup to grams'?", a: "Yes - all of these ask the same thing: how many grams are in one cup of a given ingredient. Enter 1 in the cups field and pick your ingredient above for the exact figure." },
+      { q: "Is '1 cups to grams' (plural) different from '1 cup to grams'?", a: "No - it's the same question with a grammar slip. Enter 1 in the cups field above for the answer either way." },
       { q: "How many cups are in a certain number of grams?", a: "Divide the gram amount by the grams-per-cup figure for your ingredient - 240g of flour, for example, is 240 ÷ 120 = 2 cups. This calculator converts cups to grams directly; for grams to cups, divide your gram amount by the per-cup weight shown for your ingredient above." },
       { q: "A cup is how many grams?", a: "It depends entirely on the ingredient, since a cup measures volume and grams measure weight - select your ingredient above (flour, sugar, butter, or brown sugar) to see its specific grams-per-cup figure." },
       { q: "How many grams is 1 cup, in general?", a: "There's no single answer without knowing the ingredient - it ranges from about 120g (flour) to 227g (butter) per cup for the ingredients this calculator covers, since denser ingredients pack more weight into the same volume." },
@@ -3386,6 +3388,44 @@ const CALCULATORS = [
     related: ["word-counter", "random-number-generator", "unit-length-converter"],
   },
   {
+    id: "uuid-generator",
+    category: "text",
+    title: "UUID Generator",
+    keyword: "uuid generator",
+    description: "Generate one or more random UUIDs (version 4), the standard format for unique identifiers.",
+    intro: "Choose how many UUIDs to generate - each one is a random version-4 UUID, formatted per the standard.",
+    fields: [
+      { id: "count", label: "How many UUIDs", type: "number", default: 1, step: 1, min: 1, max: 50 },
+    ],
+    compute: (v) => {
+      function uuidv4() {
+        const bytes = new Uint8Array(16);
+        if (typeof crypto !== "undefined" && crypto.getRandomValues) {
+          crypto.getRandomValues(bytes);
+        } else {
+          for (let i = 0; i < 16; i++) bytes[i] = Math.floor(Math.random() * 256);
+        }
+        bytes[6] = (bytes[6] & 0x0f) | 0x40;
+        bytes[8] = (bytes[8] & 0x3f) | 0x80;
+        const hex = Array.from(bytes, (b) => b.toString(16).padStart(2, "0"));
+        return `${hex.slice(0, 4).join("")}-${hex.slice(4, 6).join("")}-${hex.slice(6, 8).join("")}-${hex.slice(8, 10).join("")}-${hex.slice(10, 16).join("")}`;
+      }
+      const count = Math.max(1, Math.min(50, Math.round(v.count)));
+      const uuids = Array.from({ length: count }, uuidv4);
+      return {
+        primary: { label: "UUID" + (count > 1 ? "s" : ""), value: uuids.join("\n") },
+        secondary: [{ l: "Count", v: count }, { l: "Version", v: "4 (random)" }],
+        note: "Generated locally using your browser's cryptographic random number generator when available - nothing is sent to a server.",
+      };
+    },
+    faq: [
+      { q: "What is a UUID?", a: "A Universally Unique Identifier - a 128-bit value formatted as 32 hexadecimal digits in five groups (like 8-4-4-4-12 characters), designed so that generating one independently, anywhere, is astronomically unlikely to collide with any other UUID ever generated." },
+      { q: "What does 'version 4' mean for a UUID?", a: "Version 4 UUIDs are generated from random (or pseudo-random) bits, as opposed to other UUID versions based on timestamps or namespaces - it's the most common type for general-purpose unique IDs, and what this generator produces." },
+      { q: "How likely is a UUID collision?", a: "Effectively negligible - with 122 random bits (a few bits are fixed to mark the version), you'd need to generate roughly a billion UUIDs per second for about 85 years before a 50% chance of any collision, which is why UUIDs are trusted as unique identifiers without checking a central registry." },
+    ],
+    related: ["password-generator", "random-number-generator", "text-to-slug-generator"],
+  },
+  {
     id: "random-number-generator",
     category: "text",
     title: "Random Number Generator",
@@ -3636,6 +3676,7 @@ const CALCULATORS = [
       { q: "Can I use this for classroom teams or a work project split?", a: "Yes - this works for any scenario where you need an unbiased random split of a list of names into a fixed number of groups, whether that's classroom project teams, sports teams, or dividing up a task list at work." },
       { q: "Can I use this as a randomizer to pick one random winner or order names randomly?", a: "Yes - set the number of groups to 1, and this calculator shuffles your entire list into a single random order (the fairest way to pick a random winner is to take whoever ends up first). Every reshuffle uses a fresh Fisher-Yates shuffle." },
       { q: "Is a 'randomizer list' or 'random a list' the same as this tool?", a: "Yes - both describe shuffling a list into random order, which this tool does (set groups to 1 for a single shuffled list, or more for random group splits)." },
+      { q: "Is 'random generator for teams' or 'randomize list' different from this tool?", a: "No - both describe splitting or shuffling a list of names randomly, which is exactly what this calculator does. Set the number of groups to however many teams you need, or to 1 to just shuffle the whole list." },
     ],
     related: ["random-number-generator", "word-counter", "text-to-slug-generator"],
   },

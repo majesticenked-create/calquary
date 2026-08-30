@@ -4,23 +4,23 @@
   <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Group Randomizer - Free Online Calculator | Calquary</title>
-  <meta name="description" content="Randomly split a list of names into a set number of even groups or teams." />
-  <meta property="og:title" content="Group Randomizer | Calquary">
-  <meta property="og:description" content="Randomly split a list of names into a set number of even groups or teams.">
+  <title>UUID Generator - Free Online Calculator | Calquary</title>
+  <meta name="description" content="Generate one or more random UUIDs (version 4), the standard format for unique identifiers." />
+  <meta property="og:title" content="UUID Generator | Calquary">
+  <meta property="og:description" content="Generate one or more random UUIDs (version 4), the standard format for unique identifiers.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://calquary.com/tool/group-randomizer.html">
+  <meta property="og:url" content="https://calquary.com/tool/uuid-generator.html">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Calquary">
-  <meta property="og:image" content="https://calquary.com/og-images/group-randomizer.png">
+  <meta property="og:image" content="https://calquary.com/og-images/uuid-generator.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Group Randomizer | Calquary">
-  <meta name="twitter:description" content="Randomly split a list of names into a set number of even groups or teams.">
-  <meta name="twitter:image" content="https://calquary.com/og-images/group-randomizer.png">
-    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/group-randomizer.html">
-  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/group-randomizer.html">
+  <meta name="twitter:title" content="UUID Generator | Calquary">
+  <meta name="twitter:description" content="Generate one or more random UUIDs (version 4), the standard format for unique identifiers.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/uuid-generator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/uuid-generator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/uuid-generator.html">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -46,7 +46,7 @@
       // still JS-driven here is the interactive calculator widget itself
       // (fields/compute/results) and the related-tools list, neither of
       // which is static SEO prose.
-      const calc = getCalculator("group-randomizer");
+      const calc = getCalculator("uuid-generator");
 
       const relWrap = document.getElementById("related-list");
       calc.related.forEach((relId) => {
@@ -57,7 +57,7 @@
         relWrap.appendChild(li);
       });
 
-      initCalculator("group-randomizer");
+      initCalculator("uuid-generator");
     });
   </script>
   <script type="application/ld+json">
@@ -66,11 +66,11 @@
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "Group Randomizer",
-      "description": "Randomly split a list of names into a set number of even groups or teams.",
+      "name": "UUID Generator",
+      "description": "Generate one or more random UUIDs (version 4), the standard format for unique identifiers.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
-      "url": "https://calquary.com/tool/group-randomizer.html",
+      "url": "https://calquary.com/tool/uuid-generator.html",
       "isAccessibleForFree": true,
       "offers": {
         "@type": "Offer",
@@ -98,8 +98,8 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Group Randomizer",
-          "item": "https://calquary.com/tool/group-randomizer.html"
+          "name": "UUID Generator",
+          "item": "https://calquary.com/tool/uuid-generator.html"
         }
       ]
     },
@@ -108,50 +108,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "How does this randomize groups fairly?",
+          "name": "What is a UUID?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It uses a Fisher-Yates shuffle - a well-established algorithm that gives every name an equal, unbiased chance of ending up in any position - then deals the shuffled list into groups in round-robin order, which keeps group sizes as even as possible."
+            "text": "A Universally Unique Identifier - a 128-bit value formatted as 32 hexadecimal digits in five groups (like 8-4-4-4-12 characters), designed so that generating one independently, anywhere, is astronomically unlikely to collide with any other UUID ever generated."
           }
         },
         {
           "@type": "Question",
-          "name": "What happens if the number of people doesn't divide evenly into groups?",
+          "name": "What does 'version 4' mean for a UUID?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The extra people are spread one-per-group starting from the first group, so group sizes differ by at most one person - for 10 people split into 3 groups, you'll get groups of 4, 3, and 3, not 4, 4, and 2."
+            "text": "Version 4 UUIDs are generated from random (or pseudo-random) bits, as opposed to other UUID versions based on timestamps or namespaces - it's the most common type for general-purpose unique IDs, and what this generator produces."
           }
         },
         {
           "@type": "Question",
-          "name": "Can I use this for classroom teams or a work project split?",
+          "name": "How likely is a UUID collision?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes - this works for any scenario where you need an unbiased random split of a list of names into a fixed number of groups, whether that's classroom project teams, sports teams, or dividing up a task list at work."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I use this as a randomizer to pick one random winner or order names randomly?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes - set the number of groups to 1, and this calculator shuffles your entire list into a single random order (the fairest way to pick a random winner is to take whoever ends up first). Every reshuffle uses a fresh Fisher-Yates shuffle."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is a 'randomizer list' or 'random a list' the same as this tool?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes - both describe shuffling a list into random order, which this tool does (set groups to 1 for a single shuffled list, or more for random group splits)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is 'random generator for teams' or 'randomize list' different from this tool?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No - both describe splitting or shuffling a list of names randomly, which is exactly what this calculator does. Set the number of groups to however many teams you need, or to 1 to just shuffle the whole list."
+            "text": "Effectively negligible - with 122 random bits (a few bits are fixed to mark the version), you'd need to generate roughly a billion UUIDs per second for about 85 years before a 50% chance of any collision, which is why UUIDs are trusted as unique identifiers without checking a central registry."
           }
         }
       ]
@@ -186,8 +162,8 @@
   <div class="wrap" style="padding-bottom:64px;">
     <div class="tool-layout">
       <main>
-        <h1>Group Randomizer</h1>
-        <p style="max-width:60ch;">Enter one name per line and choose how many groups to split them into - each group is randomly and evenly assigned.</p>
+        <h1>UUID Generator</h1>
+        <p style="max-width:60ch;">Choose how many UUIDs to generate - each one is a random version-4 UUID, formatted per the standard.</p>
         <p class="last-updated">Last updated: August 30, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -215,28 +191,16 @@
         <div class="article-block">
           <h2>Frequently asked questions</h2>
           <div id="faq-list"><div class="faq-item">
-<h3>How does this randomize groups fairly?</h3>
-<p>It uses a Fisher-Yates shuffle - a well-established algorithm that gives every name an equal, unbiased chance of ending up in any position - then deals the shuffled list into groups in round-robin order, which keeps group sizes as even as possible.</p>
+<h3>What is a UUID?</h3>
+<p>A Universally Unique Identifier - a 128-bit value formatted as 32 hexadecimal digits in five groups (like 8-4-4-4-12 characters), designed so that generating one independently, anywhere, is astronomically unlikely to collide with any other UUID ever generated.</p>
 </div>
 <div class="faq-item">
-<h3>What happens if the number of people doesn't divide evenly into groups?</h3>
-<p>The extra people are spread one-per-group starting from the first group, so group sizes differ by at most one person - for 10 people split into 3 groups, you'll get groups of 4, 3, and 3, not 4, 4, and 2.</p>
+<h3>What does 'version 4' mean for a UUID?</h3>
+<p>Version 4 UUIDs are generated from random (or pseudo-random) bits, as opposed to other UUID versions based on timestamps or namespaces - it's the most common type for general-purpose unique IDs, and what this generator produces.</p>
 </div>
 <div class="faq-item">
-<h3>Can I use this for classroom teams or a work project split?</h3>
-<p>Yes - this works for any scenario where you need an unbiased random split of a list of names into a fixed number of groups, whether that's classroom project teams, sports teams, or dividing up a task list at work.</p>
-</div>
-<div class="faq-item">
-<h3>Can I use this as a randomizer to pick one random winner or order names randomly?</h3>
-<p>Yes - set the number of groups to 1, and this calculator shuffles your entire list into a single random order (the fairest way to pick a random winner is to take whoever ends up first). Every reshuffle uses a fresh Fisher-Yates shuffle.</p>
-</div>
-<div class="faq-item">
-<h3>Is a 'randomizer list' or 'random a list' the same as this tool?</h3>
-<p>Yes - both describe shuffling a list into random order, which this tool does (set groups to 1 for a single shuffled list, or more for random group splits).</p>
-</div>
-<div class="faq-item">
-<h3>Is 'random generator for teams' or 'randomize list' different from this tool?</h3>
-<p>No - both describe splitting or shuffling a list of names randomly, which is exactly what this calculator does. Set the number of groups to however many teams you need, or to 1 to just shuffle the whole list.</p>
+<h3>How likely is a UUID collision?</h3>
+<p>Effectively negligible - with 122 random bits (a few bits are fixed to mark the version), you'd need to generate roughly a billion UUIDs per second for about 85 years before a 50% chance of any collision, which is why UUIDs are trusted as unique identifiers without checking a central registry.</p>
 </div></div>
         </div>
       </main>
