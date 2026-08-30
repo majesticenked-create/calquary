@@ -481,9 +481,13 @@ function buildToolPage(template, locale, calc, cat, I18N) {
   const faqHtml = t.faq.map((item) => `<div class="faq-item">\n<h3>${escapeHtml(item.q)}</h3>\n<p>${item.a}</p>\n</div>`).join("\n");
   // Non-English tool titles run short (compact compound words/abbreviations
   // in de/ja especially) and were flagged by an SEO audit for a too-short
-  // <title> tag; English titles are already long enough on their own.
+  // <title> tag. Short single/two-word English titles (e.g. "BMI
+  // Calculator | Calquary", 25 chars) got flagged too - only English
+  // titles that are actually short get the suffix, so already-adequate
+  // ones stay untouched.
+  const baseEnTitle = `${t.title} | Calquary`;
   const pageTitle = locale === "en"
-    ? `${t.title} | Calquary`
+    ? (baseEnTitle.length < 30 ? `${t.title} - Free Online Calculator | Calquary` : baseEnTitle)
     : `${t.title} - ${ui.labels.titleSuffix} | Calquary`;
 
   return template
