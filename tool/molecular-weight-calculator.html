@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Molecular Weight Calculator | Calquary</title>
+  <meta name="description" content="Calculate the molecular weight (molar mass) of a chemical formula, like H2O or C6H12O6." />
+  <meta property="og:title" content="Molecular Weight Calculator | Calquary">
+  <meta property="og:description" content="Calculate the molecular weight (molar mass) of a chemical formula, like H2O or C6H12O6.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/tool/molecular-weight-calculator.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/molecular-weight-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Molecular Weight Calculator | Calquary">
+  <meta name="twitter:description" content="Calculate the molecular weight (molar mass) of a chemical formula, like H2O or C6H12O6.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/molecular-weight-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/molecular-weight-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/molecular-weight-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("molecular-weight-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("molecular-weight-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Molecular Weight Calculator",
+      "description": "Calculate the molecular weight (molar mass) of a chemical formula, like H2O or C6H12O6.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/molecular-weight-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-30",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Math",
+          "item": "https://calquary.com/category/math.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Molecular Weight Calculator",
+          "item": "https://calquary.com/tool/molecular-weight-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I calculate the molecular weight of water (H2O)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Add up the atomic weights: 2 hydrogen atoms (2 × 1.008 = 2.016) plus 1 oxygen atom (15.999), for a total of about 18.015 g/mol."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between molecular weight and molar mass?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They're the same value expressed differently - molecular weight is technically a dimensionless ratio, while molar mass carries units (grams per mole, g/mol), but in practice the numbers are identical and the terms are used interchangeably."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I enter a formula with parentheses, like Ca(OH)2?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Type it exactly as written - this calculator supports parentheses with a multiplier, so Ca(OH)2 correctly counts 1 calcium, 2 oxygen, and 2 hydrogen atoms (the 2 outside the parentheses multiplies everything inside)."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/index.html#categories">Categories</a>
+          <a href="/index.html#tools">All tools</a>
+          <a href="/about.html">About</a>
+        </nav>
+        
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/index.html">Calquary</a> / <a href="/category/math.html">Math</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Molecular Weight Calculator</h1>
+        <p style="max-width:60ch;">Enter a chemical formula (e.g. H2O, NaCl, C6H12O6, Ca(OH)2) to calculate its molecular weight in grams per mole.</p>
+        <p class="last-updated">Last updated: August 30, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculate</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reset</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Frequently asked questions</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>How do I calculate the molecular weight of water (H2O)?</h3>
+<p>Add up the atomic weights: 2 hydrogen atoms (2 × 1.008 = 2.016) plus 1 oxygen atom (15.999), for a total of about 18.015 g/mol.</p>
+</div>
+<div class="faq-item">
+<h3>What's the difference between molecular weight and molar mass?</h3>
+<p>They're the same value expressed differently - molecular weight is technically a dimensionless ratio, while molar mass carries units (grams per mole, g/mol), but in practice the numbers are identical and the terms are used interchangeably.</p>
+</div>
+<div class="faq-item">
+<h3>How do I enter a formula with parentheses, like Ca(OH)2?</h3>
+<p>Type it exactly as written - this calculator supports parentheses with a multiplier, so Ca(OH)2 correctly counts 1 calcium, 2 oxygen, and 2 hydrogen atoms (the 2 outside the parentheses multiplies everything inside).</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Related tools</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>A note on accuracy</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquary's calculators are built for quick, reliable estimates. For decisions with real financial, structural, or medical stakes, confirm with a qualified professional.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/index.html">← Back to all calculators</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

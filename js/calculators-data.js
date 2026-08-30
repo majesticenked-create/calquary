@@ -428,6 +428,166 @@ const CALCULATORS = [
     ],
     related: ["cone-volume-calculator", "square-root-calculator", "area-converter"],
   },
+  {
+    id: "rectangular-prism-volume-calculator",
+    category: "math",
+    title: "Rectangular Prism Volume Calculator",
+    keyword: "rectangular prism volume calculator",
+    description: "Calculate the volume and surface area of a rectangular prism (box) from its length, width, and height.",
+    intro: "Enter a box's length, width, and height to calculate its volume, using V = l × w × h.",
+    fields: [
+      { id: "length", label: "Length", type: "number", default: 5, step: 0.1 },
+      { id: "width", label: "Width", type: "number", default: 4, step: 0.1 },
+      { id: "height", label: "Height", type: "number", default: 3, step: 0.1 },
+    ],
+    compute: (v) => {
+      const volume = v.length * v.width * v.height;
+      const surfaceArea = 2 * (v.length * v.width + v.length * v.height + v.width * v.height);
+      const diagonal = Math.sqrt(v.length * v.length + v.width * v.width + v.height * v.height);
+      return {
+        primary: { label: "Volume", value: round(volume, 4) },
+        secondary: [
+          { l: "Surface area", v: round(surfaceArea, 4) },
+          { l: "Diagonal length", v: round(diagonal, 4) },
+        ],
+        note: "Volume uses V = l × w × h. Surface area sums all six rectangular faces; a cube is just a rectangular prism where l = w = h.",
+      };
+    },
+    faq: [
+      { q: "What's the formula for the volume of a rectangular prism?", a: "V = l × w × h - multiply the length, width, and height together. A box that's 5 × 4 × 3 units has a volume of 60 cubic units." },
+      { q: "Is a rectangular prism the same as a cuboid or a box?", a: "Yes - \"rectangular prism,\" \"cuboid,\" and \"box\" (or \"rectangular box\") all describe the same 3D shape: six rectangular faces meeting at right angles. This calculator works for any of them, whichever term you use." },
+      { q: "How is a rectangular prism different from a cube?", a: "A cube is a special case of a rectangular prism where all three dimensions are equal (l = w = h). Every cube is a rectangular prism, but most rectangular prisms aren't cubes, since their length, width, and height differ." },
+    ],
+    related: ["area-converter", "volume-converter", "cylinder-volume-calculator"],
+  },
+  {
+    id: "slope-calculator",
+    category: "math",
+    title: "Slope Calculator",
+    keyword: "slope calculator",
+    description: "Calculate the slope between two points, plus the line's equation and angle.",
+    intro: "Enter the coordinates of two points to calculate the slope of the line between them, using m = (y2 − y1) / (x2 − x1).",
+    fields: [
+      { id: "x1", label: "x1", type: "number", default: 1, step: 0.1 },
+      { id: "y1", label: "y1", type: "number", default: 2, step: 0.1 },
+      { id: "x2", label: "x2", type: "number", default: 4, step: 0.1 },
+      { id: "y2", label: "y2", type: "number", default: 8, step: 0.1 },
+    ],
+    compute: (v) => {
+      const dx = v.x2 - v.x1;
+      const dy = v.y2 - v.y1;
+      if (dx === 0) {
+        return {
+          primary: { label: "Slope", value: "Undefined" },
+          secondary: [{ l: "Line type", v: "Vertical (x = " + v.x1 + ")" }],
+          note: "The slope is undefined when both points share the same x-coordinate - the line is vertical, and vertical lines have no defined slope (a zero denominator).",
+        };
+      }
+      const slope = dy / dx;
+      const yIntercept = v.y1 - slope * v.x1;
+      const angleDeg = (Math.atan(slope) * 180) / Math.PI;
+      return {
+        primary: { label: "Slope (m)", value: round(slope, 4) },
+        secondary: [
+          { l: "Y-intercept (b)", v: round(yIntercept, 4) },
+          { l: "Angle from horizontal", v: `${round(angleDeg, 2)}°` },
+        ],
+        note: `Line equation: y = ${round(slope, 4)}x + ${round(yIntercept, 4)}`,
+      };
+    },
+    faq: [
+      { q: "What's the formula for slope?", a: "m = (y2 − y1) / (x2 − x1) - the change in y divided by the change in x between two points. A slope of 2 means y increases by 2 for every 1 unit increase in x." },
+      { q: "What does a negative slope mean?", a: "A negative slope means the line goes downward from left to right - as x increases, y decreases. A positive slope goes upward left to right, a zero slope is a flat horizontal line, and an undefined slope is a vertical line." },
+      { q: "How do I calculate slope from a graph without exact coordinates?", a: "Pick any two points the line clearly passes through on the grid, read off their (x, y) coordinates, then apply the slope formula. Choosing points that land on clean grid intersections makes the rise-over-run count easier and less error-prone than estimating decimal coordinates." },
+    ],
+    related: ["quadratic-formula-calculator", "ratio-calculator", "percentage-change-calculator"],
+  },
+  {
+    id: "molecular-weight-calculator",
+    category: "math",
+    title: "Molecular Weight Calculator",
+    keyword: "molecular weight calculator",
+    description: "Calculate the molecular weight (molar mass) of a chemical formula, like H2O or C6H12O6.",
+    intro: "Enter a chemical formula (e.g. H2O, NaCl, C6H12O6, Ca(OH)2) to calculate its molecular weight in grams per mole.",
+    fields: [
+      { id: "formula", label: "Chemical formula", type: "text", default: "H2O" },
+    ],
+    compute: (v) => {
+      const ATOMIC_WEIGHTS = {
+        H: 1.008, He: 4.0026, Li: 6.94, Be: 9.0122, B: 10.81, C: 12.011, N: 14.007, O: 15.999, F: 18.998, Ne: 20.18,
+        Na: 22.99, Mg: 24.305, Al: 26.982, Si: 28.085, P: 30.974, S: 32.06, Cl: 35.45, Ar: 39.948, K: 39.098, Ca: 40.078,
+        Sc: 44.956, Ti: 47.867, V: 50.942, Cr: 51.996, Mn: 54.938, Fe: 55.845, Co: 58.933, Ni: 58.693, Cu: 63.546, Zn: 65.38,
+        Ga: 69.723, Ge: 72.63, As: 74.922, Se: 78.971, Br: 79.904, Kr: 83.798, Rb: 85.468, Sr: 87.62, Y: 88.906, Zr: 91.224,
+        Nb: 92.906, Mo: 95.95, Tc: 98, Ru: 101.07, Rh: 102.91, Pd: 106.42, Ag: 107.87, Cd: 112.41, In: 114.82, Sn: 118.71,
+        Sb: 121.76, Te: 127.6, I: 126.9, Xe: 131.29, Cs: 132.91, Ba: 137.33, La: 138.91, Ce: 140.12, Pr: 140.91, Nd: 144.24,
+        Pm: 145, Sm: 150.36, Eu: 151.96, Gd: 157.25, Tb: 158.93, Dy: 162.5, Ho: 164.93, Er: 167.26, Tm: 168.93, Yb: 173.05,
+        Lu: 174.97, Hf: 178.49, Ta: 180.95, W: 183.84, Re: 186.21, Os: 190.23, Ir: 192.22, Pt: 195.08, Au: 196.97, Hg: 200.59,
+        Tl: 204.38, Pb: 207.2, Bi: 208.98, Po: 209, At: 210, Rn: 222, Fr: 223, Ra: 226, Ac: 227, Th: 232.04,
+        Pa: 231.04, U: 238.03, Np: 237, Pu: 244, Am: 243, Cm: 247, Bk: 247, Cf: 251, Es: 252, Fm: 257,
+        Md: 258, No: 259, Lr: 262, Rf: 267, Db: 268, Sg: 271, Bh: 272, Hs: 270, Mt: 276, Ds: 281,
+        Rg: 280, Cn: 285, Nh: 284, Fl: 289, Mc: 288, Lv: 293, Ts: 294, Og: 294,
+      };
+      const formula = (v.formula || "").trim();
+      if (!formula) {
+        return { primary: { label: "Molecular weight", value: "—" }, secondary: [], note: "Enter a chemical formula, like H2O or NaCl." };
+      }
+      let i = 0;
+      let error = null;
+      const parseNumber = () => {
+        const start = i;
+        while (i < formula.length && /[0-9]/.test(formula[i])) i++;
+        return start === i ? 1 : parseInt(formula.slice(start, i), 10);
+      };
+      const parseGroup = () => {
+        const counts = {};
+        while (i < formula.length && formula[i] !== ")" && !error) {
+          if (formula[i] === "(") {
+            i++;
+            const inner = parseGroup();
+            if (formula[i] !== ")") { error = "Mismatched parentheses"; return counts; }
+            i++;
+            const mult = parseNumber();
+            for (const el in inner) counts[el] = (counts[el] || 0) + inner[el] * mult;
+          } else if (/[A-Z]/.test(formula[i])) {
+            const start = i;
+            i++;
+            while (i < formula.length && /[a-z]/.test(formula[i])) i++;
+            const el = formula.slice(start, i);
+            if (!(el in ATOMIC_WEIGHTS)) { error = `Unknown element: ${el}`; return counts; }
+            const count = parseNumber();
+            counts[el] = (counts[el] || 0) + count;
+          } else {
+            error = `Unexpected character: ${formula[i]}`;
+            return counts;
+          }
+        }
+        return counts;
+      };
+      const counts = parseGroup();
+      if (!error && i !== formula.length) error = "Unexpected character at end of formula";
+      if (error) {
+        return { primary: { label: "Molecular weight", value: "Invalid formula" }, secondary: [], note: error + " - try a format like H2O, NaCl, or Ca(OH)2." };
+      }
+      let totalWeight = 0;
+      const breakdown = [];
+      for (const el in counts) {
+        const contribution = ATOMIC_WEIGHTS[el] * counts[el];
+        totalWeight += contribution;
+        breakdown.push({ l: `${el} × ${counts[el]}`, v: round(contribution, 3) });
+      }
+      return {
+        primary: { label: "Molecular weight", value: `${round(totalWeight, 3)} g/mol` },
+        secondary: breakdown,
+        note: "Uses standard atomic weights (IUPAC). Doesn't support hydrate notation (like CuSO4·5H2O) or isotope-specific masses.",
+      };
+    },
+    faq: [
+      { q: "How do I calculate the molecular weight of water (H2O)?", a: "Add up the atomic weights: 2 hydrogen atoms (2 × 1.008 = 2.016) plus 1 oxygen atom (15.999), for a total of about 18.015 g/mol." },
+      { q: "What's the difference between molecular weight and molar mass?", a: "They're the same value expressed differently - molecular weight is technically a dimensionless ratio, while molar mass carries units (grams per mole, g/mol), but in practice the numbers are identical and the terms are used interchangeably." },
+      { q: "How do I enter a formula with parentheses, like Ca(OH)2?", a: "Type it exactly as written - this calculator supports parentheses with a multiplier, so Ca(OH)2 correctly counts 1 calcium, 2 oxygen, and 2 hydrogen atoms (the 2 outside the parentheses multiplies everything inside)." },
+    ],
+    related: ["percentage-calculator", "square-root-calculator", "exponent-calculator"],
+  },
 
   // ---------------- FINANCE ----------------
   {
