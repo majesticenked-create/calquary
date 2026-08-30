@@ -247,6 +247,51 @@ const CALCULATORS = [
     related: ["fraction-calculator", "gcd-lcm-calculator", "percentage-calculator"],
   },
   {
+    id: "long-multiplication-calculator",
+    category: "math",
+    title: "Long Multiplication Calculator",
+    keyword: "multiplication long",
+    description: "Multiply two whole numbers and see the full step-by-step long multiplication work.",
+    intro: "Enter two numbers to see the product, plus the full step-by-step long multiplication work (partial products for each digit).",
+    fields: [
+      { id: "factor1", label: "First number", type: "number", default: 234, step: 1 },
+      { id: "factor2", label: "Second number", type: "number", default: 56, step: 1 },
+    ],
+    compute: (v) => {
+      const f1 = Math.round(Math.abs(v.factor1));
+      const f2 = Math.round(Math.abs(v.factor2));
+      const digits2 = String(f2).split("").reverse();
+      const rows = [];
+      let total = 0;
+      digits2.forEach((digitChar, placeIdx) => {
+        const digit = Number(digitChar);
+        const partial = f1 * digit * Math.pow(10, placeIdx);
+        total += partial;
+        rows.push([
+          `${f1} × ${digit} (×10^${placeIdx})`,
+          `${f1} × ${digit} = ${f1 * digit}`,
+          partial.toLocaleString(),
+        ]);
+      });
+      rows.push(["Sum of partial products", "—", total.toLocaleString()]);
+      return {
+        primary: { label: "Product", value: total.toLocaleString() },
+        secondary: [
+          { l: "First number", v: f1 },
+          { l: "Second number", v: f2 },
+        ],
+        note: "Scroll the table below for the full digit-by-digit long multiplication work.",
+        table: { columns: ["Step", "Digit multiplication", "Partial product"], rows },
+      };
+    },
+    faq: [
+      { q: "How does long multiplication work?", a: "Multiply the first number by each digit of the second number separately (starting from the ones place), shifting each result left by one place value per digit, then add all those partial products together for the final answer - this calculator shows every partial product in the table." },
+      { q: "Why do partial products get shifted left as you go?", a: "Each digit in the second number represents a different place value (ones, tens, hundreds, etc.), so multiplying by the tens digit really means multiplying by that digit times 10 - shifting the partial product one place left accounts for that automatically." },
+      { q: "Does this work with negative numbers?", a: "This calculator works with the absolute (positive) value of whatever you enter, since long multiplication as a step-by-step method is defined for positive whole numbers - apply sign rules separately afterward (a result is negative if exactly one of the two numbers was negative)." },
+    ],
+    related: ["long-division-calculator", "fraction-calculator", "percentage-calculator"],
+  },
+  {
     id: "gcd-lcm-calculator",
     category: "math",
     title: "GCD and LCM Calculator",
@@ -408,6 +453,50 @@ const CALCULATORS = [
       { q: "How do you calculate percentile in general?", a: "Enter your value, the distribution's mean, and its standard deviation above - this calculator converts that into a z-score, then into a percentile using the normal distribution. That's the standard method for calculating percentile when you know a distribution's mean and spread." },
     ],
     related: ["standard-deviation-calculator", "average-calculator", "percentage-calculator"],
+  },
+  {
+    id: "normal-distribution-calculator",
+    category: "math",
+    title: "Normal Distribution Calculator",
+    keyword: "normal distribution calculator",
+    description: "Calculate the probability that a normally distributed value falls between two values, given the mean and standard deviation.",
+    intro: "Enter a mean, standard deviation, and a value range to calculate the probability that a normally distributed value falls within that range.",
+    fields: [
+      { id: "mean", label: "Mean", type: "number", default: 100, step: 0.1 },
+      { id: "stdDev", label: "Standard deviation", type: "number", default: 15, step: 0.1 },
+      { id: "lower", label: "Lower bound", type: "number", default: 85, step: 0.1 },
+      { id: "upper", label: "Upper bound", type: "number", default: 115, step: 0.1 },
+    ],
+    compute: (v) => {
+      if (v.stdDev === 0) {
+        return { primary: { label: "Probability", value: "Undefined" }, secondary: [], note: "Standard deviation can't be zero." };
+      }
+      function normalCdf(x) {
+        const sign = x < 0 ? -1 : 1;
+        const ax = Math.abs(x) / Math.sqrt(2);
+        const a1 = 0.254829592, a2 = -0.284496736, a3 = 1.421413741, a4 = -1.453152027, a5 = 1.061405429, p = 0.3275911;
+        const t = 1 / (1 + p * ax);
+        const y = 1 - (((((a5 * t + a4) * t) + a3) * t + a2) * t + a1) * t * Math.exp(-ax * ax);
+        return 0.5 * (1 + sign * y);
+      }
+      const zLower = (v.lower - v.mean) / v.stdDev;
+      const zUpper = (v.upper - v.mean) / v.stdDev;
+      const probability = normalCdf(zUpper) - normalCdf(zLower);
+      return {
+        primary: { label: "Probability", value: `${round(probability * 100, 2)}%` },
+        secondary: [
+          { l: "Z-score (lower)", v: round(zLower, 4) },
+          { l: "Z-score (upper)", v: round(zUpper, 4) },
+        ],
+        note: probability < 0 ? "Lower bound is above upper bound - swap them for a positive probability." : "Assumes a normal (bell-curve) distribution with the given mean and standard deviation.",
+      };
+    },
+    faq: [
+      { q: "How do I find the probability a value falls in a range for a normal distribution?", a: "Convert both bounds to z-scores (z = (x − mean) / SD), look up (or calculate) the cumulative probability for each z-score, then subtract: P(lower < X < upper) = CDF(z_upper) − CDF(z_lower). This calculator does that conversion automatically." },
+      { q: "What's the probability within 1, 2, or 3 standard deviations of the mean?", a: "This follows the empirical rule (68-95-99.7 rule): about 68% of values fall within 1 standard deviation of the mean, about 95% within 2, and about 99.7% within 3 - try entering mean ± 1, 2, or 3 × standard deviation as your bounds to confirm this." },
+      { q: "Is this the same as the Z-Score Calculator?", a: "Related but different - the Z-Score Calculator finds the percentile below a single value. This calculator finds the probability a value falls between two bounds, which is more useful for questions like \"what fraction of scores are between 85 and 115?\"" },
+    ],
+    related: ["z-score-calculator", "standard-deviation-calculator", "average-calculator"],
   },
   {
     id: "lottery-odds-calculator",

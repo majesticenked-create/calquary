@@ -205,6 +205,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/long-division-calculator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/long-multiplication-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/long-multiplication-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/long-multiplication-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/gcd-lcm-calculator.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/gcd-lcm-calculator.html"/>
@@ -227,6 +233,12 @@
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/z-score-calculator.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/z-score-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/normal-distribution-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/normal-distribution-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/normal-distribution-calculator.html"/>
   </url>
   <url>
     <loc>https://calquary.com/tool/lottery-odds-calculator.html</loc>
