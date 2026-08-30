@@ -4,23 +4,23 @@
   <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Unix Timestamp Converter | Calquary</title>
-  <meta name="description" content="Convert a Unix timestamp (epoch time) to a human-readable date, or a date to a timestamp." />
-  <meta property="og:title" content="Unix Timestamp Converter | Calquary">
-  <meta property="og:description" content="Convert a Unix timestamp (epoch time) to a human-readable date, or a date to a timestamp.">
+  <title>Limiting Reagent Calculator | Calquary</title>
+  <meta name="description" content="Find which of two reactants is the limiting reagent from their mass, formula, and stoichiometric coefficient." />
+  <meta property="og:title" content="Limiting Reagent Calculator | Calquary">
+  <meta property="og:description" content="Find which of two reactants is the limiting reagent from their mass, formula, and stoichiometric coefficient.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://calquary.com/tool/unix-timestamp-converter.html">
+  <meta property="og:url" content="https://calquary.com/tool/limiting-reagent-calculator.html">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Calquary">
-  <meta property="og:image" content="https://calquary.com/og-images/unix-timestamp-converter.png">
+  <meta property="og:image" content="https://calquary.com/og-images/limiting-reagent-calculator.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Unix Timestamp Converter | Calquary">
-  <meta name="twitter:description" content="Convert a Unix timestamp (epoch time) to a human-readable date, or a date to a timestamp.">
-  <meta name="twitter:image" content="https://calquary.com/og-images/unix-timestamp-converter.png">
-    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/unix-timestamp-converter.html">
-  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/unix-timestamp-converter.html">
+  <meta name="twitter:title" content="Limiting Reagent Calculator | Calquary">
+  <meta name="twitter:description" content="Find which of two reactants is the limiting reagent from their mass, formula, and stoichiometric coefficient.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/limiting-reagent-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/limiting-reagent-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/limiting-reagent-calculator.html">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -46,7 +46,7 @@
       // still JS-driven here is the interactive calculator widget itself
       // (fields/compute/results) and the related-tools list, neither of
       // which is static SEO prose.
-      const calc = getCalculator("unix-timestamp-converter");
+      const calc = getCalculator("limiting-reagent-calculator");
 
       const relWrap = document.getElementById("related-list");
       calc.related.forEach((relId) => {
@@ -57,7 +57,7 @@
         relWrap.appendChild(li);
       });
 
-      initCalculator("unix-timestamp-converter");
+      initCalculator("limiting-reagent-calculator");
     });
   </script>
   <script type="application/ld+json">
@@ -66,11 +66,11 @@
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "Unix Timestamp Converter",
-      "description": "Convert a Unix timestamp (epoch time) to a human-readable date, or a date to a timestamp.",
+      "name": "Limiting Reagent Calculator",
+      "description": "Find which of two reactants is the limiting reagent from their mass, formula, and stoichiometric coefficient.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
-      "url": "https://calquary.com/tool/unix-timestamp-converter.html",
+      "url": "https://calquary.com/tool/limiting-reagent-calculator.html",
       "isAccessibleForFree": true,
       "offers": {
         "@type": "Offer",
@@ -92,14 +92,14 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Date & Time",
-          "item": "https://calquary.com/category/datetime.html"
+          "name": "Math",
+          "item": "https://calquary.com/category/math.html"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Unix Timestamp Converter",
-          "item": "https://calquary.com/tool/unix-timestamp-converter.html"
+          "name": "Limiting Reagent Calculator",
+          "item": "https://calquary.com/tool/limiting-reagent-calculator.html"
         }
       ]
     },
@@ -108,50 +108,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What is a Unix timestamp?",
+          "name": "How do I find the limiting reagent?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The number of seconds elapsed since January 1, 1970, 00:00:00 UTC (the \"Unix epoch\") - a single number that unambiguously represents a specific moment in time, widely used in programming and databases since it avoids time zone and calendar-formatting ambiguity."
+            "text": "Convert each reactant's mass to moles (mass ÷ molar mass), divide by its coefficient in the balanced equation, then compare - whichever reactant has the smaller result is the limiting reagent, since it will run out first."
           }
         },
         {
           "@type": "Question",
-          "name": "How is this different from an epoch converter?",
+          "name": "Why does the coefficient matter, not just the moles?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nothing - \"epoch time\" and \"Unix timestamp\" are the same thing, and \"epoch converter\" and \"Unix timestamp converter\" describe the same tool. This calculator handles both directions: timestamp to date, and date to timestamp."
+            "text": "The balanced equation's coefficients show the required ratio between reactants - having more raw moles of a reactant doesn't help if the reaction needs proportionally even more of it. Dividing by the coefficient normalizes each reactant to \"how many complete reactions worth\" you have."
           }
         },
         {
           "@type": "Question",
-          "name": "How do I convert a Unix timestamp to a readable time?",
+          "name": "What happens to the excess reagent?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Enter the timestamp in the \"Unix timestamp\" field above - the \"Date from timestamp\" result shows the exact UTC date and time it corresponds to."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is 'unix to timestamp' or 'unix timestamp to timestamp' a valid search, or a mistake?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It's likely shorthand for converting a Unix timestamp to a readable date, or vice versa - both directions are handled by the fields above, whichever way you're converting."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is 'linux timestamp to time' the same as a Unix timestamp?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes - Linux (and most Unix-like systems) uses the same epoch-based timestamp convention, so \"Linux timestamp\" and \"Unix timestamp\" refer to the identical value. Enter it in the timestamp field above."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Why does my timestamp look 3 or 10 digits different from what I expected?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Some systems use milliseconds since the epoch instead of seconds - a timestamp in milliseconds has 3 extra digits (13 digits vs. 10 for a current-day timestamp in seconds). Divide a millisecond timestamp by 1,000 before entering it here."
+            "text": "The non-limiting reagent is left over (in excess) once the limiting reagent is fully consumed - the reaction stops there, and any remaining excess reagent doesn't react further without more of the limiting reagent being added."
           }
         }
       ]
@@ -179,15 +155,15 @@
 
   <div class="wrap" style="padding-top:32px;">
     <div class="breadcrumb">
-      <a href="/index.html">Calquary</a> / <a href="/category/datetime.html">Date & Time</a>
+      <a href="/index.html">Calquary</a> / <a href="/category/math.html">Math</a>
     </div>
   </div>
 
   <div class="wrap" style="padding-bottom:64px;">
     <div class="tool-layout">
       <main>
-        <h1>Unix Timestamp Converter</h1>
-        <p style="max-width:60ch;">Enter a Unix timestamp to convert it to a readable date, or enter a date below to get its timestamp.</p>
+        <h1>Limiting Reagent Calculator</h1>
+        <p style="max-width:60ch;">Enter each reactant's chemical formula, mass, and its coefficient in the balanced equation to find the limiting reagent.</p>
         <p class="last-updated">Last updated: August 30, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -215,28 +191,16 @@
         <div class="article-block">
           <h2>Frequently asked questions</h2>
           <div id="faq-list"><div class="faq-item">
-<h3>What is a Unix timestamp?</h3>
-<p>The number of seconds elapsed since January 1, 1970, 00:00:00 UTC (the "Unix epoch") - a single number that unambiguously represents a specific moment in time, widely used in programming and databases since it avoids time zone and calendar-formatting ambiguity.</p>
+<h3>How do I find the limiting reagent?</h3>
+<p>Convert each reactant's mass to moles (mass ÷ molar mass), divide by its coefficient in the balanced equation, then compare - whichever reactant has the smaller result is the limiting reagent, since it will run out first.</p>
 </div>
 <div class="faq-item">
-<h3>How is this different from an epoch converter?</h3>
-<p>Nothing - "epoch time" and "Unix timestamp" are the same thing, and "epoch converter" and "Unix timestamp converter" describe the same tool. This calculator handles both directions: timestamp to date, and date to timestamp.</p>
+<h3>Why does the coefficient matter, not just the moles?</h3>
+<p>The balanced equation's coefficients show the required ratio between reactants - having more raw moles of a reactant doesn't help if the reaction needs proportionally even more of it. Dividing by the coefficient normalizes each reactant to "how many complete reactions worth" you have.</p>
 </div>
 <div class="faq-item">
-<h3>How do I convert a Unix timestamp to a readable time?</h3>
-<p>Enter the timestamp in the "Unix timestamp" field above - the "Date from timestamp" result shows the exact UTC date and time it corresponds to.</p>
-</div>
-<div class="faq-item">
-<h3>Is 'unix to timestamp' or 'unix timestamp to timestamp' a valid search, or a mistake?</h3>
-<p>It's likely shorthand for converting a Unix timestamp to a readable date, or vice versa - both directions are handled by the fields above, whichever way you're converting.</p>
-</div>
-<div class="faq-item">
-<h3>Is 'linux timestamp to time' the same as a Unix timestamp?</h3>
-<p>Yes - Linux (and most Unix-like systems) uses the same epoch-based timestamp convention, so "Linux timestamp" and "Unix timestamp" refer to the identical value. Enter it in the timestamp field above.</p>
-</div>
-<div class="faq-item">
-<h3>Why does my timestamp look 3 or 10 digits different from what I expected?</h3>
-<p>Some systems use milliseconds since the epoch instead of seconds - a timestamp in milliseconds has 3 extra digits (13 digits vs. 10 for a current-day timestamp in seconds). Divide a millisecond timestamp by 1,000 before entering it here.</p>
+<h3>What happens to the excess reagent?</h3>
+<p>The non-limiting reagent is left over (in excess) once the limiting reagent is fully consumed - the reaction stops there, and any remaining excess reagent doesn't react further without more of the limiting reagent being added.</p>
 </div></div>
         </div>
       </main>

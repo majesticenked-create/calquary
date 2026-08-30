@@ -432,6 +432,7 @@ const CALCULATORS = [
       { q: "What are the odds of a royal flush?", a: "1 in 649,740 - there are only 4 ways to make a royal flush (one per suit) out of 2,598,960 possible 5-card hands, making it the rarest standard poker hand." },
       { q: "Why is a flush rarer than a straight even though it ranks higher?", a: "Actually, in standard hand rankings a flush does rank higher than a straight, and it is rarer - a flush has 5,108 ways to occur versus a straight's 10,200, which matches the table above and confirms flush is the less common (and higher-ranked) hand." },
       { q: "How are these probabilities calculated?", a: "Each hand type's count comes from combinatorics - for example, four of a kind is 13 possible ranks × 48 remaining cards for the 5th card = 624 ways, divided by the total 2,598,960 possible 5-card hands from a 52-card deck." },
+      { q: "Is a 'poker hand percentage calculator' the same as this tool?", a: "Yes - the table above shows the exact percentage (and odds) for every standard poker hand ranking." },
     ],
     related: ["lottery-odds-calculator", "card-deck-shuffler", "random-number-generator"],
   },
@@ -900,6 +901,7 @@ const CALCULATORS = [
       { q: "How do I enter a formula with parentheses, like Ca(OH)2?", a: "Type it exactly as written - this calculator supports parentheses with a multiplier, so Ca(OH)2 correctly counts 1 calcium, 2 oxygen, and 2 hydrogen atoms (the 2 outside the parentheses multiplies everything inside)." },
       { q: "Is a 'molecular weight calculators' or 'calculate molecular weights' search different from this tool?", a: "No - plural, verb, and noun forms of the same phrase all point to the same task: entering a chemical formula and getting its total molar mass back, which is exactly what this calculator does." },
       { q: "Is 'molar weight calculator' or 'mol wt calculator' the same as molecular weight?", a: "Yes - \"molar weight,\" \"mol wt,\" \"molecular weight,\" and \"molar mass\" are all names for the same quantity: the mass of one mole of a substance, in grams per mole. This calculator computes it from any chemical formula you enter." },
+      { q: "How do we calculate molar mass?", a: "Add up the atomic weight of each element in the formula, multiplied by how many atoms of that element appear - for H2O, that's 2 × 1.008 (hydrogen) + 1 × 15.999 (oxygen) = 18.015 g/mol. Enter any formula above and this calculator does that sum for you." },
     ],
     related: ["percentage-calculator", "square-root-calculator", "exponent-calculator"],
   },
@@ -1139,6 +1141,94 @@ const CALCULATORS = [
       { q: "Why does this calculator sometimes say it can't balance my equation?", a: "Usually because of a typo in a chemical formula, or because the reaction as written isn't chemically valid (the same elements don't appear on both sides). Double-check each formula's capitalization and parentheses - chemical symbols are case-sensitive (Co is cobalt, CO is carbon monoxide)." },
     ],
     related: ["molecular-weight-calculator", "percentage-calculator", "square-root-calculator"],
+  },
+  {
+    id: "limiting-reagent-calculator",
+    category: "math",
+    title: "Limiting Reagent Calculator",
+    keyword: "how to do limiting reagent",
+    description: "Find which of two reactants is the limiting reagent from their mass, formula, and stoichiometric coefficient.",
+    intro: "Enter each reactant's chemical formula, mass, and its coefficient in the balanced equation to find the limiting reagent.",
+    fields: [
+      { id: "formula1", label: "Reactant 1 formula", type: "text", default: "H2" },
+      { id: "mass1", label: "Reactant 1 mass", type: "number", unit: "g", default: 10, step: 0.1 },
+      { id: "coeff1", label: "Reactant 1 coefficient", type: "number", default: 2, step: 1, min: 1 },
+      { id: "formula2", label: "Reactant 2 formula", type: "text", default: "O2" },
+      { id: "mass2", label: "Reactant 2 mass", type: "number", unit: "g", default: 10, step: 0.1 },
+      { id: "coeff2", label: "Reactant 2 coefficient", type: "number", default: 1, step: 1, min: 1 },
+    ],
+    compute: (v) => {
+      const ATOMIC_WEIGHTS = {
+        H: 1.008, He: 4.0026, Li: 6.94, Be: 9.0122, B: 10.81, C: 12.011, N: 14.007, O: 15.999, F: 18.998, Ne: 20.18,
+        Na: 22.99, Mg: 24.305, Al: 26.982, Si: 28.085, P: 30.974, S: 32.06, Cl: 35.45, Ar: 39.948, K: 39.098, Ca: 40.078,
+        Sc: 44.956, Ti: 47.867, V: 50.942, Cr: 51.996, Mn: 54.938, Fe: 55.845, Co: 58.933, Ni: 58.693, Cu: 63.546, Zn: 65.38,
+        Ga: 69.723, Ge: 72.63, As: 74.922, Se: 78.971, Br: 79.904, Kr: 83.798, Rb: 85.468, Sr: 87.62, Y: 88.906, Zr: 91.224,
+        Ag: 107.87, Cd: 112.41, Sn: 118.71, I: 126.9, Ba: 137.33, Au: 196.97, Hg: 200.59, Pb: 207.2,
+      };
+      function molarMass(formula) {
+        let i = 0, error = null;
+        const clean = (formula || "").trim();
+        const parseNumber = () => {
+          const start = i;
+          while (i < clean.length && /[0-9]/.test(clean[i])) i++;
+          return start === i ? 1 : parseInt(clean.slice(start, i), 10);
+        };
+        const parseGroup = () => {
+          const counts = {};
+          while (i < clean.length && clean[i] !== ")" && !error) {
+            if (clean[i] === "(") {
+              i++;
+              const inner = parseGroup();
+              if (clean[i] !== ")") { error = "Mismatched parentheses"; return counts; }
+              i++;
+              const mult = parseNumber();
+              for (const el in inner) counts[el] = (counts[el] || 0) + inner[el] * mult;
+            } else if (/[A-Z]/.test(clean[i])) {
+              const start = i;
+              i++;
+              while (i < clean.length && /[a-z]/.test(clean[i])) i++;
+              const el = clean.slice(start, i);
+              if (!(el in ATOMIC_WEIGHTS)) { error = `Unknown element: ${el}`; return counts; }
+              counts[el] = (counts[el] || 0) + parseNumber();
+            } else {
+              error = `Unexpected character: ${clean[i]}`;
+              return counts;
+            }
+          }
+          return counts;
+        };
+        const counts = parseGroup();
+        if (!error && i !== clean.length) error = "Unexpected character at end";
+        if (error) return { mass: null, error };
+        let total = 0;
+        for (const el in counts) total += ATOMIC_WEIGHTS[el] * counts[el];
+        return { mass: total, error: null };
+      }
+      const m1 = molarMass(v.formula1);
+      const m2 = molarMass(v.formula2);
+      if (m1.error || m2.error) {
+        return { primary: { label: "Limiting reagent", value: "Invalid formula" }, secondary: [], note: (m1.error || "") + " " + (m2.error || "") + " - try formats like H2, O2, or Ca(OH)2." };
+      }
+      const moles1 = v.mass1 / m1.mass;
+      const moles2 = v.mass2 / m2.mass;
+      const ratio1 = moles1 / v.coeff1;
+      const ratio2 = moles2 / v.coeff2;
+      const limiting = ratio1 < ratio2 ? v.formula1 : ratio2 < ratio1 ? v.formula2 : "Neither (exact stoichiometric match)";
+      return {
+        primary: { label: "Limiting reagent", value: limiting },
+        secondary: [
+          { l: `Moles of ${v.formula1}`, v: round(moles1, 4) },
+          { l: `Moles of ${v.formula2}`, v: round(moles2, 4) },
+        ],
+        note: "The limiting reagent is whichever reactant has the smaller moles-to-coefficient ratio - it runs out first and determines how much product can form.",
+      };
+    },
+    faq: [
+      { q: "How do I find the limiting reagent?", a: "Convert each reactant's mass to moles (mass ÷ molar mass), divide by its coefficient in the balanced equation, then compare - whichever reactant has the smaller result is the limiting reagent, since it will run out first." },
+      { q: "Why does the coefficient matter, not just the moles?", a: "The balanced equation's coefficients show the required ratio between reactants - having more raw moles of a reactant doesn't help if the reaction needs proportionally even more of it. Dividing by the coefficient normalizes each reactant to \"how many complete reactions worth\" you have." },
+      { q: "What happens to the excess reagent?", a: "The non-limiting reagent is left over (in excess) once the limiting reagent is fully consumed - the reaction stops there, and any remaining excess reagent doesn't react further without more of the limiting reagent being added." },
+    ],
+    related: ["chemical-equation-balancer", "molecular-weight-calculator", "percentage-calculator"],
   },
   {
     id: "grade-calculator",
@@ -2921,6 +3011,7 @@ const CALCULATORS = [
       { q: "How is this different from an epoch converter?", a: "Nothing - \"epoch time\" and \"Unix timestamp\" are the same thing, and \"epoch converter\" and \"Unix timestamp converter\" describe the same tool. This calculator handles both directions: timestamp to date, and date to timestamp." },
       { q: "How do I convert a Unix timestamp to a readable time?", a: "Enter the timestamp in the \"Unix timestamp\" field above - the \"Date from timestamp\" result shows the exact UTC date and time it corresponds to." },
       { q: "Is 'unix to timestamp' or 'unix timestamp to timestamp' a valid search, or a mistake?", a: "It's likely shorthand for converting a Unix timestamp to a readable date, or vice versa - both directions are handled by the fields above, whichever way you're converting." },
+      { q: "Is 'linux timestamp to time' the same as a Unix timestamp?", a: "Yes - Linux (and most Unix-like systems) uses the same epoch-based timestamp convention, so \"Linux timestamp\" and \"Unix timestamp\" refer to the identical value. Enter it in the timestamp field above." },
       { q: "Why does my timestamp look 3 or 10 digits different from what I expected?", a: "Some systems use milliseconds since the epoch instead of seconds - a timestamp in milliseconds has 3 extra digits (13 digits vs. 10 for a current-day timestamp in seconds). Divide a millisecond timestamp by 1,000 before entering it here." },
     ],
     related: ["date-duration-calculator", "time-unit-converter", "days-until-calculator"],
@@ -3409,6 +3500,7 @@ const CALCULATORS = [
       { q: "How many cups are in a certain number of grams?", a: "Divide the gram amount by the grams-per-cup figure for your ingredient - 240g of flour, for example, is 240 ÷ 120 = 2 cups. This calculator converts cups to grams directly; for grams to cups, divide your gram amount by the per-cup weight shown for your ingredient above." },
       { q: "A cup is how many grams?", a: "It depends entirely on the ingredient, since a cup measures volume and grams measure weight - select your ingredient above (flour, sugar, butter, or brown sugar) to see its specific grams-per-cup figure." },
       { q: "How many grams is 1/2 cup?", a: "Enter 0.5 in the cups field above - for example, 1/2 cup of flour is about 60g, while 1/2 cup of butter is about 113.5g, since the per-cup weight varies by ingredient density." },
+      { q: "How many grams are in 1 1/2 cups of sugar?", a: "About 300g for granulated sugar - enter 1.5 in the cups field with sugar selected above (200g per cup × 1.5 = 300g)." },
       { q: "How many grams is 1 cup, in general?", a: "There's no single answer without knowing the ingredient - it ranges from about 120g (flour) to 227g (butter) per cup for the ingredients this calculator covers, since denser ingredients pack more weight into the same volume." },
       { q: "Why do recipes from different countries use different measurement systems?", a: "The US primarily uses volume-based cup and spoon measurements, while most of the rest of the world uses weight-based metric measurements (grams), which are more precise for baking since ingredient density varies. This converter bridges the two so you can follow a recipe written in either system." },
     ],
@@ -4105,6 +4197,7 @@ const CALCULATORS = [
       { q: "Can I use this for classroom teams or a work project split?", a: "Yes - this works for any scenario where you need an unbiased random split of a list of names into a fixed number of groups, whether that's classroom project teams, sports teams, or dividing up a task list at work." },
       { q: "Can I use this as a randomizer to pick one random winner or order names randomly?", a: "Yes - set the number of groups to 1, and this calculator shuffles your entire list into a single random order (the fairest way to pick a random winner is to take whoever ends up first). Every reshuffle uses a fresh Fisher-Yates shuffle." },
       { q: "Is a 'randomizer list' or 'random a list' the same as this tool?", a: "Yes - both describe shuffling a list into random order, which this tool does (set groups to 1 for a single shuffled list, or more for random group splits)." },
+      { q: "Is 'random draws,' 'random list creator,' or 'list random generator' different from this tool?", a: "No - all of these describe randomly ordering or drawing from a list, which this calculator does. Set groups to 1 to shuffle the whole list into random order." },
       { q: "Is 'random generator for teams' or 'randomize list' different from this tool?", a: "No - both describe splitting or shuffling a list of names randomly, which is exactly what this calculator does. Set the number of groups to however many teams you need, or to 1 to just shuffle the whole list." },
     ],
     related: ["random-number-generator", "word-counter", "text-to-slug-generator"],
