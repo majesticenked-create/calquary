@@ -331,6 +331,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/eigenvalue-calculator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/inequality-solver.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/inequality-solver.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/inequality-solver.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/chemical-equation-balancer.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/chemical-equation-balancer.html"/>

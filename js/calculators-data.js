@@ -405,6 +405,7 @@ const CALCULATORS = [
       { q: "How do I calculate a standardized score (z-score)?", a: "Subtract the mean from your value, then divide by the standard deviation: z = (x − mean) / SD. A score of 85 with a mean of 75 and standard deviation of 10 gives z = (85−75)/10 = 1.0, meaning the score is exactly 1 standard deviation above average." },
       { q: "What does a z-score of 0 mean?", a: "A z-score of 0 means the value is exactly equal to the mean - neither above nor below average. Positive z-scores are above the mean, negative z-scores are below it." },
       { q: "How is percentile calculated from a z-score?", a: "Using the standard normal cumulative distribution function, which gives the proportion of a normal distribution falling below a given z-score - a z-score of 1.0 corresponds to about the 84th percentile, meaning roughly 84% of values in a normal distribution fall below that point." },
+      { q: "How do you calculate percentile in general?", a: "Enter your value, the distribution's mean, and its standard deviation above - this calculator converts that into a z-score, then into a percentile using the normal distribution. That's the standard method for calculating percentile when you know a distribution's mean and spread." },
     ],
     related: ["standard-deviation-calculator", "average-calculator", "percentage-calculator"],
   },
@@ -1118,6 +1119,51 @@ const CALCULATORS = [
       { q: "What does it mean if the eigenvalues are complex?", a: "Complex eigenvalues mean the matrix has no real eigenvectors - geometrically, this happens for matrices that rotate vectors (like a rotation matrix) rather than just stretching them along fixed directions, since a rotation has no direction that stays unchanged (except a 180° rotation)." },
     ],
     related: ["system-of-equations-solver", "quadratic-formula-calculator", "square-root-calculator"],
+  },
+  {
+    id: "inequality-solver",
+    category: "math",
+    title: "Linear Inequality Solver",
+    keyword: "solution inequality calculator",
+    description: "Solve a linear inequality of the form ax + b [<, >, ≤, ≥] c for x.",
+    intro: "Enter the coefficients and choose an inequality symbol to solve ax + b [symbol] c for x.",
+    fields: [
+      { id: "a", label: "a (coefficient of x)", type: "number", default: 2, step: 0.1 },
+      { id: "b", label: "b", type: "number", default: 3, step: 0.1 },
+      { id: "symbol", label: "Symbol", type: "select", default: "gt", options: [
+        { v: "gt", l: ">" }, { v: "lt", l: "<" }, { v: "gte", l: "≥" }, { v: "lte", l: "≤" },
+      ] },
+      { id: "c", label: "c", type: "number", default: 7, step: 0.1 },
+    ],
+    compute: (v) => {
+      if (v.a === 0) {
+        const symbols = { gt: "b > c", lt: "b < c", gte: "b ≥ c", lte: "b ≤ c" };
+        const holds = { gt: v.b > v.c, lt: v.b < v.c, gte: v.b >= v.c, lte: v.b <= v.c }[v.symbol];
+        return {
+          primary: { label: "Solution", value: holds ? "All real numbers" : "No solution" },
+          secondary: [],
+          note: `With a = 0, the inequality reduces to ${v.b} ${{ gt: ">", lt: "<", gte: "≥", lte: "≤" }[v.symbol]} ${v.c}, which is ${holds ? "always true" : "never true"} - x doesn't appear, so the inequality is ${holds ? "true for every x" : "false for every x"}.`,
+        };
+      }
+      const boundary = (v.c - v.b) / v.a;
+      // Dividing/multiplying an inequality by a negative flips its direction.
+      let symbol = v.symbol;
+      if (v.a < 0) {
+        symbol = { gt: "lt", lt: "gt", gte: "lte", lte: "gte" }[symbol];
+      }
+      const symbolText = { gt: ">", lt: "<", gte: "≥", lte: "≤" }[symbol];
+      return {
+        primary: { label: "Solution", value: `x ${symbolText} ${round(boundary, 4)}` },
+        secondary: [{ l: "Boundary value", v: round(boundary, 4) }],
+        note: v.a < 0 ? "Dividing both sides by a negative number (a) flips the inequality's direction - that's already applied above." : undefined,
+      };
+    },
+    faq: [
+      { q: "How do I solve a linear inequality like 2x + 3 > 7?", a: "Isolate x the same way as an equation: subtract 3 from both sides to get 2x > 4, then divide by 2 to get x > 2. The only special rule is that dividing or multiplying by a negative number flips the inequality's direction." },
+      { q: "Why does the inequality sign flip when dividing by a negative number?", a: "Because multiplying or dividing by a negative reverses the order of numbers on the number line - if 2 < 3, multiplying both sides by −1 gives −2 and −3, and −2 is actually greater than −3, so the inequality must flip to stay true (−2 > −3)." },
+      { q: "What does 'no solution' or 'all real numbers' mean for an inequality?", a: "This happens when the x term cancels out (a = 0), leaving just a comparison of two numbers - if that comparison is always true (like 5 > 3), every x satisfies it; if it's never true (like 3 > 5), no x does, since x never had any influence on the outcome." },
+    ],
+    related: ["linear-equation-solver", "quadratic-formula-calculator", "system-of-equations-solver"],
   },
   {
     id: "chemical-equation-balancer",
@@ -3772,6 +3818,7 @@ const CALCULATORS = [
       { q: "How many grams is 1/2 cup?", a: "Enter 0.5 in the cups field above - for example, 1/2 cup of flour is about 60g, while 1/2 cup of butter is about 113.5g, since the per-cup weight varies by ingredient density." },
       { q: "How many grams are in 1 1/2 cups of sugar?", a: "About 300g for granulated sugar - enter 1.5 in the cups field with sugar selected above (200g per cup × 1.5 = 300g)." },
       { q: "How many grams is 2 1/2 cups?", a: "It depends on the ingredient - enter 2.5 in the cups field above with your ingredient selected. For flour that's about 300g, and for sugar it's about 500g, since the per-cup weight varies by density." },
+      { q: "How many grams is 3/4 cup?", a: "Enter 0.75 in the cups field above with your ingredient selected - for flour that's about 90g, and for sugar it's about 150g." },
       { q: "How many grams is 1 cup, in general?", a: "There's no single answer without knowing the ingredient - it ranges from about 120g (flour) to 227g (butter) per cup for the ingredients this calculator covers, since denser ingredients pack more weight into the same volume." },
       { q: "Why do recipes from different countries use different measurement systems?", a: "The US primarily uses volume-based cup and spoon measurements, while most of the rest of the world uses weight-based metric measurements (grams), which are more precise for baking since ingredient density varies. This converter bridges the two so you can follow a recipe written in either system." },
     ],

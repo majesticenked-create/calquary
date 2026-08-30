@@ -4,23 +4,23 @@
   <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Z-Score (Standardized Score) Calculator | Calquary</title>
-  <meta name="description" content="Calculate a z-score (standardized score) and percentile from a value, mean, and standard deviation." />
-  <meta property="og:title" content="Z-Score (Standardized Score) Calculator | Calquary">
-  <meta property="og:description" content="Calculate a z-score (standardized score) and percentile from a value, mean, and standard deviation.">
+  <title>Linear Inequality Solver | Calquary</title>
+  <meta name="description" content="Solve a linear inequality of the form ax + b [<, >, ≤, ≥] c for x." />
+  <meta property="og:title" content="Linear Inequality Solver | Calquary">
+  <meta property="og:description" content="Solve a linear inequality of the form ax + b [<, >, ≤, ≥] c for x.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://calquary.com/tool/z-score-calculator.html">
+  <meta property="og:url" content="https://calquary.com/tool/inequality-solver.html">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Calquary">
-  <meta property="og:image" content="https://calquary.com/og-images/z-score-calculator.png">
+  <meta property="og:image" content="https://calquary.com/og-images/inequality-solver.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Z-Score (Standardized Score) Calculator | Calquary">
-  <meta name="twitter:description" content="Calculate a z-score (standardized score) and percentile from a value, mean, and standard deviation.">
-  <meta name="twitter:image" content="https://calquary.com/og-images/z-score-calculator.png">
-    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/z-score-calculator.html">
-  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/z-score-calculator.html">
+  <meta name="twitter:title" content="Linear Inequality Solver | Calquary">
+  <meta name="twitter:description" content="Solve a linear inequality of the form ax + b [<, >, ≤, ≥] c for x.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/inequality-solver.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/inequality-solver.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/inequality-solver.html">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -46,7 +46,7 @@
       // still JS-driven here is the interactive calculator widget itself
       // (fields/compute/results) and the related-tools list, neither of
       // which is static SEO prose.
-      const calc = getCalculator("z-score-calculator");
+      const calc = getCalculator("inequality-solver");
 
       const relWrap = document.getElementById("related-list");
       calc.related.forEach((relId) => {
@@ -57,7 +57,7 @@
         relWrap.appendChild(li);
       });
 
-      initCalculator("z-score-calculator");
+      initCalculator("inequality-solver");
     });
   </script>
   <script type="application/ld+json">
@@ -66,11 +66,11 @@
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "Z-Score (Standardized Score) Calculator",
-      "description": "Calculate a z-score (standardized score) and percentile from a value, mean, and standard deviation.",
+      "name": "Linear Inequality Solver",
+      "description": "Solve a linear inequality of the form ax + b [<, >, ≤, ≥] c for x.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
-      "url": "https://calquary.com/tool/z-score-calculator.html",
+      "url": "https://calquary.com/tool/inequality-solver.html",
       "isAccessibleForFree": true,
       "offers": {
         "@type": "Offer",
@@ -98,8 +98,8 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Z-Score (Standardized Score) Calculator",
-          "item": "https://calquary.com/tool/z-score-calculator.html"
+          "name": "Linear Inequality Solver",
+          "item": "https://calquary.com/tool/inequality-solver.html"
         }
       ]
     },
@@ -108,34 +108,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "How do I calculate a standardized score (z-score)?",
+          "name": "How do I solve a linear inequality like 2x + 3 > 7?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Subtract the mean from your value, then divide by the standard deviation: z = (x − mean) / SD. A score of 85 with a mean of 75 and standard deviation of 10 gives z = (85−75)/10 = 1.0, meaning the score is exactly 1 standard deviation above average."
+            "text": "Isolate x the same way as an equation: subtract 3 from both sides to get 2x > 4, then divide by 2 to get x > 2. The only special rule is that dividing or multiplying by a negative number flips the inequality's direction."
           }
         },
         {
           "@type": "Question",
-          "name": "What does a z-score of 0 mean?",
+          "name": "Why does the inequality sign flip when dividing by a negative number?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A z-score of 0 means the value is exactly equal to the mean - neither above nor below average. Positive z-scores are above the mean, negative z-scores are below it."
+            "text": "Because multiplying or dividing by a negative reverses the order of numbers on the number line - if 2 < 3, multiplying both sides by −1 gives −2 and −3, and −2 is actually greater than −3, so the inequality must flip to stay true (−2 > −3)."
           }
         },
         {
           "@type": "Question",
-          "name": "How is percentile calculated from a z-score?",
+          "name": "What does 'no solution' or 'all real numbers' mean for an inequality?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Using the standard normal cumulative distribution function, which gives the proportion of a normal distribution falling below a given z-score - a z-score of 1.0 corresponds to about the 84th percentile, meaning roughly 84% of values in a normal distribution fall below that point."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do you calculate percentile in general?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Enter your value, the distribution's mean, and its standard deviation above - this calculator converts that into a z-score, then into a percentile using the normal distribution. That's the standard method for calculating percentile when you know a distribution's mean and spread."
+            "text": "This happens when the x term cancels out (a = 0), leaving just a comparison of two numbers - if that comparison is always true (like 5 > 3), every x satisfies it; if it's never true (like 3 > 5), no x does, since x never had any influence on the outcome."
           }
         }
       ]
@@ -170,8 +162,8 @@
   <div class="wrap" style="padding-bottom:64px;">
     <div class="tool-layout">
       <main>
-        <h1>Z-Score (Standardized Score) Calculator</h1>
-        <p style="max-width:60ch;">Enter a value, the mean, and the standard deviation of its distribution to calculate the z-score and percentile.</p>
+        <h1>Linear Inequality Solver</h1>
+        <p style="max-width:60ch;">Enter the coefficients and choose an inequality symbol to solve ax + b [symbol] c for x.</p>
         <p class="last-updated">Last updated: August 30, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -199,20 +191,16 @@
         <div class="article-block">
           <h2>Frequently asked questions</h2>
           <div id="faq-list"><div class="faq-item">
-<h3>How do I calculate a standardized score (z-score)?</h3>
-<p>Subtract the mean from your value, then divide by the standard deviation: z = (x − mean) / SD. A score of 85 with a mean of 75 and standard deviation of 10 gives z = (85−75)/10 = 1.0, meaning the score is exactly 1 standard deviation above average.</p>
+<h3>How do I solve a linear inequality like 2x + 3 &gt; 7?</h3>
+<p>Isolate x the same way as an equation: subtract 3 from both sides to get 2x > 4, then divide by 2 to get x > 2. The only special rule is that dividing or multiplying by a negative number flips the inequality's direction.</p>
 </div>
 <div class="faq-item">
-<h3>What does a z-score of 0 mean?</h3>
-<p>A z-score of 0 means the value is exactly equal to the mean - neither above nor below average. Positive z-scores are above the mean, negative z-scores are below it.</p>
+<h3>Why does the inequality sign flip when dividing by a negative number?</h3>
+<p>Because multiplying or dividing by a negative reverses the order of numbers on the number line - if 2 < 3, multiplying both sides by −1 gives −2 and −3, and −2 is actually greater than −3, so the inequality must flip to stay true (−2 > −3).</p>
 </div>
 <div class="faq-item">
-<h3>How is percentile calculated from a z-score?</h3>
-<p>Using the standard normal cumulative distribution function, which gives the proportion of a normal distribution falling below a given z-score - a z-score of 1.0 corresponds to about the 84th percentile, meaning roughly 84% of values in a normal distribution fall below that point.</p>
-</div>
-<div class="faq-item">
-<h3>How do you calculate percentile in general?</h3>
-<p>Enter your value, the distribution's mean, and its standard deviation above - this calculator converts that into a z-score, then into a percentile using the normal distribution. That's the standard method for calculating percentile when you know a distribution's mean and spread.</p>
+<h3>What does 'no solution' or 'all real numbers' mean for an inequality?</h3>
+<p>This happens when the x term cancels out (a = 0), leaving just a comparison of two numbers - if that comparison is always true (like 5 > 3), every x satisfies it; if it's never true (like 3 > 5), no x does, since x never had any influence on the outcome.</p>
 </div></div>
         </div>
       </main>
