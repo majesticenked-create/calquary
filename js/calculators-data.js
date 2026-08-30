@@ -3682,6 +3682,8 @@ const CALCULATORS = [
       { q: "Why do some online converters give a slightly different answer?", a: "Small differences usually come from rounding at different decimal places, not a different conversion factor - the underlying 1 inch = 2.54 cm relationship is a fixed international standard, so any accurate converter should agree once you compare at the same precision." },
       { q: "Which length units does this converter support?", a: "This tool converts between metric units (millimeters, centimeters, meters, kilometers) and imperial/US units (inches, feet, yards, miles), so you can convert in either direction without memorizing conversion factors." },
       { q: "How many centimeters are in a kilometer?", a: "100,000 centimeters - a kilometer is 1,000 meters, and each meter is 100 centimeters, so 1,000 × 100 = 100,000 cm." },
+      { q: "How tall is 175 cm in feet and inches?", a: "175 cm is about 5 feet 8.9 inches (68.9 inches total) - divide 175 by 2.54 to get inches, then divide by 12 for feet, with the remainder as extra inches. Enter 175 with \"Centimeters\" selected above to see this and other unit conversions at once." },
+      { q: "Is 'feet in to cm' the same as this converter?", a: "Yes - this tool converts feet to centimeters and centimeters to feet (along with several other length units), in either direction." },
     ],
     related: ["weight-converter", "cooking-converter", "concrete-calculator"],
   },
