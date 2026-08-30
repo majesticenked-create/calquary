@@ -625,8 +625,162 @@ const CALCULATORS = [
       { q: "What's the difference between molecular weight and molar mass?", a: "They're the same value expressed differently - molecular weight is technically a dimensionless ratio, while molar mass carries units (grams per mole, g/mol), but in practice the numbers are identical and the terms are used interchangeably." },
       { q: "How do I enter a formula with parentheses, like Ca(OH)2?", a: "Type it exactly as written - this calculator supports parentheses with a multiplier, so Ca(OH)2 correctly counts 1 calcium, 2 oxygen, and 2 hydrogen atoms (the 2 outside the parentheses multiplies everything inside)." },
       { q: "Is a 'molecular weight calculators' or 'calculate molecular weights' search different from this tool?", a: "No - plural, verb, and noun forms of the same phrase all point to the same task: entering a chemical formula and getting its total molar mass back, which is exactly what this calculator does." },
+      { q: "Is 'molar weight calculator' or 'mol wt calculator' the same as molecular weight?", a: "Yes - \"molar weight,\" \"mol wt,\" \"molecular weight,\" and \"molar mass\" are all names for the same quantity: the mass of one mole of a substance, in grams per mole. This calculator computes it from any chemical formula you enter." },
     ],
     related: ["percentage-calculator", "square-root-calculator", "exponent-calculator"],
+  },
+  {
+    id: "chemical-equation-balancer",
+    category: "math",
+    title: "Chemical Equation Balancer",
+    keyword: "chemical equation balancer",
+    description: "Balance a chemical equation by finding the correct whole-number coefficients.",
+    intro: "Enter an unbalanced equation (like Fe + O2 -> Fe2O3) using + between compounds and -> between reactants and products.",
+    fields: [
+      { id: "equation", label: "Equation", type: "text", default: "Fe + O2 -> Fe2O3" },
+    ],
+    compute: (v) => {
+      const raw = (v.equation || "").trim();
+      if (!raw) {
+        return { primary: { label: "Balanced equation", value: "—" }, secondary: [], note: "Enter an equation, like Fe + O2 -> Fe2O3." };
+      }
+      const fail = (msg) => ({ primary: { label: "Balanced equation", value: "Invalid equation" }, secondary: [], note: msg });
+
+      const arrowSplit = raw.split(/->|=>|=/);
+      if (arrowSplit.length !== 2) return fail("Use -> (or =) to separate reactants from products, e.g. Fe + O2 -> Fe2O3.");
+      const [leftRaw, rightRaw] = arrowSplit;
+      const reactants = leftRaw.split("+").map((s) => s.trim()).filter(Boolean);
+      const products = rightRaw.split("+").map((s) => s.trim()).filter(Boolean);
+      if (!reactants.length || !products.length) return fail("Both sides of the equation need at least one compound.");
+      const terms = [...reactants, ...products];
+
+      function parseFormula(formula) {
+        let i = 0;
+        let error = null;
+        const parseNumber = () => {
+          const start = i;
+          while (i < formula.length && /[0-9]/.test(formula[i])) i++;
+          return start === i ? 1 : parseInt(formula.slice(start, i), 10);
+        };
+        const parseGroup = () => {
+          const counts = {};
+          while (i < formula.length && formula[i] !== ")" && !error) {
+            if (formula[i] === "(") {
+              i++;
+              const inner = parseGroup();
+              if (formula[i] !== ")") { error = `Mismatched parentheses in "${formula}"`; return counts; }
+              i++;
+              const mult = parseNumber();
+              for (const el in inner) counts[el] = (counts[el] || 0) + inner[el] * mult;
+            } else if (/[A-Z]/.test(formula[i])) {
+              const start = i;
+              i++;
+              while (i < formula.length && /[a-z]/.test(formula[i])) i++;
+              const el = formula.slice(start, i);
+              const count = parseNumber();
+              counts[el] = (counts[el] || 0) + count;
+            } else {
+              error = `Unexpected character in "${formula}"`;
+              return counts;
+            }
+          }
+          return counts;
+        };
+        const counts = parseGroup();
+        if (!error && i !== formula.length) error = `Unexpected character at end of "${formula}"`;
+        return { counts, error };
+      }
+
+      const termCounts = [];
+      for (const t of terms) {
+        const { counts, error } = parseFormula(t);
+        if (error) return fail(error);
+        termCounts.push(counts);
+      }
+
+      const elements = [...new Set(termCounts.flatMap((c) => Object.keys(c)))];
+      const numTerms = terms.length;
+      const matrix = elements.map((el, rowIdx) =>
+        termCounts.map((counts, colIdx) => {
+          const sign = colIdx < reactants.length ? 1 : -1;
+          return sign * (counts[el] || 0);
+        })
+      );
+
+      // Reduced row echelon form (Gauss-Jordan) to find the null space.
+      const m = matrix.map((row) => row.slice());
+      const rows = m.length;
+      const cols = numTerms;
+      let lead = 0;
+      const pivotCols = [];
+      for (let r = 0; r < rows && lead < cols; r++) {
+        let i = r;
+        while (i < rows && Math.abs(m[i][lead]) < 1e-9) i++;
+        if (i === rows) { lead++; r--; continue; }
+        [m[r], m[i]] = [m[i], m[r]];
+        const lv = m[r][lead];
+        for (let j = 0; j < cols; j++) m[r][j] /= lv;
+        for (let i2 = 0; i2 < rows; i2++) {
+          if (i2 !== r) {
+            const factor = m[i2][lead];
+            for (let j = 0; j < cols; j++) m[i2][j] -= factor * m[r][j];
+          }
+        }
+        pivotCols.push(lead);
+        lead++;
+      }
+      const freeCols = [];
+      for (let c = 0; c < cols; c++) if (!pivotCols.includes(c)) freeCols.push(c);
+      if (freeCols.length === 0) return fail("Couldn't find a way to balance this equation - check the formulas and try again.");
+
+      const solution = new Array(cols).fill(0);
+      solution[freeCols[0]] = 1;
+      for (let r = 0; r < pivotCols.length; r++) {
+        const pc = pivotCols[r];
+        let val = 0;
+        for (const fc of freeCols) val -= m[r][fc] * solution[fc];
+        solution[pc] = val;
+      }
+
+      let coeffs = null;
+      for (let k = 1; k <= 60 && !coeffs; k++) {
+        const scaled = solution.map((x) => x * k);
+        const allNearInt = scaled.every((x) => Math.abs(x - Math.round(x)) < 1e-3);
+        const allPositive = scaled.every((x) => x > 1e-6);
+        if (allNearInt && allPositive) coeffs = scaled.map((x) => Math.round(x));
+      }
+      if (!coeffs) return fail("Couldn't resolve whole-number coefficients for this equation - double-check the formulas.");
+
+      let g = coeffs[0];
+      for (let i = 1; i < coeffs.length; i++) g = gcd(g, coeffs[i]);
+      if (g > 1) coeffs = coeffs.map((c) => c / g);
+
+      for (const el of elements) {
+        let reactantTotal = 0, productTotal = 0;
+        for (let i = 0; i < reactants.length; i++) reactantTotal += coeffs[i] * (termCounts[i][el] || 0);
+        for (let i = reactants.length; i < numTerms; i++) productTotal += coeffs[i] * (termCounts[i][el] || 0);
+        if (reactantTotal !== productTotal) return fail(`Couldn't verify a balanced solution for element ${el} - double-check the equation.`);
+      }
+
+      const fmt = (coeff, term) => (coeff === 1 ? term : `${coeff}${term}`);
+      const balancedLeft = reactants.map((t, i) => fmt(coeffs[i], t)).join(" + ");
+      const balancedRight = products.map((t, i) => fmt(coeffs[reactants.length + i], t)).join(" + ");
+
+      return {
+        primary: { label: "Balanced equation", value: `${balancedLeft} → ${balancedRight}` },
+        secondary: [
+          { l: "Reactant coefficients", v: coeffs.slice(0, reactants.length).join(", ") },
+          { l: "Product coefficients", v: coeffs.slice(reactants.length).join(", ") },
+        ],
+        note: "Verified atom-for-atom - every element has the same total count on both sides.",
+      };
+    },
+    faq: [
+      { q: "What does it mean to 'balance' a chemical equation?", a: "Finding the whole-number coefficients (multipliers) in front of each compound so the same number of atoms of each element appears on both sides of the equation - matter isn't created or destroyed in a chemical reaction, so both sides must balance exactly." },
+      { q: "How do I enter an equation with multiple compounds, like combustion reactions?", a: "Separate compounds with + and use -> between reactants and products, for example: CH4 + O2 -> CO2 + H2O. This calculator finds the smallest whole-number coefficients that balance every element in the equation." },
+      { q: "Why does this calculator sometimes say it can't balance my equation?", a: "Usually because of a typo in a chemical formula, or because the reaction as written isn't chemically valid (the same elements don't appear on both sides). Double-check each formula's capitalization and parentheses - chemical symbols are case-sensitive (Co is cobalt, CO is carbon monoxide)." },
+    ],
+    related: ["molecular-weight-calculator", "percentage-calculator", "square-root-calculator"],
   },
   {
     id: "grade-calculator",
@@ -2121,6 +2275,7 @@ const CALCULATORS = [
     },
     faq: [
       { q: "How do I add hours and minutes to a time?", a: "Convert everything to total minutes, add them together, then convert back: for 9:00 plus 5 hours 45 minutes, that's (9×60) + (5×60+45) = 540 + 345 = 885 minutes, which is 14:45 (2:45 PM)." },
+      { q: "How do I add or convert between hours and minutes in general?", a: "Multiply hours by 60 to get minutes (2.5 hours = 150 minutes), or divide minutes by 60 to get hours (150 minutes = 2.5 hours). This calculator applies that directly when adding or subtracting a duration to a starting time." },
       { q: "What happens if adding time crosses midnight?", a: "The result wraps around to the next day - for example, 11:00 PM plus 3 hours becomes 2:00 AM, and this calculator flags that the result crosses into the following calendar day rather than showing an invalid 26:00." },
       { q: "Is this the same as the Time Duration Calculator?", a: "No - the Time Duration Calculator finds the gap between two times you already know (like 9 AM and 5:30 PM). This calculator does the opposite: starting from one known time, it adds or subtracts a duration to find a new resulting time." },
     ],
@@ -2198,6 +2353,8 @@ const CALCULATORS = [
       { q: "How do I convert military time back to 12-hour time?", a: "If the hour is 13 or greater, subtract 12 and mark it PM (1430 becomes 2:30 PM); if it's 00-11, keep the hour and mark it AM, except 0000 which becomes 12:00 AM. Switch this calculator to \"Military → 12-hour\" mode to do this conversion directly." },
       { q: "Is 'military clock conversion' or 'military hours converter' different from converting military time?", a: "No - all of these describe the same conversion between 24-hour military time and standard 12-hour clock time, in either direction. Pick the direction you need above." },
       { q: "Do 'military clock converter,' 'conversion of military time,' 'converting military time,' and 'translate military time' all mean the same thing here?", a: "Yes - every one of these phrasings is asking to convert between 12-hour and 24-hour (military) time, which is exactly what this calculator does in both directions." },
+      { q: "What is 1600 military time?", a: "4:00 PM. Since 1600 is 16 hundred hours, subtract 12 to get 4, and any hour of 13 or greater is PM - switch this calculator to \"Military → 12-hour\" mode and enter hour 16, minute 0 to confirm." },
+      { q: "Is 'army clock converter' the same as a military time converter?", a: "Yes - the US military and other armed forces use the same 24-hour clock system commonly called \"military time,\" so \"army clock converter\" describes the same conversion this tool handles in both directions." },
     ],
     related: ["time-duration-calculator", "time-add-calculator", "time-unit-converter"],
   },
@@ -2570,6 +2727,7 @@ const CALCULATORS = [
       { q: "How many grams are in a cup?", a: "It depends on the ingredient - a cup of flour is about 120g, a cup of granulated sugar is about 200g, and a cup of butter is about 227g, since cups measure volume and grams measure weight. Choose your ingredient above for the exact figure." },
       { q: "How many cups are in a certain number of grams?", a: "Divide the gram amount by the grams-per-cup figure for your ingredient - 240g of flour, for example, is 240 ÷ 120 = 2 cups. This calculator converts cups to grams directly; for grams to cups, divide your gram amount by the per-cup weight shown for your ingredient above." },
       { q: "A cup is how many grams?", a: "It depends entirely on the ingredient, since a cup measures volume and grams measure weight - select your ingredient above (flour, sugar, butter, or brown sugar) to see its specific grams-per-cup figure." },
+      { q: "How many grams is 1 cup, in general?", a: "There's no single answer without knowing the ingredient - it ranges from about 120g (flour) to 227g (butter) per cup for the ingredients this calculator covers, since denser ingredients pack more weight into the same volume." },
       { q: "Why do recipes from different countries use different measurement systems?", a: "The US primarily uses volume-based cup and spoon measurements, while most of the rest of the world uses weight-based metric measurements (grams), which are more precise for baking since ingredient density varies. This converter bridges the two so you can follow a recipe written in either system." },
     ],
     related: ["unit-length-converter", "volume-converter", "paint-calculator"],

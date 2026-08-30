@@ -4,23 +4,23 @@
   <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Time Add/Subtract Calculator | Calquary</title>
-  <meta name="description" content="Add or subtract hours and minutes to or from a starting time." />
-  <meta property="og:title" content="Time Add/Subtract Calculator | Calquary">
-  <meta property="og:description" content="Add or subtract hours and minutes to or from a starting time.">
+  <title>Chemical Equation Balancer | Calquary</title>
+  <meta name="description" content="Balance a chemical equation by finding the correct whole-number coefficients." />
+  <meta property="og:title" content="Chemical Equation Balancer | Calquary">
+  <meta property="og:description" content="Balance a chemical equation by finding the correct whole-number coefficients.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://calquary.com/tool/time-add-calculator.html">
+  <meta property="og:url" content="https://calquary.com/tool/chemical-equation-balancer.html">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Calquary">
-  <meta property="og:image" content="https://calquary.com/og-images/time-add-calculator.png">
+  <meta property="og:image" content="https://calquary.com/og-images/chemical-equation-balancer.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Time Add/Subtract Calculator | Calquary">
-  <meta name="twitter:description" content="Add or subtract hours and minutes to or from a starting time.">
-  <meta name="twitter:image" content="https://calquary.com/og-images/time-add-calculator.png">
-    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/time-add-calculator.html">
-  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/time-add-calculator.html">
+  <meta name="twitter:title" content="Chemical Equation Balancer | Calquary">
+  <meta name="twitter:description" content="Balance a chemical equation by finding the correct whole-number coefficients.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/chemical-equation-balancer.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/chemical-equation-balancer.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/chemical-equation-balancer.html">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -46,7 +46,7 @@
       // still JS-driven here is the interactive calculator widget itself
       // (fields/compute/results) and the related-tools list, neither of
       // which is static SEO prose.
-      const calc = getCalculator("time-add-calculator");
+      const calc = getCalculator("chemical-equation-balancer");
 
       const relWrap = document.getElementById("related-list");
       calc.related.forEach((relId) => {
@@ -57,7 +57,7 @@
         relWrap.appendChild(li);
       });
 
-      initCalculator("time-add-calculator");
+      initCalculator("chemical-equation-balancer");
     });
   </script>
   <script type="application/ld+json">
@@ -66,11 +66,11 @@
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "Time Add/Subtract Calculator",
-      "description": "Add or subtract hours and minutes to or from a starting time.",
+      "name": "Chemical Equation Balancer",
+      "description": "Balance a chemical equation by finding the correct whole-number coefficients.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
-      "url": "https://calquary.com/tool/time-add-calculator.html",
+      "url": "https://calquary.com/tool/chemical-equation-balancer.html",
       "isAccessibleForFree": true,
       "offers": {
         "@type": "Offer",
@@ -92,14 +92,14 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Date & Time",
-          "item": "https://calquary.com/category/datetime.html"
+          "name": "Math",
+          "item": "https://calquary.com/category/math.html"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Time Add/Subtract Calculator",
-          "item": "https://calquary.com/tool/time-add-calculator.html"
+          "name": "Chemical Equation Balancer",
+          "item": "https://calquary.com/tool/chemical-equation-balancer.html"
         }
       ]
     },
@@ -108,34 +108,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "How do I add hours and minutes to a time?",
+          "name": "What does it mean to 'balance' a chemical equation?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Convert everything to total minutes, add them together, then convert back: for 9:00 plus 5 hours 45 minutes, that's (9×60) + (5×60+45) = 540 + 345 = 885 minutes, which is 14:45 (2:45 PM)."
+            "text": "Finding the whole-number coefficients (multipliers) in front of each compound so the same number of atoms of each element appears on both sides of the equation - matter isn't created or destroyed in a chemical reaction, so both sides must balance exactly."
           }
         },
         {
           "@type": "Question",
-          "name": "How do I add or convert between hours and minutes in general?",
+          "name": "How do I enter an equation with multiple compounds, like combustion reactions?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Multiply hours by 60 to get minutes (2.5 hours = 150 minutes), or divide minutes by 60 to get hours (150 minutes = 2.5 hours). This calculator applies that directly when adding or subtracting a duration to a starting time."
+            "text": "Separate compounds with + and use -> between reactants and products, for example: CH4 + O2 -> CO2 + H2O. This calculator finds the smallest whole-number coefficients that balance every element in the equation."
           }
         },
         {
           "@type": "Question",
-          "name": "What happens if adding time crosses midnight?",
+          "name": "Why does this calculator sometimes say it can't balance my equation?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The result wraps around to the next day - for example, 11:00 PM plus 3 hours becomes 2:00 AM, and this calculator flags that the result crosses into the following calendar day rather than showing an invalid 26:00."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is this the same as the Time Duration Calculator?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No - the Time Duration Calculator finds the gap between two times you already know (like 9 AM and 5:30 PM). This calculator does the opposite: starting from one known time, it adds or subtracts a duration to find a new resulting time."
+            "text": "Usually because of a typo in a chemical formula, or because the reaction as written isn't chemically valid (the same elements don't appear on both sides). Double-check each formula's capitalization and parentheses - chemical symbols are case-sensitive (Co is cobalt, CO is carbon monoxide)."
           }
         }
       ]
@@ -163,15 +155,15 @@
 
   <div class="wrap" style="padding-top:32px;">
     <div class="breadcrumb">
-      <a href="/index.html">Calquary</a> / <a href="/category/datetime.html">Date & Time</a>
+      <a href="/index.html">Calquary</a> / <a href="/category/math.html">Math</a>
     </div>
   </div>
 
   <div class="wrap" style="padding-bottom:64px;">
     <div class="tool-layout">
       <main>
-        <h1>Time Add/Subtract Calculator</h1>
-        <p style="max-width:60ch;">Enter a starting time and how many hours and minutes to add or subtract to calculate the resulting time.</p>
+        <h1>Chemical Equation Balancer</h1>
+        <p style="max-width:60ch;">Enter an unbalanced equation (like Fe + O2 -> Fe2O3) using + between compounds and -> between reactants and products.</p>
         <p class="last-updated">Last updated: August 30, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -199,20 +191,16 @@
         <div class="article-block">
           <h2>Frequently asked questions</h2>
           <div id="faq-list"><div class="faq-item">
-<h3>How do I add hours and minutes to a time?</h3>
-<p>Convert everything to total minutes, add them together, then convert back: for 9:00 plus 5 hours 45 minutes, that's (9×60) + (5×60+45) = 540 + 345 = 885 minutes, which is 14:45 (2:45 PM).</p>
+<h3>What does it mean to 'balance' a chemical equation?</h3>
+<p>Finding the whole-number coefficients (multipliers) in front of each compound so the same number of atoms of each element appears on both sides of the equation - matter isn't created or destroyed in a chemical reaction, so both sides must balance exactly.</p>
 </div>
 <div class="faq-item">
-<h3>How do I add or convert between hours and minutes in general?</h3>
-<p>Multiply hours by 60 to get minutes (2.5 hours = 150 minutes), or divide minutes by 60 to get hours (150 minutes = 2.5 hours). This calculator applies that directly when adding or subtracting a duration to a starting time.</p>
+<h3>How do I enter an equation with multiple compounds, like combustion reactions?</h3>
+<p>Separate compounds with + and use -> between reactants and products, for example: CH4 + O2 -> CO2 + H2O. This calculator finds the smallest whole-number coefficients that balance every element in the equation.</p>
 </div>
 <div class="faq-item">
-<h3>What happens if adding time crosses midnight?</h3>
-<p>The result wraps around to the next day - for example, 11:00 PM plus 3 hours becomes 2:00 AM, and this calculator flags that the result crosses into the following calendar day rather than showing an invalid 26:00.</p>
-</div>
-<div class="faq-item">
-<h3>Is this the same as the Time Duration Calculator?</h3>
-<p>No - the Time Duration Calculator finds the gap between two times you already know (like 9 AM and 5:30 PM). This calculator does the opposite: starting from one known time, it adds or subtracts a duration to find a new resulting time.</p>
+<h3>Why does this calculator sometimes say it can't balance my equation?</h3>
+<p>Usually because of a typo in a chemical formula, or because the reaction as written isn't chemically valid (the same elements don't appear on both sides). Double-check each formula's capitalization and parentheses - chemical symbols are case-sensitive (Co is cobalt, CO is carbon monoxide).</p>
 </div></div>
         </div>
       </main>
