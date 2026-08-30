@@ -1203,6 +1203,7 @@ const CALCULATORS = [
       { q: "How is GPA calculated?", a: "Convert each course's letter grade to grade points (A=4.0, A-=3.7, B+=3.3, etc.), multiply by that course's credit hours to get \"quality points,\" add up the quality points across all courses, then divide by the total credit hours - this weights higher-credit courses more heavily than lower-credit ones." },
       { q: "Why is this called a 'weighted' GPA calculator?", a: "\"Weighted\" here refers to weighting by credit hours - a 4-credit course affects your GPA more than a 1-credit course. This is different from \"weighted\" in the high school sense (extra GPA points for honors/AP classes), which this calculator doesn't apply - it uses a standard unweighted 4.0 scale per course." },
       { q: "What if I'm only taking 2 or 3 courses?", a: "Leave the unused course credit-hour fields at 0 - this calculator skips any course with 0 credit hours entered, so you can use just 2, 3, 4, or all 5 course slots." },
+      { q: "Is a 'GPA calculator with weighted grades' the same as this tool?", a: "Yes - this calculator weights each course's grade by its credit hours, which is exactly what \"weighted GPA\" means in this context. Enter your grades and credit hours above to get your overall GPA." },
     ],
     related: ["grade-calculator", "weighted-grade-calculator", "average-calculator"],
   },
