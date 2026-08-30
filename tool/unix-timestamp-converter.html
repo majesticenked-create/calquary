@@ -4,23 +4,23 @@
   <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amortization Schedule Calculator | Calquary</title>
-  <meta name="description" content="See a full month-by-month payment breakdown - principal, interest, and remaining balance - for a fixed-rate loan." />
-  <meta property="og:title" content="Amortization Schedule Calculator | Calquary">
-  <meta property="og:description" content="See a full month-by-month payment breakdown - principal, interest, and remaining balance - for a fixed-rate loan.">
+  <title>Unix Timestamp Converter | Calquary</title>
+  <meta name="description" content="Convert a Unix timestamp (epoch time) to a human-readable date, or a date to a timestamp." />
+  <meta property="og:title" content="Unix Timestamp Converter | Calquary">
+  <meta property="og:description" content="Convert a Unix timestamp (epoch time) to a human-readable date, or a date to a timestamp.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://calquary.com/tool/amortization-schedule-calculator.html">
+  <meta property="og:url" content="https://calquary.com/tool/unix-timestamp-converter.html">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Calquary">
-  <meta property="og:image" content="https://calquary.com/og-images/amortization-schedule-calculator.png">
+  <meta property="og:image" content="https://calquary.com/og-images/unix-timestamp-converter.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Amortization Schedule Calculator | Calquary">
-  <meta name="twitter:description" content="See a full month-by-month payment breakdown - principal, interest, and remaining balance - for a fixed-rate loan.">
-  <meta name="twitter:image" content="https://calquary.com/og-images/amortization-schedule-calculator.png">
-    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/amortization-schedule-calculator.html">
-  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/amortization-schedule-calculator.html">
+  <meta name="twitter:title" content="Unix Timestamp Converter | Calquary">
+  <meta name="twitter:description" content="Convert a Unix timestamp (epoch time) to a human-readable date, or a date to a timestamp.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/unix-timestamp-converter.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/unix-timestamp-converter.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/unix-timestamp-converter.html">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -46,7 +46,7 @@
       // still JS-driven here is the interactive calculator widget itself
       // (fields/compute/results) and the related-tools list, neither of
       // which is static SEO prose.
-      const calc = getCalculator("amortization-schedule-calculator");
+      const calc = getCalculator("unix-timestamp-converter");
 
       const relWrap = document.getElementById("related-list");
       calc.related.forEach((relId) => {
@@ -57,7 +57,7 @@
         relWrap.appendChild(li);
       });
 
-      initCalculator("amortization-schedule-calculator");
+      initCalculator("unix-timestamp-converter");
     });
   </script>
   <script type="application/ld+json">
@@ -66,11 +66,11 @@
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "Amortization Schedule Calculator",
-      "description": "See a full month-by-month payment breakdown - principal, interest, and remaining balance - for a fixed-rate loan.",
+      "name": "Unix Timestamp Converter",
+      "description": "Convert a Unix timestamp (epoch time) to a human-readable date, or a date to a timestamp.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
-      "url": "https://calquary.com/tool/amortization-schedule-calculator.html",
+      "url": "https://calquary.com/tool/unix-timestamp-converter.html",
       "isAccessibleForFree": true,
       "offers": {
         "@type": "Offer",
@@ -92,14 +92,14 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Finance",
-          "item": "https://calquary.com/category/finance.html"
+          "name": "Date & Time",
+          "item": "https://calquary.com/category/datetime.html"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Amortization Schedule Calculator",
-          "item": "https://calquary.com/tool/amortization-schedule-calculator.html"
+          "name": "Unix Timestamp Converter",
+          "item": "https://calquary.com/tool/unix-timestamp-converter.html"
         }
       ]
     },
@@ -108,34 +108,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What's an amortization schedule?",
+          "name": "What is a Unix timestamp?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A table showing every payment over the life of a loan, broken into how much goes to principal versus interest, plus the remaining balance after each payment - it shows exactly how the principal/interest split shifts over time, even though the total payment stays the same."
+            "text": "The number of seconds elapsed since January 1, 1970, 00:00:00 UTC (the \"Unix epoch\") - a single number that unambiguously represents a specific moment in time, widely used in programming and databases since it avoids time zone and calendar-formatting ambiguity."
           }
         },
         {
           "@type": "Question",
-          "name": "Why does more of my payment go to interest early on?",
+          "name": "How is this different from an epoch converter?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Interest is calculated on the remaining balance each period, and the balance is largest at the start of the loan - as principal gets paid down, the interest portion shrinks and more of each fixed payment goes toward principal instead."
+            "text": "Nothing - \"epoch time\" and \"Unix timestamp\" are the same thing, and \"epoch converter\" and \"Unix timestamp converter\" describe the same tool. This calculator handles both directions: timestamp to date, and date to timestamp."
           }
         },
         {
           "@type": "Question",
-          "name": "Why is my last payment sometimes a different amount?",
+          "name": "Why does my timestamp look 3 or 10 digits different from what I expected?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Rounding across many months of interest calculations can leave a few cents of balance remaining after the second-to-last scheduled payment - this calculator adjusts the final payment to clear the exact remaining balance rather than leaving a tiny leftover balance."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is 'amortization schedule for loan' the same as this calculator?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes - enter your loan amount, rate, and term above to see the full amortization schedule for that loan, exactly what this phrase is asking for."
+            "text": "Some systems use milliseconds since the epoch instead of seconds - a timestamp in milliseconds has 3 extra digits (13 digits vs. 10 for a current-day timestamp in seconds). Divide a millisecond timestamp by 1,000 before entering it here."
           }
         }
       ]
@@ -163,15 +155,15 @@
 
   <div class="wrap" style="padding-top:32px;">
     <div class="breadcrumb">
-      <a href="/index.html">Calquary</a> / <a href="/category/finance.html">Finance</a>
+      <a href="/index.html">Calquary</a> / <a href="/category/datetime.html">Date & Time</a>
     </div>
   </div>
 
   <div class="wrap" style="padding-bottom:64px;">
     <div class="tool-layout">
       <main>
-        <h1>Amortization Schedule Calculator</h1>
-        <p style="max-width:60ch;">Enter a loan amount, rate, and term to see the monthly payment plus the complete amortization schedule below.</p>
+        <h1>Unix Timestamp Converter</h1>
+        <p style="max-width:60ch;">Enter a Unix timestamp to convert it to a readable date, or enter a date below to get its timestamp.</p>
         <p class="last-updated">Last updated: August 30, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -199,20 +191,16 @@
         <div class="article-block">
           <h2>Frequently asked questions</h2>
           <div id="faq-list"><div class="faq-item">
-<h3>What's an amortization schedule?</h3>
-<p>A table showing every payment over the life of a loan, broken into how much goes to principal versus interest, plus the remaining balance after each payment - it shows exactly how the principal/interest split shifts over time, even though the total payment stays the same.</p>
+<h3>What is a Unix timestamp?</h3>
+<p>The number of seconds elapsed since January 1, 1970, 00:00:00 UTC (the "Unix epoch") - a single number that unambiguously represents a specific moment in time, widely used in programming and databases since it avoids time zone and calendar-formatting ambiguity.</p>
 </div>
 <div class="faq-item">
-<h3>Why does more of my payment go to interest early on?</h3>
-<p>Interest is calculated on the remaining balance each period, and the balance is largest at the start of the loan - as principal gets paid down, the interest portion shrinks and more of each fixed payment goes toward principal instead.</p>
+<h3>How is this different from an epoch converter?</h3>
+<p>Nothing - "epoch time" and "Unix timestamp" are the same thing, and "epoch converter" and "Unix timestamp converter" describe the same tool. This calculator handles both directions: timestamp to date, and date to timestamp.</p>
 </div>
 <div class="faq-item">
-<h3>Why is my last payment sometimes a different amount?</h3>
-<p>Rounding across many months of interest calculations can leave a few cents of balance remaining after the second-to-last scheduled payment - this calculator adjusts the final payment to clear the exact remaining balance rather than leaving a tiny leftover balance.</p>
-</div>
-<div class="faq-item">
-<h3>Is 'amortization schedule for loan' the same as this calculator?</h3>
-<p>Yes - enter your loan amount, rate, and term above to see the full amortization schedule for that loan, exactly what this phrase is asking for.</p>
+<h3>Why does my timestamp look 3 or 10 digits different from what I expected?</h3>
+<p>Some systems use milliseconds since the epoch instead of seconds - a timestamp in milliseconds has 3 extra digits (13 digits vs. 10 for a current-day timestamp in seconds). Divide a millisecond timestamp by 1,000 before entering it here.</p>
 </div></div>
         </div>
       </main>

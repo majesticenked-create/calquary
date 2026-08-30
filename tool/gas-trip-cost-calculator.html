@@ -4,23 +4,23 @@
   <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amortization Schedule Calculator | Calquary</title>
-  <meta name="description" content="See a full month-by-month payment breakdown - principal, interest, and remaining balance - for a fixed-rate loan." />
-  <meta property="og:title" content="Amortization Schedule Calculator | Calquary">
-  <meta property="og:description" content="See a full month-by-month payment breakdown - principal, interest, and remaining balance - for a fixed-rate loan.">
+  <title>Gas Trip Cost Calculator | Calquary</title>
+  <meta name="description" content="Calculate how much gas a trip will cost based on distance, fuel economy, and gas price." />
+  <meta property="og:title" content="Gas Trip Cost Calculator | Calquary">
+  <meta property="og:description" content="Calculate how much gas a trip will cost based on distance, fuel economy, and gas price.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://calquary.com/tool/amortization-schedule-calculator.html">
+  <meta property="og:url" content="https://calquary.com/tool/gas-trip-cost-calculator.html">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Calquary">
-  <meta property="og:image" content="https://calquary.com/og-images/amortization-schedule-calculator.png">
+  <meta property="og:image" content="https://calquary.com/og-images/gas-trip-cost-calculator.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Amortization Schedule Calculator | Calquary">
-  <meta name="twitter:description" content="See a full month-by-month payment breakdown - principal, interest, and remaining balance - for a fixed-rate loan.">
-  <meta name="twitter:image" content="https://calquary.com/og-images/amortization-schedule-calculator.png">
-    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/amortization-schedule-calculator.html">
-  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/amortization-schedule-calculator.html">
+  <meta name="twitter:title" content="Gas Trip Cost Calculator | Calquary">
+  <meta name="twitter:description" content="Calculate how much gas a trip will cost based on distance, fuel economy, and gas price.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/gas-trip-cost-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/gas-trip-cost-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/gas-trip-cost-calculator.html">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -46,7 +46,7 @@
       // still JS-driven here is the interactive calculator widget itself
       // (fields/compute/results) and the related-tools list, neither of
       // which is static SEO prose.
-      const calc = getCalculator("amortization-schedule-calculator");
+      const calc = getCalculator("gas-trip-cost-calculator");
 
       const relWrap = document.getElementById("related-list");
       calc.related.forEach((relId) => {
@@ -57,7 +57,7 @@
         relWrap.appendChild(li);
       });
 
-      initCalculator("amortization-schedule-calculator");
+      initCalculator("gas-trip-cost-calculator");
     });
   </script>
   <script type="application/ld+json">
@@ -66,11 +66,11 @@
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "Amortization Schedule Calculator",
-      "description": "See a full month-by-month payment breakdown - principal, interest, and remaining balance - for a fixed-rate loan.",
+      "name": "Gas Trip Cost Calculator",
+      "description": "Calculate how much gas a trip will cost based on distance, fuel economy, and gas price.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
-      "url": "https://calquary.com/tool/amortization-schedule-calculator.html",
+      "url": "https://calquary.com/tool/gas-trip-cost-calculator.html",
       "isAccessibleForFree": true,
       "offers": {
         "@type": "Offer",
@@ -98,8 +98,8 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Amortization Schedule Calculator",
-          "item": "https://calquary.com/tool/amortization-schedule-calculator.html"
+          "name": "Gas Trip Cost Calculator",
+          "item": "https://calquary.com/tool/gas-trip-cost-calculator.html"
         }
       ]
     },
@@ -108,34 +108,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What's an amortization schedule?",
+          "name": "How do I calculate the cost of gas for a road trip?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A table showing every payment over the life of a loan, broken into how much goes to principal versus interest, plus the remaining balance after each payment - it shows exactly how the principal/interest split shifts over time, even though the total payment stays the same."
+            "text": "Divide the trip distance by your vehicle's miles-per-gallon rating to get gallons needed, then multiply by the price per gallon. A 300-mile trip at 28 mpg and $3.50/gallon needs about 10.7 gallons, costing roughly $37.50."
           }
         },
         {
           "@type": "Question",
-          "name": "Why does more of my payment go to interest early on?",
+          "name": "Should I use city or highway mpg for a road trip estimate?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Interest is calculated on the remaining balance each period, and the balance is largest at the start of the loan - as principal gets paid down, the interest portion shrinks and more of each fixed payment goes toward principal instead."
+            "text": "Highway mpg is usually the more accurate figure for a long-distance trip, since most of the driving happens at steady highway speeds; city mpg (typically lower) is more relevant for trips with frequent stops and lower average speeds."
           }
         },
         {
           "@type": "Question",
-          "name": "Why is my last payment sometimes a different amount?",
+          "name": "How can I split this cost among passengers?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Rounding across many months of interest calculations can leave a few cents of balance remaining after the second-to-last scheduled payment - this calculator adjusts the final payment to clear the exact remaining balance rather than leaving a tiny leftover balance."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is 'amortization schedule for loan' the same as this calculator?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes - enter your loan amount, rate, and term above to see the full amortization schedule for that loan, exactly what this phrase is asking for."
+            "text": "Divide the total gas cost by the number of people sharing the trip - for a $37.50 total split 3 ways, that's $12.50 per person. This calculator gives you the total cost; dividing it evenly (or by another agreed split) is a simple next step."
           }
         }
       ]
@@ -170,8 +162,8 @@
   <div class="wrap" style="padding-bottom:64px;">
     <div class="tool-layout">
       <main>
-        <h1>Amortization Schedule Calculator</h1>
-        <p style="max-width:60ch;">Enter a loan amount, rate, and term to see the monthly payment plus the complete amortization schedule below.</p>
+        <h1>Gas Trip Cost Calculator</h1>
+        <p style="max-width:60ch;">Enter your trip distance, vehicle's fuel economy, and the price of gas to calculate the total fuel cost.</p>
         <p class="last-updated">Last updated: August 30, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -199,20 +191,16 @@
         <div class="article-block">
           <h2>Frequently asked questions</h2>
           <div id="faq-list"><div class="faq-item">
-<h3>What's an amortization schedule?</h3>
-<p>A table showing every payment over the life of a loan, broken into how much goes to principal versus interest, plus the remaining balance after each payment - it shows exactly how the principal/interest split shifts over time, even though the total payment stays the same.</p>
+<h3>How do I calculate the cost of gas for a road trip?</h3>
+<p>Divide the trip distance by your vehicle's miles-per-gallon rating to get gallons needed, then multiply by the price per gallon. A 300-mile trip at 28 mpg and $3.50/gallon needs about 10.7 gallons, costing roughly $37.50.</p>
 </div>
 <div class="faq-item">
-<h3>Why does more of my payment go to interest early on?</h3>
-<p>Interest is calculated on the remaining balance each period, and the balance is largest at the start of the loan - as principal gets paid down, the interest portion shrinks and more of each fixed payment goes toward principal instead.</p>
+<h3>Should I use city or highway mpg for a road trip estimate?</h3>
+<p>Highway mpg is usually the more accurate figure for a long-distance trip, since most of the driving happens at steady highway speeds; city mpg (typically lower) is more relevant for trips with frequent stops and lower average speeds.</p>
 </div>
 <div class="faq-item">
-<h3>Why is my last payment sometimes a different amount?</h3>
-<p>Rounding across many months of interest calculations can leave a few cents of balance remaining after the second-to-last scheduled payment - this calculator adjusts the final payment to clear the exact remaining balance rather than leaving a tiny leftover balance.</p>
-</div>
-<div class="faq-item">
-<h3>Is 'amortization schedule for loan' the same as this calculator?</h3>
-<p>Yes - enter your loan amount, rate, and term above to see the full amortization schedule for that loan, exactly what this phrase is asking for.</p>
+<h3>How can I split this cost among passengers?</h3>
+<p>Divide the total gas cost by the number of people sharing the trip - for a $37.50 total split 3 ways, that's $12.50 per person. This calculator gives you the total cost; dividing it evenly (or by another agreed split) is a simple next step.</p>
 </div></div>
         </div>
       </main>

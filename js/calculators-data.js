@@ -965,6 +965,7 @@ const CALCULATORS = [
       { q: "What's an amortization schedule?", a: "A table showing every payment over the life of a loan, broken into how much goes to principal versus interest, plus the remaining balance after each payment - it shows exactly how the principal/interest split shifts over time, even though the total payment stays the same." },
       { q: "Why does more of my payment go to interest early on?", a: "Interest is calculated on the remaining balance each period, and the balance is largest at the start of the loan - as principal gets paid down, the interest portion shrinks and more of each fixed payment goes toward principal instead." },
       { q: "Why is my last payment sometimes a different amount?", a: "Rounding across many months of interest calculations can leave a few cents of balance remaining after the second-to-last scheduled payment - this calculator adjusts the final payment to clear the exact remaining balance rather than leaving a tiny leftover balance." },
+      { q: "Is 'amortization schedule for loan' the same as this calculator?", a: "Yes - enter your loan amount, rate, and term above to see the full amortization schedule for that loan, exactly what this phrase is asking for." },
     ],
     related: ["loan-calculator", "mortgage-calculator", "auto-loan-calculator"],
   },
@@ -2359,6 +2360,107 @@ const CALCULATORS = [
     related: ["time-duration-calculator", "time-add-calculator", "time-unit-converter"],
   },
   {
+    id: "unix-timestamp-converter",
+    category: "datetime",
+    title: "Unix Timestamp Converter",
+    keyword: "unix timestamp converter",
+    description: "Convert a Unix timestamp (epoch time) to a human-readable date, or a date to a timestamp.",
+    intro: "Enter a Unix timestamp to convert it to a readable date, or enter a date below to get its timestamp.",
+    fields: [
+      { id: "timestamp", label: "Unix timestamp (seconds)", type: "number", default: 1735689600, step: 1 },
+      { id: "year", label: "Year", type: "number", default: 2025, step: 1 },
+      { id: "month", label: "Month", type: "number", default: 1, step: 1, min: 1, max: 12 },
+      { id: "day", label: "Day", type: "number", default: 1, step: 1, min: 1, max: 31 },
+      { id: "hour", label: "Hour (UTC, 0-23)", type: "number", default: 0, step: 1, min: 0, max: 23 },
+    ],
+    compute: (v) => {
+      const fromTimestamp = new Date(v.timestamp * 1000);
+      const dateFromEntered = new Date(Date.UTC(v.year, v.month - 1, v.day, v.hour));
+      const epochFromEntered = Math.floor(dateFromEntered.getTime() / 1000);
+      const pad = (n) => String(n).padStart(2, "0");
+      const isoFromTimestamp = isNaN(fromTimestamp.getTime())
+        ? "Invalid timestamp"
+        : `${fromTimestamp.getUTCFullYear()}-${pad(fromTimestamp.getUTCMonth() + 1)}-${pad(fromTimestamp.getUTCDate())} ${pad(fromTimestamp.getUTCHours())}:${pad(fromTimestamp.getUTCMinutes())}:${pad(fromTimestamp.getUTCSeconds())} UTC`;
+      return {
+        primary: { label: "Date from timestamp", value: isoFromTimestamp },
+        secondary: [
+          { l: "Milliseconds", v: (v.timestamp * 1000).toLocaleString() },
+          { l: "Timestamp from entered date", v: epochFromEntered.toLocaleString() },
+        ],
+        note: "Timestamps are seconds since January 1, 1970 UTC (the Unix epoch). Entered dates are treated as UTC, not your local time zone.",
+      };
+    },
+    faq: [
+      { q: "What is a Unix timestamp?", a: "The number of seconds elapsed since January 1, 1970, 00:00:00 UTC (the \"Unix epoch\") - a single number that unambiguously represents a specific moment in time, widely used in programming and databases since it avoids time zone and calendar-formatting ambiguity." },
+      { q: "How is this different from an epoch converter?", a: "Nothing - \"epoch time\" and \"Unix timestamp\" are the same thing, and \"epoch converter\" and \"Unix timestamp converter\" describe the same tool. This calculator handles both directions: timestamp to date, and date to timestamp." },
+      { q: "Why does my timestamp look 3 or 10 digits different from what I expected?", a: "Some systems use milliseconds since the epoch instead of seconds - a timestamp in milliseconds has 3 extra digits (13 digits vs. 10 for a current-day timestamp in seconds). Divide a millisecond timestamp by 1,000 before entering it here." },
+    ],
+    related: ["date-duration-calculator", "time-unit-converter", "days-until-calculator"],
+  },
+  {
+    id: "absolute-risk-reduction-calculator",
+    category: "math",
+    title: "Absolute Risk Reduction Calculator",
+    keyword: "absolute risk reduction calculator",
+    description: "Calculate absolute risk reduction (ARR), relative risk reduction (RRR), and number needed to treat (NNT) from two event rates.",
+    intro: "Enter the event rate in a control group and a treatment group to calculate absolute risk reduction, relative risk reduction, and number needed to treat.",
+    fields: [
+      { id: "controlRate", label: "Control group event rate", type: "number", unit: "%", default: 20, step: 0.1 },
+      { id: "treatmentRate", label: "Treatment group event rate", type: "number", unit: "%", default: 12, step: 0.1 },
+    ],
+    compute: (v) => {
+      const arr = v.controlRate - v.treatmentRate;
+      const rrr = v.controlRate === 0 ? null : (arr / v.controlRate) * 100;
+      const nnt = arr === 0 ? null : Math.abs(100 / arr);
+      return {
+        primary: { label: "Absolute risk reduction (ARR)", value: `${round(arr, 2)} percentage points` },
+        secondary: [
+          { l: "Relative risk reduction (RRR)", v: rrr === null ? "—" : `${round(rrr, 1)}%` },
+          { l: "Number needed to treat (NNT)", v: nnt === null ? "—" : round(nnt, 1) },
+        ],
+        note: "A statistics reference tool, not medical advice - interpreting clinical significance requires the full study context (confidence intervals, study design, population), which a single calculator can't capture.",
+      };
+    },
+    faq: [
+      { q: "What's the difference between absolute and relative risk reduction?", a: "Absolute risk reduction (ARR) is the simple difference between two event rates (e.g., 20% − 12% = 8 percentage points). Relative risk reduction (RRR) expresses that same difference as a percentage of the original rate (8 ÷ 20 = 40%) - RRR often sounds more dramatic than ARR for the same underlying data, which is why both numbers matter for context." },
+      { q: "What does 'number needed to treat' (NNT) mean?", a: "NNT is the number of people who would need to receive a treatment for one additional person to benefit (avoid the event), calculated as 1 ÷ ARR (expressed as a decimal). A smaller NNT means a more impactful treatment effect - an NNT of 12.5 means roughly 1 in every 12-13 people treated sees the benefit." },
+      { q: "Is this appropriate for making medical treatment decisions?", a: "No - this is a statistics reference calculator for understanding how these numbers are computed, not a substitute for a full clinical study's confidence intervals, population characteristics, and a qualified professional's interpretation. Always discuss treatment decisions with a healthcare provider." },
+    ],
+    related: ["percentage-calculator", "percentage-change-calculator", "standard-deviation-calculator"],
+  },
+  {
+    id: "gas-trip-cost-calculator",
+    category: "finance",
+    title: "Gas Trip Cost Calculator",
+    keyword: "cost of gas calculator",
+    description: "Calculate how much gas a trip will cost based on distance, fuel economy, and gas price.",
+    intro: "Enter your trip distance, vehicle's fuel economy, and the price of gas to calculate the total fuel cost.",
+    fields: [
+      { id: "distance", label: "Trip distance", type: "number", unit: "miles", default: 300, step: 1 },
+      { id: "mpg", label: "Fuel economy", type: "number", unit: "mpg", default: 28, step: 0.1 },
+      { id: "gasPrice", label: "Gas price", type: "number", unit: "$/gallon", default: 3.5, step: 0.01 },
+    ],
+    compute: (v) => {
+      const gallons = v.mpg === 0 ? 0 : v.distance / v.mpg;
+      const totalCost = gallons * v.gasPrice;
+      const costPerMile = v.distance === 0 ? 0 : totalCost / v.distance;
+      return {
+        primary: { label: "Total gas cost", value: `$${round(totalCost, 2).toLocaleString()}` },
+        secondary: [
+          { l: "Gallons needed", v: round(gallons, 2) },
+          { l: "Cost per mile", v: `$${round(costPerMile, 3)}` },
+        ],
+        note: "Estimate only - actual fuel use varies with driving style, terrain, traffic, and vehicle load.",
+      };
+    },
+    faq: [
+      { q: "How do I calculate the cost of gas for a road trip?", a: "Divide the trip distance by your vehicle's miles-per-gallon rating to get gallons needed, then multiply by the price per gallon. A 300-mile trip at 28 mpg and $3.50/gallon needs about 10.7 gallons, costing roughly $37.50." },
+      { q: "Should I use city or highway mpg for a road trip estimate?", a: "Highway mpg is usually the more accurate figure for a long-distance trip, since most of the driving happens at steady highway speeds; city mpg (typically lower) is more relevant for trips with frequent stops and lower average speeds." },
+      { q: "How can I split this cost among passengers?", a: "Divide the total gas cost by the number of people sharing the trip - for a $37.50 total split 3 ways, that's $12.50 per person. This calculator gives you the total cost; dividing it evenly (or by another agreed split) is a simple next step." },
+    ],
+    related: ["fuel-economy-converter", "auto-loan-calculator", "tip-calculator"],
+  },
+  {
     id: "week-number-calculator",
     category: "datetime",
     title: "Week Number Calculator",
@@ -2475,6 +2577,7 @@ const CALCULATORS = [
       { q: "Does this account for leap years?", a: "Yes - it works directly from calendar dates rather than assuming a fixed 365-day year, so leap years are handled correctly without any extra adjustment." },
       { q: "Can I calculate age as of a specific future or past date instead of today?", a: "This calculator compares your birth date to today's date specifically; to find your age on another date, use the Days Until Calculator or Date Duration Calculator to measure the gap between your birth date and any date you choose." },
       { q: "Can this calculate age in months or weeks instead of just years?", a: "Yes - alongside your age in years, this calculator breaks down the exact time elapsed into total months, weeks, and days, so you can see your precise age in whichever unit is most useful." },
+      { q: "Is this the same as a 'calculator birthday' or 'age calculator net' search?", a: "Yes - both describe calculating exact age from a birth date, which is exactly what this tool does. Enter your birth date above to see your exact age in years, months, and days." },
     ],
     related: ["days-until-calculator", "dog-age-calculator"],
   },
