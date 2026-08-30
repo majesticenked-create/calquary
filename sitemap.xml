@@ -217,6 +217,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/standard-deviation-calculator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/correlation-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/correlation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/correlation-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/z-score-calculator.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/z-score-calculator.html"/>
@@ -661,6 +667,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/online-alarm-clock.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/random-date-generator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/random-date-generator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/random-date-generator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/military-time-converter.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/military-time-converter.html"/>
@@ -677,6 +689,12 @@
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/absolute-risk-reduction-calculator.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/absolute-risk-reduction-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/sample-size-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/sample-size-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/sample-size-calculator.html"/>
   </url>
   <url>
     <loc>https://calquary.com/tool/gas-trip-cost-calculator.html</loc>

@@ -161,6 +161,7 @@ const CALCULATORS = [
       { q: "How do I add two fractions?", a: "Find a common denominator, convert both fractions, then add the numerators. 1/2 + 1/3 = 3/6 + 2/6 = 5/6." },
       { q: "How do I divide fractions?", a: "Multiply the first fraction by the reciprocal (flip) of the second. 1/2 ÷ 1/3 = 1/2 × 3/1 = 3/2." },
       { q: "How do I convert a fraction to a decimal?", a: "Divide the numerator by the denominator. 3/4 becomes 3 ÷ 4 = 0.75. This calculator's fraction operations return a simplified fraction, which you can convert to a decimal the same way afterward." },
+      { q: "How do I just simplify one fraction, without a second one?", a: "Set the second fraction to 1/1 and choose \"×\" (multiply) - multiplying by 1/1 doesn't change the value, so the result shown is your original fraction reduced to its simplest form." },
       { q: "How do I subtract fractions with different denominators?", a: "Find a common denominator first, convert each fraction to that denominator, then subtract the numerators. For 3/4 - 1/6, the common denominator is 12: 9/12 - 2/12 = 7/12. This calculator handles the common-denominator step automatically." },
     ],
     related: ["gcd-lcm-calculator", "average-calculator", "percentage-calculator"],
@@ -306,6 +307,61 @@ const CALCULATORS = [
       { q: "Where do I find standard deviation on a calculator?", a: "You don't need a special scientific calculator function - enter your list of numbers above (separated by commas or spaces) and this calculator computes the standard deviation directly, along with the variance and mean." },
     ],
     related: ["average-calculator", "fraction-calculator", "gcd-lcm-calculator"],
+  },
+  {
+    id: "correlation-calculator",
+    category: "math",
+    title: "Correlation Coefficient Calculator",
+    keyword: "correlation test calculator",
+    description: "Calculate the Pearson correlation coefficient (r) between two paired sets of numbers.",
+    intro: "Enter two lists of paired numbers (same length, separated by commas or spaces) to calculate the Pearson correlation coefficient.",
+    fields: [
+      { id: "xValues", label: "X values", type: "text", default: "1, 2, 3, 4, 5" },
+      { id: "yValues", label: "Y values", type: "text", default: "2, 4, 5, 4, 6" },
+    ],
+    compute: (v) => {
+      const parseList = (s) => (s || "").split(/[,\s]+/).map(Number).filter((n) => !isNaN(n));
+      const xs = parseList(v.xValues);
+      const ys = parseList(v.yValues);
+      if (xs.length < 2 || xs.length !== ys.length) {
+        return { primary: { label: "Correlation (r)", value: "Invalid input" }, secondary: [], note: "Enter two equal-length lists of at least 2 numbers each, separated by commas or spaces." };
+      }
+      const n = xs.length;
+      const meanX = xs.reduce((a, b) => a + b, 0) / n;
+      const meanY = ys.reduce((a, b) => a + b, 0) / n;
+      let cov = 0, varX = 0, varY = 0;
+      for (let i = 0; i < n; i++) {
+        const dx = xs[i] - meanX, dy = ys[i] - meanY;
+        cov += dx * dy;
+        varX += dx * dx;
+        varY += dy * dy;
+      }
+      const denom = Math.sqrt(varX * varY);
+      const r = denom === 0 ? null : cov / denom;
+      let strength = "None";
+      if (r !== null) {
+        const abs = Math.abs(r);
+        if (abs >= 0.8) strength = "Very strong";
+        else if (abs >= 0.6) strength = "Strong";
+        else if (abs >= 0.4) strength = "Moderate";
+        else if (abs >= 0.2) strength = "Weak";
+        else strength = "Very weak / none";
+      }
+      return {
+        primary: { label: "Correlation (r)", value: r === null ? "Undefined" : round(r, 4) },
+        secondary: [
+          { l: "Direction", v: r === null ? "—" : r > 0 ? "Positive" : r < 0 ? "Negative" : "None" },
+          { l: "Strength", v: strength },
+        ],
+        note: "r ranges from -1 (perfect negative) to +1 (perfect positive); 0 means no linear relationship. Correlation doesn't imply causation.",
+      };
+    },
+    faq: [
+      { q: "What does a correlation coefficient of 1 or -1 mean?", a: "A correlation of exactly 1 means the two variables have a perfect positive linear relationship (as one increases, the other increases proportionally); -1 means a perfect negative linear relationship (as one increases, the other decreases proportionally). Real-world data rarely hits exactly 1 or -1." },
+      { q: "Does correlation prove causation?", a: "No - two variables can be strongly correlated without one causing the other, due to coincidence, a shared underlying cause, or reverse causation. Correlation only measures whether two variables tend to move together, not why." },
+      { q: "What's considered a 'strong' correlation?", a: "There's no universal cutoff, but a common rough guide is: 0.8+ very strong, 0.6-0.8 strong, 0.4-0.6 moderate, 0.2-0.4 weak, and below 0.2 very weak or none - though what counts as \"strong enough\" varies a lot by field (social sciences vs. physical sciences, for example)." },
+    ],
+    related: ["standard-deviation-calculator", "average-calculator", "percentage-calculator"],
   },
   {
     id: "z-score-calculator",
@@ -2933,6 +2989,47 @@ const CALCULATORS = [
     related: ["online-timer", "time-add-calculator", "military-time-converter"],
   },
   {
+    id: "random-date-generator",
+    category: "datetime",
+    title: "Random Date Generator",
+    keyword: "generate random date",
+    description: "Generate one or more random dates within a chosen date range.",
+    intro: "Choose a start date, end date, and how many random dates to generate.",
+    fields: [
+      { id: "startDate", label: "Start date", type: "date", default: "2020-01-01" },
+      { id: "endDate", label: "End date", type: "date", default: "2029-12-31" },
+      { id: "count", label: "How many dates", type: "number", default: 1, step: 1, min: 1, max: 20 },
+    ],
+    compute: (v) => {
+      const start = new Date(v.startDate);
+      const end = new Date(v.endDate);
+      const startMs = start.getTime();
+      const endMs = end.getTime();
+      if (isNaN(startMs) || isNaN(endMs) || endMs < startMs) {
+        return { primary: { label: "Random date", value: "Invalid range" }, secondary: [], note: "End date must be on or after the start date." };
+      }
+      const count = Math.max(1, Math.min(20, Math.round(v.count)));
+      const dates = Array.from({ length: count }, () => {
+        const randomMs = startMs + Math.random() * (endMs - startMs);
+        return new Date(randomMs).toISOString().slice(0, 10);
+      });
+      return {
+        primary: { label: count > 1 ? "Random dates" : "Random date", value: dates.join(", ") },
+        secondary: [
+          { l: "Date range", v: `${v.startDate} to ${v.endDate}` },
+          { l: "Count", v: count },
+        ],
+        note: "Click Calculate again to generate a fresh set of random dates.",
+      };
+    },
+    faq: [
+      { q: "How does this generate a random date?", a: "It picks a random point in time uniformly between your start and end dates (converted to timestamps), then converts that random timestamp back into a calendar date - every day in the range has an equal chance of being picked." },
+      { q: "Can I generate multiple random dates at once?", a: "Yes - set \"how many dates\" to any value up to 20 to generate that many random dates from the same range in one click." },
+      { q: "What could this be used for?", a: "Common uses include picking a random testing date, generating sample data for software testing, randomly assigning a date for a drawing or giveaway, or any scenario needing an unbiased random pick from a range of dates." },
+    ],
+    related: ["days-until-calculator", "date-duration-calculator", "random-number-generator"],
+  },
+  {
     id: "military-time-converter",
     category: "datetime",
     title: "Military Time Converter",
@@ -3061,6 +3158,50 @@ const CALCULATORS = [
       { q: "Is this appropriate for making medical treatment decisions?", a: "No - this is a statistics reference calculator for understanding how these numbers are computed, not a substitute for a full clinical study's confidence intervals, population characteristics, and a qualified professional's interpretation. Always discuss treatment decisions with a healthcare provider." },
     ],
     related: ["percentage-calculator", "percentage-change-calculator", "standard-deviation-calculator"],
+  },
+  {
+    id: "sample-size-calculator",
+    category: "math",
+    title: "Sample Size Calculator",
+    keyword: "calculating sample size calculator",
+    description: "Calculate the survey or study sample size needed for a chosen confidence level and margin of error.",
+    intro: "Choose a confidence level and margin of error to calculate the minimum sample size needed for a survey or study.",
+    fields: [
+      { id: "confidenceLevel", label: "Confidence level", type: "select", default: "95", options: [
+        { v: "90", l: "90%" }, { v: "95", l: "95%" }, { v: "99", l: "99%" },
+      ] },
+      { id: "marginError", label: "Margin of error", type: "number", unit: "%", default: 5, step: 0.1, min: 0.1 },
+      { id: "proportion", label: "Estimated response proportion", type: "number", unit: "%", default: 50, step: 1, min: 1, max: 99 },
+      { id: "populationSize", label: "Population size (0 = unlimited/unknown)", type: "number", default: 0, step: 1, min: 0 },
+    ],
+    compute: (v) => {
+      const zValues = { "90": 1.645, "95": 1.96, "99": 2.576 };
+      const z = zValues[v.confidenceLevel];
+      const p = v.proportion / 100;
+      const e = v.marginError / 100;
+      if (e === 0) {
+        return { primary: { label: "Sample size", value: "Undefined" }, secondary: [], note: "Margin of error can't be zero." };
+      }
+      const nInfinite = (z * z * p * (1 - p)) / (e * e);
+      let nFinal = nInfinite;
+      if (v.populationSize > 0) {
+        nFinal = nInfinite / (1 + (nInfinite - 1) / v.populationSize);
+      }
+      return {
+        primary: { label: "Required sample size", value: Math.ceil(nFinal).toLocaleString() },
+        secondary: [
+          { l: "Unadjusted (infinite population)", v: Math.ceil(nInfinite).toLocaleString() },
+          { l: "Z-score used", v: z },
+        ],
+        note: v.populationSize > 0 ? "Adjusted for a finite population using the finite population correction formula." : "For an unknown or very large population - enter a population size above to get a smaller, adjusted sample size for a finite group.",
+      };
+    },
+    faq: [
+      { q: "How is sample size calculated?", a: "n = (z² × p × (1−p)) / e², where z is the z-score for your confidence level, p is the estimated proportion (50% is the most conservative/largest assumption if unknown), and e is your margin of error as a decimal. Higher confidence and lower margin of error both increase the required sample size." },
+      { q: "Why use 50% for the estimated proportion if I don't know it?", a: "50% produces the largest possible required sample size (p×(1−p) is maximized at p=0.5), so it's the safe, conservative default when you have no prior estimate - using it guarantees your sample is large enough regardless of the true proportion." },
+      { q: "How does population size affect the required sample size?", a: "For very large or unknown populations, sample size depends only on confidence level and margin of error, not population size. For a known, finite population, the finite population correction reduces the required sample size somewhat, since sampling a larger fraction of a smaller population reduces uncertainty faster." },
+    ],
+    related: ["standard-deviation-calculator", "percentage-calculator", "average-calculator"],
   },
   {
     id: "gas-trip-cost-calculator",
