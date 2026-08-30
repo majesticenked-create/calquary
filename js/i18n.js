@@ -483,6 +483,7 @@ const I18N_TOOLS = {
         { q: "¿Cómo hallo qué porcentaje representa un número de otro?", a: "Divide la parte entre el total y multiplica por 100. Por ejemplo, ¿30 qué porcentaje es de 150? 30 ÷ 150 × 100 = 20%." },
         { q: "¿Cómo calculo un aumento o una disminución porcentual?", a: "Resta el valor antiguo del nuevo valor, divide entre el valor antiguo y multiplica por 100. Pasar de 150 a 180 es (180−150)/150×100 = 20% de aumento; pasar de 150 a 120 es (120−150)/150×100 = −20%, una disminución del 20%." },
         { q: "¿Cómo hallo el precio original antes de aplicar un descuento porcentual?", a: "Divide el precio con descuento entre (1 menos el descuento en decimal). Si un artículo de $60 tiene un 25% de descuento, divide 60 entre 0,75 para obtener el precio original de $80." },
+        { q: "¿Cómo calculo un porcentaje de un porcentaje, como el 20% del 50%?", a: "Convierte ambos porcentajes a decimales y multiplícalos entre sí, luego vuelve a convertir a porcentaje: el 20% del 50% es 0,20 × 0,50 = 0,10, o 10%. Esto surge al combinar tasas, como un descuento aplicado sobre un precio ya rebajado, o una tasa de impuesto aplicada a una cantidad parcial." },
       ],
     },
     fr: {
@@ -494,6 +495,7 @@ const I18N_TOOLS = {
         { q: "Comment trouver quel pourcentage un nombre représente d'un autre ?", a: "Divisez la partie par le tout, puis multipliez par 100. Par exemple, 30 représente quel pourcentage de 150 ? 30 ÷ 150 × 100 = 20%." },
         { q: "Comment calculer une augmentation ou une diminution en pourcentage ?", a: "Soustrayez l'ancienne valeur de la nouvelle, divisez par l'ancienne valeur, puis multipliez par 100. Passer de 150 à 180 donne (180−150)/150×100 = 20 % d'augmentation ; passer de 150 à 120 donne (120−150)/150×100 = −20 %, soit une diminution de 20 %." },
         { q: "Comment trouver le prix d'origine avant l'application d'une remise en pourcentage ?", a: "Divisez le prix soldé par (1 moins la remise en décimal). Pour un article à 60 $ avec 25 % de remise, divisez 60 par 0,75 pour obtenir le prix d'origine de 80 $." },
+        { q: "Comment calculer un pourcentage d'un pourcentage, comme 20 % de 50 % ?", a: "Convertissez les deux pourcentages en décimales et multipliez-les entre eux, puis reconvertissez en pourcentage : 20 % de 50 % équivaut à 0,20 × 0,50 = 0,10, soit 10 %. Cela arrive lorsqu'on combine des taux - comme une remise appliquée sur un prix déjà réduit, ou un taux de taxe appliqué à un montant partiel." },
       ],
     },
     de: {
@@ -505,6 +507,7 @@ const I18N_TOOLS = {
         { q: "Wie finde ich heraus, wie viel Prozent eine Zahl von einer anderen ist?", a: "Teilen Sie den Teil durch das Ganze und multiplizieren Sie mit 100. Beispiel: Wie viel Prozent von 150 sind 30? 30 ÷ 150 × 100 = 20%." },
         { q: "Wie berechne ich eine prozentuale Zu- oder Abnahme?", a: "Ziehen Sie den alten Wert vom neuen Wert ab, teilen Sie durch den alten Wert und multiplizieren Sie mit 100. Von 150 auf 180 ergibt (180−150)/150×100 = 20 % Zunahme; von 150 auf 120 ergibt (120−150)/150×100 = −20 %, also eine Abnahme von 20 %." },
         { q: "Wie finde ich den ursprünglichen Preis vor einem prozentualen Rabatt?", a: "Teilen Sie den reduzierten Preis durch (1 minus den Rabatt als Dezimalzahl). Bei einem Artikel für 60 $ mit 25 % Rabatt teilen Sie 60 durch 0,75, um den ursprünglichen Preis von 80 $ zu erhalten." },
+        { q: "Wie berechne ich einen Prozentsatz eines Prozentsatzes, z. B. 20 % von 50 %?", a: "Wandeln Sie beide Prozentsätze in Dezimalzahlen um und multiplizieren Sie sie miteinander, dann rechnen Sie zurück in Prozent: 20 % von 50 % sind 0,20 × 0,50 = 0,10, also 10 %. Das kommt vor, wenn Sie Sätze kombinieren - etwa einen Rabatt auf einen bereits reduzierten Preis oder einen Steuersatz auf einen Teilbetrag." },
       ],
     },
     pt: {
@@ -516,6 +519,7 @@ const I18N_TOOLS = {
         { q: "Como descubro que porcentagem um número representa de outro?", a: "Divida a parte pelo todo e multiplique por 100. Por exemplo, 30 é que porcentagem de 150? 30 ÷ 150 × 100 = 20%." },
         { q: "Como calculo um aumento ou diminuição percentual?", a: "Subtraia o valor antigo do novo valor, divida pelo valor antigo e multiplique por 100. Ir de 150 para 180 é (180−150)/150×100 = 20% de aumento; ir de 150 para 120 é (120−150)/150×100 = −20%, uma diminuição de 20%." },
         { q: "Como encontro o preço original antes de aplicar um desconto percentual?", a: "Divida o preço com desconto por (1 menos o desconto em decimal). Se um item de $60 tem 25% de desconto, divida 60 por 0,75 para obter o preço original de $80." },
+        { q: "Como calculo uma porcentagem de uma porcentagem, como 20% de 50%?", a: "Converta as duas porcentagens em decimais e multiplique-as entre si, depois converta de volta para porcentagem: 20% de 50% é 0,20 × 0,50 = 0,10, ou 10%. Isso surge ao combinar taxas - como um desconto aplicado sobre um preço já reduzido, ou uma taxa de imposto aplicada sobre um valor parcial." },
       ],
     },
     it: {
@@ -527,6 +531,7 @@ const I18N_TOOLS = {
         { q: "Come trovo che percentuale rappresenta un numero rispetto a un altro?", a: "Dividi la parte per il totale, poi moltiplica per 100. Ad esempio, 30 che percentuale è di 150? 30 ÷ 150 × 100 = 20%." },
         { q: "Come calcolo un aumento o una diminuzione percentuale?", a: "Sottrai il vecchio valore dal nuovo valore, dividi per il vecchio valore, poi moltiplica per 100. Passare da 150 a 180 è (180−150)/150×100 = 20% di aumento; passare da 150 a 120 è (120−150)/150×100 = −20%, una diminuzione del 20%." },
         { q: "Come trovo il prezzo originale prima di applicare uno sconto percentuale?", a: "Dividi il prezzo scontato per (1 meno lo sconto in decimale). Per un articolo da $60 con il 25% di sconto, dividi 60 per 0,75 per ottenere il prezzo originale di $80." },
+        { q: "Come calcolo una percentuale di una percentuale, come il 20% del 50%?", a: "Converti entrambe le percentuali in decimali e moltiplicale tra loro, poi riconverti in percentuale: il 20% del 50% è 0,20 × 0,50 = 0,10, ovvero il 10%. Questo capita quando si combinano tassi - come uno sconto applicato su un prezzo già ridotto, o un'aliquota fiscale applicata a un importo parziale." },
       ],
     },
     ja: {
@@ -538,6 +543,7 @@ const I18N_TOOLS = {
         { q: "ある数が別の数の何パーセントかを求める方法は？", a: "部分を全体で割り、100を掛けます。例えば、30は150の何パーセントですか？30 ÷ 150 × 100 = 20%。" },
         { q: "パーセントの増加や減少はどのように計算しますか？", a: "新しい値から元の値を引き、元の値で割ってから100を掛けます。150から180への変化は(180−150)/150×100 = 20%の増加、150から120への変化は(120−150)/150×100 = −20%、つまり20%の減少です。" },
         { q: "割引後の価格から元の価格を求めるにはどうすればいいですか？", a: "割引後の価格を「1 − 割引率（小数）」で割ります。60ドルの商品が25%オフの場合、60を0.75で割ると元の価格80ドルになります。" },
+        { q: "20%の50%のような「パーセントのパーセント」はどう計算しますか？", a: "両方のパーセントを小数に変換して掛け合わせ、結果を再びパーセントに戻します。20%の50%は0.20 × 0.50 = 0.10、つまり10%です。これは、すでに割引された価格にさらに割引を適用する場合や、一部の金額に税率を適用する場合など、率を組み合わせるときに使います。" },
       ],
     },
   },
@@ -1035,6 +1041,8 @@ const I18N_TOOLS = {
         { q: "¿Qué se considera un rango de IMC saludable?", a: "18,5-24,9 se clasifica generalmente como rango saludable, menos de 18,5 como bajo peso, 25-29,9 como sobrepeso y 30+ como el rango de obesidad - pero estos límites son promedios poblacionales, no veredictos individuales de salud." },
         { q: "¿El IMC se aplica igual a niños que a adultos?", a: "No: esta calculadora usa la fórmula de IMC para adultos y los rangos saludables para adultos; los niños y adolescentes necesitan percentiles de tablas de crecimiento específicos por edad y sexo, ya que la composición corporal saludable cambia significativamente durante el desarrollo infantil." },
         { q: "¿En qué se diferencia el IMC del porcentaje de grasa corporal?", a: "El IMC solo usa la altura y el peso, por lo que no puede distinguir el músculo de la grasa - una persona muy musculosa puede mostrar un IMC alto sin exceso de grasa corporal. El porcentaje de grasa corporal mide directamente la parte de grasa de tu cuerpo y ofrece una imagen más precisa de la composición corporal que el IMC por sí solo." },
+        { q: "¿Cómo se calcula el IMC, y es lo mismo que el 'índice de peso corporal'?", a: "Para calcular el IMC a mano: divide tu peso en kilogramos entre tu altura en metros al cuadrado. \"Índice de peso corporal\" es una variante informal de la misma búsqueda - se refiere al mismo cálculo del índice de masa corporal (IMC), no a una métrica distinta." },
+        { q: "¿'Calculadora de índice corporal', 'calculadora de índice de masa' y 'calculadora de biomasa' son lo mismo que el IMC?", a: "Sí - todas estas son variantes informales o mal recordadas de la misma búsqueda: índice de masa corporal (IMC). Esta calculadora calcula el IMC estándar a partir de la altura y el peso, sin importar con cuál de estas frases la hayas encontrado." },
       ],
     },
     fr: {
@@ -1046,6 +1054,8 @@ const I18N_TOOLS = {
         { q: "Quelle est la plage d'IMC considérée comme saine ?", a: "18,5-24,9 est généralement classé comme la plage saine, moins de 18,5 comme insuffisance pondérale, 25-29,9 comme surpoids, et 30+ comme la plage d'obésité - mais ces seuils sont des moyennes de population, pas des verdicts de santé individuels." },
         { q: "L'IMC s'applique-t-il de la même façon aux enfants qu'aux adultes ?", a: "Non - cette calculatrice utilise la formule d'IMC pour adultes et les seuils sains pour adultes ; les enfants et adolescents ont besoin de percentiles de courbes de croissance spécifiques à l'âge et au sexe, car la composition corporelle saine évolue considérablement au cours du développement de l'enfant." },
         { q: "En quoi l'IMC diffère-t-il du pourcentage de masse grasse ?", a: "L'IMC n'utilise que la taille et le poids, il ne peut donc pas distinguer le muscle de la graisse - une personne très musclée peut afficher un IMC élevé sans excès de graisse corporelle. Le pourcentage de masse grasse mesure directement la part de graisse du corps et donne une image plus précise de la composition corporelle que l'IMC seul." },
+        { q: "Comment calculer l'IMC, et « indice de poids corporel » est-il la même chose ?", a: "Pour calculer l'IMC à la main : divisez votre poids en kilogrammes par votre taille en mètres au carré. « Indice de poids corporel » est une variante informelle de la même recherche - elle désigne le même calcul de l'indice de masse corporelle (IMC), pas une mesure distincte." },
+        { q: "« Calculatrice d'indice corporel », « calculatrice d'indice de masse » et « calculatrice de biomasse » sont-elles la même chose que l'IMC ?", a: "Oui - ce sont toutes des variantes informelles ou mal mémorisées de la même recherche : l'indice de masse corporelle (IMC). Cette calculatrice calcule l'IMC standard à partir de la taille et du poids, quelle que soit la formulation utilisée pour la trouver." },
       ],
     },
     de: {
@@ -1057,6 +1067,8 @@ const I18N_TOOLS = {
         { q: "Was gilt als gesunder BMI-Bereich?", a: "18,5-24,9 gilt allgemein als gesunder Bereich, unter 18,5 als Untergewicht, 25-29,9 als Übergewicht und 30+ als Adipositas-Bereich - diese Grenzwerte sind jedoch Bevölkerungsdurchschnitte, keine individuellen Gesundheitsurteile." },
         { q: "Gilt der BMI für Kinder genauso wie für Erwachsene?", a: "Nein - dieser Rechner verwendet die BMI-Formel und die gesunden Bereichsgrenzen für Erwachsene; Kinder und Jugendliche benötigen stattdessen alters- und geschlechtsspezifische Perzentile aus Wachstumskurven, da sich eine gesunde Körperzusammensetzung während der Kindheit deutlich verändert." },
         { q: "Wie unterscheidet sich der BMI vom Körperfettanteil?", a: "Der BMI berücksichtigt nur Größe und Gewicht und kann daher nicht zwischen Muskeln und Fett unterscheiden - eine sehr muskulöse Person kann einen hohen BMI aufweisen, ohne überschüssiges Körperfett zu haben. Der Körperfettanteil misst den Fettanteil des Körpers direkt und gibt ein genaueres Bild der Körperzusammensetzung als der BMI allein." },
+        { q: "Wie berechne ich den BMI, und ist 'Körpergewichtsindex' dasselbe?", a: "So berechnen Sie den BMI von Hand: teilen Sie Ihr Gewicht in Kilogramm durch Ihre Größe in Metern zum Quadrat. „Körpergewichtsindex“ ist eine informelle Variante derselben Suche - sie bezieht sich auf dieselbe Body-Mass-Index-Berechnung (BMI), nicht auf eine eigene Kennzahl." },
+        { q: "Sind 'Körperindex-Rechner', 'Massenindex-Rechner' und 'Biomasse-Index-Rechner' dasselbe wie der BMI?", a: "Ja - das sind alles informelle oder falsch erinnerte Varianten derselben Suche: Body-Mass-Index (BMI). Dieser Rechner berechnet den Standard-BMI aus Größe und Gewicht, unabhängig davon, mit welcher dieser Formulierungen Sie ihn gefunden haben." },
       ],
     },
     pt: {
@@ -1068,6 +1080,8 @@ const I18N_TOOLS = {
         { q: "O que é considerado uma faixa de IMC saudável?", a: "18,5-24,9 é geralmente classificado como a faixa saudável, abaixo de 18,5 como abaixo do peso, 25-29,9 como sobrepeso e 30+ como a faixa de obesidade - mas esses limites são médias populacionais, não veredictos individuais de saúde." },
         { q: "O IMC se aplica da mesma forma a crianças e adultos?", a: "Não - esta calculadora usa a fórmula de IMC para adultos e as faixas saudáveis para adultos; crianças e adolescentes precisam de percentis de curvas de crescimento específicos por idade e sexo, já que a composição corporal saudável muda significativamente ao longo do desenvolvimento infantil." },
         { q: "Como o IMC é diferente do percentual de gordura corporal?", a: "O IMC usa apenas altura e peso, então não consegue distinguir músculo de gordura - uma pessoa muito musculosa pode apresentar um IMC alto sem excesso de gordura corporal. O percentual de gordura corporal mede diretamente a parte de gordura do corpo e oferece um retrato mais preciso da composição corporal do que o IMC sozinho." },
+        { q: "Como calculo o IMC, e 'índice de peso corporal' é a mesma coisa?", a: "Para calcular o IMC manualmente: divida seu peso em quilogramas pela sua altura em metros ao quadrado. \"Índice de peso corporal\" é uma variante informal da mesma busca - refere-se ao mesmo cálculo do índice de massa corporal (IMC), não a uma métrica separada." },
+        { q: "'Calculadora de índice corporal', 'calculadora de índice de massa' e 'calculadora de biomassa' são a mesma coisa que o IMC?", a: "Sim - todas essas são variantes informais ou mal lembradas da mesma busca: índice de massa corporal (IMC). Esta calculadora calcula o IMC padrão a partir da altura e do peso, independentemente de qual dessas expressões você usou para encontrá-la." },
       ],
     },
     it: {
@@ -1079,6 +1093,8 @@ const I18N_TOOLS = {
         { q: "Cosa si considera un intervallo di IMC sano?", a: "18,5-24,9 è generalmente classificato come l'intervallo sano, sotto 18,5 come sottopeso, 25-29,9 come sovrappeso e 30+ come l'intervallo dell'obesità - ma queste soglie sono medie di popolazione, non verdetti di salute individuali." },
         { q: "L'IMC si applica allo stesso modo a bambini e adulti?", a: "No - questa calcolatrice utilizza la formula dell'IMC per adulti e gli intervalli sani per adulti; bambini e adolescenti necessitano invece di percentili delle curve di crescita specifici per età e sesso, poiché la composizione corporea sana cambia significativamente durante lo sviluppo infantile." },
         { q: "In cosa si differenzia l'IMC dalla percentuale di grasso corporeo?", a: "L'IMC utilizza solo altezza e peso, quindi non riesce a distinguere il muscolo dal grasso - una persona molto muscolosa può avere un IMC alto senza eccesso di grasso corporeo. La percentuale di grasso corporeo misura direttamente la parte grassa del corpo e offre un quadro più accurato della composizione corporea rispetto al solo IMC." },
+        { q: "Come si calcola l'IMC, e 'indice di peso corporeo' è la stessa cosa?", a: "Per calcolare l'IMC a mano: dividi il tuo peso in chilogrammi per la tua altezza in metri al quadrato. \"Indice di peso corporeo\" è una variante informale della stessa ricerca - si riferisce allo stesso calcolo dell'indice di massa corporea (IMC), non a una misura distinta." },
+        { q: "'Calcolatrice indice corporeo', 'calcolatrice indice di massa' e 'calcolatrice biomassa' sono la stessa cosa dell'IMC?", a: "Sì - sono tutte varianti informali o ricordate male della stessa ricerca: indice di massa corporea (IMC). Questa calcolatrice calcola l'IMC standard da altezza e peso, indipendentemente da quale di queste espressioni tu abbia usato per trovarla." },
       ],
     },
     ja: {
@@ -1090,6 +1106,8 @@ const I18N_TOOLS = {
         { q: "健康的なBMIの範囲は？", a: "一般的に18.5〜24.9が健康的な範囲、18.5未満はやせすぎ、25〜29.9は肥満（軽度）、30以上は肥満の範囲とされていますが、これらは集団の平均値であり、個人の健康を判定するものではありません。" },
         { q: "BMIは子どもにも大人と同じように当てはまりますか？", a: "いいえ。この計算機は大人用のBMI計算式と健康範囲の基準を使用しています。子どもや青少年には、年齢・性別ごとの成長曲線パーセンタイルが必要です。これは、健やかな体組成が子どもの発達過程で大きく変化するためです。" },
         { q: "BMIと体脂肪率はどう違いますか？", a: "BMIは身長と体重だけを使うため、筋肉と脂肪を区別できません。筋肉量の多い人は体脂肪が少なくてもBMIが高く出ることがあります。体脂肪率は体の脂肪部分を直接測定するため、BMIだけよりも体組成をより正確に把握できます。" },
+        { q: "BMIはどう計算しますか？「体重指数」も同じものですか？", a: "BMIを手計算するには、体重（キログラム）を身長（メートル）の2乗で割ります。「体重指数」は同じ検索の非公式な言い方で、別の指標ではなく同じ体格指数（BMI）の計算を指しています。" },
+        { q: "「身体指数計算機」「質量指数計算機」「バイオマス指数計算機」もBMIと同じものですか？", a: "はい。これらはすべて体格指数（BMI）を指す非公式な、あるいは記憶違いによる言い方です。この計算機はどの言い方で検索してたどり着いた場合でも、身長と体重から標準的なBMIを計算します。" },
       ],
     },
   },
