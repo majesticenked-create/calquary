@@ -2948,6 +2948,37 @@ const CALCULATORS = [
     related: ["bmi-calculator", "heart-rate-zone-calculator", "days-until-calculator"],
   },
   {
+    id: "steps-to-miles-calculator",
+    category: "health",
+    title: "Steps to Miles Calculator",
+    keyword: "steps to miles calculator",
+    description: "Convert a step count into distance walked, based on your stride length.",
+    intro: "Enter a step count and your stride length (or use the average default) to convert steps into miles and kilometers.",
+    fields: [
+      { id: "steps", label: "Steps", type: "number", default: 10000, step: 100 },
+      { id: "strideFeet", label: "Stride length", type: "number", unit: "feet", default: 2.5, step: 0.1 },
+    ],
+    compute: (v) => {
+      const totalFeet = v.steps * v.strideFeet;
+      const miles = totalFeet / 5280;
+      const km = (totalFeet * 0.3048) / 1000;
+      return {
+        primary: { label: "Distance", value: `${round(miles, 2)} miles` },
+        secondary: [
+          { l: "Kilometers", v: round(km, 2) },
+          { l: "Total feet", v: Math.round(totalFeet).toLocaleString() },
+        ],
+        note: "Stride length varies by height and walking speed - 2.5 feet is a commonly used average for adults, but measuring your own gives a more accurate result.",
+      };
+    },
+    faq: [
+      { q: "How many miles is 10,000 steps?", a: "About 4.7-5 miles at an average stride length of 2.5 feet (10,000 × 2.5 ÷ 5,280 ≈ 4.73 miles) - this is why \"10,000 steps ≈ 5 miles\" is a commonly cited rule of thumb, though your actual distance depends on your stride length." },
+      { q: "How do I measure my own stride length?", a: "Walk a known distance (like 100 feet) counting your steps, then divide the distance by the step count - or use your height as a rough estimate: stride length is typically about 0.4-0.45 times your height in inches, converted to feet." },
+      { q: "Does stride length differ between walking and running?", a: "Yes - running strides are typically longer than walking strides for the same person, since running involves a greater push-off and airborne phase. Use a shorter stride estimate for walking-based step counts and adjust upward if you're converting running steps." },
+    ],
+    related: ["pace-calculator", "unit-length-converter", "calorie-calculator"],
+  },
+  {
     id: "speed-distance-time-calculator",
     category: "math",
     title: "Speed, Distance & Time Calculator",
