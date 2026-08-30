@@ -400,7 +400,7 @@ const CALCULATORS = [
     title: "Mortgage Calculator",
     keyword: "mortgage calculator",
     description: "Free mtg (mortgage) calculator - estimate your total monthly mortgage payment, including taxes and insurance.",
-    intro: "Enter your home price, down payment, rate, and term to estimate your full monthly payment - principal, interest, property tax, and insurance.",
+    intro: "Also known as a home loan calculator: enter your home price, down payment, rate, and term to estimate your full monthly payment - principal, interest, property tax, and insurance.",
     fields: [
       { id: "homePrice", label: "Home price", type: "number", unit: "$", default: 350000, step: 1000 },
       { id: "downPaymentPercent", label: "Down payment", type: "number", unit: "%", default: 20, step: 1 },
@@ -435,6 +435,7 @@ const CALCULATORS = [
       { q: "What happens to my payment if I refinance to a lower rate later?", a: "Refinancing recalculates your loan from the new balance, rate, and remaining term - even a 1% rate drop meaningfully lowers the interest portion of each payment, though closing costs on the new loan need to be weighed against the savings." },
       { q: "How does the loan term affect total interest paid?", a: "A shorter term (like 15 years vs. 30) means higher monthly payments but far less total interest, since you're paying down principal faster and it has less time to accrue interest. A 30-year loan lowers the monthly payment but often costs more than double the total interest of the same loan at 15 years." },
       { q: "What does 'mtg' mean in mtg calculator or mtg payment?", a: "'Mtg' is a common shorthand for 'mortgage' used in real estate listings, loan documents, and search queries - an mtg calculator is the same thing as a mortgage calculator. This tool covers both: enter your home price, down payment, rate, and term to estimate your monthly mtg payment." },
+      { q: "Is a home loan calculator the same as a mortgage calculator?", a: "Yes - \"home loan\" and \"mortgage\" refer to the same type of loan used to buy a house, so a home loan calculator and a mortgage calculator do the same job. This tool estimates your full monthly payment (principal, interest, taxes, and insurance) whichever term you search for." },
     ],
     related: ["loan-calculator", "savings-calculator", "compound-interest-calculator"],
   },
