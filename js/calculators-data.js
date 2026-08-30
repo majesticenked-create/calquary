@@ -3806,6 +3806,7 @@ const CALCULATORS = [
       { q: "What is 73°F in Celsius?", a: "About 22.8°C - (73−32)×5/9 = 41×5/9 ≈ 22.78°C, a comfortable room temperature." },
       { q: "What is 43°F in Celsius?", a: "About 6.1°C - (43−32)×5/9 = 11×5/9 ≈ 6.11°C, just above refrigerator temperature." },
       { q: "What is 43°C in Fahrenheit?", a: "109.4°F - multiply by 9/5 and add 32: 43×9/5+32 = 77.4+32 = 109.4°F, a high fever range if referring to body temperature (though a healthy human body temperature never actually reaches 43°C)." },
+      { q: "What is 73°C in Fahrenheit?", a: "163.4°F - multiply by 9/5 and add 32: 73×9/5+32 = 131.4+32 = 163.4°F." },
     ],
     related: ["weight-converter", "volume-converter", "unit-length-converter"],
   },
