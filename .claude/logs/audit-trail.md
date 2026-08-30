@@ -548,3 +548,5 @@
 - `2026-08-30 12:06:48` | Edit | js/i18n.js
 - `2026-08-30 12:13:33` | Edit | _templates/index.template.html
 - `2026-08-30 12:13:49` | Edit | _templates/index.template.html
+- `2026-08-30 13:50:53` | Edit | js/calculators-data.js
+- `2026-08-30 13:51:15` | Edit | js/calculators-data.js

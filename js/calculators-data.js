@@ -399,7 +399,7 @@ const CALCULATORS = [
     category: "finance",
     title: "Mortgage Calculator",
     keyword: "mortgage calculator",
-    description: "Estimate your total monthly mortgage payment, including taxes and insurance.",
+    description: "Free mtg (mortgage) calculator - estimate your total monthly mortgage payment, including taxes and insurance.",
     intro: "Enter your home price, down payment, rate, and term to estimate your full monthly payment - principal, interest, property tax, and insurance.",
     fields: [
       { id: "homePrice", label: "Home price", type: "number", unit: "$", default: 350000, step: 1000 },
@@ -434,6 +434,7 @@ const CALCULATORS = [
       { q: "How does down payment affect my monthly payment?", a: "A larger down payment reduces your loan amount, which lowers both the principal & interest portion of your payment and your total interest paid over the loan term." },
       { q: "What happens to my payment if I refinance to a lower rate later?", a: "Refinancing recalculates your loan from the new balance, rate, and remaining term - even a 1% rate drop meaningfully lowers the interest portion of each payment, though closing costs on the new loan need to be weighed against the savings." },
       { q: "How does the loan term affect total interest paid?", a: "A shorter term (like 15 years vs. 30) means higher monthly payments but far less total interest, since you're paying down principal faster and it has less time to accrue interest. A 30-year loan lowers the monthly payment but often costs more than double the total interest of the same loan at 15 years." },
+      { q: "What does 'mtg' mean in mtg calculator or mtg payment?", a: "'Mtg' is a common shorthand for 'mortgage' used in real estate listings, loan documents, and search queries - an mtg calculator is the same thing as a mortgage calculator. This tool covers both: enter your home price, down payment, rate, and term to estimate your monthly mtg payment." },
     ],
     related: ["loan-calculator", "savings-calculator", "compound-interest-calculator"],
   },
