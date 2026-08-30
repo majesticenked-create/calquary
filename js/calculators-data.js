@@ -190,6 +190,7 @@ const CALCULATORS = [
       { q: "What are the first 10 digits of pi?", a: "3.141592653 - pi is an irrational number, so its decimal digits never terminate or repeat, but the sequence is precisely known and verified to trillions of digits by mathematicians and computer scientists." },
       { q: "Why does pi have infinite digits?", a: "Pi is irrational, meaning it can't be expressed as a simple fraction of two integers - a mathematical proof (first given by Johann Lambert in 1761) shows its decimal expansion never terminates or falls into a repeating pattern, unlike a fraction like 1/3 = 0.333..." },
       { q: "Do I need 100 digits of pi for real calculations?", a: "No - just 15-16 digits of pi (about what a standard calculator or programming language's floating-point number provides) is far more precision than needed for any real-world physical calculation, even at astronomical scales. Extra digits are mostly of interest for pure mathematics, computing benchmarks, and memorization records." },
+      { q: "How many digits does pi have?", a: "Infinitely many - since pi is irrational, its decimal expansion never ends or repeats. This calculator shows up to 100 of those digits; trillions more have been computed by supercomputers, though only a handful are useful for any real calculation." },
     ],
     related: ["square-root-calculator", "exponent-calculator", "random-number-generator"],
   },
@@ -1062,6 +1063,61 @@ const CALCULATORS = [
       { q: "What does it mean if a = 0 in this calculator?", a: "If a is 0, there's no x term left to solve for - the equation becomes just b = c. If that's true (like 5 = 5), every value of x satisfies it; if it's false (like 5 = 7), no value of x can, since the x term can't change the outcome." },
     ],
     related: ["system-of-equations-solver", "quadratic-formula-calculator", "ratio-calculator"],
+  },
+  {
+    id: "eigenvalue-calculator",
+    category: "math",
+    title: "Eigenvalue & Eigenvector Calculator (2x2)",
+    keyword: "eigenvalues and eigenvectors calculator",
+    description: "Calculate the eigenvalues and eigenvectors of a 2x2 matrix.",
+    intro: "Enter the four entries of a 2x2 matrix [[a, b], [c, d]] to calculate its eigenvalues and eigenvectors.",
+    fields: [
+      { id: "a", label: "a (row 1, col 1)", type: "number", default: 2, step: 0.1 },
+      { id: "b", label: "b (row 1, col 2)", type: "number", default: 1, step: 0.1 },
+      { id: "c", label: "c (row 2, col 1)", type: "number", default: 1, step: 0.1 },
+      { id: "d", label: "d (row 2, col 2)", type: "number", default: 2, step: 0.1 },
+    ],
+    compute: (v) => {
+      const trace = v.a + v.d;
+      const det = v.a * v.d - v.b * v.c;
+      const discriminant = trace * trace - 4 * det;
+
+      function eigenvector(lambda) {
+        if (v.b !== 0) return [round(v.b, 4), round(lambda - v.a, 4)];
+        if (v.c !== 0) return [round(lambda - v.d, 4), round(v.c, 4)];
+        return v.a === lambda ? [1, 0] : [0, 1];
+      }
+
+      if (discriminant >= 0) {
+        const sq = Math.sqrt(discriminant);
+        const l1 = (trace + sq) / 2;
+        const l2 = (trace - sq) / 2;
+        const v1 = eigenvector(l1);
+        const v2 = eigenvector(l2);
+        return {
+          primary: { label: "Eigenvalues", value: `λ₁ = ${round(l1, 4)}, λ₂ = ${round(l2, 4)}` },
+          secondary: [
+            { l: "Eigenvector for λ₁", v: `[${v1[0]}, ${v1[1]}]` },
+            { l: "Eigenvector for λ₂", v: `[${v2[0]}, ${v2[1]}]` },
+          ],
+          note: "Eigenvectors are shown as one valid direction (any nonzero multiple is also a valid eigenvector) - they aren't normalized to unit length.",
+        };
+      } else {
+        const realPart = trace / 2;
+        const imagPart = Math.sqrt(-discriminant) / 2;
+        return {
+          primary: { label: "Eigenvalues", value: `${round(realPart, 4)} ± ${round(imagPart, 4)}i` },
+          secondary: [{ l: "Trace", v: round(trace, 4) }, { l: "Determinant", v: round(det, 4) }],
+          note: "This matrix has complex eigenvalues (no real eigenvectors) - this happens for matrices that represent a rotation-like transformation.",
+        };
+      }
+    },
+    faq: [
+      { q: "How do I find eigenvalues of a 2x2 matrix?", a: "Solve det(A − λI) = 0, which for a 2x2 matrix [[a,b],[c,d]] simplifies to λ² − (a+d)λ + (ad−bc) = 0 - a quadratic equation in λ, using the matrix's trace (a+d) and determinant (ad−bc). This calculator applies that formula directly." },
+      { q: "How do I find the eigenvector once I have an eigenvalue?", a: "Solve (A − λI)v = 0 for the vector v - for a 2x2 matrix this reduces to one independent equation, since the system is singular by construction. This calculator solves that directly from the b or c entry and the eigenvalue." },
+      { q: "What does it mean if the eigenvalues are complex?", a: "Complex eigenvalues mean the matrix has no real eigenvectors - geometrically, this happens for matrices that rotate vectors (like a rotation matrix) rather than just stretching them along fixed directions, since a rotation has no direction that stays unchanged (except a 180° rotation)." },
+    ],
+    related: ["system-of-equations-solver", "quadratic-formula-calculator", "square-root-calculator"],
   },
   {
     id: "chemical-equation-balancer",
@@ -2711,6 +2767,54 @@ const CALCULATORS = [
     related: ["bmi-calculator", "heart-rate-zone-calculator", "days-until-calculator"],
   },
   {
+    id: "speed-distance-time-calculator",
+    category: "math",
+    title: "Speed, Distance & Time Calculator",
+    keyword: "speed distance time calculator",
+    description: "Solve for speed, distance, or time using speed = distance / time - enter any two to find the third.",
+    intro: "Choose which value to solve for, then enter the other two - speed, distance, and time are all connected by speed = distance / time.",
+    fields: [
+      { id: "solveFor", label: "Solve for", type: "select", default: "speed", options: [
+        { v: "speed", l: "Speed" }, { v: "distance", l: "Distance" }, { v: "time", l: "Time" },
+      ] },
+      { id: "distance", label: "Distance", type: "number", default: 120, step: 0.1 },
+      { id: "time", label: "Time", type: "number", unit: "hours", default: 2, step: 0.1 },
+      { id: "speed", label: "Speed", type: "number", unit: "per hour", default: 60, step: 0.1 },
+    ],
+    compute: (v) => {
+      if (v.solveFor === "speed") {
+        if (v.time === 0) return { primary: { label: "Speed", value: "Undefined" }, secondary: [], note: "Time can't be zero." };
+        const speed = v.distance / v.time;
+        return {
+          primary: { label: "Speed", value: round(speed, 4) },
+          secondary: [{ l: "Distance", v: v.distance }, { l: "Time", v: `${v.time} hours` }],
+          note: `speed = distance ÷ time = ${v.distance} ÷ ${v.time} = ${round(speed, 4)}`,
+        };
+      } else if (v.solveFor === "distance") {
+        const distance = v.speed * v.time;
+        return {
+          primary: { label: "Distance", value: round(distance, 4) },
+          secondary: [{ l: "Speed", v: v.speed }, { l: "Time", v: `${v.time} hours` }],
+          note: `distance = speed × time = ${v.speed} × ${v.time} = ${round(distance, 4)}`,
+        };
+      } else {
+        if (v.speed === 0) return { primary: { label: "Time", value: "Undefined" }, secondary: [], note: "Speed can't be zero." };
+        const time = v.distance / v.speed;
+        return {
+          primary: { label: "Time", value: `${round(time, 4)} hours` },
+          secondary: [{ l: "Distance", v: v.distance }, { l: "Speed", v: v.speed }],
+          note: `time = distance ÷ speed = ${v.distance} ÷ ${v.speed} = ${round(time, 4)} hours`,
+        };
+      }
+    },
+    faq: [
+      { q: "What's the formula connecting speed, distance, and time?", a: "Speed = distance ÷ time. Rearranged, distance = speed × time, and time = distance ÷ speed - all three formulas describe the same relationship, just solved for a different variable." },
+      { q: "How do I calculate speed if I know distance and time?", a: "Divide distance by time. A trip covering 120 miles in 2 hours averages 120 ÷ 2 = 60 mph." },
+      { q: "Do the units need to match, like miles and hours?", a: "Yes - this calculator doesn't convert units, so make sure distance and speed use the same unit (both miles or both km) and time is in hours to get a correctly-scaled result. Use the unit length converter first if your distance is in a different unit than your speed." },
+    ],
+    related: ["pace-calculator", "unit-length-converter", "fuel-economy-converter"],
+  },
+  {
     id: "pregnancy-due-date-calculator",
     category: "health",
     title: "Pregnancy Due Date Calculator",
@@ -3665,6 +3769,7 @@ const CALCULATORS = [
       { q: "A cup is how many grams?", a: "It depends entirely on the ingredient, since a cup measures volume and grams measure weight - select your ingredient above (flour, sugar, butter, or brown sugar) to see its specific grams-per-cup figure." },
       { q: "How many grams is 1/2 cup?", a: "Enter 0.5 in the cups field above - for example, 1/2 cup of flour is about 60g, while 1/2 cup of butter is about 113.5g, since the per-cup weight varies by ingredient density." },
       { q: "How many grams are in 1 1/2 cups of sugar?", a: "About 300g for granulated sugar - enter 1.5 in the cups field with sugar selected above (200g per cup × 1.5 = 300g)." },
+      { q: "How many grams is 2 1/2 cups?", a: "It depends on the ingredient - enter 2.5 in the cups field above with your ingredient selected. For flour that's about 300g, and for sugar it's about 500g, since the per-cup weight varies by density." },
       { q: "How many grams is 1 cup, in general?", a: "There's no single answer without knowing the ingredient - it ranges from about 120g (flour) to 227g (butter) per cup for the ingredients this calculator covers, since denser ingredients pack more weight into the same volume." },
       { q: "Why do recipes from different countries use different measurement systems?", a: "The US primarily uses volume-based cup and spoon measurements, while most of the rest of the world uses weight-based metric measurements (grams), which are more precise for baking since ingredient density varies. This converter bridges the two so you can follow a recipe written in either system." },
     ],
@@ -4021,6 +4126,7 @@ const CALCULATORS = [
       { q: "Can I generate multiple random numbers at once?", a: "Yes - set 'how many numbers' to any value up to 50 to generate a list of random numbers within your chosen range in one click." },
       { q: "Can I exclude specific numbers from the random range?", a: "This calculator generates uniformly from the full range you specify (minimum to maximum); to exclude specific values, generate a number and simply re-roll if it matches an excluded value, or narrow the range if the excluded values are all at one end." },
       { q: "Is a 'randomness generator' the same as this random number generator?", a: "Yes - \"randomness generator\" is just another way of describing a tool that produces random numbers, which is exactly what this calculator does within whatever range and count you set." },
+      { q: "Is an 'integer random generator' different from this tool?", a: "No - this calculator already generates whole numbers (integers) within your chosen range by default, so an \"integer random generator\" search is asking for exactly what this tool provides." },
       { q: "Can I use this for a raffle or giveaway drawing?", a: "Yes - this generator is well-suited for informal drawings like picking a raffle winner or random giveaway entry from a numbered list. For anything with legal or regulatory requirements around fairness (like a licensed lottery), use a certified random number source instead." },
     ],
     related: ["password-generator", "word-counter", "gcd-lcm-calculator"],

@@ -325,6 +325,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/linear-equation-solver.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/eigenvalue-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/eigenvalue-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/eigenvalue-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/chemical-equation-balancer.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/chemical-equation-balancer.html"/>
@@ -611,6 +617,12 @@
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/pace-calculator.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/pace-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/speed-distance-time-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/speed-distance-time-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/speed-distance-time-calculator.html"/>
   </url>
   <url>
     <loc>https://calquary.com/tool/pregnancy-due-date-calculator.html</loc>

@@ -4,23 +4,23 @@
   <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Digits of Pi Calculator | Calquary</title>
-  <meta name="description" content="Show pi (π) to a chosen number of decimal digits, up to 100." />
-  <meta property="og:title" content="Digits of Pi Calculator | Calquary">
-  <meta property="og:description" content="Show pi (π) to a chosen number of decimal digits, up to 100.">
+  <title>Speed, Distance & Time Calculator | Calquary</title>
+  <meta name="description" content="Solve for speed, distance, or time using speed = distance / time - enter any two to find the third." />
+  <meta property="og:title" content="Speed, Distance &amp; Time Calculator | Calquary">
+  <meta property="og:description" content="Solve for speed, distance, or time using speed = distance / time - enter any two to find the third.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://calquary.com/tool/pi-digits-calculator.html">
+  <meta property="og:url" content="https://calquary.com/tool/speed-distance-time-calculator.html">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Calquary">
-  <meta property="og:image" content="https://calquary.com/og-images/pi-digits-calculator.png">
+  <meta property="og:image" content="https://calquary.com/og-images/speed-distance-time-calculator.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Digits of Pi Calculator | Calquary">
-  <meta name="twitter:description" content="Show pi (π) to a chosen number of decimal digits, up to 100.">
-  <meta name="twitter:image" content="https://calquary.com/og-images/pi-digits-calculator.png">
-    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/pi-digits-calculator.html">
-  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/pi-digits-calculator.html">
+  <meta name="twitter:title" content="Speed, Distance &amp; Time Calculator | Calquary">
+  <meta name="twitter:description" content="Solve for speed, distance, or time using speed = distance / time - enter any two to find the third.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/speed-distance-time-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/speed-distance-time-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/speed-distance-time-calculator.html">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -46,7 +46,7 @@
       // still JS-driven here is the interactive calculator widget itself
       // (fields/compute/results) and the related-tools list, neither of
       // which is static SEO prose.
-      const calc = getCalculator("pi-digits-calculator");
+      const calc = getCalculator("speed-distance-time-calculator");
 
       const relWrap = document.getElementById("related-list");
       calc.related.forEach((relId) => {
@@ -57,7 +57,7 @@
         relWrap.appendChild(li);
       });
 
-      initCalculator("pi-digits-calculator");
+      initCalculator("speed-distance-time-calculator");
     });
   </script>
   <script type="application/ld+json">
@@ -66,11 +66,11 @@
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "Digits of Pi Calculator",
-      "description": "Show pi (π) to a chosen number of decimal digits, up to 100.",
+      "name": "Speed, Distance & Time Calculator",
+      "description": "Solve for speed, distance, or time using speed = distance / time - enter any two to find the third.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
-      "url": "https://calquary.com/tool/pi-digits-calculator.html",
+      "url": "https://calquary.com/tool/speed-distance-time-calculator.html",
       "isAccessibleForFree": true,
       "offers": {
         "@type": "Offer",
@@ -98,8 +98,8 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Digits of Pi Calculator",
-          "item": "https://calquary.com/tool/pi-digits-calculator.html"
+          "name": "Speed, Distance & Time Calculator",
+          "item": "https://calquary.com/tool/speed-distance-time-calculator.html"
         }
       ]
     },
@@ -108,34 +108,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What are the first 10 digits of pi?",
+          "name": "What's the formula connecting speed, distance, and time?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "3.141592653 - pi is an irrational number, so its decimal digits never terminate or repeat, but the sequence is precisely known and verified to trillions of digits by mathematicians and computer scientists."
+            "text": "Speed = distance ÷ time. Rearranged, distance = speed × time, and time = distance ÷ speed - all three formulas describe the same relationship, just solved for a different variable."
           }
         },
         {
           "@type": "Question",
-          "name": "Why does pi have infinite digits?",
+          "name": "How do I calculate speed if I know distance and time?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Pi is irrational, meaning it can't be expressed as a simple fraction of two integers - a mathematical proof (first given by Johann Lambert in 1761) shows its decimal expansion never terminates or falls into a repeating pattern, unlike a fraction like 1/3 = 0.333..."
+            "text": "Divide distance by time. A trip covering 120 miles in 2 hours averages 120 ÷ 2 = 60 mph."
           }
         },
         {
           "@type": "Question",
-          "name": "Do I need 100 digits of pi for real calculations?",
+          "name": "Do the units need to match, like miles and hours?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No - just 15-16 digits of pi (about what a standard calculator or programming language's floating-point number provides) is far more precision than needed for any real-world physical calculation, even at astronomical scales. Extra digits are mostly of interest for pure mathematics, computing benchmarks, and memorization records."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How many digits does pi have?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Infinitely many - since pi is irrational, its decimal expansion never ends or repeats. This calculator shows up to 100 of those digits; trillions more have been computed by supercomputers, though only a handful are useful for any real calculation."
+            "text": "Yes - this calculator doesn't convert units, so make sure distance and speed use the same unit (both miles or both km) and time is in hours to get a correctly-scaled result. Use the unit length converter first if your distance is in a different unit than your speed."
           }
         }
       ]
@@ -170,8 +162,8 @@
   <div class="wrap" style="padding-bottom:64px;">
     <div class="tool-layout">
       <main>
-        <h1>Digits of Pi Calculator</h1>
-        <p style="max-width:60ch;">Choose how many decimal digits of pi (π) to display, from 1 to 100.</p>
+        <h1>Speed, Distance & Time Calculator</h1>
+        <p style="max-width:60ch;">Choose which value to solve for, then enter the other two - speed, distance, and time are all connected by speed = distance / time.</p>
         <p class="last-updated">Last updated: August 30, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -199,20 +191,16 @@
         <div class="article-block">
           <h2>Frequently asked questions</h2>
           <div id="faq-list"><div class="faq-item">
-<h3>What are the first 10 digits of pi?</h3>
-<p>3.141592653 - pi is an irrational number, so its decimal digits never terminate or repeat, but the sequence is precisely known and verified to trillions of digits by mathematicians and computer scientists.</p>
+<h3>What's the formula connecting speed, distance, and time?</h3>
+<p>Speed = distance ÷ time. Rearranged, distance = speed × time, and time = distance ÷ speed - all three formulas describe the same relationship, just solved for a different variable.</p>
 </div>
 <div class="faq-item">
-<h3>Why does pi have infinite digits?</h3>
-<p>Pi is irrational, meaning it can't be expressed as a simple fraction of two integers - a mathematical proof (first given by Johann Lambert in 1761) shows its decimal expansion never terminates or falls into a repeating pattern, unlike a fraction like 1/3 = 0.333...</p>
+<h3>How do I calculate speed if I know distance and time?</h3>
+<p>Divide distance by time. A trip covering 120 miles in 2 hours averages 120 ÷ 2 = 60 mph.</p>
 </div>
 <div class="faq-item">
-<h3>Do I need 100 digits of pi for real calculations?</h3>
-<p>No - just 15-16 digits of pi (about what a standard calculator or programming language's floating-point number provides) is far more precision than needed for any real-world physical calculation, even at astronomical scales. Extra digits are mostly of interest for pure mathematics, computing benchmarks, and memorization records.</p>
-</div>
-<div class="faq-item">
-<h3>How many digits does pi have?</h3>
-<p>Infinitely many - since pi is irrational, its decimal expansion never ends or repeats. This calculator shows up to 100 of those digits; trillions more have been computed by supercomputers, though only a handful are useful for any real calculation.</p>
+<h3>Do the units need to match, like miles and hours?</h3>
+<p>Yes - this calculator doesn't convert units, so make sure distance and speed use the same unit (both miles or both km) and time is in hours to get a correctly-scaled result. Use the unit length converter first if your distance is in a different unit than your speed.</p>
 </div></div>
         </div>
       </main>
