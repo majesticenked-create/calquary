@@ -707,6 +707,63 @@ const CALCULATORS = [
     related: ["mortgage-calculator", "auto-loan-calculator", "percentage-calculator", "tip-calculator"],
   },
   {
+    id: "amortization-schedule-calculator",
+    category: "finance",
+    title: "Amortization Schedule Calculator",
+    keyword: "amortization schedule calculator",
+    description: "See a full month-by-month payment breakdown - principal, interest, and remaining balance - for a fixed-rate loan.",
+    intro: "Enter a loan amount, rate, and term to see the monthly payment plus the complete amortization schedule below.",
+    fields: [
+      { id: "principal", label: "Loan amount", type: "number", unit: "$", default: 20000, step: 100 },
+      { id: "rate", label: "Annual interest rate", type: "number", unit: "%", default: 6.5, step: 0.01 },
+      { id: "years", label: "Loan term", type: "number", unit: "years", default: 5, step: 1 },
+    ],
+    compute: (v) => {
+      const monthlyRate = v.rate / 100 / 12;
+      const n = Math.round(v.years * 12);
+      const payment = monthlyRate === 0
+        ? v.principal / n
+        : (v.principal * monthlyRate * Math.pow(1 + monthlyRate, n)) / (Math.pow(1 + monthlyRate, n) - 1);
+      let balance = v.principal;
+      let totalInterest = 0;
+      const rows = [];
+      for (let month = 1; month <= n; month++) {
+        const interestPortion = balance * monthlyRate;
+        let principalPortion = payment - interestPortion;
+        if (month === n || principalPortion > balance) principalPortion = balance;
+        const actualPayment = principalPortion + interestPortion;
+        balance = Math.max(0, balance - principalPortion);
+        totalInterest += interestPortion;
+        rows.push([
+          month,
+          `$${round(actualPayment, 2).toLocaleString()}`,
+          `$${round(principalPortion, 2).toLocaleString()}`,
+          `$${round(interestPortion, 2).toLocaleString()}`,
+          `$${round(balance, 2).toLocaleString()}`,
+        ]);
+      }
+      return {
+        primary: { label: "Monthly payment", value: `$${round(payment, 2).toLocaleString()}` },
+        secondary: [
+          { l: "Total interest", v: `$${round(totalInterest, 0).toLocaleString()}` },
+          { l: "Total paid", v: `$${round(v.principal + totalInterest, 0).toLocaleString()}` },
+          { l: "Number of payments", v: n },
+        ],
+        note: "Scroll the table below for the full payment-by-payment schedule.",
+        table: {
+          columns: ["Month", "Payment", "Principal", "Interest", "Balance"],
+          rows,
+        },
+      };
+    },
+    faq: [
+      { q: "What's an amortization schedule?", a: "A table showing every payment over the life of a loan, broken into how much goes to principal versus interest, plus the remaining balance after each payment - it shows exactly how the principal/interest split shifts over time, even though the total payment stays the same." },
+      { q: "Why does more of my payment go to interest early on?", a: "Interest is calculated on the remaining balance each period, and the balance is largest at the start of the loan - as principal gets paid down, the interest portion shrinks and more of each fixed payment goes toward principal instead." },
+      { q: "Why is my last payment sometimes a different amount?", a: "Rounding across many months of interest calculations can leave a few cents of balance remaining after the second-to-last scheduled payment - this calculator adjusts the final payment to clear the exact remaining balance rather than leaving a tiny leftover balance." },
+    ],
+    related: ["loan-calculator", "mortgage-calculator", "auto-loan-calculator"],
+  },
+  {
     id: "mortgage-calculator",
     category: "finance",
     title: "Mortgage Calculator",
@@ -2016,6 +2073,29 @@ const CALCULATORS = [
       { q: "Is this the same as the Time Duration Calculator?", a: "No - the Time Duration Calculator finds the gap between two times you already know (like 9 AM and 5:30 PM). This calculator does the opposite: starting from one known time, it adds or subtracts a duration to find a new resulting time." },
     ],
     related: ["time-duration-calculator", "time-unit-converter", "date-duration-calculator"],
+  },
+  {
+    id: "online-timer",
+    category: "datetime",
+    title: "Online Timer",
+    keyword: "online timer",
+    description: "A free countdown timer that runs in your browser - set minutes and seconds, then start, pause, or reset.",
+    intro: "Set a countdown time, then hit start - this timer counts down and alerts you when time's up.",
+    // No form fields — this tool is a live, running widget (see
+    // js/engine.js's initOnlineTimer), not a compute-on-submit
+    // calculator. compute() only exists so the homepage/category card
+    // preview (which calls it for a sample readout) doesn't crash.
+    fields: [],
+    compute: () => ({
+      primary: { label: "Default duration", value: "5:00" },
+      secondary: [{ l: "Controls", v: "Start / Pause / Reset" }],
+    }),
+    faq: [
+      { q: "Does this online timer keep running if I switch browser tabs?", a: "Yes - the countdown runs in the background as long as this browser tab stays open, even if it's not the active tab. Closing the tab or your browser stops the timer." },
+      { q: "Will this timer make a sound when it finishes?", a: "Yes - a short beep plays when the countdown reaches zero, along with the display changing to \"Time's up!\" so you notice even if you're not looking directly at the screen." },
+      { q: "Can I set a timer for longer than an hour?", a: "Yes - enter any number of minutes (there's no upper limit), so you can set a 90-minute or multi-hour timer just as easily as a short one." },
+    ],
+    related: ["time-duration-calculator", "time-add-calculator", "date-duration-calculator"],
   },
   {
     id: "week-number-calculator",

@@ -4,23 +4,23 @@
   <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Text to Slug Generator | Calquary</title>
-  <meta name="description" content="Convert text into a clean, URL-friendly slug." />
-  <meta property="og:title" content="Text to Slug Generator | Calquary">
-  <meta property="og:description" content="Convert text into a clean, URL-friendly slug.">
+  <title>Online Timer - Free Online Calculator | Calquary</title>
+  <meta name="description" content="A free countdown timer that runs in your browser - set minutes and seconds, then start, pause, or reset." />
+  <meta property="og:title" content="Online Timer | Calquary">
+  <meta property="og:description" content="A free countdown timer that runs in your browser - set minutes and seconds, then start, pause, or reset.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://calquary.com/tool/text-to-slug-generator.html">
+  <meta property="og:url" content="https://calquary.com/tool/online-timer.html">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Calquary">
-  <meta property="og:image" content="https://calquary.com/og-images/text-to-slug-generator.png">
+  <meta property="og:image" content="https://calquary.com/og-images/online-timer.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Text to Slug Generator | Calquary">
-  <meta name="twitter:description" content="Convert text into a clean, URL-friendly slug.">
-  <meta name="twitter:image" content="https://calquary.com/og-images/text-to-slug-generator.png">
-    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/text-to-slug-generator.html">
-  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/text-to-slug-generator.html">
+  <meta name="twitter:title" content="Online Timer | Calquary">
+  <meta name="twitter:description" content="A free countdown timer that runs in your browser - set minutes and seconds, then start, pause, or reset.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/online-timer.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/online-timer.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/online-timer.html">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -46,7 +46,7 @@
       // still JS-driven here is the interactive calculator widget itself
       // (fields/compute/results) and the related-tools list, neither of
       // which is static SEO prose.
-      const calc = getCalculator("text-to-slug-generator");
+      const calc = getCalculator("online-timer");
 
       const relWrap = document.getElementById("related-list");
       calc.related.forEach((relId) => {
@@ -57,7 +57,7 @@
         relWrap.appendChild(li);
       });
 
-      initCalculator("text-to-slug-generator");
+      initCalculator("online-timer");
     });
   </script>
   <script type="application/ld+json">
@@ -66,11 +66,11 @@
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "Text to Slug Generator",
-      "description": "Convert text into a clean, URL-friendly slug.",
+      "name": "Online Timer",
+      "description": "A free countdown timer that runs in your browser - set minutes and seconds, then start, pause, or reset.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
-      "url": "https://calquary.com/tool/text-to-slug-generator.html",
+      "url": "https://calquary.com/tool/online-timer.html",
       "isAccessibleForFree": true,
       "offers": {
         "@type": "Offer",
@@ -92,14 +92,14 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Text & Digital",
-          "item": "https://calquary.com/category/text.html"
+          "name": "Date & Time",
+          "item": "https://calquary.com/category/datetime.html"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Text to Slug Generator",
-          "item": "https://calquary.com/tool/text-to-slug-generator.html"
+          "name": "Online Timer",
+          "item": "https://calquary.com/tool/online-timer.html"
         }
       ]
     },
@@ -108,34 +108,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What makes a good URL slug?",
+          "name": "Does this online timer keep running if I switch browser tabs?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Lowercase letters, numbers, and hyphens only - no spaces, punctuation, or special characters. Slugs should be short, readable, and describe the page content."
+            "text": "Yes - the countdown runs in the background as long as this browser tab stays open, even if it's not the active tab. Closing the tab or your browser stops the timer."
           }
         },
         {
           "@type": "Question",
-          "name": "Why are spaces replaced with hyphens instead of underscores?",
+          "name": "Will this timer make a sound when it finishes?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Search engines generally treat hyphens as word separators but not underscores, so hyphens are the standard choice for SEO-friendly URLs."
+            "text": "Yes - a short beep plays when the countdown reaches zero, along with the display changing to \"Time's up!\" so you notice even if you're not looking directly at the screen."
           }
         },
         {
           "@type": "Question",
-          "name": "Should slugs include numbers or only letters?",
+          "name": "Can I set a timer for longer than an hour?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Numbers are fine and commonly used in slugs (e.g., product model numbers or years), as long as they're separated by hyphens like other words - this generator preserves numbers while converting everything else to lowercase, hyphen-separated text."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Should URL slugs include stop words like 'the' and 'and'?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Removing common stop words is optional but often improves readability and slightly shortens the URL without losing meaning - 'best-pizza-in-chicago' works as well as 'the-best-pizza-in-chicago'. This tool preserves your original word order and lets you decide what to keep."
+            "text": "Yes - enter any number of minutes (there's no upper limit), so you can set a 90-minute or multi-hour timer just as easily as a short one."
           }
         }
       ]
@@ -163,15 +155,15 @@
 
   <div class="wrap" style="padding-top:32px;">
     <div class="breadcrumb">
-      <a href="/index.html">Calquary</a> / <a href="/category/text.html">Text & Digital</a>
+      <a href="/index.html">Calquary</a> / <a href="/category/datetime.html">Date & Time</a>
     </div>
   </div>
 
   <div class="wrap" style="padding-bottom:64px;">
     <div class="tool-layout">
       <main>
-        <h1>Text to Slug Generator</h1>
-        <p style="max-width:60ch;">Enter a title or phrase to convert it into a lowercase, hyphenated URL slug.</p>
+        <h1>Online Timer</h1>
+        <p style="max-width:60ch;">Set a countdown time, then hit start - this timer counts down and alerts you when time's up.</p>
         <p class="last-updated">Last updated: August 30, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -199,20 +191,16 @@
         <div class="article-block">
           <h2>Frequently asked questions</h2>
           <div id="faq-list"><div class="faq-item">
-<h3>What makes a good URL slug?</h3>
-<p>Lowercase letters, numbers, and hyphens only - no spaces, punctuation, or special characters. Slugs should be short, readable, and describe the page content.</p>
+<h3>Does this online timer keep running if I switch browser tabs?</h3>
+<p>Yes - the countdown runs in the background as long as this browser tab stays open, even if it's not the active tab. Closing the tab or your browser stops the timer.</p>
 </div>
 <div class="faq-item">
-<h3>Why are spaces replaced with hyphens instead of underscores?</h3>
-<p>Search engines generally treat hyphens as word separators but not underscores, so hyphens are the standard choice for SEO-friendly URLs.</p>
+<h3>Will this timer make a sound when it finishes?</h3>
+<p>Yes - a short beep plays when the countdown reaches zero, along with the display changing to "Time's up!" so you notice even if you're not looking directly at the screen.</p>
 </div>
 <div class="faq-item">
-<h3>Should slugs include numbers or only letters?</h3>
-<p>Numbers are fine and commonly used in slugs (e.g., product model numbers or years), as long as they're separated by hyphens like other words - this generator preserves numbers while converting everything else to lowercase, hyphen-separated text.</p>
-</div>
-<div class="faq-item">
-<h3>Should URL slugs include stop words like 'the' and 'and'?</h3>
-<p>Removing common stop words is optional but often improves readability and slightly shortens the URL without losing meaning - 'best-pizza-in-chicago' works as well as 'the-best-pizza-in-chicago'. This tool preserves your original word order and lets you decide what to keep.</p>
+<h3>Can I set a timer for longer than an hour?</h3>
+<p>Yes - enter any number of minutes (there's no upper limit), so you can set a 90-minute or multi-hour timer just as easily as a short one.</p>
 </div></div>
         </div>
       </main>

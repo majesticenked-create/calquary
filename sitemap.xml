@@ -283,6 +283,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/loan-calculator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/amortization-schedule-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/amortization-schedule-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/amortization-schedule-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/mortgage-calculator.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/mortgage-calculator.html"/>
@@ -551,6 +557,12 @@
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/time-add-calculator.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/time-add-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/online-timer.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/online-timer.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/online-timer.html"/>
   </url>
   <url>
     <loc>https://calquary.com/tool/week-number-calculator.html</loc>

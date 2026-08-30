@@ -115,6 +115,23 @@ function renderResult(panel, result) {
   } else {
     noteEl.style.display = "none";
   }
+
+  // Optional scrollable data table (e.g. an amortization schedule) — most
+  // tools never set result.table, so this stays hidden for them.
+  const tableWrap = panel.querySelector(".result-table-wrap");
+  if (tableWrap) {
+    if (result.table && result.table.rows && result.table.rows.length) {
+      const thead = tableWrap.querySelector("thead");
+      const tbody = tableWrap.querySelector("tbody");
+      thead.innerHTML = `<tr>${result.table.columns.map((c) => `<th>${c}</th>`).join("")}</tr>`;
+      tbody.innerHTML = result.table.rows
+        .map((row) => `<tr>${row.map((cell) => `<td>${cell}</td>`).join("")}</tr>`)
+        .join("");
+      tableWrap.style.display = "block";
+    } else {
+      tableWrap.style.display = "none";
+    }
+  }
 }
 
 /* ---------- Dimension diagrams ----------
@@ -236,6 +253,126 @@ function renderDiagram(calc) {
 // tool template's element IDs exactly. `live: true` also recalculates on
 // every input/change, not just submit — for a compact instance meant to feel
 // immediate (e.g. a homepage preview) rather than click-to-calculate.
+// The online timer is a live, continuously-running widget (start/pause/
+// countdown), fundamentally different from every other tool's
+// compute-once-on-submit model — it gets its own init path rather than
+// being forced through renderFieldsInto/collectValues/compute.
+function initOnlineTimer(fieldsId, resultId, formId) {
+  const form = document.getElementById(formId);
+  const fieldsContainer = document.getElementById(fieldsId);
+  const resultPanel = document.getElementById(resultId);
+  if (!form || !fieldsContainer || !resultPanel) return;
+  form.style.display = "none";
+  resultPanel.classList.remove("visible");
+
+  const widget = document.createElement("div");
+  widget.className = "timer-widget";
+  widget.innerHTML = `
+    <div class="timer-display" id="timer-display">05:00</div>
+    <div class="timer-inputs">
+      <label>Minutes <input type="number" id="timer-min" min="0" max="999" value="5" /></label>
+      <label>Seconds <input type="number" id="timer-sec" min="0" max="59" value="0" /></label>
+    </div>
+    <div class="timer-actions">
+      <button type="button" id="timer-start" class="btn-primary">Start</button>
+      <button type="button" id="timer-pause" class="btn-ghost" disabled>Pause</button>
+      <button type="button" id="timer-reset" class="btn-ghost">Reset</button>
+    </div>
+  `;
+  form.parentElement.insertBefore(widget, form);
+
+  const display = widget.querySelector("#timer-display");
+  const minInput = widget.querySelector("#timer-min");
+  const secInput = widget.querySelector("#timer-sec");
+  const startBtn = widget.querySelector("#timer-start");
+  const pauseBtn = widget.querySelector("#timer-pause");
+  const resetBtn = widget.querySelector("#timer-reset");
+
+  let remaining = 300;
+  let intervalId = null;
+
+  function format(totalSeconds) {
+    const m = Math.floor(totalSeconds / 60);
+    const s = totalSeconds % 60;
+    return `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
+  }
+
+  function renderDisplay() {
+    display.textContent = format(Math.max(0, remaining));
+    display.classList.toggle("timer-done", remaining <= 0);
+  }
+
+  function beep() {
+    try {
+      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.frequency.value = 880;
+      gain.gain.setValueAtTime(0.2, ctx.currentTime);
+      osc.start();
+      osc.stop(ctx.currentTime + 0.4);
+    } catch (e) { /* Audio unsupported/blocked — silent countdown still works. */ }
+  }
+
+  function tick() {
+    remaining -= 1;
+    renderDisplay();
+    if (remaining <= 0) {
+      clearInterval(intervalId);
+      intervalId = null;
+      startBtn.disabled = false;
+      pauseBtn.disabled = true;
+      display.textContent = "Time's up!";
+      display.classList.add("timer-done");
+      beep();
+    }
+  }
+
+  startBtn.addEventListener("click", () => {
+    if (intervalId) return;
+    if (remaining <= 0) {
+      remaining = (parseInt(minInput.value, 10) || 0) * 60 + (parseInt(secInput.value, 10) || 0);
+    }
+    if (remaining <= 0) return;
+    display.classList.remove("timer-done");
+    intervalId = setInterval(tick, 1000);
+    startBtn.disabled = true;
+    pauseBtn.disabled = false;
+    minInput.disabled = true;
+    secInput.disabled = true;
+  });
+
+  pauseBtn.addEventListener("click", () => {
+    clearInterval(intervalId);
+    intervalId = null;
+    startBtn.disabled = false;
+    pauseBtn.disabled = true;
+  });
+
+  resetBtn.addEventListener("click", () => {
+    clearInterval(intervalId);
+    intervalId = null;
+    minInput.disabled = false;
+    secInput.disabled = false;
+    startBtn.disabled = false;
+    pauseBtn.disabled = true;
+    remaining = (parseInt(minInput.value, 10) || 0) * 60 + (parseInt(secInput.value, 10) || 0);
+    display.classList.remove("timer-done");
+    renderDisplay();
+  });
+
+  [minInput, secInput].forEach((input) => {
+    input.addEventListener("input", () => {
+      remaining = (parseInt(minInput.value, 10) || 0) * 60 + (parseInt(secInput.value, 10) || 0);
+      renderDisplay();
+    });
+  });
+
+  renderDisplay();
+}
+
 function initCalculator(calcId, opts = {}) {
   const {
     fieldsId = "calc-fields",
@@ -244,6 +381,11 @@ function initCalculator(calcId, opts = {}) {
     resetId = "calc-reset",
     live = false,
   } = opts;
+
+  if (calcId === "online-timer") {
+    initOnlineTimer(fieldsId, resultId, formId);
+    return;
+  }
 
   const calc = getCalculator(calcId);
   if (!calc) return;
