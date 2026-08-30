@@ -2601,6 +2601,51 @@ const CALCULATORS = [
     related: ["body-fat-calculator", "calorie-calculator", "pace-calculator", "water-intake-calculator"],
   },
   {
+    id: "height-percentile-calculator",
+    category: "health",
+    title: "Height Percentile Calculator",
+    keyword: "height percentile calculator",
+    description: "Estimate what percentile a height falls into among US adults of the same gender.",
+    intro: "Enter a height and gender to estimate the percentile rank among US adults of the same gender.",
+    fields: [
+      { id: "feet", label: "Feet", type: "number", default: 5, step: 1, min: 0 },
+      { id: "inches", label: "Inches", type: "number", default: 9, step: 0.1, min: 0, max: 11.9 },
+      { id: "gender", label: "Gender", type: "select", default: "male", options: [{ v: "male", l: "Male" }, { v: "female", l: "Female" }] },
+    ],
+    compute: (v) => {
+      // Approximate US adult height distribution (commonly cited CDC/NHANES-
+      // based figures) - a general reference, not a precise clinical or
+      // region-specific dataset.
+      const stats = { male: { mean: 69.1, sd: 3.0 }, female: { mean: 63.7, sd: 2.7 } };
+      const { mean, sd } = stats[v.gender];
+      const totalInches = v.feet * 12 + v.inches;
+      const z = (totalInches - mean) / sd;
+      function normalCdf(x) {
+        const sign = x < 0 ? -1 : 1;
+        const ax = Math.abs(x) / Math.sqrt(2);
+        const a1 = 0.254829592, a2 = -0.284496736, a3 = 1.421413741, a4 = -1.453152027, a5 = 1.061405429, p = 0.3275911;
+        const t = 1 / (1 + p * ax);
+        const y = 1 - (((((a5 * t + a4) * t) + a3) * t + a2) * t + a1) * t * Math.exp(-ax * ax);
+        return 0.5 * (1 + sign * y);
+      }
+      const percentile = normalCdf(z) * 100;
+      return {
+        primary: { label: "Percentile", value: `${round(percentile, 1)}th` },
+        secondary: [
+          { l: "Height", v: `${totalInches.toFixed(1)} in (${(totalInches * 2.54).toFixed(1)} cm)` },
+          { l: "Z-score", v: round(z, 2) },
+        ],
+        note: `Estimated against a US adult ${v.gender} average of about ${mean.toFixed(1)} in with a standard deviation of ${sd.toFixed(1)} in - a general population approximation, not a precise or region-specific measurement.`,
+      };
+    },
+    faq: [
+      { q: "How is height percentile calculated?", a: "Convert height to a z-score using an average and standard deviation for the population (height − mean) ÷ SD, then convert that z-score to a percentile using the normal distribution - the same method used for other percentile calculations like test scores." },
+      { q: "How tall is 5'9\" compared to other people?", a: "For a US adult male, 5'9\" (69 inches) is almost exactly average, landing around the 50th percentile, since the average US male adult height is very close to 5'9\". For a US adult female, 5'9\" is well above average, in roughly the 96-97th percentile." },
+      { q: "How accurate are these percentile estimates?", a: "They're based on commonly cited average height and standard deviation figures for the general US adult population, not an exact or up-to-date clinical dataset - actual percentiles vary somewhat by country, age group, and measurement methodology, so treat this as a general estimate rather than a precise clinical percentile." },
+    ],
+    related: ["bmi-calculator", "ideal-weight-calculator", "unit-length-converter"],
+  },
+  {
     id: "bmr-calculator",
     category: "health",
     title: "BMR Calculator",
@@ -3758,6 +3803,9 @@ const CALCULATORS = [
       { q: "What is 180°C in an oven, in Fahrenheit?", a: "356°F exactly, though recipes almost always round oven temperatures to the nearest common setting - 180°C is the standard rounded equivalent of 350°F, a very common baking temperature, even though the precise conversion is a few degrees higher." },
       { q: "What is 100°F in Celsius?", a: "About 37.8°C - subtract 32, then multiply by 5/9: (100−32)×5/9 = 68×5/9 ≈ 37.78°C. That's just above normal human body temperature (37°C), which is why 100°F often feels notably hot outdoors." },
       { q: "What is 170°F in Celsius?", a: "About 76.7°C - (170−32)×5/9 = 138×5/9 ≈ 76.67°C." },
+      { q: "What is 73°F in Celsius?", a: "About 22.8°C - (73−32)×5/9 = 41×5/9 ≈ 22.78°C, a comfortable room temperature." },
+      { q: "What is 43°F in Celsius?", a: "About 6.1°C - (43−32)×5/9 = 11×5/9 ≈ 6.11°C, just above refrigerator temperature." },
+      { q: "What is 43°C in Fahrenheit?", a: "109.4°F - multiply by 9/5 and add 32: 43×9/5+32 = 77.4+32 = 109.4°F, a high fever range if referring to body temperature (though a healthy human body temperature never actually reaches 43°C)." },
     ],
     related: ["weight-converter", "volume-converter", "unit-length-converter"],
   },
