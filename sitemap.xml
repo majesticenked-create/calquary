@@ -241,6 +241,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/cylinder-volume-calculator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/pythagorean-theorem-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/pythagorean-theorem-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/pythagorean-theorem-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/rectangular-prism-volume-calculator.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/rectangular-prism-volume-calculator.html"/>
@@ -647,6 +653,12 @@
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/pressure-converter.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/pressure-converter.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/torque-converter.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/torque-converter.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/torque-converter.html"/>
   </url>
   <url>
     <loc>https://calquary.com/tool/fuel-economy-converter.html</loc>

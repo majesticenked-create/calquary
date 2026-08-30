@@ -433,6 +433,37 @@ const CALCULATORS = [
     related: ["cone-volume-calculator", "square-root-calculator", "area-converter"],
   },
   {
+    id: "pythagorean-theorem-calculator",
+    category: "math",
+    title: "Pythagorean Theorem Calculator",
+    keyword: "pythagorean theorem calculator",
+    description: "Calculate the hypotenuse (or a missing leg) of a right triangle using the Pythagorean theorem.",
+    intro: "Enter the two legs of a right triangle to calculate the hypotenuse, using a² + b² = c².",
+    fields: [
+      { id: "a", label: "Leg a", type: "number", default: 3, step: 0.1 },
+      { id: "b", label: "Leg b", type: "number", default: 4, step: 0.1 },
+    ],
+    compute: (v) => {
+      const c = Math.sqrt(v.a * v.a + v.b * v.b);
+      return {
+        primary: { label: "Hypotenuse (c)", value: round(c, 4) },
+        secondary: [
+          { l: "a²", v: round(v.a * v.a, 4) },
+          { l: "b²", v: round(v.b * v.b, 4) },
+          { l: "a² + b²", v: round(v.a * v.a + v.b * v.b, 4) },
+        ],
+        note: "Uses a² + b² = c², valid only for right triangles (one 90° angle). To find a missing leg instead of the hypotenuse, rearrange to a = √(c² − b²).",
+      };
+    },
+    faq: [
+      { q: "What is the Pythagorean theorem?", a: "a² + b² = c², where a and b are the two shorter sides (legs) of a right triangle and c is the hypotenuse (the longest side, opposite the right angle). It only applies to right triangles." },
+      { q: "How do I find a missing leg instead of the hypotenuse?", a: "Rearrange the formula: a = √(c² − b²), or b = √(c² − a²). Subtract the known leg's square from the hypotenuse's square, then take the square root." },
+      { q: "What's a common example of the Pythagorean theorem, like 3-4-5?", a: "3-4-5 is the most common \"Pythagorean triple\" - a set of whole numbers that satisfy a² + b² = c² exactly: 3² + 4² = 9 + 16 = 25 = 5². Other common triples include 5-12-13 and 8-15-17, useful for quickly checking if a corner is truly square without a calculator." },
+      { q: "Is a 'pythagoras theorem calculator' or 'pythagorean theorem calc' different from this tool?", a: "No - \"Pythagoras\" and \"Pythagorean\" both refer to the same theorem and mathematician, and \"calc\" is just short for calculator. All of these searches want the same thing: a² + b² = c², which this calculator solves for you." },
+    ],
+    related: ["square-root-calculator", "cylinder-volume-calculator", "quadratic-formula-calculator"],
+  },
+  {
     id: "rectangular-prism-volume-calculator",
     category: "math",
     title: "Rectangular Prism Volume Calculator",
@@ -2444,6 +2475,38 @@ const CALCULATORS = [
       { q: "How many kilopascals is 1 atmosphere?", a: "One standard atmosphere equals approximately 101.325 kilopascals. Atmospheres are commonly used as a reference pressure in science and diving, while kilopascals are the standard SI unit used in most engineering and weather contexts." },
     ],
     related: ["unit-length-converter", "weight-converter", "fuel-economy-converter"],
+  },
+  {
+    id: "torque-converter",
+    category: "conversions",
+    title: "Torque Converter",
+    keyword: "torque converter",
+    description: "Also works as an nm to ft lb converter - convert between newton-meters (Nm), foot-pounds (ft-lb), and inch-pounds (in-lb).",
+    intro: "Enter a torque value and choose a starting unit to convert between newton-meters, foot-pounds, and inch-pounds.",
+    fields: [
+      { id: "value", label: "Value", type: "number", default: 100, step: 0.1 },
+      { id: "from", label: "From", type: "select", default: "nm", options: [
+        { v: "nm", l: "Newton-meters (Nm)" }, { v: "ftlb", l: "Foot-pounds (ft-lb)" }, { v: "inlb", l: "Inch-pounds (in-lb)" },
+      ] },
+    ],
+    compute: (v) => {
+      const toNm = { nm: 1, ftlb: 1.35582, inlb: 0.112985 };
+      const nmValue = v.value * toNm[v.from];
+      return {
+        primary: { label: "In newton-meters", value: `${round(nmValue, 3)} Nm` },
+        secondary: [
+          { l: "Foot-pounds (ft-lb)", v: round(nmValue / toNm.ftlb, 3) },
+          { l: "Inch-pounds (in-lb)", v: round(nmValue / toNm.inlb, 2) },
+        ],
+      };
+    },
+    faq: [
+      { q: "How do I convert Nm to ft-lbs?", a: "Divide by 1.35582 - 1 newton-meter equals about 0.7376 foot-pounds. For example, 100 Nm converts to roughly 73.76 ft-lb, a common conversion when a torque wrench spec is given in the unit your wrench doesn't use." },
+      { q: "Why does a lug nut or bolt spec list torque in Nm sometimes and ft-lb other times?", a: "Manufacturers based in metric-standard countries (and most of the auto industry globally) spec torque in newton-meters, while US-market torque wrenches and repair manuals often use foot-pounds - this converter bridges the two so you can match your spec to your wrench's units." },
+      { q: "What's the difference between foot-pounds and inch-pounds?", a: "Both measure torque (a twisting force), but inch-pounds are 1/12th the size of foot-pounds, since a foot is 12 inches - inch-pounds are used for smaller fasteners where foot-pounds would be too coarse a unit (12 in-lb = 1 ft-lb)." },
+      { q: "Is 'nm ft lbs,' 'nm to ft-lbs,' and 'newton meters to foot pounds' all the same conversion?", a: "Yes - \"Nm\" here is short for newton-meters (not nanometers, despite the abbreviation looking similar), and all of these phrasings ask for the same conversion this tool does: newton-meters to foot-pounds." },
+    ],
+    related: ["unit-length-converter", "weight-converter", "pressure-converter"],
   },
   {
     id: "fuel-economy-converter",
