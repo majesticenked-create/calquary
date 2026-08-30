@@ -4,23 +4,23 @@
   <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Molecular Weight Calculator | Calquary</title>
-  <meta name="description" content="Calculate the molecular weight (molar mass) of a chemical formula, like H2O or C6H12O6." />
-  <meta property="og:title" content="Molecular Weight Calculator | Calquary">
-  <meta property="og:description" content="Calculate the molecular weight (molar mass) of a chemical formula, like H2O or C6H12O6.">
+  <title>Grade Calculator - Free Online Calculator | Calquary</title>
+  <meta name="description" content="Calculate a test or exam grade as a percentage and letter grade from points earned and total points." />
+  <meta property="og:title" content="Grade Calculator | Calquary">
+  <meta property="og:description" content="Calculate a test or exam grade as a percentage and letter grade from points earned and total points.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://calquary.com/tool/molecular-weight-calculator.html">
+  <meta property="og:url" content="https://calquary.com/tool/grade-calculator.html">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Calquary">
-  <meta property="og:image" content="https://calquary.com/og-images/molecular-weight-calculator.png">
+  <meta property="og:image" content="https://calquary.com/og-images/grade-calculator.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Molecular Weight Calculator | Calquary">
-  <meta name="twitter:description" content="Calculate the molecular weight (molar mass) of a chemical formula, like H2O or C6H12O6.">
-  <meta name="twitter:image" content="https://calquary.com/og-images/molecular-weight-calculator.png">
-    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/molecular-weight-calculator.html">
-  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/molecular-weight-calculator.html">
+  <meta name="twitter:title" content="Grade Calculator | Calquary">
+  <meta name="twitter:description" content="Calculate a test or exam grade as a percentage and letter grade from points earned and total points.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/grade-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/grade-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/grade-calculator.html">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -46,7 +46,7 @@
       // still JS-driven here is the interactive calculator widget itself
       // (fields/compute/results) and the related-tools list, neither of
       // which is static SEO prose.
-      const calc = getCalculator("molecular-weight-calculator");
+      const calc = getCalculator("grade-calculator");
 
       const relWrap = document.getElementById("related-list");
       calc.related.forEach((relId) => {
@@ -57,7 +57,7 @@
         relWrap.appendChild(li);
       });
 
-      initCalculator("molecular-weight-calculator");
+      initCalculator("grade-calculator");
     });
   </script>
   <script type="application/ld+json">
@@ -66,11 +66,11 @@
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "Molecular Weight Calculator",
-      "description": "Calculate the molecular weight (molar mass) of a chemical formula, like H2O or C6H12O6.",
+      "name": "Grade Calculator",
+      "description": "Calculate a test or exam grade as a percentage and letter grade from points earned and total points.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
-      "url": "https://calquary.com/tool/molecular-weight-calculator.html",
+      "url": "https://calquary.com/tool/grade-calculator.html",
       "isAccessibleForFree": true,
       "offers": {
         "@type": "Offer",
@@ -98,8 +98,8 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Molecular Weight Calculator",
-          "item": "https://calquary.com/tool/molecular-weight-calculator.html"
+          "name": "Grade Calculator",
+          "item": "https://calquary.com/tool/grade-calculator.html"
         }
       ]
     },
@@ -108,34 +108,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "How do I calculate the molecular weight of water (H2O)?",
+          "name": "How do I calculate my grade as a percentage?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Add up the atomic weights: 2 hydrogen atoms (2 × 1.008 = 2.016) plus 1 oxygen atom (15.999), for a total of about 18.015 g/mol."
+            "text": "Divide the points you earned by the total points possible, then multiply by 100. Scoring 85 out of 100 gives 85/100 × 100 = 85%."
           }
         },
         {
           "@type": "Question",
-          "name": "What's the difference between molecular weight and molar mass?",
+          "name": "What percentage is each letter grade?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "They're the same value expressed differently - molecular weight is technically a dimensionless ratio, while molar mass carries units (grams per mole, g/mol), but in practice the numbers are identical and the terms are used interchangeably."
+            "text": "On the standard US scale this calculator uses: 90-100% is the A range, 80-89% is B, 70-79% is C, 60-69% is D, and below 60% is F, each split further into +/- bands (e.g. 93-96% is a straight A, 90-92% is A-)."
           }
         },
         {
           "@type": "Question",
-          "name": "How do I enter a formula with parentheses, like Ca(OH)2?",
+          "name": "Is this the same as a gradebook calculator?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Type it exactly as written - this calculator supports parentheses with a multiplier, so Ca(OH)2 correctly counts 1 calcium, 2 oxygen, and 2 hydrogen atoms (the 2 outside the parentheses multiplies everything inside)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is a 'molecular weight calculators' or 'calculate molecular weights' search different from this tool?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No - plural, verb, and noun forms of the same phrase all point to the same task: entering a chemical formula and getting its total molar mass back, which is exactly what this calculator does."
+            "text": "Yes - \"gradebook calculator\" and \"grading calculator\" both describe figuring out a grade percentage and letter grade from points earned, which is exactly what this tool does for a single test, assignment, or exam."
           }
         }
       ]
@@ -170,8 +162,8 @@
   <div class="wrap" style="padding-bottom:64px;">
     <div class="tool-layout">
       <main>
-        <h1>Molecular Weight Calculator</h1>
-        <p style="max-width:60ch;">Enter a chemical formula (e.g. H2O, NaCl, C6H12O6, Ca(OH)2) to calculate its molecular weight in grams per mole.</p>
+        <h1>Grade Calculator</h1>
+        <p style="max-width:60ch;">Enter the points earned and total possible points to calculate your percentage and letter grade.</p>
         <p class="last-updated">Last updated: August 30, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -198,20 +190,16 @@
         <div class="article-block">
           <h2>Frequently asked questions</h2>
           <div id="faq-list"><div class="faq-item">
-<h3>How do I calculate the molecular weight of water (H2O)?</h3>
-<p>Add up the atomic weights: 2 hydrogen atoms (2 × 1.008 = 2.016) plus 1 oxygen atom (15.999), for a total of about 18.015 g/mol.</p>
+<h3>How do I calculate my grade as a percentage?</h3>
+<p>Divide the points you earned by the total points possible, then multiply by 100. Scoring 85 out of 100 gives 85/100 × 100 = 85%.</p>
 </div>
 <div class="faq-item">
-<h3>What's the difference between molecular weight and molar mass?</h3>
-<p>They're the same value expressed differently - molecular weight is technically a dimensionless ratio, while molar mass carries units (grams per mole, g/mol), but in practice the numbers are identical and the terms are used interchangeably.</p>
+<h3>What percentage is each letter grade?</h3>
+<p>On the standard US scale this calculator uses: 90-100% is the A range, 80-89% is B, 70-79% is C, 60-69% is D, and below 60% is F, each split further into +/- bands (e.g. 93-96% is a straight A, 90-92% is A-).</p>
 </div>
 <div class="faq-item">
-<h3>How do I enter a formula with parentheses, like Ca(OH)2?</h3>
-<p>Type it exactly as written - this calculator supports parentheses with a multiplier, so Ca(OH)2 correctly counts 1 calcium, 2 oxygen, and 2 hydrogen atoms (the 2 outside the parentheses multiplies everything inside).</p>
-</div>
-<div class="faq-item">
-<h3>Is a 'molecular weight calculators' or 'calculate molecular weights' search different from this tool?</h3>
-<p>No - plural, verb, and noun forms of the same phrase all point to the same task: entering a chemical formula and getting its total molar mass back, which is exactly what this calculator does.</p>
+<h3>Is this the same as a gradebook calculator?</h3>
+<p>Yes - "gradebook calculator" and "grading calculator" both describe figuring out a grade percentage and letter grade from points earned, which is exactly what this tool does for a single test, assignment, or exam.</p>
 </div></div>
         </div>
       </main>

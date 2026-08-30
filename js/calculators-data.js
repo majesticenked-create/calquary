@@ -388,6 +388,7 @@ const CALCULATORS = [
       { q: "What about 'formula for cone volume,' 'cone volume formula,' 'volume formula of a cone,' and 'volume for a cone formula'?", a: "All the same question, just reordered - every one of these is asking for the cone volume formula, V = (1/3)πr²h. Enter your radius and height above and this calculator applies it for you." },
       { q: "Does 'cones volume formula,' 'formulas for volume of a cone,' 'formula volume of cone,' and 'formula for volume of cone' mean anything different?", a: "No - plural, singular, and reordered versions of the same phrase all point to the same thing: the cone volume formula, V = (1/3)πr²h. This calculator computes it directly from your radius and height, whichever way you searched for it." },
       { q: "What about 'formula for volume of a cone,' 'volume for cone formula,' 'formula cone volume,' 'formula of cone volume,' and 'formula volume for cone'?", a: "Same answer every time: the cone volume formula is V = (1/3)πr²h. However this phrase gets reordered or abbreviated, it's asking for that one formula, which this calculator applies to your radius and height automatically." },
+      { q: "Is 'volume of the cone,' 'volume for a cone,' 'volume of conical,' and 'cones volume' the same search?", a: "Yes - \"conical\" is just the adjective form of \"cone,\" and the rest are simple word-order or plural variations. All of them mean the same volume formula, V = (1/3)πr²h, which this calculator computes from your radius and height." },
       { q: "Why is a cone's volume exactly 1/3 of a cylinder's?", a: "This is a geometric fact provable with calculus (integrating circular cross-sections that shrink linearly to a point) - for any cone and cylinder sharing the same base radius and height, the cone always encloses exactly one-third the volume, regardless of the specific radius or height." },
       { q: "What's the difference between height and slant height?", a: "Height is the straight vertical distance from the base to the apex; slant height is the distance along the cone's curved surface from the base edge to the apex. Slant height is always longer than height (except in the degenerate case of zero radius), and is calculated as √(r² + h²)." },
     ],
@@ -585,8 +586,51 @@ const CALCULATORS = [
       { q: "How do I calculate the molecular weight of water (H2O)?", a: "Add up the atomic weights: 2 hydrogen atoms (2 × 1.008 = 2.016) plus 1 oxygen atom (15.999), for a total of about 18.015 g/mol." },
       { q: "What's the difference between molecular weight and molar mass?", a: "They're the same value expressed differently - molecular weight is technically a dimensionless ratio, while molar mass carries units (grams per mole, g/mol), but in practice the numbers are identical and the terms are used interchangeably." },
       { q: "How do I enter a formula with parentheses, like Ca(OH)2?", a: "Type it exactly as written - this calculator supports parentheses with a multiplier, so Ca(OH)2 correctly counts 1 calcium, 2 oxygen, and 2 hydrogen atoms (the 2 outside the parentheses multiplies everything inside)." },
+      { q: "Is a 'molecular weight calculators' or 'calculate molecular weights' search different from this tool?", a: "No - plural, verb, and noun forms of the same phrase all point to the same task: entering a chemical formula and getting its total molar mass back, which is exactly what this calculator does." },
     ],
     related: ["percentage-calculator", "square-root-calculator", "exponent-calculator"],
+  },
+  {
+    id: "grade-calculator",
+    category: "math",
+    title: "Grade Calculator",
+    keyword: "grade calculator",
+    description: "Calculate a test or exam grade as a percentage and letter grade from points earned and total points.",
+    intro: "Enter the points earned and total possible points to calculate your percentage and letter grade.",
+    fields: [
+      { id: "earned", label: "Points earned", type: "number", default: 85, step: 0.5 },
+      { id: "total", label: "Total points possible", type: "number", default: 100, step: 0.5 },
+    ],
+    compute: (v) => {
+      const pct = v.total === 0 ? 0 : (v.earned / v.total) * 100;
+      let letter = "F";
+      if (pct >= 97) letter = "A+";
+      else if (pct >= 93) letter = "A";
+      else if (pct >= 90) letter = "A-";
+      else if (pct >= 87) letter = "B+";
+      else if (pct >= 83) letter = "B";
+      else if (pct >= 80) letter = "B-";
+      else if (pct >= 77) letter = "C+";
+      else if (pct >= 73) letter = "C";
+      else if (pct >= 70) letter = "C-";
+      else if (pct >= 67) letter = "D+";
+      else if (pct >= 63) letter = "D";
+      else if (pct >= 60) letter = "D-";
+      return {
+        primary: { label: "Grade", value: `${round(pct, 2)}%` },
+        secondary: [
+          { l: "Letter grade", v: letter },
+          { l: "Points missed", v: round(v.total - v.earned, 2) },
+        ],
+        note: "Uses a standard US grading scale (90+ = A range, 80-89 = B range, etc.). Individual schools and instructors may use a different scale.",
+      };
+    },
+    faq: [
+      { q: "How do I calculate my grade as a percentage?", a: "Divide the points you earned by the total points possible, then multiply by 100. Scoring 85 out of 100 gives 85/100 × 100 = 85%." },
+      { q: "What percentage is each letter grade?", a: "On the standard US scale this calculator uses: 90-100% is the A range, 80-89% is B, 70-79% is C, 60-69% is D, and below 60% is F, each split further into +/- bands (e.g. 93-96% is a straight A, 90-92% is A-)." },
+      { q: "Is this the same as a gradebook calculator?", a: "Yes - \"gradebook calculator\" and \"grading calculator\" both describe figuring out a grade percentage and letter grade from points earned, which is exactly what this tool does for a single test, assignment, or exam." },
+    ],
+    related: ["average-calculator", "percentage-calculator", "percentage-change-calculator"],
   },
 
   // ---------------- FINANCE ----------------
