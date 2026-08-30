@@ -360,6 +360,7 @@ const CALCULATORS = [
       { q: "What does a correlation coefficient of 1 or -1 mean?", a: "A correlation of exactly 1 means the two variables have a perfect positive linear relationship (as one increases, the other increases proportionally); -1 means a perfect negative linear relationship (as one increases, the other decreases proportionally). Real-world data rarely hits exactly 1 or -1." },
       { q: "Does correlation prove causation?", a: "No - two variables can be strongly correlated without one causing the other, due to coincidence, a shared underlying cause, or reverse causation. Correlation only measures whether two variables tend to move together, not why." },
       { q: "What's considered a 'strong' correlation?", a: "There's no universal cutoff, but a common rough guide is: 0.8+ very strong, 0.6-0.8 strong, 0.4-0.6 moderate, 0.2-0.4 weak, and below 0.2 very weak or none - though what counts as \"strong enough\" varies a lot by field (social sciences vs. physical sciences, for example)." },
+      { q: "Is a 'Pearson correlation calculator' or 'Pearson coefficient calculator' the same as this tool?", a: "Yes - \"Pearson\" refers to the Pearson product-moment correlation coefficient, which is the standard correlation measure this calculator computes. It's the most common type of correlation people mean by \"correlation\" without further specification." },
     ],
     related: ["standard-deviation-calculator", "average-calculator", "percentage-calculator"],
   },
@@ -2577,6 +2578,7 @@ const CALCULATORS = [
     faq: [
       { q: "How much water should I drink based on my weight?", a: "A common guideline is half your body weight in pounds, converted to ounces - a 180 lb person would target about 90 oz per day before accounting for exercise." },
       { q: "Does exercise increase how much water I need?", a: "Yes - sweat losses during exercise increase your fluid needs. This calculator adds roughly 12 oz for every 30 minutes of activity as a general estimate." },
+      { q: "Is a 'weight and water calculator' the same as this tool?", a: "Yes - this calculator estimates your daily water intake target based on your body weight (plus activity level), which is exactly what that phrase describes." },
       { q: "Does this account for water from food, not just drinks?", a: "No - this estimates fluid intake from drinking specifically; roughly 20% of daily water intake typically comes from food, so your actual total hydration needs are somewhat lower than the drinking-only figure this calculator returns." },
       { q: "Do coffee and tea count toward daily water intake?", a: "Yes, in moderation - while caffeine has a mild diuretic effect, research shows moderate coffee and tea consumption still contributes net hydration rather than causing dehydration. Water remains the most reliable source, but you don't need to exclude other beverages entirely from your daily total." },
     ],
@@ -3026,6 +3028,7 @@ const CALCULATORS = [
       { q: "How does this generate a random date?", a: "It picks a random point in time uniformly between your start and end dates (converted to timestamps), then converts that random timestamp back into a calendar date - every day in the range has an equal chance of being picked." },
       { q: "Can I generate multiple random dates at once?", a: "Yes - set \"how many dates\" to any value up to 20 to generate that many random dates from the same range in one click." },
       { q: "What could this be used for?", a: "Common uses include picking a random testing date, generating sample data for software testing, randomly assigning a date for a drawing or giveaway, or any scenario needing an unbiased random pick from a range of dates." },
+      { q: "Is 'get random date' the same as this random date generator?", a: "Yes - choose your start date, end date, and how many dates you need above, then click Calculate to get one or more random dates." },
     ],
     related: ["days-until-calculator", "date-duration-calculator", "random-number-generator"],
   },
