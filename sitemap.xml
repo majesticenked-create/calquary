@@ -283,6 +283,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/slope-calculator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/grade-gradient-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/grade-gradient-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/grade-gradient-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/molecular-weight-calculator.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/molecular-weight-calculator.html"/>
@@ -395,6 +401,12 @@
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/debt-payoff-calculator.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/debt-payoff-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/dti-ratio-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/dti-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/dti-ratio-calculator.html"/>
   </url>
   <url>
     <loc>https://calquary.com/tool/credit-card-payoff-calculator.html</loc>
@@ -815,6 +827,12 @@
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/dice-roller.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/dice-roller.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/card-deck-shuffler.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/card-deck-shuffler.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/card-deck-shuffler.html"/>
   </url>
   <url>
     <loc>https://calquary.com/tool/color-mixer.html</loc>

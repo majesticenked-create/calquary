@@ -694,6 +694,40 @@ const CALCULATORS = [
     related: ["quadratic-formula-calculator", "ratio-calculator", "percentage-change-calculator"],
   },
   {
+    id: "grade-gradient-calculator",
+    category: "math",
+    title: "Grade / Gradient Calculator",
+    keyword: "average gradient calculator",
+    description: "Calculate slope grade as a percentage, angle, and ratio from rise and run - for roads, ramps, and roofs.",
+    intro: "Enter the rise (vertical change) and run (horizontal distance) to calculate the grade as a percentage, angle, and ratio.",
+    fields: [
+      { id: "rise", label: "Rise (vertical change)", type: "number", default: 6, step: 0.1 },
+      { id: "run", label: "Run (horizontal distance)", type: "number", default: 100, step: 0.1 },
+    ],
+    compute: (v) => {
+      if (v.run === 0) {
+        return { primary: { label: "Grade", value: "Undefined" }, secondary: [], note: "Run (horizontal distance) can't be zero." };
+      }
+      const gradePercent = (v.rise / v.run) * 100;
+      const angleDeg = (Math.atan(v.rise / v.run) * 180) / Math.PI;
+      const ratioRun = v.rise === 0 ? 0 : Math.abs(v.run / v.rise);
+      return {
+        primary: { label: "Grade", value: `${round(gradePercent, 2)}%` },
+        secondary: [
+          { l: "Angle", v: `${round(angleDeg, 2)}°` },
+          { l: "Ratio", v: v.rise === 0 ? "Flat (0)" : `1:${round(ratioRun, 2)}` },
+        ],
+        note: "This is average gradient over the whole run - a real road, ramp, or roof may vary in steepness along its length even if the average matches this figure.",
+      };
+    },
+    faq: [
+      { q: "How do I calculate grade as a percentage?", a: "Divide the rise (vertical change) by the run (horizontal distance), then multiply by 100. A road that climbs 6 feet over a 100-foot horizontal distance has a 6% grade (6 ÷ 100 × 100 = 6%)." },
+      { q: "What's the difference between grade (percentage) and angle (degrees)?", a: "Grade and angle both describe steepness, but grade is rise ÷ run as a percentage, while angle is the arctangent of that same ratio in degrees - a 100% grade is a 45° angle (not 90°, a common misconception), since 100% grade means rise equals run." },
+      { q: "What's a typical maximum grade for roads or wheelchair ramps?", a: "US highways are typically limited to about 6-8% grade, residential driveways often go up to 15-20%, and ADA-compliant wheelchair ramps are limited to about 8.3% (1:12) - though exact limits depend on the specific code or standard that applies to your situation." },
+    ],
+    related: ["slope-calculator", "ratio-calculator", "unit-length-converter"],
+  },
+  {
     id: "molecular-weight-calculator",
     category: "math",
     title: "Molecular Weight Calculator",
@@ -1513,6 +1547,38 @@ const CALCULATORS = [
       { q: "What's the difference between the debt snowball and debt avalanche methods?", a: "The snowball method pays off the smallest balance first for quick psychological wins, then rolls that payment into the next-smallest debt; the avalanche method pays off the highest-interest debt first to minimize total interest paid. Avalanche saves more money mathematically, but snowball's early wins help some people stay motivated." },
     ],
     related: ["credit-card-payoff-calculator", "loan-calculator", "compound-interest-calculator"],
+  },
+  {
+    id: "dti-ratio-calculator",
+    category: "finance",
+    title: "Debt-to-Income (DTI) Ratio Calculator",
+    keyword: "dti ratio calculator",
+    description: "Calculate your debt-to-income ratio from monthly debt payments and gross monthly income.",
+    intro: "Enter your total monthly debt payments and gross monthly income to calculate your debt-to-income (DTI) ratio.",
+    fields: [
+      { id: "monthlyDebt", label: "Total monthly debt payments", type: "number", unit: "$", default: 1800, step: 10 },
+      { id: "monthlyIncome", label: "Gross monthly income", type: "number", unit: "$", default: 6000, step: 10 },
+    ],
+    compute: (v) => {
+      const dti = v.monthlyIncome === 0 ? 0 : (v.monthlyDebt / v.monthlyIncome) * 100;
+      let category = "High";
+      if (dti <= 36) category = "Generally favorable";
+      else if (dti <= 43) category = "Moderate";
+      return {
+        primary: { label: "DTI ratio", value: `${round(dti, 1)}%` },
+        secondary: [
+          { l: "General range", v: category },
+          { l: "Income remaining after debt", v: `$${round(v.monthlyIncome - v.monthlyDebt, 2).toLocaleString()}` },
+        ],
+        note: "Lender thresholds vary by loan type and program - many conventional mortgage guidelines look for 36-43% or below, but this varies. Check your specific lender's requirements rather than treating these ranges as a hard rule.",
+      };
+    },
+    faq: [
+      { q: "How is debt-to-income (DTI) ratio calculated?", a: "Divide your total monthly debt payments (loans, credit cards, etc.) by your gross (pre-tax) monthly income, then multiply by 100. $1,800 in monthly debt on $6,000 gross monthly income gives a DTI of 30%." },
+      { q: "What counts as 'debt' in a DTI calculation?", a: "Recurring debt obligations like mortgage or rent, car loans, student loans, minimum credit card payments, and other loan payments - it does not include everyday living expenses like groceries, utilities, or insurance, which aren't counted as \"debt\" for DTI purposes." },
+      { q: "What's a good DTI ratio?", a: "Many conventional mortgage lenders look favorably on a DTI of 36% or below, with some programs allowing up to 43-50% depending on other factors - but exact thresholds vary significantly by loan type and lender, so this is a general reference, not a guarantee of approval." },
+    ],
+    related: ["debt-payoff-calculator", "mortgage-calculator", "loan-calculator"],
   },
   {
     id: "credit-card-payoff-calculator",
@@ -3639,6 +3705,48 @@ const CALCULATORS = [
       { q: "How do I roll multiple dice and add them together, like 2d6?", a: "Set \"number of dice\" to 2 and \"sides per die\" to 6 - the result shows each individual roll plus the total, which is exactly what \"2d6\" notation from tabletop games means." },
     ],
     related: ["random-number-generator", "group-randomizer", "password-generator"],
+  },
+  {
+    id: "card-deck-shuffler",
+    category: "text",
+    title: "Shuffled Deck of Cards",
+    keyword: "shuffled deck of cards",
+    description: "Shuffle a standard 52-card deck into random order, or draw a set number of random cards.",
+    intro: "Choose how many cards to draw from a freshly shuffled standard 52-card deck.",
+    fields: [
+      { id: "numCards", label: "Cards to draw", type: "number", default: 52, step: 1, min: 1, max: 52 },
+    ],
+    compute: (v) => {
+      const suits = ["♠", "♥", "♦", "♣"];
+      const ranks = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+      const deck = [];
+      for (const s of suits) for (const r of ranks) deck.push(`${r}${s}`);
+      for (let i = deck.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [deck[i], deck[j]] = [deck[j], deck[i]];
+      }
+      const numCards = Math.max(1, Math.min(52, Math.round(v.numCards)));
+      const drawn = deck.slice(0, numCards);
+      const perRow = 8;
+      const rows = [];
+      for (let i = 0; i < drawn.length; i += perRow) {
+        const chunk = drawn.slice(i, i + perRow);
+        while (chunk.length < perRow) chunk.push("");
+        rows.push(chunk);
+      }
+      return {
+        primary: { label: "Cards drawn", value: numCards },
+        secondary: [{ l: "First card", v: drawn[0] }, { l: "Last card", v: drawn[drawn.length - 1] }],
+        note: "Click Calculate again to reshuffle and draw a fresh set.",
+        table: { columns: Array.from({ length: perRow }, (_, i) => `#${i + 1}`), rows },
+      };
+    },
+    faq: [
+      { q: "How is this deck shuffled?", a: "Using a Fisher-Yates shuffle - a well-established algorithm that gives every one of the 52! (about 8×10^67) possible orderings an equal chance, run using your browser's random number generator." },
+      { q: "Can I draw fewer than 52 cards, like for a poker hand?", a: "Yes - set \"cards to draw\" to however many you need (5 for a poker hand, 13 for a bridge hand, etc.) and this pulls that many cards from the top of a freshly shuffled deck." },
+      { q: "Does this include jokers?", a: "No - this is a standard 52-card deck (4 suits × 13 ranks, no jokers), which matches the deck used in most card games. Jokers aren't part of the standard deck this tool shuffles." },
+    ],
+    related: ["random-number-generator", "dice-roller", "group-randomizer"],
   },
   {
     id: "color-mixer",
