@@ -796,6 +796,43 @@ const CALCULATORS = [
     related: ["quadratic-formula-calculator", "ratio-calculator", "square-root-calculator"],
   },
   {
+    id: "linear-equation-solver",
+    category: "math",
+    title: "Linear Equation Solver",
+    keyword: "linear equation solver",
+    description: "Solve a linear equation of the form ax + b = c for x.",
+    intro: "Enter the coefficients for ax + b = c to solve for x.",
+    fields: [
+      { id: "a", label: "a (coefficient of x)", type: "number", default: 3, step: 0.1 },
+      { id: "b", label: "b", type: "number", default: 5, step: 0.1 },
+      { id: "c", label: "c", type: "number", default: 20, step: 0.1 },
+    ],
+    compute: (v) => {
+      if (v.a === 0) {
+        const isTrue = v.b === v.c;
+        return {
+          primary: { label: "Solution", value: isTrue ? "Infinitely many solutions" : "No solution" },
+          secondary: [],
+          note: isTrue
+            ? "With a = 0, the equation reduces to b = c, which is true regardless of x - so every value of x works."
+            : "With a = 0, the equation reduces to b = c, which is false here - so no value of x can make the equation true.",
+        };
+      }
+      const x = (v.c - v.b) / v.a;
+      return {
+        primary: { label: "x =", value: round(x, 6) },
+        secondary: [{ l: "Check", v: `${round(v.a, 4)}(${round(x, 4)}) + ${round(v.b, 4)} = ${round(v.a * x + v.b, 4)}` }],
+        note: "Solved by isolating x: x = (c − b) / a.",
+      };
+    },
+    faq: [
+      { q: "How do I solve a linear equation like 3x + 5 = 20?", a: "Isolate x: subtract 5 from both sides to get 3x = 15, then divide both sides by 3 to get x = 5. In general, for ax + b = c, x = (c − b) / a." },
+      { q: "What if the equation has x on both sides, like 2x + 3 = x + 10?", a: "Move all the x terms to one side and constants to the other first: subtracting x from both sides gives x + 3 = 10, then subtracting 3 gives x = 7. Rearrange your equation into the ax + b = c form before entering it here." },
+      { q: "What does it mean if a = 0 in this calculator?", a: "If a is 0, there's no x term left to solve for - the equation becomes just b = c. If that's true (like 5 = 5), every value of x satisfies it; if it's false (like 5 = 7), no value of x can, since the x term can't change the outcome." },
+    ],
+    related: ["system-of-equations-solver", "quadratic-formula-calculator", "ratio-calculator"],
+  },
+  {
     id: "chemical-equation-balancer",
     category: "math",
     title: "Chemical Equation Balancer",
@@ -2488,6 +2525,7 @@ const CALCULATORS = [
       { q: "What happens if adding time crosses midnight?", a: "The result wraps around to the next day - for example, 11:00 PM plus 3 hours becomes 2:00 AM, and this calculator flags that the result crosses into the following calendar day rather than showing an invalid 26:00." },
       { q: "Is this the same as the Time Duration Calculator?", a: "No - the Time Duration Calculator finds the gap between two times you already know (like 9 AM and 5:30 PM). This calculator does the opposite: starting from one known time, it adds or subtracts a duration to find a new resulting time." },
       { q: "Is a 'calculator that adds time' or 'time calculator addition' the same as this tool?", a: "Yes - all of these describe adding a duration to a starting time to get a new time, which is exactly what this calculator does. Set the operation to \"Add\" above." },
+      { q: "Is an 'add calculator time' or 'time adding calculator' search different from this tool?", a: "No - both describe the same task this calculator handles: adding a duration to a starting time. Set the operation to \"Add\" and enter your starting time and duration above." },
     ],
     related: ["time-duration-calculator", "time-unit-converter", "date-duration-calculator"],
   },
@@ -2588,6 +2626,7 @@ const CALCULATORS = [
       { q: "What is 1600 military time?", a: "4:00 PM. Since 1600 is 16 hundred hours, subtract 12 to get 4, and any hour of 13 or greater is PM - switch this calculator to \"Military → 12-hour\" mode and enter hour 16, minute 0 to confirm." },
       { q: "What is 7 PM or 10 PM in military time?", a: "7:00 PM is 1900 (19 hundred hours) - add 12 to the PM hour. 10:00 PM is 2200 (22 hundred hours), same rule. Only 12 PM (noon, stays 1200) and 12 AM (midnight, becomes 0000) break the simple \"add 12\" pattern." },
       { q: "What is 6 PM in military time?", a: "1800 (18 hundred hours) - add 12 to the PM hour, same rule as any other PM time between 1 PM and 11 PM." },
+      { q: "What is 8 AM in military time?", a: "0800 - AM hours from 1 AM to 11 AM stay the same number in military time, just with a leading zero. Only 12 AM (midnight) is the exception, becoming 0000." },
       { q: "Is 'army clock converter' the same as a military time converter?", a: "Yes - the US military and other armed forces use the same 24-hour clock system commonly called \"military time,\" so \"army clock converter\" describes the same conversion this tool handles in both directions." },
     ],
     related: ["time-duration-calculator", "time-add-calculator", "time-unit-converter"],
@@ -2693,6 +2732,7 @@ const CALCULATORS = [
       { q: "Should I use city or highway mpg for a road trip estimate?", a: "Highway mpg is usually the more accurate figure for a long-distance trip, since most of the driving happens at steady highway speeds; city mpg (typically lower) is more relevant for trips with frequent stops and lower average speeds." },
       { q: "How can I split this cost among passengers?", a: "Divide the total gas cost by the number of people sharing the trip - for a $37.50 total split 3 ways, that's $12.50 per person. This calculator gives you the total cost; dividing it evenly (or by another agreed split) is a simple next step." },
       { q: "Is 'calculating gas costs for a trip' the same as this calculator?", a: "Yes - enter your trip distance, fuel economy, and gas price above to calculate exactly that." },
+      { q: "Is a 'gas calculator for a trip' the same as this tool?", a: "Yes - that's exactly what this calculator does, using your trip distance, fuel economy, and gas price." },
     ],
     related: ["fuel-economy-converter", "auto-loan-calculator", "tip-calculator"],
   },
@@ -2960,6 +3000,7 @@ const CALCULATORS = [
       { q: "Why does temperature conversion need an offset, not just multiplication?", a: "Fahrenheit and Celsius have different zero points (freezing water is 0°C but 32°F), so converting requires shifting the scale first, unlike length or weight conversions which only need a multiplier." },
       { q: "What temperature is the same number in both Celsius and Fahrenheit?", a: "−40 degrees - it's the one point where the two scales intersect, since −40°C × 9/5 + 32 = −40°F exactly; every other temperature reads as a different number on each scale." },
       { q: "Does this also convert to and from Kelvin?", a: "Yes - alongside Celsius and Fahrenheit, this converter supports Kelvin, which is useful for scientific calculations since it starts at absolute zero rather than an arbitrary reference point." },
+      { q: "What is 180°C in an oven, in Fahrenheit?", a: "356°F exactly, though recipes almost always round oven temperatures to the nearest common setting - 180°C is the standard rounded equivalent of 350°F, a very common baking temperature, even though the precise conversion is a few degrees higher." },
     ],
     related: ["weight-converter", "volume-converter", "unit-length-converter"],
   },
@@ -3106,6 +3147,7 @@ const CALCULATORS = [
       { q: "How many grams are in a cup?", a: "It depends on the ingredient - a cup of flour is about 120g, a cup of granulated sugar is about 200g, and a cup of butter is about 227g, since cups measure volume and grams measure weight. Choose your ingredient above for the exact figure." },
       { q: "Is '1 cup in grams' or '1 cup to g' the same question as 'cup to grams'?", a: "Yes - all of these ask the same thing: how many grams are in one cup of a given ingredient. Enter 1 in the cups field and pick your ingredient above for the exact figure." },
       { q: "Is '1 cups to grams' (plural) different from '1 cup to grams'?", a: "No - it's the same question with a grammar slip. Enter 1 in the cups field above for the answer either way." },
+      { q: "Is a 'cup to gram calculator' the same as this tool?", a: "Yes - that's exactly what this calculator does. Choose your ingredient and enter a number of cups above to get the equivalent weight in grams." },
       { q: "Is 'cups to grams' without a number the same question?", a: "Yes - it's asking for the same conversion, just without specifying an amount. Enter however many cups you have above (1, 2, 0.5, etc.) to get the exact grams for your ingredient." },
       { q: "How many cups are in a certain number of grams?", a: "Divide the gram amount by the grams-per-cup figure for your ingredient - 240g of flour, for example, is 240 ÷ 120 = 2 cups. This calculator converts cups to grams directly; for grams to cups, divide your gram amount by the per-cup weight shown for your ingredient above." },
       { q: "A cup is how many grams?", a: "It depends entirely on the ingredient, since a cup measures volume and grams measure weight - select your ingredient above (flour, sugar, butter, or brown sugar) to see its specific grams-per-cup figure." },

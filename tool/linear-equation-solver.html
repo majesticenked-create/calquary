@@ -4,29 +4,23 @@
   <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Temperature Converter | Calquary</title>
-  <meta name="description" content="Convert between Fahrenheit, Celsius, and Kelvin." />
-  <meta property="og:title" content="Temperature Converter | Calquary">
-  <meta property="og:description" content="Convert between Fahrenheit, Celsius, and Kelvin.">
+  <title>Linear Equation Solver | Calquary</title>
+  <meta name="description" content="Solve a linear equation of the form ax + b = c for x." />
+  <meta property="og:title" content="Linear Equation Solver | Calquary">
+  <meta property="og:description" content="Solve a linear equation of the form ax + b = c for x.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://calquary.com/tool/temperature-converter.html">
+  <meta property="og:url" content="https://calquary.com/tool/linear-equation-solver.html">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Calquary">
-  <meta property="og:image" content="https://calquary.com/og-images/temperature-converter.png">
+  <meta property="og:image" content="https://calquary.com/og-images/linear-equation-solver.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Temperature Converter | Calquary">
-  <meta name="twitter:description" content="Convert between Fahrenheit, Celsius, and Kelvin.">
-  <meta name="twitter:image" content="https://calquary.com/og-images/temperature-converter.png">
-    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/temperature-converter.html">
-  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/temperature-converter.html">
-  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/temperature-converter.html">
-  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/temperature-converter.html">
-  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/temperature-converter.html">
-  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/temperature-converter.html">
-  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/temperature-converter.html">
-  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/temperature-converter.html">
+  <meta name="twitter:title" content="Linear Equation Solver | Calquary">
+  <meta name="twitter:description" content="Solve a linear equation of the form ax + b = c for x.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/linear-equation-solver.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/linear-equation-solver.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/linear-equation-solver.html">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -52,7 +46,7 @@
       // still JS-driven here is the interactive calculator widget itself
       // (fields/compute/results) and the related-tools list, neither of
       // which is static SEO prose.
-      const calc = getCalculator("temperature-converter");
+      const calc = getCalculator("linear-equation-solver");
 
       const relWrap = document.getElementById("related-list");
       calc.related.forEach((relId) => {
@@ -63,7 +57,7 @@
         relWrap.appendChild(li);
       });
 
-      initCalculator("temperature-converter");
+      initCalculator("linear-equation-solver");
     });
   </script>
   <script type="application/ld+json">
@@ -72,11 +66,11 @@
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "Temperature Converter",
-      "description": "Convert between Fahrenheit, Celsius, and Kelvin.",
+      "name": "Linear Equation Solver",
+      "description": "Solve a linear equation of the form ax + b = c for x.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
-      "url": "https://calquary.com/tool/temperature-converter.html",
+      "url": "https://calquary.com/tool/linear-equation-solver.html",
       "isAccessibleForFree": true,
       "offers": {
         "@type": "Offer",
@@ -98,14 +92,14 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Everyday Conversions",
-          "item": "https://calquary.com/category/conversions.html"
+          "name": "Math",
+          "item": "https://calquary.com/category/math.html"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Temperature Converter",
-          "item": "https://calquary.com/tool/temperature-converter.html"
+          "name": "Linear Equation Solver",
+          "item": "https://calquary.com/tool/linear-equation-solver.html"
         }
       ]
     },
@@ -114,42 +108,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "How do I convert Fahrenheit to Celsius?",
+          "name": "How do I solve a linear equation like 3x + 5 = 20?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Subtract 32, then multiply by 5/9. 98.6°F: (98.6 − 32) × 5/9 = 37°C - normal human body temperature."
+            "text": "Isolate x: subtract 5 from both sides to get 3x = 15, then divide both sides by 3 to get x = 5. In general, for ax + b = c, x = (c − b) / a."
           }
         },
         {
           "@type": "Question",
-          "name": "Why does temperature conversion need an offset, not just multiplication?",
+          "name": "What if the equation has x on both sides, like 2x + 3 = x + 10?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Fahrenheit and Celsius have different zero points (freezing water is 0°C but 32°F), so converting requires shifting the scale first, unlike length or weight conversions which only need a multiplier."
+            "text": "Move all the x terms to one side and constants to the other first: subtracting x from both sides gives x + 3 = 10, then subtracting 3 gives x = 7. Rearrange your equation into the ax + b = c form before entering it here."
           }
         },
         {
           "@type": "Question",
-          "name": "What temperature is the same number in both Celsius and Fahrenheit?",
+          "name": "What does it mean if a = 0 in this calculator?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "−40 degrees - it's the one point where the two scales intersect, since −40°C × 9/5 + 32 = −40°F exactly; every other temperature reads as a different number on each scale."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does this also convert to and from Kelvin?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes - alongside Celsius and Fahrenheit, this converter supports Kelvin, which is useful for scientific calculations since it starts at absolute zero rather than an arbitrary reference point."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is 180°C in an oven, in Fahrenheit?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "356°F exactly, though recipes almost always round oven temperatures to the nearest common setting - 180°C is the standard rounded equivalent of 350°F, a very common baking temperature, even though the precise conversion is a few degrees higher."
+            "text": "If a is 0, there's no x term left to solve for - the equation becomes just b = c. If that's true (like 5 = 5), every value of x satisfies it; if it's false (like 5 = 7), no value of x can, since the x term can't change the outcome."
           }
         }
       ]
@@ -169,13 +147,7 @@
           <a href="/index.html#tools">All tools</a>
           <a href="/about.html">About</a>
         </nav>
-        <div class="locale-switcher">
-          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: English">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
-            <span>EN</span>
-          </button>
-          <div class="locale-menu" role="menu"><span class="locale-item current" role="menuitem" aria-current="true">English</span><a class="locale-item" role="menuitem" href="/es/tool/temperature-converter.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/temperature-converter.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/temperature-converter.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/temperature-converter.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/temperature-converter.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/temperature-converter.html">日本語</a></div>
-        </div>
+        
         <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
       </div>
     </div>
@@ -183,15 +155,15 @@
 
   <div class="wrap" style="padding-top:32px;">
     <div class="breadcrumb">
-      <a href="/index.html">Calquary</a> / <a href="/category/conversions.html">Everyday Conversions</a>
+      <a href="/index.html">Calquary</a> / <a href="/category/math.html">Math</a>
     </div>
   </div>
 
   <div class="wrap" style="padding-bottom:64px;">
     <div class="tool-layout">
       <main>
-        <h1>Temperature Converter</h1>
-        <p style="max-width:60ch;">Enter a temperature and choose a starting unit to convert between Fahrenheit, Celsius, and Kelvin.</p>
+        <h1>Linear Equation Solver</h1>
+        <p style="max-width:60ch;">Enter the coefficients for ax + b = c to solve for x.</p>
         <p class="last-updated">Last updated: August 30, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -219,24 +191,16 @@
         <div class="article-block">
           <h2>Frequently asked questions</h2>
           <div id="faq-list"><div class="faq-item">
-<h3>How do I convert Fahrenheit to Celsius?</h3>
-<p>Subtract 32, then multiply by 5/9. 98.6°F: (98.6 − 32) × 5/9 = 37°C - normal human body temperature.</p>
+<h3>How do I solve a linear equation like 3x + 5 = 20?</h3>
+<p>Isolate x: subtract 5 from both sides to get 3x = 15, then divide both sides by 3 to get x = 5. In general, for ax + b = c, x = (c − b) / a.</p>
 </div>
 <div class="faq-item">
-<h3>Why does temperature conversion need an offset, not just multiplication?</h3>
-<p>Fahrenheit and Celsius have different zero points (freezing water is 0°C but 32°F), so converting requires shifting the scale first, unlike length or weight conversions which only need a multiplier.</p>
+<h3>What if the equation has x on both sides, like 2x + 3 = x + 10?</h3>
+<p>Move all the x terms to one side and constants to the other first: subtracting x from both sides gives x + 3 = 10, then subtracting 3 gives x = 7. Rearrange your equation into the ax + b = c form before entering it here.</p>
 </div>
 <div class="faq-item">
-<h3>What temperature is the same number in both Celsius and Fahrenheit?</h3>
-<p>−40 degrees - it's the one point where the two scales intersect, since −40°C × 9/5 + 32 = −40°F exactly; every other temperature reads as a different number on each scale.</p>
-</div>
-<div class="faq-item">
-<h3>Does this also convert to and from Kelvin?</h3>
-<p>Yes - alongside Celsius and Fahrenheit, this converter supports Kelvin, which is useful for scientific calculations since it starts at absolute zero rather than an arbitrary reference point.</p>
-</div>
-<div class="faq-item">
-<h3>What is 180°C in an oven, in Fahrenheit?</h3>
-<p>356°F exactly, though recipes almost always round oven temperatures to the nearest common setting - 180°C is the standard rounded equivalent of 350°F, a very common baking temperature, even though the precise conversion is a few degrees higher.</p>
+<h3>What does it mean if a = 0 in this calculator?</h3>
+<p>If a is 0, there's no x term left to solve for - the equation becomes just b = c. If that's true (like 5 = 5), every value of x satisfies it; if it's false (like 5 = 7), no value of x can, since the x term can't change the outcome.</p>
 </div></div>
         </div>
       </main>
