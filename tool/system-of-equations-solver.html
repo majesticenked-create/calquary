@@ -4,23 +4,23 @@
   <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Random Number Generator | Calquary</title>
-  <meta name="description" content="Generate one or more random numbers within a range." />
-  <meta property="og:title" content="Random Number Generator | Calquary">
-  <meta property="og:description" content="Generate one or more random numbers within a range.">
+  <title>System of Equations Solver | Calquary</title>
+  <meta name="description" content="Solve a system of two linear equations (ax + by = e, cx + dy = f) for x and y." />
+  <meta property="og:title" content="System of Equations Solver | Calquary">
+  <meta property="og:description" content="Solve a system of two linear equations (ax + by = e, cx + dy = f) for x and y.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://calquary.com/tool/random-number-generator.html">
+  <meta property="og:url" content="https://calquary.com/tool/system-of-equations-solver.html">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Calquary">
-  <meta property="og:image" content="https://calquary.com/og-images/random-number-generator.png">
+  <meta property="og:image" content="https://calquary.com/og-images/system-of-equations-solver.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Random Number Generator | Calquary">
-  <meta name="twitter:description" content="Generate one or more random numbers within a range.">
-  <meta name="twitter:image" content="https://calquary.com/og-images/random-number-generator.png">
-    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/random-number-generator.html">
-  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/random-number-generator.html">
+  <meta name="twitter:title" content="System of Equations Solver | Calquary">
+  <meta name="twitter:description" content="Solve a system of two linear equations (ax + by = e, cx + dy = f) for x and y.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/system-of-equations-solver.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/system-of-equations-solver.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/system-of-equations-solver.html">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -46,7 +46,7 @@
       // still JS-driven here is the interactive calculator widget itself
       // (fields/compute/results) and the related-tools list, neither of
       // which is static SEO prose.
-      const calc = getCalculator("random-number-generator");
+      const calc = getCalculator("system-of-equations-solver");
 
       const relWrap = document.getElementById("related-list");
       calc.related.forEach((relId) => {
@@ -57,7 +57,7 @@
         relWrap.appendChild(li);
       });
 
-      initCalculator("random-number-generator");
+      initCalculator("system-of-equations-solver");
     });
   </script>
   <script type="application/ld+json">
@@ -66,11 +66,11 @@
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "Random Number Generator",
-      "description": "Generate one or more random numbers within a range.",
+      "name": "System of Equations Solver",
+      "description": "Solve a system of two linear equations (ax + by = e, cx + dy = f) for x and y.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
-      "url": "https://calquary.com/tool/random-number-generator.html",
+      "url": "https://calquary.com/tool/system-of-equations-solver.html",
       "isAccessibleForFree": true,
       "offers": {
         "@type": "Offer",
@@ -92,14 +92,14 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Text & Digital",
-          "item": "https://calquary.com/category/text.html"
+          "name": "Math",
+          "item": "https://calquary.com/category/math.html"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Random Number Generator",
-          "item": "https://calquary.com/tool/random-number-generator.html"
+          "name": "System of Equations Solver",
+          "item": "https://calquary.com/tool/system-of-equations-solver.html"
         }
       ]
     },
@@ -108,50 +108,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Is this random number generator truly random?",
+          "name": "How do I solve a system of two linear equations?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It uses your browser's built-in Math.random(), which is pseudo-random and suitable for games, giveaways, and everyday decisions - but not for cryptographic or security purposes."
+            "text": "Using Cramer's rule (what this calculator does): for ax+by=e and cx+dy=f, x = (ed−bf)/(ad−bc) and y = (af−ec)/(ad−bc), where ad−bc is the determinant of the coefficient matrix. This works as long as that determinant isn't zero."
           }
         },
         {
           "@type": "Question",
-          "name": "Is this the same as asking Google to generate a random number?",
+          "name": "What does it mean if there's no solution?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, functionally - Google's search results include a built-in random number generator for quick use, and this calculator does the same thing with a dedicated page, plus the option to set a custom range and generate multiple numbers at once."
+            "text": "The two equations represent parallel lines (the same slope, different intercepts) that never cross - so there's no (x, y) pair that makes both equations true at the same time."
           }
         },
         {
           "@type": "Question",
-          "name": "Can I generate multiple random numbers at once?",
+          "name": "What does it mean if there are infinitely many solutions?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes - set 'how many numbers' to any value up to 50 to generate a list of random numbers within your chosen range in one click."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I exclude specific numbers from the random range?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "This calculator generates uniformly from the full range you specify (minimum to maximum); to exclude specific values, generate a number and simply re-roll if it matches an excluded value, or narrow the range if the excluded values are all at one end."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is a 'randomness generator' the same as this random number generator?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes - \"randomness generator\" is just another way of describing a tool that produces random numbers, which is exactly what this calculator does within whatever range and count you set."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I use this for a raffle or giveaway drawing?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes - this generator is well-suited for informal drawings like picking a raffle winner or random giveaway entry from a numbered list. For anything with legal or regulatory requirements around fairness (like a licensed lottery), use a certified random number source instead."
+            "text": "The two equations actually describe the exact same line (one might just be a multiple of the other) - every point on that line satisfies both equations, so there isn't one unique (x, y) answer."
           }
         }
       ]
@@ -179,15 +155,15 @@
 
   <div class="wrap" style="padding-top:32px;">
     <div class="breadcrumb">
-      <a href="/index.html">Calquary</a> / <a href="/category/text.html">Text & Digital</a>
+      <a href="/index.html">Calquary</a> / <a href="/category/math.html">Math</a>
     </div>
   </div>
 
   <div class="wrap" style="padding-bottom:64px;">
     <div class="tool-layout">
       <main>
-        <h1>Random Number Generator</h1>
-        <p style="max-width:60ch;">Choose a minimum, maximum, and how many numbers you need to generate random numbers in your browser.</p>
+        <h1>System of Equations Solver</h1>
+        <p style="max-width:60ch;">Enter the coefficients for two linear equations (ax + by = e and cx + dy = f) to solve for x and y.</p>
         <p class="last-updated">Last updated: August 30, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -215,28 +191,16 @@
         <div class="article-block">
           <h2>Frequently asked questions</h2>
           <div id="faq-list"><div class="faq-item">
-<h3>Is this random number generator truly random?</h3>
-<p>It uses your browser's built-in Math.random(), which is pseudo-random and suitable for games, giveaways, and everyday decisions - but not for cryptographic or security purposes.</p>
+<h3>How do I solve a system of two linear equations?</h3>
+<p>Using Cramer's rule (what this calculator does): for ax+by=e and cx+dy=f, x = (ed−bf)/(ad−bc) and y = (af−ec)/(ad−bc), where ad−bc is the determinant of the coefficient matrix. This works as long as that determinant isn't zero.</p>
 </div>
 <div class="faq-item">
-<h3>Is this the same as asking Google to generate a random number?</h3>
-<p>Yes, functionally - Google's search results include a built-in random number generator for quick use, and this calculator does the same thing with a dedicated page, plus the option to set a custom range and generate multiple numbers at once.</p>
+<h3>What does it mean if there's no solution?</h3>
+<p>The two equations represent parallel lines (the same slope, different intercepts) that never cross - so there's no (x, y) pair that makes both equations true at the same time.</p>
 </div>
 <div class="faq-item">
-<h3>Can I generate multiple random numbers at once?</h3>
-<p>Yes - set 'how many numbers' to any value up to 50 to generate a list of random numbers within your chosen range in one click.</p>
-</div>
-<div class="faq-item">
-<h3>Can I exclude specific numbers from the random range?</h3>
-<p>This calculator generates uniformly from the full range you specify (minimum to maximum); to exclude specific values, generate a number and simply re-roll if it matches an excluded value, or narrow the range if the excluded values are all at one end.</p>
-</div>
-<div class="faq-item">
-<h3>Is a 'randomness generator' the same as this random number generator?</h3>
-<p>Yes - "randomness generator" is just another way of describing a tool that produces random numbers, which is exactly what this calculator does within whatever range and count you set.</p>
-</div>
-<div class="faq-item">
-<h3>Can I use this for a raffle or giveaway drawing?</h3>
-<p>Yes - this generator is well-suited for informal drawings like picking a raffle winner or random giveaway entry from a numbered list. For anything with legal or regulatory requirements around fairness (like a licensed lottery), use a certified random number source instead.</p>
+<h3>What does it mean if there are infinitely many solutions?</h3>
+<p>The two equations actually describe the exact same line (one might just be a multiple of the other) - every point on that line satisfies both equations, so there isn't one unique (x, y) answer.</p>
 </div></div>
         </div>
       </main>

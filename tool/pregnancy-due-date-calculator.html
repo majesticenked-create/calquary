@@ -4,23 +4,23 @@
   <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Random Number Generator | Calquary</title>
-  <meta name="description" content="Generate one or more random numbers within a range." />
-  <meta property="og:title" content="Random Number Generator | Calquary">
-  <meta property="og:description" content="Generate one or more random numbers within a range.">
+  <title>Pregnancy Due Date Calculator | Calquary</title>
+  <meta name="description" content="Estimate a pregnancy due date from your last period, conception date, or IVF transfer date." />
+  <meta property="og:title" content="Pregnancy Due Date Calculator | Calquary">
+  <meta property="og:description" content="Estimate a pregnancy due date from your last period, conception date, or IVF transfer date.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://calquary.com/tool/random-number-generator.html">
+  <meta property="og:url" content="https://calquary.com/tool/pregnancy-due-date-calculator.html">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Calquary">
-  <meta property="og:image" content="https://calquary.com/og-images/random-number-generator.png">
+  <meta property="og:image" content="https://calquary.com/og-images/pregnancy-due-date-calculator.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Random Number Generator | Calquary">
-  <meta name="twitter:description" content="Generate one or more random numbers within a range.">
-  <meta name="twitter:image" content="https://calquary.com/og-images/random-number-generator.png">
-    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/random-number-generator.html">
-  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/random-number-generator.html">
+  <meta name="twitter:title" content="Pregnancy Due Date Calculator | Calquary">
+  <meta name="twitter:description" content="Estimate a pregnancy due date from your last period, conception date, or IVF transfer date.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/pregnancy-due-date-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/pregnancy-due-date-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/pregnancy-due-date-calculator.html">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -46,7 +46,7 @@
       // still JS-driven here is the interactive calculator widget itself
       // (fields/compute/results) and the related-tools list, neither of
       // which is static SEO prose.
-      const calc = getCalculator("random-number-generator");
+      const calc = getCalculator("pregnancy-due-date-calculator");
 
       const relWrap = document.getElementById("related-list");
       calc.related.forEach((relId) => {
@@ -57,7 +57,7 @@
         relWrap.appendChild(li);
       });
 
-      initCalculator("random-number-generator");
+      initCalculator("pregnancy-due-date-calculator");
     });
   </script>
   <script type="application/ld+json">
@@ -66,11 +66,11 @@
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "Random Number Generator",
-      "description": "Generate one or more random numbers within a range.",
+      "name": "Pregnancy Due Date Calculator",
+      "description": "Estimate a pregnancy due date from your last period, conception date, or IVF transfer date.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
-      "url": "https://calquary.com/tool/random-number-generator.html",
+      "url": "https://calquary.com/tool/pregnancy-due-date-calculator.html",
       "isAccessibleForFree": true,
       "offers": {
         "@type": "Offer",
@@ -92,14 +92,14 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Text & Digital",
-          "item": "https://calquary.com/category/text.html"
+          "name": "Health & Fitness",
+          "item": "https://calquary.com/category/health.html"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Random Number Generator",
-          "item": "https://calquary.com/tool/random-number-generator.html"
+          "name": "Pregnancy Due Date Calculator",
+          "item": "https://calquary.com/tool/pregnancy-due-date-calculator.html"
         }
       ]
     },
@@ -108,50 +108,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Is this random number generator truly random?",
+          "name": "How is a due date calculated from the last menstrual period (LMP)?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It uses your browser's built-in Math.random(), which is pseudo-random and suitable for games, giveaways, and everyday decisions - but not for cryptographic or security purposes."
+            "text": "Add 280 days (40 weeks) to the first day of your last period - this is Naegele's rule, the standard method, which assumes a 28-day cycle with ovulation on day 14. It's an estimate; actual cycle length affects real conception timing."
           }
         },
         {
           "@type": "Question",
-          "name": "Is this the same as asking Google to generate a random number?",
+          "name": "How is an IVF due date different from an LMP-based due date?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, functionally - Google's search results include a built-in random number generator for quick use, and this calculator does the same thing with a dedicated page, plus the option to set a custom range and generate multiple numbers at once."
+            "text": "IVF due dates are calculated from a known transfer date rather than an estimated ovulation date, which makes them more precise. A day-5 (blastocyst) transfer adds 261 days to the transfer date, and a day-3 transfer adds 263 days - both account for the embryo's exact age at transfer."
           }
         },
         {
           "@type": "Question",
-          "name": "Can I generate multiple random numbers at once?",
+          "name": "How accurate are due date estimates?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes - set 'how many numbers' to any value up to 50 to generate a list of random numbers within your chosen range in one click."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I exclude specific numbers from the random range?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "This calculator generates uniformly from the full range you specify (minimum to maximum); to exclude specific values, generate a number and simply re-roll if it matches an excluded value, or narrow the range if the excluded values are all at one end."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is a 'randomness generator' the same as this random number generator?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes - \"randomness generator\" is just another way of describing a tool that produces random numbers, which is exactly what this calculator does within whatever range and count you set."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I use this for a raffle or giveaway drawing?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes - this generator is well-suited for informal drawings like picking a raffle winner or random giveaway entry from a numbered list. For anything with legal or regulatory requirements around fairness (like a licensed lottery), use a certified random number source instead."
+            "text": "Only about 5% of babies are born on their exact estimated due date - most arrive within a 2-week window before or after. Due dates are a statistical estimate of a full-term timeline, not a precise prediction, and your care provider's ultrasound-based dating is generally more reliable than a calculation from LMP alone."
           }
         }
       ]
@@ -179,15 +155,15 @@
 
   <div class="wrap" style="padding-top:32px;">
     <div class="breadcrumb">
-      <a href="/index.html">Calquary</a> / <a href="/category/text.html">Text & Digital</a>
+      <a href="/index.html">Calquary</a> / <a href="/category/health.html">Health & Fitness</a>
     </div>
   </div>
 
   <div class="wrap" style="padding-bottom:64px;">
     <div class="tool-layout">
       <main>
-        <h1>Random Number Generator</h1>
-        <p style="max-width:60ch;">Choose a minimum, maximum, and how many numbers you need to generate random numbers in your browser.</p>
+        <h1>Pregnancy Due Date Calculator</h1>
+        <p style="max-width:60ch;">Choose your calculation method and enter the relevant date to estimate your due date.</p>
         <p class="last-updated">Last updated: August 30, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -215,28 +191,16 @@
         <div class="article-block">
           <h2>Frequently asked questions</h2>
           <div id="faq-list"><div class="faq-item">
-<h3>Is this random number generator truly random?</h3>
-<p>It uses your browser's built-in Math.random(), which is pseudo-random and suitable for games, giveaways, and everyday decisions - but not for cryptographic or security purposes.</p>
+<h3>How is a due date calculated from the last menstrual period (LMP)?</h3>
+<p>Add 280 days (40 weeks) to the first day of your last period - this is Naegele's rule, the standard method, which assumes a 28-day cycle with ovulation on day 14. It's an estimate; actual cycle length affects real conception timing.</p>
 </div>
 <div class="faq-item">
-<h3>Is this the same as asking Google to generate a random number?</h3>
-<p>Yes, functionally - Google's search results include a built-in random number generator for quick use, and this calculator does the same thing with a dedicated page, plus the option to set a custom range and generate multiple numbers at once.</p>
+<h3>How is an IVF due date different from an LMP-based due date?</h3>
+<p>IVF due dates are calculated from a known transfer date rather than an estimated ovulation date, which makes them more precise. A day-5 (blastocyst) transfer adds 261 days to the transfer date, and a day-3 transfer adds 263 days - both account for the embryo's exact age at transfer.</p>
 </div>
 <div class="faq-item">
-<h3>Can I generate multiple random numbers at once?</h3>
-<p>Yes - set 'how many numbers' to any value up to 50 to generate a list of random numbers within your chosen range in one click.</p>
-</div>
-<div class="faq-item">
-<h3>Can I exclude specific numbers from the random range?</h3>
-<p>This calculator generates uniformly from the full range you specify (minimum to maximum); to exclude specific values, generate a number and simply re-roll if it matches an excluded value, or narrow the range if the excluded values are all at one end.</p>
-</div>
-<div class="faq-item">
-<h3>Is a 'randomness generator' the same as this random number generator?</h3>
-<p>Yes - "randomness generator" is just another way of describing a tool that produces random numbers, which is exactly what this calculator does within whatever range and count you set.</p>
-</div>
-<div class="faq-item">
-<h3>Can I use this for a raffle or giveaway drawing?</h3>
-<p>Yes - this generator is well-suited for informal drawings like picking a raffle winner or random giveaway entry from a numbered list. For anything with legal or regulatory requirements around fairness (like a licensed lottery), use a certified random number source instead.</p>
+<h3>How accurate are due date estimates?</h3>
+<p>Only about 5% of babies are born on their exact estimated due date - most arrive within a 2-week window before or after. Due dates are a statistical estimate of a full-term timeline, not a precise prediction, and your care provider's ultrasound-based dating is generally more reliable than a calculation from LMP alone.</p>
 </div></div>
         </div>
       </main>

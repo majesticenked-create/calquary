@@ -256,6 +256,46 @@ const CALCULATORS = [
     related: ["average-calculator", "fraction-calculator", "gcd-lcm-calculator"],
   },
   {
+    id: "lottery-odds-calculator",
+    category: "math",
+    title: "Lottery Odds Calculator",
+    keyword: "lottery odds calculator",
+    description: "Calculate the odds of winning a lottery jackpot from the pool size and how many numbers are drawn.",
+    intro: "Enter the lottery's main number pool and picks, plus an optional bonus-ball pool, to calculate the jackpot odds. Defaults are set to Powerball's actual rules.",
+    fields: [
+      { id: "mainPool", label: "Main number pool (1 to N)", type: "number", default: 69, step: 1, min: 1 },
+      { id: "mainPicks", label: "Numbers drawn from main pool", type: "number", default: 5, step: 1, min: 1 },
+      { id: "bonusPool", label: "Bonus ball pool (0 if none)", type: "number", default: 26, step: 1, min: 0 },
+    ],
+    compute: (v) => {
+      function combinations(n, k) {
+        if (k < 0 || k > n) return 0;
+        k = Math.min(k, n - k);
+        let result = 1;
+        for (let i = 0; i < k; i++) {
+          result = (result * (n - i)) / (i + 1);
+        }
+        return Math.round(result);
+      }
+      const mainCombos = combinations(v.mainPool, v.mainPicks);
+      const totalCombos = v.bonusPool > 0 ? mainCombos * v.bonusPool : mainCombos;
+      return {
+        primary: { label: "Odds of winning the jackpot", value: `1 in ${totalCombos.toLocaleString()}` },
+        secondary: [
+          { l: "Main pool combinations", v: mainCombos.toLocaleString() },
+          { l: "Total combinations", v: totalCombos.toLocaleString() },
+        ],
+        note: "Assumes numbers are drawn without replacement and order doesn't matter (standard lottery rules) - the default values match the actual Powerball jackpot format (5 of 69, plus 1 of 26).",
+      };
+    },
+    faq: [
+      { q: "What are the actual odds of winning the Powerball jackpot?", a: "1 in 292,201,338 - calculated from choosing 5 numbers correctly out of 69 (11,238,513 combinations), then multiplying by the 26 possible Powerball numbers, since you need to match that separately drawn number too." },
+      { q: "How is the number of possible combinations calculated?", a: "Using the combinations formula (n choose k) = n! / (k!(n−k)!), which counts how many ways you can choose k numbers from a pool of n where order doesn't matter - that's why lottery odds use combinations, not permutations." },
+      { q: "Why does adding a bonus ball make the odds so much worse?", a: "Because you multiply the main-pool combinations by the bonus pool size, since you need both the right main numbers AND the right bonus number - Powerball's main-pool-only odds are about 1 in 11.2 million, but requiring the correct Powerball number too (1 in 26) multiplies that to roughly 1 in 292 million." },
+    ],
+    related: ["random-number-generator", "percentage-calculator", "gcd-lcm-calculator"],
+  },
+  {
     id: "square-root-calculator",
     category: "math",
     title: "Square Root Calculator",
@@ -655,6 +695,52 @@ const CALCULATORS = [
       { q: "Is 'molar weight calculator' or 'mol wt calculator' the same as molecular weight?", a: "Yes - \"molar weight,\" \"mol wt,\" \"molecular weight,\" and \"molar mass\" are all names for the same quantity: the mass of one mole of a substance, in grams per mole. This calculator computes it from any chemical formula you enter." },
     ],
     related: ["percentage-calculator", "square-root-calculator", "exponent-calculator"],
+  },
+  {
+    id: "system-of-equations-solver",
+    category: "math",
+    title: "System of Equations Solver",
+    keyword: "system of equations solver",
+    description: "Solve a system of two linear equations (ax + by = e, cx + dy = f) for x and y.",
+    intro: "Enter the coefficients for two linear equations (ax + by = e and cx + dy = f) to solve for x and y.",
+    fields: [
+      { id: "a", label: "a (eq. 1: ax + by = e)", type: "number", default: 2, step: 0.1 },
+      { id: "b", label: "b", type: "number", default: 3, step: 0.1 },
+      { id: "e", label: "e", type: "number", default: 16, step: 0.1 },
+      { id: "c", label: "c (eq. 2: cx + dy = f)", type: "number", default: 1, step: 0.1 },
+      { id: "d", label: "d", type: "number", default: -1, step: 0.1 },
+      { id: "f", label: "f", type: "number", default: 2, step: 0.1 },
+    ],
+    compute: (v) => {
+      const det = v.a * v.d - v.b * v.c;
+      if (Math.abs(det) < 1e-12) {
+        const det2 = v.a * v.f - v.e * v.c;
+        const sameLine = Math.abs(det2) < 1e-9 && Math.abs(v.b * v.f - v.e * v.d) < 1e-9;
+        return {
+          primary: { label: "Solution", value: sameLine ? "Infinitely many solutions" : "No solution" },
+          secondary: [],
+          note: sameLine
+            ? "Both equations describe the same line, so every (x, y) pair on that line satisfies both equations."
+            : "These two lines are parallel and never intersect, so there's no (x, y) that satisfies both equations.",
+        };
+      }
+      const x = (v.e * v.d - v.b * v.f) / det;
+      const y = (v.a * v.f - v.e * v.c) / det;
+      return {
+        primary: { label: "Solution", value: `x = ${round(x, 4)}, y = ${round(y, 4)}` },
+        secondary: [
+          { l: "x", v: round(x, 4) },
+          { l: "y", v: round(y, 4) },
+        ],
+        note: "Solved using Cramer's rule - each variable is a ratio of two determinants of the coefficient matrix.",
+      };
+    },
+    faq: [
+      { q: "How do I solve a system of two linear equations?", a: "Using Cramer's rule (what this calculator does): for ax+by=e and cx+dy=f, x = (ed−bf)/(ad−bc) and y = (af−ec)/(ad−bc), where ad−bc is the determinant of the coefficient matrix. This works as long as that determinant isn't zero." },
+      { q: "What does it mean if there's no solution?", a: "The two equations represent parallel lines (the same slope, different intercepts) that never cross - so there's no (x, y) pair that makes both equations true at the same time." },
+      { q: "What does it mean if there are infinitely many solutions?", a: "The two equations actually describe the exact same line (one might just be a multiple of the other) - every point on that line satisfies both equations, so there isn't one unique (x, y) answer." },
+    ],
+    related: ["quadratic-formula-calculator", "ratio-calculator", "square-root-calculator"],
   },
   {
     id: "chemical-equation-balancer",
@@ -2116,6 +2202,47 @@ const CALCULATORS = [
     ],
     related: ["bmi-calculator", "heart-rate-zone-calculator", "days-until-calculator"],
   },
+  {
+    id: "pregnancy-due-date-calculator",
+    category: "health",
+    title: "Pregnancy Due Date Calculator",
+    keyword: "pregnancy due date calculator",
+    description: "Estimate a pregnancy due date from your last period, conception date, or IVF transfer date.",
+    intro: "Choose your calculation method and enter the relevant date to estimate your due date.",
+    fields: [
+      { id: "method", label: "Calculate from", type: "select", default: "lmp", options: [
+        { v: "lmp", l: "Last menstrual period (LMP)" },
+        { v: "conception", l: "Conception date" },
+        { v: "ivf3", l: "IVF transfer - day 3 embryo" },
+        { v: "ivf5", l: "IVF transfer - day 5 embryo (blastocyst)" },
+      ] },
+      { id: "refDate", label: "Reference date", type: "date", default: futureDateString(-30) },
+    ],
+    compute: (v) => {
+      const offsetDays = { lmp: 280, conception: 266, ivf3: 263, ivf5: 261 };
+      const ref = new Date(v.refDate);
+      const due = new Date(ref);
+      due.setDate(due.getDate() + offsetDays[v.method]);
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      const daysRemaining = Math.round((due - today) / 86400000);
+      const dueStr = due.toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" });
+      return {
+        primary: { label: "Estimated due date", value: dueStr },
+        secondary: [
+          { l: "Days from today", v: daysRemaining >= 0 ? daysRemaining : `${Math.abs(daysRemaining)} (past)` },
+          { l: "Weeks pregnant (approx., today)", v: v.method === "lmp" ? Math.max(0, round((today - ref) / 86400000 / 7, 1)) : "N/A for this method" },
+        ],
+        note: "An estimate only, based on average timelines - actual delivery dates vary widely and this doesn't replace dating confirmed by your care provider (typically via ultrasound).",
+      };
+    },
+    faq: [
+      { q: "How is a due date calculated from the last menstrual period (LMP)?", a: "Add 280 days (40 weeks) to the first day of your last period - this is Naegele's rule, the standard method, which assumes a 28-day cycle with ovulation on day 14. It's an estimate; actual cycle length affects real conception timing." },
+      { q: "How is an IVF due date different from an LMP-based due date?", a: "IVF due dates are calculated from a known transfer date rather than an estimated ovulation date, which makes them more precise. A day-5 (blastocyst) transfer adds 261 days to the transfer date, and a day-3 transfer adds 263 days - both account for the embryo's exact age at transfer." },
+      { q: "How accurate are due date estimates?", a: "Only about 5% of babies are born on their exact estimated due date - most arrive within a 2-week window before or after. Due dates are a statistical estimate of a full-term timeline, not a precise prediction, and your care provider's ultrasound-based dating is generally more reliable than a calculation from LMP alone." },
+    ],
+    related: ["age-calculator", "days-until-calculator", "date-duration-calculator"],
+  },
 
   // ---------------- DATE & TIME ----------------
   {
@@ -2350,6 +2477,7 @@ const CALCULATORS = [
       { q: "Does this alarm clock keep the correct time?", a: "Yes - it reads your computer or phone's system clock directly, so it's as accurate as your device's clock, updated every second." },
       { q: "Will the alarm still ring if I switch browser tabs?", a: "Yes, as long as this tab stays open - the check runs in the background even on an inactive tab. Closing the tab or your browser cancels the alarm." },
       { q: "Can I set more than one alarm at a time?", a: "This tool supports one alarm at a time - set a new one and it replaces the previous one. For multiple simultaneous countdowns instead of a specific clock time, use the Online Timer." },
+      { q: "Is this an 'alarm clock website' I can bookmark and reuse?", a: "Yes - this page works as a standalone browser alarm clock you can bookmark; just keep the tab open while you wait for it to ring, since the alarm only runs while the page is loaded." },
     ],
     related: ["online-timer", "time-add-calculator", "military-time-converter"],
   },
@@ -2626,6 +2754,7 @@ const CALCULATORS = [
       { q: "Can I calculate age as of a specific future or past date instead of today?", a: "This calculator compares your birth date to today's date specifically; to find your age on another date, use the Days Until Calculator or Date Duration Calculator to measure the gap between your birth date and any date you choose." },
       { q: "Can this calculate age in months or weeks instead of just years?", a: "Yes - alongside your age in years, this calculator breaks down the exact time elapsed into total months, weeks, and days, so you can see your precise age in whichever unit is most useful." },
       { q: "Is this the same as a 'calculator birthday' or 'age calculator net' search?", a: "Yes - both describe calculating exact age from a birth date, which is exactly what this tool does. Enter your birth date above to see your exact age in years, months, and days." },
+      { q: "Is 'age calculator from birth date' or 'count age from date of birth' different from this tool?", a: "No - all three phrasings describe the same task: entering a birth date to get an exact age. Enter your birth date above to get started." },
     ],
     related: ["days-until-calculator", "dog-age-calculator"],
   },
@@ -3195,6 +3324,7 @@ const CALCULATORS = [
       { q: "Is this the same as asking Google to generate a random number?", a: "Yes, functionally - Google's search results include a built-in random number generator for quick use, and this calculator does the same thing with a dedicated page, plus the option to set a custom range and generate multiple numbers at once." },
       { q: "Can I generate multiple random numbers at once?", a: "Yes - set 'how many numbers' to any value up to 50 to generate a list of random numbers within your chosen range in one click." },
       { q: "Can I exclude specific numbers from the random range?", a: "This calculator generates uniformly from the full range you specify (minimum to maximum); to exclude specific values, generate a number and simply re-roll if it matches an excluded value, or narrow the range if the excluded values are all at one end." },
+      { q: "Is a 'randomness generator' the same as this random number generator?", a: "Yes - \"randomness generator\" is just another way of describing a tool that produces random numbers, which is exactly what this calculator does within whatever range and count you set." },
       { q: "Can I use this for a raffle or giveaway drawing?", a: "Yes - this generator is well-suited for informal drawings like picking a raffle winner or random giveaway entry from a numbered list. For anything with legal or regulatory requirements around fairness (like a licensed lottery), use a certified random number source instead." },
     ],
     related: ["password-generator", "word-counter", "gcd-lcm-calculator"],
