@@ -1266,6 +1266,7 @@ const I18N_TOOLS = {
         { q: "¿Esto cuenta fines de semana y festivos?", a: "Sí - esto cuenta todos los días de calendario, incluyendo fines de semana y festivos. Si necesitas un conteo solo de días hábiles (excluyendo fines de semana), usa la Calculadora de Días Hábiles." },
         { q: "¿Puedo calcular los días entre dos fechas futuras, no solo desde hoy?", a: "Sí, de forma indirecta: esta herramienta parte de hoy, pero la Calculadora de Duración de Fecha te permite elegir dos fechas arbitrarias (pasadas, presentes o futuras) y devuelve el número exacto de días entre ellas." },
         { q: "¿Puedo usar esto para contar los días hasta un evento recurrente como un cumpleaños?", a: "Sí - introduce la fecha del próximo año para un cumpleaños o aniversario que ya pasó este año, y la calculadora mostrará el número exacto de días hasta esa próxima ocurrencia." },
+        { q: "¿Cuántos días faltan para Navidad?", a: "Fija la fecha objetivo en el 25 de diciembre del año actual (o del próximo) y esta calculadora te dará la cuenta regresiva exacta, incluido el equivalente en semanas y meses - útil para planear compras de regalos o viajes." },
       ],
     },
     fr: {
@@ -1277,6 +1278,7 @@ const I18N_TOOLS = {
         { q: "Cela compte-t-il les week-ends et jours fériés ?", a: "Oui - ce calcul compte chaque jour calendaire, y compris les week-ends et jours fériés. Si vous avez besoin d'un décompte en jours ouvrés uniquement (hors week-ends), utilisez la Calculatrice de Jours Ouvrés." },
         { q: "Puis-je calculer le nombre de jours entre deux dates futures, pas seulement à partir d'aujourd'hui ?", a: "Oui, indirectement - cet outil part d'aujourd'hui, mais la Calculatrice de Durée vous permet de choisir deux dates quelconques (passées, présentes ou futures) et renvoie le nombre exact de jours entre elles." },
         { q: "Puis-je l'utiliser pour compter les jours restants avant un événement récurrent comme un anniversaire ?", a: "Oui - saisissez la date de l'année prochaine pour un anniversaire déjà passé cette année, et la calculatrice affichera le nombre exact de jours restants avant cette prochaine occurrence." },
+        { q: "Combien de jours reste-t-il avant Noël ?", a: "Réglez la date cible sur le 25 décembre de l'année en cours (ou de l'année prochaine) et cette calculatrice vous donnera le compte à rebours exact, avec l'équivalent en semaines et en mois - utile pour planifier vos achats de cadeaux ou vos voyages." },
       ],
     },
     de: {
@@ -1288,6 +1290,7 @@ const I18N_TOOLS = {
         { q: "Werden Wochenenden und Feiertage mitgezählt?", a: "Ja - hier werden alle Kalendertage gezählt, einschließlich Wochenenden und Feiertagen. Falls Sie nur Werktage benötigen (ohne Wochenenden), nutzen Sie stattdessen den Werktage-Rechner." },
         { q: "Kann ich die Tage zwischen zwei zukünftigen Daten berechnen, nicht nur ab heute?", a: "Ja, indirekt - dieses Tool geht von heute aus, aber der Datumsdifferenz-Rechner lässt Sie zwei beliebige Daten (Vergangenheit, Gegenwart oder Zukunft) wählen und liefert die genaue Anzahl der Tage dazwischen." },
         { q: "Kann ich damit die Tage bis zu einem wiederkehrenden Ereignis wie einem Geburtstag zählen?", a: "Ja - geben Sie das Datum für nächstes Jahr ein, falls ein Geburtstag oder Jahrestag dieses Jahr bereits vorbei ist, und der Rechner zeigt die genaue Anzahl an Tagen bis zu diesem nächsten Termin an." },
+        { q: "Wie viele Tage sind es noch bis Weihnachten?", a: "Stellen Sie das Zieldatum auf den 25. Dezember des aktuellen (oder nächsten) Jahres ein, und dieser Rechner zeigt Ihnen den genauen Countdown, inklusive der Umrechnung in Wochen und Monate - praktisch für die Planung von Geschenkkäufen oder Reisen." },
       ],
     },
     pt: {
@@ -1299,6 +1302,7 @@ const I18N_TOOLS = {
         { q: "Isso conta fins de semana e feriados?", a: "Sim - isso conta todos os dias corridos, incluindo fins de semana e feriados. Se você precisar de uma contagem apenas de dias úteis (excluindo fins de semana), use a Calculadora de Dias Úteis." },
         { q: "Posso calcular os dias entre duas datas futuras, não apenas a partir de hoje?", a: "Sim, indiretamente - esta ferramenta parte de hoje, mas a Calculadora de Duração de Data permite escolher duas datas arbitrárias (passadas, presentes ou futuras) e retorna o número exato de dias entre elas." },
         { q: "Posso usar isso para contar os dias até um evento recorrente, como um aniversário?", a: "Sim - insira a data do próximo ano para um aniversário que já passou este ano, e a calculadora mostrará o número exato de dias até essa próxima ocorrência." },
+        { q: "Quantos dias faltam para o Natal?", a: "Defina a data de destino para 25 de dezembro do ano atual (ou do próximo) e esta calculadora dará a contagem regressiva exata, incluindo o equivalente em semanas e meses - útil para planejar compras de presentes ou viagens." },
       ],
     },
     it: {
@@ -1310,6 +1314,7 @@ const I18N_TOOLS = {
         { q: "Questo conta i weekend e le festività?", a: "Sì - questo conta ogni giorno di calendario, inclusi weekend e festività. Se hai bisogno di un conteggio solo di giorni lavorativi (esclusi i weekend), usa la Calcolatrice dei Giorni Lavorativi." },
         { q: "Posso calcolare i giorni tra due date future, non solo da oggi?", a: "Sì, indirettamente - questo strumento parte da oggi, ma la Calcolatrice della Durata tra Date ti permette di scegliere due date qualsiasi (passate, presenti o future) e restituisce il numero esatto di giorni tra loro." },
         { q: "Posso usarlo per contare i giorni fino a un evento ricorrente come un compleanno?", a: "Sì - inserisci la data dell'anno prossimo per un compleanno o un anniversario già trascorso quest'anno, e la calcolatrice mostrerà il numero esatto di giorni fino a quella prossima occorrenza." },
+        { q: "Quanti giorni mancano a Natale?", a: "Imposta la data obiettivo sul 25 dicembre dell'anno in corso (o del prossimo) e questa calcolatrice ti darà il conto alla rovescia esatto, incluso l'equivalente in settimane e mesi - utile per pianificare acquisti di regali o viaggi." },
       ],
     },
     ja: {
@@ -1321,6 +1326,7 @@ const I18N_TOOLS = {
         { q: "週末や祝日もカウントされますか？", a: "はい。週末や祝日を含むすべての暦日をカウントします。週末を除いた営業日のみのカウントが必要な場合は、営業日計算機をご利用ください。" },
         { q: "今日からではなく、2つの未来の日付の間の日数を計算できますか？", a: "間接的には可能です。このツールは今日を基準にしていますが、期間計算機を使えば任意の2つの日付（過去・現在・未来）を選んで、その間の正確な日数を求めることができます。" },
         { q: "誕生日のような繰り返しのイベントまでの日数を数えるのにも使えますか？", a: "はい。今年すでに過ぎてしまった誕生日や記念日については、来年の日付を入力すれば、次回の日までの正確な日数を表示します。" },
+        { q: "クリスマスまであと何日ですか？", a: "対象日を今年（または来年）の12月25日に設定すると、正確なカウントダウンが週数・月数の目安とともに表示されます。プレゼントの準備や旅行の計画に便利です。" },
       ],
     },
   },

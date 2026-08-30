@@ -1857,6 +1857,7 @@ const CALCULATORS = [
       { q: "Does this count weekends and holidays?", a: "Yes - this counts every calendar day, including weekends and holidays. If you need business-day-only counts (excluding weekends), use the Business Days Calculator instead." },
       { q: "Can I calculate the days between two future dates, not just from today?", a: "Yes, indirectly - this tool anchors to today, but the Date Duration Calculator lets you pick any two arbitrary dates (past, present, or future) and returns the exact number of days between them." },
       { q: "Can I use this to count down to a recurring event like a birthday?", a: "Yes - enter next year's date for a birthday or anniversary that's already passed this year, and the calculator will show the exact number of days until that upcoming occurrence." },
+      { q: "How many days until Christmas?", a: "Set the target date to December 25 of the current (or next) year and this calculator gives you the exact countdown, including the equivalent in weeks and months - handy for gift-shopping or travel planning deadlines." },
     ],
     related: ["date-duration-calculator", "age-calculator", "pace-calculator"],
   },
@@ -1973,6 +1974,48 @@ const CALCULATORS = [
       { q: "Can I calculate duration in decimal hours instead of hours and minutes?", a: "Yes - alongside the hours-and-minutes breakdown, this calculator shows the total duration as a decimal (e.g., 7 hours 30 minutes displays as 7.5 hours), which is useful for timesheets and billing that require decimal time entries." },
     ],
     related: ["business-days-calculator", "date-duration-calculator", "pace-calculator"],
+  },
+  {
+    id: "time-add-calculator",
+    category: "datetime",
+    title: "Time Add/Subtract Calculator",
+    keyword: "time add calculator",
+    description: "Add or subtract hours and minutes to or from a starting time.",
+    intro: "Enter a starting time and how many hours and minutes to add or subtract to calculate the resulting time.",
+    fields: [
+      { id: "startHour", label: "Start hour", type: "number", default: 9, step: 1, min: 0, max: 23 },
+      { id: "startMinute", label: "Start minute", type: "number", default: 0, step: 1, min: 0, max: 59 },
+      { id: "operation", label: "Operation", type: "select", default: "add", options: [{ v: "add", l: "Add" }, { v: "subtract", l: "Subtract" }] },
+      { id: "deltaHours", label: "Hours", type: "number", default: 5, step: 1, min: 0 },
+      { id: "deltaMinutes", label: "Minutes", type: "number", default: 45, step: 1, min: 0, max: 59 },
+    ],
+    compute: (v) => {
+      const startTotal = v.startHour * 60 + v.startMinute;
+      const deltaTotal = v.deltaHours * 60 + v.deltaMinutes;
+      const signedDelta = v.operation === "subtract" ? -deltaTotal : deltaTotal;
+      const rawTotal = startTotal + signedDelta;
+      const daysRolled = Math.floor(rawTotal / 1440);
+      const normalized = ((rawTotal % 1440) + 1440) % 1440;
+      const resultHour = Math.floor(normalized / 60);
+      const resultMinute = normalized % 60;
+      const pad = (n) => String(n).padStart(2, "0");
+      const hour12 = resultHour % 12 === 0 ? 12 : resultHour % 12;
+      const ampm = resultHour < 12 ? "AM" : "PM";
+      return {
+        primary: { label: "Resulting time", value: `${pad(resultHour)}:${pad(resultMinute)} (${hour12}:${pad(resultMinute)} ${ampm})` },
+        secondary: [
+          { l: "24-hour format", v: `${pad(resultHour)}:${pad(resultMinute)}` },
+          { l: "Days crossed", v: daysRolled },
+        ],
+        note: daysRolled !== 0 ? `This ${v.operation === "subtract" ? "goes back" : "crosses forward"} ${Math.abs(daysRolled)} calendar day${Math.abs(daysRolled) === 1 ? "" : "s"} from the start time.` : undefined,
+      };
+    },
+    faq: [
+      { q: "How do I add hours and minutes to a time?", a: "Convert everything to total minutes, add them together, then convert back: for 9:00 plus 5 hours 45 minutes, that's (9×60) + (5×60+45) = 540 + 345 = 885 minutes, which is 14:45 (2:45 PM)." },
+      { q: "What happens if adding time crosses midnight?", a: "The result wraps around to the next day - for example, 11:00 PM plus 3 hours becomes 2:00 AM, and this calculator flags that the result crosses into the following calendar day rather than showing an invalid 26:00." },
+      { q: "Is this the same as the Time Duration Calculator?", a: "No - the Time Duration Calculator finds the gap between two times you already know (like 9 AM and 5:30 PM). This calculator does the opposite: starting from one known time, it adds or subtracts a duration to find a new resulting time." },
+    ],
+    related: ["time-duration-calculator", "time-unit-converter", "date-duration-calculator"],
   },
   {
     id: "week-number-calculator",
