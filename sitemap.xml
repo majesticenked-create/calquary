@@ -217,10 +217,22 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/standard-deviation-calculator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/z-score-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/z-score-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/z-score-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/lottery-odds-calculator.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/lottery-odds-calculator.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/lottery-odds-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/poker-hand-probability-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/poker-hand-probability-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/poker-hand-probability-calculator.html"/>
   </url>
   <url>
     <loc>https://calquary.com/tool/square-root-calculator.html</loc>
@@ -704,7 +716,7 @@
   </url>
   <url>
     <loc>https://calquary.com/tool/unit-length-converter.html</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/unit-length-converter.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/unit-length-converter.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/unit-length-converter.html"/>
@@ -1244,7 +1256,7 @@
   </url>
   <url>
     <loc>https://calquary.com/es/tool/unit-length-converter.html</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/unit-length-converter.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/unit-length-converter.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/unit-length-converter.html"/>
@@ -1616,7 +1628,7 @@
   </url>
   <url>
     <loc>https://calquary.com/fr/tool/unit-length-converter.html</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/unit-length-converter.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/unit-length-converter.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/unit-length-converter.html"/>
@@ -1988,7 +2000,7 @@
   </url>
   <url>
     <loc>https://calquary.com/de/tool/unit-length-converter.html</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/unit-length-converter.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/unit-length-converter.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/unit-length-converter.html"/>
@@ -2360,7 +2372,7 @@
   </url>
   <url>
     <loc>https://calquary.com/pt/tool/unit-length-converter.html</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/unit-length-converter.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/unit-length-converter.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/unit-length-converter.html"/>
@@ -2732,7 +2744,7 @@
   </url>
   <url>
     <loc>https://calquary.com/it/tool/unit-length-converter.html</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/unit-length-converter.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/unit-length-converter.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/unit-length-converter.html"/>
@@ -3104,7 +3116,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ja/tool/unit-length-converter.html</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/unit-length-converter.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/unit-length-converter.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/unit-length-converter.html"/>

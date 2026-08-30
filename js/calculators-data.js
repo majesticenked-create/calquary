@@ -308,6 +308,48 @@ const CALCULATORS = [
     related: ["average-calculator", "fraction-calculator", "gcd-lcm-calculator"],
   },
   {
+    id: "z-score-calculator",
+    category: "math",
+    title: "Z-Score (Standardized Score) Calculator",
+    keyword: "how to calculate standardized score",
+    description: "Calculate a z-score (standardized score) and percentile from a value, mean, and standard deviation.",
+    intro: "Enter a value, the mean, and the standard deviation of its distribution to calculate the z-score and percentile.",
+    fields: [
+      { id: "value", label: "Value", type: "number", default: 85, step: 0.1 },
+      { id: "mean", label: "Mean", type: "number", default: 75, step: 0.1 },
+      { id: "stdDev", label: "Standard deviation", type: "number", default: 10, step: 0.1 },
+    ],
+    compute: (v) => {
+      if (v.stdDev === 0) {
+        return { primary: { label: "Z-score", value: "Undefined" }, secondary: [], note: "Standard deviation can't be zero." };
+      }
+      const z = (v.value - v.mean) / v.stdDev;
+      function normalCdf(x) {
+        const sign = x < 0 ? -1 : 1;
+        const ax = Math.abs(x) / Math.sqrt(2);
+        const a1 = 0.254829592, a2 = -0.284496736, a3 = 1.421413741, a4 = -1.453152027, a5 = 1.061405429, p = 0.3275911;
+        const t = 1 / (1 + p * ax);
+        const y = 1 - (((((a5 * t + a4) * t) + a3) * t + a2) * t + a1) * t * Math.exp(-ax * ax);
+        return 0.5 * (1 + sign * y);
+      }
+      const percentile = normalCdf(z) * 100;
+      return {
+        primary: { label: "Z-score", value: round(z, 4) },
+        secondary: [
+          { l: "Percentile", v: `${round(percentile, 2)}th` },
+          { l: "Standard deviations from mean", v: `${round(Math.abs(z), 2)} ${z >= 0 ? "above" : "below"}` },
+        ],
+        note: "Percentile assumes a normal (bell-curve) distribution - the z-score itself doesn't depend on that assumption, but converting it to a percentile does.",
+      };
+    },
+    faq: [
+      { q: "How do I calculate a standardized score (z-score)?", a: "Subtract the mean from your value, then divide by the standard deviation: z = (x − mean) / SD. A score of 85 with a mean of 75 and standard deviation of 10 gives z = (85−75)/10 = 1.0, meaning the score is exactly 1 standard deviation above average." },
+      { q: "What does a z-score of 0 mean?", a: "A z-score of 0 means the value is exactly equal to the mean - neither above nor below average. Positive z-scores are above the mean, negative z-scores are below it." },
+      { q: "How is percentile calculated from a z-score?", a: "Using the standard normal cumulative distribution function, which gives the proportion of a normal distribution falling below a given z-score - a z-score of 1.0 corresponds to about the 84th percentile, meaning roughly 84% of values in a normal distribution fall below that point." },
+    ],
+    related: ["standard-deviation-calculator", "average-calculator", "percentage-calculator"],
+  },
+  {
     id: "lottery-odds-calculator",
     category: "math",
     title: "Lottery Odds Calculator",
@@ -346,6 +388,52 @@ const CALCULATORS = [
       { q: "Why does adding a bonus ball make the odds so much worse?", a: "Because you multiply the main-pool combinations by the bonus pool size, since you need both the right main numbers AND the right bonus number - Powerball's main-pool-only odds are about 1 in 11.2 million, but requiring the correct Powerball number too (1 in 26) multiplies that to roughly 1 in 292 million." },
     ],
     related: ["random-number-generator", "percentage-calculator", "gcd-lcm-calculator"],
+  },
+  {
+    id: "poker-hand-probability-calculator",
+    category: "math",
+    title: "Poker Hand Probability Calculator",
+    keyword: "poker hand percentages calculator",
+    description: "See the exact probability and odds of every 5-card poker hand ranking, out of a standard 52-card deck.",
+    intro: "This table shows the exact count, probability, and odds of every 5-card poker hand ranking from a standard 52-card deck.",
+    fields: [],
+    compute: () => {
+      // Standard 5-card-hand counts out of C(52,5) = 2,598,960 total hands.
+      // Each count is a direct combinatorial calculation (e.g. four of a
+      // kind = 13 ranks x 48 remaining cards = 624); these are fixed
+      // mathematical facts about a 52-card deck, not sourced data.
+      const totalHands = 2598960;
+      const hands = [
+        ["Royal flush", 4],
+        ["Straight flush", 36],
+        ["Four of a kind", 624],
+        ["Full house", 3744],
+        ["Flush", 5108],
+        ["Straight", 10200],
+        ["Three of a kind", 54912],
+        ["Two pair", 123552],
+        ["One pair", 1098240],
+        ["High card", 1302540],
+      ];
+      const rows = hands.map(([name, count]) => [
+        name,
+        count.toLocaleString(),
+        `${round((count / totalHands) * 100, 4)}%`,
+        `1 in ${round(totalHands / count, 0).toLocaleString()}`,
+      ]);
+      return {
+        primary: { label: "Total 5-card hands", value: totalHands.toLocaleString() },
+        secondary: [{ l: "Rarest hand", v: "Royal flush" }, { l: "Most common", v: "High card" }],
+        note: "Based on a standard 52-card deck, 5 cards dealt with no wild cards.",
+        table: { columns: ["Hand", "Ways to make it", "Probability", "Odds"], rows },
+      };
+    },
+    faq: [
+      { q: "What are the odds of a royal flush?", a: "1 in 649,740 - there are only 4 ways to make a royal flush (one per suit) out of 2,598,960 possible 5-card hands, making it the rarest standard poker hand." },
+      { q: "Why is a flush rarer than a straight even though it ranks higher?", a: "Actually, in standard hand rankings a flush does rank higher than a straight, and it is rarer - a flush has 5,108 ways to occur versus a straight's 10,200, which matches the table above and confirms flush is the less common (and higher-ranked) hand." },
+      { q: "How are these probabilities calculated?", a: "Each hand type's count comes from combinatorics - for example, four of a kind is 13 possible ranks × 48 remaining cards for the 5th card = 624 ways, divided by the total 2,598,960 possible 5-card hands from a 52-card deck." },
+    ],
+    related: ["lottery-odds-calculator", "card-deck-shuffler", "random-number-generator"],
   },
   {
     id: "square-root-calculator",
@@ -1418,6 +1506,7 @@ const CALCULATORS = [
       { q: "What interest rate should I use for a savings calculator?", a: "Use your actual account's APY for savings accounts, or a conservative long-term average (historically 4–7%) for investment accounts - check your specific account terms for the current rate." },
       { q: "How do monthly contributions compare to a one-time lump sum?", a: "Regular monthly contributions add up steadily and each one gets fewer years to compound than an early lump sum, so a lump sum invested early generally outgrows the same total amount contributed gradually - though most people find gradual saving far more realistic." },
       { q: "How much do monthly contributions really matter over 20-30 years?", a: "Even modest recurring contributions compound significantly over decades - $200/month at a 6% annual return grows to well over $130,000 in 25 years, most of it from compound growth rather than the contributions themselves. Starting early matters more than the exact contribution amount, since compounding needs time to work." },
+      { q: "Is this a 'time value of money' (TVM) calculator?", a: "Yes - this calculator solves for future value given a starting balance, regular contributions, interest rate, and time frame, which is the core time value of money calculation used in savings and investment planning." },
     ],
     related: ["compound-interest-calculator", "mortgage-calculator", "loan-calculator"],
   },
@@ -2791,6 +2880,7 @@ const CALCULATORS = [
       { q: "What is 7 PM or 10 PM in military time?", a: "7:00 PM is 1900 (19 hundred hours) - add 12 to the PM hour. 10:00 PM is 2200 (22 hundred hours), same rule. Only 12 PM (noon, stays 1200) and 12 AM (midnight, becomes 0000) break the simple \"add 12\" pattern." },
       { q: "What is 6 PM in military time?", a: "1800 (18 hundred hours) - add 12 to the PM hour, same rule as any other PM time between 1 PM and 11 PM." },
       { q: "What is 8 AM in military time?", a: "0800 - AM hours from 1 AM to 11 AM stay the same number in military time, just with a leading zero. Only 12 AM (midnight) is the exception, becoming 0000." },
+      { q: "What is 12 PM in military time?", a: "1200 - noon is one of the two exceptions to the simple AM/PM rules (the other being 12 AM/midnight, which becomes 0000). 12 PM stays 1200 rather than becoming 2400." },
       { q: "Is 'army clock converter' the same as a military time converter?", a: "Yes - the US military and other armed forces use the same 24-hour clock system commonly called \"military time,\" so \"army clock converter\" describes the same conversion this tool handles in both directions." },
     ],
     related: ["time-duration-calculator", "time-add-calculator", "time-unit-converter"],
@@ -3068,23 +3158,25 @@ const CALCULATORS = [
     category: "conversions",
     title: "CM to Inches Converter",
     keyword: "cm to inches converter",
-    description: "Convert between centimeters, inches, feet, and meters.",
-    intro: "Enter a value and choose units to convert between common length measurements.",
+    description: "Convert between millimeters, centimeters, meters, kilometers, inches, feet, yards, and miles.",
+    intro: "Enter a value and choose units to convert between common metric and imperial length measurements.",
     fields: [
       { id: "value", label: "Value", type: "number", default: 100, step: 0.01 },
       { id: "from", label: "From", type: "select", default: "cm", options: [
-        { v: "cm", l: "Centimeters" }, { v: "in", l: "Inches" }, { v: "ft", l: "Feet" }, { v: "m", l: "Meters" },
+        { v: "mm", l: "Millimeters" }, { v: "cm", l: "Centimeters" }, { v: "m", l: "Meters" }, { v: "km", l: "Kilometers" },
+        { v: "in", l: "Inches" }, { v: "ft", l: "Feet" }, { v: "yd", l: "Yards" }, { v: "mi", l: "Miles" },
       ] },
     ],
     compute: (v) => {
-      const toCm = { cm: 1, in: 2.54, ft: 30.48, m: 100 };
+      const toCm = { mm: 0.1, cm: 1, m: 100, km: 100000, in: 2.54, ft: 30.48, yd: 91.44, mi: 160934.4 };
       const cmValue = v.value * toCm[v.from];
       return {
-        primary: { label: "In centimeters", value: `${round(cmValue, 2)} cm` },
+        primary: { label: "In centimeters", value: `${round(cmValue, 4)} cm` },
         secondary: [
-          { l: "Inches", v: round(cmValue / 2.54, 2) },
-          { l: "Feet", v: round(cmValue / 30.48, 3) },
-          { l: "Meters", v: round(cmValue / 100, 3) },
+          { l: "Inches", v: round(cmValue / toCm.in, 4) },
+          { l: "Feet", v: round(cmValue / toCm.ft, 4) },
+          { l: "Meters", v: round(cmValue / toCm.m, 4) },
+          { l: "Kilometers", v: round(cmValue / toCm.km, 6) },
         ],
       };
     },
@@ -3093,6 +3185,7 @@ const CALCULATORS = [
       { q: "Is this conversion exact or rounded?", a: "The underlying conversion factor (1 inch = 2.54 cm) is exact by international definition - any rounding you see is just the displayed result being trimmed to a readable number of decimal places." },
       { q: "Why do some online converters give a slightly different answer?", a: "Small differences usually come from rounding at different decimal places, not a different conversion factor - the underlying 1 inch = 2.54 cm relationship is a fixed international standard, so any accurate converter should agree once you compare at the same precision." },
       { q: "Which length units does this converter support?", a: "This tool converts between metric units (millimeters, centimeters, meters, kilometers) and imperial/US units (inches, feet, yards, miles), so you can convert in either direction without memorizing conversion factors." },
+      { q: "How many centimeters are in a kilometer?", a: "100,000 centimeters - a kilometer is 1,000 meters, and each meter is 100 centimeters, so 1,000 × 100 = 100,000 cm." },
     ],
     related: ["weight-converter", "cooking-converter", "concrete-calculator"],
   },
@@ -3315,6 +3408,7 @@ const CALCULATORS = [
       { q: "Is 'cups to grams' without a number the same question?", a: "Yes - it's asking for the same conversion, just without specifying an amount. Enter however many cups you have above (1, 2, 0.5, etc.) to get the exact grams for your ingredient." },
       { q: "How many cups are in a certain number of grams?", a: "Divide the gram amount by the grams-per-cup figure for your ingredient - 240g of flour, for example, is 240 ÷ 120 = 2 cups. This calculator converts cups to grams directly; for grams to cups, divide your gram amount by the per-cup weight shown for your ingredient above." },
       { q: "A cup is how many grams?", a: "It depends entirely on the ingredient, since a cup measures volume and grams measure weight - select your ingredient above (flour, sugar, butter, or brown sugar) to see its specific grams-per-cup figure." },
+      { q: "How many grams is 1/2 cup?", a: "Enter 0.5 in the cups field above - for example, 1/2 cup of flour is about 60g, while 1/2 cup of butter is about 113.5g, since the per-cup weight varies by ingredient density." },
       { q: "How many grams is 1 cup, in general?", a: "There's no single answer without knowing the ingredient - it ranges from about 120g (flour) to 227g (butter) per cup for the ingredients this calculator covers, since denser ingredients pack more weight into the same volume." },
       { q: "Why do recipes from different countries use different measurement systems?", a: "The US primarily uses volume-based cup and spoon measurements, while most of the rest of the world uses weight-based metric measurements (grams), which are more precise for baking since ingredient density varies. This converter bridges the two so you can follow a recipe written in either system." },
     ],

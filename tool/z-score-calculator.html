@@ -4,29 +4,23 @@
   <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CM to Inches Converter | Calquary</title>
-  <meta name="description" content="Convert between millimeters, centimeters, meters, kilometers, inches, feet, yards, and miles." />
-  <meta property="og:title" content="CM to Inches Converter | Calquary">
-  <meta property="og:description" content="Convert between millimeters, centimeters, meters, kilometers, inches, feet, yards, and miles.">
+  <title>Z-Score (Standardized Score) Calculator | Calquary</title>
+  <meta name="description" content="Calculate a z-score (standardized score) and percentile from a value, mean, and standard deviation." />
+  <meta property="og:title" content="Z-Score (Standardized Score) Calculator | Calquary">
+  <meta property="og:description" content="Calculate a z-score (standardized score) and percentile from a value, mean, and standard deviation.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://calquary.com/tool/unit-length-converter.html">
+  <meta property="og:url" content="https://calquary.com/tool/z-score-calculator.html">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Calquary">
-  <meta property="og:image" content="https://calquary.com/og-images/unit-length-converter.png">
+  <meta property="og:image" content="https://calquary.com/og-images/z-score-calculator.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="CM to Inches Converter | Calquary">
-  <meta name="twitter:description" content="Convert between millimeters, centimeters, meters, kilometers, inches, feet, yards, and miles.">
-  <meta name="twitter:image" content="https://calquary.com/og-images/unit-length-converter.png">
-    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/unit-length-converter.html">
-  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/unit-length-converter.html">
-  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/unit-length-converter.html">
-  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/unit-length-converter.html">
-  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/unit-length-converter.html">
-  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/unit-length-converter.html">
-  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/unit-length-converter.html">
-  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/unit-length-converter.html">
+  <meta name="twitter:title" content="Z-Score (Standardized Score) Calculator | Calquary">
+  <meta name="twitter:description" content="Calculate a z-score (standardized score) and percentile from a value, mean, and standard deviation.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/z-score-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/z-score-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/z-score-calculator.html">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -52,7 +46,7 @@
       // still JS-driven here is the interactive calculator widget itself
       // (fields/compute/results) and the related-tools list, neither of
       // which is static SEO prose.
-      const calc = getCalculator("unit-length-converter");
+      const calc = getCalculator("z-score-calculator");
 
       const relWrap = document.getElementById("related-list");
       calc.related.forEach((relId) => {
@@ -63,7 +57,7 @@
         relWrap.appendChild(li);
       });
 
-      initCalculator("unit-length-converter");
+      initCalculator("z-score-calculator");
     });
   </script>
   <script type="application/ld+json">
@@ -72,11 +66,11 @@
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "CM to Inches Converter",
-      "description": "Convert between millimeters, centimeters, meters, kilometers, inches, feet, yards, and miles.",
+      "name": "Z-Score (Standardized Score) Calculator",
+      "description": "Calculate a z-score (standardized score) and percentile from a value, mean, and standard deviation.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
-      "url": "https://calquary.com/tool/unit-length-converter.html",
+      "url": "https://calquary.com/tool/z-score-calculator.html",
       "isAccessibleForFree": true,
       "offers": {
         "@type": "Offer",
@@ -98,14 +92,14 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Everyday Conversions",
-          "item": "https://calquary.com/category/conversions.html"
+          "name": "Math",
+          "item": "https://calquary.com/category/math.html"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "CM to Inches Converter",
-          "item": "https://calquary.com/tool/unit-length-converter.html"
+          "name": "Z-Score (Standardized Score) Calculator",
+          "item": "https://calquary.com/tool/z-score-calculator.html"
         }
       ]
     },
@@ -114,42 +108,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "How many inches is a centimeter?",
+          "name": "How do I calculate a standardized score (z-score)?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "1 centimeter equals about 0.3937 inches. To convert cm to inches, divide by 2.54."
+            "text": "Subtract the mean from your value, then divide by the standard deviation: z = (x − mean) / SD. A score of 85 with a mean of 75 and standard deviation of 10 gives z = (85−75)/10 = 1.0, meaning the score is exactly 1 standard deviation above average."
           }
         },
         {
           "@type": "Question",
-          "name": "Is this conversion exact or rounded?",
+          "name": "What does a z-score of 0 mean?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The underlying conversion factor (1 inch = 2.54 cm) is exact by international definition - any rounding you see is just the displayed result being trimmed to a readable number of decimal places."
+            "text": "A z-score of 0 means the value is exactly equal to the mean - neither above nor below average. Positive z-scores are above the mean, negative z-scores are below it."
           }
         },
         {
           "@type": "Question",
-          "name": "Why do some online converters give a slightly different answer?",
+          "name": "How is percentile calculated from a z-score?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Small differences usually come from rounding at different decimal places, not a different conversion factor - the underlying 1 inch = 2.54 cm relationship is a fixed international standard, so any accurate converter should agree once you compare at the same precision."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Which length units does this converter support?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "This tool converts between metric units (millimeters, centimeters, meters, kilometers) and imperial/US units (inches, feet, yards, miles), so you can convert in either direction without memorizing conversion factors."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How many centimeters are in a kilometer?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "100,000 centimeters - a kilometer is 1,000 meters, and each meter is 100 centimeters, so 1,000 × 100 = 100,000 cm."
+            "text": "Using the standard normal cumulative distribution function, which gives the proportion of a normal distribution falling below a given z-score - a z-score of 1.0 corresponds to about the 84th percentile, meaning roughly 84% of values in a normal distribution fall below that point."
           }
         }
       ]
@@ -169,13 +147,7 @@
           <a href="/index.html#tools">All tools</a>
           <a href="/about.html">About</a>
         </nav>
-        <div class="locale-switcher">
-          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: English">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
-            <span>EN</span>
-          </button>
-          <div class="locale-menu" role="menu"><span class="locale-item current" role="menuitem" aria-current="true">English</span><a class="locale-item" role="menuitem" href="/es/tool/unit-length-converter.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/unit-length-converter.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/unit-length-converter.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/unit-length-converter.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/unit-length-converter.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/unit-length-converter.html">日本語</a></div>
-        </div>
+        
         <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
       </div>
     </div>
@@ -183,15 +155,15 @@
 
   <div class="wrap" style="padding-top:32px;">
     <div class="breadcrumb">
-      <a href="/index.html">Calquary</a> / <a href="/category/conversions.html">Everyday Conversions</a>
+      <a href="/index.html">Calquary</a> / <a href="/category/math.html">Math</a>
     </div>
   </div>
 
   <div class="wrap" style="padding-bottom:64px;">
     <div class="tool-layout">
       <main>
-        <h1>CM to Inches Converter</h1>
-        <p style="max-width:60ch;">Enter a value and choose units to convert between common metric and imperial length measurements.</p>
+        <h1>Z-Score (Standardized Score) Calculator</h1>
+        <p style="max-width:60ch;">Enter a value, the mean, and the standard deviation of its distribution to calculate the z-score and percentile.</p>
         <p class="last-updated">Last updated: August 30, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -219,24 +191,16 @@
         <div class="article-block">
           <h2>Frequently asked questions</h2>
           <div id="faq-list"><div class="faq-item">
-<h3>How many inches is a centimeter?</h3>
-<p>1 centimeter equals about 0.3937 inches. To convert cm to inches, divide by 2.54.</p>
+<h3>How do I calculate a standardized score (z-score)?</h3>
+<p>Subtract the mean from your value, then divide by the standard deviation: z = (x − mean) / SD. A score of 85 with a mean of 75 and standard deviation of 10 gives z = (85−75)/10 = 1.0, meaning the score is exactly 1 standard deviation above average.</p>
 </div>
 <div class="faq-item">
-<h3>Is this conversion exact or rounded?</h3>
-<p>The underlying conversion factor (1 inch = 2.54 cm) is exact by international definition - any rounding you see is just the displayed result being trimmed to a readable number of decimal places.</p>
+<h3>What does a z-score of 0 mean?</h3>
+<p>A z-score of 0 means the value is exactly equal to the mean - neither above nor below average. Positive z-scores are above the mean, negative z-scores are below it.</p>
 </div>
 <div class="faq-item">
-<h3>Why do some online converters give a slightly different answer?</h3>
-<p>Small differences usually come from rounding at different decimal places, not a different conversion factor - the underlying 1 inch = 2.54 cm relationship is a fixed international standard, so any accurate converter should agree once you compare at the same precision.</p>
-</div>
-<div class="faq-item">
-<h3>Which length units does this converter support?</h3>
-<p>This tool converts between metric units (millimeters, centimeters, meters, kilometers) and imperial/US units (inches, feet, yards, miles), so you can convert in either direction without memorizing conversion factors.</p>
-</div>
-<div class="faq-item">
-<h3>How many centimeters are in a kilometer?</h3>
-<p>100,000 centimeters - a kilometer is 1,000 meters, and each meter is 100 centimeters, so 1,000 × 100 = 100,000 cm.</p>
+<h3>How is percentile calculated from a z-score?</h3>
+<p>Using the standard normal cumulative distribution function, which gives the proportion of a normal distribution falling below a given z-score - a z-score of 1.0 corresponds to about the 84th percentile, meaning roughly 84% of values in a normal distribution fall below that point.</p>
 </div></div>
         </div>
       </main>
