@@ -2153,29 +2153,48 @@ const CALCULATORS = [
     title: "Military Time Converter",
     keyword: "military time converter",
     description: "Convert 12-hour clock time to 24-hour military (army) time, and back.",
-    intro: "Enter a 12-hour time to convert it to 24-hour military time.",
+    intro: "Choose a direction, then enter a time to convert between standard 12-hour time and 24-hour military time.",
     fields: [
-      { id: "hour12", label: "Hour", type: "number", default: 2, step: 1, min: 1, max: 12 },
-      { id: "minute", label: "Minute", type: "number", default: 30, step: 1, min: 0, max: 59 },
+      { id: "direction", label: "Convert", type: "select", default: "to24", options: [
+        { v: "to24", l: "12-hour → Military (24-hour)" }, { v: "to12", l: "Military (24-hour) → 12-hour" },
+      ] },
+      { id: "hour12", label: "Hour (1-12)", type: "number", default: 2, step: 1, min: 1, max: 12 },
+      { id: "minute12", label: "Minute", type: "number", default: 30, step: 1, min: 0, max: 59 },
       { id: "period", label: "AM/PM", type: "select", default: "PM", options: [{ v: "AM", l: "AM" }, { v: "PM", l: "PM" }] },
+      { id: "hour24", label: "Military hour (0-23)", type: "number", default: 14, step: 1, min: 0, max: 23 },
+      { id: "minute24", label: "Military minute", type: "number", default: 30, step: 1, min: 0, max: 59 },
     ],
     compute: (v) => {
       const pad = (n) => String(n).padStart(2, "0");
+      if (v.direction === "to12") {
+        const h24 = ((v.hour24 % 24) + 24) % 24;
+        const period = h24 < 12 ? "AM" : "PM";
+        let h12 = h24 % 12;
+        if (h12 === 0) h12 = 12;
+        return {
+          primary: { label: "12-hour time", value: `${h12}:${pad(v.minute24)} ${period}` },
+          secondary: [
+            { l: "Military time entered", v: `${pad(h24)}:${pad(v.minute24)}` },
+            { l: "Spoken as", v: `${pad(h24)}${pad(v.minute24)} hours` },
+          ],
+        };
+      }
       let hour24 = v.hour12 % 12;
       if (v.period === "PM") hour24 += 12;
-      const militaryDigits = `${pad(hour24)}${pad(v.minute)}`;
+      const militaryDigits = `${pad(hour24)}${pad(v.minute12)}`;
       return {
-        primary: { label: "Military time", value: `${pad(hour24)}:${pad(v.minute)}` },
+        primary: { label: "Military time", value: `${pad(hour24)}:${pad(v.minute12)}` },
         secondary: [
           { l: "Spoken as", v: `${militaryDigits} hours` },
-          { l: "12-hour time", v: `${v.hour12}:${pad(v.minute)} ${v.period}` },
+          { l: "12-hour time entered", v: `${v.hour12}:${pad(v.minute12)} ${v.period}` },
         ],
       };
     },
     faq: [
       { q: "How do I convert regular time to military time?", a: "For AM hours, military time matches the clock hour (with a leading zero) - 9:00 AM becomes 0900. For PM hours, add 12 to the clock hour - 2:30 PM becomes 14:30 (1430)." },
       { q: "What is 12 AM and 12 PM in military time?", a: "12:00 AM (midnight) is 0000 in military time, and 12:00 PM (noon) is 1200 - these are the two exceptions where you don't simply add or keep the 12." },
-      { q: "How do I convert military time back to 12-hour time?", a: "If the hour is 13 or greater, subtract 12 and mark it PM (1430 becomes 2:30 PM); if it's 00-11, keep the hour and mark it AM, except 0000 which becomes 12:00 AM." },
+      { q: "How do I convert military time back to 12-hour time?", a: "If the hour is 13 or greater, subtract 12 and mark it PM (1430 becomes 2:30 PM); if it's 00-11, keep the hour and mark it AM, except 0000 which becomes 12:00 AM. Switch this calculator to \"Military → 12-hour\" mode to do this conversion directly." },
+      { q: "Is 'military clock conversion' or 'military hours converter' different from converting military time?", a: "No - all of these describe the same conversion between 24-hour military time and standard 12-hour clock time, in either direction. Pick the direction you need above." },
     ],
     related: ["time-duration-calculator", "time-add-calculator", "time-unit-converter"],
   },
@@ -2546,6 +2565,7 @@ const CALCULATORS = [
       { q: "How much does a stick of butter weigh in this converter?", a: "A standard US stick of butter is 1/2 cup, which converts to about 113.5g - half of the 227g-per-cup figure this calculator uses." },
       { q: "Why does the type of flour affect its weight per cup?", a: "How densely the flour is packed into the measuring cup - and differences between flour types like all-purpose, bread, or cake flour - both affect weight per cup, which is why professional recipes often specify weight rather than cup measurements for consistency." },
       { q: "How many grams are in a cup?", a: "It depends on the ingredient - a cup of flour is about 120g, a cup of granulated sugar is about 200g, and a cup of butter is about 227g, since cups measure volume and grams measure weight. Choose your ingredient above for the exact figure." },
+      { q: "How many cups are in a certain number of grams?", a: "Divide the gram amount by the grams-per-cup figure for your ingredient - 240g of flour, for example, is 240 ÷ 120 = 2 cups. This calculator converts cups to grams directly; for grams to cups, divide your gram amount by the per-cup weight shown for your ingredient above." },
       { q: "Why do recipes from different countries use different measurement systems?", a: "The US primarily uses volume-based cup and spoon measurements, while most of the rest of the world uses weight-based metric measurements (grams), which are more precise for baking since ingredient density varies. This converter bridges the two so you can follow a recipe written in either system." },
     ],
     related: ["unit-length-converter", "volume-converter", "paint-calculator"],
@@ -2859,6 +2879,7 @@ const CALCULATORS = [
     },
     faq: [
       { q: "Is this random number generator truly random?", a: "It uses your browser's built-in Math.random(), which is pseudo-random and suitable for games, giveaways, and everyday decisions - but not for cryptographic or security purposes." },
+      { q: "Is this the same as asking Google to generate a random number?", a: "Yes, functionally - Google's search results include a built-in random number generator for quick use, and this calculator does the same thing with a dedicated page, plus the option to set a custom range and generate multiple numbers at once." },
       { q: "Can I generate multiple random numbers at once?", a: "Yes - set 'how many numbers' to any value up to 50 to generate a list of random numbers within your chosen range in one click." },
       { q: "Can I exclude specific numbers from the random range?", a: "This calculator generates uniformly from the full range you specify (minimum to maximum); to exclude specific values, generate a number and simply re-roll if it matches an excluded value, or narrow the range if the excluded values are all at one end." },
       { q: "Can I use this for a raffle or giveaway drawing?", a: "Yes - this generator is well-suited for informal drawings like picking a raffle winner or random giveaway entry from a numbered list. For anything with legal or regulatory requirements around fairness (like a licensed lottery), use a certified random number source instead." },
