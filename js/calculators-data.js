@@ -3756,6 +3756,8 @@ const CALCULATORS = [
       { q: "What temperature is the same number in both Celsius and Fahrenheit?", a: "−40 degrees - it's the one point where the two scales intersect, since −40°C × 9/5 + 32 = −40°F exactly; every other temperature reads as a different number on each scale." },
       { q: "Does this also convert to and from Kelvin?", a: "Yes - alongside Celsius and Fahrenheit, this converter supports Kelvin, which is useful for scientific calculations since it starts at absolute zero rather than an arbitrary reference point." },
       { q: "What is 180°C in an oven, in Fahrenheit?", a: "356°F exactly, though recipes almost always round oven temperatures to the nearest common setting - 180°C is the standard rounded equivalent of 350°F, a very common baking temperature, even though the precise conversion is a few degrees higher." },
+      { q: "What is 100°F in Celsius?", a: "About 37.8°C - subtract 32, then multiply by 5/9: (100−32)×5/9 = 68×5/9 ≈ 37.78°C. That's just above normal human body temperature (37°C), which is why 100°F often feels notably hot outdoors." },
+      { q: "What is 170°F in Celsius?", a: "About 76.7°C - (170−32)×5/9 = 138×5/9 ≈ 76.67°C." },
     ],
     related: ["weight-converter", "volume-converter", "unit-length-converter"],
   },
