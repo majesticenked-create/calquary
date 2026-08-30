@@ -407,6 +407,39 @@ const CALCULATORS = [
     related: ["fraction-calculator", "gcd-lcm-calculator", "percentage-calculator"],
   },
   {
+    id: "aspect-ratio-calculator",
+    category: "math",
+    title: "Aspect Ratio Calculator",
+    keyword: "aspect ratio calculator",
+    description: "Calculate a photo or video's aspect ratio, and find a matching height or width for a new size.",
+    intro: "Enter a width and height to find the simplified aspect ratio, plus the matching dimension for a new size.",
+    fields: [
+      { id: "width", label: "Original width", type: "number", default: 1920, step: 1 },
+      { id: "height", label: "Original height", type: "number", default: 1080, step: 1 },
+      { id: "newWidth", label: "New width (optional)", type: "number", default: 800, step: 1 },
+    ],
+    compute: (v) => {
+      const g = gcd(Math.round(v.width), Math.round(v.height));
+      const ratioW = g === 0 ? v.width : v.width / g;
+      const ratioH = g === 0 ? v.height : v.height / g;
+      const matchingHeight = v.width === 0 ? 0 : (v.newWidth * v.height) / v.width;
+      return {
+        primary: { label: "Aspect ratio", value: `${round(ratioW, 2)}:${round(ratioH, 2)}` },
+        secondary: [
+          { l: "Decimal ratio", v: round(v.width / v.height, 4) },
+          { l: `Height at width ${v.newWidth}`, v: round(matchingHeight, 1) },
+        ],
+        note: "The matching height/width keeps the same proportions as your original image or video, avoiding a stretched or squashed resize.",
+      };
+    },
+    faq: [
+      { q: "How do I calculate an aspect ratio?", a: "Divide both the width and height by their greatest common divisor (GCD) to simplify them to the smallest whole-number ratio - 1920×1080 simplifies to 16:9, since GCD(1920, 1080) = 120, and 1920÷120=16, 1080÷120=9." },
+      { q: "How do I resize an image without distorting it?", a: "Keep the same aspect ratio: pick your new width, then calculate the matching height using (new width × original height) ÷ original width - that's exactly what this calculator's \"new width\" field does." },
+      { q: "What does a 'photo ratio' like 4:3 or 16:9 mean?", a: "It's the proportional relationship between an image's width and height - 4:3 is a more square-ish traditional photo/TV shape, while 16:9 is the wider, more cinematic shape used by most modern screens and video." },
+    ],
+    related: ["unit-length-converter", "area-converter", "ratio-calculator"],
+  },
+  {
     id: "exponent-calculator",
     category: "math",
     title: "Exponent Calculator",
@@ -1074,6 +1107,70 @@ const CALCULATORS = [
       { q: "Is this different from the regular Grade Calculator?", a: "Yes - the regular Grade Calculator converts a single score (like one test) into a percentage and letter grade. This tool combines multiple weighted categories - homework, tests, a final exam, etc. - into one overall course grade." },
     ],
     related: ["grade-calculator", "average-calculator", "percentage-calculator"],
+  },
+  {
+    id: "gpa-calculator",
+    category: "math",
+    title: "Weighted GPA Calculator",
+    keyword: "weighted calculator gpa",
+    description: "Calculate your GPA on a 4.0 scale from letter grades and credit hours across up to 5 courses.",
+    intro: "Enter a letter grade and credit hours for each course to calculate your credit-weighted GPA.",
+    fields: [
+      { id: "grade1", label: "Course 1 grade", type: "select", default: "A", options: [
+        { v: "A", l: "A (4.0)" }, { v: "A-", l: "A- (3.7)" }, { v: "B+", l: "B+ (3.3)" }, { v: "B", l: "B (3.0)" }, { v: "B-", l: "B- (2.7)" },
+        { v: "C+", l: "C+ (2.3)" }, { v: "C", l: "C (2.0)" }, { v: "C-", l: "C- (1.7)" }, { v: "D+", l: "D+ (1.3)" }, { v: "D", l: "D (1.0)" }, { v: "F", l: "F (0.0)" },
+      ] },
+      { id: "credits1", label: "Course 1 credit hours", type: "number", default: 3, step: 0.5, min: 0 },
+      { id: "grade2", label: "Course 2 grade", type: "select", default: "B+", options: [
+        { v: "A", l: "A (4.0)" }, { v: "A-", l: "A- (3.7)" }, { v: "B+", l: "B+ (3.3)" }, { v: "B", l: "B (3.0)" }, { v: "B-", l: "B- (2.7)" },
+        { v: "C+", l: "C+ (2.3)" }, { v: "C", l: "C (2.0)" }, { v: "C-", l: "C- (1.7)" }, { v: "D+", l: "D+ (1.3)" }, { v: "D", l: "D (1.0)" }, { v: "F", l: "F (0.0)" },
+      ] },
+      { id: "credits2", label: "Course 2 credit hours", type: "number", default: 3, step: 0.5, min: 0 },
+      { id: "grade3", label: "Course 3 grade", type: "select", default: "A-", options: [
+        { v: "A", l: "A (4.0)" }, { v: "A-", l: "A- (3.7)" }, { v: "B+", l: "B+ (3.3)" }, { v: "B", l: "B (3.0)" }, { v: "B-", l: "B- (2.7)" },
+        { v: "C+", l: "C+ (2.3)" }, { v: "C", l: "C (2.0)" }, { v: "C-", l: "C- (1.7)" }, { v: "D+", l: "D+ (1.3)" }, { v: "D", l: "D (1.0)" }, { v: "F", l: "F (0.0)" },
+      ] },
+      { id: "credits3", label: "Course 3 credit hours", type: "number", default: 3, step: 0.5, min: 0 },
+      { id: "grade4", label: "Course 4 grade (optional)", type: "select", default: "B", options: [
+        { v: "A", l: "A (4.0)" }, { v: "A-", l: "A- (3.7)" }, { v: "B+", l: "B+ (3.3)" }, { v: "B", l: "B (3.0)" }, { v: "B-", l: "B- (2.7)" },
+        { v: "C+", l: "C+ (2.3)" }, { v: "C", l: "C (2.0)" }, { v: "C-", l: "C- (1.7)" }, { v: "D+", l: "D+ (1.3)" }, { v: "D", l: "D (1.0)" }, { v: "F", l: "F (0.0)" },
+      ] },
+      { id: "credits4", label: "Course 4 credit hours (0 to skip)", type: "number", default: 0, step: 0.5, min: 0 },
+      { id: "grade5", label: "Course 5 grade (optional)", type: "select", default: "A", options: [
+        { v: "A", l: "A (4.0)" }, { v: "A-", l: "A- (3.7)" }, { v: "B+", l: "B+ (3.3)" }, { v: "B", l: "B (3.0)" }, { v: "B-", l: "B- (2.7)" },
+        { v: "C+", l: "C+ (2.3)" }, { v: "C", l: "C (2.0)" }, { v: "C-", l: "C- (1.7)" }, { v: "D+", l: "D+ (1.3)" }, { v: "D", l: "D (1.0)" }, { v: "F", l: "F (0.0)" },
+      ] },
+      { id: "credits5", label: "Course 5 credit hours (0 to skip)", type: "number", default: 0, step: 0.5, min: 0 },
+    ],
+    compute: (v) => {
+      const points = { A: 4.0, "A-": 3.7, "B+": 3.3, B: 3.0, "B-": 2.7, "C+": 2.3, C: 2.0, "C-": 1.7, "D+": 1.3, D: 1.0, F: 0.0 };
+      const courses = [
+        [v.grade1, v.credits1], [v.grade2, v.credits2], [v.grade3, v.credits3],
+        [v.grade4, v.credits4], [v.grade5, v.credits5],
+      ];
+      let totalPoints = 0, totalCredits = 0;
+      for (const [grade, credits] of courses) {
+        if (credits > 0) {
+          totalPoints += points[grade] * credits;
+          totalCredits += credits;
+        }
+      }
+      const gpa = totalCredits === 0 ? 0 : totalPoints / totalCredits;
+      return {
+        primary: { label: "Weighted GPA", value: round(gpa, 3) },
+        secondary: [
+          { l: "Total credit hours", v: totalCredits },
+          { l: "Total quality points", v: round(totalPoints, 2) },
+        ],
+        note: "Uses a standard unweighted 4.0 scale (A=4.0 down to F=0.0). Some schools use a different scale or add extra points for honors/AP courses - check your school's specific scale if this needs to match a transcript exactly.",
+      };
+    },
+    faq: [
+      { q: "How is GPA calculated?", a: "Convert each course's letter grade to grade points (A=4.0, A-=3.7, B+=3.3, etc.), multiply by that course's credit hours to get \"quality points,\" add up the quality points across all courses, then divide by the total credit hours - this weights higher-credit courses more heavily than lower-credit ones." },
+      { q: "Why is this called a 'weighted' GPA calculator?", a: "\"Weighted\" here refers to weighting by credit hours - a 4-credit course affects your GPA more than a 1-credit course. This is different from \"weighted\" in the high school sense (extra GPA points for honors/AP classes), which this calculator doesn't apply - it uses a standard unweighted 4.0 scale per course." },
+      { q: "What if I'm only taking 2 or 3 courses?", a: "Leave the unused course credit-hour fields at 0 - this calculator skips any course with 0 credit hours entered, so you can use just 2, 3, 4, or all 5 course slots." },
+    ],
+    related: ["grade-calculator", "weighted-grade-calculator", "average-calculator"],
   },
 
   // ---------------- FINANCE ----------------

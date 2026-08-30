@@ -235,6 +235,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/ratio-calculator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/aspect-ratio-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/aspect-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/aspect-ratio-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/exponent-calculator.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/exponent-calculator.html"/>
@@ -311,6 +317,12 @@
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/weighted-grade-calculator.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/weighted-grade-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/gpa-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/gpa-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/gpa-calculator.html"/>
   </url>
   <url>
     <loc>https://calquary.com/tool/loan-calculator.html</loc>
