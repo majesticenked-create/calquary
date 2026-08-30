@@ -2293,6 +2293,7 @@ const CALCULATORS = [
       { q: "How is a due date calculated from the last menstrual period (LMP)?", a: "Add 280 days (40 weeks) to the first day of your last period - this is Naegele's rule, the standard method, which assumes a 28-day cycle with ovulation on day 14. It's an estimate; actual cycle length affects real conception timing." },
       { q: "How is an IVF due date different from an LMP-based due date?", a: "IVF due dates are calculated from a known transfer date rather than an estimated ovulation date, which makes them more precise. A day-5 (blastocyst) transfer adds 261 days to the transfer date, and a day-3 transfer adds 263 days - both account for the embryo's exact age at transfer." },
       { q: "How accurate are due date estimates?", a: "Only about 5% of babies are born on their exact estimated due date - most arrive within a 2-week window before or after. Due dates are a statistical estimate of a full-term timeline, not a precise prediction, and your care provider's ultrasound-based dating is generally more reliable than a calculation from LMP alone." },
+      { q: "Is an 'ivf birth date calculator' the same as this tool?", a: "Yes - select \"IVF transfer\" as the calculation method above (day 3 or day 5, depending on your embryo's transfer stage) to get an IVF-specific due date estimate." },
     ],
     related: ["age-calculator", "days-until-calculator", "date-duration-calculator"],
   },
@@ -2706,9 +2707,15 @@ const CALCULATORS = [
       date.setUTCDate(date.getUTCDate() + 4 - dayNum);
       const yearStart = new Date(Date.UTC(date.getUTCFullYear(), 0, 1));
       const weekNo = Math.ceil((((date - yearStart) / 86400000) + 1) / 7);
+      const dec31 = new Date(Date.UTC(y, 11, 31));
+      const daysLeftInYear = Math.max(0, Math.round((dec31 - date) / 86400000));
+      const weeksLeftInYear = Math.floor(daysLeftInYear / 7);
       return {
         primary: { label: "ISO week number", value: weekNo },
-        secondary: [{ l: "ISO week year", v: date.getUTCFullYear() }],
+        secondary: [
+          { l: "ISO week year", v: date.getUTCFullYear() },
+          { l: "Full weeks left in year", v: weeksLeftInYear },
+        ],
         note: "Uses the ISO 8601 standard, where week 1 is the week containing the year's first Thursday. This can differ from a simple 'days since Jan 1' count near year boundaries.",
       };
     },
@@ -2717,6 +2724,8 @@ const CALCULATORS = [
       { q: "Why does ISO week numbering matter?", a: "ISO 8601 week numbers are used widely in business, manufacturing, and international scheduling because they give every week a consistent, unambiguous number that doesn't reset awkwardly mid-week at year boundaries." },
       { q: "Does every year have exactly 52 weeks?", a: "No - the ISO week-numbering system means most years have 52 weeks, but years where January 1 falls on a Thursday (or it's a leap year starting on Wednesday) get a 53rd week, since ISO weeks are defined by whole Monday-to-Sunday periods within the year." },
       { q: "Why do some calendars show week 53 for a year?", a: "A year has 52 weeks plus one or two extra days, and under the ISO week-numbering standard, those leftover days sometimes form a 53rd week - this happens in years where January 1st falls on a Thursday, or in leap years where it falls on a Wednesday." },
+      { q: "How many weeks are left this year?", a: "Set the date above to today and check the \"Full weeks left in year\" figure - it counts complete 7-day weeks remaining between your chosen date and December 31." },
+      { q: "What does 'week and year' mean together, like week 24 of 2024?", a: "It's the standard way to unambiguously reference a specific week - the ISO week number alone can be shared between two different years near a year boundary, so pairing it with the ISO week year (shown above) removes that ambiguity." },
     ],
     related: ["date-duration-calculator", "day-of-week-calculator", "leap-year-calculator"],
   },
@@ -2808,6 +2817,7 @@ const CALCULATORS = [
       { q: "Can this calculate age in months or weeks instead of just years?", a: "Yes - alongside your age in years, this calculator breaks down the exact time elapsed into total months, weeks, and days, so you can see your precise age in whichever unit is most useful." },
       { q: "Is this the same as a 'calculator birthday' or 'age calculator net' search?", a: "Yes - both describe calculating exact age from a birth date, which is exactly what this tool does. Enter your birth date above to see your exact age in years, months, and days." },
       { q: "Is 'age calculator from birth date' or 'count age from date of birth' different from this tool?", a: "No - all three phrasings describe the same task: entering a birth date to get an exact age. Enter your birth date above to get started." },
+      { q: "Is 'age calculator by birth date' the same as this tool?", a: "Yes - that's exactly what this calculator does. Enter your birth date above to see your exact age in years, months, and days." },
     ],
     related: ["days-until-calculator", "dog-age-calculator"],
   },
@@ -3088,6 +3098,7 @@ const CALCULATORS = [
       { q: "How much does a stick of butter weigh in this converter?", a: "A standard US stick of butter is 1/2 cup, which converts to about 113.5g - half of the 227g-per-cup figure this calculator uses." },
       { q: "Why does the type of flour affect its weight per cup?", a: "How densely the flour is packed into the measuring cup - and differences between flour types like all-purpose, bread, or cake flour - both affect weight per cup, which is why professional recipes often specify weight rather than cup measurements for consistency." },
       { q: "How many grams are in a cup?", a: "It depends on the ingredient - a cup of flour is about 120g, a cup of granulated sugar is about 200g, and a cup of butter is about 227g, since cups measure volume and grams measure weight. Choose your ingredient above for the exact figure." },
+      { q: "Is '1 cup in grams' or '1 cup to g' the same question as 'cup to grams'?", a: "Yes - all of these ask the same thing: how many grams are in one cup of a given ingredient. Enter 1 in the cups field and pick your ingredient above for the exact figure." },
       { q: "How many cups are in a certain number of grams?", a: "Divide the gram amount by the grams-per-cup figure for your ingredient - 240g of flour, for example, is 240 ÷ 120 = 2 cups. This calculator converts cups to grams directly; for grams to cups, divide your gram amount by the per-cup weight shown for your ingredient above." },
       { q: "A cup is how many grams?", a: "It depends entirely on the ingredient, since a cup measures volume and grams measure weight - select your ingredient above (flour, sugar, butter, or brown sugar) to see its specific grams-per-cup figure." },
       { q: "How many grams is 1 cup, in general?", a: "There's no single answer without knowing the ingredient - it ranges from about 120g (flour) to 227g (butter) per cup for the ingredients this calculator covers, since denser ingredients pack more weight into the same volume." },
@@ -3624,6 +3635,7 @@ const CALCULATORS = [
       { q: "What happens if the number of people doesn't divide evenly into groups?", a: "The extra people are spread one-per-group starting from the first group, so group sizes differ by at most one person - for 10 people split into 3 groups, you'll get groups of 4, 3, and 3, not 4, 4, and 2." },
       { q: "Can I use this for classroom teams or a work project split?", a: "Yes - this works for any scenario where you need an unbiased random split of a list of names into a fixed number of groups, whether that's classroom project teams, sports teams, or dividing up a task list at work." },
       { q: "Can I use this as a randomizer to pick one random winner or order names randomly?", a: "Yes - set the number of groups to 1, and this calculator shuffles your entire list into a single random order (the fairest way to pick a random winner is to take whoever ends up first). Every reshuffle uses a fresh Fisher-Yates shuffle." },
+      { q: "Is a 'randomizer list' or 'random a list' the same as this tool?", a: "Yes - both describe shuffling a list into random order, which this tool does (set groups to 1 for a single shuffled list, or more for random group splits)." },
     ],
     related: ["random-number-generator", "word-counter", "text-to-slug-generator"],
   },
