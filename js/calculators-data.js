@@ -3844,6 +3844,7 @@ const CALCULATORS = [
       { q: "What is 37°F in Celsius?", a: "About 2.8°C - (37−32)×5/9 = 5×5/9 ≈ 2.78°C, just above freezing." },
       { q: "What is 98°F in Celsius?", a: "About 36.7°C - (98−32)×5/9 = 66×5/9 ≈ 36.67°C, very close to normal human body temperature (which is closer to 98.6°F / 37°C)." },
       { q: "What is 18°C in Fahrenheit?", a: "64.4°F - multiply by 9/5 and add 32: 18×9/5+32 = 32.4+32 = 64.4°F, a mild spring/fall temperature." },
+      { q: "What is 40°F in Celsius?", a: "About 4.4°C - (40−32)×5/9 = 8×5/9 ≈ 4.44°C, a cold, near-refrigerator temperature." },
     ],
     related: ["weight-converter", "volume-converter", "unit-length-converter"],
   },
