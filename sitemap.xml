@@ -793,6 +793,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/random-number-generator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/dice-roller.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/dice-roller.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/dice-roller.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/color-mixer.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/color-mixer.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/color-mixer.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/case-converter.html</loc>
     <lastmod>2026-08-27</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/case-converter.html"/>

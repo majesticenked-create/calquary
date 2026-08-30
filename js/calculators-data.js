@@ -2585,6 +2585,7 @@ const CALCULATORS = [
       { q: "Is 'military clock conversion' or 'military hours converter' different from converting military time?", a: "No - all of these describe the same conversion between 24-hour military time and standard 12-hour clock time, in either direction. Pick the direction you need above." },
       { q: "Do 'military clock converter,' 'conversion of military time,' 'converting military time,' and 'translate military time' all mean the same thing here?", a: "Yes - every one of these phrasings is asking to convert between 12-hour and 24-hour (military) time, which is exactly what this calculator does in both directions." },
       { q: "What is 1600 military time?", a: "4:00 PM. Since 1600 is 16 hundred hours, subtract 12 to get 4, and any hour of 13 or greater is PM - switch this calculator to \"Military → 12-hour\" mode and enter hour 16, minute 0 to confirm." },
+      { q: "What is 7 PM or 10 PM in military time?", a: "7:00 PM is 1900 (19 hundred hours) - add 12 to the PM hour. 10:00 PM is 2200 (22 hundred hours), same rule. Only 12 PM (noon, stays 1200) and 12 AM (midnight, becomes 0000) break the simple \"add 12\" pattern." },
       { q: "Is 'army clock converter' the same as a military time converter?", a: "Yes - the US military and other armed forces use the same 24-hour clock system commonly called \"military time,\" so \"army clock converter\" describes the same conversion this tool handles in both directions." },
     ],
     related: ["time-duration-calculator", "time-add-calculator", "time-unit-converter"],
@@ -3101,6 +3102,7 @@ const CALCULATORS = [
       { q: "How many grams are in a cup?", a: "It depends on the ingredient - a cup of flour is about 120g, a cup of granulated sugar is about 200g, and a cup of butter is about 227g, since cups measure volume and grams measure weight. Choose your ingredient above for the exact figure." },
       { q: "Is '1 cup in grams' or '1 cup to g' the same question as 'cup to grams'?", a: "Yes - all of these ask the same thing: how many grams are in one cup of a given ingredient. Enter 1 in the cups field and pick your ingredient above for the exact figure." },
       { q: "Is '1 cups to grams' (plural) different from '1 cup to grams'?", a: "No - it's the same question with a grammar slip. Enter 1 in the cups field above for the answer either way." },
+      { q: "Is 'cups to grams' without a number the same question?", a: "Yes - it's asking for the same conversion, just without specifying an amount. Enter however many cups you have above (1, 2, 0.5, etc.) to get the exact grams for your ingredient." },
       { q: "How many cups are in a certain number of grams?", a: "Divide the gram amount by the grams-per-cup figure for your ingredient - 240g of flour, for example, is 240 ÷ 120 = 2 cups. This calculator converts cups to grams directly; for grams to cups, divide your gram amount by the per-cup weight shown for your ingredient above." },
       { q: "A cup is how many grams?", a: "It depends entirely on the ingredient, since a cup measures volume and grams measure weight - select your ingredient above (flour, sugar, butter, or brown sugar) to see its specific grams-per-cup figure." },
       { q: "How many grams is 1 cup, in general?", a: "There's no single answer without knowing the ingredient - it ranges from about 120g (flour) to 227g (butter) per cup for the ingredients this calculator covers, since denser ingredients pack more weight into the same volume." },
@@ -3462,6 +3464,87 @@ const CALCULATORS = [
       { q: "Can I use this for a raffle or giveaway drawing?", a: "Yes - this generator is well-suited for informal drawings like picking a raffle winner or random giveaway entry from a numbered list. For anything with legal or regulatory requirements around fairness (like a licensed lottery), use a certified random number source instead." },
     ],
     related: ["password-generator", "word-counter", "gcd-lcm-calculator"],
+  },
+  {
+    id: "dice-roller",
+    category: "text",
+    title: "Dice Roller",
+    keyword: "dice roller",
+    description: "Roll one or more virtual dice, with any number of sides.",
+    intro: "Choose how many dice to roll and how many sides each die has, then roll.",
+    fields: [
+      { id: "numDice", label: "Number of dice", type: "number", default: 2, step: 1, min: 1, max: 20 },
+      { id: "numSides", label: "Sides per die", type: "number", default: 6, step: 1, min: 2, max: 100 },
+    ],
+    compute: (v) => {
+      const numDice = Math.max(1, Math.min(20, Math.round(v.numDice)));
+      const numSides = Math.max(2, Math.min(100, Math.round(v.numSides)));
+      const rolls = Array.from({ length: numDice }, () => Math.floor(Math.random() * numSides) + 1);
+      const total = rolls.reduce((a, b) => a + b, 0);
+      return {
+        primary: { label: "Roll result", value: rolls.join(" + ") },
+        secondary: [
+          { l: "Total", v: total },
+          { l: "Average per die", v: round(total / numDice, 2) },
+        ],
+        note: "Click Calculate again to roll again.",
+      };
+    },
+    faq: [
+      { q: "How random is this dice roller?", a: "It uses your browser's random number generator, giving each side of each die an equal chance on every roll - fine for games, decisions, and casual use, though not certified for regulated gambling." },
+      { q: "Can I roll dice with more than 6 sides, like a D20?", a: "Yes - set \"sides per die\" to any number from 2 to 100, so this works for standard 6-sided dice, D20s and other tabletop RPG dice, or custom side counts." },
+      { q: "How do I roll multiple dice and add them together, like 2d6?", a: "Set \"number of dice\" to 2 and \"sides per die\" to 6 - the result shows each individual roll plus the total, which is exactly what \"2d6\" notation from tabletop games means." },
+    ],
+    related: ["random-number-generator", "group-randomizer", "password-generator"],
+  },
+  {
+    id: "color-mixer",
+    category: "text",
+    title: "Color Mixer",
+    keyword: "color mixer",
+    description: "Mix two colors together at any ratio to see the resulting hex and RGB color.",
+    intro: "Enter two hex colors and a mix ratio to see the blended color.",
+    fields: [
+      { id: "color1", label: "First color (hex)", type: "text", default: "#FF0000" },
+      { id: "color2", label: "Second color (hex)", type: "text", default: "#0000FF" },
+      { id: "ratio", label: "First color weight", type: "number", unit: "%", default: 50, step: 1, min: 0, max: 100 },
+    ],
+    compute: (v) => {
+      function parseHex(hex) {
+        const clean = (hex || "").trim().replace(/^#/, "");
+        if (!/^[0-9a-fA-F]{6}$/.test(clean)) return null;
+        return {
+          r: parseInt(clean.slice(0, 2), 16),
+          g: parseInt(clean.slice(2, 4), 16),
+          b: parseInt(clean.slice(4, 6), 16),
+        };
+      }
+      const c1 = parseHex(v.color1);
+      const c2 = parseHex(v.color2);
+      if (!c1 || !c2) {
+        return { primary: { label: "Mixed color", value: "Invalid hex color" }, secondary: [], note: "Enter colors as 6-digit hex codes, like #FF0000." };
+      }
+      const w = Math.max(0, Math.min(100, v.ratio)) / 100;
+      const r = Math.round(c1.r * w + c2.r * (1 - w));
+      const g = Math.round(c1.g * w + c2.g * (1 - w));
+      const b = Math.round(c1.b * w + c2.b * (1 - w));
+      const toHex = (n) => n.toString(16).padStart(2, "0").toUpperCase();
+      const mixedHex = `#${toHex(r)}${toHex(g)}${toHex(b)}`;
+      return {
+        primary: { label: "Mixed color", value: mixedHex },
+        secondary: [
+          { l: "RGB", v: `${r}, ${g}, ${b}` },
+          { l: "Mix ratio", v: `${round(v.ratio, 0)}% / ${round(100 - v.ratio, 0)}%` },
+        ],
+        note: "Mixed by simple linear interpolation of RGB channels - matches how digital color mixing (light-based, not paint) actually works.",
+      };
+    },
+    faq: [
+      { q: "How does color mixing work here - like paint or like light?", a: "Like light (additive RGB blending), not paint (subtractive pigment mixing) - this calculator linearly interpolates the red, green, and blue channels between your two colors, which is how digital displays and design tools mix colors, not how physical paint pigments combine." },
+      { q: "What ratio gives an even 50/50 mix?", a: "Set the first color's weight to 50% - each channel becomes the exact average of the two input colors' channels at that setting." },
+      { q: "Can I use color names instead of hex codes?", a: "No - enter colors as 6-digit hex codes (like #FF0000 for red), since that's the precise, unambiguous format this calculator parses. Most design tools and browsers can show you the hex code for any color you pick visually." },
+    ],
+    related: ["random-number-generator", "unit-length-converter", "text-to-slug-generator"],
   },
   {
     id: "case-converter",
