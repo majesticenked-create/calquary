@@ -696,6 +696,7 @@ const I18N_TOOLS = {
         { q: "¿Esto incluye impuestos y seguro?", a: "No - esto es solo capital e interés. Las hipotecas en particular suelen incluir el impuesto predial y el seguro en el pago mensual (PITI), así que tu factura real del prestamista puede ser mayor que el número mostrado aquí." },
         { q: "¿Pagar extra cada mes reduce el interés total?", a: "Sí - cualquier pago superior al monto requerido se destina directamente al capital, lo que acorta el préstamo y reduce el interés total pagado, ya que el interés se calcula sobre el saldo restante en cada período." },
         { q: "¿Cómo afecta el plazo del préstamo al interés total pagado?", a: "Un plazo más largo reduce tu pago mensual pero aumenta el interés total pagado, ya que pides prestado el mismo monto durante más períodos; un plazo más corto sube el pago pero reduce el interés total - el equilibrio depende de qué monto mensual puedas afrontar cómodamente." },
+        { q: "¿Es lo mismo que un simulador de préstamo?", a: "Sí - \"simulador de préstamo\" es solo otro nombre para una calculadora de pago de préstamo, y esta herramienta cubre ambos: introduce el capital, la tasa y el plazo para cualquier préstamo de tasa fija. Si estás financiando específicamente un vehículo, la calculadora de préstamo de auto es más adecuada, ya que también incluye el valor de la parte de cambio y el impuesto sobre ventas." },
       ],
     },
     fr: {
@@ -707,6 +708,7 @@ const I18N_TOOLS = {
         { q: "Cela inclut-il les taxes et l'assurance ?", a: "Non - il s'agit uniquement du capital et des intérêts. Les prêts immobiliers en particulier incluent souvent la taxe foncière et l'assurance dans la mensualité (PITI), donc votre facture réelle auprès du prêteur peut être supérieure au montant affiché ici." },
         { q: "Payer un supplément chaque mois réduit-il les intérêts totaux ?", a: "Oui - tout paiement au-delà du montant requis va directement au capital, ce qui raccourcit le prêt et réduit le total des intérêts payés, puisque les intérêts sont calculés sur le solde restant à chaque période." },
         { q: "Comment la durée du prêt affecte-t-elle le total des intérêts payés ?", a: "Une durée plus longue réduit votre mensualité mais augmente le total des intérêts payés, puisque vous empruntez le même montant sur plus de périodes ; une durée plus courte augmente la mensualité mais réduit le total des intérêts - l'arbitrage dépend du montant mensuel que vous pouvez confortablement vous permettre." },
+        { q: "Est-ce la même chose qu'un simulateur de prêt ?", a: "Oui - « simulateur de prêt » est simplement un autre nom pour une calculatrice de mensualité de prêt, et cet outil couvre les deux : saisissez le capital, le taux et la durée pour n'importe quel prêt à taux fixe. Si vous financez spécifiquement un véhicule, la calculatrice de prêt auto est plus adaptée, car elle prend aussi en compte la valeur de reprise et la taxe de vente." },
       ],
     },
     de: {
@@ -718,6 +720,7 @@ const I18N_TOOLS = {
         { q: "Sind Steuern und Versicherung enthalten?", a: "Nein - dies sind nur Tilgung und Zinsen. Insbesondere Hypotheken bündeln Grundsteuer und Versicherung oft in der monatlichen Rate (PITI), sodass Ihre tatsächliche Rechnung des Kreditgebers höher ausfallen kann als der hier angezeigte Betrag." },
         { q: "Senkt eine zusätzliche monatliche Zahlung die Gesamtzinsen?", a: "Ja - jede Zahlung über dem erforderlichen Betrag fließt direkt in die Tilgung, was das Darlehen verkürzt und die insgesamt gezahlten Zinsen senkt, da die Zinsen jede Periode auf den verbleibenden Saldo berechnet werden." },
         { q: "Wie wirkt sich die Kreditlaufzeit auf die insgesamt gezahlten Zinsen aus?", a: "Eine längere Laufzeit senkt Ihre monatliche Rate, erhöht aber die insgesamt gezahlten Zinsen, da Sie denselben Betrag über mehr Perioden leihen; eine kürzere Laufzeit erhöht die Rate, senkt aber die Gesamtzinsen - der Kompromiss hängt davon ab, welchen monatlichen Betrag Sie sich bequem leisten können." },
+        { q: "Ist das dasselbe wie ein Kreditsimulator?", a: "Ja - \"Kreditsimulator\" ist nur ein anderer Name für einen Kreditratenrechner, und dieses Tool deckt beides ab: Geben Sie Darlehenssumme, Zinssatz und Laufzeit für ein beliebiges Darlehen mit festem Zinssatz ein. Wenn Sie speziell ein Fahrzeug finanzieren, ist der Autokreditrechner besser geeignet, da er auch den Inzahlungnahmewert und die Umsatzsteuer berücksichtigt." },
       ],
     },
     pt: {
@@ -729,6 +732,7 @@ const I18N_TOOLS = {
         { q: "Isso inclui impostos e seguro?", a: "Não - isso é apenas principal e juros. Financiamentos imobiliários, em particular, costumam incluir imposto predial e seguro no pagamento mensal (PITI), então sua conta real do credor pode ser maior do que o valor mostrado aqui." },
         { q: "Pagar a mais todo mês reduz os juros totais?", a: "Sim - qualquer pagamento acima do valor exigido vai diretamente para o principal, o que encurta o empréstimo e reduz o total de juros pagos, já que os juros são calculados sobre o saldo restante a cada período." },
         { q: "Como o prazo do empréstimo afeta o total de juros pagos?", a: "Um prazo mais longo reduz seu pagamento mensal, mas aumenta o total de juros pagos, já que você toma emprestado o mesmo valor por mais períodos; um prazo mais curto aumenta o pagamento, mas reduz o total de juros - o equilíbrio depende de qual valor mensal você consegue pagar confortavelmente." },
+        { q: "Isso é a mesma coisa que um simulador de empréstimo?", a: "Sim - \"simulador de empréstimo\" é apenas outro nome para uma calculadora de pagamento de empréstimo, e esta ferramenta cobre ambos: insira o valor principal, a taxa e o prazo para qualquer empréstimo de taxa fixa. Se você está financiando especificamente um veículo, a calculadora de empréstimo automotivo é mais adequada, já que também considera o valor de troca e o imposto sobre vendas." },
       ],
     },
     it: {
@@ -740,6 +744,7 @@ const I18N_TOOLS = {
         { q: "Questo include tasse e assicurazione?", a: "No - questo è solo capitale e interessi. I mutui, in particolare, spesso includono imposta sulla proprietà e assicurazione nella rata mensile (PITI), quindi la fattura reale del tuo prestatore potrebbe essere superiore all'importo mostrato qui." },
         { q: "Pagare di più ogni mese riduce gli interessi totali?", a: "Sì - qualsiasi pagamento superiore all'importo richiesto va direttamente al capitale, il che accorcia il prestito e riduce il totale degli interessi pagati, poiché gli interessi vengono calcolati sul saldo residuo ogni periodo." },
         { q: "In che modo la durata del prestito influisce sul totale degli interessi pagati?", a: "Una durata più lunga riduce la rata mensile ma aumenta il totale degli interessi pagati, poiché prendi in prestito lo stesso importo per più periodi; una durata più breve aumenta la rata ma riduce il totale degli interessi - il compromesso dipende da quale importo mensile puoi permetterti comodamente." },
+        { q: "È la stessa cosa di un simulatore di prestito?", a: "Sì - \"simulatore di prestito\" è solo un altro nome per una calcolatrice della rata del prestito, e questo strumento copre entrambi: inserisci capitale, tasso e durata per qualsiasi prestito a tasso fisso. Se stai finanziando specificamente un veicolo, la calcolatrice del prestito auto è più adatta, poiché considera anche il valore della permuta e l'imposta sulle vendite." },
       ],
     },
     ja: {
@@ -751,6 +756,7 @@ const I18N_TOOLS = {
         { q: "これには税金や保険料が含まれますか？", a: "いいえ、これは元金と利息のみです。特に住宅ローンでは、固定資産税や保険料が毎月の返済額（PITI）に含まれることが多いため、実際の貸し手からの請求額はここに表示される金額より高くなる場合があります。" },
         { q: "毎月多めに支払うと総利息は減りますか？", a: "はい。必要額を超える支払い分はすべて元金に充てられるため、ローン期間が短縮され、支払う総利息が減ります。これは各期間の利息が残高に対して計算されるためです。" },
         { q: "返済期間は支払う総利息にどう影響しますか？", a: "返済期間を長くすると毎月の返済額は下がりますが、同じ金額をより多くの期間借りることになるため総利息は増えます。期間を短くすると返済額は上がりますが総利息は減ります。どちらを選ぶかは、無理なく支払える毎月の金額次第です。" },
+        { q: "ローンシミュレーターと同じものですか？", a: "はい。「ローンシミュレーター」はローン返済額計算機の別の呼び方に過ぎず、このツールはどちらの用途にも対応します。元金、金利、返済期間を入力すれば、固定金利のどんなローンにも使えます。車の購入資金を計算したい場合は、下取り額や消費税も考慮できるオートローン計算機の方が適しています。" },
       ],
     },
   },
