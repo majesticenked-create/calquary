@@ -583,6 +583,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/unit-length-converter.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/time-unit-converter.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/time-unit-converter.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/time-unit-converter.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/temperature-converter.html</loc>
     <lastmod>2026-08-27</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/temperature-converter.html"/>
@@ -593,6 +599,12 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/temperature-converter.html"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/temperature-converter.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/temperature-converter.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/water-density-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/water-density-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/water-density-calculator.html"/>
   </url>
   <url>
     <loc>https://calquary.com/tool/weight-converter.html</loc>

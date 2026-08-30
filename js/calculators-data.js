@@ -389,6 +389,7 @@ const CALCULATORS = [
       { q: "Does 'cones volume formula,' 'formulas for volume of a cone,' 'formula volume of cone,' and 'formula for volume of cone' mean anything different?", a: "No - plural, singular, and reordered versions of the same phrase all point to the same thing: the cone volume formula, V = (1/3)πr²h. This calculator computes it directly from your radius and height, whichever way you searched for it." },
       { q: "What about 'formula for volume of a cone,' 'volume for cone formula,' 'formula cone volume,' 'formula of cone volume,' and 'formula volume for cone'?", a: "Same answer every time: the cone volume formula is V = (1/3)πr²h. However this phrase gets reordered or abbreviated, it's asking for that one formula, which this calculator applies to your radius and height automatically." },
       { q: "Is 'volume of the cone,' 'volume for a cone,' 'volume of conical,' and 'cones volume' the same search?", a: "Yes - \"conical\" is just the adjective form of \"cone,\" and the rest are simple word-order or plural variations. All of them mean the same volume formula, V = (1/3)πr²h, which this calculator computes from your radius and height." },
+      { q: "What about 'volume of a conical shape,' 'volume cone,' and 'cone of volume'?", a: "Still the same thing - a \"conical shape\" is just a cone, and the terse two-word versions are the same search with the words dropped or reordered. All of them mean V = (1/3)πr²h." },
       { q: "Why is a cone's volume exactly 1/3 of a cylinder's?", a: "This is a geometric fact provable with calculus (integrating circular cross-sections that shrink linearly to a point) - for any cone and cylinder sharing the same base radius and height, the cone always encloses exactly one-third the volume, regardless of the specific radius or height." },
       { q: "What's the difference between height and slant height?", a: "Height is the straight vertical distance from the base to the apex; slant height is the distance along the cone's curved surface from the base edge to the apex. Slant height is always longer than height (except in the degenerate case of zero radius), and is calculated as √(r² + h²)." },
     ],
@@ -500,6 +501,7 @@ const CALCULATORS = [
       { q: "What's the formula for slope?", a: "m = (y2 − y1) / (x2 − x1) - the change in y divided by the change in x between two points. A slope of 2 means y increases by 2 for every 1 unit increase in x." },
       { q: "What does a negative slope mean?", a: "A negative slope means the line goes downward from left to right - as x increases, y decreases. A positive slope goes upward left to right, a zero slope is a flat horizontal line, and an undefined slope is a vertical line." },
       { q: "How do I calculate slope from a graph without exact coordinates?", a: "Pick any two points the line clearly passes through on the grid, read off their (x, y) coordinates, then apply the slope formula. Choosing points that land on clean grid intersections makes the rise-over-run count easier and less error-prone than estimating decimal coordinates." },
+      { q: "How do you find slope?", a: "Pick any two points on the line, subtract their y-coordinates and their x-coordinates, then divide: slope = (y2 − y1) / (x2 − x1). Enter your two points above and this calculator does that division for you, along with the line's full equation." },
     ],
     related: ["quadratic-formula-calculator", "ratio-calculator", "percentage-change-calculator"],
   },
@@ -2095,6 +2097,41 @@ const CALCULATORS = [
     related: ["weight-converter", "cooking-converter", "concrete-calculator"],
   },
   {
+    id: "time-unit-converter",
+    category: "conversions",
+    title: "Time Unit Converter",
+    keyword: "time unit converter",
+    description: "Convert between seconds, minutes, hours, days, weeks, and years.",
+    intro: "Enter a value and choose a unit to convert it into seconds, minutes, hours, days, and weeks.",
+    fields: [
+      { id: "value", label: "Value", type: "number", default: 1, step: 0.1 },
+      { id: "from", label: "From", type: "select", default: "hours", options: [
+        { v: "seconds", l: "Seconds" }, { v: "minutes", l: "Minutes" }, { v: "hours", l: "Hours" },
+        { v: "days", l: "Days" }, { v: "weeks", l: "Weeks" }, { v: "months", l: "Months (avg.)" }, { v: "years", l: "Years" },
+      ] },
+    ],
+    compute: (v) => {
+      const toSeconds = { seconds: 1, minutes: 60, hours: 3600, days: 86400, weeks: 604800, months: 2629800, years: 31557600 };
+      const totalSeconds = v.value * toSeconds[v.from];
+      return {
+        primary: { label: "In seconds", value: round(totalSeconds, 2).toLocaleString() },
+        secondary: [
+          { l: "Minutes", v: round(totalSeconds / 60, 4).toLocaleString() },
+          { l: "Hours", v: round(totalSeconds / 3600, 4).toLocaleString() },
+          { l: "Days", v: round(totalSeconds / 86400, 4).toLocaleString() },
+          { l: "Weeks", v: round(totalSeconds / 604800, 4).toLocaleString() },
+        ],
+        note: "Months and years use average lengths (30.44 and 365.25 days) since calendar months and leap years vary - for exact calendar-date math, use the Date Duration Calculator instead.",
+      };
+    },
+    faq: [
+      { q: "How many seconds are in a day?", a: "86,400 seconds - 24 hours × 60 minutes × 60 seconds." },
+      { q: "Why does this use 365.25 days for a year instead of 365?", a: "365.25 accounts for leap years - a solar year is actually about 365.2422 days, and adding a leap day roughly every 4 years keeps the calendar aligned with Earth's orbit, so 365.25 is a more accurate long-run average than a flat 365." },
+      { q: "Should I use this or the Date Duration Calculator to find days between two dates?", a: "Use the Date Duration Calculator for that - it works from actual calendar dates and accounts for real month lengths and leap years exactly. This tool is for converting a plain quantity (like \"3.5 hours\") between units, not for calendar-date math." },
+    ],
+    related: ["time-duration-calculator", "date-duration-calculator", "unit-length-converter"],
+  },
+  {
     id: "temperature-converter",
     category: "conversions",
     title: "Temperature Converter",
@@ -2129,6 +2166,50 @@ const CALCULATORS = [
       { q: "Does this also convert to and from Kelvin?", a: "Yes - alongside Celsius and Fahrenheit, this converter supports Kelvin, which is useful for scientific calculations since it starts at absolute zero rather than an arbitrary reference point." },
     ],
     related: ["weight-converter", "volume-converter", "unit-length-converter"],
+  },
+  {
+    id: "water-density-calculator",
+    category: "conversions",
+    title: "Water Density Calculator",
+    keyword: "water density calculator",
+    description: "Calculate the density of water at a given temperature.",
+    intro: "Enter a water temperature to calculate its density, since water's density changes slightly (and non-linearly) with temperature.",
+    fields: [
+      { id: "tempC", label: "Temperature", type: "number", unit: "°C", default: 20, step: 0.5 },
+    ],
+    compute: (v) => {
+      const points = [
+        [0, 999.84], [4, 999.97], [10, 999.70], [20, 998.20], [25, 997.05],
+        [30, 995.65], [40, 992.22], [50, 988.03], [60, 983.20], [70, 977.76],
+        [80, 971.79], [90, 965.31], [100, 958.37],
+      ];
+      let t = v.tempC;
+      if (t < 0) t = 0;
+      if (t > 100) t = 100;
+      let density = points[points.length - 1][1];
+      for (let i = 0; i < points.length - 1; i++) {
+        const [t1, d1] = points[i];
+        const [t2, d2] = points[i + 1];
+        if (t >= t1 && t <= t2) {
+          density = d1 + ((t - t1) / (t2 - t1)) * (d2 - d1);
+          break;
+        }
+      }
+      return {
+        primary: { label: "Density", value: `${round(density, 2)} kg/m³` },
+        secondary: [
+          { l: "g/cm³ (g/mL)", v: round(density / 1000, 4) },
+          { l: "lb/ft³", v: round(density * 0.062428, 2) },
+        ],
+        note: v.tempC < 0 || v.tempC > 100 ? "Clamped to the 0-100°C liquid water range - values outside that need to account for ice or steam, which this calculator doesn't cover." : "At standard atmospheric pressure, for pure (fresh) water. Interpolated between standard reference points.",
+      };
+    },
+    faq: [
+      { q: "What is the density of water at room temperature?", a: "About 998.2 kg/m³ (0.9982 g/cm³) at 20°C, which is commonly used as \"room temperature\" - very close to, but not exactly, the commonly rounded figure of 1,000 kg/m³ (1 g/cm³) used in everyday estimates." },
+      { q: "Why isn't water's density exactly 1,000 kg/m³ except at one specific temperature?", a: "1,000 kg/m³ (1 g/cm³) is only exact at 3.98°C, water's point of maximum density - a quirk caused by hydrogen bonding effects that make water denser as it warms from 0°C up to about 4°C, before behaving normally and getting less dense as it warms further." },
+      { q: "Does salt water have the same density as this calculator shows?", a: "No - this calculator is for pure (fresh) water only. Seawater is denser due to dissolved salts, typically around 1,020-1,029 kg/m³ at the surface depending on salinity and temperature, meaningfully higher than fresh water at the same temperature." },
+    ],
+    related: ["volume-converter", "weight-converter", "unit-length-converter"],
   },
   {
     id: "weight-converter",

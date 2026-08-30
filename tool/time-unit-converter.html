@@ -4,23 +4,23 @@
   <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Slope Calculator - Free Online Calculator | Calquary</title>
-  <meta name="description" content="Calculate the slope between two points, plus the line's equation and angle." />
-  <meta property="og:title" content="Slope Calculator | Calquary">
-  <meta property="og:description" content="Calculate the slope between two points, plus the line's equation and angle.">
+  <title>Time Unit Converter | Calquary</title>
+  <meta name="description" content="Convert between seconds, minutes, hours, days, weeks, and years." />
+  <meta property="og:title" content="Time Unit Converter | Calquary">
+  <meta property="og:description" content="Convert between seconds, minutes, hours, days, weeks, and years.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://calquary.com/tool/slope-calculator.html">
+  <meta property="og:url" content="https://calquary.com/tool/time-unit-converter.html">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Calquary">
-  <meta property="og:image" content="https://calquary.com/og-images/slope-calculator.png">
+  <meta property="og:image" content="https://calquary.com/og-images/time-unit-converter.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Slope Calculator | Calquary">
-  <meta name="twitter:description" content="Calculate the slope between two points, plus the line's equation and angle.">
-  <meta name="twitter:image" content="https://calquary.com/og-images/slope-calculator.png">
-    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/slope-calculator.html">
-  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/slope-calculator.html">
+  <meta name="twitter:title" content="Time Unit Converter | Calquary">
+  <meta name="twitter:description" content="Convert between seconds, minutes, hours, days, weeks, and years.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/time-unit-converter.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/time-unit-converter.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/time-unit-converter.html">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -46,7 +46,7 @@
       // still JS-driven here is the interactive calculator widget itself
       // (fields/compute/results) and the related-tools list, neither of
       // which is static SEO prose.
-      const calc = getCalculator("slope-calculator");
+      const calc = getCalculator("time-unit-converter");
 
       const relWrap = document.getElementById("related-list");
       calc.related.forEach((relId) => {
@@ -57,7 +57,7 @@
         relWrap.appendChild(li);
       });
 
-      initCalculator("slope-calculator");
+      initCalculator("time-unit-converter");
     });
   </script>
   <script type="application/ld+json">
@@ -66,11 +66,11 @@
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "Slope Calculator",
-      "description": "Calculate the slope between two points, plus the line's equation and angle.",
+      "name": "Time Unit Converter",
+      "description": "Convert between seconds, minutes, hours, days, weeks, and years.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
-      "url": "https://calquary.com/tool/slope-calculator.html",
+      "url": "https://calquary.com/tool/time-unit-converter.html",
       "isAccessibleForFree": true,
       "offers": {
         "@type": "Offer",
@@ -92,14 +92,14 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Math",
-          "item": "https://calquary.com/category/math.html"
+          "name": "Everyday Conversions",
+          "item": "https://calquary.com/category/conversions.html"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Slope Calculator",
-          "item": "https://calquary.com/tool/slope-calculator.html"
+          "name": "Time Unit Converter",
+          "item": "https://calquary.com/tool/time-unit-converter.html"
         }
       ]
     },
@@ -108,34 +108,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What's the formula for slope?",
+          "name": "How many seconds are in a day?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "m = (y2 − y1) / (x2 − x1) - the change in y divided by the change in x between two points. A slope of 2 means y increases by 2 for every 1 unit increase in x."
+            "text": "86,400 seconds - 24 hours × 60 minutes × 60 seconds."
           }
         },
         {
           "@type": "Question",
-          "name": "What does a negative slope mean?",
+          "name": "Why does this use 365.25 days for a year instead of 365?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A negative slope means the line goes downward from left to right - as x increases, y decreases. A positive slope goes upward left to right, a zero slope is a flat horizontal line, and an undefined slope is a vertical line."
+            "text": "365.25 accounts for leap years - a solar year is actually about 365.2422 days, and adding a leap day roughly every 4 years keeps the calendar aligned with Earth's orbit, so 365.25 is a more accurate long-run average than a flat 365."
           }
         },
         {
           "@type": "Question",
-          "name": "How do I calculate slope from a graph without exact coordinates?",
+          "name": "Should I use this or the Date Duration Calculator to find days between two dates?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Pick any two points the line clearly passes through on the grid, read off their (x, y) coordinates, then apply the slope formula. Choosing points that land on clean grid intersections makes the rise-over-run count easier and less error-prone than estimating decimal coordinates."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do you find slope?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Pick any two points on the line, subtract their y-coordinates and their x-coordinates, then divide: slope = (y2 − y1) / (x2 − x1). Enter your two points above and this calculator does that division for you, along with the line's full equation."
+            "text": "Use the Date Duration Calculator for that - it works from actual calendar dates and accounts for real month lengths and leap years exactly. This tool is for converting a plain quantity (like \"3.5 hours\") between units, not for calendar-date math."
           }
         }
       ]
@@ -163,15 +155,15 @@
 
   <div class="wrap" style="padding-top:32px;">
     <div class="breadcrumb">
-      <a href="/index.html">Calquary</a> / <a href="/category/math.html">Math</a>
+      <a href="/index.html">Calquary</a> / <a href="/category/conversions.html">Everyday Conversions</a>
     </div>
   </div>
 
   <div class="wrap" style="padding-bottom:64px;">
     <div class="tool-layout">
       <main>
-        <h1>Slope Calculator</h1>
-        <p style="max-width:60ch;">Enter the coordinates of two points to calculate the slope of the line between them, using m = (y2 − y1) / (x2 − x1).</p>
+        <h1>Time Unit Converter</h1>
+        <p style="max-width:60ch;">Enter a value and choose a unit to convert it into seconds, minutes, hours, days, and weeks.</p>
         <p class="last-updated">Last updated: August 30, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -198,20 +190,16 @@
         <div class="article-block">
           <h2>Frequently asked questions</h2>
           <div id="faq-list"><div class="faq-item">
-<h3>What's the formula for slope?</h3>
-<p>m = (y2 − y1) / (x2 − x1) - the change in y divided by the change in x between two points. A slope of 2 means y increases by 2 for every 1 unit increase in x.</p>
+<h3>How many seconds are in a day?</h3>
+<p>86,400 seconds - 24 hours × 60 minutes × 60 seconds.</p>
 </div>
 <div class="faq-item">
-<h3>What does a negative slope mean?</h3>
-<p>A negative slope means the line goes downward from left to right - as x increases, y decreases. A positive slope goes upward left to right, a zero slope is a flat horizontal line, and an undefined slope is a vertical line.</p>
+<h3>Why does this use 365.25 days for a year instead of 365?</h3>
+<p>365.25 accounts for leap years - a solar year is actually about 365.2422 days, and adding a leap day roughly every 4 years keeps the calendar aligned with Earth's orbit, so 365.25 is a more accurate long-run average than a flat 365.</p>
 </div>
 <div class="faq-item">
-<h3>How do I calculate slope from a graph without exact coordinates?</h3>
-<p>Pick any two points the line clearly passes through on the grid, read off their (x, y) coordinates, then apply the slope formula. Choosing points that land on clean grid intersections makes the rise-over-run count easier and less error-prone than estimating decimal coordinates.</p>
-</div>
-<div class="faq-item">
-<h3>How do you find slope?</h3>
-<p>Pick any two points on the line, subtract their y-coordinates and their x-coordinates, then divide: slope = (y2 − y1) / (x2 − x1). Enter your two points above and this calculator does that division for you, along with the line's full equation.</p>
+<h3>Should I use this or the Date Duration Calculator to find days between two dates?</h3>
+<p>Use the Date Duration Calculator for that - it works from actual calendar dates and accounts for real month lengths and leap years exactly. This tool is for converting a plain quantity (like "3.5 hours") between units, not for calendar-date math.</p>
 </div></div>
         </div>
       </main>
