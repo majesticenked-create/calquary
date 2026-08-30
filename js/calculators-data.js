@@ -224,6 +224,7 @@ const CALCULATORS = [
       { q: "When should I use sample vs. population standard deviation?", a: "Use population standard deviation when your numbers represent the entire group you care about; use sample standard deviation when your numbers are a subset used to estimate a larger population's spread." },
       { q: "What does a low vs. high standard deviation mean?", a: "A low standard deviation means the values cluster tightly around the mean, while a high standard deviation means they're spread out widely - it's a measure of consistency, not of the average itself." },
       { q: "What does it mean if the standard deviation is zero?", a: "A standard deviation of zero means every value in the data set is identical - there's no spread or variation at all. Any variation among the numbers, even a small one, produces a standard deviation greater than zero." },
+      { q: "Where do I find standard deviation on a calculator?", a: "You don't need a special scientific calculator function - enter your list of numbers above (separated by commas or spaces) and this calculator computes the standard deviation directly, along with the variance and mean." },
     ],
     related: ["average-calculator", "fraction-calculator", "gcd-lcm-calculator"],
   },
@@ -281,6 +282,7 @@ const CALCULATORS = [
       { q: "How is a ratio different from a fraction?", a: "A ratio compares two quantities directly (like 2:3), while a fraction expresses one quantity as a part of a whole (like 2/3) - though the simplification math is the same." },
       { q: "How do I scale a ratio to a different total?", a: "Divide the target total by the sum of the ratio parts, then multiply each part by that factor. To split $300 in a 2:3 ratio: 2+3=5 parts, $300÷5=$60 per part, so the split is $120 and $180." },
       { q: "How do I find a missing value in a proportion, like 3:4 = x:20?", a: "Cross-multiply and solve: 3/4 = x/20 becomes 3*20 = 4*x, so x = 60/4 = 15. This calculator handles that cross-multiplication automatically whenever you provide three of the four values in a proportion." },
+      { q: "Is a 'proportions calculator' the same as this ratio calculator?", a: "Yes - a proportion is just two ratios set equal to each other, so a proportions calculator and a ratio calculator solve the same underlying math. Enter your two known values above to simplify a ratio, or use the proportion FAQ above to solve for a missing fourth value." },
     ],
     related: ["fraction-calculator", "gcd-lcm-calculator", "percentage-calculator"],
   },
@@ -666,6 +668,54 @@ const CALCULATORS = [
       { q: "Is this the same as a gradebook calculator?", a: "Yes - \"gradebook calculator\" and \"grading calculator\" both describe figuring out a grade percentage and letter grade from points earned, which is exactly what this tool does for a single test, assignment, or exam." },
     ],
     related: ["average-calculator", "percentage-calculator", "percentage-change-calculator"],
+  },
+  {
+    id: "weighted-grade-calculator",
+    category: "math",
+    title: "Weighted Grade Calculator",
+    keyword: "weighted grade calculator",
+    description: "Calculate an overall course grade from category scores and weights, like homework, tests, and a final exam.",
+    intro: "Enter your score and weight for each category to calculate your overall weighted grade.",
+    fields: [
+      { id: "homeworkScore", label: "Homework score", type: "number", unit: "%", default: 95, step: 0.5 },
+      { id: "homeworkWeight", label: "Homework weight", type: "number", unit: "%", default: 20, step: 1 },
+      { id: "testsScore", label: "Tests score", type: "number", unit: "%", default: 82, step: 0.5 },
+      { id: "testsWeight", label: "Tests weight", type: "number", unit: "%", default: 40, step: 1 },
+      { id: "finalScore", label: "Final exam score", type: "number", unit: "%", default: 88, step: 0.5 },
+      { id: "finalWeight", label: "Final exam weight", type: "number", unit: "%", default: 40, step: 1 },
+    ],
+    compute: (v) => {
+      const totalWeight = v.homeworkWeight + v.testsWeight + v.finalWeight;
+      const weightedSum = v.homeworkScore * v.homeworkWeight + v.testsScore * v.testsWeight + v.finalScore * v.finalWeight;
+      const overall = totalWeight === 0 ? 0 : weightedSum / totalWeight;
+      let letter = "F";
+      if (overall >= 97) letter = "A+";
+      else if (overall >= 93) letter = "A";
+      else if (overall >= 90) letter = "A-";
+      else if (overall >= 87) letter = "B+";
+      else if (overall >= 83) letter = "B";
+      else if (overall >= 80) letter = "B-";
+      else if (overall >= 77) letter = "C+";
+      else if (overall >= 73) letter = "C";
+      else if (overall >= 70) letter = "C-";
+      else if (overall >= 67) letter = "D+";
+      else if (overall >= 63) letter = "D";
+      else if (overall >= 60) letter = "D-";
+      return {
+        primary: { label: "Overall grade", value: `${round(overall, 2)}%` },
+        secondary: [
+          { l: "Letter grade", v: letter },
+          { l: "Total weight entered", v: `${round(totalWeight, 1)}%` },
+        ],
+        note: totalWeight !== 100 ? `Your weights add up to ${round(totalWeight, 1)}%, not 100% - the overall grade above is still calculated correctly (normalized to whatever total you entered), but double-check your category weights match your syllabus.` : undefined,
+      };
+    },
+    faq: [
+      { q: "How do I calculate a weighted grade?", a: "Multiply each category's score by its weight, add those together, then divide by the total weight. For 95% homework at 20%, 82% tests at 40%, and 88% final at 40%: (95×20 + 82×40 + 88×40) / 100 = 87.4%." },
+      { q: "What if my category weights don't add up to 100%?", a: "This calculator still works correctly - it divides by whatever your weights actually sum to, which handles a partial-progress scenario (like weights that only cover work completed so far). Just make sure the weights you enter match the categories your instructor actually uses." },
+      { q: "Is this different from the regular Grade Calculator?", a: "Yes - the regular Grade Calculator converts a single score (like one test) into a percentage and letter grade. This tool combines multiple weighted categories - homework, tests, a final exam, etc. - into one overall course grade." },
+    ],
+    related: ["grade-calculator", "average-calculator", "percentage-calculator"],
   },
 
   // ---------------- FINANCE ----------------
@@ -2098,6 +2148,38 @@ const CALCULATORS = [
     related: ["time-duration-calculator", "time-add-calculator", "date-duration-calculator"],
   },
   {
+    id: "military-time-converter",
+    category: "datetime",
+    title: "Military Time Converter",
+    keyword: "military time converter",
+    description: "Convert 12-hour clock time to 24-hour military (army) time, and back.",
+    intro: "Enter a 12-hour time to convert it to 24-hour military time.",
+    fields: [
+      { id: "hour12", label: "Hour", type: "number", default: 2, step: 1, min: 1, max: 12 },
+      { id: "minute", label: "Minute", type: "number", default: 30, step: 1, min: 0, max: 59 },
+      { id: "period", label: "AM/PM", type: "select", default: "PM", options: [{ v: "AM", l: "AM" }, { v: "PM", l: "PM" }] },
+    ],
+    compute: (v) => {
+      const pad = (n) => String(n).padStart(2, "0");
+      let hour24 = v.hour12 % 12;
+      if (v.period === "PM") hour24 += 12;
+      const militaryDigits = `${pad(hour24)}${pad(v.minute)}`;
+      return {
+        primary: { label: "Military time", value: `${pad(hour24)}:${pad(v.minute)}` },
+        secondary: [
+          { l: "Spoken as", v: `${militaryDigits} hours` },
+          { l: "12-hour time", v: `${v.hour12}:${pad(v.minute)} ${v.period}` },
+        ],
+      };
+    },
+    faq: [
+      { q: "How do I convert regular time to military time?", a: "For AM hours, military time matches the clock hour (with a leading zero) - 9:00 AM becomes 0900. For PM hours, add 12 to the clock hour - 2:30 PM becomes 14:30 (1430)." },
+      { q: "What is 12 AM and 12 PM in military time?", a: "12:00 AM (midnight) is 0000 in military time, and 12:00 PM (noon) is 1200 - these are the two exceptions where you don't simply add or keep the 12." },
+      { q: "How do I convert military time back to 12-hour time?", a: "If the hour is 13 or greater, subtract 12 and mark it PM (1430 becomes 2:30 PM); if it's 00-11, keep the hour and mark it AM, except 0000 which becomes 12:00 AM." },
+    ],
+    related: ["time-duration-calculator", "time-add-calculator", "time-unit-converter"],
+  },
+  {
     id: "week-number-calculator",
     category: "datetime",
     title: "Week Number Calculator",
@@ -2463,6 +2545,7 @@ const CALCULATORS = [
       { q: "Why does 1 cup of flour and 1 cup of sugar weigh different amounts?", a: "Cups measure volume, not weight - denser ingredients like sugar weigh more per cup than lighter ones like flour." },
       { q: "How much does a stick of butter weigh in this converter?", a: "A standard US stick of butter is 1/2 cup, which converts to about 113.5g - half of the 227g-per-cup figure this calculator uses." },
       { q: "Why does the type of flour affect its weight per cup?", a: "How densely the flour is packed into the measuring cup - and differences between flour types like all-purpose, bread, or cake flour - both affect weight per cup, which is why professional recipes often specify weight rather than cup measurements for consistency." },
+      { q: "How many grams are in a cup?", a: "It depends on the ingredient - a cup of flour is about 120g, a cup of granulated sugar is about 200g, and a cup of butter is about 227g, since cups measure volume and grams measure weight. Choose your ingredient above for the exact figure." },
       { q: "Why do recipes from different countries use different measurement systems?", a: "The US primarily uses volume-based cup and spoon measurements, while most of the rest of the world uses weight-based metric measurements (grams), which are more precise for baking since ingredient density varies. This converter bridges the two so you can follow a recipe written in either system." },
     ],
     related: ["unit-length-converter", "volume-converter", "paint-calculator"],

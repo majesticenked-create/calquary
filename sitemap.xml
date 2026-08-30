@@ -271,6 +271,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/grade-calculator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/weighted-grade-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/weighted-grade-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/weighted-grade-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/loan-calculator.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/loan-calculator.html"/>
@@ -563,6 +569,12 @@
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/online-timer.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/online-timer.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/military-time-converter.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/military-time-converter.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/military-time-converter.html"/>
   </url>
   <url>
     <loc>https://calquary.com/tool/week-number-calculator.html</loc>

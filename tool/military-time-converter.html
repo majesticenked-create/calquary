@@ -4,23 +4,23 @@
   <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ratio Calculator - Free Online Calculator | Calquary</title>
-  <meta name="description" content="Simplify a ratio to its lowest terms." />
-  <meta property="og:title" content="Ratio Calculator | Calquary">
-  <meta property="og:description" content="Simplify a ratio to its lowest terms.">
+  <title>Military Time Converter | Calquary</title>
+  <meta name="description" content="Convert 12-hour clock time to 24-hour military (army) time, and back." />
+  <meta property="og:title" content="Military Time Converter | Calquary">
+  <meta property="og:description" content="Convert 12-hour clock time to 24-hour military (army) time, and back.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://calquary.com/tool/ratio-calculator.html">
+  <meta property="og:url" content="https://calquary.com/tool/military-time-converter.html">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Calquary">
-  <meta property="og:image" content="https://calquary.com/og-images/ratio-calculator.png">
+  <meta property="og:image" content="https://calquary.com/og-images/military-time-converter.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ratio Calculator | Calquary">
-  <meta name="twitter:description" content="Simplify a ratio to its lowest terms.">
-  <meta name="twitter:image" content="https://calquary.com/og-images/ratio-calculator.png">
-    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/ratio-calculator.html">
-  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/ratio-calculator.html">
+  <meta name="twitter:title" content="Military Time Converter | Calquary">
+  <meta name="twitter:description" content="Convert 12-hour clock time to 24-hour military (army) time, and back.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/military-time-converter.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/military-time-converter.html">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -46,7 +46,7 @@
       // still JS-driven here is the interactive calculator widget itself
       // (fields/compute/results) and the related-tools list, neither of
       // which is static SEO prose.
-      const calc = getCalculator("ratio-calculator");
+      const calc = getCalculator("military-time-converter");
 
       const relWrap = document.getElementById("related-list");
       calc.related.forEach((relId) => {
@@ -57,7 +57,7 @@
         relWrap.appendChild(li);
       });
 
-      initCalculator("ratio-calculator");
+      initCalculator("military-time-converter");
     });
   </script>
   <script type="application/ld+json">
@@ -66,11 +66,11 @@
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "Ratio Calculator",
-      "description": "Simplify a ratio to its lowest terms.",
+      "name": "Military Time Converter",
+      "description": "Convert 12-hour clock time to 24-hour military (army) time, and back.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
-      "url": "https://calquary.com/tool/ratio-calculator.html",
+      "url": "https://calquary.com/tool/military-time-converter.html",
       "isAccessibleForFree": true,
       "offers": {
         "@type": "Offer",
@@ -92,14 +92,14 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Math",
-          "item": "https://calquary.com/category/math.html"
+          "name": "Date & Time",
+          "item": "https://calquary.com/category/datetime.html"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Ratio Calculator",
-          "item": "https://calquary.com/tool/ratio-calculator.html"
+          "name": "Military Time Converter",
+          "item": "https://calquary.com/tool/military-time-converter.html"
         }
       ]
     },
@@ -108,42 +108,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "How do I simplify a ratio like 8:12?",
+          "name": "How do I convert regular time to military time?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Divide both numbers by their greatest common divisor. GCD(8, 12) = 4, so 8:12 simplifies to 2:3."
+            "text": "For AM hours, military time matches the clock hour (with a leading zero) - 9:00 AM becomes 0900. For PM hours, add 12 to the clock hour - 2:30 PM becomes 14:30 (1430)."
           }
         },
         {
           "@type": "Question",
-          "name": "How is a ratio different from a fraction?",
+          "name": "What is 12 AM and 12 PM in military time?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A ratio compares two quantities directly (like 2:3), while a fraction expresses one quantity as a part of a whole (like 2/3) - though the simplification math is the same."
+            "text": "12:00 AM (midnight) is 0000 in military time, and 12:00 PM (noon) is 1200 - these are the two exceptions where you don't simply add or keep the 12."
           }
         },
         {
           "@type": "Question",
-          "name": "How do I scale a ratio to a different total?",
+          "name": "How do I convert military time back to 12-hour time?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Divide the target total by the sum of the ratio parts, then multiply each part by that factor. To split $300 in a 2:3 ratio: 2+3=5 parts, $300÷5=$60 per part, so the split is $120 and $180."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I find a missing value in a proportion, like 3:4 = x:20?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Cross-multiply and solve: 3/4 = x/20 becomes 3*20 = 4*x, so x = 60/4 = 15. This calculator handles that cross-multiplication automatically whenever you provide three of the four values in a proportion."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is a 'proportions calculator' the same as this ratio calculator?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes - a proportion is just two ratios set equal to each other, so a proportions calculator and a ratio calculator solve the same underlying math. Enter your two known values above to simplify a ratio, or use the proportion FAQ above to solve for a missing fourth value."
+            "text": "If the hour is 13 or greater, subtract 12 and mark it PM (1430 becomes 2:30 PM); if it's 00-11, keep the hour and mark it AM, except 0000 which becomes 12:00 AM."
           }
         }
       ]
@@ -171,15 +155,15 @@
 
   <div class="wrap" style="padding-top:32px;">
     <div class="breadcrumb">
-      <a href="/index.html">Calquary</a> / <a href="/category/math.html">Math</a>
+      <a href="/index.html">Calquary</a> / <a href="/category/datetime.html">Date & Time</a>
     </div>
   </div>
 
   <div class="wrap" style="padding-bottom:64px;">
     <div class="tool-layout">
       <main>
-        <h1>Ratio Calculator</h1>
-        <p style="max-width:60ch;">Enter two numbers to simplify their ratio to lowest terms and see the decimal equivalent.</p>
+        <h1>Military Time Converter</h1>
+        <p style="max-width:60ch;">Enter a 12-hour time to convert it to 24-hour military time.</p>
         <p class="last-updated">Last updated: August 30, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -207,24 +191,16 @@
         <div class="article-block">
           <h2>Frequently asked questions</h2>
           <div id="faq-list"><div class="faq-item">
-<h3>How do I simplify a ratio like 8:12?</h3>
-<p>Divide both numbers by their greatest common divisor. GCD(8, 12) = 4, so 8:12 simplifies to 2:3.</p>
+<h3>How do I convert regular time to military time?</h3>
+<p>For AM hours, military time matches the clock hour (with a leading zero) - 9:00 AM becomes 0900. For PM hours, add 12 to the clock hour - 2:30 PM becomes 14:30 (1430).</p>
 </div>
 <div class="faq-item">
-<h3>How is a ratio different from a fraction?</h3>
-<p>A ratio compares two quantities directly (like 2:3), while a fraction expresses one quantity as a part of a whole (like 2/3) - though the simplification math is the same.</p>
+<h3>What is 12 AM and 12 PM in military time?</h3>
+<p>12:00 AM (midnight) is 0000 in military time, and 12:00 PM (noon) is 1200 - these are the two exceptions where you don't simply add or keep the 12.</p>
 </div>
 <div class="faq-item">
-<h3>How do I scale a ratio to a different total?</h3>
-<p>Divide the target total by the sum of the ratio parts, then multiply each part by that factor. To split $300 in a 2:3 ratio: 2+3=5 parts, $300÷5=$60 per part, so the split is $120 and $180.</p>
-</div>
-<div class="faq-item">
-<h3>How do I find a missing value in a proportion, like 3:4 = x:20?</h3>
-<p>Cross-multiply and solve: 3/4 = x/20 becomes 3*20 = 4*x, so x = 60/4 = 15. This calculator handles that cross-multiplication automatically whenever you provide three of the four values in a proportion.</p>
-</div>
-<div class="faq-item">
-<h3>Is a 'proportions calculator' the same as this ratio calculator?</h3>
-<p>Yes - a proportion is just two ratios set equal to each other, so a proportions calculator and a ratio calculator solve the same underlying math. Enter your two known values above to simplify a ratio, or use the proportion FAQ above to solve for a missing fourth value.</p>
+<h3>How do I convert military time back to 12-hour time?</h3>
+<p>If the hour is 13 or greater, subtract 12 and mark it PM (1430 becomes 2:30 PM); if it's 00-11, keep the hour and mark it AM, except 0000 which becomes 12:00 AM.</p>
 </div></div>
         </div>
       </main>
