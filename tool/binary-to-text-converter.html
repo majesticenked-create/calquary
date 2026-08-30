@@ -77,7 +77,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-08-30",
       "inLanguage": "en"
     },
     {
@@ -129,6 +129,14 @@
             "@type": "Answer",
             "text": "Standard text encoding (ASCII/UTF-8) represents each character as a full 8-bit byte, so a binary string that isn't a clean multiple of 8 bits can't be converted to valid characters and will likely produce an error or unexpected result - double-check your binary input is grouped correctly."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Can this convert binary to numbers as well as text?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This tool converts binary directly to readable text using standard 8-bit character encoding (ASCII/UTF-8). To convert binary to a plain numeric value instead, treat the binary string as a base-2 number and convert it to base-10 using a binary-to-decimal calculation instead."
+          }
         }
       ]
     }
@@ -164,7 +172,7 @@
       <main>
         <h1>Binary to Text Converter</h1>
         <p style="max-width:60ch;">Enter text or binary and choose a direction to convert between plain text and 8-bit binary.</p>
-        <p class="last-updated">Last updated: August 27, 2026</p>
+        <p class="last-updated">Last updated: August 30, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -200,6 +208,10 @@
 <div class="faq-item">
 <h3>What happens if I enter a binary string that isn't a multiple of 8 bits?</h3>
 <p>Standard text encoding (ASCII/UTF-8) represents each character as a full 8-bit byte, so a binary string that isn't a clean multiple of 8 bits can't be converted to valid characters and will likely produce an error or unexpected result - double-check your binary input is grouped correctly.</p>
+</div>
+<div class="faq-item">
+<h3>Can this convert binary to numbers as well as text?</h3>
+<p>This tool converts binary directly to readable text using standard 8-bit character encoding (ASCII/UTF-8). To convert binary to a plain numeric value instead, treat the binary string as a base-2 number and convert it to base-10 using a binary-to-decimal calculation instead.</p>
 </div></div>
         </div>
       </main>

@@ -77,7 +77,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-08-30",
       "inLanguage": "en"
     },
     {
@@ -129,6 +129,14 @@
             "@type": "Answer",
             "text": "This calculator assumes the standard Monday-through-Friday work week; if your business operates on a different schedule (e.g., Sunday-Thursday), you'd need to manually adjust the count for the days that differ from the standard assumption."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How does this handle a business day count that crosses a weekend?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Weekends are automatically excluded from the count - if you start on a Thursday and need 5 business days, the calculator skips the intervening Saturday and Sunday and lands on the following Thursday, rather than counting them as business days."
+          }
         }
       ]
     }
@@ -164,7 +172,7 @@
       <main>
         <h1>Business Days Calculator</h1>
         <p style="max-width:60ch;">Enter a start and end date to count the number of business days (Monday through Friday) between them.</p>
-        <p class="last-updated">Last updated: August 27, 2026</p>
+        <p class="last-updated">Last updated: August 30, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -200,6 +208,10 @@
 <div class="faq-item">
 <h3>Can this account for a custom work week (not Monday-Friday)?</h3>
 <p>This calculator assumes the standard Monday-through-Friday work week; if your business operates on a different schedule (e.g., Sunday-Thursday), you'd need to manually adjust the count for the days that differ from the standard assumption.</p>
+</div>
+<div class="faq-item">
+<h3>How does this handle a business day count that crosses a weekend?</h3>
+<p>Weekends are automatically excluded from the count - if you start on a Thursday and need 5 business days, the calculator skips the intervening Saturday and Sunday and lands on the following Thursday, rather than counting them as business days.</p>
 </div></div>
         </div>
       </main>
