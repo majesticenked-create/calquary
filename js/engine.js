@@ -373,6 +373,107 @@ function initOnlineTimer(fieldsId, resultId, formId) {
   renderDisplay();
 }
 
+// Same live-widget rationale as initOnlineTimer above, but checks the
+// wall clock each second against a target time instead of counting
+// down a fixed duration.
+function initOnlineAlarm(fieldsId, resultId, formId) {
+  const form = document.getElementById(formId);
+  const fieldsContainer = document.getElementById(fieldsId);
+  const resultPanel = document.getElementById(resultId);
+  if (!form || !fieldsContainer || !resultPanel) return;
+  form.style.display = "none";
+  resultPanel.classList.remove("visible");
+
+  const widget = document.createElement("div");
+  widget.className = "timer-widget";
+  widget.innerHTML = `
+    <div class="timer-display" id="alarm-current">--:--:--</div>
+    <div class="timer-inputs">
+      <label>Hour <input type="number" id="alarm-hour" min="1" max="12" value="7" /></label>
+      <label>Minute <input type="number" id="alarm-minute" min="0" max="59" value="0" /></label>
+      <select id="alarm-period" aria-label="AM or PM">
+        <option value="AM">AM</option>
+        <option value="PM">PM</option>
+      </select>
+    </div>
+    <div class="timer-actions">
+      <button type="button" id="alarm-set" class="btn-primary">Set Alarm</button>
+      <button type="button" id="alarm-cancel" class="btn-ghost" disabled>Cancel</button>
+    </div>
+    <p id="alarm-status" style="margin-top:16px;color:var(--muted);font-size:0.9rem;"></p>
+  `;
+  fieldsContainer.parentElement.insertBefore(widget, form);
+
+  const currentEl = widget.querySelector("#alarm-current");
+  const hourInput = widget.querySelector("#alarm-hour");
+  const minuteInput = widget.querySelector("#alarm-minute");
+  const periodSelect = widget.querySelector("#alarm-period");
+  const setBtn = widget.querySelector("#alarm-set");
+  const cancelBtn = widget.querySelector("#alarm-cancel");
+  const statusEl = widget.querySelector("#alarm-status");
+
+  let target = null; // { hour24, minute }
+  let rang = false;
+  let intervalId = null;
+
+  function beep() {
+    try {
+      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+      let t = ctx.currentTime;
+      for (let i = 0; i < 3; i++) {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.frequency.value = 880;
+        gain.gain.setValueAtTime(0.2, t);
+        osc.start(t);
+        osc.stop(t + 0.3);
+        t += 0.4;
+      }
+    } catch (e) { /* Audio unsupported/blocked — visual alert still works. */ }
+  }
+
+  function tick() {
+    const now = new Date();
+    const pad = (n) => String(n).padStart(2, "0");
+    currentEl.textContent = `${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
+    if (target && !rang && now.getHours() === target.hour24 && now.getMinutes() === target.minute) {
+      rang = true;
+      statusEl.textContent = "⏰ Alarm ringing!";
+      currentEl.classList.add("timer-done");
+      beep();
+    }
+  }
+
+  setBtn.addEventListener("click", () => {
+    let h = parseInt(hourInput.value, 10) || 12;
+    h = h % 12;
+    if (periodSelect.value === "PM") h += 12;
+    target = { hour24: h, minute: parseInt(minuteInput.value, 10) || 0 };
+    rang = false;
+    currentEl.classList.remove("timer-done");
+    const pad = (n) => String(n).padStart(2, "0");
+    statusEl.textContent = `Alarm set for ${pad(h)}:${pad(target.minute)}.`;
+    setBtn.disabled = true;
+    cancelBtn.disabled = false;
+    [hourInput, minuteInput, periodSelect].forEach((el) => (el.disabled = true));
+  });
+
+  cancelBtn.addEventListener("click", () => {
+    target = null;
+    rang = false;
+    currentEl.classList.remove("timer-done");
+    statusEl.textContent = "Alarm cancelled.";
+    setBtn.disabled = false;
+    cancelBtn.disabled = true;
+    [hourInput, minuteInput, periodSelect].forEach((el) => (el.disabled = false));
+  });
+
+  intervalId = setInterval(tick, 1000);
+  tick();
+}
+
 function initCalculator(calcId, opts = {}) {
   const {
     fieldsId = "calc-fields",
@@ -384,6 +485,10 @@ function initCalculator(calcId, opts = {}) {
 
   if (calcId === "online-timer") {
     initOnlineTimer(fieldsId, resultId, formId);
+    return;
+  }
+  if (calcId === "online-alarm-clock") {
+    initOnlineAlarm(fieldsId, resultId, formId);
     return;
   }
 

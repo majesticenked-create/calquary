@@ -193,6 +193,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/fraction-calculator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/pi-digits-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/pi-digits-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/pi-digits-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/gcd-lcm-calculator.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/gcd-lcm-calculator.html"/>
@@ -577,6 +583,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/online-timer.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/online-alarm-clock.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/online-alarm-clock.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/online-alarm-clock.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/military-time-converter.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/military-time-converter.html"/>
@@ -779,6 +791,12 @@
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/word-frequency-counter.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/word-frequency-counter.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/group-randomizer.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/group-randomizer.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/group-randomizer.html"/>
   </url>
   <url>
     <loc>https://calquary.com/tool/dog-age-calculator.html</loc>

@@ -166,6 +166,33 @@ const CALCULATORS = [
     related: ["gcd-lcm-calculator", "average-calculator", "percentage-calculator"],
   },
   {
+    id: "pi-digits-calculator",
+    category: "math",
+    title: "Digits of Pi Calculator",
+    keyword: "pi digits calculator",
+    description: "Show pi (π) to a chosen number of decimal digits, up to 100.",
+    intro: "Choose how many decimal digits of pi (π) to display, from 1 to 100.",
+    fields: [
+      { id: "digits", label: "Number of decimal digits", type: "number", default: 20, step: 1, min: 1, max: 100 },
+    ],
+    compute: (v) => {
+      const PI_100 = "1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679";
+      const n = Math.max(1, Math.min(100, Math.round(v.digits)));
+      const decimals = PI_100.slice(0, n);
+      return {
+        primary: { label: `π to ${n} decimal digits`, value: `3.${decimals}` },
+        secondary: [{ l: "Decimal digits shown", v: n }],
+        note: n === 100 ? "This calculator supports up to 100 decimal digits." : undefined,
+      };
+    },
+    faq: [
+      { q: "What are the first 10 digits of pi?", a: "3.141592653 - pi is an irrational number, so its decimal digits never terminate or repeat, but the sequence is precisely known and verified to trillions of digits by mathematicians and computer scientists." },
+      { q: "Why does pi have infinite digits?", a: "Pi is irrational, meaning it can't be expressed as a simple fraction of two integers - a mathematical proof (first given by Johann Lambert in 1761) shows its decimal expansion never terminates or falls into a repeating pattern, unlike a fraction like 1/3 = 0.333..." },
+      { q: "Do I need 100 digits of pi for real calculations?", a: "No - just 15-16 digits of pi (about what a standard calculator or programming language's floating-point number provides) is far more precision than needed for any real-world physical calculation, even at astronomical scales. Extra digits are mostly of interest for pure mathematics, computing benchmarks, and memorization records." },
+    ],
+    related: ["square-root-calculator", "exponent-calculator", "random-number-generator"],
+  },
+  {
     id: "gcd-lcm-calculator",
     category: "math",
     title: "GCD and LCM Calculator",
@@ -2306,6 +2333,27 @@ const CALCULATORS = [
     related: ["time-duration-calculator", "time-add-calculator", "date-duration-calculator"],
   },
   {
+    id: "online-alarm-clock",
+    category: "datetime",
+    title: "Online Alarm Clock",
+    keyword: "online alarm clock",
+    description: "A free alarm clock that runs in your browser - set a time and it alerts you when your clock reaches it.",
+    intro: "Set a time below, then click Set Alarm - this rings (with an on-screen alert and a sound) when your computer's clock reaches that time.",
+    // Live widget, same pattern as online-timer — see initOnlineAlarm in
+    // js/engine.js. compute() only exists for the card-preview readout.
+    fields: [],
+    compute: () => ({
+      primary: { label: "Alarm status", value: "Not set" },
+      secondary: [{ l: "Controls", v: "Set / Cancel" }],
+    }),
+    faq: [
+      { q: "Does this alarm clock keep the correct time?", a: "Yes - it reads your computer or phone's system clock directly, so it's as accurate as your device's clock, updated every second." },
+      { q: "Will the alarm still ring if I switch browser tabs?", a: "Yes, as long as this tab stays open - the check runs in the background even on an inactive tab. Closing the tab or your browser cancels the alarm." },
+      { q: "Can I set more than one alarm at a time?", a: "This tool supports one alarm at a time - set a new one and it replaces the previous one. For multiple simultaneous countdowns instead of a specific clock time, use the Online Timer." },
+    ],
+    related: ["online-timer", "time-add-calculator", "military-time-converter"],
+  },
+  {
     id: "military-time-converter",
     category: "datetime",
     title: "Military Time Converter",
@@ -3315,6 +3363,55 @@ const CALCULATORS = [
       { q: "How can word frequency analysis help with SEO or writing?", a: "Word frequency analysis reveals unintentional repetition, helps confirm target keywords appear at a natural density rather than being stuffed, and can surface overused filler words that weaken writing - useful for both editing prose and checking on-page SEO content before publishing." },
     ],
     related: ["word-counter", "text-to-slug-generator", "case-converter"],
+  },
+  {
+    id: "group-randomizer",
+    category: "text",
+    title: "Group Randomizer",
+    keyword: "group randomizer generator",
+    description: "Randomly split a list of names into a set number of even groups or teams.",
+    intro: "Enter one name per line and choose how many groups to split them into - each group is randomly and evenly assigned.",
+    fields: [
+      { id: "names", label: "Names (one per line)", type: "textarea", default: "Alex\nJordan\nTaylor\nMorgan\nCasey\nRiley\nSam\nJamie" },
+      { id: "numGroups", label: "Number of groups", type: "number", default: 2, step: 1, min: 2, max: 20 },
+    ],
+    compute: (v) => {
+      const names = (v.names || "").split("\n").map((n) => n.trim()).filter(Boolean);
+      const numGroups = Math.max(2, Math.min(20, Math.round(v.numGroups)));
+      if (names.length === 0) {
+        return { primary: { label: "Groups", value: "—" }, secondary: [], note: "Enter at least one name, one per line." };
+      }
+      const shuffled = names.slice();
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      const groups = Array.from({ length: numGroups }, () => []);
+      shuffled.forEach((name, i) => groups[i % numGroups].push(name));
+      const maxRows = Math.max(...groups.map((g) => g.length));
+      const rows = [];
+      for (let r = 0; r < maxRows; r++) {
+        rows.push(groups.map((g) => g[r] || ""));
+      }
+      return {
+        primary: { label: "People assigned", value: names.length },
+        secondary: [
+          { l: "Groups", v: numGroups },
+          { l: "Group size", v: `${Math.floor(names.length / numGroups)}-${Math.ceil(names.length / numGroups)}` },
+        ],
+        note: "Click Calculate again for a fresh random split.",
+        table: {
+          columns: groups.map((_, i) => `Group ${i + 1}`),
+          rows,
+        },
+      };
+    },
+    faq: [
+      { q: "How does this randomize groups fairly?", a: "It uses a Fisher-Yates shuffle - a well-established algorithm that gives every name an equal, unbiased chance of ending up in any position - then deals the shuffled list into groups in round-robin order, which keeps group sizes as even as possible." },
+      { q: "What happens if the number of people doesn't divide evenly into groups?", a: "The extra people are spread one-per-group starting from the first group, so group sizes differ by at most one person - for 10 people split into 3 groups, you'll get groups of 4, 3, and 3, not 4, 4, and 2." },
+      { q: "Can I use this for classroom teams or a work project split?", a: "Yes - this works for any scenario where you need an unbiased random split of a list of names into a fixed number of groups, whether that's classroom project teams, sports teams, or dividing up a task list at work." },
+    ],
+    related: ["random-number-generator", "word-counter", "text-to-slug-generator"],
   },
 
   // ---------------- PET & LIFESTYLE ----------------
