@@ -688,7 +688,7 @@ const CALCULATORS = [
     category: "finance",
     title: "Auto Loan Calculator",
     keyword: "auto loan calculator",
-    description: "Estimate your monthly car payment, including trade-in value and sales tax.",
+    description: "Also works as a car loan or automobile loan calculator - estimate your monthly car payment, including trade-in value and sales tax.",
     intro: "Enter your vehicle price, trade-in value, down payment, and loan terms to estimate your monthly payment, including sales tax.",
     fields: [
       { id: "vehiclePrice", label: "Vehicle price", type: "number", unit: "$", default: 32000, step: 500 },
@@ -721,6 +721,7 @@ const CALCULATORS = [
       { q: "Should I finance the sales tax on my car loan?", a: "Many buyers roll sales tax into the loan rather than paying it upfront - this increases your amount financed and total interest paid, but keeps more cash on hand at purchase." },
       { q: "Is it better to put more money down or take a longer loan term?", a: "A larger down payment reduces both your monthly payment and total interest paid, while a longer term only lowers the monthly payment while increasing total interest - a bigger down payment is almost always the better deal if you can afford it." },
       { q: "What's a reasonable loan term for a car purchase?", a: "Shorter terms (36-60 months) mean higher payments but less total interest and less risk of owing more than the car is worth; longer terms (72-84 months) lower the payment but often mean paying significantly more in interest over the life of the loan." },
+      { q: "Is a car loan calculator the same as an auto loan calculator?", a: "Yes - \"car loan,\" \"automobile loan,\" and \"auto loan\" all describe the same type of financing, so a car loan calculator, automobile loan calculator, and auto loan calculator are interchangeable names for the same estimate: your monthly payment including trade-in value and sales tax." },
     ],
     related: ["loan-calculator", "sales-tax-calculator", "debt-payoff-calculator"],
   },
