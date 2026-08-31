@@ -1828,6 +1828,43 @@ const CALCULATORS = [
     related: ["loan-calculator", "savings-calculator", "tip-calculator"],
   },
   {
+    id: "time-card-calculator",
+    category: "finance",
+    title: "Time Card Calculator",
+    keyword: "time card calculator",
+    description: "Add up hours worked across the week and calculate gross pay.",
+    intro: "Enter hours worked each day and an hourly rate to total your weekly hours and gross pay.",
+    fields: [
+      { id: "mon", label: "Monday", type: "number", unit: "hrs", default: 8, step: 0.25 },
+      { id: "tue", label: "Tuesday", type: "number", unit: "hrs", default: 8, step: 0.25 },
+      { id: "wed", label: "Wednesday", type: "number", unit: "hrs", default: 8, step: 0.25 },
+      { id: "thu", label: "Thursday", type: "number", unit: "hrs", default: 8, step: 0.25 },
+      { id: "fri", label: "Friday", type: "number", unit: "hrs", default: 8, step: 0.25 },
+      { id: "sat", label: "Saturday", type: "number", unit: "hrs", default: 0, step: 0.25 },
+      { id: "sun", label: "Sunday", type: "number", unit: "hrs", default: 0, step: 0.25 },
+      { id: "hourlyRate", label: "Hourly rate", type: "number", unit: "$", default: 20, step: 0.25 },
+    ],
+    compute: (v) => {
+      const totalHours = v.mon + v.tue + v.wed + v.thu + v.fri + v.sat + v.sun;
+      const grossPay = totalHours * v.hourlyRate;
+      return {
+        primary: { label: "Total hours", value: `${round(totalHours, 2)} hrs` },
+        secondary: [
+          { l: "Gross pay", v: `$${round(grossPay, 2).toLocaleString()}` },
+          { l: "Average hours/day worked", v: round(totalHours / 7, 2) },
+        ],
+        note: "This is gross (pre-tax) pay at a flat hourly rate - it doesn't account for overtime premiums, unpaid breaks already excluded from your entered hours, or tax withholding.",
+      };
+    },
+    faq: [
+      { q: "How do I calculate total hours from a time card?", a: "Add up the hours worked each day of the pay period. This calculator sums seven daily entries (Monday through Sunday) into a weekly total, then multiplies by your hourly rate for gross pay." },
+      { q: "Does this handle clock-in and clock-out times?", a: "No - enter the total decimal hours already worked each day (e.g., 7.5 for 7 hours 30 minutes), not clock-in/clock-out times. If you only have clock times, subtract clock-in from clock-out (accounting for any unpaid break) to get the decimal hours first." },
+      { q: "Does this include overtime pay?", a: "No - it multiplies total hours by a single flat hourly rate. If any hours qualify for an overtime premium (commonly 1.5x for hours over 40/week in the US), calculate the regular and overtime portions separately and add them together." },
+      { q: "How do I convert minutes to a decimal for a time card?", a: "Divide the minutes by 60. 30 minutes = 0.5 hours, 15 minutes = 0.25 hours, 45 minutes = 0.75 hours - add that decimal to the whole-hour count for each day." },
+    ],
+    related: ["hourly-to-salary-calculator", "time-duration-calculator", "tip-calculator"],
+  },
+  {
     id: "tip-calculator",
     category: "finance",
     title: "Tip Calculator",
@@ -4128,6 +4165,7 @@ const CALCULATORS = [
       { q: "How big is an acre in more relatable terms?", a: "An acre is about 43,560 sq ft - roughly the size of a standard American football field without the end zones, or about 90% of one." },
       { q: "How is a hectare different from an acre?", a: "A hectare is a metric unit (10,000 square meters) commonly used outside the US, while an acre is an imperial unit (43,560 square feet) common in the US and UK - one hectare is approximately 2.47 acres." },
       { q: "How many square feet are in a square meter?", a: "One square meter equals approximately 10.76 square feet. This conversion is commonly needed when comparing real estate listings or floor plans that mix metric and imperial units." },
+      { q: "Is 'ac to ft2' the same as this converter?", a: "Yes - \"ac\" and \"ft2\" are just shorthand for acres and square feet, which this converter handles alongside square meters and square yards." },
     ],
     related: ["unit-length-converter", "concrete-calculator", "flooring-calculator"],
   },

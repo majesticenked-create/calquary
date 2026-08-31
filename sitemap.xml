@@ -415,6 +415,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/hourly-to-salary-calculator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/time-card-calculator.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/time-card-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/time-card-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/tip-calculator.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/tip-calculator.html"/>
@@ -830,7 +836,7 @@
   </url>
   <url>
     <loc>https://calquary.com/tool/volume-converter.html</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/volume-converter.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/volume-converter.html"/>
   </url>
@@ -848,7 +854,7 @@
   </url>
   <url>
     <loc>https://calquary.com/tool/area-converter.html</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/area-converter.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/area-converter.html"/>
   </url>
