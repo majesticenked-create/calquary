@@ -3677,6 +3677,76 @@ const CALCULATORS = [
     related: ["date-duration-calculator", "day-of-week-calculator", "leap-year-calculator"],
   },
   {
+    id: "time-zone-converter",
+    category: "datetime",
+    title: "Time Zone Converter",
+    keyword: "time zone converter",
+    description: "Convert a time from one time zone to another, including current time in any zone.",
+    intro: "Enter a date and time in one time zone to see the equivalent time in another - defaults to right now.",
+    fields: [
+      { id: "date", label: "Date", type: "date", default: todayDateString() },
+      { id: "time", label: "Time (24-hour, HH:MM)", type: "text", default: nowTimeString() },
+      { id: "fromZone", label: "From time zone", type: "select", default: Intl.DateTimeFormat().resolvedOptions().timeZone, options: [
+        { v: "America/New_York", l: "US Eastern (New York)" }, { v: "America/Chicago", l: "US Central (Chicago)" },
+        { v: "America/Denver", l: "US Mountain (Denver)" }, { v: "America/Los_Angeles", l: "US Pacific (Los Angeles)" },
+        { v: "America/Sao_Paulo", l: "Brazil (São Paulo)" }, { v: "UTC", l: "UTC" },
+        { v: "Europe/London", l: "UK (London)" }, { v: "Europe/Paris", l: "Central Europe (Paris)" },
+        { v: "Europe/Moscow", l: "Russia (Moscow)" }, { v: "Africa/Cairo", l: "Egypt (Cairo)" },
+        { v: "Asia/Dubai", l: "UAE (Dubai)" }, { v: "Asia/Kolkata", l: "India (Kolkata)" },
+        { v: "Asia/Dhaka", l: "Bangladesh (Dhaka)" }, { v: "Asia/Bangkok", l: "Thailand (Bangkok)" },
+        { v: "Asia/Shanghai", l: "China (Shanghai)" }, { v: "Asia/Tokyo", l: "Japan (Tokyo)" },
+        { v: "Asia/Seoul", l: "South Korea (Seoul)" }, { v: "Australia/Sydney", l: "Australia Eastern (Sydney)" },
+        { v: "Pacific/Auckland", l: "New Zealand (Auckland)" },
+      ] },
+      { id: "toZone", label: "To time zone", type: "select", default: "Asia/Kolkata", options: [
+        { v: "America/New_York", l: "US Eastern (New York)" }, { v: "America/Chicago", l: "US Central (Chicago)" },
+        { v: "America/Denver", l: "US Mountain (Denver)" }, { v: "America/Los_Angeles", l: "US Pacific (Los Angeles)" },
+        { v: "America/Sao_Paulo", l: "Brazil (São Paulo)" }, { v: "UTC", l: "UTC" },
+        { v: "Europe/London", l: "UK (London)" }, { v: "Europe/Paris", l: "Central Europe (Paris)" },
+        { v: "Europe/Moscow", l: "Russia (Moscow)" }, { v: "Africa/Cairo", l: "Egypt (Cairo)" },
+        { v: "Asia/Dubai", l: "UAE (Dubai)" }, { v: "Asia/Kolkata", l: "India (Kolkata)" },
+        { v: "Asia/Dhaka", l: "Bangladesh (Dhaka)" }, { v: "Asia/Bangkok", l: "Thailand (Bangkok)" },
+        { v: "Asia/Shanghai", l: "China (Shanghai)" }, { v: "Asia/Tokyo", l: "Japan (Tokyo)" },
+        { v: "Asia/Seoul", l: "South Korea (Seoul)" }, { v: "Australia/Sydney", l: "Australia Eastern (Sydney)" },
+        { v: "Pacific/Auckland", l: "New Zealand (Auckland)" },
+      ] },
+    ],
+    compute: (v) => {
+      const getOffsetMinutes = (date, zone) => {
+        const zStr = date.toLocaleString("en-US", { timeZone: zone });
+        const uStr = date.toLocaleString("en-US", { timeZone: "UTC" });
+        return (new Date(zStr) - new Date(uStr)) / 60000;
+      };
+      const [hh, mm] = v.time.split(":").map(Number);
+      const timeStr = `${String(hh).padStart(2, "0")}:${String(mm).padStart(2, "0")}`;
+      const asUTC = new Date(`${v.date}T${timeStr}:00Z`);
+      const fromOffsetMin = getOffsetMinutes(asUTC, v.fromZone);
+      const realUTC = new Date(asUTC.getTime() - fromOffsetMin * 60000);
+      const fmt = (zone) => realUTC.toLocaleString("en-US", {
+        timeZone: zone, weekday: "short", year: "numeric", month: "short", day: "numeric",
+        hour: "2-digit", minute: "2-digit", hour12: true,
+      });
+      const fromOffset = getOffsetMinutes(realUTC, v.fromZone) / 60;
+      const toOffset = getOffsetMinutes(realUTC, v.toZone) / 60;
+      const diffHours = round(toOffset - fromOffset, 2);
+      return {
+        primary: { label: "Time in destination zone", value: fmt(v.toZone) },
+        secondary: [
+          { l: "Original time", v: fmt(v.fromZone) },
+          { l: "Difference", v: `${diffHours >= 0 ? "+" : ""}${diffHours} hrs` },
+        ],
+        note: "Uses each location's actual current UTC offset for the date entered, so daylight saving time is applied automatically where it's observed.",
+      };
+    },
+    faq: [
+      { q: "What time is it in India right now?", a: "Leave the date and time fields at their defaults (today, current time) above, set \"From\" to your own time zone, and \"To\" to India (Kolkata) to see the live current time there, including the exact offset from your zone." },
+      { q: "Why is India's time zone offset like +5:30 instead of a whole number?", a: "India uses a single time zone (IST, UTC+5:30) with a half-hour offset rather than aligning to whole-hour zones - a deliberate choice made at independence to sit between the whole-hour zones that would otherwise apply across the country's width." },
+      { q: "Does this account for daylight saving time?", a: "Yes - the conversion uses each time zone's actual UTC offset on the specific date you enter, so it automatically reflects daylight saving time where a zone observes it, without you needing to adjust manually." },
+      { q: "Can I convert a time from the past or future, not just right now?", a: "Yes - change the date and time fields to any date; the tool still applies the correct daylight-saving rules for whichever zones and date you choose." },
+    ],
+    related: ["online-timer", "day-of-week-calculator", "date-duration-calculator"],
+  },
+  {
     id: "day-of-week-calculator",
     category: "datetime",
     title: "Day of the Week Calculator",
@@ -5172,6 +5242,17 @@ function futureDateString(daysAhead) {
   const d = new Date();
   d.setDate(d.getDate() + daysAhead);
   return d.toISOString().slice(0, 10);
+}
+
+function todayDateString() {
+  const d = new Date();
+  d.setMinutes(d.getMinutes() - d.getTimezoneOffset());
+  return d.toISOString().slice(0, 10);
+}
+
+function nowTimeString() {
+  const d = new Date();
+  return `${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}`;
 }
 
 function getCalculator(id) {

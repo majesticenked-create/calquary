@@ -4,23 +4,23 @@
   <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cat Pregnancy Calculator | Calquary</title>
-  <meta name="description" content="Estimate your cat's due date based on the mating date." />
-  <meta property="og:title" content="Cat Pregnancy Calculator | Calquary">
-  <meta property="og:description" content="Estimate your cat's due date based on the mating date.">
+  <title>Time Zone Converter | Calquary</title>
+  <meta name="description" content="Convert a time from one time zone to another, including current time in any zone." />
+  <meta property="og:title" content="Time Zone Converter | Calquary">
+  <meta property="og:description" content="Convert a time from one time zone to another, including current time in any zone.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://calquary.com/tool/cat-pregnancy-calculator.html">
+  <meta property="og:url" content="https://calquary.com/tool/time-zone-converter.html">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Calquary">
-  <meta property="og:image" content="https://calquary.com/og-images/cat-pregnancy-calculator.png">
+  <meta property="og:image" content="https://calquary.com/og-images/time-zone-converter.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Cat Pregnancy Calculator | Calquary">
-  <meta name="twitter:description" content="Estimate your cat's due date based on the mating date.">
-  <meta name="twitter:image" content="https://calquary.com/og-images/cat-pregnancy-calculator.png">
-    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/cat-pregnancy-calculator.html">
-  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/cat-pregnancy-calculator.html">
+  <meta name="twitter:title" content="Time Zone Converter | Calquary">
+  <meta name="twitter:description" content="Convert a time from one time zone to another, including current time in any zone.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/time-zone-converter.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/time-zone-converter.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/time-zone-converter.html">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -46,7 +46,7 @@
       // still JS-driven here is the interactive calculator widget itself
       // (fields/compute/results) and the related-tools list, neither of
       // which is static SEO prose.
-      const calc = getCalculator("cat-pregnancy-calculator");
+      const calc = getCalculator("time-zone-converter");
 
       const relWrap = document.getElementById("related-list");
       calc.related.forEach((relId) => {
@@ -57,7 +57,7 @@
         relWrap.appendChild(li);
       });
 
-      initCalculator("cat-pregnancy-calculator");
+      initCalculator("time-zone-converter");
     });
   </script>
   <script type="application/ld+json">
@@ -66,11 +66,11 @@
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "Cat Pregnancy Calculator",
-      "description": "Estimate your cat's due date based on the mating date.",
+      "name": "Time Zone Converter",
+      "description": "Convert a time from one time zone to another, including current time in any zone.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
-      "url": "https://calquary.com/tool/cat-pregnancy-calculator.html",
+      "url": "https://calquary.com/tool/time-zone-converter.html",
       "isAccessibleForFree": true,
       "offers": {
         "@type": "Offer",
@@ -92,14 +92,14 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Pet & Lifestyle",
-          "item": "https://calquary.com/category/pets.html"
+          "name": "Date & Time",
+          "item": "https://calquary.com/category/datetime.html"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Cat Pregnancy Calculator",
-          "item": "https://calquary.com/tool/cat-pregnancy-calculator.html"
+          "name": "Time Zone Converter",
+          "item": "https://calquary.com/tool/time-zone-converter.html"
         }
       ]
     },
@@ -108,34 +108,34 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "How long are cats pregnant?",
+          "name": "What time is it in India right now?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The average feline gestation period is about 64 days from conception, typically ranging from 63 to 65 days."
+            "text": "Leave the date and time fields at their defaults (today, current time) above, set \"From\" to your own time zone, and \"To\" to India (Kolkata) to see the live current time there, including the exact offset from your zone."
           }
         },
         {
           "@type": "Question",
-          "name": "How many kittens are in an average litter?",
+          "name": "Why is India's time zone offset like +5:30 instead of a whole number?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Cat litters typically range from 3 to 5 kittens, though first litters and some breeds tend to be smaller."
+            "text": "India uses a single time zone (IST, UTC+5:30) with a half-hour offset rather than aligning to whole-hour zones - a deliberate choice made at independence to sit between the whole-hour zones that would otherwise apply across the country's width."
           }
         },
         {
           "@type": "Question",
-          "name": "How can I tell if a cat is pregnant before the due date estimate matters?",
+          "name": "Does this account for daylight saving time?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Signs include enlarged and pinker nipples ('pinking up') around 2-3 weeks, gradual abdominal enlargement after about 3-4 weeks, and increased appetite - a veterinarian can confirm pregnancy via palpation as early as day 17-25 or ultrasound, which is more reliable than estimating from mating date alone."
+            "text": "Yes - the conversion uses each time zone's actual UTC offset on the specific date you enter, so it automatically reflects daylight saving time where a zone observes it, without you needing to adjust manually."
           }
         },
         {
           "@type": "Question",
-          "name": "Do cats show physical signs of pregnancy right away?",
+          "name": "Can I convert a time from the past or future, not just right now?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Not usually - most physical signs, like a swollen abdomen or enlarged nipples, become noticeable around 3-4 weeks into the pregnancy, well after conception. Behavioral changes like increased affection or appetite can sometimes appear earlier, but a vet exam or ultrasound is the most reliable early confirmation."
+            "text": "Yes - change the date and time fields to any date; the tool still applies the correct daylight-saving rules for whichever zones and date you choose."
           }
         }
       ]
@@ -163,15 +163,15 @@
 
   <div class="wrap" style="padding-top:32px;">
     <div class="breadcrumb">
-      <a href="/index.html">Calquary</a> / <a href="/category/pets.html">Pet & Lifestyle</a>
+      <a href="/index.html">Calquary</a> / <a href="/category/datetime.html">Date & Time</a>
     </div>
   </div>
 
   <div class="wrap" style="padding-bottom:64px;">
     <div class="tool-layout">
       <main>
-        <h1>Cat Pregnancy Calculator</h1>
-        <p style="max-width:60ch;">Enter the mating date to estimate your cat's due date, based on the typical 64-day feline gestation period.</p>
+        <h1>Time Zone Converter</h1>
+        <p style="max-width:60ch;">Enter a date and time in one time zone to see the equivalent time in another - defaults to right now.</p>
         <p class="last-updated">Last updated: August 31, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -199,20 +199,20 @@
         <div class="article-block">
           <h2>Frequently asked questions</h2>
           <div id="faq-list"><div class="faq-item">
-<h3>How long are cats pregnant?</h3>
-<p>The average feline gestation period is about 64 days from conception, typically ranging from 63 to 65 days.</p>
+<h3>What time is it in India right now?</h3>
+<p>Leave the date and time fields at their defaults (today, current time) above, set "From" to your own time zone, and "To" to India (Kolkata) to see the live current time there, including the exact offset from your zone.</p>
 </div>
 <div class="faq-item">
-<h3>How many kittens are in an average litter?</h3>
-<p>Cat litters typically range from 3 to 5 kittens, though first litters and some breeds tend to be smaller.</p>
+<h3>Why is India's time zone offset like +5:30 instead of a whole number?</h3>
+<p>India uses a single time zone (IST, UTC+5:30) with a half-hour offset rather than aligning to whole-hour zones - a deliberate choice made at independence to sit between the whole-hour zones that would otherwise apply across the country's width.</p>
 </div>
 <div class="faq-item">
-<h3>How can I tell if a cat is pregnant before the due date estimate matters?</h3>
-<p>Signs include enlarged and pinker nipples ('pinking up') around 2-3 weeks, gradual abdominal enlargement after about 3-4 weeks, and increased appetite - a veterinarian can confirm pregnancy via palpation as early as day 17-25 or ultrasound, which is more reliable than estimating from mating date alone.</p>
+<h3>Does this account for daylight saving time?</h3>
+<p>Yes - the conversion uses each time zone's actual UTC offset on the specific date you enter, so it automatically reflects daylight saving time where a zone observes it, without you needing to adjust manually.</p>
 </div>
 <div class="faq-item">
-<h3>Do cats show physical signs of pregnancy right away?</h3>
-<p>Not usually - most physical signs, like a swollen abdomen or enlarged nipples, become noticeable around 3-4 weeks into the pregnancy, well after conception. Behavioral changes like increased affection or appetite can sometimes appear earlier, but a vet exam or ultrasound is the most reliable early confirmation.</p>
+<h3>Can I convert a time from the past or future, not just right now?</h3>
+<p>Yes - change the date and time fields to any date; the tool still applies the correct daylight-saving rules for whichever zones and date you choose.</p>
 </div></div>
         </div>
       </main>
