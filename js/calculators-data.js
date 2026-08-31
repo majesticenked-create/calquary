@@ -3762,6 +3762,7 @@ const CALCULATORS = [
       { q: "How tall is 175 cm in feet and inches?", a: "175 cm is about 5 feet 8.9 inches (68.9 inches total) - divide 175 by 2.54 to get inches, then divide by 12 for feet, with the remainder as extra inches. Enter 175 with \"Centimeters\" selected above to see this and other unit conversions at once." },
       { q: "Is 'feet in to cm' the same as this converter?", a: "Yes - this tool converts feet to centimeters and centimeters to feet (along with several other length units), in either direction." },
       { q: "Is 'feet inches centimeters,' 'foot and inches to cm,' or 'ft inch to cm' different from this tool?", a: "No - all of these describe converting between feet/inches and centimeters, which this converter handles alongside several other length units." },
+      { q: "How tall is 5 feet 8 inches in centimeters?", a: "About 172.7 cm - convert to total inches (5×12+8=68), then multiply by 2.54 (68×2.54=172.72 cm). Enter 68 with \"Inches\" selected above to confirm." },
     ],
     related: ["weight-converter", "cooking-converter", "concrete-calculator"],
   },
