@@ -2115,6 +2115,39 @@ const CALCULATORS = [
     related: ["sales-tax-calculator", "tip-calculator", "percentage-calculator"],
   },
   {
+    id: "price-calculator",
+    category: "finance",
+    title: "Price Calculator",
+    keyword: "price calculator",
+    description: "Calculate a selling price from your cost and target profit margin.",
+    intro: "Enter your cost and target profit margin to calculate the selling price, profit, and equivalent markup.",
+    fields: [
+      { id: "cost", label: "Cost", type: "number", unit: "$", default: 50, step: 0.01 },
+      { id: "marginPercent", label: "Target profit margin", type: "number", unit: "%", default: 30, step: 1, max: 99.9 },
+    ],
+    compute: (v) => {
+      const margin = Math.min(99.9, Math.max(0, v.marginPercent));
+      const price = v.cost / (1 - margin / 100);
+      const profit = price - v.cost;
+      const markup = v.cost > 0 ? (profit / v.cost) * 100 : 0;
+      return {
+        primary: { label: "Selling price", value: `$${round(price, 2)}` },
+        secondary: [
+          { l: "Profit", v: `$${round(profit, 2)}` },
+          { l: "Equivalent markup", v: `${round(markup, 1)}%` },
+        ],
+        note: "Margin is profit as a percentage of the selling price; markup is profit as a percentage of cost. The two describe the same profit differently and are never the same number (except at 0%).",
+      };
+    },
+    faq: [
+      { q: "What's the difference between margin and markup?", a: "Margin is profit divided by the selling price; markup is profit divided by cost - the same dollar amount of profit produces two different percentages depending on which base you divide by. A 30% margin corresponds to about a 42.9% markup." },
+      { q: "How do I calculate a selling price from cost and margin?", a: "Divide cost by (1 - margin as a decimal). A $50 cost at a 30% target margin: $50 ÷ (1 - 0.30) = $50 ÷ 0.70 = $71.43." },
+      { q: "Why can't margin be 100% or more?", a: "Margin is profit as a percentage of the selling price, and profit can never exceed the selling price itself (that would mean the cost was negative) - so margin approaches but never reaches 100%, no matter how low the cost is relative to price." },
+      { q: "Is this the same as the Discount Calculator?", a: "No - the Discount Calculator works backward from a sale price and discount percentage to find savings. This tool works forward from your cost and a target profit margin to find what price to charge." },
+    ],
+    related: ["discount-calculator", "sales-tax-calculator", "percentage-calculator"],
+  },
+  {
     id: "debt-payoff-calculator",
     category: "finance",
     title: "Debt Payoff Calculator",
