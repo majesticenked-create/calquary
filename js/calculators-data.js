@@ -3852,6 +3852,7 @@ const CALCULATORS = [
       { q: "What is 18°C in Fahrenheit?", a: "64.4°F - multiply by 9/5 and add 32: 18×9/5+32 = 32.4+32 = 64.4°F, a mild spring/fall temperature." },
       { q: "What is 40°F in Celsius?", a: "About 4.4°C - (40−32)×5/9 = 8×5/9 ≈ 4.44°C, a cold, near-refrigerator temperature." },
       { q: "What is 165°C in Fahrenheit?", a: "329°F - multiply by 9/5 and add 32: 165×9/5+32 = 297+32 = 329°F, a typical baking oven temperature." },
+      { q: "What is 165°F in Celsius?", a: "About 73.9°C - (165−32)×5/9 = 133×5/9 ≈ 73.89°C." },
     ],
     related: ["weight-converter", "volume-converter", "unit-length-converter"],
   },
