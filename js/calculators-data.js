@@ -3982,16 +3982,17 @@ const CALCULATORS = [
     category: "conversions",
     title: "Volume Converter",
     keyword: "volume converter",
-    description: "Convert between liters, gallons, cups, and milliliters.",
+    description: "Convert between liters, gallons, cups, milliliters, teaspoons, and tablespoons.",
     intro: "Enter a value and choose a starting unit to convert between common volume measurements.",
     fields: [
       { id: "value", label: "Value", type: "number", default: 1, step: 0.01 },
       { id: "from", label: "From", type: "select", default: "gal", options: [
         { v: "l", l: "Liters" }, { v: "gal", l: "Gallons" }, { v: "cup", l: "Cups" }, { v: "ml", l: "Milliliters" },
+        { v: "tbsp", l: "Tablespoons" }, { v: "tsp", l: "Teaspoons" },
       ] },
     ],
     compute: (v) => {
-      const toLiters = { l: 1, gal: 3.78541, cup: 0.236588, ml: 0.001 };
+      const toLiters = { l: 1, gal: 3.78541, cup: 0.236588, ml: 0.001, tbsp: 0.0147868, tsp: 0.00492892 };
       const litersValue = v.value * toLiters[v.from];
       return {
         primary: { label: "In liters", value: `${round(litersValue, 3)} L` },
@@ -3999,6 +4000,8 @@ const CALCULATORS = [
           { l: "Gallons", v: round(litersValue / toLiters.gal, 3) },
           { l: "Cups", v: round(litersValue / toLiters.cup, 2) },
           { l: "Milliliters", v: round(litersValue / toLiters.ml, 0) },
+          { l: "Tablespoons", v: round(litersValue / toLiters.tbsp, 2) },
+          { l: "Teaspoons", v: round(litersValue / toLiters.tsp, 2) },
         ],
       };
     },
@@ -4007,6 +4010,7 @@ const CALCULATORS = [
       { q: "Is a US gallon the same as a UK gallon?", a: "No - a US gallon (3.785 L) is smaller than a UK/imperial gallon (4.546 L). This converter uses US gallons; adjust accordingly if you need imperial units." },
       { q: "Why is a US pint different from an imperial pint?", a: "The US and imperial (UK) systems define their base units differently - a US gallon is smaller than an imperial gallon, and since a pint is defined as a fraction of a gallon in each system, US pints (16 fl oz) end up smaller than imperial pints (20 fl oz)." },
       { q: "How many milliliters are in a fluid ounce?", a: "One US fluid ounce equals approximately 29.57 milliliters. This differs slightly from the UK/imperial fluid ounce (about 28.41 mL), so it's worth checking which standard a recipe or product label is using before converting." },
+      { q: "A teaspoon is how many tablespoons?", a: "1 US teaspoon is 1/3 of a tablespoon, so 1 tablespoon equals exactly 3 teaspoons. Select \"Teaspoons\" or \"Tablespoons\" above to convert either direction, alongside liters, gallons, cups, and milliliters." },
     ],
     related: ["cooking-converter", "weight-converter", "unit-length-converter"],
   },
