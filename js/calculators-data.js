@@ -3805,6 +3805,7 @@ const CALCULATORS = [
       { q: "How many feet is 210 cm?", a: "About 6 feet 10.7 inches - divide 210 by 2.54 to get 82.68 inches, then divide by 12 for feet (6) with the remainder in inches (10.68). Enter 210 with \"Centimeters\" selected above to confirm." },
       { q: "How many inches is 210 cm?", a: "About 82.68 inches - divide 210 by 2.54. Enter 210 with \"Centimeters\" selected above to confirm." },
       { q: "How many feet is 108 inches?", a: "Exactly 9 feet - divide 108 by 12. Enter 108 with \"Inches\" selected above to confirm." },
+      { q: "How many inches is a millimeter?", a: "1 millimeter equals about 0.03937 inches - divide millimeters by 25.4, or select \"Millimeters\" above and enter your value to see the exact inch equivalent alongside every other supported unit." },
     ],
     related: ["weight-converter", "cooking-converter", "concrete-calculator"],
   },
