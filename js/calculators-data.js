@@ -1937,6 +1937,49 @@ const CALCULATORS = [
     related: ["compound-interest-calculator", "mortgage-calculator", "loan-calculator"],
   },
   {
+    id: "budget-calculator",
+    category: "finance",
+    title: "Budget Calculator",
+    keyword: "budget calculator",
+    description: "See where your monthly income goes and how it compares to the 50/30/20 rule.",
+    intro: "Enter your monthly take-home income and spending by category to see what's left over and how your budget compares to the 50/30/20 guideline.",
+    fields: [
+      { id: "income", label: "Monthly income (after tax)", type: "number", unit: "$", default: 4500, step: 50 },
+      { id: "housing", label: "Housing", type: "number", unit: "$", default: 1400, step: 10 },
+      { id: "transportation", label: "Transportation", type: "number", unit: "$", default: 400, step: 10 },
+      { id: "food", label: "Food & groceries", type: "number", unit: "$", default: 500, step: 10 },
+      { id: "utilities", label: "Utilities & bills", type: "number", unit: "$", default: 250, step: 10 },
+      { id: "debt", label: "Debt payments", type: "number", unit: "$", default: 300, step: 10 },
+      { id: "other", label: "Other spending", type: "number", unit: "$", default: 400, step: 10 },
+    ],
+    compute: (v) => {
+      const totalExpenses = v.housing + v.transportation + v.food + v.utilities + v.debt + v.other;
+      const leftover = v.income - totalExpenses;
+      const savingsRate = v.income > 0 ? round((leftover / v.income) * 100, 1) : 0;
+      const need50 = v.income * 0.5;
+      const want30 = v.income * 0.3;
+      const save20 = v.income * 0.2;
+      return {
+        primary: { label: leftover >= 0 ? "Left over each month" : "Over budget by", value: `$${round(Math.abs(leftover), 2).toLocaleString()}` },
+        secondary: [
+          { l: "Total expenses", v: `$${round(totalExpenses, 2).toLocaleString()}` },
+          { l: "Savings rate", v: `${savingsRate}%` },
+          { l: "50/30/20 needs target", v: `$${round(need50, 0).toLocaleString()}` },
+          { l: "50/30/20 wants target", v: `$${round(want30, 0).toLocaleString()}` },
+          { l: "50/30/20 savings target", v: `$${round(save20, 0).toLocaleString()}` },
+        ],
+        note: "The 50/30/20 targets are a common budgeting guideline (50% needs, 30% wants, 20% savings/debt payoff), not a rule - useful as a reference point, not a strict requirement.",
+      };
+    },
+    faq: [
+      { q: "What is the 50/30/20 budgeting rule?", a: "A guideline that splits after-tax income into roughly 50% needs (housing, food, utilities), 30% wants (discretionary spending), and 20% savings or extra debt payoff - popularized as a simple starting framework, not a strict formula." },
+      { q: "What counts as a 'need' versus a 'want'?", a: "Needs are costs you can't avoid without real hardship - rent/mortgage, groceries, utilities, minimum debt payments. Wants are discretionary - dining out, entertainment, subscriptions. The line isn't always sharp, but the split is meant to be a rough guide, not an exact accounting standard." },
+      { q: "What if my expenses add up to more than my income?", a: "The calculator shows you're over budget by the shortfall amount - that's a signal to either reduce spending in a category, find additional income, or both, before it compounds into debt." },
+      { q: "Should my income here be gross or after-tax?", a: "Use after-tax (take-home) income - it reflects money actually available to spend or save, which is what a monthly budget is built around." },
+    ],
+    related: ["savings-calculator", "hourly-to-salary-calculator", "loan-calculator"],
+  },
+  {
     id: "compound-interest-calculator",
     category: "finance",
     title: "Compound Interest Calculator",

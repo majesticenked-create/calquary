@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Budget Calculator - Free Online Calculator | Calquary</title>
+  <meta name="description" content="See where your monthly income goes and how it compares to the 50/30/20 rule." />
+  <meta property="og:title" content="Budget Calculator | Calquary">
+  <meta property="og:description" content="See where your monthly income goes and how it compares to the 50/30/20 rule.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/tool/budget-calculator.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/budget-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Budget Calculator | Calquary">
+  <meta name="twitter:description" content="See where your monthly income goes and how it compares to the 50/30/20 rule.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/budget-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/budget-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/budget-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("budget-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("budget-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Budget Calculator",
+      "description": "See where your monthly income goes and how it compares to the 50/30/20 rule.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/budget-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-31",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Finance",
+          "item": "https://calquary.com/category/finance.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Budget Calculator",
+          "item": "https://calquary.com/tool/budget-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the 50/30/20 budgeting rule?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A guideline that splits after-tax income into roughly 50% needs (housing, food, utilities), 30% wants (discretionary spending), and 20% savings or extra debt payoff - popularized as a simple starting framework, not a strict formula."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What counts as a 'need' versus a 'want'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Needs are costs you can't avoid without real hardship - rent/mortgage, groceries, utilities, minimum debt payments. Wants are discretionary - dining out, entertainment, subscriptions. The line isn't always sharp, but the split is meant to be a rough guide, not an exact accounting standard."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if my expenses add up to more than my income?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The calculator shows you're over budget by the shortfall amount - that's a signal to either reduce spending in a category, find additional income, or both, before it compounds into debt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should my income here be gross or after-tax?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use after-tax (take-home) income - it reflects money actually available to spend or save, which is what a monthly budget is built around."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/index.html#categories">Categories</a>
+          <a href="/index.html#tools">All tools</a>
+          <a href="/about.html">About</a>
+        </nav>
+        
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/index.html">Calquary</a> / <a href="/category/finance.html">Finance</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Budget Calculator</h1>
+        <p style="max-width:60ch;">Enter your monthly take-home income and spending by category to see what's left over and how your budget compares to the 50/30/20 guideline.</p>
+        <p class="last-updated">Last updated: August 31, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculate</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reset</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Frequently asked questions</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>What is the 50/30/20 budgeting rule?</h3>
+<p>A guideline that splits after-tax income into roughly 50% needs (housing, food, utilities), 30% wants (discretionary spending), and 20% savings or extra debt payoff - popularized as a simple starting framework, not a strict formula.</p>
+</div>
+<div class="faq-item">
+<h3>What counts as a 'need' versus a 'want'?</h3>
+<p>Needs are costs you can't avoid without real hardship - rent/mortgage, groceries, utilities, minimum debt payments. Wants are discretionary - dining out, entertainment, subscriptions. The line isn't always sharp, but the split is meant to be a rough guide, not an exact accounting standard.</p>
+</div>
+<div class="faq-item">
+<h3>What if my expenses add up to more than my income?</h3>
+<p>The calculator shows you're over budget by the shortfall amount - that's a signal to either reduce spending in a category, find additional income, or both, before it compounds into debt.</p>
+</div>
+<div class="faq-item">
+<h3>Should my income here be gross or after-tax?</h3>
+<p>Use after-tax (take-home) income - it reflects money actually available to spend or save, which is what a monthly budget is built around.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Related tools</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>A note on accuracy</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquary's calculators are built for quick, reliable estimates. For decisions with real financial, structural, or medical stakes, confirm with a qualified professional.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/index.html">← Back to all calculators</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>
