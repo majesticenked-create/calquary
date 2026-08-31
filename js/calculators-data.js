@@ -3982,23 +3982,25 @@ const CALCULATORS = [
     category: "conversions",
     title: "Volume Converter",
     keyword: "volume converter",
-    description: "Convert between liters, gallons, cups, milliliters, teaspoons, and tablespoons.",
+    description: "Convert between liters, gallons, quarts, fluid ounces, cups, milliliters, teaspoons, and tablespoons.",
     intro: "Enter a value and choose a starting unit to convert between common volume measurements.",
     fields: [
       { id: "value", label: "Value", type: "number", default: 1, step: 0.01 },
       { id: "from", label: "From", type: "select", default: "gal", options: [
-        { v: "l", l: "Liters" }, { v: "gal", l: "Gallons" }, { v: "cup", l: "Cups" }, { v: "ml", l: "Milliliters" },
+        { v: "l", l: "Liters" }, { v: "gal", l: "Gallons" }, { v: "qt", l: "Quarts" }, { v: "cup", l: "Cups" }, { v: "floz", l: "Fluid ounces" }, { v: "ml", l: "Milliliters" },
         { v: "tbsp", l: "Tablespoons" }, { v: "tsp", l: "Teaspoons" },
       ] },
     ],
     compute: (v) => {
-      const toLiters = { l: 1, gal: 3.78541, cup: 0.236588, ml: 0.001, tbsp: 0.0147868, tsp: 0.00492892 };
+      const toLiters = { l: 1, gal: 3.78541, qt: 0.946353, cup: 0.236588, floz: 0.0295735, ml: 0.001, tbsp: 0.0147868, tsp: 0.00492892 };
       const litersValue = v.value * toLiters[v.from];
       return {
         primary: { label: "In liters", value: `${round(litersValue, 3)} L` },
         secondary: [
           { l: "Gallons", v: round(litersValue / toLiters.gal, 3) },
+          { l: "Quarts", v: round(litersValue / toLiters.qt, 3) },
           { l: "Cups", v: round(litersValue / toLiters.cup, 2) },
+          { l: "Fluid ounces", v: round(litersValue / toLiters.floz, 2) },
           { l: "Milliliters", v: round(litersValue / toLiters.ml, 0) },
           { l: "Tablespoons", v: round(litersValue / toLiters.tbsp, 2) },
           { l: "Teaspoons", v: round(litersValue / toLiters.tsp, 2) },
@@ -4011,6 +4013,9 @@ const CALCULATORS = [
       { q: "Why is a US pint different from an imperial pint?", a: "The US and imperial (UK) systems define their base units differently - a US gallon is smaller than an imperial gallon, and since a pint is defined as a fraction of a gallon in each system, US pints (16 fl oz) end up smaller than imperial pints (20 fl oz)." },
       { q: "How many milliliters are in a fluid ounce?", a: "One US fluid ounce equals approximately 29.57 milliliters. This differs slightly from the UK/imperial fluid ounce (about 28.41 mL), so it's worth checking which standard a recipe or product label is using before converting." },
       { q: "A teaspoon is how many tablespoons?", a: "1 US teaspoon is 1/3 of a tablespoon, so 1 tablespoon equals exactly 3 teaspoons. Select \"Teaspoons\" or \"Tablespoons\" above to convert either direction, alongside liters, gallons, cups, and milliliters." },
+      { q: "How many fluid ounces are in a gallon?", a: "Exactly 128 US fluid ounces per gallon - a gallon is defined as 128 fl oz, so 1 gallon ÷ 128 gives the fl oz-to-gallon conversion factor directly. Select \"Gallons\" or \"Fluid ounces\" above to convert either direction." },
+      { q: "How many quarts are in a gallon?", a: "Exactly 4 quarts per US gallon - a quart is literally defined as a quarter-gallon. Select \"Gallons\" or \"Quarts\" above to convert between them alongside the other supported units." },
+      { q: "How many cups are in a tablespoon?", a: "1 tablespoon is 1/16 of a cup, so there are 16 tablespoons in a cup. Select \"Tablespoons\" or \"Cups\" above to convert either direction." },
     ],
     related: ["cooking-converter", "weight-converter", "unit-length-converter"],
   },
