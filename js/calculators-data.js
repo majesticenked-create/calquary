@@ -4049,6 +4049,98 @@ const CALCULATORS = [
     related: ["percentage-calculator", "random-number-generator", "quadratic-formula-calculator"],
   },
   {
+    id: "sunrise-sunset-calculator",
+    category: "datetime",
+    title: "Sunrise and Sunset Calculator",
+    keyword: "sunrise sunset calculator",
+    description: "Find sunrise and sunset times for any date and major city.",
+    intro: "Choose a city and date to see when the sun rises and sets there.",
+    fields: [
+      { id: "date", label: "Date", type: "date", default: todayDateString() },
+      { id: "city", label: "City", type: "select", default: "New York", options: [
+        { v: "New York", l: "New York, USA" }, { v: "Los Angeles", l: "Los Angeles, USA" },
+        { v: "Chicago", l: "Chicago, USA" }, { v: "London", l: "London, UK" },
+        { v: "Paris", l: "Paris, France" }, { v: "Berlin", l: "Berlin, Germany" },
+        { v: "Moscow", l: "Moscow, Russia" }, { v: "Cairo", l: "Cairo, Egypt" },
+        { v: "Dubai", l: "Dubai, UAE" }, { v: "Mumbai", l: "Mumbai, India" },
+        { v: "Bangkok", l: "Bangkok, Thailand" }, { v: "Shanghai", l: "Shanghai, China" },
+        { v: "Tokyo", l: "Tokyo, Japan" }, { v: "Sydney", l: "Sydney, Australia" },
+        { v: "Auckland", l: "Auckland, New Zealand" }, { v: "Sao Paulo", l: "São Paulo, Brazil" },
+      ] },
+    ],
+    compute: (v) => {
+      const cities = {
+        "New York": { lat: 40.7128, lon: -74.006, zone: "America/New_York" },
+        "Los Angeles": { lat: 34.0522, lon: -118.2437, zone: "America/Los_Angeles" },
+        "Chicago": { lat: 41.8781, lon: -87.6298, zone: "America/Chicago" },
+        "London": { lat: 51.5074, lon: -0.1278, zone: "Europe/London" },
+        "Paris": { lat: 48.8566, lon: 2.3522, zone: "Europe/Paris" },
+        "Berlin": { lat: 52.52, lon: 13.405, zone: "Europe/Berlin" },
+        "Moscow": { lat: 55.7558, lon: 37.6173, zone: "Europe/Moscow" },
+        "Cairo": { lat: 30.0444, lon: 31.2357, zone: "Africa/Cairo" },
+        "Dubai": { lat: 25.2048, lon: 55.2708, zone: "Asia/Dubai" },
+        "Mumbai": { lat: 19.076, lon: 72.8777, zone: "Asia/Kolkata" },
+        "Bangkok": { lat: 13.7563, lon: 100.5018, zone: "Asia/Bangkok" },
+        "Shanghai": { lat: 31.2304, lon: 121.4737, zone: "Asia/Shanghai" },
+        "Tokyo": { lat: 35.6762, lon: 139.6503, zone: "Asia/Tokyo" },
+        "Sydney": { lat: -33.8688, lon: 151.2093, zone: "Australia/Sydney" },
+        "Auckland": { lat: -36.8485, lon: 174.7633, zone: "Pacific/Auckland" },
+        "Sao Paulo": { lat: -23.5505, lon: -46.6333, zone: "America/Sao_Paulo" },
+      };
+      const c = cities[v.city];
+      const rad = Math.PI / 180;
+      const dayMs = 86400000;
+      const J1970 = 2440588, J2000 = 2451545, J0 = 0.0009;
+      const e = rad * 23.4397;
+      const toJulian = (d) => d.getTime() / dayMs - 0.5 + J1970;
+      const fromJulian = (j) => new Date((j + 0.5 - J1970) * dayMs);
+      const [yy, mm, dd] = v.date.split("-").map(Number);
+      const dateNoon = new Date(Date.UTC(yy, mm - 1, dd, 12));
+      const dNum = toJulian(dateNoon) - J2000;
+      const solarMeanAnomaly = (d) => rad * (357.5291 + 0.98560028 * d);
+      const eclipticLongitude = (M) => M + rad * (1.9148 * Math.sin(M) + 0.02 * Math.sin(2 * M) + 0.0003 * Math.sin(3 * M)) + rad * 102.9372 + Math.PI;
+      const declination = (l) => Math.asin(Math.sin(l) * Math.sin(e));
+      const lw = rad * -c.lon;
+      const phi = rad * c.lat;
+      const n = Math.round(dNum - J0 - lw / (2 * Math.PI));
+      const approxTransit = (Ht) => J0 + (Ht + lw) / (2 * Math.PI) + n;
+      const ds = approxTransit(0);
+      const M = solarMeanAnomaly(ds);
+      const L = eclipticLongitude(M);
+      const dec = declination(L);
+      const solarTransitJ = (dsx) => J2000 + dsx + 0.0053 * Math.sin(M) - 0.0069 * Math.sin(2 * L);
+      const Jnoon = solarTransitJ(ds);
+      const h0 = -0.833 * rad;
+      const cosW = (Math.sin(h0) - Math.sin(phi) * Math.sin(dec)) / (Math.cos(phi) * Math.cos(dec));
+      const fmt = (j) => fromJulian(j).toLocaleTimeString("en-US", { timeZone: c.zone, hour: "2-digit", minute: "2-digit" });
+      if (cosW > 1) {
+        return { primary: { label: "Sunrise/sunset", value: "No sunrise (polar night)" }, secondary: [], note: "The sun stays below the horizon all day at this latitude and date." };
+      }
+      if (cosW < -1) {
+        return { primary: { label: "Sunrise/sunset", value: "No sunset (midnight sun)" }, secondary: [], note: "The sun stays above the horizon all day at this latitude and date." };
+      }
+      const w = Math.acos(cosW);
+      const Jset = solarTransitJ(approxTransit(w));
+      const Jrise = Jnoon - (Jset - Jnoon);
+      const daylightMinutes = Math.round((Jset - Jrise) * 1440);
+      return {
+        primary: { label: "Sunrise", value: fmt(Jrise) },
+        secondary: [
+          { l: "Sunset", v: fmt(Jset) },
+          { l: "Daylight", v: `${Math.floor(daylightMinutes / 60)}h ${daylightMinutes % 60}m` },
+        ],
+        note: "Calculated from the sun's position for this date and location, accurate to within about a minute - actual visible sunrise/sunset can shift slightly with local horizon obstructions and atmospheric conditions.",
+      };
+    },
+    faq: [
+      { q: "How is sunrise time calculated?", a: "From the sun's position (declination and hour angle) for the given date and location, using standard solar position equations - the same underlying astronomy used by observatories and navigation, accurate to within about a minute." },
+      { q: "Why are sunrise and sunset times different every day?", a: "Earth's axial tilt (about 23.4°) means the sun's path across the sky shifts throughout the year as the planet orbits, changing day length and the exact rise/set times - most dramatically near the solstices and least around the equinoxes." },
+      { q: "What does 'midnight sun' or 'polar night' mean?", a: "Near the poles, at some times of year the sun never sets (midnight sun, in summer) or never rises (polar night, in winter) - this calculator flags those cases instead of showing a sunrise/sunset time that doesn't exist." },
+      { q: "Does this account for daylight saving time?", a: "Yes - times are shown in the selected city's local time zone, which automatically reflects daylight saving time if that zone observes it on the chosen date." },
+    ],
+    related: ["time-zone-converter", "daylight-saving-time-calculator", "day-of-week-calculator"],
+  },
+  {
     id: "day-of-week-calculator",
     category: "datetime",
     title: "Day of the Week Calculator",
