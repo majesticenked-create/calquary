@@ -3230,6 +3230,45 @@ const CALCULATORS = [
     ],
     related: ["age-calculator", "days-until-calculator", "date-duration-calculator"],
   },
+  {
+    id: "ovulation-calculator",
+    category: "health",
+    title: "Ovulation Calculator",
+    keyword: "ovulation calculator",
+    description: "Estimate your ovulation date and fertile window from your last period and cycle length.",
+    intro: "Enter the first day of your last period and your average cycle length to estimate your ovulation date and fertile window.",
+    fields: [
+      { id: "lastPeriod", label: "First day of last period", type: "date", default: futureDateString(-14) },
+      { id: "cycleLength", label: "Average cycle length", type: "number", unit: "days", default: 28, step: 1, min: 20, max: 45 },
+    ],
+    compute: (v) => {
+      const lmp = new Date(v.lastPeriod);
+      const ovulation = new Date(lmp);
+      ovulation.setDate(ovulation.getDate() + (v.cycleLength - 14));
+      const fertileStart = new Date(ovulation);
+      fertileStart.setDate(fertileStart.getDate() - 5);
+      const fertileEnd = new Date(ovulation);
+      fertileEnd.setDate(fertileEnd.getDate() + 1);
+      const nextPeriod = new Date(lmp);
+      nextPeriod.setDate(nextPeriod.getDate() + v.cycleLength);
+      const fmt = (d) => d.toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" });
+      return {
+        primary: { label: "Estimated ovulation date", value: fmt(ovulation) },
+        secondary: [
+          { l: "Fertile window", v: `${fmt(fertileStart)} - ${fmt(fertileEnd)}` },
+          { l: "Next period expected", v: fmt(nextPeriod) },
+        ],
+        note: "Assumes a standard 14-day luteal phase (time between ovulation and your next period), which is fairly consistent even when overall cycle length varies. This is an estimate - actual ovulation timing varies cycle to cycle.",
+      };
+    },
+    faq: [
+      { q: "How is ovulation date calculated from cycle length?", a: "Ovulation typically occurs 14 days before your next period starts, regardless of how long your total cycle is - so it's calculated as (cycle length - 14) days after the first day of your last period." },
+      { q: "Why does ovulation timing vary if the luteal phase is fixed at 14 days?", a: "The luteal phase (after ovulation, before the next period) is relatively consistent at about 14 days, but the follicular phase (before ovulation) varies more between cycles and between people - so a longer or shorter overall cycle mostly reflects a longer or shorter follicular phase, not a different luteal length." },
+      { q: "What is the fertile window?", a: "The days when pregnancy is possible from intercourse - typically the 5 days before ovulation plus the day of ovulation itself, since sperm can survive several days while the egg is viable for about 24 hours after release." },
+      { q: "Does this work for irregular cycles?", a: "It's less reliable for irregular cycles, since the calculation assumes a consistent cycle length. Tracking actual ovulation signs (basal body temperature, cervical mucus, or an ovulation predictor kit) gives more accurate results if your cycles vary significantly month to month." },
+    ],
+    related: ["pregnancy-due-date-calculator", "age-calculator", "days-until-calculator"],
+  },
 
   // ---------------- DATE & TIME ----------------
   {
