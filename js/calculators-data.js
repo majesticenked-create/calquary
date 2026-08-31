@@ -3790,6 +3790,66 @@ const CALCULATORS = [
     related: ["online-timer", "day-of-week-calculator", "date-duration-calculator"],
   },
   {
+    id: "roman-numeral-converter",
+    category: "math",
+    title: "Roman Numeral Converter",
+    keyword: "roman numeral converter",
+    description: "Convert between numbers and Roman numerals, in either direction.",
+    intro: "Enter a number (1-3999) or a Roman numeral to convert it to the other - the tool detects which one you typed.",
+    fields: [
+      { id: "value", label: "Number or Roman numeral", type: "text", default: "1994" },
+    ],
+    compute: (v) => {
+      const input = v.value.trim();
+      const romanVals = [[1000, "M"], [900, "CM"], [500, "D"], [400, "CD"], [100, "C"], [90, "XC"], [50, "L"], [40, "XL"], [10, "X"], [9, "IX"], [5, "V"], [4, "IV"], [1, "I"]];
+      const toRoman = (num) => {
+        let res = "";
+        let n = num;
+        for (const [v2, s] of romanVals) {
+          while (n >= v2) { res += s; n -= v2; }
+        }
+        return res;
+      };
+      const fromRoman = (str) => {
+        const map = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };
+        let total = 0, prev = 0;
+        for (let i = str.length - 1; i >= 0; i--) {
+          const val = map[str[i]];
+          if (val === undefined) return null;
+          if (val < prev) total -= val; else { total += val; prev = val; }
+        }
+        return total;
+      };
+      if (/^[0-9]+$/.test(input)) {
+        const num = parseInt(input, 10);
+        if (num < 1 || num > 3999) {
+          return { primary: { label: "Out of range", value: "Enter 1-3999" }, secondary: [], note: "Standard Roman numerals only represent values from 1 to 3999." };
+        }
+        return {
+          primary: { label: "Roman numeral", value: toRoman(num) },
+          secondary: [{ l: "Number", v: num }],
+        };
+      }
+      const upper = input.toUpperCase();
+      const num = fromRoman(upper);
+      if (num === null || num < 1 || toRoman(num) !== upper) {
+        return { primary: { label: "Not a valid Roman numeral", value: input }, secondary: [], note: "Check the spelling - Roman numerals only use the letters I, V, X, L, C, D, and M." };
+      }
+      return {
+        primary: { label: "Number", value: num },
+        secondary: [{ l: "Roman numeral", v: upper }],
+      };
+    },
+    faq: [
+      { q: "What is 1994 in Roman numerals?", a: "MCMXCIV - 1000 (M) + 900 (CM) + 90 (XC) + 4 (IV)." },
+      { q: "What is 58 in Roman numerals?", a: "LVIII - 50 (L) + 5 (V) + 1 + 1 + 1 (III)." },
+      { q: "What's the highest number Roman numerals can represent?", a: "Standard Roman numerals go up to 3,999 (MMMCMXCIX) - there's no standard symbol for 4,000 or higher without using an overline or other extended notation." },
+      { q: "Why is 4 written as IV instead of IIII?", a: "Roman numerals use a subtractive rule for four specific cases (IV, IX, XL, XC, CD, CM) where a smaller symbol placed before a larger one is subtracted - this keeps numbers shorter than repeating a symbol four times, though IIII does appear historically, especially on clock faces." },
+      { q: "How do I convert a Roman numeral back to a regular number?", a: "Type the Roman numeral (like MCMXCIV) into the field above instead of a number - the tool automatically detects whether you entered digits or Roman numerals and converts to the other." },
+    ],
+    related: ["percentage-calculator", "random-number-generator", "quadratic-formula-calculator"],
+  },
+  {
     id: "day-of-week-calculator",
     category: "datetime",
     title: "Day of the Week Calculator",
