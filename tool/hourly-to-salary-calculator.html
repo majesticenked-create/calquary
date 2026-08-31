@@ -4,23 +4,23 @@
   <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Weight Converter - Free Online Calculator | Calquary</title>
-  <meta name="description" content="Convert between kilograms, pounds, ounces, and grams." />
-  <meta property="og:title" content="Weight Converter | Calquary">
-  <meta property="og:description" content="Convert between kilograms, pounds, ounces, and grams.">
+  <title>Hourly to Salary Calculator | Calquary</title>
+  <meta name="description" content="Convert an hourly wage into an estimated annual salary, and back." />
+  <meta property="og:title" content="Hourly to Salary Calculator | Calquary">
+  <meta property="og:description" content="Convert an hourly wage into an estimated annual salary, and back.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://calquary.com/tool/weight-converter.html">
+  <meta property="og:url" content="https://calquary.com/tool/hourly-to-salary-calculator.html">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Calquary">
-  <meta property="og:image" content="https://calquary.com/og-images/weight-converter.png">
+  <meta property="og:image" content="https://calquary.com/og-images/hourly-to-salary-calculator.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Weight Converter | Calquary">
-  <meta name="twitter:description" content="Convert between kilograms, pounds, ounces, and grams.">
-  <meta name="twitter:image" content="https://calquary.com/og-images/weight-converter.png">
-    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/weight-converter.html">
-  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/weight-converter.html">
+  <meta name="twitter:title" content="Hourly to Salary Calculator | Calquary">
+  <meta name="twitter:description" content="Convert an hourly wage into an estimated annual salary, and back.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/hourly-to-salary-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/hourly-to-salary-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/hourly-to-salary-calculator.html">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -46,7 +46,7 @@
       // still JS-driven here is the interactive calculator widget itself
       // (fields/compute/results) and the related-tools list, neither of
       // which is static SEO prose.
-      const calc = getCalculator("weight-converter");
+      const calc = getCalculator("hourly-to-salary-calculator");
 
       const relWrap = document.getElementById("related-list");
       calc.related.forEach((relId) => {
@@ -57,7 +57,7 @@
         relWrap.appendChild(li);
       });
 
-      initCalculator("weight-converter");
+      initCalculator("hourly-to-salary-calculator");
     });
   </script>
   <script type="application/ld+json">
@@ -66,11 +66,11 @@
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "Weight Converter",
-      "description": "Convert between kilograms, pounds, ounces, and grams.",
+      "name": "Hourly to Salary Calculator",
+      "description": "Convert an hourly wage into an estimated annual salary, and back.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
-      "url": "https://calquary.com/tool/weight-converter.html",
+      "url": "https://calquary.com/tool/hourly-to-salary-calculator.html",
       "isAccessibleForFree": true,
       "offers": {
         "@type": "Offer",
@@ -92,14 +92,14 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Everyday Conversions",
-          "item": "https://calquary.com/category/conversions.html"
+          "name": "Finance",
+          "item": "https://calquary.com/category/finance.html"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Weight Converter",
-          "item": "https://calquary.com/tool/weight-converter.html"
+          "name": "Hourly to Salary Calculator",
+          "item": "https://calquary.com/tool/hourly-to-salary-calculator.html"
         }
       ]
     },
@@ -108,50 +108,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "How many kilograms is 150 pounds?",
+          "name": "How do I convert an hourly wage to an annual salary?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "150 lb equals about 68.04 kg. To convert pounds to kilograms, multiply by 0.453592."
+            "text": "Multiply hourly wage by hours worked per week, then by weeks worked per year. At full-time hours (40/week, 52 weeks), that's hourly × 2,080. A $19/hour wage works out to $19 × 2,080 = $39,520 per year."
           }
         },
         {
           "@type": "Question",
-          "name": "What's the difference between weight and mass?",
+          "name": "Why 2,080 hours in a work year?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In everyday use they're treated as the same - this converter, like most scales and recipes, converts weight units (kg, lb, oz, g) directly without distinguishing mass from gravitational weight, which is accurate for anything happening on Earth's surface."
+            "text": "40 hours/week × 52 weeks/year = 2,080 hours - the standard full-time work-year figure used for salary conversions, assuming no unpaid time off. If you take unpaid vacation or have fewer working weeks, use a lower \"weeks worked per year\" figure for a more accurate estimate."
           }
         },
         {
           "@type": "Question",
-          "name": "Why do some scales show a slightly different number than an exact conversion?",
+          "name": "Does this account for overtime pay?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Most bathroom and kitchen scales round to the nearest whole unit or a fixed decimal place for readability, so a small rounding gap between the scale's display and an exact mathematical conversion is normal and doesn't indicate an error in either one."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How many grams are in an ounce?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "One ounce equals approximately 28.35 grams. This is the standard conversion used for cooking, postal weights, and most everyday US customary-to-metric weight conversions."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How many pounds is 200 grams?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "About 0.441 pounds - multiply grams by 0.00220462, or divide by 453.592 (grams per pound). 200g is a relatively small weight, well under half a pound."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How many ounces is 200 grams?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "About 7.05 ounces - divide grams by 28.3495 (grams per ounce). 200g ÷ 28.3495 ≈ 7.05 oz."
+            "text": "No - this calculator assumes a flat hourly rate for all hours entered. If some of your hours are paid at an overtime rate (typically 1.5x for hours over 40/week in the US), calculate the regular and overtime portions separately and add them together."
           }
         }
       ]
@@ -179,15 +155,15 @@
 
   <div class="wrap" style="padding-top:32px;">
     <div class="breadcrumb">
-      <a href="/index.html">Calquary</a> / <a href="/category/conversions.html">Everyday Conversions</a>
+      <a href="/index.html">Calquary</a> / <a href="/category/finance.html">Finance</a>
     </div>
   </div>
 
   <div class="wrap" style="padding-bottom:64px;">
     <div class="tool-layout">
       <main>
-        <h1>Weight Converter</h1>
-        <p style="max-width:60ch;">Enter a value and choose a starting unit to convert between common weight measurements.</p>
+        <h1>Hourly to Salary Calculator</h1>
+        <p style="max-width:60ch;">Enter an hourly wage, hours per week, and weeks worked per year to calculate the equivalent annual salary.</p>
         <p class="last-updated">Last updated: August 31, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -215,28 +191,16 @@
         <div class="article-block">
           <h2>Frequently asked questions</h2>
           <div id="faq-list"><div class="faq-item">
-<h3>How many kilograms is 150 pounds?</h3>
-<p>150 lb equals about 68.04 kg. To convert pounds to kilograms, multiply by 0.453592.</p>
+<h3>How do I convert an hourly wage to an annual salary?</h3>
+<p>Multiply hourly wage by hours worked per week, then by weeks worked per year. At full-time hours (40/week, 52 weeks), that's hourly × 2,080. A $19/hour wage works out to $19 × 2,080 = $39,520 per year.</p>
 </div>
 <div class="faq-item">
-<h3>What's the difference between weight and mass?</h3>
-<p>In everyday use they're treated as the same - this converter, like most scales and recipes, converts weight units (kg, lb, oz, g) directly without distinguishing mass from gravitational weight, which is accurate for anything happening on Earth's surface.</p>
+<h3>Why 2,080 hours in a work year?</h3>
+<p>40 hours/week × 52 weeks/year = 2,080 hours - the standard full-time work-year figure used for salary conversions, assuming no unpaid time off. If you take unpaid vacation or have fewer working weeks, use a lower "weeks worked per year" figure for a more accurate estimate.</p>
 </div>
 <div class="faq-item">
-<h3>Why do some scales show a slightly different number than an exact conversion?</h3>
-<p>Most bathroom and kitchen scales round to the nearest whole unit or a fixed decimal place for readability, so a small rounding gap between the scale's display and an exact mathematical conversion is normal and doesn't indicate an error in either one.</p>
-</div>
-<div class="faq-item">
-<h3>How many grams are in an ounce?</h3>
-<p>One ounce equals approximately 28.35 grams. This is the standard conversion used for cooking, postal weights, and most everyday US customary-to-metric weight conversions.</p>
-</div>
-<div class="faq-item">
-<h3>How many pounds is 200 grams?</h3>
-<p>About 0.441 pounds - multiply grams by 0.00220462, or divide by 453.592 (grams per pound). 200g is a relatively small weight, well under half a pound.</p>
-</div>
-<div class="faq-item">
-<h3>How many ounces is 200 grams?</h3>
-<p>About 7.05 ounces - divide grams by 28.3495 (grams per ounce). 200g ÷ 28.3495 ≈ 7.05 oz.</p>
+<h3>Does this account for overtime pay?</h3>
+<p>No - this calculator assumes a flat hourly rate for all hours entered. If some of your hours are paid at an overtime rate (typically 1.5x for hours over 40/week in the US), calculate the regular and overtime portions separately and add them together.</p>
 </div></div>
         </div>
       </main>

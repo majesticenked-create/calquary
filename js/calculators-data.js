@@ -1795,6 +1795,38 @@ const CALCULATORS = [
     related: ["loan-calculator", "savings-calculator", "compound-interest-calculator"],
   },
   {
+    id: "hourly-to-salary-calculator",
+    category: "finance",
+    title: "Hourly to Salary Calculator",
+    keyword: "hourly to salary calculator",
+    description: "Convert an hourly wage into an estimated annual salary, and back.",
+    intro: "Enter an hourly wage, hours per week, and weeks worked per year to calculate the equivalent annual salary.",
+    fields: [
+      { id: "hourlyRate", label: "Hourly wage", type: "number", unit: "$", default: 19, step: 0.25 },
+      { id: "hoursPerWeek", label: "Hours per week", type: "number", default: 40, step: 1 },
+      { id: "weeksPerYear", label: "Weeks worked per year", type: "number", default: 52, step: 1 },
+    ],
+    compute: (v) => {
+      const weeklyPay = v.hourlyRate * v.hoursPerWeek;
+      const annual = weeklyPay * v.weeksPerYear;
+      const monthly = annual / 12;
+      return {
+        primary: { label: "Annual salary", value: `$${round(annual, 2).toLocaleString()}` },
+        secondary: [
+          { l: "Monthly", v: `$${round(monthly, 2).toLocaleString()}` },
+          { l: "Weekly", v: `$${round(weeklyPay, 2).toLocaleString()}` },
+        ],
+        note: "This is gross (pre-tax) pay - actual take-home pay is lower after taxes and any other withholdings. Uses a standard full-time schedule by default (40 hrs/week, 52 weeks/year); adjust for part-time hours or unpaid time off.",
+      };
+    },
+    faq: [
+      { q: "How do I convert an hourly wage to an annual salary?", a: "Multiply hourly wage by hours worked per week, then by weeks worked per year. At full-time hours (40/week, 52 weeks), that's hourly × 2,080. A $19/hour wage works out to $19 × 2,080 = $39,520 per year." },
+      { q: "Why 2,080 hours in a work year?", a: "40 hours/week × 52 weeks/year = 2,080 hours - the standard full-time work-year figure used for salary conversions, assuming no unpaid time off. If you take unpaid vacation or have fewer working weeks, use a lower \"weeks worked per year\" figure for a more accurate estimate." },
+      { q: "Does this account for overtime pay?", a: "No - this calculator assumes a flat hourly rate for all hours entered. If some of your hours are paid at an overtime rate (typically 1.5x for hours over 40/week in the US), calculate the regular and overtime portions separately and add them together." },
+    ],
+    related: ["loan-calculator", "savings-calculator", "tip-calculator"],
+  },
+  {
     id: "tip-calculator",
     category: "finance",
     title: "Tip Calculator",
@@ -3932,6 +3964,7 @@ const CALCULATORS = [
       { q: "Why do some scales show a slightly different number than an exact conversion?", a: "Most bathroom and kitchen scales round to the nearest whole unit or a fixed decimal place for readability, so a small rounding gap between the scale's display and an exact mathematical conversion is normal and doesn't indicate an error in either one." },
       { q: "How many grams are in an ounce?", a: "One ounce equals approximately 28.35 grams. This is the standard conversion used for cooking, postal weights, and most everyday US customary-to-metric weight conversions." },
       { q: "How many pounds is 200 grams?", a: "About 0.441 pounds - multiply grams by 0.00220462, or divide by 453.592 (grams per pound). 200g is a relatively small weight, well under half a pound." },
+      { q: "How many ounces is 200 grams?", a: "About 7.05 ounces - divide grams by 28.3495 (grams per ounce). 200g ÷ 28.3495 ≈ 7.05 oz." },
     ],
     related: ["unit-length-converter", "volume-converter", "temperature-converter", "speed-converter"],
   },
