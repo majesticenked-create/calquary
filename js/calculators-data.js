@@ -916,6 +916,42 @@ const CALCULATORS = [
     related: ["square-root-calculator", "cylinder-volume-calculator", "quadratic-formula-calculator"],
   },
   {
+    id: "distance-formula-calculator",
+    category: "math",
+    title: "Distance Formula Calculator",
+    keyword: "distance formula calculator",
+    description: "Calculate the distance between two points on a coordinate plane.",
+    intro: "Enter the coordinates of two points to calculate the straight-line distance and midpoint between them.",
+    fields: [
+      { id: "x1", label: "x1", type: "number", default: 1, step: 0.1 },
+      { id: "y1", label: "y1", type: "number", default: 2, step: 0.1 },
+      { id: "x2", label: "x2", type: "number", default: 4, step: 0.1 },
+      { id: "y2", label: "y2", type: "number", default: 6, step: 0.1 },
+    ],
+    compute: (v) => {
+      const dx = v.x2 - v.x1;
+      const dy = v.y2 - v.y1;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+      const midX = (v.x1 + v.x2) / 2;
+      const midY = (v.y1 + v.y2) / 2;
+      return {
+        primary: { label: "Distance", value: round(distance, 4) },
+        secondary: [
+          { l: "Midpoint", v: `(${round(midX, 4)}, ${round(midY, 4)})` },
+          { l: "Δx, Δy", v: `${round(dx, 4)}, ${round(dy, 4)}` },
+        ],
+        note: "Uses the distance formula d = √((x₂-x₁)² + (y₂-y₁)²), which is the Pythagorean theorem applied to coordinate points.",
+      };
+    },
+    faq: [
+      { q: "What is the distance formula?", a: "d = √((x₂-x₁)² + (y₂-y₁)²) - it finds the straight-line distance between two points (x₁,y₁) and (x₂,y₂) on a coordinate plane." },
+      { q: "How is the distance formula related to the Pythagorean theorem?", a: "It's the same theorem applied to coordinates - the horizontal difference (Δx) and vertical difference (Δy) between the two points form the two legs of a right triangle, and the distance between the points is the hypotenuse." },
+      { q: "What is the distance between (1,2) and (4,6)?", a: "5 - Δx = 4-1 = 3, Δy = 6-2 = 4, so d = √(3² + 4²) = √(9+16) = √25 = 5." },
+      { q: "How do I find the midpoint between two points?", a: "Average the x-coordinates and average the y-coordinates separately: midpoint = ((x₁+x₂)/2, (y₁+y₂)/2). For (1,2) and (4,6), the midpoint is (2.5, 4)." },
+    ],
+    related: ["pythagorean-theorem-calculator", "quadratic-formula-calculator", "slope-calculator"],
+  },
+  {
     id: "rectangular-prism-volume-calculator",
     category: "math",
     title: "Rectangular Prism Volume Calculator",
