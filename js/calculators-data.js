@@ -952,6 +952,40 @@ const CALCULATORS = [
     related: ["pythagorean-theorem-calculator", "quadratic-formula-calculator", "slope-calculator"],
   },
   {
+    id: "trapezoid-area-calculator",
+    category: "math",
+    title: "Trapezoid Area Calculator",
+    keyword: "trapezoid area calculator",
+    description: "Calculate the area and perimeter of a trapezoid.",
+    intro: "Enter the two parallel sides, height, and the two slanted sides to calculate a trapezoid's area and perimeter.",
+    fields: [
+      { id: "a", label: "Parallel side a", type: "number", default: 6, step: 0.1 },
+      { id: "b", label: "Parallel side b", type: "number", default: 10, step: 0.1 },
+      { id: "height", label: "Height", type: "number", default: 4, step: 0.1 },
+      { id: "sideC", label: "Slanted side c (optional)", type: "number", default: 0, step: 0.1 },
+      { id: "sideD", label: "Slanted side d (optional)", type: "number", default: 0, step: 0.1 },
+    ],
+    compute: (v) => {
+      const area = ((v.a + v.b) / 2) * v.height;
+      const hasSides = v.sideC > 0 && v.sideD > 0;
+      const perimeter = hasSides ? v.a + v.b + v.sideC + v.sideD : null;
+      return {
+        primary: { label: "Area", value: round(area, 4) },
+        secondary: [
+          { l: "Perimeter", v: hasSides ? round(perimeter, 4) : "Enter both slanted sides to calculate" },
+        ],
+        note: "Area = ((a + b) / 2) × height, where a and b are the two parallel sides. Perimeter needs all four side lengths, not just the parallel sides and height.",
+      };
+    },
+    faq: [
+      { q: "What is the formula for the area of a trapezoid?", a: "Area = ((a + b) / 2) × h, where a and b are the lengths of the two parallel sides and h is the perpendicular height between them." },
+      { q: "What is the area of a trapezoid with parallel sides 6 and 10 and height 4?", a: "32 - ((6 + 10) / 2) × 4 = 8 × 4 = 32." },
+      { q: "Why do I need all four sides to find the perimeter, but only the parallel sides and height for the area?", a: "Area only depends on the two parallel sides and the distance between them, but perimeter is simply the sum of all four side lengths - including the two non-parallel (slanted) sides, which don't factor into the area formula at all." },
+      { q: "Is a parallelogram a special case of a trapezoid?", a: "Yes, under the inclusive definition most math courses use - a parallelogram is a trapezoid where both pairs of opposite sides are parallel. Some definitions exclude parallelograms, but the area formula works either way since it only requires knowing one pair of parallel sides." },
+    ],
+    related: ["pythagorean-theorem-calculator", "rectangular-prism-volume-calculator", "distance-formula-calculator"],
+  },
+  {
     id: "rectangular-prism-volume-calculator",
     category: "math",
     title: "Rectangular Prism Volume Calculator",
