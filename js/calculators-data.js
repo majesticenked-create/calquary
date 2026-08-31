@@ -320,6 +320,48 @@ const CALCULATORS = [
     related: ["fraction-calculator", "average-calculator", "percentage-calculator"],
   },
   {
+    id: "factor-calculator",
+    category: "math",
+    title: "Factor Calculator",
+    keyword: "factor calculator",
+    description: "Find all factors and the prime factorization of a whole number.",
+    intro: "Enter a positive whole number to list all of its factors and break it down into its prime factorization.",
+    fields: [
+      { id: "number", label: "Number", type: "number", default: 360, step: 1, min: 1 },
+    ],
+    compute: (v) => {
+      const n = Math.round(Math.abs(v.number));
+      const facs = [];
+      for (let i = 1; i * i <= n; i++) {
+        if (n % i === 0) {
+          facs.push(i);
+          if (i !== n / i) facs.push(n / i);
+        }
+      }
+      facs.sort((a, b) => a - b);
+      const primeFactors = [];
+      let rem = n;
+      for (let d = 2; d * d <= rem; d++) {
+        while (rem % d === 0) { primeFactors.push(d); rem /= d; }
+      }
+      if (rem > 1) primeFactors.push(rem);
+      return {
+        primary: { label: "Number of factors", value: facs.length },
+        secondary: [
+          { l: "All factors", v: facs.join(", ") },
+          { l: "Prime factorization", v: primeFactors.length > 1 ? primeFactors.join(" × ") : `${n} (prime)` },
+        ],
+      };
+    },
+    faq: [
+      { q: "What are the factors of 360?", a: "1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, 18, 20, 24, 30, 36, 40, 45, 60, 72, 90, 120, 180, and 360 - 24 factors in total." },
+      { q: "What is the prime factorization of 360?", a: "2 × 2 × 2 × 3 × 3 × 5 (or 2³ × 3² × 5) - breaking a number down into the prime numbers that multiply together to produce it." },
+      { q: "How is this different from the GCD and LCM Calculator?", a: "This tool finds every factor of a single number. The GCD and LCM Calculator instead compares two numbers to find their greatest common divisor and least common multiple - use that one if you're comparing two numbers rather than analyzing one." },
+      { q: "How do you know when a number is prime?", a: "A number is prime if its only factors are 1 and itself - enter it here and if the factor list contains only those two numbers (or the prime factorization shows just the number itself), it's prime." },
+    ],
+    related: ["gcd-lcm-calculator", "fraction-calculator", "percentage-calculator"],
+  },
+  {
     id: "standard-deviation-calculator",
     category: "math",
     title: "Standard Deviation Calculator",
