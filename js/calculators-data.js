@@ -3871,6 +3871,69 @@ const CALCULATORS = [
     related: ["online-timer", "day-of-week-calculator", "date-duration-calculator"],
   },
   {
+    id: "daylight-saving-time-calculator",
+    category: "datetime",
+    title: "Daylight Saving Time Calculator",
+    keyword: "daylight saving time calculator",
+    description: "Find when the clocks change for daylight saving time in any time zone.",
+    intro: "Choose a time zone and year to find the exact dates clocks spring forward and fall back.",
+    fields: [
+      { id: "zone", label: "Time zone", type: "select", default: Intl.DateTimeFormat().resolvedOptions().timeZone, options: [
+        { v: "America/New_York", l: "US Eastern (New York)" }, { v: "America/Chicago", l: "US Central (Chicago)" },
+        { v: "America/Denver", l: "US Mountain (Denver)" }, { v: "America/Los_Angeles", l: "US Pacific (Los Angeles)" },
+        { v: "America/Sao_Paulo", l: "Brazil (São Paulo)" }, { v: "UTC", l: "UTC" },
+        { v: "Europe/London", l: "UK (London)" }, { v: "Europe/Paris", l: "Central Europe (Paris)" },
+        { v: "Europe/Moscow", l: "Russia (Moscow)" }, { v: "Africa/Cairo", l: "Egypt (Cairo)" },
+        { v: "Asia/Dubai", l: "UAE (Dubai)" }, { v: "Asia/Kolkata", l: "India (Kolkata)" },
+        { v: "Asia/Shanghai", l: "China (Shanghai)" }, { v: "Asia/Tokyo", l: "Japan (Tokyo)" },
+        { v: "Australia/Sydney", l: "Australia Eastern (Sydney)" }, { v: "Pacific/Auckland", l: "New Zealand (Auckland)" },
+      ] },
+      { id: "year", label: "Year", type: "number", default: new Date().getFullYear(), step: 1, min: 1970, max: 2100 },
+    ],
+    compute: (v) => {
+      const getOffsetMinutes = (date, zone) => {
+        const zStr = date.toLocaleString("en-US", { timeZone: zone });
+        const uStr = date.toLocaleString("en-US", { timeZone: "UTC" });
+        return (new Date(zStr) - new Date(uStr)) / 60000;
+      };
+      const transitions = [];
+      let prevOffset = null;
+      for (let d = 1; d <= 366; d++) {
+        const date = new Date(Date.UTC(v.year, 0, d, 12));
+        if (date.getUTCFullYear() !== v.year) break;
+        const off = getOffsetMinutes(date, v.zone);
+        if (prevOffset !== null && off !== prevOffset) {
+          transitions.push({ date: new Date(Date.UTC(v.year, 0, d)), springsForward: off > prevOffset });
+        }
+        prevOffset = off;
+      }
+      if (transitions.length === 0) {
+        return {
+          primary: { label: "Daylight saving time", value: "Not observed" },
+          secondary: [{ l: "Time zone", v: v.zone }],
+          note: "This time zone doesn't change its clocks for daylight saving time.",
+        };
+      }
+      const fmt = (d) => d.toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" });
+      const springForward = transitions.find((t) => t.springsForward);
+      const fallBack = transitions.find((t) => !t.springsForward);
+      return {
+        primary: { label: "Clocks spring forward", value: springForward ? fmt(springForward.date) : "N/A" },
+        secondary: [
+          { l: "Clocks fall back", v: fallBack ? fmt(fallBack.date) : "N/A" },
+        ],
+        note: "Clocks spring forward (lose an hour) at the start of daylight saving time, and fall back (gain an hour) when it ends - based on this time zone's actual observed rules for the selected year.",
+      };
+    },
+    faq: [
+      { q: "When do clocks change for daylight saving time in the US?", a: "US clocks spring forward on the second Sunday of March and fall back on the first Sunday of November - select a US zone above to see the exact dates for any year." },
+      { q: "When does the UK/EU change clocks?", a: "The UK and EU change clocks on the last Sunday of March (spring forward) and the last Sunday of October (fall back) - different dates than the US, which is why the time difference between the US and Europe shifts by an hour for a few weeks each spring and fall." },
+      { q: "Why do some time zones not observe daylight saving time?", a: "Many regions near the equator skip it since day length barely changes across seasons there, so shifting clocks wouldn't produce any meaningful benefit. Some other regions (like most of Asia) have also chosen not to observe it for various historical or practical reasons." },
+      { q: "Which direction is 'spring forward' - do I lose or gain an hour?", a: "Spring forward means clocks move ahead one hour (e.g., 2:00 AM becomes 3:00 AM), so you lose an hour of sleep that night. Fall back moves clocks back one hour, so you gain an hour." },
+    ],
+    related: ["time-zone-converter", "online-timer", "day-of-week-calculator"],
+  },
+  {
     id: "roman-numeral-converter",
     category: "math",
     title: "Roman Numeral Converter",
