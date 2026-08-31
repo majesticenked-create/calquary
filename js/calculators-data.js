@@ -3511,6 +3511,28 @@ const CALCULATORS = [
     related: ["online-timer", "time-add-calculator", "military-time-converter"],
   },
   {
+    id: "online-stopwatch",
+    category: "datetime",
+    title: "Online Stopwatch",
+    keyword: "online stopwatch",
+    description: "A free stopwatch that runs in your browser - start, lap, and reset with tenth-of-a-second precision.",
+    intro: "Click Start to begin timing - use Lap to record split times without stopping the clock, and Reset to clear it.",
+    // Live widget, same pattern as online-timer — see initOnlineStopwatch
+    // in js/engine.js. compute() only exists for the card-preview readout.
+    fields: [],
+    compute: () => ({
+      primary: { label: "Elapsed time", value: "00:00.0" },
+      secondary: [{ l: "Controls", v: "Start / Lap / Reset" }],
+    }),
+    faq: [
+      { q: "How precise is this stopwatch?", a: "It displays to a tenth of a second, updated continuously in your browser - accurate enough for everyday timing, though very high-precision athletic timing typically needs dedicated hardware." },
+      { q: "What does the Lap button do?", a: "It records a split time without stopping the overall clock - each lap shows both the time since the previous lap and the total elapsed time, listed most recent first." },
+      { q: "Does the stopwatch keep running if I switch browser tabs?", a: "Yes - it keeps timing in the background as long as this tab stays open, even if it's not the active tab. Closing the tab or browser stops it." },
+      { q: "Can I pause and resume instead of stopping completely?", a: "Yes - the Start button toggles to \"Stop\" while running; clicking it again pauses the clock, and clicking \"Resume\" continues from where it left off. Use Reset to clear the time back to zero." },
+    ],
+    related: ["online-timer", "online-alarm-clock", "time-duration-calculator"],
+  },
+  {
     id: "random-date-generator",
     category: "datetime",
     title: "Random Date Generator",
@@ -4775,6 +4797,36 @@ const CALCULATORS = [
       { q: "Can I use this for a raffle or giveaway drawing?", a: "Yes - this generator is well-suited for informal drawings like picking a raffle winner or random giveaway entry from a numbered list. For anything with legal or regulatory requirements around fairness (like a licensed lottery), use a certified random number source instead." },
     ],
     related: ["password-generator", "word-counter", "gcd-lcm-calculator"],
+  },
+  {
+    id: "coin-flipper",
+    category: "text",
+    title: "Coin Flip",
+    keyword: "flip a coin",
+    description: "Flip one or more virtual coins instantly.",
+    intro: "Choose how many coins to flip, then flip - each one lands heads or tails with equal odds.",
+    fields: [
+      { id: "numFlips", label: "Number of coins", type: "number", default: 1, step: 1, min: 1, max: 100 },
+    ],
+    compute: (v) => {
+      const numFlips = Math.max(1, Math.min(100, Math.round(v.numFlips)));
+      const flips = Array.from({ length: numFlips }, () => (Math.random() < 0.5 ? "Heads" : "Tails"));
+      const heads = flips.filter((f) => f === "Heads").length;
+      return {
+        primary: { label: numFlips === 1 ? "Result" : "Results", value: numFlips === 1 ? flips[0] : flips.join(", ") },
+        secondary: numFlips > 1 ? [
+          { l: "Heads", v: heads },
+          { l: "Tails", v: numFlips - heads },
+        ] : [],
+        note: "Click Calculate again to flip again.",
+      };
+    },
+    faq: [
+      { q: "Is this coin flip actually random?", a: "It uses your browser's random number generator, giving heads and tails an equal 50/50 chance on every flip - fine for games and casual decisions, though not certified for regulated gambling." },
+      { q: "Can I flip multiple coins at once?", a: "Yes - set \"number of coins\" to flip up to 100 at once, and the result shows each individual outcome plus the total heads/tails count." },
+      { q: "Why did I get 7 heads in a row - is that broken?", a: "No - each flip is independent, so streaks happen naturally. A run of several heads (or tails) in a row is expected occasionally with a fair 50/50 coin, especially across many flips." },
+    ],
+    related: ["dice-roller", "random-number-generator", "group-randomizer"],
   },
   {
     id: "dice-roller",

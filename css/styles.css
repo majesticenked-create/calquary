@@ -1039,6 +1039,21 @@ a.locale-item:hover { color: var(--brand); background: var(--paper-mint); text-d
   gap: var(--space-3);
 }
 
+.stopwatch-laps {
+  max-width: 320px;
+  margin: var(--space-4) auto 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.stopwatch-laps li {
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+
 .result-table-wrap {
   margin-top: var(--space-4);
   max-height: 420px;

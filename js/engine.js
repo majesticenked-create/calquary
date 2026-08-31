@@ -474,6 +474,100 @@ function initOnlineAlarm(fieldsId, resultId, formId) {
   tick();
 }
 
+function initOnlineStopwatch(fieldsId, resultId, formId) {
+  const form = document.getElementById(formId);
+  const fieldsContainer = document.getElementById(fieldsId);
+  const resultPanel = document.getElementById(resultId);
+  if (!form || !fieldsContainer || !resultPanel) return;
+  form.style.display = "none";
+  resultPanel.classList.remove("visible");
+
+  const widget = document.createElement("div");
+  widget.className = "timer-widget";
+  widget.innerHTML = `
+    <div class="timer-display" id="stopwatch-display">00:00.0</div>
+    <div class="timer-actions">
+      <button type="button" id="stopwatch-start" class="btn-primary">Start</button>
+      <button type="button" id="stopwatch-lap" class="btn-ghost" disabled>Lap</button>
+      <button type="button" id="stopwatch-reset" class="btn-ghost">Reset</button>
+    </div>
+    <ol id="stopwatch-laps" class="stopwatch-laps"></ol>
+  `;
+  form.parentElement.insertBefore(widget, form);
+
+  const display = widget.querySelector("#stopwatch-display");
+  const startBtn = widget.querySelector("#stopwatch-start");
+  const lapBtn = widget.querySelector("#stopwatch-lap");
+  const resetBtn = widget.querySelector("#stopwatch-reset");
+  const lapsList = widget.querySelector("#stopwatch-laps");
+
+  let running = false;
+  let startedAt = 0;
+  let elapsedBeforeStart = 0;
+  let intervalId = null;
+  let lapCount = 0;
+  let lastLapElapsed = 0;
+
+  function format(ms) {
+    const totalTenths = Math.floor(ms / 100);
+    const tenths = totalTenths % 10;
+    const totalSeconds = Math.floor(ms / 1000);
+    const s = totalSeconds % 60;
+    const m = Math.floor(totalSeconds / 60);
+    return `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}.${tenths}`;
+  }
+
+  function currentElapsed() {
+    return running ? elapsedBeforeStart + (Date.now() - startedAt) : elapsedBeforeStart;
+  }
+
+  function render() {
+    display.textContent = format(currentElapsed());
+  }
+
+  startBtn.addEventListener("click", () => {
+    if (running) {
+      running = false;
+      elapsedBeforeStart = currentElapsed();
+      clearInterval(intervalId);
+      intervalId = null;
+      startBtn.textContent = "Resume";
+      lapBtn.disabled = true;
+    } else {
+      running = true;
+      startedAt = Date.now();
+      intervalId = setInterval(render, 100);
+      startBtn.textContent = "Stop";
+      lapBtn.disabled = false;
+    }
+  });
+
+  lapBtn.addEventListener("click", () => {
+    lapCount += 1;
+    const elapsed = currentElapsed();
+    const lapTime = elapsed - lastLapElapsed;
+    lastLapElapsed = elapsed;
+    const li = document.createElement("li");
+    li.textContent = `Lap ${lapCount}: ${format(lapTime)} (total ${format(elapsed)})`;
+    lapsList.insertBefore(li, lapsList.firstChild);
+  });
+
+  resetBtn.addEventListener("click", () => {
+    running = false;
+    clearInterval(intervalId);
+    intervalId = null;
+    elapsedBeforeStart = 0;
+    lapCount = 0;
+    lastLapElapsed = 0;
+    startBtn.textContent = "Start";
+    lapBtn.disabled = true;
+    lapsList.innerHTML = "";
+    render();
+  });
+
+  render();
+}
+
 function initCalculator(calcId, opts = {}) {
   const {
     fieldsId = "calc-fields",
@@ -489,6 +583,10 @@ function initCalculator(calcId, opts = {}) {
   }
   if (calcId === "online-alarm-clock") {
     initOnlineAlarm(fieldsId, resultId, formId);
+    return;
+  }
+  if (calcId === "online-stopwatch") {
+    initOnlineStopwatch(fieldsId, resultId, formId);
     return;
   }
 

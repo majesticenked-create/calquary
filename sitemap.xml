@@ -134,7 +134,7 @@
   </url>
   <url>
     <loc>https://calquary.com/category/text.html</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/text.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/text.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/text.html"/>
@@ -739,6 +739,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/online-alarm-clock.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/online-stopwatch.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/online-stopwatch.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/online-stopwatch.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/random-date-generator.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/random-date-generator.html"/>
@@ -947,6 +953,12 @@
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/random-number-generator.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/random-number-generator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/coin-flipper.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/coin-flipper.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/coin-flipper.html"/>
   </url>
   <url>
     <loc>https://calquary.com/tool/dice-roller.html</loc>
@@ -1214,7 +1226,7 @@
   </url>
   <url>
     <loc>https://calquary.com/es/category/text.html</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/text.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/text.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/text.html"/>
@@ -1586,7 +1598,7 @@
   </url>
   <url>
     <loc>https://calquary.com/fr/category/text.html</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/text.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/text.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/text.html"/>
@@ -1958,7 +1970,7 @@
   </url>
   <url>
     <loc>https://calquary.com/de/category/text.html</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/text.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/text.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/text.html"/>
@@ -2330,7 +2342,7 @@
   </url>
   <url>
     <loc>https://calquary.com/pt/category/text.html</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/text.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/text.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/text.html"/>
@@ -2702,7 +2714,7 @@
   </url>
   <url>
     <loc>https://calquary.com/it/category/text.html</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/text.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/text.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/text.html"/>
@@ -3074,7 +3086,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ja/category/text.html</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/text.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/text.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/text.html"/>
