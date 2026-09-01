@@ -415,6 +415,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/slope-calculator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/sector-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/sector-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/sector-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/grade-gradient-calculator.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/grade-gradient-calculator.html"/>
@@ -829,6 +835,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/speed-distance-time-calculator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/projectile-motion-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/projectile-motion-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/projectile-motion-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/pregnancy-due-date-calculator.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/pregnancy-due-date-calculator.html"/>
@@ -1069,6 +1081,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/distance-modulus-calculator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/earthquake-magnitude-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/earthquake-magnitude-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/earthquake-magnitude-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/pressure-altitude-calculator.html</loc>
     <lastmod>2026-09-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/pressure-altitude-calculator.html"/>
@@ -1171,6 +1189,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/fuel-economy-converter.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/gear-ratio-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/gear-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/gear-ratio-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/weather-comfort-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/weather-comfort-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/weather-comfort-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/word-counter.html</loc>
     <lastmod>2026-08-27</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/word-counter.html"/>
@@ -1259,6 +1289,12 @@
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/word-frequency-counter.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/word-frequency-counter.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/url-encoder-decoder.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/url-encoder-decoder.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/url-encoder-decoder.html"/>
   </url>
   <url>
     <loc>https://calquary.com/tool/json-compare.html</loc>

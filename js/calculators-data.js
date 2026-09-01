@@ -1637,6 +1637,40 @@ const CALCULATORS = [
     related: ["quadratic-formula-calculator", "ratio-calculator", "percentage-change-calculator"],
   },
   {
+    id: "sector-calculator",
+    category: "math",
+    title: "Circle Sector Calculator",
+    keyword: "sector calculator",
+    description: "Calculate the arc length and area of a circle sector (pie-slice) from radius and angle.",
+    intro: "Enter a circle's radius and the sector's angle to calculate its arc length and area.",
+    fields: [
+      { id: "radius", label: "Radius", type: "number", default: 10, step: 0.1, min: 0 },
+      { id: "angle", label: "Angle", type: "number", unit: "degrees", default: 90, step: 0.1, min: 0, max: 360 },
+    ],
+    compute: (v) => {
+      const angleRad = v.angle * (Math.PI / 180);
+      const arcLength = v.radius * angleRad;
+      const area = 0.5 * v.radius * v.radius * angleRad;
+      const fullCircleArea = Math.PI * v.radius * v.radius;
+      const percentOfCircle = (v.angle / 360) * 100;
+      return {
+        primary: { label: "Arc length", value: round(arcLength, 4) },
+        secondary: [
+          { l: "Sector area", v: round(area, 4) },
+          { l: "Percent of full circle", v: `${round(percentOfCircle, 2)}%` },
+        ],
+        note: "Arc length = radius × angle (in radians). Sector area = 0.5 × radius² × angle (in radians). This tool converts your angle from degrees automatically.",
+      };
+    },
+    faq: [
+      { q: "What is the arc length of a 90° sector with radius 10?", a: "About 15.71 - convert 90° to radians (π/2 ≈ 1.5708), then arc length = 10 × 1.5708 ≈ 15.71." },
+      { q: "What is the area of a 90° sector with radius 10?", a: "About 78.54 - area = 0.5 × 10² × 1.5708 (90° in radians) ≈ 78.54, which is exactly 1/4 of the full circle's area (π × 10² ≈ 314.16), matching the 90°/360° = 25% fraction." },
+      { q: "Why does the formula need the angle in radians, not degrees?", a: "Radians directly relate arc length to radius (an angle of 1 radian subtends an arc equal to the radius), which is what makes the simple formulas arc length = r×θ and area = 0.5×r²×θ work - degrees don't have that direct relationship, so this calculator converts for you automatically." },
+      { q: "How is a sector different from a segment?", a: "A sector is the full \"pie slice\" bounded by two radii and the arc between them. A segment is just the region between a chord (straight line connecting the two arc endpoints) and the arc itself - a segment is always smaller than its corresponding sector." },
+    ],
+    related: ["pythagorean-theorem-calculator", "trapezoid-area-calculator", "cylinder-volume-calculator"],
+  },
+  {
     id: "grade-gradient-calculator",
     category: "math",
     title: "Grade / Gradient Calculator",
@@ -4226,6 +4260,42 @@ const CALCULATORS = [
     related: ["pace-calculator", "unit-length-converter", "fuel-economy-converter"],
   },
   {
+    id: "projectile-motion-calculator",
+    category: "math",
+    title: "Projectile Motion Calculator",
+    keyword: "projectile motion calculator",
+    description: "Calculate the flight time, maximum height, and range of a projectile launched at an angle.",
+    intro: "Enter the launch speed and angle to calculate flight time, maximum height, and horizontal range, ignoring air resistance.",
+    fields: [
+      { id: "velocity", label: "Launch velocity", type: "number", unit: "m/s", default: 20, step: 0.1 },
+      { id: "angle", label: "Launch angle", type: "number", unit: "degrees", default: 45, step: 0.1, min: 0, max: 90 },
+      { id: "gravity", label: "Gravity", type: "number", unit: "m/s²", default: 9.81, step: 0.01 },
+    ],
+    compute: (v) => {
+      const angleRad = v.angle * (Math.PI / 180);
+      const vx = v.velocity * Math.cos(angleRad);
+      const vy = v.velocity * Math.sin(angleRad);
+      const flightTime = (2 * vy) / v.gravity;
+      const maxHeight = (vy * vy) / (2 * v.gravity);
+      const range = vx * flightTime;
+      return {
+        primary: { label: "Range", value: `${round(range, 3)} m` },
+        secondary: [
+          { l: "Flight time", v: `${round(flightTime, 3)} s` },
+          { l: "Maximum height", v: `${round(maxHeight, 3)} m` },
+        ],
+        note: "Ignores air resistance. Range = (vₓ × flight time). Flight time = 2×v_y÷g. Max height = v_y²÷(2g), where vₓ and v_y are the horizontal and vertical components of launch velocity.",
+      };
+    },
+    faq: [
+      { q: "What angle gives the maximum range?", a: "45° - for a given launch speed on flat ground with no air resistance, 45° splits the velocity evenly between horizontal and vertical components in a way that maximizes horizontal distance. Any other angle (holding speed and ground level fixed) produces a shorter range." },
+      { q: "What is the range of a projectile launched at 20 m/s at 45°?", a: "About 40.77 m - vₓ = vy = 20×cos(45°) = 20×sin(45°) ≈ 14.14 m/s, flight time = 2×14.14÷9.81 ≈ 2.88 s, range = 14.14×2.88 ≈ 40.77 m." },
+      { q: "Why do 30° and 60° give the same range?", a: "Complementary launch angles (angles that add up to 90°) always produce the same range on flat ground, because the range formula depends on sin(2×angle), and sin(2×30°) = sin(60°) equals sin(2×60°) = sin(120°) - both are the same value." },
+      { q: "Does this account for air resistance?", a: "No - this uses ideal projectile motion (only gravity acting on the object), which is accurate for dense, compact objects moving at moderate speeds over short distances, but increasingly diverges from reality for light or fast-moving objects where air drag matters." },
+    ],
+    related: ["pythagorean-theorem-calculator", "speed-distance-time-calculator", "vector-calculator"],
+  },
+  {
     id: "pregnancy-due-date-calculator",
     category: "health",
     title: "Pregnancy Due Date Calculator",
@@ -5778,6 +5848,40 @@ const CALCULATORS = [
     related: ["sunrise-sunset-calculator", "square-root-calculator", "z-score-calculator"],
   },
   {
+    id: "earthquake-magnitude-calculator",
+    category: "math",
+    title: "Earthquake Magnitude Energy Calculator",
+    keyword: "earthquake magnitude calculator",
+    description: "Compare the energy released by two earthquake magnitudes.",
+    intro: "Enter two earthquake magnitudes to compare how much more energy the larger one releases.",
+    fields: [
+      { id: "magnitude1", label: "Magnitude 1", type: "number", default: 6.0, step: 0.1 },
+      { id: "magnitude2", label: "Magnitude 2", type: "number", default: 7.0, step: 0.1 },
+    ],
+    compute: (v) => {
+      const energy1 = Math.pow(10, 1.5 * v.magnitude1 + 4.8);
+      const energy2 = Math.pow(10, 1.5 * v.magnitude2 + 4.8);
+      const ratio = energy2 / energy1;
+      const amplitudeRatio = Math.pow(10, v.magnitude2 - v.magnitude1);
+      return {
+        primary: { label: "Energy ratio (M2 ÷ M1)", value: `${round(ratio, 2)}×` },
+        secondary: [
+          { l: `Energy at M${v.magnitude1}`, v: `${energy1.toExponential(3)} J` },
+          { l: `Energy at M${v.magnitude2}`, v: `${energy2.toExponential(3)} J` },
+          { l: "Amplitude ratio", v: `${round(amplitudeRatio, 2)}×` },
+        ],
+        note: "Uses the Gutenberg-Richter relation: energy (joules) = 10^(1.5×magnitude + 4.8). Each whole-number increase in magnitude releases about 31.6× more energy, and produces 10× the ground-motion amplitude.",
+      };
+    },
+    faq: [
+      { q: "How much more energy does a magnitude 7 earthquake release than a magnitude 6?", a: "About 31.6 times more - each whole-number increase in the Richter/moment magnitude scale corresponds to roughly 31.6× more released energy, following the formula energy = 10^(1.5×M + 4.8) joules." },
+      { q: "Why does a 1-point magnitude increase mean 10× the shaking but 31.6× the energy?", a: "The magnitude scale is defined logarithmically on ground-motion amplitude (10× per whole point), but energy scales with amplitude to the 1.5 power, not 1-to-1 - so a 10× amplitude increase corresponds to 10^1.5 ≈ 31.6× more energy." },
+      { q: "What does the Gutenberg-Richter energy formula assume?", a: "It's an empirical relationship calibrated to typical earthquake source characteristics - it gives a good general estimate but the exact energy of a specific earthquake also depends on factors like fault geometry, depth, and rupture duration that aren't captured by magnitude alone." },
+      { q: "Is this the Richter scale or the moment magnitude scale?", a: "The energy formula works the same way for both, since modern earthquake reporting mostly uses moment magnitude (Mw), which was designed to align closely with the original Richter scale's numbers for most earthquakes while working better for very large events." },
+    ],
+    related: ["pressure-altitude-calculator", "sun-position-calculator", "half-life-calculator"],
+  },
+  {
     id: "pressure-altitude-calculator",
     category: "math",
     title: "Pressure Altitude Calculator",
@@ -6413,6 +6517,84 @@ const CALCULATORS = [
     ],
     related: ["unit-length-converter", "pressure-converter", "volume-converter"],
   },
+  {
+    id: "gear-ratio-calculator",
+    category: "conversions",
+    title: "Bike Gear Ratio Calculator",
+    keyword: "gear ratio calculator",
+    description: "Calculate gear inches and speed from wheel size, chainring, cog, and cadence.",
+    intro: "Enter your wheel diameter, chainring and cog teeth, and pedaling cadence to calculate gear inches and resulting speed.",
+    fields: [
+      { id: "wheelDiameter", label: "Wheel diameter", type: "number", unit: "in", default: 27, step: 0.1 },
+      { id: "chainring", label: "Chainring teeth", type: "number", default: 50, step: 1, min: 1 },
+      { id: "cog", label: "Rear cog teeth", type: "number", default: 14, step: 1, min: 1 },
+      { id: "cadence", label: "Cadence", type: "number", unit: "rpm", default: 90, step: 1 },
+    ],
+    compute: (v) => {
+      const gearInches = v.wheelDiameter * (v.chainring / v.cog);
+      const circumferenceIn = gearInches * Math.PI;
+      const speedInPerMin = circumferenceIn * v.cadence;
+      const speedMph = (speedInPerMin * 60) / 63360;
+      const speedKph = speedMph * 1.60934;
+      return {
+        primary: { label: "Gear inches", value: round(gearInches, 2) },
+        secondary: [
+          { l: "Speed", v: `${round(speedMph, 2)} mph` },
+          { l: "Speed (metric)", v: `${round(speedKph, 2)} km/h` },
+        ],
+        note: "Gear inches = wheel diameter × (chainring teeth ÷ cog teeth). Speed assumes no slipping and constant cadence: distance per pedal revolution = gear inches × π.",
+      };
+    },
+    faq: [
+      { q: "What are 'gear inches'?", a: "A standard way to compare bike gearing across different wheel sizes and gear combinations - it's the effective diameter (in inches) of the wheel if it were driven directly by the pedals with a 1:1 ratio, calculated as wheel diameter × (chainring teeth ÷ cog teeth)." },
+      { q: "How do I calculate speed from cadence and gearing?", a: "Each pedal revolution moves the bike forward by (gear inches × π) - multiply that by your cadence (revolutions per minute) to get distance per minute, then convert to your preferred speed unit." },
+      { q: "What's a typical gear-inch range for road cycling?", a: "Roughly 20-30 gear inches for steep climbs up to 100-130+ gear inches for fast flat riding or descents, depending on rider strength and terrain - a wide range across a bike's full gear set covers climbing to sprinting." },
+      { q: "Does this account for real-world factors like tire slip or drivetrain loss?", a: "No - it's an idealized calculation assuming no wheel slip and perfectly efficient power transfer, which is a reasonable approximation for most road and trail conditions but won't be perfectly exact." },
+    ],
+    related: ["speed-distance-time-calculator", "pace-calculator", "unit-length-converter"],
+  },
+  {
+    id: "weather-comfort-calculator",
+    category: "conversions",
+    title: "Dew Point, Heat Index & Wind Chill Calculator",
+    keyword: "heat index calculator",
+    description: "Calculate dew point, heat index, and wind chill from temperature, humidity, and wind speed.",
+    intro: "Enter temperature, relative humidity, and wind speed to calculate dew point, heat index, and wind chill.",
+    fields: [
+      { id: "tempF", label: "Temperature", type: "number", unit: "°F", default: 95, step: 0.1 },
+      { id: "humidity", label: "Relative humidity", type: "number", unit: "%", default: 60, step: 1, min: 0, max: 100 },
+      { id: "windMph", label: "Wind speed", type: "number", unit: "mph", default: 15, step: 0.1, min: 0 },
+    ],
+    compute: (v) => {
+      const tempC = (v.tempF - 32) * (5 / 9);
+      const a = 17.27, b = 237.7;
+      const alpha = (a * tempC) / (b + tempC) + Math.log(v.humidity / 100);
+      const dewPointC = (b * alpha) / (a - alpha);
+      const dewPointF = dewPointC * (9 / 5) + 32;
+      const T = v.tempF, RH = v.humidity;
+      const heatIndex = -42.379 + 2.04901523 * T + 10.14333127 * RH - 0.22475541 * T * RH
+        - 0.00683783 * T * T - 0.05481717 * RH * RH + 0.00122874 * T * T * RH
+        + 0.00085282 * T * RH * RH - 0.00000199 * T * T * RH * RH;
+      const heatIndexValid = T >= 80 && RH >= 40;
+      const windChill = 35.74 + 0.6215 * T - 35.75 * Math.pow(v.windMph, 0.16) + 0.4275 * T * Math.pow(v.windMph, 0.16);
+      const windChillValid = T <= 50 && v.windMph >= 3;
+      return {
+        primary: { label: "Dew point", value: `${round(dewPointF, 1)}°F` },
+        secondary: [
+          { l: "Heat index", v: heatIndexValid ? `${round(heatIndex, 1)}°F` : "N/A (needs 80°F+ and 40%+ humidity)" },
+          { l: "Wind chill", v: windChillValid ? `${round(windChill, 1)}°F` : "N/A (needs ≤50°F and 3+ mph wind)" },
+        ],
+        note: "Dew point uses the Magnus formula. Heat index uses the NWS Rothfusz regression (valid roughly 80°F+/40%+ RH). Wind chill uses the NWS formula (valid roughly ≤50°F with wind ≥3 mph). Outside those ranges, the respective figure isn't meaningful and is shown as N/A.",
+      };
+    },
+    faq: [
+      { q: "What is dew point?", a: "The temperature air would need to cool to for it to become fully saturated with the moisture it already contains, causing condensation (dew). Higher dew points feel more humid and muggy regardless of the actual temperature reading." },
+      { q: "What is heat index?", a: "The \"feels like\" temperature when humidity is factored in with air temperature - high humidity reduces how effectively sweat evaporates to cool your body, making hot weather feel hotter than the thermometer alone suggests." },
+      { q: "What is wind chill?", a: "The \"feels like\" temperature when wind is factored in with cold air - wind strips away the thin layer of warmer air your body naturally holds near your skin, making cold weather feel colder than the thermometer alone suggests." },
+      { q: "Why does the calculator sometimes show heat index or wind chill as N/A?", a: "Both formulas are empirical regressions only validated within specific conditions - heat index needs warm, humid conditions (roughly 80°F+ with 40%+ humidity) and wind chill needs cold, breezy conditions (roughly 50°F or below with wind of at least 3 mph). Outside those ranges the formulas can produce misleading results, so they're hidden instead." },
+    ],
+    related: ["temperature-converter", "sunrise-sunset-calculator", "pressure-altitude-calculator"],
+  },
 
   // ---------------- TEXT & DIGITAL ----------------
   {
@@ -6880,6 +7062,39 @@ const CALCULATORS = [
       { q: "What is word frequency analysis used for?", a: "It's used for SEO keyword density checks, writing style analysis, and finding overused words or phrases in a document." },
       { q: "Does this count 'the' and 'The' as the same word?", a: "Yes - word frequency counting is case-insensitive by default here, so capitalization at the start of a sentence doesn't split a word's count across two separate entries." },
       { q: "How can word frequency analysis help with SEO or writing?", a: "Word frequency analysis reveals unintentional repetition, helps confirm target keywords appear at a natural density rather than being stuffed, and can surface overused filler words that weaken writing - useful for both editing prose and checking on-page SEO content before publishing." },
+    ],
+    related: ["word-counter", "text-to-slug-generator", "case-converter"],
+  },
+  {
+    id: "url-encoder-decoder",
+    category: "text",
+    title: "URL Encoder / Decoder",
+    keyword: "url encoder decoder",
+    description: "Encode or decode text for safe use in URLs.",
+    intro: "Enter text or a URL-encoded string, choose a direction, and get the encoded or decoded result instantly.",
+    fields: [
+      { id: "text", label: "Text", type: "textarea", default: "https://example.com/search?q=hello world&lang=en" },
+      { id: "mode", label: "Mode", type: "select", default: "encode", options: [
+        { v: "encode", l: "Encode" }, { v: "decode", l: "Decode" },
+      ] },
+    ],
+    compute: (v) => {
+      const text = v.text || "";
+      try {
+        const result = v.mode === "encode" ? encodeURIComponent(text) : decodeURIComponent(text);
+        return {
+          primary: { label: v.mode === "encode" ? "Encoded" : "Decoded", value: result },
+          secondary: [{ l: "Original length", v: text.length }, { l: "Result length", v: result.length }],
+        };
+      } catch (err) {
+        return { primary: { label: "Invalid input", value: "Couldn't decode - check for a malformed % sequence" }, secondary: [], note: "Decoding fails if the text contains a % not followed by a valid two-digit hex code." };
+      }
+    },
+    faq: [
+      { q: "What does URL encoding do?", a: "Converts characters that aren't safe in a URL (spaces, &, ?, #, and others) into a percent-sign followed by their hex code - for example, a space becomes %20 - so the text can be safely included in a URL, like a search query or parameter value." },
+      { q: "Why does a space become %20 instead of a plus sign (+)?", a: "Both are used in practice: %20 is the standard percent-encoding for a space anywhere in a URL, while + specifically means \"space\" only within URL query strings (form-encoded data), a legacy convention from HTML forms. This tool uses %20, the more universally correct encoding." },
+      { q: "What happens if I try to decode text that isn't actually encoded?", a: "Plain text without any % sequences decodes back to itself unchanged, since there's nothing to convert - decoding only fails if the text contains an incomplete or invalid % sequence (like a % not followed by two valid hex digits)." },
+      { q: "Is this the same as encodeURIComponent() in JavaScript?", a: "Yes - encoding uses exactly that function, which is the standard way to safely encode a single value (like a query parameter) for use in a URL, as opposed to encodeURI() which is meant for encoding a whole URL and leaves characters like / and : untouched." },
     ],
     related: ["word-counter", "text-to-slug-generator", "case-converter"],
   },
