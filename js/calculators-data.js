@@ -1745,6 +1745,41 @@ const CALCULATORS = [
     related: ["molecular-weight-calculator", "percentage-calculator", "square-root-calculator"],
   },
   {
+    id: "solubility-product-calculator",
+    category: "math",
+    title: "Solubility Product (Ksp) Calculator",
+    keyword: "solubility product calculator",
+    description: "Calculate the solubility product constant (Ksp) from molar solubility and ion stoichiometry.",
+    intro: "Enter the compound's molar solubility and the number of cations and anions it releases per formula unit to calculate Ksp.",
+    fields: [
+      { id: "solubility", label: "Molar solubility (s)", type: "number", unit: "mol/L", default: 0.00021, step: 0.00001 },
+      { id: "cationCoeff", label: "Cations per formula unit (x)", type: "number", default: 1, step: 1, min: 1 },
+      { id: "anionCoeff", label: "Anions per formula unit (y)", type: "number", default: 2, step: 1, min: 1 },
+    ],
+    compute: (v) => {
+      const x = Math.round(v.cationCoeff);
+      const y = Math.round(v.anionCoeff);
+      const cationConc = x * v.solubility;
+      const anionConc = y * v.solubility;
+      const ksp = Math.pow(cationConc, x) * Math.pow(anionConc, y);
+      return {
+        primary: { label: "Ksp", value: ksp.toExponential(4) },
+        secondary: [
+          { l: "[Cation]", v: `${cationConc.toExponential(4)} mol/L` },
+          { l: "[Anion]", v: `${anionConc.toExponential(4)} mol/L` },
+        ],
+        note: `For a compound AₓBᵧ dissolving into x cations and y anions: Ksp = [cation]^x × [anion]^y, where [cation] = x×s and [anion] = y×s at saturation.`,
+      };
+    },
+    faq: [
+      { q: "What is the solubility product constant (Ksp)?", a: "An equilibrium constant for a sparingly soluble ionic compound, equal to the product of its dissolved ion concentrations (each raised to its stoichiometric coefficient) at saturation - a lower Ksp means the compound is less soluble." },
+      { q: "How do I calculate Ksp for CaF₂ (calcium fluoride)?", a: "CaF₂ dissolves as 1 Ca²⁺ and 2 F⁻ per formula unit, so with molar solubility s: [Ca²⁺] = s, [F⁻] = 2s, and Ksp = s × (2s)² = 4s³. Enter cation coefficient 1 and anion coefficient 2 above." },
+      { q: "Why is the anion concentration multiplied by its coefficient before being raised to a power?", a: "Each formula unit that dissolves releases y anions, not just 1, so the anion concentration at saturation is y times the molar solubility - that scaled concentration is what gets raised to the power y in the Ksp expression, following the reaction stoichiometry." },
+      { q: "Does this work for any compound, or just 1:1 and 1:2 ratios?", a: "It works for any x:y cation-to-anion ratio - enter the actual stoichiometric coefficients from the compound's formula (like 2 and 3 for a compound like Al₂S₃) and the calculator applies the same general formula." },
+    ],
+    related: ["molecular-weight-calculator", "chemical-equation-balancer", "limiting-reagent-calculator"],
+  },
+  {
     id: "limiting-reagent-calculator",
     category: "math",
     title: "Limiting Reagent Calculator",
@@ -2271,6 +2306,55 @@ const CALCULATORS = [
       { q: "Is this a 'time value of money' (TVM) calculator?", a: "Yes - this calculator solves for future value given a starting balance, regular contributions, interest rate, and time frame, which is the core time value of money calculation used in savings and investment planning." },
     ],
     related: ["compound-interest-calculator", "mortgage-calculator", "loan-calculator"],
+  },
+  {
+    id: "tvm-solver",
+    category: "finance",
+    title: "TVM Solver (PV, FV, PMT)",
+    keyword: "tvm solver",
+    description: "Solve for present value, future value, or payment in a time value of money problem.",
+    intro: "Choose what to solve for, then enter the other known values - rate per period, number of periods, and the known amounts.",
+    fields: [
+      { id: "solveFor", label: "Solve for", type: "select", default: "fv", options: [
+        { v: "fv", l: "Future value (FV)" }, { v: "pv", l: "Present value (PV)" }, { v: "pmt", l: "Payment (PMT)" },
+      ] },
+      { id: "rate", label: "Rate per period", type: "number", unit: "%", default: 0.5, step: 0.01 },
+      { id: "nper", label: "Number of periods", type: "number", default: 60, step: 1, min: 0 },
+      { id: "pv", label: "Present value (PV)", type: "number", unit: "$", default: 1000, step: 10 },
+      { id: "pmt", label: "Payment per period (PMT)", type: "number", unit: "$", default: -200, step: 10 },
+      { id: "fv", label: "Future value (FV)", type: "number", unit: "$", default: 0, step: 10 },
+    ],
+    compute: (v) => {
+      const r = v.rate / 100;
+      const n = v.nper;
+      const factor = Math.pow(1 + r, n);
+      let result, label;
+      if (v.solveFor === "fv") {
+        result = r === 0 ? -(v.pv + v.pmt * n) : -(v.pv * factor + v.pmt * ((factor - 1) / r));
+        label = "Future value (FV)";
+      } else if (v.solveFor === "pv") {
+        result = r === 0 ? -(v.fv + v.pmt * n) : -(v.fv + v.pmt * ((factor - 1) / r)) / factor;
+        label = "Present value (PV)";
+      } else {
+        result = r === 0 ? -(v.fv + v.pv) / n : -(v.fv + v.pv * factor) * r / (factor - 1);
+        label = "Payment (PMT)";
+      }
+      return {
+        primary: { label, value: `$${round(result, 2).toLocaleString()}` },
+        secondary: [
+          { l: "Rate per period", v: `${v.rate}%` },
+          { l: "Number of periods", v: n },
+        ],
+        note: "Uses standard TVM sign convention (like a financial calculator or spreadsheet): cash you pay out is negative, cash you receive is positive - a negative PMT means you're contributing/paying, a positive result means money coming to you.",
+      };
+    },
+    faq: [
+      { q: "What is a TVM (time value of money) solver?", a: "A calculator that solves any one of the core time-value-of-money variables (present value, future value, or payment) given the others, using standard annuity formulas - the same math behind loan payments, savings growth, and annuities." },
+      { q: "Why is my payment negative in the example?", a: "This tool uses the standard financial sign convention: money you pay out (like a monthly contribution) is negative, and money you receive is positive. Flip the signs to match your actual scenario - for example, use a positive PMT if you're receiving regular payments instead of making them." },
+      { q: "How is this related to the Savings Calculator and Loan Calculator?", a: "Same underlying math - the Savings Calculator solves specifically for future value with a starting balance and contributions, and the Loan Calculator solves specifically for payment on a loan with no future value. This tool generalizes both so you can solve for any of the three." },
+      { q: "What rate should I enter?", a: "Enter the rate per period, not the annual rate - if you're compounding monthly and have a 6% annual rate, enter 0.5 (6 ÷ 12) as the rate per period, and set periods in months to match." },
+    ],
+    related: ["savings-calculator", "loan-calculator", "compound-interest-calculator"],
   },
   {
     id: "budget-calculator",
@@ -4757,6 +4841,150 @@ const CALCULATORS = [
       { q: "Where can I find the density of the water at a specific temperature?", a: "Enter that temperature above and this calculator gives you the density directly, interpolated from standard reference values between 0°C and 100°C - no need to look it up in a printed table." },
     ],
     related: ["volume-converter", "weight-converter", "unit-length-converter"],
+  },
+  {
+    id: "distance-modulus-calculator",
+    category: "math",
+    title: "Distance Modulus Calculator",
+    keyword: "distance modulus calculator",
+    description: "Calculate astronomical distance from apparent and absolute magnitude, or vice versa.",
+    intro: "Enter apparent magnitude (m) and absolute magnitude (M) to find distance, or distance and one magnitude to find the other.",
+    fields: [
+      { id: "solveFor", label: "Solve for", type: "select", default: "distance", options: [
+        { v: "distance", l: "Distance (from m and M)" }, { v: "absolute", l: "Absolute magnitude (from m and distance)" }, { v: "apparent", l: "Apparent magnitude (from M and distance)" },
+      ] },
+      { id: "apparentMag", label: "Apparent magnitude (m)", type: "number", default: 10, step: 0.01 },
+      { id: "absoluteMag", label: "Absolute magnitude (M)", type: "number", default: 5, step: 0.01 },
+      { id: "distance", label: "Distance", type: "number", unit: "parsecs", default: 100, step: 1 },
+    ],
+    compute: (v) => {
+      if (v.solveFor === "distance") {
+        const modulus = v.apparentMag - v.absoluteMag;
+        const d = Math.pow(10, (modulus + 5) / 5);
+        return {
+          primary: { label: "Distance", value: `${round(d, 4)} pc` },
+          secondary: [
+            { l: "Distance modulus (m−M)", v: round(modulus, 4) },
+            { l: "Light-years", v: round(d * 3.26156, 2) },
+          ],
+          note: "d (parsecs) = 10^((m − M + 5) / 5).",
+        };
+      }
+      if (v.solveFor === "absolute") {
+        const M = v.apparentMag - 5 * Math.log10(v.distance) + 5;
+        return {
+          primary: { label: "Absolute magnitude (M)", value: round(M, 4) },
+          secondary: [{ l: "Distance modulus (m−M)", v: round(v.apparentMag - M, 4) }],
+          note: "M = m − 5×log₁₀(d) + 5, with d in parsecs.",
+        };
+      }
+      const m = v.absoluteMag + 5 * Math.log10(v.distance) - 5;
+      return {
+        primary: { label: "Apparent magnitude (m)", value: round(m, 4) },
+        secondary: [{ l: "Distance modulus (m−M)", v: round(m - v.absoluteMag, 4) }],
+        note: "m = M + 5×log₁₀(d) − 5, with d in parsecs.",
+      };
+    },
+    faq: [
+      { q: "What is the distance modulus?", a: "m − M, the difference between an object's apparent magnitude (how bright it looks from Earth) and its absolute magnitude (how bright it would look from a standard 10-parsec distance) - it's directly related to distance." },
+      { q: "How do I find distance from apparent and absolute magnitude?", a: "d = 10^((m − M + 5) / 5), with distance in parsecs. For m=10 and M=5: d = 10^((5+5)/5) = 10² = 100 parsecs." },
+      { q: "Why does a distance modulus of exactly 0 mean 10 parsecs?", a: "Absolute magnitude is defined as the apparent magnitude an object would have at exactly 10 parsecs - so when m equals M (modulus = 0), the object actually is at 10 parsecs, and the formula d = 10^((0+5)/5) = 10¹ = 10 confirms this." },
+      { q: "How do I convert the distance to light-years?", a: "Multiply parsecs by about 3.26156 - one parsec equals approximately 3.26 light-years." },
+    ],
+    related: ["sunrise-sunset-calculator", "square-root-calculator", "z-score-calculator"],
+  },
+  {
+    id: "pressure-altitude-calculator",
+    category: "math",
+    title: "Pressure Altitude Calculator",
+    keyword: "pressure altitude calculator",
+    description: "Calculate pressure altitude from field elevation and altimeter setting.",
+    intro: "Enter your field elevation and current altimeter setting to calculate pressure altitude, using the standard atmosphere reference of 29.92 inHg.",
+    fields: [
+      { id: "elevation", label: "Field elevation", type: "number", unit: "ft", default: 1000, step: 10 },
+      { id: "altimeterSetting", label: "Altimeter setting", type: "number", unit: "inHg", default: 29.42, step: 0.01 },
+    ],
+    compute: (v) => {
+      const pressureAltitude = v.elevation + (29.92 - v.altimeterSetting) * 1000;
+      return {
+        primary: { label: "Pressure altitude", value: `${round(pressureAltitude, 0)} ft` },
+        secondary: [{ l: "Difference from elevation", v: `${round(pressureAltitude - v.elevation, 0)} ft` }],
+        note: "Pressure altitude = field elevation + (29.92 − altimeter setting) × 1,000. Used in aviation for performance calculations, especially above the transition altitude where all aircraft use the standard 29.92 inHg setting.",
+      };
+    },
+    faq: [
+      { q: "What is pressure altitude?", a: "The altitude indicated when an altimeter is set to the standard atmospheric pressure of 29.92 inHg (1013.25 hPa), rather than the local altimeter setting - it's used for aircraft performance calculations and above the transition altitude." },
+      { q: "How do I calculate pressure altitude?", a: "Add (29.92 − current altimeter setting) × 1,000 to your field elevation. For an elevation of 1,000 ft and an altimeter setting of 29.42: 1,000 + (29.92 − 29.42) × 1,000 = 1,500 ft." },
+      { q: "Why does a lower altimeter setting increase pressure altitude?", a: "A lower altimeter setting means the actual air pressure is lower than standard, which happens at effectively higher altitudes in the standard atmosphere - so the formula adds altitude to compensate, reflecting that the air is \"thinner\" than the field elevation alone would suggest." },
+      { q: "What's the difference between pressure altitude and density altitude?", a: "Pressure altitude only accounts for atmospheric pressure. Density altitude goes a step further and also corrects for temperature (and humidity), since less dense air - whether from lower pressure or higher temperature - affects aircraft and engine performance similarly." },
+    ],
+    related: ["unit-length-converter", "pressure-converter", "sunrise-sunset-calculator"],
+  },
+  {
+    id: "time-zone-meeting-planner",
+    category: "datetime",
+    title: "Time Zone Meeting Planner",
+    keyword: "time zone meeting planner",
+    description: "See a meeting time across multiple time zones at once.",
+    intro: "Enter a date and time in your zone, then see the equivalent local time in three other zones at a glance.",
+    fields: [
+      { id: "date", label: "Date", type: "date", default: todayDateString() },
+      { id: "time", label: "Time (24-hour, HH:MM)", type: "text", default: nowTimeString() },
+      { id: "baseZone", label: "Your time zone", type: "select", default: Intl.DateTimeFormat().resolvedOptions().timeZone, options: [
+        { v: "America/New_York", l: "US Eastern (New York)" }, { v: "America/Chicago", l: "US Central (Chicago)" },
+        { v: "America/Denver", l: "US Mountain (Denver)" }, { v: "America/Los_Angeles", l: "US Pacific (Los Angeles)" },
+        { v: "UTC", l: "UTC" }, { v: "Europe/London", l: "UK (London)" }, { v: "Europe/Paris", l: "Central Europe (Paris)" },
+        { v: "Asia/Dubai", l: "UAE (Dubai)" }, { v: "Asia/Kolkata", l: "India (Kolkata)" },
+        { v: "Asia/Shanghai", l: "China (Shanghai)" }, { v: "Asia/Tokyo", l: "Japan (Tokyo)" },
+        { v: "Australia/Sydney", l: "Australia Eastern (Sydney)" },
+      ] },
+      { id: "zone2", label: "Attendee 2 time zone", type: "select", default: "Europe/London", options: [
+        { v: "America/New_York", l: "US Eastern (New York)" }, { v: "America/Chicago", l: "US Central (Chicago)" },
+        { v: "America/Denver", l: "US Mountain (Denver)" }, { v: "America/Los_Angeles", l: "US Pacific (Los Angeles)" },
+        { v: "UTC", l: "UTC" }, { v: "Europe/London", l: "UK (London)" }, { v: "Europe/Paris", l: "Central Europe (Paris)" },
+        { v: "Asia/Dubai", l: "UAE (Dubai)" }, { v: "Asia/Kolkata", l: "India (Kolkata)" },
+        { v: "Asia/Shanghai", l: "China (Shanghai)" }, { v: "Asia/Tokyo", l: "Japan (Tokyo)" },
+        { v: "Australia/Sydney", l: "Australia Eastern (Sydney)" },
+      ] },
+      { id: "zone3", label: "Attendee 3 time zone", type: "select", default: "Asia/Kolkata", options: [
+        { v: "America/New_York", l: "US Eastern (New York)" }, { v: "America/Chicago", l: "US Central (Chicago)" },
+        { v: "America/Denver", l: "US Mountain (Denver)" }, { v: "America/Los_Angeles", l: "US Pacific (Los Angeles)" },
+        { v: "UTC", l: "UTC" }, { v: "Europe/London", l: "UK (London)" }, { v: "Europe/Paris", l: "Central Europe (Paris)" },
+        { v: "Asia/Dubai", l: "UAE (Dubai)" }, { v: "Asia/Kolkata", l: "India (Kolkata)" },
+        { v: "Asia/Shanghai", l: "China (Shanghai)" }, { v: "Asia/Tokyo", l: "Japan (Tokyo)" },
+        { v: "Australia/Sydney", l: "Australia Eastern (Sydney)" },
+      ] },
+    ],
+    compute: (v) => {
+      const getOffsetMinutes = (date, zone) => {
+        const zStr = date.toLocaleString("en-US", { timeZone: zone });
+        const uStr = date.toLocaleString("en-US", { timeZone: "UTC" });
+        return (new Date(zStr) - new Date(uStr)) / 60000;
+      };
+      const [hh, mm] = v.time.split(":").map(Number);
+      const timeStr = `${String(hh).padStart(2, "0")}:${String(mm).padStart(2, "0")}`;
+      const asUTC = new Date(`${v.date}T${timeStr}:00Z`);
+      const baseOffsetMin = getOffsetMinutes(asUTC, v.baseZone);
+      const realUTC = new Date(asUTC.getTime() - baseOffsetMin * 60000);
+      const fmt = (zone) => realUTC.toLocaleString("en-US", {
+        timeZone: zone, weekday: "short", hour: "2-digit", minute: "2-digit", hour12: true,
+      });
+      return {
+        primary: { label: "Your time", value: fmt(v.baseZone) },
+        secondary: [
+          { l: "Attendee 2", v: fmt(v.zone2) },
+          { l: "Attendee 3", v: fmt(v.zone3) },
+        ],
+        note: "Automatically applies each zone's actual daylight saving rules for the selected date.",
+      };
+    },
+    faq: [
+      { q: "How is this different from the Time Zone Converter?", a: "The Time Zone Converter shows one time converted between two zones. This tool shows a single meeting time across three zones simultaneously, useful for scheduling a call with people in different locations at once." },
+      { q: "Does this handle daylight saving time correctly?", a: "Yes - it applies each zone's actual observed DST rules for the specific date you enter, so the displayed times are correct even during DST transition periods." },
+      { q: "Can I use this for more than 3 time zones?", a: "This tool shows your zone plus two others at once. For additional zones, use the Time Zone Converter to check each one individually against your base time." },
+      { q: "Why do the day names sometimes differ between zones?", a: "A meeting late at night in one zone can fall on the next calendar day in a zone further east, or the previous day in a zone further west - the weekday shown for each attendee accounts for this correctly." },
+    ],
+    related: ["time-zone-converter", "daylight-saving-time-calculator", "online-timer"],
   },
   {
     id: "weight-converter",
