@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Confusion Matrix Calculator | Calquary</title>
+  <meta name="description" content="Calculate precision, recall, F1, specificity, accuracy, and other diagnostic test metrics from a confusion matrix." />
+  <meta property="og:title" content="Confusion Matrix Calculator | Calquary">
+  <meta property="og:description" content="Calculate precision, recall, F1, specificity, accuracy, and other diagnostic test metrics from a confusion matrix.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/tool/confusion-matrix-calculator.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/confusion-matrix-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Confusion Matrix Calculator | Calquary">
+  <meta name="twitter:description" content="Calculate precision, recall, F1, specificity, accuracy, and other diagnostic test metrics from a confusion matrix.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/confusion-matrix-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/confusion-matrix-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/confusion-matrix-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("confusion-matrix-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("confusion-matrix-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Confusion Matrix Calculator",
+      "description": "Calculate precision, recall, F1, specificity, accuracy, and other diagnostic test metrics from a confusion matrix.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/confusion-matrix-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-01",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Math",
+          "item": "https://calquary.com/category/math.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Confusion Matrix Calculator",
+          "item": "https://calquary.com/tool/confusion-matrix-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What's the difference between precision and recall?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Precision asks: of everything flagged positive, how much was actually positive? (TP/(TP+FP)). Recall asks: of everything actually positive, how much did you catch? (TP/(TP+FN)). There's usually a tradeoff between the two."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the F1 score?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The harmonic mean of precision and recall, giving a single balanced score: F1 = 2×(precision×recall)/(precision+recall). It's low if either precision or recall is low, unlike a simple average."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is specificity different from recall (sensitivity)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Recall (sensitivity) measures how well you catch actual positives; specificity measures how well you correctly identify actual negatives (TN/(TN+FP)). A test can have high sensitivity but low specificity, or vice versa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between PPV and NPV?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "PPV (positive predictive value, same as precision) is the chance a positive result is truly positive. NPV (negative predictive value) is the chance a negative result is truly negative - both depend heavily on prevalence, not just the test's inherent accuracy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does prevalence matter for interpreting these numbers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A test's sensitivity and specificity are fixed properties of the test itself, but PPV and NPV shift with how common the condition actually is - the same test gives a much lower PPV when screening a low-prevalence population than a high-prevalence one, even with identical sensitivity/specificity."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/index.html#categories">Categories</a>
+          <a href="/index.html#tools">All tools</a>
+          <a href="/about.html">About</a>
+        </nav>
+        
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/index.html">Calquary</a> / <a href="/category/math.html">Math</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Confusion Matrix Calculator</h1>
+        <p style="max-width:60ch;">Enter true positives, false positives, true negatives, and false negatives to calculate every standard classification and diagnostic test metric at once.</p>
+        <p class="last-updated">Last updated: September 1, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculate</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reset</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Frequently asked questions</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>What's the difference between precision and recall?</h3>
+<p>Precision asks: of everything flagged positive, how much was actually positive? (TP/(TP+FP)). Recall asks: of everything actually positive, how much did you catch? (TP/(TP+FN)). There's usually a tradeoff between the two.</p>
+</div>
+<div class="faq-item">
+<h3>What is the F1 score?</h3>
+<p>The harmonic mean of precision and recall, giving a single balanced score: F1 = 2×(precision×recall)/(precision+recall). It's low if either precision or recall is low, unlike a simple average.</p>
+</div>
+<div class="faq-item">
+<h3>How is specificity different from recall (sensitivity)?</h3>
+<p>Recall (sensitivity) measures how well you catch actual positives; specificity measures how well you correctly identify actual negatives (TN/(TN+FP)). A test can have high sensitivity but low specificity, or vice versa.</p>
+</div>
+<div class="faq-item">
+<h3>What's the difference between PPV and NPV?</h3>
+<p>PPV (positive predictive value, same as precision) is the chance a positive result is truly positive. NPV (negative predictive value) is the chance a negative result is truly negative - both depend heavily on prevalence, not just the test's inherent accuracy.</p>
+</div>
+<div class="faq-item">
+<h3>Why does prevalence matter for interpreting these numbers?</h3>
+<p>A test's sensitivity and specificity are fixed properties of the test itself, but PPV and NPV shift with how common the condition actually is - the same test gives a much lower PPV when screening a low-prevalence population than a high-prevalence one, even with identical sensitivity/specificity.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Related tools</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>A note on accuracy</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquary's calculators are built for quick, reliable estimates. For decisions with real financial, structural, or medical stakes, confirm with a qualified professional.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/index.html">← Back to all calculators</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

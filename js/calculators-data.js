@@ -776,6 +776,90 @@ const CALCULATORS = [
     related: ["standard-deviation-calculator", "average-calculator", "percentage-calculator"],
   },
   {
+    id: "confusion-matrix-calculator",
+    category: "math",
+    title: "Confusion Matrix Calculator",
+    keyword: "confusion matrix calculator",
+    description: "Calculate precision, recall, F1, specificity, accuracy, and other diagnostic test metrics from a confusion matrix.",
+    intro: "Enter true positives, false positives, true negatives, and false negatives to calculate every standard classification and diagnostic test metric at once.",
+    fields: [
+      { id: "tp", label: "True positives (TP)", type: "number", default: 80, step: 1, min: 0 },
+      { id: "fp", label: "False positives (FP)", type: "number", default: 10, step: 1, min: 0 },
+      { id: "tn", label: "True negatives (TN)", type: "number", default: 850, step: 1, min: 0 },
+      { id: "fn", label: "False negatives (FN)", type: "number", default: 60, step: 1, min: 0 },
+    ],
+    compute: (v) => {
+      const { tp, fp, tn, fn } = v;
+      const total = tp + fp + tn + fn;
+      const precision = tp / (tp + fp);
+      const recall = tp / (tp + fn);
+      const specificity = tn / (tn + fp);
+      const npv = tn / (tn + fn);
+      const accuracy = (tp + tn) / total;
+      const f1 = 2 * (precision * recall) / (precision + recall);
+      const prevalence = (tp + fn) / total;
+      return {
+        primary: { label: "Precision (PPV)", value: `${round(precision * 100, 2)}%` },
+        secondary: [
+          { l: "Recall (Sensitivity)", v: `${round(recall * 100, 2)}%` },
+          { l: "Specificity", v: `${round(specificity * 100, 2)}%` },
+          { l: "F1 score", v: round(f1, 4) },
+          { l: "Accuracy", v: `${round(accuracy * 100, 2)}%` },
+          { l: "NPV", v: `${round(npv * 100, 2)}%` },
+          { l: "Prevalence", v: `${round(prevalence * 100, 2)}%` },
+        ],
+        note: "Precision = TP/(TP+FP). Recall = TP/(TP+FN). Specificity = TN/(TN+FP). F1 = 2×(precision×recall)/(precision+recall). Accuracy = (TP+TN)/total. Same math applies whether you call it a classification model or a diagnostic test.",
+      };
+    },
+    faq: [
+      { q: "What's the difference between precision and recall?", a: "Precision asks: of everything flagged positive, how much was actually positive? (TP/(TP+FP)). Recall asks: of everything actually positive, how much did you catch? (TP/(TP+FN)). There's usually a tradeoff between the two." },
+      { q: "What is the F1 score?", a: "The harmonic mean of precision and recall, giving a single balanced score: F1 = 2×(precision×recall)/(precision+recall). It's low if either precision or recall is low, unlike a simple average." },
+      { q: "How is specificity different from recall (sensitivity)?", a: "Recall (sensitivity) measures how well you catch actual positives; specificity measures how well you correctly identify actual negatives (TN/(TN+FP)). A test can have high sensitivity but low specificity, or vice versa." },
+      { q: "What's the difference between PPV and NPV?", a: "PPV (positive predictive value, same as precision) is the chance a positive result is truly positive. NPV (negative predictive value) is the chance a negative result is truly negative - both depend heavily on prevalence, not just the test's inherent accuracy." },
+      { q: "Why does prevalence matter for interpreting these numbers?", a: "A test's sensitivity and specificity are fixed properties of the test itself, but PPV and NPV shift with how common the condition actually is - the same test gives a much lower PPV when screening a low-prevalence population than a high-prevalence one, even with identical sensitivity/specificity." },
+    ],
+    related: ["z-score-calculator", "sample-size-calculator", "standard-deviation-calculator"],
+  },
+  {
+    id: "odds-probability-converter",
+    category: "math",
+    title: "Odds to Probability Converter",
+    keyword: "odds probability converter",
+    description: "Convert between probability and odds, in either direction.",
+    intro: "Enter a value and choose a starting format to convert between probability and odds.",
+    fields: [
+      { id: "value", label: "Value", type: "number", default: 0.25, step: 0.001 },
+      { id: "from", label: "From", type: "select", default: "probability", options: [
+        { v: "probability", l: "Probability (0 to 1)" }, { v: "odds", l: "Odds (e.g. 3 means 3-to-1)" },
+      ] },
+    ],
+    compute: (v) => {
+      let probability, odds;
+      if (v.from === "probability") {
+        probability = Math.max(0, Math.min(0.999999, v.value));
+        odds = probability / (1 - probability);
+      } else {
+        odds = Math.max(0, v.value);
+        probability = odds / (1 + odds);
+      }
+      return {
+        primary: { label: "Probability", value: round(probability, 6) },
+        secondary: [
+          { l: "Odds", v: `${round(odds, 4)}-to-1` },
+          { l: "Probability as percent", v: `${round(probability * 100, 4)}%` },
+        ],
+        note: "Odds = probability ÷ (1 − probability). Probability = odds ÷ (1 + odds).",
+      };
+    },
+    faq: [
+      { q: "How do I convert probability to odds?", a: "Divide the probability by (1 − probability). A 25% (0.25) probability converts to odds of 0.25 ÷ 0.75 = 0.333, or \"1-to-3\" odds." },
+      { q: "How do I convert odds to probability?", a: "Divide the odds by (1 + odds). Odds of 3 (meaning 3-to-1) convert to probability of 3 ÷ 4 = 0.75, or 75%." },
+      { q: "Why are probability and odds different numbers for the same likelihood?", a: "Probability compares favorable outcomes to all outcomes (favorable ÷ total), while odds compare favorable outcomes to unfavorable outcomes only (favorable ÷ unfavorable) - they measure the same underlying likelihood but with different denominators, which is why they diverge more as probability moves away from 50%." },
+      { q: "At what probability are odds exactly 1-to-1?", a: "50% (0.5) - this is the only point where probability and odds \"look\" similar in a sense (even money), since favorable and unfavorable outcomes are equally likely." },
+    ],
+    related: ["percentage-calculator", "lottery-odds-calculator", "poker-hand-probability-calculator"],
+  },
+  {
     id: "normal-distribution-calculator",
     category: "math",
     title: "Normal Distribution Calculator",
@@ -1024,6 +1108,131 @@ const CALCULATORS = [
       { q: "How do I calculate a fractional exponent, like 8^(1/3)?", a: "A fractional exponent represents a root: the denominator is the root and the numerator is the power. 8^(1/3) means the cube root of 8, which is 2. 8^(2/3) means the cube root of 8, squared, which is 4." },
     ],
     related: ["square-root-calculator", "gcd-lcm-calculator", "quadratic-formula-calculator"],
+  },
+  {
+    id: "logarithm-calculator",
+    category: "math",
+    title: "Logarithm Calculator",
+    keyword: "logarithm calculator",
+    description: "Calculate the logarithm of a number in any base, including natural log and log base 10.",
+    intro: "Enter a number and a base to calculate its logarithm.",
+    fields: [
+      { id: "value", label: "Number (x)", type: "number", default: 8, step: 0.01, min: 0.0000001 },
+      { id: "base", label: "Base (b)", type: "number", default: 2, step: 0.01, min: 0.0000001 },
+    ],
+    compute: (v) => {
+      if (v.base === 1) {
+        return { primary: { label: "Undefined", value: "-" }, secondary: [], note: "Logarithms are undefined for base 1, since 1 raised to any power always equals 1, never x." };
+      }
+      const result = Math.log(v.value) / Math.log(v.base);
+      const naturalLog = Math.log(v.value);
+      const log10 = Math.log10(v.value);
+      return {
+        primary: { label: `log_${v.base}(${v.value})`, value: round(result, 6) },
+        secondary: [
+          { l: "Natural log (ln)", v: round(naturalLog, 6) },
+          { l: "Log base 10", v: round(log10, 6) },
+        ],
+        note: `logᵦ(x) = ln(x) / ln(b) (the change-of-base formula) - used since most calculators only have built-in natural log and log-10 functions.`,
+      };
+    },
+    faq: [
+      { q: "What is log base 2 of 8?", a: "3 - because 2³ = 8. A logarithm answers \"what power do I raise the base to, to get this number?\"" },
+      { q: "How do I calculate a logarithm in a base my calculator doesn't have a button for?", a: "Use the change-of-base formula: logᵦ(x) = ln(x) / ln(b), or equivalently log₁₀(x) / log₁₀(b) - divide the natural log (or log base 10) of your number by the natural log (or log base 10) of your desired base." },
+      { q: "What's the difference between ln and log?", a: "\"ln\" always means natural log (base e ≈ 2.71828). Plain \"log\" usually means base 10 in everyday math, though in computer science and some fields it can mean base 2 - this calculator shows all three (your chosen base, natural log, and log base 10) to avoid ambiguity." },
+      { q: "Why can't I take the log of a negative number or zero?", a: "No real power of a positive base ever produces zero or a negative result, so log(x) is undefined for x ≤ 0 in the real numbers - logarithms of negative numbers require complex numbers, outside what this calculator handles." },
+    ],
+    related: ["exponent-calculator", "square-root-calculator", "gcd-lcm-calculator"],
+  },
+  {
+    id: "vector-calculator",
+    category: "math",
+    title: "Vector Calculator",
+    keyword: "vector calculator",
+    description: "Calculate dot product, cross product, magnitude, and angle between two 3D vectors.",
+    intro: "Enter the components of two vectors to calculate their dot product, cross product, magnitudes, and the angle between them.",
+    fields: [
+      { id: "ax", label: "Vector A: x", type: "number", default: 1, step: 0.1 },
+      { id: "ay", label: "Vector A: y", type: "number", default: 2, step: 0.1 },
+      { id: "az", label: "Vector A: z (0 for 2D)", type: "number", default: 3, step: 0.1 },
+      { id: "bx", label: "Vector B: x", type: "number", default: 4, step: 0.1 },
+      { id: "by", label: "Vector B: y", type: "number", default: 5, step: 0.1 },
+      { id: "bz", label: "Vector B: z (0 for 2D)", type: "number", default: 6, step: 0.1 },
+    ],
+    compute: (v) => {
+      const a = [v.ax, v.ay, v.az];
+      const b = [v.bx, v.by, v.bz];
+      const dot = a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
+      const cross = [
+        a[1] * b[2] - a[2] * b[1],
+        a[2] * b[0] - a[0] * b[2],
+        a[0] * b[1] - a[1] * b[0],
+      ];
+      const magA = Math.sqrt(a[0] * a[0] + a[1] * a[1] + a[2] * a[2]);
+      const magB = Math.sqrt(b[0] * b[0] + b[1] * b[1] + b[2] * b[2]);
+      const cosAngle = dot / (magA * magB);
+      const angle = Math.acos(Math.max(-1, Math.min(1, cosAngle))) * (180 / Math.PI);
+      return {
+        primary: { label: "Dot product (A·B)", value: round(dot, 4) },
+        secondary: [
+          { l: "Cross product (A×B)", v: `(${round(cross[0], 4)}, ${round(cross[1], 4)}, ${round(cross[2], 4)})` },
+          { l: "Angle between vectors", v: `${round(angle, 4)}°` },
+          { l: "|A|, |B|", v: `${round(magA, 4)}, ${round(magB, 4)}` },
+        ],
+        note: "Dot product: A·B = Σ(aᵢ×bᵢ). Cross product (3D only): a vector perpendicular to both A and B. Angle: cos⁻¹(A·B / (|A||B|)). For a 2D calculation, set both z components to 0.",
+      };
+    },
+    faq: [
+      { q: "What does the dot product tell you?", a: "A single number summarizing how much two vectors point in the same direction, scaled by their lengths - it's positive if the vectors point roughly the same way, negative if roughly opposite, and zero if they're perpendicular." },
+      { q: "What does the cross product tell you?", a: "A new vector perpendicular to both input vectors (only defined in 3D), whose magnitude equals the area of the parallelogram formed by the two vectors - commonly used to find a normal vector to a plane or to calculate torque and angular momentum in physics." },
+      { q: "How do I find the angle between two vectors?", a: "cos(θ) = (A·B) / (|A|×|B|), then take the inverse cosine (arccos) of that value to get the angle in degrees." },
+      { q: "How do I use this for 2D vectors?", a: "Set both z components to 0 - the dot product and angle calculations work identically, and the cross product will only have a z component, which represents the 2D \"cross product\" (a scalar in most 2D contexts)." },
+    ],
+    related: ["distance-formula-calculator", "pythagorean-theorem-calculator", "triangle-solver"],
+  },
+  {
+    id: "haversine-distance-calculator",
+    category: "math",
+    title: "Distance and Bearing Calculator (Lat/Long)",
+    keyword: "haversine distance calculator",
+    description: "Calculate the great-circle distance and compass bearing between two GPS coordinates.",
+    intro: "Enter the latitude and longitude of two points to calculate the distance between them and the compass bearing from the first to the second.",
+    fields: [
+      { id: "lat1", label: "Point 1 latitude", type: "number", default: 40.7128, step: 0.0001, min: -90, max: 90 },
+      { id: "lon1", label: "Point 1 longitude", type: "number", default: -74.006, step: 0.0001, min: -180, max: 180 },
+      { id: "lat2", label: "Point 2 latitude", type: "number", default: 51.5074, step: 0.0001, min: -90, max: 90 },
+      { id: "lon2", label: "Point 2 longitude", type: "number", default: -0.1278, step: 0.0001, min: -180, max: 180 },
+    ],
+    compute: (v) => {
+      const rad = Math.PI / 180;
+      const R = 6371;
+      const phi1 = v.lat1 * rad, phi2 = v.lat2 * rad;
+      const dPhi = (v.lat2 - v.lat1) * rad;
+      const dLambda = (v.lon2 - v.lon1) * rad;
+      const a = Math.sin(dPhi / 2) ** 2 + Math.cos(phi1) * Math.cos(phi2) * Math.sin(dLambda / 2) ** 2;
+      const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+      const distanceKm = R * c;
+      const y = Math.sin(dLambda) * Math.cos(phi2);
+      const x = Math.cos(phi1) * Math.sin(phi2) - Math.sin(phi1) * Math.cos(phi2) * Math.cos(dLambda);
+      const bearing = (Math.atan2(y, x) / rad + 360) % 360;
+      const compassPoints = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
+      const compass = compassPoints[Math.round(bearing / 22.5) % 16];
+      return {
+        primary: { label: "Distance", value: `${round(distanceKm, 2)} km` },
+        secondary: [
+          { l: "Miles", v: round(distanceKm * 0.621371, 2) },
+          { l: "Bearing", v: `${round(bearing, 2)}° (${compass})` },
+        ],
+        note: "Uses the haversine formula on a spherical Earth model (radius 6,371 km) - accurate to within about 0.5% of the true ellipsoidal distance, which is more than sufficient for most navigation and mapping purposes.",
+      };
+    },
+    faq: [
+      { q: "What is the haversine formula?", a: "A formula that calculates great-circle distance between two points on a sphere from their latitude and longitude - it accounts for Earth's curvature, unlike a straight-line (flat-map) distance calculation, which becomes increasingly inaccurate over longer distances." },
+      { q: "How far is New York from London?", a: "About 5,570 km (3,461 miles) as the crow flies, using their coordinates (40.71°N, 74.01°W) and (51.51°N, 0.13°W)." },
+      { q: "What does 'bearing' mean?", a: "The compass direction (in degrees, 0-360°, where 0°/360° is north) you'd need to initially head in to travel from the first point toward the second along the great-circle route - it changes continuously along a long route, so this is the bearing only at the starting point." },
+      { q: "How accurate is this compared to real-world flight distances?", a: "Within about 0.5%, since it treats Earth as a perfect sphere rather than its actual slightly flattened ellipsoid shape - close enough for virtually all practical distance-estimation purposes, though official aviation navigation uses more precise ellipsoidal models." },
+    ],
+    related: ["unit-length-converter", "time-zone-converter", "distance-formula-calculator"],
   },
   {
     id: "quadratic-formula-calculator",
@@ -2769,6 +2978,35 @@ const CALCULATORS = [
       { q: "Is compound interest always better than simple interest?", a: "Compound interest earns interest on both principal and previously earned interest, so it always outpaces simple interest (which only earns on the original principal) given enough time. The longer the time horizon and the higher the compounding frequency, the bigger the gap becomes." },
     ],
     related: ["savings-calculator", "mortgage-calculator", "loan-calculator", "investment-calculator"],
+  },
+  {
+    id: "apr-to-apy-calculator",
+    category: "finance",
+    title: "APR to APY (EAR) Calculator",
+    keyword: "apr to apy calculator",
+    description: "Convert a nominal interest rate (APR) into its effective annual rate (APY/EAR), accounting for compounding.",
+    intro: "Enter a nominal annual rate and how often it compounds to calculate the effective annual rate (APY/EAR).",
+    fields: [
+      { id: "apr", label: "Nominal annual rate (APR)", type: "number", unit: "%", default: 6, step: 0.01 },
+      { id: "compoundsPerYear", label: "Compounding periods per year", type: "number", default: 12, step: 1, min: 1 },
+    ],
+    compute: (v) => {
+      const r = v.apr / 100;
+      const n = v.compoundsPerYear;
+      const apy = Math.pow(1 + r / n, n) - 1;
+      return {
+        primary: { label: "Effective annual rate (APY/EAR)", value: `${round(apy * 100, 4)}%` },
+        secondary: [{ l: "Difference from APR", v: `${round((apy * 100 - v.apr), 4)} percentage points` }],
+        note: "APY = (1 + APR/n)ⁿ − 1, where n is the number of compounding periods per year. More frequent compounding produces a higher effective rate for the same nominal APR.",
+      };
+    },
+    faq: [
+      { q: "What's the difference between APR and APY?", a: "APR (annual percentage rate) is the stated nominal rate, without accounting for compounding within the year. APY (annual percentage yield, also called EAR) is the actual rate you earn or pay once compounding is factored in - APY is always equal to or higher than APR when compounding happens more than once a year." },
+      { q: "What is 6% APR compounded monthly, as APY?", a: "About 6.1678% - (1 + 0.06/12)¹² − 1 ≈ 0.061678." },
+      { q: "Why does more frequent compounding increase the effective rate?", a: "Each compounding period adds interest on top of previously earned interest, so compounding more often (monthly vs. annually, for example) lets that \"interest on interest\" effect compound more times per year, producing a higher effective annual return even though the nominal APR is unchanged." },
+      { q: "Which rate should I use to compare two loans or savings accounts?", a: "APY/EAR - it accounts for compounding frequency, so it's the only rate that lets you fairly compare two products with different compounding schedules (like monthly vs. daily) on equal terms." },
+    ],
+    related: ["compound-interest-calculator", "savings-calculator", "loan-calculator"],
   },
   {
     id: "sales-tax-calculator",

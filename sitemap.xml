@@ -283,6 +283,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/z-score-calculator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/confusion-matrix-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/confusion-matrix-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/confusion-matrix-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/odds-probability-converter.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/odds-probability-converter.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/odds-probability-converter.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/normal-distribution-calculator.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/normal-distribution-calculator.html"/>
@@ -323,6 +335,24 @@
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/exponent-calculator.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/exponent-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/logarithm-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/logarithm-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/logarithm-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/vector-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/vector-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/vector-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/haversine-distance-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/haversine-distance-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/haversine-distance-calculator.html"/>
   </url>
   <url>
     <loc>https://calquary.com/tool/quadratic-formula-calculator.html</loc>
@@ -557,6 +587,12 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/compound-interest-calculator.html"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/compound-interest-calculator.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/compound-interest-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/apr-to-apy-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/apr-to-apy-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/apr-to-apy-calculator.html"/>
   </url>
   <url>
     <loc>https://calquary.com/tool/sales-tax-calculator.html</loc>
