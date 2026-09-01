@@ -1084,6 +1084,77 @@ const CALCULATORS = [
     related: ["unit-length-converter", "area-converter", "ratio-calculator"],
   },
   {
+    id: "screen-ppi-calculator",
+    category: "conversions",
+    title: "Screen PPI Calculator",
+    keyword: "screen ppi calculator",
+    description: "Calculate a screen's pixel density (PPI) from resolution and diagonal size.",
+    intro: "Enter a screen's pixel resolution and diagonal size to calculate its pixels per inch (PPI).",
+    fields: [
+      { id: "widthPx", label: "Horizontal resolution", type: "number", unit: "px", default: 1920, step: 1 },
+      { id: "heightPx", label: "Vertical resolution", type: "number", unit: "px", default: 1080, step: 1 },
+      { id: "diagonalIn", label: "Diagonal screen size", type: "number", unit: "in", default: 24, step: 0.1 },
+    ],
+    compute: (v) => {
+      const diagonalPx = Math.sqrt(v.widthPx * v.widthPx + v.heightPx * v.heightPx);
+      const ppi = diagonalPx / v.diagonalIn;
+      const totalPixels = v.widthPx * v.heightPx;
+      return {
+        primary: { label: "Pixel density", value: `${round(ppi, 2)} PPI` },
+        secondary: [
+          { l: "Total pixels", v: `${round(totalPixels / 1000000, 2)} MP` },
+          { l: "Diagonal pixels", v: round(diagonalPx, 1) },
+        ],
+        note: "PPI = diagonal resolution (in pixels) ÷ diagonal size (in inches). Diagonal pixels use the Pythagorean theorem: √(width² + height²).",
+      };
+    },
+    faq: [
+      { q: "What is PPI?", a: "Pixels per inch - a measure of screen pixel density. Higher PPI means individual pixels are smaller and harder to see, producing a sharper image at a given viewing distance." },
+      { q: "What is the PPI of a 1920×1080 24-inch monitor?", a: "About 91.79 PPI - the diagonal resolution is √(1920² + 1080²) ≈ 2203.1 pixels, divided by the 24-inch diagonal screen size." },
+      { q: "Why does PPI matter for choosing a monitor or phone?", a: "Higher PPI generally produces a sharper, more detailed image, but the difference becomes less noticeable the farther away you sit - phones (viewed close-up) benefit more from very high PPI than a TV (viewed from across a room)." },
+      { q: "What's the difference between PPI and DPI?", a: "PPI (pixels per inch) describes screen or digital image resolution. DPI (dots per inch) technically refers to physical printer output resolution, though the terms are often used interchangeably in casual conversation." },
+    ],
+    related: ["print-dpi-calculator", "aspect-ratio-calculator", "unit-length-converter"],
+  },
+  {
+    id: "print-dpi-calculator",
+    category: "conversions",
+    title: "Print DPI Calculator",
+    keyword: "print dpi calculator",
+    description: "Calculate the effective print resolution (DPI) for a photo at a given print size.",
+    intro: "Enter your image's pixel dimensions and the print size to calculate the effective DPI (dots per inch).",
+    fields: [
+      { id: "widthPx", label: "Image width", type: "number", unit: "px", default: 3000, step: 1 },
+      { id: "heightPx", label: "Image height", type: "number", unit: "px", default: 2000, step: 1 },
+      { id: "printWidthIn", label: "Print width", type: "number", unit: "in", default: 10, step: 0.1 },
+      { id: "printHeightIn", label: "Print height", type: "number", unit: "in", default: 6.67, step: 0.1 },
+    ],
+    compute: (v) => {
+      const dpiWidth = v.widthPx / v.printWidthIn;
+      const dpiHeight = v.heightPx / v.printHeightIn;
+      const effectiveDpi = Math.min(dpiWidth, dpiHeight);
+      let quality = "Low (visible pixelation)";
+      if (effectiveDpi >= 300) quality = "Excellent (professional print quality)";
+      else if (effectiveDpi >= 200) quality = "Good (standard photo print quality)";
+      else if (effectiveDpi >= 150) quality = "Acceptable (for larger viewing distances)";
+      return {
+        primary: { label: "Effective DPI", value: round(effectiveDpi, 1) },
+        secondary: [
+          { l: "Print quality", v: quality },
+          { l: "Width/height DPI", v: `${round(dpiWidth, 1)} / ${round(dpiHeight, 1)}` },
+        ],
+        note: "DPI = pixel dimension ÷ print dimension (in inches) for each axis - the lower of the two is the effective, limiting DPI. 300 DPI is the standard target for high-quality photo prints; lower DPI is often acceptable for posters and large prints viewed from farther away.",
+      };
+    },
+    faq: [
+      { q: "What DPI do I need for a good quality print?", a: "300 DPI is the standard target for close-up viewing (like photo prints and documents). For larger prints viewed from a distance (posters, banners), 150 DPI or even lower can look sharp, since the viewing distance is greater." },
+      { q: "How do I calculate the DPI for a specific print size?", a: "Divide your image's pixel width by the intended print width in inches, and do the same for height - a 3000×2000 pixel image printed at 10×6.67 inches gives exactly 300 DPI on both axes." },
+      { q: "What's the biggest I can print my photo at 300 DPI?", a: "Divide your image's pixel dimensions by 300 - a 3000×2000 pixel photo could print at up to 10×6.67 inches while maintaining 300 DPI." },
+      { q: "Why does the calculator use the lower of the two DPI values?", a: "If your print aspect ratio doesn't exactly match your image's pixel aspect ratio, one dimension will have a higher effective DPI than the other - the lower value is the true limiting factor for overall image sharpness, since you can't exceed it without either cropping or distorting the image." },
+    ],
+    related: ["screen-ppi-calculator", "aspect-ratio-calculator", "unit-length-converter"],
+  },
+  {
     id: "exponent-calculator",
     category: "math",
     title: "Exponent Calculator",
@@ -2938,6 +3009,51 @@ const CALCULATORS = [
     related: ["savings-calculator", "loan-calculator", "compound-interest-calculator"],
   },
   {
+    id: "irr-npv-calculator",
+    category: "finance",
+    title: "IRR and NPV Calculator",
+    keyword: "irr calculator",
+    description: "Calculate net present value (NPV) and internal rate of return (IRR) from a series of cash flows.",
+    intro: "Enter a series of cash flows (starting with your initial investment as a negative number) to calculate NPV at your discount rate and the IRR.",
+    fields: [
+      { id: "cashflows", label: "Cash flows (comma or line separated, period 0 first)", type: "textarea", default: "-1000, 300, 400, 500, 200" },
+      { id: "discountRate", label: "Discount rate (for NPV)", type: "number", unit: "%", default: 8, step: 0.1 },
+    ],
+    compute: (v) => {
+      const cashflows = (v.cashflows || "").split(/[,\n]+/).map((s) => s.trim()).filter(Boolean).map(Number).filter((n) => !isNaN(n));
+      if (cashflows.length < 2) {
+        return { primary: { label: "Need more cash flows", value: "-" }, secondary: [], note: "Enter at least two cash flows, starting with your initial investment (as a negative number)." };
+      }
+      const npvAt = (rate) => cashflows.reduce((sum, cf, t) => sum + cf / Math.pow(1 + rate, t), 0);
+      const npv = npvAt(v.discountRate / 100);
+      let lo = -0.99, hi = 10;
+      const npvLo = npvAt(lo), npvHi = npvAt(hi);
+      let irr = null;
+      if (npvLo * npvHi <= 0) {
+        for (let i = 0; i < 200; i++) {
+          const mid = (lo + hi) / 2;
+          if (npvAt(mid) > 0) lo = mid; else hi = mid;
+        }
+        irr = (lo + hi) / 2;
+      }
+      return {
+        primary: { label: "NPV", value: `$${round(npv, 2).toLocaleString()}` },
+        secondary: [
+          { l: "IRR", v: irr !== null ? `${round(irr * 100, 4)}%` : "No solution found in range" },
+          { l: "Number of periods", v: cashflows.length - 1 },
+        ],
+        note: "NPV = Σ (cash flow at period t) ÷ (1 + rate)^t. IRR is the discount rate where NPV equals exactly zero, found here by numerical search (bisection).",
+      };
+    },
+    faq: [
+      { q: "What is NPV?", a: "Net present value - the sum of all cash flows, each discounted back to today's value using your chosen discount rate. A positive NPV means the investment is expected to create value above your required return; negative means it falls short." },
+      { q: "What is IRR?", a: "Internal rate of return - the discount rate at which NPV equals exactly zero. It represents the investment's break-even annualized return, useful for comparing investments without needing to pick a discount rate upfront." },
+      { q: "How do I enter cash flows correctly?", a: "Start with period 0 - typically your initial investment as a negative number (money going out) - followed by each subsequent period's net cash flow (positive for money coming in). For example: -1000, 300, 400, 500, 200 represents a $1,000 investment followed by four years of returns." },
+      { q: "Should I use NPV or IRR to compare investments?", a: "NPV is generally considered more reliable, especially when comparing projects of different sizes or with unconventional cash flow patterns, since NPV directly measures value created in dollar terms. IRR is intuitive as a percentage return but can behave oddly (multiple or no solutions) with cash flows that change sign more than once." },
+    ],
+    related: ["savings-calculator", "compound-interest-calculator", "tvm-solver"],
+  },
+  {
     id: "budget-calculator",
     category: "finance",
     title: "Budget Calculator",
@@ -3724,6 +3840,43 @@ const CALCULATORS = [
     related: ["drywall-calculator", "paint-calculator", "unit-length-converter"],
   },
   {
+    id: "ac-btu-calculator",
+    category: "construction",
+    title: "Air Conditioner Size Calculator (BTU)",
+    keyword: "air conditioner size calculator",
+    description: "Estimate the BTU/h cooling capacity needed for a room, based on its size and conditions.",
+    intro: "Enter your room's square footage and conditions to estimate the air conditioner size (BTU/h) you need.",
+    fields: [
+      { id: "sqft", label: "Room area", type: "number", unit: "sq ft", default: 300, step: 10 },
+      { id: "sunExposure", label: "Sun exposure", type: "select", default: "average", options: [
+        { v: "shaded", l: "Heavily shaded" }, { v: "average", l: "Average" }, { v: "sunny", l: "Very sunny" },
+      ] },
+      { id: "occupants", label: "Typical occupants", type: "number", default: 2, step: 1, min: 1 },
+      { id: "kitchen", label: "Is it a kitchen?", type: "select", default: "no", options: [
+        { v: "no", l: "No" }, { v: "yes", l: "Yes" },
+      ] },
+    ],
+    compute: (v) => {
+      let btu = v.sqft * 20;
+      if (v.sunExposure === "shaded") btu *= 0.9;
+      if (v.sunExposure === "sunny") btu *= 1.1;
+      if (v.occupants > 2) btu += (v.occupants - 2) * 600;
+      if (v.kitchen === "yes") btu += 4000;
+      return {
+        primary: { label: "Recommended capacity", value: `${round(btu, 0).toLocaleString()} BTU/h` },
+        secondary: [{ l: "In tons (÷12,000)", v: round(btu / 12000, 2) }],
+        note: "Based on the standard rule of thumb of 20 BTU/h per square foot, adjusted for sun exposure, extra occupants (600 BTU each beyond 2), and kitchens (+4,000 BTU for cooking heat). This is a general estimate - ceiling height, insulation quality, and climate also affect the ideal size.",
+      };
+    },
+    faq: [
+      { q: "How many BTUs do I need for a 300 sq ft room?", a: "About 6,000 BTU/h as a baseline (300 × 20), adjusted up or down for sun exposure, extra occupants, or if it's a kitchen." },
+      { q: "Why does sun exposure matter for AC sizing?", a: "Rooms with lots of direct sunlight gain significant extra heat through windows, requiring more cooling capacity than a shaded room of the same size - conversely, a heavily shaded room needs somewhat less." },
+      { q: "Why do kitchens need extra cooling capacity?", a: "Cooking appliances (stoves, ovens) generate substantial extra heat beyond what's typical for a room that size, so kitchens typically need roughly 4,000 additional BTU/h compared to a similarly sized non-kitchen room." },
+      { q: "What happens if I oversize my air conditioner?", a: "An oversized unit cools the room quickly but shuts off before properly removing humidity, leading to a cold but clammy feeling and more frequent on/off cycling that wears out the compressor faster - right-sizing (not just maximizing capacity) matters for comfort and equipment life." },
+    ],
+    related: ["insulation-calculator", "drywall-calculator", "concrete-calculator"],
+  },
+  {
     id: "lumber-calculator",
     category: "construction",
     title: "Lumber Calculator",
@@ -4294,6 +4447,56 @@ const CALCULATORS = [
       { q: "Does this account for air resistance?", a: "No - this uses ideal projectile motion (only gravity acting on the object), which is accurate for dense, compact objects moving at moderate speeds over short distances, but increasingly diverges from reality for light or fast-moving objects where air drag matters." },
     ],
     related: ["pythagorean-theorem-calculator", "speed-distance-time-calculator", "vector-calculator"],
+  },
+  {
+    id: "collision-calculator",
+    category: "math",
+    title: "Momentum and Collision Calculator",
+    keyword: "collision calculator",
+    description: "Calculate final velocities for an elastic or perfectly inelastic collision between two objects.",
+    intro: "Enter the mass and velocity of two objects to calculate their velocities after an elastic or perfectly inelastic collision.",
+    fields: [
+      { id: "collisionType", label: "Collision type", type: "select", default: "elastic", options: [
+        { v: "elastic", l: "Elastic (bounces apart, energy conserved)" }, { v: "inelastic", l: "Perfectly inelastic (objects stick together)" },
+      ] },
+      { id: "m1", label: "Mass 1", type: "number", unit: "kg", default: 2, step: 0.1, min: 0.001 },
+      { id: "v1", label: "Velocity 1 (before)", type: "number", unit: "m/s", default: 5, step: 0.1 },
+      { id: "m2", label: "Mass 2", type: "number", unit: "kg", default: 3, step: 0.1, min: 0.001 },
+      { id: "v2", label: "Velocity 2 (before)", type: "number", unit: "m/s", default: -2, step: 0.1 },
+    ],
+    compute: (v) => {
+      const totalMomentumBefore = v.m1 * v.v1 + v.m2 * v.v2;
+      if (v.collisionType === "elastic") {
+        const v1f = ((v.m1 - v.m2) * v.v1 + 2 * v.m2 * v.v2) / (v.m1 + v.m2);
+        const v2f = ((v.m2 - v.m1) * v.v2 + 2 * v.m1 * v.v1) / (v.m1 + v.m2);
+        return {
+          primary: { label: "Velocity 1 (after)", value: `${round(v1f, 4)} m/s` },
+          secondary: [
+            { l: "Velocity 2 (after)", v: `${round(v2f, 4)} m/s` },
+            { l: "Momentum before/after", v: `${round(totalMomentumBefore, 4)} kg·m/s` },
+          ],
+          note: "Elastic collision: both momentum and kinetic energy are conserved. v1f = ((m1−m2)v1 + 2m2v2)/(m1+m2), and v2f is the mirror formula.",
+        };
+      }
+      const vFinal = totalMomentumBefore / (v.m1 + v.m2);
+      const keBefore = 0.5 * v.m1 * v.v1 * v.v1 + 0.5 * v.m2 * v.v2 * v.v2;
+      const keAfter = 0.5 * (v.m1 + v.m2) * vFinal * vFinal;
+      return {
+        primary: { label: "Combined velocity (after)", value: `${round(vFinal, 4)} m/s` },
+        secondary: [
+          { l: "Kinetic energy lost", v: `${round(keBefore - keAfter, 4)} J` },
+          { l: "Momentum before/after", v: `${round(totalMomentumBefore, 4)} kg·m/s` },
+        ],
+        note: "Perfectly inelastic collision: the objects stick together and move with one shared velocity. Momentum is conserved, but kinetic energy is not (some converts to heat, sound, and deformation).",
+      };
+    },
+    faq: [
+      { q: "What's the difference between elastic and inelastic collisions?", a: "In an elastic collision, both momentum and kinetic energy are conserved (objects bounce apart cleanly). In a perfectly inelastic collision, momentum is conserved but kinetic energy is not - the objects stick together and move as one, with some energy lost to heat, sound, or deformation." },
+      { q: "How do I calculate velocities after an elastic collision?", a: "v1f = ((m1−m2)×v1 + 2×m2×v2) / (m1+m2), and v2f = ((m2−m1)×v2 + 2×m1×v1) / (m1+m2) - these formulas come from solving the conservation of momentum and conservation of kinetic energy equations together." },
+      { q: "Why is momentum always conserved, even in inelastic collisions?", a: "Momentum conservation comes directly from Newton's third law (equal and opposite forces during the collision) and doesn't require energy to be conserved - it holds for any collision as long as no external forces act on the system." },
+      { q: "What happens to the 'lost' kinetic energy in an inelastic collision?", a: "It converts to other forms of energy - heat from friction and deformation, sound from the impact, and permanent structural deformation of the colliding objects - rather than disappearing, consistent with the overall conservation of energy." },
+    ],
+    related: ["projectile-motion-calculator", "vector-calculator", "speed-distance-time-calculator"],
   },
   {
     id: "pregnancy-due-date-calculator",

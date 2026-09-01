@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Screen PPI Calculator | Calquary</title>
+  <meta name="description" content="Calculate a screen's pixel density (PPI) from resolution and diagonal size." />
+  <meta property="og:title" content="Screen PPI Calculator | Calquary">
+  <meta property="og:description" content="Calculate a screen's pixel density (PPI) from resolution and diagonal size.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/tool/screen-ppi-calculator.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/screen-ppi-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Screen PPI Calculator | Calquary">
+  <meta name="twitter:description" content="Calculate a screen's pixel density (PPI) from resolution and diagonal size.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/screen-ppi-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/screen-ppi-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/screen-ppi-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("screen-ppi-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("screen-ppi-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Screen PPI Calculator",
+      "description": "Calculate a screen's pixel density (PPI) from resolution and diagonal size.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/screen-ppi-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-01",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Everyday Conversions",
+          "item": "https://calquary.com/category/conversions.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Screen PPI Calculator",
+          "item": "https://calquary.com/tool/screen-ppi-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is PPI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pixels per inch - a measure of screen pixel density. Higher PPI means individual pixels are smaller and harder to see, producing a sharper image at a given viewing distance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the PPI of a 1920×1080 24-inch monitor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "About 91.79 PPI - the diagonal resolution is √(1920² + 1080²) ≈ 2203.1 pixels, divided by the 24-inch diagonal screen size."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does PPI matter for choosing a monitor or phone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Higher PPI generally produces a sharper, more detailed image, but the difference becomes less noticeable the farther away you sit - phones (viewed close-up) benefit more from very high PPI than a TV (viewed from across a room)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between PPI and DPI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "PPI (pixels per inch) describes screen or digital image resolution. DPI (dots per inch) technically refers to physical printer output resolution, though the terms are often used interchangeably in casual conversation."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/index.html#categories">Categories</a>
+          <a href="/index.html#tools">All tools</a>
+          <a href="/about.html">About</a>
+        </nav>
+        
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/index.html">Calquary</a> / <a href="/category/conversions.html">Everyday Conversions</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Screen PPI Calculator</h1>
+        <p style="max-width:60ch;">Enter a screen's pixel resolution and diagonal size to calculate its pixels per inch (PPI).</p>
+        <p class="last-updated">Last updated: September 1, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculate</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reset</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Frequently asked questions</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>What is PPI?</h3>
+<p>Pixels per inch - a measure of screen pixel density. Higher PPI means individual pixels are smaller and harder to see, producing a sharper image at a given viewing distance.</p>
+</div>
+<div class="faq-item">
+<h3>What is the PPI of a 1920×1080 24-inch monitor?</h3>
+<p>About 91.79 PPI - the diagonal resolution is √(1920² + 1080²) ≈ 2203.1 pixels, divided by the 24-inch diagonal screen size.</p>
+</div>
+<div class="faq-item">
+<h3>Why does PPI matter for choosing a monitor or phone?</h3>
+<p>Higher PPI generally produces a sharper, more detailed image, but the difference becomes less noticeable the farther away you sit - phones (viewed close-up) benefit more from very high PPI than a TV (viewed from across a room).</p>
+</div>
+<div class="faq-item">
+<h3>What's the difference between PPI and DPI?</h3>
+<p>PPI (pixels per inch) describes screen or digital image resolution. DPI (dots per inch) technically refers to physical printer output resolution, though the terms are often used interchangeably in casual conversation.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Related tools</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>A note on accuracy</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquary's calculators are built for quick, reliable estimates. For decisions with real financial, structural, or medical stakes, confirm with a qualified professional.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/index.html">← Back to all calculators</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

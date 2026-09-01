@@ -331,6 +331,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/aspect-ratio-calculator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/screen-ppi-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/screen-ppi-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/screen-ppi-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/print-dpi-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/print-dpi-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/print-dpi-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/exponent-calculator.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/exponent-calculator.html"/>
@@ -577,6 +589,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/tvm-solver.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/irr-npv-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/irr-npv-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/irr-npv-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/budget-calculator.html</loc>
     <lastmod>2026-08-31</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/budget-calculator.html"/>
@@ -727,6 +745,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/insulation-calculator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/ac-btu-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/ac-btu-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/lumber-calculator.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/lumber-calculator.html"/>
@@ -839,6 +863,12 @@
     <lastmod>2026-09-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/projectile-motion-calculator.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/projectile-motion-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/collision-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/collision-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/collision-calculator.html"/>
   </url>
   <url>
     <loc>https://calquary.com/tool/pregnancy-due-date-calculator.html</loc>
