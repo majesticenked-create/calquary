@@ -241,6 +241,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/effect-size-calculator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/mann-whitney-u-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/mann-whitney-u-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/mann-whitney-u-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/sequences-series-calculator.html</loc>
     <lastmod>2026-09-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/sequences-series-calculator.html"/>
@@ -599,6 +605,12 @@
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/investment-calculator.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/investment-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/bond-duration-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/bond-duration-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/bond-duration-calculator.html"/>
   </url>
   <url>
     <loc>https://calquary.com/tool/concrete-calculator.html</loc>

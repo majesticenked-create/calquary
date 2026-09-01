@@ -475,6 +475,60 @@ const CALCULATORS = [
     related: ["t-test-calculator", "standard-deviation-calculator", "z-score-calculator"],
   },
   {
+    id: "mann-whitney-u-calculator",
+    category: "math",
+    title: "Mann-Whitney U Test Calculator",
+    keyword: "mann whitney u test calculator",
+    description: "Calculate the Mann-Whitney U statistic for two independent groups, a non-parametric alternative to the t-test.",
+    intro: "Enter two groups of numbers (one per line or comma-separated) to calculate the Mann-Whitney U statistic.",
+    fields: [
+      { id: "group1", label: "Group 1 (comma or line separated)", type: "textarea", default: "1, 3, 5, 7, 9" },
+      { id: "group2", label: "Group 2 (comma or line separated)", type: "textarea", default: "2, 4, 6, 8, 10" },
+    ],
+    compute: (v) => {
+      const parse = (s) => (s || "").split(/[,\n]+/).map((x) => x.trim()).filter(Boolean).map(Number).filter((n) => !isNaN(n));
+      const g1 = parse(v.group1);
+      const g2 = parse(v.group2);
+      const n1 = g1.length, n2 = g2.length;
+      if (n1 < 2 || n2 < 2) {
+        return { primary: { label: "Need more data", value: "-" }, secondary: [], note: "Enter at least 2 numbers in each group." };
+      }
+      const combined = [...g1.map((x) => ({ val: x, group: 1 })), ...g2.map((x) => ({ val: x, group: 2 }))];
+      combined.sort((a, b) => a.val - b.val);
+      const ranks = new Array(combined.length);
+      let i = 0;
+      while (i < combined.length) {
+        let j = i;
+        while (j < combined.length && combined[j].val === combined[i].val) j++;
+        const avgRank = (i + 1 + j) / 2;
+        for (let k = i; k < j; k++) ranks[k] = avgRank;
+        i = j;
+      }
+      const R1 = combined.reduce((sum, item, idx) => item.group === 1 ? sum + ranks[idx] : sum, 0);
+      const U1 = R1 - (n1 * (n1 + 1)) / 2;
+      const U2 = n1 * n2 - U1;
+      const U = Math.min(U1, U2);
+      const meanU = (n1 * n2) / 2;
+      const sigmaU = Math.sqrt((n1 * n2 * (n1 + n2 + 1)) / 12);
+      const z = sigmaU > 0 ? (U1 - meanU) / sigmaU : 0;
+      return {
+        primary: { label: "U statistic", value: U },
+        secondary: [
+          { l: "U1, U2", v: `${round(U1, 2)}, ${round(U2, 2)}` },
+          { l: "z-score (normal approximation)", v: round(z, 4) },
+        ],
+        note: "Uses the rank-sum method with tied ranks averaged. The z-score approximation is reasonably accurate for n1 and n2 both above about 8-10; for smaller samples, compare U directly to an exact Mann-Whitney critical value table.",
+      };
+    },
+    faq: [
+      { q: "What is the Mann-Whitney U test used for?", a: "Comparing two independent groups to see if they come from the same distribution, without assuming the data is normally distributed - it's the non-parametric alternative to the independent two-sample t-test, based on ranking rather than means." },
+      { q: "How is U calculated?", a: "Combine both groups, rank all values together (averaging ranks for ties), sum the ranks for group 1 (R1), then U1 = R1 − n1(n1+1)/2. U2 is found the same way for group 2, or as n1×n2 − U1. The reported U statistic is the smaller of U1 and U2." },
+      { q: "How do I know if my result is significant?", a: "For larger samples, compare the z-score to a standard normal critical value (like ±1.96 for a 0.05 two-tailed test). For smaller samples (roughly n1 or n2 under 8-10), the normal approximation is less reliable - look up your exact U statistic against a Mann-Whitney critical value table instead." },
+      { q: "When should I use this instead of a t-test?", a: "When your data isn't normally distributed, contains outliers, or is ordinal rather than truly numeric - the Mann-Whitney test only relies on rank order, making it more robust than the t-test to non-normal distributions and extreme values." },
+    ],
+    related: ["t-test-calculator", "standard-deviation-calculator", "effect-size-calculator"],
+  },
+  {
     id: "sequences-series-calculator",
     category: "math",
     title: "Sequences and Series Calculator",
@@ -3002,6 +3056,56 @@ const CALCULATORS = [
       { q: "What's a realistic average annual return to assume for long-term projections?", a: "Historically, diversified stock market index funds have averaged roughly 7-10% annual returns before inflation over multi-decade periods, though any single year can vary wildly. Using a more conservative estimate (6-7%) for planning purposes accounts for volatility and fees better than assuming a best-case average every year." },
     ],
     related: ["savings-calculator", "compound-interest-calculator", "mortgage-calculator"],
+  },
+  {
+    id: "bond-duration-calculator",
+    category: "finance",
+    title: "Bond Duration Calculator",
+    keyword: "bond duration calculator",
+    description: "Calculate a bond's price, Macaulay duration, modified duration, DV01, and convexity.",
+    intro: "Enter a bond's face value, coupon rate, yield to maturity, term, and payment frequency to calculate its price and interest-rate risk measures.",
+    fields: [
+      { id: "faceValue", label: "Face value", type: "number", unit: "$", default: 1000, step: 10 },
+      { id: "couponRate", label: "Annual coupon rate", type: "number", unit: "%", default: 5, step: 0.01 },
+      { id: "ytm", label: "Yield to maturity", type: "number", unit: "%", default: 6, step: 0.01 },
+      { id: "years", label: "Years to maturity", type: "number", unit: "years", default: 5, step: 0.5 },
+      { id: "freq", label: "Payments per year", type: "number", default: 2, step: 1, min: 1 },
+    ],
+    compute: (v) => {
+      const n = Math.round(v.years * v.freq);
+      const couponPerPeriod = (v.faceValue * v.couponRate) / 100 / v.freq;
+      const yPerPeriod = v.ytm / 100 / v.freq;
+      let price = 0, weightedTime = 0, convexitySum = 0;
+      for (let t = 1; t <= n; t++) {
+        const cf = couponPerPeriod + (t === n ? v.faceValue : 0);
+        const pv = cf / Math.pow(1 + yPerPeriod, t);
+        price += pv;
+        weightedTime += t * pv;
+        convexitySum += pv * t * (t + 1);
+      }
+      const macaulay = weightedTime / price / v.freq;
+      const modified = macaulay / (1 + yPerPeriod);
+      const dv01 = modified * price * 0.0001;
+      const convexity = convexitySum / (price * Math.pow(1 + yPerPeriod, 2)) / (v.freq * v.freq);
+      return {
+        primary: { label: "Bond price", value: `$${round(price, 2).toLocaleString()}` },
+        secondary: [
+          { l: "Macaulay duration", v: `${round(macaulay, 4)} years` },
+          { l: "Modified duration", v: `${round(modified, 4)} years` },
+          { l: "DV01 (price change per 0.01%)", v: `$${round(dv01, 4)}` },
+          { l: "Convexity", v: round(convexity, 4) },
+        ],
+        note: "Macaulay duration is the weighted-average time to receive cash flows; modified duration estimates the % price change for a 1% yield change; DV01 is the dollar price change for a 0.01% (1 basis point) yield change. Assumes a flat yield curve and no default risk.",
+      };
+    },
+    faq: [
+      { q: "What is Macaulay duration?", a: "The weighted-average time (in years) until a bond's cash flows are received, where each cash flow's weight is its present value's share of the total price - it's a measure of how long, on average, your money is tied up." },
+      { q: "What is modified duration used for?", a: "Estimating a bond's price sensitivity to interest rate changes - a modified duration of 4.3 means the price changes by approximately 4.3% for each 1 percentage point change in yield (in the opposite direction)." },
+      { q: "What is DV01?", a: "\"Dollar value of 01\" - the actual dollar price change for a 1 basis point (0.01%) move in yield. It's the same concept as modified duration, just expressed in dollars for a specific price and a specific tiny yield move, rather than as a percentage." },
+      { q: "What is convexity, and why does it matter alongside duration?", a: "Convexity measures how much duration itself changes as yields change - duration alone is a straight-line (linear) approximation of price sensitivity, and convexity corrects for the fact that bond price/yield relationships actually curve, improving accuracy for larger yield changes." },
+      { q: "Why does a longer-maturity, lower-coupon bond have higher duration?", a: "Duration weights each cash flow by how far in the future it arrives - a lower coupon means more of the bond's value comes from the single face-value payment at maturity (rather than spread across earlier coupons), and a longer maturity pushes that payment further out, both of which increase the average weighted time." },
+    ],
+    related: ["savings-calculator", "loan-calculator", "compound-interest-calculator"],
   },
 
   // ---------------- CONSTRUCTION & HOME ----------------
