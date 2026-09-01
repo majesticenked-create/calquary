@@ -398,6 +398,230 @@ const CALCULATORS = [
     related: ["average-calculator", "fraction-calculator", "gcd-lcm-calculator"],
   },
   {
+    id: "t-test-calculator",
+    category: "math",
+    title: "T-Test Calculator",
+    keyword: "t test calculator",
+    description: "Calculate the t-statistic for a two-sample independent t-test.",
+    intro: "Enter each group's mean, standard deviation, and sample size to calculate the t-statistic and degrees of freedom.",
+    fields: [
+      { id: "mean1", label: "Group 1 mean", type: "number", default: 105, step: 0.1 },
+      { id: "sd1", label: "Group 1 standard deviation", type: "number", default: 15, step: 0.1 },
+      { id: "n1", label: "Group 1 sample size", type: "number", default: 30, step: 1, min: 2 },
+      { id: "mean2", label: "Group 2 mean", type: "number", default: 100, step: 0.1 },
+      { id: "sd2", label: "Group 2 standard deviation", type: "number", default: 14, step: 0.1 },
+      { id: "n2", label: "Group 2 sample size", type: "number", default: 30, step: 1, min: 2 },
+    ],
+    compute: (v) => {
+      const pooledVar = ((v.n1 - 1) * v.sd1 * v.sd1 + (v.n2 - 1) * v.sd2 * v.sd2) / (v.n1 + v.n2 - 2);
+      const se = Math.sqrt(pooledVar * (1 / v.n1 + 1 / v.n2));
+      const t = (v.mean1 - v.mean2) / se;
+      const df = v.n1 + v.n2 - 2;
+      return {
+        primary: { label: "t-statistic", value: round(t, 4) },
+        secondary: [
+          { l: "Degrees of freedom", v: df },
+          { l: "Pooled standard error", v: round(se, 4) },
+        ],
+        note: "This is the independent (unpaired) two-sample t-test with pooled variance, assuming both groups have similar variance. Compare |t| to a critical value from a t-table at your chosen significance level and these degrees of freedom to determine significance.",
+      };
+    },
+    faq: [
+      { q: "What does the t-statistic tell me?", a: "It measures how many standard errors apart the two group means are - the larger |t| is, the less likely the difference between groups happened by chance alone, assuming the null hypothesis (no real difference) is true." },
+      { q: "How do I know if my result is statistically significant?", a: "Compare your calculated |t| to a critical value from a t-distribution table, using your degrees of freedom and chosen significance level (commonly 0.05) - if |t| exceeds the critical value, the result is significant at that level." },
+      { q: "What's the difference between this and a paired t-test?", a: "This calculator assumes two independent groups (like a treatment group vs. a control group of different people). A paired t-test instead compares two measurements on the same subjects (like before/after) - for that, calculate the mean and standard deviation of the differences, then treat it as a one-sample t-test against zero." },
+      { q: "Why does this use \"pooled\" standard deviation?", a: "Pooling combines both groups' variance into a single weighted estimate, which is the standard approach when you can reasonably assume both groups have similar underlying variance - it uses more of your data than relying on either group's variance alone." },
+    ],
+    related: ["standard-deviation-calculator", "z-score-calculator", "sample-size-calculator"],
+  },
+  {
+    id: "effect-size-calculator",
+    category: "math",
+    title: "Effect Size Calculator (Cohen's d)",
+    keyword: "effect size calculator",
+    description: "Calculate Cohen's d to measure the standardized difference between two group means.",
+    intro: "Enter each group's mean, standard deviation, and sample size to calculate Cohen's d effect size.",
+    fields: [
+      { id: "mean1", label: "Group 1 mean", type: "number", default: 105, step: 0.1 },
+      { id: "sd1", label: "Group 1 standard deviation", type: "number", default: 15, step: 0.1 },
+      { id: "n1", label: "Group 1 sample size", type: "number", default: 30, step: 1, min: 2 },
+      { id: "mean2", label: "Group 2 mean", type: "number", default: 100, step: 0.1 },
+      { id: "sd2", label: "Group 2 standard deviation", type: "number", default: 14, step: 0.1 },
+      { id: "n2", label: "Group 2 sample size", type: "number", default: 30, step: 1, min: 2 },
+    ],
+    compute: (v) => {
+      const pooledSd = Math.sqrt(((v.n1 - 1) * v.sd1 * v.sd1 + (v.n2 - 1) * v.sd2 * v.sd2) / (v.n1 + v.n2 - 2));
+      const d = (v.mean1 - v.mean2) / pooledSd;
+      const absD = Math.abs(d);
+      let magnitude = "negligible";
+      if (absD >= 0.8) magnitude = "large";
+      else if (absD >= 0.5) magnitude = "medium";
+      else if (absD >= 0.2) magnitude = "small";
+      return {
+        primary: { label: "Cohen's d", value: round(d, 4) },
+        secondary: [
+          { l: "Pooled standard deviation", v: round(pooledSd, 4) },
+          { l: "Conventional magnitude", v: magnitude },
+        ],
+        note: "Cohen's conventional benchmarks: ~0.2 = small, ~0.5 = medium, ~0.8 = large effect - useful as a rough guide, not a strict rule, since what counts as a meaningful effect varies by field.",
+      };
+    },
+    faq: [
+      { q: "What is Cohen's d?", a: "A standardized measure of the difference between two group means, expressed in units of pooled standard deviation: d = (mean1 − mean2) ÷ pooled SD. It lets you compare effect sizes across studies that used different scales or units." },
+      { q: "What do Cohen's d values mean in practice?", a: "By Cohen's original conventions: about 0.2 is a small effect, 0.5 a medium effect, and 0.8 a large effect - meaning the groups' means differ by that many pooled standard deviations. These are rough benchmarks, not hard cutoffs." },
+      { q: "How is Cohen's d different from a t-test?", a: "A t-test tells you whether a difference is statistically significant (unlikely due to chance), while Cohen's d tells you how large that difference is in a standardized, comparable way - a result can be statistically significant with a tiny effect size, especially with large samples." },
+      { q: "Why does sample size not appear directly in the effect size formula?", a: "Effect size measures the magnitude of a difference independent of how much data you collected, unlike a t-test's significance, which does depend on sample size - a small, consistent difference will show a similar Cohen's d whether measured with 10 or 10,000 people, even though only the larger sample might reach statistical significance." },
+    ],
+    related: ["t-test-calculator", "standard-deviation-calculator", "z-score-calculator"],
+  },
+  {
+    id: "sequences-series-calculator",
+    category: "math",
+    title: "Sequences and Series Calculator",
+    keyword: "sequences and series calculator",
+    description: "Calculate the nth term and sum of an arithmetic or geometric sequence.",
+    intro: "Choose a sequence type, enter the first term and common difference or ratio, and how many terms to find the nth term and the sum.",
+    fields: [
+      { id: "type", label: "Sequence type", type: "select", default: "arithmetic", options: [
+        { v: "arithmetic", l: "Arithmetic (common difference)" }, { v: "geometric", l: "Geometric (common ratio)" },
+      ] },
+      { id: "a1", label: "First term (a₁)", type: "number", default: 3, step: 0.1 },
+      { id: "dr", label: "Common difference (d) or ratio (r)", type: "number", default: 5, step: 0.1 },
+      { id: "n", label: "Number of terms (n)", type: "number", default: 10, step: 1, min: 1 },
+    ],
+    compute: (v) => {
+      const n = Math.round(v.n);
+      if (v.type === "arithmetic") {
+        const an = v.a1 + (n - 1) * v.dr;
+        const sum = (n / 2) * (2 * v.a1 + (n - 1) * v.dr);
+        return {
+          primary: { label: `Term ${n} (aₙ)`, value: round(an, 6) },
+          secondary: [{ l: `Sum of first ${n} terms`, v: round(sum, 6) }],
+          note: `aₙ = a₁ + (n−1)d = ${v.a1} + (${n}−1)×${v.dr} = ${round(an, 6)}. Sum = n/2 × (2a₁ + (n−1)d).`,
+        };
+      }
+      const r = v.dr;
+      const an = v.a1 * Math.pow(r, n - 1);
+      const sum = r === 1 ? v.a1 * n : v.a1 * (1 - Math.pow(r, n)) / (1 - r);
+      return {
+        primary: { label: `Term ${n} (aₙ)`, value: round(an, 6) },
+        secondary: [{ l: `Sum of first ${n} terms`, v: round(sum, 6) }],
+        note: `aₙ = a₁ × r^(n−1) = ${v.a1} × ${r}^${n - 1} = ${round(an, 6)}. Sum = a₁(1−rⁿ)/(1−r) for r ≠ 1.`,
+      };
+    },
+    faq: [
+      { q: "What's the formula for the nth term of an arithmetic sequence?", a: "aₙ = a₁ + (n−1)d, where a₁ is the first term, d is the common difference, and n is the term number. For a₁=3, d=5, n=10: 3 + 9×5 = 48." },
+      { q: "What's the formula for the sum of an arithmetic sequence?", a: "Sum = n/2 × (2a₁ + (n−1)d), or equivalently n × (first term + last term) / 2. For the first 10 terms of 3, 8, 13...: 10/2 × (6 + 45) = 255." },
+      { q: "What's the formula for the nth term of a geometric sequence?", a: "aₙ = a₁ × r^(n−1), where r is the common ratio. For a₁=2, r=3, n=6: 2 × 3⁵ = 486." },
+      { q: "What's the formula for the sum of a geometric sequence?", a: "Sum = a₁(1 − rⁿ) / (1 − r) for r ≠ 1. For a₁=2, r=3, n=6: 2×(1−729)/(1−3) = 728. If r = 1, every term equals a₁, so the sum is simply a₁ × n." },
+    ],
+    related: ["gcd-lcm-calculator", "average-calculator", "compound-interest-calculator"],
+  },
+  {
+    id: "coupon-collector-calculator",
+    category: "math",
+    title: "Coupon Collector Calculator",
+    keyword: "coupon collector calculator",
+    description: "Calculate the expected number of draws needed to collect all n distinct items.",
+    intro: "Enter how many distinct items exist (like coupon types, cards, or prizes) to find the expected number of random draws to collect them all.",
+    fields: [
+      { id: "n", label: "Number of distinct items", type: "number", default: 6, step: 1, min: 1 },
+    ],
+    compute: (v) => {
+      const n = Math.round(v.n);
+      let harmonicSum = 0;
+      for (let k = 1; k <= n; k++) harmonicSum += 1 / k;
+      const expectedDraws = n * harmonicSum;
+      return {
+        primary: { label: "Expected draws to collect all", value: round(expectedDraws, 2) },
+        secondary: [{ l: "Harmonic number (Hₙ)", v: round(harmonicSum, 4) }],
+        note: "This is the classic \"coupon collector's problem\": expected draws = n × Hₙ, where Hₙ is the nth harmonic number (1 + 1/2 + 1/3 + ... + 1/n). Assumes each draw is independent and equally likely to be any of the n items.",
+      };
+    },
+    faq: [
+      { q: "What is the coupon collector's problem?", a: "A classic probability problem: if there are n distinct items and each random draw is equally likely to be any one of them (with replacement), how many draws on average does it take to collect at least one of every item?" },
+      { q: "What's the expected number of draws to collect all 6 items?", a: "About 14.7 draws - using expected draws = n × Hₙ = 6 × (1 + 1/2 + 1/3 + 1/4 + 1/5 + 1/6) = 6 × 2.45 ≈ 14.7." },
+      { q: "Why does it get disproportionately harder to collect the last few items?", a: "Early draws are likely to be new items since most of the set is still uncollected, but as you collect more, each new draw has a shrinking chance of being one of the few remaining types - the last item alone takes n draws on average to find." },
+      { q: "Does this assume every item is equally likely to be drawn?", a: "Yes - this calculation assumes a uniform distribution, where each of the n items has an equal 1/n chance on every draw. If some items are rarer than others, the actual expected number of draws will be higher than this estimate." },
+    ],
+    related: ["random-number-generator", "lottery-odds-calculator", "poker-hand-probability-calculator"],
+  },
+  {
+    id: "similarity-ratio-calculator",
+    category: "math",
+    title: "Similarity Ratio Calculator",
+    keyword: "similarity ratio calculator",
+    description: "Calculate the area and volume ratio between two similar figures from their side length ratio.",
+    intro: "Enter the scale factor (ratio of corresponding side lengths) between two similar figures to find the resulting area and volume ratios.",
+    fields: [
+      { id: "scaleFactor", label: "Scale factor (side length ratio, k)", type: "number", default: 3, step: 0.1, min: 0 },
+    ],
+    compute: (v) => {
+      const k = v.scaleFactor;
+      const areaRatio = k * k;
+      const volumeRatio = k * k * k;
+      return {
+        primary: { label: "Area ratio (k²)", value: round(areaRatio, 4) },
+        secondary: [{ l: "Volume ratio (k³)", v: round(volumeRatio, 4) }],
+        note: "For similar figures, if corresponding side lengths scale by a factor k, area scales by k² and volume scales by k³ - this holds for any similar shapes, not just simple ones like squares and cubes.",
+      };
+    },
+    faq: [
+      { q: "If two similar shapes have sides in a 1:3 ratio, what's their area ratio?", a: "1:9 - area scales with the square of the linear scale factor, so a side ratio of 3 gives an area ratio of 3² = 9." },
+      { q: "If two similar solids have sides in a 1:3 ratio, what's their volume ratio?", a: "1:27 - volume scales with the cube of the linear scale factor, so a side ratio of 3 gives a volume ratio of 3³ = 27." },
+      { q: "Why does area scale by the square and volume by the cube?", a: "Area is a two-dimensional measurement (length × length), so both dimensions scale by k, multiplying the area by k×k = k². Volume is three-dimensional (length × length × length), so all three dimensions scale by k, multiplying volume by k×k×k = k³." },
+      { q: "Does this work for any similar shapes, or just squares and cubes?", a: "Any similar shapes - triangles, circles, irregular polygons, spheres, or complex solids. As long as one figure is a uniform scaled copy of the other, the k² area rule and k³ volume rule apply regardless of the specific shape." },
+    ],
+    related: ["pythagorean-theorem-calculator", "rectangular-prism-volume-calculator", "trapezoid-area-calculator"],
+  },
+  {
+    id: "color-difference-checker",
+    category: "text",
+    title: "Color Difference Checker",
+    keyword: "color difference checker",
+    description: "Compare two colors and measure how different they are.",
+    intro: "Enter two hex colors to see how visually different they are, from identical to very different.",
+    fields: [
+      { id: "color1", label: "Color 1 (hex)", type: "text", default: "#3366CC" },
+      { id: "color2", label: "Color 2 (hex)", type: "text", default: "#33CC66" },
+    ],
+    compute: (v) => {
+      const parseHex = (hex) => {
+        const clean = hex.replace("#", "").trim();
+        const full = clean.length === 3 ? clean.split("").map((c) => c + c).join("") : clean;
+        const num = parseInt(full, 16);
+        if (full.length !== 6 || isNaN(num)) return null;
+        return { r: (num >> 16) & 255, g: (num >> 8) & 255, b: num & 255 };
+      };
+      const c1 = parseHex(v.color1);
+      const c2 = parseHex(v.color2);
+      if (!c1 || !c2) {
+        return { primary: { label: "Invalid color", value: "Use hex format like #3366CC" }, secondary: [], note: "Enter both colors as 3- or 6-digit hex codes." };
+      }
+      const dr = c1.r - c2.r, dg = c1.g - c2.g, db = c1.b - c2.b;
+      const distance = Math.sqrt(dr * dr + dg * dg + db * db);
+      const maxDistance = Math.sqrt(255 * 255 * 3);
+      const percentDiff = (distance / maxDistance) * 100;
+      let label = "Identical";
+      if (distance > 0) label = distance < 30 ? "Very similar" : distance < 100 ? "Noticeably different" : distance < 200 ? "Quite different" : "Very different";
+      return {
+        primary: { label: "Difference", value: label },
+        secondary: [
+          { l: "RGB distance", v: round(distance, 2) },
+          { l: "As percent of max", v: `${round(percentDiff, 1)}%` },
+        ],
+        note: "Uses simple Euclidean distance in RGB space (0 = identical, ~441 = maximum possible difference, e.g. black vs. white). For color-critical work like printing or design systems, a perceptual metric like CIE Delta E is more accurate than raw RGB distance.",
+      };
+    },
+    faq: [
+      { q: "How is color difference calculated here?", a: "As the Euclidean distance between the two colors' red, green, and blue values, treating RGB as 3D coordinates: √((ΔR)² + (ΔG)² + (ΔB)²). It's a simple, fast measure of numerical difference." },
+      { q: "What's the maximum possible difference?", a: "About 441.7, which is the distance between pure black (0,0,0) and pure white (255,255,255): √(255² × 3) ≈ 441.7." },
+      { q: "Is RGB distance the same as how different colors look to the human eye?", a: "Not exactly - human color perception isn't uniform across RGB space (we're more sensitive to some hue differences than others), so a more accurate perceptual measure like CIE Delta E weights the components differently. RGB distance is a simpler, \"good enough\" approximation for most everyday comparisons." },
+      { q: "Can I use this to check if two brand colors are too similar?", a: "Yes, as a rough check - a low RGB distance (under about 30) suggests colors that could be hard to tell apart, useful for flagging potential branding or accessibility conflicts before a more rigorous perceptual check." },
+    ],
+    related: ["color-mixer", "case-converter", "word-counter"],
+  },
+  {
     id: "correlation-calculator",
     category: "math",
     title: "Correlation Coefficient Calculator",
