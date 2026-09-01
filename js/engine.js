@@ -568,6 +568,35 @@ function initOnlineStopwatch(fieldsId, resultId, formId) {
   render();
 }
 
+function initOnlineClock(fieldsId, resultId, formId) {
+  const form = document.getElementById(formId);
+  const fieldsContainer = document.getElementById(fieldsId);
+  const resultPanel = document.getElementById(resultId);
+  if (!form || !fieldsContainer || !resultPanel) return;
+  form.style.display = "none";
+  resultPanel.classList.remove("visible");
+
+  const widget = document.createElement("div");
+  widget.className = "timer-widget";
+  widget.innerHTML = `
+    <div class="timer-display" id="clock-time">--:--:--</div>
+    <div id="clock-date" style="color:var(--muted);font-size:1rem;"></div>
+  `;
+  form.parentElement.insertBefore(widget, form);
+
+  const timeEl = widget.querySelector("#clock-time");
+  const dateEl = widget.querySelector("#clock-date");
+
+  function render() {
+    const now = new Date();
+    timeEl.textContent = now.toLocaleTimeString(undefined, { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+    dateEl.textContent = now.toLocaleDateString(undefined, { weekday: "long", year: "numeric", month: "long", day: "numeric" });
+  }
+
+  render();
+  setInterval(render, 1000);
+}
+
 function initCalculator(calcId, opts = {}) {
   const {
     fieldsId = "calc-fields",
@@ -587,6 +616,10 @@ function initCalculator(calcId, opts = {}) {
   }
   if (calcId === "online-stopwatch") {
     initOnlineStopwatch(fieldsId, resultId, formId);
+    return;
+  }
+  if (calcId === "current-time") {
+    initOnlineClock(fieldsId, resultId, formId);
     return;
   }
 

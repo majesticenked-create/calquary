@@ -3636,6 +3636,27 @@ const CALCULATORS = [
     related: ["online-timer", "online-alarm-clock", "time-duration-calculator"],
   },
   {
+    id: "current-time",
+    category: "datetime",
+    title: "Current Time",
+    keyword: "current time",
+    description: "See the exact current time and date, updating live in your browser.",
+    intro: "This shows your device's current time and date, updating every second.",
+    // Live widget, same pattern as online-timer — see initOnlineClock in
+    // js/engine.js. compute() only exists for the card-preview readout.
+    fields: [],
+    compute: () => ({
+      primary: { label: "Current time", value: "Live" },
+      secondary: [{ l: "Updates", v: "Every second" }],
+    }),
+    faq: [
+      { q: "Where does this time come from?", a: "Directly from your device's system clock, read and displayed in your browser - it's exactly as accurate as your computer or phone's own clock." },
+      { q: "Is this shown in my local time zone?", a: "Yes - it uses your device's configured time zone automatically. To see the time in a different zone, use the Time Zone Converter instead." },
+      { q: "Why might this be a minute or two off from an official time source?", a: "If your device's clock hasn't synced recently (or is set manually), it can drift slightly from an atomic-clock reference - most computers and phones auto-sync periodically to correct this." },
+    ],
+    related: ["time-zone-converter", "online-timer", "online-stopwatch"],
+  },
+  {
     id: "random-date-generator",
     category: "datetime",
     title: "Random Date Generator",
