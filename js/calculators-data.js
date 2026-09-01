@@ -1868,6 +1868,99 @@ const CALCULATORS = [
     related: ["chemical-equation-balancer", "molecular-weight-calculator", "percentage-calculator"],
   },
   {
+    id: "half-life-calculator",
+    category: "math",
+    title: "Half-Life Calculator",
+    keyword: "half life calculator",
+    description: "Calculate half-life, remaining amount, or elapsed time for first-order decay (radioactive decay or first-order reaction kinetics).",
+    intro: "Choose what to solve for, then enter the known values to calculate first-order decay - used for radioactive decay and first-order chemical reaction kinetics.",
+    fields: [
+      { id: "solveFor", label: "Solve for", type: "select", default: "remaining", options: [
+        { v: "remaining", l: "Remaining amount (from half-life and time)" }, { v: "halfLife", l: "Half-life (from rate constant k)" }, { v: "rateConstant", l: "Rate constant k (from half-life)" },
+      ] },
+      { id: "initialAmount", label: "Initial amount", type: "number", default: 100, step: 1 },
+      { id: "halfLife", label: "Half-life", type: "number", unit: "time units", default: 10, step: 0.1 },
+      { id: "elapsedTime", label: "Elapsed time", type: "number", unit: "time units", default: 25, step: 0.1 },
+      { id: "rateConstant", label: "Rate constant (k)", type: "number", unit: "per time unit", default: 0.0693, step: 0.0001 },
+    ],
+    compute: (v) => {
+      if (v.solveFor === "remaining") {
+        const remaining = v.initialAmount * Math.pow(0.5, v.elapsedTime / v.halfLife);
+        const percentRemaining = (remaining / v.initialAmount) * 100;
+        return {
+          primary: { label: "Remaining amount", value: round(remaining, 6) },
+          secondary: [{ l: "Percent remaining", v: `${round(percentRemaining, 3)}%` }],
+          note: "N(t) = N₀ × (1/2)^(t / half-life). Assumes simple first-order (exponential) decay.",
+        };
+      }
+      if (v.solveFor === "halfLife") {
+        const halfLife = Math.LN2 / v.rateConstant;
+        return {
+          primary: { label: "Half-life", value: round(halfLife, 6) },
+          secondary: [{ l: "Rate constant used", v: v.rateConstant }],
+          note: "Half-life = ln(2) / k, the standard relationship for first-order kinetics or radioactive decay.",
+        };
+      }
+      const k = Math.LN2 / v.halfLife;
+      return {
+        primary: { label: "Rate constant (k)", value: round(k, 6) },
+        secondary: [{ l: "Half-life used", v: v.halfLife }],
+        note: "k = ln(2) / half-life, the standard relationship for first-order kinetics or radioactive decay.",
+      };
+    },
+    faq: [
+      { q: "What is the formula for first-order half-life?", a: "Half-life = ln(2) / k, where k is the rate constant. Equivalently, k = ln(2) / half-life. This applies to both radioactive decay and first-order chemical reaction kinetics." },
+      { q: "How much of a substance remains after several half-lives?", a: "N(t) = N₀ × (1/2)^(t / half-life). After 1 half-life, 50% remains; after 2, 25%; after 3, 12.5% - each half-life cuts the remaining amount in half, regardless of the starting amount." },
+      { q: "How much of 100 units remains after 25 time units, with a half-life of 10?", a: "About 17.7 units (17.7% of the original) - 100 × (1/2)^(25/10) = 100 × 0.5^2.5 ≈ 17.68." },
+      { q: "Does this apply to both radioactive decay and chemical reactions?", a: "Yes, for first-order processes - radioactive decay is inherently first-order, and many chemical reactions (where the rate depends on the concentration of a single reactant) follow the same exponential decay math." },
+    ],
+    related: ["molecular-weight-calculator", "compound-interest-calculator", "solubility-product-calculator"],
+  },
+  {
+    id: "hardy-weinberg-calculator",
+    category: "math",
+    title: "Hardy-Weinberg Equilibrium Calculator",
+    keyword: "hardy weinberg calculator",
+    description: "Calculate genotype and allele frequencies using the Hardy-Weinberg equilibrium equation.",
+    intro: "Enter one allele frequency (or a genotype frequency) to calculate the expected genotype frequencies under Hardy-Weinberg equilibrium.",
+    fields: [
+      { id: "solveFrom", label: "Calculate from", type: "select", default: "p", options: [
+        { v: "p", l: "Dominant allele frequency (p)" }, { v: "q2", l: "Recessive genotype frequency (q²)" },
+      ] },
+      { id: "value", label: "Value (0 to 1)", type: "number", default: 0.7, step: 0.01, min: 0, max: 1 },
+    ],
+    compute: (v) => {
+      let p, q;
+      if (v.solveFrom === "p") {
+        p = Math.max(0, Math.min(1, v.value));
+        q = 1 - p;
+      } else {
+        const q2 = Math.max(0, Math.min(1, v.value));
+        q = Math.sqrt(q2);
+        p = 1 - q;
+      }
+      const p2 = p * p;
+      const twoPQ = 2 * p * q;
+      const q2 = q * q;
+      return {
+        primary: { label: "Homozygous dominant (p²)", value: `${round(p2 * 100, 2)}%` },
+        secondary: [
+          { l: "Heterozygous (2pq)", v: `${round(twoPQ * 100, 2)}%` },
+          { l: "Homozygous recessive (q²)", v: `${round(q2 * 100, 2)}%` },
+          { l: "p, q", v: `${round(p, 4)}, ${round(q, 4)}` },
+        ],
+        note: "Hardy-Weinberg equilibrium: p² + 2pq + q² = 1, where p and q are the two allele frequencies (p + q = 1). Assumes no mutation, migration, selection, or genetic drift, and random mating in a large population.",
+      };
+    },
+    faq: [
+      { q: "What is the Hardy-Weinberg equation?", a: "p² + 2pq + q² = 1, where p and q are the frequencies of two alleles at a gene (p + q = 1). p² is the frequency of homozygous dominant individuals, 2pq is heterozygous, and q² is homozygous recessive." },
+      { q: "If the dominant allele frequency (p) is 0.7, what are the genotype frequencies?", a: "q = 1 − 0.7 = 0.3. p² = 0.49 (49% homozygous dominant), 2pq = 0.42 (42% heterozygous), q² = 0.09 (9% homozygous recessive)." },
+      { q: "How do I find allele frequencies if I only know the recessive phenotype frequency?", a: "The recessive phenotype frequency equals q² (only homozygous recessive individuals show the recessive trait), so take its square root to get q, then p = 1 − q." },
+      { q: "What assumptions does Hardy-Weinberg equilibrium require?", a: "No mutation, no migration, no natural selection, random mating, and an infinitely large population (no genetic drift) - real populations rarely meet all these perfectly, so Hardy-Weinberg serves as a theoretical baseline to detect when evolution is happening, by comparing observed frequencies to the expected equilibrium." },
+    ],
+    related: ["solubility-product-calculator", "standard-deviation-calculator", "z-score-calculator"],
+  },
+  {
     id: "grade-calculator",
     category: "math",
     title: "Grade Calculator",
@@ -4796,6 +4889,166 @@ const CALCULATORS = [
       { q: "What is 36.7°C in Fahrenheit?", a: "98.06°F - multiply by 9/5 and add 32: 36.7×9/5+32 = 66.06+32 = 98.06°F, right around normal human body temperature." },
     ],
     related: ["weight-converter", "volume-converter", "unit-length-converter"],
+  },
+  {
+    id: "oven-temperature-converter",
+    category: "conversions",
+    title: "Oven Temperature Converter",
+    keyword: "oven temperature converter",
+    description: "Convert oven temperatures between Celsius, Fahrenheit, and UK Gas Mark.",
+    intro: "Enter a temperature to convert between Celsius, Fahrenheit, and the UK Gas Mark scale used on older British ovens.",
+    fields: [
+      { id: "value", label: "Value", type: "number", default: 180, step: 1 },
+      { id: "from", label: "From", type: "select", default: "c", options: [
+        { v: "c", l: "Celsius" }, { v: "f", l: "Fahrenheit" }, { v: "gas", l: "Gas Mark" },
+      ] },
+    ],
+    compute: (v) => {
+      const gasMarkTable = [
+        { mark: "1/4", c: 110, f: 225 }, { mark: "1/2", c: 120, f: 250 }, { mark: "1", c: 140, f: 275 },
+        { mark: "2", c: 150, f: 300 }, { mark: "3", c: 160, f: 325 }, { mark: "4", c: 180, f: 350 },
+        { mark: "5", c: 190, f: 375 }, { mark: "6", c: 200, f: 400 }, { mark: "7", c: 220, f: 425 },
+        { mark: "8", c: 230, f: 450 }, { mark: "9", c: 240, f: 475 },
+      ];
+      let celsius;
+      if (v.from === "c") celsius = v.value;
+      else if (v.from === "f") celsius = (v.value - 32) * (5 / 9);
+      else {
+        const entry = gasMarkTable.reduce((closest, e) => Math.abs(parseFloat(e.mark) - v.value) < Math.abs(parseFloat(closest.mark) - v.value) ? e : closest, gasMarkTable[0]);
+        celsius = entry.c;
+      }
+      const fahrenheit = celsius * (9 / 5) + 32;
+      const closestGasMark = gasMarkTable.reduce((closest, e) => Math.abs(e.c - celsius) < Math.abs(closest.c - celsius) ? e : closest, gasMarkTable[0]);
+      return {
+        primary: { label: "Celsius", value: `${round(celsius, 0)}°C` },
+        secondary: [
+          { l: "Fahrenheit", v: `${round(fahrenheit, 0)}°F` },
+          { l: "Closest Gas Mark", v: closestGasMark.mark },
+        ],
+        note: "Gas Mark is a stepped scale (whole and half numbers only), so the closest match is shown rather than an exact conversion - most home ovens round to the nearest standard setting anyway.",
+      };
+    },
+    faq: [
+      { q: "What is Gas Mark 4 in Celsius and Fahrenheit?", a: "180°C, which converts to 356°F exactly (though many recipe charts round this to the conventional 350°F pairing) - Gas Mark 4 is one of the most common baking temperatures, standard for cakes and general baking in UK recipes." },
+      { q: "What is 200°C in Gas Mark?", a: "Gas Mark 6 - 200°C is a common temperature for roasting." },
+      { q: "Why does Gas Mark use fractions like 1/4 and 1/2 at the low end?", a: "Gas Mark's lowest settings (1/4 and 1/2, corresponding to 110°C/225°F and 120°C/250°F) are used for very low, slow cooking like meringues or slow roasts, and the fractional notation is a historical convention from the original UK gas oven dial markings." },
+      { q: "Is Gas Mark still used today?", a: "Mostly in older UK recipes and some British cookbooks - most modern ovens, including in the UK, use Celsius directly, but Gas Mark conversions are still commonly included for compatibility with older recipes and gas ovens that still use the dial system." },
+    ],
+    related: ["temperature-converter", "cooking-converter", "volume-converter"],
+  },
+  {
+    id: "mix-ratio-calculator",
+    category: "construction",
+    title: "Mix Ratio Calculator",
+    keyword: "epoxy mix ratio calculator",
+    description: "Calculate the amounts of two components needed for a given mix ratio, like epoxy or paint.",
+    intro: "Enter your total amount needed and the mix ratio (like 2:1) to calculate how much of each component to use.",
+    fields: [
+      { id: "totalAmount", label: "Total amount needed", type: "number", default: 300, step: 1 },
+      { id: "ratioA", label: "Part A ratio", type: "number", default: 2, step: 0.1, min: 0.01 },
+      { id: "ratioB", label: "Part B ratio", type: "number", default: 1, step: 0.1, min: 0.01 },
+    ],
+    compute: (v) => {
+      const totalRatio = v.ratioA + v.ratioB;
+      const unit = v.totalAmount / totalRatio;
+      const amountA = unit * v.ratioA;
+      const amountB = unit * v.ratioB;
+      return {
+        primary: { label: "Part A amount", value: round(amountA, 2) },
+        secondary: [
+          { l: "Part B amount", v: round(amountB, 2) },
+          { l: "Ratio simplified", v: `${round(v.ratioA / v.ratioB, 3)}:1` },
+        ],
+        note: "Part A + Part B = total amount, split in the ratio you entered. Use the same unit (weight or volume) consistently - check your product's instructions for whether it specifies a ratio by weight or by volume, since they can differ.",
+      };
+    },
+    faq: [
+      { q: "How do I calculate a 2:1 epoxy mix for 300ml total?", a: "Divide 300 by (2+1)=3 to get 100 per unit, then multiply: Part A = 100×2 = 200ml, Part B = 100×1 = 100ml." },
+      { q: "Does it matter if I mix by weight or by volume?", a: "Yes - always check the product's instructions. Some epoxies and paints specify ratios by volume, others by weight, and using the wrong basis can produce an incorrectly cured or mixed product even if you follow the numeric ratio correctly." },
+      { q: "What happens if I get the mix ratio wrong?", a: "For epoxy and other reactive products, an incorrect ratio can prevent proper curing, leaving the mixture tacky, brittle, or never fully hardening - unlike simple dilutions, these reactions typically need close to the exact specified ratio to work correctly." },
+      { q: "Can I use this for paint tinting or other non-reactive mixes too?", a: "Yes - the same proportional math applies to any two-part mix ratio, reactive or not, including paint tinting, cleaning solution dilution, or fuel-oil mixes for 2-stroke engines." },
+    ],
+    related: ["paint-calculator", "concrete-calculator", "ratio-calculator"],
+  },
+  {
+    id: "rainfall-volume-calculator",
+    category: "conversions",
+    title: "Rainfall to Volume Calculator",
+    keyword: "rainfall to volume calculator",
+    description: "Convert rainfall depth over an area into total water volume.",
+    intro: "Enter the rainfall depth and the catchment area to calculate the total volume of water collected.",
+    fields: [
+      { id: "depth", label: "Rainfall depth", type: "number", unit: "mm", default: 10, step: 0.1 },
+      { id: "area", label: "Catchment area", type: "number", unit: "m²", default: 100, step: 1 },
+    ],
+    compute: (v) => {
+      const liters = v.depth * v.area;
+      const gallons = liters * 0.264172;
+      return {
+        primary: { label: "Volume collected", value: `${round(liters, 1)} L` },
+        secondary: [
+          { l: "US gallons", v: round(gallons, 1) },
+          { l: "Cubic meters", v: round(liters / 1000, 4) },
+        ],
+        note: "1 mm of rainfall over 1 m² of catchment area equals exactly 1 liter of water (since 1 mm = 0.001 m, and 0.001 m × 1 m² = 0.001 m³ = 1 L). Assumes 100% capture with no runoff loss.",
+      };
+    },
+    faq: [
+      { q: "How do I convert rainfall in mm to liters?", a: "Multiply the rainfall depth (mm) by the catchment area (m²) - the result is directly in liters, since 1 mm over 1 m² equals exactly 1 liter." },
+      { q: "How much water does 10mm of rain produce over a 100m² roof?", a: "1,000 liters - 10mm × 100m² = 1,000, and each 1mm-over-1m² unit equals 1 liter." },
+      { q: "Why does 1mm of rain over 1 square meter equal exactly 1 liter?", a: "1mm = 0.001 meters, so 0.001m × 1m² = 0.001 cubic meters, and 1 cubic meter equals 1,000 liters, so 0.001 m³ = 1 liter exactly - the units work out perfectly because a liter is defined as 0.001 cubic meters." },
+      { q: "Does this account for runoff losses?", a: "No - it assumes 100% of the rain falling on the area is captured, which is realistic for a smooth, sealed roof feeding a collection system but overestimates yield for permeable surfaces like soil or gravel, where some water soaks in or evaporates instead of running off." },
+    ],
+    related: ["volume-converter", "unit-length-converter", "concrete-calculator"],
+  },
+  {
+    id: "calories-burned-calculator",
+    category: "health",
+    title: "Calories Burned Calculator",
+    keyword: "calories burned calculator",
+    description: "Estimate calories burned during an activity using its MET value.",
+    intro: "Choose an activity and enter your weight and duration to estimate calories burned, using standard MET (Metabolic Equivalent of Task) values.",
+    fields: [
+      { id: "activity", label: "Activity", type: "select", default: "running_6mph", options: [
+        { v: "walking_3mph", l: "Walking, 3 mph (MET 3.5)" },
+        { v: "walking_4mph", l: "Walking, 4 mph, brisk (MET 5.0)" },
+        { v: "running_5mph", l: "Running, 5 mph (MET 8.3)" },
+        { v: "running_6mph", l: "Running, 6 mph (MET 9.8)" },
+        { v: "running_8mph", l: "Running, 8 mph (MET 11.8)" },
+        { v: "cycling_moderate", l: "Cycling, moderate (MET 8.0)" },
+        { v: "swimming_moderate", l: "Swimming, moderate (MET 6.0)" },
+        { v: "weightTraining", l: "Weight training, general (MET 3.5)" },
+        { v: "yoga", l: "Yoga (MET 2.5)" },
+        { v: "hiking", l: "Hiking (MET 6.0)" },
+      ] },
+      { id: "weightLb", label: "Weight", type: "number", unit: "lb", default: 160, step: 1 },
+      { id: "durationMin", label: "Duration", type: "number", unit: "min", default: 30, step: 1 },
+    ],
+    compute: (v) => {
+      const metValues = {
+        walking_3mph: 3.5, walking_4mph: 5.0, running_5mph: 8.3, running_6mph: 9.8, running_8mph: 11.8,
+        cycling_moderate: 8.0, swimming_moderate: 6.0, weightTraining: 3.5, yoga: 2.5, hiking: 6.0,
+      };
+      const met = metValues[v.activity];
+      const weightKg = v.weightLb * 0.453592;
+      const hours = v.durationMin / 60;
+      const calories = met * weightKg * hours;
+      return {
+        primary: { label: "Calories burned", value: round(calories, 0) },
+        secondary: [
+          { l: "MET value", v: met },
+          { l: "Calories/minute", v: round(calories / v.durationMin, 1) },
+        ],
+        note: "Calories = MET × body weight (kg) × duration (hours). MET values are standardized averages from published research; actual burn varies with intensity, fitness level, and individual metabolism.",
+      };
+    },
+    faq: [
+      { q: "What is a MET value?", a: "Metabolic Equivalent of Task - a standardized measure of how many times more energy an activity uses compared to resting quietly (MET 1.0). Running at 6 mph (MET 9.8) burns roughly 9.8 times more energy than sitting still." },
+      { q: "How are calories burned calculated from MET?", a: "Calories = MET × weight in kilograms × duration in hours. A 160 lb (72.6 kg) person running at 6 mph (MET 9.8) for 30 minutes burns about 9.8 × 72.6 × 0.5 ≈ 356 calories." },
+      { q: "Why does weight affect calories burned for the same activity?", a: "Moving more body mass takes more energy - a heavier person burns more calories doing the identical activity at the identical intensity than a lighter person, since MET-based estimates scale directly with body weight." },
+      { q: "How accurate are MET-based calorie estimates?", a: "They're population averages, not individual measurements - actual calorie burn varies with fitness level, exact intensity, terrain, and individual metabolism, so treat this as a reasonable estimate rather than a precise figure, similar to what fitness trackers and gym equipment typically show." },
+    ],
+    related: ["calorie-calculator", "bmr-calculator", "pace-calculator"],
   },
   {
     id: "water-density-calculator",

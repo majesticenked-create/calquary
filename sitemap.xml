@@ -86,7 +86,7 @@
   </url>
   <url>
     <loc>https://calquary.com/category/construction.html</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/construction.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/construction.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/construction.html"/>
@@ -98,7 +98,7 @@
   </url>
   <url>
     <loc>https://calquary.com/category/health.html</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/health.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/health.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/health.html"/>
@@ -419,6 +419,18 @@
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/limiting-reagent-calculator.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/limiting-reagent-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/half-life-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/half-life-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/half-life-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/hardy-weinberg-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/hardy-weinberg-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/hardy-weinberg-calculator.html"/>
   </url>
   <url>
     <loc>https://calquary.com/tool/grade-calculator.html</loc>
@@ -943,6 +955,30 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/temperature-converter.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/oven-temperature-converter.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/oven-temperature-converter.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/oven-temperature-converter.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/mix-ratio-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/mix-ratio-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/rainfall-volume-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/rainfall-volume-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/rainfall-volume-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/calories-burned-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/calories-burned-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/calories-burned-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/water-density-calculator.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/water-density-calculator.html"/>
@@ -1310,7 +1346,7 @@
   </url>
   <url>
     <loc>https://calquary.com/es/category/construction.html</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/construction.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/construction.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/construction.html"/>
@@ -1322,7 +1358,7 @@
   </url>
   <url>
     <loc>https://calquary.com/es/category/health.html</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/health.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/health.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/health.html"/>
@@ -1682,7 +1718,7 @@
   </url>
   <url>
     <loc>https://calquary.com/fr/category/construction.html</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/construction.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/construction.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/construction.html"/>
@@ -1694,7 +1730,7 @@
   </url>
   <url>
     <loc>https://calquary.com/fr/category/health.html</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/health.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/health.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/health.html"/>
@@ -2054,7 +2090,7 @@
   </url>
   <url>
     <loc>https://calquary.com/de/category/construction.html</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/construction.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/construction.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/construction.html"/>
@@ -2066,7 +2102,7 @@
   </url>
   <url>
     <loc>https://calquary.com/de/category/health.html</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/health.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/health.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/health.html"/>
@@ -2426,7 +2462,7 @@
   </url>
   <url>
     <loc>https://calquary.com/pt/category/construction.html</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/construction.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/construction.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/construction.html"/>
@@ -2438,7 +2474,7 @@
   </url>
   <url>
     <loc>https://calquary.com/pt/category/health.html</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/health.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/health.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/health.html"/>
@@ -2798,7 +2834,7 @@
   </url>
   <url>
     <loc>https://calquary.com/it/category/construction.html</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/construction.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/construction.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/construction.html"/>
@@ -2810,7 +2846,7 @@
   </url>
   <url>
     <loc>https://calquary.com/it/category/health.html</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/health.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/health.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/health.html"/>
@@ -3170,7 +3206,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ja/category/construction.html</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/construction.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/construction.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/construction.html"/>
@@ -3182,7 +3218,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ja/category/health.html</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/health.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/health.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/health.html"/>
