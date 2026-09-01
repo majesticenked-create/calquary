@@ -349,6 +349,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/distance-formula-calculator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/triangle-solver.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/triangle-solver.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/triangle-solver.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/hypergeometric-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/hypergeometric-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/hypergeometric-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/trapezoid-area-calculator.html</loc>
     <lastmod>2026-08-31</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/trapezoid-area-calculator.html"/>
@@ -377,6 +389,12 @@
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/molecular-weight-calculator.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/molecular-weight-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/empirical-formula-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/empirical-formula-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/empirical-formula-calculator.html"/>
   </url>
   <url>
     <loc>https://calquary.com/tool/system-of-equations-solver.html</loc>
@@ -413,6 +431,12 @@
     <lastmod>2026-09-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/solubility-product-calculator.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/solubility-product-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/titration-ph-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/titration-ph-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/titration-ph-calculator.html"/>
   </url>
   <url>
     <loc>https://calquary.com/tool/limiting-reagent-calculator.html</loc>
@@ -893,6 +917,12 @@
     <lastmod>2026-08-31</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/sunrise-sunset-calculator.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/sunrise-sunset-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/sun-position-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/sun-position-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/sun-position-calculator.html"/>
   </url>
   <url>
     <loc>https://calquary.com/tool/day-of-week-calculator.html</loc>

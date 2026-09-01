@@ -1176,6 +1176,95 @@ const CALCULATORS = [
     related: ["pythagorean-theorem-calculator", "quadratic-formula-calculator", "slope-calculator"],
   },
   {
+    id: "triangle-solver",
+    category: "math",
+    title: "Triangle Solver (SSS)",
+    keyword: "triangle solver",
+    description: "Calculate all three angles and the area of a triangle from its three side lengths.",
+    intro: "Enter the three side lengths of a triangle to calculate all three angles and the area, using the law of cosines and Heron's formula.",
+    fields: [
+      { id: "a", label: "Side a", type: "number", default: 3, step: 0.1, min: 0.01 },
+      { id: "b", label: "Side b", type: "number", default: 4, step: 0.1, min: 0.01 },
+      { id: "c", label: "Side c", type: "number", default: 5, step: 0.1, min: 0.01 },
+    ],
+    compute: (v) => {
+      const { a, b, c } = v;
+      if (a + b <= c || a + c <= b || b + c <= a) {
+        return { primary: { label: "Invalid triangle", value: "Sides don't form a valid triangle" }, secondary: [], note: "The sum of any two sides must be greater than the third side (the triangle inequality)." };
+      }
+      const angleFrom = (opp, s1, s2) => Math.acos((s1 * s1 + s2 * s2 - opp * opp) / (2 * s1 * s2)) * (180 / Math.PI);
+      const angleA = angleFrom(a, b, c);
+      const angleB = angleFrom(b, a, c);
+      const angleC = 180 - angleA - angleB;
+      const s = (a + b + c) / 2;
+      const area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+      let type = "scalene";
+      if (a === b && b === c) type = "equilateral";
+      else if (a === b || b === c || a === c) type = "isosceles";
+      if (Math.abs(angleA - 90) < 0.01 || Math.abs(angleB - 90) < 0.01 || Math.abs(angleC - 90) < 0.01) type += ", right";
+      return {
+        primary: { label: "Angle A (opposite side a)", value: `${round(angleA, 3)}°` },
+        secondary: [
+          { l: "Angle B (opposite side b)", v: `${round(angleB, 3)}°` },
+          { l: "Angle C (opposite side c)", v: `${round(angleC, 3)}°` },
+          { l: "Area", v: round(area, 4) },
+          { l: "Triangle type", v: type },
+        ],
+        note: "Uses the law of cosines to find angles from three known sides (SSS), and Heron's formula for area. All three angles always sum to 180°.",
+      };
+    },
+    faq: [
+      { q: "What are the angles of a 3-4-5 triangle?", a: "90°, 53.13°, and 36.87° - a 3-4-5 triangle is a right triangle, since 3² + 4² = 5² satisfies the Pythagorean theorem, and the angle opposite the longest side (5) is exactly 90°." },
+      { q: "What's the area of a 3-4-5 triangle?", a: "6 - using Heron's formula: s = (3+4+5)/2 = 6, area = √(6×(6-3)×(6-4)×(6-5)) = √(6×3×2×1) = √36 = 6." },
+      { q: "What is the law of cosines?", a: "c² = a² + b² − 2ab·cos(C), a generalization of the Pythagorean theorem that works for any triangle, not just right triangles. Rearranged to solve for an angle: cos(C) = (a² + b² − c²) / (2ab)." },
+      { q: "Why does this need three sides, and not angles or other combinations?", a: "This tool solves the SSS (side-side-side) case specifically. Other cases like SAS (two sides and the included angle) or ASA (two angles and the included side) need different starting formulas - the law of cosines shown here works directly from three known sides." },
+    ],
+    related: ["pythagorean-theorem-calculator", "slope-calculator", "distance-formula-calculator"],
+  },
+  {
+    id: "hypergeometric-calculator",
+    category: "math",
+    title: "Hypergeometric Distribution Calculator",
+    keyword: "hypergeometric calculator",
+    description: "Calculate the probability of drawing exactly k successes from a population without replacement.",
+    intro: "Enter the population size, number of successes in the population, sample size, and number of successes you want to find the exact and cumulative probability.",
+    fields: [
+      { id: "N", label: "Population size (N)", type: "number", default: 52, step: 1, min: 1 },
+      { id: "K", label: "Successes in population (K)", type: "number", default: 13, step: 1, min: 0 },
+      { id: "n", label: "Sample size (n)", type: "number", default: 5, step: 1, min: 0 },
+      { id: "k", label: "Successes wanted (k)", type: "number", default: 2, step: 1, min: 0 },
+    ],
+    compute: (v) => {
+      const N = Math.round(v.N), K = Math.round(v.K), n = Math.round(v.n), k = Math.round(v.k);
+      if (k > n || k > K || n > N || n - k > N - K) {
+        return { primary: { label: "Impossible combination", value: "0" }, secondary: [], note: "Check that k ≤ n, k ≤ K, n ≤ N, and n−k ≤ N−K." };
+      }
+      const logFactorial = (x) => {
+        let sum = 0;
+        for (let i = 2; i <= x; i++) sum += Math.log(i);
+        return sum;
+      };
+      const logC = (n2, r) => (r < 0 || r > n2) ? -Infinity : logFactorial(n2) - logFactorial(r) - logFactorial(n2 - r);
+      const pmf = (kk) => Math.exp(logC(K, kk) + logC(N - K, n - kk) - logC(N, n));
+      const exactProb = pmf(k);
+      let cdf = 0;
+      const lowerBound = Math.max(0, n - (N - K));
+      for (let i = lowerBound; i <= k; i++) cdf += pmf(i);
+      return {
+        primary: { label: `P(X = ${k})`, value: `${round(exactProb * 100, 4)}%` },
+        secondary: [{ l: `P(X ≤ ${k})`, v: `${round(cdf * 100, 4)}%` }],
+        note: "P(X=k) = C(K,k) × C(N−K,n−k) / C(N,n) - the probability of exactly k successes when drawing n items without replacement from a population of N with K total successes.",
+      };
+    },
+    faq: [
+      { q: "What is the hypergeometric distribution used for?", a: "Calculating probabilities when sampling without replacement from a finite population - like drawing cards from a deck, or defective items from a batch, where each draw changes the odds for the next one (unlike the binomial distribution, which assumes replacement)." },
+      { q: "What's the probability of drawing exactly 2 hearts in a 5-card hand?", a: "About 27.4% - with N=52 (deck), K=13 (hearts), n=5 (hand size), k=2: P(X=2) = C(13,2) × C(39,3) / C(52,5) ≈ 0.2743." },
+      { q: "How is this different from the binomial distribution?", a: "Binomial assumes each trial is independent with a fixed probability (sampling with replacement, or an infinite population). Hypergeometric accounts for the population shrinking as you sample (without replacement), which changes the odds on each draw - this matters most when the sample size is a meaningful fraction of the population." },
+      { q: "What does the cumulative probability (P(X ≤ k)) tell me?", a: "The probability of getting k or fewer successes, not exactly k - useful for questions like \"what's the probability of drawing at most 2 hearts,\" which sums the individual probabilities for 0, 1, and 2 hearts." },
+    ],
+    related: ["permutations-combinations-calculator", "poker-hand-probability-calculator", "lottery-odds-calculator"],
+  },
+  {
     id: "trapezoid-area-calculator",
     category: "math",
     title: "Trapezoid Area Calculator",
@@ -1406,6 +1495,58 @@ const CALCULATORS = [
       { q: "How do we calculate molar mass?", a: "Add up the atomic weight of each element in the formula, multiplied by how many atoms of that element appear - for H2O, that's 2 × 1.008 (hydrogen) + 1 × 15.999 (oxygen) = 18.015 g/mol. Enter any formula above and this calculator does that sum for you." },
     ],
     related: ["percentage-calculator", "square-root-calculator", "exponent-calculator"],
+  },
+  {
+    id: "empirical-formula-calculator",
+    category: "math",
+    title: "Empirical Formula Calculator",
+    keyword: "empirical formula calculator",
+    description: "Calculate a compound's empirical formula from the mass percentage of each element.",
+    intro: "Enter up to three elements and their mass percentages to calculate the compound's empirical formula.",
+    fields: [
+      { id: "element1", label: "Element 1 symbol", type: "text", default: "C" },
+      { id: "percent1", label: "Element 1 mass %", type: "number", unit: "%", default: 40.0, step: 0.01 },
+      { id: "element2", label: "Element 2 symbol", type: "text", default: "H" },
+      { id: "percent2", label: "Element 2 mass %", type: "number", unit: "%", default: 6.7, step: 0.01 },
+      { id: "element3", label: "Element 3 symbol (optional)", type: "text", default: "O" },
+      { id: "percent3", label: "Element 3 mass % (optional, 0 if unused)", type: "number", unit: "%", default: 53.3, step: 0.01 },
+    ],
+    compute: (v) => {
+      const atomicWeights = {
+        H: 1.008, C: 12.011, N: 14.007, O: 15.999, F: 18.998, Na: 22.99, Mg: 24.305, Al: 26.982, Si: 28.085,
+        P: 30.974, S: 32.06, Cl: 35.45, K: 39.098, Ca: 40.078, Fe: 55.845, Cu: 63.546, Zn: 65.38, Br: 79.904, I: 126.9,
+      };
+      const entries = [
+        { el: (v.element1 || "").trim(), pct: v.percent1 },
+        { el: (v.element2 || "").trim(), pct: v.percent2 },
+        { el: (v.element3 || "").trim(), pct: v.percent3 },
+      ].filter((e) => e.el && e.pct > 0);
+      for (const e of entries) {
+        if (!atomicWeights[e.el]) {
+          return { primary: { label: "Unknown element", value: e.el }, secondary: [], note: "Supported elements: H, C, N, O, F, Na, Mg, Al, Si, P, S, Cl, K, Ca, Fe, Cu, Zn, Br, I." };
+        }
+      }
+      if (entries.length < 2) {
+        return { primary: { label: "Enter at least 2 elements", value: "-" }, secondary: [], note: "Fill in symbol and mass % for at least two elements." };
+      }
+      const moles = entries.map((e) => ({ el: e.el, mol: e.pct / atomicWeights[e.el] }));
+      const minMol = Math.min(...moles.map((m) => m.mol));
+      const ratios = moles.map((m) => ({ el: m.el, ratio: m.mol / minMol }));
+      const roundedRatios = ratios.map((r) => Math.round(r.ratio));
+      const formula = ratios.map((r, idx) => `${r.el}${roundedRatios[idx] === 1 ? "" : roundedRatios[idx]}`).join("");
+      return {
+        primary: { label: "Empirical formula", value: formula },
+        secondary: ratios.map((r) => ({ l: r.el, v: round(r.ratio, 4) })),
+        note: "Mole ratio = mass% ÷ atomic weight for each element, then divide all by the smallest to get the simplest whole-number ratio. If a ratio isn't close to a whole number, the true formula may need multiplying through by a small integer.",
+      };
+    },
+    faq: [
+      { q: "What is an empirical formula?", a: "The simplest whole-number ratio of atoms in a compound - for example, glucose's molecular formula is C₆H₁₂O₆, but its empirical formula is CH₂O, the reduced ratio." },
+      { q: "How do I calculate an empirical formula from mass percentages?", a: "Divide each element's mass percentage by its atomic weight to get relative moles, then divide all the mole values by the smallest one to get the simplest ratio - round to whole numbers if they're close (like 1.98 → 2)." },
+      { q: "What's the empirical formula for a compound that's 40% C, 6.7% H, 53.3% O?", a: "CH₂O - moles: C = 40/12.011 ≈ 3.33, H = 6.7/1.008 ≈ 6.65, O = 53.3/15.999 ≈ 3.33. Dividing all by the smallest (3.33) gives roughly C₁H₂O₁, so CH₂O." },
+      { q: "Why might my mole ratios not come out to exact whole numbers?", a: "Rounding in the mass percentages themselves, or a true ratio that isn't 1:1:1 (like 2:3), can leave you with values like 1.5 or 2.33 instead of whole numbers - if that happens, try multiplying all the ratios by a small whole number (2 or 3) to see if they land on whole numbers." },
+    ],
+    related: ["molecular-weight-calculator", "chemical-equation-balancer", "percentage-calculator"],
   },
   {
     id: "system-of-equations-solver",
@@ -1778,6 +1919,56 @@ const CALCULATORS = [
       { q: "Does this work for any compound, or just 1:1 and 1:2 ratios?", a: "It works for any x:y cation-to-anion ratio - enter the actual stoichiometric coefficients from the compound's formula (like 2 and 3 for a compound like Al₂S₃) and the calculator applies the same general formula." },
     ],
     related: ["molecular-weight-calculator", "chemical-equation-balancer", "limiting-reagent-calculator"],
+  },
+  {
+    id: "titration-ph-calculator",
+    category: "math",
+    title: "Titration pH Calculator",
+    keyword: "titration ph calculator",
+    description: "Calculate the pH at any point during a strong acid / strong base titration.",
+    intro: "Enter the acid and base concentrations and volumes to calculate the resulting pH - works for any point before, at, or after the equivalence point.",
+    fields: [
+      { id: "acidConc", label: "Acid concentration", type: "number", unit: "mol/L", default: 0.1, step: 0.001 },
+      { id: "acidVolume", label: "Acid volume", type: "number", unit: "mL", default: 50, step: 1 },
+      { id: "baseConc", label: "Base concentration", type: "number", unit: "mol/L", default: 0.1, step: 0.001 },
+      { id: "baseVolume", label: "Base volume added", type: "number", unit: "mL", default: 40, step: 1 },
+    ],
+    compute: (v) => {
+      const molesAcid = v.acidConc * (v.acidVolume / 1000);
+      const molesBase = v.baseConc * (v.baseVolume / 1000);
+      const totalVolume = (v.acidVolume + v.baseVolume) / 1000;
+      let pH, note;
+      if (Math.abs(molesAcid - molesBase) < 1e-12) {
+        pH = 7;
+        note = "At the equivalence point, moles of acid and base are equal - for a strong acid/strong base titration, this occurs at exactly pH 7.";
+      } else if (molesBase < molesAcid) {
+        const excessH = molesAcid - molesBase;
+        const hConc = excessH / totalVolume;
+        pH = -Math.log10(hConc);
+        note = `Before equivalence: excess H⁺ = ${excessH.toExponential(4)} mol over ${round(totalVolume * 1000, 2)} mL total volume gives [H⁺] = ${hConc.toExponential(4)} mol/L, so pH = −log₁₀[H⁺].`;
+      } else {
+        const excessOH = molesBase - molesAcid;
+        const ohConc = excessOH / totalVolume;
+        const pOH = -Math.log10(ohConc);
+        pH = 14 - pOH;
+        note = `Past equivalence: excess OH⁻ = ${excessOH.toExponential(4)} mol over ${round(totalVolume * 1000, 2)} mL total volume gives [OH⁻] = ${ohConc.toExponential(4)} mol/L, so pOH = −log₁₀[OH⁻] and pH = 14 − pOH.`;
+      }
+      return {
+        primary: { label: "pH", value: round(pH, 4) },
+        secondary: [
+          { l: "Moles of acid", v: molesAcid.toExponential(4) },
+          { l: "Moles of base added", v: molesBase.toExponential(4) },
+        ],
+        note,
+      };
+    },
+    faq: [
+      { q: "How do I calculate pH before the equivalence point?", a: "Subtract moles of base from moles of acid to find excess H⁺, divide by total volume to get [H⁺], then pH = −log₁₀[H⁺]. This works because the strong base fully neutralizes an equal amount of acid, leaving the rest as excess." },
+      { q: "What is the pH at the equivalence point for a strong acid/strong base titration?", a: "Exactly 7 - at the equivalence point, moles of acid and base are equal, fully neutralizing each other and leaving only water and a neutral salt, with no excess H⁺ or OH⁻." },
+      { q: "How do I calculate pH after the equivalence point?", a: "Subtract moles of acid from moles of base to find excess OH⁻, divide by total volume to get [OH⁻], calculate pOH = −log₁₀[OH⁻], then pH = 14 − pOH." },
+      { q: "Does this work for weak acids or weak bases?", a: "No - this calculator assumes both the acid and base are strong (fully dissociate), which is what makes the simple excess-ion math valid. Weak acid/base titrations need equilibrium (Ka/Kb) calculations and produce a different, non-7 pH at the equivalence point due to the conjugate base or acid remaining in solution." },
+    ],
+    related: ["solubility-product-calculator", "molecular-weight-calculator", "chemical-equation-balancer"],
   },
   {
     id: "limiting-reagent-calculator",
@@ -4631,6 +4822,104 @@ const CALCULATORS = [
       { q: "Does this account for daylight saving time?", a: "Yes - times are shown in the selected city's local time zone, which automatically reflects daylight saving time if that zone observes it on the chosen date." },
     ],
     related: ["time-zone-converter", "daylight-saving-time-calculator", "day-of-week-calculator"],
+  },
+  {
+    id: "sun-position-calculator",
+    category: "datetime",
+    title: "Sun Position Calculator",
+    keyword: "sun position calculator",
+    description: "Find the sun's altitude and azimuth (solar noon, direction, and height in the sky) for any date, time, and city.",
+    intro: "Choose a city, date, and time to find the sun's altitude and azimuth (compass direction) at that moment, plus solar noon for the day.",
+    fields: [
+      { id: "date", label: "Date", type: "date", default: todayDateString() },
+      { id: "time", label: "Time (24-hour, HH:MM)", type: "text", default: nowTimeString() },
+      { id: "city", label: "City", type: "select", default: "New York", options: [
+        { v: "New York", l: "New York, USA" }, { v: "Los Angeles", l: "Los Angeles, USA" },
+        { v: "Chicago", l: "Chicago, USA" }, { v: "London", l: "London, UK" },
+        { v: "Paris", l: "Paris, France" }, { v: "Berlin", l: "Berlin, Germany" },
+        { v: "Moscow", l: "Moscow, Russia" }, { v: "Cairo", l: "Cairo, Egypt" },
+        { v: "Dubai", l: "Dubai, UAE" }, { v: "Mumbai", l: "Mumbai, India" },
+        { v: "Bangkok", l: "Bangkok, Thailand" }, { v: "Shanghai", l: "Shanghai, China" },
+        { v: "Tokyo", l: "Tokyo, Japan" }, { v: "Sydney", l: "Sydney, Australia" },
+        { v: "Auckland", l: "Auckland, New Zealand" }, { v: "Sao Paulo", l: "São Paulo, Brazil" },
+      ] },
+    ],
+    compute: (v) => {
+      const cities = {
+        "New York": { lat: 40.7128, lon: -74.006, zone: "America/New_York" },
+        "Los Angeles": { lat: 34.0522, lon: -118.2437, zone: "America/Los_Angeles" },
+        "Chicago": { lat: 41.8781, lon: -87.6298, zone: "America/Chicago" },
+        "London": { lat: 51.5074, lon: -0.1278, zone: "Europe/London" },
+        "Paris": { lat: 48.8566, lon: 2.3522, zone: "Europe/Paris" },
+        "Berlin": { lat: 52.52, lon: 13.405, zone: "Europe/Berlin" },
+        "Moscow": { lat: 55.7558, lon: 37.6173, zone: "Europe/Moscow" },
+        "Cairo": { lat: 30.0444, lon: 31.2357, zone: "Africa/Cairo" },
+        "Dubai": { lat: 25.2048, lon: 55.2708, zone: "Asia/Dubai" },
+        "Mumbai": { lat: 19.076, lon: 72.8777, zone: "Asia/Kolkata" },
+        "Bangkok": { lat: 13.7563, lon: 100.5018, zone: "Asia/Bangkok" },
+        "Shanghai": { lat: 31.2304, lon: 121.4737, zone: "Asia/Shanghai" },
+        "Tokyo": { lat: 35.6762, lon: 139.6503, zone: "Asia/Tokyo" },
+        "Sydney": { lat: -33.8688, lon: 151.2093, zone: "Australia/Sydney" },
+        "Auckland": { lat: -36.8485, lon: 174.7633, zone: "Pacific/Auckland" },
+        "Sao Paulo": { lat: -23.5505, lon: -46.6333, zone: "America/Sao_Paulo" },
+      };
+      const c = cities[v.city];
+      const rad = Math.PI / 180;
+      const dayMs = 86400000;
+      const J1970 = 2440588, J2000 = 2451545, J0 = 0.0009;
+      const e = rad * 23.4397;
+      const toJulian = (d) => d.getTime() / dayMs - 0.5 + J1970;
+      const [hh, min] = (v.time || "12:00").split(":").map(Number);
+      const timeStr = `${String(hh).padStart(2, "0")}:${String(min).padStart(2, "0")}`;
+      const asUTC = new Date(`${v.date}T${timeStr}:00Z`);
+      const getOffsetMinutes = (date, zone) => {
+        const zStr = date.toLocaleString("en-US", { timeZone: zone });
+        const uStr = date.toLocaleString("en-US", { timeZone: "UTC" });
+        return (new Date(zStr) - new Date(uStr)) / 60000;
+      };
+      const offsetMin = getOffsetMinutes(asUTC, c.zone);
+      const dateAtTime = new Date(asUTC.getTime() - offsetMin * 60000);
+      const dNum = toJulian(dateAtTime) - J2000;
+      const rightAscension = (l) => Math.atan2(Math.sin(l) * Math.cos(e), Math.cos(l));
+      const declination = (l) => Math.asin(Math.sin(l) * Math.sin(e));
+      const solarMeanAnomaly = (d) => rad * (357.5291 + 0.98560028 * d);
+      const eclipticLongitude = (M) => M + rad * (1.9148 * Math.sin(M) + 0.02 * Math.sin(2 * M) + 0.0003 * Math.sin(3 * M)) + rad * 102.9372 + Math.PI;
+      const M = solarMeanAnomaly(dNum);
+      const L = eclipticLongitude(M);
+      const dec = declination(L);
+      const ra = rightAscension(L);
+      const lw = rad * -c.lon;
+      const phi = rad * c.lat;
+      const siderealTime = rad * (280.16 + 360.9856235 * dNum) - lw;
+      const H = siderealTime - ra;
+      const azimuthSouth = Math.atan2(Math.sin(H), Math.cos(H) * Math.sin(phi) - Math.tan(dec) * Math.cos(phi));
+      const azimuth = ((azimuthSouth / rad) + 180 + 360) % 360;
+      const altitude = Math.asin(Math.sin(phi) * Math.sin(dec) + Math.cos(phi) * Math.cos(dec) * Math.cos(H)) / rad;
+      const n = Math.round(dNum - J0 - lw / (2 * Math.PI));
+      const ds = J0 + lw / (2 * Math.PI) + n;
+      const Mnoon = solarMeanAnomaly(ds);
+      const Lnoon = eclipticLongitude(Mnoon);
+      const Jnoon = J2000 + ds + 0.0053 * Math.sin(Mnoon) - 0.0069 * Math.sin(2 * Lnoon);
+      const fromJulian = (j) => new Date((j + 0.5 - J1970) * dayMs);
+      const solarNoon = fromJulian(Jnoon).toLocaleTimeString("en-US", { timeZone: c.zone, hour: "2-digit", minute: "2-digit" });
+      const compassPoints = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
+      const compass = compassPoints[Math.round(azimuth / 22.5) % 16];
+      return {
+        primary: { label: "Sun altitude", value: `${round(altitude, 2)}°${altitude < 0 ? " (below horizon)" : ""}` },
+        secondary: [
+          { l: "Azimuth (from N, clockwise)", v: `${round(azimuth, 2)}° (${compass})` },
+          { l: "Solar noon today", v: solarNoon },
+        ],
+        note: "Altitude is the sun's height above the horizon (90° = directly overhead, 0° = on the horizon, negative = below). Azimuth is compass direction, measured clockwise from north. Accurate to within about a degree.",
+      };
+    },
+    faq: [
+      { q: "What does 'sun altitude' mean?", a: "The angle of the sun above the horizon - 0° means the sun is right on the horizon (sunrise/sunset), 90° means directly overhead, and negative values mean the sun is below the horizon (nighttime)." },
+      { q: "What does 'azimuth' mean?", a: "The sun's compass direction, measured in degrees clockwise from north - 0°/360° is north, 90° is east, 180° is south, and 270° is west. This tool also shows the nearest compass point (like SE or WNW) for easier reading." },
+      { q: "What is solar noon?", a: "The moment the sun reaches its highest point in the sky for that day (due south in the Northern Hemisphere, due north in the Southern Hemisphere) - it's rarely exactly 12:00 local clock time, since clock time is standardized across a whole time zone while solar noon depends on your exact longitude." },
+      { q: "Why isn't solar noon at exactly 12:00?", a: "Two reasons: your exact longitude within your time zone shifts solar noon from the zone's reference meridian, and the \"equation of time\" (Earth's elliptical orbit and axial tilt) shifts it by up to about 16 minutes throughout the year, even at a fixed longitude." },
+    ],
+    related: ["sunrise-sunset-calculator", "time-zone-converter", "daylight-saving-time-calculator"],
   },
   {
     id: "day-of-week-calculator",

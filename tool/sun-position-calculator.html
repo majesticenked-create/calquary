@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sun Position Calculator | Calquary</title>
+  <meta name="description" content="Find the sun's altitude and azimuth (solar noon, direction, and height in the sky) for any date, time, and city." />
+  <meta property="og:title" content="Sun Position Calculator | Calquary">
+  <meta property="og:description" content="Find the sun's altitude and azimuth (solar noon, direction, and height in the sky) for any date, time, and city.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/tool/sun-position-calculator.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/sun-position-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sun Position Calculator | Calquary">
+  <meta name="twitter:description" content="Find the sun's altitude and azimuth (solar noon, direction, and height in the sky) for any date, time, and city.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/sun-position-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/sun-position-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/sun-position-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("sun-position-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("sun-position-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Sun Position Calculator",
+      "description": "Find the sun's altitude and azimuth (solar noon, direction, and height in the sky) for any date, time, and city.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/sun-position-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-01",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Date & Time",
+          "item": "https://calquary.com/category/datetime.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Sun Position Calculator",
+          "item": "https://calquary.com/tool/sun-position-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does 'sun altitude' mean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The angle of the sun above the horizon - 0° means the sun is right on the horizon (sunrise/sunset), 90° means directly overhead, and negative values mean the sun is below the horizon (nighttime)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does 'azimuth' mean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The sun's compass direction, measured in degrees clockwise from north - 0°/360° is north, 90° is east, 180° is south, and 270° is west. This tool also shows the nearest compass point (like SE or WNW) for easier reading."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is solar noon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The moment the sun reaches its highest point in the sky for that day (due south in the Northern Hemisphere, due north in the Southern Hemisphere) - it's rarely exactly 12:00 local clock time, since clock time is standardized across a whole time zone while solar noon depends on your exact longitude."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why isn't solar noon at exactly 12:00?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Two reasons: your exact longitude within your time zone shifts solar noon from the zone's reference meridian, and the \"equation of time\" (Earth's elliptical orbit and axial tilt) shifts it by up to about 16 minutes throughout the year, even at a fixed longitude."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/index.html#categories">Categories</a>
+          <a href="/index.html#tools">All tools</a>
+          <a href="/about.html">About</a>
+        </nav>
+        
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/index.html">Calquary</a> / <a href="/category/datetime.html">Date & Time</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Sun Position Calculator</h1>
+        <p style="max-width:60ch;">Choose a city, date, and time to find the sun's altitude and azimuth (compass direction) at that moment, plus solar noon for the day.</p>
+        <p class="last-updated">Last updated: September 1, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculate</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reset</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Frequently asked questions</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>What does 'sun altitude' mean?</h3>
+<p>The angle of the sun above the horizon - 0° means the sun is right on the horizon (sunrise/sunset), 90° means directly overhead, and negative values mean the sun is below the horizon (nighttime).</p>
+</div>
+<div class="faq-item">
+<h3>What does 'azimuth' mean?</h3>
+<p>The sun's compass direction, measured in degrees clockwise from north - 0°/360° is north, 90° is east, 180° is south, and 270° is west. This tool also shows the nearest compass point (like SE or WNW) for easier reading.</p>
+</div>
+<div class="faq-item">
+<h3>What is solar noon?</h3>
+<p>The moment the sun reaches its highest point in the sky for that day (due south in the Northern Hemisphere, due north in the Southern Hemisphere) - it's rarely exactly 12:00 local clock time, since clock time is standardized across a whole time zone while solar noon depends on your exact longitude.</p>
+</div>
+<div class="faq-item">
+<h3>Why isn't solar noon at exactly 12:00?</h3>
+<p>Two reasons: your exact longitude within your time zone shifts solar noon from the zone's reference meridian, and the "equation of time" (Earth's elliptical orbit and axial tilt) shifts it by up to about 16 minutes throughout the year, even at a fixed longitude.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Related tools</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>A note on accuracy</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquary's calculators are built for quick, reliable estimates. For decisions with real financial, structural, or medical stakes, confirm with a qualified professional.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/index.html">← Back to all calculators</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>
