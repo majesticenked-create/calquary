@@ -4657,6 +4657,221 @@ const CALCULATORS = [
     related: ["unit-length-converter", "volume-converter", "paint-calculator"],
   },
   {
+    id: "microwave-wattage-converter",
+    category: "conversions",
+    title: "Microwave Wattage Converter",
+    keyword: "microwave wattage converter",
+    description: "Adjust a recipe's cooking time when your microwave's wattage is different from the recipe's.",
+    intro: "Enter the recipe's original time and wattage, plus your microwave's wattage, to get an adjusted cooking time.",
+    fields: [
+      { id: "originalTime", label: "Recipe's cook time", type: "number", unit: "min", default: 5, step: 0.5 },
+      { id: "originalWattage", label: "Recipe's wattage", type: "number", unit: "W", default: 1000, step: 50 },
+      { id: "yourWattage", label: "Your microwave's wattage", type: "number", unit: "W", default: 700, step: 50 },
+    ],
+    compute: (v) => {
+      const newTime = v.originalTime * (v.originalWattage / v.yourWattage);
+      const newMin = Math.floor(newTime);
+      const newSec = Math.round((newTime - newMin) * 60);
+      return {
+        primary: { label: "Adjusted cook time", value: `${round(newTime, 2)} min` },
+        secondary: [{ l: "As min:sec", v: `${newMin}:${String(newSec).padStart(2, "0")}` }],
+        note: "Power and time are inversely proportional for the same total energy delivered - a lower-wattage microwave needs proportionally longer. Check food periodically since actual results can vary by microwave and food type.",
+      };
+    },
+    faq: [
+      { q: "How do I convert a 1000W recipe time to 700W?", a: "Multiply the original time by (1000 ÷ 700) ≈ 1.43. A 5-minute recipe at 1000W needs about 7.14 minutes (7 min 9 sec) at 700W." },
+      { q: "Why does lower wattage need more time, not less?", a: "Wattage measures how much energy the microwave delivers per second - a lower-wattage microwave delivers less energy per second, so it takes proportionally longer to deliver the same total amount of energy (and therefore the same amount of cooking)." },
+      { q: "Is this conversion exact?", a: "It's a close approximation based on the inverse relationship between power and time, but actual results can vary by food type, quantity, and microwave design - check food periodically rather than relying on the adjusted time alone, especially for longer cook times." },
+      { q: "What's a typical microwave wattage?", a: "Most home microwaves range from 600W (compact/older models) to 1200W (large, newer models), with 1000W-1100W being common for standard full-size microwaves - check the wattage printed inside the door or in the manual." },
+    ],
+    related: ["temperature-converter", "cooking-converter", "unit-length-converter"],
+  },
+  {
+    id: "list-shuffler",
+    category: "text",
+    title: "List Shuffler",
+    keyword: "list shuffler",
+    description: "Shuffle a list of items into random order.",
+    intro: "Paste a list of items (one per line) to shuffle them into random order.",
+    fields: [
+      { id: "items", label: "Items (one per line)", type: "textarea", default: "Alex\nJordan\nTaylor\nMorgan\nCasey" },
+    ],
+    compute: (v) => {
+      const items = (v.items || "").split("\n").map((s) => s.trim()).filter(Boolean);
+      const shuffled = [...items];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      return {
+        primary: { label: "Shuffled order", value: shuffled.length ? shuffled.join(", ") : "Enter at least one item" },
+        secondary: [{ l: "Items shuffled", v: items.length }],
+        note: "Click Calculate again to reshuffle.",
+      };
+    },
+    faq: [
+      { q: "How random is this shuffle?", a: "It uses the Fisher-Yates shuffle algorithm with your browser's random number generator, which gives every possible ordering an equal chance - a well-established, unbiased shuffling method." },
+      { q: "Does this remove duplicate items from my list?", a: "No - it only reorders the list you enter. If your list has duplicates, they stay in the shuffled output; remove them from your input first if you don't want repeats." },
+      { q: "How is this different from the Group Randomizer?", a: "This tool just reorders a single list. The Group Randomizer instead splits a list of names into a set number of teams or groups - use that one if you need to divide people up, not just reorder them." },
+      { q: "Can I use this to randomize the order of a playlist, raffle entries, or presentation order?", a: "Yes - paste any list (songs, names, topics) one per line, and it works for any of those use cases the same way." },
+    ],
+    related: ["group-randomizer", "random-number-generator", "card-deck-shuffler"],
+  },
+  {
+    id: "ppm-percent-converter",
+    category: "conversions",
+    title: "PPM to Percent Converter",
+    keyword: "ppm to percent converter",
+    description: "Convert between parts per million (ppm) and percent.",
+    intro: "Enter a value and choose a starting unit to convert between parts per million and percent.",
+    fields: [
+      { id: "value", label: "Value", type: "number", default: 500, step: 0.01 },
+      { id: "from", label: "From", type: "select", default: "ppm", options: [
+        { v: "ppm", l: "PPM" }, { v: "percent", l: "Percent" },
+      ] },
+    ],
+    compute: (v) => {
+      const ppm = v.from === "ppm" ? v.value : v.value * 10000;
+      const percent = ppm / 10000;
+      return {
+        primary: { label: "In PPM", value: round(ppm, 6) },
+        secondary: [{ l: "In percent", v: `${round(percent, 6)}%` }],
+        note: "1% = 10,000 ppm, since \"percent\" means parts per hundred and \"ppm\" means parts per million - the ratio between them is 1,000,000 ÷ 100 = 10,000.",
+      };
+    },
+    faq: [
+      { q: "How do I convert ppm to percent?", a: "Divide by 10,000. 500 ppm ÷ 10,000 = 0.05%." },
+      { q: "How do I convert percent to ppm?", a: "Multiply by 10,000. 0.05% × 10,000 = 500 ppm." },
+      { q: "Why is ppm used instead of percent for very small concentrations?", a: "Percent becomes awkward for tiny concentrations (like 0.0005%), so ppm - parts per million - is used instead for readability, common in water quality, air pollution, and chemistry measurements where concentrations are very low." },
+      { q: "What is 1 ppm as a percent?", a: "0.0001% - one part per million is one ten-thousandth of a percent." },
+    ],
+    related: ["percentage-calculator", "percentage-change-calculator", "water-density-calculator"],
+  },
+  {
+    id: "repeating-decimal-to-fraction-calculator",
+    category: "math",
+    title: "Repeating Decimal to Fraction Calculator",
+    keyword: "repeating decimal to fraction calculator",
+    description: "Convert a repeating decimal into an exact fraction, with steps.",
+    intro: "Enter the non-repeating digits and repeating digits after the decimal point to convert to an exact fraction.",
+    fields: [
+      { id: "nonRepeating", label: "Non-repeating digits (after decimal, before the repeat)", type: "text", default: "1" },
+      { id: "repeating", label: "Repeating digits", type: "text", default: "6" },
+    ],
+    compute: (v) => {
+      const nonRep = (v.nonRepeating || "").replace(/\D/g, "");
+      const rep = (v.repeating || "").replace(/\D/g, "");
+      if (!rep) {
+        return { primary: { label: "Enter repeating digits", value: "-" }, secondary: [], note: "This tool needs at least one repeating digit to work." };
+      }
+      const n = nonRep.length;
+      const m = rep.length;
+      const combined = parseInt((nonRep + rep) || "0", 10);
+      const nonRepNum = parseInt(nonRep || "0", 10);
+      const numerator = combined - nonRepNum;
+      const denominator = Math.pow(10, n + m) - Math.pow(10, n);
+      const g = gcd(numerator, denominator);
+      const simpNum = g ? numerator / g : numerator;
+      const simpDen = g ? denominator / g : denominator;
+      return {
+        primary: { label: "Fraction", value: `${simpNum}/${simpDen}` },
+        secondary: [
+          { l: "As decimal", v: `0.${nonRep}${rep.split("").map((d) => d).join("")}...` },
+          { l: "Before simplifying", v: `${numerator}/${denominator}` },
+        ],
+        note: `Numerator = ${combined} − ${nonRepNum} = ${numerator}. Denominator = 10^${n + m} − 10^${n} = ${denominator}. Then reduced by the GCD.`,
+      };
+    },
+    faq: [
+      { q: "What is 0.1666... (0.1 with 6 repeating) as a fraction?", a: "1/6 - with non-repeating digit \"1\" and repeating digit \"6\": numerator = 16 − 1 = 15, denominator = 100 − 10 = 90, and 15/90 simplifies to 1/6." },
+      { q: "What is 0.333... (repeating 3) as a fraction?", a: "1/3 - leave the non-repeating field empty and enter \"3\" as the repeating digit: numerator = 3 − 0 = 3, denominator = 10 − 1 = 9, and 3/9 simplifies to 1/3." },
+      { q: "Why does the denominator use powers of 10?", a: "Each decimal place represents a power of ten, so shifting the repeating block by its own length and subtracting cancels out the infinite repetition algebraically, leaving a finite fraction - the powers of 10 come directly from how many digits are in each part." },
+      { q: "Does this work for decimals with no non-repeating part, like 0.727272...?", a: "Yes - leave the non-repeating field empty and enter \"72\" as the repeating digits; the calculator treats a blank non-repeating part as zero digits." },
+    ],
+    related: ["fraction-calculator", "gcd-lcm-calculator", "percentage-calculator"],
+  },
+  {
+    id: "permutations-combinations-calculator",
+    category: "math",
+    title: "Permutations and Combinations Calculator",
+    keyword: "permutations and combinations calculator",
+    description: "Calculate nPr (permutations) and nCr (combinations) for a set of n items chosen r at a time.",
+    intro: "Enter n (total items) and r (items chosen) to calculate permutations (order matters) and combinations (order doesn't matter).",
+    fields: [
+      { id: "n", label: "n (total items)", type: "number", default: 10, step: 1, min: 0 },
+      { id: "r", label: "r (items chosen)", type: "number", default: 3, step: 1, min: 0 },
+    ],
+    compute: (v) => {
+      const n = Math.round(v.n);
+      const r = Math.round(v.r);
+      if (r > n || n < 0 || r < 0) {
+        return { primary: { label: "Invalid input", value: "r can't exceed n" }, secondary: [], note: "n and r must be non-negative whole numbers, and r can't be larger than n." };
+      }
+      const factorial = (x) => {
+        let result = 1;
+        for (let i = 2; i <= x; i++) result *= i;
+        return result;
+      };
+      const nPr = factorial(n) / factorial(n - r);
+      const nCr = nPr / factorial(r);
+      return {
+        primary: { label: "Permutations (nPr)", value: nPr.toLocaleString() },
+        secondary: [{ l: "Combinations (nCr)", v: nCr.toLocaleString() }],
+        note: "Permutations count arrangements where order matters; combinations count selections where order doesn't - combinations are always permutations divided by r! (the number of ways to reorder each selection).",
+      };
+    },
+    faq: [
+      { q: "What's the difference between a permutation and a combination?", a: "Permutations count arrangements where order matters (like a race's 1st/2nd/3rd place); combinations count selections where order doesn't matter (like picking a 3-person committee). The same group of items counted as a permutation is always larger, since it counts each ordering separately." },
+      { q: "What is 10 choose 3 (10C3)?", a: "120 - using nCr = n! / (r! × (n-r)!): 10! / (3! × 7!) = 3,628,800 / (6 × 5,040) = 120." },
+      { q: "What is 10P3?", a: "720 - using nPr = n! / (n-r)!: 10! / 7! = 10 × 9 × 8 = 720." },
+      { q: "Why is nPr always nCr multiplied by r!?", a: "Every combination of r items can be arranged in r! different orders, and each of those orderings counts as a separate permutation - so permutations = combinations × r!, or equivalently combinations = permutations ÷ r!." },
+    ],
+    related: ["gcd-lcm-calculator", "lottery-odds-calculator", "poker-hand-probability-calculator"],
+  },
+  {
+    id: "weighted-random-picker",
+    category: "text",
+    title: "Weighted Random Picker",
+    keyword: "weighted random picker",
+    description: "Pick a random item from a list where some items are more likely than others.",
+    intro: "Enter items with their weights (one \"item, weight\" pair per line) to pick a random winner, where higher weights are more likely.",
+    fields: [
+      { id: "items", label: "Items with weights (one per line, as \"item, weight\")", type: "textarea", default: "Gold, 1\nSilver, 3\nBronze, 6" },
+    ],
+    compute: (v) => {
+      const lines = (v.items || "").split("\n").map((l) => l.trim()).filter(Boolean);
+      const parsed = lines.map((line) => {
+        const idx = line.lastIndexOf(",");
+        if (idx === -1) return null;
+        const name = line.slice(0, idx).trim();
+        const weight = parseFloat(line.slice(idx + 1).trim());
+        return name && !isNaN(weight) && weight > 0 ? { name, weight } : null;
+      }).filter(Boolean);
+      if (parsed.length === 0) {
+        return { primary: { label: "No valid entries", value: "-" }, secondary: [], note: "Enter each item as \"name, weight\" on its own line, with a positive number for weight." };
+      }
+      const totalWeight = parsed.reduce((sum, p) => sum + p.weight, 0);
+      let r = Math.random() * totalWeight;
+      let winner = parsed[parsed.length - 1].name;
+      for (const p of parsed) {
+        if (r < p.weight) { winner = p.name; break; }
+        r -= p.weight;
+      }
+      return {
+        primary: { label: "Winner", value: winner },
+        secondary: parsed.map((p) => ({ l: p.name, v: `${round((p.weight / totalWeight) * 100, 1)}%` })),
+        note: "Click Calculate again to pick again - each item's chance is its weight divided by the total weight of all items.",
+      };
+    },
+    faq: [
+      { q: "How does the weighting work?", a: "Each item's probability of winning equals its weight divided by the sum of all weights. If Gold=1, Silver=3, Bronze=6 (total 10), Gold has a 10% chance, Silver 30%, and Bronze 60%." },
+      { q: "Can I use decimal weights?", a: "Yes - weights don't need to be whole numbers or add up to any particular total; only the ratio between them matters for the odds." },
+      { q: "How is this different from the plain Random Number Generator?", a: "The Random Number Generator picks uniformly (every outcome equally likely). This tool lets you assign different odds to different items, useful for prize drawings, loot tables, or any pick where some outcomes should be more common than others." },
+      { q: "What format does my list need to be in?", a: "One item per line, formatted as \"name, weight\" - for example \"Bronze, 6\". The last comma-separated value on each line is read as the weight, and everything before it is the item name." },
+    ],
+    related: ["random-number-generator", "group-randomizer", "list-shuffler"],
+  },
+  {
     id: "speed-converter",
     category: "conversions",
     title: "Speed Converter",
