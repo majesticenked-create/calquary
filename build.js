@@ -32,8 +32,8 @@ const MONTHS = ["January","February","March","April","May","June","July","August
 
 // "en" = site root (no prefix). Locale build order also controls hreflang
 // link order in the <head> of every generated page.
-const LOCALES = ["en", "es", "fr", "de", "pt", "it", "ja", "ro", "el"];
-const OG_LOCALE = { en: "en_US", es: "es_ES", fr: "fr_FR", de: "de_DE", pt: "pt_PT", it: "it_IT", ja: "ja_JP", ro: "ro_RO", el: "el_GR" };
+const LOCALES = ["en", "es", "fr", "de", "pt", "it", "ja", "ro", "el", "zh"];
+const OG_LOCALE = { en: "en_US", es: "es_ES", fr: "fr_FR", de: "de_DE", pt: "pt_PT", it: "it_IT", ja: "ja_JP", ro: "ro_RO", el: "el_GR", zh: "zh_CN" };
 
 // Wave-one tool batch: prioritized from the qualitative volume signals in
 // seo/keyword-research-*.md (DataForSEO was down for that whole research
@@ -249,7 +249,7 @@ function hreflangLinks(urlFor, builtLocales) {
 // only offers locales that actually exist for this page (an untranslated
 // tool page only ever built "en", so no dead links to a missing translation).
 const LOCALE_LABEL = { en: "EN", es: "ES", fr: "FR", de: "DE", pt: "PT", it: "IT", ja: "JA" };
-const LOCALE_LABEL_FULL = { en: "English", es: "Español", fr: "Français", de: "Deutsch", pt: "Português", it: "Italiano", ja: "日本語", ro: "Română", el: "Ελληνικά" };
+const LOCALE_LABEL_FULL = { en: "English", es: "Español", fr: "Français", de: "Deutsch", pt: "Português", it: "Italiano", ja: "日本語", ro: "Română", el: "Ελληνικά", zh: "中文" };
 const GLOBE_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>';
 
 // One dropdown control, not an always-visible EN·ES·FR·DE link row — the
