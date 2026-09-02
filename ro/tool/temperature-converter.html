@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Convertor de Temperatură - Calculator Gratuit Online | Calquary</title>
+  <meta name="description" content="Convertește între Fahrenheit, Celsius și Kelvin." />
+  <meta property="og:title" content="Convertor de Temperatură | Calquary">
+  <meta property="og:description" content="Convertește între Fahrenheit, Celsius și Kelvin.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/ro/tool/temperature-converter.html">
+  <meta property="og:locale" content="ro_RO">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/temperature-converter.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Convertor de Temperatură | Calquary">
+  <meta name="twitter:description" content="Convertește între Fahrenheit, Celsius și Kelvin.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/temperature-converter.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/temperature-converter.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/temperature-converter.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/temperature-converter.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/temperature-converter.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/temperature-converter.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/temperature-converter.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/temperature-converter.html">
+  <link rel="alternate" hreflang="undefined" href="https://calquary.com/ro/tool/temperature-converter.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/temperature-converter.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("temperature-converter");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("temperature-converter");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Convertor de Temperatură",
+      "description": "Convertește între Fahrenheit, Celsius și Kelvin.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/ro/tool/temperature-converter.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-31",
+      "inLanguage": "ro"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/ro/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Everyday Conversions",
+          "item": "https://calquary.com/ro/category/conversions.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Convertor de Temperatură",
+          "item": "https://calquary.com/ro/tool/temperature-converter.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Cum convertesc din Fahrenheit în Celsius?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Scade 32, apoi înmulțește cu 5/9. Pentru 98,6°F: (98,6 − 32) × 5/9 = 37°C (temperatura normală a corpului uman)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "De ce conversia temperaturii are nevoie de o deplasare, nu doar de o înmulțire?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fahrenheit și Celsius au puncte de zero diferite (apa îngheață la 0°C, dar la 32°F), deci scalele trebuie deplasate mai întâi - spre deosebire de conversiile de lungime sau greutate, care necesită doar o înmulțire."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Există o temperatură la care Celsius și Fahrenheit sunt egale?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da, la −40 de grade. −40°C × 9/5 + 32 = −40°F, singurul punct în care cele două scale coincid. La orice altă temperatură, cele două scale dau numere diferite."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Gestionează și Kelvin?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da - pe lângă Celsius și Fahrenheit, acest instrument gestionează și Kelvin, care pornește de la zero absolut în loc de un punct de referință arbitrar, ceea ce îl face util pentru calcule științifice."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/ro/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/ro/index.html#categories">Categorii</a>
+          <a href="/ro/index.html#tools">Toate instrumentele</a>
+          <a href="/ro/about.html">Despre noi</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Română">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>undefined</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/temperature-converter.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/temperature-converter.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/temperature-converter.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/temperature-converter.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/temperature-converter.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/temperature-converter.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/temperature-converter.html">日本語</a><span class="locale-item current" role="menuitem" aria-current="true">Română</span></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/ro/index.html">Calquary</a> / <a href="/ro/category/conversions.html">Conversii Zilnice</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Convertor de Temperatură</h1>
+        <p style="max-width:60ch;">Introdu o temperatură și unitatea din care convertești pentru a trece între Fahrenheit, Celsius și Kelvin.</p>
+        <p class="last-updated">Ultima actualizare: August 31, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculează</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Resetează</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Întrebări frecvente</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Cum convertesc din Fahrenheit în Celsius?</h3>
+<p>Scade 32, apoi înmulțește cu 5/9. Pentru 98,6°F: (98,6 − 32) × 5/9 = 37°C (temperatura normală a corpului uman).</p>
+</div>
+<div class="faq-item">
+<h3>De ce conversia temperaturii are nevoie de o deplasare, nu doar de o înmulțire?</h3>
+<p>Fahrenheit și Celsius au puncte de zero diferite (apa îngheață la 0°C, dar la 32°F), deci scalele trebuie deplasate mai întâi - spre deosebire de conversiile de lungime sau greutate, care necesită doar o înmulțire.</p>
+</div>
+<div class="faq-item">
+<h3>Există o temperatură la care Celsius și Fahrenheit sunt egale?</h3>
+<p>Da, la −40 de grade. −40°C × 9/5 + 32 = −40°F, singurul punct în care cele două scale coincid. La orice altă temperatură, cele două scale dau numere diferite.</p>
+</div>
+<div class="faq-item">
+<h3>Gestionează și Kelvin?</h3>
+<p>Da - pe lângă Celsius și Fahrenheit, acest instrument gestionează și Kelvin, care pornește de la zero absolut în loc de un punct de referință arbitrar, ceea ce îl face util pentru calcule științifice.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Instrumente similare</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Notă privind precizia</h4>
+          <p style="margin:0;font-size:0.85rem;">Calculatoarele Calquary sunt concepute pentru a oferi estimări rapide și fiabile. Pentru decizii cu implicații financiare, structurale sau medicale reale, consultă un profesionist calificat.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/ro/index.html">← Înapoi la toate calculatoarele</a> · <a href="/ro/about.html">Despre noi</a> · <a href="/ro/contact.html">Contact</a> · <a href="/ro/privacy.html">Confidențialitate</a> · <a href="/ro/terms.html">Termeni</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

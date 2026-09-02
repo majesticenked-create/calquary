@@ -399,6 +399,68 @@ const I18N_UI = {
       { q: "新しい計算ツールはどのくらいの頻度で追加されますか？", a: "決まったスケジュールはありませんが、公開以来カタログは着実に成長しています。新しい計算ツールはカテゴリーごとにまとめて追加され、公開前に一つひとつ構築・検証されています。" },
     ],
   },
+
+  ro: {
+    catSuffix: "Calculatoare",
+    nav: { categories: "Categorii", allTools: "Toate instrumentele", about: "Despre noi" },
+    footer: {
+      categoriesHeader: "Categorii",
+      popularHeader: "Populare",
+      siteHeader: "Site",
+      allCategories: "Toate categoriile",
+      allTools: "Toate instrumentele",
+      allCalculators: "Toate calculatoarele",
+      about: "Despre noi",
+      contact: "Contact",
+      privacy: "Confidențialitate",
+      terms: "Termeni",
+      tagline: "Un index de referință cu calculatoare rapide și precise, creat pentru cei care vor doar răspunsul.",
+      copyright: "© 2026 Calquary. Calculatoarele sunt oferite în scop informativ și nu înlocuiesc sfatul unui profesionist.",
+    },
+    buttons: {
+      findIt: "Caută",
+      browseAll: "Vezi toate →",
+      calculate: "Calculează",
+      reset: "Resetează",
+      backToAll: "← Înapoi la toate calculatoarele",
+    },
+    labels: {
+      relatedTools: "Instrumente similare",
+      accuracyTitle: "Notă privind precizia",
+      accuracyText: "Calculatoarele Calquary sunt concepute pentru a oferi estimări rapide și fiabile. Pentru decizii cu implicații financiare, structurale sau medicale reale, consultă un profesionist calificat.",
+      lastUpdated: "Ultima actualizare:",
+      faqTitle: "Întrebări frecvente",
+      titleSuffix: "Calculator Gratuit Online",
+      breadcrumbHome: "Calquary",
+    },
+    hero: {
+      eyebrow: "Index de referință · calculatoare pentru orice",
+      h1: "Găsește exact calculatorul de care ai nevoie - rapid.",
+      lede: "Calquary organizează calculatoarele așa cum o bibliotecă bună își organizează cărțile: pe subiecte, cu răspunsuri clare și fără elemente inutile. Matematică, bani, proiecte pentru casă, sănătate și multe altele.",
+      statLabel: "calculatoare disponibile și în continuă creștere",
+      lookupTag: "CAUTĂ",
+      placeholder: "Încearcă 'beton', 'IMC', 'împrumut'...",
+      hint: "Sau explorează pe categorii mai jos.",
+    },
+    sections: {
+      browseKicker: "Explorează",
+      browseH2: "Fiecare categorie, propriul raft",
+      popularKicker: "Populare acum",
+      popularH2: "Instrumente recomandate",
+      recentKicker: "Adăugate recent",
+      recentH2: "Adăugate de curând",
+      faqKicker: "Află mai multe",
+      faqH2: "Întrebări frecvente",
+    },
+    homeFaq: [
+      { q: "Ce este Calquary?", a: "Calquary este un index de referință cu calculatoare rapide și precise, organizate pe subiecte ca într-o bibliotecă, nu împrăștiate printre reclame și conținut fără legătură. Alegi o categorie, deschizi un instrument și obții răspunsul." },
+      { q: "Sunt gratuite aceste calculatoare?", a: "Da - toate calculatoarele Calquary sunt gratuite, fără cont, înregistrare sau plată. Deschizi un instrument și îl folosești." },
+      { q: "Cât de precise sunt calculatoarele Calquary?", a: "Fiecare calculator folosește o formulă standard, verificată pentru categoria sa, iar fiecare instrument este verificat cu rezultate calculate manual înainte de publicare. Pentru decizii cu implicații financiare, structurale sau medicale reale, consultă un profesionist calificat." },
+      { q: "Îmi salvați vreo dată?", a: "Nu - toate calculatoarele funcționează în întregime în browserul tău. Numerele introduse nu sunt niciodată trimise către un server sau stocate; când închizi fila, totul dispare." },
+      { q: "Câte calculatoare are Calquary?", a: 'În prezent, Calquary are <span id="faq-tool-count">—</span> calculatoare în 8 categorii, iar catalogul continuă să crească.' },
+      { q: "Cât de des sunt adăugate calculatoare noi?", a: "Nu există un calendar fix, dar catalogul a crescut constant de la lansare - calculatoarele noi sunt adăugate în loturi, pe categorii, fiecare fiind construit și verificat înainte de publicare." },
+    ],
+  },
 };
 
 const I18N_CATEGORIES = {
@@ -409,6 +471,7 @@ const I18N_CATEGORIES = {
     pt: { name: "Matemática", description: "Porcentagens, proporções e aritmética do dia a dia.", longDescription: "De cálculos rápidos de porcentagem a estatística e álgebra, esta categoria cobre os problemas matemáticos do dia a dia que as pessoas realmente procuram - dividir uma conta, conferir uma nota ou calcular uma proporção - sem precisar de uma calculadora científica completa cheia de funções desnecessárias." },
     it: { name: "Matematica", description: "Percentuali, rapporti e calcoli quotidiani.", longDescription: "Dai calcoli rapidi delle percentuali alla statistica e all'algebra, questa categoria copre i problemi matematici quotidiani che le persone cercano davvero - dividere un conto, controllare un voto o calcolare un rapporto - senza dover usare una calcolatrice scientifica completa piena di funzioni inutili." },
     ja: { name: "数学", description: "パーセント、比率、日常の計算。", longDescription: "パーセントの簡単な計算から統計、代数まで、このカテゴリーは人々が実際に検索する日常的な数学の問題をカバーしています。割り勘の計算、成績の確認、比率の計算などを、無関係な機能だらけの本格的な関数電卓を使わずに行えます。" },
+    ro: { name: "Matematică", description: "Procente, rapoarte și aritmetică zilnică.", longDescription: "De la calcule rapide de procente până la statistică și algebră, această categorie acoperă problemele matematice zilnice pe care oamenii chiar le caută - împărțirea unei note de plată, verificarea unei medii sau calcularea unui raport - fără să fie nevoie de un calculator științific complet, plin de funcții inutile." },
   },
   finance: {
     es: { name: "Finanzas", description: "Préstamos, propinas y matemáticas del dinero cotidianas.", longDescription: "Préstamos, ahorros, impuestos y pago de deudas se reducen a un puñado de fórmulas bien conocidas - estas calculadoras las aplican a tus propios números para que veas un pago mensual real, un cronograma de pago o una proyección de crecimiento en lugar de leer sobre la fórmula en abstracto." },
@@ -417,6 +480,7 @@ const I18N_CATEGORIES = {
     pt: { name: "Finanças", description: "Empréstimos, gorjetas e cálculos financeiros do dia a dia.", longDescription: "Empréstimos, poupança, impostos e quitação de dívidas se resumem a um punhado de fórmulas bem conhecidas - essas calculadoras as aplicam aos seus próprios números para que você veja um pagamento mensal real, um cronograma de quitação ou uma projeção de crescimento, em vez de apenas ler sobre a fórmula de forma abstrata." },
     it: { name: "Finanza", description: "Prestiti, mance e calcoli finanziari quotidiani.", longDescription: "Prestiti, risparmi, tasse e estinzione dei debiti si riducono tutti a una manciata di formule ben note - queste calcolatrici le applicano ai tuoi numeri reali così puoi vedere una rata mensile effettiva, una tempistica di estinzione o una proiezione di crescita invece di leggere della formula in astratto." },
     ja: { name: "お金・金融", description: "ローン、チップ、日常のお金の計算。", longDescription: "ローン、貯蓄、税金、借金の返済はすべて、よく知られたいくつかの計算式に帰着します。これらの計算機はそれらの式をあなたの実際の数値に当てはめるので、公式について抽象的に読むのではなく、実際の月々の返済額、返済スケジュール、または成長予測を確認できます。" },
+    ro: { name: "Finanțe", description: "Împrumuturi, bacșișuri și calcule financiare zilnice.", longDescription: "Împrumuturile, economiile, taxele și plata datoriilor se reduc la un set de formule bine cunoscute - aceste calculatoare le aplică la cifrele tale reale, ca să vezi o rată lunară reală, un grafic de rambursare sau o proiecție de creștere, nu doar formula citită abstract." },
   },
   construction: {
     es: { name: "Construcción y Hogar", description: "Materiales, cobertura y presupuestos de proyectos.", longDescription: "Los proyectos de mejoras del hogar dependen de calcular bien las cantidades de material - muy poco y tienes que volver a la tienda a mitad del trabajo, demasiado y has gastado de más. Estas calculadoras convierten las dimensiones de una habitación en cantidades de concreto, piso, pintura y madera, cada una con un margen de desperdicio incluido." },
@@ -425,6 +489,7 @@ const I18N_CATEGORIES = {
     pt: { name: "Construção e Casa", description: "Materiais, cobertura e orçamentos de projetos.", longDescription: "Projetos de reforma dependem de calcular corretamente as quantidades de material - pouco demais e você volta à loja no meio da obra, demais e você gastou mais do que devia. Essas calculadoras convertem as dimensões de um cômodo em quantidades de concreto, piso, tinta e madeira, cada uma com uma margem de desperdício incluída." },
     it: { name: "Costruzione e Casa", description: "Materiali, copertura e stime di progetto.", longDescription: "I progetti di ristrutturazione dipendono dal calcolare correttamente le quantità di materiale - troppo poco e devi tornare al negozio a metà lavoro, troppo e hai speso più del necessario. Queste calcolatrici convertono le dimensioni di una stanza in quantità di calcestruzzo, pavimento, vernice e legname, ciascuna con un margine di spreco incorporato." },
     ja: { name: "建築・住まい", description: "材料、施工面積、プロジェクトの見積もり。", longDescription: "住まいのリフォームプロジェクトは、材料の必要量を正確に把握できるかどうかで成否が分かれます。少なすぎれば工事の途中でまた買いに行くことになり、多すぎれば無駄な出費になります。これらの計算機は、部屋の寸法をコンクリート、床材、ペンキ、木材の必要量に変換し、それぞれにロス分の余裕も組み込まれています。" },
+    ro: { name: "Construcții și Casă", description: "Materiale, suprafețe și estimări de proiect.", longDescription: "Proiectele de renovare depind de calcularea corectă a cantităților de material - prea puțin și te întorci la magazin la jumătatea lucrării, prea mult și ai cheltuit în plus. Aceste calculatoare transformă dimensiunile unei camere în cantități de beton, pardoseală, vopsea și cherestea, fiecare cu o marjă de pierdere inclusă." },
   },
   health: {
     es: { name: "Salud y Fitness", description: "Métricas corporales, ritmo y datos de entrenamiento.", longDescription: "Métricas corporales como el IMC, la TMB y el porcentaje de grasa corporal se calculan con un puñado de fórmulas estándar y publicadas - estas herramientas las aplican a tus medidas para darte un número con el que trabajar, junto con una nota en lenguaje sencillo sobre lo que ese número sí y no te dice." },
@@ -433,6 +498,7 @@ const I18N_CATEGORIES = {
     pt: { name: "Saúde e Fitness", description: "Métricas corporais, ritmo e dados de treino.", longDescription: "Métricas corporais como IMC, TMB e percentual de gordura corporal são calculadas a partir de um punhado de fórmulas padrão e publicadas - essas ferramentas as aplicam às suas medidas para você obter um número com o qual trabalhar, junto com uma explicação em linguagem simples sobre o que esse número indica e o que não indica." },
     it: { name: "Salute e Fitness", description: "Parametri corporei, ritmo e dati di allenamento.", longDescription: "Parametri corporei come IMC, metabolismo basale e percentuale di grasso corporeo si calcolano con una manciata di formule standard e pubblicate - questi strumenti le applicano alle tue misurazioni per darti un numero su cui lavorare, insieme a una spiegazione in linguaggio semplice su cosa quel numero indica e cosa no." },
     ja: { name: "健康・フィットネス", description: "身体指標、ペース、トレーニングデータ。", longDescription: "BMI、基礎代謝量、体脂肪率などの身体指標は、標準的で公表されているいくつかの計算式から算出されます。これらのツールはあなたの測定値にそれらの式を適用し、数値をわかりやすい言葉での説明とともに提供します。" },
+    ro: { name: "Sănătate și Fitness", description: "Indicatori corporali, ritm și date de antrenament.", longDescription: "Indicatori corporali precum IMC, rata metabolică bazală și procentul de grăsime corporală se calculează cu un set de formule standard, publicate - aceste instrumente le aplică la măsurătorile tale pentru a-ți oferi o cifră cu care poți lucra, împreună cu o explicație pe înțelesul tuturor despre ce arată și ce nu arată acel număr." },
   },
   datetime: {
     es: { name: "Fecha y Hora", description: "Cuentas regresivas, duraciones y edad en días.", longDescription: "Ya sea que estés contando los días para un evento, calculando cuántos días hábiles quedan o determinando la edad exacta de alguien, estas calculadoras manejan correctamente el cálculo de calendario - incluidos los años bisiestos y los conteos solo de días laborables - para que no tengas que contar a mano." },
@@ -441,6 +507,7 @@ const I18N_CATEGORIES = {
     pt: { name: "Data e Hora", description: "Contagens regressivas, durações e idade em dias.", longDescription: "Seja para contar os dias até um evento, calcular quantos dias úteis restam ou determinar a idade exata de alguém, essas calculadoras lidam corretamente com cálculos de calendário - incluindo anos bissextos e contagens apenas de dias úteis - para que você não precise contar manualmente." },
     it: { name: "Data e Ora", description: "Conti alla rovescia, durate ed età in giorni.", longDescription: "Che tu stia contando alla rovescia per un evento, calcolando quanti giorni lavorativi rimangono o determinando l'età esatta di qualcuno, queste calcolatrici gestiscono correttamente i calcoli del calendario - inclusi gli anni bisestili e i conteggi solo dei giorni lavorativi - così non devi contare a mano." },
     ja: { name: "日付・時間", description: "カウントダウン、期間、日数での年齢。", longDescription: "イベントまでのカウントダウンでも、残りの営業日数の計算でも、誰かの正確な年齢の算出でも、これらの計算機はうるう年や営業日のみのカウントを含め、カレンダー計算を正しく処理するので、手作業で数える必要はありません。" },
+    ro: { name: "Dată și Oră", description: "Numărători inverse, durate și vârstă în zile.", longDescription: "Fie că numeri zilele până la un eveniment, calculezi câte zile lucrătoare mai rămân sau determini vârsta exactă a cuiva, aceste calculatoare gestionează corect calculul calendaristic - inclusiv anii bisecți și numărătorile doar în zile lucrătoare - ca să nu fie nevoie să numeri manual." },
   },
   conversions: {
     es: { name: "Conversiones Cotidianas", description: "Unidades, medidas y equivalencias de cocina.", longDescription: "Las conversiones de unidades surgen constantemente en la cocina, los proyectos del hogar y la vida cotidiana - convertir entre métrico e imperial, o calcular cuántas tazas equivalen a los gramos de una receta. Estas herramientas hacen la conversión al instante, mostrando el factor subyacente para que puedas confiar en el resultado." },
@@ -449,6 +516,7 @@ const I18N_CATEGORIES = {
     pt: { name: "Conversões do Dia a Dia", description: "Unidades, medidas e equivalências de cozinha.", longDescription: "Conversões de unidades surgem constantemente na culinária, em projetos domésticos e no dia a dia - converter entre métrico e imperial, ou descobrir quantas xícaras equivalem aos gramas de uma receita. Essas ferramentas fazem a conversão instantaneamente, mostrando o fator utilizado para que você possa confiar no resultado." },
     it: { name: "Conversioni Quotidiane", description: "Unità, misure ed equivalenze di cucina.", longDescription: "Le conversioni di unità ricorrono costantemente in cucina, nei progetti domestici e nella vita quotidiana - convertire tra metrico e imperiale, o capire quante tazze corrispondono ai grammi di una ricetta. Questi strumenti eseguono la conversione istantaneamente, mostrando il fattore sottostante così puoi fidarti del risultato." },
     ja: { name: "日常の単位換算", description: "単位、計測、料理の換算。", longDescription: "単位換算は、料理、住まいのプロジェクト、日常生活で頻繁に必要になります。メートル法とヤード・ポンド法の変換や、レシピのグラム数が何カップに相当するかを調べる場合などです。これらのツールは即座に変換を行い、根拠となる換算係数も表示するため、結果を信頼できます。" },
+    ro: { name: "Conversii Zilnice", description: "Unități, măsuri și echivalențe de gătit.", longDescription: "Conversiile de unități apar constant la gătit, în proiecte pentru casă și în viața de zi cu zi - conversia între metric și imperial, sau aflarea câte cești corespund gramelor dintr-o rețetă. Aceste instrumente fac conversia instantaneu, arătând și factorul de calcul, ca să poți avea încredere în rezultat." },
   },
   text: {
     es: { name: "Texto y Digital", description: "Conteo de palabras y generadores para tareas cotidianas.", longDescription: "El conteo de palabras, la conversión de mayúsculas/minúsculas y los generadores de texto se encargan de las pequeñas tareas de procesamiento de texto que surgen al escribir, programar o formatear contenido - cada una funciona enteramente en tu navegador, así que nada de lo que escribes o pegas se envía a ningún lado." },
@@ -457,6 +525,7 @@ const I18N_CATEGORIES = {
     pt: { name: "Texto e Digital", description: "Contagem de palavras e geradores para tarefas do dia a dia.", longDescription: "Contagem de palavras, conversão de maiúsculas/minúsculas e geradores de texto cuidam das pequenas tarefas de processamento de texto que surgem ao escrever, programar ou formatar conteúdo - cada uma funciona inteiramente no seu navegador, então nada do que você digita ou cola é enviado a lugar nenhum." },
     it: { name: "Testo e Digitale", description: "Conteggio parole e generatori per attività quotidiane.", longDescription: "Conteggio parole, conversione maiuscolo/minuscolo e generatori di testo gestiscono le piccole attività di elaborazione testo che si presentano durante la scrittura, la programmazione o la formattazione di contenuti - ognuno funziona interamente nel tuo browser, quindi nulla di ciò che digiti o incolli viene mai inviato altrove." },
     ja: { name: "テキスト・デジタル", description: "日常的な作業のための文字数カウントや生成ツール。", longDescription: "文字数カウント、大文字・小文字変換、テキスト生成ツールは、文章作成、コーディング、コンテンツの整形の際に発生する細かなテキスト処理作業を担います。すべてブラウザ内で完結して動作するため、入力または貼り付けた内容がどこかに送信されることはありません。" },
+    ro: { name: "Text și Digital", description: "Numărare de cuvinte și generatoare pentru sarcini zilnice.", longDescription: "Numărarea cuvintelor, conversia între majuscule/minuscule și generatoarele de text rezolvă micile sarcini de procesare a textului care apar la scris, programare sau formatarea conținutului - fiecare rulează în întregime în browser, deci nimic din ce scrii sau lipești nu este trimis nicăieri." },
   },
   pets: {
     es: { name: "Mascotas y Estilo de Vida", description: "Tablas de edad y matemáticas cotidianas para mascotas.", longDescription: "Un año de perro no equivale realmente a siete años humanos, y la duración del embarazo varía según la especie - estas calculadoras usan las curvas de edad y los datos de gestación reales de perros, gatos, conejos y caballos, en lugar de las reglas simplificadas que la mayoría conoce." },
@@ -465,6 +534,7 @@ const I18N_CATEGORIES = {
     pt: { name: "Animais de Estimação e Estilo de Vida", description: "Tabelas de idade e cálculos do dia a dia para pets.", longDescription: "Um ano de cão não equivale realmente a sete anos humanos, e a duração da gestação varia por espécie - essas calculadoras usam as curvas de idade e os dados de gestação reais de cães, gatos, coelhos e cavalos, em vez das regras simplificadas que a maioria conhece." },
     it: { name: "Animali Domestici e Stile di Vita", description: "Tabelle d'età e calcoli quotidiani per animali domestici.", longDescription: "Un anno di cane non equivale davvero a sette anni umani, e la durata della gravidanza varia in base alla specie - queste calcolatrici usano le curve d'età e i dati di gestazione reali per cani, gatti, conigli e cavalli, invece delle regole semplificate che la maggior parte delle persone conosce." },
     ja: { name: "ペット・ライフスタイル", description: "年齢早見表や日常のペット計算。", longDescription: "犬の1年は実際には人間の7年に相当するわけではなく、妊娠期間も種によって異なります。これらの計算機は、多くの人が知っている単純化された目安ではなく、犬・猫・ウサギ・馬それぞれの実際の年齢曲線と妊娠データを使用しています。" },
+    ro: { name: "Animale de Companie și Stil de Viață", description: "Tabele de vârstă și calcule zilnice pentru animale de companie.", longDescription: "Un an de câine nu echivalează cu adevărat cu șapte ani umani, iar durata gestației variază în funcție de specie - aceste calculatoare folosesc curbele reale de vârstă și datele de gestație pentru câini, pisici, iepuri și cai, în loc de regulile simplificate pe care majoritatea le știu." },
   },
 };
 
@@ -546,6 +616,18 @@ const I18N_TOOLS = {
         { q: "20%の50%のような「パーセントのパーセント」はどう計算しますか？", a: "両方のパーセントを小数に変換して掛け合わせ、結果を再びパーセントに戻します。20%の50%は0.20 × 0.50 = 0.10、つまり10%です。これは、すでに割引された価格にさらに割引を適用する場合や、一部の金額に税率を適用する場合など、率を組み合わせるときに使います。" },
       ],
     },
+    ro: {
+      title: "Calculator de Procente",
+      intro: "Introdu un procent și un număr pentru a obține valoarea rezultată - util pentru bacșișuri, reduceri, note și calcule zilnice.",
+      description: "Află cât reprezintă X procente dintr-un număr, într-un singur pas.",
+      faq: [
+        { q: "Cum calculez manual un procent dintr-un număr?", a: "Împarte procentul la 100 și înmulțește cu numărul. Pentru 20% din 150: 0,20 × 150 = 30." },
+        { q: "Cum aflu ce procent reprezintă un număr din altul?", a: "Împarte partea la întreg și înmulțește cu 100. De exemplu, 30 reprezintă ce procent din 150? 30 ÷ 150 × 100 = 20%." },
+        { q: "Cum calculez o creștere sau o scădere procentuală?", a: "Scade valoarea veche din valoarea nouă, împarte la valoarea veche și înmulțește cu 100. Trecerea de la 150 la 180 este (180−150)/150×100 = 20% creștere; trecerea de la 150 la 120 este (120−150)/150×100 = −20%, adică o scădere de 20%." },
+        { q: "Cum aflu prețul inițial înainte de aplicarea unei reduceri procentuale?", a: "Împarte prețul redus la (1 minus reducerea în format zecimal). Dacă un produs de 60$ are o reducere de 25%, împarte 60 la 0,75 pentru a obține prețul inițial de 80$." },
+        { q: "Cum calculez un procent dintr-un procent, cum ar fi 20% din 50%?", a: "Convertește ambele procente în zecimale și înmulțește-le, apoi convertește rezultatul înapoi în procent: 20% din 50% este 0,20 × 0,50 = 0,10, adică 10%. Acest lucru apare când combini rate - de exemplu o reducere aplicată peste un preț deja redus, sau o rată de taxă aplicată unei sume parțiale." },
+      ],
+    },
   },
 
   "average-calculator": {
@@ -615,6 +697,17 @@ const I18N_TOOLS = {
         { q: "平均と加重平均の違いは何ですか？", a: "単純平均はすべての数値を均等に扱いますが、加重平均は各数値をその重み（比重）で掛けてから合計の重みで割るため、重要な値（例えば成績の40%を占めるテストなど）がより大きく反映されます。この計算機は単純平均を計算します。加重平均を求めるには、各値に重みを掛けてから計算してください。" },
       ],
     },
+    ro: {
+      title: "Calculator de Medie",
+      intro: "Introdu o listă de numere separate prin virgulă sau spațiu pentru a calcula media, mediana și suma.",
+      description: "Calculează media, mediana și suma unei liste de numere.",
+      faq: [
+        { q: "Cum calculez media unei liste de numere?", a: "Adună toate numerele, apoi împarte la câte numere sunt. Pentru 4, 8, 15, 16, 23, 42: suma este 108, iar 108 împărțit la 6 numere dă o medie de 18." },
+        { q: "Care este diferența dintre medie și mediană?", a: "Media este suma împărțită la număr ('media aritmetică'), în timp ce mediana este valoarea din mijloc atunci când numerele sunt ordonate. Mediana este mai puțin afectată de valorile extreme decât media." },
+        { q: "Funcționează cu numere negative sau zecimale?", a: "Da - introdu numerele negative cu un semn minus și zecimalele cu punct, separate prin virgulă sau spațiu ca și celelalte valori. Media, mediana și suma se calculează corect indiferent dacă amesteci numere pozitive, negative și zecimale." },
+        { q: "Care este diferența dintre medie și medie ponderată?", a: "O medie simplă tratează toate numerele la fel, în timp ce o medie ponderată înmulțește fiecare număr cu importanța (ponderea) sa înainte de a împărți la suma ponderilor, astfel încât valorile mai importante (cum ar fi un test care valorează 40% din nota finală) cântăresc mai mult. Acest calculator calculează media simplă - pentru o medie ponderată, înmulțește fiecare valoare cu ponderea sa înainte de calcul." },
+      ],
+    },
   },
 
   "mortgage-calculator": {
@@ -682,6 +775,17 @@ const I18N_TOOLS = {
         { q: "頭金は月々の返済額にどう影響しますか？", a: "頭金が多いほど借入額が減り、返済額のうち元金・利息部分と、返済期間全体で支払う利息の総額の両方が少なくなります。" },
         { q: "後でより低い金利に借り換えると、返済額はどうなりますか？", a: "借り換えでは、新しい残高・金利・残りの返済期間に基づいてローンが再計算されます。わずか1%の金利低下でも各回の利息部分は大きく下がりますが、新しいローンの諸費用と節約額を比較検討する必要があります。" },
         { q: "ローンの返済期間は総支払利息にどう影響しますか？", a: "返済期間が短い（30年ではなく15年など）と、月々の返済額は高くなりますが、元金の減りが早く利息が発生する期間も短いため、総利息はかなり少なくなります。30年ローンは月々の返済額を抑えられますが、同じ借入額の15年ローンに比べて総利息が2倍以上になることもよくあります。" },
+      ],
+    },
+    ro: {
+      title: "Calculator de Credit Ipotecar",
+      intro: "Introdu prețul locuinței, avansul, rata dobânzii și durata împrumutului pentru a estima rata lunară, incluzând principalul, dobânda, taxele și asigurarea.",
+      description: "Estimează rata lunară totală a unui credit ipotecar, incluzând taxele și asigurarea.",
+      faq: [
+        { q: "Ce include această estimare a ratei ipotecare?", a: "Calculatorul estimează PITI (principal, dobândă, taxe și asigurare pentru locuință). Nu include PMI (asigurare ipotecară privată, dacă avansul este sub 20%) sau taxele de asociație de proprietari, care variază în funcție de creditor și proprietate." },
+        { q: "Cum influențează avansul rata lunară?", a: "Un avans mai mare reduce suma împrumutată, ceea ce scade atât partea de principal și dobândă a ratei, cât și dobânda totală plătită pe durata împrumutului." },
+        { q: "Ce se întâmplă cu rata dacă refinanțez mai târziu la o dobândă mai mică?", a: "Refinanțarea recalculează împrumutul pe baza noului sold, a noii dobânzi și a duratei rămase. Chiar și o scădere de 1 punct procentual poate reduce semnificativ partea de dobândă din fiecare rată, dar merită să compari costurile de închidere ale noului credit cu economiile obținute." },
+        { q: "Cum influențează durata împrumutului dobânda totală plătită?", a: "O durată mai scurtă (15 ani în loc de 30) înseamnă rate lunare mai mari, dar principalul scade mai repede și dobânda se acumulează pe o perioadă mai scurtă, ceea ce reduce semnificativ dobânda totală. Un împrumut pe 30 de ani reduce rata lunară, dar deseori dublează sau depășește dobânda totală plătită pentru aceeași sumă împrumutată pe 15 ani." },
       ],
     },
   },
@@ -759,6 +863,18 @@ const I18N_TOOLS = {
         { q: "ローンシミュレーターと同じものですか？", a: "はい。「ローンシミュレーター」はローン返済額計算機の別の呼び方に過ぎず、このツールはどちらの用途にも対応します。元金、金利、返済期間を入力すれば、固定金利のどんなローンにも使えます。車の購入資金を計算したい場合は、下取り額や消費税も考慮できるオートローン計算機の方が適しています。" },
       ],
     },
+    ro: {
+      title: "Calculator de Rată la Împrumut",
+      intro: "Acest calculator de împrumuturi estimează rata lunară fixă. Introdu suma împrumutată, rata anuală a dobânzii și durata împrumutului.",
+      description: "Estimează rata lunară pentru un împrumut cu dobândă fixă.",
+      faq: [
+        { q: "Cum se calculează rata unui împrumut?", a: "Un împrumut cu dobândă fixă folosește formula de amortizare, bazată pe principal, rata dobânzii pe perioadă și numărul de rate, astfel încât fiecare rată este egală, dar proporția dintre dobândă și principal se schimbă în timp." },
+        { q: "Include acest calcul taxe sau asigurare?", a: "Nu, acesta este doar principalul și dobânda. Mai ales la creditele ipotecare, taxele și asigurarea sunt adesea incluse în rata lunară (PITI), deci factura reală de la creditor poate fi mai mare decât suma afișată aici." },
+        { q: "Reduce dobânda totală dacă plătesc mai mult în fiecare lună?", a: "Da - orice sumă plătită peste rata cerută se aplică principalului, ceea ce scurtează durata împrumutului și reduce dobânda totală plătită, deoarece dobânda pentru fiecare perioadă se calculează pe baza soldului rămas." },
+        { q: "Cum influențează durata împrumutului dobânda totală plătită?", a: "O durată mai lungă reduce rata lunară, dar crește dobânda totală, deoarece împrumuți aceeași sumă pe o perioadă mai lungă. O durată mai scurtă crește rata lunară, dar reduce dobânda totală. Alegerea depinde de ce sumă lunară îți poți permite confortabil." },
+        { q: "Este același lucru cu un simulator de împrumut?", a: "Da - un \"simulator de împrumut\" este pur și simplu un alt nume pentru un calculator de rată la împrumut, iar acest instrument funcționează pentru ambele scopuri. Introdu principalul, rata dobânzii și durata pentru orice împrumut cu dobândă fixă. Dacă vrei să finanțezi o mașină, calculatorul de credit auto e mai potrivit, deoarece ia în calcul și valoarea de schimb și taxele." },
+      ],
+    },
   },
 
   "compound-interest-calculator": {
@@ -826,6 +942,17 @@ const I18N_TOOLS = {
         { q: "複利計算の頻度は増え方にどう影響しますか？", a: "複利計算の頻度が高いほど（年1回より毎日など）、同じ表示金利でもわずかに高いリターンになります。これは利息がより早く利息を生み始めるためですが、一般的な貯蓄金利では差はわずかです。" },
         { q: "数年早く始めると、どれくらいの差が生まれますか？", a: "大きな差が生まれます。複利は自己増殖的に働くため、同じ利率でも5年、10年早く投資したお金は、比例的に大きくなるだけでなく、それ以上に大きく増える傾向があります。早い時期の資金ほど、複利が効く期間が長くなるためです。" },
         { q: "複利は常に単利より有利ですか？", a: "複利は元金だけでなく、それまでに得た利息にも利息がつくため、十分な時間があれば必ず単利（元金にのみ利息がつく）を上回ります。運用期間が長いほど、また複利計算の頻度が高いほど、その差はさらに大きくなります。" },
+      ],
+    },
+    ro: {
+      title: "Calculator de Dobândă Compusă",
+      intro: "Introdu suma inițială, rata dobânzii, frecvența capitalizării și durata pentru a vedea cât de mult pot crește banii tăi.",
+      description: "Calculează cum crește o sumă de bani în timp prin dobândă compusă.",
+      faq: [
+        { q: "Care este formula dobânzii compuse?", a: "A = P(1 + r/n)^(nt) - unde P este suma inițială, r este rata anuală a dobânzii, n este numărul de capitalizări pe an, iar t este numărul de ani." },
+        { q: "Cum influențează frecvența capitalizării creșterea sumei?", a: "O capitalizare mai frecventă (zilnic în loc de anual) generează un randament ușor mai mare la aceeași rată nominală, deoarece dobânda începe să genereze dobândă mai repede - deși diferența este mică la ratele tipice de economisire." },
+        { q: "Cât de mare este diferența dacă încep cu câțiva ani mai devreme?", a: "Substanțială. Deoarece dobânda compusă se auto-alimentează, banii investiți cu 5 sau 10 ani mai devreme la aceeași rată tind să crească mai mult decât proporțional, nu doar proporțional, pentru că au mai mult timp la dispoziție pentru capitalizare." },
+        { q: "Este dobânda compusă întotdeauna mai bună decât dobânda simplă?", a: "Dobânda compusă depășește întotdeauna dobânda simplă (care se calculează doar la suma inițială) dat fiind timp suficient, deoarece se calculează atât la suma inițială, cât și la dobânda deja acumulată. Diferența crește cu cât perioada este mai lungă și capitalizarea mai frecventă." },
       ],
     },
   },
@@ -897,6 +1024,17 @@ const I18N_TOOLS = {
         { q: "計算でスラブの厚さはどう扱われますか？", a: "スラブの縦×横で面積を求め、それに厚さ（フィートに換算）を掛けて立方フィートを求め、27で割ると立方ヤードになります。厚みが増すほど必要なコンクリート量は比例して増え、同じ面積でも厚さを2倍にすれば体積も2倍になります。" },
       ],
     },
+    ro: {
+      title: "Calculator de Beton",
+      intro: "Introdu dimensiunile plăcii pentru a estima cât beton gata amestecat sau câte saci vei avea nevoie, cu marja de pierdere inclusă.",
+      description: "Estimează metrii cubi și numărul de saci de beton necesari pentru o placă.",
+      faq: [
+        { q: "Câtă beton îmi trebuie pentru o placă de 3×3m?", a: "Pentru o grosime de 10cm, o placă de 3×3m are nevoie de aproximativ 0,9 m³ de beton, fără marja de pierdere - adică aproximativ 36 de saci de 35kg." },
+        { q: "De ce am nevoie de o marjă de pierdere?", a: "Neregularitățile terenului, scurgerile de material și săpăturile suplimentare fac de obicei necesară cu 5-10% mai multă cantitate decât calculul exact." },
+        { q: "Funcționează pentru plăci care nu sunt dreptunghiulare?", a: "Împarte forma neregulată în secțiuni dreptunghiulare, calculează fiecare separat cu acest instrument, apoi adună rezultatele. Calculul lungime × lățime × grosime funcționează exact doar pentru dreptunghiuri, deci împărțirea unei zone în formă de L sau curbate în forme mai simple este abordarea standard." },
+        { q: "Cum ia în calcul grosimea plăcii?", a: "Calculul înmulțește lungimea × lățimea plăcii pentru a obține suprafața, apoi înmulțește cu grosimea (convertită în metri) pentru a obține volumul, care se împarte apoi pentru a obține metri cubi. Cu cât grosimea este mai mare, cu atât crește proporțional cantitatea de beton necesară - dublarea grosimii pentru aceeași suprafață dublează și volumul." },
+      ],
+    },
   },
 
   "flooring-calculator": {
@@ -966,6 +1104,17 @@ const I18N_TOOLS = {
         { q: "将来の補修のために床材を多めに買っておくべきですか？", a: "はい。施工時のカット用の余剰分に加えて、多くの施工業者は箱を1つ余分に取っておくことを勧めています。メーカーは時間とともに色のロットを変更するため、後で板やタイルが破損した際に元の色合いに近い交換部材を確保できるからです。" },
       ],
     },
+    ro: {
+      title: "Calculator de Pardoseală",
+      intro: "Introdu suprafața camerei, cât acoperă o cutie și marja de pierdere pentru a estima câte cutii de pardoseală ai nevoie.",
+      description: "Estimează câte cutii de pardoseală îți trebuie pentru o cameră.",
+      faq: [
+        { q: "Câte cutii de pardoseală îmi trebuie pentru o cameră de 25m²?", a: "Cu 2m² per cutie și o marjă de pierdere de 10%, ai nevoie de aproximativ 14 cutii pentru 25m²." },
+        { q: "De ce am nevoie de material în plus pentru pardoseală?", a: "Tăierile în jurul ușilor și dulapurilor, plus potrivirea modelului, consumă material suplimentar. O marjă de 10-15% te ferește să rămâi fără material la jumătatea lucrării." },
+        { q: "Marja de pierdere pentru pardoseală variază în funcție de modelul de montaj?", a: "Da - montajul drept necesită de obicei doar 5-10% marjă, dar modele precum montajul în diagonală sau în os de pește, care necesită potrivire precisă a rosturilor, pot necesita 15-20% din cauza tăierilor unghiulare și a resturilor irosite." },
+        { q: "Ar trebui să cumpăr material în plus pentru reparații viitoare?", a: "Da - pe lângă surplusul pentru tăieri în timpul montajului, mulți instalatori recomandă păstrarea unei cutii suplimentare deoparte, deoarece producătorii schimbă loturile de culoare în timp, ceea ce face dificilă găsirea unei potriviri exacte dacă o placă sau o dală se deteriorează mai târziu." },
+      ],
+    },
   },
 
   "calorie-calculator": {
@@ -1033,6 +1182,17 @@ const I18N_TOOLS = {
         { q: "減量にはどれくらいカロリーを減らせばいいですか？", a: "維持カロリーから1日約500kcal減らすのが、週に約0.45kgの減量を目指す一般的な目安です。体脂肪0.45kgは約3,500kcalに相当します。" },
         { q: "年齢・身長・体重が同じ2人でも結果が異なるのはなぜですか？", a: "活動レベルと性別の両方が計算式に影響します。活動量が多いライフスタイルは、同じ体格で座りがちな人と比べてカロリー目標を大きく引き上げます。また基礎代謝量の計算式自体も、男女間の一般的な体組成の違いを考慮しています。" },
         { q: "基礎代謝（BMR）とこのツールが示す目標カロリーはどう違いますか？", a: "基礎代謝は完全に安静な状態で体が消費するエネルギーです。このツールが示す維持カロリー（総消費エネルギー量、TDEE）は、日常の動きや運動が体を機能させるだけで必要な分を超えてカロリーを消費するため、基礎代謝に活動量を加えて算出されます。" },
+      ],
+    },
+    ro: {
+      title: "Calculator de Calorii",
+      intro: "Introdu vârsta, sexul, înălțimea, greutatea și nivelul de activitate pentru a afla necesarul zilnic de calorii pentru menținere, scădere sau creștere în greutate.",
+      description: "Calculează necesarul zilnic de calorii pentru menținere, scădere sau creștere în greutate.",
+      faq: [
+        { q: "De câte calorii am nevoie pentru a-mi menține greutatea?", a: "Depinde de rata metabolică bazală și nivelul de activitate - pentru un bărbat de 30 de ani, 178cm, 82kg, moderat activ, caloriile de menținere sunt de aproximativ 2.763 kcal pe zi." },
+        { q: "Cu cât ar trebui să-mi reduc caloriile pentru a slăbi?", a: "O reducere de aproximativ 500 kcal pe zi față de nivelul de menținere este un ghid comun pentru a viza aproximativ 0,45kg pe săptămână, deoarece 0,45kg de grăsime corporală echivalează cu aproximativ 3.500 kcal." },
+        { q: "De ce doi oameni cu aceeași vârstă, înălțime și greutate primesc rezultate diferite?", a: "Atât nivelul de activitate, cât și sexul influențează formula. Un stil de viață mai activ crește semnificativ ținta calorică față de cineva sedentar cu aceeași constituție, iar formula ratei metabolice bazale în sine ține cont de diferențele tipice de compoziție corporală dintre bărbați și femei." },
+        { q: "Cum diferă rata metabolică bazală (BMR) de ținta calorică arătată de acest instrument?", a: "Rata metabolică bazală (BMR) este energia pe care corpul o consumă în repaus complet. Caloriile de menținere arătate aici (consumul energetic total, TDEE) pornesc de la BMR și adaugă nivelul de activitate, deoarece mișcarea zilnică și exercițiile fizice ard calorii peste minimul necesar pentru funcționarea de bază a corpului." },
       ],
     },
   },
@@ -1116,6 +1276,19 @@ const I18N_TOOLS = {
         { q: "「身体指数計算機」「質量指数計算機」「バイオマス指数計算機」もBMIと同じものですか？", a: "はい。これらはすべて体格指数（BMI）を指す非公式な、あるいは記憶違いによる言い方です。この計算機はどの言い方で検索してたどり着いた場合でも、身長と体重から標準的なBMIを計算します。" },
       ],
     },
+    ro: {
+      title: "Calculator IMC",
+      intro: "Introdu înălțimea și greutatea pentru a calcula indicele de masă corporală (IMC) - un indicator general de screening, nu un diagnostic.",
+      description: "Calculează indicele de masă corporală (IMC) din înălțime și greutate.",
+      faq: [
+        { q: "Este IMC exact pentru toată lumea?", a: "Nu - IMC nu diferențiază între masa musculară și grăsimea corporală, deci poate fi înșelător pentru sportivi, adulți în vârstă sau anumite tipuri de corp. Este un instrument de screening, nu un diagnostic." },
+        { q: "Care este intervalul sănătos al IMC?", a: "În general, 18,5-24,9 este considerat intervalul sănătos, sub 18,5 înseamnă subponderal, 25-29,9 înseamnă supraponderal, iar 30+ înseamnă obezitate - dar acestea sunt medii la nivel de populație, nu un verdict individual asupra sănătății tale." },
+        { q: "Se aplică IMC copiilor la fel ca adulților?", a: "Nu - acest calculator folosește formula și pragurile de sănătate pentru IMC adult. Copiii și adolescenții au nevoie de percentile pe curbe de creștere specifice vârstei și sexului, deoarece compoziția corporală sănătoasă se schimbă semnificativ pe parcursul dezvoltării copilului." },
+        { q: "Cum diferă IMC de procentul de grăsime corporală?", a: "IMC folosește doar înălțimea și greutatea, deci nu poate diferenția masa musculară de grăsime - cineva cu masă musculară mare poate avea un IMC ridicat cu grăsime corporală scăzută. Procentul de grăsime corporală măsoară direct componenta de grăsime, oferind o imagine mai precisă a compoziției corporale decât IMC singur." },
+        { q: "Cum se calculează IMC? Este 'indice de masă corporală' același lucru?", a: "Pentru a calcula manual IMC, împarte greutatea în kilograme la înălțimea în metri la pătrat. 'Indice de masă corporală' este pur și simplu denumirea completă a aceleiași căutări, nu un indicator diferit - se referă la același calcul de IMC." },
+        { q: "Sunt și 'calculator indice corporal' sau 'calculator indice de greutate' același lucru cu IMC?", a: "Da - acestea sunt denumiri informale sau formulări ușor greșite pentru indicele de masă corporală (IMC). Acest calculator calculează IMC standard din înălțime și greutate, indiferent de termenul folosit pentru a-l găsi." },
+      ],
+    },
   },
 
   "bmr-calculator": {
@@ -1185,6 +1358,17 @@ const I18N_TOOLS = {
         { q: "基礎代謝と同じカロリーだけ摂取すればいいのですか？", a: "いいえ。基礎代謝は体が完全に安静な状態で必要とする最低限のエネルギーであり、食事の健康的な目標値ではありません。長期間基礎代謝を下回る食事を続けると代謝が低下し筋肉量が減る可能性があります。基礎代謝を基準にして活動量を加え、適切な維持カロリーや減量目標を求めてください。" },
       ],
     },
+    ro: {
+      title: "Calculator Rată Metabolică Bazală",
+      intro: "Introdu vârsta, sexul, înălțimea și greutatea pentru a estima rata metabolică bazală (BMR) folosind formula Mifflin-St Jeor.",
+      description: "Calculează rata metabolică bazală - caloriile pe care corpul le arde în repaus.",
+      faq: [
+        { q: "Ce este rata metabolică bazală?", a: "Rata metabolică bazală (BMR) este numărul de calorii pe care corpul le arde în repaus complet, doar pentru a menține funcțiile vitale precum respirația și circulația sângelui - nu include niciun fel de mișcare sau activitate." },
+        { q: "Cât de precisă este formula Mifflin-St Jeor?", a: "Este considerată una dintre cele mai precise formule disponibile pentru BMR la populația generală, de obicei fiind în limita a 10% față de valoarea reală măsurată, deși metabolismul individual variază în funcție de factori precum masa musculară." },
+        { q: "Se schimbă rata metabolică bazală odată cu vârsta?", a: "Da - BMR scade treptat odată cu înaintarea în vârstă, în mare parte din cauza pierderii naturale de masă musculară în timp, motiv pentru care necesarul caloric tinde să scadă cu vârsta chiar și la același nivel de activitate." },
+        { q: "Ar trebui să mănânc exact cât este rata mea metabolică bazală?", a: "Nu - BMR este energia minimă de care corpul tău are nevoie în repaus complet, nu o țintă alimentară sănătoasă. Consumul constant sub BMR pe termen lung poate încetini metabolismul și poate duce la pierderea masei musculare. Folosește BMR ca punct de plecare, apoi adaugă nivelul de activitate pentru a obține o țintă adecvată de menținere sau de scădere în greutate." },
+      ],
+    },
   },
 
   "age-calculator": {
@@ -1252,6 +1436,17 @@ const I18N_TOOLS = {
         { q: "うるう年は考慮されますか？", a: "はい。365日固定の年を前提とするのではなく、実際のカレンダーの日付をもとに計算するため、うるう年も特別な調整なしで正しく処理されます。" },
         { q: "今日ではなく、特定の未来や過去の日付時点での年齢を計算できますか？", a: "この計算機は生年月日を今日の日付と比較する仕様です。別の日付での年齢を知りたい場合は、残り日数計算機や期間計算機を使って、生年月日と任意の日付との差を測ってください。" },
         { q: "年齢は年だけでなく月や週の単位でも計算できますか？", a: "はい。年齢を年単位で表示するだけでなく、経過時間を月・週・日の合計に細かく分解して表示するため、最も使いやすい単位で正確な年齢を確認できます。" },
+      ],
+    },
+    ro: {
+      title: "Calculator de Vârstă",
+      intro: "Introdu data nașterii pentru a calcula vârsta exactă de astăzi, până la nivel de zi.",
+      description: "Calculează vârsta exactă în ani, luni și zile.",
+      faq: [
+        { q: "Cum se calculează vârsta exactă?", a: "Calculul numără anii compleți de la data nașterii până astăzi, apoi lunile rămase, apoi zilele rămase - nu doar scade anul nașterii din anul curent." },
+        { q: "Se ține cont de anii bisecți?", a: "Da - calculul folosește date reale de calendar în loc să presupună ani ficși de 365 de zile, deci anii bisecți sunt gestionați corect fără niciun ajustaj special." },
+        { q: "Pot calcula vârsta la o dată viitoare sau trecută specifică, nu doar astăzi?", a: "Acest calculator compară data nașterii cu data de astăzi. Pentru vârsta la o altă dată, folosește calculatorul de zile rămase sau calculatorul de durată pentru a măsura diferența dintre data nașterii și orice altă dată." },
+        { q: "Pot vedea vârsta în luni sau săptămâni, nu doar ani?", a: "Da - pe lângă afișarea vârstei în ani, calculatorul descompune timpul scurs în total de luni, săptămâni și zile, ca să poți vedea vârsta exactă în orice unitate îți este cea mai utilă." },
       ],
     },
   },
@@ -1329,6 +1524,18 @@ const I18N_TOOLS = {
         { q: "クリスマスまであと何日ですか？", a: "対象日を今年（または来年）の12月25日に設定すると、正確なカウントダウンが週数・月数の目安とともに表示されます。プレゼントの準備や旅行の計画に便利です。" },
       ],
     },
+    ro: {
+      title: "Calculator Zile Rămase",
+      intro: "Alege o dată pentru a afla exact câte zile, săptămâni și luni mai sunt până la ea.",
+      description: "Află câte zile mai sunt până la orice dată viitoare.",
+      faq: [
+        { q: "Cum se calculează 'zilele rămase'?", a: "Numărul de zile calendaristice de la astăzi până la data aleasă, numărând limitele de zi de la miezul nopții." },
+        { q: "Se numără weekendurile și sărbătorile?", a: "Da - se numără toate zilele calendaristice, inclusiv weekendurile și sărbătorile. Dacă ai nevoie doar de zile lucrătoare, fără weekenduri, folosește calculatorul de zile lucrătoare." },
+        { q: "Pot calcula zilele dintre două date viitoare, nu doar de la astăzi?", a: "Indirect, da - acest instrument pornește de la data de astăzi, dar calculatorul de durată îți permite să alegi orice două date (trecute, prezente sau viitoare) pentru a afla numărul exact de zile dintre ele." },
+        { q: "Pot folosi asta pentru a număra zilele până la un eveniment recurent, cum ar fi o zi de naștere?", a: "Da - dacă ziua de naștere sau aniversarea a trecut deja anul acesta, introdu data pentru anul următor pentru a vedea exact câte zile mai sunt până la următoarea apariție." },
+        { q: "Câte zile mai sunt până la Crăciun?", a: "Setează data țintă pe 25 decembrie a anului curent (sau următor) pentru un numărător exact, plus echivalentul aproximativ în săptămâni și luni - util pentru planificarea cadourilor sau a călătoriilor." },
+      ],
+    },
   },
 
   "unit-length-converter": {
@@ -1396,6 +1603,17 @@ const I18N_TOOLS = {
         { q: "この変換は正確ですか、それとも四捨五入されていますか？", a: "変換係数そのもの（1インチ＝2.54cm）は国際的な定義により厳密な値です。表示上見える丸めは、結果を読みやすい小数点以下の桁数に調整しているだけです。" },
         { q: "オンライン変換ツールによって答えがわずかに異なるのはなぜですか？", a: "わずかな違いは通常、変換係数の違いではなく、四捨五入する小数点以下の桁数の違いによるものです。1インチ＝2.54cmという関係は国際的に定められた固定値なので、同じ精度で比較すれば正確な変換ツールの結果は一致するはずです。" },
         { q: "この変換ツールはどの長さの単位に対応していますか？", a: "このツールはメートル法の単位（ミリメートル、センチメートル、メートル、キロメートル）とヤードポンド法の単位（インチ、フィート、ヤード、マイル）の両方に対応しているため、換算係数を覚えていなくてもどちらの方向にも変換できます。" },
+      ],
+    },
+    ro: {
+      title: "Convertor cm-inch",
+      intro: "Introdu un număr și alege unitățile pentru a converti între unitățile obișnuite de lungime.",
+      description: "Convertește între centimetri, inch-uri, picioare și metri.",
+      faq: [
+        { q: "Câți inch-i este un centimetru?", a: "Un centimetru este aproximativ 0,3937 inch-i. Pentru a converti cm în inch-i, împarte la 2,54." },
+        { q: "Este această conversie exactă sau rotunjită?", a: "Factorul de conversie în sine (1 inch = 2,54cm) este exact prin definiție internațională. Orice rotunjire vizibilă este doar pentru a afișa rezultatul la un număr rezonabil de zecimale." },
+        { q: "De ce diferă ușor rezultatele la convertoarele online?", a: "Micile diferențe se datorează de obicei numărului diferit de zecimale la care se face rotunjirea, nu unui factor de conversie diferit - relația de 1 inch = 2,54cm este fixă și definită internațional, deci convertoarele exacte ar trebui să fie de acord dacă compari la aceeași precizie." },
+        { q: "Ce unități de lungime acoperă acest convertor?", a: "Acest instrument gestionează atât unitățile metrice (milimetri, centimetri, metri, kilometri), cât și cele imperiale (inch-i, picioare, yarzi, mile), deci poți converti în orice direcție fără să memorezi factorii de conversie." },
       ],
     },
   },
@@ -1467,6 +1685,17 @@ const I18N_TOOLS = {
         { q: "ケルビンとの相互変換にも対応していますか？", a: "はい。摂氏・華氏に加えて、このツールはケルビンにも対応しています。ケルビンは任意の基準点ではなく絶対零度を起点とするため、科学的な計算に便利です。" },
       ],
     },
+    ro: {
+      title: "Convertor de Temperatură",
+      intro: "Introdu o temperatură și unitatea din care convertești pentru a trece între Fahrenheit, Celsius și Kelvin.",
+      description: "Convertește între Fahrenheit, Celsius și Kelvin.",
+      faq: [
+        { q: "Cum convertesc din Fahrenheit în Celsius?", a: "Scade 32, apoi înmulțește cu 5/9. Pentru 98,6°F: (98,6 − 32) × 5/9 = 37°C (temperatura normală a corpului uman)." },
+        { q: "De ce conversia temperaturii are nevoie de o deplasare, nu doar de o înmulțire?", a: "Fahrenheit și Celsius au puncte de zero diferite (apa îngheață la 0°C, dar la 32°F), deci scalele trebuie deplasate mai întâi - spre deosebire de conversiile de lungime sau greutate, care necesită doar o înmulțire." },
+        { q: "Există o temperatură la care Celsius și Fahrenheit sunt egale?", a: "Da, la −40 de grade. −40°C × 9/5 + 32 = −40°F, singurul punct în care cele două scale coincid. La orice altă temperatură, cele două scale dau numere diferite." },
+        { q: "Gestionează și Kelvin?", a: "Da - pe lângă Celsius și Fahrenheit, acest instrument gestionează și Kelvin, care pornește de la zero absolut în loc de un punct de referință arbitrar, ceea ce îl face util pentru calcule științifice." },
+      ],
+    },
   },
 
   "word-counter": {
@@ -1534,6 +1763,17 @@ const I18N_TOOLS = {
         { q: "Microsoft Wordと同じ数え方ですか？", a: "非常に近いですが、常に同じとは限りません。このツールは空白で区切って数える、多くのワープロソフトと同様の方式ですが、ハイフン付きの単語や数字などの境界的なケースでは、ツールによって数え方がわずかに異なることがあります。" },
         { q: "「文」のカウントでは何が1文としてカウントされますか？", a: "ピリオド、疑問符、感嘆符で終わるテキストが1文としてカウントされます。「Dr.」や「e.g.」のような省略記号のピリオドは、文末のピリオドと区別できない場合があるため、まれにカウントが少し多くなることがあります。" },
         { q: "このツールは単語数だけでなく文字数も数えますか？", a: "はい。単語数に加えて、スペースを含む・含まない文字数、さらに文の数や段落数も表示します。SNS投稿やメタディスクリプションのような厳しい文字数制限を守る際に便利です。" },
+      ],
+    },
+    ro: {
+      title: "Numărător de Cuvinte și Caractere",
+      intro: "Lipește sau tastează text mai jos pentru a număra instant cuvintele, caracterele și propozițiile.",
+      description: "Numără cuvintele, caracterele și propozițiile dintr-un text.",
+      faq: [
+        { q: "Această unealtă salvează textul pe care îl introduc?", a: "Nu - numărarea are loc în întregime în browserul tău, iar datele nu sunt niciodată trimise sau stocate." },
+        { q: "Se numără la fel ca în Microsoft Word?", a: "Foarte aproape, dar nu întotdeauna identic. Acest instrument numără cuvintele separate prin spații, similar cu majoritatea procesoarelor de text, dar cazurile marginale precum cuvintele cu cratimă sau numerele pot fi tratate ușor diferit de la un instrument la altul." },
+        { q: "Ce se numără ca o 'propoziție'?", a: "Textul care se termină cu punct, semn de întrebare sau semn de exclamare este numărat ca o propoziție. Abrevierile cu punct (cum ar fi 'Dr.' sau 'de ex.') pot fi uneori greu de distins de sfârșitul unei propoziții, deci numărătoarea poate fi ocazional puțin mai mare decât te-ai aștepta." },
+        { q: "Numără și caracterele, nu doar cuvintele?", a: "Da - pe lângă numărul de cuvinte, afișează numărul de caractere cu și fără spații, precum și numărul de propoziții și paragrafe - util pentru respectarea limitelor stricte de caractere, cum ar fi postările pe rețele sociale sau meta descrierile." },
       ],
     },
   },
@@ -1605,6 +1845,17 @@ const I18N_TOOLS = {
         { q: "この変換ツールはどのような大文字・小文字のスタイルに対応していますか？", a: "タイトルケースやセンテンスケースに加えて、大文字、小文字、キャメルケースなど、文章やコードでよく使われる書式スタイルにも変換できるため、必要な用途に合わせてテキストを整形できます。" },
       ],
     },
+    ro: {
+      title: "Convertor Majuscule/Minuscule",
+      intro: "Lipește textul și alege un format pentru a converti între majuscule, minuscule, format titlu și format propoziție.",
+      description: "Convertește textul între majuscule, minuscule, format titlu și format propoziție.",
+      faq: [
+        { q: "Care este diferența dintre formatul titlu și formatul propoziție?", a: "Formatul titlu scrie cu majusculă primul caracter al fiecărui cuvânt principal (ex: 'Salut Lume Exemplu'). Formatul propoziție scrie cu majusculă doar primul caracter al întregului text (ex: 'Salut lume exemplu')." },
+        { q: "Această unealtă salvează textul pe care îl introduc?", a: "Nu - conversia are loc în întregime în browserul tău, iar datele nu sunt niciodată trimise sau stocate." },
+        { q: "Gestionează corect caracterele cu diacritice sau non-engleze?", a: "Da - conversia majuscule/minuscule funcționează cu text Unicode standard, inclusiv caractere cu diacritice (é, ñ, ü și altele). Conversia în majuscule sau minuscule păstrează diacriticele corect, fără să le piardă." },
+        { q: "Ce alte stiluri de majuscule/minuscule gestionează acest convertor?", a: "Pe lângă formatul titlu și formatul propoziție, convertește și în majuscule, minuscule și camelCase - stiluri de formatare comune în scriere și programare, ca să poți formata textul exact așa cum ai nevoie." },
+      ],
+    },
   },
 
   "dog-age-calculator": {
@@ -1672,6 +1923,17 @@ const I18N_TOOLS = {
         { q: "なぜ大型犬は小型犬より早く老化するのですか？", a: "大型犬・超大型犬は成長が早く、身体的な成熟も早く迎えます。これは寿命の短さと、中年期・シニア期における老化の速さに関連しており、他の多くの哺乳類とは逆の傾向です。" },
         { q: "犬は何歳から「シニア」と見なされますか？", a: "サイズによって異なります。小型犬は通常10〜12歳ごろ、中型犬は8〜10歳ごろ、大型犬・超大型犬は早ければ6〜7歳でシニアと見なされます。大型犬は小型犬よりも成長が早く、老化も早いためです。" },
         { q: "なぜ計算は体の大きさだけを基準にしていないのですか？犬種も関係しますか？", a: "体の大きさは老化速度の最も強い予測因子であるため、この計算機は単一の万能な計算式ではなく、犬種を大きさ（小型・中型・大型・超大型）でグループ分けしています。同じ大きさのグループ内でも遺伝的な要因により犬種ごとに老化速度は多少異なりますが、その差の大部分は体の大きさで説明できます。" },
+      ],
+    },
+    ro: {
+      title: "Calculator de Vârstă pentru Câini",
+      intro: "Câinii îmbătrânesc diferit în funcție de mărimea rasei. Introdu vârsta și mărimea câinelui pentru o estimare mai precisă a vârstei umane decât vechea regulă 'ori 7'.",
+      description: "Convertește vârsta unui câine în vârstă umană echivalentă, ajustată după mărime.",
+      faq: [
+        { q: "Este exactă regula 'un an de câine egal cu 7 ani umani'?", a: "Nu, este un mit aproximativ. Câinii îmbătrânesc rapid în primii doi ani, iar rasele mari îmbătrânesc mai repede la vârste înaintate în comparație cu rasele mici." },
+        { q: "De ce câinii mari îmbătrânesc mai repede decât cei mici?", a: "Rasele mari și uriașe cresc mai repede și ajung la maturitate fizică mai devreme, ceea ce este asociat cu o durată de viață mai scurtă și un ritm de îmbătrânire mai rapid la vârstă mijlocie și înaintată - opusul tendinței văzute la majoritatea celorlalte mamifere." },
+        { q: "La ce vârstă este considerat un câine 'senior'?", a: "Depinde de mărime - câinii mici sunt de obicei considerați seniori pe la 10-12 ani, cei de talie medie pe la 8-10 ani, iar rasele mari și uriașe pot fi considerate seniore încă de la 6-7 ani, deoarece rasele mari cresc și îmbătrânesc mai repede decât cele mici." },
+        { q: "De ce calculul nu se bazează doar pe mărimea corpului? Contează și rasa?", a: "Mărimea corpului este cel mai puternic factor de predicție al ritmului de îmbătrânire, așa că acest calculator grupează rasele după mărime (mică, medie, mare, uriașă) în loc de o singură formulă universală. În cadrul aceluiași grup de mărime, ritmul de îmbătrânire variază ușor între rase din cauza factorilor genetici, dar mărimea corpului explică cea mai mare parte a diferenței." },
       ],
     },
   },
@@ -1743,6 +2005,17 @@ const I18N_TOOLS = {
         { q: "非常に高齢な猫の場合、猫の年齢換算式はどの程度正確ですか？", a: "この計算式は猫の若い時期において最も信頼性が高く、高齢になると変化が緩やかになり、2歳以降は猫の1年ごとに人間の約4歳分が加算される計算になります。ただし高齢期の実際の老化には個体の健康状態や遺伝の影響が式だけでは捉えきれないほど大きく関わります。" },
       ],
     },
+    ro: {
+      title: "Calculator de Vârstă pentru Pisici",
+      intro: "Introdu vârsta pisicii pentru a calcula vârsta umană echivalentă, pe baza tiparelor tipice de îmbătrânire la pisici.",
+      description: "Convertește vârsta unei pisici în vârstă umană echivalentă.",
+      faq: [
+        { q: "Îmbătrânesc toate pisicile la fel, indiferent de rasă?", a: "Tiparul de îmbătrânire al pisicilor este destul de consistent la majoritatea raselor - nu există o variație atât de mare bazată pe mărime ca la câini." },
+        { q: "Contează dacă pisica trăiește în casă sau afară pentru calculul vârstei?", a: "Acest calculator nu ia în calcul acest aspect - este o estimare bazată pe tiparele generale de dezvoltare. În realitate, pisicile de interior tind să trăiască mai mult decât cele de exterior, deoarece sunt expuse la mai puține accidentări și boli, dar asta influențează durata de viață, nu formula de conversie a vârstei." },
+        { q: "La ce vârstă este considerată o pisică 'senioară'?", a: "Multe ghiduri veterinare consideră pisicile senioare pe la 10-11 ani, cu 'geriatric' folosit adesea pentru 15 ani și peste - deși variația individuală este mai mare decât poate surprinde un singur prag de vârstă." },
+        { q: "Cât de precisă este formula de conversie a vârstei pisicilor pentru animale foarte bătrâne?", a: "Formula este cea mai fiabilă în anii tineri ai pisicii, iar în anii mai avansați se aplatizează, adăugând aproximativ 4 ani umani pentru fiecare an de pisică după vârsta de 2 ani. Sănătatea individuală și genetica joacă un rol tot mai mare în îmbătrânirea reală la vârste înaintate, mai mult decât poate surprinde orice formulă." },
+      ],
+    },
   },
 };
 
@@ -1789,6 +2062,11 @@ const I18N_STATIC = {
       lede: "速く正確な計算ツールのリファレンスインデックス - 多くの計算ツールサイトのようにすべてを1ページに詰め込むのではなく、優れた図書館が本を整理するように構成されています。",
       body: "Calquaryは、数学、お金、住まいのプロジェクト、健康、日付、単位換算、日常的なテキスト作業、ペットなど、単一の目的に特化した計算ツールのコレクションです。広告や無関係なコンテンツに埋もれさせるのではなく、一つの質問にしっかり答えることを目指して作られています。すべてのツールはブラウザ内で完結して動作します。数値を入力すると答えが得られ、サーバーには何も送信されません。計算ツールは8つのカテゴリーに分類されており、カタログは今も増え続けています。公開前にはそれぞれのツールについて、正しく動作する数式とわかりやすい説明があるかを確認しているため、得られる答えを信頼していただけます。実際の財務、構造、医療に関わる重要な決定を行う前には、必ず専門家にご確認ください。ほとんどのツールは、コンクリートのスラブに必要な量、犬の年齢を人間の年齢に換算するとどうなるか、2つの日付の間に何営業日あるかなど、誰かが実際に知りたかった具体的で狭い質問から生まれたものであり、網羅的に見せるためだけに作られた汎用的な計算ツールではありません。カテゴリーを細かく分けすぎず、あえて広めに保っている（数学、金融、建築・住まい、健康・フィットネス、日付・時間、日常の単位換算、テキスト・デジタル、ペット・ライフスタイル）のもそのためです。目指しているのは、答えにたどり着く前にいくつものサブカテゴリーをクリックし続けるような迷路ではなく、抱えている問題の種類に応じて探せる図書館のような構成です。",
     },
+    ro: {
+      title: "Despre Calquary - Calculatoare și Convertoare Gratuite",
+      lede: "Un index de referință cu calculatoare rapide și precise - organizat așa cum o bibliotecă bună își organizează cărțile, nu cum majoritatea site-urilor de calculatoare aruncă totul pe o singură pagină.",
+      body: "Calquary este o colecție de calculatoare cu scop unic - pentru matematică, bani, proiecte pentru casă, sănătate, date, conversii, sarcini de text zilnice și animale de companie - create pentru a răspunde bine la o singură întrebare, în loc să o îngroape sub reclame și conținut fără legătură. Fiecare instrument funcționează în întregime în browserul tău: introduci numerele, primești răspunsul, nimic nu este trimis către un server. Calculatoarele sunt grupate în 8 categorii, iar catalogul continuă să crească - fiecare instrument este verificat pentru o formulă funcțională și o explicație pe înțelesul tuturor înainte de a fi adăugat, ca răspunsul primit să fie de încredere. Pentru decizii cu implicații financiare, structurale sau medicale reale, consultă un profesionist calificat. Majoritatea instrumentelor au pornit de la o întrebare concretă și specifică pe care cineva chiar avea nevoie să o rezolve - cât beton pentru o placă, ce înseamnă vârsta unui câine în ani umani, câte zile lucrătoare sunt între două date - în loc de un calculator generic construit doar ca să pară complet. De aceea categoriile rămân largi (Matematică, Finanțe, Construcții și Casă, Sănătate și Fitness, Dată și Oră, Conversii Zilnice, Text și Digital, și Animale de Companie și Stil de Viață) în loc de înguste: obiectivul este o bibliotecă pe care o poți explora în funcție de tipul de problemă pe care o ai, nu un labirint de subcategorii de parcurs înainte de a ajunge la un răspuns.",
+    },
   },
   contact: {
     en: {
@@ -1819,6 +2097,10 @@ const I18N_STATIC = {
       title: "お問い合わせ - Calquaryへのご連絡",
       body: "不具合の報告、計算ツールのアイデア、データの取り扱いについてのご質問などがございましたら、hello@calquary.com までご連絡ください。すべてのメッセージに目を通しておりますが、返信までに数日かかる場合があります。不具合を報告される際は、対象の計算ツール名、入力した数値、そして期待していた結果と実際の結果を書き添えていただけると助かります。新しい計算ツールのご提案も特に歓迎しています。Calquaryに掲載されているツールの多くは読者からのリクエストがきっかけで生まれており、リクエストの頻度を確認しながら次に開発するツールを決めています。",
     },
+    ro: {
+      title: "Contactează Calquary - Erori, Idei și Întrebări",
+      body: "Ai găsit o eroare, ai o idee pentru un calculator sau o întrebare despre cum gestionăm datele? Scrie-ne la hello@calquary.com - citim fiecare mesaj, deși răspunsul poate dura câteva zile. Dacă raportezi o eroare, ajută să incluzi numele calculatorului, numerele introduse și rezultatul așteptat comparat cu cel obținut. Sugestiile de calculatoare sunt binevenite - majoritatea instrumentelor deja prezente pe Calquary au pornit ca solicitări ale cititorilor, iar noi urmărim frecvența cererilor înainte de a decide ce construim în continuare.",
+    },
   },
 
   // Legal-facing pages: translated in full (not summarized), but each
@@ -1835,6 +2117,7 @@ const I18N_STATIC = {
     pt: 'Esta é uma tradução da Política de Privacidade e dos Termos de Serviço originais em inglês, oferecida por conveniência. Em caso de divergência, prevalece a <a href="/privacy.html">versão em inglês</a>. Esta tradução não passou por uma revisão jurídica independente.',
     it: 'Questa è una traduzione dell\'Informativa sulla Privacy e dei Termini di Servizio originali in inglese, fornita per comodità. In caso di discrepanza, prevale la <a href="/privacy.html">versione inglese</a>. Questa traduzione non è stata sottoposta a una revisione legale indipendente.',
     ja: 'これは英語版のプライバシーポリシーおよび利用規約の翻訳であり、利便性のために提供されています。内容に相違がある場合は、<a href="/privacy.html">英語版</a>が優先されます。この翻訳は独立した法的レビューを受けていません。',
+    ro: 'Aceasta este o traducere a Politicii de Confidențialitate și a Termenilor de Serviciu originale în limba engleză, oferită pentru comoditate. În caz de discrepanță, prevalează <a href="/privacy.html">versiunea în limba engleză</a>. Această traducere nu a trecut printr-o revizuire juridică independentă.',
   },
 
   privacy: {
@@ -1978,6 +2261,26 @@ const I18N_STATIC = {
         { h2: "お問い合わせ", p: ['本プライバシーポリシーに関するご質問は、<a href="/contact.html">お問い合わせ</a>ください。'] },
       ],
     },
+    ro: {
+      title: "Politica de Confidențialitate - Cum Gestionează Calquary Datele Tale",
+      effectiveDateLabel: "Data intrării în vigoare: 18 august 2026",
+      sections: [
+        { h2: "Prezentare generală", p: ['Această Politică de Confidențialitate explică ce informații colectează Calquary ("noi", "al nostru") atunci când utilizezi calquary.com (denumit "Site-ul"), cum le folosim și opțiunile disponibile pentru tine. Prin utilizarea Site-ului, ești de acord cu practicile descrise aici.'] },
+        { h2: "Informațiile pe care le colectăm", p: [
+          "Calculatoarele Calquary funcționează în întregime în browserul tău. Când introduci numere sau alte valori într-un calculator, acele date sunt procesate local pe dispozitivul tău folosind JavaScript - nu sunt niciodată transmise către serverele noastre, stocate într-o bază de date sau văzute de noi sub nicio formă. Nu solicităm conturi, autentificare sau vreo informație personală pentru a folosi niciun calculator de pe acest Site.",
+          "Putem colecta automat informații tehnice limitate, neidentificabile, precum tipul browserului, tipul general de dispozitiv și paginile vizitate, prin jurnale standard de server web și instrumente de analiză (de exemplu, pentru a înțelege care calculatoare sunt cele mai utile și pentru a remedia erori). Aceste informații nu includ valorile pe care le introduci într-un calculator.",
+        ] },
+        { h2: "Cookie-uri și tehnologii de urmărire", p: ["Calquary nu folosește în prezent cookie-uri pentru calculatoarele în sine - fără stare de autentificare, fără preferințe salvate, fără urmărirea datelor introduse. Folosim, sau intenționăm să folosim, serviciile terțe descrise mai jos, care pot seta propriile cookie-uri în browserul tău, inclusiv în scopuri publicitare."] },
+        { h2: "Publicitate", p: [
+          'Calquary poate afișa publicitate prin Google AdSense sau servicii publicitare terțe similare. Aceste servicii pot folosi cookie-uri, identificatori de dispozitiv sau tehnologii similare pentru a livra reclame bazate pe vizitele tale anterioare pe acest site sau pe altele (publicitate "bazată pe interese" sau "personalizată").',
+          'Utilizarea de către Google a cookie-urilor publicitare permite Google și partenerilor săi să afișeze reclame bazate pe vizitele tale pe acest site și pe altele. Poți renunța la publicitatea personalizată vizitând <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">Setările de anunțuri Google</a>, sau poți renunța la utilizarea cookie-urilor de către unii furnizori terți pentru publicitate personalizată vizitând <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer">www.aboutads.info</a>. Pentru mai multe informații despre cum Google folosește datele atunci când utilizezi Site-ul nostru, vezi <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">Cum folosește Google informațiile din site-uri sau aplicații care utilizează serviciile sale</a>.',
+        ] },
+        { h2: "Servicii terțe", p: ["Putem folosi servicii terțe pentru analiză, găzduire și publicitate (precum Google AdSense și Google Analytics). Acești furnizori pot colecta informații trimise de browserul tău ca parte a unei solicitări de pagină web, precum cookie-uri sau adresa ta IP, și sunt guvernați de propriile politici de confidențialitate, nu de aceasta."] },
+        { h2: "Confidențialitatea copiilor", p: ["Calquary nu se adresează copiilor sub 13 ani și nu colectăm cu bună știință informații personale de la copii sub 13 ani. Dacă crezi că un copil ne-a furnizat informații personale, te rugăm să ne contactezi pentru a putea remedia situația."] },
+        { h2: "Modificări ale acestei politici", p: ['Putem actualiza această Politică de Confidențialitate din când în când pentru a reflecta schimbări în practicile noastre sau din motive legale, operaționale sau de reglementare. "Data intrării în vigoare" din partea de sus a acestei pagini va reflecta cea mai recentă revizuire. Continuarea utilizării Site-ului după intrarea în vigoare a modificărilor constituie acceptarea politicii revizuite.'] },
+        { h2: "Contactează-ne", p: ['Dacă ai întrebări despre această Politică de Confidențialitate, te rugăm să <a href="/contact.html">ne contactezi</a>.'] },
+      ],
+    },
   },
 
   terms: {
@@ -2098,6 +2401,23 @@ const I18N_STATIC = {
         { h2: "第三者リンクおよび広告", p: ["本サイトには、第三者ウェブサイトへのリンクが含まれている場合や、第三者の広告が表示される場合があります。当社は、いかなる第三者サイトのコンテンツ、正確性、または取り扱いについても責任を負わず、リンクや広告の掲載は推奨を意味するものではありません。"] },
         { h2: "本規約の変更", p: ["当社は、本利用規約を随時更新する場合があります。本ページ上部の「発効日」は最新の改定日を反映しています。変更の発効後も本サイトをご利用いただいた場合、改定後の規約に同意したものとみなされます。"] },
         { h2: "お問い合わせ", p: ['本利用規約に関するご質問は、<a href="/contact.html">お問い合わせ</a>ください。'] },
+      ],
+    },
+    ro: {
+      title: "Termeni de Serviciu - Condițiile de Utilizare Calquary",
+      effectiveDateLabel: "Data intrării în vigoare: 18 august 2026",
+      sections: [
+        { h2: "Acceptarea termenilor", p: ['Prin accesarea sau utilizarea calquary.com (denumit "Site-ul"), ești de acord să respecți acești Termeni de Serviciu. Dacă nu ești de acord, te rugăm să nu folosești Site-ul.'] },
+        { h2: "Doar în scop informativ", p: [
+          "Calculatoarele Calquary sunt oferite exclusiv în scopuri informative generale și de estimare. Nu reprezintă și nu trebuie considerate consultanță financiară, structurală, inginerească, medicală, juridică sau de alt tip profesional. Rezultatele sunt estimări bazate pe formulele și presupunerile încorporate în fiecare instrument și pot să nu ia în calcul circumstanțele tale specifice.",
+          "Confirmă întotdeauna rezultatele care contează - o rată de împrumut, o estimare de materiale pentru un proiect de construcție, un calcul legat de sănătate - cu un profesionist calificat înainte de a lua o decizie bazată pe ele.",
+        ] },
+        { h2: "Fără garanție", p: ['Site-ul și calculatoarele sale sunt furnizate "ca atare" și "conform disponibilității", fără nicio garanție de niciun fel, expresă sau implicită, incluzând dar fără a se limita la garanții de acuratețe, vandabilitate, adecvare pentru un anumit scop sau neîncălcare. Nu garantăm că vreun calculator va fi lipsit de erori, neîntrerupt sau va produce rezultate adecvate pentru situația ta specifică.'] },
+        { h2: "Limitarea răspunderii", p: ["În măsura maximă permisă de lege, Calquary și operatorii săi nu vor fi răspunzători pentru niciun fel de daune directe, indirecte, incidentale, subsecvente sau speciale rezultate din sau legate de utilizarea sau imposibilitatea de a utiliza Site-ul sau rezultatele oricărui calculator - incluzând dar fără a se limita la pierderi financiare, daune materiale sau vătămări corporale - chiar dacă au fost avertizați despre posibilitatea unor astfel de daune."] },
+        { h2: "Utilizare acceptabilă", p: ["Ești de acord să nu abuzezi de Site, incluzând dar fără a se limita la: încercarea de a perturba sau supraîncărca infrastructura Site-ului, extragerea conținutului într-un ritm care degradează serviciul pentru alți utilizatori sau utilizarea Site-ului în orice scop ilegal. Ne rezervăm dreptul de a restricționa accesul pentru orice utilizare care încalcă acești termeni."] },
+        { h2: "Link-uri terțe și publicitate", p: ["Site-ul poate conține link-uri către site-uri web terțe sau poate afișa publicitate terță. Nu suntem responsabili pentru conținutul, acuratețea sau practicile niciunui site terț, iar includerea unui link sau a unei reclame nu implică o recomandare din partea noastră."] },
+        { h2: "Modificări ale acestor termeni", p: ['Putem actualiza acești Termeni de Serviciu din când în când. "Data intrării în vigoare" din partea de sus a acestei pagini reflectă cea mai recentă revizuire. Continuarea utilizării Site-ului după intrarea în vigoare a modificărilor constituie acceptarea termenilor revizuiți.'] },
+        { h2: "Contactează-ne", p: ['Dacă ai întrebări despre acești Termeni de Serviciu, te rugăm să <a href="/contact.html">ne contactezi</a>.'] },
       ],
     },
   },
