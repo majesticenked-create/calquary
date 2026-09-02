@@ -32,8 +32,8 @@ const MONTHS = ["January","February","March","April","May","June","July","August
 
 // "en" = site root (no prefix). Locale build order also controls hreflang
 // link order in the <head> of every generated page.
-const LOCALES = ["en", "es", "fr", "de", "pt", "it", "ja", "ro", "el", "zh"];
-const OG_LOCALE = { en: "en_US", es: "es_ES", fr: "fr_FR", de: "de_DE", pt: "pt_PT", it: "it_IT", ja: "ja_JP", ro: "ro_RO", el: "el_GR", zh: "zh_CN" };
+const LOCALES = ["en", "es", "fr", "de", "pt", "it", "ja", "ro", "el", "zh", "ar"];
+const OG_LOCALE = { en: "en_US", es: "es_ES", fr: "fr_FR", de: "de_DE", pt: "pt_PT", it: "it_IT", ja: "ja_JP", ro: "ro_RO", el: "el_GR", zh: "zh_CN", ar: "ar_AR" };
 
 // Wave-one tool batch: prioritized from the qualitative volume signals in
 // seo/keyword-research-*.md (DataForSEO was down for that whole research
@@ -217,6 +217,10 @@ function computeSampleResult(calc) {
 function localePath(locale) {
   return locale === "en" ? "" : `${locale}/`;
 }
+const RTL_LOCALES = ["ar"];
+function htmlDirAttr(locale) {
+  return RTL_LOCALES.includes(locale) ? ' dir="rtl"' : "";
+}
 function toolUrl(locale, id) {
   return `${SITE_URL}/${localePath(locale)}tool/${id}.html`;
 }
@@ -234,7 +238,7 @@ function staticUrl(locale, page) {
 // of LOCALES) — reciprocal by construction, since every page in the set
 // links to every other page in the same set plus x-default (English).
 function hreflangLinks(urlFor, builtLocales) {
-  const HREFLANG_CODE = { en: "en", es: "es", fr: "fr", de: "de", pt: "pt", it: "it", ja: "ja" };
+  const HREFLANG_CODE = { en: "en", es: "es", fr: "fr", de: "de", pt: "pt", it: "it", ja: "ja", ro: "ro", el: "el", zh: "zh-Hans", ar: "ar" };
   const lines = builtLocales.map(
     (loc) => `  <link rel="alternate" hreflang="${HREFLANG_CODE[loc]}" href="${urlFor(loc)}">`
   );
@@ -249,7 +253,7 @@ function hreflangLinks(urlFor, builtLocales) {
 // only offers locales that actually exist for this page (an untranslated
 // tool page only ever built "en", so no dead links to a missing translation).
 const LOCALE_LABEL = { en: "EN", es: "ES", fr: "FR", de: "DE", pt: "PT", it: "IT", ja: "JA" };
-const LOCALE_LABEL_FULL = { en: "English", es: "Español", fr: "Français", de: "Deutsch", pt: "Português", it: "Italiano", ja: "日本語", ro: "Română", el: "Ελληνικά", zh: "中文" };
+const LOCALE_LABEL_FULL = { en: "English", es: "Español", fr: "Français", de: "Deutsch", pt: "Português", it: "Italiano", ja: "日本語", ro: "Română", el: "Ελληνικά", zh: "中文", ar: "العربية" };
 const GLOBE_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>';
 
 // One dropdown control, not an always-visible EN·ES·FR·DE link row — the
@@ -382,6 +386,12 @@ function fontsLink(locale) {
   if (locale === "ja") {
     return `<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap">`;
   }
+  if (locale === "zh") {
+    return `<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap">`;
+  }
+  if (locale === "ar") {
+    return `<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap">`;
+  }
   return `<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">`;
 }
 
@@ -492,6 +502,7 @@ function buildToolPage(template, locale, calc, cat, I18N) {
 
   return template
     .split("{{LANG}}").join(locale)
+    .split("{{DIR}}").join(htmlDirAttr(locale))
     .split("{{FONTS_LINK}}").join(fontsLink(locale))
     .split("{{CALC_ID}}").join(calc.id)
     .split("{{TITLE}}").join(t.title)
@@ -559,6 +570,7 @@ function buildCategoryPage(template, locale, cat, calculators, I18N) {
 
   return template
     .split("{{LANG}}").join(locale)
+    .split("{{DIR}}").join(htmlDirAttr(locale))
     .split("{{FONTS_LINK}}").join(fontsLink(locale))
     .split("{{CAT_ID}}").join(cat.id)
     .split("{{CAT_NAME_FULL}}").join(nameFull)
@@ -633,6 +645,7 @@ function buildHomePage(template, locale, categories, calculators, I18N) {
 
   return template
     .split("{{LANG}}").join(locale)
+    .split("{{DIR}}").join(htmlDirAttr(locale))
     .split("{{FONTS_LINK}}").join(fontsLink(locale))
     .split("{{LOCALE_CODE}}").join(locale)
     .split("{{LOCALE_PATH}}").join(localePath(locale))
@@ -685,6 +698,7 @@ function buildAboutPage(template, locale, I18N) {
 
   return template
     .split("{{LANG}}").join(locale)
+    .split("{{DIR}}").join(htmlDirAttr(locale))
     .split("{{FONTS_LINK}}").join(fontsLink(locale))
     .split("{{LOCALE_PATH}}").join(localePath(locale))
     .split("{{TITLE}}").join(`${s.title} | Calquary`)
@@ -713,6 +727,7 @@ function buildContactPage(template, locale, I18N) {
 
   return template
     .split("{{LANG}}").join(locale)
+    .split("{{DIR}}").join(htmlDirAttr(locale))
     .split("{{FONTS_LINK}}").join(fontsLink(locale))
     .split("{{LOCALE_PATH}}").join(localePath(locale))
     .split("{{TITLE}}").join(`${s.title} | Calquary`)
@@ -754,6 +769,7 @@ function buildLegalPage(template, locale, docKey, I18N) {
 
   return template
     .split("{{LANG}}").join(locale)
+    .split("{{DIR}}").join(htmlDirAttr(locale))
     .split("{{FONTS_LINK}}").join(fontsLink(locale))
     .split("{{LOCALE_PATH}}").join(localePath(locale))
     .split("{{TITLE}}").join(doc.title)
@@ -859,7 +875,7 @@ function buildSitemap(categories, calculators) {
   // sibling locale URLs (+ x-default) per the sitemap hreflang spec, mirroring
   // the <head> hreflang tags rather than duplicating a separate source of
   // truth for them.
-  const HREFLANG_CODE = { en: "en", es: "es", fr: "fr", de: "de", pt: "pt", it: "it", ja: "ja" };
+  const HREFLANG_CODE = { en: "en", es: "es", fr: "fr", de: "de", pt: "pt", it: "it", ja: "ja", ro: "ro", el: "el", zh: "zh-Hans", ar: "ar" };
 
   function xhtmlBlock(urlFor, builtLocales) {
     const lines = builtLocales.map(

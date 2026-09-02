@@ -15,6 +15,18 @@ html[lang="ja"] {
   --font-display: 'Noto Sans JP', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-body: 'Noto Sans JP', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
+/* Same rationale as the Japanese override above: Inter has no CJK/Arabic
+   glyphs, so Chinese and Arabic pages load a matching Google Font (see
+   build.js's fontsLink()) instead of leaving glyph coverage to whatever
+   the visitor's OS ships as its generic sans-serif fallback. */
+html[lang="zh"] {
+  --font-display: 'Noto Sans SC', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Noto Sans SC', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+html[lang="ar"] {
+  --font-display: 'Noto Sans Arabic', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Noto Sans Arabic', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
 
 :root {
   /* Color tokens */
@@ -1311,4 +1323,44 @@ a.locale-item:hover { color: var(--brand); background: var(--paper-mint); text-d
     color: #000;
     text-align: center;
   }
+}
+
+/* ============================================================
+   RTL support (Arabic, and any future RTL locale) — [dir="rtl"]
+   is set on <html> by build.js for those locales only. This is a
+   targeted override list, not a full logical-properties rewrite:
+   only the rules above that hardcode a physical left/right side
+   need mirroring for the layout to read correctly. Flexbox/grid
+   rules that use gap, justify-content: space-between, or auto
+   margins on both axes already flip correctly on their own since
+   the browser reverses inline-axis direction for dir="rtl" without
+   any CSS change.
+   ============================================================ */
+[dir="rtl"] .locale-menu {
+  right: auto;
+  left: 0;
+}
+
+[dir="rtl"] .result-notes {
+  border-left: none;
+  border-right: 3px solid var(--brand);
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+}
+
+[dir="rtl"] .result-table thead th,
+[dir="rtl"] .result-table tbody td {
+  text-align: left;
+}
+[dir="rtl"] .result-table thead th:first-child,
+[dir="rtl"] .result-table tbody td:first-child {
+  text-align: right;
+}
+
+[dir="rtl"] .index-category-head .count {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+[dir="rtl"] .stopwatch-laps {
+  text-align: right;
 }
