@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>การเงิน เครื่องคำนวณ | Calquary</title>
+  <meta name="description" content="สินเชื่อ ทิป และการคำนวณเงินในชีวิตประจำวัน" />
+  <meta property="og:title" content="การเงิน เครื่องคำนวณ | Calquary">
+  <meta property="og:description" content="สินเชื่อ ทิป และการคำนวณเงินในชีวิตประจำวัน">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/th/category/finance.html">
+  <meta property="og:locale" content="th_TH">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/category-finance.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="การเงิน เครื่องคำนวณ | Calquary">
+  <meta name="twitter:description" content="สินเชื่อ ทิป และการคำนวณเงินในชีวิตประจำวัน">
+  <meta name="twitter:image" content="https://calquary.com/og-images/category-finance.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/category/finance.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/category/finance.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/finance.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/category/finance.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/category/finance.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/category/finance.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/category/finance.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/category/finance.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/category/finance.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/category/finance.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/category/finance.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/category/finance.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/category/finance.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Thai:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      const cat = getCategory("finance");
+      document.getElementById("cat-code").innerHTML = `<svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${cat.icon}</svg>`;
+
+      // Card grid stays JS-rendered (interactive live-readout preview, same
+      // as the homepage) but is NOT the page's static SEO content — the h1,
+      // description, and breadcrumb above are baked directly into the HTML
+      // at build time (see build.js), not set here.
+      const tools = calculatorsInCategory(cat.id);
+      const translatedIds = {"percentage-calculator":true,"average-calculator":true,"mortgage-calculator":true,"loan-calculator":true,"compound-interest-calculator":true,"concrete-calculator":true,"flooring-calculator":true,"calorie-calculator":true,"bmi-calculator":true,"bmr-calculator":true,"age-calculator":true,"days-until-calculator":true,"unit-length-converter":true,"temperature-converter":true,"word-counter":true,"case-converter":true,"dog-age-calculator":true,"cat-age-calculator":true};
+      const grid = document.getElementById("cat-tool-grid");
+      tools.forEach((calc, i) => {
+        const sampleResult = calc.compute(
+          Object.fromEntries(calc.fields.map((f) => [f.id, f.type === "checkbox-group" ? (f.default || []) : f.default]))
+        );
+        const a = document.createElement("a");
+        // Locale pages only have a localized tool page for the wave-one
+        // batch — link straight through to it when it exists, otherwise
+        // fall back to the English canonical rather than a 404.
+        a.href = translatedIds[calc.id] ? `/th/tool/${calc.id}.html` : `https://calquary.com/tool/${calc.id}.html`;
+        a.className = "tool-card";
+        a.innerHTML = `
+          <div class="cat-label">${calc.keyword}</div>
+          <h3>${calc.title}</h3>
+          <div class="readout">
+            <span class="rlabel">${sampleResult.primary.label}</span>
+            <span class="rvalue" style="--delay:${0.05 * i}s">${sampleResult.primary.value}</span>
+          </div>
+        `;
+        grid.appendChild(a);
+      });
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/th/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "การเงิน เครื่องคำนวณ",
+          "item": "https://calquary.com/th/category/finance.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/th/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/th/index.html#categories">หมวดหมู่</a>
+          <a href="/th/index.html#tools">เครื่องมือทั้งหมด</a>
+          <a href="/th/about.html">เกี่ยวกับเรา</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: ไทย">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>undefined</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/category/finance.html">English</a><a class="locale-item" role="menuitem" href="/es/category/finance.html">Español</a><a class="locale-item" role="menuitem" href="/fr/category/finance.html">Français</a><a class="locale-item" role="menuitem" href="/de/category/finance.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/category/finance.html">Português</a><a class="locale-item" role="menuitem" href="/it/category/finance.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/category/finance.html">日本語</a><a class="locale-item" role="menuitem" href="/ro/category/finance.html">Română</a><a class="locale-item" role="menuitem" href="/el/category/finance.html">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/category/finance.html">中文</a><a class="locale-item" role="menuitem" href="/ar/category/finance.html">العربية</a><span class="locale-item current" role="menuitem" aria-current="true">ไทย</span></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="category-hero">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="/th/index.html">Calquary</a> / หมวดหมู่</div>
+      <span class="code-badge" id="cat-code"></span>
+      <h1>การเงิน เครื่องคำนวณ</h1>
+      <p style="max-width:56ch;">สินเชื่อ ทิป และการคำนวณเงินในชีวิตประจำวัน</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-bottom:0;">
+    <div class="wrap">
+      <p style="max-width:72ch;color:var(--ink-soft);">สินเชื่อ เงินออม ภาษี และการชำระหนี้ ล้วนขึ้นอยู่กับสูตรที่รู้จักกันดีเพียงไม่กี่สูตร - เครื่องคำนวณเหล่านี้นำสูตรเหล่านั้นมาใช้กับตัวเลขจริงของคุณ เพื่อให้คุณเห็นค่างวดรายเดือนจริง ตารางการชำระเงิน หรือการคาดการณ์การเติบโต แทนที่จะอ่านสูตรแบบนามธรรม</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="tool-grid" id="cat-tool-grid"></div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/th/index.html">← กลับไปยังเครื่องคำนวณทั้งหมด</a> · <a href="/th/about.html">เกี่ยวกับเรา</a> · <a href="/th/contact.html">ติดต่อเรา</a> · <a href="/th/privacy.html">ความเป็นส่วนตัว</a> · <a href="/th/terms.html">ข้อกำหนด</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

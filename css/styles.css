@@ -27,6 +27,10 @@ html[lang="ar"] {
   --font-display: 'Noto Sans Arabic', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-body: 'Noto Sans Arabic', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
+html[lang="th"] {
+  --font-display: 'Noto Sans Thai', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Noto Sans Thai', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
 
 :root {
   /* Color tokens */
