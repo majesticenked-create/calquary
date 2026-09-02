@@ -461,6 +461,68 @@ const I18N_UI = {
       { q: "Cât de des sunt adăugate calculatoare noi?", a: "Nu există un calendar fix, dar catalogul a crescut constant de la lansare - calculatoarele noi sunt adăugate în loturi, pe categorii, fiecare fiind construit și verificat înainte de publicare." },
     ],
   },
+
+  el: {
+    catSuffix: "Αριθμομηχανές",
+    nav: { categories: "Κατηγορίες", allTools: "Όλα τα εργαλεία", about: "Σχετικά" },
+    footer: {
+      categoriesHeader: "Κατηγορίες",
+      popularHeader: "Δημοφιλή",
+      siteHeader: "Ιστότοπος",
+      allCategories: "Όλες οι κατηγορίες",
+      allTools: "Όλα τα εργαλεία",
+      allCalculators: "Όλες οι αριθμομηχανές",
+      about: "Σχετικά",
+      contact: "Επικοινωνία",
+      privacy: "Απόρρητο",
+      terms: "Όροι",
+      tagline: "Ένα ευρετήριο αναφοράς με γρήγορες και ακριβείς αριθμομηχανές, φτιαγμένο για όσους θέλουν απλώς την απάντηση.",
+      copyright: "© 2026 Calquary. Οι αριθμομηχανές παρέχονται για ενημερωτικούς σκοπούς και δεν υποκαθιστούν την επαγγελματική συμβουλή.",
+    },
+    buttons: {
+      findIt: "Αναζήτηση",
+      browseAll: "Δείτε όλα →",
+      calculate: "Υπολογισμός",
+      reset: "Επαναφορά",
+      backToAll: "← Πίσω σε όλες τις αριθμομηχανές",
+    },
+    labels: {
+      relatedTools: "Σχετικά εργαλεία",
+      accuracyTitle: "Σημείωση ακρίβειας",
+      accuracyText: "Οι αριθμομηχανές του Calquary έχουν σχεδιαστεί για να παρέχουν γρήγορες και αξιόπιστες εκτιμήσεις. Για αποφάσεις με πραγματικές οικονομικές, δομικές ή ιατρικές επιπτώσεις, συμβουλευτείτε έναν ειδικευμένο επαγγελματία.",
+      lastUpdated: "Τελευταία ενημέρωση:",
+      faqTitle: "Συχνές ερωτήσεις",
+      titleSuffix: "Δωρεάν Online Αριθμομηχανή",
+      breadcrumbHome: "Calquary",
+    },
+    hero: {
+      eyebrow: "Ευρετήριο αναφοράς · αριθμομηχανές για τα πάντα",
+      h1: "Βρες ακριβώς την αριθμομηχανή που χρειάζεσαι - γρήγορα.",
+      lede: "Το Calquary οργανώνει τις αριθμομηχανές όπως μια καλή βιβλιοθήκη αναφοράς οργανώνει τα βιβλία: ανά θέμα, με σαφείς απαντήσεις χωρίς περιττά στοιχεία. Μαθηματικά, χρήματα, έργα σπιτιού, υγεία και άλλα.",
+      statLabel: "διαθέσιμες αριθμομηχανές και συνεχώς αυξάνονται",
+      lookupTag: "ΑΝΑΖΗΤΗΣΗ",
+      placeholder: "Δοκίμασε 'σκυρόδεμα', 'ΔΜΣ', 'δάνειο'...",
+      hint: "Ή εξερεύνησε ανά κατηγορία παρακάτω.",
+    },
+    sections: {
+      browseKicker: "Εξερεύνηση",
+      browseH2: "Κάθε κατηγορία, το δικό της ράφι",
+      popularKicker: "Δημοφιλή τώρα",
+      popularH2: "Προτεινόμενα εργαλεία",
+      recentKicker: "Πρόσφατη προσθήκη",
+      recentH2: "Πρόσφατα προστέθηκαν",
+      faqKicker: "Μάθε περισσότερα",
+      faqH2: "Συχνές ερωτήσεις",
+    },
+    homeFaq: [
+      { q: "Τι είναι το Calquary;", a: "Το Calquary είναι ένα ευρετήριο αναφοράς με γρήγορες και ακριβείς αριθμομηχανές, οργανωμένες ανά θέμα όπως σε μια βιβλιοθήκη, αντί να είναι διάσπαρτες ανάμεσα σε διαφημίσεις και άσχετο περιεχόμενο. Επιλέγεις μια κατηγορία, ανοίγεις ένα εργαλείο και παίρνεις την απάντησή σου." },
+      { q: "Είναι δωρεάν αυτές οι αριθμομηχανές;", a: "Ναι - όλες οι αριθμομηχανές του Calquary είναι δωρεάν, χωρίς λογαριασμό, εγγραφή ή πληρωμή. Απλώς ανοίγεις ένα εργαλείο και το χρησιμοποιείς." },
+      { q: "Πόσο ακριβείς είναι οι αριθμομηχανές του Calquary;", a: "Κάθε αριθμομηχανή χρησιμοποιεί έναν τυπικό, επαληθευμένο τύπο για την κατηγορία της, και κάθε εργαλείο ελέγχεται με χειροκίνητα υπολογισμένα αποτελέσματα πριν δημοσιευτεί. Για αποφάσεις με πραγματικές οικονομικές, δομικές ή ιατρικές επιπτώσεις, συμβουλευτείτε έναν ειδικευμένο επαγγελματία." },
+      { q: "Αποθηκεύετε κάποια από τα δεδομένα μου;", a: "Όχι - όλες οι αριθμομηχανές λειτουργούν εξ ολοκλήρου στο πρόγραμμα περιήγησής σου. Οι αριθμοί που εισάγεις δεν αποστέλλονται ποτέ σε διακομιστή ούτε αποθηκεύονται· όταν κλείνεις την καρτέλα, όλα διαγράφονται." },
+      { q: "Πόσες αριθμομηχανές έχει το Calquary;", a: 'Αυτή τη στιγμή, το Calquary έχει <span id="faq-tool-count">—</span> αριθμομηχανές σε 8 κατηγορίες, και ο κατάλογος συνεχίζει να μεγαλώνει.' },
+      { q: "Πόσο συχνά προστίθενται νέες αριθμομηχανές;", a: "Δεν υπάρχει σταθερό πρόγραμμα, αλλά ο κατάλογος έχει αυξηθεί σταθερά από την κυκλοφορία - νέες αριθμομηχανές προστίθενται σε ομάδες ανά κατηγορία, η καθεμία κατασκευασμένη και ελεγμένη πριν δημοσιευτεί." },
+    ],
+  },
 };
 
 const I18N_CATEGORIES = {
@@ -472,6 +534,7 @@ const I18N_CATEGORIES = {
     it: { name: "Matematica", description: "Percentuali, rapporti e calcoli quotidiani.", longDescription: "Dai calcoli rapidi delle percentuali alla statistica e all'algebra, questa categoria copre i problemi matematici quotidiani che le persone cercano davvero - dividere un conto, controllare un voto o calcolare un rapporto - senza dover usare una calcolatrice scientifica completa piena di funzioni inutili." },
     ja: { name: "数学", description: "パーセント、比率、日常の計算。", longDescription: "パーセントの簡単な計算から統計、代数まで、このカテゴリーは人々が実際に検索する日常的な数学の問題をカバーしています。割り勘の計算、成績の確認、比率の計算などを、無関係な機能だらけの本格的な関数電卓を使わずに行えます。" },
     ro: { name: "Matematică", description: "Procente, rapoarte și aritmetică zilnică.", longDescription: "De la calcule rapide de procente până la statistică și algebră, această categorie acoperă problemele matematice zilnice pe care oamenii chiar le caută - împărțirea unei note de plată, verificarea unei medii sau calcularea unui raport - fără să fie nevoie de un calculator științific complet, plin de funcții inutile." },
+    el: { name: "Μαθηματικά", description: "Ποσοστά, αναλογίες και καθημερινή αριθμητική.", longDescription: "Από γρήγορους υπολογισμούς ποσοστών έως στατιστική και άλγεβρα, αυτή η κατηγορία καλύπτει τα καθημερινά μαθηματικά προβλήματα που πραγματικά αναζητούν οι άνθρωποι - μοίρασμα ενός λογαριασμού, έλεγχος ενός βαθμού ή υπολογισμός μιας αναλογίας - χωρίς να χρειάζεται μια πλήρης επιστημονική αριθμομηχανή γεμάτη με άχρηστες λειτουργίες." },
   },
   finance: {
     es: { name: "Finanzas", description: "Préstamos, propinas y matemáticas del dinero cotidianas.", longDescription: "Préstamos, ahorros, impuestos y pago de deudas se reducen a un puñado de fórmulas bien conocidas - estas calculadoras las aplican a tus propios números para que veas un pago mensual real, un cronograma de pago o una proyección de crecimiento en lugar de leer sobre la fórmula en abstracto." },
@@ -481,6 +544,7 @@ const I18N_CATEGORIES = {
     it: { name: "Finanza", description: "Prestiti, mance e calcoli finanziari quotidiani.", longDescription: "Prestiti, risparmi, tasse e estinzione dei debiti si riducono tutti a una manciata di formule ben note - queste calcolatrici le applicano ai tuoi numeri reali così puoi vedere una rata mensile effettiva, una tempistica di estinzione o una proiezione di crescita invece di leggere della formula in astratto." },
     ja: { name: "お金・金融", description: "ローン、チップ、日常のお金の計算。", longDescription: "ローン、貯蓄、税金、借金の返済はすべて、よく知られたいくつかの計算式に帰着します。これらの計算機はそれらの式をあなたの実際の数値に当てはめるので、公式について抽象的に読むのではなく、実際の月々の返済額、返済スケジュール、または成長予測を確認できます。" },
     ro: { name: "Finanțe", description: "Împrumuturi, bacșișuri și calcule financiare zilnice.", longDescription: "Împrumuturile, economiile, taxele și plata datoriilor se reduc la un set de formule bine cunoscute - aceste calculatoare le aplică la cifrele tale reale, ca să vezi o rată lunară reală, un grafic de rambursare sau o proiecție de creștere, nu doar formula citită abstract." },
+    el: { name: "Οικονομικά", description: "Δάνεια, φιλοδωρήματα και καθημερινά οικονομικά μαθηματικά.", longDescription: "Δάνεια, αποταμιεύσεις, φόροι και αποπληρωμή χρέους ανάγονται σε μια χούφτα γνωστών τύπων - αυτές οι αριθμομηχανές τους εφαρμόζουν στα δικά σου νούμερα, ώστε να βλέπεις μια πραγματική μηνιαία δόση, ένα πρόγραμμα αποπληρωμής ή μια πρόβλεψη ανάπτυξης, αντί να διαβάζεις για τον τύπο αφηρημένα." },
   },
   construction: {
     es: { name: "Construcción y Hogar", description: "Materiales, cobertura y presupuestos de proyectos.", longDescription: "Los proyectos de mejoras del hogar dependen de calcular bien las cantidades de material - muy poco y tienes que volver a la tienda a mitad del trabajo, demasiado y has gastado de más. Estas calculadoras convierten las dimensiones de una habitación en cantidades de concreto, piso, pintura y madera, cada una con un margen de desperdicio incluido." },
@@ -490,6 +554,7 @@ const I18N_CATEGORIES = {
     it: { name: "Costruzione e Casa", description: "Materiali, copertura e stime di progetto.", longDescription: "I progetti di ristrutturazione dipendono dal calcolare correttamente le quantità di materiale - troppo poco e devi tornare al negozio a metà lavoro, troppo e hai speso più del necessario. Queste calcolatrici convertono le dimensioni di una stanza in quantità di calcestruzzo, pavimento, vernice e legname, ciascuna con un margine di spreco incorporato." },
     ja: { name: "建築・住まい", description: "材料、施工面積、プロジェクトの見積もり。", longDescription: "住まいのリフォームプロジェクトは、材料の必要量を正確に把握できるかどうかで成否が分かれます。少なすぎれば工事の途中でまた買いに行くことになり、多すぎれば無駄な出費になります。これらの計算機は、部屋の寸法をコンクリート、床材、ペンキ、木材の必要量に変換し、それぞれにロス分の余裕も組み込まれています。" },
     ro: { name: "Construcții și Casă", description: "Materiale, suprafețe și estimări de proiect.", longDescription: "Proiectele de renovare depind de calcularea corectă a cantităților de material - prea puțin și te întorci la magazin la jumătatea lucrării, prea mult și ai cheltuit în plus. Aceste calculatoare transformă dimensiunile unei camere în cantități de beton, pardoseală, vopsea și cherestea, fiecare cu o marjă de pierdere inclusă." },
+    el: { name: "Κατασκευές και Σπίτι", description: "Υλικά, κάλυψη και εκτιμήσεις έργων.", longDescription: "Τα έργα ανακαίνισης εξαρτώνται από τον σωστό υπολογισμό των ποσοτήτων υλικών - πολύ λίγο και επιστρέφεις στο κατάστημα στη μέση της δουλειάς, πολύ πολύ και έχεις ξοδέψει παραπάνω. Αυτές οι αριθμομηχανές μετατρέπουν τις διαστάσεις ενός δωματίου σε ποσότητες σκυροδέματος, δαπέδου, μπογιάς και ξυλείας, η καθεμία με ενσωματωμένο περιθώριο φύρας." },
   },
   health: {
     es: { name: "Salud y Fitness", description: "Métricas corporales, ritmo y datos de entrenamiento.", longDescription: "Métricas corporales como el IMC, la TMB y el porcentaje de grasa corporal se calculan con un puñado de fórmulas estándar y publicadas - estas herramientas las aplican a tus medidas para darte un número con el que trabajar, junto con una nota en lenguaje sencillo sobre lo que ese número sí y no te dice." },
@@ -499,6 +564,7 @@ const I18N_CATEGORIES = {
     it: { name: "Salute e Fitness", description: "Parametri corporei, ritmo e dati di allenamento.", longDescription: "Parametri corporei come IMC, metabolismo basale e percentuale di grasso corporeo si calcolano con una manciata di formule standard e pubblicate - questi strumenti le applicano alle tue misurazioni per darti un numero su cui lavorare, insieme a una spiegazione in linguaggio semplice su cosa quel numero indica e cosa no." },
     ja: { name: "健康・フィットネス", description: "身体指標、ペース、トレーニングデータ。", longDescription: "BMI、基礎代謝量、体脂肪率などの身体指標は、標準的で公表されているいくつかの計算式から算出されます。これらのツールはあなたの測定値にそれらの式を適用し、数値をわかりやすい言葉での説明とともに提供します。" },
     ro: { name: "Sănătate și Fitness", description: "Indicatori corporali, ritm și date de antrenament.", longDescription: "Indicatori corporali precum IMC, rata metabolică bazală și procentul de grăsime corporală se calculează cu un set de formule standard, publicate - aceste instrumente le aplică la măsurătorile tale pentru a-ți oferi o cifră cu care poți lucra, împreună cu o explicație pe înțelesul tuturor despre ce arată și ce nu arată acel număr." },
+    el: { name: "Υγεία και Φυσική Κατάσταση", description: "Δείκτες σώματος, ρυθμός και δεδομένα προπόνησης.", longDescription: "Δείκτες σώματος όπως ο ΔΜΣ, ο βασικός μεταβολικός ρυθμός και το ποσοστό σωματικού λίπους υπολογίζονται με μια χούφτα τυπικών, δημοσιευμένων τύπων - αυτά τα εργαλεία τους εφαρμόζουν στις μετρήσεις σου για να σου δώσουν έναν αριθμό με τον οποίο μπορείς να δουλέψεις, μαζί με μια εξήγηση σε απλή γλώσσα για το τι δείχνει και τι δεν δείχνει αυτός ο αριθμός." },
   },
   datetime: {
     es: { name: "Fecha y Hora", description: "Cuentas regresivas, duraciones y edad en días.", longDescription: "Ya sea que estés contando los días para un evento, calculando cuántos días hábiles quedan o determinando la edad exacta de alguien, estas calculadoras manejan correctamente el cálculo de calendario - incluidos los años bisiestos y los conteos solo de días laborables - para que no tengas que contar a mano." },
@@ -508,6 +574,7 @@ const I18N_CATEGORIES = {
     it: { name: "Data e Ora", description: "Conti alla rovescia, durate ed età in giorni.", longDescription: "Che tu stia contando alla rovescia per un evento, calcolando quanti giorni lavorativi rimangono o determinando l'età esatta di qualcuno, queste calcolatrici gestiscono correttamente i calcoli del calendario - inclusi gli anni bisestili e i conteggi solo dei giorni lavorativi - così non devi contare a mano." },
     ja: { name: "日付・時間", description: "カウントダウン、期間、日数での年齢。", longDescription: "イベントまでのカウントダウンでも、残りの営業日数の計算でも、誰かの正確な年齢の算出でも、これらの計算機はうるう年や営業日のみのカウントを含め、カレンダー計算を正しく処理するので、手作業で数える必要はありません。" },
     ro: { name: "Dată și Oră", description: "Numărători inverse, durate și vârstă în zile.", longDescription: "Fie că numeri zilele până la un eveniment, calculezi câte zile lucrătoare mai rămân sau determini vârsta exactă a cuiva, aceste calculatoare gestionează corect calculul calendaristic - inclusiv anii bisecți și numărătorile doar în zile lucrătoare - ca să nu fie nevoie să numeri manual." },
+    el: { name: "Ημερομηνία και Ώρα", description: "Αντίστροφη μέτρηση, διάρκειες και ηλικία σε ημέρες.", longDescription: "Είτε μετράς τις ημέρες μέχρι μια εκδήλωση, υπολογίζεις πόσες εργάσιμες ημέρες απομένουν ή προσδιορίζεις την ακριβή ηλικία κάποιου, αυτές οι αριθμομηχανές χειρίζονται σωστά τους υπολογισμούς ημερολογίου - συμπεριλαμβανομένων των δίσεκτων ετών και των μετρήσεων μόνο εργάσιμων ημερών - ώστε να μη χρειάζεται να μετράς με το χέρι." },
   },
   conversions: {
     es: { name: "Conversiones Cotidianas", description: "Unidades, medidas y equivalencias de cocina.", longDescription: "Las conversiones de unidades surgen constantemente en la cocina, los proyectos del hogar y la vida cotidiana - convertir entre métrico e imperial, o calcular cuántas tazas equivalen a los gramos de una receta. Estas herramientas hacen la conversión al instante, mostrando el factor subyacente para que puedas confiar en el resultado." },
@@ -517,6 +584,7 @@ const I18N_CATEGORIES = {
     it: { name: "Conversioni Quotidiane", description: "Unità, misure ed equivalenze di cucina.", longDescription: "Le conversioni di unità ricorrono costantemente in cucina, nei progetti domestici e nella vita quotidiana - convertire tra metrico e imperiale, o capire quante tazze corrispondono ai grammi di una ricetta. Questi strumenti eseguono la conversione istantaneamente, mostrando il fattore sottostante così puoi fidarti del risultato." },
     ja: { name: "日常の単位換算", description: "単位、計測、料理の換算。", longDescription: "単位換算は、料理、住まいのプロジェクト、日常生活で頻繁に必要になります。メートル法とヤード・ポンド法の変換や、レシピのグラム数が何カップに相当するかを調べる場合などです。これらのツールは即座に変換を行い、根拠となる換算係数も表示するため、結果を信頼できます。" },
     ro: { name: "Conversii Zilnice", description: "Unități, măsuri și echivalențe de gătit.", longDescription: "Conversiile de unități apar constant la gătit, în proiecte pentru casă și în viața de zi cu zi - conversia între metric și imperial, sau aflarea câte cești corespund gramelor dintr-o rețetă. Aceste instrumente fac conversia instantaneu, arătând și factorul de calcul, ca să poți avea încredere în rezultat." },
+    el: { name: "Καθημερινές Μετατροπές", description: "Μονάδες, μετρήσεις και ισοδύναμα μαγειρικής.", longDescription: "Οι μετατροπές μονάδων προκύπτουν συνεχώς στη μαγειρική, σε έργα σπιτιού και στην καθημερινή ζωή - μετατροπή μεταξύ μετρικού και αγγλοσαξονικού συστήματος, ή εύρεση πόσα φλιτζάνια αντιστοιχούν στα γραμμάρια μιας συνταγής. Αυτά τα εργαλεία κάνουν τη μετατροπή ακαριαία, δείχνοντας τον υποκείμενο συντελεστή ώστε να εμπιστεύεσαι το αποτέλεσμα." },
   },
   text: {
     es: { name: "Texto y Digital", description: "Conteo de palabras y generadores para tareas cotidianas.", longDescription: "El conteo de palabras, la conversión de mayúsculas/minúsculas y los generadores de texto se encargan de las pequeñas tareas de procesamiento de texto que surgen al escribir, programar o formatear contenido - cada una funciona enteramente en tu navegador, así que nada de lo que escribes o pegas se envía a ningún lado." },
@@ -526,6 +594,7 @@ const I18N_CATEGORIES = {
     it: { name: "Testo e Digitale", description: "Conteggio parole e generatori per attività quotidiane.", longDescription: "Conteggio parole, conversione maiuscolo/minuscolo e generatori di testo gestiscono le piccole attività di elaborazione testo che si presentano durante la scrittura, la programmazione o la formattazione di contenuti - ognuno funziona interamente nel tuo browser, quindi nulla di ciò che digiti o incolli viene mai inviato altrove." },
     ja: { name: "テキスト・デジタル", description: "日常的な作業のための文字数カウントや生成ツール。", longDescription: "文字数カウント、大文字・小文字変換、テキスト生成ツールは、文章作成、コーディング、コンテンツの整形の際に発生する細かなテキスト処理作業を担います。すべてブラウザ内で完結して動作するため、入力または貼り付けた内容がどこかに送信されることはありません。" },
     ro: { name: "Text și Digital", description: "Numărare de cuvinte și generatoare pentru sarcini zilnice.", longDescription: "Numărarea cuvintelor, conversia între majuscule/minuscule și generatoarele de text rezolvă micile sarcini de procesare a textului care apar la scris, programare sau formatarea conținutului - fiecare rulează în întregime în browser, deci nimic din ce scrii sau lipești nu este trimis nicăieri." },
+    el: { name: "Κείμενο και Ψηφιακά", description: "Καταμέτρηση λέξεων και γεννήτριες για καθημερινές εργασίες.", longDescription: "Η καταμέτρηση λέξεων, η μετατροπή πεζών/κεφαλαίων και οι γεννήτριες κειμένου αναλαμβάνουν τις μικρές εργασίες επεξεργασίας κειμένου που προκύπτουν κατά τη γραφή, τον προγραμματισμό ή τη μορφοποίηση περιεχομένου - η καθεμία λειτουργεί εξ ολοκλήρου στο πρόγραμμα περιήγησής σου, οπότε τίποτα από όσα πληκτρολογείς ή επικολλάς δεν αποστέλλεται πουθενά." },
   },
   pets: {
     es: { name: "Mascotas y Estilo de Vida", description: "Tablas de edad y matemáticas cotidianas para mascotas.", longDescription: "Un año de perro no equivale realmente a siete años humanos, y la duración del embarazo varía según la especie - estas calculadoras usan las curvas de edad y los datos de gestación reales de perros, gatos, conejos y caballos, en lugar de las reglas simplificadas que la mayoría conoce." },
@@ -535,6 +604,7 @@ const I18N_CATEGORIES = {
     it: { name: "Animali Domestici e Stile di Vita", description: "Tabelle d'età e calcoli quotidiani per animali domestici.", longDescription: "Un anno di cane non equivale davvero a sette anni umani, e la durata della gravidanza varia in base alla specie - queste calcolatrici usano le curve d'età e i dati di gestazione reali per cani, gatti, conigli e cavalli, invece delle regole semplificate che la maggior parte delle persone conosce." },
     ja: { name: "ペット・ライフスタイル", description: "年齢早見表や日常のペット計算。", longDescription: "犬の1年は実際には人間の7年に相当するわけではなく、妊娠期間も種によって異なります。これらの計算機は、多くの人が知っている単純化された目安ではなく、犬・猫・ウサギ・馬それぞれの実際の年齢曲線と妊娠データを使用しています。" },
     ro: { name: "Animale de Companie și Stil de Viață", description: "Tabele de vârstă și calcule zilnice pentru animale de companie.", longDescription: "Un an de câine nu echivalează cu adevărat cu șapte ani umani, iar durata gestației variază în funcție de specie - aceste calculatoare folosesc curbele reale de vârstă și datele de gestație pentru câini, pisici, iepuri și cai, în loc de regulile simplificate pe care majoritatea le știu." },
+    el: { name: "Κατοικίδια και Τρόπος Ζωής", description: "Πίνακες ηλικίας και καθημερινοί υπολογισμοί για κατοικίδια.", longDescription: "Ένα έτος σκύλου δεν ισοδυναμεί πραγματικά με επτά ανθρώπινα έτη, και η διάρκεια της κύησης διαφέρει ανά είδος - αυτές οι αριθμομηχανές χρησιμοποιούν τις πραγματικές καμπύλες ηλικίας και τα δεδομένα κύησης για σκύλους, γάτες, κουνέλια και άλογα, αντί για τους απλοποιημένους κανόνες που γνωρίζουν οι περισσότεροι." },
   },
 };
 
@@ -628,6 +698,18 @@ const I18N_TOOLS = {
         { q: "Cum calculez un procent dintr-un procent, cum ar fi 20% din 50%?", a: "Convertește ambele procente în zecimale și înmulțește-le, apoi convertește rezultatul înapoi în procent: 20% din 50% este 0,20 × 0,50 = 0,10, adică 10%. Acest lucru apare când combini rate - de exemplu o reducere aplicată peste un preț deja redus, sau o rată de taxă aplicată unei sume parțiale." },
       ],
     },
+    el: {
+      title: "Αριθμομηχανή Ποσοστών",
+      intro: "Εισάγετε ένα ποσοστό και έναν αριθμό για να βρείτε την προκύπτουσα τιμή - χρήσιμο για φιλοδωρήματα, εκπτώσεις, βαθμούς και καθημερινούς υπολογισμούς.",
+      description: "Βρες πόσο είναι το X τοις εκατό ενός αριθμού, σε ένα βήμα.",
+      faq: [
+        { q: "Πώς υπολογίζω ένα ποσοστό ενός αριθμού με το χέρι;", a: "Διαίρεσε το ποσοστό με το 100 και πολλαπλασίασε με τον αριθμό. Για το 20% του 150: 0,20 × 150 = 30." },
+        { q: "Πώς βρίσκω τι ποσοστό είναι ένας αριθμός ενός άλλου;", a: "Διαίρεσε το μέρος με το σύνολο και πολλαπλασίασε με το 100. Για παράδειγμα, τι ποσοστό του 150 είναι το 30; 30 ÷ 150 × 100 = 20%." },
+        { q: "Πώς υπολογίζω μια ποσοστιαία αύξηση ή μείωση;", a: "Αφαίρεσε την παλιά τιμή από τη νέα τιμή, διαίρεσε με την παλιά τιμή και πολλαπλασίασε με το 100. Η μετάβαση από το 150 στο 180 είναι (180−150)/150×100 = 20% αύξηση· η μετάβαση από το 150 στο 120 είναι (120−150)/150×100 = −20%, δηλαδή μείωση 20%." },
+        { q: "Πώς βρίσκω την αρχική τιμή πριν από μια ποσοστιαία έκπτωση;", a: "Διαίρεσε την τελική τιμή με (1 μείον την έκπτωση σε δεκαδική μορφή). Αν ένα προϊόν 60$ έχει έκπτωση 25%, διαίρεσε το 60 με το 0,75 για να βρεις την αρχική τιμή των 80$." },
+        { q: "Πώς υπολογίζω ένα ποσοστό ενός ποσοστού, όπως το 20% του 50%;", a: "Μετέτρεψε και τα δύο ποσοστά σε δεκαδικούς αριθμούς και πολλαπλασίασέ τα, μετά μετέτρεψε το αποτέλεσμα ξανά σε ποσοστό: το 20% του 50% είναι 0,20 × 0,50 = 0,10, δηλαδή 10%. Αυτό προκύπτει όταν συνδυάζεις ποσοστά - όπως μια έκπτωση πάνω σε μια ήδη μειωμένη τιμή, ή έναν φορολογικό συντελεστή σε ένα μερικό ποσό." },
+      ],
+    },
   },
 
   "average-calculator": {
@@ -708,6 +790,17 @@ const I18N_TOOLS = {
         { q: "Care este diferența dintre medie și medie ponderată?", a: "O medie simplă tratează toate numerele la fel, în timp ce o medie ponderată înmulțește fiecare număr cu importanța (ponderea) sa înainte de a împărți la suma ponderilor, astfel încât valorile mai importante (cum ar fi un test care valorează 40% din nota finală) cântăresc mai mult. Acest calculator calculează media simplă - pentru o medie ponderată, înmulțește fiecare valoare cu ponderea sa înainte de calcul." },
       ],
     },
+    el: {
+      title: "Αριθμομηχανή Μέσου Όρου",
+      intro: "Εισάγετε μια λίστα αριθμών χωρισμένων με κόμμα ή κενό για να υπολογίσετε τον μέσο όρο, τη διάμεσο και το άθροισμα.",
+      description: "Υπολόγισε τον μέσο όρο, τη διάμεσο και το άθροισμα μιας λίστας αριθμών.",
+      faq: [
+        { q: "Πώς υπολογίζω τον μέσο όρο μιας λίστας αριθμών;", a: "Πρόσθεσε όλους τους αριθμούς, μετά διαίρεσε με το πλήθος τους. Για τα 4, 8, 15, 16, 23, 42: το άθροισμα είναι 108, και το 108 διαιρεμένο με 6 αριθμούς δίνει μέσο όρο 18." },
+        { q: "Ποια είναι η διαφορά μεταξύ μέσου όρου και διαμέσου;", a: "Ο μέσος όρος είναι το άθροισμα διαιρεμένο με το πλήθος ('αριθμητικός μέσος'), ενώ η διάμεσος είναι η μεσαία τιμή όταν οι αριθμοί ταξινομούνται. Η διάμεσος επηρεάζεται λιγότερο από ακραίες τιμές σε σύγκριση με τον μέσο όρο." },
+        { q: "Λειτουργεί με αρνητικούς αριθμούς ή δεκαδικά;", a: "Ναι - εισάγετε τους αρνητικούς αριθμούς με πρόσημο μείον και τα δεκαδικά με τελεία, χωρισμένα με κόμμα ή κενό όπως και οι υπόλοιπες τιμές. Ο μέσος όρος, η διάμεσος και το άθροισμα υπολογίζονται σωστά είτε αναμειγνύεις θετικούς, αρνητικούς και δεκαδικούς αριθμούς." },
+        { q: "Ποια είναι η διαφορά μεταξύ μέσου όρου και σταθμισμένου μέσου όρου;", a: "Ένας απλός μέσος όρος αντιμετωπίζει όλους τους αριθμούς εξίσου, ενώ ένας σταθμισμένος μέσος όρος πολλαπλασιάζει κάθε αριθμό με τη σημασία (βάρος) του πριν διαιρέσει με το άθροισμα των βαρών, ώστε οι πιο σημαντικές τιμές (όπως ένα διαγώνισμα που μετράει 40% του τελικού βαθμού) να έχουν μεγαλύτερη επιρροή. Αυτή η αριθμομηχανή υπολογίζει τον απλό μέσο όρο - για σταθμισμένο μέσο όρο, πολλαπλασίασε κάθε τιμή με το βάρος της πριν τον υπολογισμό." },
+      ],
+    },
   },
 
   "mortgage-calculator": {
@@ -786,6 +879,17 @@ const I18N_TOOLS = {
         { q: "Cum influențează avansul rata lunară?", a: "Un avans mai mare reduce suma împrumutată, ceea ce scade atât partea de principal și dobândă a ratei, cât și dobânda totală plătită pe durata împrumutului." },
         { q: "Ce se întâmplă cu rata dacă refinanțez mai târziu la o dobândă mai mică?", a: "Refinanțarea recalculează împrumutul pe baza noului sold, a noii dobânzi și a duratei rămase. Chiar și o scădere de 1 punct procentual poate reduce semnificativ partea de dobândă din fiecare rată, dar merită să compari costurile de închidere ale noului credit cu economiile obținute." },
         { q: "Cum influențează durata împrumutului dobânda totală plătită?", a: "O durată mai scurtă (15 ani în loc de 30) înseamnă rate lunare mai mari, dar principalul scade mai repede și dobânda se acumulează pe o perioadă mai scurtă, ceea ce reduce semnificativ dobânda totală. Un împrumut pe 30 de ani reduce rata lunară, dar deseori dublează sau depășește dobânda totală plătită pentru aceeași sumă împrumutată pe 15 ani." },
+      ],
+    },
+    el: {
+      title: "Αριθμομηχανή Στεγαστικού Δανείου",
+      intro: "Εισάγετε την τιμή του ακινήτου, την προκαταβολή, το επιτόκιο και τη διάρκεια για να εκτιμήσετε τη μηνιαία δόση, συμπεριλαμβανομένου του κεφαλαίου, των τόκων, των φόρων και της ασφάλισης.",
+      description: "Εκτίμησε τη συνολική μηνιαία δόση ενός στεγαστικού δανείου, συμπεριλαμβανομένων φόρων και ασφάλισης.",
+      faq: [
+        { q: "Τι περιλαμβάνει αυτή η εκτίμηση της δόσης στεγαστικού;", a: "Η αριθμομηχανή εκτιμά το PITI (κεφάλαιο, τόκοι, φόροι και ασφάλιση κατοικίας). Δεν περιλαμβάνει PMI (ιδιωτική ασφάλιση στεγαστικού, αν η προκαταβολή είναι κάτω από 20%) ή τέλη κοινοχρήστων, τα οποία διαφέρουν ανά δανειστή και ακίνητο." },
+        { q: "Πώς επηρεάζει η προκαταβολή τη μηνιαία δόση;", a: "Μια μεγαλύτερη προκαταβολή μειώνει το ποσό του δανείου, μειώνοντας τόσο το τμήμα κεφαλαίου-τόκων της δόσης όσο και τους συνολικούς τόκους που πληρώνονται σε όλη τη διάρκεια του δανείου." },
+        { q: "Τι γίνεται με τη δόση αν αναχρηματοδοτήσω αργότερα με χαμηλότερο επιτόκιο;", a: "Η αναχρηματοδότηση υπολογίζει ξανά το δάνειο με βάση το νέο υπόλοιπο, το νέο επιτόκιο και την υπόλοιπη διάρκεια. Ακόμα και μια μείωση 1 ποσοστιαίας μονάδας μπορεί να μειώσει σημαντικά το τμήμα των τόκων κάθε δόσης, αλλά αξίζει να συγκρίνεις τα έξοδα κλεισίματος του νέου δανείου με την εξοικονόμηση." },
+        { q: "Πώς επηρεάζει η διάρκεια του δανείου τους συνολικούς τόκους;", a: "Μια μικρότερη διάρκεια (15 χρόνια αντί για 30) σημαίνει υψηλότερες μηνιαίες δόσεις, αλλά το κεφάλαιο μειώνεται γρηγορότερα και οι τόκοι συσσωρεύονται για λιγότερο χρόνο, μειώνοντας σημαντικά τους συνολικούς τόκους. Ένα δάνειο 30 ετών μειώνει τη μηνιαία δόση, αλλά συχνά διπλασιάζει ή ξεπερνά τους συνολικούς τόκους που πληρώνονται για το ίδιο ποσό δανείου σε 15 χρόνια." },
       ],
     },
   },
@@ -875,6 +979,18 @@ const I18N_TOOLS = {
         { q: "Este același lucru cu un simulator de împrumut?", a: "Da - un \"simulator de împrumut\" este pur și simplu un alt nume pentru un calculator de rată la împrumut, iar acest instrument funcționează pentru ambele scopuri. Introdu principalul, rata dobânzii și durata pentru orice împrumut cu dobândă fixă. Dacă vrei să finanțezi o mașină, calculatorul de credit auto e mai potrivit, deoarece ia în calcul și valoarea de schimb și taxele." },
       ],
     },
+    el: {
+      title: "Αριθμομηχανή Δόσης Δανείου",
+      intro: "Αυτή η αριθμομηχανή δανείων εκτιμά τη σταθερή μηνιαία δόση σας - απλώς εισάγετε το ποσό του δανείου, το ετήσιο επιτόκιο και τη διάρκεια.",
+      description: "Εκτίμησε τη μηνιαία δόση για ένα δάνειο σταθερού επιτοκίου.",
+      faq: [
+        { q: "Πώς υπολογίζεται η δόση ενός δανείου;", a: "Ένα δάνειο σταθερού επιτοκίου χρησιμοποιεί τον τύπο απόσβεσης, βασισμένο στο κεφάλαιο, το επιτόκιο ανά περίοδο και τον αριθμό δόσεων, ώστε κάθε δόση να είναι ίση, αλλά η αναλογία τόκων προς κεφάλαιο να αλλάζει με τον χρόνο." },
+        { q: "Περιλαμβάνει αυτό φόρους ή ασφάλιση;", a: "Όχι, αυτό είναι μόνο κεφάλαιο και τόκοι. Ειδικά στα στεγαστικά δάνεια, οι φόροι και η ασφάλιση συχνά περιλαμβάνονται στη μηνιαία δόση (PITI), οπότε ο πραγματικός λογαριασμός από τον δανειστή μπορεί να είναι υψηλότερος από το ποσό που εμφανίζεται εδώ." },
+        { q: "Μειώνει τους συνολικούς τόκους αν πληρώνω περισσότερα κάθε μήνα;", a: "Ναι - κάθε ποσό που πληρώνεται πάνω από την απαιτούμενη δόση εφαρμόζεται στο κεφάλαιο, γεγονός που συντομεύει τη διάρκεια του δανείου και μειώνει τους συνολικούς τόκους που πληρώνονται, επειδή οι τόκοι κάθε περιόδου υπολογίζονται στο εναπομείναν υπόλοιπο." },
+        { q: "Πώς επηρεάζει η διάρκεια του δανείου τους συνολικούς τόκους;", a: "Μια μεγαλύτερη διάρκεια μειώνει τη μηνιαία δόση αλλά αυξάνει τους συνολικούς τόκους, επειδή δανείζεσαι το ίδιο ποσό για περισσότερο χρόνο. Μια μικρότερη διάρκεια αυξάνει τη μηνιαία δόση αλλά μειώνει τους συνολικούς τόκους. Η επιλογή εξαρτάται από το τι μηνιαίο ποσό μπορείς να αντέξεις άνετα." },
+        { q: "Είναι το ίδιο με έναν προσομοιωτή δανείου;", a: "Ναι - ένας «προσομοιωτής δανείου» είναι απλώς ένα άλλο όνομα για μια αριθμομηχανή δόσης δανείου, και αυτό το εργαλείο λειτουργεί και για τους δύο σκοπούς. Εισήγαγε το κεφάλαιο, το επιτόκιο και τη διάρκεια για οποιοδήποτε δάνειο σταθερού επιτοκίου. Αν θέλεις να χρηματοδοτήσεις ένα αυτοκίνητο, η αριθμομηχανή αυτοκινήτου είναι πιο κατάλληλη, καθώς λαμβάνει υπόψη και την αξία ανταλλαγής και τους φόρους." },
+      ],
+    },
   },
 
   "compound-interest-calculator": {
@@ -953,6 +1069,17 @@ const I18N_TOOLS = {
         { q: "Cum influențează frecvența capitalizării creșterea sumei?", a: "O capitalizare mai frecventă (zilnic în loc de anual) generează un randament ușor mai mare la aceeași rată nominală, deoarece dobânda începe să genereze dobândă mai repede - deși diferența este mică la ratele tipice de economisire." },
         { q: "Cât de mare este diferența dacă încep cu câțiva ani mai devreme?", a: "Substanțială. Deoarece dobânda compusă se auto-alimentează, banii investiți cu 5 sau 10 ani mai devreme la aceeași rată tind să crească mai mult decât proporțional, nu doar proporțional, pentru că au mai mult timp la dispoziție pentru capitalizare." },
         { q: "Este dobânda compusă întotdeauna mai bună decât dobânda simplă?", a: "Dobânda compusă depășește întotdeauna dobânda simplă (care se calculează doar la suma inițială) dat fiind timp suficient, deoarece se calculează atât la suma inițială, cât și la dobânda deja acumulată. Diferența crește cu cât perioada este mai lungă și capitalizarea mai frecventă." },
+      ],
+    },
+    el: {
+      title: "Αριθμομηχανή Ανατοκισμού",
+      intro: "Εισάγετε το αρχικό κεφάλαιο, το επιτόκιο, τη συχνότητα ανατοκισμού και τη διάρκεια για να δείτε πόσο μπορούν να αυξηθούν τα χρήματά σας.",
+      description: "Υπολόγισε πώς αυξάνεται ένα εφάπαξ ποσό με τον χρόνο μέσω ανατοκισμού.",
+      faq: [
+        { q: "Ποιος είναι ο τύπος του ανατοκισμού;", a: "A = P(1 + r/n)^(nt) - όπου P είναι το αρχικό κεφάλαιο, r είναι το ετήσιο επιτόκιο, n είναι ο αριθμός των ανατοκισμών ανά έτος, και t είναι ο χρόνος σε έτη." },
+        { q: "Πώς επηρεάζει η συχνότητα ανατοκισμού την αύξηση;", a: "Ο πιο συχνός ανατοκισμός (καθημερινά αντί ετησίως) παράγει ελαφρώς υψηλότερες αποδόσεις στο ίδιο ονομαστικό επιτόκιο, επειδή οι τόκοι αρχίζουν να παράγουν τόκους νωρίτερα - αν και η διαφορά είναι συνήθως μικρή στα τυπικά επιτόκια αποταμίευσης." },
+        { q: "Πόση διαφορά κάνει το να ξεκινήσεις μερικά χρόνια νωρίτερα;", a: "Σημαντική. Επειδή ο ανατοκισμός τροφοδοτεί τον εαυτό του, τα χρήματα που επενδύονται 5 ή 10 χρόνια νωρίτερα στο ίδιο επιτόκιο τείνουν να αυξάνονται περισσότερο από αναλογικά, όχι μόνο αναλογικά, επειδή έχουν περισσότερες περιόδους ανατοκισμού υπέρ τους." },
+        { q: "Είναι ο ανατοκισμός πάντα καλύτερος από τον απλό τόκο;", a: "Ο ανατοκισμός ξεπερνά πάντα τον απλό τόκο (που υπολογίζεται μόνο στο αρχικό κεφάλαιο) με αρκετό χρόνο, επειδή υπολογίζεται τόσο στο αρχικό κεφάλαιο όσο και στους ήδη συσσωρευμένους τόκους. Η διαφορά μεγαλώνει όσο μεγαλύτερος είναι ο χρονικός ορίζοντας και όσο πιο συχνός είναι ο ανατοκισμός." },
       ],
     },
   },
@@ -1035,6 +1162,17 @@ const I18N_TOOLS = {
         { q: "Cum ia în calcul grosimea plăcii?", a: "Calculul înmulțește lungimea × lățimea plăcii pentru a obține suprafața, apoi înmulțește cu grosimea (convertită în metri) pentru a obține volumul, care se împarte apoi pentru a obține metri cubi. Cu cât grosimea este mai mare, cu atât crește proporțional cantitatea de beton necesară - dublarea grosimii pentru aceeași suprafață dublează și volumul." },
       ],
     },
+    el: {
+      title: "Αριθμομηχανή Σκυροδέματος",
+      intro: "Εισάγετε τις διαστάσεις της πλάκας για να εκτιμήσετε πόσο έτοιμο σκυρόδεμα ή πόσους σάκους θα χρειαστείτε, με το περιθώριο φύρας συμπεριλαμβανόμενο.",
+      description: "Εκτίμησε τα κυβικά μέτρα και τον αριθμό σάκων σκυροδέματος που χρειάζεται μια πλάκα.",
+      faq: [
+        { q: "Πόσο σκυρόδεμα χρειάζομαι για μια πλάκα 3×3μ;", a: "Για πάχος 10εκ, μια πλάκα 3×3μ χρειάζεται περίπου 0,9 m³ σκυροδέματος, χωρίς το περιθώριο φύρας - δηλαδή περίπου 36 σάκους των 35κιλών." },
+        { q: "Γιατί χρειάζομαι περιθώριο φύρας;", a: "Οι ανωμαλίες του εδάφους, οι χύσεις υλικού και οι επιπλέον εκσκαφές συνήθως απαιτούν 5-10% περισσότερο υλικό από τον ακριβή υπολογισμό." },
+        { q: "Λειτουργεί για πλάκες που δεν είναι ορθογώνιες;", a: "Χώρισε το ακανόνιστο σχήμα σε ορθογώνια τμήματα, υπολόγισε το καθένα ξεχωριστά με αυτό το εργαλείο, και μετά πρόσθεσε τα αποτελέσματα. Ο υπολογισμός μήκος × πλάτος × πάχος λειτουργεί ακριβώς μόνο για ορθογώνια, οπότε ο διαχωρισμός μιας περιοχής σε σχήμα Γ ή με καμπύλες σε απλούστερα σχήματα είναι η τυπική προσέγγιση." },
+        { q: "Πώς λαμβάνεται υπόψη το πάχος της πλάκας;", a: "Ο υπολογισμός πολλαπλασιάζει το μήκος × πλάτος της πλάκας για να βρει το εμβαδόν, μετά πολλαπλασιάζει με το πάχος (μετατρεπόμενο σε μέτρα) για να βρει τον όγκο, ο οποίος διαιρείται για να δώσει κυβικά μέτρα. Όσο μεγαλύτερο το πάχος, τόσο αναλογικά αυξάνεται η απαιτούμενη ποσότητα σκυροδέματος - ο διπλασιασμός του πάχους για το ίδιο εμβαδόν διπλασιάζει και τον όγκο." },
+      ],
+    },
   },
 
   "flooring-calculator": {
@@ -1115,6 +1253,17 @@ const I18N_TOOLS = {
         { q: "Ar trebui să cumpăr material în plus pentru reparații viitoare?", a: "Da - pe lângă surplusul pentru tăieri în timpul montajului, mulți instalatori recomandă păstrarea unei cutii suplimentare deoparte, deoarece producătorii schimbă loturile de culoare în timp, ceea ce face dificilă găsirea unei potriviri exacte dacă o placă sau o dală se deteriorează mai târziu." },
       ],
     },
+    el: {
+      title: "Αριθμομηχανή Δαπέδου",
+      intro: "Εισάγετε το εμβαδόν του δωματίου, πόσο καλύπτει ένα κουτί και το περιθώριο φύρας για να εκτιμήσετε πόσα κουτιά δαπέδου χρειάζεστε.",
+      description: "Εκτίμησε πόσα κουτιά δαπέδου χρειάζεσαι για ένα δωμάτιο.",
+      faq: [
+        { q: "Πόσα κουτιά δαπέδου χρειάζομαι για ένα δωμάτιο 25m²;", a: "Με 2m² ανά κουτί και περιθώριο φύρας 10%, χρειάζεσαι περίπου 14 κουτιά για 25m²." },
+        { q: "Γιατί χρειάζομαι επιπλέον υλικό για το δάπεδο;", a: "Οι κοπές γύρω από πόρτες και ντουλάπες, καθώς και η ταύτιση σχεδίου, καταναλώνουν επιπλέον υλικό. Ένα περιθώριο 10-15% σε προστατεύει από το να μείνεις χωρίς υλικό στη μέση της δουλειάς." },
+        { q: "Διαφέρει το περιθώριο φύρας δαπέδου ανάλογα με το μοτίβο τοποθέτησης;", a: "Ναι - η ευθεία τοποθέτηση συνήθως χρειάζεται μόνο 5-10% περιθώριο, αλλά μοτίβα όπως η διαγώνια τοποθέτηση ή το ψαροκόκαλο, που απαιτούν ακριβή ταύτιση αρμών, μπορεί να χρειαστούν 15-20% λόγω γωνιακών κοπών και αχρησιμοποίητων υπολειμμάτων." },
+        { q: "Πρέπει να αγοράσω επιπλέον υλικό για μελλοντικές επισκευές;", a: "Ναι - πέρα από το πλεόνασμα για κοπές κατά την τοποθέτηση, πολλοί επαγγελματίες συνιστούν να κρατάς ένα επιπλέον κουτί στην άκρη, καθώς οι κατασκευαστές αλλάζουν παρτίδες χρωμάτων με τον καιρό, κάνοντας δύσκολη την εύρεση ακριβούς αντιστοιχίας αν μια σανίδα ή πλακάκι καταστραφεί αργότερα." },
+      ],
+    },
   },
 
   "calorie-calculator": {
@@ -1193,6 +1342,17 @@ const I18N_TOOLS = {
         { q: "Cu cât ar trebui să-mi reduc caloriile pentru a slăbi?", a: "O reducere de aproximativ 500 kcal pe zi față de nivelul de menținere este un ghid comun pentru a viza aproximativ 0,45kg pe săptămână, deoarece 0,45kg de grăsime corporală echivalează cu aproximativ 3.500 kcal." },
         { q: "De ce doi oameni cu aceeași vârstă, înălțime și greutate primesc rezultate diferite?", a: "Atât nivelul de activitate, cât și sexul influențează formula. Un stil de viață mai activ crește semnificativ ținta calorică față de cineva sedentar cu aceeași constituție, iar formula ratei metabolice bazale în sine ține cont de diferențele tipice de compoziție corporală dintre bărbați și femei." },
         { q: "Cum diferă rata metabolică bazală (BMR) de ținta calorică arătată de acest instrument?", a: "Rata metabolică bazală (BMR) este energia pe care corpul o consumă în repaus complet. Caloriile de menținere arătate aici (consumul energetic total, TDEE) pornesc de la BMR și adaugă nivelul de activitate, deoarece mișcarea zilnică și exercițiile fizice ard calorii peste minimul necesar pentru funcționarea de bază a corpului." },
+      ],
+    },
+    el: {
+      title: "Αριθμομηχανή Θερμίδων",
+      intro: "Εισάγετε ηλικία, φύλο, ύψος, βάρος και επίπεδο δραστηριότητας για να μάθετε τις ημερήσιες θερμίδες που χρειάζεστε για διατήρηση, απώλεια ή αύξηση βάρους.",
+      description: "Υπολόγισε τις ημερήσιες θερμίδες που χρειάζεσαι για διατήρηση, απώλεια ή αύξηση βάρους.",
+      faq: [
+        { q: "Πόσες θερμίδες χρειάζομαι για να διατηρήσω το βάρος μου;", a: "Εξαρτάται από τον βασικό μεταβολικό ρυθμό και το επίπεδο δραστηριότητας - για έναν άνδρα 30 ετών, 178εκ, 82κιλών, μέτρια δραστήριο, οι θερμίδες διατήρησης είναι περίπου 2.763 kcal την ημέρα." },
+        { q: "Πόσο πρέπει να μειώσω τις θερμίδες μου για να χάσω βάρος;", a: "Μια μείωση περίπου 500 kcal την ημέρα από το επίπεδο διατήρησης είναι ένας κοινός οδηγός για στόχο περίπου 0,45κιλά την εβδομάδα, καθώς 0,45κιλά σωματικού λίπους ισοδυναμούν με περίπου 3.500 kcal." },
+        { q: "Γιατί δύο άνθρωποι με την ίδια ηλικία, ύψος και βάρος παίρνουν διαφορετικά αποτελέσματα;", a: "Τόσο το επίπεδο δραστηριότητας όσο και το φύλο επηρεάζουν τον τύπο. Ένας πιο δραστήριος τρόπος ζωής αυξάνει σημαντικά τον στόχο θερμίδων σε σχέση με κάποιον καθιστικό με την ίδια σωματική διάπλαση, και ο ίδιος ο τύπος του βασικού μεταβολικού ρυθμού λαμβάνει υπόψη τις τυπικές διαφορές σωματικής σύστασης μεταξύ ανδρών και γυναικών." },
+        { q: "Πώς διαφέρει ο βασικός μεταβολικός ρυθμός (BMR) από τον στόχο θερμίδων που εμφανίζει αυτό το εργαλείο;", a: "Ο βασικός μεταβολικός ρυθμός (BMR) είναι η ενέργεια που καταναλώνει το σώμα σε πλήρη ηρεμία. Οι θερμίδες διατήρησης που εμφανίζονται εδώ (συνολική ενεργειακή δαπάνη, TDEE) ξεκινούν από τον BMR και προσθέτουν το επίπεδο δραστηριότητας, καθώς η καθημερινή κίνηση και η άσκηση καίνε θερμίδες πέρα από το ελάχιστο που χρειάζεται το σώμα για βασική λειτουργία." },
       ],
     },
   },
@@ -1289,6 +1449,19 @@ const I18N_TOOLS = {
         { q: "Sunt și 'calculator indice corporal' sau 'calculator indice de greutate' același lucru cu IMC?", a: "Da - acestea sunt denumiri informale sau formulări ușor greșite pentru indicele de masă corporală (IMC). Acest calculator calculează IMC standard din înălțime și greutate, indiferent de termenul folosit pentru a-l găsi." },
       ],
     },
+    el: {
+      title: "Αριθμομηχανή ΔΜΣ",
+      intro: "Εισάγετε ύψος και βάρος για να υπολογίσετε τον Δείκτη Μάζας Σώματος (ΔΜΣ) - έναν γενικό δείκτη διαλογής, όχι διάγνωση.",
+      description: "Υπολόγισε τον Δείκτη Μάζας Σώματος (ΔΜΣ) από το ύψος και το βάρος.",
+      faq: [
+        { q: "Είναι ο ΔΜΣ ακριβής για όλους;", a: "Όχι - ο ΔΜΣ δεν διαφοροποιεί μεταξύ μυϊκής μάζας και σωματικού λίπους, οπότε μπορεί να είναι παραπλανητικός για αθλητές, ηλικιωμένους ενήλικες ή ορισμένους σωματότυπους. Είναι εργαλείο διαλογής, όχι διάγνωση." },
+        { q: "Ποιο είναι το υγιές εύρος ΔΜΣ;", a: "Γενικά, το 18,5-24,9 θεωρείται υγιές εύρος, κάτω από 18,5 σημαίνει λιποβαρής, 25-29,9 σημαίνει υπέρβαρος, και 30+ σημαίνει παχυσαρκία - αλλά αυτοί είναι μέσοι όροι πληθυσμού, όχι ατομική κρίση για την υγεία σου." },
+        { q: "Ισχύει ο ΔΜΣ για τα παιδιά όπως και για τους ενήλικες;", a: "Όχι - αυτή η αριθμομηχανή χρησιμοποιεί τον τύπο και τα όρια υγείας για ενήλικες. Τα παιδιά και οι έφηβοι χρειάζονται εκατοστημόρια σε καμπύλες ανάπτυξης ειδικές για ηλικία και φύλο, καθώς η υγιής σωματική σύσταση αλλάζει σημαντικά κατά την ανάπτυξη του παιδιού." },
+        { q: "Πώς διαφέρει ο ΔΜΣ από το ποσοστό σωματικού λίπους;", a: "Ο ΔΜΣ χρησιμοποιεί μόνο ύψος και βάρος, οπότε δεν μπορεί να διαφοροποιήσει τη μυϊκή μάζα από το λίπος - κάποιος με υψηλή μυϊκή μάζα μπορεί να έχει υψηλό ΔΜΣ με χαμηλό σωματικό λίπος. Το ποσοστό σωματικού λίπους μετρά απευθείας τη λιπώδη συνιστώσα, δίνοντας μια πιο ακριβή εικόνα της σωματικής σύστασης από τον ΔΜΣ μόνο του." },
+        { q: "Πώς υπολογίζεται ο ΔΜΣ; Είναι το 'δείκτης μάζας σώματος' το ίδιο πράγμα;", a: "Για να υπολογίσεις τον ΔΜΣ με το χέρι, διαίρεσε το βάρος σε κιλά με το τετράγωνο του ύψους σε μέτρα. 'Δείκτης μάζας σώματος' είναι απλώς η πλήρης ονομασία της ίδιας αναζήτησης, όχι διαφορετικός δείκτης - αναφέρεται στον ίδιο υπολογισμό ΔΜΣ." },
+        { q: "Είναι και ο 'υπολογισμός σωματικού δείκτη' ή 'αριθμομηχανή δείκτη βάρους' το ίδιο με τον ΔΜΣ;", a: "Ναι - αυτές είναι ανεπίσημες ονομασίες ή ελαφρώς λανθασμένες διατυπώσεις για τον Δείκτη Μάζας Σώματος (ΔΜΣ). Αυτή η αριθμομηχανή υπολογίζει τον τυπικό ΔΜΣ από ύψος και βάρος, ανεξάρτητα από τον όρο που χρησιμοποιήθηκε για να τη βρεις." },
+      ],
+    },
   },
 
   "bmr-calculator": {
@@ -1369,6 +1542,17 @@ const I18N_TOOLS = {
         { q: "Ar trebui să mănânc exact cât este rata mea metabolică bazală?", a: "Nu - BMR este energia minimă de care corpul tău are nevoie în repaus complet, nu o țintă alimentară sănătoasă. Consumul constant sub BMR pe termen lung poate încetini metabolismul și poate duce la pierderea masei musculare. Folosește BMR ca punct de plecare, apoi adaugă nivelul de activitate pentru a obține o țintă adecvată de menținere sau de scădere în greutate." },
       ],
     },
+    el: {
+      title: "Αριθμομηχανή Βασικού Μεταβολικού Ρυθμού",
+      intro: "Εισάγετε ηλικία, φύλο, ύψος και βάρος για να εκτιμήσετε τον βασικό μεταβολικό ρυθμό (BMR) χρησιμοποιώντας τον τύπο Mifflin-St Jeor.",
+      description: "Υπολόγισε τον βασικό μεταβολικό ρυθμό - τις θερμίδες που καίει το σώμα σε ηρεμία.",
+      faq: [
+        { q: "Τι είναι ο βασικός μεταβολικός ρυθμός;", a: "Ο βασικός μεταβολικός ρυθμός (BMR) είναι ο αριθμός θερμίδων που καίει το σώμα σε πλήρη ηρεμία, μόνο για τη διατήρηση ζωτικών λειτουργιών όπως η αναπνοή και η κυκλοφορία του αίματος - δεν περιλαμβάνει καμία κίνηση ή δραστηριότητα." },
+        { q: "Πόσο ακριβής είναι ο τύπος Mifflin-St Jeor;", a: "Θεωρείται ένας από τους πιο ακριβείς διαθέσιμους τύπους για τον BMR στον γενικό πληθυσμό, συνήθως εντός 10% της πραγματικά μετρημένης τιμής, αν και ο ατομικός μεταβολισμός διαφέρει ανάλογα με παράγοντες όπως η μυϊκή μάζα." },
+        { q: "Αλλάζει ο βασικός μεταβολικός ρυθμός με την ηλικία;", a: "Ναι - ο BMR μειώνεται σταδιακά με την ηλικία, κυρίως λόγω της φυσικής απώλειας μυϊκής μάζας με τον χρόνο, γι' αυτό οι θερμιδικές ανάγκες τείνουν να μειώνονται με την ηλικία ακόμα και στο ίδιο επίπεδο δραστηριότητας." },
+        { q: "Πρέπει να τρώω ακριβώς όσο είναι ο βασικός μεταβολικός μου ρυθμός;", a: "Όχι - ο BMR είναι η ελάχιστη ενέργεια που χρειάζεται το σώμα σου σε πλήρη ηρεμία, όχι ένας υγιής διατροφικός στόχος. Η σταθερή κατανάλωση κάτω από τον BMR για μεγάλο διάστημα μπορεί να επιβραδύνει τον μεταβολισμό και να οδηγήσει σε απώλεια μυϊκής μάζας. Χρησιμοποίησε τον BMR ως σημείο εκκίνησης, μετά πρόσθεσε το επίπεδο δραστηριότητας για να βρεις έναν κατάλληλο στόχο διατήρησης ή απώλειας βάρους." },
+      ],
+    },
   },
 
   "age-calculator": {
@@ -1447,6 +1631,17 @@ const I18N_TOOLS = {
         { q: "Se ține cont de anii bisecți?", a: "Da - calculul folosește date reale de calendar în loc să presupună ani ficși de 365 de zile, deci anii bisecți sunt gestionați corect fără niciun ajustaj special." },
         { q: "Pot calcula vârsta la o dată viitoare sau trecută specifică, nu doar astăzi?", a: "Acest calculator compară data nașterii cu data de astăzi. Pentru vârsta la o altă dată, folosește calculatorul de zile rămase sau calculatorul de durată pentru a măsura diferența dintre data nașterii și orice altă dată." },
         { q: "Pot vedea vârsta în luni sau săptămâni, nu doar ani?", a: "Da - pe lângă afișarea vârstei în ani, calculatorul descompune timpul scurs în total de luni, săptămâni și zile, ca să poți vedea vârsta exactă în orice unitate îți este cea mai utilă." },
+      ],
+    },
+    el: {
+      title: "Αριθμομηχανή Ηλικίας",
+      intro: "Εισάγετε την ημερομηνία γέννησης για να υπολογίσετε την ακριβή ηλικία σήμερα, μέχρι επίπεδο ημέρας.",
+      description: "Υπολόγισε την ακριβή ηλικία σε έτη, μήνες και ημέρες.",
+      faq: [
+        { q: "Πώς υπολογίζεται η ακριβής ηλικία;", a: "Ο υπολογισμός μετράει τα πλήρη έτη από την ημερομηνία γέννησης μέχρι σήμερα, μετά τους υπόλοιπους μήνες, μετά τις υπόλοιπες ημέρες - όχι απλώς αφαιρώντας το έτος γέννησης από το τρέχον έτος." },
+        { q: "Λαμβάνονται υπόψη τα δίσεκτα έτη;", a: "Ναι - ο υπολογισμός χρησιμοποιεί πραγματικές ημερολογιακές ημερομηνίες αντί να υποθέτει σταθερά έτη 365 ημερών, οπότε τα δίσεκτα έτη αντιμετωπίζονται σωστά χωρίς καμία ειδική προσαρμογή." },
+        { q: "Μπορώ να υπολογίσω την ηλικία σε μια συγκεκριμένη μελλοντική ή παρελθοντική ημερομηνία, όχι μόνο σήμερα;", a: "Αυτή η αριθμομηχανή συγκρίνει την ημερομηνία γέννησης με τη σημερινή ημερομηνία. Για την ηλικία σε άλλη ημερομηνία, χρησιμοποιήστε την αριθμομηχανή ημερών που απομένουν ή την αριθμομηχανή διάρκειας για να μετρήσετε τη διαφορά μεταξύ της ημερομηνίας γέννησης και οποιασδήποτε άλλης ημερομηνίας." },
+        { q: "Μπορώ να δω την ηλικία σε μήνες ή εβδομάδες, όχι μόνο σε έτη;", a: "Ναι - πέρα από την εμφάνιση της ηλικίας σε έτη, η αριθμομηχανή αναλύει τον χρόνο που έχει περάσει σε σύνολο μηνών, εβδομάδων και ημερών, ώστε να μπορείτε να δείτε την ακριβή ηλικία στη μονάδα που σας είναι πιο χρήσιμη." },
       ],
     },
   },
@@ -1536,6 +1731,18 @@ const I18N_TOOLS = {
         { q: "Câte zile mai sunt până la Crăciun?", a: "Setează data țintă pe 25 decembrie a anului curent (sau următor) pentru un numărător exact, plus echivalentul aproximativ în săptămâni și luni - util pentru planificarea cadourilor sau a călătoriilor." },
       ],
     },
+    el: {
+      title: "Αριθμομηχανή Ημερών που Απομένουν",
+      intro: "Επιλέξτε μια ημερομηνία για να μάθετε ακριβώς πόσες ημέρες, εβδομάδες και μήνες απομένουν μέχρι τότε.",
+      description: "Μάθε πόσες ημέρες απομένουν μέχρι οποιαδήποτε μελλοντική ημερομηνία.",
+      faq: [
+        { q: "Πώς υπολογίζονται οι 'ημέρες που απομένουν';", a: "Ο αριθμός των ημερολογιακών ημερών από σήμερα μέχρι την επιλεγμένη ημερομηνία, μετρώντας τα όρια ημέρας από τα μεσάνυχτα." },
+        { q: "Μετρούνται τα σαββατοκύριακα και οι αργίες;", a: "Ναι - μετρούνται όλες οι ημερολογιακές ημέρες, συμπεριλαμβανομένων σαββατοκύριακων και αργιών. Αν χρειάζεστε μόνο εργάσιμες ημέρες, χωρίς σαββατοκύριακα, χρησιμοποιήστε την αριθμομηχανή εργάσιμων ημερών." },
+        { q: "Μπορώ να υπολογίσω τις ημέρες μεταξύ δύο μελλοντικών ημερομηνιών, όχι μόνο από σήμερα;", a: "Έμμεσα, ναι - αυτό το εργαλείο ξεκινά από τη σημερινή ημερομηνία, αλλά η αριθμομηχανή διάρκειας σάς επιτρέπει να επιλέξετε οποιεσδήποτε δύο ημερομηνίες (παρελθόν, παρόν ή μέλλον) για να βρείτε τον ακριβή αριθμό ημερών μεταξύ τους." },
+        { q: "Μπορώ να το χρησιμοποιήσω για να μετρήσω τις ημέρες μέχρι μια επαναλαμβανόμενη εκδήλωση, όπως γενέθλια;", a: "Ναι - αν τα γενέθλια ή η επέτειος έχουν ήδη περάσει φέτος, εισάγετε την ημερομηνία για τον επόμενο χρόνο για να δείτε ακριβώς πόσες ημέρες απομένουν μέχρι την επόμενη φορά." },
+        { q: "Πόσες ημέρες απομένουν μέχρι τα Χριστούγεννα;", a: "Ορίστε την επιλεγμένη ημερομηνία στις 25 Δεκεμβρίου του τρέχοντος (ή επόμενου) έτους για ακριβή αντίστροφη μέτρηση, μαζί με το κατά προσέγγιση ισοδύναμο σε εβδομάδες και μήνες - χρήσιμο για τον προγραμματισμό δώρων ή ταξιδιών." },
+      ],
+    },
   },
 
   "unit-length-converter": {
@@ -1614,6 +1821,17 @@ const I18N_TOOLS = {
         { q: "Este această conversie exactă sau rotunjită?", a: "Factorul de conversie în sine (1 inch = 2,54cm) este exact prin definiție internațională. Orice rotunjire vizibilă este doar pentru a afișa rezultatul la un număr rezonabil de zecimale." },
         { q: "De ce diferă ușor rezultatele la convertoarele online?", a: "Micile diferențe se datorează de obicei numărului diferit de zecimale la care se face rotunjirea, nu unui factor de conversie diferit - relația de 1 inch = 2,54cm este fixă și definită internațional, deci convertoarele exacte ar trebui să fie de acord dacă compari la aceeași precizie." },
         { q: "Ce unități de lungime acoperă acest convertor?", a: "Acest instrument gestionează atât unitățile metrice (milimetri, centimetri, metri, kilometri), cât și cele imperiale (inch-i, picioare, yarzi, mile), deci poți converti în orice direcție fără să memorezi factorii de conversie." },
+      ],
+    },
+    el: {
+      title: "Μετατροπέας εκ-ίντσες",
+      intro: "Εισάγετε έναν αριθμό και επιλέξτε μονάδες για να μετατρέψετε μεταξύ κοινών μονάδων μήκους.",
+      description: "Μετέτρεψε μεταξύ εκατοστών, ιντσών, ποδιών και μέτρων.",
+      faq: [
+        { q: "Πόσες ίντσες είναι ένα εκατοστό;", a: "Ένα εκατοστό είναι περίπου 0,3937 ίντσες. Για να μετατρέψεις εκ σε ίντσες, διαίρεσε με το 2,54." },
+        { q: "Είναι αυτή η μετατροπή ακριβής ή στρογγυλοποιημένη;", a: "Ο ίδιος ο συντελεστής μετατροπής (1 ίντσα = 2,54εκ) είναι ακριβής βάσει διεθνούς ορισμού. Οποιαδήποτε ορατή στρογγυλοποίηση είναι απλώς για να εμφανιστεί το αποτέλεσμα με έναν λογικό αριθμό δεκαδικών." },
+        { q: "Γιατί διαφέρουν ελαφρώς τα αποτελέσματα σε διαφορετικούς online μετατροπείς;", a: "Οι μικρές διαφορές συνήθως οφείλονται στον διαφορετικό αριθμό δεκαδικών στα οποία γίνεται στρογγυλοποίηση, όχι σε διαφορετικό συντελεστή μετατροπής - η σχέση 1 ίντσα = 2,54εκ είναι σταθερή και διεθνώς καθορισμένη, οπότε οι ακριβείς μετατροπείς θα πρέπει να συμφωνούν αν συγκρίνεις στην ίδια ακρίβεια." },
+        { q: "Ποιες μονάδες μήκους καλύπτει αυτός ο μετατροπέας;", a: "Αυτό το εργαλείο χειρίζεται τόσο τις μετρικές μονάδες (χιλιοστά, εκατοστά, μέτρα, χιλιόμετρα) όσο και τις αγγλοσαξονικές (ίντσες, πόδια, γιάρδες, μίλια), οπότε μπορείς να μετατρέψεις προς οποιαδήποτε κατεύθυνση χωρίς να απομνημονεύσεις τους συντελεστές μετατροπής." },
       ],
     },
   },
@@ -1696,6 +1914,17 @@ const I18N_TOOLS = {
         { q: "Gestionează și Kelvin?", a: "Da - pe lângă Celsius și Fahrenheit, acest instrument gestionează și Kelvin, care pornește de la zero absolut în loc de un punct de referință arbitrar, ceea ce îl face util pentru calcule științifice." },
       ],
     },
+    el: {
+      title: "Μετατροπέας Θερμοκρασίας",
+      intro: "Εισάγετε μια θερμοκρασία και τη μονάδα από την οποία μετατρέπετε για να μεταβείτε μεταξύ Φαρενάιτ, Κελσίου και Κέλβιν.",
+      description: "Μετέτρεψε μεταξύ Φαρενάιτ, Κελσίου και Κέλβιν.",
+      faq: [
+        { q: "Πώς μετατρέπω από Φαρενάιτ σε Κέλσιο;", a: "Αφαίρεσε 32, μετά πολλαπλασίασε με 5/9. Για 98,6°F: (98,6 − 32) × 5/9 = 37°C (η φυσιολογική θερμοκρασία του ανθρώπινου σώματος)." },
+        { q: "Γιατί η μετατροπή θερμοκρασίας χρειάζεται μετατόπιση, όχι μόνο πολλαπλασιασμό;", a: "Το Φαρενάιτ και το Κέλσιο έχουν διαφορετικά σημεία μηδέν (το νερό παγώνει στους 0°C, αλλά στους 32°F), οπότε οι κλίμακες πρέπει πρώτα να μετατοπιστούν - σε αντίθεση με μετατροπές μήκους ή βάρους, που απαιτούν μόνο πολλαπλασιασμό." },
+        { q: "Υπάρχει θερμοκρασία στην οποία το Κέλσιο και το Φαρενάιτ είναι ίσα;", a: "Ναι, στους −40 βαθμούς. −40°C × 9/5 + 32 = −40°F, το μοναδικό σημείο όπου οι δύο κλίμακες συμπίπτουν. Σε οποιαδήποτε άλλη θερμοκρασία, οι δύο κλίμακες δίνουν διαφορετικούς αριθμούς." },
+        { q: "Χειρίζεται και το Κέλβιν;", a: "Ναι - εκτός από Κέλσιο και Φαρενάιτ, αυτό το εργαλείο χειρίζεται και το Κέλβιν, το οποίο ξεκινά από το απόλυτο μηδέν αντί για ένα αυθαίρετο σημείο αναφοράς, γεγονός που το καθιστά χρήσιμο για επιστημονικούς υπολογισμούς." },
+      ],
+    },
   },
 
   "word-counter": {
@@ -1774,6 +2003,17 @@ const I18N_TOOLS = {
         { q: "Se numără la fel ca în Microsoft Word?", a: "Foarte aproape, dar nu întotdeauna identic. Acest instrument numără cuvintele separate prin spații, similar cu majoritatea procesoarelor de text, dar cazurile marginale precum cuvintele cu cratimă sau numerele pot fi tratate ușor diferit de la un instrument la altul." },
         { q: "Ce se numără ca o 'propoziție'?", a: "Textul care se termină cu punct, semn de întrebare sau semn de exclamare este numărat ca o propoziție. Abrevierile cu punct (cum ar fi 'Dr.' sau 'de ex.') pot fi uneori greu de distins de sfârșitul unei propoziții, deci numărătoarea poate fi ocazional puțin mai mare decât te-ai aștepta." },
         { q: "Numără și caracterele, nu doar cuvintele?", a: "Da - pe lângă numărul de cuvinte, afișează numărul de caractere cu și fără spații, precum și numărul de propoziții și paragrafe - util pentru respectarea limitelor stricte de caractere, cum ar fi postările pe rețele sociale sau meta descrierile." },
+      ],
+    },
+    el: {
+      title: "Μετρητής Λέξεων και Χαρακτήρων",
+      intro: "Επικολλήστε ή πληκτρολογήστε κείμενο παρακάτω για να μετρήσετε άμεσα λέξεις, χαρακτήρες και προτάσεις.",
+      description: "Μέτρησε τις λέξεις, τους χαρακτήρες και τις προτάσεις ενός κειμένου.",
+      faq: [
+        { q: "Αυτό το εργαλείο αποθηκεύει το κείμενο που εισάγω;", a: "Όχι - η μέτρηση γίνεται εξ ολοκλήρου στο πρόγραμμα περιήγησής σου, και τα δεδομένα δεν αποστέλλονται ή αποθηκεύονται ποτέ." },
+        { q: "Μετράει όπως το Microsoft Word;", a: "Πολύ κοντά, αλλά όχι πάντα πανομοιότυπα. Αυτό το εργαλείο μετράει λέξεις χωρισμένες με κενά, παρόμοια με τους περισσότερους επεξεργαστές κειμένου, αλλά οριακές περιπτώσεις όπως λέξεις με ενωτικό ή αριθμούς μπορεί να αντιμετωπίζονται ελαφρώς διαφορετικά από εργαλείο σε εργαλείο." },
+        { q: "Τι μετράει ως 'πρόταση';", a: "Κείμενο που τελειώνει με τελεία, ερωτηματικό ή θαυμαστικό μετράει ως πρόταση. Οι συντομογραφίες με τελεία (όπως 'Δρ.' ή 'π.χ.') μπορεί μερικές φορές να είναι δύσκολο να διακριθούν από το τέλος μιας πρότασης, οπότε η μέτρηση μπορεί περιστασιακά να είναι λίγο υψηλότερη από το αναμενόμενο." },
+        { q: "Μετράει και τους χαρακτήρες, όχι μόνο τις λέξεις;", a: "Ναι - πέρα από τον αριθμό λέξεων, εμφανίζει τον αριθμό χαρακτήρων με και χωρίς κενά, καθώς και τον αριθμό προτάσεων και παραγράφων - χρήσιμο για την τήρηση αυστηρών ορίων χαρακτήρων, όπως αναρτήσεις σε κοινωνικά δίκτυα ή meta περιγραφές." },
       ],
     },
   },
@@ -1856,6 +2096,17 @@ const I18N_TOOLS = {
         { q: "Ce alte stiluri de majuscule/minuscule gestionează acest convertor?", a: "Pe lângă formatul titlu și formatul propoziție, convertește și în majuscule, minuscule și camelCase - stiluri de formatare comune în scriere și programare, ca să poți formata textul exact așa cum ai nevoie." },
       ],
     },
+    el: {
+      title: "Μετατροπέας Κεφαλαίων/Πεζών",
+      intro: "Επικολλήστε κείμενο και επιλέξτε μια μορφή για να μετατρέψετε μεταξύ κεφαλαίων, πεζών, μορφής τίτλου και μορφής πρότασης.",
+      description: "Μετέτρεψε το κείμενο μεταξύ κεφαλαίων, πεζών, μορφής τίτλου και μορφής πρότασης.",
+      faq: [
+        { q: "Ποια είναι η διαφορά μεταξύ μορφής τίτλου και μορφής πρότασης;", a: "Η μορφή τίτλου γράφει με κεφαλαίο τον πρώτο χαρακτήρα κάθε κύριας λέξης (π.χ. 'Γεια Σου Κόσμε Παράδειγμα'). Η μορφή πρότασης γράφει με κεφαλαίο μόνο τον πρώτο χαρακτήρα ολόκληρου του κειμένου (π.χ. 'Γεια σου κόσμε παράδειγμα')." },
+        { q: "Αυτό το εργαλείο αποθηκεύει το κείμενο που εισάγω;", a: "Όχι - η μετατροπή γίνεται εξ ολοκλήρου στο πρόγραμμα περιήγησής σου, και τα δεδομένα δεν αποστέλλονται ή αποθηκεύονται ποτέ." },
+        { q: "Χειρίζεται σωστά χαρακτήρες με τόνους ή μη αγγλικούς χαρακτήρες;", a: "Ναι - η μετατροπή κεφαλαίων/πεζών λειτουργεί με τυπικό κείμενο Unicode, συμπεριλαμβανομένων χαρακτήρων με τόνους (é, ñ, ü και άλλα). Η μετατροπή σε κεφαλαία ή πεζά διατηρεί τους τόνους σωστά, χωρίς να τους χάνει." },
+        { q: "Ποια άλλα στιλ κεφαλαίων/πεζών χειρίζεται αυτός ο μετατροπέας;", a: "Πέρα από μορφή τίτλου και μορφή πρότασης, μετατρέπει επίσης σε κεφαλαία, πεζά και camelCase - κοινά στιλ μορφοποίησης στη γραφή και τον προγραμματισμό, ώστε να μπορείς να μορφοποιήσεις το κείμενο ακριβώς όπως χρειάζεσαι." },
+      ],
+    },
   },
 
   "dog-age-calculator": {
@@ -1934,6 +2185,17 @@ const I18N_TOOLS = {
         { q: "De ce câinii mari îmbătrânesc mai repede decât cei mici?", a: "Rasele mari și uriașe cresc mai repede și ajung la maturitate fizică mai devreme, ceea ce este asociat cu o durată de viață mai scurtă și un ritm de îmbătrânire mai rapid la vârstă mijlocie și înaintată - opusul tendinței văzute la majoritatea celorlalte mamifere." },
         { q: "La ce vârstă este considerat un câine 'senior'?", a: "Depinde de mărime - câinii mici sunt de obicei considerați seniori pe la 10-12 ani, cei de talie medie pe la 8-10 ani, iar rasele mari și uriașe pot fi considerate seniore încă de la 6-7 ani, deoarece rasele mari cresc și îmbătrânesc mai repede decât cele mici." },
         { q: "De ce calculul nu se bazează doar pe mărimea corpului? Contează și rasa?", a: "Mărimea corpului este cel mai puternic factor de predicție al ritmului de îmbătrânire, așa că acest calculator grupează rasele după mărime (mică, medie, mare, uriașă) în loc de o singură formulă universală. În cadrul aceluiași grup de mărime, ritmul de îmbătrânire variază ușor între rase din cauza factorilor genetici, dar mărimea corpului explică cea mai mare parte a diferenței." },
+      ],
+    },
+    el: {
+      title: "Αριθμομηχανή Ηλικίας Σκύλου",
+      intro: "Οι σκύλοι γερνούν διαφορετικά ανάλογα με το μέγεθος της ράτσας. Εισάγετε την ηλικία και το μέγεθος του σκύλου για μια πιο ακριβή εκτίμηση της ανθρώπινης ηλικίας από τον παλιό κανόνα 'επί 7'.",
+      description: "Μετέτρεψε την ηλικία ενός σκύλου σε ισοδύναμη ανθρώπινη ηλικία, προσαρμοσμένη ανά μέγεθος.",
+      faq: [
+        { q: "Είναι ακριβής ο κανόνας 'ένα έτος σκύλου ίσο με 7 ανθρώπινα έτη';", a: "Όχι, είναι ένας κατά προσέγγιση μύθος. Οι σκύλοι γερνούν γρήγορα τα πρώτα δύο χρόνια, και οι μεγάλες ράτσες γερνούν γρηγορότερα σε μεγαλύτερη ηλικία σε σύγκριση με τις μικρές ράτσες." },
+        { q: "Γιατί οι μεγάλοι σκύλοι γερνούν γρηγορότερα από τους μικρούς;", a: "Οι μεγάλες και γιγαντιαίες ράτσες μεγαλώνουν γρηγορότερα και φτάνουν σε σωματική ωριμότητα νωρίτερα, κάτι που συνδέεται με μικρότερη διάρκεια ζωής και ταχύτερο ρυθμό γήρανσης σε μέση και μεγάλη ηλικία - το αντίθετο από την τάση που παρατηρείται στα περισσότερα άλλα θηλαστικά." },
+        { q: "Σε ποια ηλικία θεωρείται ένας σκύλος 'ηλικιωμένος';", a: "Εξαρτάται από το μέγεθος - οι μικροί σκύλοι θεωρούνται συνήθως ηλικιωμένοι γύρω στα 10-12 έτη, οι μεσαίου μεγέθους γύρω στα 8-10 έτη, ενώ οι μεγάλες και γιγαντιαίες ράτσες μπορεί να θεωρούνται ηλικιωμένες ήδη από τα 6-7 έτη, καθώς οι μεγάλες ράτσες μεγαλώνουν και γερνούν γρηγορότερα από τις μικρές." },
+        { q: "Γιατί ο υπολογισμός δεν βασίζεται μόνο στο μέγεθος του σώματος; Παίζει ρόλο και η ράτσα;", a: "Το μέγεθος του σώματος είναι ο ισχυρότερος παράγοντας πρόβλεψης του ρυθμού γήρανσης, γι' αυτό αυτή η αριθμομηχανή ομαδοποιεί τις ράτσες κατά μέγεθος (μικρό, μεσαίο, μεγάλο, γιγαντιαίο) αντί για έναν ενιαίο τύπο. Εντός της ίδιας ομάδας μεγέθους, ο ρυθμός γήρανσης διαφέρει ελαφρώς μεταξύ ράτσων λόγω γενετικών παραγόντων, αλλά το μέγεθος του σώματος εξηγεί το μεγαλύτερο μέρος της διαφοράς." },
       ],
     },
   },
@@ -2016,6 +2278,17 @@ const I18N_TOOLS = {
         { q: "Cât de precisă este formula de conversie a vârstei pisicilor pentru animale foarte bătrâne?", a: "Formula este cea mai fiabilă în anii tineri ai pisicii, iar în anii mai avansați se aplatizează, adăugând aproximativ 4 ani umani pentru fiecare an de pisică după vârsta de 2 ani. Sănătatea individuală și genetica joacă un rol tot mai mare în îmbătrânirea reală la vârste înaintate, mai mult decât poate surprinde orice formulă." },
       ],
     },
+    el: {
+      title: "Αριθμομηχανή Ηλικίας Γάτας",
+      intro: "Εισάγετε την ηλικία της γάτας για να υπολογίσετε την ισοδύναμη ανθρώπινη ηλικία, με βάση τα τυπικά πρότυπα γήρανσης των γατών.",
+      description: "Μετέτρεψε την ηλικία μιας γάτας σε ισοδύναμη ανθρώπινη ηλικία.",
+      faq: [
+        { q: "Γερνούν όλες οι γάτες το ίδιο, ανεξάρτητα από τη ράτσα;", a: "Το πρότυπο γήρανσης των γατών είναι αρκετά συνεπές στις περισσότερες ράτσες - δεν υπάρχει τόσο μεγάλη διαφοροποίηση βάσει μεγέθους όπως στους σκύλους." },
+        { q: "Έχει σημασία αν η γάτα ζει μέσα ή έξω για τον υπολογισμό της ηλικίας;", a: "Αυτή η αριθμομηχανή δεν λαμβάνει υπόψη αυτόν τον παράγοντα - είναι μια εκτίμηση βασισμένη σε γενικά πρότυπα ανάπτυξης. Στην πραγματικότητα, οι γάτες εσωτερικού χώρου τείνουν να ζουν περισσότερο από αυτές του εξωτερικού, καθώς εκτίθενται σε λιγότερους τραυματισμούς και ασθένειες, αλλά αυτό επηρεάζει τη διάρκεια ζωής, όχι τον τύπο μετατροπής ηλικίας." },
+        { q: "Σε ποια ηλικία θεωρείται μια γάτα 'ηλικιωμένη';", a: "Πολλές κτηνιατρικές οδηγίες θεωρούν τις γάτες ηλικιωμένες γύρω στα 10-11 έτη, με τον όρο 'γηριατρική' να χρησιμοποιείται συχνά για τα 15 έτη και άνω - αν και η ατομική διαφοροποίηση είναι μεγαλύτερη από όσο μπορεί να συλλάβει ένα μόνο όριο ηλικίας." },
+        { q: "Πόσο ακριβής είναι ο τύπος μετατροπής ηλικίας γάτας για πολύ ηλικιωμένα ζώα;", a: "Ο τύπος είναι πιο αξιόπιστος στα νεανικά χρόνια της γάτας, ενώ στα πιο προχωρημένα χρόνια ισοπεδώνεται, προσθέτοντας περίπου 4 ανθρώπινα έτη για κάθε έτος γάτας μετά την ηλικία των 2 ετών. Η ατομική υγεία και η γενετική παίζουν όλο και μεγαλύτερο ρόλο στην πραγματική γήρανση σε προχωρημένη ηλικία, περισσότερο από όσο μπορεί να συλλάβει οποιοσδήποτε τύπος." },
+      ],
+    },
   },
 };
 
@@ -2067,6 +2340,11 @@ const I18N_STATIC = {
       lede: "Un index de referință cu calculatoare rapide și precise - organizat așa cum o bibliotecă bună își organizează cărțile, nu cum majoritatea site-urilor de calculatoare aruncă totul pe o singură pagină.",
       body: "Calquary este o colecție de calculatoare cu scop unic - pentru matematică, bani, proiecte pentru casă, sănătate, date, conversii, sarcini de text zilnice și animale de companie - create pentru a răspunde bine la o singură întrebare, în loc să o îngroape sub reclame și conținut fără legătură. Fiecare instrument funcționează în întregime în browserul tău: introduci numerele, primești răspunsul, nimic nu este trimis către un server. Calculatoarele sunt grupate în 8 categorii, iar catalogul continuă să crească - fiecare instrument este verificat pentru o formulă funcțională și o explicație pe înțelesul tuturor înainte de a fi adăugat, ca răspunsul primit să fie de încredere. Pentru decizii cu implicații financiare, structurale sau medicale reale, consultă un profesionist calificat. Majoritatea instrumentelor au pornit de la o întrebare concretă și specifică pe care cineva chiar avea nevoie să o rezolve - cât beton pentru o placă, ce înseamnă vârsta unui câine în ani umani, câte zile lucrătoare sunt între două date - în loc de un calculator generic construit doar ca să pară complet. De aceea categoriile rămân largi (Matematică, Finanțe, Construcții și Casă, Sănătate și Fitness, Dată și Oră, Conversii Zilnice, Text și Digital, și Animale de Companie și Stil de Viață) în loc de înguste: obiectivul este o bibliotecă pe care o poți explora în funcție de tipul de problemă pe care o ai, nu un labirint de subcategorii de parcurs înainte de a ajunge la un răspuns.",
     },
+    el: {
+      title: "Σχετικά με το Calquary - Δωρεάν Αριθμομηχανές και Μετατροπείς",
+      lede: "Ένα ευρετήριο αναφοράς με γρήγορες και ακριβείς αριθμομηχανές - οργανωμένο όπως μια καλή βιβλιοθήκη αναφοράς οργανώνει τα βιβλία, όχι όπως οι περισσότεροι ιστότοποι αριθμομηχανών ρίχνουν τα πάντα σε μία σελίδα.",
+      body: "Το Calquary είναι μια συλλογή αριθμομηχανών μοναδικού σκοπού - για μαθηματικά, χρήματα, έργα σπιτιού, υγεία, ημερομηνίες, μετατροπές, καθημερινές εργασίες κειμένου και κατοικίδια - φτιαγμένες για να απαντούν καλά σε μία ερώτηση αντί να τη θάβουν κάτω από διαφημίσεις και άσχετο περιεχόμενο. Κάθε εργαλείο λειτουργεί εξ ολοκλήρου στο πρόγραμμα περιήγησής σου: εισάγεις τους αριθμούς σου, παίρνεις την απάντησή σου, τίποτα δεν αποστέλλεται σε διακομιστή. Οι αριθμομηχανές ομαδοποιούνται σε 8 κατηγορίες, και ο κατάλογος συνεχίζει να μεγαλώνει - κάθε εργαλείο ελέγχεται για έναν λειτουργικό τύπο και μια εξήγηση σε απλή γλώσσα πριν προστεθεί, ώστε η απάντηση που παίρνεις να είναι αξιόπιστη. Για αποφάσεις με πραγματικές οικονομικές, δομικές ή ιατρικές επιπτώσεις, συμβουλευτείτε έναν ειδικευμένο επαγγελματία. Τα περισσότερα εργαλεία ξεκίνησαν από μια συγκεκριμένη, στενή ερώτηση που κάποιος πραγματικά χρειαζόταν να απαντήσει - πόσο σκυρόδεμα για μια πλάκα, τι σημαίνει η ηλικία ενός σκύλου σε ανθρώπινα έτη, πόσες εργάσιμες ημέρες υπάρχουν μεταξύ δύο ημερομηνιών - αντί για μια γενική αριθμομηχανή φτιαγμένη απλώς για να φαίνεται πλήρης. Γι' αυτό οι κατηγορίες παραμένουν ευρείες (Μαθηματικά, Οικονομικά, Κατασκευές και Σπίτι, Υγεία και Φυσική Κατάσταση, Ημερομηνία και Ώρα, Καθημερινές Μετατροπές, Κείμενο και Ψηφιακά, και Κατοικίδια και Τρόπος Ζωής) αντί για στενές: ο στόχος είναι μια βιβλιοθήκη που μπορείς να εξερευνήσεις ανάλογα με το είδος του προβλήματος που έχεις, όχι έναν λαβύρινθο υποκατηγοριών για να διασχίσεις πριν φτάσεις σε μια απάντηση.",
+    },
   },
   contact: {
     en: {
@@ -2101,6 +2379,10 @@ const I18N_STATIC = {
       title: "Contactează Calquary - Erori, Idei și Întrebări",
       body: "Ai găsit o eroare, ai o idee pentru un calculator sau o întrebare despre cum gestionăm datele? Scrie-ne la hello@calquary.com - citim fiecare mesaj, deși răspunsul poate dura câteva zile. Dacă raportezi o eroare, ajută să incluzi numele calculatorului, numerele introduse și rezultatul așteptat comparat cu cel obținut. Sugestiile de calculatoare sunt binevenite - majoritatea instrumentelor deja prezente pe Calquary au pornit ca solicitări ale cititorilor, iar noi urmărim frecvența cererilor înainte de a decide ce construim în continuare.",
     },
+    el: {
+      title: "Επικοινωνήστε με το Calquary - Σφάλματα, Ιδέες και Ερωτήσεις",
+      body: "Βρήκατε ένα σφάλμα, έχετε μια ιδέα για αριθμομηχανή ή μια ερώτηση για το πώς διαχειριζόμαστε τα δεδομένα; Στείλτε μας email στο hello@calquary.com - διαβάζουμε κάθε μήνυμα, αν και οι απαντήσεις μπορεί να καθυστερήσουν μερικές ημέρες. Αν αναφέρετε ένα σφάλμα, βοηθάει να συμπεριλάβετε το όνομα της αριθμομηχανής, τους αριθμούς που εισάγατε, και το αποτέλεσμα που περιμένατε σε σύγκριση με αυτό που είδατε. Οι προτάσεις για αριθμομηχανές είναι ιδιαίτερα ευπρόσδεκτες - τα περισσότερα εργαλεία που ήδη υπάρχουν στο Calquary ξεκίνησαν ως αίτημα αναγνώστη, και παρακολουθούμε τη συχνότητα των αιτημάτων πριν αποφασίσουμε τι θα φτιάξουμε στη συνέχεια.",
+    },
   },
 
   // Legal-facing pages: translated in full (not summarized), but each
@@ -2118,6 +2400,7 @@ const I18N_STATIC = {
     it: 'Questa è una traduzione dell\'Informativa sulla Privacy e dei Termini di Servizio originali in inglese, fornita per comodità. In caso di discrepanza, prevale la <a href="/privacy.html">versione inglese</a>. Questa traduzione non è stata sottoposta a una revisione legale indipendente.',
     ja: 'これは英語版のプライバシーポリシーおよび利用規約の翻訳であり、利便性のために提供されています。内容に相違がある場合は、<a href="/privacy.html">英語版</a>が優先されます。この翻訳は独立した法的レビューを受けていません。',
     ro: 'Aceasta este o traducere a Politicii de Confidențialitate și a Termenilor de Serviciu originale în limba engleză, oferită pentru comoditate. În caz de discrepanță, prevalează <a href="/privacy.html">versiunea în limba engleză</a>. Această traducere nu a trecut printr-o revizuire juridică independentă.',
+    el: 'Αυτή είναι μια μετάφραση της αρχικής αγγλικής Πολιτικής Απορρήτου και των Όρων Χρήσης, που παρέχεται για ευκολία. Σε περίπτωση διαφοράς, υπερισχύει η <a href="/privacy.html">αγγλική έκδοση</a>. Αυτή η μετάφραση δεν έχει περάσει από ανεξάρτητο νομικό έλεγχο.',
   },
 
   privacy: {
@@ -2281,6 +2564,26 @@ const I18N_STATIC = {
         { h2: "Contactează-ne", p: ['Dacă ai întrebări despre această Politică de Confidențialitate, te rugăm să <a href="/contact.html">ne contactezi</a>.'] },
       ],
     },
+    el: {
+      title: "Πολιτική Απορρήτου - Πώς το Calquary Διαχειρίζεται τα Δεδομένα σας",
+      effectiveDateLabel: "Ημερομηνία έναρξης ισχύος: 18 Αυγούστου 2026",
+      sections: [
+        { h2: "Επισκόπηση", p: ['Αυτή η Πολιτική Απορρήτου εξηγεί ποιες πληροφορίες συλλέγει το Calquary ("εμείς", "δικό μας") όταν χρησιμοποιείτε το calquary.com (ο "Ιστότοπος"), πώς τις χρησιμοποιούμε, και τις επιλογές που έχετε στη διάθεσή σας. Χρησιμοποιώντας τον Ιστότοπο, συμφωνείτε με τις πρακτικές που περιγράφονται εδώ.'] },
+        { h2: "Πληροφορίες που συλλέγουμε", p: [
+          "Οι αριθμομηχανές του Calquary λειτουργούν εξ ολοκλήρου στο πρόγραμμα περιήγησής σας. Όταν εισάγετε αριθμούς ή άλλες τιμές σε μια αριθμομηχανή, αυτά τα δεδομένα επεξεργάζονται τοπικά στη συσκευή σας χρησιμοποιώντας JavaScript - δεν διαβιβάζονται ποτέ στους διακομιστές μας, δεν αποθηκεύονται σε βάση δεδομένων, ούτε τα βλέπουμε με οποιαδήποτε μορφή. Δεν απαιτούμε λογαριασμούς, σύνδεση ή οποιαδήποτε προσωπική πληροφορία για τη χρήση οποιασδήποτε αριθμομηχανής σε αυτόν τον Ιστότοπο.",
+          "Ενδέχεται να συλλέγουμε αυτόματα περιορισμένες, μη αναγνωρίσιμες τεχνικές πληροφορίες, όπως τον τύπο του προγράμματος περιήγησης, τον γενικό τύπο συσκευής, και τις σελίδες που επισκεφθήκατε, μέσω τυπικών αρχείων καταγραφής διακομιστή ιστού και εργαλείων ανάλυσης (για παράδειγμα, για να κατανοήσουμε ποιες αριθμομηχανές είναι πιο χρήσιμες και να διορθώσουμε σφάλματα). Αυτές οι πληροφορίες δεν περιλαμβάνουν τις τιμές που εισάγετε σε μια αριθμομηχανή.",
+        ] },
+        { h2: "Cookies και τεχνολογίες παρακολούθησης", p: ["Το Calquary δεν χρησιμοποιεί επί του παρόντος cookies για τις ίδιες τις αριθμομηχανές - χωρίς κατάσταση σύνδεσης, χωρίς αποθηκευμένες προτιμήσεις, χωρίς παρακολούθηση των δεδομένων που εισάγετε. Χρησιμοποιούμε, ή σχεδιάζουμε να χρησιμοποιήσουμε, τις υπηρεσίες τρίτων που περιγράφονται παρακάτω, οι οποίες ενδέχεται να ορίσουν δικά τους cookies στο πρόγραμμα περιήγησής σας, συμπεριλαμβανομένων διαφημιστικών σκοπών."] },
+        { h2: "Διαφήμιση", p: [
+          'Το Calquary ενδέχεται να εμφανίζει διαφημίσεις μέσω του Google AdSense ή παρόμοιων διαφημιστικών υπηρεσιών τρίτων. Αυτές οι υπηρεσίες μπορεί να χρησιμοποιούν cookies, αναγνωριστικά συσκευών ή παρόμοιες τεχνολογίες για την παροχή διαφημίσεων με βάση τις προηγούμενες επισκέψεις σας σε αυτόν ή άλλους ιστότοπους (διαφήμιση "βάσει ενδιαφερόντων" ή "εξατομικευμένη").',
+          'Η χρήση διαφημιστικών cookies από τη Google επιτρέπει στη Google και τους συνεργάτες της να παρέχουν διαφημίσεις με βάση τις επισκέψεις σας σε αυτόν και άλλους ιστότοπους. Μπορείτε να εξαιρεθείτε από την εξατομικευμένη διαφήμιση επισκεπτόμενοι τις <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">Ρυθμίσεις διαφημίσεων Google</a>, ή να εξαιρεθείτε από τη χρήση cookies ορισμένων τρίτων προμηθευτών για εξατομικευμένη διαφήμιση επισκεπτόμενοι το <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer">www.aboutads.info</a>. Για περισσότερα σχετικά με το πώς η Google χρησιμοποιεί δεδομένα όταν χρησιμοποιείτε τον Ιστότοπό μας, δείτε το <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">Πώς η Google χρησιμοποιεί πληροφορίες από ιστότοπους ή εφαρμογές που χρησιμοποιούν τις υπηρεσίες της</a>.',
+        ] },
+        { h2: "Υπηρεσίες τρίτων", p: ["Ενδέχεται να χρησιμοποιούμε υπηρεσίες τρίτων για ανάλυση, φιλοξενία και διαφήμιση (όπως το Google AdSense και το Google Analytics). Αυτοί οι πάροχοι ενδέχεται να συλλέγουν πληροφορίες που αποστέλλονται από το πρόγραμμα περιήγησής σας ως μέρος ενός αιτήματος ιστοσελίδας, όπως cookies ή τη διεύθυνση IP σας, και διέπονται από τις δικές τους πολιτικές απορρήτου, όχι από αυτήν."] },
+        { h2: "Απόρρητο παιδιών", p: ["Το Calquary δεν απευθύνεται σε παιδιά κάτω των 13 ετών, και δεν συλλέγουμε εν γνώσει μας προσωπικές πληροφορίες από παιδιά κάτω των 13 ετών. Αν πιστεύετε ότι ένα παιδί μας έχει παράσχει προσωπικές πληροφορίες, επικοινωνήστε μαζί μας ώστε να μπορέσουμε να το αντιμετωπίσουμε."] },
+        { h2: "Αλλαγές σε αυτή την πολιτική", p: ['Ενδέχεται να ενημερώνουμε αυτή την Πολιτική Απορρήτου κατά καιρούς για να αντικατοπτρίζει αλλαγές στις πρακτικές μας ή για νομικούς, λειτουργικούς ή κανονιστικούς λόγους. Η "Ημερομηνία έναρξης ισχύος" στην κορυφή αυτής της σελίδας θα αντικατοπτρίζει την πιο πρόσφατη αναθεώρηση. Η συνεχής χρήση του Ιστότοπου μετά την έναρξη ισχύος των αλλαγών συνιστά αποδοχή της αναθεωρημένης πολιτικής.'] },
+        { h2: "Επικοινωνήστε μαζί μας", p: ['Αν έχετε ερωτήσεις σχετικά με αυτή την Πολιτική Απορρήτου, παρακαλούμε <a href="/contact.html">επικοινωνήστε μαζί μας</a>.'] },
+      ],
+    },
   },
 
   terms: {
@@ -2418,6 +2721,23 @@ const I18N_STATIC = {
         { h2: "Link-uri terțe și publicitate", p: ["Site-ul poate conține link-uri către site-uri web terțe sau poate afișa publicitate terță. Nu suntem responsabili pentru conținutul, acuratețea sau practicile niciunui site terț, iar includerea unui link sau a unei reclame nu implică o recomandare din partea noastră."] },
         { h2: "Modificări ale acestor termeni", p: ['Putem actualiza acești Termeni de Serviciu din când în când. "Data intrării în vigoare" din partea de sus a acestei pagini reflectă cea mai recentă revizuire. Continuarea utilizării Site-ului după intrarea în vigoare a modificărilor constituie acceptarea termenilor revizuiți.'] },
         { h2: "Contactează-ne", p: ['Dacă ai întrebări despre acești Termeni de Serviciu, te rugăm să <a href="/contact.html">ne contactezi</a>.'] },
+      ],
+    },
+    el: {
+      title: "Όροι Χρήσης - Όροι Χρήσης του Calquary",
+      effectiveDateLabel: "Ημερομηνία έναρξης ισχύος: 18 Αυγούστου 2026",
+      sections: [
+        { h2: "Αποδοχή των όρων", p: ['Με την πρόσβαση ή τη χρήση του calquary.com (ο "Ιστότοπος"), συμφωνείτε να δεσμεύεστε από αυτούς τους Όρους Χρήσης. Εάν δεν συμφωνείτε, παρακαλούμε μην χρησιμοποιείτε τον Ιστότοπο.'] },
+        { h2: "Μόνο για ενημερωτικούς σκοπούς", p: [
+          "Οι αριθμομηχανές του Calquary παρέχονται αποκλειστικά για γενικούς ενημερωτικούς σκοπούς και εκτιμήσεις. Δεν αποτελούν, και δεν θα πρέπει να θεωρούνται, επαγγελματική οικονομική, δομική, μηχανική, ιατρική, νομική ή άλλη εξειδικευμένη συμβουλή. Τα αποτελέσματα είναι εκτιμήσεις βασισμένες στους τύπους και τις παραδοχές που είναι ενσωματωμένες σε κάθε εργαλείο, και ενδέχεται να μην λαμβάνουν υπόψη τις συγκεκριμένες περιστάσεις σας.",
+          "Επιβεβαιώνετε πάντα τα αποτελέσματα που έχουν σημασία - μια δόση δανείου, μια εκτίμηση υλικών για ένα κατασκευαστικό έργο, έναν υπολογισμό σχετικό με την υγεία - με έναν ειδικευμένο επαγγελματία πριν λάβετε μια απόφαση βάσει αυτών.",
+        ] },
+        { h2: "Χωρίς εγγύηση", p: ['Ο Ιστότοπος και οι αριθμομηχανές του παρέχονται "ως έχουν" και "όπως είναι διαθέσιμα", χωρίς καμία εγγύηση οποιουδήποτε είδους, ρητή ή σιωπηρή, συμπεριλαμβανομένων ενδεικτικά εγγυήσεων ακρίβειας, εμπορευσιμότητας, καταλληλότητας για συγκεκριμένο σκοπό ή μη παραβίασης. Δεν εγγυόμαστε ότι οποιαδήποτε αριθμομηχανή θα είναι απαλλαγμένη από σφάλματα, αδιάλειπτη ή θα παράγει αποτελέσματα κατάλληλα για τη συγκεκριμένη κατάστασή σας.'] },
+        { h2: "Περιορισμός ευθύνης", p: ["Στον μέγιστο βαθμό που επιτρέπεται από τον νόμο, το Calquary και οι διαχειριστές του δεν θα ευθύνονται για οποιεσδήποτε άμεσες, έμμεσες, παρεπόμενες, επακόλουθες ή ειδικές ζημίες που προκύπτουν από ή σχετίζονται με τη χρήση, ή την αδυναμία χρήσης, του Ιστότοπου ή των αποτελεσμάτων οποιασδήποτε αριθμομηχανής - συμπεριλαμβανομένων ενδεικτικά οικονομικών απωλειών, υλικών ζημιών ή σωματικών βλαβών - ακόμη και αν είχαν ενημερωθεί για την πιθανότητα τέτοιων ζημιών."] },
+        { h2: "Αποδεκτή χρήση", p: ["Συμφωνείτε να μην κάνετε κακή χρήση του Ιστότοπου, συμπεριλαμβανομένων ενδεικτικά: προσπάθειας διατάραξης ή υπερφόρτωσης της υποδομής του Ιστότοπου, εξαγωγής περιεχομένου με ρυθμό που υποβαθμίζει την υπηρεσία για άλλους χρήστες, ή χρήσης του Ιστότοπου για οποιονδήποτε παράνομο σκοπό. Διατηρούμε το δικαίωμα να περιορίσουμε την πρόσβαση για οποιαδήποτε χρήση που παραβιάζει αυτούς τους όρους."] },
+        { h2: "Σύνδεσμοι τρίτων και διαφήμιση", p: ["Ο Ιστότοπος ενδέχεται να περιέχει συνδέσμους προς ιστότοπους τρίτων ή να εμφανίζει διαφημίσεις τρίτων. Δεν είμαστε υπεύθυνοι για το περιεχόμενο, την ακρίβεια ή τις πρακτικές οποιουδήποτε ιστότοπου τρίτου, και η συμπερίληψη ενός συνδέσμου ή διαφήμισης δεν συνεπάγεται έγκριση από εμάς."] },
+        { h2: "Αλλαγές σε αυτούς τους όρους", p: ['Ενδέχεται να ενημερώνουμε αυτούς τους Όρους Χρήσης κατά καιρούς. Η "Ημερομηνία έναρξης ισχύος" στην κορυφή αυτής της σελίδας αντικατοπτρίζει την πιο πρόσφατη αναθεώρηση. Η συνεχής χρήση του Ιστότοπου μετά την έναρξη ισχύος των αλλαγών συνιστά αποδοχή των αναθεωρημένων όρων.'] },
+        { h2: "Επικοινωνήστε μαζί μας", p: ['Αν έχετε ερωτήσεις σχετικά με αυτούς τους Όρους Χρήσης, παρακαλούμε <a href="/contact.html">επικοινωνήστε μαζί μας</a>.'] },
       ],
     },
   },

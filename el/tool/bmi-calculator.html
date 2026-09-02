@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Αριθμομηχανή ΔΜΣ - Δωρεάν Online Αριθμομηχανή | Calquary</title>
+  <meta name="description" content="Υπολόγισε τον Δείκτη Μάζας Σώματος (ΔΜΣ) από το ύψος και το βάρος." />
+  <meta property="og:title" content="Αριθμομηχανή ΔΜΣ | Calquary">
+  <meta property="og:description" content="Υπολόγισε τον Δείκτη Μάζας Σώματος (ΔΜΣ) από το ύψος και το βάρος.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/el/tool/bmi-calculator.html">
+  <meta property="og:locale" content="el_GR">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/bmi-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Αριθμομηχανή ΔΜΣ | Calquary">
+  <meta name="twitter:description" content="Υπολόγισε τον Δείκτη Μάζας Σώματος (ΔΜΣ) από το ύψος και το βάρος.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/bmi-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/bmi-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/bmi-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/bmi-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/bmi-calculator.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/bmi-calculator.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/bmi-calculator.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/bmi-calculator.html">
+  <link rel="alternate" hreflang="undefined" href="https://calquary.com/ro/tool/bmi-calculator.html">
+  <link rel="alternate" hreflang="undefined" href="https://calquary.com/el/tool/bmi-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/bmi-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("bmi-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("bmi-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Αριθμομηχανή ΔΜΣ",
+      "description": "Υπολόγισε τον Δείκτη Μάζας Σώματος (ΔΜΣ) από το ύψος και το βάρος.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/el/tool/bmi-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-30",
+      "inLanguage": "el"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/el/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Health & Fitness",
+          "item": "https://calquary.com/el/category/health.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Αριθμομηχανή ΔΜΣ",
+          "item": "https://calquary.com/el/tool/bmi-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Είναι ο ΔΜΣ ακριβής για όλους;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Όχι - ο ΔΜΣ δεν διαφοροποιεί μεταξύ μυϊκής μάζας και σωματικού λίπους, οπότε μπορεί να είναι παραπλανητικός για αθλητές, ηλικιωμένους ενήλικες ή ορισμένους σωματότυπους. Είναι εργαλείο διαλογής, όχι διάγνωση."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ποιο είναι το υγιές εύρος ΔΜΣ;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Γενικά, το 18,5-24,9 θεωρείται υγιές εύρος, κάτω από 18,5 σημαίνει λιποβαρής, 25-29,9 σημαίνει υπέρβαρος, και 30+ σημαίνει παχυσαρκία - αλλά αυτοί είναι μέσοι όροι πληθυσμού, όχι ατομική κρίση για την υγεία σου."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ισχύει ο ΔΜΣ για τα παιδιά όπως και για τους ενήλικες;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Όχι - αυτή η αριθμομηχανή χρησιμοποιεί τον τύπο και τα όρια υγείας για ενήλικες. Τα παιδιά και οι έφηβοι χρειάζονται εκατοστημόρια σε καμπύλες ανάπτυξης ειδικές για ηλικία και φύλο, καθώς η υγιής σωματική σύσταση αλλάζει σημαντικά κατά την ανάπτυξη του παιδιού."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Πώς διαφέρει ο ΔΜΣ από το ποσοστό σωματικού λίπους;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ο ΔΜΣ χρησιμοποιεί μόνο ύψος και βάρος, οπότε δεν μπορεί να διαφοροποιήσει τη μυϊκή μάζα από το λίπος - κάποιος με υψηλή μυϊκή μάζα μπορεί να έχει υψηλό ΔΜΣ με χαμηλό σωματικό λίπος. Το ποσοστό σωματικού λίπους μετρά απευθείας τη λιπώδη συνιστώσα, δίνοντας μια πιο ακριβή εικόνα της σωματικής σύστασης από τον ΔΜΣ μόνο του."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Πώς υπολογίζεται ο ΔΜΣ; Είναι το 'δείκτης μάζας σώματος' το ίδιο πράγμα;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Για να υπολογίσεις τον ΔΜΣ με το χέρι, διαίρεσε το βάρος σε κιλά με το τετράγωνο του ύψους σε μέτρα. 'Δείκτης μάζας σώματος' είναι απλώς η πλήρης ονομασία της ίδιας αναζήτησης, όχι διαφορετικός δείκτης - αναφέρεται στον ίδιο υπολογισμό ΔΜΣ."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Είναι και ο 'υπολογισμός σωματικού δείκτη' ή 'αριθμομηχανή δείκτη βάρους' το ίδιο με τον ΔΜΣ;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ναι - αυτές είναι ανεπίσημες ονομασίες ή ελαφρώς λανθασμένες διατυπώσεις για τον Δείκτη Μάζας Σώματος (ΔΜΣ). Αυτή η αριθμομηχανή υπολογίζει τον τυπικό ΔΜΣ από ύψος και βάρος, ανεξάρτητα από τον όρο που χρησιμοποιήθηκε για να τη βρεις."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/el/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/el/index.html#categories">Κατηγορίες</a>
+          <a href="/el/index.html#tools">Όλα τα εργαλεία</a>
+          <a href="/el/about.html">Σχετικά</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Ελληνικά">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>undefined</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/bmi-calculator.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/bmi-calculator.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/bmi-calculator.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/bmi-calculator.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/bmi-calculator.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/bmi-calculator.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/bmi-calculator.html">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/bmi-calculator.html">Română</a><span class="locale-item current" role="menuitem" aria-current="true">Ελληνικά</span></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/el/index.html">Calquary</a> / <a href="/el/category/health.html">Υγεία και Φυσική Κατάσταση</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Αριθμομηχανή ΔΜΣ</h1>
+        <p style="max-width:60ch;">Εισάγετε ύψος και βάρος για να υπολογίσετε τον Δείκτη Μάζας Σώματος (ΔΜΣ) - έναν γενικό δείκτη διαλογής, όχι διάγνωση.</p>
+        <p class="last-updated">Τελευταία ενημέρωση: August 30, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Υπολογισμός</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Επαναφορά</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Συχνές ερωτήσεις</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Είναι ο ΔΜΣ ακριβής για όλους;</h3>
+<p>Όχι - ο ΔΜΣ δεν διαφοροποιεί μεταξύ μυϊκής μάζας και σωματικού λίπους, οπότε μπορεί να είναι παραπλανητικός για αθλητές, ηλικιωμένους ενήλικες ή ορισμένους σωματότυπους. Είναι εργαλείο διαλογής, όχι διάγνωση.</p>
+</div>
+<div class="faq-item">
+<h3>Ποιο είναι το υγιές εύρος ΔΜΣ;</h3>
+<p>Γενικά, το 18,5-24,9 θεωρείται υγιές εύρος, κάτω από 18,5 σημαίνει λιποβαρής, 25-29,9 σημαίνει υπέρβαρος, και 30+ σημαίνει παχυσαρκία - αλλά αυτοί είναι μέσοι όροι πληθυσμού, όχι ατομική κρίση για την υγεία σου.</p>
+</div>
+<div class="faq-item">
+<h3>Ισχύει ο ΔΜΣ για τα παιδιά όπως και για τους ενήλικες;</h3>
+<p>Όχι - αυτή η αριθμομηχανή χρησιμοποιεί τον τύπο και τα όρια υγείας για ενήλικες. Τα παιδιά και οι έφηβοι χρειάζονται εκατοστημόρια σε καμπύλες ανάπτυξης ειδικές για ηλικία και φύλο, καθώς η υγιής σωματική σύσταση αλλάζει σημαντικά κατά την ανάπτυξη του παιδιού.</p>
+</div>
+<div class="faq-item">
+<h3>Πώς διαφέρει ο ΔΜΣ από το ποσοστό σωματικού λίπους;</h3>
+<p>Ο ΔΜΣ χρησιμοποιεί μόνο ύψος και βάρος, οπότε δεν μπορεί να διαφοροποιήσει τη μυϊκή μάζα από το λίπος - κάποιος με υψηλή μυϊκή μάζα μπορεί να έχει υψηλό ΔΜΣ με χαμηλό σωματικό λίπος. Το ποσοστό σωματικού λίπους μετρά απευθείας τη λιπώδη συνιστώσα, δίνοντας μια πιο ακριβή εικόνα της σωματικής σύστασης από τον ΔΜΣ μόνο του.</p>
+</div>
+<div class="faq-item">
+<h3>Πώς υπολογίζεται ο ΔΜΣ; Είναι το 'δείκτης μάζας σώματος' το ίδιο πράγμα;</h3>
+<p>Για να υπολογίσεις τον ΔΜΣ με το χέρι, διαίρεσε το βάρος σε κιλά με το τετράγωνο του ύψους σε μέτρα. 'Δείκτης μάζας σώματος' είναι απλώς η πλήρης ονομασία της ίδιας αναζήτησης, όχι διαφορετικός δείκτης - αναφέρεται στον ίδιο υπολογισμό ΔΜΣ.</p>
+</div>
+<div class="faq-item">
+<h3>Είναι και ο 'υπολογισμός σωματικού δείκτη' ή 'αριθμομηχανή δείκτη βάρους' το ίδιο με τον ΔΜΣ;</h3>
+<p>Ναι - αυτές είναι ανεπίσημες ονομασίες ή ελαφρώς λανθασμένες διατυπώσεις για τον Δείκτη Μάζας Σώματος (ΔΜΣ). Αυτή η αριθμομηχανή υπολογίζει τον τυπικό ΔΜΣ από ύψος και βάρος, ανεξάρτητα από τον όρο που χρησιμοποιήθηκε για να τη βρεις.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Σχετικά εργαλεία</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Σημείωση ακρίβειας</h4>
+          <p style="margin:0;font-size:0.85rem;">Οι αριθμομηχανές του Calquary έχουν σχεδιαστεί για να παρέχουν γρήγορες και αξιόπιστες εκτιμήσεις. Για αποφάσεις με πραγματικές οικονομικές, δομικές ή ιατρικές επιπτώσεις, συμβουλευτείτε έναν ειδικευμένο επαγγελματία.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/el/index.html">← Πίσω σε όλες τις αριθμομηχανές</a> · <a href="/el/about.html">Σχετικά</a> · <a href="/el/contact.html">Επικοινωνία</a> · <a href="/el/privacy.html">Απόρρητο</a> · <a href="/el/terms.html">Όροι</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>
