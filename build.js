@@ -66,6 +66,8 @@ const WAVE_ONE_TOOL_IDS = [
   "apr-to-apy-calculator", "price-calculator", "debt-payoff-calculator", "dti-ratio-calculator",
   "credit-card-payoff-calculator", "auto-loan-calculator", "investment-calculator",
   "retirement-401k-calculator", "bond-duration-calculator", "gas-trip-cost-calculator",
+  "paint-calculator", "mulch-calculator", "gravel-calculator", "drywall-calculator",
+  "tile-calculator", "roofing-calculator", "square-footage-calculator",
 ];
 
 function loadData() {

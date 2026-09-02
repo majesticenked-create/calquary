@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Αριθμομηχανή Μπογιάς - Δωρεάν Online Αριθμομηχανή | Calquary</title>
+  <meta name="description" content="Εκτίμησε πόσα γαλόνια μπογιάς χρειάζεσαι για ένα δωμάτιο." />
+  <meta property="og:title" content="Αριθμομηχανή Μπογιάς | Calquary">
+  <meta property="og:description" content="Εκτίμησε πόσα γαλόνια μπογιάς χρειάζεσαι για ένα δωμάτιο.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/el/tool/paint-calculator.html">
+  <meta property="og:locale" content="el_GR">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/paint-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Αριθμομηχανή Μπογιάς | Calquary">
+  <meta name="twitter:description" content="Εκτίμησε πόσα γαλόνια μπογιάς χρειάζεσαι για ένα δωμάτιο.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/paint-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/paint-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/paint-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/paint-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/paint-calculator.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/paint-calculator.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/paint-calculator.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/paint-calculator.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/paint-calculator.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/paint-calculator.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/paint-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/paint-calculator.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/paint-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/paint-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("paint-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("paint-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Αριθμομηχανή Μπογιάς",
+      "description": "Εκτίμησε πόσα γαλόνια μπογιάς χρειάζεσαι για ένα δωμάτιο.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/el/tool/paint-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-30",
+      "inLanguage": "el"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/el/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Construction & Home",
+          "item": "https://calquary.com/el/category/construction.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Αριθμομηχανή Μπογιάς",
+          "item": "https://calquary.com/el/tool/paint-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Πόση μπογιά καλύπτει 400 τετραγωνικά πόδια;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Με τυπική κάλυψη 350 τετραγωνικών ποδιών ανά γαλόνι, μια στρώση σε 400 τετραγωνικά πόδια χρειάζεται περίπου 1,14 γαλόνια - στρογγυλοποιήστε προς τα πάνω για ασφάλεια."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Πρέπει να αφαιρέσω πόρτες και παράθυρα από την επιφάνεια του τοίχου;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Για μια χονδρική εκτίμηση, όχι - οι περισσότεροι μπογιατζήδες παραλείπουν αυτό αφού η επιπλέον μπογιά από τη μη αφαίρεση καλύπτει τις εργασίες φινιρίσματος και τις επιδιορθώσεις. Για μεγάλες περιοχές παραθύρων/πορτών, η αφαίρεσή τους μπορεί να σας γλιτώσει από την αγορά περισσότερης απ' όσο χρειάζεστε."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Πόση επιπλέον μπογιά πρέπει να αγοράσω για μελλοντικές επιδιορθώσεις;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Αγοράστε λίγο περισσότερο από την υπολογισμένη ποσότητα - η στρογγυλοποίηση στο επόμενο πλήρες γαλόνι ή τέταρτο καλύπτει επιδιορθώσεις και λαμβάνει υπόψη την ανομοιόμορφη κάλυψη σε επιφάνειες με υφή."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Πόσες στρώσεις μπογιάς υποθέτει αυτή η αριθμομηχανή;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Αυτή η αριθμομηχανή εκτιμά τη μπογιά που χρειάζεται για δύο στρώσεις, κάτι που είναι τυπικό για τις περισσότερες εσωτερικές και εξωτερικές εργασίες, ειδικά όταν αλλάζετε σημαντικά χρώμα. Αν καλύπτετε παρόμοιο χρώμα με μία μόνο στρώση, μπορείτε να μειώσετε περίπου στο μισό την εκτιμώμενη ποσότητα μπογιάς."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Είναι ένας «εκτιμητής κάλυψης μπογιάς» το ίδιο με αυτό το εργαλείο;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ναι - εισάγετε την επιφάνεια του τοίχου σας, τον αριθμό στρώσεων και το ποσοστό κάλυψης ανά γαλόνι παραπάνω για να πάρετε την ίδια εκτίμηση."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/el/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/el/index.html#categories">Κατηγορίες</a>
+          <a href="/el/index.html#tools">Όλα τα εργαλεία</a>
+          <a href="/el/about.html">Σχετικά</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Ελληνικά">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>undefined</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/paint-calculator.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/paint-calculator.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/paint-calculator.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/paint-calculator.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/paint-calculator.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/paint-calculator.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/paint-calculator.html">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/paint-calculator.html">Română</a><span class="locale-item current" role="menuitem" aria-current="true">Ελληνικά</span><a class="locale-item" role="menuitem" href="/zh/tool/paint-calculator.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/paint-calculator.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/paint-calculator.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/el/index.html">Calquary</a> / <a href="/el/category/construction.html">Κατασκευές και Σπίτι</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Αριθμομηχανή Μπογιάς</h1>
+        <p style="max-width:60ch;">Εισάγετε την επιφάνεια των τοίχων σας και τον αριθμό των στρώσεων για να εκτιμήσετε τα γαλόνια μπογιάς που χρειάζονται, με βάση τυπικά ποσοστά κάλυψης.</p>
+        <p class="last-updated">Τελευταία ενημέρωση: August 30, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Υπολογισμός</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Επαναφορά</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Συχνές ερωτήσεις</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Πόση μπογιά καλύπτει 400 τετραγωνικά πόδια;</h3>
+<p>Με τυπική κάλυψη 350 τετραγωνικών ποδιών ανά γαλόνι, μια στρώση σε 400 τετραγωνικά πόδια χρειάζεται περίπου 1,14 γαλόνια - στρογγυλοποιήστε προς τα πάνω για ασφάλεια.</p>
+</div>
+<div class="faq-item">
+<h3>Πρέπει να αφαιρέσω πόρτες και παράθυρα από την επιφάνεια του τοίχου;</h3>
+<p>Για μια χονδρική εκτίμηση, όχι - οι περισσότεροι μπογιατζήδες παραλείπουν αυτό αφού η επιπλέον μπογιά από τη μη αφαίρεση καλύπτει τις εργασίες φινιρίσματος και τις επιδιορθώσεις. Για μεγάλες περιοχές παραθύρων/πορτών, η αφαίρεσή τους μπορεί να σας γλιτώσει από την αγορά περισσότερης απ' όσο χρειάζεστε.</p>
+</div>
+<div class="faq-item">
+<h3>Πόση επιπλέον μπογιά πρέπει να αγοράσω για μελλοντικές επιδιορθώσεις;</h3>
+<p>Αγοράστε λίγο περισσότερο από την υπολογισμένη ποσότητα - η στρογγυλοποίηση στο επόμενο πλήρες γαλόνι ή τέταρτο καλύπτει επιδιορθώσεις και λαμβάνει υπόψη την ανομοιόμορφη κάλυψη σε επιφάνειες με υφή.</p>
+</div>
+<div class="faq-item">
+<h3>Πόσες στρώσεις μπογιάς υποθέτει αυτή η αριθμομηχανή;</h3>
+<p>Αυτή η αριθμομηχανή εκτιμά τη μπογιά που χρειάζεται για δύο στρώσεις, κάτι που είναι τυπικό για τις περισσότερες εσωτερικές και εξωτερικές εργασίες, ειδικά όταν αλλάζετε σημαντικά χρώμα. Αν καλύπτετε παρόμοιο χρώμα με μία μόνο στρώση, μπορείτε να μειώσετε περίπου στο μισό την εκτιμώμενη ποσότητα μπογιάς.</p>
+</div>
+<div class="faq-item">
+<h3>Είναι ένας «εκτιμητής κάλυψης μπογιάς» το ίδιο με αυτό το εργαλείο;</h3>
+<p>Ναι - εισάγετε την επιφάνεια του τοίχου σας, τον αριθμό στρώσεων και το ποσοστό κάλυψης ανά γαλόνι παραπάνω για να πάρετε την ίδια εκτίμηση.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Σχετικά εργαλεία</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Σημείωση ακρίβειας</h4>
+          <p style="margin:0;font-size:0.85rem;">Οι αριθμομηχανές του Calquary έχουν σχεδιαστεί για να παρέχουν γρήγορες και αξιόπιστες εκτιμήσεις. Για αποφάσεις με πραγματικές οικονομικές, δομικές ή ιατρικές επιπτώσεις, συμβουλευτείτε έναν ειδικευμένο επαγγελματία.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/el/index.html">← Πίσω σε όλες τις αριθμομηχανές</a> · <a href="/el/about.html">Σχετικά</a> · <a href="/el/contact.html">Επικοινωνία</a> · <a href="/el/privacy.html">Απόρρητο</a> · <a href="/el/terms.html">Όροι</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>
