@@ -4298,6 +4298,42 @@ const CALCULATORS = [
     related: ["bmi-calculator", "body-fat-calculator", "calorie-calculator"],
   },
   {
+    id: "bra-size-calculator",
+    category: "health",
+    title: "Bra Size Calculator",
+    keyword: "bra size calculator",
+    description: "Calculate your bra band and cup size from your underbust and bust measurements.",
+    intro: "Enter your underbust (band) and bust measurements in inches to estimate your US bra size.",
+    fields: [
+      { id: "underbust", label: "Underbust measurement", type: "number", unit: "in", default: 32, step: 0.25, min: 20, max: 60 },
+      { id: "bust", label: "Bust measurement", type: "number", unit: "in", default: 36, step: 0.25, min: 20, max: 70 },
+    ],
+    compute: (v) => {
+      const bandRounded = Math.round(v.underbust);
+      const bandSize = bandRounded % 2 === 0 ? bandRounded + 4 : bandRounded + 5;
+      const diff = v.bust - v.underbust;
+      const cupLetters = ["AA", "A", "B", "C", "D", "DD/E", "DDD/F", "G", "H", "I", "J"];
+      const cupIndex = Math.max(0, Math.min(Math.round(diff), cupLetters.length - 1));
+      const cup = cupLetters[cupIndex];
+      return {
+        primary: { label: "Estimated size", value: `${bandSize}${cup}` },
+        secondary: [
+          { l: "Band size", v: bandSize },
+          { l: "Cup size", v: cup },
+          { l: "Bust-band difference", v: `${round(diff, 2)} in` },
+        ],
+        note: "Uses a common US sizing method: band size rounds your underbust to the nearest even number, adding 4 (if even) or 5 (if odd); cup size is based on the difference between bust and underbust (1 inch per cup letter, starting at AA). Sizing conventions vary between brands and regions, so treat this as a starting point, not a guarantee of fit.",
+      };
+    },
+    faq: [
+      { q: "How do I measure for a bra size?", a: "Underbust: wrap a tape measure snugly around your ribcage, directly under your bust, keeping it level and not too tight. Bust: wrap the tape around the fullest part of your bust, without compressing it, while wearing a well-fitting (non-padded) bra." },
+      { q: "How is cup size calculated?", a: "By the difference between your bust and underbust measurements - each full inch of difference corresponds to one cup letter, starting at AA for less than 1 inch, A for 1 inch, B for 2 inches, and so on." },
+      { q: "Why do bra sizes vary so much between brands?", a: "There's no single universal sizing standard - brands use different measuring conventions, cut patterns, and fit philosophies, so the same calculated size can fit differently across brands. Use this calculator as a starting point and expect to fine-tune with try-ons." },
+      { q: "What if my calculated size doesn't fit well?", a: "This formula is a widely used estimate, not a substitute for professional fitting - if the band feels loose or the cups gap or spill over, try adjacent sizes (a smaller band with a larger cup, or vice versa, often fits similarly) or get measured in person." },
+    ],
+    related: ["bmi-calculator", "body-fat-calculator", "unit-length-converter"],
+  },
+  {
     id: "pace-calculator",
     category: "health",
     title: "Running Pace Calculator",
@@ -4497,6 +4533,94 @@ const CALCULATORS = [
       { q: "What happens to the 'lost' kinetic energy in an inelastic collision?", a: "It converts to other forms of energy - heat from friction and deformation, sound from the impact, and permanent structural deformation of the colliding objects - rather than disappearing, consistent with the overall conservation of energy." },
     ],
     related: ["projectile-motion-calculator", "vector-calculator", "speed-distance-time-calculator"],
+  },
+  {
+    id: "ohms-law-calculator",
+    category: "math",
+    title: "Ohm's Law Calculator",
+    keyword: "ohms law calculator",
+    description: "Calculate voltage, current, resistance, or power - enter any two to find the other two.",
+    intro: "Enter any two of voltage, current, and resistance to calculate the other two, plus power.",
+    fields: [
+      { id: "voltage", label: "Voltage (V, leave 0 to solve for it)", type: "number", unit: "volts", default: 0, step: 0.01 },
+      { id: "current", label: "Current (I, leave 0 to solve for it)", type: "number", unit: "amps", default: 2, step: 0.01 },
+      { id: "resistance", label: "Resistance (R, leave 0 to solve for it)", type: "number", unit: "ohms", default: 10, step: 0.01 },
+    ],
+    compute: (v) => {
+      const known = [v.voltage > 0, v.current > 0, v.resistance > 0].filter(Boolean).length;
+      if (known < 2) {
+        return { primary: { label: "Need two values", value: "-" }, secondary: [], note: "Enter any two of voltage, current, and resistance (leave the third at 0) to solve for the rest." };
+      }
+      let V = v.voltage, I = v.current, R = v.resistance;
+      if (V === 0) V = I * R;
+      else if (I === 0) I = V / R;
+      else if (R === 0) R = V / I;
+      const P = V * I;
+      return {
+        primary: { label: "Voltage", value: `${round(V, 4)} V` },
+        secondary: [
+          { l: "Current", v: `${round(I, 4)} A` },
+          { l: "Resistance", v: `${round(R, 4)} Ω` },
+          { l: "Power", v: `${round(P, 4)} W` },
+        ],
+        note: "Ohm's law: V = I × R. Power: P = V × I. Enter any two of voltage, current, or resistance (leave the third at 0) to solve for all four values.",
+      };
+    },
+    faq: [
+      { q: "What is Ohm's law?", a: "V = I × R - voltage equals current multiplied by resistance. It describes the relationship between these three quantities in an electrical circuit: for a fixed resistance, more voltage drives more current." },
+      { q: "How do I calculate power from Ohm's law values?", a: "P = V × I (power equals voltage times current) - once you know voltage and current from Ohm's law, power follows directly. You can also derive P = I²R or P = V²/R by substituting Ohm's law into the power formula." },
+      { q: "What is the current if a 10-ohm resistor has 20 volts across it?", a: "2 amps - using I = V/R = 20/10 = 2 A." },
+      { q: "Why do I need to enter exactly two known values?", a: "Ohm's law (V=IR) relates three quantities - knowing any two lets you solve for the third algebraically, but with only one known value, there isn't enough information to determine the other two uniquely." },
+    ],
+    related: ["electricity-cost-calculator", "collision-calculator", "vector-calculator"],
+  },
+  {
+    id: "right-triangle-calculator",
+    category: "math",
+    title: "Right Triangle Calculator",
+    keyword: "right triangle calculator",
+    description: "Solve a right triangle's missing sides, angles, and area from any two known sides.",
+    intro: "Enter any two of a right triangle's sides (two legs, or one leg and the hypotenuse) to calculate everything else.",
+    fields: [
+      { id: "legA", label: "Leg a (leave 0 if unknown)", type: "number", default: 3, step: 0.01, min: 0 },
+      { id: "legB", label: "Leg b (leave 0 if unknown)", type: "number", default: 4, step: 0.01, min: 0 },
+      { id: "hypotenuse", label: "Hypotenuse c (leave 0 if unknown)", type: "number", default: 0, step: 0.01, min: 0 },
+    ],
+    compute: (v) => {
+      let a = v.legA, b = v.legB, c = v.hypotenuse;
+      if (a > 0 && b > 0) {
+        c = Math.sqrt(a * a + b * b);
+      } else if (a > 0 && c > 0) {
+        if (c <= a) return { primary: { label: "Invalid input", value: "-" }, secondary: [], note: "The hypotenuse must be longer than either leg." };
+        b = Math.sqrt(c * c - a * a);
+      } else if (b > 0 && c > 0) {
+        if (c <= b) return { primary: { label: "Invalid input", value: "-" }, secondary: [], note: "The hypotenuse must be longer than either leg." };
+        a = Math.sqrt(c * c - b * b);
+      } else {
+        return { primary: { label: "Need two sides", value: "-" }, secondary: [], note: "Enter any two sides (two legs, or one leg and the hypotenuse) - leave the unknown one at 0." };
+      }
+      const angleA = Math.asin(a / c) * (180 / Math.PI);
+      const angleB = 90 - angleA;
+      const area = 0.5 * a * b;
+      const perimeter = a + b + c;
+      return {
+        primary: { label: "Hypotenuse (c)", value: round(c, 4) },
+        secondary: [
+          { l: "Leg a, Leg b", v: `${round(a, 4)}, ${round(b, 4)}` },
+          { l: "Angle A, Angle B", v: `${round(angleA, 3)}°, ${round(angleB, 3)}°` },
+          { l: "Area", v: round(area, 4) },
+          { l: "Perimeter", v: round(perimeter, 4) },
+        ],
+        note: "Uses the Pythagorean theorem (a² + b² = c²) to find the missing side, then trigonometry to find the angles. Angle C (opposite the hypotenuse) is always 90°.",
+      };
+    },
+    faq: [
+      { q: "What is the hypotenuse of a right triangle with legs 3 and 4?", a: "5 - using the Pythagorean theorem: c = √(3² + 4²) = √25 = 5. This is the classic 3-4-5 right triangle." },
+      { q: "How do I find a missing leg if I know the hypotenuse and one leg?", a: "Rearrange the Pythagorean theorem: missing leg = √(hypotenuse² − known leg²). For example, with hypotenuse 5 and one leg 3: √(25−9) = √16 = 4." },
+      { q: "How do I find the angles of a right triangle from its sides?", a: "Once you know all three sides, use inverse sine: angle A = sin⁻¹(a ÷ c), where a is the leg opposite angle A and c is the hypotenuse. The other non-right angle is simply 90° minus angle A, since all three angles sum to 180°." },
+      { q: "What's the area of a right triangle?", a: "0.5 × leg a × leg b - the two legs meet at the right angle, so they serve directly as the triangle's base and height." },
+    ],
+    related: ["pythagorean-theorem-calculator", "triangle-solver", "circle-calculator"],
   },
   {
     id: "pregnancy-due-date-calculator",
@@ -6328,6 +6452,144 @@ const CALCULATORS = [
       { q: "What's a typical microwave wattage?", a: "Most home microwaves range from 600W (compact/older models) to 1200W (large, newer models), with 1000W-1100W being common for standard full-size microwaves - check the wattage printed inside the door or in the manual." },
     ],
     related: ["temperature-converter", "cooking-converter", "unit-length-converter"],
+  },
+  {
+    id: "electricity-cost-calculator",
+    category: "conversions",
+    title: "Electricity Cost Calculator",
+    keyword: "electricity cost calculator",
+    description: "Calculate the electricity cost of running an appliance, from its wattage, usage time, and your rate.",
+    intro: "Enter an appliance's wattage, how long you run it, and your electricity rate to calculate the cost.",
+    fields: [
+      { id: "watts", label: "Power draw", type: "number", unit: "watts", default: 100, step: 1, min: 0 },
+      { id: "hoursPerDay", label: "Hours used per day", type: "number", unit: "hours", default: 5, step: 0.1, min: 0 },
+      { id: "days", label: "Number of days", type: "number", default: 30, step: 1, min: 1 },
+      { id: "ratePerKwh", label: "Electricity rate", type: "number", unit: "$/kWh", default: 0.15, step: 0.001, min: 0 },
+    ],
+    compute: (v) => {
+      const kwhPerDay = (v.watts / 1000) * v.hoursPerDay;
+      const totalKwh = kwhPerDay * v.days;
+      const totalCost = totalKwh * v.ratePerKwh;
+      const costPerDay = kwhPerDay * v.ratePerKwh;
+      return {
+        primary: { label: "Total cost", value: `$${round(totalCost, 2).toLocaleString()}` },
+        secondary: [
+          { l: "Cost per day", v: `$${round(costPerDay, 4)}` },
+          { l: "Total energy used", v: `${round(totalKwh, 3)} kWh` },
+        ],
+        note: "Energy (kWh) = watts ÷ 1000 × hours used. Cost = energy (kWh) × your rate per kWh. Check your utility bill for your actual rate, since it often varies by usage tier or time of day.",
+      };
+    },
+    faq: [
+      { q: "How much does it cost to run a 100W device for 5 hours a day?", a: "At a typical rate of $0.15/kWh: about $0.075 per day, or roughly $2.25 over 30 days - 100W × 5 hours = 0.5 kWh per day, times $0.15." },
+      { q: "How do I convert watts to kilowatt-hours?", a: "Kilowatt-hours = watts ÷ 1000 × hours of use. A 1000-watt device running for 1 hour uses exactly 1 kWh - it's a measure of total energy consumed, not just power draw." },
+      { q: "Where do I find my electricity rate?", a: "Check your utility bill - it's usually listed as a price per kilowatt-hour (kWh), though many utilities use tiered or time-of-use rates that vary depending on how much you use or when, which this simple calculator doesn't account for." },
+      { q: "Why does my calculated cost differ from my actual bill?", a: "Real bills often include additional fixed charges, taxes, and tiered or time-of-use pricing that a simple flat-rate calculation doesn't capture - this tool gives a good estimate for a single device's marginal cost, not a full bill prediction." },
+    ],
+    related: ["ohms-law-calculator", "gas-trip-cost-calculator", "microwave-wattage-converter"],
+  },
+  {
+    id: "day-of-the-week-calculator",
+    category: "datetime",
+    title: "Day of the Week Calculator",
+    keyword: "day of the week calculator",
+    description: "Find what day of the week any date falls on, past or future.",
+    intro: "Enter any date to find out what day of the week it falls on.",
+    fields: [
+      { id: "date", label: "Date", type: "date", default: todayDateString() },
+    ],
+    compute: (v) => {
+      const [y, m, d] = v.date.split("-").map(Number);
+      const date = new Date(Date.UTC(y, m - 1, d));
+      const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      const dayName = days[date.getUTCDay()];
+      const dayOfYear = Math.round((date - new Date(Date.UTC(y, 0, 1))) / 86400000) + 1;
+      const weekNum = Math.ceil((dayOfYear + new Date(Date.UTC(y, 0, 1)).getUTCDay()) / 7);
+      return {
+        primary: { label: "Day of the week", value: dayName },
+        secondary: [
+          { l: "Day of the year", v: dayOfYear },
+          { l: "Approximate week number", v: weekNum },
+        ],
+        note: "Uses the proleptic Gregorian calendar, which works correctly for any date, past or future - including dates before the Gregorian calendar's 1582 adoption (calculated as if it had always been in use).",
+      };
+    },
+    faq: [
+      { q: "What day of the week was January 1, 2000?", a: "Saturday - a widely known reference date, useful for verifying day-of-week calculations." },
+      { q: "How do you calculate the day of the week for any date?", a: "The most common method is Zeller's congruence, a formula that uses the day, month, and year (with January and February treated as months 13 and 14 of the previous year) to directly compute the day of the week without needing a calendar lookup." },
+      { q: "Does this work for dates far in the past or future?", a: "Yes - it uses the proleptic Gregorian calendar, meaning it applies today's calendar rules consistently to any date, even before the Gregorian calendar was actually adopted in 1582. Historical dates recorded under the Julian calendar may differ from this calculation." },
+      { q: "Why does knowing the day of the week matter for old or future dates?", a: "It's useful for genealogy research, verifying historical records, planning far-future events, or just satisfying curiosity about what day a birthday, anniversary, or historical event actually fell on." },
+    ],
+    related: ["days-until-calculator", "date-duration-calculator", "time-add-calculator"],
+  },
+  {
+    id: "simple-interest-calculator",
+    category: "finance",
+    title: "Simple Interest Calculator",
+    keyword: "simple interest calculator",
+    description: "Calculate simple interest and total repayment from principal, rate, and time.",
+    intro: "Enter the principal, annual interest rate, and time period to calculate simple interest (no compounding).",
+    fields: [
+      { id: "principal", label: "Principal", type: "number", unit: "$", default: 1000, step: 10, min: 0 },
+      { id: "rate", label: "Annual interest rate", type: "number", unit: "%", default: 5, step: 0.01 },
+      { id: "years", label: "Time", type: "number", unit: "years", default: 3, step: 0.1, min: 0 },
+    ],
+    compute: (v) => {
+      const interest = (v.principal * v.rate * v.years) / 100;
+      const total = v.principal + interest;
+      return {
+        primary: { label: "Simple interest", value: `$${round(interest, 2).toLocaleString()}` },
+        secondary: [{ l: "Total amount", v: `$${round(total, 2).toLocaleString()}` }],
+        note: "Simple interest = principal × rate × time. Unlike compound interest, simple interest is calculated only on the original principal - it never earns \"interest on interest.\"",
+      };
+    },
+    faq: [
+      { q: "How do I calculate simple interest?", a: "Interest = principal × rate × time, where rate is expressed as a decimal (or divided by 100 if using a percentage) and time is in years. A $1,000 principal at 5% for 3 years earns $1,000 × 0.05 × 3 = $150." },
+      { q: "What's the difference between simple and compound interest?", a: "Simple interest is calculated only on the original principal for the entire period. Compound interest is recalculated periodically on the growing balance (principal plus previously earned interest), so it grows faster over time - use the compound interest calculator for compounding scenarios." },
+      { q: "Where is simple interest actually used?", a: "Some short-term loans, certain bonds, and basic promissory notes use simple interest, since it's straightforward to calculate. Most savings accounts, credit cards, and mortgages use compound interest instead." },
+      { q: "Does simple interest ever beat compound interest?", a: "For a single compounding period (like one year with annual compounding), simple and compound interest give the same result. Over multiple periods, compound interest always produces more total interest for the lender/investor (or costs more for the borrower) than simple interest at the same nominal rate." },
+    ],
+    related: ["compound-interest-calculator", "savings-calculator", "loan-calculator"],
+  },
+  {
+    id: "circle-calculator",
+    category: "math",
+    title: "Circle Calculator",
+    keyword: "circle calculator",
+    description: "Calculate a circle's radius, diameter, circumference, and area from any one known value.",
+    intro: "Enter any one measurement of a circle - radius, diameter, circumference, or area - to calculate the rest.",
+    fields: [
+      { id: "knownValue", label: "Known value", type: "select", default: "radius", options: [
+        { v: "radius", l: "Radius" }, { v: "diameter", l: "Diameter" }, { v: "circumference", l: "Circumference" }, { v: "area", l: "Area" },
+      ] },
+      { id: "value", label: "Value", type: "number", default: 5, step: 0.01, min: 0.0001 },
+    ],
+    compute: (v) => {
+      let radius;
+      if (v.knownValue === "radius") radius = v.value;
+      else if (v.knownValue === "diameter") radius = v.value / 2;
+      else if (v.knownValue === "circumference") radius = v.value / (2 * Math.PI);
+      else radius = Math.sqrt(v.value / Math.PI);
+      const diameter = radius * 2;
+      const circumference = 2 * Math.PI * radius;
+      const area = Math.PI * radius * radius;
+      return {
+        primary: { label: "Radius", value: round(radius, 4) },
+        secondary: [
+          { l: "Diameter", v: round(diameter, 4) },
+          { l: "Circumference", v: round(circumference, 4) },
+          { l: "Area", v: round(area, 4) },
+        ],
+        note: "Diameter = 2 × radius. Circumference = 2π × radius. Area = π × radius². Enter any one measurement and the rest are calculated from it.",
+      };
+    },
+    faq: [
+      { q: "What is the circumference of a circle with radius 5?", a: "About 31.42 - circumference = 2 × π × 5 ≈ 31.42." },
+      { q: "What is the area of a circle with radius 5?", a: "About 78.54 - area = π × 5² ≈ 78.54." },
+      { q: "How do I find the radius from the circumference?", a: "Divide the circumference by 2π: radius = circumference ÷ (2×π)." },
+      { q: "How do I find the radius from the area?", a: "Divide the area by π, then take the square root: radius = √(area ÷ π)." },
+    ],
+    related: ["right-triangle-calculator", "sector-calculator", "cylinder-volume-calculator"],
   },
   {
     id: "list-shuffler",
