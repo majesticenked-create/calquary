@@ -50,6 +50,14 @@ const WAVE_ONE_TOOL_IDS = [
   "unit-length-converter", "temperature-converter",
   "word-counter", "case-converter",
   "dog-age-calculator", "cat-age-calculator",
+  // Wave two: added after users hit untranslated tool pages on non-English
+  // locales (cat-pregnancy-calculator specifically) - a second batch
+  // picked for general, cross-locale relevance rather than US-specific
+  // tools (sales-tax, tip) alone.
+  "cat-pregnancy-calculator", "dog-pregnancy-calculator",
+  "simple-interest-calculator", "sales-tax-calculator",
+  "tip-calculator", "discount-calculator",
+  "gpa-calculator", "body-fat-calculator",
 ];
 
 function loadData() {

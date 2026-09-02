@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Embarazo de Perras - Calculadora Gratis Online | Calquary</title>
+  <meta name="description" content="Estima la fecha de parto de tu perra a partir de la fecha de apareamiento." />
+  <meta property="og:title" content="Calculadora de Embarazo de Perras | Calquary">
+  <meta property="og:description" content="Estima la fecha de parto de tu perra a partir de la fecha de apareamiento.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/es/tool/dog-pregnancy-calculator.html">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/dog-pregnancy-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculadora de Embarazo de Perras | Calquary">
+  <meta name="twitter:description" content="Estima la fecha de parto de tu perra a partir de la fecha de apareamiento.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/dog-pregnancy-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/dog-pregnancy-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dog-pregnancy-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/dog-pregnancy-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/dog-pregnancy-calculator.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/dog-pregnancy-calculator.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/dog-pregnancy-calculator.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/dog-pregnancy-calculator.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/dog-pregnancy-calculator.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/dog-pregnancy-calculator.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/dog-pregnancy-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/dog-pregnancy-calculator.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/dog-pregnancy-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/dog-pregnancy-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("dog-pregnancy-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("dog-pregnancy-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calculadora de Embarazo de Perras",
+      "description": "Estima la fecha de parto de tu perra a partir de la fecha de apareamiento.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/es/tool/dog-pregnancy-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-30",
+      "inLanguage": "es"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/es/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Pet & Lifestyle",
+          "item": "https://calquary.com/es/category/pets.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calculadora de Embarazo de Perras",
+          "item": "https://calquary.com/es/tool/dog-pregnancy-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cuánto tiempo dura el embarazo de una perra?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El período de gestación canino promedio es de unos 63 días desde la concepción, aunque puede variar entre 58 y 68 días según la perra y el tamaño de la camada."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué tan precisa es una estimación de la fecha de parto a partir de la fecha de apareamiento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es una estimación razonable, pero la fecha real de parto puede variar varios días - un veterinario puede confirmar el momento con mayor precisión mediante ecografía o análisis de progesterona."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuáles son los signos de que una perra está por dar a luz?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Una caída de la temperatura corporal (a menudo por debajo de 37,8°C), comportamiento de anidación, inquietud y pérdida de apetito son signos comunes en las últimas 24 horas antes del parto - si tienes dudas o tu perra muestra síntomas preocupantes, contacta a tu veterinario en lugar de confiar solo en la fecha estimada."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puede una ecografía confirmar el embarazo antes de que la estimación de la fecha de parto sea útil?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí - una ecografía normalmente puede confirmar el embarazo entre 25 y 35 días después del apareamiento, bastante antes de la fecha de parto estimada, y también puede dar una estimación aproximada del tamaño de la camada más adelante en el embarazo, algo que el cálculo de la fecha de parto por sí solo no puede ofrecer."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/es/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/es/index.html#categories">Categorías</a>
+          <a href="/es/index.html#tools">Todas las herramientas</a>
+          <a href="/es/about.html">Acerca de</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Español">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>ES</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/dog-pregnancy-calculator.html">English</a><span class="locale-item current" role="menuitem" aria-current="true">Español</span><a class="locale-item" role="menuitem" href="/fr/tool/dog-pregnancy-calculator.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/dog-pregnancy-calculator.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/dog-pregnancy-calculator.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/dog-pregnancy-calculator.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/dog-pregnancy-calculator.html">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/dog-pregnancy-calculator.html">Română</a><a class="locale-item" role="menuitem" href="/el/tool/dog-pregnancy-calculator.html">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/dog-pregnancy-calculator.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/dog-pregnancy-calculator.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/dog-pregnancy-calculator.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/es/index.html">Calquary</a> / <a href="/es/category/pets.html">Mascotas y Estilo de Vida</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calculadora de Embarazo de Perras</h1>
+        <p style="max-width:60ch;">Introduce la fecha de apareamiento para estimar la fecha de parto de tu perra, según el período de gestación canino típico de 63 días.</p>
+        <p class="last-updated">Última actualización: August 30, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calcular</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reiniciar</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Preguntas frecuentes</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>¿Cuánto tiempo dura el embarazo de una perra?</h3>
+<p>El período de gestación canino promedio es de unos 63 días desde la concepción, aunque puede variar entre 58 y 68 días según la perra y el tamaño de la camada.</p>
+</div>
+<div class="faq-item">
+<h3>¿Qué tan precisa es una estimación de la fecha de parto a partir de la fecha de apareamiento?</h3>
+<p>Es una estimación razonable, pero la fecha real de parto puede variar varios días - un veterinario puede confirmar el momento con mayor precisión mediante ecografía o análisis de progesterona.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cuáles son los signos de que una perra está por dar a luz?</h3>
+<p>Una caída de la temperatura corporal (a menudo por debajo de 37,8°C), comportamiento de anidación, inquietud y pérdida de apetito son signos comunes en las últimas 24 horas antes del parto - si tienes dudas o tu perra muestra síntomas preocupantes, contacta a tu veterinario en lugar de confiar solo en la fecha estimada.</p>
+</div>
+<div class="faq-item">
+<h3>¿Puede una ecografía confirmar el embarazo antes de que la estimación de la fecha de parto sea útil?</h3>
+<p>Sí - una ecografía normalmente puede confirmar el embarazo entre 25 y 35 días después del apareamiento, bastante antes de la fecha de parto estimada, y también puede dar una estimación aproximada del tamaño de la camada más adelante en el embarazo, algo que el cálculo de la fecha de parto por sí solo no puede ofrecer.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Herramientas relacionadas</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Nota sobre precisión</h4>
+          <p style="margin:0;font-size:0.85rem;">Las calculadoras de Calquary están diseñadas para ofrecer estimaciones rápidas y fiables. Para decisiones con implicaciones financieras, estructurales o médicas reales, consulta con un profesional cualificado.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/es/index.html">← Volver a todas las calculadoras</a> · <a href="/es/about.html">Acerca de</a> · <a href="/es/contact.html">Contacto</a> · <a href="/es/privacy.html">Privacidad</a> · <a href="/es/terms.html">Términos</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>
