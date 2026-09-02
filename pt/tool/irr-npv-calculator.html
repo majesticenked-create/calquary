@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de TIR e VPL - Calculadora Gratuita Online | Calquary</title>
+  <meta name="description" content="Calcule o valor presente líquido (VPL) e a taxa interna de retorno (TIR) a partir de uma série de fluxos de caixa." />
+  <meta property="og:title" content="Calculadora de TIR e VPL | Calquary">
+  <meta property="og:description" content="Calcule o valor presente líquido (VPL) e a taxa interna de retorno (TIR) a partir de uma série de fluxos de caixa.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/pt/tool/irr-npv-calculator.html">
+  <meta property="og:locale" content="pt_PT">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/irr-npv-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculadora de TIR e VPL | Calquary">
+  <meta name="twitter:description" content="Calcule o valor presente líquido (VPL) e a taxa interna de retorno (TIR) a partir de uma série de fluxos de caixa.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/irr-npv-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/irr-npv-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/irr-npv-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/irr-npv-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/irr-npv-calculator.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/irr-npv-calculator.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/irr-npv-calculator.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/irr-npv-calculator.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/irr-npv-calculator.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/irr-npv-calculator.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/irr-npv-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/irr-npv-calculator.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/irr-npv-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/irr-npv-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("irr-npv-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("irr-npv-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calculadora de TIR e VPL",
+      "description": "Calcule o valor presente líquido (VPL) e a taxa interna de retorno (TIR) a partir de uma série de fluxos de caixa.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/pt/tool/irr-npv-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-01",
+      "inLanguage": "pt"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/pt/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Finance",
+          "item": "https://calquary.com/pt/category/finance.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calculadora de TIR e VPL",
+          "item": "https://calquary.com/pt/tool/irr-npv-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "O que é VPL?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Valor presente líquido - a soma de todos os fluxos de caixa, cada um descontado ao valor de hoje usando sua taxa de desconto escolhida. Um VPL positivo significa que o investimento deve criar valor acima do seu retorno exigido; negativo significa que fica aquém."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que é TIR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Taxa interna de retorno - a taxa de desconto na qual o VPL é exatamente zero. Representa o retorno anualizado de equilíbrio do investimento, útil para comparar investimentos sem precisar escolher uma taxa de desconto antecipadamente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como insiro os fluxos de caixa corretamente?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Comece com o período 0 - normalmente seu investimento inicial como um número negativo (dinheiro saindo) - seguido do fluxo de caixa líquido de cada período subsequente (positivo para dinheiro entrando). Por exemplo: -1000, 300, 400, 500, 200 representa um investimento de $1.000 seguido de quatro anos de retornos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Devo usar VPL ou TIR para comparar investimentos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O VPL é geralmente considerado mais confiável, especialmente ao comparar projetos de tamanhos diferentes ou com padrões de fluxo de caixa não convencionais, já que o VPL mede diretamente o valor criado em termos monetários. A TIR é intuitiva como um retorno percentual, mas pode se comportar de forma estranha (múltiplas soluções ou nenhuma) com fluxos de caixa que mudam de sinal mais de uma vez."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/pt/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/pt/index.html#categories">Categorias</a>
+          <a href="/pt/index.html#tools">Todas as ferramentas</a>
+          <a href="/pt/about.html">Sobre</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Português">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>PT</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/irr-npv-calculator.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/irr-npv-calculator.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/irr-npv-calculator.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/irr-npv-calculator.html">Deutsch</a><span class="locale-item current" role="menuitem" aria-current="true">Português</span><a class="locale-item" role="menuitem" href="/it/tool/irr-npv-calculator.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/irr-npv-calculator.html">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/irr-npv-calculator.html">Română</a><a class="locale-item" role="menuitem" href="/el/tool/irr-npv-calculator.html">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/irr-npv-calculator.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/irr-npv-calculator.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/irr-npv-calculator.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/pt/index.html">Calquary</a> / <a href="/pt/category/finance.html">Finanças</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calculadora de TIR e VPL</h1>
+        <p style="max-width:60ch;">Insira uma série de fluxos de caixa (começando com seu investimento inicial como um número negativo) para calcular o VPL à sua taxa de desconto e a TIR.</p>
+        <p class="last-updated">Última atualização: September 1, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calcular</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Redefinir</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Perguntas frequentes</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>O que é VPL?</h3>
+<p>Valor presente líquido - a soma de todos os fluxos de caixa, cada um descontado ao valor de hoje usando sua taxa de desconto escolhida. Um VPL positivo significa que o investimento deve criar valor acima do seu retorno exigido; negativo significa que fica aquém.</p>
+</div>
+<div class="faq-item">
+<h3>O que é TIR?</h3>
+<p>Taxa interna de retorno - a taxa de desconto na qual o VPL é exatamente zero. Representa o retorno anualizado de equilíbrio do investimento, útil para comparar investimentos sem precisar escolher uma taxa de desconto antecipadamente.</p>
+</div>
+<div class="faq-item">
+<h3>Como insiro os fluxos de caixa corretamente?</h3>
+<p>Comece com o período 0 - normalmente seu investimento inicial como um número negativo (dinheiro saindo) - seguido do fluxo de caixa líquido de cada período subsequente (positivo para dinheiro entrando). Por exemplo: -1000, 300, 400, 500, 200 representa um investimento de $1.000 seguido de quatro anos de retornos.</p>
+</div>
+<div class="faq-item">
+<h3>Devo usar VPL ou TIR para comparar investimentos?</h3>
+<p>O VPL é geralmente considerado mais confiável, especialmente ao comparar projetos de tamanhos diferentes ou com padrões de fluxo de caixa não convencionais, já que o VPL mede diretamente o valor criado em termos monetários. A TIR é intuitiva como um retorno percentual, mas pode se comportar de forma estranha (múltiplas soluções ou nenhuma) com fluxos de caixa que mudam de sinal mais de uma vez.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Ferramentas relacionadas</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Nota sobre precisão</h4>
+          <p style="margin:0;font-size:0.85rem;">As calculadoras da Calquary são feitas para estimativas rápidas e confiáveis. Para decisões com implicações financeiras, estruturais ou médicas reais, consulte um profissional qualificado.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/pt/index.html">← Voltar a todas as calculadoras</a> · <a href="/pt/about.html">Sobre</a> · <a href="/pt/contact.html">Contato</a> · <a href="/pt/privacy.html">Privacidade</a> · <a href="/pt/terms.html">Termos</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

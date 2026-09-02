@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator de Buget - Calculator Gratuit Online | Calquary</title>
+  <meta name="description" content="Vezi unde se duce venitul tău lunar și cum se compară cu regula 50/30/20." />
+  <meta property="og:title" content="Calculator de Buget | Calquary">
+  <meta property="og:description" content="Vezi unde se duce venitul tău lunar și cum se compară cu regula 50/30/20.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/ro/tool/budget-calculator.html">
+  <meta property="og:locale" content="ro_RO">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/budget-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculator de Buget | Calquary">
+  <meta name="twitter:description" content="Vezi unde se duce venitul tău lunar și cum se compară cu regula 50/30/20.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/budget-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/budget-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/budget-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/budget-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/budget-calculator.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/budget-calculator.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/budget-calculator.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/budget-calculator.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/budget-calculator.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/budget-calculator.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/budget-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/budget-calculator.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/budget-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/budget-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("budget-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("budget-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calculator de Buget",
+      "description": "Vezi unde se duce venitul tău lunar și cum se compară cu regula 50/30/20.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/ro/tool/budget-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-31",
+      "inLanguage": "ro"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/ro/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Finance",
+          "item": "https://calquary.com/ro/category/finance.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calculator de Buget",
+          "item": "https://calquary.com/ro/tool/budget-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Ce este regula de buget 50/30/20?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un ghid care împarte venitul după impozitare în aproximativ 50% nevoi (locuință, mâncare, utilități), 30% dorințe (cheltuieli discreționare) și 20% economii sau plată suplimentară de datorii - popularizat ca un cadru de pornire simplu, nu o formulă strictă."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ce contează ca \"nevoie\" față de \"dorință\"?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nevoile sunt costuri pe care nu le poți evita fără dificultăți reale - chirie/credit ipotecar, alimente, utilități, plăți minime de datorii. Dorințele sunt discreționare - mese în oraș, divertisment, abonamente. Linia nu este întotdeauna clară, dar împărțirea este menită să fie un ghid aproximativ, nu un standard contabil exact."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ce se întâmplă dacă cheltuielile mele depășesc venitul?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Calculatorul îți arată că ești peste buget cu suma deficitului - este un semnal fie să reduci cheltuielile la o categorie, fie să găsești venit suplimentar, fie ambele, înainte ca acest lucru să se transforme în datorii."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Venitul de aici ar trebui să fie brut sau net?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Folosește venitul net (după impozitare) - reflectă banii cu adevărat disponibili pentru a cheltui sau economisi, în jurul cărora este construit un buget lunar."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/ro/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/ro/index.html#categories">Categorii</a>
+          <a href="/ro/index.html#tools">Toate instrumentele</a>
+          <a href="/ro/about.html">Despre noi</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Română">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>undefined</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/budget-calculator.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/budget-calculator.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/budget-calculator.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/budget-calculator.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/budget-calculator.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/budget-calculator.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/budget-calculator.html">日本語</a><span class="locale-item current" role="menuitem" aria-current="true">Română</span><a class="locale-item" role="menuitem" href="/el/tool/budget-calculator.html">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/budget-calculator.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/budget-calculator.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/budget-calculator.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/ro/index.html">Calquary</a> / <a href="/ro/category/finance.html">Finanțe</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calculator de Buget</h1>
+        <p style="max-width:60ch;">Introdu venitul lunar net și cheltuielile pe categorii pentru a vedea ce rămâne și cum se compară bugetul tău cu ghidul 50/30/20.</p>
+        <p class="last-updated">Ultima actualizare: August 31, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculează</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Resetează</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Întrebări frecvente</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Ce este regula de buget 50/30/20?</h3>
+<p>Un ghid care împarte venitul după impozitare în aproximativ 50% nevoi (locuință, mâncare, utilități), 30% dorințe (cheltuieli discreționare) și 20% economii sau plată suplimentară de datorii - popularizat ca un cadru de pornire simplu, nu o formulă strictă.</p>
+</div>
+<div class="faq-item">
+<h3>Ce contează ca "nevoie" față de "dorință"?</h3>
+<p>Nevoile sunt costuri pe care nu le poți evita fără dificultăți reale - chirie/credit ipotecar, alimente, utilități, plăți minime de datorii. Dorințele sunt discreționare - mese în oraș, divertisment, abonamente. Linia nu este întotdeauna clară, dar împărțirea este menită să fie un ghid aproximativ, nu un standard contabil exact.</p>
+</div>
+<div class="faq-item">
+<h3>Ce se întâmplă dacă cheltuielile mele depășesc venitul?</h3>
+<p>Calculatorul îți arată că ești peste buget cu suma deficitului - este un semnal fie să reduci cheltuielile la o categorie, fie să găsești venit suplimentar, fie ambele, înainte ca acest lucru să se transforme în datorii.</p>
+</div>
+<div class="faq-item">
+<h3>Venitul de aici ar trebui să fie brut sau net?</h3>
+<p>Folosește venitul net (după impozitare) - reflectă banii cu adevărat disponibili pentru a cheltui sau economisi, în jurul cărora este construit un buget lunar.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Instrumente similare</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Notă privind precizia</h4>
+          <p style="margin:0;font-size:0.85rem;">Calculatoarele Calquary sunt concepute pentru a oferi estimări rapide și fiabile. Pentru decizii cu implicații financiare, structurale sau medicale reale, consultă un profesionist calificat.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/ro/index.html">← Înapoi la toate calculatoarele</a> · <a href="/ro/about.html">Despre noi</a> · <a href="/ro/contact.html">Contact</a> · <a href="/ro/privacy.html">Confidențialitate</a> · <a href="/ro/terms.html">Termeni</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

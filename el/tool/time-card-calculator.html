@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Αριθμομηχανή Κάρτας Εργασίας - Δωρεάν Online Αριθμομηχανή | Calquary</title>
+  <meta name="description" content="Πρόσθεσε τις ώρες εργασίας κατά τη διάρκεια της εβδομάδας και υπολόγισε τις μικτές αποδοχές." />
+  <meta property="og:title" content="Αριθμομηχανή Κάρτας Εργασίας | Calquary">
+  <meta property="og:description" content="Πρόσθεσε τις ώρες εργασίας κατά τη διάρκεια της εβδομάδας και υπολόγισε τις μικτές αποδοχές.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/el/tool/time-card-calculator.html">
+  <meta property="og:locale" content="el_GR">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/time-card-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Αριθμομηχανή Κάρτας Εργασίας | Calquary">
+  <meta name="twitter:description" content="Πρόσθεσε τις ώρες εργασίας κατά τη διάρκεια της εβδομάδας και υπολόγισε τις μικτές αποδοχές.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/time-card-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/time-card-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/time-card-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/time-card-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/time-card-calculator.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/time-card-calculator.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/time-card-calculator.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/time-card-calculator.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/time-card-calculator.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/time-card-calculator.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/time-card-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/time-card-calculator.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/time-card-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/time-card-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("time-card-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("time-card-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Αριθμομηχανή Κάρτας Εργασίας",
+      "description": "Πρόσθεσε τις ώρες εργασίας κατά τη διάρκεια της εβδομάδας και υπολόγισε τις μικτές αποδοχές.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/el/tool/time-card-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-31",
+      "inLanguage": "el"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/el/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Finance",
+          "item": "https://calquary.com/el/category/finance.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Αριθμομηχανή Κάρτας Εργασίας",
+          "item": "https://calquary.com/el/tool/time-card-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Πώς υπολογίζω τις συνολικές ώρες από μια κάρτα εργασίας;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Πρόσθεσε τις ώρες εργασίας κάθε ημέρα της περιόδου πληρωμής. Αυτή η αριθμομηχανή αθροίζει επτά ημερήσιες καταχωρίσεις (Δευτέρα έως Κυριακή) σε ένα εβδομαδιαίο σύνολο, μετά πολλαπλασιάζει με το ωρομίσθιό σας για τις μικτές αποδοχές."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Αυτό χειρίζεται ώρες προσέλευσης και αποχώρησης;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Όχι - εισάγετε τις συνολικές δεκαδικές ώρες που έχουν ήδη εργαστεί κάθε ημέρα (π.χ. 7,5 για 7 ώρες 30 λεπτά), όχι ώρες προσέλευσης/αποχώρησης. Αν έχετε μόνο ώρες ρολογιού, αφαιρέστε την ώρα προσέλευσης από την αποχώρηση (λαμβάνοντας υπόψη τυχόν άμισθο διάλειμμα) για να βρείτε πρώτα τις δεκαδικές ώρες."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Αυτό περιλαμβάνει αμοιβή υπερωριών;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Όχι - πολλαπλασιάζει τις συνολικές ώρες με ένα ενιαίο σταθερό ωρομίσθιο. Αν κάποιες ώρες δικαιούνται πριμ υπερωρίας (συνήθως 1,5x για ώρες πάνω από 40/εβδομάδα στις ΗΠΑ), υπολογίστε τα κανονικά και υπερωριακά τμήματα ξεχωριστά και προσθέστε τα."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Πώς μετατρέπω λεπτά σε δεκαδικό για μια κάρτα εργασίας;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Διαίρεσε τα λεπτά με το 60. 30 λεπτά = 0,5 ώρες, 15 λεπτά = 0,25 ώρες, 45 λεπτά = 0,75 ώρες - πρόσθεσε αυτό το δεκαδικό στον αριθμό ολόκληρων ωρών κάθε ημέρας."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/el/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/el/index.html#categories">Κατηγορίες</a>
+          <a href="/el/index.html#tools">Όλα τα εργαλεία</a>
+          <a href="/el/about.html">Σχετικά</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Ελληνικά">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>undefined</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/time-card-calculator.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/time-card-calculator.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/time-card-calculator.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/time-card-calculator.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/time-card-calculator.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/time-card-calculator.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/time-card-calculator.html">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/time-card-calculator.html">Română</a><span class="locale-item current" role="menuitem" aria-current="true">Ελληνικά</span><a class="locale-item" role="menuitem" href="/zh/tool/time-card-calculator.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/time-card-calculator.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/time-card-calculator.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/el/index.html">Calquary</a> / <a href="/el/category/finance.html">Οικονομικά</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Αριθμομηχανή Κάρτας Εργασίας</h1>
+        <p style="max-width:60ch;">Εισάγετε τις ώρες εργασίας κάθε ημέρα και ένα ωρομίσθιο για να υπολογίσετε τις εβδομαδιαίες ώρες και τις μικτές αποδοχές σας.</p>
+        <p class="last-updated">Τελευταία ενημέρωση: August 31, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Υπολογισμός</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Επαναφορά</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Συχνές ερωτήσεις</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Πώς υπολογίζω τις συνολικές ώρες από μια κάρτα εργασίας;</h3>
+<p>Πρόσθεσε τις ώρες εργασίας κάθε ημέρα της περιόδου πληρωμής. Αυτή η αριθμομηχανή αθροίζει επτά ημερήσιες καταχωρίσεις (Δευτέρα έως Κυριακή) σε ένα εβδομαδιαίο σύνολο, μετά πολλαπλασιάζει με το ωρομίσθιό σας για τις μικτές αποδοχές.</p>
+</div>
+<div class="faq-item">
+<h3>Αυτό χειρίζεται ώρες προσέλευσης και αποχώρησης;</h3>
+<p>Όχι - εισάγετε τις συνολικές δεκαδικές ώρες που έχουν ήδη εργαστεί κάθε ημέρα (π.χ. 7,5 για 7 ώρες 30 λεπτά), όχι ώρες προσέλευσης/αποχώρησης. Αν έχετε μόνο ώρες ρολογιού, αφαιρέστε την ώρα προσέλευσης από την αποχώρηση (λαμβάνοντας υπόψη τυχόν άμισθο διάλειμμα) για να βρείτε πρώτα τις δεκαδικές ώρες.</p>
+</div>
+<div class="faq-item">
+<h3>Αυτό περιλαμβάνει αμοιβή υπερωριών;</h3>
+<p>Όχι - πολλαπλασιάζει τις συνολικές ώρες με ένα ενιαίο σταθερό ωρομίσθιο. Αν κάποιες ώρες δικαιούνται πριμ υπερωρίας (συνήθως 1,5x για ώρες πάνω από 40/εβδομάδα στις ΗΠΑ), υπολογίστε τα κανονικά και υπερωριακά τμήματα ξεχωριστά και προσθέστε τα.</p>
+</div>
+<div class="faq-item">
+<h3>Πώς μετατρέπω λεπτά σε δεκαδικό για μια κάρτα εργασίας;</h3>
+<p>Διαίρεσε τα λεπτά με το 60. 30 λεπτά = 0,5 ώρες, 15 λεπτά = 0,25 ώρες, 45 λεπτά = 0,75 ώρες - πρόσθεσε αυτό το δεκαδικό στον αριθμό ολόκληρων ωρών κάθε ημέρας.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Σχετικά εργαλεία</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Σημείωση ακρίβειας</h4>
+          <p style="margin:0;font-size:0.85rem;">Οι αριθμομηχανές του Calquary έχουν σχεδιαστεί για να παρέχουν γρήγορες και αξιόπιστες εκτιμήσεις. Για αποφάσεις με πραγματικές οικονομικές, δομικές ή ιατρικές επιπτώσεις, συμβουλευτείτε έναν ειδικευμένο επαγγελματία.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/el/index.html">← Πίσω σε όλες τις αριθμομηχανές</a> · <a href="/el/about.html">Σχετικά</a> · <a href="/el/contact.html">Επικοινωνία</a> · <a href="/el/privacy.html">Απόρρητο</a> · <a href="/el/terms.html">Όροι</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

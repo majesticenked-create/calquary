@@ -58,6 +58,11 @@ const WAVE_ONE_TOOL_IDS = [
   "simple-interest-calculator", "sales-tax-calculator",
   "tip-calculator", "discount-calculator",
   "gpa-calculator", "body-fat-calculator",
+  // Wave three: full-catalog translation pass, added batch by batch across
+  // all 8 categories until every calculator is covered.
+  "amortization-schedule-calculator", "mortgage-payoff-calculator",
+  "heloc-calculator", "home-affordability-calculator", "hourly-to-salary-calculator",
+  "time-card-calculator", "savings-calculator", "tvm-solver", "irr-npv-calculator", "budget-calculator",
 ];
 
 function loadData() {

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calcolatrice di Risparmio - Calcolatrice Online Gratuita | Calquary</title>
+  <meta name="description" content="Stima il valore futuro dei tuoi risparmi con contributi regolari." />
+  <meta property="og:title" content="Calcolatrice di Risparmio | Calquary">
+  <meta property="og:description" content="Stima il valore futuro dei tuoi risparmi con contributi regolari.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/it/tool/savings-calculator.html">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/savings-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calcolatrice di Risparmio | Calquary">
+  <meta name="twitter:description" content="Stima il valore futuro dei tuoi risparmi con contributi regolari.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/savings-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/savings-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/savings-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/savings-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/savings-calculator.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/savings-calculator.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/savings-calculator.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/savings-calculator.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/savings-calculator.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/savings-calculator.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/savings-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/savings-calculator.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/savings-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/savings-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("savings-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("savings-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calcolatrice di Risparmio",
+      "description": "Stima il valore futuro dei tuoi risparmi con contributi regolari.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/it/tool/savings-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-30",
+      "inLanguage": "it"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/it/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Finance",
+          "item": "https://calquary.com/it/category/finance.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calcolatrice di Risparmio",
+          "item": "https://calquary.com/it/tool/savings-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Come influisce la crescita composta sui risparmi nel tempo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gli interessi generano interessi su se stessi, quindi più a lungo il tuo denaro rimane investito, maggiore è la quota del tuo saldo derivante dalla crescita piuttosto che dai contributi - questo effetto accelera negli anni successivi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quale tasso di interesse dovrei usare per una calcolatrice di risparmio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usa il TAEG effettivo del tuo conto per i conti di risparmio, o una media conservativa a lungo termine (storicamente 4-7%) per i conti di investimento - controlla i termini specifici del tuo conto per il tasso attuale."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Come si confrontano i contributi mensili con un versamento unico?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "I contributi mensili regolari si accumulano costantemente e ognuno ha meno anni per capitalizzare rispetto a un versamento unico anticipato, quindi un versamento unico investito presto generalmente supera lo stesso importo totale contribuito gradualmente - anche se la maggior parte delle persone trova il risparmio graduale molto più realistico."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto contano davvero i contributi mensili su 20-30 anni?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Anche contributi ricorrenti modesti si capitalizzano significativamente nel corso di decenni - $200/mese a un rendimento annuo del 6% cresce a ben oltre $130.000 in 25 anni, la maggior parte dalla crescita composta piuttosto che dai contributi stessi. Iniziare presto conta più dell'importo esatto del contributo, poiché la capitalizzazione ha bisogno di tempo per funzionare."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "È questa una calcolatrice del 'valore temporale del denaro' (TVM)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì - questa calcolatrice risolve il valore futuro dato un saldo iniziale, contributi regolari, tasso di interesse e orizzonte temporale, che è il calcolo centrale del valore temporale del denaro usato nella pianificazione di risparmi e investimenti."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/it/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/it/index.html#categories">Categorie</a>
+          <a href="/it/index.html#tools">Tutti gli strumenti</a>
+          <a href="/it/about.html">Chi siamo</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Italiano">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>IT</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/savings-calculator.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/savings-calculator.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/savings-calculator.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/savings-calculator.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/savings-calculator.html">Português</a><span class="locale-item current" role="menuitem" aria-current="true">Italiano</span><a class="locale-item" role="menuitem" href="/ja/tool/savings-calculator.html">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/savings-calculator.html">Română</a><a class="locale-item" role="menuitem" href="/el/tool/savings-calculator.html">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/savings-calculator.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/savings-calculator.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/savings-calculator.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/it/index.html">Calquary</a> / <a href="/it/category/finance.html">Finanza</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calcolatrice di Risparmio</h1>
+        <p style="max-width:60ch;">Inserisci il tuo saldo iniziale, il contributo mensile, il tasso di interesse e l'orizzonte temporale per vedere come potrebbero crescere i tuoi risparmi.</p>
+        <p class="last-updated">Ultimo aggiornamento: August 30, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calcola</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reimposta</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Domande frequenti</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Come influisce la crescita composta sui risparmi nel tempo?</h3>
+<p>Gli interessi generano interessi su se stessi, quindi più a lungo il tuo denaro rimane investito, maggiore è la quota del tuo saldo derivante dalla crescita piuttosto che dai contributi - questo effetto accelera negli anni successivi.</p>
+</div>
+<div class="faq-item">
+<h3>Quale tasso di interesse dovrei usare per una calcolatrice di risparmio?</h3>
+<p>Usa il TAEG effettivo del tuo conto per i conti di risparmio, o una media conservativa a lungo termine (storicamente 4-7%) per i conti di investimento - controlla i termini specifici del tuo conto per il tasso attuale.</p>
+</div>
+<div class="faq-item">
+<h3>Come si confrontano i contributi mensili con un versamento unico?</h3>
+<p>I contributi mensili regolari si accumulano costantemente e ognuno ha meno anni per capitalizzare rispetto a un versamento unico anticipato, quindi un versamento unico investito presto generalmente supera lo stesso importo totale contribuito gradualmente - anche se la maggior parte delle persone trova il risparmio graduale molto più realistico.</p>
+</div>
+<div class="faq-item">
+<h3>Quanto contano davvero i contributi mensili su 20-30 anni?</h3>
+<p>Anche contributi ricorrenti modesti si capitalizzano significativamente nel corso di decenni - $200/mese a un rendimento annuo del 6% cresce a ben oltre $130.000 in 25 anni, la maggior parte dalla crescita composta piuttosto che dai contributi stessi. Iniziare presto conta più dell'importo esatto del contributo, poiché la capitalizzazione ha bisogno di tempo per funzionare.</p>
+</div>
+<div class="faq-item">
+<h3>È questa una calcolatrice del 'valore temporale del denaro' (TVM)?</h3>
+<p>Sì - questa calcolatrice risolve il valore futuro dato un saldo iniziale, contributi regolari, tasso di interesse e orizzonte temporale, che è il calcolo centrale del valore temporale del denaro usato nella pianificazione di risparmi e investimenti.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Strumenti correlati</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Nota sulla precisione</h4>
+          <p style="margin:0;font-size:0.85rem;">Le calcolatrici di Calquary sono pensate per stime rapide e affidabili. Per decisioni con reali implicazioni finanziarie, strutturali o mediche, consulta un professionista qualificato.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/it/index.html">← Torna a tutte le calcolatrici</a> · <a href="/it/about.html">Chi siamo</a> · <a href="/it/contact.html">Contatti</a> · <a href="/it/privacy.html">Privacy</a> · <a href="/it/terms.html">Termini</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>
