@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>401(k) Retirement Calculator | Calquary</title>
+  <meta name="description" content="Project your 401(k) balance at retirement, including employer match and investment growth." />
+  <meta property="og:title" content="401(k) Retirement Calculator | Calquary">
+  <meta property="og:description" content="Project your 401(k) balance at retirement, including employer match and investment growth.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/tool/retirement-401k-calculator.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/retirement-401k-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="401(k) Retirement Calculator | Calquary">
+  <meta name="twitter:description" content="Project your 401(k) balance at retirement, including employer match and investment growth.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/retirement-401k-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/retirement-401k-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/retirement-401k-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("retirement-401k-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("retirement-401k-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "401(k) Retirement Calculator",
+      "description": "Project your 401(k) balance at retirement, including employer match and investment growth.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/retirement-401k-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-02",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Finance",
+          "item": "https://calquary.com/category/finance.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "401(k) Retirement Calculator",
+          "item": "https://calquary.com/tool/retirement-401k-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much will my 401(k) be worth if I contribute 6% with a 50% employer match?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on your salary, years to retirement, and assumed return - for an $80,000 salary contributing 6% (matched 50% up to 6%) starting with $20,000 over 25 years at 7% returns, the projected balance is roughly $564,000."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does '50% match up to 6%' mean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your employer contributes 50 cents for every dollar you contribute, up to a maximum employer contribution equal to 6% of your salary - so contributing 6% of your salary gets you the full match (3% of salary from your employer), but contributing 10% still only gets you that same 3% match, not more."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I contribute more than my employer's match limit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Contributing at least enough to get your full employer match is often called 'free money' and is generally worth prioritizing, but whether to contribute beyond that depends on your other financial goals, tax situation, and whether you have access to other tax-advantaged accounts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does the projection assume a constant annual return?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Real investment returns vary significantly year to year - this calculator uses a constant average return as a simplifying assumption for a long-term projection, not a prediction of actual year-by-year performance, which will include both up and down years."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/index.html#categories">Categories</a>
+          <a href="/index.html#tools">All tools</a>
+          <a href="/about.html">About</a>
+        </nav>
+        
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/index.html">Calquary</a> / <a href="/category/finance.html">Finance</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>401(k) Retirement Calculator</h1>
+        <p style="max-width:60ch;">Enter your salary, contribution rate, employer match, current balance, and years until retirement to project your 401(k) balance.</p>
+        <p class="last-updated">Last updated: September 2, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculate</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reset</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Frequently asked questions</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>How much will my 401(k) be worth if I contribute 6% with a 50% employer match?</h3>
+<p>It depends on your salary, years to retirement, and assumed return - for an $80,000 salary contributing 6% (matched 50% up to 6%) starting with $20,000 over 25 years at 7% returns, the projected balance is roughly $564,000.</p>
+</div>
+<div class="faq-item">
+<h3>What does '50% match up to 6%' mean?</h3>
+<p>Your employer contributes 50 cents for every dollar you contribute, up to a maximum employer contribution equal to 6% of your salary - so contributing 6% of your salary gets you the full match (3% of salary from your employer), but contributing 10% still only gets you that same 3% match, not more.</p>
+</div>
+<div class="faq-item">
+<h3>Should I contribute more than my employer's match limit?</h3>
+<p>Contributing at least enough to get your full employer match is often called 'free money' and is generally worth prioritizing, but whether to contribute beyond that depends on your other financial goals, tax situation, and whether you have access to other tax-advantaged accounts.</p>
+</div>
+<div class="faq-item">
+<h3>Why does the projection assume a constant annual return?</h3>
+<p>Real investment returns vary significantly year to year - this calculator uses a constant average return as a simplifying assumption for a long-term projection, not a prediction of actual year-by-year performance, which will include both up and down years.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Related tools</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>A note on accuracy</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquary's calculators are built for quick, reliable estimates. For decisions with real financial, structural, or medical stakes, confirm with a qualified professional.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/index.html">← Back to all calculators</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

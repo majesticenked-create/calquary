@@ -2772,6 +2772,97 @@ const CALCULATORS = [
     related: ["loan-calculator", "mortgage-calculator", "auto-loan-calculator"],
   },
   {
+    id: "mortgage-payoff-calculator",
+    category: "finance",
+    title: "Mortgage Payoff Calculator",
+    keyword: "mortgage payoff calculator",
+    description: "Calculate how much time and interest you'd save by adding extra payments to your mortgage.",
+    intro: "Enter your mortgage details and an extra monthly payment amount to see how much time and interest you'd save.",
+    fields: [
+      { id: "principal", label: "Remaining loan balance", type: "number", unit: "$", default: 300000, step: 1000, min: 0 },
+      { id: "rate", label: "Interest rate", type: "number", unit: "%", default: 6.5, step: 0.01 },
+      { id: "years", label: "Remaining term", type: "number", unit: "years", default: 30, step: 1, min: 1 },
+      { id: "extraMonthly", label: "Extra monthly payment", type: "number", unit: "$", default: 200, step: 10, min: 0 },
+    ],
+    compute: (v) => {
+      const r = v.rate / 100 / 12;
+      const n = v.years * 12;
+      const payment = (v.principal * r) / (1 - Math.pow(1 + r, -n));
+      const simulate = (extra) => {
+        let balance = v.principal;
+        let months = 0;
+        let totalInterest = 0;
+        while (balance > 0 && months < 1000) {
+          const interest = balance * r;
+          let principalPayment = payment + extra - interest;
+          if (principalPayment > balance) principalPayment = balance;
+          balance -= principalPayment;
+          totalInterest += interest;
+          months++;
+        }
+        return { months, totalInterest };
+      };
+      const withoutExtra = simulate(0);
+      const withExtra = simulate(v.extraMonthly);
+      const interestSaved = withoutExtra.totalInterest - withExtra.totalInterest;
+      const monthsSaved = withoutExtra.months - withExtra.months;
+      return {
+        primary: { label: "Interest saved", value: `$${round(interestSaved, 0).toLocaleString()}` },
+        secondary: [
+          { l: "Time saved", v: `${Math.floor(monthsSaved / 12)} years, ${monthsSaved % 12} months` },
+          { l: "New payoff time", v: `${Math.floor(withExtra.months / 12)} years, ${withExtra.months % 12} months` },
+          { l: "Regular monthly payment (P&I)", v: `$${round(payment, 2).toLocaleString()}` },
+        ],
+        note: "Simulates your loan month by month, applying the extra payment entirely to principal each month. Extra payments reduce the balance faster, which reduces the interest charged on all future months - the earlier you start, the more you save.",
+      };
+    },
+    faq: [
+      { q: "How much can I save by paying $200 extra per month on a $300,000 mortgage?", a: "At 6.5% over 30 years, roughly $103,000 in interest and about 7 years off the loan term - extra payments compound in your favor since they reduce the balance that future interest is calculated on." },
+      { q: "Does it matter when I start making extra payments?", a: "Yes - extra payments made earlier in the loan save more interest, since more of the loan's remaining life is affected by the reduced balance. The same extra payment made in year 25 of a 30-year mortgage saves much less than starting in year 1." },
+      { q: "Is paying off my mortgage early always the best financial move?", a: "Not necessarily - it depends on your mortgage rate versus what you could earn investing that money elsewhere, whether you have higher-interest debt to pay off first, and how much you value the psychological benefit of being debt-free. There's no universal right answer." },
+      { q: "Do extra payments automatically apply to principal?", a: "Not always - many lenders apply extra payments to future interest or fees by default unless you specifically designate them as \"principal only.\" Check with your servicer to make sure your extra payments are actually reducing principal as this calculator assumes." },
+    ],
+    related: ["mortgage-calculator", "amortization-schedule-calculator", "loan-calculator"],
+  },
+  {
+    id: "heloc-calculator",
+    category: "finance",
+    title: "HELOC Payment Calculator",
+    keyword: "heloc calculator",
+    description: "Calculate interest-only draw period payments and amortizing repayment period payments for a HELOC.",
+    intro: "Enter your drawn balance, interest rate, and draw/repayment periods to calculate HELOC payments in both phases.",
+    fields: [
+      { id: "drawAmount", label: "Amount drawn (borrowed)", type: "number", unit: "$", default: 30000, step: 1000, min: 0 },
+      { id: "rate", label: "Interest rate", type: "number", unit: "%", default: 8, step: 0.01 },
+      { id: "drawYears", label: "Draw period", type: "number", unit: "years", default: 10, step: 1, min: 0 },
+      { id: "repayYears", label: "Repayment period", type: "number", unit: "years", default: 20, step: 1, min: 1 },
+    ],
+    compute: (v) => {
+      const r = v.rate / 100 / 12;
+      const interestOnlyPayment = v.drawAmount * r;
+      const n = v.repayYears * 12;
+      const repaymentPayment = (v.drawAmount * r) / (1 - Math.pow(1 + r, -n));
+      const totalInterestDraw = interestOnlyPayment * v.drawYears * 12;
+      const totalInterestRepay = repaymentPayment * n - v.drawAmount;
+      return {
+        primary: { label: "Draw period payment (interest-only)", value: `$${round(interestOnlyPayment, 2).toLocaleString()}/mo` },
+        secondary: [
+          { l: "Repayment period payment", v: `$${round(repaymentPayment, 2).toLocaleString()}/mo` },
+          { l: "Total interest (draw period)", v: `$${round(totalInterestDraw, 0).toLocaleString()}` },
+          { l: "Total interest (repayment period)", v: `$${round(totalInterestRepay, 0).toLocaleString()}` },
+        ],
+        note: "During the draw period, most HELOCs only require interest payments (balance doesn't decrease unless you pay extra). During the repayment period, payments amortize the balance to zero like a standard loan. Assumes a fixed rate and no additional draws - real HELOCs often have variable rates.",
+      };
+    },
+    faq: [
+      { q: "What is a HELOC?", a: "A home equity line of credit - a revolving credit line secured by your home's equity, similar to a credit card. You can draw funds as needed up to your credit limit during the draw period, then repay the balance during the repayment period." },
+      { q: "Why is my payment so much lower during the draw period?", a: "Most HELOCs only require interest-only payments during the draw period - you're not required to pay down principal, so the monthly payment only covers the interest on whatever balance you've drawn (though you can choose to pay extra toward principal)." },
+      { q: "What happens when the draw period ends?", a: "The HELOC converts to the repayment period, where payments become fully amortizing (like a standard loan) - covering both principal and interest until the balance is paid off by the end of the repayment term. This often causes a significant payment increase." },
+      { q: "Does this calculator account for HELOC rates changing?", a: "No - it assumes a fixed rate throughout for simplicity. Most real-world HELOCs have variable rates tied to a benchmark index, so your actual payments will likely fluctuate over time as rates change." },
+    ],
+    related: ["mortgage-calculator", "loan-calculator", "home-affordability-calculator"],
+  },
+  {
     id: "mortgage-calculator",
     category: "finance",
     title: "Mortgage Calculator",
@@ -3491,6 +3582,53 @@ const CALCULATORS = [
     related: ["savings-calculator", "compound-interest-calculator", "mortgage-calculator"],
   },
   {
+    id: "retirement-401k-calculator",
+    category: "finance",
+    title: "401(k) Retirement Calculator",
+    keyword: "401k calculator",
+    description: "Project your 401(k) balance at retirement, including employer match and investment growth.",
+    intro: "Enter your salary, contribution rate, employer match, current balance, and years until retirement to project your 401(k) balance.",
+    fields: [
+      { id: "salary", label: "Annual salary", type: "number", unit: "$", default: 80000, step: 1000, min: 0 },
+      { id: "contributionPct", label: "Your contribution", type: "number", unit: "% of salary", default: 6, step: 0.5, min: 0, max: 100 },
+      { id: "employerMatchPct", label: "Employer match", type: "number", unit: "% of what you contribute", default: 50, step: 5, min: 0 },
+      { id: "employerMatchLimitPct", label: "Employer match limit", type: "number", unit: "% of salary", default: 6, step: 0.5, min: 0 },
+      { id: "currentBalance", label: "Current 401(k) balance", type: "number", unit: "$", default: 20000, step: 1000, min: 0 },
+      { id: "years", label: "Years until retirement", type: "number", unit: "years", default: 25, step: 1, min: 1 },
+      { id: "annualReturn", label: "Expected annual return", type: "number", unit: "%", default: 7, step: 0.1 },
+    ],
+    compute: (v) => {
+      const annualContribution = (v.salary * v.contributionPct) / 100;
+      const matchBase = Math.min(v.contributionPct, v.employerMatchLimitPct);
+      const employerAnnual = ((v.salary * matchBase) / 100) * (v.employerMatchPct / 100);
+      const totalAnnual = annualContribution + employerAnnual;
+      let balance = v.currentBalance;
+      let totalContributed = v.currentBalance;
+      let totalEmployerMatch = 0;
+      for (let i = 0; i < v.years; i++) {
+        balance = balance * (1 + v.annualReturn / 100) + totalAnnual;
+        totalContributed += annualContribution;
+        totalEmployerMatch += employerAnnual;
+      }
+      return {
+        primary: { label: "Projected balance at retirement", value: `$${round(balance, 0).toLocaleString()}` },
+        secondary: [
+          { l: "Your total contributions", v: `$${round(totalContributed, 0).toLocaleString()}` },
+          { l: "Total employer match", v: `$${round(totalEmployerMatch, 0).toLocaleString()}` },
+          { l: "Growth from investment returns", v: `$${round(balance - totalContributed - totalEmployerMatch, 0).toLocaleString()}` },
+        ],
+        note: "Assumes annual contributions (a simplification of per-paycheck contributions) compounding once per year at a constant rate. Employer match is capped at your match limit percentage of salary - contributing above that limit doesn't earn additional match. Actual returns vary year to year and aren't guaranteed.",
+      };
+    },
+    faq: [
+      { q: "How much will my 401(k) be worth if I contribute 6% with a 50% employer match?", a: "It depends on your salary, years to retirement, and assumed return - for an $80,000 salary contributing 6% (matched 50% up to 6%) starting with $20,000 over 25 years at 7% returns, the projected balance is roughly $564,000." },
+      { q: "What does '50% match up to 6%' mean?", a: "Your employer contributes 50 cents for every dollar you contribute, up to a maximum employer contribution equal to 6% of your salary - so contributing 6% of your salary gets you the full match (3% of salary from your employer), but contributing 10% still only gets you that same 3% match, not more." },
+      { q: "Should I contribute more than my employer's match limit?", a: "Contributing at least enough to get your full employer match is often called 'free money' and is generally worth prioritizing, but whether to contribute beyond that depends on your other financial goals, tax situation, and whether you have access to other tax-advantaged accounts." },
+      { q: "Why does the projection assume a constant annual return?", a: "Real investment returns vary significantly year to year - this calculator uses a constant average return as a simplifying assumption for a long-term projection, not a prediction of actual year-by-year performance, which will include both up and down years." },
+    ],
+    related: ["investment-calculator", "savings-calculator", "compound-interest-calculator"],
+  },
+  {
     id: "bond-duration-calculator",
     category: "finance",
     title: "Bond Duration Calculator",
@@ -3815,6 +3953,44 @@ const CALCULATORS = [
       { q: "What's included in a typical roofing material estimate beyond shingles?", a: "Beyond the shingles themselves (measured in squares), a full roofing estimate usually accounts for underlayment, starter strips, ridge cap shingles, and flashing - this calculator estimates the shingle quantity specifically, which is the largest cost component, but always add a margin for these additional materials." },
     ],
     related: ["lumber-calculator", "concrete-calculator", "unit-length-converter"],
+  },
+  {
+    id: "square-footage-calculator",
+    category: "construction",
+    title: "Square Footage Calculator",
+    keyword: "square footage calculator",
+    description: "Calculate the square footage of a room from its length and width, in any unit.",
+    intro: "Enter a room or area's length and width to calculate its square footage.",
+    fields: [
+      { id: "length", label: "Length", type: "number", default: 12, step: 0.1, min: 0 },
+      { id: "width", label: "Width", type: "number", default: 15, step: 0.1, min: 0 },
+      { id: "unit", label: "Unit", type: "select", default: "ft", options: [
+        { v: "ft", l: "Feet" }, { v: "in", l: "Inches" }, { v: "m", l: "Meters" }, { v: "yd", l: "Yards" },
+      ] },
+    ],
+    compute: (v) => {
+      const toFeet = { ft: 1, in: 1 / 12, m: 3.28084, yd: 3 };
+      const lengthFt = v.length * toFeet[v.unit];
+      const widthFt = v.width * toFeet[v.unit];
+      const sqft = lengthFt * widthFt;
+      const sqm = sqft * 0.092903;
+      const sqyd = sqft / 9;
+      return {
+        primary: { label: "Square footage", value: `${round(sqft, 2).toLocaleString()} sq ft` },
+        secondary: [
+          { l: "Square meters", v: round(sqm, 2) },
+          { l: "Square yards", v: round(sqyd, 2) },
+        ],
+        note: "Square footage = length × width, converted to feet first if entered in another unit. For irregular rooms, split the space into rectangles, calculate each separately, and add the totals together.",
+      };
+    },
+    faq: [
+      { q: "How do I calculate square footage?", a: "Multiply length by width, both measured in feet - a 12×15 foot room is 12 × 15 = 180 square feet." },
+      { q: "How do I calculate square footage for an L-shaped room?", a: "Split the room into two or more rectangles, calculate the square footage of each separately, then add them together for the total." },
+      { q: "How do I convert square meters to square feet?", a: "Multiply square meters by about 10.764, or equivalently, convert each side to feet first (1 meter ≈ 3.28 feet) before multiplying length × width." },
+      { q: "Why does flooring or paint calculation need extra square footage beyond the exact room size?", a: "This calculator gives the exact area - most contractors and DIY guides recommend adding 10% or more on top of that for cuts, waste, pattern matching, and future repairs, which isn't included in a simple length × width calculation." },
+    ],
+    related: ["area-converter", "concrete-calculator", "flooring-calculator"],
   },
   {
     id: "fence-calculator",

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Square Footage Calculator | Calquary</title>
+  <meta name="description" content="Calculate the square footage of a room from its length and width, in any unit." />
+  <meta property="og:title" content="Square Footage Calculator | Calquary">
+  <meta property="og:description" content="Calculate the square footage of a room from its length and width, in any unit.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/tool/square-footage-calculator.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/square-footage-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Square Footage Calculator | Calquary">
+  <meta name="twitter:description" content="Calculate the square footage of a room from its length and width, in any unit.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/square-footage-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/square-footage-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/square-footage-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("square-footage-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("square-footage-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Square Footage Calculator",
+      "description": "Calculate the square footage of a room from its length and width, in any unit.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/square-footage-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-02",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Construction & Home",
+          "item": "https://calquary.com/category/construction.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Square Footage Calculator",
+          "item": "https://calquary.com/tool/square-footage-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I calculate square footage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Multiply length by width, both measured in feet - a 12×15 foot room is 12 × 15 = 180 square feet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate square footage for an L-shaped room?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Split the room into two or more rectangles, calculate the square footage of each separately, then add them together for the total."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I convert square meters to square feet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Multiply square meters by about 10.764, or equivalently, convert each side to feet first (1 meter ≈ 3.28 feet) before multiplying length × width."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does flooring or paint calculation need extra square footage beyond the exact room size?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This calculator gives the exact area - most contractors and DIY guides recommend adding 10% or more on top of that for cuts, waste, pattern matching, and future repairs, which isn't included in a simple length × width calculation."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/index.html#categories">Categories</a>
+          <a href="/index.html#tools">All tools</a>
+          <a href="/about.html">About</a>
+        </nav>
+        
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/index.html">Calquary</a> / <a href="/category/construction.html">Construction & Home</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Square Footage Calculator</h1>
+        <p style="max-width:60ch;">Enter a room or area's length and width to calculate its square footage.</p>
+        <p class="last-updated">Last updated: September 2, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculate</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reset</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Frequently asked questions</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>How do I calculate square footage?</h3>
+<p>Multiply length by width, both measured in feet - a 12×15 foot room is 12 × 15 = 180 square feet.</p>
+</div>
+<div class="faq-item">
+<h3>How do I calculate square footage for an L-shaped room?</h3>
+<p>Split the room into two or more rectangles, calculate the square footage of each separately, then add them together for the total.</p>
+</div>
+<div class="faq-item">
+<h3>How do I convert square meters to square feet?</h3>
+<p>Multiply square meters by about 10.764, or equivalently, convert each side to feet first (1 meter ≈ 3.28 feet) before multiplying length × width.</p>
+</div>
+<div class="faq-item">
+<h3>Why does flooring or paint calculation need extra square footage beyond the exact room size?</h3>
+<p>This calculator gives the exact area - most contractors and DIY guides recommend adding 10% or more on top of that for cuts, waste, pattern matching, and future repairs, which isn't included in a simple length × width calculation.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Related tools</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>A note on accuracy</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquary's calculators are built for quick, reliable estimates. For decisions with real financial, structural, or medical stakes, confirm with a qualified professional.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/index.html">← Back to all calculators</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>
