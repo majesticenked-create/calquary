@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How Much House Can I Afford Calculator | Calquary</title>
+  <meta name="description" content="Estimate the home price you can afford, based on income, debt, and a down payment." />
+  <meta property="og:title" content="How Much House Can I Afford Calculator | Calquary">
+  <meta property="og:description" content="Estimate the home price you can afford, based on income, debt, and a down payment.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/tool/home-affordability-calculator.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/home-affordability-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How Much House Can I Afford Calculator | Calquary">
+  <meta name="twitter:description" content="Estimate the home price you can afford, based on income, debt, and a down payment.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/home-affordability-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/home-affordability-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/home-affordability-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("home-affordability-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("home-affordability-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "How Much House Can I Afford Calculator",
+      "description": "Estimate the home price you can afford, based on income, debt, and a down payment.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/home-affordability-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-02",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Finance",
+          "item": "https://calquary.com/category/finance.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How Much House Can I Afford Calculator",
+          "item": "https://calquary.com/tool/home-affordability-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the 28/36 rule?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A widely used mortgage affordability guideline: your total monthly housing costs (mortgage, taxes, insurance) shouldn't exceed 28% of gross monthly income, and your total debt payments (housing plus other debts like car loans and credit cards) shouldn't exceed 36%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does this calculator ask about existing monthly debt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lenders look at your total debt burden, not just the potential mortgage payment - the \"back-end\" 36% limit already has to cover your car payments, student loans, and credit card minimums, so more existing debt directly reduces how much mortgage payment you can qualify for."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a bigger down payment increase how much house I can afford?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, directly - the down payment adds straight to the maximum loan amount to determine home price, and it can also reduce your monthly payment (a smaller loan needs a smaller payment) or help you avoid private mortgage insurance, freeing up more payment room."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this the same amount a lender will actually approve me for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not necessarily - lenders also weigh your credit score, employment history, cash reserves, and specific loan program guidelines (conventional, FHA, VA, etc.), which can push their actual approved amount higher or lower than this 28/36-rule estimate."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/index.html#categories">Categories</a>
+          <a href="/index.html#tools">All tools</a>
+          <a href="/about.html">About</a>
+        </nav>
+        
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/index.html">Calquary</a> / <a href="/category/finance.html">Finance</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>How Much House Can I Afford Calculator</h1>
+        <p style="max-width:60ch;">Enter your income, existing monthly debt, down payment, and loan terms to estimate an affordable home price using standard debt-to-income guidelines.</p>
+        <p class="last-updated">Last updated: September 2, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculate</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reset</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Frequently asked questions</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>What is the 28/36 rule?</h3>
+<p>A widely used mortgage affordability guideline: your total monthly housing costs (mortgage, taxes, insurance) shouldn't exceed 28% of gross monthly income, and your total debt payments (housing plus other debts like car loans and credit cards) shouldn't exceed 36%.</p>
+</div>
+<div class="faq-item">
+<h3>Why does this calculator ask about existing monthly debt?</h3>
+<p>Lenders look at your total debt burden, not just the potential mortgage payment - the "back-end" 36% limit already has to cover your car payments, student loans, and credit card minimums, so more existing debt directly reduces how much mortgage payment you can qualify for.</p>
+</div>
+<div class="faq-item">
+<h3>Does a bigger down payment increase how much house I can afford?</h3>
+<p>Yes, directly - the down payment adds straight to the maximum loan amount to determine home price, and it can also reduce your monthly payment (a smaller loan needs a smaller payment) or help you avoid private mortgage insurance, freeing up more payment room.</p>
+</div>
+<div class="faq-item">
+<h3>Is this the same amount a lender will actually approve me for?</h3>
+<p>Not necessarily - lenders also weigh your credit score, employment history, cash reserves, and specific loan program guidelines (conventional, FHA, VA, etc.), which can push their actual approved amount higher or lower than this 28/36-rule estimate.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Related tools</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>A note on accuracy</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquary's calculators are built for quick, reliable estimates. For decisions with real financial, structural, or medical stakes, confirm with a qualified professional.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/index.html">← Back to all calculators</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

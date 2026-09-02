@@ -2818,6 +2818,51 @@ const CALCULATORS = [
     related: ["loan-calculator", "savings-calculator", "compound-interest-calculator"],
   },
   {
+    id: "home-affordability-calculator",
+    category: "finance",
+    title: "How Much House Can I Afford Calculator",
+    keyword: "how much house can i afford",
+    description: "Estimate the home price you can afford, based on income, debt, and a down payment.",
+    intro: "Enter your income, existing monthly debt, down payment, and loan terms to estimate an affordable home price using standard debt-to-income guidelines.",
+    fields: [
+      { id: "annualIncome", label: "Annual household income", type: "number", unit: "$", default: 90000, step: 1000, min: 0 },
+      { id: "monthlyDebt", label: "Existing monthly debt payments", type: "number", unit: "$", default: 500, step: 10, min: 0 },
+      { id: "downPayment", label: "Down payment", type: "number", unit: "$", default: 40000, step: 1000, min: 0 },
+      { id: "rate", label: "Mortgage interest rate", type: "number", unit: "%", default: 6.5, step: 0.01 },
+      { id: "years", label: "Loan term", type: "number", unit: "years", default: 30, step: 1, min: 1 },
+      { id: "taxInsurance", label: "Est. monthly taxes & insurance", type: "number", unit: "$", default: 300, step: 10, min: 0 },
+    ],
+    compute: (v) => {
+      const monthlyIncome = v.annualIncome / 12;
+      const maxFrontEnd = monthlyIncome * 0.28;
+      const maxBackEnd = monthlyIncome * 0.36 - v.monthlyDebt;
+      const maxTotalPayment = Math.min(maxFrontEnd, maxBackEnd);
+      const maxPrincipalAndInterest = maxTotalPayment - v.taxInsurance;
+      if (maxPrincipalAndInterest <= 0) {
+        return { primary: { label: "Not enough income headroom", value: "$0" }, secondary: [], note: "Your existing debt and estimated taxes/insurance leave no room for a mortgage payment under standard 28%/36% guidelines." };
+      }
+      const r = v.rate / 100 / 12;
+      const n = v.years * 12;
+      const maxLoan = (maxPrincipalAndInterest * (1 - Math.pow(1 + r, -n))) / r;
+      const maxHomePrice = maxLoan + v.downPayment;
+      return {
+        primary: { label: "Estimated affordable home price", value: `$${round(maxHomePrice, 0).toLocaleString()}` },
+        secondary: [
+          { l: "Max monthly payment (P&I + tax/ins.)", v: `$${round(maxTotalPayment, 0).toLocaleString()}` },
+          { l: "Max loan amount", v: `$${round(maxLoan, 0).toLocaleString()}` },
+        ],
+        note: "Uses the standard 28/36 rule: monthly housing costs shouldn't exceed 28% of gross income, and total debt payments (including housing) shouldn't exceed 36%. Actual lender approval also depends on credit score, other assets, and specific loan program rules.",
+      };
+    },
+    faq: [
+      { q: "What is the 28/36 rule?", a: "A widely used mortgage affordability guideline: your total monthly housing costs (mortgage, taxes, insurance) shouldn't exceed 28% of gross monthly income, and your total debt payments (housing plus other debts like car loans and credit cards) shouldn't exceed 36%." },
+      { q: "Why does this calculator ask about existing monthly debt?", a: "Lenders look at your total debt burden, not just the potential mortgage payment - the \"back-end\" 36% limit already has to cover your car payments, student loans, and credit card minimums, so more existing debt directly reduces how much mortgage payment you can qualify for." },
+      { q: "Does a bigger down payment increase how much house I can afford?", a: "Yes, directly - the down payment adds straight to the maximum loan amount to determine home price, and it can also reduce your monthly payment (a smaller loan needs a smaller payment) or help you avoid private mortgage insurance, freeing up more payment room." },
+      { q: "Is this the same amount a lender will actually approve me for?", a: "Not necessarily - lenders also weigh your credit score, employment history, cash reserves, and specific loan program guidelines (conventional, FHA, VA, etc.), which can push their actual approved amount higher or lower than this 28/36-rule estimate." },
+    ],
+    related: ["mortgage-calculator", "dti-ratio-calculator", "loan-calculator"],
+  },
+  {
     id: "hourly-to-salary-calculator",
     category: "finance",
     title: "Hourly to Salary Calculator",
@@ -4062,6 +4107,34 @@ const CALCULATORS = [
     related: ["calorie-calculator", "body-fat-calculator", "bmi-calculator"],
   },
   {
+    id: "body-surface-area-calculator",
+    category: "health",
+    title: "Body Surface Area Calculator",
+    keyword: "body surface area calculator",
+    description: "Calculate body surface area (BSA) from height and weight using the Mosteller formula.",
+    intro: "Enter height and weight to calculate body surface area (BSA), commonly used for medication dosing.",
+    fields: [
+      { id: "heightCm", label: "Height", type: "number", unit: "cm", default: 170, step: 0.1, min: 1 },
+      { id: "weightKg", label: "Weight", type: "number", unit: "kg", default: 70, step: 0.1, min: 1 },
+    ],
+    compute: (v) => {
+      const bsa = Math.sqrt((v.heightCm * v.weightKg) / 3600);
+      const bsaSqFt = bsa * 10.7639;
+      return {
+        primary: { label: "Body surface area", value: `${round(bsa, 4)} m²` },
+        secondary: [{ l: "In square feet", v: round(bsaSqFt, 4) }],
+        note: "Uses the Mosteller formula: BSA = √((height in cm × weight in kg) ÷ 3600). This is a general reference figure - actual medication dosing should always follow a clinician's guidance, not a self-calculated value.",
+      };
+    },
+    faq: [
+      { q: "What is body surface area (BSA) used for?", a: "Primarily for dosing certain medications (especially chemotherapy drugs) more precisely than weight alone, since some drug effects correlate better with total body surface area than with body mass." },
+      { q: "What is the Mosteller formula?", a: "BSA = √((height in cm × weight in kg) ÷ 3600) - a simple, widely used formula that closely approximates the more complex DuBois formula while being much easier to calculate by hand." },
+      { q: "What is a typical BSA for an adult?", a: "About 1.5 to 2.0 m² for most adults, though it varies with height and weight - a person of average height (170cm) and weight (70kg) has a BSA of roughly 1.81 m² by the Mosteller formula." },
+      { q: "Should I use this to calculate my own medication dose?", a: "No - this is a general reference calculation. Medication dosing based on BSA should always be determined and verified by a qualified healthcare provider, since dosing also depends on the specific drug, your medical history, and other clinical factors this calculator doesn't account for." },
+    ],
+    related: ["bmi-calculator", "bmr-calculator", "ideal-weight-calculator"],
+  },
+  {
     id: "calorie-calculator",
     category: "health",
     title: "Calorie Calculator",
@@ -5203,6 +5276,85 @@ const CALCULATORS = [
       { q: "Is 'calculating sample size online' or 'determine sample size calculator' the same as this tool?", a: "Yes - all of these describe finding the minimum sample size needed for a survey or study at a chosen confidence level and margin of error, which is exactly what this calculator does." },
     ],
     related: ["standard-deviation-calculator", "percentage-calculator", "average-calculator"],
+  },
+  {
+    id: "confidence-interval-calculator",
+    category: "math",
+    title: "Confidence Interval Calculator",
+    keyword: "confidence interval calculator",
+    description: "Calculate a confidence interval for a sample mean.",
+    intro: "Enter a sample mean, standard deviation, and sample size to calculate a confidence interval.",
+    fields: [
+      { id: "mean", label: "Sample mean", type: "number", default: 100, step: 0.01 },
+      { id: "stdDev", label: "Sample standard deviation", type: "number", default: 15, step: 0.01, min: 0 },
+      { id: "sampleSize", label: "Sample size (n)", type: "number", default: 30, step: 1, min: 2 },
+      { id: "confidenceLevel", label: "Confidence level", type: "select", default: "95", options: [
+        { v: "90", l: "90%" }, { v: "95", l: "95%" }, { v: "99", l: "99%" },
+      ] },
+    ],
+    compute: (v) => {
+      const zTable = { "90": 1.645, "95": 1.96, "99": 2.576 };
+      const z = zTable[v.confidenceLevel];
+      const marginOfError = (z * v.stdDev) / Math.sqrt(v.sampleSize);
+      const lower = v.mean - marginOfError;
+      const upper = v.mean + marginOfError;
+      return {
+        primary: { label: `${v.confidenceLevel}% confidence interval`, value: `${round(lower, 4)} to ${round(upper, 4)}` },
+        secondary: [{ l: "Margin of error", v: `±${round(marginOfError, 4)}` }],
+        note: `Uses the normal (z) distribution: margin of error = z × (standard deviation ÷ √n), with z = ${z} for ${v.confidenceLevel}% confidence. This approximation works well for sample sizes of 30+; for smaller samples, a t-distribution is more accurate.`,
+      };
+    },
+    faq: [
+      { q: "What does a 95% confidence interval mean?", a: "If you repeated the sampling process many times and built a confidence interval each time, about 95% of those intervals would contain the true population mean - it's a statement about the reliability of the method, not a 95% probability that this specific interval contains the true value." },
+      { q: "How do I calculate a confidence interval?", a: "Margin of error = z-score × (standard deviation ÷ √sample size). Then add and subtract that margin from your sample mean to get the interval's lower and upper bounds. The z-score depends on your chosen confidence level (1.96 for 95%, for example)." },
+      { q: "Why does a larger sample size produce a narrower confidence interval?", a: "The margin of error divides by the square root of the sample size, so larger samples shrink the margin - more data means less uncertainty about where the true population mean lies, narrowing the interval around your estimate." },
+      { q: "Should I use a z-score or t-score for my confidence interval?", a: "Use a t-score (from the t-distribution) for smaller samples, typically under 30, since it accounts for extra uncertainty in a small-sample standard deviation estimate. This calculator uses the z-distribution, which is a reasonable approximation once your sample size is 30 or more." },
+    ],
+    related: ["standard-deviation-calculator", "sample-size-calculator", "z-score-calculator"],
+  },
+  {
+    id: "mean-median-mode-calculator",
+    category: "math",
+    title: "Mean, Median, Mode & Range Calculator",
+    keyword: "mean median mode calculator",
+    description: "Calculate the mean, median, mode, and range of a data set.",
+    intro: "Enter a list of numbers (comma or line separated) to calculate the mean, median, mode, and range.",
+    fields: [
+      { id: "data", label: "Numbers (comma or line separated)", type: "textarea", default: "2, 4, 4, 4, 5, 5, 7, 9" },
+    ],
+    compute: (v) => {
+      const data = (v.data || "").split(/[,\n]+/).map((s) => s.trim()).filter(Boolean).map(Number).filter((n) => !isNaN(n));
+      if (data.length === 0) {
+        return { primary: { label: "Enter some numbers", value: "-" }, secondary: [], note: "Enter a list of numbers separated by commas or line breaks." };
+      }
+      const sorted = [...data].sort((a, b) => a - b);
+      const n = data.length;
+      const mean = data.reduce((a, b) => a + b, 0) / n;
+      const median = n % 2 === 0 ? (sorted[n / 2 - 1] + sorted[n / 2]) / 2 : sorted[(n - 1) / 2];
+      const counts = {};
+      data.forEach((x) => { counts[x] = (counts[x] || 0) + 1; });
+      const maxCount = Math.max(...Object.values(counts));
+      const modes = Object.keys(counts).filter((k) => counts[k] === maxCount).map(Number);
+      const modeStr = maxCount === 1 ? "No mode (all values unique)" : modes.join(", ");
+      const range = sorted[n - 1] - sorted[0];
+      return {
+        primary: { label: "Mean", value: round(mean, 4) },
+        secondary: [
+          { l: "Median", v: round(median, 4) },
+          { l: "Mode", v: modeStr },
+          { l: "Range", v: round(range, 4) },
+          { l: "Count", v: n },
+        ],
+        note: "Mean = sum ÷ count. Median = the middle value (average of the two middle values if count is even). Mode = the most frequently occurring value(s). Range = maximum − minimum.",
+      };
+    },
+    faq: [
+      { q: "What's the difference between mean, median, and mode?", a: "Mean is the arithmetic average (sum ÷ count). Median is the middle value when sorted. Mode is the most frequently occurring value. They can all differ, especially with skewed data or outliers." },
+      { q: "Why would I use median instead of mean?", a: "Median is more resistant to outliers - a single extreme value can pull the mean far from where most of the data actually sits, while the median stays anchored to the middle of the sorted data regardless of how extreme the outliers are." },
+      { q: "Can a data set have more than one mode?", a: "Yes - if two or more values tie for the highest frequency, the data set is \"multimodal\" and all of them are reported as modes. If every value appears exactly once, there's no meaningful mode." },
+      { q: "What does range tell you that mean or median doesn't?", a: "Range measures the spread of the data (maximum minus minimum), while mean and median describe its center - two data sets can have identical means but very different ranges, reflecting very different amounts of variability." },
+    ],
+    related: ["average-calculator", "standard-deviation-calculator", "confidence-interval-calculator"],
   },
   {
     id: "gas-trip-cost-calculator",
@@ -7019,6 +7171,47 @@ const CALCULATORS = [
     related: ["speed-distance-time-calculator", "pace-calculator", "unit-length-converter"],
   },
   {
+    id: "tire-size-calculator",
+    category: "conversions",
+    title: "Tire Size Comparison Calculator",
+    keyword: "tire size calculator",
+    description: "Compare two tire sizes and see the resulting difference in diameter, circumference, and speedometer accuracy.",
+    intro: "Enter two tire sizes (width/aspect ratio/rim diameter) to compare their overall diameter and the resulting speedometer difference.",
+    fields: [
+      { id: "width1", label: "Tire 1 width", type: "number", unit: "mm", default: 225, step: 1 },
+      { id: "aspect1", label: "Tire 1 aspect ratio", type: "number", unit: "%", default: 45, step: 1 },
+      { id: "rim1", label: "Tire 1 rim diameter", type: "number", unit: "in", default: 17, step: 0.5 },
+      { id: "width2", label: "Tire 2 width", type: "number", unit: "mm", default: 235, step: 1 },
+      { id: "aspect2", label: "Tire 2 aspect ratio", type: "number", unit: "%", default: 40, step: 1 },
+      { id: "rim2", label: "Tire 2 rim diameter", type: "number", unit: "in", default: 18, step: 0.5 },
+    ],
+    compute: (v) => {
+      const diameter = (width, aspect, rim) => rim + (2 * (width * (aspect / 100))) / 25.4;
+      const d1 = diameter(v.width1, v.aspect1, v.rim1);
+      const d2 = diameter(v.width2, v.aspect2, v.rim2);
+      const circumference1 = d1 * Math.PI;
+      const circumference2 = d2 * Math.PI;
+      const diffPercent = ((d2 - d1) / d1) * 100;
+      const speedoAt60 = 60 * (d2 / d1);
+      return {
+        primary: { label: "Diameter difference", value: `${round(diffPercent, 2)}%` },
+        secondary: [
+          { l: "Tire 1 diameter / circumference", v: `${round(d1, 2)} in / ${round(circumference1, 2)} in` },
+          { l: "Tire 2 diameter / circumference", v: `${round(d2, 2)} in / ${round(circumference2, 2)} in` },
+          { l: "Actual speed when speedo reads 60", v: `${round(speedoAt60, 2)} mph` },
+        ],
+        note: "Diameter = rim diameter + 2 × (sidewall height), where sidewall height = tire width × (aspect ratio ÷ 100), converted from mm to inches. A larger tire diameter means your speedometer (calibrated for the original tire) will under-read your actual speed.",
+      };
+    },
+    faq: [
+      { q: "How do I read a tire size like 225/45R17?", a: "225 is the tire width in millimeters, 45 is the aspect ratio (sidewall height as a percentage of width), R means radial construction, and 17 is the rim diameter in inches." },
+      { q: "Why does changing tire size affect my speedometer accuracy?", a: "Your speedometer is calibrated based on your original tire's diameter and how many times it rotates per mile. A larger-diameter tire covers more distance per rotation, so your speedometer (still counting rotations the same way) will read lower than your actual speed - and a smaller tire will make it read higher." },
+      { q: "How much difference in tire diameter is considered acceptable?", a: "Many tire professionals recommend staying within about 3% of the original diameter to avoid significantly affecting speedometer accuracy, ABS/traction control calibration, and ground clearance." },
+      { q: "Does tire width alone tell you the overall size?", a: "No - width is just one factor. Overall diameter depends on width, aspect ratio (sidewall height), and rim diameter together, which is why two tires with different width/aspect/rim combinations can end up nearly the same overall size." },
+    ],
+    related: ["gear-ratio-calculator", "speed-distance-time-calculator", "unit-length-converter"],
+  },
+  {
     id: "weather-comfort-calculator",
     category: "conversions",
     title: "Dew Point, Heat Index & Wind Chill Calculator",
@@ -7562,6 +7755,51 @@ const CALCULATORS = [
       { q: "Is this the same as encodeURIComponent() in JavaScript?", a: "Yes - encoding uses exactly that function, which is the standard way to safely encode a single value (like a query parameter) for use in a URL, as opposed to encodeURI() which is meant for encoding a whole URL and leaves characters like / and : untouched." },
     ],
     related: ["word-counter", "text-to-slug-generator", "case-converter"],
+  },
+  {
+    id: "ip-subnet-calculator",
+    category: "text",
+    title: "IP Subnet Calculator",
+    keyword: "ip subnet calculator",
+    description: "Calculate network address, broadcast address, and usable host range from an IPv4 address and CIDR prefix.",
+    intro: "Enter an IPv4 address and CIDR prefix length to calculate the subnet's network address, broadcast address, and usable host range.",
+    fields: [
+      { id: "ip", label: "IP address", type: "text", default: "192.168.1.0" },
+      { id: "cidr", label: "CIDR prefix length", type: "number", default: 24, step: 1, min: 0, max: 32 },
+    ],
+    compute: (v) => {
+      const parts = (v.ip || "").split(".").map(Number);
+      if (parts.length !== 4 || parts.some((p) => isNaN(p) || p < 0 || p > 255)) {
+        return { primary: { label: "Invalid IP address", value: "-" }, secondary: [], note: "Enter a valid IPv4 address, like 192.168.1.0." };
+      }
+      const cidr = Math.round(v.cidr);
+      const ipInt = ((parts[0] << 24) + (parts[1] << 16) + (parts[2] << 8) + parts[3]) >>> 0;
+      const maskInt = cidr === 0 ? 0 : (0xffffffff << (32 - cidr)) >>> 0;
+      const networkInt = (ipInt & maskInt) >>> 0;
+      const broadcastInt = (networkInt | (~maskInt >>> 0)) >>> 0;
+      const intToIp = (int) => [(int >>> 24) & 255, (int >>> 16) & 255, (int >>> 8) & 255, int & 255].join(".");
+      const totalAddresses = Math.pow(2, 32 - cidr);
+      const usableHosts = cidr >= 31 ? 0 : totalAddresses - 2;
+      const firstHost = cidr >= 31 ? networkInt : networkInt + 1;
+      const lastHost = cidr >= 31 ? broadcastInt : broadcastInt - 1;
+      return {
+        primary: { label: "Network address", value: `${intToIp(networkInt)}/${cidr}` },
+        secondary: [
+          { l: "Subnet mask", v: intToIp(maskInt) },
+          { l: "Broadcast address", v: intToIp(broadcastInt) },
+          { l: "Usable host range", v: `${intToIp(firstHost)} - ${intToIp(lastHost)}` },
+          { l: "Total / usable addresses", v: `${totalAddresses.toLocaleString()} / ${usableHosts.toLocaleString()}` },
+        ],
+        note: "The network address is the IP masked by the CIDR prefix; the broadcast address is the network address with all host bits set to 1. /31 and /32 subnets have no separate usable host range (point-to-point links and single hosts).",
+      };
+    },
+    faq: [
+      { q: "What is a CIDR prefix?", a: "A number (0-32) after a slash indicating how many leading bits of the IP address are the network portion - /24 means the first 24 bits (three octets) identify the network, leaving the last 8 bits for host addresses." },
+      { q: "How many usable hosts does a /24 subnet have?", a: "254 - a /24 has 256 total addresses (2⁸), minus the network address and broadcast address, which aren't assignable to individual hosts." },
+      { q: "What's the difference between network address and broadcast address?", a: "The network address (all host bits set to 0) identifies the subnet itself and isn't assigned to any device. The broadcast address (all host bits set to 1) is used to send a message to every device on that subnet simultaneously - neither is usable as a regular host address." },
+      { q: "Why do /31 and /32 subnets have no usable host range?", a: "A /32 has exactly one address total (used to identify a single host, like a loopback interface), and a /31 has only 2 addresses with no room for separate network/broadcast addresses - both are typically used for point-to-point links where every address is directly usable." },
+    ],
+    related: ["url-encoder-decoder", "data-storage-converter", "roman-numeral-converter"],
   },
   {
     id: "json-compare",

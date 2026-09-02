@@ -134,7 +134,7 @@
   </url>
   <url>
     <loc>https://calquary.com/category/text.html</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/text.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/text.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/text.html"/>
@@ -559,6 +559,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/mortgage-calculator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/home-affordability-calculator.html</loc>
+    <lastmod>2026-09-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/home-affordability-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/home-affordability-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/hourly-to-salary-calculator.html</loc>
     <lastmod>2026-08-31</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/hourly-to-salary-calculator.html"/>
@@ -793,6 +799,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/bmr-calculator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/body-surface-area-calculator.html</loc>
+    <lastmod>2026-09-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/body-surface-area-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/body-surface-area-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/calorie-calculator.html</loc>
     <lastmod>2026-08-27</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/calorie-calculator.html"/>
@@ -989,6 +1001,18 @@
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/sample-size-calculator.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/sample-size-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/confidence-interval-calculator.html</loc>
+    <lastmod>2026-09-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/confidence-interval-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/confidence-interval-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/mean-median-mode-calculator.html</loc>
+    <lastmod>2026-09-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/mean-median-mode-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/mean-median-mode-calculator.html"/>
   </url>
   <url>
     <loc>https://calquary.com/tool/gas-trip-cost-calculator.html</loc>
@@ -1267,6 +1291,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/gear-ratio-calculator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/tire-size-calculator.html</loc>
+    <lastmod>2026-09-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/tire-size-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/tire-size-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/weather-comfort-calculator.html</loc>
     <lastmod>2026-09-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/weather-comfort-calculator.html"/>
@@ -1367,6 +1397,12 @@
     <lastmod>2026-09-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/url-encoder-decoder.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/url-encoder-decoder.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/ip-subnet-calculator.html</loc>
+    <lastmod>2026-09-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/ip-subnet-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/ip-subnet-calculator.html"/>
   </url>
   <url>
     <loc>https://calquary.com/tool/json-compare.html</loc>
@@ -1580,7 +1616,7 @@
   </url>
   <url>
     <loc>https://calquary.com/es/category/text.html</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/text.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/text.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/text.html"/>
@@ -1952,7 +1988,7 @@
   </url>
   <url>
     <loc>https://calquary.com/fr/category/text.html</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/text.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/text.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/text.html"/>
@@ -2324,7 +2360,7 @@
   </url>
   <url>
     <loc>https://calquary.com/de/category/text.html</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/text.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/text.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/text.html"/>
@@ -2696,7 +2732,7 @@
   </url>
   <url>
     <loc>https://calquary.com/pt/category/text.html</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/text.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/text.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/text.html"/>
@@ -3068,7 +3104,7 @@
   </url>
   <url>
     <loc>https://calquary.com/it/category/text.html</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/text.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/text.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/text.html"/>
@@ -3440,7 +3476,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ja/category/text.html</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/text.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/text.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/text.html"/>
