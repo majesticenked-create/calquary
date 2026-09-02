@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>401(k)退職金計算機 - 無料オンライン計算ツール | Calquary</title>
+  <meta name="description" content="雇用主のマッチング拠出と投資成長を含めた、退職時の401(k)残高を予測します。" />
+  <meta property="og:title" content="401(k)退職金計算機 | Calquary">
+  <meta property="og:description" content="雇用主のマッチング拠出と投資成長を含めた、退職時の401(k)残高を予測します。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/ja/tool/retirement-401k-calculator.html">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/retirement-401k-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="401(k)退職金計算機 | Calquary">
+  <meta name="twitter:description" content="雇用主のマッチング拠出と投資成長を含めた、退職時の401(k)残高を予測します。">
+  <meta name="twitter:image" content="https://calquary.com/og-images/retirement-401k-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/retirement-401k-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/retirement-401k-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/retirement-401k-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/retirement-401k-calculator.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/retirement-401k-calculator.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/retirement-401k-calculator.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/retirement-401k-calculator.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/retirement-401k-calculator.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/retirement-401k-calculator.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/retirement-401k-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/retirement-401k-calculator.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/retirement-401k-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/retirement-401k-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("retirement-401k-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("retirement-401k-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "401(k)退職金計算機",
+      "description": "雇用主のマッチング拠出と投資成長を含めた、退職時の401(k)残高を予測します。",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/ja/tool/retirement-401k-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-02",
+      "inLanguage": "ja"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/ja/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Finance",
+          "item": "https://calquary.com/ja/category/finance.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "401(k)退職金計算機",
+          "item": "https://calquary.com/ja/tool/retirement-401k-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "6%拠出して雇用主が50%マッチングした場合、401(k)はいくらになりますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "給与、退職までの年数、想定リターンによって異なります。年収80,000ドルで6%拠出（6%まで50%マッチング）、20,000ドルから始めて25年間、リターン7%と仮定した場合、予測残高は約564,000ドルです。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "「6%まで50%マッチング」とはどういう意味ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "雇用主は、あなたが拠出する1ドルにつき50セントを、給与の6%を上限として拠出します。つまり給与の6%を拠出すればフルマッチング（雇用主から給与の3%）を受けられますが、10%拠出しても同じ3%のマッチングしか受けられず、それ以上にはなりません。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "雇用主のマッチング上限以上に拠出すべきですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "雇用主のフルマッチングを受けるのに十分な額を拠出することは「タダのお金」とよく呼ばれ、通常は優先する価値があります。それ以上拠出すべきかどうかは、他の財務目標、税務状況、他の税制優遇口座を利用できるかどうかによって異なります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "なぜこの予測は一定の年間リターンを前提としているのですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "実際の投資リターンは年ごとに大きく変動します。この計算機は、長期予測のための単純化された仮定として一定の平均リターンを使用しており、上昇年も下降年も含む実際の年ごとのパフォーマンスの予測ではありません。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/ja/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/ja/index.html#categories">カテゴリー</a>
+          <a href="/ja/index.html#tools">すべてのツール</a>
+          <a href="/ja/about.html">このサイトについて</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: 日本語">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>JA</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/retirement-401k-calculator.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/retirement-401k-calculator.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/retirement-401k-calculator.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/retirement-401k-calculator.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/retirement-401k-calculator.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/retirement-401k-calculator.html">Italiano</a><span class="locale-item current" role="menuitem" aria-current="true">日本語</span><a class="locale-item" role="menuitem" href="/ro/tool/retirement-401k-calculator.html">Română</a><a class="locale-item" role="menuitem" href="/el/tool/retirement-401k-calculator.html">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/retirement-401k-calculator.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/retirement-401k-calculator.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/retirement-401k-calculator.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/ja/index.html">Calquary</a> / <a href="/ja/category/finance.html">お金・金融</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>401(k)退職金計算機</h1>
+        <p style="max-width:60ch;">給与、拠出率、雇用主のマッチング拠出、現在の残高、退職までの年数を入力すると、401(k)の残高を予測します。</p>
+        <p class="last-updated">最終更新日： September 2, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">計算する</button>
+              <button type="button" id="calc-reset" class="btn-ghost">リセット</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>よくある質問</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>6%拠出して雇用主が50%マッチングした場合、401(k)はいくらになりますか？</h3>
+<p>給与、退職までの年数、想定リターンによって異なります。年収80,000ドルで6%拠出（6%まで50%マッチング）、20,000ドルから始めて25年間、リターン7%と仮定した場合、予測残高は約564,000ドルです。</p>
+</div>
+<div class="faq-item">
+<h3>「6%まで50%マッチング」とはどういう意味ですか？</h3>
+<p>雇用主は、あなたが拠出する1ドルにつき50セントを、給与の6%を上限として拠出します。つまり給与の6%を拠出すればフルマッチング（雇用主から給与の3%）を受けられますが、10%拠出しても同じ3%のマッチングしか受けられず、それ以上にはなりません。</p>
+</div>
+<div class="faq-item">
+<h3>雇用主のマッチング上限以上に拠出すべきですか？</h3>
+<p>雇用主のフルマッチングを受けるのに十分な額を拠出することは「タダのお金」とよく呼ばれ、通常は優先する価値があります。それ以上拠出すべきかどうかは、他の財務目標、税務状況、他の税制優遇口座を利用できるかどうかによって異なります。</p>
+</div>
+<div class="faq-item">
+<h3>なぜこの予測は一定の年間リターンを前提としているのですか？</h3>
+<p>実際の投資リターンは年ごとに大きく変動します。この計算機は、長期予測のための単純化された仮定として一定の平均リターンを使用しており、上昇年も下降年も含む実際の年ごとのパフォーマンスの予測ではありません。</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>関連ツール</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>精度について</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquaryの計算ツールは、迅速で信頼できる概算を目的としています。実際の財務、構造、医療に関わる重要な決定を行う前には、必ず専門家にご確認ください。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/ja/index.html">← すべての計算ツールに戻る</a> · <a href="/ja/about.html">このサイトについて</a> · <a href="/ja/contact.html">お問い合わせ</a> · <a href="/ja/privacy.html">プライバシー</a> · <a href="/ja/terms.html">利用規約</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

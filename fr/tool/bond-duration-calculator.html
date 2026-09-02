@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculatrice de Duration Obligataire - Calculatrice Gratuite en Ligne | Calquary</title>
+  <meta name="description" content="Calculez le prix d'une obligation, la duration de Macaulay, la duration modifiée, le DV01 et la convexité." />
+  <meta property="og:title" content="Calculatrice de Duration Obligataire | Calquary">
+  <meta property="og:description" content="Calculez le prix d'une obligation, la duration de Macaulay, la duration modifiée, le DV01 et la convexité.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/fr/tool/bond-duration-calculator.html">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/bond-duration-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculatrice de Duration Obligataire | Calquary">
+  <meta name="twitter:description" content="Calculez le prix d'une obligation, la duration de Macaulay, la duration modifiée, le DV01 et la convexité.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/bond-duration-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/bond-duration-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/bond-duration-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/bond-duration-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/bond-duration-calculator.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/bond-duration-calculator.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/bond-duration-calculator.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/bond-duration-calculator.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/bond-duration-calculator.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/bond-duration-calculator.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/bond-duration-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/bond-duration-calculator.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/bond-duration-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/bond-duration-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("bond-duration-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("bond-duration-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calculatrice de Duration Obligataire",
+      "description": "Calculez le prix d'une obligation, la duration de Macaulay, la duration modifiée, le DV01 et la convexité.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/fr/tool/bond-duration-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-01",
+      "inLanguage": "fr"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/fr/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Finance",
+          "item": "https://calquary.com/fr/category/finance.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calculatrice de Duration Obligataire",
+          "item": "https://calquary.com/fr/tool/bond-duration-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce que la duration de Macaulay ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le temps moyen pondéré (en années) avant que les flux de trésorerie d'une obligation soient reçus, où le poids de chaque flux de trésorerie est la part de sa valeur actuelle dans le prix total - c'est une mesure de combien de temps, en moyenne, votre argent est immobilisé."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "À quoi sert la duration modifiée ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "À estimer la sensibilité du prix d'une obligation aux variations des taux d'intérêt - une duration modifiée de 4,3 signifie que le prix change d'environ 4,3 % pour chaque variation de 1 point de pourcentage du rendement (dans la direction opposée)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce que le DV01 ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "« Valeur en dollars de 01 » - le changement réel de prix en dollars pour un mouvement de 1 point de base (0,01 %) du rendement. C'est le même concept que la duration modifiée, mais exprimé en dollars pour un prix spécifique et un mouvement de rendement minuscule spécifique, plutôt qu'en pourcentage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce que la convexité, et pourquoi est-elle importante avec la duration ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La convexité mesure à quel point la duration elle-même change lorsque les rendements changent - la duration seule est une approximation linéaire (en ligne droite) de la sensibilité du prix, et la convexité corrige le fait que les relations prix/rendement des obligations se courbent en réalité, améliorant la précision pour des variations de rendement plus importantes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pourquoi une obligation à échéance plus longue et coupon plus faible a-t-elle une duration plus élevée ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La duration pondère chaque flux de trésorerie selon sa distance dans le futur - un coupon plus faible signifie qu'une plus grande partie de la valeur de l'obligation provient du paiement unique de la valeur nominale à l'échéance (plutôt que répartie sur les coupons antérieurs), et une échéance plus longue repousse ce paiement plus loin, ces deux facteurs augmentant le temps pondéré moyen."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/fr/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/fr/index.html#categories">Catégories</a>
+          <a href="/fr/index.html#tools">Tous les outils</a>
+          <a href="/fr/about.html">À propos</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Français">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>FR</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/bond-duration-calculator.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/bond-duration-calculator.html">Español</a><span class="locale-item current" role="menuitem" aria-current="true">Français</span><a class="locale-item" role="menuitem" href="/de/tool/bond-duration-calculator.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/bond-duration-calculator.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/bond-duration-calculator.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/bond-duration-calculator.html">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/bond-duration-calculator.html">Română</a><a class="locale-item" role="menuitem" href="/el/tool/bond-duration-calculator.html">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/bond-duration-calculator.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/bond-duration-calculator.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/bond-duration-calculator.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/fr/index.html">Calquary</a> / <a href="/fr/category/finance.html">Finance</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calculatrice de Duration Obligataire</h1>
+        <p style="max-width:60ch;">Indiquez la valeur nominale, le taux de coupon, le rendement à l'échéance, le terme et la fréquence de paiement d'une obligation pour calculer son prix et ses mesures de risque de taux d'intérêt.</p>
+        <p class="last-updated">Dernière mise à jour : September 1, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculer</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Réinitialiser</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Questions fréquentes</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Qu'est-ce que la duration de Macaulay ?</h3>
+<p>Le temps moyen pondéré (en années) avant que les flux de trésorerie d'une obligation soient reçus, où le poids de chaque flux de trésorerie est la part de sa valeur actuelle dans le prix total - c'est une mesure de combien de temps, en moyenne, votre argent est immobilisé.</p>
+</div>
+<div class="faq-item">
+<h3>À quoi sert la duration modifiée ?</h3>
+<p>À estimer la sensibilité du prix d'une obligation aux variations des taux d'intérêt - une duration modifiée de 4,3 signifie que le prix change d'environ 4,3 % pour chaque variation de 1 point de pourcentage du rendement (dans la direction opposée).</p>
+</div>
+<div class="faq-item">
+<h3>Qu'est-ce que le DV01 ?</h3>
+<p>« Valeur en dollars de 01 » - le changement réel de prix en dollars pour un mouvement de 1 point de base (0,01 %) du rendement. C'est le même concept que la duration modifiée, mais exprimé en dollars pour un prix spécifique et un mouvement de rendement minuscule spécifique, plutôt qu'en pourcentage.</p>
+</div>
+<div class="faq-item">
+<h3>Qu'est-ce que la convexité, et pourquoi est-elle importante avec la duration ?</h3>
+<p>La convexité mesure à quel point la duration elle-même change lorsque les rendements changent - la duration seule est une approximation linéaire (en ligne droite) de la sensibilité du prix, et la convexité corrige le fait que les relations prix/rendement des obligations se courbent en réalité, améliorant la précision pour des variations de rendement plus importantes.</p>
+</div>
+<div class="faq-item">
+<h3>Pourquoi une obligation à échéance plus longue et coupon plus faible a-t-elle une duration plus élevée ?</h3>
+<p>La duration pondère chaque flux de trésorerie selon sa distance dans le futur - un coupon plus faible signifie qu'une plus grande partie de la valeur de l'obligation provient du paiement unique de la valeur nominale à l'échéance (plutôt que répartie sur les coupons antérieurs), et une échéance plus longue repousse ce paiement plus loin, ces deux facteurs augmentant le temps pondéré moyen.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Outils associés</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Remarque sur la précision</h4>
+          <p style="margin:0;font-size:0.85rem;">Les calculatrices de Calquary sont conçues pour fournir des estimations rapides et fiables. Pour toute décision ayant de réelles conséquences financières, structurelles ou médicales, consultez un professionnel qualifié.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/fr/index.html">← Retour à toutes les calculatrices</a> · <a href="/fr/about.html">À propos</a> · <a href="/fr/contact.html">Contact</a> · <a href="/fr/privacy.html">Confidentialité</a> · <a href="/fr/terms.html">Conditions</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

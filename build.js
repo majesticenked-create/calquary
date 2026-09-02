@@ -63,6 +63,9 @@ const WAVE_ONE_TOOL_IDS = [
   "amortization-schedule-calculator", "mortgage-payoff-calculator",
   "heloc-calculator", "home-affordability-calculator", "hourly-to-salary-calculator",
   "time-card-calculator", "savings-calculator", "tvm-solver", "irr-npv-calculator", "budget-calculator",
+  "apr-to-apy-calculator", "price-calculator", "debt-payoff-calculator", "dti-ratio-calculator",
+  "credit-card-payoff-calculator", "auto-loan-calculator", "investment-calculator",
+  "retirement-401k-calculator", "bond-duration-calculator", "gas-trip-cost-calculator",
 ];
 
 function loadData() {

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>借金返済計算機 - 無料オンライン計算ツール | Calquary</title>
+  <meta name="description" content="一定の月々の返済額で借金を完済するまでの期間を計算します。" />
+  <meta property="og:title" content="借金返済計算機 | Calquary">
+  <meta property="og:description" content="一定の月々の返済額で借金を完済するまでの期間を計算します。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/ja/tool/debt-payoff-calculator.html">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/debt-payoff-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="借金返済計算機 | Calquary">
+  <meta name="twitter:description" content="一定の月々の返済額で借金を完済するまでの期間を計算します。">
+  <meta name="twitter:image" content="https://calquary.com/og-images/debt-payoff-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/debt-payoff-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/debt-payoff-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/debt-payoff-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/debt-payoff-calculator.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/debt-payoff-calculator.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/debt-payoff-calculator.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/debt-payoff-calculator.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/debt-payoff-calculator.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/debt-payoff-calculator.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/debt-payoff-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/debt-payoff-calculator.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/debt-payoff-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/debt-payoff-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("debt-payoff-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("debt-payoff-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "借金返済計算機",
+      "description": "一定の月々の返済額で借金を完済するまでの期間を計算します。",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/ja/tool/debt-payoff-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-30",
+      "inLanguage": "ja"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/ja/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Finance",
+          "item": "https://calquary.com/ja/category/finance.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "借金返済計算機",
+          "item": "https://calquary.com/ja/tool/debt-payoff-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "8,000ドルを19.99%の金利で月250ドルずつ返済すると、完済までどのくらいかかりますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "約47か月（4年弱）で、元の8,000ドルの残高に加えて、合計で約3,750ドルの利息を支払うことになります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "なぜ返済額は月々の利息を上回る必要があるのですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "返済額がその月に発生した利息より少ない場合、残高は減るどころか増えてしまいます。これが、最低返済額の低いクレジットカードの完済に数十年かかることがある理由です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "金利が最も高い借金から返済すると、最も節約になりますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "一般的にはい。これは「アバランチ法」と呼ばれ、返済額のより多くが最も速く利息が積み上がる残高に充てられるため、時間とともに支払う総利息を最小化できます。ただし、口座を早く完済できるという心理的な達成感から、「スノーボール法」（残高の少ないものから返済）を好む人もいます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "借金返済のスノーボール法とアバランチ法の違いは何ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "スノーボール法は、心理的にすぐに達成感を得られるよう最も残高の少ない借金から返済し、その返済額を次に小さい借金に回していく方法です。アバランチ法は、支払う総利息を最小化するため、金利が最も高い借金から返済する方法です。数学的にはアバランチ法の方がより多くのお金を節約できますが、スノーボール法の早期の達成感がモチベーション維持に役立つ人もいます。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/ja/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/ja/index.html#categories">カテゴリー</a>
+          <a href="/ja/index.html#tools">すべてのツール</a>
+          <a href="/ja/about.html">このサイトについて</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: 日本語">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>JA</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/debt-payoff-calculator.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/debt-payoff-calculator.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/debt-payoff-calculator.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/debt-payoff-calculator.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/debt-payoff-calculator.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/debt-payoff-calculator.html">Italiano</a><span class="locale-item current" role="menuitem" aria-current="true">日本語</span><a class="locale-item" role="menuitem" href="/ro/tool/debt-payoff-calculator.html">Română</a><a class="locale-item" role="menuitem" href="/el/tool/debt-payoff-calculator.html">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/debt-payoff-calculator.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/debt-payoff-calculator.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/debt-payoff-calculator.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/ja/index.html">Calquary</a> / <a href="/ja/category/finance.html">お金・金融</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>借金返済計算機</h1>
+        <p style="max-width:60ch;">残高、金利、一定の月々の返済額を入力すると、完済までの月数と支払う利息額がわかります。</p>
+        <p class="last-updated">最終更新日： August 30, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">計算する</button>
+              <button type="button" id="calc-reset" class="btn-ghost">リセット</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>よくある質問</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>8,000ドルを19.99%の金利で月250ドルずつ返済すると、完済までどのくらいかかりますか？</h3>
+<p>約47か月（4年弱）で、元の8,000ドルの残高に加えて、合計で約3,750ドルの利息を支払うことになります。</p>
+</div>
+<div class="faq-item">
+<h3>なぜ返済額は月々の利息を上回る必要があるのですか？</h3>
+<p>返済額がその月に発生した利息より少ない場合、残高は減るどころか増えてしまいます。これが、最低返済額の低いクレジットカードの完済に数十年かかることがある理由です。</p>
+</div>
+<div class="faq-item">
+<h3>金利が最も高い借金から返済すると、最も節約になりますか？</h3>
+<p>一般的にはい。これは「アバランチ法」と呼ばれ、返済額のより多くが最も速く利息が積み上がる残高に充てられるため、時間とともに支払う総利息を最小化できます。ただし、口座を早く完済できるという心理的な達成感から、「スノーボール法」（残高の少ないものから返済）を好む人もいます。</p>
+</div>
+<div class="faq-item">
+<h3>借金返済のスノーボール法とアバランチ法の違いは何ですか？</h3>
+<p>スノーボール法は、心理的にすぐに達成感を得られるよう最も残高の少ない借金から返済し、その返済額を次に小さい借金に回していく方法です。アバランチ法は、支払う総利息を最小化するため、金利が最も高い借金から返済する方法です。数学的にはアバランチ法の方がより多くのお金を節約できますが、スノーボール法の早期の達成感がモチベーション維持に役立つ人もいます。</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>関連ツール</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>精度について</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquaryの計算ツールは、迅速で信頼できる概算を目的としています。実際の財務、構造、医療に関わる重要な決定を行う前には、必ず専門家にご確認ください。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/ja/index.html">← すべての計算ツールに戻る</a> · <a href="/ja/about.html">このサイトについて</a> · <a href="/ja/contact.html">お問い合わせ</a> · <a href="/ja/privacy.html">プライバシー</a> · <a href="/ja/terms.html">利用規約</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>
