@@ -117,6 +117,10 @@ const WAVE_ONE_TOOL_IDS = [
   "quadratic-formula-calculator", "cone-volume-calculator", "cylinder-volume-calculator",
   "pythagorean-theorem-calculator", "distance-formula-calculator", "triangle-solver",
   "hypergeometric-calculator",
+  // Math category, batch 6
+  "trapezoid-area-calculator", "rectangular-prism-volume-calculator", "slope-calculator",
+  "sector-calculator", "grade-gradient-calculator", "molecular-weight-calculator",
+  "empirical-formula-calculator",
 ];
 
 function loadData() {
