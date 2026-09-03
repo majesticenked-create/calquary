@@ -129,6 +129,10 @@ const WAVE_ONE_TOOL_IDS = [
   "limiting-reagent-calculator", "half-life-calculator", "hardy-weinberg-calculator",
   "grade-calculator", "weighted-grade-calculator", "speed-distance-time-calculator",
   "projectile-motion-calculator",
+  // Math category, batch 9
+  "collision-calculator", "ohms-law-calculator", "right-triangle-calculator",
+  "absolute-risk-reduction-calculator", "sample-size-calculator", "confidence-interval-calculator",
+  "mean-median-mode-calculator",
 ];
 
 function loadData() {

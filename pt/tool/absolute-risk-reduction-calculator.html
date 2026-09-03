@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Redução Absoluta do Risco - Calculadora Gratuita Online | Calquary</title>
+  <meta name="description" content="Calcule a redução absoluta do risco (ARR), redução relativa do risco (RRR), e número necessário a tratar (NNT) a partir de duas taxas de eventos." />
+  <meta property="og:title" content="Calculadora de Redução Absoluta do Risco | Calquary">
+  <meta property="og:description" content="Calcule a redução absoluta do risco (ARR), redução relativa do risco (RRR), e número necessário a tratar (NNT) a partir de duas taxas de eventos.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/pt/tool/absolute-risk-reduction-calculator.html">
+  <meta property="og:locale" content="pt_PT">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/absolute-risk-reduction-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculadora de Redução Absoluta do Risco | Calquary">
+  <meta name="twitter:description" content="Calcule a redução absoluta do risco (ARR), redução relativa do risco (RRR), e número necessário a tratar (NNT) a partir de duas taxas de eventos.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/absolute-risk-reduction-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/absolute-risk-reduction-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/absolute-risk-reduction-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/absolute-risk-reduction-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/absolute-risk-reduction-calculator.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/absolute-risk-reduction-calculator.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/absolute-risk-reduction-calculator.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/absolute-risk-reduction-calculator.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/absolute-risk-reduction-calculator.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/absolute-risk-reduction-calculator.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/absolute-risk-reduction-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/absolute-risk-reduction-calculator.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/absolute-risk-reduction-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/absolute-risk-reduction-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("absolute-risk-reduction-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("absolute-risk-reduction-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calculadora de Redução Absoluta do Risco",
+      "description": "Calcule a redução absoluta do risco (ARR), redução relativa do risco (RRR), e número necessário a tratar (NNT) a partir de duas taxas de eventos.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/pt/tool/absolute-risk-reduction-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-30",
+      "inLanguage": "pt"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/pt/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Math",
+          "item": "https://calquary.com/pt/category/math.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calculadora de Redução Absoluta do Risco",
+          "item": "https://calquary.com/pt/tool/absolute-risk-reduction-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qual é a diferença entre redução absoluta e relativa do risco?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A redução absoluta do risco (ARR) é a diferença simples entre duas taxas de eventos (por exemplo, 20% − 12% = 8 pontos percentuais). A redução relativa do risco (RRR) expressa essa mesma diferença como uma porcentagem da taxa original (8 ÷ 20 = 40%) - RRR frequentemente soa mais dramática que ARR para os mesmos dados subjacentes, por isso ambos os números importam para o contexto."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que significa 'número necessário a tratar' (NNT)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "NNT é o número de pessoas que precisariam receber um tratamento para que uma pessoa adicional se beneficie (evite o evento), calculado como 1 ÷ ARR (expresso como decimal). Um NNT menor significa um efeito de tratamento mais impactante - um NNT de 12,5 significa que aproximadamente 1 em cada 12-13 pessoas tratadas vê o benefício."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Isso é apropriado para tomar decisões de tratamento médico?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não - esta é uma calculadora de referência estatística para entender como esses números são calculados, não um substituto para os intervalos de confiança de um estudo clínico completo, características da população, e a interpretação de um profissional qualificado. Sempre discuta decisões de tratamento com um profissional de saúde."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/pt/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/pt/index.html#categories">Categorias</a>
+          <a href="/pt/index.html#tools">Todas as ferramentas</a>
+          <a href="/pt/about.html">Sobre</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Português">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>PT</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/absolute-risk-reduction-calculator.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/absolute-risk-reduction-calculator.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/absolute-risk-reduction-calculator.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/absolute-risk-reduction-calculator.html">Deutsch</a><span class="locale-item current" role="menuitem" aria-current="true">Português</span><a class="locale-item" role="menuitem" href="/it/tool/absolute-risk-reduction-calculator.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/absolute-risk-reduction-calculator.html">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/absolute-risk-reduction-calculator.html">Română</a><a class="locale-item" role="menuitem" href="/el/tool/absolute-risk-reduction-calculator.html">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/absolute-risk-reduction-calculator.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/absolute-risk-reduction-calculator.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/absolute-risk-reduction-calculator.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/pt/index.html">Calquary</a> / <a href="/pt/category/math.html">Matemática</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calculadora de Redução Absoluta do Risco</h1>
+        <p style="max-width:60ch;">Digite a taxa de eventos em um grupo de controle e um grupo de tratamento para calcular a redução absoluta do risco, redução relativa do risco, e número necessário a tratar.</p>
+        <p class="last-updated">Última atualização: August 30, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calcular</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Redefinir</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Perguntas frequentes</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Qual é a diferença entre redução absoluta e relativa do risco?</h3>
+<p>A redução absoluta do risco (ARR) é a diferença simples entre duas taxas de eventos (por exemplo, 20% − 12% = 8 pontos percentuais). A redução relativa do risco (RRR) expressa essa mesma diferença como uma porcentagem da taxa original (8 ÷ 20 = 40%) - RRR frequentemente soa mais dramática que ARR para os mesmos dados subjacentes, por isso ambos os números importam para o contexto.</p>
+</div>
+<div class="faq-item">
+<h3>O que significa 'número necessário a tratar' (NNT)?</h3>
+<p>NNT é o número de pessoas que precisariam receber um tratamento para que uma pessoa adicional se beneficie (evite o evento), calculado como 1 ÷ ARR (expresso como decimal). Um NNT menor significa um efeito de tratamento mais impactante - um NNT de 12,5 significa que aproximadamente 1 em cada 12-13 pessoas tratadas vê o benefício.</p>
+</div>
+<div class="faq-item">
+<h3>Isso é apropriado para tomar decisões de tratamento médico?</h3>
+<p>Não - esta é uma calculadora de referência estatística para entender como esses números são calculados, não um substituto para os intervalos de confiança de um estudo clínico completo, características da população, e a interpretação de um profissional qualificado. Sempre discuta decisões de tratamento com um profissional de saúde.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Ferramentas relacionadas</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Nota sobre precisão</h4>
+          <p style="margin:0;font-size:0.85rem;">As calculadoras da Calquary são feitas para estimativas rápidas e confiáveis. Para decisões com implicações financeiras, estruturais ou médicas reais, consulte um profissional qualificado.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/pt/index.html">← Voltar a todas as calculadoras</a> · <a href="/pt/about.html">Sobre</a> · <a href="/pt/contact.html">Contato</a> · <a href="/pt/privacy.html">Privacidade</a> · <a href="/pt/terms.html">Termos</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

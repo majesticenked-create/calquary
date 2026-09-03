@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Υπολογιστής Διαστήματος Εμπιστοσύνης - Δωρεάν Online Αριθμομηχανή | Calquary</title>
+  <meta name="description" content="Υπολόγισε ένα διάστημα εμπιστοσύνης για έναν δειγματικό μέσο όρο." />
+  <meta property="og:title" content="Υπολογιστής Διαστήματος Εμπιστοσύνης | Calquary">
+  <meta property="og:description" content="Υπολόγισε ένα διάστημα εμπιστοσύνης για έναν δειγματικό μέσο όρο.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/el/tool/confidence-interval-calculator.html">
+  <meta property="og:locale" content="el_GR">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/confidence-interval-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Υπολογιστής Διαστήματος Εμπιστοσύνης | Calquary">
+  <meta name="twitter:description" content="Υπολόγισε ένα διάστημα εμπιστοσύνης για έναν δειγματικό μέσο όρο.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/confidence-interval-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/confidence-interval-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/confidence-interval-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/confidence-interval-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/confidence-interval-calculator.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/confidence-interval-calculator.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/confidence-interval-calculator.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/confidence-interval-calculator.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/confidence-interval-calculator.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/confidence-interval-calculator.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/confidence-interval-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/confidence-interval-calculator.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/confidence-interval-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/confidence-interval-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("confidence-interval-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("confidence-interval-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Υπολογιστής Διαστήματος Εμπιστοσύνης",
+      "description": "Υπολόγισε ένα διάστημα εμπιστοσύνης για έναν δειγματικό μέσο όρο.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/el/tool/confidence-interval-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-02",
+      "inLanguage": "el"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/el/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Math",
+          "item": "https://calquary.com/el/category/math.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Υπολογιστής Διαστήματος Εμπιστοσύνης",
+          "item": "https://calquary.com/el/tool/confidence-interval-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Τι σημαίνει ένα διάστημα εμπιστοσύνης 95%;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Αν επαναλαμβάνατε τη διαδικασία δειγματοληψίας πολλές φορές και κατασκευάζατε ένα διάστημα εμπιστοσύνης κάθε φορά, περίπου το 95% αυτών των διαστημάτων θα περιείχε τον πραγματικό μέσο όρο πληθυσμού - είναι μια δήλωση για την αξιοπιστία της μεθόδου, όχι μια πιθανότητα 95% ότι αυτό το συγκεκριμένο διάστημα περιέχει την πραγματική τιμή."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Πώς υπολογίζω ένα διάστημα εμπιστοσύνης;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Περιθώριο σφάλματος = βαθμολογία z × (τυπική απόκλιση ÷ √μέγεθος δείγματος). Μετά προσθέστε και αφαιρέστε αυτό το περιθώριο από τον δειγματικό μέσο όρο σας για να πάρετε τα κατώτερα και ανώτερα όρια του διαστήματος. Η βαθμολογία z εξαρτάται από το επιλεγμένο επίπεδο εμπιστοσύνης σας (1,96 για 95%, για παράδειγμα)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Γιατί ένα μεγαλύτερο μέγεθος δείγματος παράγει στενότερο διάστημα εμπιστοσύνης;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Το περιθώριο σφάλματος διαιρείται με την τετραγωνική ρίζα του μεγέθους δείγματος, οπότε μεγαλύτερα δείγματα συρρικνώνουν το περιθώριο - περισσότερα δεδομένα σημαίνουν λιγότερη αβεβαιότητα σχετικά με το πού βρίσκεται ο πραγματικός μέσος όρος πληθυσμού, στενεύοντας το διάστημα γύρω από την εκτίμησή σας."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Πρέπει να χρησιμοποιήσω βαθμολογία z ή t για το διάστημα εμπιστοσύνης μου;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Χρησιμοποιήστε βαθμολογία t (από την κατανομή t) για μικρότερα δείγματα, συνήθως κάτω από 30, αφού λαμβάνει υπόψη επιπλέον αβεβαιότητα σε μια εκτίμηση τυπικής απόκλισης μικρού δείγματος. Αυτή η αριθμομηχανή χρησιμοποιεί την κατανομή z, που είναι μια λογική προσέγγιση μόλις το μέγεθος του δείγματός σας είναι 30 ή περισσότερο."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/el/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/el/index.html#categories">Κατηγορίες</a>
+          <a href="/el/index.html#tools">Όλα τα εργαλεία</a>
+          <a href="/el/about.html">Σχετικά</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Ελληνικά">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>undefined</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/confidence-interval-calculator.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/confidence-interval-calculator.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/confidence-interval-calculator.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/confidence-interval-calculator.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/confidence-interval-calculator.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/confidence-interval-calculator.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/confidence-interval-calculator.html">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/confidence-interval-calculator.html">Română</a><span class="locale-item current" role="menuitem" aria-current="true">Ελληνικά</span><a class="locale-item" role="menuitem" href="/zh/tool/confidence-interval-calculator.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/confidence-interval-calculator.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/confidence-interval-calculator.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/el/index.html">Calquary</a> / <a href="/el/category/math.html">Μαθηματικά</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Υπολογιστής Διαστήματος Εμπιστοσύνης</h1>
+        <p style="max-width:60ch;">Εισάγετε έναν δειγματικό μέσο όρο, τυπική απόκλιση, και μέγεθος δείγματος για να υπολογίσετε ένα διάστημα εμπιστοσύνης.</p>
+        <p class="last-updated">Τελευταία ενημέρωση: September 2, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Υπολογισμός</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Επαναφορά</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Συχνές ερωτήσεις</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Τι σημαίνει ένα διάστημα εμπιστοσύνης 95%;</h3>
+<p>Αν επαναλαμβάνατε τη διαδικασία δειγματοληψίας πολλές φορές και κατασκευάζατε ένα διάστημα εμπιστοσύνης κάθε φορά, περίπου το 95% αυτών των διαστημάτων θα περιείχε τον πραγματικό μέσο όρο πληθυσμού - είναι μια δήλωση για την αξιοπιστία της μεθόδου, όχι μια πιθανότητα 95% ότι αυτό το συγκεκριμένο διάστημα περιέχει την πραγματική τιμή.</p>
+</div>
+<div class="faq-item">
+<h3>Πώς υπολογίζω ένα διάστημα εμπιστοσύνης;</h3>
+<p>Περιθώριο σφάλματος = βαθμολογία z × (τυπική απόκλιση ÷ √μέγεθος δείγματος). Μετά προσθέστε και αφαιρέστε αυτό το περιθώριο από τον δειγματικό μέσο όρο σας για να πάρετε τα κατώτερα και ανώτερα όρια του διαστήματος. Η βαθμολογία z εξαρτάται από το επιλεγμένο επίπεδο εμπιστοσύνης σας (1,96 για 95%, για παράδειγμα).</p>
+</div>
+<div class="faq-item">
+<h3>Γιατί ένα μεγαλύτερο μέγεθος δείγματος παράγει στενότερο διάστημα εμπιστοσύνης;</h3>
+<p>Το περιθώριο σφάλματος διαιρείται με την τετραγωνική ρίζα του μεγέθους δείγματος, οπότε μεγαλύτερα δείγματα συρρικνώνουν το περιθώριο - περισσότερα δεδομένα σημαίνουν λιγότερη αβεβαιότητα σχετικά με το πού βρίσκεται ο πραγματικός μέσος όρος πληθυσμού, στενεύοντας το διάστημα γύρω από την εκτίμησή σας.</p>
+</div>
+<div class="faq-item">
+<h3>Πρέπει να χρησιμοποιήσω βαθμολογία z ή t για το διάστημα εμπιστοσύνης μου;</h3>
+<p>Χρησιμοποιήστε βαθμολογία t (από την κατανομή t) για μικρότερα δείγματα, συνήθως κάτω από 30, αφού λαμβάνει υπόψη επιπλέον αβεβαιότητα σε μια εκτίμηση τυπικής απόκλισης μικρού δείγματος. Αυτή η αριθμομηχανή χρησιμοποιεί την κατανομή z, που είναι μια λογική προσέγγιση μόλις το μέγεθος του δείγματός σας είναι 30 ή περισσότερο.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Σχετικά εργαλεία</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Σημείωση ακρίβειας</h4>
+          <p style="margin:0;font-size:0.85rem;">Οι αριθμομηχανές του Calquary έχουν σχεδιαστεί για να παρέχουν γρήγορες και αξιόπιστες εκτιμήσεις. Για αποφάσεις με πραγματικές οικονομικές, δομικές ή ιατρικές επιπτώσεις, συμβουλευτείτε έναν ειδικευμένο επαγγελματία.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/el/index.html">← Πίσω σε όλες τις αριθμομηχανές</a> · <a href="/el/about.html">Σχετικά</a> · <a href="/el/contact.html">Επικοινωνία</a> · <a href="/el/privacy.html">Απόρρητο</a> · <a href="/el/terms.html">Όροι</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

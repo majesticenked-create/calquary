@@ -25304,6 +25304,863 @@ const I18N_TOOLS = {
       ],
     },
   },
+
+  "collision-calculator": {
+    es: {
+      title: "Calculadora de Momento y Colisión",
+      intro: "Introduce la masa y velocidad de dos objetos para calcular sus velocidades después de una colisión elástica o perfectamente inelástica.",
+      description: "Calcula las velocidades finales para una colisión elástica o perfectamente inelástica entre dos objetos.",
+      faq: [
+        { q: "¿Cuál es la diferencia entre colisiones elásticas e inelásticas?", a: "En una colisión elástica, tanto el momento como la energía cinética se conservan (los objetos rebotan limpiamente). En una colisión perfectamente inelástica, el momento se conserva pero la energía cinética no - los objetos se pegan y se mueven como uno, con parte de la energía perdida en calor, sonido, o deformación." },
+        { q: "¿Cómo calculo las velocidades después de una colisión elástica?", a: "v1f = ((m1−m2)×v1 + 2×m2×v2) / (m1+m2), y v2f = ((m2−m1)×v2 + 2×m1×v1) / (m1+m2) - estas fórmulas provienen de resolver juntas las ecuaciones de conservación del momento y conservación de la energía cinética." },
+        { q: "¿Por qué el momento siempre se conserva, incluso en colisiones inelásticas?", a: "La conservación del momento proviene directamente de la tercera ley de Newton (fuerzas iguales y opuestas durante la colisión) y no requiere que la energía se conserve - se mantiene para cualquier colisión mientras no actúen fuerzas externas sobre el sistema." },
+        { q: "¿Qué pasa con la energía cinética 'perdida' en una colisión inelástica?", a: "Se convierte en otras formas de energía - calor por fricción y deformación, sonido del impacto, y deformación estructural permanente de los objetos en colisión - en lugar de desaparecer, consistente con la conservación general de la energía." },
+      ],
+    },
+    fr: {
+      title: "Calculateur de Quantité de Mouvement et Collision",
+      intro: "Entrez la masse et la vitesse de deux objets pour calculer leurs vitesses après une collision élastique ou parfaitement inélastique.",
+      description: "Calculez les vitesses finales pour une collision élastique ou parfaitement inélastique entre deux objets.",
+      faq: [
+        { q: "Quelle est la différence entre collisions élastiques et inélastiques ?", a: "Dans une collision élastique, la quantité de mouvement et l'énergie cinétique sont toutes deux conservées (les objets rebondissent proprement). Dans une collision parfaitement inélastique, la quantité de mouvement est conservée mais pas l'énergie cinétique - les objets se collent et se déplacent comme un seul, avec de l'énergie perdue en chaleur, son, ou déformation." },
+        { q: "Comment calculer les vitesses après une collision élastique ?", a: "v1f = ((m1−m2)×v1 + 2×m2×v2) / (m1+m2), et v2f = ((m2−m1)×v2 + 2×m1×v1) / (m1+m2) - ces formules proviennent de la résolution conjointe des équations de conservation de la quantité de mouvement et de conservation de l'énergie cinétique." },
+        { q: "Pourquoi la quantité de mouvement est-elle toujours conservée, même dans les collisions inélastiques ?", a: "La conservation de la quantité de mouvement découle directement de la troisième loi de Newton (forces égales et opposées pendant la collision) et ne nécessite pas que l'énergie soit conservée - elle est valable pour toute collision tant qu'aucune force externe n'agit sur le système." },
+        { q: "Que devient l'énergie cinétique « perdue » dans une collision inélastique ?", a: "Elle se convertit en d'autres formes d'énergie - chaleur due au frottement et à la déformation, son de l'impact, et déformation structurelle permanente des objets en collision - plutôt que de disparaître, conformément à la conservation globale de l'énergie." },
+      ],
+    },
+    de: {
+      title: "Impuls-und-Stoß-Rechner",
+      intro: "Geben Sie die Masse und Geschwindigkeit zweier Objekte ein, um ihre Geschwindigkeiten nach einem elastischen oder vollkommen unelastischen Stoß zu berechnen.",
+      description: "Berechnen Sie die Endgeschwindigkeiten für einen elastischen oder vollkommen unelastischen Stoß zwischen zwei Objekten.",
+      faq: [
+        { q: "Was ist der Unterschied zwischen elastischen und unelastischen Stößen?", a: "Bei einem elastischen Stoß bleiben sowohl Impuls als auch kinetische Energie erhalten (Objekte prallen sauber ab). Bei einem vollkommen unelastischen Stoß bleibt der Impuls erhalten, aber nicht die kinetische Energie - die Objekte bleiben zusammen und bewegen sich als eines, wobei Energie in Wärme, Schall, oder Verformung verloren geht." },
+        { q: "Wie berechne ich Geschwindigkeiten nach einem elastischen Stoß?", a: "v1f = ((m1−m2)×v1 + 2×m2×v2) / (m1+m2), und v2f = ((m2−m1)×v2 + 2×m1×v1) / (m1+m2) - diese Formeln stammen aus dem gemeinsamen Lösen der Gleichungen für Impulserhaltung und Erhaltung der kinetischen Energie." },
+        { q: "Warum bleibt der Impuls immer erhalten, auch bei unelastischen Stößen?", a: "Die Impulserhaltung ergibt sich direkt aus Newtons drittem Gesetz (gleiche und entgegengesetzte Kräfte während des Stoßes) und erfordert nicht, dass Energie erhalten bleibt - sie gilt für jeden Stoß, solange keine äußeren Kräfte auf das System wirken." },
+        { q: "Was passiert mit der „verlorenen“ kinetischen Energie bei einem unelastischen Stoß?", a: "Sie wandelt sich in andere Energieformen um - Wärme durch Reibung und Verformung, Schall vom Aufprall, und dauerhafte strukturelle Verformung der kollidierenden Objekte - anstatt zu verschwinden, im Einklang mit der allgemeinen Energieerhaltung." },
+      ],
+    },
+    pt: {
+      title: "Calculadora de Momento e Colisão",
+      intro: "Digite a massa e velocidade de dois objetos para calcular suas velocidades após uma colisão elástica ou perfeitamente inelástica.",
+      description: "Calcule as velocidades finais para uma colisão elástica ou perfeitamente inelástica entre dois objetos.",
+      faq: [
+        { q: "Qual é a diferença entre colisões elásticas e inelásticas?", a: "Em uma colisão elástica, tanto o momento quanto a energia cinética são conservados (os objetos se separam de forma limpa). Em uma colisão perfeitamente inelástica, o momento é conservado mas a energia cinética não - os objetos grudam e se movem como um, com alguma energia perdida em calor, som, ou deformação." },
+        { q: "Como calculo velocidades depois de uma colisão elástica?", a: "v1f = ((m1−m2)×v1 + 2×m2×v2) / (m1+m2), e v2f = ((m2−m1)×v2 + 2×m1×v1) / (m1+m2) - essas fórmulas vêm de resolver juntas as equações de conservação do momento e conservação da energia cinética." },
+        { q: "Por que o momento é sempre conservado, mesmo em colisões inelásticas?", a: "A conservação do momento vem diretamente da terceira lei de Newton (forças iguais e opostas durante a colisão) e não requer que a energia seja conservada - ela vale para qualquer colisão desde que nenhuma força externa atue sobre o sistema." },
+        { q: "O que acontece com a energia cinética 'perdida' em uma colisão inelástica?", a: "Ela se converte em outras formas de energia - calor por fricção e deformação, som do impacto, e deformação estrutural permanente dos objetos em colisão - em vez de desaparecer, consistente com a conservação geral da energia." },
+      ],
+    },
+    it: {
+      title: "Calcolatore di Momento e Collisione",
+      intro: "Inserisci la massa e velocità di due oggetti per calcolare le loro velocità dopo una collisione elastica o perfettamente anelastica.",
+      description: "Calcola le velocità finali per una collisione elastica o perfettamente anelastica tra due oggetti.",
+      faq: [
+        { q: "Qual è la differenza tra collisioni elastiche e anelastiche?", a: "In una collisione elastica, sia la quantità di moto che l'energia cinetica si conservano (gli oggetti rimbalzano pulitamente). In una collisione perfettamente anelastica, la quantità di moto si conserva ma l'energia cinetica no - gli oggetti si attaccano e si muovono come uno solo, con parte dell'energia persa in calore, suono, o deformazione." },
+        { q: "Come calcolo le velocità dopo una collisione elastica?", a: "v1f = ((m1−m2)×v1 + 2×m2×v2) / (m1+m2), e v2f = ((m2−m1)×v2 + 2×m1×v1) / (m1+m2) - queste formule derivano dal risolvere insieme le equazioni di conservazione della quantità di moto e conservazione dell'energia cinetica." },
+        { q: "Perché la quantità di moto si conserva sempre, anche nelle collisioni anelastiche?", a: "La conservazione della quantità di moto deriva direttamente dalla terza legge di Newton (forze uguali e opposte durante la collisione) e non richiede che l'energia si conservi - vale per qualsiasi collisione finché nessuna forza esterna agisce sul sistema." },
+        { q: "Cosa succede all'energia cinetica 'persa' in una collisione anelastica?", a: "Si converte in altre forme di energia - calore da attrito e deformazione, suono dell'impatto, e deformazione strutturale permanente degli oggetti in collisione - anziché scomparire, coerentemente con la conservazione generale dell'energia." },
+      ],
+    },
+    ja: {
+      title: "運動量・衝突計算機",
+      intro: "2つの物体の質量と速度を入力すると、弾性衝突または完全非弾性衝突後の速度を計算します。",
+      description: "2つの物体間の弾性衝突または完全非弾性衝突の最終速度を計算します。",
+      faq: [
+        { q: "弾性衝突と非弾性衝突の違いは何ですか？", a: "弾性衝突では、運動量と運動エネルギーの両方が保存されます（物体はきれいに跳ね返ります）。完全非弾性衝突では、運動量は保存されますが運動エネルギーは保存されません。物体はくっついて一体となって動き、一部のエネルギーが熱、音、または変形として失われます。" },
+        { q: "弾性衝突後の速度をどう計算しますか？", a: "v1f = ((m1−m2)×v1 + 2×m2×v2) / (m1+m2)、v2f = ((m2−m1)×v2 + 2×m1×v1) / (m1+m2)です。これらの公式は、運動量保存と運動エネルギー保存の方程式を一緒に解くことから来ています。" },
+        { q: "なぜ非弾性衝突でも運動量は常に保存されるのですか？", a: "運動量保存はニュートンの第三法則（衝突中の等しく反対の力）から直接導かれ、エネルギーが保存される必要はありません。系に外力が作用しない限り、あらゆる衝突に対して成り立ちます。" },
+        { q: "非弾性衝突で「失われた」運動エネルギーはどうなりますか？", a: "消えるのではなく、他の形態のエネルギーに変換されます。摩擦と変形による熱、衝撃による音、衝突する物体の永久的な構造変形などです。これはエネルギーの全体的な保存則と一致します。" },
+      ],
+    },
+    ro: {
+      title: "Calculator de Impuls și Coliziune",
+      intro: "Introdu masa și viteza a două obiecte pentru a calcula vitezele lor după o coliziune elastică sau perfect inelastică.",
+      description: "Calculează vitezele finale pentru o coliziune elastică sau perfect inelastică între două obiecte.",
+      faq: [
+        { q: "Care este diferența dintre coliziunile elastice și inelastice?", a: "Într-o coliziune elastică, atât impulsul cât și energia cinetică sunt conservate (obiectele sar înapoi curat). Într-o coliziune perfect inelastică, impulsul este conservat dar energia cinetică nu - obiectele se lipesc și se mișcă ca unul singur, cu o parte din energie pierdută sub formă de căldură, sunet, sau deformare." },
+        { q: "Cum calculez vitezele după o coliziune elastică?", a: "v1f = ((m1−m2)×v1 + 2×m2×v2) / (m1+m2), și v2f = ((m2−m1)×v2 + 2×m1×v1) / (m1+m2) - aceste formule vin din rezolvarea împreună a ecuațiilor de conservare a impulsului și conservare a energiei cinetice." },
+        { q: "De ce impulsul este întotdeauna conservat, chiar și în coliziunile inelastice?", a: "Conservarea impulsului vine direct din a treia lege a lui Newton (forțe egale și opuse în timpul coliziunii) și nu necesită conservarea energiei - se aplică oricărei coliziuni atâta timp cât nicio forță externă nu acționează asupra sistemului." },
+        { q: "Ce se întâmplă cu energia cinetică \"pierdută\" într-o coliziune inelastică?", a: "Se transformă în alte forme de energie - căldură din frecare și deformare, sunet din impact, și deformare structurală permanentă a obiectelor care se ciocnesc - în loc să dispară, în concordanță cu conservarea generală a energiei." },
+      ],
+    },
+    el: {
+      title: "Υπολογιστής Ορμής και Σύγκρουσης",
+      intro: "Εισάγετε τη μάζα και ταχύτητα δύο αντικειμένων για να υπολογίσετε τις ταχύτητές τους μετά από μια ελαστική ή τέλεια ανελαστική σύγκρουση.",
+      description: "Υπολόγισε τις τελικές ταχύτητες για μια ελαστική ή τέλεια ανελαστική σύγκρουση μεταξύ δύο αντικειμένων.",
+      faq: [
+        { q: "Ποια είναι η διαφορά μεταξύ ελαστικών και ανελαστικών συγκρούσεων;", a: "Σε μια ελαστική σύγκρουση, τόσο η ορμή όσο και η κινητική ενέργεια διατηρούνται (τα αντικείμενα αναπηδούν καθαρά). Σε μια τέλεια ανελαστική σύγκρουση, η ορμή διατηρείται αλλά όχι η κινητική ενέργεια - τα αντικείμενα κολλάνε και κινούνται ως ένα, με κάποια ενέργεια χαμένη σε θερμότητα, ήχο, ή παραμόρφωση." },
+        { q: "Πώς υπολογίζω τις ταχύτητες μετά από μια ελαστική σύγκρουση;", a: "v1f = ((m1−m2)×v1 + 2×m2×v2) / (m1+m2), και v2f = ((m2−m1)×v2 + 2×m1×v1) / (m1+m2) - αυτοί οι τύποι προέρχονται από την επίλυση μαζί των εξισώσεων διατήρησης της ορμής και διατήρησης της κινητικής ενέργειας." },
+        { q: "Γιατί η ορμή διατηρείται πάντα, ακόμη και σε ανελαστικές συγκρούσεις;", a: "Η διατήρηση της ορμής προέρχεται απευθείας από τον τρίτο νόμο του Νεύτωνα (ίσες και αντίθετες δυνάμεις κατά τη διάρκεια της σύγκρουσης) και δεν απαιτεί τη διατήρηση της ενέργειας - ισχύει για κάθε σύγκρουση εφόσον δεν ενεργούν εξωτερικές δυνάμεις στο σύστημα." },
+        { q: "Τι συμβαίνει με τη «χαμένη» κινητική ενέργεια σε μια ανελαστική σύγκρουση;", a: "Μετατρέπεται σε άλλες μορφές ενέργειας - θερμότητα από τριβή και παραμόρφωση, ήχο από την πρόσκρουση, και μόνιμη δομική παραμόρφωση των αντικειμένων που συγκρούονται - αντί να εξαφανίζεται, σύμφωνα με τη γενική διατήρηση της ενέργειας." },
+      ],
+    },
+    zh: {
+      title: "动量与碰撞计算器",
+      intro: "输入两个物体的质量和速度，计算它们在弹性碰撞或完全非弹性碰撞后的速度。",
+      description: "计算两个物体之间弹性碰撞或完全非弹性碰撞的最终速度。",
+      faq: [
+        { q: "弹性碰撞和非弹性碰撞有什么区别？", a: "在弹性碰撞中，动量和动能都守恒（物体干净地弹开）。在完全非弹性碰撞中，动量守恒但动能不守恒——物体粘在一起作为一个整体运动，一部分能量转化为热、声音或形变而损失。" },
+        { q: "如何计算弹性碰撞后的速度？", a: "v1f = ((m1−m2)×v1 + 2×m2×v2) / (m1+m2)，v2f = ((m2−m1)×v2 + 2×m1×v1) / (m1+m2)——这些公式来自于同时求解动量守恒方程和动能守恒方程。" },
+        { q: "为什么即使在非弹性碰撞中动量也总是守恒的？", a: "动量守恒直接源于牛顿第三定律（碰撞过程中大小相等、方向相反的力），并不要求能量守恒——只要没有外力作用于系统，它对任何碰撞都成立。" },
+        { q: "非弹性碰撞中「损失」的动能去哪了？", a: "它转化成了其他形式的能量——摩擦和形变产生的热量、撞击产生的声音，以及碰撞物体的永久性结构形变——而不是凭空消失，这与总体的能量守恒是一致的。" },
+      ],
+    },
+    ar: {
+      title: "حاسبة الزخم والتصادم",
+      intro: "أدخل كتلة وسرعة جسمين لحساب سرعتيهما بعد تصادم مرن أو تصادم غير مرن تمامًا.",
+      description: "احسب السرعات النهائية لتصادم مرن أو تصادم غير مرن تمامًا بين جسمين.",
+      faq: [
+        { q: "ما الفرق بين التصادمات المرنة وغير المرنة؟", a: "في التصادم المرن، يُحفظ كل من الزخم والطاقة الحركية (ترتد الأجسام بشكل نظيف). في التصادم غير المرن تمامًا، يُحفظ الزخم لكن ليس الطاقة الحركية - تلتصق الأجسام وتتحرك كجسم واحد، مع فقدان بعض الطاقة كحرارة أو صوت أو تشوه." },
+        { q: "كيف أحسب السرعات بعد تصادم مرن؟", a: "v1f = ((m1−m2)×v1 + 2×m2×v2) / (m1+m2)، وv2f = ((m2−m1)×v2 + 2×m1×v1) / (m1+m2) - تأتي هذه الصيغ من حل معادلتي حفظ الزخم وحفظ الطاقة الحركية معًا." },
+        { q: "لماذا يُحفظ الزخم دائمًا، حتى في التصادمات غير المرنة؟", a: "يأتي حفظ الزخم مباشرة من قانون نيوتن الثالث (قوى متساوية ومتعاكسة أثناء التصادم) ولا يتطلب حفظ الطاقة - يصح لأي تصادم طالما لا تؤثر قوى خارجية على النظام." },
+        { q: "ماذا يحدث للطاقة الحركية \"المفقودة\" في التصادم غير المرن؟", a: "تتحول إلى أشكال أخرى من الطاقة - حرارة من الاحتكاك والتشوه، وصوت من الاصطدام، وتشوه هيكلي دائم للأجسام المتصادمة - بدلاً من أن تختفي، بما يتوافق مع الحفظ العام للطاقة." },
+      ],
+    },
+    th: {
+      title: "เครื่องคำนวณโมเมนตัมและการชน",
+      intro: "ป้อนมวลและความเร็วของวัตถุสองชิ้นเพื่อคำนวณความเร็วของพวกมันหลังการชนแบบยืดหยุ่นหรือไม่ยืดหยุ่นอย่างสมบูรณ์",
+      description: "คำนวณความเร็วสุดท้ายสำหรับการชนแบบยืดหยุ่นหรือไม่ยืดหยุ่นอย่างสมบูรณ์ระหว่างวัตถุสองชิ้น",
+      faq: [
+        { q: "ความแตกต่างระหว่างการชนแบบยืดหยุ่นและไม่ยืดหยุ่นคืออะไร?", a: "ในการชนแบบยืดหยุ่น ทั้งโมเมนตัมและพลังงานจลน์จะคงที่ (วัตถุกระเด็นแยกออกจากกันอย่างสะอาด) ในการชนแบบไม่ยืดหยุ่นอย่างสมบูรณ์ โมเมนตัมคงที่แต่พลังงานจลน์ไม่คงที่ - วัตถุติดกันและเคลื่อนที่เป็นชิ้นเดียว โดยพลังงานบางส่วนสูญเสียไปเป็นความร้อน เสียง หรือการเปลี่ยนรูป" },
+        { q: "ฉันจะคำนวณความเร็วหลังการชนแบบยืดหยุ่นได้อย่างไร?", a: "v1f = ((m1−m2)×v1 + 2×m2×v2) / (m1+m2) และ v2f = ((m2−m1)×v2 + 2×m1×v1) / (m1+m2) - สูตรเหล่านี้มาจากการแก้สมการการอนุรักษ์โมเมนตัมและการอนุรักษ์พลังงานจลน์ร่วมกัน" },
+        { q: "ทำไมโมเมนตัมจึงคงที่เสมอ แม้ในการชนแบบไม่ยืดหยุ่น?", a: "การอนุรักษ์โมเมนตัมมาจากกฎข้อที่สามของนิวตันโดยตรง (แรงที่เท่ากันและตรงข้ามกันระหว่างการชน) และไม่ต้องการให้พลังงานคงที่ - มันใช้ได้กับการชนใดๆ ตราบใดที่ไม่มีแรงภายนอกกระทำต่อระบบ" },
+        { q: "พลังงานจลน์ที่ \"สูญเสียไป\" ในการชนแบบไม่ยืดหยุ่นเกิดอะไรขึ้น?", a: "มันเปลี่ยนเป็นพลังงานรูปแบบอื่น - ความร้อนจากแรงเสียดทานและการเปลี่ยนรูป เสียงจากการกระแทก และการเปลี่ยนรูปโครงสร้างถาวรของวัตถุที่ชนกัน - แทนที่จะหายไป ซึ่งสอดคล้องกับการอนุรักษ์พลังงานโดยรวม" },
+      ],
+    },
+  },
+
+  "ohms-law-calculator": {
+    es: {
+      title: "Calculadora de Ley de Ohm",
+      intro: "Introduce dos de voltaje, corriente, y resistencia para calcular los otros dos, más la potencia.",
+      description: "Calcula voltaje, corriente, resistencia, o potencia - introduce dos cualesquiera para encontrar los otros dos.",
+      faq: [
+        { q: "¿Qué es la ley de Ohm?", a: "V = I × R - el voltaje es igual a la corriente multiplicada por la resistencia. Describe la relación entre estas tres cantidades en un circuito eléctrico: para una resistencia fija, más voltaje impulsa más corriente." },
+        { q: "¿Cómo calculo la potencia a partir de los valores de la ley de Ohm?", a: "P = V × I (potencia es igual a voltaje por corriente) - una vez que conoces el voltaje y la corriente por la ley de Ohm, la potencia se sigue directamente. También puedes derivar P = I²R o P = V²/R sustituyendo la ley de Ohm en la fórmula de potencia." },
+        { q: "¿Cuál es la corriente si una resistencia de 10 ohmios tiene 20 voltios a través de ella?", a: "2 amperios - usando I = V/R = 20/10 = 2 A." },
+        { q: "¿Por qué necesito introducir exactamente dos valores conocidos?", a: "La ley de Ohm (V=IR) relaciona tres cantidades - conocer dos cualesquiera te permite resolver el tercero algebraicamente, pero con solo un valor conocido, no hay suficiente información para determinar los otros dos de manera única." },
+      ],
+    },
+    fr: {
+      title: "Calculateur de Loi d'Ohm",
+      intro: "Entrez deux valeurs parmi tension, courant, et résistance pour calculer les deux autres, plus la puissance.",
+      description: "Calculez la tension, le courant, la résistance, ou la puissance - entrez deux valeurs pour trouver les deux autres.",
+      faq: [
+        { q: "Qu'est-ce que la loi d'Ohm ?", a: "V = I × R - la tension est égale au courant multiplié par la résistance. Elle décrit la relation entre ces trois quantités dans un circuit électrique : pour une résistance fixe, plus de tension entraîne plus de courant." },
+        { q: "Comment calculer la puissance à partir des valeurs de la loi d'Ohm ?", a: "P = V × I (la puissance est égale à la tension multipliée par le courant) - une fois que vous connaissez la tension et le courant grâce à la loi d'Ohm, la puissance suit directement. Vous pouvez aussi dériver P = I²R ou P = V²/R en substituant la loi d'Ohm dans la formule de puissance." },
+        { q: "Quel est le courant si une résistance de 10 ohms a 20 volts à ses bornes ?", a: "2 ampères - en utilisant I = V/R = 20/10 = 2 A." },
+        { q: "Pourquoi dois-je entrer exactement deux valeurs connues ?", a: "La loi d'Ohm (V=IR) relie trois quantités - connaître deux d'entre elles vous permet de résoudre la troisième algébriquement, mais avec une seule valeur connue, il n'y a pas assez d'informations pour déterminer les deux autres de manière unique." },
+      ],
+    },
+    de: {
+      title: "Ohmsches-Gesetz-Rechner",
+      intro: "Geben Sie zwei von Spannung, Stromstärke, und Widerstand ein, um die anderen beiden plus die Leistung zu berechnen.",
+      description: "Berechnen Sie Spannung, Stromstärke, Widerstand, oder Leistung - geben Sie zwei beliebige ein, um die anderen beiden zu finden.",
+      faq: [
+        { q: "Was ist das Ohmsche Gesetz?", a: "V = I × R - Spannung ist gleich Stromstärke multipliziert mit Widerstand. Es beschreibt die Beziehung zwischen diesen drei Größen in einem elektrischen Stromkreis: bei festem Widerstand treibt mehr Spannung mehr Strom an." },
+        { q: "Wie berechne ich die Leistung aus den Werten des Ohmschen Gesetzes?", a: "P = V × I (Leistung ist gleich Spannung mal Stromstärke) - sobald Sie Spannung und Stromstärke aus dem Ohmschen Gesetz kennen, folgt die Leistung direkt. Sie können auch P = I²R oder P = V²/R ableiten, indem Sie das Ohmsche Gesetz in die Leistungsformel einsetzen." },
+        { q: "Wie hoch ist der Strom, wenn an einem 10-Ohm-Widerstand 20 Volt anliegen?", a: "2 Ampere - mit I = V/R = 20/10 = 2 A." },
+        { q: "Warum muss ich genau zwei bekannte Werte eingeben?", a: "Das Ohmsche Gesetz (V=IR) verbindet drei Größen - wenn Sie zwei davon kennen, können Sie die dritte algebraisch lösen, aber mit nur einem bekannten Wert gibt es nicht genug Informationen, um die anderen beiden eindeutig zu bestimmen." },
+      ],
+    },
+    pt: {
+      title: "Calculadora da Lei de Ohm",
+      intro: "Digite dois de tensão, corrente, e resistência para calcular os outros dois, mais a potência.",
+      description: "Calcule tensão, corrente, resistência, ou potência - digite dois quaisquer para encontrar os outros dois.",
+      faq: [
+        { q: "O que é a lei de Ohm?", a: "V = I × R - a tensão é igual à corrente multiplicada pela resistência. Ela descreve a relação entre essas três quantidades em um circuito elétrico: para uma resistência fixa, mais tensão impulsiona mais corrente." },
+        { q: "Como calculo a potência a partir dos valores da lei de Ohm?", a: "P = V × I (potência é igual a tensão vezes corrente) - assim que você sabe a tensão e corrente pela lei de Ohm, a potência segue diretamente. Você também pode derivar P = I²R ou P = V²/R substituindo a lei de Ohm na fórmula de potência." },
+        { q: "Qual é a corrente se um resistor de 10 ohms tem 20 volts sobre ele?", a: "2 amperes - usando I = V/R = 20/10 = 2 A." },
+        { q: "Por que preciso digitar exatamente dois valores conhecidos?", a: "A lei de Ohm (V=IR) relaciona três quantidades - saber duas quaisquer permite resolver a terceira algebricamente, mas com apenas um valor conhecido, não há informação suficiente para determinar as outras duas de forma única." },
+      ],
+    },
+    it: {
+      title: "Calcolatore della Legge di Ohm",
+      intro: "Inserisci due tra tensione, corrente, e resistenza per calcolare gli altri due, più la potenza.",
+      description: "Calcola tensione, corrente, resistenza, o potenza - inserisci due qualsiasi per trovare gli altri due.",
+      faq: [
+        { q: "Cos'è la legge di Ohm?", a: "V = I × R - la tensione è uguale alla corrente moltiplicata per la resistenza. Descrive la relazione tra queste tre grandezze in un circuito elettrico: per una resistenza fissa, più tensione produce più corrente." },
+        { q: "Come calcolo la potenza dai valori della legge di Ohm?", a: "P = V × I (la potenza è uguale a tensione per corrente) - una volta che conosci tensione e corrente dalla legge di Ohm, la potenza segue direttamente. Puoi anche derivare P = I²R o P = V²/R sostituendo la legge di Ohm nella formula della potenza." },
+        { q: "Qual è la corrente se un resistore da 10 ohm ha 20 volt ai suoi capi?", a: "2 ampere - usando I = V/R = 20/10 = 2 A." },
+        { q: "Perché devo inserire esattamente due valori noti?", a: "La legge di Ohm (V=IR) mette in relazione tre grandezze - conoscerne due qualsiasi ti permette di risolvere la terza algebricamente, ma con solo un valore noto, non ci sono informazioni sufficienti per determinare le altre due in modo univoco." },
+      ],
+    },
+    ja: {
+      title: "オームの法則計算機",
+      intro: "電圧、電流、抵抗のうち2つを入力すると、残りの2つと電力を計算します。",
+      description: "電圧、電流、抵抗、または電力を計算します。任意の2つを入力すると残りの2つが求まります。",
+      faq: [
+        { q: "オームの法則とは何ですか？", a: "V = I × Rです。電圧は電流と抵抗の積に等しくなります。これは電気回路におけるこれら3つの量の関係を表しています。抵抗が一定の場合、電圧が高いほど電流が大きくなります。" },
+        { q: "オームの法則の値から電力をどう計算しますか？", a: "P = V × I（電力は電圧×電流）です。オームの法則から電圧と電流がわかれば、電力は直接求まります。オームの法則を電力の公式に代入することで、P = I²RまたはP = V²/Rも導出できます。" },
+        { q: "10オームの抵抗器に20ボルトがかかっている場合、電流はいくつですか？", a: "2アンペアです。I = V/R = 20/10 = 2 Aを使用します。" },
+        { q: "なぜ正確に2つの既知の値を入力する必要があるのですか？", a: "オームの法則（V=IR）は3つの量を関連付けています。任意の2つがわかれば、代数的に3つ目を解くことができますが、1つの既知の値だけでは、残りの2つを一意に決定するのに十分な情報がありません。" },
+      ],
+    },
+    ro: {
+      title: "Calculator de Legea lui Ohm",
+      intro: "Introdu doi din tensiune, curent, și rezistență pentru a calcula ceilalți doi, plus puterea.",
+      description: "Calculează tensiunea, curentul, rezistența, sau puterea - introdu oricare doi pentru a găsi ceilalți doi.",
+      faq: [
+        { q: "Ce este legea lui Ohm?", a: "V = I × R - tensiunea este egală cu curentul înmulțit cu rezistența. Descrie relația dintre aceste trei mărimi într-un circuit electric: pentru o rezistență fixă, mai multă tensiune produce mai mult curent." },
+        { q: "Cum calculez puterea din valorile legii lui Ohm?", a: "P = V × I (puterea este egală cu tensiunea înmulțită cu curentul) - odată ce cunoști tensiunea și curentul din legea lui Ohm, puterea rezultă direct. De asemenea, poți deriva P = I²R sau P = V²/R substituind legea lui Ohm în formula puterii." },
+        { q: "Care este curentul dacă un rezistor de 10 ohmi are 20 de volți la borne?", a: "2 amperi - folosind I = V/R = 20/10 = 2 A." },
+        { q: "De ce trebuie să introduc exact două valori cunoscute?", a: "Legea lui Ohm (V=IR) leagă trei mărimi - cunoscând oricare două îți permite să rezolvi algebric a treia, dar cu o singură valoare cunoscută, nu există suficiente informații pentru a determina în mod unic celelalte două." },
+      ],
+    },
+    el: {
+      title: "Υπολογιστής Νόμου του Ωμ",
+      intro: "Εισάγετε δύο από τάση, ρεύμα, και αντίσταση για να υπολογίσετε τα άλλα δύο, συν την ισχύ.",
+      description: "Υπολόγισε τάση, ρεύμα, αντίσταση, ή ισχύ - εισάγετε οποιαδήποτε δύο για να βρείτε τα άλλα δύο.",
+      faq: [
+        { q: "Τι είναι ο νόμος του Ωμ;", a: "V = I × R - η τάση ισούται με το ρεύμα επί την αντίσταση. Περιγράφει τη σχέση μεταξύ αυτών των τριών ποσοτήτων σε ένα ηλεκτρικό κύκλωμα: για σταθερή αντίσταση, περισσότερη τάση οδηγεί σε περισσότερο ρεύμα." },
+        { q: "Πώς υπολογίζω την ισχύ από τις τιμές του νόμου του Ωμ;", a: "P = V × I (η ισχύς ισούται με τάση επί ρεύμα) - μόλις γνωρίζετε την τάση και το ρεύμα από τον νόμο του Ωμ, η ισχύς προκύπτει απευθείας. Μπορείτε επίσης να προκύψει P = I²R ή P = V²/R αντικαθιστώντας τον νόμο του Ωμ στον τύπο ισχύος." },
+        { q: "Ποιο είναι το ρεύμα αν μια αντίσταση 10 ωμ έχει 20 βολτ πάνω της;", a: "2 αμπέρ - χρησιμοποιώντας I = V/R = 20/10 = 2 A." },
+        { q: "Γιατί πρέπει να εισάγω ακριβώς δύο γνωστές τιμές;", a: "Ο νόμος του Ωμ (V=IR) συνδέει τρεις ποσότητες - η γνώση οποιωνδήποτε δύο σας επιτρέπει να λύσετε αλγεβρικά την τρίτη, αλλά με μόνο μία γνωστή τιμή, δεν υπάρχουν αρκετές πληροφορίες για να προσδιοριστούν μοναδικά οι άλλες δύο." },
+      ],
+    },
+    zh: {
+      title: "欧姆定律计算器",
+      intro: "输入电压、电流和电阻中的任意两个值，计算另外两个值以及功率。",
+      description: "计算电压、电流、电阻或功率——输入任意两个值即可求出另外两个。",
+      faq: [
+        { q: "什么是欧姆定律？", a: "V = I × R——电压等于电流乘以电阻。它描述了电路中这三个量之间的关系：在电阻固定的情况下，电压越大，电流越大。" },
+        { q: "如何用欧姆定律的值计算功率？", a: "P = V × I（功率等于电压乘以电流）——一旦你从欧姆定律得知电压和电流，功率就可以直接算出。你也可以把欧姆定律代入功率公式，推导出P = I²R或P = V²/R。" },
+        { q: "如果10欧姆的电阻两端有20伏特电压，电流是多少？", a: "2安培——使用I = V/R = 20/10 = 2 A。" },
+        { q: "为什么我需要恰好输入两个已知值？", a: "欧姆定律（V=IR）关联着三个量——知道其中任意两个，就能用代数方法求出第三个，但如果只知道一个值，就没有足够的信息来唯一确定另外两个值。" },
+      ],
+    },
+    ar: {
+      title: "حاسبة قانون أوم",
+      intro: "أدخل قيمتين من الجهد والتيار والمقاومة لحساب القيمتين الأخريين، بالإضافة إلى القدرة.",
+      description: "احسب الجهد أو التيار أو المقاومة أو القدرة - أدخل أي قيمتين لإيجاد القيمتين الأخريين.",
+      faq: [
+        { q: "ما هو قانون أوم؟", a: "V = I × R - الجهد يساوي التيار مضروبًا في المقاومة. يصف العلاقة بين هذه الكميات الثلاث في دائرة كهربائية: بالنسبة لمقاومة ثابتة، يؤدي المزيد من الجهد إلى المزيد من التيار." },
+        { q: "كيف أحسب القدرة من قيم قانون أوم؟", a: "P = V × I (القدرة تساوي الجهد مضروبًا في التيار) - بمجرد معرفة الجهد والتيار من قانون أوم، تُستنتج القدرة مباشرة. يمكنك أيضًا اشتقاق P = I²R أو P = V²/R بتعويض قانون أوم في صيغة القدرة." },
+        { q: "ما هو التيار إذا كانت مقاومة 10 أوم عليها 20 فولت؟", a: "2 أمبير - باستخدام I = V/R = 20/10 = 2 A." },
+        { q: "لماذا أحتاج إلى إدخال قيمتين معروفتين بالضبط؟", a: "يربط قانون أوم (V=IR) بين ثلاث كميات - معرفة أي قيمتين تتيح لك حل الثالثة جبريًا، لكن مع قيمة معروفة واحدة فقط، لا توجد معلومات كافية لتحديد القيمتين الأخريين بشكل فريد." },
+      ],
+    },
+    th: {
+      title: "เครื่องคำนวณกฎของโอห์ม",
+      intro: "ป้อนสองค่าจากแรงดันไฟฟ้า กระแสไฟฟ้า และความต้านทานเพื่อคำนวณอีกสองค่าที่เหลือ พร้อมกำลังไฟฟ้า",
+      description: "คำนวณแรงดันไฟฟ้า กระแสไฟฟ้า ความต้านทาน หรือกำลังไฟฟ้า - ป้อนสองค่าใดๆ เพื่อหาอีกสองค่าที่เหลือ",
+      faq: [
+        { q: "กฎของโอห์มคืออะไร?", a: "V = I × R - แรงดันไฟฟ้าเท่ากับกระแสไฟฟ้าคูณด้วยความต้านทาน มันอธิบายความสัมพันธ์ระหว่างสามปริมาณนี้ในวงจรไฟฟ้า: สำหรับความต้านทานคงที่ แรงดันไฟฟ้าที่มากขึ้นจะขับเคลื่อนกระแสไฟฟ้าที่มากขึ้น" },
+        { q: "ฉันจะคำนวณกำลังไฟฟ้าจากค่ากฎของโอห์มได้อย่างไร?", a: "P = V × I (กำลังไฟฟ้าเท่ากับแรงดันไฟฟ้าคูณกระแสไฟฟ้า) - เมื่อคุณทราบแรงดันไฟฟ้าและกระแสไฟฟ้าจากกฎของโอห์มแล้ว กำลังไฟฟ้าจะตามมาโดยตรง คุณยังสามารถหา P = I²R หรือ P = V²/R ได้โดยการแทนกฎของโอห์มลงในสูตรกำลังไฟฟ้า" },
+        { q: "กระแสไฟฟ้าคือเท่าไหร่ถ้าตัวต้านทาน 10 โอห์มมีแรงดันไฟฟ้า 20 โวลต์คร่อมอยู่?", a: "2 แอมป์ - โดยใช้ I = V/R = 20/10 = 2 A" },
+        { q: "ทำไมฉันจึงต้องป้อนค่าที่ทราบแล้วสองค่าพอดี?", a: "กฎของโอห์ม (V=IR) เชื่อมโยงสามปริมาณเข้าด้วยกัน - การรู้สองค่าใดๆ ช่วยให้คุณแก้หาค่าที่สามได้ทางพีชคณิต แต่ด้วยค่าที่ทราบเพียงค่าเดียว จะไม่มีข้อมูลเพียงพอที่จะกำหนดอีกสองค่าที่เหลือได้อย่างเฉพาะเจาะจง" },
+      ],
+    },
+  },
+
+  "right-triangle-calculator": {
+    es: {
+      title: "Calculadora de Triángulo Rectángulo",
+      intro: "Introduce dos de los lados de un triángulo rectángulo (dos catetos, o un cateto y la hipotenusa) para calcular todo lo demás.",
+      description: "Resuelve los lados, ángulos, y área faltantes de un triángulo rectángulo a partir de dos lados conocidos cualesquiera.",
+      faq: [
+        { q: "¿Cuál es la hipotenusa de un triángulo rectángulo con catetos 3 y 4?", a: "5 - usando el teorema de Pitágoras: c = √(3² + 4²) = √25 = 5. Este es el clásico triángulo rectángulo 3-4-5." },
+        { q: "¿Cómo encuentro un cateto faltante si conozco la hipotenusa y un cateto?", a: "Reordena el teorema de Pitágoras: cateto faltante = √(hipotenusa² − cateto conocido²). Por ejemplo, con hipotenusa 5 y un cateto 3: √(25−9) = √16 = 4." },
+        { q: "¿Cómo encuentro los ángulos de un triángulo rectángulo a partir de sus lados?", a: "Una vez que conoces los tres lados, usa el seno inverso: ángulo A = sin⁻¹(a ÷ c), donde a es el cateto opuesto al ángulo A y c es la hipotenusa. El otro ángulo no recto es simplemente 90° menos el ángulo A, ya que los tres ángulos suman 180°." },
+        { q: "¿Cuál es el área de un triángulo rectángulo?", a: "0.5 × cateto a × cateto b - los dos catetos se encuentran en el ángulo recto, así que sirven directamente como la base y altura del triángulo." },
+      ],
+    },
+    fr: {
+      title: "Calculateur de Triangle Rectangle",
+      intro: "Entrez deux des côtés d'un triangle rectangle (deux cathètes, ou une cathète et l'hypoténuse) pour calculer tout le reste.",
+      description: "Résolvez les côtés, angles, et aire manquants d'un triangle rectangle à partir de deux côtés connus quelconques.",
+      faq: [
+        { q: "Quelle est l'hypoténuse d'un triangle rectangle avec des cathètes 3 et 4 ?", a: "5 - en utilisant le théorème de Pythagore : c = √(3² + 4²) = √25 = 5. C'est le classique triangle rectangle 3-4-5." },
+        { q: "Comment trouver une cathète manquante si je connais l'hypoténuse et une cathète ?", a: "Réarrangez le théorème de Pythagore : cathète manquante = √(hypoténuse² − cathète connue²). Par exemple, avec une hypoténuse de 5 et une cathète de 3 : √(25−9) = √16 = 4." },
+        { q: "Comment trouver les angles d'un triangle rectangle à partir de ses côtés ?", a: "Une fois que vous connaissez les trois côtés, utilisez le sinus inverse : angle A = sin⁻¹(a ÷ c), où a est la cathète opposée à l'angle A et c est l'hypoténuse. L'autre angle non droit est simplement 90° moins l'angle A, puisque les trois angles totalisent 180°." },
+        { q: "Quelle est l'aire d'un triangle rectangle ?", a: "0,5 × cathète a × cathète b - les deux cathètes se rencontrent à l'angle droit, elles servent donc directement de base et de hauteur du triangle." },
+      ],
+    },
+    de: {
+      title: "Rechtwinkliges-Dreieck-Rechner",
+      intro: "Geben Sie zwei Seiten eines rechtwinkligen Dreiecks ein (zwei Katheten, oder eine Kathete und die Hypotenuse), um alles andere zu berechnen.",
+      description: "Lösen Sie die fehlenden Seiten, Winkel, und Fläche eines rechtwinkligen Dreiecks aus zwei beliebigen bekannten Seiten.",
+      faq: [
+        { q: "Was ist die Hypotenuse eines rechtwinkligen Dreiecks mit Katheten 3 und 4?", a: "5 - mit dem Satz des Pythagoras: c = √(3² + 4²) = √25 = 5. Dies ist das klassische 3-4-5-Rechtwinkeldreieck." },
+        { q: "Wie finde ich eine fehlende Kathete, wenn ich die Hypotenuse und eine Kathete kenne?", a: "Ordnen Sie den Satz des Pythagoras um: fehlende Kathete = √(Hypotenuse² − bekannte Kathete²). Zum Beispiel bei Hypotenuse 5 und einer Kathete 3: √(25−9) = √16 = 4." },
+        { q: "Wie finde ich die Winkel eines rechtwinkligen Dreiecks aus seinen Seiten?", a: "Sobald Sie alle drei Seiten kennen, verwenden Sie den Arkussinus: Winkel A = sin⁻¹(a ÷ c), wobei a die dem Winkel A gegenüberliegende Kathete ist und c die Hypotenuse. Der andere nicht-rechte Winkel ist einfach 90° minus Winkel A, da alle drei Winkel sich zu 180° summieren." },
+        { q: "Was ist die Fläche eines rechtwinkligen Dreiecks?", a: "0,5 × Kathete a × Kathete b - die beiden Katheten treffen sich am rechten Winkel, sodass sie direkt als Basis und Höhe des Dreiecks dienen." },
+      ],
+    },
+    pt: {
+      title: "Calculadora de Triângulo Retângulo",
+      intro: "Digite dois dos lados de um triângulo retângulo (dois catetos, ou um cateto e a hipotenusa) para calcular tudo o mais.",
+      description: "Resolva os lados, ângulos, e área faltantes de um triângulo retângulo a partir de dois lados conhecidos quaisquer.",
+      faq: [
+        { q: "Qual é a hipotenusa de um triângulo retângulo com catetos 3 e 4?", a: "5 - usando o teorema de Pitágoras: c = √(3² + 4²) = √25 = 5. Este é o clássico triângulo retângulo 3-4-5." },
+        { q: "Como encontro um cateto faltante se conheço a hipotenusa e um cateto?", a: "Reorganize o teorema de Pitágoras: cateto faltante = √(hipotenusa² − cateto conhecido²). Por exemplo, com hipotenusa 5 e um cateto 3: √(25−9) = √16 = 4." },
+        { q: "Como encontro os ângulos de um triângulo retângulo a partir de seus lados?", a: "Assim que você conhece os três lados, use o seno inverso: ângulo A = sin⁻¹(a ÷ c), onde a é o cateto oposto ao ângulo A e c é a hipotenusa. O outro ângulo não reto é simplesmente 90° menos o ângulo A, já que os três ângulos somam 180°." },
+        { q: "Qual é a área de um triângulo retângulo?", a: "0,5 × cateto a × cateto b - os dois catetos se encontram no ângulo reto, então servem diretamente como base e altura do triângulo." },
+      ],
+    },
+    it: {
+      title: "Calcolatore di Triangolo Rettangolo",
+      intro: "Inserisci due dei lati di un triangolo rettangolo (due cateti, o un cateto e l'ipotenusa) per calcolare tutto il resto.",
+      description: "Risolvi i lati, angoli, e area mancanti di un triangolo rettangolo da due lati noti qualsiasi.",
+      faq: [
+        { q: "Qual è l'ipotenusa di un triangolo rettangolo con cateti 3 e 4?", a: "5 - usando il teorema di Pitagora: c = √(3² + 4²) = √25 = 5. Questo è il classico triangolo rettangolo 3-4-5." },
+        { q: "Come trovo un cateto mancante se conosco l'ipotenusa e un cateto?", a: "Riorganizza il teorema di Pitagora: cateto mancante = √(ipotenusa² − cateto noto²). Per esempio, con ipotenusa 5 e un cateto 3: √(25−9) = √16 = 4." },
+        { q: "Come trovo gli angoli di un triangolo rettangolo dai suoi lati?", a: "Una volta che conosci tutti e tre i lati, usa il seno inverso: angolo A = sin⁻¹(a ÷ c), dove a è il cateto opposto all'angolo A e c è l'ipotenusa. L'altro angolo non retto è semplicemente 90° meno l'angolo A, poiché tutti e tre gli angoli sommano a 180°." },
+        { q: "Qual è l'area di un triangolo rettangolo?", a: "0,5 × cateto a × cateto b - i due cateti si incontrano all'angolo retto, quindi servono direttamente come base e altezza del triangolo." },
+      ],
+    },
+    ja: {
+      title: "直角三角形計算機",
+      intro: "直角三角形の2辺（2つの脚、または1つの脚と斜辺）を入力すると、他のすべてを計算します。",
+      description: "既知の任意の2辺から、直角三角形の欠けている辺、角度、面積を求めます。",
+      faq: [
+        { q: "脚が3と4の直角三角形の斜辺はいくつですか？", a: "5です。ピタゴラスの定理を使用：c = √(3² + 4²) = √25 = 5。これは古典的な3-4-5直角三角形です。" },
+        { q: "斜辺と1つの脚がわかっている場合、欠けている脚をどう求めますか？", a: "ピタゴラスの定理を並べ替えます：欠けている脚 = √(斜辺² − 既知の脚²)。例えば、斜辺5と脚3の場合：√(25−9) = √16 = 4。" },
+        { q: "直角三角形の辺から角度をどう求めますか？", a: "3辺すべてがわかったら、逆正弦を使用します：角度A = sin⁻¹(a ÷ c)。aは角度Aの対辺、cは斜辺です。もう1つの非直角の角度は、単に90°から角度Aを引いたものです。3つの角度の合計は180°になるためです。" },
+        { q: "直角三角形の面積はいくつですか？", a: "0.5 × 脚a × 脚bです。2つの脚は直角で交わるため、直接三角形の底辺と高さとして機能します。" },
+      ],
+    },
+    ro: {
+      title: "Calculator de Triunghi Dreptunghic",
+      intro: "Introdu două dintre laturile unui triunghi dreptunghic (două catete, sau o catetă și ipotenuza) pentru a calcula orice altceva.",
+      description: "Rezolvă laturile, unghiurile, și aria lipsă ale unui triunghi dreptunghic din oricare două laturi cunoscute.",
+      faq: [
+        { q: "Care este ipotenuza unui triunghi dreptunghic cu catetele 3 și 4?", a: "5 - folosind teorema lui Pitagora: c = √(3² + 4²) = √25 = 5. Acesta este clasicul triunghi dreptunghic 3-4-5." },
+        { q: "Cum găsesc o catetă lipsă dacă știu ipotenuza și o catetă?", a: "Rearanjează teorema lui Pitagora: catetă lipsă = √(ipotenuza² − catetă cunoscută²). De exemplu, cu ipotenuza 5 și o catetă 3: √(25−9) = √16 = 4." },
+        { q: "Cum găsesc unghiurile unui triunghi dreptunghic din laturile sale?", a: "Odată ce cunoști toate cele trei laturi, folosește sinusul invers: unghiul A = sin⁻¹(a ÷ c), unde a este cateta opusă unghiului A și c este ipotenuza. Celălalt unghi nedreptunghic este pur și simplu 90° minus unghiul A, deoarece toate cele trei unghiuri însumează 180°." },
+        { q: "Care este aria unui triunghi dreptunghic?", a: "0,5 × cateta a × cateta b - cele două catete se întâlnesc la unghiul drept, deci servesc direct ca bază și înălțime a triunghiului." },
+      ],
+    },
+    el: {
+      title: "Υπολογιστής Ορθογωνίου Τριγώνου",
+      intro: "Εισάγετε δύο από τις πλευρές ενός ορθογωνίου τριγώνου (δύο κάθετες πλευρές, ή μία κάθετη πλευρά και την υποτείνουσα) για να υπολογίσετε όλα τα υπόλοιπα.",
+      description: "Λύσε τις ελλείπουσες πλευρές, γωνίες, και εμβαδόν ενός ορθογωνίου τριγώνου από οποιεσδήποτε δύο γνωστές πλευρές.",
+      faq: [
+        { q: "Ποια είναι η υποτείνουσα ενός ορθογωνίου τριγώνου με κάθετες πλευρές 3 και 4;", a: "5 - χρησιμοποιώντας το πυθαγόρειο θεώρημα: c = √(3² + 4²) = √25 = 5. Αυτό είναι το κλασικό ορθογώνιο τρίγωνο 3-4-5." },
+        { q: "Πώς βρίσκω μια ελλείπουσα κάθετη πλευρά αν γνωρίζω την υποτείνουσα και μία κάθετη πλευρά;", a: "Αναδιατάξτε το πυθαγόρειο θεώρημα: ελλείπουσα κάθετη πλευρά = √(υποτείνουσα² − γνωστή κάθετη πλευρά²). Για παράδειγμα, με υποτείνουσα 5 και μία κάθετη πλευρά 3: √(25−9) = √16 = 4." },
+        { q: "Πώς βρίσκω τις γωνίες ενός ορθογωνίου τριγώνου από τις πλευρές του;", a: "Μόλις γνωρίζετε και τις τρεις πλευρές, χρησιμοποιήστε το αντίστροφο ημίτονο: γωνία A = sin⁻¹(a ÷ c), όπου a είναι η κάθετη πλευρά απέναντι από τη γωνία A και c είναι η υποτείνουσα. Η άλλη μη ορθή γωνία είναι απλά 90° μείον τη γωνία A, αφού και οι τρεις γωνίες αθροίζουν στις 180°." },
+        { q: "Ποιο είναι το εμβαδόν ενός ορθογωνίου τριγώνου;", a: "0,5 × κάθετη πλευρά a × κάθετη πλευρά b - οι δύο κάθετες πλευρές συναντώνται στην ορθή γωνία, οπότε χρησιμεύουν απευθείας ως βάση και ύψος του τριγώνου." },
+      ],
+    },
+    zh: {
+      title: "直角三角形计算器",
+      intro: "输入直角三角形的两条边（两条直角边，或一条直角边和斜边），计算其余的一切。",
+      description: "根据任意两条已知边，求解直角三角形缺失的边、角和面积。",
+      faq: [
+        { q: "直角边为3和4的直角三角形的斜边是多少？", a: "5——使用勾股定理：c = √(3² + 4²) = √25 = 5。这是经典的3-4-5直角三角形。" },
+        { q: "如果我知道斜边和一条直角边，如何求缺失的直角边？", a: "重新排列勾股定理：缺失直角边 = √(斜边² − 已知直角边²)。例如，斜边为5、一条直角边为3时：√(25−9) = √16 = 4。" },
+        { q: "如何从边长求出直角三角形的角？", a: "一旦你知道全部三条边，就可以使用反正弦：角A = sin⁻¹(a ÷ c)，其中a是角A对边，c是斜边。另一个非直角就是90°减去角A，因为三个角之和为180°。" },
+        { q: "直角三角形的面积是多少？", a: "0.5 × 直角边a × 直角边b——两条直角边在直角处相交，因此可以直接作为三角形的底和高。" },
+      ],
+    },
+    ar: {
+      title: "حاسبة المثلث القائم الزاوية",
+      intro: "أدخل ضلعين من مثلث قائم الزاوية (ضلعان قائمان، أو ضلع قائم والوتر) لحساب كل شيء آخر.",
+      description: "حل الأضلاع والزوايا والمساحة المفقودة لمثلث قائم الزاوية من أي ضلعين معروفين.",
+      faq: [
+        { q: "ما هو وتر مثلث قائم الزاوية بضلعين قائمين 3 و4؟", a: "5 - باستخدام نظرية فيثاغورس: c = √(3² + 4²) = √25 = 5. هذا هو المثلث القائم الزاوية الكلاسيكي 3-4-5." },
+        { q: "كيف أجد ضلعًا قائمًا مفقودًا إذا كنت أعرف الوتر وضلعًا قائمًا واحدًا؟", a: "أعد ترتيب نظرية فيثاغورس: الضلع القائم المفقود = √(الوتر² − الضلع القائم المعروف²). على سبيل المثال، بوتر 5 وضلع قائم 3: √(25−9) = √16 = 4." },
+        { q: "كيف أجد زوايا مثلث قائم الزاوية من أضلاعه؟", a: "بمجرد معرفة الأضلاع الثلاثة، استخدم جيب التمام العكسي: الزاوية A = sin⁻¹(a ÷ c)، حيث a هو الضلع القائم المقابل للزاوية A وc هو الوتر. الزاوية الأخرى غير القائمة هي ببساطة 90° ناقص الزاوية A، لأن مجموع الزوايا الثلاث يساوي 180°." },
+        { q: "ما هي مساحة مثلث قائم الزاوية؟", a: "0.5 × الضلع القائم a × الضلع القائم b - يلتقي الضلعان القائمان عند الزاوية القائمة، لذا يعملان مباشرة كقاعدة وارتفاع للمثلث." },
+      ],
+    },
+    th: {
+      title: "เครื่องคำนวณสามเหลี่ยมมุมฉาก",
+      intro: "ป้อนสองด้านของสามเหลี่ยมมุมฉาก (สองด้านประกอบมุมฉาก หรือหนึ่งด้านประกอบมุมฉากและด้านตรงข้ามมุมฉาก) เพื่อคำนวณทุกอย่างที่เหลือ",
+      description: "แก้หาด้าน มุม และพื้นที่ที่หายไปของสามเหลี่ยมมุมฉากจากด้านที่ทราบสองด้านใดก็ได้",
+      faq: [
+        { q: "ด้านตรงข้ามมุมฉากของสามเหลี่ยมมุมฉากที่มีด้านประกอบมุมฉาก 3 และ 4 คือเท่าไหร่?", a: "5 - โดยใช้ทฤษฎีบทพีทาโกรัส: c = √(3² + 4²) = √25 = 5 นี่คือสามเหลี่ยมมุมฉาก 3-4-5 แบบคลาสสิก" },
+        { q: "ฉันจะหาด้านประกอบมุมฉากที่หายไปได้อย่างไรถ้ารู้ด้านตรงข้ามมุมฉากและด้านประกอบมุมฉากหนึ่งด้าน?", a: "จัดเรียงทฤษฎีบทพีทาโกรัสใหม่: ด้านประกอบมุมฉากที่หายไป = √(ด้านตรงข้ามมุมฉาก² − ด้านประกอบมุมฉากที่ทราบ²) ตัวอย่างเช่น ด้านตรงข้ามมุมฉาก 5 และด้านประกอบมุมฉาก 3: √(25−9) = √16 = 4" },
+        { q: "ฉันจะหามุมของสามเหลี่ยมมุมฉากจากด้านของมันได้อย่างไร?", a: "เมื่อคุณทราบด้านทั้งสามแล้ว ใช้ไซน์ผกผัน: มุม A = sin⁻¹(a ÷ c) โดยที่ a คือด้านตรงข้ามมุม A และ c คือด้านตรงข้ามมุมฉาก มุมที่ไม่ใช่มุมฉากอีกมุมหนึ่งคือ 90° ลบมุม A เนื่องจากมุมทั้งสามรวมกันได้ 180°" },
+        { q: "พื้นที่ของสามเหลี่ยมมุมฉากคือเท่าไหร่?", a: "0.5 × ด้านประกอบมุมฉาก a × ด้านประกอบมุมฉาก b - ด้านประกอบมุมฉากทั้งสองมาบรรจบกันที่มุมฉาก ดังนั้นจึงทำหน้าที่เป็นฐานและความสูงของสามเหลี่ยมโดยตรง" },
+      ],
+    },
+  },
+
+  "absolute-risk-reduction-calculator": {
+    es: {
+      title: "Calculadora de Reducción Absoluta del Riesgo",
+      intro: "Introduce la tasa de eventos en un grupo de control y un grupo de tratamiento para calcular la reducción absoluta del riesgo, reducción relativa del riesgo, y número necesario a tratar.",
+      description: "Calcula la reducción absoluta del riesgo (ARR), reducción relativa del riesgo (RRR), y número necesario a tratar (NNT) a partir de dos tasas de eventos.",
+      faq: [
+        { q: "¿Cuál es la diferencia entre reducción absoluta y relativa del riesgo?", a: "La reducción absoluta del riesgo (ARR) es la diferencia simple entre dos tasas de eventos (por ejemplo, 20% − 12% = 8 puntos porcentuales). La reducción relativa del riesgo (RRR) expresa esa misma diferencia como un porcentaje de la tasa original (8 ÷ 20 = 40%) - RRR a menudo suena más dramática que ARR para los mismos datos subyacentes, por lo que ambos números importan para el contexto." },
+        { q: "¿Qué significa 'número necesario a tratar' (NNT)?", a: "NNT es el número de personas que necesitarían recibir un tratamiento para que una persona adicional se beneficie (evite el evento), calculado como 1 ÷ ARR (expresado como decimal). Un NNT más pequeño significa un efecto de tratamiento más impactante - un NNT de 12.5 significa que aproximadamente 1 de cada 12-13 personas tratadas ve el beneficio." },
+        { q: "¿Es esto apropiado para tomar decisiones de tratamiento médico?", a: "No - esta es una calculadora de referencia estadística para entender cómo se calculan estos números, no un sustituto de los intervalos de confianza de un estudio clínico completo, características de la población, y la interpretación de un profesional calificado. Siempre discute las decisiones de tratamiento con un proveedor de atención médica." },
+      ],
+    },
+    fr: {
+      title: "Calculateur de Réduction Absolue du Risque",
+      intro: "Entrez le taux d'événements dans un groupe témoin et un groupe de traitement pour calculer la réduction absolue du risque, la réduction relative du risque, et le nombre nécessaire à traiter.",
+      description: "Calculez la réduction absolue du risque (ARR), la réduction relative du risque (RRR), et le nombre nécessaire à traiter (NNT) à partir de deux taux d'événements.",
+      faq: [
+        { q: "Quelle est la différence entre réduction absolue et relative du risque ?", a: "La réduction absolue du risque (ARR) est la différence simple entre deux taux d'événements (par exemple, 20 % − 12 % = 8 points de pourcentage). La réduction relative du risque (RRR) exprime cette même différence en pourcentage du taux original (8 ÷ 20 = 40 %) - RRR semble souvent plus spectaculaire qu'ARR pour les mêmes données sous-jacentes, c'est pourquoi les deux chiffres comptent pour le contexte." },
+        { q: "Que signifie « nombre nécessaire à traiter » (NNT) ?", a: "NNT est le nombre de personnes qui devraient recevoir un traitement pour qu'une personne supplémentaire en bénéficie (évite l'événement), calculé comme 1 ÷ ARR (exprimé en décimal). Un NNT plus petit signifie un effet de traitement plus important - un NNT de 12,5 signifie qu'environ 1 personne traitée sur 12-13 en tire un bénéfice." },
+        { q: "Est-ce approprié pour prendre des décisions de traitement médical ?", a: "Non - il s'agit d'une calculatrice de référence statistique pour comprendre comment ces chiffres sont calculés, pas un substitut aux intervalles de confiance d'une étude clinique complète, aux caractéristiques de la population, et à l'interprétation d'un professionnel qualifié. Discutez toujours des décisions de traitement avec un professionnel de santé." },
+      ],
+    },
+    de: {
+      title: "Absolute-Risikoreduktion-Rechner",
+      intro: "Geben Sie die Ereignisrate in einer Kontrollgruppe und einer Behandlungsgruppe ein, um die absolute Risikoreduktion, relative Risikoreduktion, und die zu behandelnde Anzahl zu berechnen.",
+      description: "Berechnen Sie die absolute Risikoreduktion (ARR), relative Risikoreduktion (RRR), und die zu behandelnde Anzahl (NNT) aus zwei Ereignisraten.",
+      faq: [
+        { q: "Was ist der Unterschied zwischen absoluter und relativer Risikoreduktion?", a: "Die absolute Risikoreduktion (ARR) ist der einfache Unterschied zwischen zwei Ereignisraten (z.B. 20 % − 12 % = 8 Prozentpunkte). Die relative Risikoreduktion (RRR) drückt denselben Unterschied als Prozentsatz der ursprünglichen Rate aus (8 ÷ 20 = 40 %) - RRR klingt oft dramatischer als ARR für dieselben zugrunde liegenden Daten, weshalb beide Zahlen für den Kontext wichtig sind." },
+        { q: "Was bedeutet „zu behandelnde Anzahl“ (NNT)?", a: "NNT ist die Anzahl der Personen, die eine Behandlung erhalten müssten, damit eine zusätzliche Person davon profitiert (das Ereignis vermeidet), berechnet als 1 ÷ ARR (als Dezimalzahl ausgedrückt). Eine kleinere NNT bedeutet eine wirkungsvollere Behandlungswirkung - eine NNT von 12,5 bedeutet, dass ungefähr 1 von 12-13 behandelten Personen den Nutzen sieht." },
+        { q: "Ist dies für medizinische Behandlungsentscheidungen geeignet?", a: "Nein - dies ist ein statistischer Referenzrechner, um zu verstehen, wie diese Zahlen berechnet werden, kein Ersatz für die Konfidenzintervalle einer vollständigen klinischen Studie, Populationsmerkmale, und die Interpretation eines qualifizierten Fachmanns. Besprechen Sie Behandlungsentscheidungen immer mit einem Gesundheitsdienstleister." },
+      ],
+    },
+    pt: {
+      title: "Calculadora de Redução Absoluta do Risco",
+      intro: "Digite a taxa de eventos em um grupo de controle e um grupo de tratamento para calcular a redução absoluta do risco, redução relativa do risco, e número necessário a tratar.",
+      description: "Calcule a redução absoluta do risco (ARR), redução relativa do risco (RRR), e número necessário a tratar (NNT) a partir de duas taxas de eventos.",
+      faq: [
+        { q: "Qual é a diferença entre redução absoluta e relativa do risco?", a: "A redução absoluta do risco (ARR) é a diferença simples entre duas taxas de eventos (por exemplo, 20% − 12% = 8 pontos percentuais). A redução relativa do risco (RRR) expressa essa mesma diferença como uma porcentagem da taxa original (8 ÷ 20 = 40%) - RRR frequentemente soa mais dramática que ARR para os mesmos dados subjacentes, por isso ambos os números importam para o contexto." },
+        { q: "O que significa 'número necessário a tratar' (NNT)?", a: "NNT é o número de pessoas que precisariam receber um tratamento para que uma pessoa adicional se beneficie (evite o evento), calculado como 1 ÷ ARR (expresso como decimal). Um NNT menor significa um efeito de tratamento mais impactante - um NNT de 12,5 significa que aproximadamente 1 em cada 12-13 pessoas tratadas vê o benefício." },
+        { q: "Isso é apropriado para tomar decisões de tratamento médico?", a: "Não - esta é uma calculadora de referência estatística para entender como esses números são calculados, não um substituto para os intervalos de confiança de um estudo clínico completo, características da população, e a interpretação de um profissional qualificado. Sempre discuta decisões de tratamento com um profissional de saúde." },
+      ],
+    },
+    it: {
+      title: "Calcolatore di Riduzione Assoluta del Rischio",
+      intro: "Inserisci il tasso di eventi in un gruppo di controllo e un gruppo di trattamento per calcolare la riduzione assoluta del rischio, riduzione relativa del rischio, e numero necessario da trattare.",
+      description: "Calcola la riduzione assoluta del rischio (ARR), riduzione relativa del rischio (RRR), e numero necessario da trattare (NNT) da due tassi di eventi.",
+      faq: [
+        { q: "Qual è la differenza tra riduzione assoluta e relativa del rischio?", a: "La riduzione assoluta del rischio (ARR) è la semplice differenza tra due tassi di eventi (ad esempio, 20% − 12% = 8 punti percentuali). La riduzione relativa del rischio (RRR) esprime quella stessa differenza come percentuale del tasso originale (8 ÷ 20 = 40%) - RRR spesso suona più drammatica di ARR per gli stessi dati sottostanti, ecco perché entrambi i numeri contano per il contesto." },
+        { q: "Cosa significa 'numero necessario da trattare' (NNT)?", a: "NNT è il numero di persone che dovrebbero ricevere un trattamento affinché una persona aggiuntiva ne tragga beneficio (eviti l'evento), calcolato come 1 ÷ ARR (espresso come decimale). Un NNT più piccolo significa un effetto di trattamento più impattante - un NNT di 12,5 significa che circa 1 persona su 12-13 trattate vede il beneficio." },
+        { q: "È appropriato per prendere decisioni di trattamento medico?", a: "No - questo è un calcolatore di riferimento statistico per capire come vengono calcolati questi numeri, non un sostituto degli intervalli di confidenza di uno studio clinico completo, delle caratteristiche della popolazione, e dell'interpretazione di un professionista qualificato. Discuti sempre le decisioni di trattamento con un operatore sanitario." },
+      ],
+    },
+    ja: {
+      title: "絶対リスク減少計算機",
+      intro: "対照群と治療群の事象率を入力すると、絶対リスク減少、相対リスク減少、治療必要数を計算します。",
+      description: "2つの事象率から絶対リスク減少（ARR）、相対リスク減少（RRR）、治療必要数（NNT）を計算します。",
+      faq: [
+        { q: "絶対リスク減少と相対リスク減少の違いは何ですか？", a: "絶対リスク減少（ARR）は2つの事象率の単純な差です（例：20% − 12% = 8パーセントポイント）。相対リスク減少（RRR）は同じ差を元の率に対する割合として表します（8 ÷ 20 = 40%）。RRRは同じ基礎データに対してARRよりも劇的に聞こえることが多いため、両方の数値が文脈にとって重要です。" },
+        { q: "「治療必要数」（NNT）とは何を意味しますか？", a: "NNTは、1人の追加の人が利益を得る（事象を回避する）ために治療を受ける必要がある人数で、1 ÷ ARR（小数として表現）として計算されます。NNTが小さいほど、より影響力のある治療効果を意味します。NNT 12.5は、治療を受けた12〜13人のうち約1人が利益を得ることを意味します。" },
+        { q: "これは医療上の治療決定に適していますか？", a: "いいえ。これはこれらの数値がどのように計算されるかを理解するための統計参考計算機であり、完全な臨床研究の信頼区間、集団の特性、資格のある専門家の解釈の代わりにはなりません。治療の決定については、常に医療提供者と相談してください。" },
+      ],
+    },
+    ro: {
+      title: "Calculator de Reducere Absolută a Riscului",
+      intro: "Introdu rata evenimentelor într-un grup de control și un grup de tratament pentru a calcula reducerea absolută a riscului, reducerea relativă a riscului, și numărul necesar de tratat.",
+      description: "Calculează reducerea absolută a riscului (ARR), reducerea relativă a riscului (RRR), și numărul necesar de tratat (NNT) din două rate ale evenimentelor.",
+      faq: [
+        { q: "Care este diferența dintre reducerea absolută și relativă a riscului?", a: "Reducerea absolută a riscului (ARR) este diferența simplă dintre două rate ale evenimentelor (de exemplu, 20% − 12% = 8 puncte procentuale). Reducerea relativă a riscului (RRR) exprimă aceeași diferență ca procent din rata originală (8 ÷ 20 = 40%) - RRR sună adesea mai dramatic decât ARR pentru aceleași date de bază, motiv pentru care ambele numere contează pentru context." },
+        { q: "Ce înseamnă \"numărul necesar de tratat\" (NNT)?", a: "NNT este numărul de persoane care ar trebui să primească un tratament pentru ca o persoană suplimentară să beneficieze (să evite evenimentul), calculat ca 1 ÷ ARR (exprimat ca zecimal). Un NNT mai mic înseamnă un efect de tratament mai puternic - un NNT de 12,5 înseamnă că aproximativ 1 din fiecare 12-13 persoane tratate vede beneficiul." },
+        { q: "Este acest lucru potrivit pentru luarea deciziilor de tratament medical?", a: "Nu - acesta este un calculator de referință statistică pentru a înțelege cum sunt calculate aceste numere, nu un substitut pentru intervalele de încredere ale unui studiu clinic complet, caracteristicile populației, și interpretarea unui profesionist calificat. Discută întotdeauna deciziile de tratament cu un furnizor de servicii medicale." },
+      ],
+    },
+    el: {
+      title: "Υπολογιστής Απόλυτης Μείωσης Κινδύνου",
+      intro: "Εισάγετε τον ρυθμό συμβάντων σε μια ομάδα ελέγχου και μια ομάδα θεραπείας για να υπολογίσετε την απόλυτη μείωση κινδύνου, τη σχετική μείωση κινδύνου, και τον αριθμό που απαιτείται για θεραπεία.",
+      description: "Υπολόγισε την απόλυτη μείωση κινδύνου (ARR), τη σχετική μείωση κινδύνου (RRR), και τον αριθμό που απαιτείται για θεραπεία (NNT) από δύο ρυθμούς συμβάντων.",
+      faq: [
+        { q: "Ποια είναι η διαφορά μεταξύ απόλυτης και σχετικής μείωσης κινδύνου;", a: "Η απόλυτη μείωση κινδύνου (ARR) είναι η απλή διαφορά μεταξύ δύο ρυθμών συμβάντων (π.χ., 20% − 12% = 8 ποσοστιαίες μονάδες). Η σχετική μείωση κινδύνου (RRR) εκφράζει την ίδια διαφορά ως ποσοστό του αρχικού ρυθμού (8 ÷ 20 = 40%) - η RRR συχνά ακούγεται πιο εντυπωσιακή από την ARR για τα ίδια υποκείμενα δεδομένα, γι' αυτό και οι δύο αριθμοί έχουν σημασία για το πλαίσιο." },
+        { q: "Τι σημαίνει «αριθμός που απαιτείται για θεραπεία» (NNT);", a: "Το NNT είναι ο αριθμός ατόμων που θα χρειαζόταν να λάβουν μια θεραπεία για να ωφεληθεί ένα επιπλέον άτομο (να αποφύγει το συμβάν), υπολογιζόμενος ως 1 ÷ ARR (εκφρασμένος ως δεκαδικός). Μικρότερο NNT σημαίνει πιο επιδραστικό θεραπευτικό αποτέλεσμα - ένα NNT 12,5 σημαίνει ότι περίπου 1 στους 12-13 ανθρώπους που θεραπεύονται βλέπει το όφελος." },
+        { q: "Είναι αυτό κατάλληλο για τη λήψη ιατρικών αποφάσεων θεραπείας;", a: "Όχι - αυτή είναι μια στατιστική αριθμομηχανή αναφοράς για την κατανόηση του πώς υπολογίζονται αυτοί οι αριθμοί, όχι υποκατάστατο των διαστημάτων εμπιστοσύνης μιας πλήρους κλινικής μελέτης, των χαρακτηριστικών του πληθυσμού, και της ερμηνείας ενός εξειδικευμένου επαγγελματία. Συζητάτε πάντα τις αποφάσεις θεραπείας με έναν πάροχο υγειονομικής περίθαλψης." },
+      ],
+    },
+    zh: {
+      title: "绝对风险降低计算器",
+      intro: "输入对照组和治疗组的事件发生率，计算绝对风险降低、相对风险降低和需治疗人数。",
+      description: "根据两个事件发生率计算绝对风险降低（ARR）、相对风险降低（RRR）和需治疗人数（NNT）。",
+      faq: [
+        { q: "绝对风险降低和相对风险降低有什么区别？", a: "绝对风险降低（ARR）是两个事件发生率之间的简单差值（例如，20% − 12% = 8个百分点）。相对风险降低（RRR）则把这个差值表示为原始发生率的百分比（8 ÷ 20 = 40%）——对于相同的基础数据，RRR的数值往往比ARR听起来更引人注目，这就是为什么这两个数字对理解背景都很重要。" },
+        { q: "「需治疗人数」（NNT）是什么意思？", a: "NNT是指为了让一个额外的人受益（避免事件发生）需要接受治疗的人数，计算方式为1 ÷ ARR（以小数表示）。NNT越小，意味着治疗效果的影响力越大——NNT为12.5意味着每接受治疗的12-13人中大约有1人受益。" },
+        { q: "这适合用于做出医疗治疗决策吗？", a: "不适合——这是一个用于理解这些数字如何计算的统计参考计算器，不能替代完整临床研究的置信区间、人群特征以及合格专业人员的解读。治疗决策应始终与医疗保健提供者讨论。" },
+      ],
+    },
+    ar: {
+      title: "حاسبة الحد المطلق من الخطر",
+      intro: "أدخل معدل الأحداث في مجموعة ضابطة ومجموعة علاج لحساب الحد المطلق من الخطر، والحد النسبي من الخطر، والعدد اللازم للعلاج.",
+      description: "احسب الحد المطلق من الخطر (ARR)، والحد النسبي من الخطر (RRR)، والعدد اللازم للعلاج (NNT) من معدلي حدثين.",
+      faq: [
+        { q: "ما الفرق بين الحد المطلق والنسبي من الخطر؟", a: "الحد المطلق من الخطر (ARR) هو الفرق البسيط بين معدلي حدثين (مثلاً، 20% − 12% = 8 نقاط مئوية). يعبّر الحد النسبي من الخطر (RRR) عن نفس الفرق كنسبة مئوية من المعدل الأصلي (8 ÷ 20 = 40%) - غالبًا ما يبدو RRR أكثر إثارة من ARR لنفس البيانات الأساسية، ولهذا يهم كلا الرقمين للسياق." },
+        { q: "ماذا يعني \"العدد اللازم للعلاج\" (NNT)؟", a: "NNT هو عدد الأشخاص الذين سيحتاجون إلى تلقي علاج حتى يستفيد شخص إضافي واحد (يتجنب الحدث)، ويُحسب كـ1 ÷ ARR (معبّرًا عنه كعدد عشري). يعني NNT الأصغر تأثيرًا علاجيًا أكبر - يعني NNT قدره 12.5 أن حوالي شخص واحد من كل 12-13 شخصًا مُعالَجًا يرى الفائدة." },
+        { q: "هل هذا مناسب لاتخاذ قرارات العلاج الطبي؟", a: "لا - هذه حاسبة مرجعية إحصائية لفهم كيفية حساب هذه الأرقام، وليست بديلاً عن فترات الثقة لدراسة سريرية كاملة، وخصائص المجتمع، وتفسير أخصائي مؤهل. ناقش دائمًا قرارات العلاج مع مقدم رعاية صحية." },
+      ],
+    },
+    th: {
+      title: "เครื่องคำนวณการลดความเสี่ยงสัมบูรณ์",
+      intro: "ป้อนอัตราการเกิดเหตุการณ์ในกลุ่มควบคุมและกลุ่มทดลองเพื่อคำนวณการลดความเสี่ยงสัมบูรณ์ การลดความเสี่ยงสัมพัทธ์ และจำนวนที่ต้องรักษา",
+      description: "คำนวณการลดความเสี่ยงสัมบูรณ์ (ARR) การลดความเสี่ยงสัมพัทธ์ (RRR) และจำนวนที่ต้องรักษา (NNT) จากอัตราการเกิดเหตุการณ์สองค่า",
+      faq: [
+        { q: "ความแตกต่างระหว่างการลดความเสี่ยงสัมบูรณ์และสัมพัทธ์คืออะไร?", a: "การลดความเสี่ยงสัมบูรณ์ (ARR) คือความแตกต่างอย่างง่ายระหว่างอัตราการเกิดเหตุการณ์สองค่า (เช่น 20% − 12% = 8 จุดเปอร์เซ็นต์) การลดความเสี่ยงสัมพัทธ์ (RRR) แสดงความแตกต่างเดียวกันนั้นเป็นเปอร์เซ็นต์ของอัตราเดิม (8 ÷ 20 = 40%) - RRR มักฟังดูน่าทึ่งกว่า ARR สำหรับข้อมูลพื้นฐานเดียวกัน นี่คือเหตุผลที่ตัวเลขทั้งสองมีความสำคัญต่อบริบท" },
+        { q: "\"จำนวนที่ต้องรักษา\" (NNT) หมายความว่าอย่างไร?", a: "NNT คือจำนวนคนที่ต้องได้รับการรักษาเพื่อให้อีกหนึ่งคนได้รับประโยชน์ (หลีกเลี่ยงเหตุการณ์) คำนวณเป็น 1 ÷ ARR (แสดงเป็นทศนิยม) NNT ที่น้อยกว่าหมายถึงผลการรักษาที่มีผลกระทบมากกว่า - NNT ที่ 12.5 หมายความว่าประมาณ 1 ใน 12-13 คนที่ได้รับการรักษาจะเห็นประโยชน์" },
+        { q: "สิ่งนี้เหมาะสมสำหรับการตัดสินใจการรักษาทางการแพทย์หรือไม่?", a: "ไม่ใช่ - นี่เป็นเครื่องคำนวณอ้างอิงทางสถิติเพื่อทำความเข้าใจว่าตัวเลขเหล่านี้คำนวณอย่างไร ไม่ใช่สิ่งทดแทนช่วงความเชื่อมั่นของการศึกษาทางคลินิกฉบับเต็ม ลักษณะประชากร และการตีความของผู้เชี่ยวชาญที่มีคุณสมบัติ ควรปรึกษาผู้ให้บริการด้านสุขภาพเสมอสำหรับการตัดสินใจการรักษา" },
+      ],
+    },
+  },
+
+  "sample-size-calculator": {
+    es: {
+      title: "Calculadora de Tamaño de Muestra",
+      intro: "Elige un nivel de confianza y margen de error para calcular el tamaño mínimo de muestra necesario para una encuesta o estudio.",
+      description: "Calcula el tamaño de muestra de encuesta o estudio necesario para un nivel de confianza y margen de error elegidos.",
+      faq: [
+        { q: "¿Cómo se calcula el tamaño de muestra?", a: "n = (z² × p × (1−p)) / e², donde z es la puntuación z para tu nivel de confianza, p es la proporción estimada (50% es la suposición más conservadora/grande si es desconocida), y e es tu margen de error como decimal. Mayor confianza y menor margen de error ambos aumentan el tamaño de muestra requerido." },
+        { q: "¿Por qué usar 50% para la proporción estimada si no la conozco?", a: "50% produce el tamaño de muestra requerido más grande posible (p×(1−p) se maximiza en p=0.5), así que es el valor predeterminado seguro y conservador cuando no tienes una estimación previa - usarlo garantiza que tu muestra sea suficientemente grande sin importar la proporción real." },
+        { q: "¿Cómo afecta el tamaño de la población al tamaño de muestra requerido?", a: "Para poblaciones muy grandes o desconocidas, el tamaño de muestra depende solo del nivel de confianza y margen de error, no del tamaño de la población. Para una población conocida y finita, la corrección de población finita reduce algo el tamaño de muestra requerido, ya que muestrear una fracción mayor de una población más pequeña reduce la incertidumbre más rápido." },
+        { q: "¿Es 'calcular tamaño de muestra en línea' o 'calculadora para determinar tamaño de muestra' lo mismo que esta herramienta?", a: "Sí - todo esto describe encontrar el tamaño mínimo de muestra necesario para una encuesta o estudio a un nivel de confianza y margen de error elegidos, que es exactamente lo que hace esta calculadora." },
+      ],
+    },
+    fr: {
+      title: "Calculateur de Taille d'Échantillon",
+      intro: "Choisissez un niveau de confiance et une marge d'erreur pour calculer la taille minimale d'échantillon nécessaire pour un sondage ou une étude.",
+      description: "Calculez la taille d'échantillon de sondage ou d'étude nécessaire pour un niveau de confiance et une marge d'erreur choisis.",
+      faq: [
+        { q: "Comment la taille d'échantillon est-elle calculée ?", a: "n = (z² × p × (1−p)) / e², où z est le score z pour votre niveau de confiance, p est la proportion estimée (50 % est l'hypothèse la plus conservatrice/importante si inconnue), et e est votre marge d'erreur en décimal. Une confiance plus élevée et une marge d'erreur plus faible augmentent toutes deux la taille d'échantillon requise." },
+        { q: "Pourquoi utiliser 50 % pour la proportion estimée si je ne la connais pas ?", a: "50 % produit la plus grande taille d'échantillon requise possible (p×(1−p) est maximisé à p=0,5), c'est donc la valeur par défaut sûre et conservatrice lorsque vous n'avez pas d'estimation préalable - l'utiliser garantit que votre échantillon est suffisamment grand quelle que soit la proportion réelle." },
+        { q: "Comment la taille de la population affecte-t-elle la taille d'échantillon requise ?", a: "Pour des populations très grandes ou inconnues, la taille d'échantillon dépend uniquement du niveau de confiance et de la marge d'erreur, pas de la taille de la population. Pour une population connue et finie, la correction de population finie réduit quelque peu la taille d'échantillon requise, puisqu'échantillonner une fraction plus grande d'une population plus petite réduit l'incertitude plus rapidement." },
+        { q: "« Calculer la taille d'échantillon en ligne » ou « calculateur pour déterminer la taille d'échantillon » sont-ils la même chose que cet outil ?", a: "Oui - tout cela décrit la recherche de la taille minimale d'échantillon nécessaire pour un sondage ou une étude à un niveau de confiance et une marge d'erreur choisis, ce qui est exactement ce que fait cette calculatrice." },
+      ],
+    },
+    de: {
+      title: "Stichprobengrößen-Rechner",
+      intro: "Wählen Sie ein Konfidenzniveau und eine Fehlermarge, um die minimale Stichprobengröße zu berechnen, die für eine Umfrage oder Studie benötigt wird.",
+      description: "Berechnen Sie die für ein gewähltes Konfidenzniveau und eine Fehlermarge benötigte Umfrage- oder Studien-Stichprobengröße.",
+      faq: [
+        { q: "Wie wird die Stichprobengröße berechnet?", a: "n = (z² × p × (1−p)) / e², wobei z der z-Wert für Ihr Konfidenzniveau ist, p der geschätzte Anteil (50 % ist die konservativste/größte Annahme, wenn unbekannt), und e Ihre Fehlermarge als Dezimalzahl. Höhere Konfidenz und niedrigere Fehlermarge erhöhen beide die erforderliche Stichprobengröße." },
+        { q: "Warum 50 % für den geschätzten Anteil verwenden, wenn ich ihn nicht kenne?", a: "50 % erzeugt die größtmögliche erforderliche Stichprobengröße (p×(1−p) wird bei p=0,5 maximiert), also ist es der sichere, konservative Standardwert, wenn Sie keine vorherige Schätzung haben - seine Verwendung garantiert, dass Ihre Stichprobe unabhängig vom tatsächlichen Anteil groß genug ist." },
+        { q: "Wie beeinflusst die Populationsgröße die erforderliche Stichprobengröße?", a: "Für sehr große oder unbekannte Populationen hängt die Stichprobengröße nur vom Konfidenzniveau und der Fehlermarge ab, nicht von der Populationsgröße. Für eine bekannte, endliche Population reduziert die Endpopulationskorrektur die erforderliche Stichprobengröße etwas, da das Stichprobenziehen eines größeren Anteils einer kleineren Population die Unsicherheit schneller reduziert." },
+        { q: "Ist „Stichprobengröße online berechnen“ oder „Rechner zur Bestimmung der Stichprobengröße“ dasselbe wie dieses Tool?", a: "Ja - all dies beschreibt das Finden der minimalen Stichprobengröße, die für eine Umfrage oder Studie bei einem gewählten Konfidenzniveau und einer Fehlermarge benötigt wird, was genau das ist, was dieser Rechner tut." },
+      ],
+    },
+    pt: {
+      title: "Calculadora de Tamanho de Amostra",
+      intro: "Escolha um nível de confiança e margem de erro para calcular o tamanho mínimo de amostra necessário para uma pesquisa ou estudo.",
+      description: "Calcule o tamanho de amostra de pesquisa ou estudo necessário para um nível de confiança e margem de erro escolhidos.",
+      faq: [
+        { q: "Como o tamanho de amostra é calculado?", a: "n = (z² × p × (1−p)) / e², onde z é o escore z para seu nível de confiança, p é a proporção estimada (50% é a suposição mais conservadora/maior se desconhecida), e e é sua margem de erro como decimal. Maior confiança e menor margem de erro ambos aumentam o tamanho de amostra necessário." },
+        { q: "Por que usar 50% para a proporção estimada se eu não a conheço?", a: "50% produz o maior tamanho de amostra necessário possível (p×(1−p) é maximizado em p=0,5), então é o padrão seguro e conservador quando você não tem uma estimativa prévia - usá-lo garante que sua amostra seja grande o suficiente independentemente da proporção real." },
+        { q: "Como o tamanho da população afeta o tamanho de amostra necessário?", a: "Para populações muito grandes ou desconhecidas, o tamanho de amostra depende apenas do nível de confiança e margem de erro, não do tamanho da população. Para uma população conhecida e finita, a correção de população finita reduz um pouco o tamanho de amostra necessário, já que amostrar uma fração maior de uma população menor reduz a incerteza mais rápido." },
+        { q: "'Calcular tamanho de amostra online' ou 'calculadora para determinar tamanho de amostra' é a mesma coisa que esta ferramenta?", a: "Sim - tudo isso descreve encontrar o tamanho mínimo de amostra necessário para uma pesquisa ou estudo em um nível de confiança e margem de erro escolhidos, que é exatamente o que esta calculadora faz." },
+      ],
+    },
+    it: {
+      title: "Calcolatore della Dimensione del Campione",
+      intro: "Scegli un livello di confidenza e margine di errore per calcolare la dimensione minima del campione necessaria per un sondaggio o studio.",
+      description: "Calcola la dimensione del campione di sondaggio o studio necessaria per un livello di confidenza e margine di errore scelti.",
+      faq: [
+        { q: "Come viene calcolata la dimensione del campione?", a: "n = (z² × p × (1−p)) / e², dove z è il punteggio z per il tuo livello di confidenza, p è la proporzione stimata (50% è l'ipotesi più conservativa/più grande se sconosciuta), ed e è il tuo margine di errore come decimale. Maggiore confidenza e minore margine di errore aumentano entrambi la dimensione del campione richiesta." },
+        { q: "Perché usare il 50% per la proporzione stimata se non la conosco?", a: "Il 50% produce la dimensione del campione richiesta più grande possibile (p×(1−p) è massimizzato a p=0,5), quindi è il valore predefinito sicuro e conservativo quando non hai una stima precedente - usarlo garantisce che il tuo campione sia abbastanza grande indipendentemente dalla proporzione reale." },
+        { q: "Come influisce la dimensione della popolazione sulla dimensione del campione richiesta?", a: "Per popolazioni molto grandi o sconosciute, la dimensione del campione dipende solo dal livello di confidenza e margine di errore, non dalla dimensione della popolazione. Per una popolazione nota e finita, la correzione per popolazione finita riduce in qualche modo la dimensione del campione richiesta, poiché campionare una frazione maggiore di una popolazione più piccola riduce l'incertezza più velocemente." },
+        { q: "'Calcolare la dimensione del campione online' o 'calcolatore per determinare la dimensione del campione' sono la stessa cosa di questo strumento?", a: "Sì - tutto ciò descrive la ricerca della dimensione minima del campione necessaria per un sondaggio o studio a un livello di confidenza e margine di errore scelti, che è esattamente ciò che fa questa calcolatrice." },
+      ],
+    },
+    ja: {
+      title: "サンプルサイズ計算機",
+      intro: "信頼水準と誤差範囲を選択すると、調査や研究に必要な最小サンプルサイズを計算します。",
+      description: "選択した信頼水準と誤差範囲に必要な調査または研究のサンプルサイズを計算します。",
+      faq: [
+        { q: "サンプルサイズはどう計算されますか？", a: "n = (z² × p × (1−p)) / e²です。zは信頼水準のzスコア、pは推定比率（不明な場合は50%が最も保守的/大きな仮定）、eは小数で表した誤差範囲です。信頼水準が高いほど、また誤差範囲が小さいほど、必要なサンプルサイズは大きくなります。" },
+        { q: "推定比率がわからない場合、なぜ50%を使うのですか？", a: "50%は可能な限り最大の必要サンプルサイズを生成します（p×(1−p)はp=0.5で最大化されます）。そのため、事前の推定値がない場合の安全で保守的なデフォルト値です。これを使用すると、実際の比率に関係なくサンプルが十分な大きさであることが保証されます。" },
+        { q: "母集団のサイズは必要なサンプルサイズにどう影響しますか？", a: "非常に大きいまたは未知の母集団の場合、サンプルサイズは信頼水準と誤差範囲のみに依存し、母集団のサイズには依存しません。既知の有限母集団の場合、有限母集団修正により必要なサンプルサイズがいくらか減少します。小さい母集団のより大きな割合をサンプリングすると、不確実性がより速く減少するためです。" },
+        { q: "「オンラインでサンプルサイズを計算」や「サンプルサイズを決定する計算機」はこのツールと同じですか？", a: "はい。これらはすべて、選択した信頼水準と誤差範囲で調査や研究に必要な最小サンプルサイズを求めることを表しており、これはこの計算機がまさに行うことです。" },
+      ],
+    },
+    ro: {
+      title: "Calculator de Dimensiune a Eșantionului",
+      intro: "Alege un nivel de încredere și marjă de eroare pentru a calcula dimensiunea minimă a eșantionului necesară pentru un sondaj sau studiu.",
+      description: "Calculează dimensiunea eșantionului de sondaj sau studiu necesară pentru un nivel de încredere și marjă de eroare aleși.",
+      faq: [
+        { q: "Cum se calculează dimensiunea eșantionului?", a: "n = (z² × p × (1−p)) / e², unde z este scorul z pentru nivelul tău de încredere, p este proporția estimată (50% este cea mai conservatoare/mare presupunere dacă este necunoscută), și e este marja ta de eroare ca zecimal. Încrederea mai mare și marja de eroare mai mică cresc ambele dimensiunea eșantionului necesară." },
+        { q: "De ce să folosesc 50% pentru proporția estimată dacă nu o cunosc?", a: "50% produce cea mai mare dimensiune posibilă a eșantionului necesar (p×(1−p) este maximizat la p=0,5), deci este valoarea implicită sigură, conservatoare atunci când nu ai o estimare anterioară - folosirea ei garantează că eșantionul tău este suficient de mare indiferent de proporția reală." },
+        { q: "Cum afectează dimensiunea populației dimensiunea eșantionului necesar?", a: "Pentru populații foarte mari sau necunoscute, dimensiunea eșantionului depinde doar de nivelul de încredere și marja de eroare, nu de dimensiunea populației. Pentru o populație cunoscută, finită, corecția populației finite reduce oarecum dimensiunea eșantionului necesar, deoarece eșantionarea unei fracțiuni mai mari a unei populații mai mici reduce incertitudinea mai rapid." },
+        { q: "Este \"calcularea dimensiunii eșantionului online\" sau \"calculator pentru determinarea dimensiunii eșantionului\" același lucru cu acest instrument?", a: "Da - toate acestea descriu găsirea dimensiunii minime a eșantionului necesar pentru un sondaj sau studiu la un nivel de încredere și marjă de eroare alese, ceea ce este exact ceea ce face acest calculator." },
+      ],
+    },
+    el: {
+      title: "Υπολογιστής Μεγέθους Δείγματος",
+      intro: "Επιλέξτε ένα επίπεδο εμπιστοσύνης και περιθώριο σφάλματος για να υπολογίσετε το ελάχιστο μέγεθος δείγματος που χρειάζεται για μια έρευνα ή μελέτη.",
+      description: "Υπολόγισε το μέγεθος δείγματος έρευνας ή μελέτης που χρειάζεται για ένα επιλεγμένο επίπεδο εμπιστοσύνης και περιθώριο σφάλματος.",
+      faq: [
+        { q: "Πώς υπολογίζεται το μέγεθος δείγματος;", a: "n = (z² × p × (1−p)) / e², όπου z είναι η βαθμολογία z για το επίπεδο εμπιστοσύνης σας, p είναι η εκτιμώμενη αναλογία (50% είναι η πιο συντηρητική/μεγαλύτερη υπόθεση αν είναι άγνωστη), και e είναι το περιθώριο σφάλματός σας ως δεκαδικός. Υψηλότερη εμπιστοσύνη και χαμηλότερο περιθώριο σφάλματος και τα δύο αυξάνουν το απαιτούμενο μέγεθος δείγματος." },
+        { q: "Γιατί να χρησιμοποιήσω 50% για την εκτιμώμενη αναλογία αν δεν την γνωρίζω;", a: "Το 50% παράγει το μεγαλύτερο δυνατό απαιτούμενο μέγεθος δείγματος (το p×(1−p) μεγιστοποιείται στο p=0,5), οπότε είναι η ασφαλής, συντηρητική προεπιλογή όταν δεν έχετε προηγούμενη εκτίμηση - η χρήση του εγγυάται ότι το δείγμα σας είναι αρκετά μεγάλο ανεξάρτητα από την πραγματική αναλογία." },
+        { q: "Πώς επηρεάζει το μέγεθος του πληθυσμού το απαιτούμενο μέγεθος δείγματος;", a: "Για πολύ μεγάλους ή άγνωστους πληθυσμούς, το μέγεθος δείγματος εξαρτάται μόνο από το επίπεδο εμπιστοσύνης και το περιθώριο σφάλματος, όχι από το μέγεθος του πληθυσμού. Για γνωστό, πεπερασμένο πληθυσμό, η διόρθωση πεπερασμένου πληθυσμού μειώνει κάπως το απαιτούμενο μέγεθος δείγματος, αφού η δειγματοληψία μεγαλύτερου κλάσματος ενός μικρότερου πληθυσμού μειώνει την αβεβαιότητα πιο γρήγορα." },
+        { q: "Είναι «υπολογισμός μεγέθους δείγματος online» ή «υπολογιστής για προσδιορισμό μεγέθους δείγματος» το ίδιο με αυτό το εργαλείο;", a: "Ναι - όλα αυτά περιγράφουν την εύρεση του ελάχιστου μεγέθους δείγματος που χρειάζεται για μια έρευνα ή μελέτη σε ένα επιλεγμένο επίπεδο εμπιστοσύνης και περιθώριο σφάλματος, που είναι ακριβώς αυτό που κάνει αυτή η αριθμομηχανή." },
+      ],
+    },
+    zh: {
+      title: "样本量计算器",
+      intro: "选择置信水平和误差范围，计算调查或研究所需的最小样本量。",
+      description: "计算在选定置信水平和误差范围下调查或研究所需的样本量。",
+      faq: [
+        { q: "样本量是如何计算的？", a: "n = (z² × p × (1−p)) / e²，其中z是你所选置信水平对应的z分数，p是估计比例（如果未知，50%是最保守/最大的假设），e是以小数表示的误差范围。置信水平越高、误差范围越小，所需样本量就越大。" },
+        { q: "如果我不知道估计比例，为什么要用50%？", a: "50%会产生可能的最大所需样本量（p×(1−p)在p=0.5时最大），所以当你没有先验估计时，这是安全、保守的默认值——使用它可以保证无论真实比例是多少，你的样本都足够大。" },
+        { q: "总体规模如何影响所需样本量？", a: "对于非常大或未知的总体，样本量只取决于置信水平和误差范围，而不取决于总体规模。对于已知的有限总体，有限总体修正会在一定程度上减少所需的样本量，因为对较小总体抽取更大比例的样本能更快地降低不确定性。" },
+        { q: "「在线计算样本量」或「用于确定样本量的计算器」和这个工具一样吗？", a: "是的——这些说法描述的都是在选定置信水平和误差范围下找出调查或研究所需的最小样本量，这正是这个计算器所做的。" },
+      ],
+    },
+    ar: {
+      title: "حاسبة حجم العينة",
+      intro: "اختر مستوى ثقة وهامش خطأ لحساب الحد الأدنى لحجم العينة اللازم لاستطلاع أو دراسة.",
+      description: "احسب حجم عينة الاستطلاع أو الدراسة اللازم لمستوى ثقة وهامش خطأ مختارين.",
+      faq: [
+        { q: "كيف يُحسب حجم العينة؟", a: "n = (z² × p × (1−p)) / e²، حيث z هي درجة z لمستوى ثقتك، وp هي النسبة المقدرة (50% هي الافتراض الأكثر تحفظًا/كبرًا إذا كانت غير معروفة)، وe هو هامش خطأك كعدد عشري. تزيد كل من الثقة الأعلى وهامش الخطأ الأقل من حجم العينة المطلوب." },
+        { q: "لماذا أستخدم 50% للنسبة المقدرة إذا كنت لا أعرفها؟", a: "تنتج نسبة 50% أكبر حجم عينة مطلوب ممكن (يبلغ p×(1−p) أقصاه عند p=0.5)، لذا فهي الإعداد الافتراضي الآمن والمتحفظ عندما لا يكون لديك تقدير سابق - استخدامها يضمن أن عينتك كبيرة بما يكفي بغض النظر عن النسبة الحقيقية." },
+        { q: "كيف يؤثر حجم المجتمع على حجم العينة المطلوب؟", a: "بالنسبة للمجتمعات الكبيرة جدًا أو غير المعروفة، يعتمد حجم العينة فقط على مستوى الثقة وهامش الخطأ، وليس على حجم المجتمع. بالنسبة لمجتمع معروف ومحدود، يقلل تصحيح المجتمع المحدود من حجم العينة المطلوب إلى حد ما، لأن أخذ عينة من جزء أكبر من مجتمع أصغر يقلل عدم اليقين بشكل أسرع." },
+        { q: "هل \"حساب حجم العينة عبر الإنترنت\" أو \"حاسبة لتحديد حجم العينة\" هي نفسها هذه الأداة؟", a: "نعم - كل هذا يصف إيجاد الحد الأدنى لحجم العينة اللازم لاستطلاع أو دراسة عند مستوى ثقة وهامش خطأ مختارين، وهو بالضبط ما تفعله هذه الحاسبة." },
+      ],
+    },
+    th: {
+      title: "เครื่องคำนวณขนาดตัวอย่าง",
+      intro: "เลือกระดับความเชื่อมั่นและขอบเขตความคลาดเคลื่อนเพื่อคำนวณขนาดตัวอย่างขั้นต่ำที่จำเป็นสำหรับแบบสำรวจหรือการศึกษา",
+      description: "คำนวณขนาดตัวอย่างแบบสำรวจหรือการศึกษาที่จำเป็นสำหรับระดับความเชื่อมั่นและขอบเขตความคลาดเคลื่อนที่เลือก",
+      faq: [
+        { q: "ขนาดตัวอย่างคำนวณอย่างไร?", a: "n = (z² × p × (1−p)) / e² โดยที่ z คือคะแนน z สำหรับระดับความเชื่อมั่นของคุณ p คือสัดส่วนโดยประมาณ (50% เป็นสมมติฐานที่อนุรักษ์นิยม/ใหญ่ที่สุดถ้าไม่ทราบ) และ e คือขอบเขตความคลาดเคลื่อนของคุณเป็นทศนิยม ความเชื่อมั่นที่สูงขึ้นและขอบเขตความคลาดเคลื่อนที่ต่ำลงทั้งคู่จะเพิ่มขนาดตัวอย่างที่จำเป็น" },
+        { q: "ทำไมต้องใช้ 50% สำหรับสัดส่วนโดยประมาณถ้าฉันไม่ทราบ?", a: "50% ให้ขนาดตัวอย่างที่จำเป็นมากที่สุดเท่าที่จะเป็นไปได้ (p×(1−p) มีค่าสูงสุดที่ p=0.5) ดังนั้นจึงเป็นค่าเริ่มต้นที่ปลอดภัยและอนุรักษ์นิยมเมื่อคุณไม่มีการประมาณค่าก่อนหน้า - การใช้มันรับประกันว่าตัวอย่างของคุณมีขนาดใหญ่พอไม่ว่าสัดส่วนที่แท้จริงจะเป็นอย่างไร" },
+        { q: "ขนาดประชากรส่งผลต่อขนาดตัวอย่างที่จำเป็นอย่างไร?", a: "สำหรับประชากรที่มีขนาดใหญ่มากหรือไม่ทราบ ขนาดตัวอย่างขึ้นอยู่กับระดับความเชื่อมั่นและขอบเขตความคลาดเคลื่อนเท่านั้น ไม่ขึ้นกับขนาดประชากร สำหรับประชากรที่ทราบและจำกัด การแก้ไขประชากรจำกัดจะลดขนาดตัวอย่างที่จำเป็นลงบ้าง เนื่องจากการสุ่มตัวอย่างสัดส่วนที่ใหญ่กว่าของประชากรที่เล็กกว่าจะลดความไม่แน่นอนได้เร็วกว่า" },
+        { q: "\"การคำนวณขนาดตัวอย่างออนไลน์\" หรือ \"เครื่องคำนวณเพื่อกำหนดขนาดตัวอย่าง\" เหมือนกับเครื่องมือนี้หรือไม่?", a: "ใช่ - ทั้งหมดนี้อธิบายการหาขนาดตัวอย่างขั้นต่ำที่จำเป็นสำหรับแบบสำรวจหรือการศึกษาที่ระดับความเชื่อมั่นและขอบเขตความคลาดเคลื่อนที่เลือก ซึ่งเป็นสิ่งที่เครื่องคำนวณนี้ทำอย่างแม่นยำ" },
+      ],
+    },
+  },
+
+  "confidence-interval-calculator": {
+    es: {
+      title: "Calculadora de Intervalo de Confianza",
+      intro: "Introduce una media muestral, desviación estándar, y tamaño de muestra para calcular un intervalo de confianza.",
+      description: "Calcula un intervalo de confianza para una media muestral.",
+      faq: [
+        { q: "¿Qué significa un intervalo de confianza del 95%?", a: "Si repitieras el proceso de muestreo muchas veces y construyeras un intervalo de confianza cada vez, aproximadamente el 95% de esos intervalos contendrían la verdadera media poblacional - es una declaración sobre la confiabilidad del método, no una probabilidad del 95% de que este intervalo específico contenga el valor verdadero." },
+        { q: "¿Cómo calculo un intervalo de confianza?", a: "Margen de error = puntuación z × (desviación estándar ÷ √tamaño de muestra). Luego suma y resta ese margen de tu media muestral para obtener los límites inferior y superior del intervalo. La puntuación z depende de tu nivel de confianza elegido (1.96 para 95%, por ejemplo)." },
+        { q: "¿Por qué un tamaño de muestra más grande produce un intervalo de confianza más estrecho?", a: "El margen de error se divide entre la raíz cuadrada del tamaño de muestra, así que muestras más grandes reducen el margen - más datos significa menos incertidumbre sobre dónde se encuentra la verdadera media poblacional, estrechando el intervalo alrededor de tu estimación." },
+        { q: "¿Debo usar una puntuación z o t para mi intervalo de confianza?", a: "Usa una puntuación t (de la distribución t) para muestras más pequeñas, típicamente menos de 30, ya que tiene en cuenta la incertidumbre adicional en una estimación de desviación estándar de muestra pequeña. Esta calculadora usa la distribución z, que es una aproximación razonable una vez que tu tamaño de muestra es de 30 o más." },
+      ],
+    },
+    fr: {
+      title: "Calculateur d'Intervalle de Confiance",
+      intro: "Entrez une moyenne d'échantillon, écart-type, et taille d'échantillon pour calculer un intervalle de confiance.",
+      description: "Calculez un intervalle de confiance pour une moyenne d'échantillon.",
+      faq: [
+        { q: "Que signifie un intervalle de confiance à 95 % ?", a: "Si vous répétiez le processus d'échantillonnage plusieurs fois et construisiez un intervalle de confiance à chaque fois, environ 95 % de ces intervalles contiendraient la vraie moyenne de population - c'est une déclaration sur la fiabilité de la méthode, pas une probabilité de 95 % que cet intervalle spécifique contienne la vraie valeur." },
+        { q: "Comment calculer un intervalle de confiance ?", a: "Marge d'erreur = score z × (écart-type ÷ √taille d'échantillon). Ensuite, ajoutez et soustrayez cette marge de votre moyenne d'échantillon pour obtenir les bornes inférieure et supérieure de l'intervalle. Le score z dépend de votre niveau de confiance choisi (1,96 pour 95 %, par exemple)." },
+        { q: "Pourquoi une taille d'échantillon plus grande produit-elle un intervalle de confiance plus étroit ?", a: "La marge d'erreur divise par la racine carrée de la taille d'échantillon, donc des échantillons plus grands réduisent la marge - plus de données signifie moins d'incertitude sur l'endroit où se trouve la vraie moyenne de population, resserrant l'intervalle autour de votre estimation." },
+        { q: "Dois-je utiliser un score z ou t pour mon intervalle de confiance ?", a: "Utilisez un score t (de la distribution t) pour des échantillons plus petits, généralement moins de 30, car il tient compte de l'incertitude supplémentaire dans une estimation d'écart-type d'échantillon petit. Cette calculatrice utilise la distribution z, qui est une approximation raisonnable une fois que votre taille d'échantillon est de 30 ou plus." },
+      ],
+    },
+    de: {
+      title: "Konfidenzintervall-Rechner",
+      intro: "Geben Sie einen Stichprobenmittelwert, Standardabweichung, und Stichprobengröße ein, um ein Konfidenzintervall zu berechnen.",
+      description: "Berechnen Sie ein Konfidenzintervall für einen Stichprobenmittelwert.",
+      faq: [
+        { q: "Was bedeutet ein 95%-Konfidenzintervall?", a: "Wenn Sie den Stichprobenprozess viele Male wiederholen und jedes Mal ein Konfidenzintervall erstellen würden, würden etwa 95 % dieser Intervalle den wahren Populationsmittelwert enthalten - es ist eine Aussage über die Zuverlässigkeit der Methode, keine 95%ige Wahrscheinlichkeit, dass dieses spezifische Intervall den wahren Wert enthält." },
+        { q: "Wie berechne ich ein Konfidenzintervall?", a: "Fehlermarge = z-Wert × (Standardabweichung ÷ √Stichprobengröße). Addieren und subtrahieren Sie dann diese Marge von Ihrem Stichprobenmittelwert, um die untere und obere Grenze des Intervalls zu erhalten. Der z-Wert hängt von Ihrem gewählten Konfidenzniveau ab (z.B. 1,96 für 95 %)." },
+        { q: "Warum erzeugt eine größere Stichprobengröße ein engeres Konfidenzintervall?", a: "Die Fehlermarge teilt durch die Quadratwurzel der Stichprobengröße, sodass größere Stichproben die Marge verkleinern - mehr Daten bedeuten weniger Unsicherheit darüber, wo der wahre Populationsmittelwert liegt, was das Intervall um Ihre Schätzung herum verengt." },
+        { q: "Sollte ich einen z-Wert oder t-Wert für mein Konfidenzintervall verwenden?", a: "Verwenden Sie einen t-Wert (aus der t-Verteilung) für kleinere Stichproben, typischerweise unter 30, da er die zusätzliche Unsicherheit bei einer Standardabweichungsschätzung mit kleiner Stichprobe berücksichtigt. Dieser Rechner verwendet die z-Verteilung, die eine vernünftige Näherung ist, sobald Ihre Stichprobengröße 30 oder mehr beträgt." },
+      ],
+    },
+    pt: {
+      title: "Calculadora de Intervalo de Confiança",
+      intro: "Digite uma média amostral, desvio padrão, e tamanho de amostra para calcular um intervalo de confiança.",
+      description: "Calcule um intervalo de confiança para uma média amostral.",
+      faq: [
+        { q: "O que significa um intervalo de confiança de 95%?", a: "Se você repetisse o processo de amostragem muitas vezes e construísse um intervalo de confiança a cada vez, cerca de 95% desses intervalos conteriam a verdadeira média populacional - é uma declaração sobre a confiabilidade do método, não uma probabilidade de 95% de que este intervalo específico contenha o valor verdadeiro." },
+        { q: "Como calculo um intervalo de confiança?", a: "Margem de erro = escore z × (desvio padrão ÷ √tamanho de amostra). Depois some e subtraia essa margem da sua média amostral para obter os limites inferior e superior do intervalo. O escore z depende do seu nível de confiança escolhido (1,96 para 95%, por exemplo)." },
+        { q: "Por que um tamanho de amostra maior produz um intervalo de confiança mais estreito?", a: "A margem de erro divide pela raiz quadrada do tamanho de amostra, então amostras maiores encolhem a margem - mais dados significam menos incerteza sobre onde a verdadeira média populacional está, estreitando o intervalo ao redor da sua estimativa." },
+        { q: "Devo usar um escore z ou t para meu intervalo de confiança?", a: "Use um escore t (da distribuição t) para amostras menores, tipicamente abaixo de 30, já que ele considera incerteza extra em uma estimativa de desvio padrão de amostra pequena. Esta calculadora usa a distribuição z, que é uma aproximação razoável assim que seu tamanho de amostra for 30 ou mais." },
+      ],
+    },
+    it: {
+      title: "Calcolatore di Intervallo di Confidenza",
+      intro: "Inserisci una media campionaria, deviazione standard, e dimensione del campione per calcolare un intervallo di confidenza.",
+      description: "Calcola un intervallo di confidenza per una media campionaria.",
+      faq: [
+        { q: "Cosa significa un intervallo di confidenza del 95%?", a: "Se ripetessi il processo di campionamento molte volte e costruissi un intervallo di confidenza ogni volta, circa il 95% di quegli intervalli conterrebbe la vera media della popolazione - è un'affermazione sull'affidabilità del metodo, non una probabilità del 95% che questo specifico intervallo contenga il vero valore." },
+        { q: "Come calcolo un intervallo di confidenza?", a: "Margine di errore = punteggio z × (deviazione standard ÷ √dimensione campione). Poi aggiungi e sottrai quel margine dalla tua media campionaria per ottenere i limiti inferiore e superiore dell'intervallo. Il punteggio z dipende dal tuo livello di confidenza scelto (1,96 per il 95%, per esempio)." },
+        { q: "Perché una dimensione del campione maggiore produce un intervallo di confidenza più stretto?", a: "Il margine di errore divide per la radice quadrata della dimensione del campione, quindi campioni più grandi restringono il margine - più dati significa meno incertezza su dove si trova la vera media della popolazione, restringendo l'intervallo attorno alla tua stima." },
+        { q: "Dovrei usare un punteggio z o t per il mio intervallo di confidenza?", a: "Usa un punteggio t (dalla distribuzione t) per campioni più piccoli, tipicamente sotto 30, poiché tiene conto dell'incertezza extra in una stima di deviazione standard di campione piccolo. Questa calcolatrice usa la distribuzione z, che è un'approssimazione ragionevole una volta che la dimensione del tuo campione è 30 o più." },
+      ],
+    },
+    ja: {
+      title: "信頼区間計算機",
+      intro: "標本平均、標準偏差、標本サイズを入力すると、信頼区間を計算します。",
+      description: "標本平均の信頼区間を計算します。",
+      faq: [
+        { q: "95%信頼区間とはどういう意味ですか？", a: "サンプリングプロセスを何度も繰り返し、毎回信頼区間を構築した場合、それらの区間の約95%が真の母集団平均を含むことになります。これは方法の信頼性についての記述であり、この特定の区間が真の値を含む95%の確率という意味ではありません。" },
+        { q: "信頼区間をどう計算しますか？", a: "誤差範囲 = zスコア × (標準偏差 ÷ √標本サイズ)。次に、その誤差範囲を標本平均に加減して、区間の下限と上限を得ます。zスコアは選択した信頼水準によって異なります（例：95%の場合1.96）。" },
+        { q: "なぜサンプルサイズが大きいほど信頼区間が狭くなるのですか？", a: "誤差範囲はサンプルサイズの平方根で割られるため、サンプルが大きいほど誤差範囲が縮小します。データが多いほど、真の母集団平均がどこにあるかについての不確実性が減少し、推定値周辺の区間が狭くなります。" },
+        { q: "信頼区間にはzスコアとtスコアのどちらを使うべきですか？", a: "通常30未満の小さいサンプルにはtスコア（t分布から）を使用してください。これは小サンプルの標準偏差推定の追加の不確実性を考慮するためです。この計算機はz分布を使用しており、サンプルサイズが30以上になると妥当な近似値になります。" },
+      ],
+    },
+    ro: {
+      title: "Calculator de Interval de Încredere",
+      intro: "Introdu o medie de eșantion, deviație standard, și dimensiune de eșantion pentru a calcula un interval de încredere.",
+      description: "Calculează un interval de încredere pentru o medie de eșantion.",
+      faq: [
+        { q: "Ce înseamnă un interval de încredere de 95%?", a: "Dacă ai repeta procesul de eșantionare de mai multe ori și ai construi un interval de încredere de fiecare dată, aproximativ 95% din acele intervale ar conține adevărata medie a populației - este o afirmație despre fiabilitatea metodei, nu o probabilitate de 95% că acest interval specific conține valoarea adevărată." },
+        { q: "Cum calculez un interval de încredere?", a: "Marja de eroare = scor z × (deviație standard ÷ √dimensiune eșantion). Apoi adaugă și scade acea marjă din media ta de eșantion pentru a obține limitele inferioară și superioară ale intervalului. Scorul z depinde de nivelul tău de încredere ales (1,96 pentru 95%, de exemplu)." },
+        { q: "De ce o dimensiune mai mare a eșantionului produce un interval de încredere mai îngust?", a: "Marja de eroare se împarte la rădăcina pătrată a dimensiunii eșantionului, deci eșantioanele mai mari micșorează marja - mai multe date înseamnă mai puțină incertitudine despre unde se află adevărata medie a populației, îngustând intervalul în jurul estimării tale." },
+        { q: "Ar trebui să folosesc un scor z sau t pentru intervalul meu de încredere?", a: "Folosește un scor t (din distribuția t) pentru eșantioane mai mici, de obicei sub 30, deoarece ține cont de incertitudinea suplimentară într-o estimare a deviației standard pentru eșantion mic. Acest calculator folosește distribuția z, care este o aproximare rezonabilă odată ce dimensiunea eșantionului tău este 30 sau mai mult." },
+      ],
+    },
+    el: {
+      title: "Υπολογιστής Διαστήματος Εμπιστοσύνης",
+      intro: "Εισάγετε έναν δειγματικό μέσο όρο, τυπική απόκλιση, και μέγεθος δείγματος για να υπολογίσετε ένα διάστημα εμπιστοσύνης.",
+      description: "Υπολόγισε ένα διάστημα εμπιστοσύνης για έναν δειγματικό μέσο όρο.",
+      faq: [
+        { q: "Τι σημαίνει ένα διάστημα εμπιστοσύνης 95%;", a: "Αν επαναλαμβάνατε τη διαδικασία δειγματοληψίας πολλές φορές και κατασκευάζατε ένα διάστημα εμπιστοσύνης κάθε φορά, περίπου το 95% αυτών των διαστημάτων θα περιείχε τον πραγματικό μέσο όρο πληθυσμού - είναι μια δήλωση για την αξιοπιστία της μεθόδου, όχι μια πιθανότητα 95% ότι αυτό το συγκεκριμένο διάστημα περιέχει την πραγματική τιμή." },
+        { q: "Πώς υπολογίζω ένα διάστημα εμπιστοσύνης;", a: "Περιθώριο σφάλματος = βαθμολογία z × (τυπική απόκλιση ÷ √μέγεθος δείγματος). Μετά προσθέστε και αφαιρέστε αυτό το περιθώριο από τον δειγματικό μέσο όρο σας για να πάρετε τα κατώτερα και ανώτερα όρια του διαστήματος. Η βαθμολογία z εξαρτάται από το επιλεγμένο επίπεδο εμπιστοσύνης σας (1,96 για 95%, για παράδειγμα)." },
+        { q: "Γιατί ένα μεγαλύτερο μέγεθος δείγματος παράγει στενότερο διάστημα εμπιστοσύνης;", a: "Το περιθώριο σφάλματος διαιρείται με την τετραγωνική ρίζα του μεγέθους δείγματος, οπότε μεγαλύτερα δείγματα συρρικνώνουν το περιθώριο - περισσότερα δεδομένα σημαίνουν λιγότερη αβεβαιότητα σχετικά με το πού βρίσκεται ο πραγματικός μέσος όρος πληθυσμού, στενεύοντας το διάστημα γύρω από την εκτίμησή σας." },
+        { q: "Πρέπει να χρησιμοποιήσω βαθμολογία z ή t για το διάστημα εμπιστοσύνης μου;", a: "Χρησιμοποιήστε βαθμολογία t (από την κατανομή t) για μικρότερα δείγματα, συνήθως κάτω από 30, αφού λαμβάνει υπόψη επιπλέον αβεβαιότητα σε μια εκτίμηση τυπικής απόκλισης μικρού δείγματος. Αυτή η αριθμομηχανή χρησιμοποιεί την κατανομή z, που είναι μια λογική προσέγγιση μόλις το μέγεθος του δείγματός σας είναι 30 ή περισσότερο." },
+      ],
+    },
+    zh: {
+      title: "置信区间计算器",
+      intro: "输入样本均值、标准差和样本量，计算置信区间。",
+      description: "计算样本均值的置信区间。",
+      faq: [
+        { q: "95%置信区间是什么意思？", a: "如果你重复抽样过程很多次，并每次都构建一个置信区间，那么大约95%的这些区间会包含真实的总体均值——这是关于该方法可靠性的陈述，而不是说这个特定区间有95%的概率包含真实值。" },
+        { q: "如何计算置信区间？", a: "误差范围 = z分数 × (标准差 ÷ √样本量)。然后从样本均值中加上和减去这个误差范围，得到区间的下限和上限。z分数取决于你选择的置信水平（例如，95%对应1.96）。" },
+        { q: "为什么样本量越大，置信区间越窄？", a: "误差范围要除以样本量的平方根，所以样本越大，误差范围就越小——数据越多，关于真实总体均值所在位置的不确定性就越少，从而使区间围绕你的估计值收窄。" },
+        { q: "我的置信区间应该用z分数还是t分数？", a: "对于较小的样本（通常小于30），使用t分数（来自t分布），因为它考虑了小样本标准差估计中的额外不确定性。这个计算器使用的是z分布，当样本量达到30或以上时，这是一个合理的近似。" },
+      ],
+    },
+    ar: {
+      title: "حاسبة فترة الثقة",
+      intro: "أدخل متوسط عينة وانحرافًا معياريًا وحجم عينة لحساب فترة الثقة.",
+      description: "احسب فترة الثقة لمتوسط عينة.",
+      faq: [
+        { q: "ماذا تعني فترة ثقة 95%؟", a: "إذا كررت عملية أخذ العينات عدة مرات وبنيت فترة ثقة في كل مرة، فإن حوالي 95% من تلك الفترات ستحتوي على متوسط المجتمع الحقيقي - إنها بيان حول موثوقية الطريقة، وليست احتمالية 95% بأن هذه الفترة المحددة تحتوي على القيمة الحقيقية." },
+        { q: "كيف أحسب فترة الثقة؟", a: "هامش الخطأ = درجة z × (الانحراف المعياري ÷ √حجم العينة). ثم أضف واطرح ذلك الهامش من متوسط عينتك للحصول على الحدين السفلي والعلوي للفترة. تعتمد درجة z على مستوى الثقة الذي اخترته (1.96 لـ95%، على سبيل المثال)." },
+        { q: "لماذا ينتج حجم عينة أكبر فترة ثقة أضيق؟", a: "يُقسَّم هامش الخطأ على الجذر التربيعي لحجم العينة، لذا فإن العينات الأكبر تقلص الهامش - المزيد من البيانات يعني عدم يقين أقل حول مكان متوسط المجتمع الحقيقي، مما يضيق الفترة حول تقديرك." },
+        { q: "هل يجب أن أستخدم درجة z أو t لفترة الثقة الخاصة بي؟", a: "استخدم درجة t (من توزيع t) للعينات الأصغر، عادة أقل من 30، لأنها تراعي عدم اليقين الإضافي في تقدير الانحراف المعياري للعينة الصغيرة. تستخدم هذه الحاسبة توزيع z، وهو تقريب معقول بمجرد أن يصبح حجم عينتك 30 أو أكثر." },
+      ],
+    },
+    th: {
+      title: "เครื่องคำนวณช่วงความเชื่อมั่น",
+      intro: "ป้อนค่าเฉลี่ยตัวอย่าง ส่วนเบี่ยงเบนมาตรฐาน และขนาดตัวอย่างเพื่อคำนวณช่วงความเชื่อมั่น",
+      description: "คำนวณช่วงความเชื่อมั่นสำหรับค่าเฉลี่ยตัวอย่าง",
+      faq: [
+        { q: "ช่วงความเชื่อมั่น 95% หมายความว่าอย่างไร?", a: "ถ้าคุณทำการสุ่มตัวอย่างซ้ำหลายครั้งและสร้างช่วงความเชื่อมั่นทุกครั้ง ประมาณ 95% ของช่วงเหล่านั้นจะมีค่าเฉลี่ยประชากรที่แท้จริงอยู่ - นี่คือคำกล่าวเกี่ยวกับความน่าเชื่อถือของวิธีการ ไม่ใช่ความน่าจะเป็น 95% ที่ช่วงเฉพาะนี้จะมีค่าที่แท้จริงอยู่" },
+        { q: "ฉันจะคำนวณช่วงความเชื่อมั่นได้อย่างไร?", a: "ขอบเขตความคลาดเคลื่อน = คะแนน z × (ส่วนเบี่ยงเบนมาตรฐาน ÷ √ขนาดตัวอย่าง) จากนั้นบวกและลบขอบเขตนั้นจากค่าเฉลี่ยตัวอย่างของคุณเพื่อได้ขอบเขตล่างและบนของช่วง คะแนน z ขึ้นอยู่กับระดับความเชื่อมั่นที่คุณเลือก (เช่น 1.96 สำหรับ 95%)" },
+        { q: "ทำไมขนาดตัวอย่างที่ใหญ่กว่าจึงให้ช่วงความเชื่อมั่นที่แคบกว่า?", a: "ขอบเขตความคลาดเคลื่อนหารด้วยรากที่สองของขนาดตัวอย่าง ดังนั้นตัวอย่างที่ใหญ่กว่าจะลดขอบเขตลง - ข้อมูลที่มากขึ้นหมายถึงความไม่แน่นอนที่น้อยลงเกี่ยวกับตำแหน่งที่แท้จริงของค่าเฉลี่ยประชากร ทำให้ช่วงรอบการประมาณของคุณแคบลง" },
+        { q: "ฉันควรใช้คะแนน z หรือ t สำหรับช่วงความเชื่อมั่นของฉัน?", a: "ใช้คะแนน t (จากการแจกแจง t) สำหรับตัวอย่างขนาดเล็ก โดยทั่วไปน้อยกว่า 30 เนื่องจากมันคำนึงถึงความไม่แน่นอนเพิ่มเติมในการประมาณส่วนเบี่ยงเบนมาตรฐานของตัวอย่างขนาดเล็ก เครื่องคำนวณนี้ใช้การแจกแจง z ซึ่งเป็นการประมาณที่สมเหตุสมผลเมื่อขนาดตัวอย่างของคุณมี 30 หรือมากกว่า" },
+      ],
+    },
+  },
+
+  "mean-median-mode-calculator": {
+    es: {
+      title: "Calculadora de Media, Mediana, Moda y Rango",
+      intro: "Introduce una lista de números (separados por comas o líneas) para calcular la media, mediana, moda, y rango.",
+      description: "Calcula la media, mediana, moda, y rango de un conjunto de datos.",
+      faq: [
+        { q: "¿Cuál es la diferencia entre media, mediana, y moda?", a: "La media es el promedio aritmético (suma ÷ cantidad). La mediana es el valor medio cuando se ordena. La moda es el valor que ocurre con más frecuencia. Todos pueden diferir, especialmente con datos sesgados o valores atípicos." },
+        { q: "¿Por qué usaría la mediana en lugar de la media?", a: "La mediana es más resistente a los valores atípicos - un solo valor extremo puede alejar mucho la media de donde realmente se encuentra la mayoría de los datos, mientras que la mediana permanece anclada al medio de los datos ordenados sin importar qué tan extremos sean los valores atípicos." },
+        { q: "¿Puede un conjunto de datos tener más de una moda?", a: "Sí - si dos o más valores empatan en la frecuencia más alta, el conjunto de datos es \"multimodal\" y todos se reportan como modas. Si cada valor aparece exactamente una vez, no hay una moda significativa." },
+        { q: "¿Qué te dice el rango que la media o mediana no?", a: "El rango mide la dispersión de los datos (máximo menos mínimo), mientras que la media y mediana describen su centro - dos conjuntos de datos pueden tener medias idénticas pero rangos muy diferentes, reflejando cantidades de variabilidad muy diferentes." },
+      ],
+    },
+    fr: {
+      title: "Calculateur de Moyenne, Médiane, Mode et Étendue",
+      intro: "Entrez une liste de nombres (séparés par des virgules ou des lignes) pour calculer la moyenne, médiane, mode, et étendue.",
+      description: "Calculez la moyenne, médiane, mode, et étendue d'un ensemble de données.",
+      faq: [
+        { q: "Quelle est la différence entre moyenne, médiane, et mode ?", a: "La moyenne est la moyenne arithmétique (somme ÷ nombre). La médiane est la valeur du milieu une fois triée. Le mode est la valeur la plus fréquente. Elles peuvent toutes différer, surtout avec des données asymétriques ou des valeurs aberrantes." },
+        { q: "Pourquoi utiliserais-je la médiane plutôt que la moyenne ?", a: "La médiane est plus résistante aux valeurs aberrantes - une seule valeur extrême peut éloigner considérablement la moyenne de l'endroit où se situe réellement la majorité des données, tandis que la médiane reste ancrée au milieu des données triées quelle que soit l'ampleur des valeurs aberrantes." },
+        { q: "Un ensemble de données peut-il avoir plus d'un mode ?", a: "Oui - si deux valeurs ou plus sont à égalité pour la fréquence la plus élevée, l'ensemble de données est « multimodal » et toutes sont rapportées comme modes. Si chaque valeur apparaît exactement une fois, il n'y a pas de mode significatif." },
+        { q: "Que vous dit l'étendue que la moyenne ou la médiane ne vous dit pas ?", a: "L'étendue mesure la dispersion des données (maximum moins minimum), tandis que la moyenne et la médiane décrivent son centre - deux ensembles de données peuvent avoir des moyennes identiques mais des étendues très différentes, reflétant des quantités de variabilité très différentes." },
+      ],
+    },
+    de: {
+      title: "Mittelwert-Median-Modus-und-Spannweite-Rechner",
+      intro: "Geben Sie eine Zahlenliste ein (durch Kommas oder Zeilen getrennt), um Mittelwert, Median, Modus, und Spannweite zu berechnen.",
+      description: "Berechnen Sie Mittelwert, Median, Modus, und Spannweite eines Datensatzes.",
+      faq: [
+        { q: "Was ist der Unterschied zwischen Mittelwert, Median, und Modus?", a: "Der Mittelwert ist der arithmetische Durchschnitt (Summe ÷ Anzahl). Der Median ist der mittlere Wert nach Sortierung. Der Modus ist der am häufigsten vorkommende Wert. Sie können sich alle unterscheiden, besonders bei schiefen Daten oder Ausreißern." },
+        { q: "Warum sollte ich den Median statt des Mittelwerts verwenden?", a: "Der Median ist widerstandsfähiger gegenüber Ausreißern - ein einzelner Extremwert kann den Mittelwert weit von dem Ort wegziehen, an dem sich die meisten Daten tatsächlich befinden, während der Median in der Mitte der sortierten Daten verankert bleibt, egal wie extrem die Ausreißer sind." },
+        { q: "Kann ein Datensatz mehr als einen Modus haben?", a: "Ja - wenn zwei oder mehr Werte um die höchste Häufigkeit gleichauf liegen, ist der Datensatz „multimodal“, und alle werden als Modi gemeldet. Wenn jeder Wert genau einmal vorkommt, gibt es keinen aussagekräftigen Modus." },
+        { q: "Was sagt Ihnen die Spannweite, was Mittelwert oder Median nicht sagen?", a: "Die Spannweite misst die Streuung der Daten (Maximum minus Minimum), während Mittelwert und Median deren Zentrum beschreiben - zwei Datensätze können identische Mittelwerte, aber sehr unterschiedliche Spannweiten haben, was sehr unterschiedliche Mengen an Variabilität widerspiegelt." },
+      ],
+    },
+    pt: {
+      title: "Calculadora de Média, Mediana, Moda e Amplitude",
+      intro: "Digite uma lista de números (separados por vírgulas ou linhas) para calcular a média, mediana, moda, e amplitude.",
+      description: "Calcule a média, mediana, moda, e amplitude de um conjunto de dados.",
+      faq: [
+        { q: "Qual é a diferença entre média, mediana, e moda?", a: "A média é a média aritmética (soma ÷ quantidade). A mediana é o valor do meio quando ordenado. A moda é o valor que ocorre com mais frequência. Todas podem diferir, especialmente com dados enviesados ou outliers." },
+        { q: "Por que eu usaria a mediana em vez da média?", a: "A mediana é mais resistente a outliers - um único valor extremo pode puxar a média para longe de onde a maioria dos dados realmente está, enquanto a mediana permanece ancorada ao meio dos dados ordenados independentemente de quão extremos sejam os outliers." },
+        { q: "Um conjunto de dados pode ter mais de uma moda?", a: "Sim - se dois ou mais valores empatam na maior frequência, o conjunto de dados é \"multimodal\" e todos são relatados como modas. Se cada valor aparece exatamente uma vez, não há moda significativa." },
+        { q: "O que a amplitude te diz que a média ou mediana não dizem?", a: "A amplitude mede a dispersão dos dados (máximo menos mínimo), enquanto média e mediana descrevem seu centro - dois conjuntos de dados podem ter médias idênticas mas amplitudes muito diferentes, refletindo quantidades de variabilidade muito diferentes." },
+      ],
+    },
+    it: {
+      title: "Calcolatore di Media, Mediana, Moda e Intervallo",
+      intro: "Inserisci un elenco di numeri (separati da virgole o righe) per calcolare la media, mediana, moda, e intervallo.",
+      description: "Calcola la media, mediana, moda, e intervallo di un insieme di dati.",
+      faq: [
+        { q: "Qual è la differenza tra media, mediana, e moda?", a: "La media è la media aritmetica (somma ÷ conteggio). La mediana è il valore centrale una volta ordinato. La moda è il valore che ricorre più frequentemente. Possono tutte differire, specialmente con dati asimmetrici o valori anomali." },
+        { q: "Perché dovrei usare la mediana invece della media?", a: "La mediana è più resistente ai valori anomali - un singolo valore estremo può allontanare molto la media da dove si trova effettivamente la maggior parte dei dati, mentre la mediana rimane ancorata al centro dei dati ordinati indipendentemente da quanto siano estremi i valori anomali." },
+        { q: "Un insieme di dati può avere più di una moda?", a: "Sì - se due o più valori sono in parità per la frequenza più alta, l'insieme di dati è \"multimodale\" e tutti vengono riportati come mode. Se ogni valore appare esattamente una volta, non c'è una moda significativa." },
+        { q: "Cosa ti dice l'intervallo che media o mediana non dicono?", a: "L'intervallo misura la dispersione dei dati (massimo meno minimo), mentre media e mediana ne descrivono il centro - due insiemi di dati possono avere medie identiche ma intervalli molto diversi, riflettendo quantità di variabilità molto diverse." },
+      ],
+    },
+    ja: {
+      title: "平均値・中央値・最頻値・範囲計算機",
+      intro: "数字のリスト（カンマまたは改行区切り）を入力すると、平均値、中央値、最頻値、範囲を計算します。",
+      description: "データセットの平均値、中央値、最頻値、範囲を計算します。",
+      faq: [
+        { q: "平均値、中央値、最頻値の違いは何ですか？", a: "平均値は算術平均です（合計 ÷ 個数）。中央値は並べ替えたときの中央の値です。最頻値は最も頻繁に出現する値です。これらはすべて異なる場合があり、特に偏ったデータや外れ値がある場合に顕著です。" },
+        { q: "なぜ平均値ではなく中央値を使うのですか？", a: "中央値は外れ値に対してより耐性があります。1つの極端な値が、実際にほとんどのデータがある場所から平均値を大きく引き離すことがありますが、中央値は外れ値がどれほど極端であっても、並べ替えられたデータの中央に固定されたままです。" },
+        { q: "データセットに複数の最頻値がある場合がありますか？", a: "はい。2つ以上の値が最高頻度で同点の場合、データセットは「多峰性」であり、それらすべてが最頻値として報告されます。すべての値がちょうど1回だけ出現する場合、意味のある最頻値はありません。" },
+        { q: "範囲は平均値や中央値が教えてくれない何を教えてくれますか？", a: "範囲はデータの広がり（最大値マイナス最小値）を測定し、平均値と中央値はその中心を表します。2つのデータセットは同一の平均値を持つことができますが、範囲が非常に異なることがあり、非常に異なる変動量を反映しています。" },
+      ],
+    },
+    ro: {
+      title: "Calculator de Medie, Mediană, Mod și Amplitudine",
+      intro: "Introdu o listă de numere (separate prin virgule sau linii) pentru a calcula media, mediana, modul, și amplitudinea.",
+      description: "Calculează media, mediana, modul, și amplitudinea unui set de date.",
+      faq: [
+        { q: "Care este diferența dintre medie, mediană, și mod?", a: "Media este media aritmetică (sumă ÷ număr). Mediana este valoarea din mijloc atunci când este sortată. Modul este valoarea care apare cel mai frecvent. Toate pot diferi, mai ales cu date asimetrice sau valori aberante." },
+        { q: "De ce aș folosi mediana în loc de medie?", a: "Mediana este mai rezistentă la valorile aberante - o singură valoare extremă poate trage media departe de unde se află efectiv majoritatea datelor, în timp ce mediana rămâne ancorată la mijlocul datelor sortate, indiferent de cât de extreme sunt valorile aberante." },
+        { q: "Poate un set de date să aibă mai mult de un mod?", a: "Da - dacă două sau mai multe valori sunt la egalitate pentru cea mai mare frecvență, setul de date este \"multimodal\" și toate sunt raportate ca moduri. Dacă fiecare valoare apare exact o dată, nu există un mod semnificativ." },
+        { q: "Ce îți spune amplitudinea pe care media sau mediana nu ți-o spun?", a: "Amplitudinea măsoară dispersia datelor (maxim minus minim), în timp ce media și mediana îi descriu centrul - două seturi de date pot avea medii identice dar amplitudini foarte diferite, reflectând cantități foarte diferite de variabilitate." },
+      ],
+    },
+    el: {
+      title: "Υπολογιστής Μέσου Όρου, Διαμέσου, Επικρατούσας Τιμής και Εύρους",
+      intro: "Εισάγετε μια λίστα αριθμών (χωρισμένων με κόμματα ή γραμμές) για να υπολογίσετε τον μέσο όρο, διάμεσο, επικρατούσα τιμή, και εύρος.",
+      description: "Υπολόγισε τον μέσο όρο, διάμεσο, επικρατούσα τιμή, και εύρος ενός συνόλου δεδομένων.",
+      faq: [
+        { q: "Ποια είναι η διαφορά μεταξύ μέσου όρου, διαμέσου, και επικρατούσας τιμής;", a: "Ο μέσος όρος είναι ο αριθμητικός μέσος (άθροισμα ÷ πλήθος). Η διάμεσος είναι η μεσαία τιμή όταν ταξινομηθεί. Η επικρατούσα τιμή είναι η τιμή που εμφανίζεται πιο συχνά. Όλα μπορούν να διαφέρουν, ειδικά με ασύμμετρα δεδομένα ή ακραίες τιμές." },
+        { q: "Γιατί να χρησιμοποιήσω τη διάμεσο αντί για τον μέσο όρο;", a: "Η διάμεσος είναι πιο ανθεκτική στις ακραίες τιμές - μια μόνο ακραία τιμή μπορεί να τραβήξει τον μέσο όρο μακριά από το σημείο όπου βρίσκονται τα περισσότερα δεδομένα, ενώ η διάμεσος παραμένει αγκυρωμένη στη μέση των ταξινομημένων δεδομένων ανεξάρτητα από το πόσο ακραίες είναι οι τιμές." },
+        { q: "Μπορεί ένα σύνολο δεδομένων να έχει περισσότερες από μία επικρατούσες τιμές;", a: "Ναι - αν δύο ή περισσότερες τιμές ισοβαθμούν για την υψηλότερη συχνότητα, το σύνολο δεδομένων είναι «πολυτροπικό» και όλες αναφέρονται ως επικρατούσες τιμές. Αν κάθε τιμή εμφανίζεται ακριβώς μία φορά, δεν υπάρχει ουσιαστική επικρατούσα τιμή." },
+        { q: "Τι σας λέει το εύρος που ο μέσος όρος ή η διάμεσος δεν λένε;", a: "Το εύρος μετρά τη διασπορά των δεδομένων (μέγιστο μείον ελάχιστο), ενώ ο μέσος όρος και η διάμεσος περιγράφουν το κέντρο τους - δύο σύνολα δεδομένων μπορεί να έχουν ίδιους μέσους όρους αλλά πολύ διαφορετικά εύρη, αντικατοπτρίζοντας πολύ διαφορετικά ποσά μεταβλητότητας." },
+      ],
+    },
+    zh: {
+      title: "均值、中位数、众数和极差计算器",
+      intro: "输入一组数字（用逗号或换行分隔），计算均值、中位数、众数和极差。",
+      description: "计算数据集的均值、中位数、众数和极差。",
+      faq: [
+        { q: "均值、中位数和众数有什么区别？", a: "均值是算术平均数（总和÷个数）。中位数是排序后位于中间的值。众数是出现频率最高的值。它们都可能不同，尤其是在数据存在偏态分布或异常值的情况下。" },
+        { q: "为什么我要用中位数而不是均值？", a: "中位数对异常值更具抵抗力——单个极端值可能会把均值拉得远离大多数数据实际所在的位置，而中位数无论异常值多么极端，都会保持锚定在排序数据的中间。" },
+        { q: "一个数据集可以有多个众数吗？", a: "可以——如果两个或更多的值在最高频率上并列，该数据集就是「多峰」的，所有这些值都会被报告为众数。如果每个值恰好只出现一次，那就没有有意义的众数。" },
+        { q: "极差能告诉你哪些均值或中位数无法告诉你的信息？", a: "极差衡量的是数据的离散程度（最大值减最小值），而均值和中位数描述的是数据的中心——两个数据集可能有相同的均值，但极差却大不相同，反映出变异程度的巨大差异。" },
+      ],
+    },
+    ar: {
+      title: "حاسبة المتوسط والوسيط والمنوال والمدى",
+      intro: "أدخل قائمة أرقام (مفصولة بفواصل أو أسطر) لحساب المتوسط والوسيط والمنوال والمدى.",
+      description: "احسب المتوسط والوسيط والمنوال والمدى لمجموعة بيانات.",
+      faq: [
+        { q: "ما الفرق بين المتوسط والوسيط والمنوال؟", a: "المتوسط هو المتوسط الحسابي (المجموع ÷ العدد). الوسيط هو القيمة الوسطى عند الترتيب. المنوال هو القيمة الأكثر تكرارًا. يمكن أن تختلف جميعها، خاصة مع البيانات المنحرفة أو القيم الشاذة." },
+        { q: "لماذا قد أستخدم الوسيط بدلاً من المتوسط؟", a: "الوسيط أكثر مقاومة للقيم الشاذة - يمكن لقيمة متطرفة واحدة أن تسحب المتوسط بعيدًا عن مكان تركز معظم البيانات فعليًا، بينما يبقى الوسيط ثابتًا في منتصف البيانات المرتبة بغض النظر عن مدى تطرف القيم الشاذة." },
+        { q: "هل يمكن أن يكون لمجموعة بيانات أكثر من منوال واحد؟", a: "نعم - إذا تعادلت قيمتان أو أكثر في أعلى تكرار، تكون مجموعة البيانات \"متعددة المنوال\" ويتم الإبلاغ عن جميعها كمنوالات. إذا ظهرت كل قيمة مرة واحدة بالضبط، فلا يوجد منوال ذو معنى." },
+        { q: "ماذا يخبرك المدى مما لا يخبرك به المتوسط أو الوسيط؟", a: "يقيس المدى تشتت البيانات (الأقصى ناقص الأدنى)، بينما يصف المتوسط والوسيط مركزها - يمكن أن تكون لمجموعتي بيانات نفس المتوسط لكن مدىين مختلفين تمامًا، مما يعكس كميات مختلفة تمامًا من التباين." },
+      ],
+    },
+    th: {
+      title: "เครื่องคำนวณค่าเฉลี่ย มัธยฐาน ฐานนิยม และพิสัย",
+      intro: "ป้อนรายการตัวเลข (คั่นด้วยจุลภาคหรือบรรทัด) เพื่อคำนวณค่าเฉลี่ย มัธยฐาน ฐานนิยม และพิสัย",
+      description: "คำนวณค่าเฉลี่ย มัธยฐาน ฐานนิยม และพิสัยของชุดข้อมูล",
+      faq: [
+        { q: "ความแตกต่างระหว่างค่าเฉลี่ย มัธยฐาน และฐานนิยมคืออะไร?", a: "ค่าเฉลี่ยคือค่าเฉลี่ยเลขคณิต (ผลรวม ÷ จำนวน) มัธยฐานคือค่ากลางเมื่อเรียงลำดับแล้ว ฐานนิยมคือค่าที่เกิดขึ้นบ่อยที่สุด ทั้งหมดอาจแตกต่างกัน โดยเฉพาะกับข้อมูลที่เบ้หรือมีค่าผิดปกติ" },
+        { q: "ทำไมฉันถึงควรใช้มัธยฐานแทนค่าเฉลี่ย?", a: "มัธยฐานทนทานต่อค่าผิดปกติมากกว่า - ค่าสุดขั้วเพียงค่าเดียวสามารถดึงค่าเฉลี่ยให้ห่างจากตำแหน่งที่ข้อมูลส่วนใหญ่อยู่จริง ในขณะที่มัธยฐานยังคงยึดอยู่ที่กึ่งกลางของข้อมูลที่เรียงลำดับแล้วไม่ว่าค่าผิดปกติจะสุดขั้วแค่ไหน" },
+        { q: "ชุดข้อมูลสามารถมีฐานนิยมมากกว่าหนึ่งค่าได้หรือไม่?", a: "ได้ - ถ้าค่าตั้งแต่สองค่าขึ้นไปมีความถี่สูงสุดเท่ากัน ชุดข้อมูลนั้นจะเป็น \"หลายฐานนิยม\" และทั้งหมดจะถูกรายงานเป็นฐานนิยม ถ้าทุกค่าปรากฏเพียงครั้งเดียวพอดี ก็จะไม่มีฐานนิยมที่มีความหมาย" },
+        { q: "พิสัยบอกอะไรที่ค่าเฉลี่ยหรือมัธยฐานบอกไม่ได้?", a: "พิสัยวัดการกระจายของข้อมูล (ค่าสูงสุดลบค่าต่ำสุด) ในขณะที่ค่าเฉลี่ยและมัธยฐานอธิบายศูนย์กลางของมัน - ชุดข้อมูลสองชุดอาจมีค่าเฉลี่ยเหมือนกันแต่มีพิสัยต่างกันมาก สะท้อนถึงปริมาณความแปรปรวนที่แตกต่างกันมาก" },
+      ],
+    },
+  },
 };
 
 // Static-page copy for wave one. Privacy and Terms are flagged explicitly

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculateur d'Intervalle de Confiance - Calculatrice Gratuite en Ligne | Calquary</title>
+  <meta name="description" content="Calculez un intervalle de confiance pour une moyenne d'échantillon." />
+  <meta property="og:title" content="Calculateur d'Intervalle de Confiance | Calquary">
+  <meta property="og:description" content="Calculez un intervalle de confiance pour une moyenne d'échantillon.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/fr/tool/confidence-interval-calculator.html">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/confidence-interval-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculateur d'Intervalle de Confiance | Calquary">
+  <meta name="twitter:description" content="Calculez un intervalle de confiance pour une moyenne d'échantillon.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/confidence-interval-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/confidence-interval-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/confidence-interval-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/confidence-interval-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/confidence-interval-calculator.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/confidence-interval-calculator.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/confidence-interval-calculator.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/confidence-interval-calculator.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/confidence-interval-calculator.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/confidence-interval-calculator.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/confidence-interval-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/confidence-interval-calculator.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/confidence-interval-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/confidence-interval-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("confidence-interval-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("confidence-interval-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calculateur d'Intervalle de Confiance",
+      "description": "Calculez un intervalle de confiance pour une moyenne d'échantillon.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/fr/tool/confidence-interval-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-02",
+      "inLanguage": "fr"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/fr/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Math",
+          "item": "https://calquary.com/fr/category/math.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calculateur d'Intervalle de Confiance",
+          "item": "https://calquary.com/fr/tool/confidence-interval-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Que signifie un intervalle de confiance à 95 % ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Si vous répétiez le processus d'échantillonnage plusieurs fois et construisiez un intervalle de confiance à chaque fois, environ 95 % de ces intervalles contiendraient la vraie moyenne de population - c'est une déclaration sur la fiabilité de la méthode, pas une probabilité de 95 % que cet intervalle spécifique contienne la vraie valeur."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment calculer un intervalle de confiance ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Marge d'erreur = score z × (écart-type ÷ √taille d'échantillon). Ensuite, ajoutez et soustrayez cette marge de votre moyenne d'échantillon pour obtenir les bornes inférieure et supérieure de l'intervalle. Le score z dépend de votre niveau de confiance choisi (1,96 pour 95 %, par exemple)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pourquoi une taille d'échantillon plus grande produit-elle un intervalle de confiance plus étroit ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La marge d'erreur divise par la racine carrée de la taille d'échantillon, donc des échantillons plus grands réduisent la marge - plus de données signifie moins d'incertitude sur l'endroit où se trouve la vraie moyenne de population, resserrant l'intervalle autour de votre estimation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dois-je utiliser un score z ou t pour mon intervalle de confiance ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Utilisez un score t (de la distribution t) pour des échantillons plus petits, généralement moins de 30, car il tient compte de l'incertitude supplémentaire dans une estimation d'écart-type d'échantillon petit. Cette calculatrice utilise la distribution z, qui est une approximation raisonnable une fois que votre taille d'échantillon est de 30 ou plus."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/fr/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/fr/index.html#categories">Catégories</a>
+          <a href="/fr/index.html#tools">Tous les outils</a>
+          <a href="/fr/about.html">À propos</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Français">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>FR</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/confidence-interval-calculator.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/confidence-interval-calculator.html">Español</a><span class="locale-item current" role="menuitem" aria-current="true">Français</span><a class="locale-item" role="menuitem" href="/de/tool/confidence-interval-calculator.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/confidence-interval-calculator.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/confidence-interval-calculator.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/confidence-interval-calculator.html">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/confidence-interval-calculator.html">Română</a><a class="locale-item" role="menuitem" href="/el/tool/confidence-interval-calculator.html">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/confidence-interval-calculator.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/confidence-interval-calculator.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/confidence-interval-calculator.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/fr/index.html">Calquary</a> / <a href="/fr/category/math.html">Mathématiques</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calculateur d'Intervalle de Confiance</h1>
+        <p style="max-width:60ch;">Entrez une moyenne d'échantillon, écart-type, et taille d'échantillon pour calculer un intervalle de confiance.</p>
+        <p class="last-updated">Dernière mise à jour : September 2, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculer</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Réinitialiser</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Questions fréquentes</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Que signifie un intervalle de confiance à 95 % ?</h3>
+<p>Si vous répétiez le processus d'échantillonnage plusieurs fois et construisiez un intervalle de confiance à chaque fois, environ 95 % de ces intervalles contiendraient la vraie moyenne de population - c'est une déclaration sur la fiabilité de la méthode, pas une probabilité de 95 % que cet intervalle spécifique contienne la vraie valeur.</p>
+</div>
+<div class="faq-item">
+<h3>Comment calculer un intervalle de confiance ?</h3>
+<p>Marge d'erreur = score z × (écart-type ÷ √taille d'échantillon). Ensuite, ajoutez et soustrayez cette marge de votre moyenne d'échantillon pour obtenir les bornes inférieure et supérieure de l'intervalle. Le score z dépend de votre niveau de confiance choisi (1,96 pour 95 %, par exemple).</p>
+</div>
+<div class="faq-item">
+<h3>Pourquoi une taille d'échantillon plus grande produit-elle un intervalle de confiance plus étroit ?</h3>
+<p>La marge d'erreur divise par la racine carrée de la taille d'échantillon, donc des échantillons plus grands réduisent la marge - plus de données signifie moins d'incertitude sur l'endroit où se trouve la vraie moyenne de population, resserrant l'intervalle autour de votre estimation.</p>
+</div>
+<div class="faq-item">
+<h3>Dois-je utiliser un score z ou t pour mon intervalle de confiance ?</h3>
+<p>Utilisez un score t (de la distribution t) pour des échantillons plus petits, généralement moins de 30, car il tient compte de l'incertitude supplémentaire dans une estimation d'écart-type d'échantillon petit. Cette calculatrice utilise la distribution z, qui est une approximation raisonnable une fois que votre taille d'échantillon est de 30 ou plus.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Outils associés</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Remarque sur la précision</h4>
+          <p style="margin:0;font-size:0.85rem;">Les calculatrices de Calquary sont conçues pour fournir des estimations rapides et fiables. Pour toute décision ayant de réelles conséquences financières, structurelles ou médicales, consultez un professionnel qualifié.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/fr/index.html">← Retour à toutes les calculatrices</a> · <a href="/fr/about.html">À propos</a> · <a href="/fr/contact.html">Contact</a> · <a href="/fr/privacy.html">Confidentialité</a> · <a href="/fr/terms.html">Conditions</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>
