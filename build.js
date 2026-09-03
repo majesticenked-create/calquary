@@ -68,6 +68,8 @@ const WAVE_ONE_TOOL_IDS = [
   "retirement-401k-calculator", "bond-duration-calculator", "gas-trip-cost-calculator",
   "paint-calculator", "mulch-calculator", "gravel-calculator", "drywall-calculator",
   "tile-calculator", "roofing-calculator", "square-footage-calculator",
+  "fence-calculator", "insulation-calculator", "ac-btu-calculator",
+  "lumber-calculator", "paver-calculator", "mix-ratio-calculator",
 ];
 
 function loadData() {

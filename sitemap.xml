@@ -19,7 +19,7 @@
   </url>
   <url>
     <loc>https://calquary.com/about.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/about.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/about.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/about.html"/>
@@ -36,7 +36,7 @@
   </url>
   <url>
     <loc>https://calquary.com/contact.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/contact.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/contact.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/contact.html"/>
@@ -53,7 +53,7 @@
   </url>
   <url>
     <loc>https://calquary.com/privacy.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/privacy.html"/>
@@ -70,7 +70,7 @@
   </url>
   <url>
     <loc>https://calquary.com/terms.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/terms.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/terms.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/terms.html"/>
@@ -1196,30 +1196,85 @@
     <loc>https://calquary.com/tool/fence-calculator.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/fence-calculator.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/fence-calculator.html"/>
   </url>
   <url>
     <loc>https://calquary.com/tool/insulation-calculator.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/insulation-calculator.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/insulation-calculator.html"/>
   </url>
   <url>
     <loc>https://calquary.com/tool/ac-btu-calculator.html</loc>
     <lastmod>2026-09-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/ac-btu-calculator.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/ac-btu-calculator.html"/>
   </url>
   <url>
     <loc>https://calquary.com/tool/lumber-calculator.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/lumber-calculator.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/lumber-calculator.html"/>
   </url>
   <url>
     <loc>https://calquary.com/tool/paver-calculator.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/paver-calculator.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/paver-calculator.html"/>
   </url>
   <url>
@@ -1637,6 +1692,17 @@
     <loc>https://calquary.com/tool/mix-ratio-calculator.html</loc>
     <lastmod>2026-09-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/mix-ratio-calculator.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/mix-ratio-calculator.html"/>
   </url>
   <url>
@@ -2897,6 +2963,91 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/square-footage-calculator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/es/tool/fence-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/fence-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/es/tool/insulation-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/insulation-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/es/tool/ac-btu-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/ac-btu-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/es/tool/lumber-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/lumber-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/es/tool/paver-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/paver-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/es/tool/bmi-calculator.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/bmi-calculator.html"/>
@@ -3048,6 +3199,23 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/temperature-converter.html"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/temperature-converter.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/temperature-converter.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/es/tool/mix-ratio-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/mix-ratio-calculator.html"/>
   </url>
   <url>
     <loc>https://calquary.com/es/tool/simple-interest-calculator.html</loc>
@@ -4019,6 +4187,91 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/square-footage-calculator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/fr/tool/fence-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/fence-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/fr/tool/insulation-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/insulation-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/fr/tool/ac-btu-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/ac-btu-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/fr/tool/lumber-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/lumber-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/fr/tool/paver-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/paver-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/fr/tool/bmi-calculator.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/bmi-calculator.html"/>
@@ -4170,6 +4423,23 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/temperature-converter.html"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/temperature-converter.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/temperature-converter.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/fr/tool/mix-ratio-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/mix-ratio-calculator.html"/>
   </url>
   <url>
     <loc>https://calquary.com/fr/tool/simple-interest-calculator.html</loc>
@@ -5141,6 +5411,91 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/square-footage-calculator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/de/tool/fence-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/fence-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/de/tool/insulation-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/insulation-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/de/tool/ac-btu-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/ac-btu-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/de/tool/lumber-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/lumber-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/de/tool/paver-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/paver-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/de/tool/bmi-calculator.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/bmi-calculator.html"/>
@@ -5292,6 +5647,23 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/temperature-converter.html"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/temperature-converter.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/temperature-converter.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/de/tool/mix-ratio-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/mix-ratio-calculator.html"/>
   </url>
   <url>
     <loc>https://calquary.com/de/tool/simple-interest-calculator.html</loc>
@@ -6263,6 +6635,91 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/square-footage-calculator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/pt/tool/fence-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/fence-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/pt/tool/insulation-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/insulation-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/pt/tool/ac-btu-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/ac-btu-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/pt/tool/lumber-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/lumber-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/pt/tool/paver-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/paver-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/pt/tool/bmi-calculator.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/bmi-calculator.html"/>
@@ -6414,6 +6871,23 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/temperature-converter.html"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/temperature-converter.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/temperature-converter.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/pt/tool/mix-ratio-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/mix-ratio-calculator.html"/>
   </url>
   <url>
     <loc>https://calquary.com/pt/tool/simple-interest-calculator.html</loc>
@@ -7385,6 +7859,91 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/square-footage-calculator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/it/tool/fence-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/fence-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/it/tool/insulation-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/insulation-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/it/tool/ac-btu-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/ac-btu-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/it/tool/lumber-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/lumber-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/it/tool/paver-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/paver-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/it/tool/bmi-calculator.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/bmi-calculator.html"/>
@@ -7536,6 +8095,23 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/temperature-converter.html"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/temperature-converter.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/temperature-converter.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/it/tool/mix-ratio-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/mix-ratio-calculator.html"/>
   </url>
   <url>
     <loc>https://calquary.com/it/tool/simple-interest-calculator.html</loc>
@@ -8507,6 +9083,91 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/square-footage-calculator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/ja/tool/fence-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/fence-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ja/tool/insulation-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/insulation-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ja/tool/ac-btu-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/ac-btu-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ja/tool/lumber-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/lumber-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ja/tool/paver-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/paver-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/ja/tool/bmi-calculator.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/bmi-calculator.html"/>
@@ -8658,6 +9319,23 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/temperature-converter.html"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/temperature-converter.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/temperature-converter.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ja/tool/mix-ratio-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/mix-ratio-calculator.html"/>
   </url>
   <url>
     <loc>https://calquary.com/ja/tool/simple-interest-calculator.html</loc>
@@ -9629,6 +10307,91 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/square-footage-calculator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/ro/tool/fence-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/fence-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ro/tool/insulation-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/insulation-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ro/tool/ac-btu-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/ac-btu-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ro/tool/lumber-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/lumber-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ro/tool/paver-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/paver-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/ro/tool/bmi-calculator.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/bmi-calculator.html"/>
@@ -9780,6 +10543,23 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/temperature-converter.html"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/temperature-converter.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/temperature-converter.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ro/tool/mix-ratio-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/mix-ratio-calculator.html"/>
   </url>
   <url>
     <loc>https://calquary.com/ro/tool/simple-interest-calculator.html</loc>
@@ -10751,6 +11531,91 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/square-footage-calculator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/el/tool/fence-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/fence-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/el/tool/insulation-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/insulation-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/el/tool/ac-btu-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/ac-btu-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/el/tool/lumber-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/lumber-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/el/tool/paver-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/paver-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/el/tool/bmi-calculator.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/bmi-calculator.html"/>
@@ -10902,6 +11767,23 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/temperature-converter.html"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/temperature-converter.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/temperature-converter.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/el/tool/mix-ratio-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/mix-ratio-calculator.html"/>
   </url>
   <url>
     <loc>https://calquary.com/el/tool/simple-interest-calculator.html</loc>
@@ -11873,6 +12755,91 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/square-footage-calculator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/zh/tool/fence-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/fence-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/zh/tool/insulation-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/insulation-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/zh/tool/ac-btu-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/ac-btu-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/zh/tool/lumber-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/lumber-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/zh/tool/paver-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/paver-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/zh/tool/bmi-calculator.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/bmi-calculator.html"/>
@@ -12024,6 +12991,23 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/temperature-converter.html"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/temperature-converter.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/temperature-converter.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/zh/tool/mix-ratio-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/mix-ratio-calculator.html"/>
   </url>
   <url>
     <loc>https://calquary.com/zh/tool/simple-interest-calculator.html</loc>
@@ -12995,6 +13979,91 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/square-footage-calculator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/ar/tool/fence-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/fence-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ar/tool/insulation-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/insulation-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ar/tool/ac-btu-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/ac-btu-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ar/tool/lumber-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/lumber-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ar/tool/paver-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/paver-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/ar/tool/bmi-calculator.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/bmi-calculator.html"/>
@@ -13146,6 +14215,23 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/temperature-converter.html"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/temperature-converter.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/temperature-converter.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ar/tool/mix-ratio-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/mix-ratio-calculator.html"/>
   </url>
   <url>
     <loc>https://calquary.com/ar/tool/simple-interest-calculator.html</loc>
@@ -14117,6 +15203,91 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/square-footage-calculator.html"/>
   </url>
   <url>
+    <loc>https://calquary.com/th/tool/fence-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/fence-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/fence-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/th/tool/insulation-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/insulation-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/insulation-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/th/tool/ac-btu-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/ac-btu-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/ac-btu-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/th/tool/lumber-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/lumber-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/lumber-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/th/tool/paver-calculator.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/paver-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/paver-calculator.html"/>
+  </url>
+  <url>
     <loc>https://calquary.com/th/tool/bmi-calculator.html</loc>
     <lastmod>2026-08-30</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/bmi-calculator.html"/>
@@ -14268,6 +15439,23 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/temperature-converter.html"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/temperature-converter.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/temperature-converter.html"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/th/tool/mix-ratio-calculator.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/mix-ratio-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/mix-ratio-calculator.html"/>
   </url>
   <url>
     <loc>https://calquary.com/th/tool/simple-interest-calculator.html</loc>
