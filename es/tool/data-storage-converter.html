@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conversor de Almacenamiento de Datos - Calculadora Gratis Online | Calquary</title>
+  <meta name="description" content="Convierte entre bytes, KB, MB, GB, y TB." />
+  <meta property="og:title" content="Conversor de Almacenamiento de Datos | Calquary">
+  <meta property="og:description" content="Convierte entre bytes, KB, MB, GB, y TB.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/es/tool/data-storage-converter.html">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/data-storage-converter.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Conversor de Almacenamiento de Datos | Calquary">
+  <meta name="twitter:description" content="Convierte entre bytes, KB, MB, GB, y TB.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/data-storage-converter.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/data-storage-converter.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/data-storage-converter.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/data-storage-converter.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/data-storage-converter.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/data-storage-converter.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/data-storage-converter.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/data-storage-converter.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/data-storage-converter.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/data-storage-converter.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/data-storage-converter.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/data-storage-converter.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/data-storage-converter.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/data-storage-converter.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("data-storage-converter");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("data-storage-converter");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Conversor de Almacenamiento de Datos",
+      "description": "Convierte entre bytes, KB, MB, GB, y TB.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/es/tool/data-storage-converter.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-30",
+      "inLanguage": "es"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/es/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Everyday Conversions",
+          "item": "https://calquary.com/es/category/conversions.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Conversor de Almacenamiento de Datos",
+          "item": "https://calquary.com/es/tool/data-storage-converter.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cuántos MB tiene un GB?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1 GB equivale a 1,024 MB usando la convención binaria que usa esta calculadora (1 KB = 1,024 bytes) - esto es estándar en contextos de computación como tamaños de archivo y RAM."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué los tamaños de almacenamiento a veces no coinciden con lo que espero?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los fabricantes de almacenamiento a menudo usan unidades decimales (1 GB = 1,000 MB) para marketing, mientras que los sistemas operativos típicamente reportan unidades binarias (1 GB = 1,024 MB) - por eso una unidad de \"1 TB\" muestra menos espacio del esperado en tu explorador de archivos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué las capacidades de disco duro a veces muestran menos espacio del anunciado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los fabricantes típicamente calculan el almacenamiento usando unidades decimales (1 GB = 1,000,000,000 bytes), mientras que los sistemas operativos a menudo muestran la capacidad usando unidades binarias (1 GB = 1,073,741,824 bytes) - el mismo disco físico muestra un número menor bajo la convención binaria, por eso las capacidades anunciadas y mostradas no siempre coinciden."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es la diferencia entre un megabyte (MB) y un mebibyte (MiB)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un megabyte típicamente son 1,000 kilobytes (decimal, base 10), usado por fabricantes de almacenamiento, mientras que un mebibyte son 1,024 kibibytes (binario, base 2), usado por la mayoría de sistemas operativos al reportar tamaños de archivos y discos - esta discrepancia es por qué un disco de '256GB' a menudo muestra menos espacio utilizable en tu SO."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/es/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/es/index.html#categories">Categorías</a>
+          <a href="/es/index.html#tools">Todas las herramientas</a>
+          <a href="/es/about.html">Acerca de</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Español">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>ES</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/data-storage-converter.html">English</a><span class="locale-item current" role="menuitem" aria-current="true">Español</span><a class="locale-item" role="menuitem" href="/fr/tool/data-storage-converter.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/data-storage-converter.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/data-storage-converter.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/data-storage-converter.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/data-storage-converter.html">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/data-storage-converter.html">Română</a><a class="locale-item" role="menuitem" href="/el/tool/data-storage-converter.html">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/data-storage-converter.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/data-storage-converter.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/data-storage-converter.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/es/index.html">Calquary</a> / <a href="/es/category/conversions.html">Conversiones Cotidianas</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Conversor de Almacenamiento de Datos</h1>
+        <p style="max-width:60ch;">Introduce un valor y elige una unidad de inicio para convertir entre bytes, kilobytes, megabytes, gigabytes, y terabytes.</p>
+        <p class="last-updated">Última actualización: August 30, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calcular</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reiniciar</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Preguntas frecuentes</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>¿Cuántos MB tiene un GB?</h3>
+<p>1 GB equivale a 1,024 MB usando la convención binaria que usa esta calculadora (1 KB = 1,024 bytes) - esto es estándar en contextos de computación como tamaños de archivo y RAM.</p>
+</div>
+<div class="faq-item">
+<h3>¿Por qué los tamaños de almacenamiento a veces no coinciden con lo que espero?</h3>
+<p>Los fabricantes de almacenamiento a menudo usan unidades decimales (1 GB = 1,000 MB) para marketing, mientras que los sistemas operativos típicamente reportan unidades binarias (1 GB = 1,024 MB) - por eso una unidad de "1 TB" muestra menos espacio del esperado en tu explorador de archivos.</p>
+</div>
+<div class="faq-item">
+<h3>¿Por qué las capacidades de disco duro a veces muestran menos espacio del anunciado?</h3>
+<p>Los fabricantes típicamente calculan el almacenamiento usando unidades decimales (1 GB = 1,000,000,000 bytes), mientras que los sistemas operativos a menudo muestran la capacidad usando unidades binarias (1 GB = 1,073,741,824 bytes) - el mismo disco físico muestra un número menor bajo la convención binaria, por eso las capacidades anunciadas y mostradas no siempre coinciden.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cuál es la diferencia entre un megabyte (MB) y un mebibyte (MiB)?</h3>
+<p>Un megabyte típicamente son 1,000 kilobytes (decimal, base 10), usado por fabricantes de almacenamiento, mientras que un mebibyte son 1,024 kibibytes (binario, base 2), usado por la mayoría de sistemas operativos al reportar tamaños de archivos y discos - esta discrepancia es por qué un disco de '256GB' a menudo muestra menos espacio utilizable en tu SO.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Herramientas relacionadas</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Nota sobre precisión</h4>
+          <p style="margin:0;font-size:0.85rem;">Las calculadoras de Calquary están diseñadas para ofrecer estimaciones rápidas y fiables. Para decisiones con implicaciones financieras, estructurales o médicas reales, consulta con un profesional cualificado.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/es/index.html">← Volver a todas las calculadoras</a> · <a href="/es/about.html">Acerca de</a> · <a href="/es/contact.html">Contacto</a> · <a href="/es/privacy.html">Privacidad</a> · <a href="/es/terms.html">Términos</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

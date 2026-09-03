@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>自行车齿比计算器 - 免费在线计算器 | Calquary</title>
+  <meta name="description" content="根据车轮尺寸、大盘、飞轮和踏频计算发展齿数和速度。" />
+  <meta property="og:title" content="自行车齿比计算器 | Calquary">
+  <meta property="og:description" content="根据车轮尺寸、大盘、飞轮和踏频计算发展齿数和速度。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/zh/tool/gear-ratio-calculator.html">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/gear-ratio-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="自行车齿比计算器 | Calquary">
+  <meta name="twitter:description" content="根据车轮尺寸、大盘、飞轮和踏频计算发展齿数和速度。">
+  <meta name="twitter:image" content="https://calquary.com/og-images/gear-ratio-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/gear-ratio-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/gear-ratio-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/gear-ratio-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/gear-ratio-calculator.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/gear-ratio-calculator.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/gear-ratio-calculator.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/gear-ratio-calculator.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/gear-ratio-calculator.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/gear-ratio-calculator.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/gear-ratio-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/gear-ratio-calculator.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/gear-ratio-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/gear-ratio-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("gear-ratio-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("gear-ratio-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "自行车齿比计算器",
+      "description": "根据车轮尺寸、大盘、飞轮和踏频计算发展齿数和速度。",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/zh/tool/gear-ratio-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-01",
+      "inLanguage": "zh"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/zh/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Everyday Conversions",
+          "item": "https://calquary.com/zh/category/conversions.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "自行车齿比计算器",
+          "item": "https://calquary.com/zh/tool/gear-ratio-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "什么是「发展齿数（gear inches）」？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "这是一种在不同轮径和齿比组合之间比较自行车传动比的标准方法——它表示如果车轮以1:1的比例直接由踏板驱动时的有效直径（英寸），计算方式为车轮直径 × (大盘齿数 ÷ 飞轮齿数)。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "如何根据踏频和齿比计算速度？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "每转一圈踏板，自行车前进（发展齿数 × π）——将这个值乘以你的踏频（每分钟转数）就能得到每分钟的行驶距离，然后再换算成你想要的速度单位。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "公路骑行常见的发展齿数范围是多少？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "陡坡爬升大约在20-30发展齿数，快速平路骑行或下坡则可达100-130甚至更高，具体取决于骑手体力和地形——一辆自行车整套齿比的宽范围能覆盖从爬坡到冲刺的各种需求。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "这个计算考虑了轮胎打滑或传动系统损耗等现实因素吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "没有——这是一个理想化的计算，假设没有车轮打滑，动力传递完全高效，这对大多数公路和越野条件来说是一个合理的近似值，但不会完全精确。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/zh/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/zh/index.html#categories">分类</a>
+          <a href="/zh/index.html#tools">所有工具</a>
+          <a href="/zh/about.html">关于我们</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: 中文">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>undefined</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/gear-ratio-calculator.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/gear-ratio-calculator.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/gear-ratio-calculator.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/gear-ratio-calculator.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/gear-ratio-calculator.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/gear-ratio-calculator.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/gear-ratio-calculator.html">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/gear-ratio-calculator.html">Română</a><a class="locale-item" role="menuitem" href="/el/tool/gear-ratio-calculator.html">Ελληνικά</a><span class="locale-item current" role="menuitem" aria-current="true">中文</span><a class="locale-item" role="menuitem" href="/ar/tool/gear-ratio-calculator.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/gear-ratio-calculator.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/zh/index.html">Calquary</a> / <a href="/zh/category/conversions.html">日常换算</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>自行车齿比计算器</h1>
+        <p style="max-width:60ch;">输入你的车轮直径、大盘和飞轮齿数以及踏频，计算发展齿数（gear inches）和相应的速度。</p>
+        <p class="last-updated">最后更新： September 1, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">计算</button>
+              <button type="button" id="calc-reset" class="btn-ghost">重置</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>常见问题</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>什么是「发展齿数（gear inches）」？</h3>
+<p>这是一种在不同轮径和齿比组合之间比较自行车传动比的标准方法——它表示如果车轮以1:1的比例直接由踏板驱动时的有效直径（英寸），计算方式为车轮直径 × (大盘齿数 ÷ 飞轮齿数)。</p>
+</div>
+<div class="faq-item">
+<h3>如何根据踏频和齿比计算速度？</h3>
+<p>每转一圈踏板，自行车前进（发展齿数 × π）——将这个值乘以你的踏频（每分钟转数）就能得到每分钟的行驶距离，然后再换算成你想要的速度单位。</p>
+</div>
+<div class="faq-item">
+<h3>公路骑行常见的发展齿数范围是多少？</h3>
+<p>陡坡爬升大约在20-30发展齿数，快速平路骑行或下坡则可达100-130甚至更高，具体取决于骑手体力和地形——一辆自行车整套齿比的宽范围能覆盖从爬坡到冲刺的各种需求。</p>
+</div>
+<div class="faq-item">
+<h3>这个计算考虑了轮胎打滑或传动系统损耗等现实因素吗？</h3>
+<p>没有——这是一个理想化的计算，假设没有车轮打滑，动力传递完全高效，这对大多数公路和越野条件来说是一个合理的近似值，但不会完全精确。</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>相关工具</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>准确性说明</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquary 的计算器旨在提供快速、可靠的估算。对于涉及重大财务、结构或医疗后果的决定，请咨询合格的专业人士。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/zh/index.html">← 返回所有计算器</a> · <a href="/zh/about.html">关于我们</a> · <a href="/zh/contact.html">联系我们</a> · <a href="/zh/privacy.html">隐私政策</a> · <a href="/zh/terms.html">使用条款</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

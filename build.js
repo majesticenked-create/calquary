@@ -86,6 +86,8 @@ const WAVE_ONE_TOOL_IDS = [
   "rainfall-volume-calculator", "water-density-calculator", "weight-converter",
   "volume-converter", "cooking-converter", "microwave-wattage-converter",
   "electricity-cost-calculator", "ppm-percent-converter", "speed-converter", "area-converter",
+  "data-storage-converter", "pressure-converter", "torque-converter", "fuel-economy-converter",
+  "gear-ratio-calculator", "tire-size-calculator", "weather-comfort-calculator",
 ];
 
 function loadData() {
