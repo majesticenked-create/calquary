@@ -88,6 +88,9 @@ const WAVE_ONE_TOOL_IDS = [
   "electricity-cost-calculator", "ppm-percent-converter", "speed-converter", "area-converter",
   "data-storage-converter", "pressure-converter", "torque-converter", "fuel-economy-converter",
   "gear-ratio-calculator", "tire-size-calculator", "weather-comfort-calculator",
+  // Text category, batch 1
+  "color-difference-checker", "list-shuffler", "weighted-random-picker",
+  "password-generator", "uuid-generator", "random-number-generator", "coin-flipper",
 ];
 
 function loadData() {
