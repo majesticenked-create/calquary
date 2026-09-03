@@ -75,6 +75,7 @@ const WAVE_ONE_TOOL_IDS = [
   "ideal-weight-calculator", "bra-size-calculator", "pace-calculator",
   "steps-to-miles-calculator", "pregnancy-due-date-calculator", "ovulation-calculator",
   "calories-burned-calculator",
+  "dog-food-calculator", "rabbit-age-calculator", "horse-age-calculator", "ideal-dog-weight-calculator",
 ];
 
 function loadData() {

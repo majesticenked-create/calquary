@@ -9893,6 +9893,502 @@ const I18N_TOOLS = {
       ],
     },
   },
+
+  "dog-food-calculator": {
+    es: {
+      title: "Calculadora de Comida para Perros",
+      intro: "Introduce el peso de tu perro y su nivel de actividad para estimar las necesidades calóricas diarias y tazas de comida por día.",
+      description: "Estima cuánta comida darle a tu perro cada día.",
+      faq: [
+        { q: "¿Cuánta comida necesita un perro de 40 lb al día?", a: "Un perro moderadamente activo de 40 lb necesita aproximadamente 985 calorías al día, o cerca de 2.8 tazas de un alimento con 350 calorías por taza." },
+        { q: "¿Qué es el RER para cálculos de comida de perros?", a: "El requerimiento energético en reposo (RER) son las calorías que un perro necesita en completo reposo, calculado como 70 × (peso en kg)^0.75 - las necesidades diarias luego se escalan desde el RER según el nivel de actividad." },
+        { q: "¿Debo ajustar la cantidad para un perro esterilizado o castrado?", a: "Sí, generalmente - los perros esterilizados y castrados a menudo tienen una tasa metabólica ligeramente más baja, así que muchos veterinarios recomiendan reducir la porción calculada en aproximadamente 10-20% para evitar el aumento gradual de peso, luego ajustar más según la condición corporal real de tu perro con el tiempo." },
+        { q: "¿Cómo afecta la densidad calórica de la comida de perro a cuánto alimentar?", a: "No todas las comidas para perros tienen la misma densidad calórica - una taza de un alimento denso en calorías proporciona más energía que una taza de una fórmula con menos calorías, así que el mismo objetivo calórico diario se traduce en diferentes tamaños de porción dependiendo de las calorías por taza específicas del alimento, indicadas en el empaque." },
+      ],
+    },
+    fr: {
+      title: "Calculatrice de Nourriture pour Chien",
+      intro: "Indiquez le poids de votre chien et son niveau d'activité pour estimer les besoins caloriques quotidiens et les tasses de nourriture par jour.",
+      description: "Estimez combien de nourriture donner à votre chien chaque jour.",
+      faq: [
+        { q: "Combien de nourriture un chien de 40 lb a-t-il besoin par jour ?", a: "Un chien modérément actif de 40 lb a besoin d'environ 985 calories par jour, soit environ 2,8 tasses d'un aliment à 350 calories par tasse." },
+        { q: "Qu'est-ce que le RER pour les calculs de nourriture pour chien ?", a: "Le besoin énergétique au repos (RER) est le nombre de calories dont un chien a besoin au repos complet, calculé comme 70 × (poids en kg)^0,75 - les besoins quotidiens sont ensuite mis à l'échelle à partir du RER selon le niveau d'activité." },
+        { q: "Devrais-je ajuster la quantité pour un chien stérilisé ou castré ?", a: "Oui, généralement - les chiens stérilisés et castrés ont souvent un taux métabolique légèrement plus bas, donc de nombreux vétérinaires recommandent de réduire la portion calculée d'environ 10-20 % pour éviter une prise de poids progressive, puis d'ajuster davantage selon la condition corporelle réelle de votre chien au fil du temps." },
+        { q: "Comment la densité calorique de la nourriture pour chien affecte-t-elle la quantité à donner ?", a: "Toutes les nourritures pour chien n'ont pas la même densité calorique - une tasse d'un aliment dense en calories fournit plus d'énergie qu'une tasse d'une formule moins calorique, donc le même objectif calorique quotidien se traduit par des tailles de portion différentes selon les calories par tasse spécifiques de l'aliment, indiquées sur l'emballage." },
+      ],
+    },
+    de: {
+      title: "Hundefutterrechner",
+      intro: "Geben Sie das Gewicht und Aktivitätsniveau Ihres Hundes ein, um den täglichen Kalorienbedarf und die Futtertassen pro Tag zu schätzen.",
+      description: "Schätzen Sie, wie viel Futter Sie Ihrem Hund täglich geben sollten.",
+      faq: [
+        { q: "Wie viel Futter braucht ein 40-Pfund-Hund pro Tag?", a: "Ein mäßig aktiver 40-Pfund-Hund braucht etwa 985 Kalorien pro Tag, oder etwa 2,8 Tassen eines Futters mit 350 Kalorien pro Tasse." },
+        { q: "Was ist RER für Hundefutterberechnungen?", a: "Der Ruheenergiebedarf (RER) sind die Kalorien, die ein Hund in völliger Ruhe benötigt, berechnet als 70 × (Gewicht in kg)^0,75 - der tägliche Bedarf wird dann basierend auf dem Aktivitätsniveau vom RER hochskaliert." },
+        { q: "Sollte ich die Menge für einen kastrierten oder sterilisierten Hund anpassen?", a: "Ja, im Allgemeinen - kastrierte und sterilisierte Hunde haben oft eine leicht niedrigere Stoffwechselrate, daher empfehlen viele Tierärzte, die berechnete Portion um etwa 10-20 % zu reduzieren, um allmähliche Gewichtszunahme zu vermeiden, und dann weiter basierend auf dem tatsächlichen Körperzustand Ihres Hundes im Laufe der Zeit anzupassen." },
+        { q: "Wie wirkt sich die Kaloriendichte von Hundefutter darauf aus, wie viel zu füttern ist?", a: "Nicht alle Hundefutter haben die gleiche Kaloriendichte - eine Tasse eines kalorienreichen Futters liefert mehr Energie als eine Tasse einer kalorienärmeren Rezeptur, sodass sich das gleiche tägliche Kalorienziel je nach den spezifischen Kalorien pro Tasse des Futters, die auf der Verpackung angegeben sind, in unterschiedliche Portionsgrößen umsetzt." },
+      ],
+    },
+    pt: {
+      title: "Calculadora de Ração para Cães",
+      intro: "Insira o peso e nível de atividade do seu cão para estimar as necessidades calóricas diárias e xícaras de comida por dia.",
+      description: "Estime quanta comida dar ao seu cão a cada dia.",
+      faq: [
+        { q: "Quanta comida um cão de 40 lb precisa por dia?", a: "Um cão moderadamente ativo de 40 lb precisa de aproximadamente 985 calorias por dia, ou cerca de 2,8 xícaras de uma ração com 350 calorias por xícara." },
+        { q: "O que é RER para cálculos de ração de cães?", a: "A necessidade energética em repouso (RER) são as calorias que um cão precisa em repouso completo, calculada como 70 × (peso em kg)^0,75 - as necessidades diárias são então escaladas a partir do RER com base no nível de atividade." },
+        { q: "Devo ajustar a quantidade para um cão castrado ou esterilizado?", a: "Sim, geralmente - cães castrados e esterilizados frequentemente têm uma taxa metabólica ligeiramente menor, então muitos veterinários recomendam reduzir a porção calculada em cerca de 10-20% para evitar ganho de peso gradual, depois ajustar mais com base na condição corporal real do seu cão ao longo do tempo." },
+        { q: "Como a densidade calórica da ração de cães afeta quanto alimentar?", a: "Nem todas as rações de cães têm a mesma densidade calórica - uma xícara de uma ração densa em calorias fornece mais energia do que uma xícara de uma fórmula com menos calorias, então o mesmo objetivo calórico diário se traduz em tamanhos de porção diferentes dependendo das calorias por xícara específicas da ração, listadas na embalagem." },
+      ],
+    },
+    it: {
+      title: "Calcolatrice del Cibo per Cani",
+      intro: "Inserisci il peso e il livello di attività del tuo cane per stimare il fabbisogno calorico giornaliero e le tazze di cibo al giorno.",
+      description: "Stima quanto cibo dare al tuo cane ogni giorno.",
+      faq: [
+        { q: "Quanto cibo serve a un cane di 40 lb al giorno?", a: "Un cane moderatamente attivo di 40 lb ha bisogno di circa 985 calorie al giorno, ovvero circa 2,8 tazze di un cibo con 350 calorie per tazza." },
+        { q: "Cos'è il RER per i calcoli del cibo per cani?", a: "Il fabbisogno energetico a riposo (RER) sono le calorie di cui un cane ha bisogno a riposo completo, calcolato come 70 × (peso in kg)^0,75 - il fabbisogno giornaliero viene poi scalato dal RER in base al livello di attività." },
+        { q: "Dovrei regolare la quantità per un cane sterilizzato o castrato?", a: "Sì, generalmente - i cani sterilizzati e castrati hanno spesso un tasso metabolico leggermente più basso, quindi molti veterinari raccomandano di ridurre la porzione calcolata di circa il 10-20% per evitare un graduale aumento di peso, poi regolare ulteriormente in base alla condizione corporea effettiva del tuo cane nel tempo." },
+        { q: "Come influisce la densità calorica del cibo per cani su quanto nutrire?", a: "Non tutti i cibi per cani hanno la stessa densità calorica - una tazza di un cibo denso di calorie fornisce più energia di una tazza di una formula meno calorica, quindi lo stesso obiettivo calorico giornaliero si traduce in dimensioni di porzione diverse a seconda delle calorie per tazza specifiche del cibo, indicate sulla confezione." },
+      ],
+    },
+    ja: {
+      title: "ドッグフード計算機",
+      intro: "犬の体重と活動レベルを入力すると、1日に必要なカロリーと餌のカップ数を見積もります。",
+      description: "犬に毎日どのくらいの餌を与えるべきかを見積もります。",
+      faq: [
+        { q: "40ポンドの犬は1日にどのくらいの餌が必要ですか？", a: "適度に活動的な40ポンドの犬は1日約985カロリーが必要で、1カップ350カロリーのフードなら約2.8カップになります。" },
+        { q: "ドッグフード計算におけるRERとは何ですか？", a: "安静時エネルギー要求量（RER）は、犬が完全に安静な状態で必要とするカロリーで、70 ×（体重kg）^0.75で計算されます。1日の必要量は、この後、活動レベルに応じてRERから拡大されます。" },
+        { q: "避妊・去勢済みの犬には量を調整すべきですか？", a: "はい、一般的にはそうです。避妊・去勢済みの犬は代謝率がやや低くなることが多いため、多くの獣医師は計算された量を約10〜20%減らして徐々に体重が増えるのを防ぎ、その後は時間の経過とともに犬の実際の体調に応じてさらに調整することを推奨しています。" },
+        { q: "ドッグフードのカロリー密度は給餌量にどう影響しますか？", a: "すべてのドッグフードが同じカロリー密度を持っているわけではありません。カロリー密度の高いフードの1カップは、カロリーの低い配合のフードの1カップよりも多くのエネルギーを提供します。そのため、同じ1日のカロリー目標でも、パッケージに記載されているフード固有の1カップあたりのカロリーによって、実際の給餌量は変わってきます。" },
+      ],
+    },
+    ro: {
+      title: "Calculator de Hrană pentru Câini",
+      intro: "Introdu greutatea și nivelul de activitate al câinelui tău pentru a estima necesarul caloric zilnic și căni de hrană pe zi.",
+      description: "Estimează câtă hrană să oferi câinelui tău în fiecare zi.",
+      faq: [
+        { q: "Câtă hrană are nevoie un câine de 40 lb pe zi?", a: "Un câine moderat activ de 40 lb are nevoie de aproximativ 985 de calorii pe zi, sau aproximativ 2,8 căni de hrană cu 350 de calorii per cană." },
+        { q: "Ce este RER pentru calculele de hrană pentru câini?", a: "Necesarul energetic de repaus (RER) reprezintă caloriile de care un câine are nevoie în repaus complet, calculat ca 70 × (greutate în kg)^0,75 - necesarul zilnic este apoi scalat de la RER pe baza nivelului de activitate." },
+        { q: "Ar trebui să ajustez cantitatea pentru un câine sterilizat sau castrat?", a: "Da, în general - câinii sterilizați și castrați au adesea o rată metabolică ușor mai scăzută, deci mulți medici veterinari recomandă reducerea porției calculate cu aproximativ 10-20% pentru a evita creșterea treptată în greutate, apoi ajustarea suplimentară pe baza condiției corporale reale a câinelui tău în timp." },
+        { q: "Cum afectează densitatea calorică a hranei pentru câini cât de mult să hrănești?", a: "Nu toate hranele pentru câini au aceeași densitate calorică - o cană de hrană densă caloric oferă mai multă energie decât o cană dintr-o formulă cu mai puține calorii, deci aceeași țintă calorică zilnică se traduce în dimensiuni diferite ale porției în funcție de caloriile pe cană specifice hranei, listate pe ambalaj." },
+      ],
+    },
+    el: {
+      title: "Αριθμομηχανή Τροφής Σκύλου",
+      intro: "Εισάγετε το βάρος και το επίπεδο δραστηριότητας του σκύλου σας για να εκτιμήσετε τις ημερήσιες ανάγκες θερμίδων και τα φλιτζάνια τροφής ανά ημέρα.",
+      description: "Εκτίμησε πόση τροφή να δίνεις στον σκύλο σου κάθε μέρα.",
+      faq: [
+        { q: "Πόση τροφή χρειάζεται ένας σκύλος 40 lb την ημέρα;", a: "Ένας μέτρια δραστήριος σκύλος 40 lb χρειάζεται περίπου 985 θερμίδες την ημέρα, ή περίπου 2,8 φλιτζάνια μιας τροφής με 350 θερμίδες ανά φλιτζάνι." },
+        { q: "Τι είναι το RER για υπολογισμούς τροφής σκύλου;", a: "Η ενεργειακή απαίτηση ηρεμίας (RER) είναι οι θερμίδες που χρειάζεται ένας σκύλος σε πλήρη ηρεμία, υπολογιζόμενη ως 70 × (βάρος σε κιλά)^0,75 - οι ημερήσιες ανάγκες κλιμακώνονται στη συνέχεια από το RER με βάση το επίπεδο δραστηριότητας." },
+        { q: "Πρέπει να προσαρμόσω την ποσότητα για έναν στειρωμένο ή ευνουχισμένο σκύλο;", a: "Ναι, γενικά - οι στειρωμένοι και ευνουχισμένοι σκύλοι έχουν συχνά ελαφρώς χαμηλότερο μεταβολικό ρυθμό, οπότε πολλοί κτηνίατροι συνιστούν τη μείωση της υπολογισμένης μερίδας κατά περίπου 10-20% για να αποφευχθεί η σταδιακή αύξηση βάρους, μετά περαιτέρω προσαρμογή με βάση την πραγματική σωματική κατάσταση του σκύλου σας με τον καιρό." },
+        { q: "Πώς επηρεάζει η θερμιδική πυκνότητα της τροφής σκύλου το πόσο να ταΐζετε;", a: "Δεν έχουν όλες οι τροφές σκύλων την ίδια θερμιδική πυκνότητα - ένα φλιτζάνι μιας πυκνής σε θερμίδες τροφής παρέχει περισσότερη ενέργεια από ένα φλιτζάνι μιας φόρμουλας με λιγότερες θερμίδες, οπότε ο ίδιος ημερήσιος στόχος θερμίδων μεταφράζεται σε διαφορετικά μεγέθη μερίδας ανάλογα με τις θερμίδες ανά φλιτζάνι της συγκεκριμένης τροφής, που αναγράφονται στη συσκευασία." },
+      ],
+    },
+    zh: {
+      title: "狗粮计算器",
+      intro: "输入狗狗的体重和活动量，估算每日所需的卡路里和每天需要喂食的杯数。",
+      description: "估算每天应该给狗狗喂多少食物。",
+      faq: [
+        { q: "40磅的狗每天需要多少食物？", a: "一只中等活跃度、体重40磅的狗每天大约需要985卡路里，如果狗粮每杯含350卡路里，大约需要2.8杯。" },
+        { q: "在狗粮计算中，什么是RER？", a: "静息能量需求（RER）是狗在完全静止状态下所需的卡路里，计算公式为70 ×（体重（千克）的0.75次方）——然后根据活动量，从RER基础上按比例增加每日需求量。" },
+        { q: "绝育或阉割过的狗需要调整喂食量吗？", a: "一般来说需要——绝育和阉割过的狗通常代谢率会略低一些，因此许多兽医建议将计算出的份量减少约10-20%，以避免体重逐渐增加，之后再根据狗狗实际的体况随时间进一步调整。" },
+        { q: "狗粮的热量密度如何影响喂食量？", a: "并非所有狗粮的热量密度都相同——一杯热量密集的狗粮比一杯热量较低配方的狗粮提供更多能量，因此同样的每日卡路里目标，会因具体狗粮包装上标注的每杯卡路里不同，而对应不同的喂食份量。" },
+      ],
+    },
+    ar: {
+      title: "حاسبة طعام الكلاب",
+      intro: "أدخل وزن كلبك ومستوى نشاطه لتقدير احتياجاته اليومية من السعرات الحرارية وأكواب الطعام في اليوم.",
+      description: "قدّر كمية الطعام التي يجب إطعامها لكلبك كل يوم.",
+      faq: [
+        { q: "كم من الطعام يحتاجه كلب وزنه 40 رطلاً يوميًا؟", a: "يحتاج كلب متوسط النشاط يزن 40 رطلاً إلى حوالي 985 سعرة حرارية يوميًا، أو حوالي 2.8 كوب من طعام يحتوي على 350 سعرة حرارية لكل كوب." },
+        { q: "ما هو RER في حسابات طعام الكلاب؟", a: "متطلب الطاقة أثناء الراحة (RER) هو السعرات الحرارية التي يحتاجها الكلب في راحة تامة، ويُحسب كـ 70 × (الوزن بالكيلوغرام)^0.75 - ثم تُصعَّد الاحتياجات اليومية من RER بناءً على مستوى النشاط." },
+        { q: "هل يجب أن أعدّل الكمية لكلب معقّم أو مخصي؟", a: "نعم، بشكل عام - غالبًا ما يكون لدى الكلاب المعقمة والمخصية معدل أيض أقل قليلاً، لذا يوصي العديد من الأطباء البيطريين بتقليل الجزء المحسوب بحوالي 10-20% لتجنب زيادة الوزن التدريجية، ثم ضبطها أكثر بناءً على الحالة الجسدية الفعلية لكلبك بمرور الوقت." },
+        { q: "كيف تؤثر كثافة السعرات الحرارية في طعام الكلاب على كمية الإطعام؟", a: "لا تحتوي جميع أطعمة الكلاب على نفس كثافة السعرات الحرارية - يوفر كوب من طعام غني بالسعرات الحرارية طاقة أكثر من كوب من تركيبة أقل سعرات حرارية، لذا فإن نفس الهدف اليومي من السعرات الحرارية يُترجم إلى أحجام حصص مختلفة اعتمادًا على السعرات الحرارية لكل كوب المحددة للطعام، المدرجة على العبوة." },
+      ],
+    },
+    th: {
+      title: "เครื่องคำนวณอาหารสุนัข",
+      intro: "ป้อนน้ำหนักและระดับกิจกรรมของสุนัขของคุณเพื่อประเมินความต้องการแคลอรี่รายวันและถ้วยอาหารต่อวัน",
+      description: "ประเมินว่าควรให้อาหารสุนัขของคุณเท่าไหร่ในแต่ละวัน",
+      faq: [
+        { q: "สุนัขน้ำหนัก 40 ปอนด์ต้องการอาหารเท่าไหร่ต่อวัน?", a: "สุนัขที่มีกิจกรรมปานกลางน้ำหนัก 40 ปอนด์ต้องการแคลอรี่ประมาณ 985 แคลอรี่ต่อวัน หรือประมาณ 2.8 ถ้วยของอาหารที่มี 350 แคลอรี่ต่อถ้วย" },
+        { q: "RER คืออะไรในการคำนวณอาหารสุนัข?", a: "ความต้องการพลังงานขณะพัก (RER) คือแคลอรี่ที่สุนัขต้องการขณะพักผ่อนอย่างสมบูรณ์ คำนวณเป็น 70 × (น้ำหนักเป็นกก.)^0.75 - จากนั้นความต้องการรายวันจะถูกปรับขึ้นจาก RER ตามระดับกิจกรรม" },
+        { q: "ฉันควรปรับปริมาณสำหรับสุนัขที่ทำหมันแล้วหรือไม่?", a: "ใช่ โดยทั่วไป - สุนัขที่ทำหมันมักมีอัตราการเผาผลาญที่ต่ำกว่าเล็กน้อย ดังนั้นสัตวแพทย์หลายคนแนะนำให้ลดปริมาณที่คำนวณได้ลงประมาณ 10-20% เพื่อหลีกเลี่ยงการเพิ่มน้ำหนักอย่างค่อยเป็นค่อยไป แล้วปรับเพิ่มเติมตามสภาพร่างกายจริงของสุนัขของคุณเมื่อเวลาผ่านไป" },
+        { q: "ความหนาแน่นแคลอรี่ของอาหารสุนัขส่งผลต่อปริมาณที่ควรให้อย่างไร?", a: "ไม่ใช่อาหารสุนัขทุกชนิดที่มีความหนาแน่นแคลอรี่เท่ากัน - อาหาร 1 ถ้วยที่มีความหนาแน่นแคลอรี่สูงให้พลังงานมากกว่าอาหาร 1 ถ้วยของสูตรแคลอรี่ต่ำกว่า ดังนั้นเป้าหมายแคลอรี่รายวันเดียวกันจะแปลงเป็นขนาดการเสิร์ฟที่แตกต่างกันขึ้นอยู่กับแคลอรี่ต่อถ้วยเฉพาะของอาหารนั้น ซึ่งระบุไว้บนบรรจุภัณฑ์" },
+      ],
+    },
+  },
+
+  "rabbit-age-calculator": {
+    es: {
+      title: "Calculadora de Edad de Conejo",
+      intro: "Introduce la edad de tu conejo para estimar la edad humana equivalente, según patrones típicos de envejecimiento de lagomorfos.",
+      description: "Convierte la edad de tu conejo en años humanos.",
+      faq: [
+        { q: "¿Qué tan rápido envejecen los conejos comparados con los humanos?", a: "Los conejos maduran muy rápido - un conejo de 1 año equivale aproximadamente a un humano de 21 años, luego el envejecimiento se ralentiza a aproximadamente 6 años humanos por cada año de conejo después de eso." },
+        { q: "¿Cuánto tiempo viven típicamente los conejos domésticos?", a: "Los conejos de casa bien cuidados comúnmente viven de 8 a 12 años, y algunos viven más dependiendo de la raza y la salud." },
+        { q: "¿Diferentes razas de conejos envejecen a diferentes ritmos?", a: "En cierta medida - las razas de conejos más grandes tienden a tener vidas más cortas y pueden mostrar signos de envejecimiento antes que las razas más pequeñas, siguiendo un patrón similar (aunque menos dramático) de tamaño a esperanza de vida visto en los perros, aunque esta calculadora usa una estimación general en lugar de curvas específicas por raza." },
+        { q: "¿La esterilización o castración afecta la esperanza de vida o el ritmo de envejecimiento de un conejo?", a: "Sí - los conejos esterilizados y castrados generalmente viven más que los conejos intactos, ya que el procedimiento reduce significativamente el riesgo de cánceres reproductivos que son comunes en conejos no alterados, particularmente en conejas hembras, que enfrentan un alto riesgo de cáncer uterino de por vida si permanecen intactas." },
+      ],
+    },
+    fr: {
+      title: "Calculatrice d'Âge de Lapin",
+      intro: "Indiquez l'âge de votre lapin pour estimer l'âge humain équivalent, selon les schémas typiques de vieillissement des lagomorphes.",
+      description: "Convertissez l'âge de votre lapin en années humaines.",
+      faq: [
+        { q: "À quelle vitesse les lapins vieillissent-ils par rapport aux humains ?", a: "Les lapins mûrissent très rapidement - un lapin d'un an équivaut à peu près à un humain de 21 ans, puis le vieillissement ralentit à environ 6 années humaines par année de lapin après cela." },
+        { q: "Combien de temps vivent généralement les lapins domestiques ?", a: "Les lapins d'intérieur bien soignés vivent généralement 8 à 12 ans, certains vivant plus longtemps selon la race et la santé." },
+        { q: "Différentes races de lapins vieillissent-elles à des rythmes différents ?", a: "Dans une certaine mesure - les races de lapins plus grandes ont tendance à avoir des durées de vie plus courtes et peuvent montrer des signes de vieillissement plus tôt que les races plus petites, suivant un schéma similaire (bien que moins dramatique) de taille-à-durée de vie observé chez les chiens, bien que cette calculatrice utilise une estimation générale plutôt que des courbes spécifiques à la race." },
+        { q: "La stérilisation ou la castration affecte-t-elle la durée de vie ou le rythme de vieillissement d'un lapin ?", a: "Oui - les lapins stérilisés et castrés vivent généralement plus longtemps que les lapins intacts, car la procédure réduit considérablement le risque de cancers reproducteurs courants chez les lapins non modifiés, en particulier les lapines femelles, qui font face à un risque élevé de cancer utérin à vie si elles restent intactes." },
+      ],
+    },
+    de: {
+      title: "Kaninchen-Altersrechner",
+      intro: "Geben Sie das Alter Ihres Kaninchens ein, um das äquivalente menschliche Alter basierend auf typischen Alterungsmustern von Hasenartigen zu schätzen.",
+      description: "Rechnen Sie das Alter Ihres Kaninchens in Menschenjahre um.",
+      faq: [
+        { q: "Wie schnell altern Kaninchen im Vergleich zu Menschen?", a: "Kaninchen reifen sehr schnell - ein einjähriges Kaninchen entspricht etwa einem 21-jährigen Menschen, danach verlangsamt sich die Alterung auf etwa 6 Menschenjahre pro Kaninchenjahr." },
+        { q: "Wie lange leben Hauskaninchen typischerweise?", a: "Gut gepflegte Hauskaninchen leben üblicherweise 8-12 Jahre, manche leben länger, abhängig von Rasse und Gesundheit." },
+        { q: "Altern verschiedene Kaninchenrassen unterschiedlich schnell?", a: "In gewissem Maße - größere Kaninchenrassen haben tendenziell kürzere Lebensspannen und können früher Alterungszeichen zeigen als kleinere Rassen, ähnlich (wenn auch weniger drastisch) dem Größe-Lebensspanne-Muster bei Hunden, obwohl dieser Rechner eine allgemeine Schätzung statt rassespezifischer Kurven verwendet." },
+        { q: "Beeinflusst Kastration oder Sterilisation die Lebensspanne oder Alterungsrate eines Kaninchens?", a: "Ja - kastrierte und sterilisierte Kaninchen leben im Allgemeinen länger als unveränderte Kaninchen, da der Eingriff das Risiko reproduktiver Krebsarten deutlich verringert, die bei unveränderten Kaninchen häufig sind, besonders bei weiblichen Kaninchen, die ein hohes lebenslanges Risiko für Gebärmutterkrebs haben, wenn sie unverändert bleiben." },
+      ],
+    },
+    pt: {
+      title: "Calculadora de Idade de Coelho",
+      intro: "Insira a idade do seu coelho para estimar a idade humana equivalente, com base em padrões típicos de envelhecimento de lagomorfos.",
+      description: "Converta a idade do seu coelho em anos humanos.",
+      faq: [
+        { q: "Quão rápido os coelhos envelhecem comparados aos humanos?", a: "Os coelhos amadurecem muito rapidamente - um coelho de 1 ano equivale aproximadamente a um humano de 21 anos, depois o envelhecimento desacelera para cerca de 6 anos humanos por ano de coelho após isso." },
+        { q: "Quanto tempo os coelhos de estimação normalmente vivem?", a: "Coelhos domésticos bem cuidados comumente vivem de 8 a 12 anos, com alguns vivendo mais tempo dependendo da raça e saúde." },
+        { q: "Diferentes raças de coelhos envelhecem em ritmos diferentes?", a: "Um pouco - raças de coelhos maiores tendem a ter expectativa de vida mais curta e podem mostrar sinais de envelhecimento mais cedo do que raças menores, seguindo um padrão similar (embora menos dramático) de tamanho para expectativa de vida visto em cães, embora esta calculadora use uma estimativa geral em vez de curvas específicas de raça." },
+        { q: "A castração ou esterilização afeta a expectativa de vida ou taxa de envelhecimento de um coelho?", a: "Sim - coelhos castrados e esterilizados geralmente vivem mais que coelhos intactos, já que o procedimento reduz significativamente o risco de cânceres reprodutivos comuns em coelhos não alterados, particularmente coelhas fêmeas, que enfrentam um alto risco vitalício de câncer uterino se permanecerem intactas." },
+      ],
+    },
+    it: {
+      title: "Calcolatrice dell'Età del Coniglio",
+      intro: "Inserisci l'età del tuo coniglio per stimare l'età umana equivalente, in base ai tipici modelli di invecchiamento dei lagomorfi.",
+      description: "Converti l'età del tuo coniglio in anni umani.",
+      faq: [
+        { q: "Quanto velocemente invecchiano i conigli rispetto agli umani?", a: "I conigli maturano molto rapidamente - un coniglio di 1 anno equivale approssimativamente a un umano di 21 anni, poi l'invecchiamento rallenta a circa 6 anni umani per anno di coniglio dopo quello." },
+        { q: "Quanto vivono tipicamente i conigli domestici?", a: "I conigli domestici ben curati vivono comunemente 8-12 anni, con alcuni che vivono più a lungo a seconda della razza e della salute." },
+        { q: "Razze diverse di conigli invecchiano a ritmi diversi?", a: "In qualche misura - le razze di conigli più grandi tendono ad avere durate di vita più brevi e possono mostrare segni di invecchiamento prima delle razze più piccole, seguendo un modello simile (sebbene meno drammatico) di dimensione-durata di vita visto nei cani, sebbene questa calcolatrice usi una stima generale piuttosto che curve specifiche per razza." },
+        { q: "La sterilizzazione o castrazione influisce sulla durata di vita o sul tasso di invecchiamento di un coniglio?", a: "Sì - i conigli sterilizzati e castrati vivono generalmente più a lungo dei conigli intatti, poiché la procedura riduce significativamente il rischio di tumori riproduttivi comuni nei conigli non alterati, in particolare le coniglie femmine, che affrontano un alto rischio di cancro uterino nel corso della vita se rimangono intatte." },
+      ],
+    },
+    ja: {
+      title: "ウサギ年齢計算機",
+      intro: "ウサギの年齢を入力すると、一般的なウサギ目の老化パターンに基づいて、人間の年齢に換算した年齢を推定します。",
+      description: "ウサギの年齢を人間の年齢に換算します。",
+      faq: [
+        { q: "ウサギは人間と比べてどのくらい早く老化しますか？", a: "ウサギは非常に早く成熟します。1歳のウサギはおよそ21歳の人間に相当し、その後の老化はウサギの1年あたり人間の約6年のペースに緩やかになります。" },
+        { q: "ペットのウサギは通常どのくらい生きますか？", a: "しっかりと世話をされた室内ウサギは一般的に8〜12年生き、品種や健康状態によってはさらに長生きすることもあります。" },
+        { q: "ウサギの品種によって老化速度は異なりますか？", a: "ある程度は異なります。大型のウサギ品種は寿命が短い傾向があり、小型品種よりも早く老化の兆候を示すことがあります。これは犬に見られる体格と寿命の関係と似たパターンです（それほど劇的ではありませんが）。ただし、この計算機は品種別の曲線ではなく、一般的な推定値を使用しています。" },
+        { q: "避妊・去勢はウサギの寿命や老化速度に影響しますか？", a: "はい。避妊・去勢されたウサギは、未去勢のウサギよりも一般的に長生きします。この処置により、未去勢のウサギ（特に子宮がんのリスクが生涯にわたって高いメスのウサギ）に一般的な生殖器系のがんのリスクが大幅に減少するためです。" },
+      ],
+    },
+    ro: {
+      title: "Calculator al Vârstei Iepurelui",
+      intro: "Introdu vârsta iepurelui tău pentru a estima vârsta umană echivalentă, pe baza tiparelor tipice de îmbătrânire a lagomorfelor.",
+      description: "Convertește vârsta iepurelui tău în ani umani.",
+      faq: [
+        { q: "Cât de repede îmbătrânesc iepurii comparativ cu oamenii?", a: "Iepurii se maturizează foarte repede - un iepure de 1 an este aproximativ echivalent cu un om de 21 de ani, apoi îmbătrânirea încetinește la aproximativ 6 ani umani per an de iepure după aceea." },
+        { q: "Cât timp trăiesc de obicei iepurii de companie?", a: "Iepurii de casă bine îngrijiți trăiesc de obicei 8-12 ani, unii trăind mai mult în funcție de rasă și sănătate." },
+        { q: "Diferite rase de iepuri îmbătrânesc în ritmuri diferite?", a: "Oarecum - rasele mai mari de iepuri tind să aibă durate de viață mai scurte și pot prezenta semne de îmbătrânire mai devreme decât rasele mai mici, urmând un tipar similar (deși mai puțin dramatic) de dimensiune-durată de viață văzut la câini, deși acest calculator folosește o estimare generală în loc de curbe specifice rasei." },
+        { q: "Sterilizarea sau castrarea afectează durata de viață sau ritmul de îmbătrânire al unui iepure?", a: "Da - iepurii sterilizați și castrați trăiesc în general mai mult decât iepurii intacți, deoarece procedura reduce semnificativ riscul de cancere reproductive comune la iepurii nealterați, în special la iepuroaice, care se confruntă cu un risc ridicat pe viață de cancer uterin dacă rămân intacte." },
+      ],
+    },
+    el: {
+      title: "Αριθμομηχανή Ηλικίας Κουνελιού",
+      intro: "Εισάγετε την ηλικία του κουνελιού σας για να εκτιμήσετε την ισοδύναμη ανθρώπινη ηλικία, με βάση τυπικά πρότυπα γήρανσης λαγόμορφων.",
+      description: "Μετέτρεψε την ηλικία του κουνελιού σου σε ανθρώπινα χρόνια.",
+      faq: [
+        { q: "Πόσο γρήγορα γερνούν τα κουνέλια σε σύγκριση με τους ανθρώπους;", a: "Τα κουνέλια ωριμάζουν πολύ γρήγορα - ένα κουνέλι 1 έτους ισοδυναμεί περίπου με έναν άνθρωπο 21 ετών, μετά η γήρανση επιβραδύνεται σε περίπου 6 ανθρώπινα χρόνια ανά έτος κουνελιού μετά από αυτό." },
+        { q: "Πόσο καιρό ζουν συνήθως τα κατοικίδια κουνέλια;", a: "Τα καλά φροντισμένα κουνέλια σπιτιού ζουν συνήθως 8-12 χρόνια, με μερικά να ζουν περισσότερο ανάλογα με τη φυλή και την υγεία." },
+        { q: "Γερνούν διαφορετικές φυλές κουνελιών με διαφορετικούς ρυθμούς;", a: "Κάπως - οι μεγαλύτερες φυλές κουνελιών τείνουν να έχουν συντομότερη διάρκεια ζωής και μπορεί να δείχνουν σημάδια γήρανσης νωρίτερα από τις μικρότερες φυλές, ακολουθώντας ένα παρόμοιο (αν και λιγότερο δραματικό) μοτίβο μεγέθους-προς-διάρκεια ζωής που παρατηρείται στα σκυλιά, αν και αυτή η αριθμομηχανή χρησιμοποιεί μια γενική εκτίμηση αντί για καμπύλες ειδικές ανά φυλή." },
+        { q: "Επηρεάζει η στείρωση ή ο ευνουχισμός τη διάρκεια ζωής ή τον ρυθμό γήρανσης ενός κουνελιού;", a: "Ναι - τα στειρωμένα και ευνουχισμένα κουνέλια ζουν γενικά περισσότερο από τα ανέπαφα κουνέλια, αφού η διαδικασία μειώνει σημαντικά τον κίνδυνο αναπαραγωγικών καρκίνων που είναι συχνοί σε μη τροποποιημένα κουνέλια, ιδιαίτερα στα θηλυκά κουνέλια, που αντιμετωπίζουν υψηλό κίνδυνο καρκίνου μήτρας σε όλη τη ζωή τους αν παραμείνουν ανέπαφα." },
+      ],
+    },
+    zh: {
+      title: "兔子年龄计算器",
+      intro: "输入你的兔子的年龄，根据兔形目动物典型的衰老模式，估算相当于人类的年龄。",
+      description: "把你的兔子的年龄换算成人类年龄。",
+      faq: [
+        { q: "兔子的衰老速度和人类相比有多快？", a: "兔子成熟得非常快——1岁的兔子大约相当于21岁的人类，之后老化速度放缓到每一年兔龄大约相当于6年人类年龄。" },
+        { q: "宠物兔通常能活多久？", a: "得到良好照顾的家养兔子通常能活8-12年，有些兔子根据品种和健康状况能活得更久。" },
+        { q: "不同品种的兔子衰老速度不同吗？", a: "在一定程度上是的——较大型的兔子品种寿命往往更短，衰老迹象也可能比小型品种出现得更早，这与狗身上体型与寿命关系的模式类似（不过没那么明显）。不过这个计算器使用的是通用估算值，而不是针对具体品种的曲线。" },
+        { q: "绝育或阉割会影响兔子的寿命或衰老速度吗？", a: "会的——绝育和阉割过的兔子通常比未做绝育的兔子活得更久，因为这个手术能大大降低生殖系统癌症的风险，这类癌症在未绝育的兔子中很常见，尤其是母兔，如果不绝育，其一生患子宫癌的风险很高。" },
+      ],
+    },
+    ar: {
+      title: "حاسبة عمر الأرنب",
+      intro: "أدخل عمر أرنبك لتقدير العمر البشري المكافئ، بناءً على أنماط الشيخوخة النموذجية للأرانب.",
+      description: "حوّل عمر أرنبك إلى سنوات بشرية.",
+      faq: [
+        { q: "ما مدى سرعة شيخوخة الأرانب مقارنة بالبشر؟", a: "تنضج الأرانب بسرعة كبيرة - الأرنب البالغ من العمر عامًا واحدًا يعادل تقريبًا إنسانًا في الحادية والعشرين، ثم تتباطأ الشيخوخة بعد ذلك إلى حوالي 6 سنوات بشرية لكل عام من عمر الأرنب." },
+        { q: "كم من الوقت تعيش الأرانب الأليفة عادة؟", a: "تعيش أرانب المنازل التي تُعتنى بها جيدًا عادة من 8 إلى 12 عامًا، مع بعضها يعيش أطول اعتمادًا على السلالة والصحة." },
+        { q: "هل تشيخ سلالات الأرانب المختلفة بمعدلات مختلفة؟", a: "إلى حد ما - تميل سلالات الأرانب الأكبر حجمًا إلى أن يكون لها عمر أقصر وقد تظهر عليها علامات الشيخوخة في وقت أبكر من السلالات الأصغر، متبعة نمطًا مشابهًا (وإن كان أقل دراماتيكية) بين الحجم والعمر يُلاحظ في الكلاب، رغم أن هذه الحاسبة تستخدم تقديرًا عامًا بدلاً من منحنيات خاصة بكل سلالة." },
+        { q: "هل يؤثر التعقيم أو الخصي على عمر الأرنب أو معدل شيخوخته؟", a: "نعم - تعيش الأرانب المعقمة والمخصية عمومًا أطول من الأرانب غير المعدلة، حيث يقلل الإجراء بشكل كبير من خطر سرطانات الجهاز التناسلي الشائعة في الأرانب غير المعدلة، وخاصة إناث الأرانب، التي تواجه خطرًا مرتفعًا مدى الحياة للإصابة بسرطان الرحم إذا بقيت غير معدلة." },
+      ],
+    },
+    th: {
+      title: "เครื่องคำนวณอายุกระต่าย",
+      intro: "ป้อนอายุกระต่ายของคุณเพื่อประเมินอายุเทียบเท่ามนุษย์ โดยอิงจากรูปแบบการแก่ตัวทั่วไปของสัตว์ตระกูลกระต่าย",
+      description: "แปลงอายุกระต่ายของคุณเป็นปีมนุษย์",
+      faq: [
+        { q: "กระต่ายแก่ตัวเร็วแค่ไหนเมื่อเทียบกับมนุษย์?", a: "กระต่ายเจริญเติบโตเร็วมาก - กระต่ายอายุ 1 ปีเทียบเท่ากับมนุษย์อายุประมาณ 21 ปี จากนั้นการแก่ตัวจะช้าลงเหลือประมาณ 6 ปีมนุษย์ต่อ 1 ปีกระต่ายหลังจากนั้น" },
+        { q: "กระต่ายเลี้ยงมักมีอายุยืนแค่ไหน?", a: "กระต่ายที่เลี้ยงในบ้านและได้รับการดูแลอย่างดีมักมีอายุ 8-12 ปี บางตัวมีอายุยืนกว่านั้นขึ้นอยู่กับสายพันธุ์และสุขภาพ" },
+        { q: "กระต่ายสายพันธุ์ต่างกันแก่ตัวในอัตราต่างกันหรือไม่?", a: "ในระดับหนึ่ง - กระต่ายสายพันธุ์ใหญ่มักมีอายุขัยสั้นกว่าและอาจแสดงสัญญาณการแก่ตัวเร็วกว่าสายพันธุ์เล็ก โดยมีรูปแบบคล้ายกัน (แม้จะไม่ชัดเจนเท่า) กับความสัมพันธ์ระหว่างขนาดและอายุขัยที่พบในสุนัข แม้ว่าเครื่องคำนวณนี้จะใช้การประมาณทั่วไปแทนที่จะใช้เส้นโค้งเฉพาะสายพันธุ์" },
+        { q: "การทำหมันหรือตอนส่งผลต่ออายุขัยหรืออัตราการแก่ตัวของกระต่ายหรือไม่?", a: "ใช่ - กระต่ายที่ทำหมันแล้วโดยทั่วไปมีอายุยืนกว่ากระต่ายที่ไม่ได้ทำหมัน เนื่องจากขั้นตอนนี้ลดความเสี่ยงของมะเร็งระบบสืบพันธุ์ที่พบได้ทั่วไปในกระต่ายที่ไม่ได้ทำหมันอย่างมาก โดยเฉพาะกระต่ายตัวเมียที่มีความเสี่ยงสูงตลอดชีวิตในการเป็นมะเร็งมดลูกหากไม่ได้ทำหมัน" },
+      ],
+    },
+  },
+
+  "horse-age-calculator": {
+    es: {
+      title: "Calculadora de Edad de Caballo",
+      intro: "Introduce la edad de tu caballo para estimar la edad humana equivalente, según patrones típicos de envejecimiento equino.",
+      description: "Convierte la edad de tu caballo en años humanos.",
+      faq: [
+        { q: "¿Cuántos años tiene un caballo de 10 años en años humanos?", a: "Aproximadamente 33 años humanos - los caballos maduran muy rápido en sus primeros dos años (alcanzando aproximadamente los 13 años para el segundo año), luego envejecen más gradualmente después." },
+        { q: "¿Qué se considera vejez para un caballo?", a: "Los caballos a menudo se consideran mayores a partir de los 15-20 años, y muchos viven hasta finales de sus 20s o principios de sus 30s con buenos cuidados." },
+        { q: "¿Todas las razas de caballos envejecen a un ritmo similar?", a: "Los patrones de envejecimiento son bastante similares entre la mayoría de las razas de caballos comparado con las diferencias impulsadas por el tamaño vistas en los perros, aunque las razas de tiro muy grandes y las razas miniatura pueden mostrar tendencias de esperanza de vida algo diferentes en los extremos." },
+        { q: "¿Por qué los caballos envejecen más rápido en sus primeros años que más tarde en la vida?", a: "Los caballos alcanzan la madurez física mucho más rápido que los humanos, llegando a la adolescencia y casi al crecimiento completo dentro de sus primeros 4-5 años, así que el equivalente en años humanos de cada año temprano de caballo es muy alto antes de nivelarse a un ritmo más lento y constante durante el resto de su vida adulta." },
+      ],
+    },
+    fr: {
+      title: "Calculatrice d'Âge de Cheval",
+      intro: "Indiquez l'âge de votre cheval pour estimer l'âge humain équivalent, selon les schémas typiques de vieillissement équin.",
+      description: "Convertissez l'âge de votre cheval en années humaines.",
+      faq: [
+        { q: "Quel âge a un cheval de 10 ans en années humaines ?", a: "Environ 33 années humaines - les chevaux mûrissent très rapidement dans leurs deux premières années (atteignant environ 13 ans en deux ans), puis vieillissent plus progressivement par la suite." },
+        { q: "Qu'est-ce qui est considéré comme un grand âge pour un cheval ?", a: "Les chevaux sont souvent considérés comme seniors à partir d'environ 15-20 ans, beaucoup vivant jusqu'à la fin de la vingtaine ou au début de la trentaine avec de bons soins." },
+        { q: "Toutes les races de chevaux vieillissent-elles à un rythme similaire ?", a: "Les schémas de vieillissement sont assez similaires dans la plupart des races de chevaux comparés aux différences liées à la taille observées chez les chiens, bien que les races de trait très grandes et les races miniatures puissent montrer des tendances de durée de vie quelque peu différentes aux extrêmes." },
+        { q: "Pourquoi les chevaux vieillissent-ils plus vite dans leurs premières années que plus tard dans la vie ?", a: "Les chevaux atteignent la maturité physique beaucoup plus rapidement que les humains, atteignant l'adolescence et une croissance quasi complète dans leurs 4-5 premières années, donc l'équivalent en années humaines de chaque année précoce de cheval est très élevé avant de se stabiliser à un rythme plus lent et régulier pour le reste de leur vie adulte." },
+      ],
+    },
+    de: {
+      title: "Pferdealter-Rechner",
+      intro: "Geben Sie das Alter Ihres Pferdes ein, um das äquivalente menschliche Alter basierend auf typischen Alterungsmustern von Pferden zu schätzen.",
+      description: "Rechnen Sie das Alter Ihres Pferdes in Menschenjahre um.",
+      faq: [
+        { q: "Wie alt ist ein 10-jähriges Pferd in Menschenjahren?", a: "Etwa 33 Menschenjahre - Pferde reifen in ihren ersten zwei Jahren sehr schnell (erreichen bis zum zweiten Jahr etwa Alter 13), danach altern sie graduell." },
+        { q: "Was gilt als hohes Alter für ein Pferd?", a: "Pferde gelten oft ab etwa 15-20 Jahren als Senioren, wobei viele bei guter Pflege bis Ende 20 oder Anfang 30 leben." },
+        { q: "Altern alle Pferderassen mit ähnlicher Geschwindigkeit?", a: "Die Alterungsmuster sind bei den meisten Pferderassen ziemlich ähnlich im Vergleich zu den größenbedingten Unterschieden bei Hunden, obwohl sehr große Kaltblutrassen und Miniaturrassen an den Extremen etwas unterschiedliche Lebensspannen-Trends zeigen können." },
+        { q: "Warum altern Pferde in ihren ersten Jahren schneller als später im Leben?", a: "Pferde erreichen die körperliche Reife viel schneller als Menschen und erreichen innerhalb ihrer ersten 4-5 Jahre die Adoleszenz und nahezu vollständiges Wachstum, sodass das menschliche Jahresäquivalent jedes frühen Pferdejahres sehr hoch ist, bevor es sich für den Rest ihres Erwachsenenlebens auf eine langsamere, gleichmäßigere Rate einpendelt." },
+      ],
+    },
+    pt: {
+      title: "Calculadora de Idade de Cavalo",
+      intro: "Insira a idade do seu cavalo para estimar a idade humana equivalente, com base em padrões típicos de envelhecimento equino.",
+      description: "Converta a idade do seu cavalo em anos humanos.",
+      faq: [
+        { q: "Quantos anos tem um cavalo de 10 anos em anos humanos?", a: "Cerca de 33 anos humanos - os cavalos amadurecem muito rapidamente nos primeiros dois anos (chegando a cerca de 13 anos no segundo ano), depois envelhecem mais gradualmente." },
+        { q: "O que é considerado idade avançada para um cavalo?", a: "Os cavalos são frequentemente considerados idosos a partir de cerca de 15-20 anos, com muitos vivendo até o final dos 20 ou início dos 30 anos com bons cuidados." },
+        { q: "Todas as raças de cavalos envelhecem em um ritmo similar?", a: "Os padrões de envelhecimento são bastante similares na maioria das raças de cavalos comparados às diferenças impulsionadas pelo tamanho vistas em cães, embora raças de tração muito grandes e raças em miniatura possam mostrar tendências de expectativa de vida um pouco diferentes nos extremos." },
+        { q: "Por que os cavalos envelhecem mais rápido nos primeiros anos do que mais tarde na vida?", a: "Os cavalos atingem a maturidade física muito mais rápido que os humanos, atingindo a adolescência e crescimento quase completo dentro dos primeiros 4-5 anos, então o equivalente em anos humanos de cada ano inicial de cavalo é muito alto antes de se estabilizar em um ritmo mais lento e constante pelo resto de sua vida adulta." },
+      ],
+    },
+    it: {
+      title: "Calcolatrice dell'Età del Cavallo",
+      intro: "Inserisci l'età del tuo cavallo per stimare l'età umana equivalente, in base ai tipici modelli di invecchiamento equino.",
+      description: "Converti l'età del tuo cavallo in anni umani.",
+      faq: [
+        { q: "Quanti anni ha un cavallo di 10 anni in anni umani?", a: "Circa 33 anni umani - i cavalli maturano molto rapidamente nei loro primi due anni (raggiungendo circa i 13 anni entro il secondo anno), poi invecchiano più gradualmente in seguito." },
+        { q: "Cosa è considerata vecchiaia per un cavallo?", a: "I cavalli sono spesso considerati anziani a partire da circa 15-20 anni, con molti che vivono fino alla fine dei 20 o all'inizio dei 30 anni con buone cure." },
+        { q: "Tutte le razze di cavalli invecchiano a un ritmo simile?", a: "I modelli di invecchiamento sono abbastanza simili nella maggior parte delle razze di cavalli rispetto alle differenze legate alla dimensione viste nei cani, sebbene razze da tiro molto grandi e razze in miniatura possano mostrare tendenze di durata di vita alquanto diverse agli estremi." },
+        { q: "Perché i cavalli invecchiano più velocemente nei primi anni rispetto a più tardi nella vita?", a: "I cavalli raggiungono la maturità fisica molto più velocemente degli umani, raggiungendo l'adolescenza e la crescita quasi completa entro i primi 4-5 anni, quindi l'equivalente in anni umani di ogni anno iniziale di cavallo è molto alto prima di stabilizzarsi a un ritmo più lento e costante per il resto della loro vita adulta." },
+      ],
+    },
+    ja: {
+      title: "馬の年齢計算機",
+      intro: "馬の年齢を入力すると、一般的な馬の老化パターンに基づいて、人間の年齢に換算した年齢を推定します。",
+      description: "馬の年齢を人間の年齢に換算します。",
+      faq: [
+        { q: "10歳の馬は人間の年齢に換算すると何歳ですか？", a: "約33歳（人間換算）です。馬は最初の2年間で非常に急速に成熟し（2年目までに約13歳相当に達する）、その後は成長がより緩やかになります。" },
+        { q: "馬にとって高齢とはどのくらいですか？", a: "馬はしばしば15〜20歳頃からシニアとみなされ、良好なケアがあれば20代後半から30代前半まで生きることも多くあります。" },
+        { q: "すべての馬の品種は同じような速度で老化しますか？", a: "犬に見られる体格による違いと比べると、ほとんどの馬の品種で老化パターンはかなり似ています。ただし、非常に大型のドラフト種やミニチュア種は、極端なケースではやや異なる寿命傾向を示すことがあります。" },
+        { q: "なぜ馬は最初の数年間の方が後年よりも早く老化するのですか？", a: "馬は人間よりもはるかに早く身体的成熟に達し、最初の4〜5年で思春期とほぼ完全な成長に達します。そのため、初期の馬の1年あたりの人間換算年数は非常に高く、その後は成体期の残りの期間、より緩やかで安定した速度に落ち着きます。" },
+      ],
+    },
+    ro: {
+      title: "Calculator al Vârstei Calului",
+      intro: "Introdu vârsta calului tău pentru a estima vârsta umană echivalentă, pe baza tiparelor tipice de îmbătrânire ecvină.",
+      description: "Convertește vârsta calului tău în ani umani.",
+      faq: [
+        { q: "Cât de bătrân este un cal de 10 ani în ani umani?", a: "Aproximativ 33 de ani umani - caii se maturizează foarte repede în primii doi ani (ajungând la aproximativ 13 ani până în al doilea an), apoi îmbătrânesc mai treptat după aceea." },
+        { q: "Ce este considerată vârsta înaintată pentru un cal?", a: "Caii sunt adesea considerați seniori începând cu aproximativ 15-20 de ani, mulți trăind până la sfârșitul anilor 20 sau începutul anilor 30 cu îngrijire bună." },
+        { q: "Toate rasele de cai îmbătrânesc la un ritm similar?", a: "Tiparele de îmbătrânire sunt destul de similare la majoritatea raselor de cai comparativ cu diferențele determinate de mărime observate la câini, deși rasele de tracțiune foarte mari și rasele miniaturale pot arăta tendințe de durată de viață oarecum diferite la extreme." },
+        { q: "De ce caii îmbătrânesc mai repede în primii ani decât mai târziu în viață?", a: "Caii ajung la maturitatea fizică mult mai repede decât oamenii, atingând adolescența și o creștere aproape completă în primii 4-5 ani, deci echivalentul în ani umani al fiecărui an timpuriu de cal este foarte mare înainte de a se stabiliza la un ritm mai lent și mai constant pentru restul vieții lor adulte." },
+      ],
+    },
+    el: {
+      title: "Αριθμομηχανή Ηλικίας Αλόγου",
+      intro: "Εισάγετε την ηλικία του αλόγου σας για να εκτιμήσετε την ισοδύναμη ανθρώπινη ηλικία, με βάση τυπικά πρότυπα γήρανσης ίππων.",
+      description: "Μετέτρεψε την ηλικία του αλόγου σου σε ανθρώπινα χρόνια.",
+      faq: [
+        { q: "Πόσο χρονών είναι ένα άλογο 10 ετών σε ανθρώπινα χρόνια;", a: "Περίπου 33 ανθρώπινα χρόνια - τα άλογα ωριμάζουν πολύ γρήγορα τα πρώτα δύο χρόνια (φτάνοντας περίπου στα 13 έτη μέχρι τον δεύτερο χρόνο), μετά γερνούν πιο σταδιακά." },
+        { q: "Τι θεωρείται γεράματα για ένα άλογο;", a: "Τα άλογα συχνά θεωρούνται ηλικιωμένα από περίπου 15-20 ετών, με πολλά να ζουν μέχρι τα τέλη της δεκαετίας των 20 ή αρχές της δεκαετίας των 30 με καλή φροντίδα." },
+        { q: "Όλες οι φυλές αλόγων γερνούν με παρόμοιο ρυθμό;", a: "Τα πρότυπα γήρανσης είναι αρκετά παρόμοια στις περισσότερες φυλές αλόγων σε σύγκριση με τις διαφορές που καθορίζονται από το μέγεθος που παρατηρούνται στους σκύλους, αν και πολύ μεγάλες φυλές έλξης και μικρόσωμες φυλές μπορεί να δείχνουν κάπως διαφορετικές τάσεις διάρκειας ζωής στα άκρα." },
+        { q: "Γιατί τα άλογα γερνούν πιο γρήγορα τα πρώτα τους χρόνια απ' ό,τι αργότερα στη ζωή;", a: "Τα άλογα φτάνουν στη σωματική ωριμότητα πολύ πιο γρήγορα από τους ανθρώπους, φτάνοντας στην εφηβεία και σχεδόν πλήρη ανάπτυξη μέσα στα πρώτα 4-5 χρόνια τους, οπότε το ανθρώπινο ισοδύναμο κάθε πρώιμου έτους αλόγου είναι πολύ υψηλό πριν σταθεροποιηθεί σε έναν πιο αργό, σταθερό ρυθμό για το υπόλοιπο της ενήλικης ζωής τους." },
+      ],
+    },
+    zh: {
+      title: "马匹年龄计算器",
+      intro: "输入你的马的年龄，根据马匹典型的衰老模式，估算相当于人类的年龄。",
+      description: "把你的马的年龄换算成人类年龄。",
+      faq: [
+        { q: "10岁的马相当于人类多少岁？", a: "大约相当于33岁的人类——马在最初两年成长非常快（到第二年时大约相当于13岁），之后衰老速度会逐渐放缓。" },
+        { q: "对马来说，多大算是老年？", a: "马通常从大约15-20岁开始被视为老年马，在良好的照顾下，许多马能活到接近30岁甚至30出头。" },
+        { q: "所有马的品种衰老速度都相似吗？", a: "与狗身上明显受体型影响的差异相比，大多数马匹品种的衰老模式相当相似，不过体型非常大的挽马品种和迷你品种在极端情况下可能会表现出略有不同的寿命趋势。" },
+        { q: "为什么马在最初几年的衰老速度比后期更快？", a: "马达到身体成熟的速度比人类快得多，在最初的4-5年内就进入青春期并接近完全发育，因此马早期每一年所对应的人类年龄换算值非常高，之后会趋于平稳，在成年期剩余的时间里以较慢、较稳定的速度衰老。" },
+      ],
+    },
+    ar: {
+      title: "حاسبة عمر الحصان",
+      intro: "أدخل عمر حصانك لتقدير العمر البشري المكافئ، بناءً على أنماط الشيخوخة النموذجية للخيول.",
+      description: "حوّل عمر حصانك إلى سنوات بشرية.",
+      faq: [
+        { q: "كم عمر حصان بعمر 10 سنوات بالسنوات البشرية؟", a: "حوالي 33 سنة بشرية - تنضج الخيول بسرعة كبيرة في أول عامين (تصل إلى عمر 13 تقريبًا بحلول العام الثاني)، ثم تشيخ بشكل أكثر تدريجيًا بعد ذلك." },
+        { q: "ما الذي يُعتبر كبرًا في السن بالنسبة للحصان؟", a: "غالبًا ما تُعتبر الخيول كبيرة في السن بدءًا من حوالي 15-20 عامًا، حيث يعيش الكثير منها حتى أواخر العشرينات أو أوائل الثلاثينات من العمر مع رعاية جيدة." },
+        { q: "هل تشيخ جميع سلالات الخيول بمعدل مماثل؟", a: "أنماط الشيخوخة متشابهة إلى حد كبير عبر معظم سلالات الخيول مقارنة بالاختلافات المدفوعة بالحجم الملاحظة في الكلاب، رغم أن سلالات الجر الكبيرة جدًا والسلالات المصغرة قد تُظهر اتجاهات عمر مختلفة نوعًا ما في الحالات القصوى." },
+        { q: "لماذا تشيخ الخيول بشكل أسرع في سنواتها الأولى منها لاحقًا في الحياة؟", a: "تصل الخيول إلى النضج الجسدي أسرع بكثير من البشر، حيث تصل إلى مرحلة المراهقة ونمو شبه كامل خلال أول 4-5 سنوات، لذا فإن ما يعادل السنة البشرية لكل عام مبكر من عمر الحصان مرتفع جدًا قبل أن يستقر عند معدل أبطأ وأكثر ثباتًا لبقية حياته البالغة." },
+      ],
+    },
+    th: {
+      title: "เครื่องคำนวณอายุม้า",
+      intro: "ป้อนอายุม้าของคุณเพื่อประเมินอายุเทียบเท่ามนุษย์ โดยอิงจากรูปแบบการแก่ตัวทั่วไปของม้า",
+      description: "แปลงอายุม้าของคุณเป็นปีมนุษย์",
+      faq: [
+        { q: "ม้าอายุ 10 ปีเทียบเท่ากับกี่ปีมนุษย์?", a: "ประมาณ 33 ปีมนุษย์ - ม้าเติบโตเร็วมากในสองปีแรก (มีอายุประมาณ 13 ปีเมื่อถึงปีที่สอง) จากนั้นจะแก่ตัวช้าลงหลังจากนั้น" },
+        { q: "อะไรถือว่าเป็นวัยชราสำหรับม้า?", a: "ม้ามักถูกพิจารณาว่าเป็นผู้สูงอายุเมื่ออายุประมาณ 15-20 ปี โดยหลายตัวมีชีวิตอยู่ถึงปลายอายุ 20 ปีหรือต้นอายุ 30 ปีหากได้รับการดูแลที่ดี" },
+        { q: "ม้าทุกสายพันธุ์แก่ตัวในอัตราที่ใกล้เคียงกันหรือไม่?", a: "รูปแบบการแก่ตัวค่อนข้างคล้ายกันในสายพันธุ์ม้าส่วนใหญ่เมื่อเทียบกับความแตกต่างที่ขับเคลื่อนด้วยขนาดที่พบในสุนัข แม้ว่าสายพันธุ์ลากเลื่อนขนาดใหญ่มากและสายพันธุ์จิ๋วอาจแสดงแนวโน้มอายุขัยที่แตกต่างกันบ้างในกรณีสุดขั้ว" },
+        { q: "ทำไมม้าถึงแก่ตัวเร็วกว่าในช่วงปีแรกๆ มากกว่าในช่วงหลังของชีวิต?", a: "ม้าเจริญเติบโตทางร่างกายเร็วกว่ามนุษย์มาก โดยเข้าสู่วัยรุ่นและเติบโตเกือบเต็มที่ภายใน 4-5 ปีแรก ดังนั้นค่าเทียบเท่าปีมนุษย์ของแต่ละปีแรกของม้าจึงสูงมาก ก่อนที่จะคงที่ในอัตราที่ช้าลงและสม่ำเสมอมากขึ้นตลอดชีวิตวัยผู้ใหญ่ที่เหลือ" },
+      ],
+    },
+  },
+
+  "ideal-dog-weight-calculator": {
+    es: {
+      title: "Calculadora de Peso Ideal para Perros",
+      intro: "Introduce el peso actual de tu perro y su puntuación de condición corporal (escala 1-9) para estimar su peso ideal.",
+      description: "Estima el peso ideal de tu perro a partir del peso actual y la puntuación de condición corporal.",
+      faq: [
+        { q: "¿Qué es una puntuación de condición corporal para perros?", a: "Una escala de 1-9 que los veterinarios usan para evaluar la cobertura de grasa de un perro por apariencia y tacto - 4-5 es ideal, con cada punto adicional indicando aproximadamente un 10% de peso corporal excesivo." },
+        { q: "¿Cuánto peso debería perder un perro con BCS de 7?", a: "Un BCS de 7 (moderadamente sobrepeso) sugiere aproximadamente un 20% de exceso de peso - un perro de 60 lb tendría un peso ideal estimado de alrededor de 48 lb, una pérdida de aproximadamente 12 lb." },
+        { q: "¿Puedo evaluar la puntuación de condición corporal en casa sin un veterinario?", a: "Sí, hasta un grado razonable - puedes sentir las costillas de tu perro (deberían sentirse fácilmente pero no ser visiblemente prominentes) y buscar una cintura visible desde arriba, pero la evaluación práctica de un veterinario es más confiable, especialmente para razas con pelaje grueso que dificulta la evaluación visual y táctil." },
+        { q: "¿Debería usar el peso ideal o la puntuación de condición corporal para juzgar si mi perro necesita perder peso?", a: "La puntuación de condición corporal generalmente es más confiable que un único número de peso ideal, ya que considera el marco y la masa muscular individual de tu perro en lugar de un objetivo promedio de raza; usa el peso ideal como referencia inicial y la puntuación de condición corporal para ajustar el objetivo real." },
+      ],
+    },
+    fr: {
+      title: "Calculatrice de Poids Idéal pour Chien",
+      intro: "Indiquez le poids actuel de votre chien et son score de condition corporelle (échelle 1-9) pour estimer son poids idéal.",
+      description: "Estimez le poids idéal de votre chien à partir du poids actuel et du score de condition corporelle.",
+      faq: [
+        { q: "Qu'est-ce qu'un score de condition corporelle pour les chiens ?", a: "Une échelle de 1 à 9 que les vétérinaires utilisent pour évaluer la couverture graisseuse d'un chien par l'apparence et le toucher - 4-5 est idéal, chaque point au-dessus indiquant environ 10 % de poids corporel excédentaire." },
+        { q: "Combien de poids un chien avec un BCS de 7 devrait-il perdre ?", a: "Un BCS de 7 (modérément en surpoids) suggère environ 20 % de poids excédentaire - un chien de 60 lb aurait un poids idéal estimé d'environ 48 lb, soit une perte d'environ 12 lb." },
+        { q: "Puis-je évaluer le score de condition corporelle à la maison sans vétérinaire ?", a: "Oui, dans une mesure raisonnable - vous pouvez sentir les côtes de votre chien (elles devraient être facilement palpables mais pas visiblement proéminentes) et vérifier une taille visible vue de dessus, mais l'évaluation pratique d'un vétérinaire est plus fiable, surtout pour les races au pelage épais qui rendent l'évaluation visuelle et tactile plus difficile." },
+        { q: "Devrais-je utiliser le poids idéal ou le score de condition corporelle pour juger si mon chien doit perdre du poids ?", a: "Le score de condition corporelle est généralement plus fiable qu'un simple chiffre de poids idéal, car il tient compte du gabarit individuel et de la masse musculaire de votre chien plutôt que d'un objectif moyen de race ; utilisez le poids idéal comme référence de départ et le score de condition corporelle pour affiner l'objectif réel." },
+      ],
+    },
+    de: {
+      title: "Idealgewicht-Rechner für Hunde",
+      intro: "Geben Sie das aktuelle Gewicht und den Körperkonditionswert Ihres Hundes (Skala 1-9) ein, um sein Idealgewicht zu schätzen.",
+      description: "Schätzen Sie das Idealgewicht Ihres Hundes aus aktuellem Gewicht und Körperkonditionswert.",
+      faq: [
+        { q: "Was ist ein Körperkonditionswert für Hunde?", a: "Eine 1-9-Skala, die Tierärzte verwenden, um die Fettdeckung eines Hundes nach Aussehen und Fühlen zu beurteilen - 4-5 ist ideal, wobei jeder Punkt darüber etwa 10 % Übergewicht anzeigt." },
+        { q: "Wie viel Gewicht sollte ein Hund mit einem BCS von 7 verlieren?", a: "Ein BCS von 7 (mäßig übergewichtig) deutet auf etwa 20 % Übergewicht hin - ein 60-Pfund-Hund hätte ein geschätztes Idealgewicht von etwa 48 Pfund, ein Verlust von etwa 12 Pfund." },
+        { q: "Kann ich den Körperkonditionswert zu Hause ohne Tierarzt beurteilen?", a: "Ja, bis zu einem angemessenen Grad - Sie können die Rippen Ihres Hundes ertasten (sollten leicht fühlbar, aber nicht sichtbar hervorstehend sein) und von oben auf eine sichtbare Taille achten, aber die praktische Beurteilung durch einen Tierarzt ist zuverlässiger, besonders bei Rassen mit dickem Fell, das die visuelle und taktile Beurteilung erschwert." },
+        { q: "Sollte ich das Idealgewicht oder den Körperkonditionswert verwenden, um zu beurteilen, ob mein Hund abnehmen muss?", a: "Der Körperkonditionswert ist im Allgemeinen zuverlässiger als eine einzelne Idealgewichtszahl, da er den individuellen Körperbau und die Muskelmasse Ihres Hundes berücksichtigt statt eines Rassedurchschnittsziels; verwenden Sie das Idealgewicht als Ausgangsreferenz und den Körperkonditionswert, um das tatsächliche Ziel zu verfeinern." },
+      ],
+    },
+    pt: {
+      title: "Calculadora de Peso Ideal para Cães",
+      intro: "Insira o peso atual do seu cão e a pontuação de condição corporal (escala 1-9) para estimar seu peso ideal.",
+      description: "Estime o peso ideal do seu cão a partir do peso atual e pontuação de condição corporal.",
+      faq: [
+        { q: "O que é uma pontuação de condição corporal para cães?", a: "Uma escala de 1-9 que veterinários usam para avaliar a cobertura de gordura de um cão pela aparência e toque - 4-5 é ideal, com cada ponto acima indicando aproximadamente 10% de peso corporal excedente." },
+        { q: "Quanto peso um cão com BCS de 7 deveria perder?", a: "Um BCS de 7 (moderadamente com sobrepeso) sugere aproximadamente 20% de excesso de peso - um cão de 60 lb teria um peso ideal estimado em torno de 48 lb, uma perda de cerca de 12 lb." },
+        { q: "Posso avaliar a pontuação de condição corporal em casa sem um veterinário?", a: "Sim, até um grau razoável - você pode sentir as costelas do seu cão (devem ser facilmente sentidas mas não visivelmente proeminentes) e verificar uma cintura visível de cima, mas a avaliação prática de um veterinário é mais confiável, especialmente para raças com pelagem espessa que dificultam a avaliação visual e tátil." },
+        { q: "Devo usar o peso ideal ou a pontuação de condição corporal para julgar se meu cão precisa perder peso?", a: "A pontuação de condição corporal geralmente é mais confiável do que um único número de peso ideal, já que considera a estrutura individual e massa muscular do seu cão em vez de um objetivo médio de raça; use o peso ideal como referência inicial e a pontuação de condição corporal para ajustar o objetivo real." },
+      ],
+    },
+    it: {
+      title: "Calcolatrice del Peso Ideale per Cani",
+      intro: "Inserisci il peso attuale del tuo cane e il punteggio di condizione corporea (scala 1-9) per stimare il suo peso ideale.",
+      description: "Stima il peso ideale del tuo cane dal peso attuale e dal punteggio di condizione corporea.",
+      faq: [
+        { q: "Cos'è un punteggio di condizione corporea per i cani?", a: "Una scala 1-9 che i veterinari usano per valutare la copertura di grasso di un cane per aspetto e tatto - 4-5 è ideale, con ogni punto sopra che indica circa il 10% di peso corporeo in eccesso." },
+        { q: "Quanto peso dovrebbe perdere un cane con un BCS di 7?", a: "Un BCS di 7 (moderatamente sovrappeso) suggerisce circa il 20% di peso in eccesso - un cane di 60 lb avrebbe un peso ideale stimato intorno a 48 lb, una perdita di circa 12 lb." },
+        { q: "Posso valutare il punteggio di condizione corporea a casa senza un veterinario?", a: "Sì, in misura ragionevole - puoi sentire le costole del tuo cane (dovrebbero essere facilmente percepibili ma non visibilmente prominenti) e controllare una vita visibile dall'alto, ma la valutazione pratica di un veterinario è più affidabile, specialmente per razze con pelo spesso che rendono più difficile la valutazione visiva e tattile." },
+        { q: "Dovrei usare il peso ideale o il punteggio di condizione corporea per giudicare se il mio cane deve perdere peso?", a: "Il punteggio di condizione corporea è generalmente più affidabile di un singolo numero di peso ideale, poiché tiene conto della struttura individuale e della massa muscolare del tuo cane piuttosto che di un obiettivo medio di razza; usa il peso ideale come riferimento iniziale e il punteggio di condizione corporea per affinare l'obiettivo effettivo." },
+      ],
+    },
+    ja: {
+      title: "犬の理想体重計算機",
+      intro: "犬の現在の体重とボディコンディションスコア（1〜9段階）を入力すると、理想的な体重を推定します。",
+      description: "現在の体重とボディコンディションスコアから犬の理想体重を推定します。",
+      faq: [
+        { q: "犬のボディコンディションスコアとは何ですか？", a: "見た目と触感によって犬の脂肪のつき具合を評価するために獣医が使用する1〜9段階のスケールです。4〜5が理想的で、それ以上の各ポイントはおよそ10%の過剰体重を示します。" },
+        { q: "BCSが7の犬はどのくらい体重を減らすべきですか？", a: "BCS7（中程度の肥満）は約20%の過剰体重を示唆します。60ポンドの犬の場合、推定理想体重は約48ポンドで、約12ポンドの減量が必要です。" },
+        { q: "獣医なしで自宅でボディコンディションスコアを評価できますか？", a: "はい、ある程度は可能です。犬の肋骨に触れて確認できます（簡単に触れられるが目に見えて出っ張っていない状態が理想）。また、上から見てウエストが見えるかを確認できます。ただし、獣医による実際の評価の方が信頼性が高く、特に視覚的・触覚的な評価が難しい厚い被毛を持つ犬種ではそうです。" },
+        { q: "犬が減量する必要があるかどうかを判断するには、理想体重とボディコンディションスコアのどちらを使うべきですか？", a: "ボディコンディションスコアは、犬種平均の目標値ではなく個々の犬の骨格と筋肉量を考慮するため、一般的に単一の理想体重の数値よりも信頼性が高いです。理想体重を出発点の参考として使い、ボディコンディションスコアで実際の目標を微調整してください。" },
+      ],
+    },
+    ro: {
+      title: "Calculator de Greutate Ideală pentru Câini",
+      intro: "Introdu greutatea actuală a câinelui tău și scorul de condiție corporală (scara 1-9) pentru a estima greutatea sa ideală.",
+      description: "Estimează greutatea ideală a câinelui tău din greutatea actuală și scorul de condiție corporală.",
+      faq: [
+        { q: "Ce este un scor de condiție corporală pentru câini?", a: "O scară de 1-9 pe care veterinarii o folosesc pentru a evalua acoperirea de grăsime a unui câine după aspect și pipăit - 4-5 este ideal, fiecare punct peste indicând aproximativ 10% greutate corporală în exces." },
+        { q: "Câtă greutate ar trebui să piardă un câine cu un BCS de 7?", a: "Un BCS de 7 (moderat supraponderal) sugerează aproximativ 20% greutate în exces - un câine de 60 lb ar avea o greutate ideală estimată de aproximativ 48 lb, o pierdere de aproximativ 12 lb." },
+        { q: "Pot evalua scorul de condiție corporală acasă fără un veterinar?", a: "Da, într-o măsură rezonabilă - poți simți coastele câinelui tău (ar trebui să fie ușor simțite dar nu vizibil proeminente) și poți verifica o talie vizibilă de sus, dar evaluarea practică a unui veterinar este mai fiabilă, în special pentru rasele cu blană groasă care fac evaluarea vizuală și tactilă mai dificilă." },
+        { q: "Ar trebui să folosesc greutatea ideală sau scorul de condiție corporală pentru a judeca dacă câinele meu trebuie să slăbească?", a: "Scorul de condiție corporală este în general mai fiabil decât un singur număr de greutate ideală, deoarece ține cont de cadrul individual și masa musculară a câinelui tău mai degrabă decât de o țintă medie de rasă; folosește greutatea ideală ca referință inițială și scorul de condiție corporală pentru a ajusta obiectivul real." },
+      ],
+    },
+    el: {
+      title: "Αριθμομηχανή Ιδανικού Βάρους Σκύλου",
+      intro: "Εισάγετε το τρέχον βάρος του σκύλου σας και τη βαθμολογία σωματικής κατάστασης (κλίμακα 1-9) για να εκτιμήσετε το ιδανικό του βάρος.",
+      description: "Εκτίμησε το ιδανικό βάρος του σκύλου σου από το τρέχον βάρος και τη βαθμολογία σωματικής κατάστασης.",
+      faq: [
+        { q: "Τι είναι μια βαθμολογία σωματικής κατάστασης για σκύλους;", a: "Μια κλίμακα 1-9 που χρησιμοποιούν οι κτηνίατροι για να αξιολογήσουν την κάλυψη λίπους ενός σκύλου με βάση την εμφάνιση και την αφή - το 4-5 είναι ιδανικό, με κάθε πόντο πάνω να υποδεικνύει περίπου 10% περίσσειο σωματικό βάρος." },
+        { q: "Πόσο βάρος πρέπει να χάσει ένας σκύλος με BCS 7;", a: "Ένα BCS 7 (μέτρια υπέρβαρος) υποδηλώνει περίπου 20% περίσσειο βάρος - ένας σκύλος 60 lb θα είχε εκτιμώμενο ιδανικό βάρος περίπου 48 lb, μια απώλεια περίπου 12 lb." },
+        { q: "Μπορώ να αξιολογήσω τη βαθμολογία σωματικής κατάστασης στο σπίτι χωρίς κτηνίατρο;", a: "Ναι, σε λογικό βαθμό - μπορείτε να νιώσετε τα πλευρά του σκύλου σας (θα πρέπει να γίνονται εύκολα αισθητά αλλά όχι εμφανώς προεξέχοντα) και να ελέγξετε για ορατή μέση από πάνω, αλλά η πρακτική αξιολόγηση ενός κτηνιάτρου είναι πιο αξιόπιστη, ειδικά για φυλές με παχύ τρίχωμα που δυσκολεύουν την οπτική και απτική αξιολόγηση." },
+        { q: "Πρέπει να χρησιμοποιήσω το ιδανικό βάρος ή τη βαθμολογία σωματικής κατάστασης για να κρίνω αν ο σκύλος μου χρειάζεται να χάσει βάρος;", a: "Η βαθμολογία σωματικής κατάστασης είναι γενικά πιο αξιόπιστη από έναν μεμονωμένο αριθμό ιδανικού βάρους, αφού λαμβάνει υπόψη το μεμονωμένο σκελετό και τη μυϊκή μάζα του σκύλου σας αντί για έναν μέσο στόχο φυλής· χρησιμοποιήστε το ιδανικό βάρος ως αρχική αναφορά και τη βαθμολογία σωματικής κατάστασης για να βελτιώσετε τον πραγματικό στόχο." },
+      ],
+    },
+    zh: {
+      title: "狗狗理想体重计算器",
+      intro: "输入你的狗狗当前的体重和身体状况评分（1-9分制），估算它的理想体重。",
+      description: "根据当前体重和身体状况评分估算狗狗的理想体重。",
+      faq: [
+        { q: "什么是狗狗的身体状况评分？", a: "这是兽医用来通过外观和触感评估狗狗脂肪覆盖情况的1-9分制评分——4-5分为理想状态，每高出一分大约表示体重超出理想值10%。" },
+        { q: "身体状况评分为7的狗应该减掉多少体重？", a: "身体状况评分为7（中度超重）表明大约超重20%——一只60磅的狗，估算的理想体重约为48磅，也就是需要减掉约12磅。" },
+        { q: "我可以不去看兽医、在家自己评估身体状况评分吗？", a: "可以，在一定程度上是可行的——你可以摸摸狗狗的肋骨（应该能轻松摸到但不应明显突出），并从上方观察是否有可见的腰线，不过兽医的实际手动评估更可靠，尤其是对于毛发浓密、难以通过视觉和触摸评估的品种。" },
+        { q: "我应该用理想体重还是身体状况评分来判断我的狗是否需要减肥？", a: "身体状况评分通常比单一的理想体重数字更可靠，因为它考虑了你的狗个体的骨架和肌肉量，而不是品种平均目标值；可以把理想体重作为最初的参考，再用身体状况评分来微调实际目标。" },
+      ],
+    },
+    ar: {
+      title: "حاسبة الوزن المثالي للكلاب",
+      intro: "أدخل وزن كلبك الحالي ودرجة حالة الجسم (مقياس 1-9) لتقدير وزنه المثالي.",
+      description: "قدّر الوزن المثالي لكلبك من الوزن الحالي ودرجة حالة الجسم.",
+      faq: [
+        { q: "ما هي درجة حالة الجسم للكلاب؟", a: "مقياس من 1 إلى 9 يستخدمه الأطباء البيطريون لتقييم تغطية الدهون لدى الكلب من خلال المظهر واللمس - 4-5 هي الحالة المثالية، حيث تشير كل نقطة أعلاها إلى حوالي 10% من الوزن الزائد." },
+        { q: "كم من الوزن يجب أن يفقده كلب بدرجة حالة جسم 7؟", a: "درجة حالة جسم 7 (زيادة وزن معتدلة) تشير إلى حوالي 20% من الوزن الزائد - كلب يزن 60 رطلاً سيكون له وزن مثالي مقدر حوالي 48 رطلاً، أي فقدان حوالي 12 رطلاً." },
+        { q: "هل يمكنني تقييم درجة حالة الجسم في المنزل دون طبيب بيطري؟", a: "نعم، إلى حد معقول - يمكنك تحسس أضلاع كلبك (يجب أن تُلمس بسهولة لكن دون بروز واضح) والتحقق من وجود خصر مرئي من الأعلى، لكن التقييم العملي من طبيب بيطري أكثر موثوقية، خاصة بالنسبة للسلالات ذات الفراء الكثيف التي تجعل التقييم البصري واللمسي أصعب." },
+        { q: "هل يجب أن أستخدم الوزن المثالي أم درجة حالة الجسم للحكم على ما إذا كان كلبي بحاجة لفقدان الوزن؟", a: "درجة حالة الجسم عمومًا أكثر موثوقية من رقم وزن مثالي واحد، لأنها تأخذ في الاعتبار الهيكل الفردي والكتلة العضلية لكلبك بدلاً من هدف متوسط للسلالة؛ استخدم الوزن المثالي كمرجع بداية ودرجة حالة الجسم لضبط الهدف الفعلي." },
+      ],
+    },
+    th: {
+      title: "เครื่องคำนวณน้ำหนักในอุดมคติของสุนัข",
+      intro: "ป้อนน้ำหนักปัจจุบันของสุนัขและคะแนนสภาพร่างกาย (มาตราส่วน 1-9) เพื่อประเมินน้ำหนักในอุดมคติของสุนัข",
+      description: "ประเมินน้ำหนักในอุดมคติของสุนัขจากน้ำหนักปัจจุบันและคะแนนสภาพร่างกาย",
+      faq: [
+        { q: "คะแนนสภาพร่างกายของสุนัขคืออะไร?", a: "มาตราส่วน 1-9 ที่สัตวแพทย์ใช้ประเมินความหนาของไขมันของสุนัขจากการมองและสัมผัส - 4-5 คือระดับอุดมคติ โดยแต่ละคะแนนที่สูงกว่านั้นบ่งชี้ถึงน้ำหนักส่วนเกินประมาณ 10%" },
+        { q: "สุนัขที่มี BCS เท่ากับ 7 ควรลดน้ำหนักเท่าไหร่?", a: "BCS 7 (น้ำหนักเกินปานกลาง) บ่งชี้ว่ามีน้ำหนักส่วนเกินประมาณ 20% - สุนัขน้ำหนัก 60 ปอนด์จะมีน้ำหนักในอุดมคติโดยประมาณ 48 ปอนด์ ซึ่งต้องลดประมาณ 12 ปอนด์" },
+        { q: "ฉันสามารถประเมินคะแนนสภาพร่างกายที่บ้านโดยไม่ต้องพบสัตวแพทย์ได้หรือไม่?", a: "ได้ ในระดับที่สมเหตุสมผล - คุณสามารถคลำซี่โครงของสุนัข (ควรคลำได้ง่ายแต่ไม่ควรเห็นชัดเจนจนโดดออกมา) และตรวจสอบเอวที่มองเห็นได้จากด้านบน แต่การประเมินโดยสัตวแพทย์ที่ตรวจร่างกายจริงจะเชื่อถือได้มากกว่า โดยเฉพาะสำหรับสายพันธุ์ที่มีขนหนาซึ่งทำให้การประเมินด้วยสายตาและการสัมผัสยากขึ้น" },
+        { q: "ฉันควรใช้น้ำหนักในอุดมคติหรือคะแนนสภาพร่างกายในการตัดสินว่าสุนัขของฉันต้องลดน้ำหนักหรือไม่?", a: "คะแนนสภาพร่างกายโดยทั่วไปเชื่อถือได้มากกว่าตัวเลขน้ำหนักในอุดมคติเพียงอย่างเดียว เนื่องจากคำนึงถึงโครงร่างและมวลกล้ามเนื้อเฉพาะตัวของสุนัขของคุณแทนที่จะเป็นเป้าหมายเฉลี่ยของสายพันธุ์ ใช้น้ำหนักในอุดมคติเป็นข้อมูลอ้างอิงเริ่มต้นและใช้คะแนนสภาพร่างกายเพื่อปรับเป้าหมายที่แท้จริง" },
+      ],
+    },
+  },
 };
 
 // Static-page copy for wave one. Privacy and Terms are flagged explicitly
