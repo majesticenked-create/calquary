@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Αριθμομηχανή Διάρκειας Ημερομηνιών - Δωρεάν Online Αριθμομηχανή | Calquary</title>
+  <meta name="description" content="Υπολόγισε τον αριθμό ημερών, εβδομάδων, μηνών και ετών μεταξύ δύο ημερομηνιών." />
+  <meta property="og:title" content="Αριθμομηχανή Διάρκειας Ημερομηνιών | Calquary">
+  <meta property="og:description" content="Υπολόγισε τον αριθμό ημερών, εβδομάδων, μηνών και ετών μεταξύ δύο ημερομηνιών.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/el/tool/date-duration-calculator.html">
+  <meta property="og:locale" content="el_GR">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/date-duration-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Αριθμομηχανή Διάρκειας Ημερομηνιών | Calquary">
+  <meta name="twitter:description" content="Υπολόγισε τον αριθμό ημερών, εβδομάδων, μηνών και ετών μεταξύ δύο ημερομηνιών.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/date-duration-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/date-duration-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/date-duration-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/date-duration-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/date-duration-calculator.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/date-duration-calculator.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/date-duration-calculator.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/date-duration-calculator.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/date-duration-calculator.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/date-duration-calculator.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/date-duration-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/date-duration-calculator.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/date-duration-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/date-duration-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("date-duration-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("date-duration-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Αριθμομηχανή Διάρκειας Ημερομηνιών",
+      "description": "Υπολόγισε τον αριθμό ημερών, εβδομάδων, μηνών και ετών μεταξύ δύο ημερομηνιών.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/el/tool/date-duration-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-30",
+      "inLanguage": "el"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/el/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Date & Time",
+          "item": "https://calquary.com/el/category/datetime.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Αριθμομηχανή Διάρκειας Ημερομηνιών",
+          "item": "https://calquary.com/el/tool/date-duration-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Πόσες ημέρες είναι μεταξύ 1 Ιανουαρίου και 31 Δεκεμβρίου 2024;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "365 ημέρες - το 2024 είναι δίσεκτο έτος, αλλά αφού το εύρος δεν διασχίζει σε νέο έτος πέρα από το όριο της δίσεκτης ημέρας για αυτό το συγκεκριμένο ζεύγος ημερομηνιών, η μέτρηση είναι μια τυπική 365."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Αυτή η αριθμομηχανή μετράει την ημερομηνία έναρξης ή λήξης;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Μετράει τον αριθμό των πλήρων ημερών που έχουν περάσει μεταξύ των δύο ημερομηνιών - η ίδια η ημερομηνία έναρξης είναι η ημέρα μηδέν, όχι η ημέρα ένα."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Λαμβάνει αυτό υπόψη τα δίσεκτα έτη;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ναι - λειτουργεί απευθείας από πραγματικές ημερομηνίες ημερολογίου αντί να υποθέτει ένα σταθερό έτος 365 ημερών, οπότε μια 29η Φεβρουαρίου που πέφτει μεταξύ της ημερομηνίας έναρξης και λήξης σας μετράται σωστά χωρίς καμία επιπλέον προσαρμογή."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Μπορεί αυτό να υπολογίσει τη διάρκεια σε μήνες και ημέρες, όχι μόνο συνολικές ημέρες;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ναι - παράλληλα με τον συνολικό αριθμό ημερών μεταξύ δύο ημερομηνιών, αυτή η αριθμομηχανή αναλύει τη διάρκεια σε χρόνια, μήνες και ημέρες, κάτι που είναι πιο διαισθητικό για περιόδους μεγαλύτερες από λίγες εβδομάδες παρά μια ενιαία μεγάλη μέτρηση ημερών."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Είναι μια «αριθμομηχανή ημέρα προς ημέρα» το ίδιο με αυτή την αριθμομηχανή διάρκειας ημερομηνιών;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ναι - «αριθμομηχανή ημέρα προς ημέρα» περιγράφει την εύρεση του εύρους μεταξύ δύο ημερομηνιών ημερολογίου, που είναι ακριβώς αυτό που κάνει αυτό το εργαλείο. Εισάγετε μια ημερομηνία έναρξης και λήξης παραπάνω για να λάβετε τον ακριβή αριθμό ημερών, εβδομάδων, μηνών και ετών μεταξύ τους."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Είναι η «ημέρα μεταξύ ημερών» η ίδια αναζήτηση με το «ημέρες μεταξύ ημερομηνιών»;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ναι - και οι δύο περιγράφουν την εύρεση του εύρους μεταξύ δύο ημερομηνιών ημερολογίου, που είναι ακριβώς αυτό που κάνει αυτό το εργαλείο."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/el/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/el/index.html#categories">Κατηγορίες</a>
+          <a href="/el/index.html#tools">Όλα τα εργαλεία</a>
+          <a href="/el/about.html">Σχετικά</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Ελληνικά">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>undefined</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/date-duration-calculator.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/date-duration-calculator.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/date-duration-calculator.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/date-duration-calculator.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/date-duration-calculator.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/date-duration-calculator.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/date-duration-calculator.html">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/date-duration-calculator.html">Română</a><span class="locale-item current" role="menuitem" aria-current="true">Ελληνικά</span><a class="locale-item" role="menuitem" href="/zh/tool/date-duration-calculator.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/date-duration-calculator.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/date-duration-calculator.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/el/index.html">Calquary</a> / <a href="/el/category/datetime.html">Ημερομηνία και Ώρα</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Αριθμομηχανή Διάρκειας Ημερομηνιών</h1>
+        <p style="max-width:60ch;">Αυτή η αριθμομηχανή ημερομηνιών βρίσκει την ακριβή διάρκεια μεταξύ μιας ημερομηνίας έναρξης και λήξης - σε ημέρες, εβδομάδες, μήνες και χρόνια.</p>
+        <p class="last-updated">Τελευταία ενημέρωση: August 30, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Υπολογισμός</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Επαναφορά</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Συχνές ερωτήσεις</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Πόσες ημέρες είναι μεταξύ 1 Ιανουαρίου και 31 Δεκεμβρίου 2024;</h3>
+<p>365 ημέρες - το 2024 είναι δίσεκτο έτος, αλλά αφού το εύρος δεν διασχίζει σε νέο έτος πέρα από το όριο της δίσεκτης ημέρας για αυτό το συγκεκριμένο ζεύγος ημερομηνιών, η μέτρηση είναι μια τυπική 365.</p>
+</div>
+<div class="faq-item">
+<h3>Αυτή η αριθμομηχανή μετράει την ημερομηνία έναρξης ή λήξης;</h3>
+<p>Μετράει τον αριθμό των πλήρων ημερών που έχουν περάσει μεταξύ των δύο ημερομηνιών - η ίδια η ημερομηνία έναρξης είναι η ημέρα μηδέν, όχι η ημέρα ένα.</p>
+</div>
+<div class="faq-item">
+<h3>Λαμβάνει αυτό υπόψη τα δίσεκτα έτη;</h3>
+<p>Ναι - λειτουργεί απευθείας από πραγματικές ημερομηνίες ημερολογίου αντί να υποθέτει ένα σταθερό έτος 365 ημερών, οπότε μια 29η Φεβρουαρίου που πέφτει μεταξύ της ημερομηνίας έναρξης και λήξης σας μετράται σωστά χωρίς καμία επιπλέον προσαρμογή.</p>
+</div>
+<div class="faq-item">
+<h3>Μπορεί αυτό να υπολογίσει τη διάρκεια σε μήνες και ημέρες, όχι μόνο συνολικές ημέρες;</h3>
+<p>Ναι - παράλληλα με τον συνολικό αριθμό ημερών μεταξύ δύο ημερομηνιών, αυτή η αριθμομηχανή αναλύει τη διάρκεια σε χρόνια, μήνες και ημέρες, κάτι που είναι πιο διαισθητικό για περιόδους μεγαλύτερες από λίγες εβδομάδες παρά μια ενιαία μεγάλη μέτρηση ημερών.</p>
+</div>
+<div class="faq-item">
+<h3>Είναι μια «αριθμομηχανή ημέρα προς ημέρα» το ίδιο με αυτή την αριθμομηχανή διάρκειας ημερομηνιών;</h3>
+<p>Ναι - «αριθμομηχανή ημέρα προς ημέρα» περιγράφει την εύρεση του εύρους μεταξύ δύο ημερομηνιών ημερολογίου, που είναι ακριβώς αυτό που κάνει αυτό το εργαλείο. Εισάγετε μια ημερομηνία έναρξης και λήξης παραπάνω για να λάβετε τον ακριβή αριθμό ημερών, εβδομάδων, μηνών και ετών μεταξύ τους.</p>
+</div>
+<div class="faq-item">
+<h3>Είναι η «ημέρα μεταξύ ημερών» η ίδια αναζήτηση με το «ημέρες μεταξύ ημερομηνιών»;</h3>
+<p>Ναι - και οι δύο περιγράφουν την εύρεση του εύρους μεταξύ δύο ημερομηνιών ημερολογίου, που είναι ακριβώς αυτό που κάνει αυτό το εργαλείο.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Σχετικά εργαλεία</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Σημείωση ακρίβειας</h4>
+          <p style="margin:0;font-size:0.85rem;">Οι αριθμομηχανές του Calquary έχουν σχεδιαστεί για να παρέχουν γρήγορες και αξιόπιστες εκτιμήσεις. Για αποφάσεις με πραγματικές οικονομικές, δομικές ή ιατρικές επιπτώσεις, συμβουλευτείτε έναν ειδικευμένο επαγγελματία.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/el/index.html">← Πίσω σε όλες τις αριθμομηχανές</a> · <a href="/el/about.html">Σχετικά</a> · <a href="/el/contact.html">Επικοινωνία</a> · <a href="/el/privacy.html">Απόρρητο</a> · <a href="/el/terms.html">Όροι</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

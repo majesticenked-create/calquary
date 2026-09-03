@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>军用时间转换器 - 免费在线计算器 | Calquary</title>
+  <meta name="description" content="把12小时制时钟时间转换为24小时军用（陆军）时间，反之亦然。" />
+  <meta property="og:title" content="军用时间转换器 | Calquary">
+  <meta property="og:description" content="把12小时制时钟时间转换为24小时军用（陆军）时间，反之亦然。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/zh/tool/military-time-converter.html">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/military-time-converter.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="军用时间转换器 | Calquary">
+  <meta name="twitter:description" content="把12小时制时钟时间转换为24小时军用（陆军）时间，反之亦然。">
+  <meta name="twitter:image" content="https://calquary.com/og-images/military-time-converter.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/military-time-converter.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("military-time-converter");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("military-time-converter");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "军用时间转换器",
+      "description": "把12小时制时钟时间转换为24小时军用（陆军）时间，反之亦然。",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/zh/tool/military-time-converter.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-30",
+      "inLanguage": "zh"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/zh/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Date & Time",
+          "item": "https://calquary.com/zh/category/datetime.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "军用时间转换器",
+          "item": "https://calquary.com/zh/tool/military-time-converter.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "我该如何把普通时间转换成军用时间？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "对于上午（AM）的时间，军用时间与钟表时间一致（前面补零）——上午9:00变成0900。对于下午（PM）的时间，钟表时间加12——下午2:30变成14:30（1430）。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "军用时间中的12 AM和12 PM是什么？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "凌晨12点（午夜）在军用时间中是0000，中午12点（正午）是1200——这是唯一的两个例外情况，不是简单地加12或保留12。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "我该如何把军用时间换算回12小时制？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "如果小时数是13或更大，减去12并标记为PM（1430变成下午2:30）；如果是00-11，保留小时数并标记为AM，除了0000会变成凌晨12点。把这个计算器切换到「军用→12小时」模式即可直接完成这种转换。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "「军用钟表转换」或「军用小时转换器」和转换军用时间不同吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不同——这些说法都是指在24小时军用时间和标准12小时钟表时间之间进行转换，无论方向如何。请在上方选择你需要的方向。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "「军用钟表转换器」「军用时间转换」「转换军用时间」和「翻译军用时间」在这里都是同一个意思吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "是的——这些说法都是在要求把12小时制和24小时（军用）制之间相互转换，这正是这个计算器双向所做的事情。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "军用时间1600是几点？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "下午4:00。因为1600是16百小时，减去12得到4，任何13或更大的小时数都是下午——把这个计算器切换到「军用→12小时」模式，输入小时16、分钟0来确认。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "军用时间中晚上7点或晚上10点是多少？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "晚上7:00是1900（19百小时）——下午时间加12。晚上10:00是2200（22百小时），同样的规则。只有中午12点（正午，保持1200）和凌晨12点（午夜，变为0000）打破了简单的「加12」模式。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "军用时间中晚上6点是多少？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1800（18百小时）——下午时间加12，与下午1点到晚上11点之间任何其他下午时间的规则相同。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "军用时间中早上8点是多少？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "0800——从凌晨1点到上午11点，AM时间在军用时间中保持相同数字，只是前面补零。唯一的例外是凌晨12点（午夜），会变成0000。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "军用时间中中午12点是多少？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1200——正午是简单AM/PM规则的两个例外之一（另一个是凌晨12点/午夜，变为0000）。中午12点保持为1200，而不是变成2400。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "「陆军钟表转换器」和军用时间转换器是一回事吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "是的——美国军方和其他武装力量使用的是同一套24小时制系统，通常称为「军用时间」，所以「陆军钟表转换器」描述的正是这个工具双向处理的同一种转换。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/zh/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/zh/index.html#categories">分类</a>
+          <a href="/zh/index.html#tools">所有工具</a>
+          <a href="/zh/about.html">关于我们</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: 中文">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>undefined</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/military-time-converter.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/military-time-converter.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/military-time-converter.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/military-time-converter.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/military-time-converter.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/military-time-converter.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/military-time-converter.html">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/military-time-converter.html">Română</a><a class="locale-item" role="menuitem" href="/el/tool/military-time-converter.html">Ελληνικά</a><span class="locale-item current" role="menuitem" aria-current="true">中文</span><a class="locale-item" role="menuitem" href="/ar/tool/military-time-converter.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/military-time-converter.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/zh/index.html">Calquary</a> / <a href="/zh/category/datetime.html">日期与时间</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>军用时间转换器</h1>
+        <p style="max-width:60ch;">选择转换方向，然后输入一个时间，在标准12小时制和24小时军用制之间进行转换。</p>
+        <p class="last-updated">最后更新： August 30, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">计算</button>
+              <button type="button" id="calc-reset" class="btn-ghost">重置</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>常见问题</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>我该如何把普通时间转换成军用时间？</h3>
+<p>对于上午（AM）的时间，军用时间与钟表时间一致（前面补零）——上午9:00变成0900。对于下午（PM）的时间，钟表时间加12——下午2:30变成14:30（1430）。</p>
+</div>
+<div class="faq-item">
+<h3>军用时间中的12 AM和12 PM是什么？</h3>
+<p>凌晨12点（午夜）在军用时间中是0000，中午12点（正午）是1200——这是唯一的两个例外情况，不是简单地加12或保留12。</p>
+</div>
+<div class="faq-item">
+<h3>我该如何把军用时间换算回12小时制？</h3>
+<p>如果小时数是13或更大，减去12并标记为PM（1430变成下午2:30）；如果是00-11，保留小时数并标记为AM，除了0000会变成凌晨12点。把这个计算器切换到「军用→12小时」模式即可直接完成这种转换。</p>
+</div>
+<div class="faq-item">
+<h3>「军用钟表转换」或「军用小时转换器」和转换军用时间不同吗？</h3>
+<p>不同——这些说法都是指在24小时军用时间和标准12小时钟表时间之间进行转换，无论方向如何。请在上方选择你需要的方向。</p>
+</div>
+<div class="faq-item">
+<h3>「军用钟表转换器」「军用时间转换」「转换军用时间」和「翻译军用时间」在这里都是同一个意思吗？</h3>
+<p>是的——这些说法都是在要求把12小时制和24小时（军用）制之间相互转换，这正是这个计算器双向所做的事情。</p>
+</div>
+<div class="faq-item">
+<h3>军用时间1600是几点？</h3>
+<p>下午4:00。因为1600是16百小时，减去12得到4，任何13或更大的小时数都是下午——把这个计算器切换到「军用→12小时」模式，输入小时16、分钟0来确认。</p>
+</div>
+<div class="faq-item">
+<h3>军用时间中晚上7点或晚上10点是多少？</h3>
+<p>晚上7:00是1900（19百小时）——下午时间加12。晚上10:00是2200（22百小时），同样的规则。只有中午12点（正午，保持1200）和凌晨12点（午夜，变为0000）打破了简单的「加12」模式。</p>
+</div>
+<div class="faq-item">
+<h3>军用时间中晚上6点是多少？</h3>
+<p>1800（18百小时）——下午时间加12，与下午1点到晚上11点之间任何其他下午时间的规则相同。</p>
+</div>
+<div class="faq-item">
+<h3>军用时间中早上8点是多少？</h3>
+<p>0800——从凌晨1点到上午11点，AM时间在军用时间中保持相同数字，只是前面补零。唯一的例外是凌晨12点（午夜），会变成0000。</p>
+</div>
+<div class="faq-item">
+<h3>军用时间中中午12点是多少？</h3>
+<p>1200——正午是简单AM/PM规则的两个例外之一（另一个是凌晨12点/午夜，变为0000）。中午12点保持为1200，而不是变成2400。</p>
+</div>
+<div class="faq-item">
+<h3>「陆军钟表转换器」和军用时间转换器是一回事吗？</h3>
+<p>是的——美国军方和其他武装力量使用的是同一套24小时制系统，通常称为「军用时间」，所以「陆军钟表转换器」描述的正是这个工具双向处理的同一种转换。</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>相关工具</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>准确性说明</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquary 的计算器旨在提供快速、可靠的估算。对于涉及重大财务、结构或医疗后果的决定，请咨询合格的专业人士。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/zh/index.html">← 返回所有计算器</a> · <a href="/zh/about.html">关于我们</a> · <a href="/zh/contact.html">联系我们</a> · <a href="/zh/privacy.html">隐私政策</a> · <a href="/zh/terms.html">使用条款</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

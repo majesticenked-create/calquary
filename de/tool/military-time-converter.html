@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Militärzeit-Umrechner - Kostenloser Online-Rechner | Calquary</title>
+  <meta name="description" content="Rechnen Sie 12-Stunden-Uhrzeit in 24-Stunden-Militärzeit (Armee) um, und zurück." />
+  <meta property="og:title" content="Militärzeit-Umrechner | Calquary">
+  <meta property="og:description" content="Rechnen Sie 12-Stunden-Uhrzeit in 24-Stunden-Militärzeit (Armee) um, und zurück.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/de/tool/military-time-converter.html">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/military-time-converter.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Militärzeit-Umrechner | Calquary">
+  <meta name="twitter:description" content="Rechnen Sie 12-Stunden-Uhrzeit in 24-Stunden-Militärzeit (Armee) um, und zurück.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/military-time-converter.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/military-time-converter.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("military-time-converter");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("military-time-converter");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Militärzeit-Umrechner",
+      "description": "Rechnen Sie 12-Stunden-Uhrzeit in 24-Stunden-Militärzeit (Armee) um, und zurück.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/de/tool/military-time-converter.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-30",
+      "inLanguage": "de"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/de/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Date & Time",
+          "item": "https://calquary.com/de/category/datetime.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Militärzeit-Umrechner",
+          "item": "https://calquary.com/de/tool/military-time-converter.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Wie rechne ich normale Zeit in Militärzeit um?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Für AM-Stunden entspricht die Militärzeit der Uhrzeit (mit führender Null) - 9:00 Uhr wird 0900. Für PM-Stunden addieren Sie 12 zur Uhrzeit - 14:30 Uhr wird 1430."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was sind 12 AM und 12 PM in Militärzeit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "0:00 Uhr (Mitternacht) ist 0000 in Militärzeit, und 12:00 Uhr (Mittag) ist 1200 - das sind die beiden Ausnahmen, bei denen Sie nicht einfach addieren oder die 12 behalten."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie rechne ich Militärzeit zurück in 12-Stunden-Zeit um?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wenn die Stunde 13 oder größer ist, ziehen Sie 12 ab und markieren PM (1430 wird 14:30 Uhr); wenn sie 00-11 ist, behalten Sie die Stunde und markieren AM, außer 0000, was Mitternacht wird. Schalten Sie diesen Rechner auf den Modus „Militär → 12-Stunden“, um diese Umrechnung direkt durchzuführen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Unterscheiden sich „Militäruhr-Umrechnung“ oder „Militärstunden-Umrechner“ von der Umrechnung von Militärzeit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein - all diese beschreiben dieselbe Umrechnung zwischen 24-Stunden-Militärzeit und Standard-12-Stunden-Zeit, in beide Richtungen. Wählen Sie oben die benötigte Richtung."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Bedeuten „Militäruhr-Umrechner“, „Umrechnung der Militärzeit“, „Militärzeit umrechnen“ und „Militärzeit übersetzen“ hier alle dasselbe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja - jede dieser Formulierungen bittet um Umrechnung zwischen 12-Stunden- und 24-Stunden-(Militär-)Zeit, was genau das ist, was dieser Rechner in beide Richtungen tut."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was ist 1600 in Militärzeit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "16:00 Uhr. Da 1600 16 Uhrhundert ist, ziehen Sie 12 ab, um 4 zu erhalten, und jede Stunde von 13 oder mehr ist PM - schalten Sie diesen Rechner auf den Modus „Militär → 12-Stunden“ und geben Sie Stunde 16, Minute 0 ein, um zu bestätigen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was sind 19 Uhr oder 22 Uhr in Militärzeit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "19:00 Uhr ist 1900 - addieren Sie 12 zur PM-Stunde. 22:00 Uhr ist 2200, gleiche Regel. Nur 12 Uhr (Mittag, bleibt 1200) und 0 Uhr (Mitternacht, wird 0000) brechen das einfache „12-addieren“-Muster."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was ist 18 Uhr in Militärzeit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1800 - addieren Sie 12 zur PM-Stunde, gleiche Regel wie jede andere PM-Zeit zwischen 13 und 23 Uhr."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was ist 8 Uhr in Militärzeit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "0800 - AM-Stunden von 1 bis 11 Uhr behalten in der Militärzeit dieselbe Zahl, nur mit einer führenden Null. Nur 0 Uhr (Mitternacht) ist die Ausnahme und wird 0000."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was ist 12 Uhr mittags in Militärzeit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1200 - Mittag ist eine der beiden Ausnahmen zu den einfachen AM/PM-Regeln (die andere ist Mitternacht, die 0000 wird). 12 Uhr mittags bleibt 1200 statt 2400 zu werden."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ist „Armeeuhr-Umrechner“ dasselbe wie ein Militärzeit-Umrechner?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja - das US-Militär und andere Streitkräfte verwenden dasselbe 24-Stunden-Uhrsystem, allgemein als „Militärzeit“ bezeichnet, sodass „Armeeuhr-Umrechner“ dieselbe Umrechnung beschreibt, die dieses Tool in beide Richtungen handhabt."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/de/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/de/index.html#categories">Kategorien</a>
+          <a href="/de/index.html#tools">Alle Tools</a>
+          <a href="/de/about.html">Über uns</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Deutsch">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>DE</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/military-time-converter.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/military-time-converter.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/military-time-converter.html">Français</a><span class="locale-item current" role="menuitem" aria-current="true">Deutsch</span><a class="locale-item" role="menuitem" href="/pt/tool/military-time-converter.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/military-time-converter.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/military-time-converter.html">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/military-time-converter.html">Română</a><a class="locale-item" role="menuitem" href="/el/tool/military-time-converter.html">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/military-time-converter.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/military-time-converter.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/military-time-converter.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/de/index.html">Calquary</a> / <a href="/de/category/datetime.html">Datum & Uhrzeit</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Militärzeit-Umrechner</h1>
+        <p style="max-width:60ch;">Wählen Sie eine Richtung und geben Sie dann eine Zeit ein, um zwischen der standardmäßigen 12-Stunden-Zeit und der 24-Stunden-Militärzeit umzurechnen.</p>
+        <p class="last-updated">Zuletzt aktualisiert: August 30, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Berechnen</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Zurücksetzen</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Häufig gestellte Fragen</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Wie rechne ich normale Zeit in Militärzeit um?</h3>
+<p>Für AM-Stunden entspricht die Militärzeit der Uhrzeit (mit führender Null) - 9:00 Uhr wird 0900. Für PM-Stunden addieren Sie 12 zur Uhrzeit - 14:30 Uhr wird 1430.</p>
+</div>
+<div class="faq-item">
+<h3>Was sind 12 AM und 12 PM in Militärzeit?</h3>
+<p>0:00 Uhr (Mitternacht) ist 0000 in Militärzeit, und 12:00 Uhr (Mittag) ist 1200 - das sind die beiden Ausnahmen, bei denen Sie nicht einfach addieren oder die 12 behalten.</p>
+</div>
+<div class="faq-item">
+<h3>Wie rechne ich Militärzeit zurück in 12-Stunden-Zeit um?</h3>
+<p>Wenn die Stunde 13 oder größer ist, ziehen Sie 12 ab und markieren PM (1430 wird 14:30 Uhr); wenn sie 00-11 ist, behalten Sie die Stunde und markieren AM, außer 0000, was Mitternacht wird. Schalten Sie diesen Rechner auf den Modus „Militär → 12-Stunden“, um diese Umrechnung direkt durchzuführen.</p>
+</div>
+<div class="faq-item">
+<h3>Unterscheiden sich „Militäruhr-Umrechnung“ oder „Militärstunden-Umrechner“ von der Umrechnung von Militärzeit?</h3>
+<p>Nein - all diese beschreiben dieselbe Umrechnung zwischen 24-Stunden-Militärzeit und Standard-12-Stunden-Zeit, in beide Richtungen. Wählen Sie oben die benötigte Richtung.</p>
+</div>
+<div class="faq-item">
+<h3>Bedeuten „Militäruhr-Umrechner“, „Umrechnung der Militärzeit“, „Militärzeit umrechnen“ und „Militärzeit übersetzen“ hier alle dasselbe?</h3>
+<p>Ja - jede dieser Formulierungen bittet um Umrechnung zwischen 12-Stunden- und 24-Stunden-(Militär-)Zeit, was genau das ist, was dieser Rechner in beide Richtungen tut.</p>
+</div>
+<div class="faq-item">
+<h3>Was ist 1600 in Militärzeit?</h3>
+<p>16:00 Uhr. Da 1600 16 Uhrhundert ist, ziehen Sie 12 ab, um 4 zu erhalten, und jede Stunde von 13 oder mehr ist PM - schalten Sie diesen Rechner auf den Modus „Militär → 12-Stunden“ und geben Sie Stunde 16, Minute 0 ein, um zu bestätigen.</p>
+</div>
+<div class="faq-item">
+<h3>Was sind 19 Uhr oder 22 Uhr in Militärzeit?</h3>
+<p>19:00 Uhr ist 1900 - addieren Sie 12 zur PM-Stunde. 22:00 Uhr ist 2200, gleiche Regel. Nur 12 Uhr (Mittag, bleibt 1200) und 0 Uhr (Mitternacht, wird 0000) brechen das einfache „12-addieren“-Muster.</p>
+</div>
+<div class="faq-item">
+<h3>Was ist 18 Uhr in Militärzeit?</h3>
+<p>1800 - addieren Sie 12 zur PM-Stunde, gleiche Regel wie jede andere PM-Zeit zwischen 13 und 23 Uhr.</p>
+</div>
+<div class="faq-item">
+<h3>Was ist 8 Uhr in Militärzeit?</h3>
+<p>0800 - AM-Stunden von 1 bis 11 Uhr behalten in der Militärzeit dieselbe Zahl, nur mit einer führenden Null. Nur 0 Uhr (Mitternacht) ist die Ausnahme und wird 0000.</p>
+</div>
+<div class="faq-item">
+<h3>Was ist 12 Uhr mittags in Militärzeit?</h3>
+<p>1200 - Mittag ist eine der beiden Ausnahmen zu den einfachen AM/PM-Regeln (die andere ist Mitternacht, die 0000 wird). 12 Uhr mittags bleibt 1200 statt 2400 zu werden.</p>
+</div>
+<div class="faq-item">
+<h3>Ist „Armeeuhr-Umrechner“ dasselbe wie ein Militärzeit-Umrechner?</h3>
+<p>Ja - das US-Militär und andere Streitkräfte verwenden dasselbe 24-Stunden-Uhrsystem, allgemein als „Militärzeit“ bezeichnet, sodass „Armeeuhr-Umrechner“ dieselbe Umrechnung beschreibt, die dieses Tool in beide Richtungen handhabt.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Ähnliche Rechner</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Hinweis zur Genauigkeit</h4>
+          <p style="margin:0;font-size:0.85rem;">Die Rechner von Calquary sind für schnelle, zuverlässige Schätzungen ausgelegt. Bei Entscheidungen mit echten finanziellen, baulichen oder medizinischen Konsequenzen wenden Sie sich bitte an eine qualifizierte Fachperson.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/de/index.html">← Zurück zu allen Rechnern</a> · <a href="/de/about.html">Über uns</a> · <a href="/de/contact.html">Kontakt</a> · <a href="/de/privacy.html">Datenschutz</a> · <a href="/de/terms.html">Nutzungsbedingungen</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

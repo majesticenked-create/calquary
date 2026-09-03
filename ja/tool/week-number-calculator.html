@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>週番号計算機 - 無料オンライン計算ツール | Calquary</title>
+  <meta name="description" content="任意の日付のISO週番号を求めます。" />
+  <meta property="og:title" content="週番号計算機 | Calquary">
+  <meta property="og:description" content="任意の日付のISO週番号を求めます。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/ja/tool/week-number-calculator.html">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/week-number-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="週番号計算機 | Calquary">
+  <meta name="twitter:description" content="任意の日付のISO週番号を求めます。">
+  <meta name="twitter:image" content="https://calquary.com/og-images/week-number-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/week-number-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/week-number-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/week-number-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/week-number-calculator.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/week-number-calculator.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/week-number-calculator.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/week-number-calculator.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/week-number-calculator.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/week-number-calculator.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/week-number-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/week-number-calculator.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/week-number-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/week-number-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("week-number-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("week-number-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "週番号計算機",
+      "description": "任意の日付のISO週番号を求めます。",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/ja/tool/week-number-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-30",
+      "inLanguage": "ja"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/ja/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Date & Time",
+          "item": "https://calquary.com/ja/category/datetime.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "週番号計算機",
+          "item": "https://calquary.com/ja/tool/week-number-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "2024年6月15日は何週目ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "週が月曜日から始まるISO 8601規格を使うと、2024年の第24週です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "なぜISO週番号が重要なのですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ISO 8601の週番号は、ビジネス、製造業、国際的なスケジューリングで広く使われています。年の境界で週の途中で不自然にリセットされることなく、すべての週に一貫した明確な番号を与えるためです。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "すべての年がちょうど52週ありますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "いいえ。ISO週番号システムでは、ほとんどの年は52週ですが、1月1日が木曜日にあたる年（またはうるう年で水曜日から始まる年）は53週目があります。これは、ISO週がその年内の完全な月曜日から日曜日までの期間で定義されるためです。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "なぜカレンダーによっては、ある年に53週目を表示するのですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1年は52週プラス1日か2日の余分な日からなり、ISO週番号規格では、その余った日々が時々53週目を形成します。これは1月1日が木曜日にあたる年、またはうるう年で水曜日にあたる年に起こります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "今年はあと何週間残っていますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "上記の日付を今日に設定し、「年内の残りの完全週」の値を確認してください。選択した日付から12月31日までの残りの完全な7日間の週をカウントします。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "「週と年」が一緒になった場合、たとえば2024年第24週とはどういう意味ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "これは特定の週を明確に示す標準的な方法です。ISO週番号だけでは、年の境界近くで2つの異なる年の間で共有される可能性があるため、ISO週年（上記に表示）と組み合わせることでその曖昧さを解消します。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/ja/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/ja/index.html#categories">カテゴリー</a>
+          <a href="/ja/index.html#tools">すべてのツール</a>
+          <a href="/ja/about.html">このサイトについて</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: 日本語">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>JA</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/week-number-calculator.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/week-number-calculator.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/week-number-calculator.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/week-number-calculator.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/week-number-calculator.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/week-number-calculator.html">Italiano</a><span class="locale-item current" role="menuitem" aria-current="true">日本語</span><a class="locale-item" role="menuitem" href="/ro/tool/week-number-calculator.html">Română</a><a class="locale-item" role="menuitem" href="/el/tool/week-number-calculator.html">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/week-number-calculator.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/week-number-calculator.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/week-number-calculator.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/ja/index.html">Calquary</a> / <a href="/ja/category/datetime.html">日付・時間</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>週番号計算機</h1>
+        <p style="max-width:60ch;">日付を入力すると、そのISO週番号を求めます。これは企業、スケジュール、国際規格で使用される標準システムです。</p>
+        <p class="last-updated">最終更新日： August 30, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">計算する</button>
+              <button type="button" id="calc-reset" class="btn-ghost">リセット</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>よくある質問</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>2024年6月15日は何週目ですか？</h3>
+<p>週が月曜日から始まるISO 8601規格を使うと、2024年の第24週です。</p>
+</div>
+<div class="faq-item">
+<h3>なぜISO週番号が重要なのですか？</h3>
+<p>ISO 8601の週番号は、ビジネス、製造業、国際的なスケジューリングで広く使われています。年の境界で週の途中で不自然にリセットされることなく、すべての週に一貫した明確な番号を与えるためです。</p>
+</div>
+<div class="faq-item">
+<h3>すべての年がちょうど52週ありますか？</h3>
+<p>いいえ。ISO週番号システムでは、ほとんどの年は52週ですが、1月1日が木曜日にあたる年（またはうるう年で水曜日から始まる年）は53週目があります。これは、ISO週がその年内の完全な月曜日から日曜日までの期間で定義されるためです。</p>
+</div>
+<div class="faq-item">
+<h3>なぜカレンダーによっては、ある年に53週目を表示するのですか？</h3>
+<p>1年は52週プラス1日か2日の余分な日からなり、ISO週番号規格では、その余った日々が時々53週目を形成します。これは1月1日が木曜日にあたる年、またはうるう年で水曜日にあたる年に起こります。</p>
+</div>
+<div class="faq-item">
+<h3>今年はあと何週間残っていますか？</h3>
+<p>上記の日付を今日に設定し、「年内の残りの完全週」の値を確認してください。選択した日付から12月31日までの残りの完全な7日間の週をカウントします。</p>
+</div>
+<div class="faq-item">
+<h3>「週と年」が一緒になった場合、たとえば2024年第24週とはどういう意味ですか？</h3>
+<p>これは特定の週を明確に示す標準的な方法です。ISO週番号だけでは、年の境界近くで2つの異なる年の間で共有される可能性があるため、ISO週年（上記に表示）と組み合わせることでその曖昧さを解消します。</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>関連ツール</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>精度について</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquaryの計算ツールは、迅速で信頼できる概算を目的としています。実際の財務、構造、医療に関わる重要な決定を行う前には、必ず専門家にご確認ください。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/ja/index.html">← すべての計算ツールに戻る</a> · <a href="/ja/about.html">このサイトについて</a> · <a href="/ja/contact.html">お問い合わせ</a> · <a href="/ja/privacy.html">プライバシー</a> · <a href="/ja/terms.html">利用規約</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

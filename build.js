@@ -76,6 +76,10 @@ const WAVE_ONE_TOOL_IDS = [
   "steps-to-miles-calculator", "pregnancy-due-date-calculator", "ovulation-calculator",
   "calories-burned-calculator",
   "dog-food-calculator", "rabbit-age-calculator", "horse-age-calculator", "ideal-dog-weight-calculator",
+  "date-duration-calculator", "business-days-calculator", "time-duration-calculator", "time-add-calculator",
+  "online-timer", "online-alarm-clock", "online-stopwatch",
+  "current-time", "random-date-generator", "military-time-converter", "unix-timestamp-converter",
+  "week-number-calculator", "time-zone-converter", "daylight-saving-time-calculator",
 ];
 
 function loadData() {

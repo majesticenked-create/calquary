@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Μετατροπέας Στρατιωτικής Ώρας - Δωρεάν Online Αριθμομηχανή | Calquary</title>
+  <meta name="description" content="Μετέτρεψε 12ωρη ώρα ρολογιού σε 24ωρη στρατιωτική (στρατός) ώρα, και αντίστροφα." />
+  <meta property="og:title" content="Μετατροπέας Στρατιωτικής Ώρας | Calquary">
+  <meta property="og:description" content="Μετέτρεψε 12ωρη ώρα ρολογιού σε 24ωρη στρατιωτική (στρατός) ώρα, και αντίστροφα.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/el/tool/military-time-converter.html">
+  <meta property="og:locale" content="el_GR">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/military-time-converter.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Μετατροπέας Στρατιωτικής Ώρας | Calquary">
+  <meta name="twitter:description" content="Μετέτρεψε 12ωρη ώρα ρολογιού σε 24ωρη στρατιωτική (στρατός) ώρα, και αντίστροφα.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/military-time-converter.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/military-time-converter.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("military-time-converter");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("military-time-converter");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Μετατροπέας Στρατιωτικής Ώρας",
+      "description": "Μετέτρεψε 12ωρη ώρα ρολογιού σε 24ωρη στρατιωτική (στρατός) ώρα, και αντίστροφα.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/el/tool/military-time-converter.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-30",
+      "inLanguage": "el"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/el/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Date & Time",
+          "item": "https://calquary.com/el/category/datetime.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Μετατροπέας Στρατιωτικής Ώρας",
+          "item": "https://calquary.com/el/tool/military-time-converter.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Πώς μετατρέπω την κανονική ώρα σε στρατιωτική ώρα;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Για ώρες πμ, η στρατιωτική ώρα ταιριάζει με την ώρα του ρολογιού (με αρχικό μηδέν) - 9:00 πμ γίνεται 0900. Για ώρες μμ, προσθέστε 12 στην ώρα του ρολογιού - 2:30 μμ γίνεται 14:30 (1430)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Τι είναι 12 πμ και 12 μμ σε στρατιωτική ώρα;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "12:00 πμ (μεσάνυχτα) είναι 0000 σε στρατιωτική ώρα, και 12:00 μμ (μεσημέρι) είναι 1200 - αυτές είναι οι δύο εξαιρέσεις όπου δεν προσθέτετε απλά ή κρατάτε το 12."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Πώς μετατρέπω τη στρατιωτική ώρα πίσω σε 12ωρη ώρα;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Αν η ώρα είναι 13 ή μεγαλύτερη, αφαιρέστε 12 και σημειώστε μμ (1430 γίνεται 2:30 μμ)· αν είναι 00-11, κρατήστε την ώρα και σημειώστε πμ, εκτός από 0000 που γίνεται 12:00 πμ. Αλλάξτε αυτή την αριθμομηχανή σε λειτουργία «Στρατιωτική → 12ωρη» για να κάνετε αυτή τη μετατροπή απευθείας."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Είναι η «μετατροπή στρατιωτικού ρολογιού» ή ο «μετατροπέας στρατιωτικών ωρών» διαφορετικά από τη μετατροπή στρατιωτικής ώρας;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Όχι - όλα αυτά περιγράφουν την ίδια μετατροπή μεταξύ 24ωρης στρατιωτικής ώρας και τυπικής 12ωρης ώρας ρολογιού, προς οποιαδήποτε κατεύθυνση. Επιλέξτε την κατεύθυνση που χρειάζεστε παραπάνω."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Σημαίνουν όλα τα «μετατροπέας στρατιωτικού ρολογιού», «μετατροπή στρατιωτικής ώρας», «μετατροπή στρατιωτικής ώρας» και «μετάφραση στρατιωτικής ώρας» το ίδιο πράγμα εδώ;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ναι - κάθε μία από αυτές τις διατυπώσεις ζητά μετατροπή μεταξύ 12ωρης και 24ωρης (στρατιωτικής) ώρας, που είναι ακριβώς αυτό που κάνει αυτή η αριθμομηχανή και προς τις δύο κατευθύνσεις."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Τι είναι το 1600 σε στρατιωτική ώρα;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "4:00 μμ. Αφού το 1600 είναι 16 εκατοντάδες ώρες, αφαιρέστε 12 για να πάρετε 4, και οποιαδήποτε ώρα 13 ή μεγαλύτερη είναι μμ - αλλάξτε αυτή την αριθμομηχανή σε λειτουργία «Στρατιωτική → 12ωρη» και εισάγετε ώρα 16, λεπτό 0 για επιβεβαίωση."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Τι είναι 7 μμ ή 10 μμ σε στρατιωτική ώρα;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "7:00 μμ είναι 1900 (19 εκατοντάδες ώρες) - προσθέστε 12 στην ώρα μμ. 10:00 μμ είναι 2200 (22 εκατοντάδες ώρες), ίδιος κανόνας. Μόνο το 12 μμ (μεσημέρι, παραμένει 1200) και το 12 πμ (μεσάνυχτα, γίνεται 0000) σπάνε το απλό μοτίβο «πρόσθεσε 12»."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Τι είναι 6 μμ σε στρατιωτική ώρα;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1800 (18 εκατοντάδες ώρες) - προσθέστε 12 στην ώρα μμ, ίδιος κανόνας με οποιαδήποτε άλλη ώρα μμ μεταξύ 1 μμ και 11 μμ."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Τι είναι 8 πμ σε στρατιωτική ώρα;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "0800 - ώρες πμ από 1 πμ έως 11 πμ παραμένουν με τον ίδιο αριθμό σε στρατιωτική ώρα, απλώς με αρχικό μηδέν. Μόνο το 12 πμ (μεσάνυχτα) είναι η εξαίρεση, γίνεται 0000."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Τι είναι 12 μμ σε στρατιωτική ώρα;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1200 - το μεσημέρι είναι μία από τις δύο εξαιρέσεις στους απλούς κανόνες πμ/μμ (η άλλη είναι 12 πμ/μεσάνυχτα, που γίνεται 0000). Το 12 μμ παραμένει 1200 αντί να γίνει 2400."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Είναι ο «μετατροπέας στρατιωτικού ρολογιού» το ίδιο με έναν μετατροπέα στρατιωτικής ώρας;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ναι - ο στρατός των ΗΠΑ και άλλες ένοπλες δυνάμεις χρησιμοποιούν το ίδιο 24ωρο σύστημα ρολογιού που ονομάζεται συνήθως «στρατιωτική ώρα», οπότε ο «μετατροπέας στρατιωτικού ρολογιού» περιγράφει την ίδια μετατροπή που χειρίζεται αυτό το εργαλείο και προς τις δύο κατευθύνσεις."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/el/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/el/index.html#categories">Κατηγορίες</a>
+          <a href="/el/index.html#tools">Όλα τα εργαλεία</a>
+          <a href="/el/about.html">Σχετικά</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Ελληνικά">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>undefined</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/military-time-converter.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/military-time-converter.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/military-time-converter.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/military-time-converter.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/military-time-converter.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/military-time-converter.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/military-time-converter.html">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/military-time-converter.html">Română</a><span class="locale-item current" role="menuitem" aria-current="true">Ελληνικά</span><a class="locale-item" role="menuitem" href="/zh/tool/military-time-converter.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/military-time-converter.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/military-time-converter.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/el/index.html">Calquary</a> / <a href="/el/category/datetime.html">Ημερομηνία και Ώρα</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Μετατροπέας Στρατιωτικής Ώρας</h1>
+        <p style="max-width:60ch;">Επιλέξτε κατεύθυνση, μετά εισάγετε μια ώρα για μετατροπή μεταξύ τυπικής 12ωρης ώρας και στρατιωτικής 24ωρης ώρας.</p>
+        <p class="last-updated">Τελευταία ενημέρωση: August 30, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Υπολογισμός</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Επαναφορά</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Συχνές ερωτήσεις</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Πώς μετατρέπω την κανονική ώρα σε στρατιωτική ώρα;</h3>
+<p>Για ώρες πμ, η στρατιωτική ώρα ταιριάζει με την ώρα του ρολογιού (με αρχικό μηδέν) - 9:00 πμ γίνεται 0900. Για ώρες μμ, προσθέστε 12 στην ώρα του ρολογιού - 2:30 μμ γίνεται 14:30 (1430).</p>
+</div>
+<div class="faq-item">
+<h3>Τι είναι 12 πμ και 12 μμ σε στρατιωτική ώρα;</h3>
+<p>12:00 πμ (μεσάνυχτα) είναι 0000 σε στρατιωτική ώρα, και 12:00 μμ (μεσημέρι) είναι 1200 - αυτές είναι οι δύο εξαιρέσεις όπου δεν προσθέτετε απλά ή κρατάτε το 12.</p>
+</div>
+<div class="faq-item">
+<h3>Πώς μετατρέπω τη στρατιωτική ώρα πίσω σε 12ωρη ώρα;</h3>
+<p>Αν η ώρα είναι 13 ή μεγαλύτερη, αφαιρέστε 12 και σημειώστε μμ (1430 γίνεται 2:30 μμ)· αν είναι 00-11, κρατήστε την ώρα και σημειώστε πμ, εκτός από 0000 που γίνεται 12:00 πμ. Αλλάξτε αυτή την αριθμομηχανή σε λειτουργία «Στρατιωτική → 12ωρη» για να κάνετε αυτή τη μετατροπή απευθείας.</p>
+</div>
+<div class="faq-item">
+<h3>Είναι η «μετατροπή στρατιωτικού ρολογιού» ή ο «μετατροπέας στρατιωτικών ωρών» διαφορετικά από τη μετατροπή στρατιωτικής ώρας;</h3>
+<p>Όχι - όλα αυτά περιγράφουν την ίδια μετατροπή μεταξύ 24ωρης στρατιωτικής ώρας και τυπικής 12ωρης ώρας ρολογιού, προς οποιαδήποτε κατεύθυνση. Επιλέξτε την κατεύθυνση που χρειάζεστε παραπάνω.</p>
+</div>
+<div class="faq-item">
+<h3>Σημαίνουν όλα τα «μετατροπέας στρατιωτικού ρολογιού», «μετατροπή στρατιωτικής ώρας», «μετατροπή στρατιωτικής ώρας» και «μετάφραση στρατιωτικής ώρας» το ίδιο πράγμα εδώ;</h3>
+<p>Ναι - κάθε μία από αυτές τις διατυπώσεις ζητά μετατροπή μεταξύ 12ωρης και 24ωρης (στρατιωτικής) ώρας, που είναι ακριβώς αυτό που κάνει αυτή η αριθμομηχανή και προς τις δύο κατευθύνσεις.</p>
+</div>
+<div class="faq-item">
+<h3>Τι είναι το 1600 σε στρατιωτική ώρα;</h3>
+<p>4:00 μμ. Αφού το 1600 είναι 16 εκατοντάδες ώρες, αφαιρέστε 12 για να πάρετε 4, και οποιαδήποτε ώρα 13 ή μεγαλύτερη είναι μμ - αλλάξτε αυτή την αριθμομηχανή σε λειτουργία «Στρατιωτική → 12ωρη» και εισάγετε ώρα 16, λεπτό 0 για επιβεβαίωση.</p>
+</div>
+<div class="faq-item">
+<h3>Τι είναι 7 μμ ή 10 μμ σε στρατιωτική ώρα;</h3>
+<p>7:00 μμ είναι 1900 (19 εκατοντάδες ώρες) - προσθέστε 12 στην ώρα μμ. 10:00 μμ είναι 2200 (22 εκατοντάδες ώρες), ίδιος κανόνας. Μόνο το 12 μμ (μεσημέρι, παραμένει 1200) και το 12 πμ (μεσάνυχτα, γίνεται 0000) σπάνε το απλό μοτίβο «πρόσθεσε 12».</p>
+</div>
+<div class="faq-item">
+<h3>Τι είναι 6 μμ σε στρατιωτική ώρα;</h3>
+<p>1800 (18 εκατοντάδες ώρες) - προσθέστε 12 στην ώρα μμ, ίδιος κανόνας με οποιαδήποτε άλλη ώρα μμ μεταξύ 1 μμ και 11 μμ.</p>
+</div>
+<div class="faq-item">
+<h3>Τι είναι 8 πμ σε στρατιωτική ώρα;</h3>
+<p>0800 - ώρες πμ από 1 πμ έως 11 πμ παραμένουν με τον ίδιο αριθμό σε στρατιωτική ώρα, απλώς με αρχικό μηδέν. Μόνο το 12 πμ (μεσάνυχτα) είναι η εξαίρεση, γίνεται 0000.</p>
+</div>
+<div class="faq-item">
+<h3>Τι είναι 12 μμ σε στρατιωτική ώρα;</h3>
+<p>1200 - το μεσημέρι είναι μία από τις δύο εξαιρέσεις στους απλούς κανόνες πμ/μμ (η άλλη είναι 12 πμ/μεσάνυχτα, που γίνεται 0000). Το 12 μμ παραμένει 1200 αντί να γίνει 2400.</p>
+</div>
+<div class="faq-item">
+<h3>Είναι ο «μετατροπέας στρατιωτικού ρολογιού» το ίδιο με έναν μετατροπέα στρατιωτικής ώρας;</h3>
+<p>Ναι - ο στρατός των ΗΠΑ και άλλες ένοπλες δυνάμεις χρησιμοποιούν το ίδιο 24ωρο σύστημα ρολογιού που ονομάζεται συνήθως «στρατιωτική ώρα», οπότε ο «μετατροπέας στρατιωτικού ρολογιού» περιγράφει την ίδια μετατροπή που χειρίζεται αυτό το εργαλείο και προς τις δύο κατευθύνσεις.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Σχετικά εργαλεία</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Σημείωση ακρίβειας</h4>
+          <p style="margin:0;font-size:0.85rem;">Οι αριθμομηχανές του Calquary έχουν σχεδιαστεί για να παρέχουν γρήγορες και αξιόπιστες εκτιμήσεις. Για αποφάσεις με πραγματικές οικονομικές, δομικές ή ιατρικές επιπτώσεις, συμβουλευτείτε έναν ειδικευμένο επαγγελματία.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/el/index.html">← Πίσω σε όλες τις αριθμομηχανές</a> · <a href="/el/about.html">Σχετικά</a> · <a href="/el/contact.html">Επικοινωνία</a> · <a href="/el/privacy.html">Απόρρητο</a> · <a href="/el/terms.html">Όροι</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>サマータイム計算機 - 無料オンライン計算ツール | Calquary</title>
+  <meta name="description" content="任意のタイムゾーンでサマータイムの時計変更がいつ行われるかを調べます。" />
+  <meta property="og:title" content="サマータイム計算機 | Calquary">
+  <meta property="og:description" content="任意のタイムゾーンでサマータイムの時計変更がいつ行われるかを調べます。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/ja/tool/daylight-saving-time-calculator.html">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/daylight-saving-time-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="サマータイム計算機 | Calquary">
+  <meta name="twitter:description" content="任意のタイムゾーンでサマータイムの時計変更がいつ行われるかを調べます。">
+  <meta name="twitter:image" content="https://calquary.com/og-images/daylight-saving-time-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/daylight-saving-time-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/daylight-saving-time-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/daylight-saving-time-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/daylight-saving-time-calculator.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/daylight-saving-time-calculator.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/daylight-saving-time-calculator.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/daylight-saving-time-calculator.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/daylight-saving-time-calculator.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/daylight-saving-time-calculator.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/daylight-saving-time-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/daylight-saving-time-calculator.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/daylight-saving-time-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/daylight-saving-time-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("daylight-saving-time-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("daylight-saving-time-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "サマータイム計算機",
+      "description": "任意のタイムゾーンでサマータイムの時計変更がいつ行われるかを調べます。",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/ja/tool/daylight-saving-time-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-31",
+      "inLanguage": "ja"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/ja/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Date & Time",
+          "item": "https://calquary.com/ja/category/datetime.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "サマータイム計算機",
+          "item": "https://calquary.com/ja/tool/daylight-saving-time-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "アメリカでサマータイムの時計はいつ変わりますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "アメリカの時計は3月の第2日曜日に進み、11月の第1日曜日に戻ります。上記でアメリカのゾーンを選択すると、任意の年の正確な日付がわかります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "イギリス/EUはいつ時計を変えますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "イギリスとEUは3月の最終日曜日（進む）と10月の最終日曜日（戻る）に時計を変えます。アメリカとは異なる日付のため、アメリカとヨーロッパの時差は毎年春と秋に数週間、1時間ずれます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "なぜ一部のタイムゾーンはサマータイムを採用しないのですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "赤道付近の多くの地域では、季節による日の長さの変化がほとんどないため、サマータイムを飛ばしています。時計をずらしても意味のあるメリットが生まれないためです。アジアのほとんどなど、他のいくつかの地域も、様々な歴史的または実用的な理由からサマータイムを採用していません。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "「サマータイム開始（春に進む）」はどちらの方向ですか？1時間失いますか、それとも得ますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "サマータイム開始（春に進む）とは、時計が1時間進むことを意味します（例：午前2時が午前3時になる）。そのため、その夜は1時間の睡眠を失います。冬時間戻し（秋に戻る）は時計を1時間戻すため、1時間得ます。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/ja/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/ja/index.html#categories">カテゴリー</a>
+          <a href="/ja/index.html#tools">すべてのツール</a>
+          <a href="/ja/about.html">このサイトについて</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: 日本語">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>JA</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/daylight-saving-time-calculator.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/daylight-saving-time-calculator.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/daylight-saving-time-calculator.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/daylight-saving-time-calculator.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/daylight-saving-time-calculator.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/daylight-saving-time-calculator.html">Italiano</a><span class="locale-item current" role="menuitem" aria-current="true">日本語</span><a class="locale-item" role="menuitem" href="/ro/tool/daylight-saving-time-calculator.html">Română</a><a class="locale-item" role="menuitem" href="/el/tool/daylight-saving-time-calculator.html">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/daylight-saving-time-calculator.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/daylight-saving-time-calculator.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/daylight-saving-time-calculator.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/ja/index.html">Calquary</a> / <a href="/ja/category/datetime.html">日付・時間</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>サマータイム計算機</h1>
+        <p style="max-width:60ch;">タイムゾーンと年を選択すると、時計が進む日と戻る日の正確な日付がわかります。</p>
+        <p class="last-updated">最終更新日： August 31, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">計算する</button>
+              <button type="button" id="calc-reset" class="btn-ghost">リセット</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>よくある質問</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>アメリカでサマータイムの時計はいつ変わりますか？</h3>
+<p>アメリカの時計は3月の第2日曜日に進み、11月の第1日曜日に戻ります。上記でアメリカのゾーンを選択すると、任意の年の正確な日付がわかります。</p>
+</div>
+<div class="faq-item">
+<h3>イギリス/EUはいつ時計を変えますか？</h3>
+<p>イギリスとEUは3月の最終日曜日（進む）と10月の最終日曜日（戻る）に時計を変えます。アメリカとは異なる日付のため、アメリカとヨーロッパの時差は毎年春と秋に数週間、1時間ずれます。</p>
+</div>
+<div class="faq-item">
+<h3>なぜ一部のタイムゾーンはサマータイムを採用しないのですか？</h3>
+<p>赤道付近の多くの地域では、季節による日の長さの変化がほとんどないため、サマータイムを飛ばしています。時計をずらしても意味のあるメリットが生まれないためです。アジアのほとんどなど、他のいくつかの地域も、様々な歴史的または実用的な理由からサマータイムを採用していません。</p>
+</div>
+<div class="faq-item">
+<h3>「サマータイム開始（春に進む）」はどちらの方向ですか？1時間失いますか、それとも得ますか？</h3>
+<p>サマータイム開始（春に進む）とは、時計が1時間進むことを意味します（例：午前2時が午前3時になる）。そのため、その夜は1時間の睡眠を失います。冬時間戻し（秋に戻る）は時計を1時間戻すため、1時間得ます。</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>関連ツール</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>精度について</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquaryの計算ツールは、迅速で信頼できる概算を目的としています。実際の財務、構造、医療に関わる重要な決定を行う前には、必ず専門家にご確認ください。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/ja/index.html">← すべての計算ツールに戻る</a> · <a href="/ja/about.html">このサイトについて</a> · <a href="/ja/contact.html">お問い合わせ</a> · <a href="/ja/privacy.html">プライバシー</a> · <a href="/ja/terms.html">利用規約</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>軍事時間変換ツール - 無料オンライン計算ツール | Calquary</title>
+  <meta name="description" content="12時間制の時刻を24時間制の軍事（陸軍）時間に、またその逆に変換します。" />
+  <meta property="og:title" content="軍事時間変換ツール | Calquary">
+  <meta property="og:description" content="12時間制の時刻を24時間制の軍事（陸軍）時間に、またその逆に変換します。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/ja/tool/military-time-converter.html">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/military-time-converter.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="軍事時間変換ツール | Calquary">
+  <meta name="twitter:description" content="12時間制の時刻を24時間制の軍事（陸軍）時間に、またその逆に変換します。">
+  <meta name="twitter:image" content="https://calquary.com/og-images/military-time-converter.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/military-time-converter.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/military-time-converter.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("military-time-converter");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("military-time-converter");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "軍事時間変換ツール",
+      "description": "12時間制の時刻を24時間制の軍事（陸軍）時間に、またその逆に変換します。",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/ja/tool/military-time-converter.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-30",
+      "inLanguage": "ja"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/ja/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Date & Time",
+          "item": "https://calquary.com/ja/category/datetime.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "軍事時間変換ツール",
+          "item": "https://calquary.com/ja/tool/military-time-converter.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "通常の時刻を軍事時間に変換するにはどうすればいいですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "午前の時間は、軍事時間では時計の時間と一致します（先頭にゼロを付けて）。午前9:00は0900になります。午後の時間は、時計の時間に12を加えます。午後2:30は14:30（1430）になります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "軍事時間で午前12時と午後12時は何ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "午前12時（真夜中）は軍事時間で0000、午後12時（正午）は1200です。これらは、単純に12を加えたり保持したりしない2つの例外です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "軍事時間を12時間表記に戻すにはどうすればいいですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "時が13以上の場合は12を引いてPMとマークします（1430は午後2:30になります）。00〜11の場合は時をそのままにしてAMとマークしますが、0000は午前12時になります。この計算機を「軍事→12時間」モードに切り替えると、直接この変換ができます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "「軍事時計の変換」や「軍事時間変換ツール」は軍事時間の変換とは異なりますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "いいえ。これらはすべて、24時間の軍事時間と標準の12時間時計の間の同じ変換を、どちらの方向にも説明しています。上記で必要な方向を選んでください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "「軍事時計変換ツール」「軍事時間の変換」「軍事時間を変換する」「軍事時間を翻訳する」はすべてここで同じ意味ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。これらの表現はすべて、12時間表記と24時間（軍事）時間の間の変換を求めており、これはまさにこの計算機が両方向で行うことです。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "軍事時間の1600は何ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "午後4:00です。1600は16時なので、12を引いて4を得ます。13以上の時はすべてPMです。この計算機を「軍事→12時間」モードに切り替えて、時16、分0を入力して確認してください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "軍事時間で午後7時や午後10時は何ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "午後7:00は1900（19時）です。PMの時に12を加えます。午後10:00は2200（22時）、同じルールです。午後12時（正午、1200のまま）と午前12時（真夜中、0000になる）だけが単純な「12を加える」パターンを破ります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "軍事時間で午後6時は何ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1800（18時）です。PMの時に12を加えます。午後1時から午後11時までの他のPM時刻と同じルールです。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "軍事時間で午前8時は何ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "0800です。午前1時から午前11時までのAM時刻は、軍事時間でも同じ数字のままで、先頭にゼロが付くだけです。例外は午前12時（真夜中）だけで、0000になります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "軍事時間で午後12時は何ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1200です。正午は単純なAM/PMルールの2つの例外の1つです（もう1つは午前12時/真夜中で、0000になります）。午後12時は2400にならず、1200のままです。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "「陸軍時計変換ツール」は軍事時間変換ツールと同じですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。米軍やその他の軍隊は、一般に「軍事時間」と呼ばれる同じ24時間制の時計システムを使用しているため、「陸軍時計変換ツール」はこのツールが両方向で処理するのと同じ変換を指しています。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/ja/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/ja/index.html#categories">カテゴリー</a>
+          <a href="/ja/index.html#tools">すべてのツール</a>
+          <a href="/ja/about.html">このサイトについて</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: 日本語">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>JA</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/military-time-converter.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/military-time-converter.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/military-time-converter.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/military-time-converter.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/military-time-converter.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/military-time-converter.html">Italiano</a><span class="locale-item current" role="menuitem" aria-current="true">日本語</span><a class="locale-item" role="menuitem" href="/ro/tool/military-time-converter.html">Română</a><a class="locale-item" role="menuitem" href="/el/tool/military-time-converter.html">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/military-time-converter.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/military-time-converter.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/military-time-converter.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/ja/index.html">Calquary</a> / <a href="/ja/category/datetime.html">日付・時間</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>軍事時間変換ツール</h1>
+        <p style="max-width:60ch;">方向を選択し、標準の12時間表記と24時間の軍事時間の間で変換する時刻を入力してください。</p>
+        <p class="last-updated">最終更新日： August 30, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">計算する</button>
+              <button type="button" id="calc-reset" class="btn-ghost">リセット</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>よくある質問</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>通常の時刻を軍事時間に変換するにはどうすればいいですか？</h3>
+<p>午前の時間は、軍事時間では時計の時間と一致します（先頭にゼロを付けて）。午前9:00は0900になります。午後の時間は、時計の時間に12を加えます。午後2:30は14:30（1430）になります。</p>
+</div>
+<div class="faq-item">
+<h3>軍事時間で午前12時と午後12時は何ですか？</h3>
+<p>午前12時（真夜中）は軍事時間で0000、午後12時（正午）は1200です。これらは、単純に12を加えたり保持したりしない2つの例外です。</p>
+</div>
+<div class="faq-item">
+<h3>軍事時間を12時間表記に戻すにはどうすればいいですか？</h3>
+<p>時が13以上の場合は12を引いてPMとマークします（1430は午後2:30になります）。00〜11の場合は時をそのままにしてAMとマークしますが、0000は午前12時になります。この計算機を「軍事→12時間」モードに切り替えると、直接この変換ができます。</p>
+</div>
+<div class="faq-item">
+<h3>「軍事時計の変換」や「軍事時間変換ツール」は軍事時間の変換とは異なりますか？</h3>
+<p>いいえ。これらはすべて、24時間の軍事時間と標準の12時間時計の間の同じ変換を、どちらの方向にも説明しています。上記で必要な方向を選んでください。</p>
+</div>
+<div class="faq-item">
+<h3>「軍事時計変換ツール」「軍事時間の変換」「軍事時間を変換する」「軍事時間を翻訳する」はすべてここで同じ意味ですか？</h3>
+<p>はい。これらの表現はすべて、12時間表記と24時間（軍事）時間の間の変換を求めており、これはまさにこの計算機が両方向で行うことです。</p>
+</div>
+<div class="faq-item">
+<h3>軍事時間の1600は何ですか？</h3>
+<p>午後4:00です。1600は16時なので、12を引いて4を得ます。13以上の時はすべてPMです。この計算機を「軍事→12時間」モードに切り替えて、時16、分0を入力して確認してください。</p>
+</div>
+<div class="faq-item">
+<h3>軍事時間で午後7時や午後10時は何ですか？</h3>
+<p>午後7:00は1900（19時）です。PMの時に12を加えます。午後10:00は2200（22時）、同じルールです。午後12時（正午、1200のまま）と午前12時（真夜中、0000になる）だけが単純な「12を加える」パターンを破ります。</p>
+</div>
+<div class="faq-item">
+<h3>軍事時間で午後6時は何ですか？</h3>
+<p>1800（18時）です。PMの時に12を加えます。午後1時から午後11時までの他のPM時刻と同じルールです。</p>
+</div>
+<div class="faq-item">
+<h3>軍事時間で午前8時は何ですか？</h3>
+<p>0800です。午前1時から午前11時までのAM時刻は、軍事時間でも同じ数字のままで、先頭にゼロが付くだけです。例外は午前12時（真夜中）だけで、0000になります。</p>
+</div>
+<div class="faq-item">
+<h3>軍事時間で午後12時は何ですか？</h3>
+<p>1200です。正午は単純なAM/PMルールの2つの例外の1つです（もう1つは午前12時/真夜中で、0000になります）。午後12時は2400にならず、1200のままです。</p>
+</div>
+<div class="faq-item">
+<h3>「陸軍時計変換ツール」は軍事時間変換ツールと同じですか？</h3>
+<p>はい。米軍やその他の軍隊は、一般に「軍事時間」と呼ばれる同じ24時間制の時計システムを使用しているため、「陸軍時計変換ツール」はこのツールが両方向で処理するのと同じ変換を指しています。</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>関連ツール</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>精度について</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquaryの計算ツールは、迅速で信頼できる概算を目的としています。実際の財務、構造、医療に関わる重要な決定を行う前には、必ず専門家にご確認ください。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/ja/index.html">← すべての計算ツールに戻る</a> · <a href="/ja/about.html">このサイトについて</a> · <a href="/ja/contact.html">お問い合わせ</a> · <a href="/ja/privacy.html">プライバシー</a> · <a href="/ja/terms.html">利用規約</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

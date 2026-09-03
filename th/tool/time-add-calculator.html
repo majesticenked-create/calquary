@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>เครื่องคำนวณบวก/ลบเวลา - เครื่องคำนวณออนไลน์ฟรี | Calquary</title>
+  <meta name="description" content="บวกหรือลบชั่วโมงและนาทีจากเวลาเริ่มต้น" />
+  <meta property="og:title" content="เครื่องคำนวณบวก/ลบเวลา | Calquary">
+  <meta property="og:description" content="บวกหรือลบชั่วโมงและนาทีจากเวลาเริ่มต้น">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/th/tool/time-add-calculator.html">
+  <meta property="og:locale" content="th_TH">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/time-add-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="เครื่องคำนวณบวก/ลบเวลา | Calquary">
+  <meta name="twitter:description" content="บวกหรือลบชั่วโมงและนาทีจากเวลาเริ่มต้น">
+  <meta name="twitter:image" content="https://calquary.com/og-images/time-add-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/time-add-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/time-add-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/time-add-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/time-add-calculator.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/time-add-calculator.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/time-add-calculator.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/time-add-calculator.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/time-add-calculator.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/time-add-calculator.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/time-add-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/time-add-calculator.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/time-add-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/time-add-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Thai:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("time-add-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("time-add-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "เครื่องคำนวณบวก/ลบเวลา",
+      "description": "บวกหรือลบชั่วโมงและนาทีจากเวลาเริ่มต้น",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/th/tool/time-add-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-30",
+      "inLanguage": "th"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/th/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Date & Time",
+          "item": "https://calquary.com/th/category/datetime.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "เครื่องคำนวณบวก/ลบเวลา",
+          "item": "https://calquary.com/th/tool/time-add-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "ฉันจะบวกชั่วโมงและนาทีเข้ากับเวลาได้อย่างไร?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "แปลงทุกอย่างเป็นนาทีรวม บวกเข้าด้วยกัน แล้วแปลงกลับ: สำหรับ 9:00 บวก 5 ชั่วโมง 45 นาที นั่นคือ (9×60) + (5×60+45) = 540 + 345 = 885 นาที ซึ่งเท่ากับ 14:45 น."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ฉันจะบวกหรือแปลงระหว่างชั่วโมงและนาทีโดยทั่วไปได้อย่างไร?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "คูณชั่วโมงด้วย 60 เพื่อให้ได้นาที (2.5 ชั่วโมง = 150 นาที) หรือหารนาทีด้วย 60 เพื่อให้ได้ชั่วโมง (150 นาที = 2.5 ชั่วโมง) เครื่องคำนวณนี้ใช้วิธีนี้โดยตรงเมื่อบวกหรือลบระยะเวลาจากเวลาเริ่มต้น"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "จะเกิดอะไรขึ้นถ้าการบวกเวลาข้ามเที่ยงคืน?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ผลลัพธ์จะเลื่อนไปยังวันถัดไป - ตัวอย่างเช่น 23:00 น. บวก 3 ชั่วโมงจะกลายเป็น 2:00 น. และเครื่องคำนวณนี้จะระบุว่าผลลัพธ์ข้ามไปยังวันปฏิทินถัดไปแทนที่จะแสดง 26:00 น. ที่ไม่ถูกต้อง"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "นี่เหมือนกับเครื่องคำนวณระยะเวลาหรือไม่?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ไม่ - เครื่องคำนวณระยะเวลาหาช่องว่างระหว่างสองเวลาที่คุณทราบอยู่แล้ว (เช่น 9 โมงเช้าและ 17:30 น.) เครื่องคำนวณนี้ทำตรงกันข้าม: เริ่มจากเวลาที่ทราบหนึ่งเวลา มันบวกหรือลบระยะเวลาเพื่อหาเวลาผลลัพธ์ใหม่"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "\"เครื่องคำนวณที่บวกเวลา\" หรือ \"การบวกเครื่องคำนวณเวลา\" เหมือนกับเครื่องมือนี้หรือไม่?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ใช่ - ทั้งหมดนี้อธิบายถึงการบวกระยะเวลาเข้ากับเวลาเริ่มต้นเพื่อให้ได้เวลาใหม่ ซึ่งเป็นสิ่งที่เครื่องคำนวณนี้ทำอย่างแม่นยำ ตั้งค่าการดำเนินการเป็น \"บวก\" ด้านบน"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "การค้นหา \"เครื่องคำนวณเวลาบวก\" แตกต่างจากเครื่องมือนี้หรือไม่?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ไม่ - ทั้งสองอธิบายถึงงานเดียวกันที่เครื่องคำนวณนี้จัดการ: การบวกระยะเวลาเข้ากับเวลาเริ่มต้น ตั้งค่าการดำเนินการเป็น \"บวก\" และป้อนเวลาเริ่มต้นและระยะเวลาของคุณด้านบน"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/th/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/th/index.html#categories">หมวดหมู่</a>
+          <a href="/th/index.html#tools">เครื่องมือทั้งหมด</a>
+          <a href="/th/about.html">เกี่ยวกับเรา</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: ไทย">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>undefined</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/time-add-calculator.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/time-add-calculator.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/time-add-calculator.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/time-add-calculator.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/time-add-calculator.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/time-add-calculator.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/time-add-calculator.html">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/time-add-calculator.html">Română</a><a class="locale-item" role="menuitem" href="/el/tool/time-add-calculator.html">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/time-add-calculator.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/time-add-calculator.html">العربية</a><span class="locale-item current" role="menuitem" aria-current="true">ไทย</span></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/th/index.html">Calquary</a> / <a href="/th/category/datetime.html">วันที่และเวลา</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>เครื่องคำนวณบวก/ลบเวลา</h1>
+        <p style="max-width:60ch;">ป้อนเวลาเริ่มต้นและจำนวนชั่วโมงและนาทีที่จะบวกหรือลบเพื่อคำนวณเวลาผลลัพธ์</p>
+        <p class="last-updated">อัปเดตล่าสุด: August 30, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">คำนวณ</button>
+              <button type="button" id="calc-reset" class="btn-ghost">รีเซ็ต</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>คำถามที่พบบ่อย</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>ฉันจะบวกชั่วโมงและนาทีเข้ากับเวลาได้อย่างไร?</h3>
+<p>แปลงทุกอย่างเป็นนาทีรวม บวกเข้าด้วยกัน แล้วแปลงกลับ: สำหรับ 9:00 บวก 5 ชั่วโมง 45 นาที นั่นคือ (9×60) + (5×60+45) = 540 + 345 = 885 นาที ซึ่งเท่ากับ 14:45 น.</p>
+</div>
+<div class="faq-item">
+<h3>ฉันจะบวกหรือแปลงระหว่างชั่วโมงและนาทีโดยทั่วไปได้อย่างไร?</h3>
+<p>คูณชั่วโมงด้วย 60 เพื่อให้ได้นาที (2.5 ชั่วโมง = 150 นาที) หรือหารนาทีด้วย 60 เพื่อให้ได้ชั่วโมง (150 นาที = 2.5 ชั่วโมง) เครื่องคำนวณนี้ใช้วิธีนี้โดยตรงเมื่อบวกหรือลบระยะเวลาจากเวลาเริ่มต้น</p>
+</div>
+<div class="faq-item">
+<h3>จะเกิดอะไรขึ้นถ้าการบวกเวลาข้ามเที่ยงคืน?</h3>
+<p>ผลลัพธ์จะเลื่อนไปยังวันถัดไป - ตัวอย่างเช่น 23:00 น. บวก 3 ชั่วโมงจะกลายเป็น 2:00 น. และเครื่องคำนวณนี้จะระบุว่าผลลัพธ์ข้ามไปยังวันปฏิทินถัดไปแทนที่จะแสดง 26:00 น. ที่ไม่ถูกต้อง</p>
+</div>
+<div class="faq-item">
+<h3>นี่เหมือนกับเครื่องคำนวณระยะเวลาหรือไม่?</h3>
+<p>ไม่ - เครื่องคำนวณระยะเวลาหาช่องว่างระหว่างสองเวลาที่คุณทราบอยู่แล้ว (เช่น 9 โมงเช้าและ 17:30 น.) เครื่องคำนวณนี้ทำตรงกันข้าม: เริ่มจากเวลาที่ทราบหนึ่งเวลา มันบวกหรือลบระยะเวลาเพื่อหาเวลาผลลัพธ์ใหม่</p>
+</div>
+<div class="faq-item">
+<h3>"เครื่องคำนวณที่บวกเวลา" หรือ "การบวกเครื่องคำนวณเวลา" เหมือนกับเครื่องมือนี้หรือไม่?</h3>
+<p>ใช่ - ทั้งหมดนี้อธิบายถึงการบวกระยะเวลาเข้ากับเวลาเริ่มต้นเพื่อให้ได้เวลาใหม่ ซึ่งเป็นสิ่งที่เครื่องคำนวณนี้ทำอย่างแม่นยำ ตั้งค่าการดำเนินการเป็น "บวก" ด้านบน</p>
+</div>
+<div class="faq-item">
+<h3>การค้นหา "เครื่องคำนวณเวลาบวก" แตกต่างจากเครื่องมือนี้หรือไม่?</h3>
+<p>ไม่ - ทั้งสองอธิบายถึงงานเดียวกันที่เครื่องคำนวณนี้จัดการ: การบวกระยะเวลาเข้ากับเวลาเริ่มต้น ตั้งค่าการดำเนินการเป็น "บวก" และป้อนเวลาเริ่มต้นและระยะเวลาของคุณด้านบน</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>เครื่องมือที่เกี่ยวข้อง</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>หมายเหตุเกี่ยวกับความแม่นยำ</h4>
+          <p style="margin:0;font-size:0.85rem;">เครื่องคำนวณของ Calquary ออกแบบมาเพื่อให้การประมาณค่าที่รวดเร็วและเชื่อถือได้ สำหรับการตัดสินใจที่มีผลกระทบทางการเงิน โครงสร้าง หรือทางการแพทย์อย่างแท้จริง โปรดปรึกษาผู้เชี่ยวชาญที่มีคุณสมบัติเหมาะสม</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/th/index.html">← กลับไปยังเครื่องคำนวณทั้งหมด</a> · <a href="/th/about.html">เกี่ยวกับเรา</a> · <a href="/th/contact.html">ติดต่อเรา</a> · <a href="/th/privacy.html">ความเป็นส่วนตัว</a> · <a href="/th/terms.html">ข้อกำหนด</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>
