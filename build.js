@@ -133,6 +133,10 @@ const WAVE_ONE_TOOL_IDS = [
   "collision-calculator", "ohms-law-calculator", "right-triangle-calculator",
   "absolute-risk-reduction-calculator", "sample-size-calculator", "confidence-interval-calculator",
   "mean-median-mode-calculator",
+  // Math category, batch 10 (final)
+  "roman-numeral-converter", "distance-modulus-calculator", "earthquake-magnitude-calculator",
+  "pressure-altitude-calculator", "circle-calculator", "repeating-decimal-to-fraction-calculator",
+  "permutations-combinations-calculator",
 ];
 
 function loadData() {
