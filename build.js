@@ -121,6 +121,10 @@ const WAVE_ONE_TOOL_IDS = [
   "trapezoid-area-calculator", "rectangular-prism-volume-calculator", "slope-calculator",
   "sector-calculator", "grade-gradient-calculator", "molecular-weight-calculator",
   "empirical-formula-calculator",
+  // Math category, batch 7
+  "system-of-equations-solver", "linear-equation-solver", "eigenvalue-calculator",
+  "inequality-solver", "chemical-equation-balancer", "solubility-product-calculator",
+  "titration-ph-calculator",
 ];
 
 function loadData() {

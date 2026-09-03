@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resolvedor de Inequações Lineares - Calculadora Gratuita Online | Calquary</title>
+  <meta name="description" content="Resolva uma inequação linear da forma ax + b [<, >, ≤, ≥] c para x." />
+  <meta property="og:title" content="Resolvedor de Inequações Lineares | Calquary">
+  <meta property="og:description" content="Resolva uma inequação linear da forma ax + b [<, >, ≤, ≥] c para x.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/pt/tool/inequality-solver.html">
+  <meta property="og:locale" content="pt_PT">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/inequality-solver.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Resolvedor de Inequações Lineares | Calquary">
+  <meta name="twitter:description" content="Resolva uma inequação linear da forma ax + b [<, >, ≤, ≥] c para x.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/inequality-solver.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/inequality-solver.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/inequality-solver.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/inequality-solver.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/inequality-solver.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/inequality-solver.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/inequality-solver.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/inequality-solver.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/inequality-solver.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/inequality-solver.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/inequality-solver.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/inequality-solver.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/inequality-solver.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/inequality-solver.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("inequality-solver");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("inequality-solver");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Resolvedor de Inequações Lineares",
+      "description": "Resolva uma inequação linear da forma ax + b [<, >, ≤, ≥] c para x.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/pt/tool/inequality-solver.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-30",
+      "inLanguage": "pt"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/pt/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Math",
+          "item": "https://calquary.com/pt/category/math.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Resolvedor de Inequações Lineares",
+          "item": "https://calquary.com/pt/tool/inequality-solver.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Como resolvo uma inequação linear como 2x + 3 > 7?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Isole x da mesma forma que uma equação: subtraia 3 de ambos os lados para obter 2x > 4, depois divida por 2 para obter x > 2. A única regra especial é que dividir ou multiplicar por um número negativo inverte a direção da desigualdade."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Por que o sinal de desigualdade se inverte ao dividir por um número negativo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Porque multiplicar ou dividir por um negativo inverte a ordem dos números na reta numérica - se 2 < 3, multiplicar ambos os lados por −1 dá −2 e −3, e −2 na verdade é maior que −3, então a desigualdade deve se inverter para permanecer verdadeira (−2 > −3)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que significa 'sem solução' ou 'todos os números reais' para uma inequação?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Isso acontece quando o termo x se cancela (a = 0), deixando apenas uma comparação de dois números - se essa comparação for sempre verdadeira (como 5 > 3), todo x a satisfaz; se nunca for verdadeira (como 3 > 5), nenhum x o faz, já que x nunca teve nenhuma influência no resultado."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/pt/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/pt/index.html#categories">Categorias</a>
+          <a href="/pt/index.html#tools">Todas as ferramentas</a>
+          <a href="/pt/about.html">Sobre</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Português">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>PT</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/inequality-solver.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/inequality-solver.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/inequality-solver.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/inequality-solver.html">Deutsch</a><span class="locale-item current" role="menuitem" aria-current="true">Português</span><a class="locale-item" role="menuitem" href="/it/tool/inequality-solver.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/inequality-solver.html">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/inequality-solver.html">Română</a><a class="locale-item" role="menuitem" href="/el/tool/inequality-solver.html">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/inequality-solver.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/inequality-solver.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/inequality-solver.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/pt/index.html">Calquary</a> / <a href="/pt/category/math.html">Matemática</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Resolvedor de Inequações Lineares</h1>
+        <p style="max-width:60ch;">Digite os coeficientes e escolha um símbolo de desigualdade para resolver ax + b [símbolo] c para x.</p>
+        <p class="last-updated">Última atualização: August 30, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calcular</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Redefinir</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Perguntas frequentes</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Como resolvo uma inequação linear como 2x + 3 &gt; 7?</h3>
+<p>Isole x da mesma forma que uma equação: subtraia 3 de ambos os lados para obter 2x > 4, depois divida por 2 para obter x > 2. A única regra especial é que dividir ou multiplicar por um número negativo inverte a direção da desigualdade.</p>
+</div>
+<div class="faq-item">
+<h3>Por que o sinal de desigualdade se inverte ao dividir por um número negativo?</h3>
+<p>Porque multiplicar ou dividir por um negativo inverte a ordem dos números na reta numérica - se 2 < 3, multiplicar ambos os lados por −1 dá −2 e −3, e −2 na verdade é maior que −3, então a desigualdade deve se inverter para permanecer verdadeira (−2 > −3).</p>
+</div>
+<div class="faq-item">
+<h3>O que significa 'sem solução' ou 'todos os números reais' para uma inequação?</h3>
+<p>Isso acontece quando o termo x se cancela (a = 0), deixando apenas uma comparação de dois números - se essa comparação for sempre verdadeira (como 5 > 3), todo x a satisfaz; se nunca for verdadeira (como 3 > 5), nenhum x o faz, já que x nunca teve nenhuma influência no resultado.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Ferramentas relacionadas</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Nota sobre precisão</h4>
+          <p style="margin:0;font-size:0.85rem;">As calculadoras da Calquary são feitas para estimativas rápidas e confiáveis. Para decisões com implicações financeiras, estruturais ou médicas reais, consulte um profissional qualificado.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/pt/index.html">← Voltar a todas as calculadoras</a> · <a href="/pt/about.html">Sobre</a> · <a href="/pt/contact.html">Contato</a> · <a href="/pt/privacy.html">Privacidade</a> · <a href="/pt/terms.html">Termos</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

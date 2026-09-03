@@ -23645,6 +23645,830 @@ const I18N_TOOLS = {
       ],
     },
   },
+
+  "system-of-equations-solver": {
+    es: {
+      title: "Resolvedor de Sistema de Ecuaciones",
+      intro: "Introduce los coeficientes de dos ecuaciones lineales (ax + by = e y cx + dy = f) para resolver x e y.",
+      description: "Resuelve un sistema de dos ecuaciones lineales (ax + by = e, cx + dy = f) para x e y.",
+      faq: [
+        { q: "¿Cómo resuelvo un sistema de dos ecuaciones lineales?", a: "Usando la regla de Cramer (lo que hace esta calculadora): para ax+by=e y cx+dy=f, x = (ed−bf)/(ad−bc) y y = (af−ec)/(ad−bc), donde ad−bc es el determinante de la matriz de coeficientes. Esto funciona siempre que ese determinante no sea cero." },
+        { q: "¿Qué significa si no hay solución?", a: "Las dos ecuaciones representan líneas paralelas (la misma pendiente, diferentes intersecciones) que nunca se cruzan - así que no hay par (x, y) que haga verdaderas ambas ecuaciones al mismo tiempo." },
+        { q: "¿Qué significa si hay infinitas soluciones?", a: "Las dos ecuaciones en realidad describen exactamente la misma línea (una podría ser simplemente un múltiplo de la otra) - cada punto en esa línea satisface ambas ecuaciones, así que no hay una única respuesta (x, y)." },
+        { q: "¿Es una 'calculadora de sistemas de ecuaciones' lo mismo que este resolvedor?", a: "Sí - \"resolvedor de sistemas de ecuaciones\" y \"calculadora de sistemas de ecuaciones\" ambos describen encontrar (x, y) que satisface dos ecuaciones lineales simultáneamente, que es exactamente lo que hace esta herramienta." },
+      ],
+    },
+    fr: {
+      title: "Solveur de Système d'Équations",
+      intro: "Entrez les coefficients de deux équations linéaires (ax + by = e et cx + dy = f) pour résoudre x et y.",
+      description: "Résolvez un système de deux équations linéaires (ax + by = e, cx + dy = f) pour x et y.",
+      faq: [
+        { q: "Comment résoudre un système de deux équations linéaires ?", a: "En utilisant la règle de Cramer (ce que fait cette calculatrice) : pour ax+by=e et cx+dy=f, x = (ed−bf)/(ad−bc) et y = (af−ec)/(ad−bc), où ad−bc est le déterminant de la matrice des coefficients. Cela fonctionne tant que ce déterminant n'est pas zéro." },
+        { q: "Que signifie l'absence de solution ?", a: "Les deux équations représentent des lignes parallèles (même pente, ordonnées à l'origine différentes) qui ne se croisent jamais - donc il n'y a pas de paire (x, y) qui rende les deux équations vraies simultanément." },
+        { q: "Que signifie une infinité de solutions ?", a: "Les deux équations décrivent en fait exactement la même ligne (l'une pourrait être simplement un multiple de l'autre) - chaque point de cette ligne satisfait les deux équations, donc il n'y a pas de réponse unique (x, y)." },
+        { q: "Un « calculateur de systèmes d'équations » est-il la même chose que ce solveur ?", a: "Oui - « solveur de systèmes d'équations » et « calculateur de systèmes d'équations » décrivent tous deux le fait de trouver le (x, y) qui satisfait simultanément deux équations linéaires, ce qui est exactement ce que fait cet outil." },
+      ],
+    },
+    de: {
+      title: "Gleichungssystem-Löser",
+      intro: "Geben Sie die Koeffizienten für zwei lineare Gleichungen ein (ax + by = e und cx + dy = f), um nach x und y aufzulösen.",
+      description: "Lösen Sie ein System zweier linearer Gleichungen (ax + by = e, cx + dy = f) nach x und y.",
+      faq: [
+        { q: "Wie löse ich ein System zweier linearer Gleichungen?", a: "Mit der Cramerschen Regel (was dieser Rechner tut): für ax+by=e und cx+dy=f, x = (ed−bf)/(ad−bc) und y = (af−ec)/(ad−bc), wobei ad−bc die Determinante der Koeffizientenmatrix ist. Dies funktioniert, solange diese Determinante nicht null ist." },
+        { q: "Was bedeutet es, wenn es keine Lösung gibt?", a: "Die beiden Gleichungen stellen parallele Linien dar (gleiche Steigung, unterschiedliche Achsenabschnitte), die sich nie kreuzen - es gibt also kein (x, y)-Paar, das beide Gleichungen gleichzeitig wahr macht." },
+        { q: "Was bedeutet es, wenn es unendlich viele Lösungen gibt?", a: "Die beiden Gleichungen beschreiben tatsächlich genau dieselbe Linie (eine könnte einfach ein Vielfaches der anderen sein) - jeder Punkt auf dieser Linie erfüllt beide Gleichungen, sodass es keine eindeutige (x, y)-Antwort gibt." },
+        { q: "Ist ein „Gleichungssysteme-Rechner“ dasselbe wie dieser Löser?", a: "Ja - „Gleichungssysteme-Löser“ und „Gleichungssysteme-Rechner“ beschreiben beide das Finden des (x, y), das zwei lineare Gleichungen gleichzeitig erfüllt, was genau das ist, was dieses Tool tut." },
+      ],
+    },
+    pt: {
+      title: "Resolvedor de Sistema de Equações",
+      intro: "Digite os coeficientes de duas equações lineares (ax + by = e e cx + dy = f) para resolver x e y.",
+      description: "Resolva um sistema de duas equações lineares (ax + by = e, cx + dy = f) para x e y.",
+      faq: [
+        { q: "Como resolvo um sistema de duas equações lineares?", a: "Usando a regra de Cramer (o que esta calculadora faz): para ax+by=e e cx+dy=f, x = (ed−bf)/(ad−bc) e y = (af−ec)/(ad−bc), onde ad−bc é o determinante da matriz de coeficientes. Isso funciona desde que esse determinante não seja zero." },
+        { q: "O que significa se não há solução?", a: "As duas equações representam linhas paralelas (mesma inclinação, interceptos diferentes) que nunca se cruzam - então não há par (x, y) que torne ambas as equações verdadeiras ao mesmo tempo." },
+        { q: "O que significa se há infinitas soluções?", a: "As duas equações na verdade descrevem exatamente a mesma linha (uma pode ser apenas um múltiplo da outra) - todo ponto naquela linha satisfaz ambas as equações, então não há uma única resposta (x, y)." },
+        { q: "Uma 'calculadora de sistemas de equações' é a mesma coisa que este resolvedor?", a: "Sim - \"resolvedor de sistemas de equações\" e \"calculadora de sistemas de equações\" ambos descrevem encontrar o (x, y) que satisfaz duas equações lineares simultaneamente, que é exatamente o que esta ferramenta faz." },
+      ],
+    },
+    it: {
+      title: "Risolutore di Sistemi di Equazioni",
+      intro: "Inserisci i coefficienti per due equazioni lineari (ax + by = e e cx + dy = f) per risolvere x e y.",
+      description: "Risolvi un sistema di due equazioni lineari (ax + by = e, cx + dy = f) per x e y.",
+      faq: [
+        { q: "Come risolvo un sistema di due equazioni lineari?", a: "Usando la regola di Cramer (ciò che fa questa calcolatrice): per ax+by=e e cx+dy=f, x = (ed−bf)/(ad−bc) e y = (af−ec)/(ad−bc), dove ad−bc è il determinante della matrice dei coefficienti. Questo funziona finché quel determinante non è zero." },
+        { q: "Cosa significa se non c'è soluzione?", a: "Le due equazioni rappresentano rette parallele (stessa pendenza, intercette diverse) che non si incrociano mai - quindi non c'è coppia (x, y) che renda vere entrambe le equazioni contemporaneamente." },
+        { q: "Cosa significa se ci sono infinite soluzioni?", a: "Le due equazioni descrivono in realtà esattamente la stessa retta (una potrebbe essere semplicemente un multiplo dell'altra) - ogni punto su quella retta soddisfa entrambe le equazioni, quindi non c'è un'unica risposta (x, y)." },
+        { q: "Un 'calcolatore di sistemi di equazioni' è la stessa cosa di questo risolutore?", a: "Sì - \"risolutore di sistemi di equazioni\" e \"calcolatore di sistemi di equazioni\" descrivono entrambi la ricerca di (x, y) che soddisfa due equazioni lineari simultaneamente, che è esattamente ciò che fa questo strumento." },
+      ],
+    },
+    ja: {
+      title: "連立方程式ソルバー",
+      intro: "2つの線形方程式（ax + by = eとcx + dy = f）の係数を入力すると、xとyを解きます。",
+      description: "2つの線形方程式（ax + by = e、cx + dy = f）の連立方程式をxとyについて解きます。",
+      faq: [
+        { q: "2つの線形方程式の連立方程式をどう解きますか？", a: "クラメールの公式を使用します（この計算機が行うこと）：ax+by=eとcx+dy=fの場合、x = (ed−bf)/(ad−bc)、y = (af−ec)/(ad−bc)です。ad−bcは係数行列の行列式です。この行列式がゼロでない限り機能します。" },
+        { q: "解がない場合はどういう意味ですか？", a: "2つの方程式は決して交わらない平行線（同じ傾き、異なる切片）を表しています。したがって、両方の方程式を同時に真にする(x, y)のペアは存在しません。" },
+        { q: "無限に多くの解がある場合はどういう意味ですか？", a: "2つの方程式は実際にはまったく同じ直線を表しています（一方が他方の倍数である可能性があります）。その直線上のすべての点が両方の方程式を満たすため、一意の(x, y)の答えはありません。" },
+        { q: "「連立方程式計算機」はこのソルバーと同じですか？", a: "はい。「連立方程式ソルバー」と「連立方程式計算機」はどちらも、2つの線形方程式を同時に満たす(x, y)を見つけることを表しており、これはこのツールがまさに行うことです。" },
+      ],
+    },
+    ro: {
+      title: "Rezolvator de Sistem de Ecuații",
+      intro: "Introdu coeficienții pentru două ecuații liniare (ax + by = e și cx + dy = f) pentru a rezolva x și y.",
+      description: "Rezolvă un sistem de două ecuații liniare (ax + by = e, cx + dy = f) pentru x și y.",
+      faq: [
+        { q: "Cum rezolv un sistem de două ecuații liniare?", a: "Folosind regula lui Cramer (ceea ce face acest calculator): pentru ax+by=e și cx+dy=f, x = (ed−bf)/(ad−bc) și y = (af−ec)/(ad−bc), unde ad−bc este determinantul matricei coeficienților. Acest lucru funcționează atâta timp cât acel determinant nu este zero." },
+        { q: "Ce înseamnă dacă nu există soluție?", a: "Cele două ecuații reprezintă linii paralele (aceeași pantă, intercepții diferite) care nu se intersectează niciodată - deci nu există o pereche (x, y) care să facă ambele ecuații adevărate în același timp." },
+        { q: "Ce înseamnă dacă există infinit de multe soluții?", a: "Cele două ecuații descriu de fapt exact aceeași linie (una ar putea fi doar un multiplu al celeilalte) - fiecare punct de pe acea linie satisface ambele ecuații, deci nu există un răspuns unic (x, y)." },
+        { q: "Este un \"calculator de sisteme de ecuații\" același lucru cu acest rezolvator?", a: "Da - \"rezolvator de sisteme de ecuații\" și \"calculator de sisteme de ecuații\" descriu ambele găsirea (x, y) care satisface simultan două ecuații liniare, ceea ce este exact ceea ce face acest instrument." },
+      ],
+    },
+    el: {
+      title: "Επιλυτής Συστήματος Εξισώσεων",
+      intro: "Εισάγετε τους συντελεστές για δύο γραμμικές εξισώσεις (ax + by = e και cx + dy = f) για να λύσετε ως προς x και y.",
+      description: "Λύσε ένα σύστημα δύο γραμμικών εξισώσεων (ax + by = e, cx + dy = f) ως προς x και y.",
+      faq: [
+        { q: "Πώς λύνω ένα σύστημα δύο γραμμικών εξισώσεων;", a: "Χρησιμοποιώντας τον κανόνα του Cramer (αυτό που κάνει αυτή η αριθμομηχανή): για ax+by=e και cx+dy=f, x = (ed−bf)/(ad−bc) και y = (af−ec)/(ad−bc), όπου ad−bc είναι η ορίζουσα του πίνακα συντελεστών. Αυτό λειτουργεί όσο αυτή η ορίζουσα δεν είναι μηδέν." },
+        { q: "Τι σημαίνει αν δεν υπάρχει λύση;", a: "Οι δύο εξισώσεις αντιπροσωπεύουν παράλληλες γραμμές (ίδια κλίση, διαφορετικές τομές) που δεν τέμνονται ποτέ - οπότε δεν υπάρχει ζεύγος (x, y) που να κάνει και τις δύο εξισώσεις αληθείς ταυτόχρονα." },
+        { q: "Τι σημαίνει αν υπάρχουν άπειρες λύσεις;", a: "Οι δύο εξισώσεις στην πραγματικότητα περιγράφουν ακριβώς την ίδια γραμμή (η μία μπορεί απλά να είναι πολλαπλάσιο της άλλης) - κάθε σημείο σε αυτή τη γραμμή ικανοποιεί και τις δύο εξισώσεις, οπότε δεν υπάρχει μία μοναδική απάντηση (x, y)." },
+        { q: "Είναι ένας «υπολογιστής συστημάτων εξισώσεων» το ίδιο με αυτόν τον επιλυτή;", a: "Ναι - «επιλυτής συστημάτων εξισώσεων» και «υπολογιστής συστημάτων εξισώσεων» περιγράφουν και οι δύο την εύρεση του (x, y) που ικανοποιεί ταυτόχρονα δύο γραμμικές εξισώσεις, που είναι ακριβώς αυτό που κάνει αυτό το εργαλείο." },
+      ],
+    },
+    zh: {
+      title: "方程组求解器",
+      intro: "输入两个线性方程（ax + by = e和cx + dy = f）的系数，求解x和y。",
+      description: "求解由两个线性方程（ax + by = e，cx + dy = f）组成的方程组，得到x和y。",
+      faq: [
+        { q: "如何求解两个线性方程组成的方程组？", a: "使用克莱姆法则（这正是这个计算器所做的）：对于ax+by=e和cx+dy=f，x = (ed−bf)/(ad−bc)，y = (af−ec)/(ad−bc)，其中ad−bc是系数矩阵的行列式。只要这个行列式不为零，这个方法就有效。" },
+        { q: "如果没有解，意味着什么？", a: "两个方程代表两条永不相交的平行线（斜率相同，截距不同）——所以不存在能同时满足两个方程的(x, y)组合。" },
+        { q: "如果有无穷多解，意味着什么？", a: "两个方程实际上描述的是完全相同的一条直线（一个可能只是另一个的倍数）——这条直线上的每一点都满足两个方程，所以不存在唯一的(x, y)答案。" },
+        { q: "「方程组计算器」和这个求解器是一回事吗？", a: "是的——「方程组求解器」和「方程组计算器」描述的都是找出同时满足两个线性方程的(x, y)，这正是这个工具所做的。" },
+      ],
+    },
+    ar: {
+      title: "حلّال نظام المعادلات",
+      intro: "أدخل معاملات معادلتين خطيتين (ax + by = e وcx + dy = f) لحل x وy.",
+      description: "حل نظام معادلتين خطيتين (ax + by = e، cx + dy = f) لإيجاد x وy.",
+      faq: [
+        { q: "كيف أحل نظام معادلتين خطيتين؟", a: "باستخدام قاعدة كرامر (وهو ما تفعله هذه الحاسبة): لـax+by=e وcx+dy=f، x = (ed−bf)/(ad−bc) وy = (af−ec)/(ad−bc)، حيث ad−bc هو محدد مصفوفة المعاملات. يعمل هذا طالما أن ذلك المحدد ليس صفرًا." },
+        { q: "ماذا يعني عدم وجود حل؟", a: "تمثل المعادلتان خطين متوازيين (نفس الميل، تقاطعات مختلفة مع المحور) لا يتقاطعان أبدًا - لذا لا يوجد زوج (x, y) يجعل كلتا المعادلتين صحيحتين في نفس الوقت." },
+        { q: "ماذا يعني وجود عدد لا نهائي من الحلول؟", a: "تصف المعادلتان في الواقع نفس الخط بالضبط (قد تكون إحداهما مجرد مضاعف للأخرى) - كل نقطة على ذلك الخط تحقق كلتا المعادلتين، لذا لا توجد إجابة (x, y) فريدة." },
+        { q: "هل \"حاسبة أنظمة المعادلات\" هي نفسها هذا الحلّال؟", a: "نعم - يصف كل من \"حلّال أنظمة المعادلات\" و\"حاسبة أنظمة المعادلات\" إيجاد (x, y) التي تحقق معادلتين خطيتين في آن واحد، وهو بالضبط ما تفعله هذه الأداة." },
+      ],
+    },
+    th: {
+      title: "ตัวแก้ระบบสมการ",
+      intro: "ป้อนสัมประสิทธิ์สำหรับสมการเชิงเส้นสองสมการ (ax + by = e และ cx + dy = f) เพื่อแก้หา x และ y",
+      description: "แก้ระบบสมการเชิงเส้นสองสมการ (ax + by = e, cx + dy = f) สำหรับ x และ y",
+      faq: [
+        { q: "ฉันจะแก้ระบบสมการเชิงเส้นสองสมการได้อย่างไร?", a: "ใช้กฎของคราเมอร์ (สิ่งที่เครื่องคำนวณนี้ทำ): สำหรับ ax+by=e และ cx+dy=f, x = (ed−bf)/(ad−bc) และ y = (af−ec)/(ad−bc) โดยที่ ad−bc คือดีเทอร์มิแนนต์ของเมทริกซ์สัมประสิทธิ์ วิธีนี้ใช้ได้ตราบใดที่ดีเทอร์มิแนนต์นั้นไม่เป็นศูนย์" },
+        { q: "ถ้าไม่มีคำตอบหมายความว่าอย่างไร?", a: "สมการทั้งสองแทนเส้นขนาน (ความชันเดียวกัน จุดตัดต่างกัน) ที่ไม่มีวันตัดกัน - ดังนั้นจึงไม่มีคู่ (x, y) ที่ทำให้สมการทั้งสองเป็นจริงพร้อมกัน" },
+        { q: "ถ้ามีคำตอบมากมายไม่จำกัดหมายความว่าอย่างไร?", a: "สมการทั้งสองอธิบายเส้นเดียวกันจริงๆ (สมการหนึ่งอาจเป็นเพียงผลคูณของอีกสมการ) - ทุกจุดบนเส้นนั้นสอดคล้องกับสมการทั้งสอง ดังนั้นจึงไม่มีคำตอบ (x, y) ที่เฉพาะเจาะจงเพียงคำตอบเดียว" },
+        { q: "\"เครื่องคำนวณระบบสมการ\" เหมือนกับตัวแก้นี้หรือไม่?", a: "ใช่ - \"ตัวแก้ระบบสมการ\" และ \"เครื่องคำนวณระบบสมการ\" ทั้งคู่อธิบายการหา (x, y) ที่สอดคล้องกับสมการเชิงเส้นสองสมการพร้อมกัน ซึ่งเป็นสิ่งที่เครื่องมือนี้ทำอย่างแม่นยำ" },
+      ],
+    },
+  },
+
+  "linear-equation-solver": {
+    es: {
+      title: "Resolvedor de Ecuaciones Lineales",
+      intro: "Introduce los coeficientes de ax + b = c para resolver x.",
+      description: "Resuelve una ecuación lineal de la forma ax + b = c para x.",
+      faq: [
+        { q: "¿Cómo resuelvo una ecuación lineal como 3x + 5 = 20?", a: "Aísla x: resta 5 de ambos lados para obtener 3x = 15, luego divide ambos lados entre 3 para obtener x = 5. En general, para ax + b = c, x = (c − b) / a." },
+        { q: "¿Qué pasa si la ecuación tiene x en ambos lados, como 2x + 3 = x + 10?", a: "Mueve primero todos los términos con x a un lado y las constantes al otro: restando x de ambos lados obtienes x + 3 = 10, luego restando 3 obtienes x = 7. Reordena tu ecuación en la forma ax + b = c antes de introducirla aquí." },
+        { q: "¿Qué significa si a = 0 en esta calculadora?", a: "Si a es 0, no queda término con x para resolver - la ecuación se convierte simplemente en b = c. Si eso es verdadero (como 5 = 5), todo valor de x lo satisface; si es falso (como 5 = 7), ningún valor de x puede, ya que el término x no puede cambiar el resultado." },
+      ],
+    },
+    fr: {
+      title: "Solveur d'Équation Linéaire",
+      intro: "Entrez les coefficients de ax + b = c pour résoudre x.",
+      description: "Résolvez une équation linéaire de la forme ax + b = c pour x.",
+      faq: [
+        { q: "Comment résoudre une équation linéaire comme 3x + 5 = 20 ?", a: "Isolez x : soustrayez 5 des deux côtés pour obtenir 3x = 15, puis divisez les deux côtés par 3 pour obtenir x = 5. En général, pour ax + b = c, x = (c − b) / a." },
+        { q: "Et si l'équation a des x des deux côtés, comme 2x + 3 = x + 10 ?", a: "Déplacez d'abord tous les termes en x d'un côté et les constantes de l'autre : soustraire x des deux côtés donne x + 3 = 10, puis soustraire 3 donne x = 7. Réorganisez votre équation sous la forme ax + b = c avant de l'entrer ici." },
+        { q: "Que signifie a = 0 dans cette calculatrice ?", a: "Si a est 0, il n'y a plus de terme en x à résoudre - l'équation devient simplement b = c. Si c'est vrai (comme 5 = 5), toute valeur de x la satisfait ; si c'est faux (comme 5 = 7), aucune valeur de x ne le peut, puisque le terme x ne peut pas changer le résultat." },
+      ],
+    },
+    de: {
+      title: "Lineare-Gleichung-Löser",
+      intro: "Geben Sie die Koeffizienten für ax + b = c ein, um nach x aufzulösen.",
+      description: "Lösen Sie eine lineare Gleichung der Form ax + b = c nach x.",
+      faq: [
+        { q: "Wie löse ich eine lineare Gleichung wie 3x + 5 = 20?", a: "Isolieren Sie x: subtrahieren Sie 5 von beiden Seiten, um 3x = 15 zu erhalten, dann teilen Sie beide Seiten durch 3, um x = 5 zu erhalten. Allgemein gilt für ax + b = c: x = (c − b) / a." },
+        { q: "Was ist, wenn die Gleichung x auf beiden Seiten hat, wie 2x + 3 = x + 10?", a: "Bewegen Sie zuerst alle x-Terme auf eine Seite und Konstanten auf die andere: das Subtrahieren von x von beiden Seiten ergibt x + 3 = 10, dann ergibt das Subtrahieren von 3: x = 7. Ordnen Sie Ihre Gleichung in die Form ax + b = c um, bevor Sie sie hier eingeben." },
+        { q: "Was bedeutet es, wenn a = 0 in diesem Rechner ist?", a: "Wenn a 0 ist, gibt es keinen x-Term mehr zum Auflösen - die Gleichung wird einfach zu b = c. Wenn das wahr ist (wie 5 = 5), erfüllt jeder Wert von x sie; wenn es falsch ist (wie 5 = 7), kann kein Wert von x das, da der x-Term das Ergebnis nicht ändern kann." },
+      ],
+    },
+    pt: {
+      title: "Resolvedor de Equações Lineares",
+      intro: "Digite os coeficientes de ax + b = c para resolver x.",
+      description: "Resolva uma equação linear na forma ax + b = c para x.",
+      faq: [
+        { q: "Como resolvo uma equação linear como 3x + 5 = 20?", a: "Isole x: subtraia 5 de ambos os lados para obter 3x = 15, depois divida ambos os lados por 3 para obter x = 5. Em geral, para ax + b = c, x = (c − b) / a." },
+        { q: "E se a equação tiver x em ambos os lados, como 2x + 3 = x + 10?", a: "Mova primeiro todos os termos com x para um lado e constantes para o outro: subtraindo x de ambos os lados obtém-se x + 3 = 10, depois subtraindo 3 obtém-se x = 7. Reorganize sua equação na forma ax + b = c antes de digitá-la aqui." },
+        { q: "O que significa se a = 0 nesta calculadora?", a: "Se a for 0, não há mais termo x para resolver - a equação se torna apenas b = c. Se isso for verdadeiro (como 5 = 5), todo valor de x a satisfaz; se for falso (como 5 = 7), nenhum valor de x pode, já que o termo x não pode mudar o resultado." },
+      ],
+    },
+    it: {
+      title: "Risolutore di Equazioni Lineari",
+      intro: "Inserisci i coefficienti di ax + b = c per risolvere x.",
+      description: "Risolvi un'equazione lineare della forma ax + b = c per x.",
+      faq: [
+        { q: "Come risolvo un'equazione lineare come 3x + 5 = 20?", a: "Isola x: sottrai 5 da entrambi i lati per ottenere 3x = 15, poi dividi entrambi i lati per 3 per ottenere x = 5. In generale, per ax + b = c, x = (c − b) / a." },
+        { q: "Cosa succede se l'equazione ha x su entrambi i lati, come 2x + 3 = x + 10?", a: "Sposta prima tutti i termini con x su un lato e le costanti sull'altro: sottraendo x da entrambi i lati si ottiene x + 3 = 10, poi sottraendo 3 si ottiene x = 7. Riorganizza la tua equazione nella forma ax + b = c prima di inserirla qui." },
+        { q: "Cosa significa se a = 0 in questa calcolatrice?", a: "Se a è 0, non c'è più termine x da risolvere - l'equazione diventa semplicemente b = c. Se questo è vero (come 5 = 5), ogni valore di x la soddisfa; se è falso (come 5 = 7), nessun valore di x può farlo, poiché il termine x non può cambiare il risultato." },
+      ],
+    },
+    ja: {
+      title: "一次方程式ソルバー",
+      intro: "ax + b = cの係数を入力すると、xについて解きます。",
+      description: "ax + b = cの形式の一次方程式をxについて解きます。",
+      faq: [
+        { q: "3x + 5 = 20のような一次方程式をどう解きますか？", a: "xを孤立させます：両辺から5を引いて3x = 15を得て、その後両辺を3で割ってx = 5を得ます。一般的に、ax + b = cの場合、x = (c − b) / aです。" },
+        { q: "2x + 3 = x + 10のように、方程式の両辺にxがある場合はどうしますか？", a: "まずすべてのx項を一方に、定数をもう一方に移動します：両辺からxを引くとx + 3 = 10になり、その後3を引くとx = 7になります。ここに入力する前に、方程式をax + b = cの形式に並べ替えてください。" },
+        { q: "この計算機でa = 0の場合はどういう意味ですか？", a: "aが0の場合、解くべきx項が残っていません。方程式は単にb = cになります。それが真である場合（5 = 5のように）、xのすべての値がそれを満たします。それが偽である場合（5 = 7のように）、x項が結果を変えることができないため、xのどの値もそれを満たすことができません。" },
+      ],
+    },
+    ro: {
+      title: "Rezolvator de Ecuație Liniară",
+      intro: "Introdu coeficienții pentru ax + b = c pentru a rezolva x.",
+      description: "Rezolvă o ecuație liniară de forma ax + b = c pentru x.",
+      faq: [
+        { q: "Cum rezolv o ecuație liniară precum 3x + 5 = 20?", a: "Izolează x: scade 5 din ambele părți pentru a obține 3x = 15, apoi împarte ambele părți la 3 pentru a obține x = 5. În general, pentru ax + b = c, x = (c − b) / a." },
+        { q: "Ce se întâmplă dacă ecuația are x pe ambele părți, precum 2x + 3 = x + 10?", a: "Mută mai întâi toți termenii cu x pe o parte și constantele pe cealaltă: scăzând x din ambele părți se obține x + 3 = 10, apoi scăzând 3 se obține x = 7. Rearanjează ecuația ta în forma ax + b = c înainte de a o introduce aici." },
+        { q: "Ce înseamnă dacă a = 0 în acest calculator?", a: "Dacă a este 0, nu mai rămâne niciun termen x de rezolvat - ecuația devine pur și simplu b = c. Dacă asta este adevărat (precum 5 = 5), orice valoare a lui x o satisface; dacă este fals (precum 5 = 7), nicio valoare a lui x nu o poate satisface, deoarece termenul x nu poate schimba rezultatul." },
+      ],
+    },
+    el: {
+      title: "Επιλυτής Γραμμικής Εξίσωσης",
+      intro: "Εισάγετε τους συντελεστές για ax + b = c για να λύσετε ως προς x.",
+      description: "Λύσε μια γραμμική εξίσωση της μορφής ax + b = c ως προς x.",
+      faq: [
+        { q: "Πώς λύνω μια γραμμική εξίσωση όπως 3x + 5 = 20;", a: "Απομονώστε το x: αφαιρέστε 5 και από τις δύο πλευρές για να πάρετε 3x = 15, μετά διαιρέστε και τις δύο πλευρές με το 3 για να πάρετε x = 5. Γενικά, για ax + b = c, x = (c − b) / a." },
+        { q: "Τι γίνεται αν η εξίσωση έχει x και στις δύο πλευρές, όπως 2x + 3 = x + 10;", a: "Μετακινήστε πρώτα όλους τους όρους x σε μία πλευρά και τις σταθερές στην άλλη: αφαιρώντας το x και από τις δύο πλευρές δίνει x + 3 = 10, μετά αφαιρώντας 3 δίνει x = 7. Αναδιατάξτε την εξίσωσή σας στη μορφή ax + b = c πριν την εισάγετε εδώ." },
+        { q: "Τι σημαίνει αν a = 0 σε αυτή την αριθμομηχανή;", a: "Αν το a είναι 0, δεν απομένει όρος x προς επίλυση - η εξίσωση γίνεται απλά b = c. Αν αυτό είναι αληθές (όπως 5 = 5), κάθε τιμή του x το ικανοποιεί· αν είναι ψευδές (όπως 5 = 7), καμία τιμή του x δεν μπορεί, αφού ο όρος x δεν μπορεί να αλλάξει το αποτέλεσμα." },
+      ],
+    },
+    zh: {
+      title: "一元一次方程求解器",
+      intro: "输入ax + b = c的系数，求解x。",
+      description: "求解形如ax + b = c的一元一次方程，得到x。",
+      faq: [
+        { q: "如何求解像3x + 5 = 20这样的一元一次方程？", a: "把x单独分离出来：两边同时减去5得到3x = 15，然后两边同时除以3得到x = 5。一般来说，对于ax + b = c，x = (c − b) / a。" },
+        { q: "如果方程两边都有x，比如2x + 3 = x + 10，该怎么办？", a: "先把所有x项移到一边，常数移到另一边：两边同时减去x得到x + 3 = 10，再减去3得到x = 7。在这里输入之前，先把你的方程整理成ax + b = c的形式。" },
+        { q: "在这个计算器中，a = 0意味着什么？", a: "如果a为0，就没有x项可以求解了——方程就简化成了b = c。如果这个等式为真（比如5 = 5），那么x的任何值都满足它；如果为假（比如5 = 7），那么x的任何值都无法满足它，因为x项无法改变结果。" },
+      ],
+    },
+    ar: {
+      title: "حلّال المعادلات الخطية",
+      intro: "أدخل معاملات ax + b = c لحل x.",
+      description: "حل معادلة خطية من الشكل ax + b = c لإيجاد x.",
+      faq: [
+        { q: "كيف أحل معادلة خطية مثل 3x + 5 = 20؟", a: "اعزل x: اطرح 5 من كلا الطرفين للحصول على 3x = 15، ثم اقسم كلا الطرفين على 3 للحصول على x = 5. بشكل عام، لـax + b = c، x = (c − b) / a." },
+        { q: "ماذا لو كانت المعادلة تحتوي على x في كلا الطرفين، مثل 2x + 3 = x + 10؟", a: "انقل أولاً جميع حدود x إلى طرف واحد والثوابت إلى الطرف الآخر: طرح x من كلا الطرفين يعطي x + 3 = 10، ثم طرح 3 يعطي x = 7. أعد ترتيب معادلتك إلى الشكل ax + b = c قبل إدخالها هنا." },
+        { q: "ماذا يعني إذا كانت a = 0 في هذه الحاسبة؟", a: "إذا كانت a تساوي 0، فلا يبقى حد x لحله - تصبح المعادلة ببساطة b = c. إذا كان هذا صحيحًا (مثل 5 = 5)، فإن كل قيمة لـx تحققه؛ وإذا كان خاطئًا (مثل 5 = 7)، فلا يمكن لأي قيمة لـx ذلك، لأن حد x لا يمكنه تغيير النتيجة." },
+      ],
+    },
+    th: {
+      title: "ตัวแก้สมการเชิงเส้น",
+      intro: "ป้อนสัมประสิทธิ์สำหรับ ax + b = c เพื่อแก้หา x",
+      description: "แก้สมการเชิงเส้นในรูปแบบ ax + b = c สำหรับ x",
+      faq: [
+        { q: "ฉันจะแก้สมการเชิงเส้นเช่น 3x + 5 = 20 ได้อย่างไร?", a: "แยก x ออกมา: ลบ 5 ออกจากทั้งสองข้างเพื่อได้ 3x = 15 จากนั้นหารทั้งสองข้างด้วย 3 เพื่อได้ x = 5 โดยทั่วไป สำหรับ ax + b = c, x = (c − b) / a" },
+        { q: "ถ้าสมการมี x ทั้งสองข้าง เช่น 2x + 3 = x + 10 ล่ะ?", a: "ย้ายพจน์ x ทั้งหมดไปด้านหนึ่งและค่าคงที่ไปอีกด้านก่อน: การลบ x ออกจากทั้งสองข้างจะได้ x + 3 = 10 จากนั้นลบ 3 จะได้ x = 7 จัดเรียงสมการของคุณให้อยู่ในรูปแบบ ax + b = c ก่อนป้อนที่นี่" },
+        { q: "ถ้า a = 0 ในเครื่องคำนวณนี้หมายความว่าอย่างไร?", a: "ถ้า a เป็น 0 ก็ไม่มีพจน์ x เหลือให้แก้ - สมการจะกลายเป็นเพียง b = c ถ้าเป็นจริง (เช่น 5 = 5) ค่า x ทุกค่าจะสอดคล้อง ถ้าเป็นเท็จ (เช่น 5 = 7) ไม่มีค่า x ใดที่จะสอดคล้องได้ เนื่องจากพจน์ x ไม่สามารถเปลี่ยนผลลัพธ์ได้" },
+      ],
+    },
+  },
+
+  "eigenvalue-calculator": {
+    es: {
+      title: "Calculadora de Autovalores y Autovectores (2x2)",
+      intro: "Introduce los cuatro elementos de una matriz 2x2 [[a, b], [c, d]] para calcular sus autovalores y autovectores.",
+      description: "Calcula los autovalores y autovectores de una matriz 2x2.",
+      faq: [
+        { q: "¿Cómo encuentro los autovalores de una matriz 2x2?", a: "Resuelve det(A − λI) = 0, que para una matriz 2x2 [[a,b],[c,d]] se simplifica a λ² − (a+d)λ + (ad−bc) = 0 - una ecuación cuadrática en λ, usando la traza de la matriz (a+d) y determinante (ad−bc). Esta calculadora aplica esa fórmula directamente." },
+        { q: "¿Cómo encuentro el autovector una vez que tengo un autovalor?", a: "Resuelve (A − λI)v = 0 para el vector v - para una matriz 2x2 esto se reduce a una ecuación independiente, ya que el sistema es singular por construcción. Esta calculadora lo resuelve directamente a partir del elemento b o c y el autovalor." },
+        { q: "¿Qué significa si los autovalores son complejos?", a: "Autovalores complejos significan que la matriz no tiene autovectores reales - geométricamente, esto ocurre en matrices que rotan vectores (como una matriz de rotación) en lugar de simplemente estirarlos a lo largo de direcciones fijas, ya que una rotación no tiene ninguna dirección que permanezca sin cambios (excepto una rotación de 180°)." },
+      ],
+    },
+    fr: {
+      title: "Calculateur de Valeurs et Vecteurs Propres (2x2)",
+      intro: "Entrez les quatre éléments d'une matrice 2x2 [[a, b], [c, d]] pour calculer ses valeurs propres et vecteurs propres.",
+      description: "Calculez les valeurs propres et vecteurs propres d'une matrice 2x2.",
+      faq: [
+        { q: "Comment trouver les valeurs propres d'une matrice 2x2 ?", a: "Résolvez det(A − λI) = 0, qui pour une matrice 2x2 [[a,b],[c,d]] se simplifie en λ² − (a+d)λ + (ad−bc) = 0 - une équation quadratique en λ, utilisant la trace de la matrice (a+d) et le déterminant (ad−bc). Cette calculatrice applique directement cette formule." },
+        { q: "Comment trouver le vecteur propre une fois que j'ai une valeur propre ?", a: "Résolvez (A − λI)v = 0 pour le vecteur v - pour une matrice 2x2, cela se réduit à une équation indépendante, puisque le système est singulier par construction. Cette calculatrice résout cela directement à partir de l'élément b ou c et de la valeur propre." },
+        { q: "Que signifie si les valeurs propres sont complexes ?", a: "Des valeurs propres complexes signifient que la matrice n'a pas de vecteurs propres réels - géométriquement, cela se produit pour des matrices qui font tourner des vecteurs (comme une matrice de rotation) plutôt que de simplement les étirer le long de directions fixes, puisqu'une rotation n'a aucune direction qui reste inchangée (sauf une rotation de 180°)." },
+      ],
+    },
+    de: {
+      title: "Eigenwert-und-Eigenvektor-Rechner (2x2)",
+      intro: "Geben Sie die vier Einträge einer 2x2-Matrix [[a, b], [c, d]] ein, um ihre Eigenwerte und Eigenvektoren zu berechnen.",
+      description: "Berechnen Sie die Eigenwerte und Eigenvektoren einer 2x2-Matrix.",
+      faq: [
+        { q: "Wie finde ich die Eigenwerte einer 2x2-Matrix?", a: "Lösen Sie det(A − λI) = 0, was sich für eine 2x2-Matrix [[a,b],[c,d]] zu λ² − (a+d)λ + (ad−bc) = 0 vereinfacht - eine quadratische Gleichung in λ, unter Verwendung der Spur der Matrix (a+d) und der Determinante (ad−bc). Dieser Rechner wendet diese Formel direkt an." },
+        { q: "Wie finde ich den Eigenvektor, sobald ich einen Eigenwert habe?", a: "Lösen Sie (A − λI)v = 0 für den Vektor v - für eine 2x2-Matrix reduziert sich dies auf eine unabhängige Gleichung, da das System durch Konstruktion singulär ist. Dieser Rechner löst dies direkt aus dem b- oder c-Eintrag und dem Eigenwert." },
+        { q: "Was bedeutet es, wenn die Eigenwerte komplex sind?", a: "Komplexe Eigenwerte bedeuten, dass die Matrix keine reellen Eigenvektoren hat - geometrisch geschieht dies bei Matrizen, die Vektoren drehen (wie eine Rotationsmatrix), anstatt sie nur entlang fester Richtungen zu strecken, da eine Rotation keine Richtung hat, die unverändert bleibt (außer einer 180°-Drehung)." },
+      ],
+    },
+    pt: {
+      title: "Calculadora de Autovalores e Autovetores (2x2)",
+      intro: "Digite os quatro elementos de uma matriz 2x2 [[a, b], [c, d]] para calcular seus autovalores e autovetores.",
+      description: "Calcule os autovalores e autovetores de uma matriz 2x2.",
+      faq: [
+        { q: "Como encontro os autovalores de uma matriz 2x2?", a: "Resolva det(A − λI) = 0, que para uma matriz 2x2 [[a,b],[c,d]] se simplifica para λ² − (a+d)λ + (ad−bc) = 0 - uma equação quadrática em λ, usando o traço da matriz (a+d) e determinante (ad−bc). Esta calculadora aplica essa fórmula diretamente." },
+        { q: "Como encontro o autovetor uma vez que tenho um autovalor?", a: "Resolva (A − λI)v = 0 para o vetor v - para uma matriz 2x2 isso se reduz a uma equação independente, já que o sistema é singular por construção. Esta calculadora resolve isso diretamente a partir do elemento b ou c e do autovalor." },
+        { q: "O que significa se os autovalores são complexos?", a: "Autovalores complexos significam que a matriz não tem autovetores reais - geometricamente, isso acontece para matrizes que rotacionam vetores (como uma matriz de rotação) em vez de apenas esticá-los ao longo de direções fixas, já que uma rotação não tem nenhuma direção que permaneça inalterada (exceto uma rotação de 180°)." },
+      ],
+    },
+    it: {
+      title: "Calcolatore di Autovalori e Autovettori (2x2)",
+      intro: "Inserisci i quattro elementi di una matrice 2x2 [[a, b], [c, d]] per calcolare i suoi autovalori e autovettori.",
+      description: "Calcola gli autovalori e autovettori di una matrice 2x2.",
+      faq: [
+        { q: "Come trovo gli autovalori di una matrice 2x2?", a: "Risolvi det(A − λI) = 0, che per una matrice 2x2 [[a,b],[c,d]] si semplifica in λ² − (a+d)λ + (ad−bc) = 0 - un'equazione quadratica in λ, usando la traccia della matrice (a+d) e il determinante (ad−bc). Questa calcolatrice applica direttamente quella formula." },
+        { q: "Come trovo l'autovettore una volta che ho un autovalore?", a: "Risolvi (A − λI)v = 0 per il vettore v - per una matrice 2x2 questo si riduce a un'equazione indipendente, poiché il sistema è singolare per costruzione. Questa calcolatrice risolve direttamente questo dall'elemento b o c e dall'autovalore." },
+        { q: "Cosa significa se gli autovalori sono complessi?", a: "Autovalori complessi significano che la matrice non ha autovettori reali - geometricamente, questo accade per matrici che ruotano vettori (come una matrice di rotazione) piuttosto che semplicemente allungarli lungo direzioni fisse, poiché una rotazione non ha alcuna direzione che rimane invariata (tranne una rotazione di 180°)." },
+      ],
+    },
+    ja: {
+      title: "固有値・固有ベクトル計算機（2x2）",
+      intro: "2x2行列[[a, b], [c, d]]の4つの要素を入力すると、その固有値と固有ベクトルを計算します。",
+      description: "2x2行列の固有値と固有ベクトルを計算します。",
+      faq: [
+        { q: "2x2行列の固有値をどう求めますか？", a: "det(A − λI) = 0を解きます。2x2行列[[a,b],[c,d]]の場合、これはλ² − (a+d)λ + (ad−bc) = 0に簡約されます。これは行列のトレース（a+d）と行列式（ad−bc）を使用したλの二次方程式です。この計算機はその公式を直接適用します。" },
+        { q: "固有値がわかったら、固有ベクトルをどう求めますか？", a: "ベクトルvについて(A − λI)v = 0を解きます。2x2行列の場合、これは1つの独立した方程式に帰着します。システムは構造上特異だからです。この計算機は、b要素またはc要素と固有値から直接それを解きます。" },
+        { q: "固有値が複素数の場合はどういう意味ですか？", a: "複素固有値は、行列に実固有ベクトルがないことを意味します。幾何学的には、これはベクトルを固定方向に沿って単に伸ばすのではなく回転させる行列（回転行列など）で発生します。回転には変化しない方向がないためです（180°回転を除く）。" },
+      ],
+    },
+    ro: {
+      title: "Calculator de Valori și Vectori Proprii (2x2)",
+      intro: "Introdu cele patru intrări ale unei matrice 2x2 [[a, b], [c, d]] pentru a calcula valorile și vectorii proprii.",
+      description: "Calculează valorile și vectorii proprii ai unei matrice 2x2.",
+      faq: [
+        { q: "Cum găsesc valorile proprii ale unei matrice 2x2?", a: "Rezolvă det(A − λI) = 0, care pentru o matrice 2x2 [[a,b],[c,d]] se simplifică la λ² − (a+d)λ + (ad−bc) = 0 - o ecuație pătratică în λ, folosind urma matricei (a+d) și determinantul (ad−bc). Acest calculator aplică direct acea formulă." },
+        { q: "Cum găsesc vectorul propriu odată ce am o valoare proprie?", a: "Rezolvă (A − λI)v = 0 pentru vectorul v - pentru o matrice 2x2 aceasta se reduce la o ecuație independentă, deoarece sistemul este singular prin construcție. Acest calculator rezolvă direct asta din intrarea b sau c și valoarea proprie." },
+        { q: "Ce înseamnă dacă valorile proprii sunt complexe?", a: "Valorile proprii complexe înseamnă că matricea nu are vectori proprii reali - geometric, acest lucru se întâmplă pentru matrici care rotesc vectori (precum o matrice de rotație) mai degrabă decât să îi întindă pur și simplu de-a lungul direcțiilor fixe, deoarece o rotație nu are nicio direcție care rămâne neschimbată (cu excepția unei rotații de 180°)." },
+      ],
+    },
+    el: {
+      title: "Υπολογιστής Ιδιοτιμών & Ιδιοδιανυσμάτων (2x2)",
+      intro: "Εισάγετε τα τέσσερα στοιχεία ενός πίνακα 2x2 [[a, b], [c, d]] για να υπολογίσετε τις ιδιοτιμές και τα ιδιοδιανύσματά του.",
+      description: "Υπολόγισε τις ιδιοτιμές και τα ιδιοδιανύσματα ενός πίνακα 2x2.",
+      faq: [
+        { q: "Πώς βρίσκω τις ιδιοτιμές ενός πίνακα 2x2;", a: "Λύστε det(A − λI) = 0, που για έναν πίνακα 2x2 [[a,b],[c,d]] απλοποιείται σε λ² − (a+d)λ + (ad−bc) = 0 - μια δευτεροβάθμια εξίσωση στο λ, χρησιμοποιώντας το ίχνος του πίνακα (a+d) και την ορίζουσα (ad−bc). Αυτή η αριθμομηχανή εφαρμόζει απευθείας αυτόν τον τύπο." },
+        { q: "Πώς βρίσκω το ιδιοδιάνυσμα αφού έχω μια ιδιοτιμή;", a: "Λύστε (A − λI)v = 0 για το διάνυσμα v - για έναν πίνακα 2x2 αυτό μειώνεται σε μία ανεξάρτητη εξίσωση, αφού το σύστημα είναι ιδιάζον εκ κατασκευής. Αυτή η αριθμομηχανή το λύνει απευθείας από το στοιχείο b ή c και την ιδιοτιμή." },
+        { q: "Τι σημαίνει αν οι ιδιοτιμές είναι μιγαδικές;", a: "Οι μιγαδικές ιδιοτιμές σημαίνουν ότι ο πίνακας δεν έχει πραγματικά ιδιοδιανύσματα - γεωμετρικά, αυτό συμβαίνει για πίνακες που περιστρέφουν διανύσματα (όπως ένας πίνακας περιστροφής) αντί απλά να τα τεντώνουν κατά μήκος σταθερών κατευθύνσεων, αφού μια περιστροφή δεν έχει καμία κατεύθυνση που παραμένει αμετάβλητη (εκτός από περιστροφή 180°)." },
+      ],
+    },
+    zh: {
+      title: "特征值与特征向量计算器（2x2）",
+      intro: "输入2x2矩阵[[a, b], [c, d]]的四个元素，计算它的特征值和特征向量。",
+      description: "计算2x2矩阵的特征值和特征向量。",
+      faq: [
+        { q: "如何求2x2矩阵的特征值？", a: "求解det(A − λI) = 0，对于2x2矩阵[[a,b],[c,d]]，这简化为λ² − (a+d)λ + (ad−bc) = 0——一个关于λ的二次方程，使用矩阵的迹（a+d）和行列式（ad−bc）。这个计算器直接应用这个公式。" },
+        { q: "得到特征值之后，如何求特征向量？", a: "求解(A − λI)v = 0得到向量v——对于2x2矩阵，这会简化为一个独立方程，因为该系统在构造上是奇异的。这个计算器直接从b或c元素以及特征值求解出结果。" },
+        { q: "特征值为复数意味着什么？", a: "复特征值意味着该矩阵没有实特征向量——从几何上讲，这发生在旋转向量（如旋转矩阵）而不是仅仅沿固定方向拉伸向量的矩阵中，因为旋转没有保持不变的方向（除了180°旋转）。" },
+      ],
+    },
+    ar: {
+      title: "حاسبة القيم الذاتية والمتجهات الذاتية (2x2)",
+      intro: "أدخل العناصر الأربعة لمصفوفة 2x2 [[a, b], [c, d]] لحساب قيمها الذاتية ومتجهاتها الذاتية.",
+      description: "احسب القيم الذاتية والمتجهات الذاتية لمصفوفة 2x2.",
+      faq: [
+        { q: "كيف أجد القيم الذاتية لمصفوفة 2x2؟", a: "حل det(A − λI) = 0، والذي بالنسبة لمصفوفة 2x2 [[a,b],[c,d]] يُبسَّط إلى λ² − (a+d)λ + (ad−bc) = 0 - معادلة تربيعية في λ، باستخدام أثر المصفوفة (a+d) والمحدد (ad−bc). تطبق هذه الحاسبة تلك الصيغة مباشرة." },
+        { q: "كيف أجد المتجه الذاتي بمجرد حصولي على قيمة ذاتية؟", a: "حل (A − λI)v = 0 لإيجاد المتجه v - بالنسبة لمصفوفة 2x2 يُختزل هذا إلى معادلة مستقلة واحدة، لأن النظام شاذ بحكم بنائه. تحل هذه الحاسبة ذلك مباشرة من العنصر b أو c والقيمة الذاتية." },
+        { q: "ماذا يعني إذا كانت القيم الذاتية مركبة؟", a: "القيم الذاتية المركبة تعني أن المصفوفة ليس لها متجهات ذاتية حقيقية - هندسيًا، يحدث هذا للمصفوفات التي تدوّر المتجهات (مثل مصفوفة الدوران) بدلاً من مجرد تمديدها على طول اتجاهات ثابتة، لأن الدوران ليس له اتجاه يبقى دون تغيير (باستثناء دوران بمقدار 180°)." },
+      ],
+    },
+    th: {
+      title: "เครื่องคำนวณค่าไอเกนและเวกเตอร์ไอเกน (2x2)",
+      intro: "ป้อนสี่ค่าของเมทริกซ์ 2x2 [[a, b], [c, d]] เพื่อคำนวณค่าไอเกนและเวกเตอร์ไอเกนของมัน",
+      description: "คำนวณค่าไอเกนและเวกเตอร์ไอเกนของเมทริกซ์ 2x2",
+      faq: [
+        { q: "ฉันจะหาค่าไอเกนของเมทริกซ์ 2x2 ได้อย่างไร?", a: "แก้ det(A − λI) = 0 ซึ่งสำหรับเมทริกซ์ 2x2 [[a,b],[c,d]] จะลดรูปเป็น λ² − (a+d)λ + (ad−bc) = 0 - สมการกำลังสองใน λ โดยใช้ trace ของเมทริกซ์ (a+d) และดีเทอร์มิแนนต์ (ad−bc) เครื่องคำนวณนี้ใช้สูตรนั้นโดยตรง" },
+        { q: "เมื่อมีค่าไอเกนแล้ว ฉันจะหาเวกเตอร์ไอเกนได้อย่างไร?", a: "แก้ (A − λI)v = 0 สำหรับเวกเตอร์ v - สำหรับเมทริกซ์ 2x2 สิ่งนี้จะลดรูปเป็นสมการอิสระหนึ่งสมการ เนื่องจากระบบเป็นเอกฐานโดยโครงสร้าง เครื่องคำนวณนี้แก้สิ่งนั้นโดยตรงจากค่า b หรือ c และค่าไอเกน" },
+        { q: "ถ้าค่าไอเกนเป็นจำนวนเชิงซ้อนหมายความว่าอย่างไร?", a: "ค่าไอเกนเชิงซ้อนหมายความว่าเมทริกซ์ไม่มีเวกเตอร์ไอเกนจริง - ในเชิงเรขาคณิต สิ่งนี้เกิดขึ้นกับเมทริกซ์ที่หมุนเวกเตอร์ (เช่น เมทริกซ์การหมุน) แทนที่จะยืดพวกมันตามทิศทางคงที่ เนื่องจากการหมุนไม่มีทิศทางใดที่ยังคงไม่เปลี่ยนแปลง (ยกเว้นการหมุน 180°)" },
+      ],
+    },
+  },
+
+  "inequality-solver": {
+    es: {
+      title: "Resolvedor de Desigualdades Lineales",
+      intro: "Introduce los coeficientes y elige un símbolo de desigualdad para resolver ax + b [símbolo] c para x.",
+      description: "Resuelve una desigualdad lineal de la forma ax + b [<, >, ≤, ≥] c para x.",
+      faq: [
+        { q: "¿Cómo resuelvo una desigualdad lineal como 2x + 3 > 7?", a: "Aísla x de la misma manera que una ecuación: resta 3 de ambos lados para obtener 2x > 4, luego divide entre 2 para obtener x > 2. La única regla especial es que dividir o multiplicar por un número negativo invierte la dirección de la desigualdad." },
+        { q: "¿Por qué el signo de desigualdad se invierte al dividir entre un número negativo?", a: "Porque multiplicar o dividir por un negativo invierte el orden de los números en la recta numérica - si 2 < 3, multiplicar ambos lados por −1 da −2 y −3, y −2 en realidad es mayor que −3, así que la desigualdad debe invertirse para seguir siendo verdadera (−2 > −3)." },
+        { q: "¿Qué significa 'sin solución' o 'todos los números reales' para una desigualdad?", a: "Esto sucede cuando el término x se cancela (a = 0), dejando solo una comparación de dos números - si esa comparación siempre es verdadera (como 5 > 3), todo x la satisface; si nunca es verdadera (como 3 > 5), ningún x lo hace, ya que x nunca tuvo ninguna influencia en el resultado." },
+      ],
+    },
+    fr: {
+      title: "Solveur d'Inégalité Linéaire",
+      intro: "Entrez les coefficients et choisissez un symbole d'inégalité pour résoudre ax + b [symbole] c pour x.",
+      description: "Résolvez une inégalité linéaire de la forme ax + b [<, >, ≤, ≥] c pour x.",
+      faq: [
+        { q: "Comment résoudre une inégalité linéaire comme 2x + 3 > 7 ?", a: "Isolez x de la même manière qu'une équation : soustrayez 3 des deux côtés pour obtenir 2x > 4, puis divisez par 2 pour obtenir x > 2. La seule règle spéciale est que diviser ou multiplier par un nombre négatif inverse le sens de l'inégalité." },
+        { q: "Pourquoi le signe d'inégalité s'inverse-t-il lors de la division par un nombre négatif ?", a: "Parce que multiplier ou diviser par un négatif inverse l'ordre des nombres sur la droite numérique - si 2 < 3, multiplier les deux côtés par −1 donne −2 et −3, et −2 est en fait plus grand que −3, donc l'inégalité doit s'inverser pour rester vraie (−2 > −3)." },
+        { q: "Que signifie « pas de solution » ou « tous les nombres réels » pour une inégalité ?", a: "Cela se produit lorsque le terme x s'annule (a = 0), ne laissant qu'une comparaison de deux nombres - si cette comparaison est toujours vraie (comme 5 > 3), tout x la satisfait ; si elle n'est jamais vraie (comme 3 > 5), aucun x ne le peut, puisque x n'a jamais eu d'influence sur le résultat." },
+      ],
+    },
+    de: {
+      title: "Lineare-Ungleichung-Löser",
+      intro: "Geben Sie die Koeffizienten ein und wählen Sie ein Ungleichheitssymbol, um ax + b [Symbol] c nach x aufzulösen.",
+      description: "Lösen Sie eine lineare Ungleichung der Form ax + b [<, >, ≤, ≥] c nach x.",
+      faq: [
+        { q: "Wie löse ich eine lineare Ungleichung wie 2x + 3 > 7?", a: "Isolieren Sie x auf dieselbe Weise wie eine Gleichung: subtrahieren Sie 3 von beiden Seiten, um 2x > 4 zu erhalten, dann teilen Sie durch 2, um x > 2 zu erhalten. Die einzige besondere Regel ist, dass das Teilen oder Multiplizieren mit einer negativen Zahl die Richtung der Ungleichung umkehrt." },
+        { q: "Warum kehrt sich das Ungleichheitszeichen um, wenn man durch eine negative Zahl teilt?", a: "Weil das Multiplizieren oder Teilen mit einer negativen Zahl die Reihenfolge der Zahlen auf der Zahlengeraden umkehrt - wenn 2 < 3, ergibt die Multiplikation beider Seiten mit −1: −2 und −3, und −2 ist tatsächlich größer als −3, sodass sich die Ungleichung umkehren muss, um wahr zu bleiben (−2 > −3)." },
+        { q: "Was bedeutet „keine Lösung“ oder „alle reellen Zahlen“ für eine Ungleichung?", a: "Dies geschieht, wenn sich der x-Term aufhebt (a = 0), sodass nur ein Vergleich zweier Zahlen übrig bleibt - wenn dieser Vergleich immer wahr ist (wie 5 > 3), erfüllt ihn jedes x; wenn er nie wahr ist (wie 3 > 5), tut das kein x, da x nie einen Einfluss auf das Ergebnis hatte." },
+      ],
+    },
+    pt: {
+      title: "Resolvedor de Inequações Lineares",
+      intro: "Digite os coeficientes e escolha um símbolo de desigualdade para resolver ax + b [símbolo] c para x.",
+      description: "Resolva uma inequação linear da forma ax + b [<, >, ≤, ≥] c para x.",
+      faq: [
+        { q: "Como resolvo uma inequação linear como 2x + 3 > 7?", a: "Isole x da mesma forma que uma equação: subtraia 3 de ambos os lados para obter 2x > 4, depois divida por 2 para obter x > 2. A única regra especial é que dividir ou multiplicar por um número negativo inverte a direção da desigualdade." },
+        { q: "Por que o sinal de desigualdade se inverte ao dividir por um número negativo?", a: "Porque multiplicar ou dividir por um negativo inverte a ordem dos números na reta numérica - se 2 < 3, multiplicar ambos os lados por −1 dá −2 e −3, e −2 na verdade é maior que −3, então a desigualdade deve se inverter para permanecer verdadeira (−2 > −3)." },
+        { q: "O que significa 'sem solução' ou 'todos os números reais' para uma inequação?", a: "Isso acontece quando o termo x se cancela (a = 0), deixando apenas uma comparação de dois números - se essa comparação for sempre verdadeira (como 5 > 3), todo x a satisfaz; se nunca for verdadeira (como 3 > 5), nenhum x o faz, já que x nunca teve nenhuma influência no resultado." },
+      ],
+    },
+    it: {
+      title: "Risolutore di Disequazioni Lineari",
+      intro: "Inserisci i coefficienti e scegli un simbolo di disuguaglianza per risolvere ax + b [simbolo] c per x.",
+      description: "Risolvi una disequazione lineare della forma ax + b [<, >, ≤, ≥] c per x.",
+      faq: [
+        { q: "Come risolvo una disequazione lineare come 2x + 3 > 7?", a: "Isola x nello stesso modo di un'equazione: sottrai 3 da entrambi i lati per ottenere 2x > 4, poi dividi per 2 per ottenere x > 2. L'unica regola speciale è che dividere o moltiplicare per un numero negativo inverte la direzione della disuguaglianza." },
+        { q: "Perché il segno di disuguaglianza si inverte quando si divide per un numero negativo?", a: "Perché moltiplicare o dividere per un negativo inverte l'ordine dei numeri sulla retta numerica - se 2 < 3, moltiplicando entrambi i lati per −1 si ottiene −2 e −3, e −2 in realtà è maggiore di −3, quindi la disuguaglianza deve invertirsi per rimanere vera (−2 > −3)." },
+        { q: "Cosa significa 'nessuna soluzione' o 'tutti i numeri reali' per una disuguaglianza?", a: "Questo accade quando il termine x si annulla (a = 0), lasciando solo un confronto di due numeri - se quel confronto è sempre vero (come 5 > 3), ogni x lo soddisfa; se non è mai vero (come 3 > 5), nessun x lo fa, poiché x non ha mai avuto alcuna influenza sul risultato." },
+      ],
+    },
+    ja: {
+      title: "線形不等式ソルバー",
+      intro: "係数を入力し、不等式記号を選択すると、ax + b [記号] cをxについて解きます。",
+      description: "ax + b [<, >, ≤, ≥] cの形式の線形不等式をxについて解きます。",
+      faq: [
+        { q: "2x + 3 > 7のような線形不等式をどう解きますか？", a: "方程式と同じ方法でxを孤立させます：両辺から3を引いて2x > 4を得て、その後2で割ってx > 2を得ます。唯一の特別なルールは、負の数で割ったり掛けたりすると不等式の方向が反転することです。" },
+        { q: "なぜ負の数で割ると不等号が反転するのですか？", a: "負の数を掛けたり割ったりすると、数直線上の数の順序が逆になるためです。2 < 3の場合、両辺に−1を掛けると−2と−3になり、−2は実際には−3より大きいため、不等式は真であり続けるために反転する必要があります（−2 > −3）。" },
+        { q: "不等式の「解なし」や「すべての実数」とはどういう意味ですか？", a: "これはx項が相殺される場合（a = 0）に起こり、2つの数の比較だけが残ります。その比較が常に真である場合（5 > 3のように）、すべてのxがそれを満たします。決して真でない場合（3 > 5のように）、xがその結果に影響を与えることは決してなかったため、どのxもそれを満たしません。" },
+      ],
+    },
+    ro: {
+      title: "Rezolvator de Inegalitate Liniară",
+      intro: "Introdu coeficienții și alege un simbol de inegalitate pentru a rezolva ax + b [simbol] c pentru x.",
+      description: "Rezolvă o inegalitate liniară de forma ax + b [<, >, ≤, ≥] c pentru x.",
+      faq: [
+        { q: "Cum rezolv o inegalitate liniară precum 2x + 3 > 7?", a: "Izolează x în același mod ca o ecuație: scade 3 din ambele părți pentru a obține 2x > 4, apoi împarte la 2 pentru a obține x > 2. Singura regulă specială este că împărțirea sau înmulțirea cu un număr negativ inversează direcția inegalității." },
+        { q: "De ce se inversează semnul inegalității când împarți la un număr negativ?", a: "Deoarece înmulțirea sau împărțirea cu un negativ inversează ordinea numerelor pe axa numerică - dacă 2 < 3, înmulțind ambele părți cu −1 se obține −2 și −3, iar −2 este de fapt mai mare decât −3, deci inegalitatea trebuie să se inverseze pentru a rămâne adevărată (−2 > −3)." },
+        { q: "Ce înseamnă \"fără soluție\" sau \"toate numerele reale\" pentru o inegalitate?", a: "Aceasta se întâmplă când termenul x se anulează (a = 0), lăsând doar o comparație a două numere - dacă acea comparație este întotdeauna adevărată (precum 5 > 3), orice x o satisface; dacă nu este niciodată adevărată (precum 3 > 5), niciun x nu o face, deoarece x nu a avut niciodată nicio influență asupra rezultatului." },
+      ],
+    },
+    el: {
+      title: "Επιλυτής Γραμμικής Ανίσωσης",
+      intro: "Εισάγετε τους συντελεστές και επιλέξτε ένα σύμβολο ανισότητας για να λύσετε ax + b [σύμβολο] c ως προς x.",
+      description: "Λύσε μια γραμμική ανίσωση της μορφής ax + b [<, >, ≤, ≥] c ως προς x.",
+      faq: [
+        { q: "Πώς λύνω μια γραμμική ανίσωση όπως 2x + 3 > 7;", a: "Απομονώστε το x με τον ίδιο τρόπο όπως μια εξίσωση: αφαιρέστε 3 και από τις δύο πλευρές για να πάρετε 2x > 4, μετά διαιρέστε με το 2 για να πάρετε x > 2. Ο μοναδικός ειδικός κανόνας είναι ότι η διαίρεση ή ο πολλαπλασιασμός με αρνητικό αριθμό αντιστρέφει την κατεύθυνση της ανίσωσης." },
+        { q: "Γιατί το σύμβολο ανισότητας αντιστρέφεται κατά τη διαίρεση με αρνητικό αριθμό;", a: "Επειδή ο πολλαπλασιασμός ή η διαίρεση με αρνητικό αντιστρέφει τη σειρά των αριθμών στην αριθμογραμμή - αν 2 < 3, πολλαπλασιάζοντας και τις δύο πλευρές με −1 δίνει −2 και −3, και το −2 είναι στην πραγματικότητα μεγαλύτερο από το −3, οπότε η ανίσωση πρέπει να αντιστραφεί για να παραμείνει αληθής (−2 > −3)." },
+        { q: "Τι σημαίνει «καμία λύση» ή «όλοι οι πραγματικοί αριθμοί» για μια ανίσωση;", a: "Αυτό συμβαίνει όταν ο όρος x ακυρώνεται (a = 0), αφήνοντας μόνο μια σύγκριση δύο αριθμών - αν αυτή η σύγκριση είναι πάντα αληθής (όπως 5 > 3), κάθε x την ικανοποιεί· αν δεν είναι ποτέ αληθής (όπως 3 > 5), κανένα x δεν την ικανοποιεί, αφού το x δεν είχε ποτέ καμία επιρροή στο αποτέλεσμα." },
+      ],
+    },
+    zh: {
+      title: "线性不等式求解器",
+      intro: "输入系数并选择不等号，求解ax + b [符号] c中的x。",
+      description: "求解形如ax + b [<, >, ≤, ≥] c的线性不等式，得到x。",
+      faq: [
+        { q: "如何求解像2x + 3 > 7这样的线性不等式？", a: "用和方程一样的方法把x单独分离出来：两边同时减去3得到2x > 4，然后除以2得到x > 2。唯一的特殊规则是：除以或乘以一个负数时，不等号的方向会反转。" },
+        { q: "为什么除以负数时不等号会反转？", a: "因为乘以或除以负数会颠倒数轴上数字的顺序——如果2 < 3，两边都乘以−1得到−2和−3，而−2实际上比−3大，所以不等式必须反转才能保持成立（−2 > −3）。" },
+        { q: "对于不等式来说，「无解」或「所有实数」是什么意思？", a: "当x项被消去时（a = 0），就只剩下两个数字的比较——如果这个比较始终为真（比如5 > 3），那么所有x都满足它；如果它永远不成立（比如3 > 5），那么没有任何x能满足它，因为x从未对结果产生任何影响。" },
+      ],
+    },
+    ar: {
+      title: "حلّال المتباينات الخطية",
+      intro: "أدخل المعاملات واختر رمز متباينة لحل ax + b [رمز] c لإيجاد x.",
+      description: "حل متباينة خطية من الشكل ax + b [<, >, ≤, ≥] c لإيجاد x.",
+      faq: [
+        { q: "كيف أحل متباينة خطية مثل 2x + 3 > 7؟", a: "اعزل x بنفس طريقة المعادلة: اطرح 3 من كلا الطرفين للحصول على 2x > 4، ثم اقسم على 2 للحصول على x > 2. القاعدة الخاصة الوحيدة هي أن القسمة أو الضرب في عدد سالب يعكس اتجاه المتباينة." },
+        { q: "لماذا تنعكس علامة المتباينة عند القسمة على عدد سالب؟", a: "لأن الضرب أو القسمة على عدد سالب يعكس ترتيب الأرقام على خط الأعداد - إذا كانت 2 < 3، فإن ضرب كلا الطرفين في −1 يعطي −2 و−3، و−2 في الواقع أكبر من −3، لذا يجب أن تنعكس المتباينة لتبقى صحيحة (−2 > −3)." },
+        { q: "ماذا يعني \"لا يوجد حل\" أو \"جميع الأعداد الحقيقية\" بالنسبة لمتباينة؟", a: "يحدث هذا عندما يُلغى حد x (a = 0)، تاركًا فقط مقارنة بين رقمين - إذا كانت تلك المقارنة صحيحة دائمًا (مثل 5 > 3)، فإن كل x يحققها؛ وإذا لم تكن صحيحة أبدًا (مثل 3 > 5)، فلا يوجد x يحققها، لأن x لم يكن له أي تأثير على النتيجة أبدًا." },
+      ],
+    },
+    th: {
+      title: "ตัวแก้อสมการเชิงเส้น",
+      intro: "ป้อนสัมประสิทธิ์และเลือกสัญลักษณ์อสมการเพื่อแก้ ax + b [สัญลักษณ์] c สำหรับ x",
+      description: "แก้อสมการเชิงเส้นในรูปแบบ ax + b [<, >, ≤, ≥] c สำหรับ x",
+      faq: [
+        { q: "ฉันจะแก้อสมการเชิงเส้นเช่น 2x + 3 > 7 ได้อย่างไร?", a: "แยก x ออกมาเหมือนกับสมการ: ลบ 3 ออกจากทั้งสองข้างเพื่อได้ 2x > 4 จากนั้นหารด้วย 2 เพื่อได้ x > 2 กฎพิเศษเดียวคือการหารหรือคูณด้วยจำนวนลบจะกลับทิศทางของอสมการ" },
+        { q: "ทำไมเครื่องหมายอสมการจึงกลับด้านเมื่อหารด้วยจำนวนลบ?", a: "เพราะการคูณหรือหารด้วยจำนวนลบจะกลับลำดับของตัวเลขบนเส้นจำนวน - ถ้า 2 < 3 การคูณทั้งสองข้างด้วย −1 จะได้ −2 และ −3 และ −2 นั้นจริงๆ แล้วมากกว่า −3 ดังนั้นอสมการจึงต้องกลับด้านเพื่อให้ยังคงเป็นจริง (−2 > −3)" },
+        { q: "\"ไม่มีคำตอบ\" หรือ \"จำนวนจริงทั้งหมด\" หมายความว่าอย่างไรสำหรับอสมการ?", a: "สิ่งนี้เกิดขึ้นเมื่อพจน์ x ถูกตัดออก (a = 0) เหลือเพียงการเปรียบเทียบตัวเลขสองตัว - ถ้าการเปรียบเทียบนั้นเป็นจริงเสมอ (เช่น 5 > 3) ค่า x ทุกค่าจะสอดคล้อง ถ้าไม่เคยเป็นจริง (เช่น 3 > 5) ไม่มีค่า x ใดที่จะสอดคล้อง เนื่องจาก x ไม่เคยมีอิทธิพลต่อผลลัพธ์เลย" },
+      ],
+    },
+  },
+
+  "chemical-equation-balancer": {
+    es: {
+      title: "Balanceador de Ecuaciones Químicas",
+      intro: "Introduce una ecuación no balanceada (como Fe + O2 -> Fe2O3) usando + entre compuestos y -> entre reactivos y productos.",
+      description: "Balancea una ecuación química encontrando los coeficientes enteros correctos.",
+      faq: [
+        { q: "¿Qué significa 'balancear' una ecuación química?", a: "Encontrar los coeficientes enteros (multiplicadores) delante de cada compuesto para que el mismo número de átomos de cada elemento aparezca en ambos lados de la ecuación - la materia no se crea ni se destruye en una reacción química, así que ambos lados deben balancearse exactamente." },
+        { q: "¿Cómo introduzco una ecuación con múltiples compuestos, como reacciones de combustión?", a: "Separa los compuestos con + y usa -> entre reactivos y productos, por ejemplo: CH4 + O2 -> CO2 + H2O. Esta calculadora encuentra los coeficientes enteros más pequeños que balancean cada elemento en la ecuación." },
+        { q: "¿Por qué esta calculadora a veces dice que no puede balancear mi ecuación?", a: "Generalmente por un error tipográfico en una fórmula química, o porque la reacción tal como está escrita no es químicamente válida (los mismos elementos no aparecen en ambos lados). Verifica dos veces las mayúsculas y paréntesis de cada fórmula - los símbolos químicos distinguen mayúsculas de minúsculas (Co es cobalto, CO es monóxido de carbono)." },
+      ],
+    },
+    fr: {
+      title: "Équilibreur d'Équation Chimique",
+      intro: "Entrez une équation non équilibrée (comme Fe + O2 -> Fe2O3) en utilisant + entre les composés et -> entre réactifs et produits.",
+      description: "Équilibrez une équation chimique en trouvant les coefficients entiers corrects.",
+      faq: [
+        { q: "Que signifie « équilibrer » une équation chimique ?", a: "Trouver les coefficients entiers (multiplicateurs) devant chaque composé pour que le même nombre d'atomes de chaque élément apparaisse des deux côtés de l'équation - la matière n'est ni créée ni détruite dans une réaction chimique, donc les deux côtés doivent s'équilibrer exactement." },
+        { q: "Comment entrer une équation avec plusieurs composés, comme des réactions de combustion ?", a: "Séparez les composés avec + et utilisez -> entre réactifs et produits, par exemple : CH4 + O2 -> CO2 + H2O. Cette calculatrice trouve les plus petits coefficients entiers qui équilibrent chaque élément de l'équation." },
+        { q: "Pourquoi cette calculatrice dit-elle parfois qu'elle ne peut pas équilibrer mon équation ?", a: "Généralement à cause d'une faute de frappe dans une formule chimique, ou parce que la réaction telle qu'écrite n'est pas chimiquement valide (les mêmes éléments n'apparaissent pas des deux côtés). Vérifiez à nouveau la capitalisation et les parenthèses de chaque formule - les symboles chimiques sont sensibles à la casse (Co est le cobalt, CO est le monoxyde de carbone)." },
+      ],
+    },
+    de: {
+      title: "Chemische-Gleichung-Ausgleicher",
+      intro: "Geben Sie eine unausgeglichene Gleichung ein (wie Fe + O2 -> Fe2O3), wobei Sie + zwischen Verbindungen und -> zwischen Edukten und Produkten verwenden.",
+      description: "Gleichen Sie eine chemische Gleichung aus, indem Sie die richtigen ganzzahligen Koeffizienten finden.",
+      faq: [
+        { q: "Was bedeutet es, eine chemische Gleichung „auszugleichen“?", a: "Das Finden der ganzzahligen Koeffizienten (Multiplikatoren) vor jeder Verbindung, sodass dieselbe Anzahl von Atomen jedes Elements auf beiden Seiten der Gleichung erscheint - Materie wird bei einer chemischen Reaktion weder erzeugt noch zerstört, sodass beide Seiten genau ausgeglichen sein müssen." },
+        { q: "Wie gebe ich eine Gleichung mit mehreren Verbindungen ein, wie Verbrennungsreaktionen?", a: "Trennen Sie Verbindungen mit + und verwenden Sie -> zwischen Edukten und Produkten, zum Beispiel: CH4 + O2 -> CO2 + H2O. Dieser Rechner findet die kleinsten ganzzahligen Koeffizienten, die jedes Element in der Gleichung ausgleichen." },
+        { q: "Warum sagt dieser Rechner manchmal, dass er meine Gleichung nicht ausgleichen kann?", a: "Normalerweise wegen eines Tippfehlers in einer chemischen Formel, oder weil die Reaktion, wie geschrieben, chemisch nicht gültig ist (dieselben Elemente erscheinen nicht auf beiden Seiten). Überprüfen Sie die Groß-/Kleinschreibung und Klammern jeder Formel doppelt - chemische Symbole unterscheiden zwischen Groß- und Kleinschreibung (Co ist Kobalt, CO ist Kohlenmonoxid)." },
+      ],
+    },
+    pt: {
+      title: "Balanceador de Equações Químicas",
+      intro: "Digite uma equação não balanceada (como Fe + O2 -> Fe2O3) usando + entre compostos e -> entre reagentes e produtos.",
+      description: "Balanceie uma equação química encontrando os coeficientes inteiros corretos.",
+      faq: [
+        { q: "O que significa 'balancear' uma equação química?", a: "Encontrar os coeficientes inteiros (multiplicadores) na frente de cada composto para que o mesmo número de átomos de cada elemento apareça em ambos os lados da equação - a matéria não é criada nem destruída em uma reação química, então ambos os lados devem balancear exatamente." },
+        { q: "Como insiro uma equação com múltiplos compostos, como reações de combustão?", a: "Separe compostos com + e use -> entre reagentes e produtos, por exemplo: CH4 + O2 -> CO2 + H2O. Esta calculadora encontra os menores coeficientes inteiros que balanceiam cada elemento na equação." },
+        { q: "Por que esta calculadora às vezes diz que não consegue balancear minha equação?", a: "Geralmente por causa de um erro de digitação em uma fórmula química, ou porque a reação como escrita não é quimicamente válida (os mesmos elementos não aparecem em ambos os lados). Verifique novamente a capitalização e parênteses de cada fórmula - símbolos químicos diferenciam maiúsculas de minúsculas (Co é cobalto, CO é monóxido de carbono)." },
+      ],
+    },
+    it: {
+      title: "Bilanciatore di Equazioni Chimiche",
+      intro: "Inserisci un'equazione non bilanciata (come Fe + O2 -> Fe2O3) usando + tra i composti e -> tra reagenti e prodotti.",
+      description: "Bilancia un'equazione chimica trovando i coefficienti interi corretti.",
+      faq: [
+        { q: "Cosa significa 'bilanciare' un'equazione chimica?", a: "Trovare i coefficienti interi (moltiplicatori) davanti a ciascun composto in modo che lo stesso numero di atomi di ogni elemento appaia su entrambi i lati dell'equazione - la materia non viene creata né distrutta in una reazione chimica, quindi entrambi i lati devono bilanciarsi esattamente." },
+        { q: "Come inserisco un'equazione con più composti, come reazioni di combustione?", a: "Separa i composti con + e usa -> tra reagenti e prodotti, per esempio: CH4 + O2 -> CO2 + H2O. Questa calcolatrice trova i coefficienti interi più piccoli che bilanciano ogni elemento nell'equazione." },
+        { q: "Perché questa calcolatrice a volte dice che non può bilanciare la mia equazione?", a: "Solitamente a causa di un errore di battitura in una formula chimica, o perché la reazione così come scritta non è chimicamente valida (gli stessi elementi non appaiono su entrambi i lati). Ricontrolla le maiuscole e le parentesi di ogni formula - i simboli chimici distinguono tra maiuscole e minuscole (Co è cobalto, CO è monossido di carbonio)." },
+      ],
+    },
+    ja: {
+      title: "化学反応式バランサー",
+      intro: "化合物間は+、反応物と生成物の間は->を使用して、不均衡な方程式（Fe + O2 -> Fe2O3など）を入力します。",
+      description: "正しい整数係数を見つけて化学反応式のバランスを取ります。",
+      faq: [
+        { q: "化学反応式を「バランスさせる」とはどういう意味ですか？", a: "各化合物の前に整数係数（乗数）を見つけて、方程式の両側に各元素の原子が同じ数だけ現れるようにすることです。化学反応では物質が生成も破壊もされないため、両側は正確にバランスが取れていなければなりません。" },
+        { q: "燃焼反応のように複数の化合物を含む方程式をどう入力しますか？", a: "化合物は+で区切り、反応物と生成物の間は->を使用します。例：CH4 + O2 -> CO2 + H2O。この計算機は、方程式内のすべての元素をバランスさせる最小の整数係数を見つけます。" },
+        { q: "なぜこの計算機は時々私の方程式をバランスさせられないと言うのですか？", a: "通常、化学式のタイプミス、または書かれた通りの反応が化学的に有効でない（同じ元素が両側に現れない）ためです。各式の大文字小文字と括弧を再確認してください。化学記号は大文字小文字を区別します（Coはコバルト、COは一酸化炭素です）。" },
+      ],
+    },
+    ro: {
+      title: "Echilibrator de Ecuații Chimice",
+      intro: "Introdu o ecuație neechilibrată (precum Fe + O2 -> Fe2O3) folosind + între compuși și -> între reactanți și produși.",
+      description: "Echilibrează o ecuație chimică găsind coeficienții întregi corecți.",
+      faq: [
+        { q: "Ce înseamnă să \"echilibrezi\" o ecuație chimică?", a: "Găsirea coeficienților întregi (multiplicatori) în fața fiecărui compus astfel încât același număr de atomi din fiecare element să apară pe ambele părți ale ecuației - materia nu este creată sau distrusă într-o reacție chimică, deci ambele părți trebuie să se echilibreze exact." },
+        { q: "Cum introduc o ecuație cu compuși multipli, precum reacțiile de combustie?", a: "Separă compușii cu + și folosește -> între reactanți și produși, de exemplu: CH4 + O2 -> CO2 + H2O. Acest calculator găsește cei mai mici coeficienți întregi care echilibrează fiecare element din ecuație." },
+        { q: "De ce acest calculator spune uneori că nu poate echilibra ecuația mea?", a: "De obicei din cauza unei greșeli de tastare într-o formulă chimică, sau pentru că reacția așa cum este scrisă nu este valabilă chimic (aceleași elemente nu apar pe ambele părți). Verifică de două ori majusculele și parantezele fiecărei formule - simbolurile chimice sunt sensibile la majuscule (Co este cobalt, CO este monoxid de carbon)." },
+      ],
+    },
+    el: {
+      title: "Εξισορροπητής Χημικών Εξισώσεων",
+      intro: "Εισάγετε μια μη ισοσταθμισμένη εξίσωση (όπως Fe + O2 -> Fe2O3) χρησιμοποιώντας + μεταξύ ενώσεων και -> μεταξύ αντιδρώντων και προϊόντων.",
+      description: "Εξισορρόπησε μια χημική εξίσωση βρίσκοντας τους σωστούς ακέραιους συντελεστές.",
+      faq: [
+        { q: "Τι σημαίνει «εξισορρόπηση» μιας χημικής εξίσωσης;", a: "Η εύρεση των ακέραιων συντελεστών (πολλαπλασιαστών) μπροστά από κάθε ένωση ώστε ο ίδιος αριθμός ατόμων κάθε στοιχείου να εμφανίζεται και στις δύο πλευρές της εξίσωσης - η ύλη δεν δημιουργείται ούτε καταστρέφεται σε μια χημική αντίδραση, οπότε και οι δύο πλευρές πρέπει να ισοσταθμίζονται ακριβώς." },
+        { q: "Πώς εισάγω μια εξίσωση με πολλαπλές ενώσεις, όπως αντιδράσεις καύσης;", a: "Διαχωρίστε τις ενώσεις με + και χρησιμοποιήστε -> μεταξύ αντιδρώντων και προϊόντων, για παράδειγμα: CH4 + O2 -> CO2 + H2O. Αυτή η αριθμομηχανή βρίσκει τους μικρότερους ακέραιους συντελεστές που εξισορροπούν κάθε στοιχείο στην εξίσωση." },
+        { q: "Γιατί αυτή η αριθμομηχανή μερικές φορές λέει ότι δεν μπορεί να εξισορροπήσει την εξίσωσή μου;", a: "Συνήθως λόγω τυπογραφικού λάθους σε έναν χημικό τύπο, ή επειδή η αντίδραση όπως είναι γραμμένη δεν είναι χημικά έγκυρη (τα ίδια στοιχεία δεν εμφανίζονται και στις δύο πλευρές). Ελέγξτε ξανά τα κεφαλαία γράμματα και τις παρενθέσεις κάθε τύπου - τα χημικά σύμβολα κάνουν διάκριση πεζών-κεφαλαίων (το Co είναι κοβάλτιο, το CO είναι μονοξείδιο του άνθρακα)." },
+      ],
+    },
+    zh: {
+      title: "化学方程式配平器",
+      intro: "输入未配平的方程式（如Fe + O2 -> Fe2O3），化合物之间用+分隔，反应物和生成物之间用->分隔。",
+      description: "通过找出正确的整数系数来配平化学方程式。",
+      faq: [
+        { q: "「配平」化学方程式是什么意思？", a: "找出每种化合物前面的整数系数（倍数），使方程式两边每种元素的原子数量相同——化学反应中物质既不会凭空产生也不会凭空消失，所以方程式两边必须精确配平。" },
+        { q: "如何输入包含多种化合物的方程式，比如燃烧反应？", a: "用+分隔化合物，反应物和生成物之间用->，例如：CH4 + O2 -> CO2 + H2O。这个计算器会找出能配平方程式中每种元素的最小整数系数。" },
+        { q: "为什么这个计算器有时说无法配平我的方程式？", a: "通常是因为化学式中有拼写错误，或者所写的反应在化学上不成立（两边出现的元素不一致）。请仔细检查每个化学式的大小写和括号——化学符号是区分大小写的（Co是钴，CO是一氧化碳）。" },
+      ],
+    },
+    ar: {
+      title: "موازن المعادلات الكيميائية",
+      intro: "أدخل معادلة غير متزنة (مثل Fe + O2 -> Fe2O3) باستخدام + بين المركبات و-> بين المتفاعلات والنواتج.",
+      description: "وازن معادلة كيميائية بإيجاد المعاملات الصحيحة الصحيحة.",
+      faq: [
+        { q: "ماذا يعني \"موازنة\" معادلة كيميائية؟", a: "إيجاد المعاملات الصحيحة (المضاعِفات) أمام كل مركب بحيث يظهر نفس عدد ذرات كل عنصر على جانبي المعادلة - لا تُخلق المادة ولا تُفنى في تفاعل كيميائي، لذا يجب أن يتوازن كلا الجانبين تمامًا." },
+        { q: "كيف أدخل معادلة تحتوي على مركبات متعددة، مثل تفاعلات الاحتراق؟", a: "افصل المركبات بـ+ واستخدم -> بين المتفاعلات والنواتج، على سبيل المثال: CH4 + O2 -> CO2 + H2O. تجد هذه الحاسبة أصغر المعاملات الصحيحة التي توازن كل عنصر في المعادلة." },
+        { q: "لماذا تقول هذه الحاسبة أحيانًا إنها لا تستطيع موازنة معادلتي؟", a: "عادة بسبب خطأ إملائي في صيغة كيميائية، أو لأن التفاعل كما هو مكتوب غير صالح كيميائيًا (لا تظهر نفس العناصر على كلا الجانبين). تحقق مرة أخرى من الأحرف الكبيرة والصغيرة والأقواس في كل صيغة - الرموز الكيميائية حساسة لحالة الأحرف (Co هو الكوبالت، CO هو أول أكسيد الكربون)." },
+      ],
+    },
+    th: {
+      title: "เครื่องดุลสมการเคมี",
+      intro: "ป้อนสมการที่ไม่สมดุล (เช่น Fe + O2 -> Fe2O3) โดยใช้ + ระหว่างสารประกอบและ -> ระหว่างสารตั้งต้นและผลิตภัณฑ์",
+      description: "ดุลสมการเคมีโดยหาสัมประสิทธิ์จำนวนเต็มที่ถูกต้อง",
+      faq: [
+        { q: "\"การดุล\" สมการเคมีหมายความว่าอย่างไร?", a: "การหาสัมประสิทธิ์จำนวนเต็ม (ตัวคูณ) หน้าสารประกอบแต่ละตัวเพื่อให้จำนวนอะตอมของแต่ละธาตุเท่ากันปรากฏทั้งสองข้างของสมการ - สสารไม่ถูกสร้างขึ้นหรือทำลายในปฏิกิริยาเคมี ดังนั้นทั้งสองข้างต้องสมดุลกันอย่างแน่นอน" },
+        { q: "ฉันจะป้อนสมการที่มีสารประกอบหลายตัว เช่น ปฏิกิริยาการเผาไหม้ได้อย่างไร?", a: "แยกสารประกอบด้วย + และใช้ -> ระหว่างสารตั้งต้นและผลิตภัณฑ์ ตัวอย่างเช่น: CH4 + O2 -> CO2 + H2O เครื่องคำนวณนี้หาสัมประสิทธิ์จำนวนเต็มที่เล็กที่สุดที่ดุลทุกธาตุในสมการ" },
+        { q: "ทำไมเครื่องคำนวณนี้บางครั้งบอกว่าไม่สามารถดุลสมการของฉันได้?", a: "โดยปกติเกิดจากการพิมพ์ผิดในสูตรเคมี หรือเพราะปฏิกิริยาตามที่เขียนไม่ถูกต้องทางเคมี (ธาตุเดียวกันไม่ปรากฏทั้งสองข้าง) ตรวจสอบตัวพิมพ์ใหญ่เล็กและวงเล็บของแต่ละสูตรอีกครั้ง - สัญลักษณ์เคมีคำนึงถึงตัวพิมพ์ใหญ่เล็ก (Co คือโคบอลต์ CO คือคาร์บอนมอนอกไซด์)" },
+      ],
+    },
+  },
+
+  "solubility-product-calculator": {
+    es: {
+      title: "Calculadora de Producto de Solubilidad (Ksp)",
+      intro: "Introduce la solubilidad molar del compuesto y el número de cationes y aniones que libera por unidad de fórmula para calcular Ksp.",
+      description: "Calcula la constante de producto de solubilidad (Ksp) a partir de la solubilidad molar y estequiometría iónica.",
+      faq: [
+        { q: "¿Qué es la constante de producto de solubilidad (Ksp)?", a: "Una constante de equilibrio para un compuesto iónico ligeramente soluble, igual al producto de sus concentraciones de iones disueltos (cada una elevada a su coeficiente estequiométrico) en saturación - un Ksp más bajo significa que el compuesto es menos soluble." },
+        { q: "¿Cómo calculo Ksp para CaF₂ (fluoruro de calcio)?", a: "CaF₂ se disuelve como 1 Ca²⁺ y 2 F⁻ por unidad de fórmula, así que con solubilidad molar s: [Ca²⁺] = s, [F⁻] = 2s, y Ksp = s × (2s)² = 4s³. Introduce coeficiente de catión 1 y coeficiente de anión 2 arriba." },
+        { q: "¿Por qué se multiplica la concentración del anión por su coeficiente antes de elevarla a una potencia?", a: "Cada unidad de fórmula que se disuelve libera y aniones, no solo 1, así que la concentración del anión en saturación es y veces la solubilidad molar - esa concentración escalada es la que se eleva a la potencia y en la expresión de Ksp, siguiendo la estequiometría de la reacción." },
+        { q: "¿Esto funciona para cualquier compuesto, o solo proporciones 1:1 y 1:2?", a: "Funciona para cualquier proporción catión-anión x:y - introduce los coeficientes estequiométricos reales de la fórmula del compuesto (como 2 y 3 para un compuesto como Al₂S₃) y la calculadora aplica la misma fórmula general." },
+      ],
+    },
+    fr: {
+      title: "Calculateur de Produit de Solubilité (Ksp)",
+      intro: "Entrez la solubilité molaire du composé et le nombre de cations et anions qu'il libère par unité formulaire pour calculer Ksp.",
+      description: "Calculez la constante de produit de solubilité (Ksp) à partir de la solubilité molaire et de la stœchiométrie ionique.",
+      faq: [
+        { q: "Qu'est-ce que la constante de produit de solubilité (Ksp) ?", a: "Une constante d'équilibre pour un composé ionique peu soluble, égale au produit de ses concentrations d'ions dissous (chacune élevée à son coefficient stœchiométrique) à saturation - un Ksp plus faible signifie que le composé est moins soluble." },
+        { q: "Comment calculer Ksp pour CaF₂ (fluorure de calcium) ?", a: "CaF₂ se dissout en 1 Ca²⁺ et 2 F⁻ par unité formulaire, donc avec une solubilité molaire s : [Ca²⁺] = s, [F⁻] = 2s, et Ksp = s × (2s)² = 4s³. Entrez le coefficient de cation 1 et le coefficient d'anion 2 ci-dessus." },
+        { q: "Pourquoi la concentration de l'anion est-elle multipliée par son coefficient avant d'être élevée à une puissance ?", a: "Chaque unité formulaire qui se dissout libère y anions, pas seulement 1, donc la concentration de l'anion à saturation est y fois la solubilité molaire - cette concentration mise à l'échelle est ce qui est élevé à la puissance y dans l'expression de Ksp, suivant la stœchiométrie de la réaction." },
+        { q: "Cela fonctionne-t-il pour tout composé, ou seulement les ratios 1:1 et 1:2 ?", a: "Cela fonctionne pour tout ratio cation-anion x:y - entrez les coefficients stœchiométriques réels de la formule du composé (comme 2 et 3 pour un composé comme Al₂S₃) et la calculatrice applique la même formule générale." },
+      ],
+    },
+    de: {
+      title: "Löslichkeitsprodukt-Rechner (Ksp)",
+      intro: "Geben Sie die molare Löslichkeit der Verbindung und die Anzahl der Kationen und Anionen ein, die sie pro Formeleinheit freisetzt, um Ksp zu berechnen.",
+      description: "Berechnen Sie die Löslichkeitsproduktkonstante (Ksp) aus molarer Löslichkeit und Ionenstöchiometrie.",
+      faq: [
+        { q: "Was ist die Löslichkeitsproduktkonstante (Ksp)?", a: "Eine Gleichgewichtskonstante für eine schwerlösliche ionische Verbindung, gleich dem Produkt ihrer gelösten Ionenkonzentrationen (jede auf ihren stöchiometrischen Koeffizienten erhoben) bei Sättigung - ein niedrigeres Ksp bedeutet, dass die Verbindung weniger löslich ist." },
+        { q: "Wie berechne ich Ksp für CaF₂ (Calciumfluorid)?", a: "CaF₂ löst sich als 1 Ca²⁺ und 2 F⁻ pro Formeleinheit auf, also mit molarer Löslichkeit s: [Ca²⁺] = s, [F⁻] = 2s, und Ksp = s × (2s)² = 4s³. Geben Sie oben Kationkoeffizient 1 und Anionkoeffizient 2 ein." },
+        { q: "Warum wird die Anionenkonzentration mit ihrem Koeffizienten multipliziert, bevor sie auf eine Potenz erhoben wird?", a: "Jede sich lösende Formeleinheit setzt y Anionen frei, nicht nur 1, sodass die Anionenkonzentration bei Sättigung y-mal die molare Löslichkeit ist - diese skalierte Konzentration wird in der Ksp-Formel auf die Potenz y erhoben, gemäß der Reaktionsstöchiometrie." },
+        { q: "Funktioniert dies für jede Verbindung, oder nur 1:1- und 1:2-Verhältnisse?", a: "Es funktioniert für jedes x:y-Kation-zu-Anion-Verhältnis - geben Sie die tatsächlichen stöchiometrischen Koeffizienten aus der Formel der Verbindung ein (wie 2 und 3 für eine Verbindung wie Al₂S₃), und der Rechner wendet dieselbe allgemeine Formel an." },
+      ],
+    },
+    pt: {
+      title: "Calculadora do Produto de Solubilidade (Ksp)",
+      intro: "Digite a solubilidade molar do composto e o número de cátions e ânions que ele libera por unidade de fórmula para calcular Ksp.",
+      description: "Calcule a constante do produto de solubilidade (Ksp) a partir da solubilidade molar e estequiometria dos íons.",
+      faq: [
+        { q: "O que é a constante do produto de solubilidade (Ksp)?", a: "Uma constante de equilíbrio para um composto iônico pouco solúvel, igual ao produto de suas concentrações de íons dissolvidos (cada uma elevada ao seu coeficiente estequiométrico) na saturação - um Ksp mais baixo significa que o composto é menos solúvel." },
+        { q: "Como calculo Ksp para CaF₂ (fluoreto de cálcio)?", a: "CaF₂ dissolve-se como 1 Ca²⁺ e 2 F⁻ por unidade de fórmula, então com solubilidade molar s: [Ca²⁺] = s, [F⁻] = 2s, e Ksp = s × (2s)² = 4s³. Digite coeficiente de cátion 1 e coeficiente de ânion 2 acima." },
+        { q: "Por que a concentração do ânion é multiplicada pelo seu coeficiente antes de ser elevada a uma potência?", a: "Cada unidade de fórmula que se dissolve libera y ânions, não apenas 1, então a concentração do ânion na saturação é y vezes a solubilidade molar - essa concentração escalada é o que é elevado à potência y na expressão de Ksp, seguindo a estequiometria da reação." },
+        { q: "Isso funciona para qualquer composto, ou apenas proporções 1:1 e 1:2?", a: "Funciona para qualquer proporção cátion-ânion x:y - digite os coeficientes estequiométricos reais da fórmula do composto (como 2 e 3 para um composto como Al₂S₃) e a calculadora aplica a mesma fórmula geral." },
+      ],
+    },
+    it: {
+      title: "Calcolatore del Prodotto di Solubilità (Ksp)",
+      intro: "Inserisci la solubilità molare del composto e il numero di cationi e anioni che rilascia per unità formula per calcolare Ksp.",
+      description: "Calcola la costante del prodotto di solubilità (Ksp) dalla solubilità molare e stechiometria degli ioni.",
+      faq: [
+        { q: "Cos'è la costante del prodotto di solubilità (Ksp)?", a: "Una costante di equilibrio per un composto ionico scarsamente solubile, uguale al prodotto delle sue concentrazioni di ioni disciolti (ciascuna elevata al proprio coefficiente stechiometrico) alla saturazione - un Ksp più basso significa che il composto è meno solubile." },
+        { q: "Come calcolo Ksp per CaF₂ (fluoruro di calcio)?", a: "CaF₂ si dissolve come 1 Ca²⁺ e 2 F⁻ per unità formula, quindi con solubilità molare s: [Ca²⁺] = s, [F⁻] = 2s, e Ksp = s × (2s)² = 4s³. Inserisci coefficiente del catione 1 e coefficiente dell'anione 2 sopra." },
+        { q: "Perché la concentrazione dell'anione viene moltiplicata per il suo coefficiente prima di essere elevata a potenza?", a: "Ogni unità formula che si dissolve rilascia y anioni, non solo 1, quindi la concentrazione dell'anione alla saturazione è y volte la solubilità molare - quella concentrazione scalata è ciò che viene elevato alla potenza y nell'espressione di Ksp, seguendo la stechiometria della reazione." },
+        { q: "Questo funziona per qualsiasi composto, o solo per rapporti 1:1 e 1:2?", a: "Funziona per qualsiasi rapporto catione-anione x:y - inserisci i coefficienti stechiometrici effettivi dalla formula del composto (come 2 e 3 per un composto come Al₂S₃) e la calcolatrice applica la stessa formula generale." },
+      ],
+    },
+    ja: {
+      title: "溶解度積（Ksp）計算機",
+      intro: "化合物のモル溶解度と、化学式単位あたりに放出される陽イオンと陰イオンの数を入力すると、Kspを計算します。",
+      description: "モル溶解度とイオンの化学量論からKspを計算します。",
+      faq: [
+        { q: "溶解度積定数（Ksp）とは何ですか？", a: "わずかに溶解するイオン性化合物の平衡定数で、飽和状態でのその溶解イオン濃度（それぞれが化学量論係数で累乗される）の積に等しくなります。Kspが低いほど、化合物の溶解度が低いことを意味します。" },
+        { q: "CaF₂（フッ化カルシウム）のKspをどう計算しますか？", a: "CaF₂は化学式単位あたり1 Ca²⁺と2 F⁻に溶解するため、モル溶解度sを使用すると：[Ca²⁺] = s、[F⁻] = 2s、Ksp = s × (2s)² = 4s³です。上に陽イオン係数1と陰イオン係数2を入力してください。" },
+        { q: "なぜ陰イオン濃度は累乗される前にその係数で掛けられるのですか？", a: "溶解する各化学式単位は1つだけでなくy個の陰イオンを放出するため、飽和状態での陰イオン濃度はモル溶解度のy倍です。反応の化学量論に従って、そのスケーリングされた濃度がKsp式でy乗されます。" },
+        { q: "これはあらゆる化合物に対して機能しますか、それとも1:1と1:2の比率だけですか？", a: "任意のx:y陽イオン対陰イオン比に対して機能します。化合物の式から実際の化学量論係数を入力してください（Al₂S₃のような化合物の場合は2と3など）。計算機は同じ一般的な公式を適用します。" },
+      ],
+    },
+    ro: {
+      title: "Calculator de Produs de Solubilitate (Ksp)",
+      intro: "Introdu solubilitatea molară a compusului și numărul de cationi și anioni pe care îi eliberează per unitate formulă pentru a calcula Ksp.",
+      description: "Calculează constanta produsului de solubilitate (Ksp) din solubilitatea molară și stoichiometria ionilor.",
+      faq: [
+        { q: "Ce este constanta produsului de solubilitate (Ksp)?", a: "O constantă de echilibru pentru un compus ionic slab solubil, egală cu produsul concentrațiilor sale de ioni dizolvați (fiecare ridicată la coeficientul său stoichiometric) la saturație - un Ksp mai mic înseamnă că compusul este mai puțin solubil." },
+        { q: "Cum calculez Ksp pentru CaF₂ (fluorură de calciu)?", a: "CaF₂ se dizolvă ca 1 Ca²⁺ și 2 F⁻ per unitate formulă, deci cu solubilitate molară s: [Ca²⁺] = s, [F⁻] = 2s, și Ksp = s × (2s)² = 4s³. Introdu coeficientul cationului 1 și coeficientul anionului 2 mai sus." },
+        { q: "De ce concentrația anionului este înmulțită cu coeficientul său înainte de a fi ridicată la putere?", a: "Fiecare unitate formulă care se dizolvă eliberează y anioni, nu doar 1, deci concentrația anionului la saturație este de y ori solubilitatea molară - acea concentrație scalată este cea care este ridicată la puterea y în expresia Ksp, urmând stoichiometria reacției." },
+        { q: "Funcționează asta pentru orice compus, sau doar pentru rapoartele 1:1 și 1:2?", a: "Funcționează pentru orice raport cation-anion x:y - introdu coeficienții stoichiometrici efectivi din formula compusului (precum 2 și 3 pentru un compus precum Al₂S₃) și calculatorul aplică aceeași formulă generală." },
+      ],
+    },
+    el: {
+      title: "Υπολογιστής Γινομένου Διαλυτότητας (Ksp)",
+      intro: "Εισάγετε τη γραμμομοριακή διαλυτότητα της ένωσης και τον αριθμό κατιόντων και ανιόντων που απελευθερώνει ανά μονάδα τύπου για να υπολογίσετε το Ksp.",
+      description: "Υπολόγισε τη σταθερά γινομένου διαλυτότητας (Ksp) από τη γραμμομοριακή διαλυτότητα και τη στοιχειομετρία ιόντων.",
+      faq: [
+        { q: "Τι είναι η σταθερά γινομένου διαλυτότητας (Ksp);", a: "Μια σταθερά ισορροπίας για μια ελάχιστα διαλυτή ιοντική ένωση, ίση με το γινόμενο των συγκεντρώσεων των διαλυμένων ιόντων της (καθεμία υψωμένη στον στοιχειομετρικό της συντελεστή) στον κορεσμό - ένα χαμηλότερο Ksp σημαίνει ότι η ένωση είναι λιγότερο διαλυτή." },
+        { q: "Πώς υπολογίζω το Ksp για το CaF₂ (φθοριούχο ασβέστιο);", a: "Το CaF₂ διαλύεται ως 1 Ca²⁺ και 2 F⁻ ανά μονάδα τύπου, οπότε με γραμμομοριακή διαλυτότητα s: [Ca²⁺] = s, [F⁻] = 2s, και Ksp = s × (2s)² = 4s³. Εισάγετε συντελεστή κατιόντος 1 και συντελεστή ανιόντος 2 παραπάνω." },
+        { q: "Γιατί η συγκέντρωση ανιόντος πολλαπλασιάζεται με τον συντελεστή της πριν υψωθεί σε δύναμη;", a: "Κάθε μονάδα τύπου που διαλύεται απελευθερώνει y ανιόντα, όχι μόνο 1, οπότε η συγκέντρωση ανιόντος στον κορεσμό είναι y φορές η γραμμομοριακή διαλυτότητα - αυτή η κλιμακωμένη συγκέντρωση είναι αυτή που υψώνεται στη δύναμη y στην έκφραση Ksp, ακολουθώντας τη στοιχειομετρία της αντίδρασης." },
+        { q: "Λειτουργεί αυτό για οποιαδήποτε ένωση, ή μόνο για αναλογίες 1:1 και 1:2;", a: "Λειτουργεί για οποιαδήποτε αναλογία κατιόντος προς ανιόν x:y - εισάγετε τους πραγματικούς στοιχειομετρικούς συντελεστές από τον τύπο της ένωσης (όπως 2 και 3 για μια ένωση όπως το Al₂S₃) και η αριθμομηχανή εφαρμόζει τον ίδιο γενικό τύπο." },
+      ],
+    },
+    zh: {
+      title: "溶度积计算器（Ksp）",
+      intro: "输入化合物的摩尔溶解度以及每个化学式单元释放的阳离子和阴离子数量，计算Ksp。",
+      description: "根据摩尔溶解度和离子化学计量比计算溶度积常数（Ksp）。",
+      faq: [
+        { q: "什么是溶度积常数（Ksp）？", a: "一种微溶离子化合物的平衡常数，等于饱和时其溶解离子浓度的乘积（每种浓度都被提升到其化学计量系数的幂次）——Ksp越低，说明该化合物的溶解度越低。" },
+        { q: "如何计算CaF₂（氟化钙）的Ksp？", a: "CaF₂每个化学式单元溶解释放1个Ca²⁺和2个F⁻，所以设摩尔溶解度为s：[Ca²⁺] = s，[F⁻] = 2s，Ksp = s × (2s)² = 4s³。在上方输入阳离子系数1和阴离子系数2。" },
+        { q: "为什么阴离子浓度要先乘以其系数再取幂？", a: "每个溶解的化学式单元释放的阴离子不止1个，而是y个，所以饱和时阴离子的浓度是摩尔溶解度的y倍——按照反应的化学计量比，正是这个按比例调整后的浓度在Ksp表达式中被提升到y次幂。" },
+        { q: "这适用于任何化合物，还是只适用于1:1和1:2的比例？", a: "它适用于任何x:y的阳离子与阴离子比例——只需输入该化合物化学式中实际的化学计量系数（比如像Al₂S₃这样的化合物用2和3），计算器就会应用相同的通用公式。" },
+      ],
+    },
+    ar: {
+      title: "حاسبة ناتج الذوبان (Ksp)",
+      intro: "أدخل الذوبانية المولية للمركب وعدد الكاتيونات والأنيونات التي يطلقها لكل وحدة صيغة لحساب Ksp.",
+      description: "احسب ثابت ناتج الذوبان (Ksp) من الذوبانية المولية والقياس المتكافئ للأيونات.",
+      faq: [
+        { q: "ما هو ثابت ناتج الذوبان (Ksp)؟", a: "ثابت اتزان لمركب أيوني ضعيف الذوبان، يساوي حاصل ضرب تراكيز أيوناته المذابة (كل منها مرفوع إلى معامله القياسي المتكافئ) عند التشبع - انخفاض Ksp يعني أن المركب أقل قابلية للذوبان." },
+        { q: "كيف أحسب Ksp لـCaF₂ (فلوريد الكالسيوم)؟", a: "يذوب CaF₂ كـ1 Ca²⁺ و2 F⁻ لكل وحدة صيغة، لذا مع الذوبانية المولية s: [Ca²⁺] = s، [F⁻] = 2s، وKsp = s × (2s)² = 4s³. أدخل معامل الكاتيون 1 ومعامل الأنيون 2 أعلاه." },
+        { q: "لماذا يُضرب تركيز الأنيون في معامله قبل رفعه لأس؟", a: "كل وحدة صيغة تذوب تطلق y أنيونًا، وليس واحدًا فقط، لذا فإن تركيز الأنيون عند التشبع هو y ضعف الذوبانية المولية - هذا التركيز المُقاس هو ما يُرفع للأس y في تعبير Ksp، وفقًا للقياس المتكافئ للتفاعل." },
+        { q: "هل يعمل هذا مع أي مركب، أم فقط النسب 1:1 و1:2؟", a: "يعمل مع أي نسبة كاتيون إلى أنيون x:y - أدخل المعاملات القياسية المتكافئة الفعلية من صيغة المركب (مثل 2 و3 لمركب مثل Al₂S₃) وستطبق الحاسبة نفس الصيغة العامة." },
+      ],
+    },
+    th: {
+      title: "เครื่องคำนวณผลคูณความสามารถในการละลาย (Ksp)",
+      intro: "ป้อนความสามารถในการละลายโมลาร์ของสารประกอบและจำนวนไอออนบวกและไอออนลบที่ปล่อยออกมาต่อหน่วยสูตรเพื่อคำนวณ Ksp",
+      description: "คำนวณค่าคงที่ผลคูณความสามารถในการละลาย (Ksp) จากความสามารถในการละลายโมลาร์และสัดส่วนสโตอิชิโอเมตริกของไอออน",
+      faq: [
+        { q: "ค่าคงที่ผลคูณความสามารถในการละลาย (Ksp) คืออะไร?", a: "ค่าคงที่สมดุลสำหรับสารประกอบไอออนิกที่ละลายได้น้อย เท่ากับผลคูณของความเข้มข้นไอออนที่ละลายอยู่ (แต่ละตัวยกกำลังด้วยสัมประสิทธิ์สโตอิชิโอเมตริกของมัน) ที่จุดอิ่มตัว - Ksp ที่ต่ำกว่าหมายความว่าสารประกอบละลายได้น้อยกว่า" },
+        { q: "ฉันจะคำนวณ Ksp สำหรับ CaF₂ (แคลเซียมฟลูออไรด์) ได้อย่างไร?", a: "CaF₂ ละลายเป็น 1 Ca²⁺ และ 2 F⁻ ต่อหน่วยสูตร ดังนั้นด้วยความสามารถในการละลายโมลาร์ s: [Ca²⁺] = s, [F⁻] = 2s และ Ksp = s × (2s)² = 4s³ ป้อนสัมประสิทธิ์ไอออนบวก 1 และสัมประสิทธิ์ไอออนลบ 2 ด้านบน" },
+        { q: "ทำไมความเข้มข้นของไอออนลบจึงถูกคูณด้วยสัมประสิทธิ์ของมันก่อนที่จะยกกำลัง?", a: "แต่ละหน่วยสูตรที่ละลายจะปล่อยไอออนลบ y ตัว ไม่ใช่แค่ 1 ตัว ดังนั้นความเข้มข้นของไอออนลบที่จุดอิ่มตัวคือ y เท่าของความสามารถในการละลายโมลาร์ - ความเข้มข้นที่ปรับสเกลนั้นคือสิ่งที่ถูกยกกำลัง y ในนิพจน์ Ksp ตามสัดส่วนสโตอิชิโอเมตริกของปฏิกิริยา" },
+        { q: "สิ่งนี้ใช้ได้กับสารประกอบใดๆ หรือแค่อัตราส่วน 1:1 และ 1:2?", a: "ใช้ได้กับอัตราส่วนไอออนบวกต่อไอออนลบ x:y ใดๆ - ป้อนสัมประสิทธิ์สโตอิชิโอเมตริกจริงจากสูตรของสารประกอบ (เช่น 2 และ 3 สำหรับสารประกอบเช่น Al₂S₃) และเครื่องคำนวณจะใช้สูตรทั่วไปเดียวกัน" },
+      ],
+    },
+  },
+
+  "titration-ph-calculator": {
+    es: {
+      title: "Calculadora de pH de Titulación",
+      intro: "Introduce las concentraciones y volúmenes del ácido y base para calcular el pH resultante - funciona para cualquier punto antes, en, o después del punto de equivalencia.",
+      description: "Calcula el pH en cualquier punto durante una titulación de ácido fuerte / base fuerte.",
+      faq: [
+        { q: "¿Cómo calculo el pH antes del punto de equivalencia?", a: "Resta los moles de base de los moles de ácido para encontrar el H⁺ en exceso, divide entre el volumen total para obtener [H⁺], luego pH = −log₁₀[H⁺]. Esto funciona porque la base fuerte neutraliza completamente una cantidad igual de ácido, dejando el resto como exceso." },
+        { q: "¿Cuál es el pH en el punto de equivalencia para una titulación de ácido fuerte/base fuerte?", a: "Exactamente 7 - en el punto de equivalencia, los moles de ácido y base son iguales, neutralizándose completamente entre sí y dejando solo agua y una sal neutra, sin H⁺ u OH⁻ en exceso." },
+        { q: "¿Cómo calculo el pH después del punto de equivalencia?", a: "Resta los moles de ácido de los moles de base para encontrar el OH⁻ en exceso, divide entre el volumen total para obtener [OH⁻], calcula pOH = −log₁₀[OH⁻], luego pH = 14 − pOH." },
+        { q: "¿Esto funciona para ácidos débiles o bases débiles?", a: "No - esta calculadora asume que tanto el ácido como la base son fuertes (se disocian completamente), que es lo que hace válida la matemática simple de iones en exceso. Las titulaciones de ácido/base débil necesitan cálculos de equilibrio (Ka/Kb) y producen un pH diferente, no 7, en el punto de equivalencia debido a la base o ácido conjugado que permanece en solución." },
+      ],
+    },
+    fr: {
+      title: "Calculateur de pH de Titrage",
+      intro: "Entrez les concentrations et volumes de l'acide et de la base pour calculer le pH résultant - fonctionne pour tout point avant, au, ou après le point d'équivalence.",
+      description: "Calculez le pH à tout point pendant un titrage acide fort / base forte.",
+      faq: [
+        { q: "Comment calculer le pH avant le point d'équivalence ?", a: "Soustrayez les moles de base des moles d'acide pour trouver l'excès de H⁺, divisez par le volume total pour obtenir [H⁺], puis pH = −log₁₀[H⁺]. Cela fonctionne car la base forte neutralise complètement une quantité égale d'acide, laissant le reste comme excès." },
+        { q: "Quel est le pH au point d'équivalence pour un titrage acide fort/base forte ?", a: "Exactement 7 - au point d'équivalence, les moles d'acide et de base sont égales, se neutralisant complètement l'une l'autre et ne laissant que de l'eau et un sel neutre, sans excès de H⁺ ou OH⁻." },
+        { q: "Comment calculer le pH après le point d'équivalence ?", a: "Soustrayez les moles d'acide des moles de base pour trouver l'excès de OH⁻, divisez par le volume total pour obtenir [OH⁻], calculez pOH = −log₁₀[OH⁻], puis pH = 14 − pOH." },
+        { q: "Cela fonctionne-t-il pour les acides faibles ou les bases faibles ?", a: "Non - cette calculatrice suppose que l'acide et la base sont tous deux forts (se dissocient complètement), ce qui est ce qui rend valide le calcul simple de l'excès d'ions. Les titrages acide/base faible nécessitent des calculs d'équilibre (Ka/Kb) et produisent un pH différent, non égal à 7, au point d'équivalence en raison de la base ou de l'acide conjugué restant en solution." },
+      ],
+    },
+    de: {
+      title: "Titrations-pH-Rechner",
+      intro: "Geben Sie die Säure- und Basenkonzentrationen und -volumina ein, um den resultierenden pH-Wert zu berechnen - funktioniert für jeden Punkt vor, am, oder nach dem Äquivalenzpunkt.",
+      description: "Berechnen Sie den pH-Wert an jedem Punkt während einer starke Säure/starke Base-Titration.",
+      faq: [
+        { q: "Wie berechne ich den pH-Wert vor dem Äquivalenzpunkt?", a: "Subtrahieren Sie die Molzahl der Base von der Molzahl der Säure, um überschüssiges H⁺ zu finden, teilen Sie durch das Gesamtvolumen, um [H⁺] zu erhalten, dann pH = −log₁₀[H⁺]. Dies funktioniert, weil die starke Base eine gleiche Menge Säure vollständig neutralisiert und den Rest als Überschuss lässt." },
+        { q: "Wie hoch ist der pH-Wert am Äquivalenzpunkt bei einer starke Säure/starke Base-Titration?", a: "Genau 7 - am Äquivalenzpunkt sind Mol der Säure und Base gleich, neutralisieren sich vollständig gegenseitig und lassen nur Wasser und ein neutrales Salz übrig, ohne überschüssiges H⁺ oder OH⁻." },
+        { q: "Wie berechne ich den pH-Wert nach dem Äquivalenzpunkt?", a: "Subtrahieren Sie die Molzahl der Säure von der Molzahl der Base, um überschüssiges OH⁻ zu finden, teilen Sie durch das Gesamtvolumen, um [OH⁻] zu erhalten, berechnen Sie pOH = −log₁₀[OH⁻], dann pH = 14 − pOH." },
+        { q: "Funktioniert dies für schwache Säuren oder schwache Basen?", a: "Nein - dieser Rechner geht davon aus, dass sowohl Säure als auch Base stark sind (vollständig dissoziieren), was die einfache Überschuss-Ionen-Mathematik gültig macht. Schwache Säure/Base-Titrationen benötigen Gleichgewichtsberechnungen (Ka/Kb) und ergeben am Äquivalenzpunkt einen anderen, nicht-7-pH-Wert aufgrund der in Lösung verbleibenden konjugierten Base oder Säure." },
+      ],
+    },
+    pt: {
+      title: "Calculadora de pH de Titulação",
+      intro: "Digite as concentrações e volumes do ácido e base para calcular o pH resultante - funciona para qualquer ponto antes, no, ou depois do ponto de equivalência.",
+      description: "Calcule o pH em qualquer ponto durante uma titulação de ácido forte / base forte.",
+      faq: [
+        { q: "Como calculo o pH antes do ponto de equivalência?", a: "Subtraia os mols de base dos mols de ácido para encontrar o H⁺ em excesso, divida pelo volume total para obter [H⁺], depois pH = −log₁₀[H⁺]. Isso funciona porque a base forte neutraliza completamente uma quantidade igual de ácido, deixando o resto como excesso." },
+        { q: "Qual é o pH no ponto de equivalência para uma titulação de ácido forte/base forte?", a: "Exatamente 7 - no ponto de equivalência, os mols de ácido e base são iguais, neutralizando-se completamente e deixando apenas água e um sal neutro, sem H⁺ ou OH⁻ em excesso." },
+        { q: "Como calculo o pH depois do ponto de equivalência?", a: "Subtraia os mols de ácido dos mols de base para encontrar o OH⁻ em excesso, divida pelo volume total para obter [OH⁻], calcule pOH = −log₁₀[OH⁻], depois pH = 14 − pOH." },
+        { q: "Isso funciona para ácidos fracos ou bases fracas?", a: "Não - esta calculadora assume que tanto o ácido quanto a base são fortes (dissociam-se completamente), que é o que torna válida a matemática simples de íons em excesso. Titulações de ácido/base fraca precisam de cálculos de equilíbrio (Ka/Kb) e produzem um pH diferente, não 7, no ponto de equivalência devido à base ou ácido conjugado que permanece em solução." },
+      ],
+    },
+    it: {
+      title: "Calcolatore di pH di Titolazione",
+      intro: "Inserisci le concentrazioni e i volumi di acido e base per calcolare il pH risultante - funziona per qualsiasi punto prima, al, o dopo il punto di equivalenza.",
+      description: "Calcola il pH in qualsiasi punto durante una titolazione acido forte / base forte.",
+      faq: [
+        { q: "Come calcolo il pH prima del punto di equivalenza?", a: "Sottrai le moli di base dalle moli di acido per trovare l'H⁺ in eccesso, dividi per il volume totale per ottenere [H⁺], poi pH = −log₁₀[H⁺]. Questo funziona perché la base forte neutralizza completamente una quantità uguale di acido, lasciando il resto come eccesso." },
+        { q: "Qual è il pH al punto di equivalenza per una titolazione acido forte/base forte?", a: "Esattamente 7 - al punto di equivalenza, le moli di acido e base sono uguali, neutralizzandosi completamente a vicenda e lasciando solo acqua e un sale neutro, senza H⁺ o OH⁻ in eccesso." },
+        { q: "Come calcolo il pH dopo il punto di equivalenza?", a: "Sottrai le moli di acido dalle moli di base per trovare l'OH⁻ in eccesso, dividi per il volume totale per ottenere [OH⁻], calcola pOH = −log₁₀[OH⁻], poi pH = 14 − pOH." },
+        { q: "Questo funziona per acidi deboli o basi deboli?", a: "No - questa calcolatrice presuppone che sia l'acido che la base siano forti (si dissociano completamente), il che è ciò che rende valida la semplice matematica degli ioni in eccesso. Le titolazioni acido/base debole necessitano di calcoli di equilibrio (Ka/Kb) e producono un pH diverso, non 7, al punto di equivalenza a causa della base o acido coniugato rimanente in soluzione." },
+      ],
+    },
+    ja: {
+      title: "滴定pH計算機",
+      intro: "酸と塩基の濃度と体積を入力すると、結果のpHを計算します。当量点の前、当量点、または後のどの時点でも機能します。",
+      description: "強酸/強塩基滴定中の任意の時点でのpHを計算します。",
+      faq: [
+        { q: "当量点前のpHをどう計算しますか？", a: "酸のモル数から塩基のモル数を引いて過剰なH⁺を求め、総体積で割って[H⁺]を得て、pH = −log₁₀[H⁺]とします。これは、強塩基が等量の酸を完全に中和し、残りを過剰分として残すために機能します。" },
+        { q: "強酸/強塩基滴定の当量点でのpHはいくつですか？", a: "正確に7です。当量点では、酸と塩基のモル数が等しく、互いに完全に中和し合い、水と中性塩だけが残り、過剰なH⁺やOH⁻はありません。" },
+        { q: "当量点後のpHをどう計算しますか？", a: "塩基のモル数から酸のモル数を引いて過剰なOH⁻を求め、総体積で割って[OH⁻]を得て、pOH = −log₁₀[OH⁻]を計算し、その後pH = 14 − pOHとします。" },
+        { q: "これは弱酸や弱塩基でも機能しますか？", a: "いいえ。この計算機は、酸と塩基の両方が強い（完全に解離する）と仮定しており、これが単純な過剰イオン計算を有効にしています。弱酸/弱塩基の滴定には平衡（Ka/Kb）計算が必要で、溶液中に残る共役塩基または酸のために当量点で7とは異なるpHが生じます。" },
+      ],
+    },
+    ro: {
+      title: "Calculator de pH de Titrare",
+      intro: "Introdu concentrațiile și volumele acidului și bazei pentru a calcula pH-ul rezultat - funcționează pentru orice punct înainte, la, sau după punctul de echivalență.",
+      description: "Calculează pH-ul în orice punct în timpul unei titrări acid puternic / bază puternică.",
+      faq: [
+        { q: "Cum calculez pH-ul înainte de punctul de echivalență?", a: "Scade molii de bază din molii de acid pentru a găsi H⁺ în exces, împarte la volumul total pentru a obține [H⁺], apoi pH = −log₁₀[H⁺]. Acest lucru funcționează deoarece baza puternică neutralizează complet o cantitate egală de acid, lăsând restul ca exces." },
+        { q: "Care este pH-ul la punctul de echivalență pentru o titrare acid puternic/bază puternică?", a: "Exact 7 - la punctul de echivalență, molii de acid și bază sunt egali, neutralizându-se complet reciproc și lăsând doar apă și o sare neutră, fără exces de H⁺ sau OH⁻." },
+        { q: "Cum calculez pH-ul după punctul de echivalență?", a: "Scade molii de acid din molii de bază pentru a găsi OH⁻ în exces, împarte la volumul total pentru a obține [OH⁻], calculează pOH = −log₁₀[OH⁻], apoi pH = 14 − pOH." },
+        { q: "Funcționează asta pentru acizi slabi sau baze slabe?", a: "Nu - acest calculator presupune că atât acidul cât și baza sunt puternici (se disociază complet), ceea ce face valabilă matematica simplă a ionilor în exces. Titrările acid/bază slab au nevoie de calcule de echilibru (Ka/Kb) și produc un pH diferit, nu 7, la punctul de echivalență din cauza bazei sau acidului conjugat rămas în soluție." },
+      ],
+    },
+    el: {
+      title: "Υπολογιστής pH Ογκομέτρησης",
+      intro: "Εισάγετε τις συγκεντρώσεις και τους όγκους οξέος και βάσης για να υπολογίσετε το προκύπτον pH - λειτουργεί για οποιοδήποτε σημείο πριν, στο, ή μετά το σημείο ισοδυναμίας.",
+      description: "Υπολόγισε το pH σε οποιοδήποτε σημείο κατά τη διάρκεια μιας ογκομέτρησης ισχυρού οξέος / ισχυρής βάσης.",
+      faq: [
+        { q: "Πώς υπολογίζω το pH πριν το σημείο ισοδυναμίας;", a: "Αφαιρέστε τα mol βάσης από τα mol οξέος για να βρείτε το περίσσιο H⁺, διαιρέστε με τον συνολικό όγκο για να πάρετε [H⁺], μετά pH = −log₁₀[H⁺]. Αυτό λειτουργεί επειδή η ισχυρή βάση εξουδετερώνει πλήρως ίση ποσότητα οξέος, αφήνοντας το υπόλοιπο ως περίσσεια." },
+        { q: "Ποιο είναι το pH στο σημείο ισοδυναμίας για μια ογκομέτρηση ισχυρού οξέος/ισχυρής βάσης;", a: "Ακριβώς 7 - στο σημείο ισοδυναμίας, τα mol οξέος και βάσης είναι ίσα, εξουδετερώνοντας πλήρως το ένα το άλλο και αφήνοντας μόνο νερό και ένα ουδέτερο άλας, χωρίς περίσσιο H⁺ ή OH⁻." },
+        { q: "Πώς υπολογίζω το pH μετά το σημείο ισοδυναμίας;", a: "Αφαιρέστε τα mol οξέος από τα mol βάσης για να βρείτε το περίσσιο OH⁻, διαιρέστε με τον συνολικό όγκο για να πάρετε [OH⁻], υπολογίστε pOH = −log₁₀[OH⁻], μετά pH = 14 − pOH." },
+        { q: "Λειτουργεί αυτό για ασθενή οξέα ή ασθενείς βάσεις;", a: "Όχι - αυτή η αριθμομηχανή υποθέτει ότι τόσο το οξύ όσο και η βάση είναι ισχυρά (διίστανται πλήρως), που είναι αυτό που κάνει την απλή μαθηματική περίσσειας ιόντων έγκυρη. Οι ογκομετρήσεις ασθενούς οξέος/βάσης χρειάζονται υπολογισμούς ισορροπίας (Ka/Kb) και παράγουν διαφορετικό, μη-7 pH στο σημείο ισοδυναμίας λόγω της συζυγούς βάσης ή οξέος που παραμένει στο διάλυμα." },
+      ],
+    },
+    zh: {
+      title: "滴定pH计算器",
+      intro: "输入酸和碱的浓度与体积，计算所得的pH值——适用于等当点之前、当时或之后的任何一点。",
+      description: "计算强酸/强碱滴定过程中任意一点的pH值。",
+      faq: [
+        { q: "如何计算等当点之前的pH？", a: "用酸的摩尔数减去碱的摩尔数得到过量的H⁺，除以总体积得到[H⁺]，然后pH = −log₁₀[H⁺]。这个方法之所以有效，是因为强碱会完全中和等量的酸，剩下的就是过量部分。" },
+        { q: "强酸/强碱滴定在等当点时的pH是多少？", a: "恰好是7——在等当点，酸和碱的摩尔数相等，彼此完全中和，只剩下水和中性盐，没有过量的H⁺或OH⁻。" },
+        { q: "如何计算等当点之后的pH？", a: "用碱的摩尔数减去酸的摩尔数得到过量的OH⁻，除以总体积得到[OH⁻]，计算pOH = −log₁₀[OH⁻]，然后pH = 14 − pOH。" },
+        { q: "这适用于弱酸或弱碱吗？", a: "不适用——这个计算器假设酸和碱都是强酸强碱（完全电离），这正是简单的过量离子计算方法成立的前提。弱酸/弱碱滴定需要平衡常数（Ka/Kb）计算，并且由于溶液中残留的共轭碱或共轭酸，等当点的pH值会不同于7。" },
+      ],
+    },
+    ar: {
+      title: "حاسبة درجة الحموضة للمعايرة",
+      intro: "أدخل تركيزات وأحجام الحمض والقاعدة لحساب درجة الحموضة الناتجة - تعمل لأي نقطة قبل نقطة التكافؤ أو عندها أو بعدها.",
+      description: "احسب درجة الحموضة عند أي نقطة أثناء معايرة حمض قوي / قاعدة قوية.",
+      faq: [
+        { q: "كيف أحسب درجة الحموضة قبل نقطة التكافؤ؟", a: "اطرح مولات القاعدة من مولات الحمض لإيجاد الزائد من H⁺، اقسم على الحجم الإجمالي للحصول على [H⁺]، ثم pH = −log₁₀[H⁺]. يعمل هذا لأن القاعدة القوية تعادل تمامًا كمية مساوية من الحمض، تاركة الباقي كفائض." },
+        { q: "ما هي درجة الحموضة عند نقطة التكافؤ لمعايرة حمض قوي/قاعدة قوية؟", a: "7 بالضبط - عند نقطة التكافؤ، تتساوى مولات الحمض والقاعدة، فتعادل كل منهما الأخرى تمامًا تاركة فقط الماء وملحًا محايدًا، دون زيادة H⁺ أو OH⁻." },
+        { q: "كيف أحسب درجة الحموضة بعد نقطة التكافؤ؟", a: "اطرح مولات الحمض من مولات القاعدة لإيجاد الزائد من OH⁻، اقسم على الحجم الإجمالي للحصول على [OH⁻]، احسب pOH = −log₁₀[OH⁻]، ثم pH = 14 − pOH." },
+        { q: "هل يعمل هذا مع الأحماض الضعيفة أو القواعد الضعيفة؟", a: "لا - تفترض هذه الحاسبة أن كلاً من الحمض والقاعدة قويان (يتفككان تمامًا)، وهذا ما يجعل الحساب البسيط للأيونات الزائدة صالحًا. تحتاج معايرات الحمض/القاعدة الضعيفة إلى حسابات اتزان (Ka/Kb) وتنتج درجة حموضة مختلفة، ليست 7، عند نقطة التكافؤ بسبب القاعدة أو الحمض المرافق المتبقي في المحلول." },
+      ],
+    },
+    th: {
+      title: "เครื่องคำนวณ pH การไทเทรต",
+      intro: "ป้อนความเข้มข้นและปริมาตรของกรดและเบสเพื่อคำนวณ pH ที่ได้ - ใช้ได้กับจุดใดๆ ก่อน ที่ หรือหลังจุดสมมูล",
+      description: "คำนวณ pH ที่จุดใดๆ ระหว่างการไทเทรตกรดแก่/เบสแก่",
+      faq: [
+        { q: "ฉันจะคำนวณ pH ก่อนจุดสมมูลได้อย่างไร?", a: "ลบโมลของเบสออกจากโมลของกรดเพื่อหา H⁺ ส่วนเกิน หารด้วยปริมาตรรวมเพื่อได้ [H⁺] จากนั้น pH = −log₁₀[H⁺] วิธีนี้ใช้ได้เพราะเบสแก่จะทำให้กรดปริมาณเท่ากันเป็นกลางอย่างสมบูรณ์ เหลือส่วนที่เกินไว้" },
+        { q: "pH ที่จุดสมมูลสำหรับการไทเทรตกรดแก่/เบสแก่คือเท่าไหร่?", a: "เท่ากับ 7 พอดี - ที่จุดสมมูล โมลของกรดและเบสเท่ากัน ทำให้กันและกันเป็นกลางอย่างสมบูรณ์ เหลือเพียงน้ำและเกลือที่เป็นกลาง โดยไม่มี H⁺ หรือ OH⁻ ส่วนเกิน" },
+        { q: "ฉันจะคำนวณ pH หลังจุดสมมูลได้อย่างไร?", a: "ลบโมลของกรดออกจากโมลของเบสเพื่อหา OH⁻ ส่วนเกิน หารด้วยปริมาตรรวมเพื่อได้ [OH⁻] คำนวณ pOH = −log₁₀[OH⁻] จากนั้น pH = 14 − pOH" },
+        { q: "สิ่งนี้ใช้ได้กับกรดอ่อนหรือเบสอ่อนหรือไม่?", a: "ไม่ได้ - เครื่องคำนวณนี้สมมติว่าทั้งกรดและเบสเป็นกรดแก่/เบสแก่ (แตกตัวอย่างสมบูรณ์) ซึ่งเป็นสิ่งที่ทำให้การคำนวณไอออนส่วนเกินอย่างง่ายใช้ได้ การไทเทรตกรด/เบสอ่อนต้องใช้การคำนวณสมดุล (Ka/Kb) และให้ค่า pH ที่แตกต่างออกไป ไม่ใช่ 7 ที่จุดสมมูล เนื่องจากเบสหรือกรดคอนจูเกตที่เหลืออยู่ในสารละลาย" },
+      ],
+    },
+  },
 };
 
 // Static-page copy for wave one. Privacy and Terms are flagged explicitly
