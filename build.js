@@ -82,6 +82,8 @@ const WAVE_ONE_TOOL_IDS = [
   "week-number-calculator", "time-zone-converter", "daylight-saving-time-calculator",
   "sunrise-sunset-calculator", "sun-position-calculator", "day-of-week-calculator",
   "leap-year-calculator", "birth-year-calculator", "time-zone-meeting-planner", "day-of-the-week-calculator",
+  "screen-ppi-calculator", "print-dpi-calculator", "time-unit-converter", "oven-temperature-converter",
+  "rainfall-volume-calculator", "water-density-calculator", "weight-converter",
 ];
 
 function loadData() {
