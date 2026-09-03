@@ -18294,6 +18294,863 @@ const I18N_TOOLS = {
       ],
     },
   },
+
+  "percentage-change-calculator": {
+    es: {
+      title: "Calculadora de Cambio Porcentual",
+      intro: "Introduce un valor inicial y final para ver el aumento o disminución porcentual entre ellos.",
+      description: "Calcula el aumento o disminución porcentual entre dos valores.",
+      faq: [
+        { q: "¿Cuál es la fórmula del cambio porcentual?", a: "(Valor nuevo − Valor antiguo) ÷ Valor antiguo × 100. Un resultado positivo es un aumento; un resultado negativo es una disminución." },
+        { q: "¿Es el cambio porcentual lo mismo que el cambio en puntos porcentuales?", a: "No - si una tasa pasa del 20% al 25%, eso es un aumento de 5 puntos porcentuales, pero un cambio porcentual del 25% ((25−20)÷20×100). Confundir los dos es un error común de reporte." },
+        { q: "¿Cómo calculo el cambio porcentual cuando el valor antiguo es negativo?", a: "La fórmula sigue aplicándose: (nuevo − antiguo) / |antiguo| × 100, pero usar el valor absoluto del número antiguo en el denominador evita un cambio de signo engañoso - la mayoría de contextos financieros y científicos definen el cambio porcentual de esta manera específicamente para mantener el resultado intuitivo." },
+        { q: "¿Puede el cambio porcentual ser mayor al 100%?", a: "Sí - si un valor más que se duplica, el cambio porcentual supera el 100%. Pasar de 10 a 25 es un aumento del 150%: (25-10)/10*100 = 150%. No hay límite superior en los aumentos, pero una disminución nunca puede superar el -100% (un valor no puede caer por debajo de cero en relación a sí mismo)." },
+      ],
+    },
+    fr: {
+      title: "Calculateur de Variation en Pourcentage",
+      intro: "Entrez une valeur de départ et d'arrivée pour voir l'augmentation ou la diminution en pourcentage entre elles.",
+      description: "Calculez l'augmentation ou la diminution en pourcentage entre deux valeurs.",
+      faq: [
+        { q: "Quelle est la formule de variation en pourcentage ?", a: "(Nouvelle valeur − Ancienne valeur) ÷ Ancienne valeur × 100. Un résultat positif est une augmentation ; un résultat négatif est une diminution." },
+        { q: "La variation en pourcentage est-elle la même chose que la variation en points de pourcentage ?", a: "Non - si un taux passe de 20 % à 25 %, c'est une augmentation de 5 points de pourcentage, mais une variation de 25 % en pourcentage ((25−20)÷20×100). Confondre les deux est une erreur de reporting courante." },
+        { q: "Comment calculer la variation en pourcentage lorsque l'ancienne valeur est négative ?", a: "La formule s'applique toujours : (nouveau − ancien) / |ancien| × 100, mais utiliser la valeur absolue de l'ancien nombre au dénominateur évite une inversion de signe trompeuse - la plupart des contextes financiers et scientifiques définissent la variation en pourcentage ainsi spécifiquement pour garder le résultat intuitif." },
+        { q: "La variation en pourcentage peut-elle dépasser 100 % ?", a: "Oui - si une valeur fait plus que doubler, la variation en pourcentage dépasse 100 %. Passer de 10 à 25 est une augmentation de 150 % : (25-10)/10*100 = 150 %. Il n'y a pas de limite supérieure aux augmentations, mais une diminution ne peut jamais dépasser -100 % (une valeur ne peut pas descendre en dessous de zéro par rapport à elle-même)." },
+      ],
+    },
+    de: {
+      title: "Prozentuale-Veränderung-Rechner",
+      intro: "Geben Sie einen Anfangs- und Endwert ein, um die prozentuale Zunahme oder Abnahme zwischen ihnen zu sehen.",
+      description: "Berechnen Sie die prozentuale Zunahme oder Abnahme zwischen zwei Werten.",
+      faq: [
+        { q: "Was ist die Formel für die prozentuale Veränderung?", a: "(Neuer Wert − Alter Wert) ÷ Alter Wert × 100. Ein positives Ergebnis ist eine Zunahme; ein negatives Ergebnis ist eine Abnahme." },
+        { q: "Ist die prozentuale Veränderung dasselbe wie die Veränderung in Prozentpunkten?", a: "Nein - wenn eine Rate von 20 % auf 25 % steigt, ist das ein Anstieg um 5 Prozentpunkte, aber eine prozentuale Veränderung von 25 % ((25−20)÷20×100). Die beiden zu verwechseln ist ein häufiger Berichtsfehler." },
+        { q: "Wie berechne ich die prozentuale Veränderung, wenn der alte Wert negativ ist?", a: "Die Formel gilt weiterhin: (neu − alt) / |alt| × 100, aber die Verwendung des Absolutwerts der alten Zahl im Nenner vermeidet einen irreführenden Vorzeichenwechsel - die meisten finanziellen und wissenschaftlichen Kontexte definieren die prozentuale Veränderung speziell so, um das Ergebnis intuitiv zu halten." },
+        { q: "Kann die prozentuale Veränderung größer als 100 % sein?", a: "Ja - wenn sich ein Wert mehr als verdoppelt, übersteigt die prozentuale Veränderung 100 %. Von 10 auf 25 zu gehen ist ein Anstieg von 150 %: (25-10)/10*100 = 150 %. Es gibt keine Obergrenze für Zunahmen, aber eine Abnahme kann niemals -100 % überschreiten (ein Wert kann relativ zu sich selbst nicht unter null fallen)." },
+      ],
+    },
+    pt: {
+      title: "Calculadora de Variação Percentual",
+      intro: "Digite um valor inicial e final para ver o aumento ou diminuição percentual entre eles.",
+      description: "Calcule o aumento ou diminuição percentual entre dois valores.",
+      faq: [
+        { q: "Qual é a fórmula da variação percentual?", a: "(Valor novo − Valor antigo) ÷ Valor antigo × 100. Um resultado positivo é um aumento; um resultado negativo é uma diminuição." },
+        { q: "A variação percentual é a mesma coisa que a variação em pontos percentuais?", a: "Não - se uma taxa vai de 20% para 25%, isso é um aumento de 5 pontos percentuais, mas uma variação percentual de 25% ((25−20)÷20×100). Confundir os dois é um erro comum de relatório." },
+        { q: "Como calculo a variação percentual quando o valor antigo é negativo?", a: "A fórmula ainda se aplica: (novo − antigo) / |antigo| × 100, mas usar o valor absoluto do número antigo no denominador evita uma inversão de sinal enganosa - a maioria dos contextos financeiros e científicos define a variação percentual dessa forma especificamente para manter o resultado intuitivo." },
+        { q: "A variação percentual pode ser maior que 100%?", a: "Sim - se um valor mais que dobra, a variação percentual excede 100%. Ir de 10 para 25 é um aumento de 150%: (25-10)/10*100 = 150%. Não há limite superior para aumentos, mas uma diminuição nunca pode exceder -100% (um valor não pode cair abaixo de zero em relação a si mesmo)." },
+      ],
+    },
+    it: {
+      title: "Calcolatore di Variazione Percentuale",
+      intro: "Inserisci un valore iniziale e finale per vedere l'aumento o la diminuzione percentuale tra loro.",
+      description: "Calcola l'aumento o la diminuzione percentuale tra due valori.",
+      faq: [
+        { q: "Qual è la formula della variazione percentuale?", a: "(Nuovo valore − Vecchio valore) ÷ Vecchio valore × 100. Un risultato positivo è un aumento; un risultato negativo è una diminuzione." },
+        { q: "La variazione percentuale è la stessa cosa della variazione in punti percentuali?", a: "No - se un tasso passa dal 20% al 25%, quello è un aumento di 5 punti percentuali, ma una variazione percentuale del 25% ((25−20)÷20×100). Confondere i due è un errore comune di reporting." },
+        { q: "Come calcolo la variazione percentuale quando il vecchio valore è negativo?", a: "La formula si applica comunque: (nuovo − vecchio) / |vecchio| × 100, ma usare il valore assoluto del vecchio numero al denominatore evita un fuorviante cambio di segno - la maggior parte dei contesti finanziari e scientifici definisce la variazione percentuale in questo modo specificamente per mantenere il risultato intuitivo." },
+        { q: "La variazione percentuale può essere maggiore del 100%?", a: "Sì - se un valore più che raddoppia, la variazione percentuale supera il 100%. Passare da 10 a 25 è un aumento del 150%: (25-10)/10*100 = 150%. Non c'è limite superiore per gli aumenti, ma una diminuzione non può mai superare il -100% (un valore non può scendere sotto zero rispetto a se stesso)." },
+      ],
+    },
+    ja: {
+      title: "変化率計算機",
+      intro: "開始値と終了値を入力すると、それらの間の増減率が表示されます。",
+      description: "2つの値の間の増加率または減少率を計算します。",
+      faq: [
+        { q: "変化率の公式は何ですか？", a: "(新しい値 − 古い値) ÷ 古い値 × 100。正の結果は増加、負の結果は減少です。" },
+        { q: "変化率とパーセンテージポイントの変化は同じですか？", a: "いいえ。比率が20%から25%に上がった場合、それは5パーセントポイントの増加ですが、変化率としては25%です（(25−20)÷20×100）。この2つを混同するのはよくある報告ミスです。" },
+        { q: "古い値が負の場合、変化率をどう計算しますか？", a: "公式は依然として適用されます：(新 − 旧) / |旧| × 100。ただし分母に古い数値の絶対値を使うことで、誤解を招く符号の反転を回避します。ほとんどの金融的・科学的文脈では、結果を直感的に保つために特にこの方法で変化率を定義しています。" },
+        { q: "変化率は100%を超えることができますか？", a: "はい。値が2倍を超えると、変化率は100%を超えます。10から25への変化は150%の増加です：(25-10)/10*100 = 150%。増加には上限がありませんが、減少は決して-100%を超えることはできません（値は自分自身に対してゼロを下回ることはできません）。" },
+      ],
+    },
+    ro: {
+      title: "Calculator de Variație Procentuală",
+      intro: "Introdu o valoare inițială și finală pentru a vedea creșterea sau scăderea procentuală dintre ele.",
+      description: "Calculează creșterea sau scăderea procentuală între două valori.",
+      faq: [
+        { q: "Care este formula pentru variația procentuală?", a: "(Valoarea nouă − Valoarea veche) ÷ Valoarea veche × 100. Un rezultat pozitiv este o creștere; un rezultat negativ este o scădere." },
+        { q: "Este variația procentuală același lucru cu variația în puncte procentuale?", a: "Nu - dacă o rată crește de la 20% la 25%, aceasta este o creștere de 5 puncte procentuale, dar o variație procentuală de 25% ((25−20)÷20×100). Confundarea celor două este o greșeală comună de raportare." },
+        { q: "Cum calculez variația procentuală când valoarea veche este negativă?", a: "Formula se aplică în continuare: (nou − vechi) / |vechi| × 100, dar folosirea valorii absolute a numărului vechi la numitor evită o schimbare de semn înșelătoare - majoritatea contextelor financiare și științifice definesc variația procentuală în acest fel special pentru a menține rezultatul intuitiv." },
+        { q: "Poate variația procentuală fi mai mare de 100%?", a: "Da - dacă o valoare se mai mult decât dublează, variația procentuală depășește 100%. Trecerea de la 10 la 25 este o creștere de 150%: (25-10)/10*100 = 150%. Nu există limită superioară pentru creșteri, dar o scădere nu poate depăși niciodată -100% (o valoare nu poate scădea sub zero în raport cu ea însăși)." },
+      ],
+    },
+    el: {
+      title: "Υπολογιστής Ποσοστιαίας Μεταβολής",
+      intro: "Εισάγετε μια αρχική και τελική τιμή για να δείτε την ποσοστιαία αύξηση ή μείωση μεταξύ τους.",
+      description: "Υπολόγισε την ποσοστιαία αύξηση ή μείωση μεταξύ δύο τιμών.",
+      faq: [
+        { q: "Ποιος είναι ο τύπος για την ποσοστιαία μεταβολή;", a: "(Νέα τιμή − Παλιά τιμή) ÷ Παλιά τιμή × 100. Ένα θετικό αποτέλεσμα είναι αύξηση· ένα αρνητικό αποτέλεσμα είναι μείωση." },
+        { q: "Είναι η ποσοστιαία μεταβολή το ίδιο με τη μεταβολή σε ποσοστιαίες μονάδες;", a: "Όχι - αν ένα ποσοστό πάει από 20% σε 25%, αυτό είναι αύξηση 5 ποσοστιαίων μονάδων, αλλά ποσοστιαία μεταβολή 25% ((25−20)÷20×100). Το να συγχέονται τα δύο είναι ένα κοινό λάθος αναφοράς." },
+        { q: "Πώς υπολογίζω την ποσοστιαία μεταβολή όταν η παλιά τιμή είναι αρνητική;", a: "Ο τύπος εξακολουθεί να ισχύει: (νέα − παλιά) / |παλιά| × 100, αλλά η χρήση της απόλυτης τιμής του παλιού αριθμού στον παρονομαστή αποφεύγει μια παραπλανητική αλλαγή προσήμου - οι περισσότερα οικονομικά και επιστημονικά πλαίσια ορίζουν την ποσοστιαία μεταβολή έτσι συγκεκριμένα ώστε το αποτέλεσμα να παραμένει διαισθητικό." },
+        { q: "Μπορεί η ποσοστιαία μεταβολή να είναι μεγαλύτερη από 100%;", a: "Ναι - αν μια τιμή υπερδιπλασιάζεται, η ποσοστιαία μεταβολή υπερβαίνει το 100%. Η μετάβαση από το 10 στο 25 είναι αύξηση 150%: (25-10)/10*100 = 150%. Δεν υπάρχει ανώτατο όριο στις αυξήσεις, αλλά μια μείωση δεν μπορεί ποτέ να υπερβεί το -100% (μια τιμή δεν μπορεί να πέσει κάτω από το μηδέν σε σχέση με τον εαυτό της)." },
+      ],
+    },
+    zh: {
+      title: "百分比变化计算器",
+      intro: "输入起始值和结束值，查看两者之间的百分比增加或减少。",
+      description: "计算两个数值之间的百分比增加或减少。",
+      faq: [
+        { q: "百分比变化的公式是什么？", a: "(新值 − 旧值) ÷ 旧值 × 100。结果为正表示增加；结果为负表示减少。" },
+        { q: "百分比变化和百分点变化是一回事吗？", a: "不是——如果一个比率从20%变为25%，这是增加了5个百分点，但百分比变化是25%（(25−20)÷20×100）。混淆这两者是常见的报告错误。" },
+        { q: "当旧值为负数时，如何计算百分比变化？", a: "公式仍然适用：(新 − 旧) / |旧| × 100，但在分母中使用旧数值的绝对值可以避免误导性的符号翻转——大多数金融和科学场景都特意这样定义百分比变化，以保持结果符合直觉。" },
+        { q: "百分比变化可以超过100%吗？", a: "可以——如果一个值增加超过一倍，百分比变化就会超过100%。从10变到25是增加了150%：(25-10)/10*100 = 150%。增加没有上限，但减少永远不会超过-100%（一个值相对于自身不能降到零以下）。" },
+      ],
+    },
+    ar: {
+      title: "حاسبة التغير النسبي المئوي",
+      intro: "أدخل قيمة بداية ونهاية لرؤية الزيادة أو النقصان النسبي المئوي بينهما.",
+      description: "احسب الزيادة أو النقصان النسبي المئوي بين قيمتين.",
+      faq: [
+        { q: "ما هي صيغة التغير النسبي المئوي؟", a: "(القيمة الجديدة − القيمة القديمة) ÷ القيمة القديمة × 100. النتيجة الموجبة تعني زيادة؛ والنتيجة السالبة تعني نقصانًا." },
+        { q: "هل التغير النسبي المئوي هو نفسه تغير النقاط المئوية؟", a: "لا - إذا انتقل معدل من 20% إلى 25%، فهذه زيادة بمقدار 5 نقاط مئوية، لكن التغير النسبي المئوي هو 25% ((25−20)÷20×100). الخلط بين الاثنين خطأ شائع في التقارير." },
+        { q: "كيف أحسب التغير النسبي المئوي عندما تكون القيمة القديمة سالبة؟", a: "لا تزال الصيغة تنطبق: (جديد − قديم) / |قديم| × 100، لكن استخدام القيمة المطلقة للرقم القديم في المقام يتجنب انعكاس الإشارة المضلل - تُعرّف معظم السياقات المالية والعلمية التغير النسبي المئوي بهذه الطريقة تحديدًا للحفاظ على نتيجة بديهية." },
+        { q: "هل يمكن أن يكون التغير النسبي المئوي أكبر من 100%؟", a: "نعم - إذا زادت قيمة إلى أكثر من الضعف، يتجاوز التغير النسبي المئوي 100%. الانتقال من 10 إلى 25 هو زيادة بنسبة 150%: (25-10)/10*100 = 150%. لا يوجد حد أعلى للزيادات، لكن النقصان لا يمكن أبدًا أن يتجاوز -100% (لا يمكن أن تنخفض القيمة إلى ما دون الصفر بالنسبة لنفسها)." },
+      ],
+    },
+    th: {
+      title: "เครื่องคำนวณการเปลี่ยนแปลงเปอร์เซ็นต์",
+      intro: "ป้อนค่าเริ่มต้นและค่าสิ้นสุดเพื่อดูเปอร์เซ็นต์การเพิ่มขึ้นหรือลดลงระหว่างทั้งสอง",
+      description: "คำนวณเปอร์เซ็นต์การเพิ่มขึ้นหรือลดลงระหว่างสองค่า",
+      faq: [
+        { q: "สูตรของการเปลี่ยนแปลงเปอร์เซ็นต์คืออะไร?", a: "(ค่าใหม่ − ค่าเก่า) ÷ ค่าเก่า × 100 ผลลัพธ์เป็นบวกคือการเพิ่มขึ้น ผลลัพธ์เป็นลบคือการลดลง" },
+        { q: "การเปลี่ยนแปลงเปอร์เซ็นต์เหมือนกับการเปลี่ยนแปลงจุดเปอร์เซ็นต์หรือไม่?", a: "ไม่ - ถ้าอัตราเปลี่ยนจาก 20% เป็น 25% นั่นคือการเพิ่มขึ้น 5 จุดเปอร์เซ็นต์ แต่การเปลี่ยนแปลงเปอร์เซ็นต์คือ 25% ((25−20)÷20×100) การสับสนทั้งสองอย่างนี้เป็นความผิดพลาดทั่วไปในการรายงาน" },
+        { q: "ฉันจะคำนวณการเปลี่ยนแปลงเปอร์เซ็นต์เมื่อค่าเก่าเป็นลบได้อย่างไร?", a: "สูตรยังคงใช้ได้: (ใหม่ − เก่า) / |เก่า| × 100 แต่การใช้ค่าสัมบูรณ์ของตัวเลขเก่าในตัวส่วนช่วยหลีกเลี่ยงการกลับเครื่องหมายที่ทำให้เข้าใจผิด - บริบททางการเงินและวิทยาศาสตร์ส่วนใหญ่กำหนดการเปลี่ยนแปลงเปอร์เซ็นต์ในลักษณะนี้โดยเฉพาะเพื่อให้ผลลัพธ์เข้าใจง่าย" },
+        { q: "การเปลี่ยนแปลงเปอร์เซ็นต์สามารถมากกว่า 100% ได้หรือไม่?", a: "ได้ - ถ้าค่าเพิ่มขึ้นมากกว่าสองเท่า การเปลี่ยนแปลงเปอร์เซ็นต์จะเกิน 100% การเปลี่ยนจาก 10 เป็น 25 คือการเพิ่มขึ้น 150%: (25-10)/10*100 = 150% ไม่มีขีดจำกัดบนสำหรับการเพิ่มขึ้น แต่การลดลงไม่สามารถเกิน -100% ได้ (ค่าไม่สามารถลดลงต่ำกว่าศูนย์เมื่อเทียบกับตัวมันเอง)" },
+      ],
+    },
+  },
+
+  "fraction-calculator": {
+    es: {
+      title: "Calculadora de Fracciones",
+      intro: "Introduce dos fracciones y elige una operación para calcular el resultado, simplificado automáticamente.",
+      description: "Suma, resta, multiplica, o divide dos fracciones.",
+      faq: [
+        { q: "¿Cómo sumo dos fracciones?", a: "Encuentra un denominador común, convierte ambas fracciones, luego suma los numeradores. 1/2 + 1/3 = 3/6 + 2/6 = 5/6." },
+        { q: "¿Cómo divido fracciones?", a: "Multiplica la primera fracción por el recíproco (invertida) de la segunda. 1/2 ÷ 1/3 = 1/2 × 3/1 = 3/2." },
+        { q: "¿Cómo convierto una fracción a decimal?", a: "Divide el numerador entre el denominador. 3/4 se convierte en 3 ÷ 4 = 0.75. Las operaciones de fracciones de esta calculadora devuelven una fracción simplificada, que puedes convertir a decimal de la misma forma después." },
+        { q: "¿Cómo simplifico solo una fracción, sin una segunda?", a: "Establece la segunda fracción a 1/1 y elige \"×\" (multiplicar) - multiplicar por 1/1 no cambia el valor, así que el resultado mostrado es tu fracción original reducida a su forma más simple." },
+        { q: "¿Cómo resto fracciones con diferentes denominadores?", a: "Encuentra primero un denominador común, convierte cada fracción a ese denominador, luego resta los numeradores. Para 3/4 - 1/6, el denominador común es 12: 9/12 - 2/12 = 7/12. Esta calculadora maneja el paso del denominador común automáticamente." },
+      ],
+    },
+    fr: {
+      title: "Calculateur de Fractions",
+      intro: "Entrez deux fractions et choisissez une opération pour calculer le résultat, automatiquement simplifié.",
+      description: "Additionnez, soustrayez, multipliez, ou divisez deux fractions.",
+      faq: [
+        { q: "Comment additionner deux fractions ?", a: "Trouvez un dénominateur commun, convertissez les deux fractions, puis additionnez les numérateurs. 1/2 + 1/3 = 3/6 + 2/6 = 5/6." },
+        { q: "Comment diviser des fractions ?", a: "Multipliez la première fraction par l'inverse (retournée) de la seconde. 1/2 ÷ 1/3 = 1/2 × 3/1 = 3/2." },
+        { q: "Comment convertir une fraction en décimal ?", a: "Divisez le numérateur par le dénominateur. 3/4 devient 3 ÷ 4 = 0,75. Les opérations de fraction de cette calculatrice renvoient une fraction simplifiée, que vous pouvez convertir en décimal de la même manière ensuite." },
+        { q: "Comment simplifier juste une fraction, sans une seconde ?", a: "Réglez la deuxième fraction sur 1/1 et choisissez « × » (multiplier) - multiplier par 1/1 ne change pas la valeur, donc le résultat affiché est votre fraction originale réduite à sa forme la plus simple." },
+        { q: "Comment soustraire des fractions avec des dénominateurs différents ?", a: "Trouvez d'abord un dénominateur commun, convertissez chaque fraction à ce dénominateur, puis soustrayez les numérateurs. Pour 3/4 - 1/6, le dénominateur commun est 12 : 9/12 - 2/12 = 7/12. Cette calculatrice gère automatiquement l'étape du dénominateur commun." },
+      ],
+    },
+    de: {
+      title: "Bruchrechner",
+      intro: "Geben Sie zwei Brüche ein und wählen Sie eine Operation, um das Ergebnis zu berechnen, automatisch vereinfacht.",
+      description: "Addieren, subtrahieren, multiplizieren, oder dividieren Sie zwei Brüche.",
+      faq: [
+        { q: "Wie addiere ich zwei Brüche?", a: "Finden Sie einen gemeinsamen Nenner, wandeln Sie beide Brüche um, dann addieren Sie die Zähler. 1/2 + 1/3 = 3/6 + 2/6 = 5/6." },
+        { q: "Wie dividiere ich Brüche?", a: "Multiplizieren Sie den ersten Bruch mit dem Kehrwert (umgedreht) des zweiten. 1/2 ÷ 1/3 = 1/2 × 3/1 = 3/2." },
+        { q: "Wie wandle ich einen Bruch in eine Dezimalzahl um?", a: "Teilen Sie den Zähler durch den Nenner. 3/4 wird zu 3 ÷ 4 = 0,75. Die Bruchoperationen dieses Rechners geben einen vereinfachten Bruch zurück, den Sie danach auf die gleiche Weise in eine Dezimalzahl umwandeln können." },
+        { q: "Wie vereinfache ich nur einen Bruch, ohne einen zweiten?", a: "Stellen Sie den zweiten Bruch auf 1/1 und wählen Sie „×“ (multiplizieren) - die Multiplikation mit 1/1 ändert den Wert nicht, sodass das angezeigte Ergebnis Ihr ursprünglicher Bruch in seiner einfachsten Form ist." },
+        { q: "Wie subtrahiere ich Brüche mit unterschiedlichen Nennern?", a: "Finden Sie zuerst einen gemeinsamen Nenner, wandeln Sie jeden Bruch auf diesen Nenner um, dann subtrahieren Sie die Zähler. Für 3/4 - 1/6 ist der gemeinsame Nenner 12: 9/12 - 2/12 = 7/12. Dieser Rechner erledigt den Schritt des gemeinsamen Nenners automatisch." },
+      ],
+    },
+    pt: {
+      title: "Calculadora de Frações",
+      intro: "Digite duas frações e escolha uma operação para calcular o resultado, automaticamente simplificado.",
+      description: "Some, subtraia, multiplique, ou divida duas frações.",
+      faq: [
+        { q: "Como somo duas frações?", a: "Encontre um denominador comum, converta ambas as frações, depois some os numeradores. 1/2 + 1/3 = 3/6 + 2/6 = 5/6." },
+        { q: "Como divido frações?", a: "Multiplique a primeira fração pelo recíproco (invertido) da segunda. 1/2 ÷ 1/3 = 1/2 × 3/1 = 3/2." },
+        { q: "Como converto uma fração em decimal?", a: "Divida o numerador pelo denominador. 3/4 se torna 3 ÷ 4 = 0,75. As operações de fração desta calculadora retornam uma fração simplificada, que você pode converter em decimal da mesma forma depois." },
+        { q: "Como simplifico apenas uma fração, sem uma segunda?", a: "Defina a segunda fração para 1/1 e escolha \"×\" (multiplicar) - multiplicar por 1/1 não muda o valor, então o resultado mostrado é sua fração original reduzida à sua forma mais simples." },
+        { q: "Como subtraio frações com denominadores diferentes?", a: "Encontre primeiro um denominador comum, converta cada fração para esse denominador, depois subtraia os numeradores. Para 3/4 - 1/6, o denominador comum é 12: 9/12 - 2/12 = 7/12. Esta calculadora lida automaticamente com o passo do denominador comum." },
+      ],
+    },
+    it: {
+      title: "Calcolatore di Frazioni",
+      intro: "Inserisci due frazioni e scegli un'operazione per calcolare il risultato, automaticamente semplificato.",
+      description: "Somma, sottrai, moltiplica, o dividi due frazioni.",
+      faq: [
+        { q: "Come sommo due frazioni?", a: "Trova un denominatore comune, converti entrambe le frazioni, poi somma i numeratori. 1/2 + 1/3 = 3/6 + 2/6 = 5/6." },
+        { q: "Come divido le frazioni?", a: "Moltiplica la prima frazione per il reciproco (capovolto) della seconda. 1/2 ÷ 1/3 = 1/2 × 3/1 = 3/2." },
+        { q: "Come converto una frazione in decimale?", a: "Dividi il numeratore per il denominatore. 3/4 diventa 3 ÷ 4 = 0,75. Le operazioni con frazioni di questa calcolatrice restituiscono una frazione semplificata, che puoi convertire in decimale allo stesso modo in seguito." },
+        { q: "Come semplifico solo una frazione, senza una seconda?", a: "Imposta la seconda frazione su 1/1 e scegli \"×\" (moltiplica) - moltiplicare per 1/1 non cambia il valore, quindi il risultato mostrato è la tua frazione originale ridotta alla sua forma più semplice." },
+        { q: "Come sottraggo frazioni con denominatori diversi?", a: "Trova prima un denominatore comune, converti ogni frazione a quel denominatore, poi sottrai i numeratori. Per 3/4 - 1/6, il denominatore comune è 12: 9/12 - 2/12 = 7/12. Questa calcolatrice gestisce automaticamente il passaggio del denominatore comune." },
+      ],
+    },
+    ja: {
+      title: "分数計算機",
+      intro: "2つの分数を入力し、演算を選択すると、自動的に簡約された結果が計算されます。",
+      description: "2つの分数を足し算、引き算、掛け算、または割り算します。",
+      faq: [
+        { q: "2つの分数をどう足しますか？", a: "共通の分母を見つけ、両方の分数を変換してから、分子を足します。1/2 + 1/3 = 3/6 + 2/6 = 5/6。" },
+        { q: "分数をどう割りますか？", a: "最初の分数に2番目の逆数（ひっくり返したもの）を掛けます。1/2 ÷ 1/3 = 1/2 × 3/1 = 3/2。" },
+        { q: "分数を小数にどう変換しますか？", a: "分子を分母で割ります。3/4は3 ÷ 4 = 0.75になります。この計算機の分数演算は簡約された分数を返すので、その後同じ方法で小数に変換できます。" },
+        { q: "2番目なしで1つの分数だけをどう簡約しますか？", a: "2番目の分数を1/1に設定し、「×」（掛け算）を選択します。1/1を掛けても値は変わらないので、表示される結果は元の分数を最も簡単な形に約分したものになります。" },
+        { q: "異なる分母を持つ分数をどう引き算しますか？", a: "まず共通の分母を見つけ、各分数をその分母に変換してから、分子を引きます。3/4 - 1/6の場合、共通の分母は12です：9/12 - 2/12 = 7/12。この計算機は共通分母のステップを自動的に処理します。" },
+      ],
+    },
+    ro: {
+      title: "Calculator de Fracții",
+      intro: "Introdu două fracții și alege o operație pentru a calcula rezultatul, simplificat automat.",
+      description: "Adună, scade, înmulțește, sau împarte două fracții.",
+      faq: [
+        { q: "Cum adun două fracții?", a: "Găsește un numitor comun, convertește ambele fracții, apoi adună numărătorii. 1/2 + 1/3 = 3/6 + 2/6 = 5/6." },
+        { q: "Cum împart fracții?", a: "Înmulțește prima fracție cu reciproca (inversată) celei de-a doua. 1/2 ÷ 1/3 = 1/2 × 3/1 = 3/2." },
+        { q: "Cum convertesc o fracție în zecimal?", a: "Împarte numărătorul la numitor. 3/4 devine 3 ÷ 4 = 0,75. Operațiile cu fracții ale acestui calculator returnează o fracție simplificată, pe care o poți converti în zecimal în același mod ulterior." },
+        { q: "Cum simplific doar o fracție, fără o a doua?", a: "Setează a doua fracție la 1/1 și alege \"×\" (înmulțire) - înmulțirea cu 1/1 nu schimbă valoarea, deci rezultatul afișat este fracția ta originală redusă la forma cea mai simplă." },
+        { q: "Cum scad fracții cu numitori diferiți?", a: "Găsește mai întâi un numitor comun, convertește fiecare fracție la acel numitor, apoi scade numărătorii. Pentru 3/4 - 1/6, numitorul comun este 12: 9/12 - 2/12 = 7/12. Acest calculator gestionează automat pasul numitorului comun." },
+      ],
+    },
+    el: {
+      title: "Υπολογιστής Κλασμάτων",
+      intro: "Εισάγετε δύο κλάσματα και επιλέξτε μια πράξη για να υπολογίσετε το αποτέλεσμα, αυτόματα απλοποιημένο.",
+      description: "Πρόσθεσε, αφαίρεσε, πολλαπλασίασε, ή διαίρεσε δύο κλάσματα.",
+      faq: [
+        { q: "Πώς προσθέτω δύο κλάσματα;", a: "Βρείτε έναν κοινό παρονομαστή, μετατρέψτε και τα δύο κλάσματα, μετά προσθέστε τους αριθμητές. 1/2 + 1/3 = 3/6 + 2/6 = 5/6." },
+        { q: "Πώς διαιρώ κλάσματα;", a: "Πολλαπλασιάστε το πρώτο κλάσμα με το αντίστροφο (ανάποδο) του δεύτερου. 1/2 ÷ 1/3 = 1/2 × 3/1 = 3/2." },
+        { q: "Πώς μετατρέπω ένα κλάσμα σε δεκαδικό;", a: "Διαιρέστε τον αριθμητή με τον παρονομαστή. Το 3/4 γίνεται 3 ÷ 4 = 0,75. Οι πράξεις κλασμάτων αυτής της αριθμομηχανής επιστρέφουν ένα απλοποιημένο κλάσμα, που μπορείτε να μετατρέψετε σε δεκαδικό με τον ίδιο τρόπο στη συνέχεια." },
+        { q: "Πώς απλοποιώ μόνο ένα κλάσμα, χωρίς δεύτερο;", a: "Ορίστε το δεύτερο κλάσμα σε 1/1 και επιλέξτε «×» (πολλαπλασιασμός) - ο πολλαπλασιασμός με 1/1 δεν αλλάζει την τιμή, οπότε το αποτέλεσμα που εμφανίζεται είναι το αρχικό σας κλάσμα μειωμένο στην απλούστερη μορφή του." },
+        { q: "Πώς αφαιρώ κλάσματα με διαφορετικούς παρονομαστές;", a: "Βρείτε πρώτα έναν κοινό παρονομαστή, μετατρέψτε κάθε κλάσμα σε αυτόν τον παρονομαστή, μετά αφαιρέστε τους αριθμητές. Για 3/4 - 1/6, ο κοινός παρονομαστής είναι 12: 9/12 - 2/12 = 7/12. Αυτή η αριθμομηχανή χειρίζεται αυτόματα το βήμα του κοινού παρονομαστή." },
+      ],
+    },
+    zh: {
+      title: "分数计算器",
+      intro: "输入两个分数并选择一种运算，即可计算结果，并自动化简。",
+      description: "对两个分数进行加、减、乘或除运算。",
+      faq: [
+        { q: "如何将两个分数相加？", a: "找到一个公分母，把两个分数都转换成该分母，然后把分子相加。1/2 + 1/3 = 3/6 + 2/6 = 5/6。" },
+        { q: "如何对分数做除法？", a: "把第一个分数乘以第二个分数的倒数（分子分母互换）。1/2 ÷ 1/3 = 1/2 × 3/1 = 3/2。" },
+        { q: "如何把分数转换成小数？", a: "用分子除以分母。3/4变成3 ÷ 4 = 0.75。这个计算器的分数运算结果会返回一个化简后的分数，之后你可以用同样的方法把它转换成小数。" },
+        { q: "如何在没有第二个分数的情况下只化简一个分数？", a: "把第二个分数设置为1/1，然后选择「×」（乘法）——乘以1/1不会改变数值，因此显示的结果就是你原始分数化简到最简形式的结果。" },
+        { q: "如何对分母不同的分数做减法？", a: "先找到一个公分母，把每个分数都转换成该分母，然后把分子相减。对于3/4 - 1/6，公分母是12：9/12 - 2/12 = 7/12。这个计算器会自动处理求公分母的步骤。" },
+      ],
+    },
+    ar: {
+      title: "حاسبة الكسور",
+      intro: "أدخل كسرين واختر عملية لحساب النتيجة، مبسطة تلقائيًا.",
+      description: "اجمع أو اطرح أو اضرب أو اقسم كسرين.",
+      faq: [
+        { q: "كيف أجمع كسرين؟", a: "أوجد مقامًا مشتركًا، وحوّل كلا الكسرين، ثم اجمع البسطين. 1/2 + 1/3 = 3/6 + 2/6 = 5/6." },
+        { q: "كيف أقسم الكسور؟", a: "اضرب الكسر الأول في مقلوب الكسر الثاني (المقلوب). 1/2 ÷ 1/3 = 1/2 × 3/1 = 3/2." },
+        { q: "كيف أحوّل كسرًا إلى عدد عشري؟", a: "اقسم البسط على المقام. 3/4 يصبح 3 ÷ 4 = 0.75. عمليات الكسور في هذه الحاسبة تُرجع كسرًا مبسطًا، يمكنك تحويله إلى عدد عشري بنفس الطريقة بعد ذلك." },
+        { q: "كيف أبسّط كسرًا واحدًا فقط، دون كسر ثانٍ؟", a: "اضبط الكسر الثاني على 1/1 واختر \"×\" (ضرب) - الضرب في 1/1 لا يغير القيمة، لذا فإن النتيجة المعروضة هي كسرك الأصلي مختزلاً إلى أبسط صورة له." },
+        { q: "كيف أطرح كسورًا ذات مقامات مختلفة؟", a: "أوجد أولاً مقامًا مشتركًا، وحوّل كل كسر إلى ذلك المقام، ثم اطرح البسطين. لـ 3/4 - 1/6، المقام المشترك هو 12: 9/12 - 2/12 = 7/12. تتعامل هذه الحاسبة تلقائيًا مع خطوة المقام المشترك." },
+      ],
+    },
+    th: {
+      title: "เครื่องคำนวณเศษส่วน",
+      intro: "ป้อนเศษส่วนสองตัวและเลือกการดำเนินการเพื่อคำนวณผลลัพธ์ ซึ่งจะถูกลดรูปโดยอัตโนมัติ",
+      description: "บวก ลบ คูณ หรือหารเศษส่วนสองตัว",
+      faq: [
+        { q: "ฉันจะบวกเศษส่วนสองตัวได้อย่างไร?", a: "หาตัวส่วนร่วม แปลงเศษส่วนทั้งสองตัว จากนั้นบวกตัวเศษ 1/2 + 1/3 = 3/6 + 2/6 = 5/6" },
+        { q: "ฉันจะหารเศษส่วนได้อย่างไร?", a: "คูณเศษส่วนแรกด้วยส่วนกลับ (กลับเศษกับส่วน) ของเศษส่วนที่สอง 1/2 ÷ 1/3 = 1/2 × 3/1 = 3/2" },
+        { q: "ฉันจะแปลงเศษส่วนเป็นทศนิยมได้อย่างไร?", a: "หารตัวเศษด้วยตัวส่วน 3/4 กลายเป็น 3 ÷ 4 = 0.75 การดำเนินการเศษส่วนของเครื่องคำนวณนี้จะคืนค่าเศษส่วนที่ลดรูปแล้ว ซึ่งคุณสามารถแปลงเป็นทศนิยมด้วยวิธีเดียวกันในภายหลัง" },
+        { q: "ฉันจะลดรูปเศษส่วนเพียงตัวเดียว โดยไม่มีตัวที่สองได้อย่างไร?", a: "ตั้งค่าเศษส่วนที่สองเป็น 1/1 และเลือก \"×\" (คูณ) - การคูณด้วย 1/1 ไม่เปลี่ยนค่า ดังนั้นผลลัพธ์ที่แสดงคือเศษส่วนดั้งเดิมของคุณที่ลดรูปเป็นรูปแบบที่ง่ายที่สุด" },
+        { q: "ฉันจะลบเศษส่วนที่มีตัวส่วนต่างกันได้อย่างไร?", a: "หาตัวส่วนร่วมก่อน แปลงเศษส่วนแต่ละตัวให้เป็นตัวส่วนนั้น จากนั้นลบตัวเศษ สำหรับ 3/4 - 1/6 ตัวส่วนร่วมคือ 12: 9/12 - 2/12 = 7/12 เครื่องคำนวณนี้จัดการขั้นตอนตัวส่วนร่วมโดยอัตโนมัติ" },
+      ],
+    },
+  },
+
+  "pi-digits-calculator": {
+    es: {
+      title: "Calculadora de Dígitos de Pi",
+      intro: "Elige cuántos dígitos decimales de pi (π) mostrar, de 1 a 100.",
+      description: "Muestra pi (π) con un número elegido de dígitos decimales, hasta 100.",
+      faq: [
+        { q: "¿Cuáles son los primeros 10 dígitos de pi?", a: "3.141592653 - pi es un número irracional, así que sus dígitos decimales nunca terminan ni se repiten, pero la secuencia se conoce con precisión y ha sido verificada hasta billones de dígitos por matemáticos y científicos computacionales." },
+        { q: "¿Por qué pi tiene infinitos dígitos?", a: "Pi es irracional, lo que significa que no puede expresarse como una fracción simple de dos enteros - una prueba matemática (dada por primera vez por Johann Lambert en 1761) muestra que su expansión decimal nunca termina ni cae en un patrón repetitivo, a diferencia de una fracción como 1/3 = 0.333..." },
+        { q: "¿Necesito 100 dígitos de pi para cálculos reales?", a: "No - solo 15-16 dígitos de pi (aproximadamente lo que proporciona el número de punto flotante de una calculadora estándar o lenguaje de programación) es mucha más precisión de la necesaria para cualquier cálculo físico del mundo real, incluso a escalas astronómicas. Los dígitos adicionales son principalmente de interés para las matemáticas puras, pruebas de rendimiento computacional, y récords de memorización." },
+        { q: "¿Cuántos dígitos tiene pi?", a: "Infinitos - ya que pi es irracional, su expansión decimal nunca termina ni se repite. Esta calculadora muestra hasta 100 de esos dígitos; se han calculado billones más con superordenadores, aunque solo un puñado son útiles para cualquier cálculo real." },
+      ],
+    },
+    fr: {
+      title: "Calculateur de Décimales de Pi",
+      intro: "Choisissez combien de décimales de pi (π) afficher, de 1 à 100.",
+      description: "Affichez pi (π) avec un nombre choisi de décimales, jusqu'à 100.",
+      faq: [
+        { q: "Quelles sont les 10 premières décimales de pi ?", a: "3,141592653 - pi est un nombre irrationnel, donc ses décimales ne se terminent ni ne se répètent jamais, mais la séquence est précisément connue et vérifiée jusqu'à des milliers de milliards de décimales par des mathématiciens et informaticiens." },
+        { q: "Pourquoi pi a-t-il un nombre infini de décimales ?", a: "Pi est irrationnel, ce qui signifie qu'il ne peut pas être exprimé comme une simple fraction de deux entiers - une preuve mathématique (donnée pour la première fois par Johann Lambert en 1761) montre que son développement décimal ne se termine ni ne tombe dans un motif répétitif, contrairement à une fraction comme 1/3 = 0,333..." },
+        { q: "Ai-je besoin de 100 décimales de pi pour des calculs réels ?", a: "Non - seulement 15-16 décimales de pi (à peu près ce que fournit le nombre à virgule flottante d'une calculatrice standard ou d'un langage de programmation) est bien plus de précision que nécessaire pour tout calcul physique réel, même à des échelles astronomiques. Les décimales supplémentaires intéressent surtout les mathématiques pures, les benchmarks informatiques, et les records de mémorisation." },
+        { q: "Combien de décimales pi a-t-il ?", a: "Une infinité - puisque pi est irrationnel, son développement décimal ne se termine ni ne se répète jamais. Cette calculatrice affiche jusqu'à 100 de ces décimales ; des milliers de milliards d'autres ont été calculées par des superordinateurs, bien que seule une poignée soit utile pour tout calcul réel." },
+      ],
+    },
+    de: {
+      title: "Pi-Nachkommastellen-Rechner",
+      intro: "Wählen Sie, wie viele Nachkommastellen von Pi (π) angezeigt werden sollen, von 1 bis 100.",
+      description: "Zeigen Sie Pi (π) mit einer gewählten Anzahl von Nachkommastellen an, bis zu 100.",
+      faq: [
+        { q: "Was sind die ersten 10 Nachkommastellen von Pi?", a: "3,141592653 - Pi ist eine irrationale Zahl, sodass ihre Nachkommastellen nie enden oder sich wiederholen, aber die Sequenz ist präzise bekannt und von Mathematikern und Informatikern bis zu Billionen von Stellen verifiziert." },
+        { q: "Warum hat Pi unendlich viele Nachkommastellen?", a: "Pi ist irrational, was bedeutet, dass es nicht als einfacher Bruch zweier ganzer Zahlen ausgedrückt werden kann - ein mathematischer Beweis (erstmals von Johann Lambert 1761 gegeben) zeigt, dass seine Dezimalentwicklung nie endet oder in ein sich wiederholendes Muster fällt, im Gegensatz zu einem Bruch wie 1/3 = 0,333..." },
+        { q: "Brauche ich 100 Nachkommastellen von Pi für reale Berechnungen?", a: "Nein - nur 15-16 Nachkommastellen von Pi (etwa das, was die Fließkommazahl eines Standardrechners oder einer Programmiersprache liefert) ist weit mehr Präzision als für jede reale physikalische Berechnung nötig, selbst bei astronomischen Maßstäben. Zusätzliche Stellen sind hauptsächlich von Interesse für reine Mathematik, Computer-Benchmarks, und Auswendiglern-Rekorde." },
+        { q: "Wie viele Nachkommastellen hat Pi?", a: "Unendlich viele - da Pi irrational ist, endet oder wiederholt sich seine Dezimalentwicklung nie. Dieser Rechner zeigt bis zu 100 dieser Stellen; Billionen mehr wurden von Supercomputern berechnet, obwohl nur eine Handvoll für reale Berechnungen nützlich ist." },
+      ],
+    },
+    pt: {
+      title: "Calculadora de Dígitos de Pi",
+      intro: "Escolha quantos dígitos decimais de pi (π) exibir, de 1 a 100.",
+      description: "Mostre pi (π) com um número escolhido de dígitos decimais, até 100.",
+      faq: [
+        { q: "Quais são os primeiros 10 dígitos de pi?", a: "3,141592653 - pi é um número irracional, então seus dígitos decimais nunca terminam ou se repetem, mas a sequência é precisamente conhecida e verificada até trilhões de dígitos por matemáticos e cientistas da computação." },
+        { q: "Por que pi tem infinitos dígitos?", a: "Pi é irracional, o que significa que não pode ser expresso como uma fração simples de dois inteiros - uma prova matemática (dada primeiro por Johann Lambert em 1761) mostra que sua expansão decimal nunca termina ou cai em um padrão repetitivo, diferente de uma fração como 1/3 = 0,333..." },
+        { q: "Eu preciso de 100 dígitos de pi para cálculos reais?", a: "Não - apenas 15-16 dígitos de pi (aproximadamente o que uma calculadora padrão ou número de ponto flutuante de linguagem de programação fornece) é muito mais precisão do que necessário para qualquer cálculo físico do mundo real, mesmo em escalas astronômicas. Dígitos extras são principalmente de interesse para matemática pura, benchmarks de computação, e recordes de memorização." },
+        { q: "Quantos dígitos pi tem?", a: "Infinitos - já que pi é irracional, sua expansão decimal nunca termina ou se repete. Esta calculadora mostra até 100 desses dígitos; trilhões mais foram calculados por supercomputadores, embora apenas alguns sejam úteis para qualquer cálculo real." },
+      ],
+    },
+    it: {
+      title: "Calcolatore delle Cifre di Pi Greco",
+      intro: "Scegli quante cifre decimali di pi greco (π) visualizzare, da 1 a 100.",
+      description: "Mostra pi greco (π) con un numero scelto di cifre decimali, fino a 100.",
+      faq: [
+        { q: "Quali sono le prime 10 cifre di pi greco?", a: "3,141592653 - pi greco è un numero irrazionale, quindi le sue cifre decimali non terminano né si ripetono mai, ma la sequenza è precisamente nota e verificata fino a migliaia di miliardi di cifre da matematici e informatici." },
+        { q: "Perché pi greco ha infinite cifre?", a: "Pi greco è irrazionale, il che significa che non può essere espresso come una semplice frazione di due numeri interi - una dimostrazione matematica (data per la prima volta da Johann Lambert nel 1761) mostra che la sua espansione decimale non termina mai né cade in uno schema ripetitivo, a differenza di una frazione come 1/3 = 0,333..." },
+        { q: "Ho bisogno di 100 cifre di pi greco per calcoli reali?", a: "No - solo 15-16 cifre di pi greco (circa ciò che fornisce il numero in virgola mobile di una calcolatrice standard o di un linguaggio di programmazione) è molta più precisione di quella necessaria per qualsiasi calcolo fisico reale, anche su scale astronomiche. Le cifre extra interessano principalmente la matematica pura, i benchmark informatici, e i record di memorizzazione." },
+        { q: "Quante cifre ha pi greco?", a: "Infinite - poiché pi greco è irrazionale, la sua espansione decimale non termina né si ripete mai. Questa calcolatrice mostra fino a 100 di quelle cifre; migliaia di miliardi in più sono state calcolate da supercomputer, sebbene solo una manciata sia utile per qualsiasi calcolo reale." },
+      ],
+    },
+    ja: {
+      title: "円周率桁数計算機",
+      intro: "円周率（π）の小数点以下の桁数を1から100まで選択して表示します。",
+      description: "円周率（π）を選択した桁数（最大100桁）まで表示します。",
+      faq: [
+        { q: "円周率の最初の10桁は何ですか？", a: "3.141592653です。円周率は無理数なので、その小数桁は決して終わったり繰り返したりしませんが、数列は数学者やコンピュータ科学者によって数兆桁まで正確に知られ検証されています。" },
+        { q: "なぜ円周率は無限の桁数を持つのですか？", a: "円周率は無理数であり、2つの整数の単純な分数として表現できないことを意味します。数学的証明（1761年にヨハン・ランベルトによって初めて示された）は、1/3 = 0.333...のような分数とは異なり、その小数展開が決して終わらず繰り返しパターンに陥らないことを示しています。" },
+        { q: "実際の計算に円周率の100桁が必要ですか？", a: "いいえ。円周率のわずか15〜16桁（標準的な計算機やプログラミング言語の浮動小数点数が提供するもの）は、天文学的な規模であっても、現実世界の物理的計算に必要な精度をはるかに超えています。それ以上の桁数は、主に純粋数学、コンピューティングのベンチマーク、暗記記録に関心があります。" },
+        { q: "円周率には何桁ありますか？", a: "無限です。円周率は無理数であるため、その小数展開は決して終わったり繰り返したりしません。この計算機はそれらの桁のうち最大100桁を表示します。スーパーコンピューターによってさらに数兆桁が計算されていますが、実際の計算に役立つのはほんの一握りだけです。" },
+      ],
+    },
+    ro: {
+      title: "Calculator de Cifre ale lui Pi",
+      intro: "Alege câte cifre zecimale ale lui pi (π) să afișezi, de la 1 la 100.",
+      description: "Afișează pi (π) cu un număr ales de cifre zecimale, până la 100.",
+      faq: [
+        { q: "Care sunt primele 10 cifre ale lui pi?", a: "3,141592653 - pi este un număr irațional, deci cifrele sale zecimale nu se termină și nu se repetă niciodată, dar secvența este cunoscută precis și verificată până la trilioane de cifre de matematicieni și informaticieni." },
+        { q: "De ce pi are infinite cifre?", a: "Pi este irațional, ceea ce înseamnă că nu poate fi exprimat ca o fracție simplă a doi întregi - o demonstrație matematică (dată prima dată de Johann Lambert în 1761) arată că expansiunea sa zecimală nu se termină niciodată și nu cade într-un tipar repetitiv, spre deosebire de o fracție precum 1/3 = 0,333..." },
+        { q: "Am nevoie de 100 de cifre ale lui pi pentru calcule reale?", a: "Nu - doar 15-16 cifre ale lui pi (aproximativ ce oferă numărul în virgulă mobilă al unui calculator standard sau limbaj de programare) este mult mai multă precizie decât este necesară pentru orice calcul fizic real, chiar și la scări astronomice. Cifrele suplimentare sunt în principal de interes pentru matematica pură, benchmark-uri computaționale, și recorduri de memorare." },
+        { q: "Câte cifre are pi?", a: "Infinit de multe - deoarece pi este irațional, expansiunea sa zecimală nu se termină și nu se repetă niciodată. Acest calculator afișează până la 100 dintre aceste cifre; trilioane mai multe au fost calculate de supercomputere, deși doar câteva sunt utile pentru orice calcul real." },
+      ],
+    },
+    el: {
+      title: "Υπολογιστής Ψηφίων του Πι",
+      intro: "Επιλέξτε πόσα δεκαδικά ψηφία του πι (π) να εμφανιστούν, από 1 έως 100.",
+      description: "Δείξε το πι (π) με έναν επιλεγμένο αριθμό δεκαδικών ψηφίων, έως 100.",
+      faq: [
+        { q: "Ποια είναι τα πρώτα 10 ψηφία του πι;", a: "3,141592653 - το πι είναι άρρητος αριθμός, οπότε τα δεκαδικά του ψηφία δεν τελειώνουν ή επαναλαμβάνονται ποτέ, αλλά η ακολουθία είναι ακριβώς γνωστή και επαληθευμένη σε τρισεκατομμύρια ψηφία από μαθηματικούς και επιστήμονες υπολογιστών." },
+        { q: "Γιατί το πι έχει άπειρα ψηφία;", a: "Το πι είναι άρρητο, που σημαίνει ότι δεν μπορεί να εκφραστεί ως απλό κλάσμα δύο ακεραίων - μια μαθηματική απόδειξη (που δόθηκε πρώτη φορά από τον Johann Lambert το 1761) δείχνει ότι η δεκαδική του επέκταση δεν τελειώνει ποτέ ούτε πέφτει σε επαναλαμβανόμενο μοτίβο, σε αντίθεση με ένα κλάσμα όπως το 1/3 = 0,333..." },
+        { q: "Χρειάζομαι 100 ψηφία του πι για πραγματικούς υπολογισμούς;", a: "Όχι - μόνο 15-16 ψηφία του πι (περίπου αυτό που παρέχει ο αριθμός κινητής υποδιαστολής μιας τυπικής αριθμομηχανής ή γλώσσας προγραμματισμού) είναι πολύ περισσότερη ακρίβεια από όση χρειάζεται για οποιονδήποτε πραγματικό φυσικό υπολογισμό, ακόμη και σε αστρονομικές κλίμακες. Τα επιπλέον ψηφία ενδιαφέρουν κυρίως τα καθαρά μαθηματικά, τα υπολογιστικά benchmark, και τα ρεκόρ απομνημόνευσης." },
+        { q: "Πόσα ψηφία έχει το πι;", a: "Άπειρα - καθώς το πι είναι άρρητο, η δεκαδική του επέκταση δεν τελειώνει ούτε επαναλαμβάνεται ποτέ. Αυτή η αριθμομηχανή δείχνει έως 100 από αυτά τα ψηφία· τρισεκατομμύρια περισσότερα έχουν υπολογιστεί από υπερυπολογιστές, αν και μόνο μερικά είναι χρήσιμα για οποιονδήποτε πραγματικό υπολογισμό." },
+      ],
+    },
+    zh: {
+      title: "圆周率位数计算器",
+      intro: "选择要显示圆周率（π）的小数位数，从1到100位。",
+      description: "显示圆周率（π）到指定的小数位数，最多100位。",
+      faq: [
+        { q: "圆周率的前10位数字是什么？", a: "3.141592653——圆周率是一个无理数，因此它的小数位既不会终止也不会循环，但这个数列已被数学家和计算机科学家精确知晓并验证到数万亿位。" },
+        { q: "为什么圆周率有无穷多位数？", a: "圆周率是无理数，意味着它不能表示为两个整数的简单分数——一个数学证明（最早由约翰·兰伯特在1761年给出）表明它的十进制展开永远不会终止，也不会陷入循环模式，这与像1/3 = 0.333...这样的分数不同。" },
+        { q: "实际计算中我需要圆周率的100位吗？", a: "不需要——仅仅15-16位圆周率（大约是标准计算器或编程语言浮点数所提供的精度）就已经远远超过任何现实世界物理计算所需的精度，即使是在天文尺度上也是如此。更多的位数主要对纯数学、计算基准测试和记忆力记录有意义。" },
+        { q: "圆周率有多少位数？", a: "无穷多位——因为圆周率是无理数，它的十进制展开永远不会终止或循环。这个计算器最多显示100位；超级计算机已经计算出更多的数万亿位，尽管对于任何实际计算来说，只有其中很少一部分是有用的。" },
+      ],
+    },
+    ar: {
+      title: "حاسبة أرقام باي",
+      intro: "اختر عدد الأرقام العشرية لباي (π) المراد عرضها، من 1 إلى 100.",
+      description: "اعرض باي (π) بعدد مختار من الأرقام العشرية، حتى 100.",
+      faq: [
+        { q: "ما هي أول 10 أرقام لباي؟", a: "3.141592653 - باي هو عدد غير نسبي، لذا فإن أرقامه العشرية لا تنتهي أو تتكرر أبدًا، لكن التسلسل معروف بدقة وتم التحقق منه حتى تريليونات الأرقام من قبل علماء الرياضيات وعلوم الحاسوب." },
+        { q: "لماذا يحتوي باي على أرقام لا نهائية؟", a: "باي عدد غير نسبي، مما يعني أنه لا يمكن التعبير عنه كجزء بسيط من عددين صحيحين - يُظهر برهان رياضي (قدمه لأول مرة يوهان لامبرت عام 1761) أن توسعه العشري لا ينتهي أبدًا ولا يقع في نمط متكرر، على عكس كسر مثل 1/3 = 0.333..." },
+        { q: "هل أحتاج إلى 100 رقم من باي للحسابات الفعلية؟", a: "لا - فقط 15-16 رقمًا من باي (حوالي ما توفره أرقام الفاصلة العائمة لآلة حاسبة قياسية أو لغة برمجة) هي دقة أكبر بكثير مما هو مطلوب لأي حساب فيزيائي واقعي، حتى على المقاييس الفلكية. الأرقام الإضافية مثيرة للاهتمام بشكل أساسي للرياضيات البحتة، ومقاييس الأداء الحاسوبية، وأرقام قياسية في الحفظ." },
+        { q: "كم عدد أرقام باي؟", a: "عدد لا نهائي - بما أن باي عدد غير نسبي، فإن توسعه العشري لا ينتهي ولا يتكرر أبدًا. تعرض هذه الحاسبة حتى 100 رقم من هذه الأرقام؛ تم حساب تريليونات أخرى بواسطة حواسيب عملاقة، رغم أن حفنة منها فقط مفيدة لأي حساب فعلي." },
+      ],
+    },
+    th: {
+      title: "เครื่องคำนวณหลักของพาย",
+      intro: "เลือกจำนวนหลักทศนิยมของพาย (π) ที่จะแสดง ตั้งแต่ 1 ถึง 100",
+      description: "แสดงพาย (π) ตามจำนวนหลักทศนิยมที่เลือก สูงสุด 100 หลัก",
+      faq: [
+        { q: "10 หลักแรกของพายคืออะไร?", a: "3.141592653 - พายเป็นจำนวนอตรรกยะ ดังนั้นหลักทศนิยมของมันจะไม่มีวันสิ้นสุดหรือซ้ำ แต่ลำดับนี้เป็นที่รู้จักอย่างแม่นยำและได้รับการตรวจสอบถึงล้านล้านหลักโดยนักคณิตศาสตร์และนักวิทยาศาสตร์คอมพิวเตอร์" },
+        { q: "ทำไมพายถึงมีหลักไม่สิ้นสุด?", a: "พายเป็นจำนวนอตรรกยะ หมายความว่ามันไม่สามารถแสดงเป็นเศษส่วนอย่างง่ายของจำนวนเต็มสองตัวได้ - การพิสูจน์ทางคณิตศาสตร์ (ให้ครั้งแรกโดยโยฮันน์ แลมเบิร์ตในปี 1761) แสดงให้เห็นว่าการขยายทศนิยมของมันไม่มีวันสิ้นสุดหรือตกอยู่ในรูปแบบที่ซ้ำกัน ต่างจากเศษส่วนเช่น 1/3 = 0.333..." },
+        { q: "ฉันต้องการพาย 100 หลักสำหรับการคำนวณจริงหรือไม่?", a: "ไม่ - เพียง 15-16 หลักของพาย (ประมาณสิ่งที่เครื่องคิดเลขมาตรฐานหรือตัวเลขทศนิยมของภาษาโปรแกรมให้มา) มีความแม่นยำมากกว่าที่จำเป็นสำหรับการคำนวณทางกายภาพในโลกจริงใดๆ แม้ในระดับดาราศาสตร์ หลักเพิ่มเติมส่วนใหญ่น่าสนใจสำหรับคณิตศาสตร์บริสุทธิ์ การทดสอบประสิทธิภาพคอมพิวเตอร์ และสถิติการท่องจำ" },
+        { q: "พายมีกี่หลัก?", a: "ไม่จำกัดจำนวน - เนื่องจากพายเป็นจำนวนอตรรกยะ การขยายทศนิยมของมันไม่มีวันสิ้นสุดหรือซ้ำ เครื่องคำนวณนี้แสดงได้สูงสุด 100 หลักจากหลักเหล่านั้น มีการคำนวณเพิ่มอีกหลายล้านล้านหลักโดยซูเปอร์คอมพิวเตอร์ แม้ว่าจะมีเพียงไม่กี่หลักที่มีประโยชน์สำหรับการคำนวณจริงใดๆ" },
+      ],
+    },
+  },
+
+  "long-division-calculator": {
+    es: {
+      title: "Calculadora de División Larga",
+      intro: "Introduce un dividendo y divisor para ver el cociente, residuo, y el trabajo completo de división larga paso a paso.",
+      description: "Divide dos números enteros y ve el trabajo completo de división larga paso a paso.",
+      faq: [
+        { q: "¿Cómo hago división larga paso a paso?", a: "Baja un dígito del dividendo a la vez, divide el valor actual entre el divisor para obtener un dígito del cociente, multiplica ese dígito por el divisor y réstalo del valor actual, luego baja el siguiente dígito y repite - esta calculadora muestra cada uno de esos pasos en la tabla." },
+        { q: "¿Qué significa el residuo?", a: "El residuo es lo que sobra después de dividir tantas veces completas como sea posible - para 23 ÷ 5, el cociente es 4 (5×4=20) con un residuo de 3 (23−20), ya que 5 no divide exactamente a 23." },
+        { q: "¿Esto funciona con números negativos?", a: "Esta calculadora funciona con el valor absoluto (positivo) de lo que introduzcas, ya que la división larga como método paso a paso está definida para números enteros positivos - aplica las reglas de signos por separado (un dividendo o divisor negativo, pero no ambos, da un resultado negativo) después de obtener el cociente y residuo positivos aquí." },
+      ],
+    },
+    fr: {
+      title: "Calculateur de Division Longue",
+      intro: "Entrez un dividende et un diviseur pour voir le quotient, le reste, et le travail complet de division longue étape par étape.",
+      description: "Divisez deux nombres entiers et voyez le travail complet de division longue étape par étape.",
+      faq: [
+        { q: "Comment faire une division longue étape par étape ?", a: "Descendez un chiffre du dividende à la fois, divisez la valeur courante par le diviseur pour obtenir un chiffre du quotient, multipliez ce chiffre par le diviseur et soustrayez-le de la valeur courante, puis descendez le chiffre suivant et répétez - cette calculatrice montre chacune de ces étapes dans le tableau." },
+        { q: "Que signifie le reste ?", a: "Le reste est ce qui reste après avoir divisé autant de fois entières que possible - pour 23 ÷ 5, le quotient est 4 (5×4=20) avec un reste de 3 (23−20), puisque 5 ne divise pas également 23." },
+        { q: "Cela fonctionne-t-il avec des nombres négatifs ?", a: "Cette calculatrice fonctionne avec la valeur absolue (positive) de ce que vous entrez, puisque la division longue en tant que méthode étape par étape est définie pour des nombres entiers positifs - appliquez les règles de signe séparément (un dividende ou diviseur négatif, mais pas les deux, donne un résultat négatif) après avoir obtenu le quotient et le reste positifs ici." },
+      ],
+    },
+    de: {
+      title: "Schriftliche-Division-Rechner",
+      intro: "Geben Sie einen Dividenden und Divisor ein, um den Quotienten, Rest, und die vollständige schrittweise schriftliche Division zu sehen.",
+      description: "Dividieren Sie zwei ganze Zahlen und sehen Sie die vollständige schrittweise schriftliche Division.",
+      faq: [
+        { q: "Wie mache ich schriftliche Division Schritt für Schritt?", a: "Bringen Sie jeweils eine Ziffer des Dividenden herunter, dividieren Sie den laufenden Wert durch den Divisor, um eine Quotientenziffer zu erhalten, multiplizieren Sie diese Ziffer mit dem Divisor und subtrahieren Sie sie vom laufenden Wert, dann bringen Sie die nächste Ziffer herunter und wiederholen Sie - dieser Rechner zeigt jeden dieser Schritte in der Tabelle." },
+        { q: "Was bedeutet der Rest?", a: "Der Rest ist das, was übrig bleibt, nachdem so oft wie möglich vollständig geteilt wurde - für 23 ÷ 5 ist der Quotient 4 (5×4=20) mit einem Rest von 3 (23−20), da 5 nicht gleichmäßig in 23 teilt." },
+        { q: "Funktioniert dies mit negativen Zahlen?", a: "Dieser Rechner arbeitet mit dem absoluten (positiven) Wert dessen, was Sie eingeben, da schriftliche Division als schrittweise Methode für positive ganze Zahlen definiert ist - wenden Sie die Vorzeichenregeln separat an (ein negativer Dividend oder Divisor, aber nicht beide, ergibt ein negatives Ergebnis), nachdem Sie hier den positiven Quotienten und Rest erhalten haben." },
+      ],
+    },
+    pt: {
+      title: "Calculadora de Divisão Longa",
+      intro: "Digite um dividendo e divisor para ver o quociente, resto, e o trabalho completo de divisão longa passo a passo.",
+      description: "Divida dois números inteiros e veja o trabalho completo de divisão longa passo a passo.",
+      faq: [
+        { q: "Como faço divisão longa passo a passo?", a: "Desça um dígito do dividendo por vez, divida o valor corrente pelo divisor para obter um dígito do quociente, multiplique esse dígito pelo divisor e subtraia do valor corrente, depois desça o próximo dígito e repita - esta calculadora mostra cada um desses passos na tabela." },
+        { q: "O que significa o resto?", a: "O resto é o que sobra depois de dividir quantas vezes inteiras for possível - para 23 ÷ 5, o quociente é 4 (5×4=20) com resto de 3 (23−20), já que 5 não divide igualmente 23." },
+        { q: "Isso funciona com números negativos?", a: "Esta calculadora funciona com o valor absoluto (positivo) do que você digitar, já que a divisão longa como método passo a passo é definida para números inteiros positivos - aplique as regras de sinal separadamente (um dividendo ou divisor negativo, mas não ambos, dá um resultado negativo) depois de obter o quociente e resto positivos aqui." },
+      ],
+    },
+    it: {
+      title: "Calcolatore di Divisione Lunga",
+      intro: "Inserisci un dividendo e divisore per vedere il quoziente, resto, e il lavoro completo di divisione lunga passo dopo passo.",
+      description: "Dividi due numeri interi e vedi il lavoro completo di divisione lunga passo dopo passo.",
+      faq: [
+        { q: "Come faccio la divisione lunga passo dopo passo?", a: "Abbassa una cifra del dividendo alla volta, dividi il valore corrente per il divisore per ottenere una cifra del quoziente, moltiplica quella cifra per il divisore e sottraila dal valore corrente, poi abbassa la cifra successiva e ripeti - questa calcolatrice mostra ognuno di questi passaggi nella tabella." },
+        { q: "Cosa significa il resto?", a: "Il resto è ciò che rimane dopo aver diviso tante volte intere quanto possibile - per 23 ÷ 5, il quoziente è 4 (5×4=20) con un resto di 3 (23−20), poiché 5 non divide equamente 23." },
+        { q: "Questo funziona con numeri negativi?", a: "Questa calcolatrice funziona con il valore assoluto (positivo) di ciò che inserisci, poiché la divisione lunga come metodo passo dopo passo è definita per numeri interi positivi - applica le regole dei segni separatamente (un dividendo o divisore negativo, ma non entrambi, dà un risultato negativo) dopo aver ottenuto qui il quoziente e resto positivi." },
+      ],
+    },
+    ja: {
+      title: "筆算割り算計算機",
+      intro: "被除数と除数を入力すると、商、余り、そして完全なステップバイステップの筆算過程が表示されます。",
+      description: "2つの整数を割り算し、完全なステップバイステップの筆算過程を表示します。",
+      faq: [
+        { q: "筆算での割り算をステップバイステップでどう行いますか？", a: "被除数の桁を1つずつ下ろし、現在の値を除数で割って商の桁を得て、その桁を除数に掛けて現在の値から引き、次の桁を下ろして繰り返します。この計算機はそれらすべてのステップを表に表示します。" },
+        { q: "余りとは何を意味しますか？", a: "余りは可能な限り完全に割った後に残るものです。23 ÷ 5の場合、商は4（5×4=20）で余りは3（23−20）です。5は23を割り切れないためです。" },
+        { q: "これは負の数でも機能しますか？", a: "この計算機は入力された値の絶対値（正の値）で機能します。筆算はステップバイステップの方法として正の整数に対して定義されているためです。ここで正の商と余りを得た後、符号の規則を別途適用してください（被除数または除数のどちらか一方が負の場合、両方ではなく、結果は負になります）。" },
+      ],
+    },
+    ro: {
+      title: "Calculator de Împărțire cu Rest",
+      intro: "Introdu un deîmpărțit și un împărțitor pentru a vedea câtul, restul, și întreaga lucrare pas cu pas a împărțirii cu rest.",
+      description: "Împarte două numere întregi și vezi întreaga lucrare pas cu pas a împărțirii cu rest.",
+      faq: [
+        { q: "Cum fac împărțirea cu rest pas cu pas?", a: "Coboară câte o cifră a deîmpărțitului o dată, împarte valoarea curentă la împărțitor pentru a obține o cifră a câtului, înmulțește acea cifră cu împărțitorul și scade-o din valoarea curentă, apoi coboară următoarea cifră și repetă - acest calculator arată fiecare dintre acești pași în tabel." },
+        { q: "Ce înseamnă restul?", a: "Restul este ceea ce rămâne după împărțirea de cât mai multe ori întregi posibil - pentru 23 ÷ 5, câtul este 4 (5×4=20) cu un rest de 3 (23−20), deoarece 5 nu împarte exact 23." },
+        { q: "Funcționează acest lucru cu numere negative?", a: "Acest calculator funcționează cu valoarea absolută (pozitivă) a ceea ce introduci, deoarece împărțirea cu rest ca metodă pas cu pas este definită pentru numere întregi pozitive - aplică regulile de semn separat (un deîmpărțit sau împărțitor negativ, dar nu ambele, dă un rezultat negativ) după ce obții câtul și restul pozitive aici." },
+      ],
+    },
+    el: {
+      title: "Υπολογιστής Διαίρεσης με Υπόλοιπο",
+      intro: "Εισάγετε έναν διαιρετέο και διαιρέτη για να δείτε το πηλίκο, το υπόλοιπο, και ολόκληρη τη βήμα προς βήμα εργασία της διαίρεσης με υπόλοιπο.",
+      description: "Διαίρεσε δύο ακέραιους αριθμούς και δες ολόκληρη τη βήμα προς βήμα εργασία της διαίρεσης με υπόλοιπο.",
+      faq: [
+        { q: "Πώς κάνω διαίρεση με υπόλοιπο βήμα προς βήμα;", a: "Κατεβάστε ένα ψηφίο του διαιρετέου τη φορά, διαιρέστε την τρέχουσα τιμή με τον διαιρέτη για να λάβετε ένα ψηφίο του πηλίκου, πολλαπλασιάστε αυτό το ψηφίο με τον διαιρέτη και αφαιρέστε το από την τρέχουσα τιμή, μετά κατεβάστε το επόμενο ψηφίο και επαναλάβετε - αυτή η αριθμομηχανή δείχνει κάθε ένα από αυτά τα βήματα στον πίνακα." },
+        { q: "Τι σημαίνει το υπόλοιπο;", a: "Το υπόλοιπο είναι αυτό που απομένει μετά τη διαίρεση όσο το δυνατόν περισσότερες πλήρεις φορές - για 23 ÷ 5, το πηλίκο είναι 4 (5×4=20) με υπόλοιπο 3 (23−20), αφού το 5 δεν διαιρεί ομοιόμορφα το 23." },
+        { q: "Λειτουργεί αυτό με αρνητικούς αριθμούς;", a: "Αυτή η αριθμομηχανή λειτουργεί με την απόλυτη (θετική) τιμή αυτού που εισάγετε, καθώς η διαίρεση με υπόλοιπο ως βήμα προς βήμα μέθοδος ορίζεται για θετικούς ακέραιους αριθμούς - εφαρμόστε τους κανόνες προσήμου ξεχωριστά (ένας αρνητικός διαιρετέος ή διαιρέτης, αλλά όχι και οι δύο, δίνει αρνητικό αποτέλεσμα) αφού λάβετε το θετικό πηλίκο και υπόλοιπο εδώ." },
+      ],
+    },
+    zh: {
+      title: "长除法计算器",
+      intro: "输入被除数和除数，查看商、余数，以及完整的分步长除法运算过程。",
+      description: "对两个整数进行除法运算，查看完整的分步长除法运算过程。",
+      faq: [
+        { q: "如何一步步进行长除法？", a: "每次从被除数中拿下一位数字，用当前值除以除数得到商的一位数字，把该数字乘以除数并从当前值中减去，然后拿下下一位数字重复以上过程——这个计算器会在表格中展示每一个步骤。" },
+        { q: "余数是什么意思？", a: "余数是尽可能多次完整除法后剩下的部分——对于23 ÷ 5，商是4（5×4=20），余数是3（23−20），因为5不能整除23。" },
+        { q: "这适用于负数吗？", a: "这个计算器使用你输入数值的绝对值（正值）进行运算，因为长除法作为一种分步方法是针对正整数定义的——在这里得到正的商和余数后，请分别应用符号规则（被除数或除数其中一个为负，但不是两者都为负，结果为负）。" },
+      ],
+    },
+    ar: {
+      title: "حاسبة القسمة المطولة",
+      intro: "أدخل مقسومًا ومقسومًا عليه لرؤية خارج القسمة والباقي والعمل الكامل خطوة بخطوة للقسمة المطولة.",
+      description: "اقسم عددين صحيحين وشاهد العمل الكامل خطوة بخطوة للقسمة المطولة.",
+      faq: [
+        { q: "كيف أقوم بالقسمة المطولة خطوة بخطوة؟", a: "أنزل رقمًا واحدًا من المقسوم في كل مرة، اقسم القيمة الحالية على المقسوم عليه للحصول على رقم من خارج القسمة، اضرب ذلك الرقم في المقسوم عليه واطرحه من القيمة الحالية، ثم أنزل الرقم التالي وكرر - تُظهر هذه الحاسبة كل خطوة من هذه الخطوات في الجدول." },
+        { q: "ماذا يعني الباقي؟", a: "الباقي هو ما يتبقى بعد القسمة أكبر عدد ممكن من المرات الكاملة - لـ23 ÷ 5، خارج القسمة هو 4 (5×4=20) مع باقٍ قدره 3 (23−20)، لأن 5 لا يقسم 23 بالتساوي." },
+        { q: "هل يعمل هذا مع الأعداد السالبة؟", a: "تعمل هذه الحاسبة بالقيمة المطلقة (الموجبة) لما تدخله، لأن القسمة المطولة كطريقة خطوة بخطوة معرّفة للأعداد الصحيحة الموجبة - طبّق قواعد الإشارة بشكل منفصل (مقسوم أو مقسوم عليه سالب، لكن ليس كلاهما، يعطي نتيجة سالبة) بعد الحصول على خارج القسمة والباقي الموجبين هنا." },
+      ],
+    },
+    th: {
+      title: "เครื่องคำนวณการหารยาว",
+      intro: "ป้อนตัวตั้งและตัวหารเพื่อดูผลหาร เศษ และขั้นตอนการหารยาวทีละขั้นตอนแบบเต็ม",
+      description: "หารจำนวนเต็มสองจำนวนและดูขั้นตอนการหารยาวทีละขั้นตอนแบบเต็ม",
+      faq: [
+        { q: "ฉันจะทำการหารยาวทีละขั้นตอนได้อย่างไร?", a: "ดึงตัวเลขของตัวตั้งลงมาทีละหลัก หารค่าปัจจุบันด้วยตัวหารเพื่อได้หลักของผลหาร คูณหลักนั้นด้วยตัวหารและลบออกจากค่าปัจจุบัน จากนั้นดึงหลักถัดไปลงมาและทำซ้ำ - เครื่องคำนวณนี้แสดงทุกขั้นตอนเหล่านั้นในตาราง" },
+        { q: "เศษหมายถึงอะไร?", a: "เศษคือสิ่งที่เหลืออยู่หลังจากหารเต็มจำนวนมากที่สุดเท่าที่จะทำได้ - สำหรับ 23 ÷ 5 ผลหารคือ 4 (5×4=20) โดยมีเศษ 3 (23−20) เนื่องจาก 5 หาร 23 ไม่ลงตัว" },
+        { q: "สิ่งนี้ใช้ได้กับจำนวนลบหรือไม่?", a: "เครื่องคำนวณนี้ทำงานกับค่าสัมบูรณ์ (บวก) ของสิ่งที่คุณป้อน เนื่องจากการหารยาวในฐานะวิธีการทีละขั้นตอนถูกกำหนดไว้สำหรับจำนวนเต็มบวก - ใช้กฎเครื่องหมายแยกต่างหาก (ตัวตั้งหรือตัวหารที่เป็นลบ แต่ไม่ใช่ทั้งคู่ ให้ผลลัพธ์เป็นลบ) หลังจากได้ผลหารและเศษที่เป็นบวกที่นี่" },
+      ],
+    },
+  },
+
+  "long-multiplication-calculator": {
+    es: {
+      title: "Calculadora de Multiplicación Larga",
+      intro: "Introduce dos números para ver el producto, más el trabajo completo de multiplicación larga paso a paso (productos parciales para cada dígito).",
+      description: "Multiplica dos números enteros y ve el trabajo completo de multiplicación larga paso a paso.",
+      faq: [
+        { q: "¿Cómo funciona la multiplicación larga?", a: "Multiplica el primer número por cada dígito del segundo número por separado (comenzando desde las unidades), desplazando cada resultado una posición a la izquierda por cada dígito, luego suma todos esos productos parciales para la respuesta final - esta calculadora muestra cada producto parcial en la tabla." },
+        { q: "¿Por qué los productos parciales se desplazan a la izquierda a medida que avanzas?", a: "Cada dígito en el segundo número representa un valor posicional diferente (unidades, decenas, centenas, etc.), así que multiplicar por el dígito de las decenas realmente significa multiplicar por ese dígito por 10 - desplazar el producto parcial una posición a la izquierda tiene esto en cuenta automáticamente." },
+        { q: "¿Esto funciona con números negativos?", a: "Esta calculadora funciona con el valor absoluto (positivo) de lo que introduzcas, ya que la multiplicación larga como método paso a paso está definida para números enteros positivos - aplica las reglas de signos por separado después (un resultado es negativo si exactamente uno de los dos números era negativo)." },
+      ],
+    },
+    fr: {
+      title: "Calculateur de Multiplication Longue",
+      intro: "Entrez deux nombres pour voir le produit, plus le travail complet de multiplication longue étape par étape (produits partiels pour chaque chiffre).",
+      description: "Multipliez deux nombres entiers et voyez le travail complet de multiplication longue étape par étape.",
+      faq: [
+        { q: "Comment fonctionne la multiplication longue ?", a: "Multipliez le premier nombre par chaque chiffre du second nombre séparément (en commençant par les unités), en décalant chaque résultat d'une position vers la gauche par chiffre, puis additionnez tous ces produits partiels pour la réponse finale - cette calculatrice montre chaque produit partiel dans le tableau." },
+        { q: "Pourquoi les produits partiels sont-ils décalés vers la gauche au fur et à mesure ?", a: "Chaque chiffre du second nombre représente une valeur de position différente (unités, dizaines, centaines, etc.), donc multiplier par le chiffre des dizaines signifie réellement multiplier par ce chiffre fois 10 - décaler le produit partiel d'une position vers la gauche prend cela en compte automatiquement." },
+        { q: "Cela fonctionne-t-il avec des nombres négatifs ?", a: "Cette calculatrice fonctionne avec la valeur absolue (positive) de ce que vous entrez, puisque la multiplication longue en tant que méthode étape par étape est définie pour des nombres entiers positifs - appliquez les règles de signe séparément ensuite (un résultat est négatif si exactement un des deux nombres était négatif)." },
+      ],
+    },
+    de: {
+      title: "Schriftliche-Multiplikation-Rechner",
+      intro: "Geben Sie zwei Zahlen ein, um das Produkt zu sehen, plus die vollständige schrittweise schriftliche Multiplikation (Teilprodukte für jede Ziffer).",
+      description: "Multiplizieren Sie zwei ganze Zahlen und sehen Sie die vollständige schrittweise schriftliche Multiplikation.",
+      faq: [
+        { q: "Wie funktioniert schriftliche Multiplikation?", a: "Multiplizieren Sie die erste Zahl separat mit jeder Ziffer der zweiten Zahl (beginnend bei den Einern), wobei jedes Ergebnis pro Ziffer um eine Stelle nach links verschoben wird, dann addieren Sie alle diese Teilprodukte für die endgültige Antwort - dieser Rechner zeigt jedes Teilprodukt in der Tabelle." },
+        { q: "Warum werden Teilprodukte im Verlauf nach links verschoben?", a: "Jede Ziffer in der zweiten Zahl repräsentiert einen anderen Stellenwert (Einer, Zehner, Hunderter usw.), sodass die Multiplikation mit der Zehnerziffer tatsächlich Multiplikation mit dieser Ziffer mal 10 bedeutet - das Verschieben des Teilprodukts um eine Stelle nach links berücksichtigt dies automatisch." },
+        { q: "Funktioniert dies mit negativen Zahlen?", a: "Dieser Rechner arbeitet mit dem absoluten (positiven) Wert dessen, was Sie eingeben, da schriftliche Multiplikation als schrittweise Methode für positive ganze Zahlen definiert ist - wenden Sie die Vorzeichenregeln danach separat an (ein Ergebnis ist negativ, wenn genau eine der beiden Zahlen negativ war)." },
+      ],
+    },
+    pt: {
+      title: "Calculadora de Multiplicação Longa",
+      intro: "Digite dois números para ver o produto, além do trabalho completo de multiplicação longa passo a passo (produtos parciais para cada dígito).",
+      description: "Multiplique dois números inteiros e veja o trabalho completo de multiplicação longa passo a passo.",
+      faq: [
+        { q: "Como funciona a multiplicação longa?", a: "Multiplique o primeiro número por cada dígito do segundo número separadamente (começando pelas unidades), deslocando cada resultado uma posição para a esquerda por dígito, depois some todos esses produtos parciais para a resposta final - esta calculadora mostra cada produto parcial na tabela." },
+        { q: "Por que os produtos parciais são deslocados para a esquerda à medida que você avança?", a: "Cada dígito no segundo número representa um valor posicional diferente (unidades, dezenas, centenas, etc.), então multiplicar pelo dígito das dezenas realmente significa multiplicar por esse dígito vezes 10 - deslocar o produto parcial uma posição para a esquerda leva isso em conta automaticamente." },
+        { q: "Isso funciona com números negativos?", a: "Esta calculadora funciona com o valor absoluto (positivo) do que você digitar, já que a multiplicação longa como método passo a passo é definida para números inteiros positivos - aplique as regras de sinal separadamente depois (um resultado é negativo se exatamente um dos dois números era negativo)." },
+      ],
+    },
+    it: {
+      title: "Calcolatore di Moltiplicazione in Colonna",
+      intro: "Inserisci due numeri per vedere il prodotto, più il lavoro completo di moltiplicazione in colonna passo dopo passo (prodotti parziali per ogni cifra).",
+      description: "Moltiplica due numeri interi e vedi il lavoro completo di moltiplicazione in colonna passo dopo passo.",
+      faq: [
+        { q: "Come funziona la moltiplicazione in colonna?", a: "Moltiplica il primo numero per ogni cifra del secondo numero separatamente (partendo dalle unità), spostando ogni risultato di una posizione a sinistra per cifra, poi somma tutti quei prodotti parziali per la risposta finale - questa calcolatrice mostra ogni prodotto parziale nella tabella." },
+        { q: "Perché i prodotti parziali vengono spostati a sinistra man mano che si procede?", a: "Ogni cifra nel secondo numero rappresenta un valore posizionale diverso (unità, decine, centinaia, ecc.), quindi moltiplicare per la cifra delle decine significa in realtà moltiplicare per quella cifra per 10 - spostare il prodotto parziale di una posizione a sinistra tiene conto di questo automaticamente." },
+        { q: "Questo funziona con numeri negativi?", a: "Questa calcolatrice funziona con il valore assoluto (positivo) di ciò che inserisci, poiché la moltiplicazione in colonna come metodo passo dopo passo è definita per numeri interi positivi - applica le regole dei segni separatamente in seguito (un risultato è negativo se esattamente uno dei due numeri era negativo)." },
+      ],
+    },
+    ja: {
+      title: "筆算掛け算計算機",
+      intro: "2つの数字を入力すると、積と完全なステップバイステップの筆算過程（各桁の部分積）が表示されます。",
+      description: "2つの整数を掛け算し、完全なステップバイステップの筆算過程を表示します。",
+      faq: [
+        { q: "筆算での掛け算はどのように機能しますか？", a: "最初の数を2番目の数の各桁と別々に掛け算し（一の位から始めて）、各桁ごとに結果を左に1桁ずつシフトさせ、その後すべての部分積を合計して最終的な答えを得ます。この計算機はすべての部分積を表に表示します。" },
+        { q: "なぜ部分積は進むにつれて左にシフトするのですか？", a: "2番目の数の各桁は異なる位取り（一の位、十の位、百の位など）を表しているため、十の位で掛け算することは実際にはその桁の10倍を掛け算することを意味します。部分積を1桁左にシフトすることでこれを自動的に考慮します。" },
+        { q: "これは負の数でも機能しますか？", a: "この計算機は入力された値の絶対値（正の値）で機能します。筆算はステップバイステップの方法として正の整数に対して定義されているためです。その後、符号の規則を別途適用してください（2つの数のうちちょうど1つが負の場合、結果は負になります）。" },
+      ],
+    },
+    ro: {
+      title: "Calculator de Înmulțire în Coloană",
+      intro: "Introdu două numere pentru a vedea produsul, plus întreaga lucrare pas cu pas a înmulțirii în coloană (produse parțiale pentru fiecare cifră).",
+      description: "Înmulțește două numere întregi și vezi întreaga lucrare pas cu pas a înmulțirii în coloană.",
+      faq: [
+        { q: "Cum funcționează înmulțirea în coloană?", a: "Înmulțește primul număr cu fiecare cifră a celui de-al doilea număr separat (începând de la unități), deplasând fiecare rezultat cu o poziție la stânga pentru fiecare cifră, apoi adună toate acele produse parțiale pentru răspunsul final - acest calculator arată fiecare produs parțial în tabel." },
+        { q: "De ce produsele parțiale se deplasează la stânga pe măsură ce avansezi?", a: "Fiecare cifră din al doilea număr reprezintă o valoare pozițională diferită (unități, zeci, sute, etc.), deci înmulțirea cu cifra zecilor înseamnă de fapt înmulțirea cu acea cifră ori 10 - deplasarea produsului parțial cu o poziție la stânga ține cont de acest lucru automat." },
+        { q: "Funcționează acest lucru cu numere negative?", a: "Acest calculator funcționează cu valoarea absolută (pozitivă) a ceea ce introduci, deoarece înmulțirea în coloană ca metodă pas cu pas este definită pentru numere întregi pozitive - aplică regulile de semn separat ulterior (un rezultat este negativ dacă exact unul dintre cele două numere a fost negativ)." },
+      ],
+    },
+    el: {
+      title: "Υπολογιστής Πολλαπλασιασμού με Στήλες",
+      intro: "Εισάγετε δύο αριθμούς για να δείτε το γινόμενο, καθώς και ολόκληρη τη βήμα προς βήμα εργασία πολλαπλασιασμού με στήλες (μερικά γινόμενα για κάθε ψηφίο).",
+      description: "Πολλαπλασίασε δύο ακέραιους αριθμούς και δες ολόκληρη τη βήμα προς βήμα εργασία πολλαπλασιασμού με στήλες.",
+      faq: [
+        { q: "Πώς λειτουργεί ο πολλαπλασιασμός με στήλες;", a: "Πολλαπλασιάστε τον πρώτο αριθμό με κάθε ψηφίο του δεύτερου αριθμού ξεχωριστά (ξεκινώντας από τις μονάδες), μετατοπίζοντας κάθε αποτέλεσμα μία θέση προς τα αριστερά ανά ψηφίο, μετά προσθέστε όλα αυτά τα μερικά γινόμενα για την τελική απάντηση - αυτή η αριθμομηχανή δείχνει κάθε μερικό γινόμενο στον πίνακα." },
+        { q: "Γιατί τα μερικά γινόμενα μετατοπίζονται προς τα αριστερά καθώς προχωράτε;", a: "Κάθε ψηφίο στον δεύτερο αριθμό αντιπροσωπεύει διαφορετική θέση τιμής (μονάδες, δεκάδες, εκατοντάδες, κ.λπ.), οπότε ο πολλαπλασιασμός με το ψηφίο των δεκάδων στην πραγματικότητα σημαίνει πολλαπλασιασμό με αυτό το ψηφίο επί 10 - η μετατόπιση του μερικού γινομένου μία θέση προς τα αριστερά το λαμβάνει αυτόματα υπόψη." },
+        { q: "Λειτουργεί αυτό με αρνητικούς αριθμούς;", a: "Αυτή η αριθμομηχανή λειτουργεί με την απόλυτη (θετική) τιμή αυτού που εισάγετε, καθώς ο πολλαπλασιασμός με στήλες ως βήμα προς βήμα μέθοδος ορίζεται για θετικούς ακέραιους αριθμούς - εφαρμόστε τους κανόνες προσήμου ξεχωριστά στη συνέχεια (ένα αποτέλεσμα είναι αρνητικό αν ακριβώς ένας από τους δύο αριθμούς ήταν αρνητικός)." },
+      ],
+    },
+    zh: {
+      title: "长乘法计算器",
+      intro: "输入两个数字，查看乘积以及完整的分步长乘法运算过程（每位数字的部分积）。",
+      description: "对两个整数进行乘法运算，查看完整的分步长乘法运算过程。",
+      faq: [
+        { q: "长乘法是如何运作的？", a: "把第一个数分别与第二个数的每一位数字相乘（从个位开始），每一位的结果都向左移动一位，然后把所有这些部分积相加得到最终答案——这个计算器会在表格中展示每一个部分积。" },
+        { q: "为什么部分积会随着计算逐渐向左移位？", a: "第二个数中的每一位代表不同的位值（个位、十位、百位等），因此乘以十位数字实际上意味着乘以该数字再乘以10——把部分积向左移一位就自动考虑了这一点。" },
+        { q: "这适用于负数吗？", a: "这个计算器使用你输入数值的绝对值（正值）进行运算，因为长乘法作为一种分步方法是针对正整数定义的——之后请单独应用符号规则（如果两个数中恰好有一个是负数，结果就是负数）。" },
+      ],
+    },
+    ar: {
+      title: "حاسبة الضرب المطول",
+      intro: "أدخل رقمين لرؤية الناتج، بالإضافة إلى العمل الكامل خطوة بخطوة للضرب المطول (النواتج الجزئية لكل رقم).",
+      description: "اضرب رقمين صحيحين وشاهد العمل الكامل خطوة بخطوة للضرب المطول.",
+      faq: [
+        { q: "كيف يعمل الضرب المطول؟", a: "اضرب الرقم الأول في كل رقم من الرقم الثاني بشكل منفصل (بدءًا من خانة الآحاد)، مع إزاحة كل نتيجة إلى اليسار بمقدار خانة واحدة لكل رقم، ثم اجمع كل تلك النواتج الجزئية للحصول على الإجابة النهائية - تُظهر هذه الحاسبة كل ناتج جزئي في الجدول." },
+        { q: "لماذا يتم إزاحة النواتج الجزئية إلى اليسار كلما تقدمت؟", a: "يمثل كل رقم في الرقم الثاني قيمة منزلية مختلفة (آحاد، عشرات، مئات، إلخ)، لذا فإن الضرب في رقم العشرات يعني في الواقع الضرب في ذلك الرقم مضروبًا في 10 - إزاحة الناتج الجزئي بمقدار خانة واحدة إلى اليسار تراعي ذلك تلقائيًا." },
+        { q: "هل يعمل هذا مع الأعداد السالبة؟", a: "تعمل هذه الحاسبة بالقيمة المطلقة (الموجبة) لما تدخله، لأن الضرب المطول كطريقة خطوة بخطوة معرّف للأعداد الصحيحة الموجبة - طبّق قواعد الإشارة بشكل منفصل بعد ذلك (تكون النتيجة سالبة إذا كان أحد الرقمين بالضبط سالبًا)." },
+      ],
+    },
+    th: {
+      title: "เครื่องคำนวณการคูณยาว",
+      intro: "ป้อนตัวเลขสองตัวเพื่อดูผลคูณ พร้อมขั้นตอนการคูณยาวทีละขั้นตอนแบบเต็ม (ผลคูณย่อยสำหรับแต่ละหลัก)",
+      description: "คูณจำนวนเต็มสองจำนวนและดูขั้นตอนการคูณยาวทีละขั้นตอนแบบเต็ม",
+      faq: [
+        { q: "การคูณยาวทำงานอย่างไร?", a: "คูณตัวเลขแรกด้วยแต่ละหลักของตัวเลขที่สองแยกกัน (เริ่มจากหลักหน่วย) โดยเลื่อนผลลัพธ์แต่ละอันไปทางซ้ายหนึ่งตำแหน่งต่อหลัก จากนั้นบวกผลคูณย่อยทั้งหมดเข้าด้วยกันเพื่อได้คำตอบสุดท้าย - เครื่องคำนวณนี้แสดงผลคูณย่อยแต่ละอันในตาราง" },
+        { q: "ทำไมผลคูณย่อยจึงเลื่อนไปทางซ้ายเมื่อคำนวณต่อไป?", a: "แต่ละหลักในตัวเลขที่สองแสดงถึงค่าตำแหน่งที่ต่างกัน (หน่วย สิบ ร้อย ฯลฯ) ดังนั้นการคูณด้วยหลักสิบจึงหมายถึงการคูณด้วยหลักนั้นคูณ 10 - การเลื่อนผลคูณย่อยไปทางซ้ายหนึ่งตำแหน่งจะคำนึงถึงสิ่งนี้โดยอัตโนมัติ" },
+        { q: "สิ่งนี้ใช้ได้กับจำนวนลบหรือไม่?", a: "เครื่องคำนวณนี้ทำงานกับค่าสัมบูรณ์ (บวก) ของสิ่งที่คุณป้อน เนื่องจากการคูณยาวในฐานะวิธีการทีละขั้นตอนถูกกำหนดไว้สำหรับจำนวนเต็มบวก - ใช้กฎเครื่องหมายแยกต่างหากในภายหลัง (ผลลัพธ์เป็นลบถ้ามีตัวเลขตัวใดตัวหนึ่งในสองตัวเป็นลบพอดี)" },
+      ],
+    },
+  },
+
+  "gcd-lcm-calculator": {
+    es: {
+      title: "Calculadora de MCD y MCM",
+      intro: "Esta calculadora de MCD encuentra el máximo común divisor y mínimo común múltiplo (MCM) de dos números enteros en un paso.",
+      description: "Encuentra el máximo común divisor y mínimo común múltiplo de dos números.",
+      faq: [
+        { q: "¿Cuál es el MCD de 24 y 36?", a: "12 - el número más grande que divide exactamente tanto a 24 como a 36." },
+        { q: "¿Cómo se relaciona el MCM con el MCD?", a: "MCM = (a × b) ÷ MCD(a, b). Para 24 y 36: (24 × 36) ÷ 12 = 72, el número más pequeño en el que tanto 24 como 36 dividen exactamente." },
+        { q: "¿Cómo se usa el MCD para simplificar una fracción?", a: "Divide el numerador y denominador entre su MCD para reducir una fracción a su forma más simple - por ejemplo, 24/36 comparte un MCD de 12, así que dividir ambos entre 12 da la fracción simplificada 2/3. Consulta la Calculadora de Fracciones para simplificar fracciones directamente." },
+        { q: "¿Puede esto encontrar el MCD o MCM de más de dos números?", a: "Esta calculadora computa el MCD y MCM para dos números a la vez. Para tres o más números, aplica el cálculo por pares - encuentra el MCD o MCM de los primeros dos, luego combina ese resultado con el siguiente número, repitiendo hasta incluir todos los valores." },
+      ],
+    },
+    fr: {
+      title: "Calculateur de PGCD et PPCM",
+      intro: "Ce calculateur de PGCD trouve le plus grand commun diviseur et le plus petit commun multiple (PPCM) de deux nombres entiers en une seule étape.",
+      description: "Trouvez le plus grand commun diviseur et le plus petit commun multiple de deux nombres.",
+      faq: [
+        { q: "Quel est le PGCD de 24 et 36 ?", a: "12 - le plus grand nombre qui divise également 24 et 36." },
+        { q: "Comment le PPCM est-il lié au PGCD ?", a: "PPCM = (a × b) ÷ PGCD(a, b). Pour 24 et 36 : (24 × 36) ÷ 12 = 72, le plus petit nombre dans lequel 24 et 36 se divisent également." },
+        { q: "Comment le PGCD est-il utilisé pour simplifier une fraction ?", a: "Divisez le numérateur et le dénominateur par leur PGCD pour réduire une fraction à sa forme la plus simple - par exemple, 24/36 partage un PGCD de 12, donc diviser les deux par 12 donne la fraction simplifiée 2/3. Consultez le Calculateur de Fractions pour simplifier des fractions directement." },
+        { q: "Cela peut-il trouver le PGCD ou PPCM de plus de deux nombres ?", a: "Cette calculatrice calcule le PGCD et PPCM pour deux nombres à la fois. Pour trois nombres ou plus, appliquez le calcul par paires - trouvez le PGCD ou PPCM des deux premiers, puis combinez ce résultat avec le nombre suivant, en répétant jusqu'à ce que toutes les valeurs soient incluses." },
+      ],
+    },
+    de: {
+      title: "GGT- und KGV-Rechner",
+      intro: "Dieser GGT-Rechner findet den größten gemeinsamen Teiler und das kleinste gemeinsame Vielfache (KGV) zweier ganzer Zahlen in einem Schritt.",
+      description: "Finden Sie den größten gemeinsamen Teiler und das kleinste gemeinsame Vielfache zweier Zahlen.",
+      faq: [
+        { q: "Was ist der GGT von 24 und 36?", a: "12 - die größte Zahl, die sowohl 24 als auch 36 gleichmäßig teilt." },
+        { q: "Wie hängt das KGV mit dem GGT zusammen?", a: "KGV = (a × b) ÷ GGT(a, b). Für 24 und 36: (24 × 36) ÷ 12 = 72, die kleinste Zahl, in die sowohl 24 als auch 36 gleichmäßig teilen." },
+        { q: "Wie wird GGT verwendet, um einen Bruch zu vereinfachen?", a: "Teilen Sie Zähler und Nenner durch ihren GGT, um einen Bruch auf seine einfachste Form zu reduzieren - zum Beispiel teilen sich 24/36 einen GGT von 12, sodass die Division beider durch 12 den vereinfachten Bruch 2/3 ergibt. Siehe den Bruchrechner, um Brüche direkt zu vereinfachen." },
+        { q: "Kann dies den GGT oder das KGV von mehr als zwei Zahlen finden?", a: "Dieser Rechner berechnet GGT und KGV für zwei Zahlen gleichzeitig. Für drei oder mehr Zahlen wenden Sie die Berechnung paarweise an - finden Sie den GGT oder das KGV der ersten beiden, dann kombinieren Sie dieses Ergebnis mit der nächsten Zahl und wiederholen Sie, bis alle Werte einbezogen sind." },
+      ],
+    },
+    pt: {
+      title: "Calculadora de MDC e MMC",
+      intro: "Esta calculadora de MDC encontra o máximo divisor comum e mínimo múltiplo comum (MMC) de dois números inteiros em um passo.",
+      description: "Encontre o máximo divisor comum e mínimo múltiplo comum de dois números.",
+      faq: [
+        { q: "Qual é o MDC de 24 e 36?", a: "12 - o maior número que divide igualmente tanto 24 quanto 36." },
+        { q: "Como o MMC se relaciona com o MDC?", a: "MMC = (a × b) ÷ MDC(a, b). Para 24 e 36: (24 × 36) ÷ 12 = 72, o menor número em que tanto 24 quanto 36 dividem igualmente." },
+        { q: "Como o MDC é usado para simplificar uma fração?", a: "Divida o numerador e denominador pelo seu MDC para reduzir uma fração aos termos mais simples - por exemplo, 24/36 compartilha um MDC de 12, então dividir ambos por 12 dá a fração simplificada 2/3. Veja a Calculadora de Frações para simplificar frações diretamente." },
+        { q: "Isso pode encontrar o MDC ou MMC de mais de dois números?", a: "Esta calculadora calcula MDC e MMC para dois números por vez. Para três ou mais números, aplique o cálculo em pares - encontre o MDC ou MMC dos primeiros dois, depois combine esse resultado com o próximo número, repetindo até que todos os valores sejam incluídos." },
+      ],
+    },
+    it: {
+      title: "Calcolatore di MCD e mcm",
+      intro: "Questo calcolatore di MCD trova il massimo comun divisore e il minimo comune multiplo (mcm) di due numeri interi in un unico passaggio.",
+      description: "Trova il massimo comun divisore e il minimo comune multiplo di due numeri.",
+      faq: [
+        { q: "Qual è l'MCD di 24 e 36?", a: "12 - il numero più grande che divide equamente sia 24 che 36." },
+        { q: "Come si relaziona l'mcm all'MCD?", a: "mcm = (a × b) ÷ MCD(a, b). Per 24 e 36: (24 × 36) ÷ 12 = 72, il numero più piccolo in cui sia 24 che 36 si dividono equamente." },
+        { q: "Come si usa l'MCD per semplificare una frazione?", a: "Dividi il numeratore e il denominatore per il loro MCD per ridurre una frazione ai minimi termini - per esempio, 24/36 condivide un MCD di 12, quindi dividere entrambi per 12 dà la frazione semplificata 2/3. Vedi il Calcolatore di Frazioni per semplificare le frazioni direttamente." },
+        { q: "Questo può trovare l'MCD o mcm di più di due numeri?", a: "Questa calcolatrice calcola MCD e mcm per due numeri alla volta. Per tre o più numeri, applica il calcolo a coppie - trova l'MCD o mcm dei primi due, poi combina quel risultato con il numero successivo, ripetendo finché tutti i valori non sono inclusi." },
+      ],
+    },
+    ja: {
+      title: "最大公約数・最小公倍数計算機",
+      intro: "この最大公約数計算機は、2つの整数の最大公約数と最小公倍数（LCM）を一度に求めます。",
+      description: "2つの数の最大公約数と最小公倍数を求めます。",
+      faq: [
+        { q: "24と36の最大公約数は何ですか？", a: "12です。24と36の両方を割り切る最大の数です。" },
+        { q: "最小公倍数は最大公約数とどう関係していますか？", a: "最小公倍数 = (a × b) ÷ 最大公約数(a, b)。24と36の場合：(24 × 36) ÷ 12 = 72で、24と36の両方が割り切れる最小の数です。" },
+        { q: "最大公約数を使って分数を簡約するにはどうしますか？", a: "分子と分母を最大公約数で割ると、分数を最も簡単な形に約分できます。例えば、24/36は最大公約数12を共有しているので、両方を12で割ると簡約された分数2/3になります。分数を直接簡約するには分数計算機をご覧ください。" },
+        { q: "これは3つ以上の数の最大公約数や最小公倍数を求めることができますか？", a: "この計算機は一度に2つの数の最大公約数と最小公倍数を計算します。3つ以上の数の場合は、ペアごとに計算を適用します。最初の2つの最大公約数または最小公倍数を求め、その結果を次の数と組み合わせ、すべての値が含まれるまで繰り返します。" },
+      ],
+    },
+    ro: {
+      title: "Calculator CMMDC și CMMMC",
+      intro: "Acest calculator CMMDC găsește cel mai mare divizor comun și cel mai mic multiplu comun (CMMMC) a două numere întregi într-un singur pas.",
+      description: "Găsește cel mai mare divizor comun și cel mai mic multiplu comun a două numere.",
+      faq: [
+        { q: "Care este CMMDC al lui 24 și 36?", a: "12 - cel mai mare număr care divide exact atât 24 cât și 36." },
+        { q: "Cum se relaționează CMMMC cu CMMDC?", a: "CMMMC = (a × b) ÷ CMMDC(a, b). Pentru 24 și 36: (24 × 36) ÷ 12 = 72, cel mai mic număr în care atât 24 cât și 36 se divid exact." },
+        { q: "Cum este folosit CMMDC pentru a simplifica o fracție?", a: "Împarte numărătorul și numitorul la CMMDC-ul lor pentru a reduce o fracție la cei mai mici termeni - de exemplu, 24/36 împarte un CMMDC de 12, deci împărțind ambele la 12 obții fracția simplificată 2/3. Vezi Calculatorul de Fracții pentru a simplifica fracții direct." },
+        { q: "Poate acesta găsi CMMDC sau CMMMC pentru mai mult de două numere?", a: "Acest calculator calculează CMMDC și CMMMC pentru două numere odată. Pentru trei sau mai multe numere, aplică calculul în perechi - găsește CMMDC sau CMMMC pentru primele două, apoi combină acel rezultat cu următorul număr, repetând până când toate valorile sunt incluse." },
+      ],
+    },
+    el: {
+      title: "Υπολογιστής ΜΚΔ και ΕΚΠ",
+      intro: "Αυτός ο υπολογιστής ΜΚΔ βρίσκει τον μέγιστο κοινό διαιρέτη και το ελάχιστο κοινό πολλαπλάσιο (ΕΚΠ) δύο ακέραιων αριθμών σε ένα βήμα.",
+      description: "Βρες τον μέγιστο κοινό διαιρέτη και το ελάχιστο κοινό πολλαπλάσιο δύο αριθμών.",
+      faq: [
+        { q: "Ποιος είναι ο ΜΚΔ του 24 και του 36;", a: "12 - ο μεγαλύτερος αριθμός που διαιρεί ομοιόμορφα και το 24 και το 36." },
+        { q: "Πώς σχετίζεται το ΕΚΠ με τον ΜΚΔ;", a: "ΕΚΠ = (α × β) ÷ ΜΚΔ(α, β). Για 24 και 36: (24 × 36) ÷ 12 = 72, ο μικρότερος αριθμός στον οποίο διαιρούν ομοιόμορφα τόσο το 24 όσο και το 36." },
+        { q: "Πώς χρησιμοποιείται ο ΜΚΔ για να απλοποιήσει ένα κλάσμα;", a: "Διαιρέστε τον αριθμητή και τον παρονομαστή με τον ΜΚΔ τους για να μειώσετε ένα κλάσμα στους απλούστερους όρους - για παράδειγμα, το 24/36 μοιράζεται ΜΚΔ 12, οπότε η διαίρεση και των δύο με το 12 δίνει το απλοποιημένο κλάσμα 2/3. Δείτε τον Υπολογιστή Κλασμάτων για απλοποίηση κλασμάτων απευθείας." },
+        { q: "Μπορεί αυτό να βρει τον ΜΚΔ ή ΕΚΠ περισσότερων από δύο αριθμών;", a: "Αυτή η αριθμομηχανή υπολογίζει ΜΚΔ και ΕΚΠ για δύο αριθμούς κάθε φορά. Για τρεις ή περισσότερους αριθμούς, εφαρμόστε τον υπολογισμό ανά ζεύγη - βρείτε τον ΜΚΔ ή ΕΚΠ των πρώτων δύο, μετά συνδυάστε αυτό το αποτέλεσμα με τον επόμενο αριθμό, επαναλαμβάνοντας μέχρι να συμπεριληφθούν όλες οι τιμές." },
+      ],
+    },
+    zh: {
+      title: "最大公约数与最小公倍数计算器",
+      intro: "这个最大公约数计算器可以一步找出两个整数的最大公约数和最小公倍数（LCM）。",
+      description: "找出两个数的最大公约数和最小公倍数。",
+      faq: [
+        { q: "24和36的最大公约数是多少？", a: "12——能同时整除24和36的最大数字。" },
+        { q: "最小公倍数与最大公约数有什么关系？", a: "最小公倍数 = (a × b) ÷ 最大公约数(a, b)。对于24和36：(24 × 36) ÷ 12 = 72，这是24和36都能整除的最小数字。" },
+        { q: "如何用最大公约数化简分数？", a: "用分子和分母除以它们的最大公约数，把分数化简为最简形式——例如，24/36的最大公约数是12，两者都除以12就得到化简后的分数2/3。想直接化简分数，请查看分数计算器。" },
+        { q: "这个工具能找出两个以上数字的最大公约数或最小公倍数吗？", a: "这个计算器一次计算两个数字的最大公约数和最小公倍数。对于三个或更多数字，可以两两应用该计算——先找出前两个数字的最大公约数或最小公倍数，然后把该结果与下一个数字组合，重复此过程直到包含所有数值。" },
+      ],
+    },
+    ar: {
+      title: "حاسبة القاسم المشترك الأكبر والمضاعف المشترك الأصغر",
+      intro: "تجد حاسبة القاسم المشترك الأكبر هذه القاسم المشترك الأكبر والمضاعف المشترك الأصغر لعددين صحيحين في خطوة واحدة.",
+      description: "أوجد القاسم المشترك الأكبر والمضاعف المشترك الأصغر لعددين.",
+      faq: [
+        { q: "ما هو القاسم المشترك الأكبر لـ24 و36؟", a: "12 - أكبر عدد يقسم كلاً من 24 و36 بالتساوي." },
+        { q: "كيف يرتبط المضاعف المشترك الأصغر بالقاسم المشترك الأكبر؟", a: "المضاعف المشترك الأصغر = (أ × ب) ÷ القاسم المشترك الأكبر(أ، ب). لـ24 و36: (24 × 36) ÷ 12 = 72، أصغر عدد يقسم عليه كل من 24 و36 بالتساوي." },
+        { q: "كيف يُستخدم القاسم المشترك الأكبر لتبسيط كسر؟", a: "اقسم البسط والمقام على قاسمهما المشترك الأكبر لاختزال الكسر إلى أبسط صورة - على سبيل المثال، 24/36 يشترك في قاسم مشترك أكبر قدره 12، لذا فإن قسمة كليهما على 12 يعطي الكسر المبسط 2/3. راجع حاسبة الكسور لتبسيط الكسور مباشرة." },
+        { q: "هل يمكن لهذا إيجاد القاسم المشترك الأكبر أو المضاعف المشترك الأصغر لأكثر من عددين؟", a: "تحسب هذه الحاسبة القاسم المشترك الأكبر والمضاعف المشترك الأصغر لعددين في كل مرة. لثلاثة أعداد أو أكثر، طبّق الحساب بشكل ثنائي - أوجد القاسم المشترك الأكبر أو المضاعف المشترك الأصغر لأول عددين، ثم ادمج تلك النتيجة مع العدد التالي، وكرر حتى تشمل جميع القيم." },
+      ],
+    },
+    th: {
+      title: "เครื่องคำนวณ ห.ร.ม. และ ค.ร.น.",
+      intro: "เครื่องคำนวณ ห.ร.ม. นี้หาตัวหารร่วมมากและตัวคูณร่วมน้อย (ค.ร.น.) ของจำนวนเต็มสองจำนวนในขั้นตอนเดียว",
+      description: "หาตัวหารร่วมมากและตัวคูณร่วมน้อยของสองจำนวน",
+      faq: [
+        { q: "ห.ร.ม. ของ 24 และ 36 คือเท่าไหร่?", a: "12 - จำนวนที่มากที่สุดที่หารทั้ง 24 และ 36 ลงตัว" },
+        { q: "ค.ร.น. สัมพันธ์กับ ห.ร.ม. อย่างไร?", a: "ค.ร.น. = (a × b) ÷ ห.ร.ม.(a, b) สำหรับ 24 และ 36: (24 × 36) ÷ 12 = 72 ซึ่งเป็นจำนวนที่เล็กที่สุดที่ทั้ง 24 และ 36 หารลงตัว" },
+        { q: "ห.ร.ม. ใช้ลดรูปเศษส่วนอย่างไร?", a: "หารตัวเศษและตัวส่วนด้วย ห.ร.ม. ของทั้งคู่เพื่อลดเศษส่วนให้อยู่ในรูปที่ต่ำที่สุด - ตัวอย่างเช่น 24/36 มี ห.ร.ม. ร่วมกันคือ 12 ดังนั้นการหารทั้งคู่ด้วย 12 จะได้เศษส่วนที่ลดรูปแล้วคือ 2/3 ดูเครื่องคำนวณเศษส่วนสำหรับการลดรูปเศษส่วนโดยตรง" },
+        { q: "สิ่งนี้สามารถหา ห.ร.ม. หรือ ค.ร.น. ของจำนวนมากกว่าสองจำนวนได้หรือไม่?", a: "เครื่องคำนวณนี้คำนวณ ห.ร.ม. และ ค.ร.น. สำหรับสองจำนวนในแต่ละครั้ง สำหรับสามจำนวนหรือมากกว่า ให้ใช้การคำนวณเป็นคู่ๆ - หา ห.ร.ม. หรือ ค.ร.น. ของสองจำนวนแรก จากนั้นรวมผลลัพธ์นั้นกับจำนวนถัดไป ทำซ้ำจนกว่าค่าทั้งหมดจะรวมอยู่ด้วย" },
+      ],
+    },
+  },
+
+  "factor-calculator": {
+    es: {
+      title: "Calculadora de Factores",
+      intro: "Introduce un número entero positivo para listar todos sus factores y descomponerlo en su factorización prima.",
+      description: "Encuentra todos los factores y la factorización prima de un número entero.",
+      faq: [
+        { q: "¿Cuáles son los factores de 360?", a: "1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, 18, 20, 24, 30, 36, 40, 45, 60, 72, 90, 120, 180, y 360 - 24 factores en total." },
+        { q: "¿Cuál es la factorización prima de 360?", a: "2 × 2 × 2 × 3 × 3 × 5 (o 2³ × 3² × 5) - descomponer un número en los números primos que se multiplican entre sí para producirlo." },
+        { q: "¿En qué se diferencia esto de la Calculadora de MCD y MCM?", a: "Esta herramienta encuentra todos los factores de un solo número. La Calculadora de MCD y MCM en cambio compara dos números para encontrar su máximo común divisor y mínimo común múltiplo - usa esa si estás comparando dos números en lugar de analizar uno." },
+        { q: "¿Cómo sabes cuándo un número es primo?", a: "Un número es primo si sus únicos factores son 1 y él mismo - introdúcelo aquí y si la lista de factores contiene solo esos dos números (o la factorización prima muestra solo el número mismo), es primo." },
+      ],
+    },
+    fr: {
+      title: "Calculateur de Facteurs",
+      intro: "Entrez un nombre entier positif pour lister tous ses facteurs et le décomposer en sa factorisation première.",
+      description: "Trouvez tous les facteurs et la factorisation première d'un nombre entier.",
+      faq: [
+        { q: "Quels sont les facteurs de 360 ?", a: "1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, 18, 20, 24, 30, 36, 40, 45, 60, 72, 90, 120, 180, et 360 - 24 facteurs au total." },
+        { q: "Quelle est la factorisation première de 360 ?", a: "2 × 2 × 2 × 3 × 3 × 5 (ou 2³ × 3² × 5) - décomposer un nombre en nombres premiers qui se multiplient entre eux pour le produire." },
+        { q: "En quoi cela diffère-t-il du Calculateur de PGCD et PPCM ?", a: "Cet outil trouve tous les facteurs d'un seul nombre. Le Calculateur de PGCD et PPCM compare plutôt deux nombres pour trouver leur plus grand commun diviseur et plus petit commun multiple - utilisez celui-ci si vous comparez deux nombres plutôt que d'en analyser un." },
+        { q: "Comment savez-vous quand un nombre est premier ?", a: "Un nombre est premier si ses seuls facteurs sont 1 et lui-même - entrez-le ici et si la liste des facteurs ne contient que ces deux nombres (ou si la factorisation première montre juste le nombre lui-même), il est premier." },
+      ],
+    },
+    de: {
+      title: "Faktorenrechner",
+      intro: "Geben Sie eine positive ganze Zahl ein, um alle ihre Faktoren aufzulisten und sie in ihre Primfaktorzerlegung aufzuschlüsseln.",
+      description: "Finden Sie alle Faktoren und die Primfaktorzerlegung einer ganzen Zahl.",
+      faq: [
+        { q: "Was sind die Faktoren von 360?", a: "1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, 18, 20, 24, 30, 36, 40, 45, 60, 72, 90, 120, 180, und 360 - insgesamt 24 Faktoren." },
+        { q: "Was ist die Primfaktorzerlegung von 360?", a: "2 × 2 × 2 × 3 × 3 × 5 (oder 2³ × 3² × 5) - eine Zahl in die Primzahlen zerlegen, die miteinander multipliziert sie ergeben." },
+        { q: "Wie unterscheidet sich dies vom GGT- und KGV-Rechner?", a: "Dieses Tool findet jeden Faktor einer einzelnen Zahl. Der GGT- und KGV-Rechner vergleicht stattdessen zwei Zahlen, um ihren größten gemeinsamen Teiler und ihr kleinstes gemeinsames Vielfaches zu finden - verwenden Sie diesen, wenn Sie zwei Zahlen vergleichen, anstatt eine zu analysieren." },
+        { q: "Woher weiß man, wann eine Zahl eine Primzahl ist?", a: "Eine Zahl ist eine Primzahl, wenn ihre einzigen Faktoren 1 und sie selbst sind - geben Sie sie hier ein, und wenn die Faktorenliste nur diese beiden Zahlen enthält (oder die Primfaktorzerlegung nur die Zahl selbst zeigt), ist sie eine Primzahl." },
+      ],
+    },
+    pt: {
+      title: "Calculadora de Fatores",
+      intro: "Digite um número inteiro positivo para listar todos os seus fatores e decompô-lo em sua fatoração prima.",
+      description: "Encontre todos os fatores e a fatoração prima de um número inteiro.",
+      faq: [
+        { q: "Quais são os fatores de 360?", a: "1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, 18, 20, 24, 30, 36, 40, 45, 60, 72, 90, 120, 180, e 360 - 24 fatores no total." },
+        { q: "Qual é a fatoração prima de 360?", a: "2 × 2 × 2 × 3 × 3 × 5 (ou 2³ × 3² × 5) - decompor um número nos números primos que se multiplicam entre si para produzi-lo." },
+        { q: "Como isso difere da Calculadora de MDC e MMC?", a: "Esta ferramenta encontra todos os fatores de um único número. A Calculadora de MDC e MMC, em vez disso, compara dois números para encontrar seu máximo divisor comum e mínimo múltiplo comum - use essa se estiver comparando dois números em vez de analisar um." },
+        { q: "Como saber quando um número é primo?", a: "Um número é primo se seus únicos fatores forem 1 e ele mesmo - digite-o aqui e se a lista de fatores contiver apenas esses dois números (ou a fatoração prima mostrar apenas o próprio número), ele é primo." },
+      ],
+    },
+    it: {
+      title: "Calcolatore di Fattori",
+      intro: "Inserisci un numero intero positivo per elencare tutti i suoi fattori e scomporlo nella sua fattorizzazione in numeri primi.",
+      description: "Trova tutti i fattori e la fattorizzazione in numeri primi di un numero intero.",
+      faq: [
+        { q: "Quali sono i fattori di 360?", a: "1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, 18, 20, 24, 30, 36, 40, 45, 60, 72, 90, 120, 180, e 360 - 24 fattori in totale." },
+        { q: "Qual è la fattorizzazione in numeri primi di 360?", a: "2 × 2 × 2 × 3 × 3 × 5 (o 2³ × 3² × 5) - scomporre un numero nei numeri primi che moltiplicati insieme lo producono." },
+        { q: "In cosa differisce questo dal Calcolatore di MCD e mcm?", a: "Questo strumento trova ogni fattore di un singolo numero. Il Calcolatore di MCD e mcm invece confronta due numeri per trovare il loro massimo comun divisore e minimo comune multiplo - usa quello se stai confrontando due numeri anziché analizzarne uno." },
+        { q: "Come si fa a sapere quando un numero è primo?", a: "Un numero è primo se i suoi unici fattori sono 1 e se stesso - inseriscilo qui e se l'elenco dei fattori contiene solo questi due numeri (o la fattorizzazione in numeri primi mostra solo il numero stesso), è primo." },
+      ],
+    },
+    ja: {
+      title: "因数計算機",
+      intro: "正の整数を入力すると、そのすべての因数がリストされ、素因数分解に分解されます。",
+      description: "整数のすべての因数と素因数分解を求めます。",
+      faq: [
+        { q: "360の因数は何ですか？", a: "1、2、3、4、5、6、8、9、10、12、15、18、20、24、30、36、40、45、60、72、90、120、180、360です。合計24個の因数があります。" },
+        { q: "360の素因数分解は何ですか？", a: "2 × 2 × 2 × 3 × 3 × 5（または2³ × 3² × 5）です。数を掛け合わせるとその数を生成する素数に分解します。" },
+        { q: "これは最大公約数・最小公倍数計算機とどう違いますか？", a: "このツールは単一の数のすべての因数を求めます。最大公約数・最小公倍数計算機は代わりに2つの数を比較して最大公約数と最小公倍数を求めます。1つの数を分析するのではなく2つの数を比較する場合は、そちらを使用してください。" },
+        { q: "数が素数であるかどうかはどうやってわかりますか？", a: "数の因数が1とその数自身だけである場合、その数は素数です。ここに入力して、因数リストにその2つの数だけが含まれている場合（または素因数分解がその数自身だけを示している場合）、それは素数です。" },
+      ],
+    },
+    ro: {
+      title: "Calculator de Factori",
+      intro: "Introdu un număr întreg pozitiv pentru a lista toți factorii săi și a-l descompune în factorizarea sa primă.",
+      description: "Găsește toți factorii și factorizarea primă a unui număr întreg.",
+      faq: [
+        { q: "Care sunt factorii lui 360?", a: "1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, 18, 20, 24, 30, 36, 40, 45, 60, 72, 90, 120, 180, și 360 - 24 de factori în total." },
+        { q: "Care este factorizarea primă a lui 360?", a: "2 × 2 × 2 × 3 × 3 × 5 (sau 2³ × 3² × 5) - descompunerea unui număr în numerele prime care înmulțite dau numărul respectiv." },
+        { q: "Cum diferă acest lucru de Calculatorul CMMDC și CMMMC?", a: "Acest instrument găsește fiecare factor al unui singur număr. Calculatorul CMMDC și CMMMC compară în schimb două numere pentru a le găsi cel mai mare divizor comun și cel mai mic multiplu comun - folosește-l pe acela dacă compari două numere în loc să analizezi unul." },
+        { q: "Cum știi când un număr este prim?", a: "Un număr este prim dacă singurii săi factori sunt 1 și el însuși - introdu-l aici și dacă lista de factori conține doar acele două numere (sau factorizarea primă arată doar numărul în sine), este prim." },
+      ],
+    },
+    el: {
+      title: "Υπολογιστής Παραγόντων",
+      intro: "Εισάγετε έναν θετικό ακέραιο αριθμό για να καταγράψετε όλους τους παράγοντές του και να τον αναλύσετε στην πρωτογενή του παραγοντοποίηση.",
+      description: "Βρες όλους τους παράγοντες και την πρωτογενή παραγοντοποίηση ενός ακέραιου αριθμού.",
+      faq: [
+        { q: "Ποιοι είναι οι παράγοντες του 360;", a: "1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, 18, 20, 24, 30, 36, 40, 45, 60, 72, 90, 120, 180, και 360 - 24 παράγοντες συνολικά." },
+        { q: "Ποια είναι η πρωτογενής παραγοντοποίηση του 360;", a: "2 × 2 × 2 × 3 × 3 × 5 (ή 2³ × 3² × 5) - αναλύοντας έναν αριθμό στους πρώτους αριθμούς που πολλαπλασιαζόμενοι μεταξύ τους τον παράγουν." },
+        { q: "Πώς διαφέρει αυτό από τον Υπολογιστή ΜΚΔ και ΕΚΠ;", a: "Αυτό το εργαλείο βρίσκει κάθε παράγοντα ενός μόνο αριθμού. Ο Υπολογιστής ΜΚΔ και ΕΚΠ αντίθετα συγκρίνει δύο αριθμούς για να βρει τον μέγιστο κοινό διαιρέτη και το ελάχιστο κοινό πολλαπλάσιό τους - χρησιμοποιήστε αυτόν αν συγκρίνετε δύο αριθμούς αντί να αναλύετε έναν." },
+        { q: "Πώς ξέρετε πότε ένας αριθμός είναι πρώτος;", a: "Ένας αριθμός είναι πρώτος αν οι μόνοι παράγοντές του είναι το 1 και ο εαυτός του - εισάγετέ τον εδώ και αν η λίστα παραγόντων περιέχει μόνο αυτούς τους δύο αριθμούς (ή η πρωτογενής παραγοντοποίηση δείχνει μόνο τον ίδιο τον αριθμό), είναι πρώτος." },
+      ],
+    },
+    zh: {
+      title: "因数计算器",
+      intro: "输入一个正整数，列出它的所有因数，并将其分解为质因数分解式。",
+      description: "找出一个整数的所有因数以及质因数分解式。",
+      faq: [
+        { q: "360的因数有哪些？", a: "1、2、3、4、5、6、8、9、10、12、15、18、20、24、30、36、40、45、60、72、90、120、180和360——总共24个因数。" },
+        { q: "360的质因数分解是什么？", a: "2 × 2 × 2 × 3 × 3 × 5（或2³ × 3² × 5）——把一个数分解成相乘后能得到它的质数。" },
+        { q: "这与最大公约数与最小公倍数计算器有什么不同？", a: "这个工具找出单个数字的每一个因数。而最大公约数与最小公倍数计算器则比较两个数字，找出它们的最大公约数和最小公倍数——如果你是在比较两个数字而不是分析一个数字，请使用那个工具。" },
+        { q: "如何判断一个数是不是质数？", a: "如果一个数的因数只有1和它本身，那么它就是质数——在这里输入这个数，如果因数列表只包含这两个数字（或者质因数分解只显示这个数字本身），那它就是质数。" },
+      ],
+    },
+    ar: {
+      title: "حاسبة العوامل",
+      intro: "أدخل عددًا صحيحًا موجبًا لإدراج جميع عوامله وتفكيكه إلى تحليله إلى عوامل أولية.",
+      description: "أوجد جميع العوامل والتحليل إلى العوامل الأولية لعدد صحيح.",
+      faq: [
+        { q: "ما هي عوامل 360؟", a: "1، 2، 3، 4، 5، 6، 8، 9، 10، 12، 15، 18، 20، 24، 30، 36، 40، 45، 60، 72، 90، 120، 180، و360 - 24 عاملاً بالمجموع." },
+        { q: "ما هو التحليل إلى العوامل الأولية لـ360؟", a: "2 × 2 × 2 × 3 × 3 × 5 (أو 2³ × 3² × 5) - تفكيك عدد إلى الأعداد الأولية التي يُنتجها ضربها معًا." },
+        { q: "كيف يختلف هذا عن حاسبة القاسم المشترك الأكبر والمضاعف المشترك الأصغر؟", a: "تجد هذه الأداة كل عامل لعدد واحد. أما حاسبة القاسم المشترك الأكبر والمضاعف المشترك الأصغر فتقارن بدلاً من ذلك بين عددين لإيجاد قاسمهما المشترك الأكبر ومضاعفهما المشترك الأصغر - استخدم تلك إذا كنت تقارن بين عددين بدلاً من تحليل عدد واحد." },
+        { q: "كيف تعرف متى يكون العدد أوليًا؟", a: "العدد أولي إذا كانت عوامله الوحيدة هي 1 والعدد نفسه - أدخله هنا، وإذا كانت قائمة العوامل تحتوي فقط على هذين العددين (أو أظهر التحليل إلى العوامل الأولية العدد نفسه فقط)، فهو عدد أولي." },
+      ],
+    },
+    th: {
+      title: "เครื่องคำนวณตัวประกอบ",
+      intro: "ป้อนจำนวนเต็มบวกเพื่อแสดงรายการตัวประกอบทั้งหมดและแยกตัวประกอบเฉพาะ",
+      description: "หาตัวประกอบทั้งหมดและการแยกตัวประกอบเฉพาะของจำนวนเต็ม",
+      faq: [
+        { q: "ตัวประกอบของ 360 คืออะไร?", a: "1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, 18, 20, 24, 30, 36, 40, 45, 60, 72, 90, 120, 180 และ 360 - รวม 24 ตัวประกอบ" },
+        { q: "การแยกตัวประกอบเฉพาะของ 360 คืออะไร?", a: "2 × 2 × 2 × 3 × 3 × 5 (หรือ 2³ × 3² × 5) - การแยกตัวเลขออกเป็นจำนวนเฉพาะที่คูณกันแล้วได้ตัวเลขนั้น" },
+        { q: "สิ่งนี้แตกต่างจากเครื่องคำนวณ ห.ร.ม. และ ค.ร.น. อย่างไร?", a: "เครื่องมือนี้หาตัวประกอบทุกตัวของจำนวนเดียว ในขณะที่เครื่องคำนวณ ห.ร.ม. และ ค.ร.น. เปรียบเทียบสองจำนวนเพื่อหาตัวหารร่วมมากและตัวคูณร่วมน้อย - ใช้อันนั้นถ้าคุณกำลังเปรียบเทียบสองจำนวนแทนที่จะวิเคราะห์จำนวนเดียว" },
+        { q: "คุณรู้ได้อย่างไรว่าจำนวนหนึ่งเป็นจำนวนเฉพาะ?", a: "จำนวนหนึ่งเป็นจำนวนเฉพาะถ้าตัวประกอบเดียวของมันคือ 1 และตัวมันเอง - ป้อนที่นี่และถ้ารายการตัวประกอบมีเพียงสองจำนวนนั้น (หรือการแยกตัวประกอบเฉพาะแสดงเพียงจำนวนนั้นเอง) แสดงว่าเป็นจำนวนเฉพาะ" },
+      ],
+    },
+  },
 };
 
 // Static-page copy for wave one. Privacy and Terms are flagged explicitly

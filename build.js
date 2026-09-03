@@ -97,6 +97,10 @@ const WAVE_ONE_TOOL_IDS = [
   // Text category, batch 3 (final)
   "url-encoder-decoder", "ip-subnet-calculator", "json-compare",
   "cidr-calculator", "group-randomizer",
+  // Math category, batch 1
+  "percentage-change-calculator", "fraction-calculator", "pi-digits-calculator",
+  "long-division-calculator", "long-multiplication-calculator", "gcd-lcm-calculator",
+  "factor-calculator",
 ];
 
 function loadData() {
