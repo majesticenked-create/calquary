@@ -113,6 +113,10 @@ const WAVE_ONE_TOOL_IDS = [
   "square-root-calculator", "ratio-calculator", "aspect-ratio-calculator",
   "exponent-calculator", "logarithm-calculator", "vector-calculator",
   "haversine-distance-calculator",
+  // Math category, batch 5
+  "quadratic-formula-calculator", "cone-volume-calculator", "cylinder-volume-calculator",
+  "pythagorean-theorem-calculator", "distance-formula-calculator", "triangle-solver",
+  "hypergeometric-calculator",
 ];
 
 function loadData() {

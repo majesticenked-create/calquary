@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calcolatore di Distribuzione Ipergeometrica - Calcolatrice Online Gratuita | Calquary</title>
+  <meta name="description" content="Calcola la probabilità di estrarre esattamente k successi da una popolazione senza reinserimento." />
+  <meta property="og:title" content="Calcolatore di Distribuzione Ipergeometrica | Calquary">
+  <meta property="og:description" content="Calcola la probabilità di estrarre esattamente k successi da una popolazione senza reinserimento.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/it/tool/hypergeometric-calculator.html">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/hypergeometric-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calcolatore di Distribuzione Ipergeometrica | Calquary">
+  <meta name="twitter:description" content="Calcola la probabilità di estrarre esattamente k successi da una popolazione senza reinserimento.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/hypergeometric-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/hypergeometric-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/hypergeometric-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/hypergeometric-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/hypergeometric-calculator.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/hypergeometric-calculator.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/hypergeometric-calculator.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/hypergeometric-calculator.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/hypergeometric-calculator.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/hypergeometric-calculator.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/hypergeometric-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/hypergeometric-calculator.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/hypergeometric-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/hypergeometric-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("hypergeometric-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("hypergeometric-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calcolatore di Distribuzione Ipergeometrica",
+      "description": "Calcola la probabilità di estrarre esattamente k successi da una popolazione senza reinserimento.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/it/tool/hypergeometric-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-01",
+      "inLanguage": "it"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/it/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Math",
+          "item": "https://calquary.com/it/category/math.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calcolatore di Distribuzione Ipergeometrica",
+          "item": "https://calquary.com/it/tool/hypergeometric-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "A cosa serve la distribuzione ipergeometrica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Calcolare probabilità quando si campiona senza reinserimento da una popolazione finita - come estrarre carte da un mazzo, o articoli difettosi da un lotto, dove ogni estrazione cambia le probabilità per la successiva (a differenza della distribuzione binomiale, che presuppone il reinserimento)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual è la probabilità di estrarre esattamente 2 cuori in una mano di 5 carte?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Circa il 27,4% - con N=52 (mazzo), K=13 (cuori), n=5 (dimensione mano), k=2: P(X=2) = C(13,2) × C(39,3) / C(52,5) ≈ 0,2743."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "In cosa differisce dalla distribuzione binomiale?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La binomiale presuppone che ogni prova sia indipendente con una probabilità fissa (campionamento con reinserimento, o una popolazione infinita). L'ipergeometrica tiene conto della popolazione che si riduce man mano che campioni (senza reinserimento), il che cambia le probabilità ad ogni estrazione - questo conta di più quando la dimensione del campione è una frazione significativa della popolazione."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cosa mi dice la probabilità cumulativa (P(X ≤ k))?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La probabilità di ottenere k o meno successi, non esattamente k - utile per domande come \"qual è la probabilità di estrarre al massimo 2 cuori\", che somma le probabilità individuali per 0, 1, e 2 cuori."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/it/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/it/index.html#categories">Categorie</a>
+          <a href="/it/index.html#tools">Tutti gli strumenti</a>
+          <a href="/it/about.html">Chi siamo</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Italiano">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>IT</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/hypergeometric-calculator.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/hypergeometric-calculator.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/hypergeometric-calculator.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/hypergeometric-calculator.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/hypergeometric-calculator.html">Português</a><span class="locale-item current" role="menuitem" aria-current="true">Italiano</span><a class="locale-item" role="menuitem" href="/ja/tool/hypergeometric-calculator.html">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/hypergeometric-calculator.html">Română</a><a class="locale-item" role="menuitem" href="/el/tool/hypergeometric-calculator.html">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/hypergeometric-calculator.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/hypergeometric-calculator.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/hypergeometric-calculator.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/it/index.html">Calquary</a> / <a href="/it/category/math.html">Matematica</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calcolatore di Distribuzione Ipergeometrica</h1>
+        <p style="max-width:60ch;">Inserisci la dimensione della popolazione, numero di successi nella popolazione, dimensione del campione, e numero di successi che vuoi per trovare la probabilità esatta e cumulativa.</p>
+        <p class="last-updated">Ultimo aggiornamento: September 1, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calcola</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reimposta</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Domande frequenti</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>A cosa serve la distribuzione ipergeometrica?</h3>
+<p>Calcolare probabilità quando si campiona senza reinserimento da una popolazione finita - come estrarre carte da un mazzo, o articoli difettosi da un lotto, dove ogni estrazione cambia le probabilità per la successiva (a differenza della distribuzione binomiale, che presuppone il reinserimento).</p>
+</div>
+<div class="faq-item">
+<h3>Qual è la probabilità di estrarre esattamente 2 cuori in una mano di 5 carte?</h3>
+<p>Circa il 27,4% - con N=52 (mazzo), K=13 (cuori), n=5 (dimensione mano), k=2: P(X=2) = C(13,2) × C(39,3) / C(52,5) ≈ 0,2743.</p>
+</div>
+<div class="faq-item">
+<h3>In cosa differisce dalla distribuzione binomiale?</h3>
+<p>La binomiale presuppone che ogni prova sia indipendente con una probabilità fissa (campionamento con reinserimento, o una popolazione infinita). L'ipergeometrica tiene conto della popolazione che si riduce man mano che campioni (senza reinserimento), il che cambia le probabilità ad ogni estrazione - questo conta di più quando la dimensione del campione è una frazione significativa della popolazione.</p>
+</div>
+<div class="faq-item">
+<h3>Cosa mi dice la probabilità cumulativa (P(X ≤ k))?</h3>
+<p>La probabilità di ottenere k o meno successi, non esattamente k - utile per domande come "qual è la probabilità di estrarre al massimo 2 cuori", che somma le probabilità individuali per 0, 1, e 2 cuori.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Strumenti correlati</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Nota sulla precisione</h4>
+          <p style="margin:0;font-size:0.85rem;">Le calcolatrici di Calquary sono pensate per stime rapide e affidabili. Per decisioni con reali implicazioni finanziarie, strutturali o mediche, consulta un professionista qualificato.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/it/index.html">← Torna a tutte le calcolatrici</a> · <a href="/it/about.html">Chi siamo</a> · <a href="/it/contact.html">Contatti</a> · <a href="/it/privacy.html">Privacy</a> · <a href="/it/terms.html">Termini</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

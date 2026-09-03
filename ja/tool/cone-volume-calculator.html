@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>円錐体積計算機 - 無料オンライン計算ツール | Calquary</title>
+  <meta name="description" content="円錐の体積の公式検索としても使えます - 半径と高さから円錐の体積、表面積、母線を計算します。" />
+  <meta property="og:title" content="円錐体積計算機 | Calquary">
+  <meta property="og:description" content="円錐の体積の公式検索としても使えます - 半径と高さから円錐の体積、表面積、母線を計算します。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/ja/tool/cone-volume-calculator.html">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/cone-volume-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="円錐体積計算機 | Calquary">
+  <meta name="twitter:description" content="円錐の体積の公式検索としても使えます - 半径と高さから円錐の体積、表面積、母線を計算します。">
+  <meta name="twitter:image" content="https://calquary.com/og-images/cone-volume-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/cone-volume-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/cone-volume-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/cone-volume-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/cone-volume-calculator.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/cone-volume-calculator.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/cone-volume-calculator.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/cone-volume-calculator.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/cone-volume-calculator.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/cone-volume-calculator.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/cone-volume-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/cone-volume-calculator.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/cone-volume-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/cone-volume-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("cone-volume-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("cone-volume-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "円錐体積計算機",
+      "description": "円錐の体積の公式検索としても使えます - 半径と高さから円錐の体積、表面積、母線を計算します。",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/ja/tool/cone-volume-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-30",
+      "inLanguage": "ja"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/ja/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Math",
+          "item": "https://calquary.com/ja/category/math.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "円錐体積計算機",
+          "item": "https://calquary.com/ja/tool/cone-volume-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "円錐の体積の公式は何ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "V = (1/3)πr²hです。rは円形の底面の半径、hは底面から頂点までの高さです。同じ底面と高さを持つ円柱の体積のちょうど3分の1です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "これは他の言い回しと同じ質問ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。これらはすべて同じ検索の言い換えです：円錐の体積の公式、V = (1/3)πr²h。この計算機は半径と高さをその公式に直接代入するので、手計算する必要はありません。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "他の言い回しについてはどうですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "同じ質問で、単に語順が違うだけです。すべて円錐の体積の公式、V = (1/3)πr²hを求めています。上に半径と高さを入力すると、この計算機がそれを適用します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "このフレーズの複数形と単数形バージョンは何か異なる意味を持ちますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "いいえ。同じフレーズの複数形、単数形、語順を変えたバージョンはすべて同じもの、円錐の体積の公式、V = (1/3)πr²hを指しています。この計算機は、どのように検索したかに関係なく、半径と高さから直接計算します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "このフレーズの省略された言い方についてはどうですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "毎回同じ答えです：円錐の体積の公式はV = (1/3)πr²hです。このフレーズがどのように語順を変えられたり省略されたりしても、その1つの公式を求めており、この計算機は半径と高さに自動的に適用します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "「円錐の体積」と「体積の円錐」は同じ検索ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。「円錐形の」は単に「円錐」の形容詞形であり、残りは単なる語順や複数形のバリエーションです。すべて同じ体積の公式、V = (1/3)πr²hを意味し、この計算機は半径と高さから計算します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "「円錐形の体積」や他の短いバリエーションについてはどうですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "それでも同じことです。「円錐形」は単に円錐であり、簡潔な2語バージョンは単語を省略したり並べ替えたりした同じ検索です。すべてV = (1/3)πr²hを意味します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "なぜ円錐の体積は円柱のちょうど3分の1なのですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "これは微積分で証明可能な幾何学的事実です（点に線形に縮小する円形断面を積分することによって）。同じ底面半径と高さを共有する任意の円錐と円柱について、特定の半径や高さに関係なく、円錐は常に体積のちょうど3分の1を囲みます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "高さと母線の違いは何ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "高さは底面から頂点までの直線的な垂直距離です。母線は円錐の湾曲した表面に沿った、底面の端から頂点までの距離です。母線は常に高さより長く（半径がゼロの退化ケースを除く）、√(r² + h²)として計算されます。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/ja/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/ja/index.html#categories">カテゴリー</a>
+          <a href="/ja/index.html#tools">すべてのツール</a>
+          <a href="/ja/about.html">このサイトについて</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: 日本語">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>JA</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/cone-volume-calculator.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/cone-volume-calculator.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/cone-volume-calculator.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/cone-volume-calculator.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/cone-volume-calculator.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/cone-volume-calculator.html">Italiano</a><span class="locale-item current" role="menuitem" aria-current="true">日本語</span><a class="locale-item" role="menuitem" href="/ro/tool/cone-volume-calculator.html">Română</a><a class="locale-item" role="menuitem" href="/el/tool/cone-volume-calculator.html">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/cone-volume-calculator.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/cone-volume-calculator.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/cone-volume-calculator.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/ja/index.html">Calquary</a> / <a href="/ja/category/math.html">数学</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>円錐体積計算機</h1>
+        <p style="max-width:60ch;">円錐の半径と高さを入力すると、V = (1/3)πr²hを使ってその体積を計算します。</p>
+        <p class="last-updated">最終更新日： August 30, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">計算する</button>
+              <button type="button" id="calc-reset" class="btn-ghost">リセット</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>よくある質問</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>円錐の体積の公式は何ですか？</h3>
+<p>V = (1/3)πr²hです。rは円形の底面の半径、hは底面から頂点までの高さです。同じ底面と高さを持つ円柱の体積のちょうど3分の1です。</p>
+</div>
+<div class="faq-item">
+<h3>これは他の言い回しと同じ質問ですか？</h3>
+<p>はい。これらはすべて同じ検索の言い換えです：円錐の体積の公式、V = (1/3)πr²h。この計算機は半径と高さをその公式に直接代入するので、手計算する必要はありません。</p>
+</div>
+<div class="faq-item">
+<h3>他の言い回しについてはどうですか？</h3>
+<p>同じ質問で、単に語順が違うだけです。すべて円錐の体積の公式、V = (1/3)πr²hを求めています。上に半径と高さを入力すると、この計算機がそれを適用します。</p>
+</div>
+<div class="faq-item">
+<h3>このフレーズの複数形と単数形バージョンは何か異なる意味を持ちますか？</h3>
+<p>いいえ。同じフレーズの複数形、単数形、語順を変えたバージョンはすべて同じもの、円錐の体積の公式、V = (1/3)πr²hを指しています。この計算機は、どのように検索したかに関係なく、半径と高さから直接計算します。</p>
+</div>
+<div class="faq-item">
+<h3>このフレーズの省略された言い方についてはどうですか？</h3>
+<p>毎回同じ答えです：円錐の体積の公式はV = (1/3)πr²hです。このフレーズがどのように語順を変えられたり省略されたりしても、その1つの公式を求めており、この計算機は半径と高さに自動的に適用します。</p>
+</div>
+<div class="faq-item">
+<h3>「円錐の体積」と「体積の円錐」は同じ検索ですか？</h3>
+<p>はい。「円錐形の」は単に「円錐」の形容詞形であり、残りは単なる語順や複数形のバリエーションです。すべて同じ体積の公式、V = (1/3)πr²hを意味し、この計算機は半径と高さから計算します。</p>
+</div>
+<div class="faq-item">
+<h3>「円錐形の体積」や他の短いバリエーションについてはどうですか？</h3>
+<p>それでも同じことです。「円錐形」は単に円錐であり、簡潔な2語バージョンは単語を省略したり並べ替えたりした同じ検索です。すべてV = (1/3)πr²hを意味します。</p>
+</div>
+<div class="faq-item">
+<h3>なぜ円錐の体積は円柱のちょうど3分の1なのですか？</h3>
+<p>これは微積分で証明可能な幾何学的事実です（点に線形に縮小する円形断面を積分することによって）。同じ底面半径と高さを共有する任意の円錐と円柱について、特定の半径や高さに関係なく、円錐は常に体積のちょうど3分の1を囲みます。</p>
+</div>
+<div class="faq-item">
+<h3>高さと母線の違いは何ですか？</h3>
+<p>高さは底面から頂点までの直線的な垂直距離です。母線は円錐の湾曲した表面に沿った、底面の端から頂点までの距離です。母線は常に高さより長く（半径がゼロの退化ケースを除く）、√(r² + h²)として計算されます。</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>関連ツール</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>精度について</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquaryの計算ツールは、迅速で信頼できる概算を目的としています。実際の財務、構造、医療に関わる重要な決定を行う前には、必ず専門家にご確認ください。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/ja/index.html">← すべての計算ツールに戻る</a> · <a href="/ja/about.html">このサイトについて</a> · <a href="/ja/contact.html">お問い合わせ</a> · <a href="/ja/privacy.html">プライバシー</a> · <a href="/ja/terms.html">利用規約</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>
