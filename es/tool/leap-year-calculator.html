@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Año Bisiesto - Calculadora Gratis Online | Calquary</title>
+  <meta name="description" content="Verifica si un año es bisiesto y encuentra el siguiente." />
+  <meta property="og:title" content="Calculadora de Año Bisiesto | Calquary">
+  <meta property="og:description" content="Verifica si un año es bisiesto y encuentra el siguiente.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/es/tool/leap-year-calculator.html">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/leap-year-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculadora de Año Bisiesto | Calquary">
+  <meta name="twitter:description" content="Verifica si un año es bisiesto y encuentra el siguiente.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/leap-year-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/leap-year-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/leap-year-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/leap-year-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/leap-year-calculator.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/leap-year-calculator.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/leap-year-calculator.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/leap-year-calculator.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/leap-year-calculator.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/leap-year-calculator.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/leap-year-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/leap-year-calculator.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/leap-year-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/leap-year-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("leap-year-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("leap-year-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calculadora de Año Bisiesto",
+      "description": "Verifica si un año es bisiesto y encuentra el siguiente.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/es/tool/leap-year-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-30",
+      "inLanguage": "es"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/es/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Date & Time",
+          "item": "https://calquary.com/es/category/datetime.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calculadora de Año Bisiesto",
+          "item": "https://calquary.com/es/tool/leap-year-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Es 2024 un año bisiesto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí - 2024 es divisible entre 4 y no es un año centenario, así que es un año bisiesto con 366 días. El próximo año bisiesto después de 2024 es 2028."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es la regla para los años bisiestos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un año es bisiesto si es divisible entre 4, excepto los años centenarios (divisibles entre 100), que también deben ser divisibles entre 400 - así que el año 2000 fue bisiesto, pero 1900 y 2100 no lo son."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Los años centenarios son siempre años bisiestos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - los años centenarios (como 1900 o 2100) son bisiestos solo si son divisibles entre 400, no solo entre 4. Por eso el año 2000 fue bisiesto pero 1900 y 2100 no lo son - esta regla adicional mantiene el calendario alineado con el año solar durante largos períodos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué se creó la regla del año bisiesto en primer lugar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un año solar tiene aproximadamente 365.2422 días, no exactamente 365, así que sin años bisiestos el calendario se desalinearía con las estaciones en aproximadamente un día cada cuatro años. Añadir un día bisiesto aproximadamente cada cuatro años (con excepciones de años centenarios) mantiene el calendario alineado con la órbita de la Tierra durante largos períodos."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/es/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/es/index.html#categories">Categorías</a>
+          <a href="/es/index.html#tools">Todas las herramientas</a>
+          <a href="/es/about.html">Acerca de</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Español">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>ES</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/leap-year-calculator.html">English</a><span class="locale-item current" role="menuitem" aria-current="true">Español</span><a class="locale-item" role="menuitem" href="/fr/tool/leap-year-calculator.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/leap-year-calculator.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/leap-year-calculator.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/leap-year-calculator.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/leap-year-calculator.html">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/leap-year-calculator.html">Română</a><a class="locale-item" role="menuitem" href="/el/tool/leap-year-calculator.html">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/leap-year-calculator.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/leap-year-calculator.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/leap-year-calculator.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/es/index.html">Calquary</a> / <a href="/es/category/datetime.html">Fecha y Hora</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calculadora de Año Bisiesto</h1>
+        <p style="max-width:60ch;">Introduce un año para verificar si es un año bisiesto y encontrar el próximo año bisiesto después de él.</p>
+        <p class="last-updated">Última actualización: August 30, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calcular</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reiniciar</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Preguntas frecuentes</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>¿Es 2024 un año bisiesto?</h3>
+<p>Sí - 2024 es divisible entre 4 y no es un año centenario, así que es un año bisiesto con 366 días. El próximo año bisiesto después de 2024 es 2028.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cuál es la regla para los años bisiestos?</h3>
+<p>Un año es bisiesto si es divisible entre 4, excepto los años centenarios (divisibles entre 100), que también deben ser divisibles entre 400 - así que el año 2000 fue bisiesto, pero 1900 y 2100 no lo son.</p>
+</div>
+<div class="faq-item">
+<h3>¿Los años centenarios son siempre años bisiestos?</h3>
+<p>No - los años centenarios (como 1900 o 2100) son bisiestos solo si son divisibles entre 400, no solo entre 4. Por eso el año 2000 fue bisiesto pero 1900 y 2100 no lo son - esta regla adicional mantiene el calendario alineado con el año solar durante largos períodos.</p>
+</div>
+<div class="faq-item">
+<h3>¿Por qué se creó la regla del año bisiesto en primer lugar?</h3>
+<p>Un año solar tiene aproximadamente 365.2422 días, no exactamente 365, así que sin años bisiestos el calendario se desalinearía con las estaciones en aproximadamente un día cada cuatro años. Añadir un día bisiesto aproximadamente cada cuatro años (con excepciones de años centenarios) mantiene el calendario alineado con la órbita de la Tierra durante largos períodos.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Herramientas relacionadas</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Nota sobre precisión</h4>
+          <p style="margin:0;font-size:0.85rem;">Las calculadoras de Calquary están diseñadas para ofrecer estimaciones rápidas y fiables. Para decisiones con implicaciones financieras, estructurales o médicas reales, consulta con un profesional cualificado.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/es/index.html">← Volver a todas las calculadoras</a> · <a href="/es/about.html">Acerca de</a> · <a href="/es/contact.html">Contacto</a> · <a href="/es/privacy.html">Privacidad</a> · <a href="/es/terms.html">Términos</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

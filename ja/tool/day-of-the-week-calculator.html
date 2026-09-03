@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>曜日計算機 - 無料オンライン計算ツール | Calquary</title>
+  <meta name="description" content="任意の日付（過去または未来）が何曜日になるかを調べます。" />
+  <meta property="og:title" content="曜日計算機 | Calquary">
+  <meta property="og:description" content="任意の日付（過去または未来）が何曜日になるかを調べます。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/ja/tool/day-of-the-week-calculator.html">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/day-of-the-week-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="曜日計算機 | Calquary">
+  <meta name="twitter:description" content="任意の日付（過去または未来）が何曜日になるかを調べます。">
+  <meta name="twitter:image" content="https://calquary.com/og-images/day-of-the-week-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/day-of-the-week-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/day-of-the-week-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/day-of-the-week-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/day-of-the-week-calculator.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/day-of-the-week-calculator.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/day-of-the-week-calculator.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/day-of-the-week-calculator.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/day-of-the-week-calculator.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/day-of-the-week-calculator.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/day-of-the-week-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/day-of-the-week-calculator.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/day-of-the-week-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/day-of-the-week-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("day-of-the-week-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("day-of-the-week-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "曜日計算機",
+      "description": "任意の日付（過去または未来）が何曜日になるかを調べます。",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/ja/tool/day-of-the-week-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-02",
+      "inLanguage": "ja"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/ja/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Date & Time",
+          "item": "https://calquary.com/ja/category/datetime.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "曜日計算機",
+          "item": "https://calquary.com/ja/tool/day-of-the-week-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "2000年1月1日は何曜日でしたか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "土曜日です。広く知られている基準日で、曜日計算の確認に役立ちます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "任意の日付の曜日はどのように計算されますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "最も一般的な方法はツェラーの公式で、日、月、年（1月と2月は前年の13月と14月として扱われる）を使用し、カレンダーを参照する必要なく曜日を直接計算する式です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "これは遠い過去や未来の日付にも機能しますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。これは擬似グレゴリオ暦を使用しており、1582年に実際にグレゴリオ暦が採用される前の日付を含め、今日のカレンダールールを一貫してどの日付にも適用します。ユリウス暦の下で記録された歴史的な日付は、この計算とは異なる場合があります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "古い日付や未来の日付について曜日を知ることが重要なのはなぜですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "系図学の研究、歴史的記録の確認、遠い将来のイベントの計画、あるいは誕生日、記念日、歴史的出来事が実際に何曜日だったかという好奇心を満たすためなど、様々な場面で役立ちます。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/ja/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/ja/index.html#categories">カテゴリー</a>
+          <a href="/ja/index.html#tools">すべてのツール</a>
+          <a href="/ja/about.html">このサイトについて</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: 日本語">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>JA</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/day-of-the-week-calculator.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/day-of-the-week-calculator.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/day-of-the-week-calculator.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/day-of-the-week-calculator.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/day-of-the-week-calculator.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/day-of-the-week-calculator.html">Italiano</a><span class="locale-item current" role="menuitem" aria-current="true">日本語</span><a class="locale-item" role="menuitem" href="/ro/tool/day-of-the-week-calculator.html">Română</a><a class="locale-item" role="menuitem" href="/el/tool/day-of-the-week-calculator.html">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/day-of-the-week-calculator.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/day-of-the-week-calculator.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/day-of-the-week-calculator.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/ja/index.html">Calquary</a> / <a href="/ja/category/datetime.html">日付・時間</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>曜日計算機</h1>
+        <p style="max-width:60ch;">任意の日付を入力すると、それが何曜日になるかがわかります。</p>
+        <p class="last-updated">最終更新日： September 2, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">計算する</button>
+              <button type="button" id="calc-reset" class="btn-ghost">リセット</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>よくある質問</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>2000年1月1日は何曜日でしたか？</h3>
+<p>土曜日です。広く知られている基準日で、曜日計算の確認に役立ちます。</p>
+</div>
+<div class="faq-item">
+<h3>任意の日付の曜日はどのように計算されますか？</h3>
+<p>最も一般的な方法はツェラーの公式で、日、月、年（1月と2月は前年の13月と14月として扱われる）を使用し、カレンダーを参照する必要なく曜日を直接計算する式です。</p>
+</div>
+<div class="faq-item">
+<h3>これは遠い過去や未来の日付にも機能しますか？</h3>
+<p>はい。これは擬似グレゴリオ暦を使用しており、1582年に実際にグレゴリオ暦が採用される前の日付を含め、今日のカレンダールールを一貫してどの日付にも適用します。ユリウス暦の下で記録された歴史的な日付は、この計算とは異なる場合があります。</p>
+</div>
+<div class="faq-item">
+<h3>古い日付や未来の日付について曜日を知ることが重要なのはなぜですか？</h3>
+<p>系図学の研究、歴史的記録の確認、遠い将来のイベントの計画、あるいは誕生日、記念日、歴史的出来事が実際に何曜日だったかという好奇心を満たすためなど、様々な場面で役立ちます。</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>関連ツール</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>精度について</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquaryの計算ツールは、迅速で信頼できる概算を目的としています。実際の財務、構造、医療に関わる重要な決定を行う前には、必ず専門家にご確認ください。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/ja/index.html">← すべての計算ツールに戻る</a> · <a href="/ja/about.html">このサイトについて</a> · <a href="/ja/contact.html">お問い合わせ</a> · <a href="/ja/privacy.html">プライバシー</a> · <a href="/ja/terms.html">利用規約</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

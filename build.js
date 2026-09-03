@@ -80,6 +80,8 @@ const WAVE_ONE_TOOL_IDS = [
   "online-timer", "online-alarm-clock", "online-stopwatch",
   "current-time", "random-date-generator", "military-time-converter", "unix-timestamp-converter",
   "week-number-calculator", "time-zone-converter", "daylight-saving-time-calculator",
+  "sunrise-sunset-calculator", "sun-position-calculator", "day-of-week-calculator",
+  "leap-year-calculator", "birth-year-calculator", "time-zone-meeting-planner", "day-of-the-week-calculator",
 ];
 
 function loadData() {
