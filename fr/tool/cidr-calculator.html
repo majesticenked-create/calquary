@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculateur CIDR / Sous-réseau - Calculatrice Gratuite en Ligne | Calquary</title>
+  <meta name="description" content="Calculez l'adresse réseau, l'adresse de diffusion, le masque de sous-réseau, et la plage d'hôtes utilisables à partir d'une notation CIDR." />
+  <meta property="og:title" content="Calculateur CIDR / Sous-réseau | Calquary">
+  <meta property="og:description" content="Calculez l'adresse réseau, l'adresse de diffusion, le masque de sous-réseau, et la plage d'hôtes utilisables à partir d'une notation CIDR.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/fr/tool/cidr-calculator.html">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/cidr-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculateur CIDR / Sous-réseau | Calquary">
+  <meta name="twitter:description" content="Calculez l'adresse réseau, l'adresse de diffusion, le masque de sous-réseau, et la plage d'hôtes utilisables à partir d'une notation CIDR.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/cidr-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/cidr-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/cidr-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/cidr-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/cidr-calculator.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/cidr-calculator.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/cidr-calculator.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/cidr-calculator.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/cidr-calculator.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/cidr-calculator.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/cidr-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/cidr-calculator.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/cidr-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/cidr-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("cidr-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("cidr-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calculateur CIDR / Sous-réseau",
+      "description": "Calculez l'adresse réseau, l'adresse de diffusion, le masque de sous-réseau, et la plage d'hôtes utilisables à partir d'une notation CIDR.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/fr/tool/cidr-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-30",
+      "inLanguage": "fr"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/fr/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Text & Digital",
+          "item": "https://calquary.com/fr/category/text.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calculateur CIDR / Sous-réseau",
+          "item": "https://calquary.com/fr/tool/cidr-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Que signifie la notation CIDR, comme /24 ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le nombre après la barre oblique est la longueur du préfixe - combien de bits initiaux de l'adresse IP 32 bits sont fixés comme la portion réseau. /24 signifie que les 24 premiers bits (les trois premiers octets) identifient le réseau, laissant 8 bits (256 adresses) pour les hôtes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment calculer le nombre d'hôtes utilisables à partir d'un préfixe ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hôtes utilisables = 2^(32 − préfixe) − 2, en soustrayant l'adresse réseau et l'adresse de diffusion, qui ne peuvent pas être assignées à des hôtes. Un réseau /24 a 2^8 − 2 = 254 adresses d'hôtes utilisables."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pourquoi n'y a-t-il pas d'hôtes utilisables pour un /31 ou /32 ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un /32 est une adresse unique sans place pour une paire réseau/diffusion, et un /31 est un cas spécial (défini dans la RFC 3021) utilisé pour les liaisons point à point où les deux adresses du bloc de 2 adresses sont utilisables comme adresses d'hôte, puisqu'aucune diffusion n'est nécessaire."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/fr/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/fr/index.html#categories">Catégories</a>
+          <a href="/fr/index.html#tools">Tous les outils</a>
+          <a href="/fr/about.html">À propos</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Français">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>FR</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/cidr-calculator.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/cidr-calculator.html">Español</a><span class="locale-item current" role="menuitem" aria-current="true">Français</span><a class="locale-item" role="menuitem" href="/de/tool/cidr-calculator.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/cidr-calculator.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/cidr-calculator.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/cidr-calculator.html">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/cidr-calculator.html">Română</a><a class="locale-item" role="menuitem" href="/el/tool/cidr-calculator.html">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/cidr-calculator.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/cidr-calculator.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/cidr-calculator.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/fr/index.html">Calquary</a> / <a href="/fr/category/text.html">Texte et Numérique</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calculateur CIDR / Sous-réseau</h1>
+        <p style="max-width:60ch;">Entrez une adresse IP en notation CIDR (comme 192.168.1.0/24) pour calculer l'adresse réseau, l'adresse de diffusion, et la plage d'hôtes utilisables du sous-réseau.</p>
+        <p class="last-updated">Dernière mise à jour : August 30, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculer</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Réinitialiser</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Questions fréquentes</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Que signifie la notation CIDR, comme /24 ?</h3>
+<p>Le nombre après la barre oblique est la longueur du préfixe - combien de bits initiaux de l'adresse IP 32 bits sont fixés comme la portion réseau. /24 signifie que les 24 premiers bits (les trois premiers octets) identifient le réseau, laissant 8 bits (256 adresses) pour les hôtes.</p>
+</div>
+<div class="faq-item">
+<h3>Comment calculer le nombre d'hôtes utilisables à partir d'un préfixe ?</h3>
+<p>Hôtes utilisables = 2^(32 − préfixe) − 2, en soustrayant l'adresse réseau et l'adresse de diffusion, qui ne peuvent pas être assignées à des hôtes. Un réseau /24 a 2^8 − 2 = 254 adresses d'hôtes utilisables.</p>
+</div>
+<div class="faq-item">
+<h3>Pourquoi n'y a-t-il pas d'hôtes utilisables pour un /31 ou /32 ?</h3>
+<p>Un /32 est une adresse unique sans place pour une paire réseau/diffusion, et un /31 est un cas spécial (défini dans la RFC 3021) utilisé pour les liaisons point à point où les deux adresses du bloc de 2 adresses sont utilisables comme adresses d'hôte, puisqu'aucune diffusion n'est nécessaire.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Outils associés</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Remarque sur la précision</h4>
+          <p style="margin:0;font-size:0.85rem;">Les calculatrices de Calquary sont conçues pour fournir des estimations rapides et fiables. Pour toute décision ayant de réelles conséquences financières, structurelles ou médicales, consultez un professionnel qualifié.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/fr/index.html">← Retour à toutes les calculatrices</a> · <a href="/fr/about.html">À propos</a> · <a href="/fr/contact.html">Contact</a> · <a href="/fr/privacy.html">Confidentialité</a> · <a href="/fr/terms.html">Conditions</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

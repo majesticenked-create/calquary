@@ -94,6 +94,9 @@ const WAVE_ONE_TOOL_IDS = [
   // Text category, batch 2
   "dice-roller", "card-deck-shuffler", "color-mixer", "lorem-ipsum-generator",
   "text-to-slug-generator", "binary-to-text-converter", "word-frequency-counter",
+  // Text category, batch 3 (final)
+  "url-encoder-decoder", "ip-subnet-calculator", "json-compare",
+  "cidr-calculator", "group-randomizer",
 ];
 
 function loadData() {
