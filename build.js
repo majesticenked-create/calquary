@@ -101,6 +101,10 @@ const WAVE_ONE_TOOL_IDS = [
   "percentage-change-calculator", "fraction-calculator", "pi-digits-calculator",
   "long-division-calculator", "long-multiplication-calculator", "gcd-lcm-calculator",
   "factor-calculator",
+  // Math category, batch 2
+  "standard-deviation-calculator", "t-test-calculator", "effect-size-calculator",
+  "mann-whitney-u-calculator", "sequences-series-calculator", "coupon-collector-calculator",
+  "similarity-ratio-calculator",
 ];
 
 function loadData() {

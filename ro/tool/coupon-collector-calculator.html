@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator Problema Colecționarului de Cupoane - Calculator Gratuit Online | Calquary</title>
+  <meta name="description" content="Calculează numărul așteptat de extrageri necesare pentru a colecta toate cele n elemente distincte." />
+  <meta property="og:title" content="Calculator Problema Colecționarului de Cupoane | Calquary">
+  <meta property="og:description" content="Calculează numărul așteptat de extrageri necesare pentru a colecta toate cele n elemente distincte.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/ro/tool/coupon-collector-calculator.html">
+  <meta property="og:locale" content="ro_RO">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/coupon-collector-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculator Problema Colecționarului de Cupoane | Calquary">
+  <meta name="twitter:description" content="Calculează numărul așteptat de extrageri necesare pentru a colecta toate cele n elemente distincte.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/coupon-collector-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/coupon-collector-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/coupon-collector-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/coupon-collector-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/coupon-collector-calculator.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/coupon-collector-calculator.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/coupon-collector-calculator.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/coupon-collector-calculator.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/coupon-collector-calculator.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/coupon-collector-calculator.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/coupon-collector-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/coupon-collector-calculator.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/coupon-collector-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/coupon-collector-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("coupon-collector-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("coupon-collector-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calculator Problema Colecționarului de Cupoane",
+      "description": "Calculează numărul așteptat de extrageri necesare pentru a colecta toate cele n elemente distincte.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/ro/tool/coupon-collector-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-01",
+      "inLanguage": "ro"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/ro/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Math",
+          "item": "https://calquary.com/ro/category/math.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calculator Problema Colecționarului de Cupoane",
+          "item": "https://calquary.com/ro/tool/coupon-collector-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Ce este problema colecționarului de cupoane?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O problemă clasică de probabilitate: dacă există n elemente distincte și fiecare extragere aleatorie are șanse egale de a fi oricare dintre ele (cu înlocuire), câte extrageri în medie sunt necesare pentru a colecta cel puțin unul din fiecare element?"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Care este numărul așteptat de extrageri pentru a colecta toate cele 6 elemente?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aproximativ 14,7 extrageri - folosind extrageri așteptate = n × Hₙ = 6 × (1 + 1/2 + 1/3 + 1/4 + 1/5 + 1/6) = 6 × 2,45 ≈ 14,7."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "De ce devine disproporționat mai greu să colectezi ultimele câteva elemente?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Extragerile timpurii sunt probabil elemente noi deoarece cea mai mare parte a setului nu este încă colectată, dar pe măsură ce colectezi mai mult, fiecare nouă extragere are o șansă tot mai mică de a fi unul dintre puținele tipuri rămase - ultimul element singur necesită în medie n extrageri pentru a-l găsi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Se presupune că fiecare element are șanse egale de a fi extras?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da - acest calcul presupune o distribuție uniformă, în care fiecare dintre cele n elemente are o șansă egală de 1/n la fiecare extragere. Dacă unele elemente sunt mai rare decât altele, numărul real așteptat de extrageri va fi mai mare decât această estimare."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/ro/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/ro/index.html#categories">Categorii</a>
+          <a href="/ro/index.html#tools">Toate instrumentele</a>
+          <a href="/ro/about.html">Despre noi</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Română">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>undefined</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/coupon-collector-calculator.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/coupon-collector-calculator.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/coupon-collector-calculator.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/coupon-collector-calculator.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/coupon-collector-calculator.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/coupon-collector-calculator.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/coupon-collector-calculator.html">日本語</a><span class="locale-item current" role="menuitem" aria-current="true">Română</span><a class="locale-item" role="menuitem" href="/el/tool/coupon-collector-calculator.html">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/coupon-collector-calculator.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/coupon-collector-calculator.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/coupon-collector-calculator.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/ro/index.html">Calquary</a> / <a href="/ro/category/math.html">Matematică</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calculator Problema Colecționarului de Cupoane</h1>
+        <p style="max-width:60ch;">Introdu câte elemente distincte există (precum tipuri de cupoane, cărți, sau premii) pentru a găsi numărul așteptat de extrageri aleatorii pentru a le colecta pe toate.</p>
+        <p class="last-updated">Ultima actualizare: September 1, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculează</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Resetează</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Întrebări frecvente</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Ce este problema colecționarului de cupoane?</h3>
+<p>O problemă clasică de probabilitate: dacă există n elemente distincte și fiecare extragere aleatorie are șanse egale de a fi oricare dintre ele (cu înlocuire), câte extrageri în medie sunt necesare pentru a colecta cel puțin unul din fiecare element?</p>
+</div>
+<div class="faq-item">
+<h3>Care este numărul așteptat de extrageri pentru a colecta toate cele 6 elemente?</h3>
+<p>Aproximativ 14,7 extrageri - folosind extrageri așteptate = n × Hₙ = 6 × (1 + 1/2 + 1/3 + 1/4 + 1/5 + 1/6) = 6 × 2,45 ≈ 14,7.</p>
+</div>
+<div class="faq-item">
+<h3>De ce devine disproporționat mai greu să colectezi ultimele câteva elemente?</h3>
+<p>Extragerile timpurii sunt probabil elemente noi deoarece cea mai mare parte a setului nu este încă colectată, dar pe măsură ce colectezi mai mult, fiecare nouă extragere are o șansă tot mai mică de a fi unul dintre puținele tipuri rămase - ultimul element singur necesită în medie n extrageri pentru a-l găsi.</p>
+</div>
+<div class="faq-item">
+<h3>Se presupune că fiecare element are șanse egale de a fi extras?</h3>
+<p>Da - acest calcul presupune o distribuție uniformă, în care fiecare dintre cele n elemente are o șansă egală de 1/n la fiecare extragere. Dacă unele elemente sunt mai rare decât altele, numărul real așteptat de extrageri va fi mai mare decât această estimare.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Instrumente similare</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Notă privind precizia</h4>
+          <p style="margin:0;font-size:0.85rem;">Calculatoarele Calquary sunt concepute pentru a oferi estimări rapide și fiabile. Pentru decizii cu implicații financiare, structurale sau medicale reale, consultă un profesionist calificat.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/ro/index.html">← Înapoi la toate calculatoarele</a> · <a href="/ro/about.html">Despre noi</a> · <a href="/ro/contact.html">Contact</a> · <a href="/ro/privacy.html">Confidențialitate</a> · <a href="/ro/terms.html">Termeni</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

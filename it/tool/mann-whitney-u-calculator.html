@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calcolatore del Test U di Mann-Whitney - Calcolatrice Online Gratuita | Calquary</title>
+  <meta name="description" content="Calcola la statistica U di Mann-Whitney per due gruppi indipendenti, un'alternativa non parametrica al test t." />
+  <meta property="og:title" content="Calcolatore del Test U di Mann-Whitney | Calquary">
+  <meta property="og:description" content="Calcola la statistica U di Mann-Whitney per due gruppi indipendenti, un'alternativa non parametrica al test t.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/it/tool/mann-whitney-u-calculator.html">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/mann-whitney-u-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calcolatore del Test U di Mann-Whitney | Calquary">
+  <meta name="twitter:description" content="Calcola la statistica U di Mann-Whitney per due gruppi indipendenti, un'alternativa non parametrica al test t.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/mann-whitney-u-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/mann-whitney-u-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/mann-whitney-u-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/mann-whitney-u-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/mann-whitney-u-calculator.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/mann-whitney-u-calculator.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/mann-whitney-u-calculator.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/mann-whitney-u-calculator.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/mann-whitney-u-calculator.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/mann-whitney-u-calculator.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/mann-whitney-u-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/mann-whitney-u-calculator.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/mann-whitney-u-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/mann-whitney-u-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("mann-whitney-u-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("mann-whitney-u-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calcolatore del Test U di Mann-Whitney",
+      "description": "Calcola la statistica U di Mann-Whitney per due gruppi indipendenti, un'alternativa non parametrica al test t.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/it/tool/mann-whitney-u-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-01",
+      "inLanguage": "it"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/it/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Math",
+          "item": "https://calquary.com/it/category/math.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calcolatore del Test U di Mann-Whitney",
+          "item": "https://calquary.com/it/tool/mann-whitney-u-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "A cosa serve il test U di Mann-Whitney?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Confrontare due gruppi indipendenti per vedere se provengono dalla stessa distribuzione, senza assumere che i dati siano distribuiti normalmente - è l'alternativa non parametrica al test t a due campioni indipendenti, basata sul rango piuttosto che sulle medie."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Come viene calcolato U?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Combina entrambi i gruppi, classifica tutti i valori insieme (mediando i ranghi per i pareggi), somma i ranghi per il gruppo 1 (R1), poi U1 = R1 − n1(n1+1)/2. U2 viene trovato allo stesso modo per il gruppo 2, o come n1×n2 − U1. La statistica U riportata è la più piccola tra U1 e U2."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Come faccio a sapere se il mio risultato è significativo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Per campioni più grandi, confronta il punteggio z con un valore critico normale standard (come ±1,96 per un test a due code di 0,05). Per campioni più piccoli (approssimativamente n1 o n2 inferiori a 8-10), l'approssimazione normale è meno affidabile - cerca invece la tua statistica U esatta in una tabella di valori critici di Mann-Whitney."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quando dovrei usare questo invece di un test t?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Quando i tuoi dati non sono distribuiti normalmente, contengono valori anomali, o sono ordinali piuttosto che veramente numerici - il test di Mann-Whitney si basa solo sull'ordine di rango, rendendolo più robusto del test t rispetto a distribuzioni non normali e valori estremi."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/it/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/it/index.html#categories">Categorie</a>
+          <a href="/it/index.html#tools">Tutti gli strumenti</a>
+          <a href="/it/about.html">Chi siamo</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Italiano">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>IT</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/mann-whitney-u-calculator.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/mann-whitney-u-calculator.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/mann-whitney-u-calculator.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/mann-whitney-u-calculator.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/mann-whitney-u-calculator.html">Português</a><span class="locale-item current" role="menuitem" aria-current="true">Italiano</span><a class="locale-item" role="menuitem" href="/ja/tool/mann-whitney-u-calculator.html">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/mann-whitney-u-calculator.html">Română</a><a class="locale-item" role="menuitem" href="/el/tool/mann-whitney-u-calculator.html">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/mann-whitney-u-calculator.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/mann-whitney-u-calculator.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/mann-whitney-u-calculator.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/it/index.html">Calquary</a> / <a href="/it/category/math.html">Matematica</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calcolatore del Test U di Mann-Whitney</h1>
+        <p style="max-width:60ch;">Inserisci due gruppi di numeri (uno per riga o separati da virgole) per calcolare la statistica U di Mann-Whitney.</p>
+        <p class="last-updated">Ultimo aggiornamento: September 1, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calcola</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reimposta</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Domande frequenti</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>A cosa serve il test U di Mann-Whitney?</h3>
+<p>Confrontare due gruppi indipendenti per vedere se provengono dalla stessa distribuzione, senza assumere che i dati siano distribuiti normalmente - è l'alternativa non parametrica al test t a due campioni indipendenti, basata sul rango piuttosto che sulle medie.</p>
+</div>
+<div class="faq-item">
+<h3>Come viene calcolato U?</h3>
+<p>Combina entrambi i gruppi, classifica tutti i valori insieme (mediando i ranghi per i pareggi), somma i ranghi per il gruppo 1 (R1), poi U1 = R1 − n1(n1+1)/2. U2 viene trovato allo stesso modo per il gruppo 2, o come n1×n2 − U1. La statistica U riportata è la più piccola tra U1 e U2.</p>
+</div>
+<div class="faq-item">
+<h3>Come faccio a sapere se il mio risultato è significativo?</h3>
+<p>Per campioni più grandi, confronta il punteggio z con un valore critico normale standard (come ±1,96 per un test a due code di 0,05). Per campioni più piccoli (approssimativamente n1 o n2 inferiori a 8-10), l'approssimazione normale è meno affidabile - cerca invece la tua statistica U esatta in una tabella di valori critici di Mann-Whitney.</p>
+</div>
+<div class="faq-item">
+<h3>Quando dovrei usare questo invece di un test t?</h3>
+<p>Quando i tuoi dati non sono distribuiti normalmente, contengono valori anomali, o sono ordinali piuttosto che veramente numerici - il test di Mann-Whitney si basa solo sull'ordine di rango, rendendolo più robusto del test t rispetto a distribuzioni non normali e valori estremi.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Strumenti correlati</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Nota sulla precisione</h4>
+          <p style="margin:0;font-size:0.85rem;">Le calcolatrici di Calquary sono pensate per stime rapide e affidabili. Per decisioni con reali implicazioni finanziarie, strutturali o mediche, consulta un professionista qualificato.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/it/index.html">← Torna a tutte le calcolatrici</a> · <a href="/it/about.html">Chi siamo</a> · <a href="/it/contact.html">Contatti</a> · <a href="/it/privacy.html">Privacy</a> · <a href="/it/terms.html">Termini</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>
