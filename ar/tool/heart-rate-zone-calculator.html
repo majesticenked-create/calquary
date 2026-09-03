@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>حاسبة مناطق معدل ضربات القلب - حاسبة مجانية عبر الإنترنت | Calquary</title>
+  <meta name="description" content="احسب أقصى معدل ضربات قلبك ومناطق التدريب المستهدفة حسب العمر." />
+  <meta property="og:title" content="حاسبة مناطق معدل ضربات القلب | Calquary">
+  <meta property="og:description" content="احسب أقصى معدل ضربات قلبك ومناطق التدريب المستهدفة حسب العمر.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/ar/tool/heart-rate-zone-calculator.html">
+  <meta property="og:locale" content="ar_AR">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/heart-rate-zone-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="حاسبة مناطق معدل ضربات القلب | Calquary">
+  <meta name="twitter:description" content="احسب أقصى معدل ضربات قلبك ومناطق التدريب المستهدفة حسب العمر.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/heart-rate-zone-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/heart-rate-zone-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/heart-rate-zone-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/heart-rate-zone-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/heart-rate-zone-calculator.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/heart-rate-zone-calculator.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/heart-rate-zone-calculator.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/heart-rate-zone-calculator.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/heart-rate-zone-calculator.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/heart-rate-zone-calculator.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/heart-rate-zone-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/heart-rate-zone-calculator.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/heart-rate-zone-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/heart-rate-zone-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("heart-rate-zone-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("heart-rate-zone-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "حاسبة مناطق معدل ضربات القلب",
+      "description": "احسب أقصى معدل ضربات قلبك ومناطق التدريب المستهدفة حسب العمر.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/ar/tool/heart-rate-zone-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-30",
+      "inLanguage": "ar"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/ar/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Health & Fitness",
+          "item": "https://calquary.com/ar/category/health.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "حاسبة مناطق معدل ضربات القلب",
+          "item": "https://calquary.com/ar/tool/heart-rate-zone-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "كيف أحسب أقصى معدل ضربات قلبي؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "التقدير الأكثر شيوعًا هو 220 ناقص عمرك - بالنسبة لشخص عمره 30 عامًا، ذلك يعادل 190 نبضة في الدقيقة. إنه متوسط سكاني، وليس قياسًا فرديًا دقيقًا."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "في أي منطقة من معدل ضربات القلب يجب أن أتدرب لحرق الدهون؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "غالبًا ما تسمى منطقة 60-70% من أقصى معدل ضربات قلبك منطقة \"حرق الدهون\" - بالنسبة لشخص عمره 30 عامًا بحد أقصى 190 نبضة في الدقيقة، ذلك يعادل حوالي 114-133 نبضة في الدقيقة. تحرق المناطق الأعلى المزيد من إجمالي السعرات الحرارية رغم انخفاض نسبة الدهون."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "لماذا نستخدم معادلة كارفونين بدلاً من مجرد نسبة مئوية من أقصى معدل ضربات القلب؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "تأخذ معادلة كارفونين في الاعتبار معدل ضربات قلبك أثناء الراحة، مما يراعي الاختلافات الفردية في اللياقة البدنية - سيحصل شخصان بنفس أقصى معدل ضربات قلب لكن بمعدلات راحة مختلفة جدًا على مناطق تدريب أكثر تخصيصًا ودقة باستخدام كارفونين مقارنة بنسبة مئوية بسيطة من الحد الأقصى."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هل تحتاج مناطق معدل ضربات القلب إلى تعديل لأدوية مثل حاصرات بيتا؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "نعم - تخفض حاصرات بيتا وبعض أدوية القلب الأخرى معدل ضربات القلب أثناء الراحة والحد الأقصى، مما يجعل المعادلات القياسية المعتمدة على العمر غير دقيقة. إذا كنت تتناول أدوية تؤثر على القلب، استشر طبيبًا للحصول على أقصى معدل ضربات قلب أكثر دقة قبل استخدام أهداف التدريب المعتمدة على المناطق."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/ar/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/ar/index.html#categories">التصنيفات</a>
+          <a href="/ar/index.html#tools">جميع الأدوات</a>
+          <a href="/ar/about.html">من نحن</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: العربية">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>undefined</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/heart-rate-zone-calculator.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/heart-rate-zone-calculator.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/heart-rate-zone-calculator.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/heart-rate-zone-calculator.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/heart-rate-zone-calculator.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/heart-rate-zone-calculator.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/heart-rate-zone-calculator.html">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/heart-rate-zone-calculator.html">Română</a><a class="locale-item" role="menuitem" href="/el/tool/heart-rate-zone-calculator.html">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/heart-rate-zone-calculator.html">中文</a><span class="locale-item current" role="menuitem" aria-current="true">العربية</span><a class="locale-item" role="menuitem" href="/th/tool/heart-rate-zone-calculator.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/ar/index.html">Calquary</a> / <a href="/ar/category/health.html">الصحة واللياقة</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>حاسبة مناطق معدل ضربات القلب</h1>
+        <p style="max-width:60ch;">أدخل عمرك لحساب أقصى معدل ضربات قلب مقدر ومناطق مستهدفة لشدات تدريب مختلفة.</p>
+        <p class="last-updated">آخر تحديث: August 30, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">احسب</button>
+              <button type="button" id="calc-reset" class="btn-ghost">إعادة تعيين</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>الأسئلة الشائعة</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>كيف أحسب أقصى معدل ضربات قلبي؟</h3>
+<p>التقدير الأكثر شيوعًا هو 220 ناقص عمرك - بالنسبة لشخص عمره 30 عامًا، ذلك يعادل 190 نبضة في الدقيقة. إنه متوسط سكاني، وليس قياسًا فرديًا دقيقًا.</p>
+</div>
+<div class="faq-item">
+<h3>في أي منطقة من معدل ضربات القلب يجب أن أتدرب لحرق الدهون؟</h3>
+<p>غالبًا ما تسمى منطقة 60-70% من أقصى معدل ضربات قلبك منطقة "حرق الدهون" - بالنسبة لشخص عمره 30 عامًا بحد أقصى 190 نبضة في الدقيقة، ذلك يعادل حوالي 114-133 نبضة في الدقيقة. تحرق المناطق الأعلى المزيد من إجمالي السعرات الحرارية رغم انخفاض نسبة الدهون.</p>
+</div>
+<div class="faq-item">
+<h3>لماذا نستخدم معادلة كارفونين بدلاً من مجرد نسبة مئوية من أقصى معدل ضربات القلب؟</h3>
+<p>تأخذ معادلة كارفونين في الاعتبار معدل ضربات قلبك أثناء الراحة، مما يراعي الاختلافات الفردية في اللياقة البدنية - سيحصل شخصان بنفس أقصى معدل ضربات قلب لكن بمعدلات راحة مختلفة جدًا على مناطق تدريب أكثر تخصيصًا ودقة باستخدام كارفونين مقارنة بنسبة مئوية بسيطة من الحد الأقصى.</p>
+</div>
+<div class="faq-item">
+<h3>هل تحتاج مناطق معدل ضربات القلب إلى تعديل لأدوية مثل حاصرات بيتا؟</h3>
+<p>نعم - تخفض حاصرات بيتا وبعض أدوية القلب الأخرى معدل ضربات القلب أثناء الراحة والحد الأقصى، مما يجعل المعادلات القياسية المعتمدة على العمر غير دقيقة. إذا كنت تتناول أدوية تؤثر على القلب، استشر طبيبًا للحصول على أقصى معدل ضربات قلب أكثر دقة قبل استخدام أهداف التدريب المعتمدة على المناطق.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>أدوات ذات صلة</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>ملاحظة حول الدقة</h4>
+          <p style="margin:0;font-size:0.85rem;">حاسبات Calquary مصممة لتقديم تقديرات سريعة وموثوقة. للقرارات ذات التبعات المالية أو الإنشائية أو الطبية الحقيقية، يُرجى استشارة مختص مؤهل.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/ar/index.html">→ العودة إلى جميع الحاسبات</a> · <a href="/ar/about.html">من نحن</a> · <a href="/ar/contact.html">تواصل معنا</a> · <a href="/ar/privacy.html">سياسة الخصوصية</a> · <a href="/ar/terms.html">شروط الاستخدام</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

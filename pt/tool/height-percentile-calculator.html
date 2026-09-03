@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Percentil de Altura - Calculadora Gratuita Online | Calquary</title>
+  <meta name="description" content="Estime em qual percentil uma altura se encaixa entre adultos americanos do mesmo gênero." />
+  <meta property="og:title" content="Calculadora de Percentil de Altura | Calquary">
+  <meta property="og:description" content="Estime em qual percentil uma altura se encaixa entre adultos americanos do mesmo gênero.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/pt/tool/height-percentile-calculator.html">
+  <meta property="og:locale" content="pt_PT">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/height-percentile-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculadora de Percentil de Altura | Calquary">
+  <meta name="twitter:description" content="Estime em qual percentil uma altura se encaixa entre adultos americanos do mesmo gênero.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/height-percentile-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/height-percentile-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/height-percentile-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/height-percentile-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/height-percentile-calculator.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/height-percentile-calculator.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/height-percentile-calculator.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/height-percentile-calculator.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/height-percentile-calculator.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/height-percentile-calculator.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/height-percentile-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/height-percentile-calculator.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/height-percentile-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/height-percentile-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("height-percentile-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("height-percentile-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calculadora de Percentil de Altura",
+      "description": "Estime em qual percentil uma altura se encaixa entre adultos americanos do mesmo gênero.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/pt/tool/height-percentile-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-31",
+      "inLanguage": "pt"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/pt/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Health & Fitness",
+          "item": "https://calquary.com/pt/category/health.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calculadora de Percentil de Altura",
+          "item": "https://calquary.com/pt/tool/height-percentile-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Como o percentil de altura é calculado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Converta a altura em um escore z usando uma média e desvio padrão para a população (altura − média) ÷ DP, depois converta esse escore z em um percentil usando a distribuição normal - o mesmo método usado para outros cálculos de percentil como pontuações de testes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual a altura de 5'9\" comparada com outras pessoas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Para um homem adulto americano, 5'9\" (69 polegadas) é quase exatamente a média, ficando em torno do percentil 50, já que a altura média de um homem adulto americano é muito próxima de 5'9\". Para uma mulher adulta americana, 5'9\" está bem acima da média, em aproximadamente o percentil 96-97."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual a altura de 5'8\" comparada com outras pessoas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Para um homem adulto americano, 5'8\" está ligeiramente abaixo da média, em torno do percentil 36. Para uma mulher adulta americana, 5'8\" está bem acima da média, em torno do percentil 94 - um bom exemplo de como a mesma altura é classificada de forma muito diferente dependendo de qual população é comparada."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual a altura de 165 cm comparada com outras pessoas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "165 cm são cerca de 5'5\" (5 pés 4,96 polegadas). Para um homem adulto americano, isso é bem baixo, em torno do percentil 8. Para uma mulher adulta americana, está próximo da média, em torno do percentil 68. Insira 5 pés e 4,96 polegadas acima para confirmar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual a altura de 183 cm comparada com outras pessoas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "183 cm são cerca de 6'0\" (6 pés 0,05 polegadas). Para um homem adulto americano, isso está bem acima da média, em torno do percentil 84. Para uma mulher adulta americana, é extremamente alta, em aproximadamente o percentil 99,9."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quão precisas são essas estimativas de percentil?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Elas são baseadas em números comumente citados de altura média e desvio padrão para a população adulta americana geral, não em um conjunto de dados clínicos exato ou atualizado - os percentis reais variam um pouco por país, faixa etária e metodologia de medição, então trate isso como uma estimativa geral em vez de um percentil clínico preciso."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/pt/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/pt/index.html#categories">Categorias</a>
+          <a href="/pt/index.html#tools">Todas as ferramentas</a>
+          <a href="/pt/about.html">Sobre</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Português">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>PT</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/height-percentile-calculator.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/height-percentile-calculator.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/height-percentile-calculator.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/height-percentile-calculator.html">Deutsch</a><span class="locale-item current" role="menuitem" aria-current="true">Português</span><a class="locale-item" role="menuitem" href="/it/tool/height-percentile-calculator.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/height-percentile-calculator.html">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/height-percentile-calculator.html">Română</a><a class="locale-item" role="menuitem" href="/el/tool/height-percentile-calculator.html">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/height-percentile-calculator.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/height-percentile-calculator.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/height-percentile-calculator.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/pt/index.html">Calquary</a> / <a href="/pt/category/health.html">Saúde e Fitness</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calculadora de Percentil de Altura</h1>
+        <p style="max-width:60ch;">Insira uma altura e gênero para estimar o percentil entre adultos americanos do mesmo gênero.</p>
+        <p class="last-updated">Última atualização: August 31, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calcular</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Redefinir</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Perguntas frequentes</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Como o percentil de altura é calculado?</h3>
+<p>Converta a altura em um escore z usando uma média e desvio padrão para a população (altura − média) ÷ DP, depois converta esse escore z em um percentil usando a distribuição normal - o mesmo método usado para outros cálculos de percentil como pontuações de testes.</p>
+</div>
+<div class="faq-item">
+<h3>Qual a altura de 5'9" comparada com outras pessoas?</h3>
+<p>Para um homem adulto americano, 5'9" (69 polegadas) é quase exatamente a média, ficando em torno do percentil 50, já que a altura média de um homem adulto americano é muito próxima de 5'9". Para uma mulher adulta americana, 5'9" está bem acima da média, em aproximadamente o percentil 96-97.</p>
+</div>
+<div class="faq-item">
+<h3>Qual a altura de 5'8" comparada com outras pessoas?</h3>
+<p>Para um homem adulto americano, 5'8" está ligeiramente abaixo da média, em torno do percentil 36. Para uma mulher adulta americana, 5'8" está bem acima da média, em torno do percentil 94 - um bom exemplo de como a mesma altura é classificada de forma muito diferente dependendo de qual população é comparada.</p>
+</div>
+<div class="faq-item">
+<h3>Qual a altura de 165 cm comparada com outras pessoas?</h3>
+<p>165 cm são cerca de 5'5" (5 pés 4,96 polegadas). Para um homem adulto americano, isso é bem baixo, em torno do percentil 8. Para uma mulher adulta americana, está próximo da média, em torno do percentil 68. Insira 5 pés e 4,96 polegadas acima para confirmar.</p>
+</div>
+<div class="faq-item">
+<h3>Qual a altura de 183 cm comparada com outras pessoas?</h3>
+<p>183 cm são cerca de 6'0" (6 pés 0,05 polegadas). Para um homem adulto americano, isso está bem acima da média, em torno do percentil 84. Para uma mulher adulta americana, é extremamente alta, em aproximadamente o percentil 99,9.</p>
+</div>
+<div class="faq-item">
+<h3>Quão precisas são essas estimativas de percentil?</h3>
+<p>Elas são baseadas em números comumente citados de altura média e desvio padrão para a população adulta americana geral, não em um conjunto de dados clínicos exato ou atualizado - os percentis reais variam um pouco por país, faixa etária e metodologia de medição, então trate isso como uma estimativa geral em vez de um percentil clínico preciso.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Ferramentas relacionadas</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Nota sobre precisão</h4>
+          <p style="margin:0;font-size:0.85rem;">As calculadoras da Calquary são feitas para estimativas rápidas e confiáveis. Para decisões com implicações financeiras, estruturais ou médicas reais, consulte um profissional qualificado.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/pt/index.html">← Voltar a todas as calculadoras</a> · <a href="/pt/about.html">Sobre</a> · <a href="/pt/contact.html">Contato</a> · <a href="/pt/privacy.html">Privacidade</a> · <a href="/pt/terms.html">Termos</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

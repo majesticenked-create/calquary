@@ -70,6 +70,11 @@ const WAVE_ONE_TOOL_IDS = [
   "tile-calculator", "roofing-calculator", "square-footage-calculator",
   "fence-calculator", "insulation-calculator", "ac-btu-calculator",
   "lumber-calculator", "paver-calculator", "mix-ratio-calculator",
+  "height-percentile-calculator", "body-surface-area-calculator", "macro-calculator",
+  "water-intake-calculator", "one-rep-max-calculator", "heart-rate-zone-calculator",
+  "ideal-weight-calculator", "bra-size-calculator", "pace-calculator",
+  "steps-to-miles-calculator", "pregnancy-due-date-calculator", "ovulation-calculator",
+  "calories-burned-calculator",
 ];
 
 function loadData() {
