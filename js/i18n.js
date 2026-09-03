@@ -16828,6 +16828,841 @@ const I18N_TOOLS = {
       ],
     },
   },
+
+  "dice-roller": {
+    es: {
+      title: "Lanzador de Dados",
+      intro: "Elige cuántos dados lanzar y cuántas caras tiene cada dado, luego lanza.",
+      description: "Lanza uno o más dados virtuales, con cualquier número de caras.",
+      faq: [
+        { q: "¿Qué tan aleatorio es este lanzador de dados?", a: "Usa el generador de números aleatorios de tu navegador, dando a cada cara de cada dado una probabilidad igual en cada lanzamiento - bueno para juegos, decisiones, y uso casual, aunque no certificado para apuestas reguladas." },
+        { q: "¿Puedo lanzar dados con más de 6 caras, como un D20?", a: "Sí - establece \"caras por dado\" a cualquier número de 2 a 100, así que esto funciona para dados estándar de 6 caras, D20 y otros dados de juegos de rol de mesa, o cantidades de caras personalizadas." },
+        { q: "¿Cómo lanzo varios dados y los sumo, como 2d6?", a: "Establece \"número de dados\" a 2 y \"caras por dado\" a 6 - el resultado muestra cada lanzamiento individual más el total, que es exactamente lo que significa la notación \"2d6\" de los juegos de mesa." },
+      ],
+    },
+    fr: {
+      title: "Lanceur de Dés",
+      intro: "Choisissez combien de dés lancer et combien de faces a chaque dé, puis lancez.",
+      description: "Lancez un ou plusieurs dés virtuels, avec n'importe quel nombre de faces.",
+      faq: [
+        { q: "À quel point ce lanceur de dés est-il aléatoire ?", a: "Il utilise le générateur de nombres aléatoires de votre navigateur, donnant à chaque face de chaque dé une chance égale à chaque lancer - bon pour les jeux, décisions, et usage occasionnel, bien que non certifié pour les jeux d'argent réglementés." },
+        { q: "Puis-je lancer des dés avec plus de 6 faces, comme un D20 ?", a: "Oui - réglez « faces par dé » sur n'importe quel nombre de 2 à 100, cela fonctionne donc pour les dés standards à 6 faces, les D20 et autres dés de jeux de rôle sur table, ou des nombres de faces personnalisés." },
+        { q: "Comment lancer plusieurs dés et les additionner, comme 2d6 ?", a: "Réglez « nombre de dés » sur 2 et « faces par dé » sur 6 - le résultat montre chaque lancer individuel plus le total, ce qui est exactement ce que signifie la notation « 2d6 » des jeux de table." },
+      ],
+    },
+    de: {
+      title: "Würfel-Werfer",
+      intro: "Wählen Sie, wie viele Würfel geworfen werden sollen und wie viele Seiten jeder Würfel hat, dann werfen Sie.",
+      description: "Werfen Sie einen oder mehrere virtuelle Würfel mit beliebiger Seitenzahl.",
+      faq: [
+        { q: "Wie zufällig ist dieser Würfel-Werfer?", a: "Er verwendet den Zufallszahlengenerator Ihres Browsers und gibt jeder Seite jedes Würfels bei jedem Wurf eine gleiche Chance - gut für Spiele, Entscheidungen, und gelegentliche Nutzung, obwohl nicht für reguliertes Glücksspiel zertifiziert." },
+        { q: "Kann ich Würfel mit mehr als 6 Seiten werfen, wie einen D20?", a: "Ja - stellen Sie „Seiten pro Würfel“ auf eine beliebige Zahl von 2 bis 100 ein, sodass dies für Standard-6-seitige Würfel, D20 und andere Tabletop-Rollenspielwürfel oder benutzerdefinierte Seitenzahlen funktioniert." },
+        { q: "Wie werfe ich mehrere Würfel und addiere sie, wie 2d6?", a: "Stellen Sie „Anzahl der Würfel“ auf 2 und „Seiten pro Würfel“ auf 6 ein - das Ergebnis zeigt jeden einzelnen Wurf plus die Summe, was genau das ist, was die Notation „2d6“ aus Tabletop-Spielen bedeutet." },
+      ],
+    },
+    pt: {
+      title: "Lançador de Dados",
+      intro: "Escolha quantos dados lançar e quantas faces cada dado tem, depois lance.",
+      description: "Lance um ou mais dados virtuais, com qualquer número de faces.",
+      faq: [
+        { q: "Quão aleatório é esse lançador de dados?", a: "Usa o gerador de números aleatórios do seu navegador, dando a cada face de cada dado uma chance igual em cada lançamento - bom para jogos, decisões, e uso casual, embora não certificado para jogos de azar regulamentados." },
+        { q: "Posso lançar dados com mais de 6 faces, como um D20?", a: "Sim - defina \"faces por dado\" para qualquer número de 2 a 100, então isso funciona para dados padrão de 6 faces, D20s e outros dados de RPG de mesa, ou contagens de faces personalizadas." },
+        { q: "Como lanço vários dados e os somo, como 2d6?", a: "Defina \"número de dados\" para 2 e \"faces por dado\" para 6 - o resultado mostra cada lançamento individual mais o total, que é exatamente o que a notação \"2d6\" dos jogos de mesa significa." },
+      ],
+    },
+    it: {
+      title: "Lanciatore di Dadi",
+      intro: "Scegli quanti dadi lanciare e quante facce ha ogni dado, poi lancia.",
+      description: "Lancia uno o più dadi virtuali, con qualsiasi numero di facce.",
+      faq: [
+        { q: "Quanto è casuale questo lanciatore di dadi?", a: "Usa il generatore di numeri casuali del tuo browser, dando a ogni faccia di ogni dado una probabilità uguale ad ogni lancio - buono per giochi, decisioni, e uso casuale, sebbene non certificato per il gioco d'azzardo regolamentato." },
+        { q: "Posso lanciare dadi con più di 6 facce, come un D20?", a: "Sì - imposta \"facce per dado\" su qualsiasi numero da 2 a 100, quindi funziona per dadi standard a 6 facce, D20 e altri dadi da gioco di ruolo da tavolo, o conteggi di facce personalizzati." },
+        { q: "Come lancio più dadi e li sommo, come 2d6?", a: "Imposta \"numero di dadi\" su 2 e \"facce per dado\" su 6 - il risultato mostra ogni lancio individuale più il totale, che è esattamente ciò che significa la notazione \"2d6\" dei giochi da tavolo." },
+      ],
+    },
+    ja: {
+      title: "サイコロ振り",
+      intro: "振るサイコロの数と各サイコロの面の数を選択してから振ります。",
+      description: "任意の面数の仮想サイコロを1つ以上振ります。",
+      faq: [
+        { q: "このサイコロ振りはどのくらいランダムですか？", a: "ブラウザの乱数生成器を使用しており、各サイコロの各面に毎回の投げで等しい確率を与えます。ゲーム、決定、カジュアルな用途には適していますが、規制されたギャンブル用には認定されていません。" },
+        { q: "D20のように6面以上のサイコロを振ることができますか？", a: "はい。「1つのサイコロの面数」を2から100までの任意の数に設定できるため、標準的な6面サイコロ、D20、その他のテーブルトークRPGのサイコロ、またはカスタムの面数に対応します。" },
+        { q: "2d6のように複数のサイコロを振って合計する方法は？", a: "「サイコロの数」を2に、「1つのサイコロの面数」を6に設定します。結果には各投げの個別の結果と合計が表示され、これはテーブルゲームの「2d6」表記が意味することそのものです。" },
+      ],
+    },
+    ro: {
+      title: "Aruncător de Zaruri",
+      intro: "Alege câte zaruri să arunci și câte fețe are fiecare zar, apoi aruncă.",
+      description: "Aruncă unul sau mai multe zaruri virtuale, cu orice număr de fețe.",
+      faq: [
+        { q: "Cât de aleatoriu este acest aruncător de zaruri?", a: "Folosește generatorul de numere aleatorii al browserului tău, dând fiecărei fețe a fiecărui zar o șansă egală la fiecare aruncare - bun pentru jocuri, decizii, și uz ocazional, deși nu este certificat pentru jocuri de noroc reglementate." },
+        { q: "Pot arunca zaruri cu mai mult de 6 fețe, precum un D20?", a: "Da - setează \"fețe per zar\" la orice număr de la 2 la 100, deci funcționează pentru zaruri standard cu 6 fețe, D20-uri și alte zaruri de jocuri de rol de masă, sau numere personalizate de fețe." },
+        { q: "Cum arunc mai multe zaruri și le adun, precum 2d6?", a: "Setează \"numărul de zaruri\" la 2 și \"fețe per zar\" la 6 - rezultatul arată fiecare aruncare individuală plus totalul, ceea ce este exact ce înseamnă notația \"2d6\" din jocurile de masă." },
+      ],
+    },
+    el: {
+      title: "Ριξιά Ζαριών",
+      intro: "Επιλέξτε πόσα ζάρια να ρίξετε και πόσες όψεις έχει το καθένα, μετά ρίξτε.",
+      description: "Ρίξε ένα ή περισσότερα εικονικά ζάρια, με οποιονδήποτε αριθμό όψεων.",
+      faq: [
+        { q: "Πόσο τυχαία είναι αυτή η ριξιά ζαριών;", a: "Χρησιμοποιεί τη γεννήτρια τυχαίων αριθμών του προγράμματος περιήγησής σας, δίνοντας σε κάθε όψη κάθε ζαριού ίση πιθανότητα σε κάθε ρίψη - καλό για παιχνίδια, αποφάσεις, και περιστασιακή χρήση, αν και δεν είναι πιστοποιημένο για ρυθμιζόμενο τζόγο." },
+        { q: "Μπορώ να ρίξω ζάρια με περισσότερες από 6 όψεις, όπως ένα D20;", a: "Ναι - ορίστε τις «όψεις ανά ζάρι» σε οποιονδήποτε αριθμό από 2 έως 100, ώστε να λειτουργεί για τυπικά ζάρια 6 όψεων, D20 και άλλα ζάρια επιτραπέζιων ρόλων, ή προσαρμοσμένους αριθμούς όψεων." },
+        { q: "Πώς ρίχνω πολλά ζάρια και τα προσθέτω, όπως 2d6;", a: "Ορίστε τον «αριθμό ζαριών» σε 2 και τις «όψεις ανά ζάρι» σε 6 - το αποτέλεσμα δείχνει κάθε μεμονωμένη ρίψη συν το σύνολο, που είναι ακριβώς αυτό που σημαίνει ο συμβολισμός «2d6» από τα επιτραπέζια παιχνίδια." },
+      ],
+    },
+    zh: {
+      title: "掷骰子",
+      intro: "选择要掷多少个骰子以及每个骰子有多少面，然后开始掷骰。",
+      description: "掷一个或多个虚拟骰子，面数任意。",
+      faq: [
+        { q: "这个掷骰子有多随机？", a: "它使用浏览器的随机数生成器，每次掷骰时每个骰子的每一面都有相等的概率——适用于游戏、决策和日常使用，但未经认证用于受监管的赌博。" },
+        { q: "我可以掷面数超过6的骰子吗，比如D20？", a: "可以——将「每个骰子的面数」设置为2到100之间的任意数字，因此这适用于标准六面骰、D20和其他桌面角色扮演游戏骰子，或自定义面数。" },
+        { q: "如何掷多个骰子并把它们相加，比如2d6？", a: "将「骰子数量」设置为2，「每个骰子的面数」设置为6——结果会显示每次单独的掷骰结果以及总和，这正是桌游中「2d6」记法的含义。" },
+      ],
+    },
+    ar: {
+      title: "رمي النرد",
+      intro: "اختر عدد النرد المراد رميه وعدد أوجه كل نرد، ثم ارمِ.",
+      description: "ارمِ نردًا افتراضيًا واحدًا أو أكثر، بأي عدد من الأوجه.",
+      faq: [
+        { q: "ما مدى عشوائية رمي النرد هذا؟", a: "يستخدم مولد الأرقام العشوائية في متصفحك، مما يمنح كل وجه من كل نرد فرصة متساوية في كل رمية - جيد للألعاب والقرارات والاستخدام العادي، رغم أنه غير معتمد للمقامرة الخاضعة للتنظيم." },
+        { q: "هل يمكنني رمي نرد بأكثر من 6 أوجه، مثل D20؟", a: "نعم - اضبط \"الأوجه لكل نرد\" على أي رقم من 2 إلى 100، لذا يعمل هذا مع النرد القياسي ذي 6 أوجه، وD20 وأنواع أخرى من نرد الأدوار على الطاولة، أو أعداد أوجه مخصصة." },
+        { q: "كيف أرمي عدة نردات وأجمعها معًا، مثل 2d6؟", a: "اضبط \"عدد النردات\" على 2 و\"الأوجه لكل نرد\" على 6 - تُظهر النتيجة كل رمية فردية بالإضافة إلى المجموع، وهذا بالضبط ما يعنيه رمز \"2d6\" في ألعاب الطاولة." },
+      ],
+    },
+    th: {
+      title: "ทอยลูกเต๋า",
+      intro: "เลือกจำนวนลูกเต๋าที่จะทอยและจำนวนด้านของลูกเต๋าแต่ละลูก จากนั้นทอย",
+      description: "ทอยลูกเต๋าเสมือนหนึ่งลูกหรือมากกว่า ด้วยจำนวนด้านใดก็ได้",
+      faq: [
+        { q: "การทอยลูกเต๋านี้สุ่มแค่ไหน?", a: "ใช้ตัวสร้างตัวเลขสุ่มของเบราว์เซอร์ของคุณ ให้แต่ละด้านของลูกเต๋าแต่ละลูกมีโอกาสเท่ากันในทุกการทอย - เหมาะสำหรับเกม การตัดสินใจ และการใช้งานทั่วไป แม้ว่าจะไม่ได้รับการรับรองสำหรับการพนันที่มีการควบคุม" },
+        { q: "ฉันสามารถทอยลูกเต๋าที่มีมากกว่า 6 ด้านได้หรือไม่ เช่น D20?", a: "ได้ - ตั้งค่า \"จำนวนด้านต่อลูกเต๋า\" เป็นตัวเลขใดก็ได้ตั้งแต่ 2 ถึง 100 ดังนั้นสิ่งนี้ใช้ได้กับลูกเต๋ามาตรฐาน 6 ด้าน D20 และลูกเต๋าเกมสวมบทบาทบนโต๊ะอื่นๆ หรือจำนวนด้านที่กำหนดเอง" },
+        { q: "ฉันจะทอยลูกเต๋าหลายลูกและรวมเข้าด้วยกันได้อย่างไร เช่น 2d6?", a: "ตั้งค่า \"จำนวนลูกเต๋า\" เป็น 2 และ \"จำนวนด้านต่อลูกเต๋า\" เป็น 6 - ผลลัพธ์จะแสดงการทอยแต่ละครั้งพร้อมผลรวม ซึ่งเป็นความหมายที่แน่นอนของสัญลักษณ์ \"2d6\" จากเกมกระดาน" },
+      ],
+    },
+  },
+
+  "card-deck-shuffler": {
+    es: {
+      title: "Baraja de Cartas Mezclada",
+      intro: "Elige cuántas cartas sacar de una baraja estándar de 52 cartas recién mezclada.",
+      description: "Mezcla una baraja estándar de 52 cartas en orden aleatorio, o saca un número determinado de cartas al azar.",
+      faq: [
+        { q: "¿Cómo se mezcla esta baraja?", a: "Usando un mezclado Fisher-Yates - un algoritmo bien establecido que da a cada uno de los 52! (aproximadamente 8×10^67) posibles ordenamientos una probabilidad igual, ejecutado usando el generador de números aleatorios de tu navegador." },
+        { q: "¿Puedo sacar menos de 52 cartas, como para una mano de póquer?", a: "Sí - establece \"cartas a sacar\" a cuantas necesites (5 para una mano de póquer, 13 para una mano de bridge, etc.) y esto extrae esa cantidad de cartas de la parte superior de una baraja recién mezclada." },
+        { q: "¿Esto incluye comodines?", a: "No - esta es una baraja estándar de 52 cartas (4 palos × 13 rangos, sin comodines), que coincide con la baraja usada en la mayoría de los juegos de cartas. Los comodines no forman parte de la baraja estándar que mezcla esta herramienta." },
+      ],
+    },
+    fr: {
+      title: "Jeu de Cartes Mélangé",
+      intro: "Choisissez combien de cartes tirer d'un jeu standard de 52 cartes fraîchement mélangé.",
+      description: "Mélangez un jeu standard de 52 cartes dans un ordre aléatoire, ou tirez un nombre défini de cartes aléatoires.",
+      faq: [
+        { q: "Comment ce jeu est-il mélangé ?", a: "En utilisant un mélange Fisher-Yates - un algorithme bien établi qui donne à chacun des 52! (environ 8×10^67) ordres possibles une chance égale, exécuté en utilisant le générateur de nombres aléatoires de votre navigateur." },
+        { q: "Puis-je tirer moins de 52 cartes, comme pour une main de poker ?", a: "Oui - réglez « cartes à tirer » sur le nombre dont vous avez besoin (5 pour une main de poker, 13 pour une main de bridge, etc.) et cela tire ce nombre de cartes du dessus d'un jeu fraîchement mélangé." },
+        { q: "Cela inclut-il des jokers ?", a: "Non - c'est un jeu standard de 52 cartes (4 couleurs × 13 valeurs, sans jokers), ce qui correspond au jeu utilisé dans la plupart des jeux de cartes. Les jokers ne font pas partie du jeu standard que cet outil mélange." },
+      ],
+    },
+    de: {
+      title: "Gemischtes Kartendeck",
+      intro: "Wählen Sie, wie viele Karten aus einem frisch gemischten Standard-52-Karten-Deck gezogen werden sollen.",
+      description: "Mischen Sie ein Standard-52-Karten-Deck in zufälliger Reihenfolge, oder ziehen Sie eine festgelegte Anzahl zufälliger Karten.",
+      faq: [
+        { q: "Wie wird dieses Deck gemischt?", a: "Mit einem Fisher-Yates-Shuffle - einem bewährten Algorithmus, der jeder der 52! (etwa 8×10^67) möglichen Anordnungen eine gleiche Chance gibt, ausgeführt mit dem Zufallszahlengenerator Ihres Browsers." },
+        { q: "Kann ich weniger als 52 Karten ziehen, z.B. für eine Pokerhand?", a: "Ja - stellen Sie „zu ziehende Karten“ auf die benötigte Anzahl ein (5 für eine Pokerhand, 13 für eine Bridgehand usw.) und dies zieht diese Anzahl von Karten von der Oberseite eines frisch gemischten Decks." },
+        { q: "Enthält dies Joker?", a: "Nein - dies ist ein Standard-52-Karten-Deck (4 Farben × 13 Ränge, keine Joker), das dem in den meisten Kartenspielen verwendeten Deck entspricht. Joker sind nicht Teil des Standarddecks, das dieses Tool mischt." },
+      ],
+    },
+    pt: {
+      title: "Baralho Embaralhado",
+      intro: "Escolha quantas cartas sacar de um baralho padrão de 52 cartas recém-embaralhado.",
+      description: "Embaralhe um baralho padrão de 52 cartas em ordem aleatória, ou saque um número definido de cartas aleatórias.",
+      faq: [
+        { q: "Como esse baralho é embaralhado?", a: "Usando um embaralhamento Fisher-Yates - um algoritmo bem estabelecido que dá a cada uma das 52! (cerca de 8×10^67) ordens possíveis uma chance igual, executado usando o gerador de números aleatórios do seu navegador." },
+        { q: "Posso sacar menos de 52 cartas, como para uma mão de pôquer?", a: "Sim - defina \"cartas a sacar\" para quantas você precisar (5 para uma mão de pôquer, 13 para uma mão de bridge, etc.) e isso puxa essa quantidade de cartas do topo de um baralho recém-embaralhado." },
+        { q: "Isso inclui coringas?", a: "Não - este é um baralho padrão de 52 cartas (4 naipes × 13 valores, sem coringas), que corresponde ao baralho usado na maioria dos jogos de cartas. Coringas não fazem parte do baralho padrão que esta ferramenta embaralha." },
+      ],
+    },
+    it: {
+      title: "Mazzo di Carte Mescolato",
+      intro: "Scegli quante carte pescare da un mazzo standard di 52 carte appena mescolato.",
+      description: "Mescola un mazzo standard di 52 carte in ordine casuale, o pesca un numero definito di carte casuali.",
+      faq: [
+        { q: "Come viene mescolato questo mazzo?", a: "Usando uno shuffle Fisher-Yates - un algoritmo ben consolidato che dà a ciascuno dei 52! (circa 8×10^67) ordini possibili una probabilità uguale, eseguito usando il generatore di numeri casuali del tuo browser." },
+        { q: "Posso pescare meno di 52 carte, come per una mano di poker?", a: "Sì - imposta \"carte da pescare\" sul numero di cui hai bisogno (5 per una mano di poker, 13 per una mano di bridge, ecc.) e questo estrae quel numero di carte dalla cima di un mazzo appena mescolato." },
+        { q: "Questo include i jolly?", a: "No - questo è un mazzo standard di 52 carte (4 semi × 13 valori, senza jolly), che corrisponde al mazzo usato nella maggior parte dei giochi di carte. I jolly non fanno parte del mazzo standard che questo strumento mescola." },
+      ],
+    },
+    ja: {
+      title: "シャッフルされたトランプ",
+      intro: "新しくシャッフルされた標準52枚のトランプから引くカードの枚数を選択します。",
+      description: "標準52枚のトランプをランダムな順序にシャッフルするか、指定した枚数のランダムなカードを引きます。",
+      faq: [
+        { q: "このデッキはどのようにシャッフルされますか？", a: "フィッシャー・イェーツ・シャッフルを使用しています。これは52！（約8×10^67）通りの並び順すべてに等しい確率を与える、確立されたアルゴリズムで、ブラウザの乱数生成器を使用して実行されます。" },
+        { q: "ポーカーハンドのように52枚未満のカードを引くことができますか？", a: "はい。「引くカードの枚数」を必要な枚数（ポーカーハンドなら5枚、ブリッジハンドなら13枚など）に設定すると、新しくシャッフルされたデッキの上からその枚数のカードを引きます。" },
+        { q: "これにはジョーカーが含まれますか？", a: "いいえ。これは標準的な52枚のトランプ（4スート×13ランク、ジョーカーなし）で、ほとんどのカードゲームで使用されるデッキと一致します。ジョーカーは、このツールがシャッフルする標準デッキには含まれていません。" },
+      ],
+    },
+    ro: {
+      title: "Pachet de Cărți Amestecat",
+      intro: "Alege câte cărți să extragi dintr-un pachet standard de 52 de cărți proaspăt amestecat.",
+      description: "Amestecă un pachet standard de 52 de cărți într-o ordine aleatorie, sau extrage un număr stabilit de cărți aleatorii.",
+      faq: [
+        { q: "Cum este amestecat acest pachet?", a: "Folosind un amestec Fisher-Yates - un algoritm bine stabilit care dă fiecăreia dintre cele 52! (aproximativ 8×10^67) ordini posibile o șansă egală, rulat folosind generatorul de numere aleatorii al browserului tău." },
+        { q: "Pot extrage mai puțin de 52 de cărți, precum pentru o mână de poker?", a: "Da - setează \"cărți de extras\" la câte ai nevoie (5 pentru o mână de poker, 13 pentru o mână de bridge, etc.) și acest lucru extrage acel număr de cărți de deasupra unui pachet proaspăt amestecat." },
+        { q: "Include acesta jokeri?", a: "Nu - acesta este un pachet standard de 52 de cărți (4 culori × 13 valori, fără jokeri), care se potrivește cu pachetul folosit în majoritatea jocurilor de cărți. Jokerii nu fac parte din pachetul standard pe care îl amestecă acest instrument." },
+      ],
+    },
+    el: {
+      title: "Ανακατεμένη Τράπουλα",
+      intro: "Επιλέξτε πόσα χαρτιά να τραβήξετε από μια φρεσκο-ανακατεμένη τυπική τράπουλα 52 χαρτιών.",
+      description: "Ανακάτεψε μια τυπική τράπουλα 52 χαρτιών σε τυχαία σειρά, ή τράβηξε έναν καθορισμένο αριθμό τυχαίων χαρτιών.",
+      faq: [
+        { q: "Πώς ανακατεύεται αυτή η τράπουλα;", a: "Χρησιμοποιώντας ένα ανακάτεμα Fisher-Yates - έναν καλά καθιερωμένο αλγόριθμο που δίνει σε κάθε μία από τις 52! (περίπου 8×10^67) πιθανές διατάξεις ίση πιθανότητα, εκτελούμενο με τη γεννήτρια τυχαίων αριθμών του προγράμματος περιήγησής σας." },
+        { q: "Μπορώ να τραβήξω λιγότερα από 52 χαρτιά, όπως για ένα χέρι πόκερ;", a: "Ναι - ορίστε τα «χαρτιά προς τράβηγμα» σε όσα χρειάζεστε (5 για χέρι πόκερ, 13 για χέρι μπριτζ, κ.λπ.) και αυτό τραβάει αυτόν τον αριθμό χαρτιών από την κορυφή μιας φρεσκο-ανακατεμένης τράπουλας." },
+        { q: "Περιλαμβάνει αυτό τζόκερ;", a: "Όχι - αυτή είναι μια τυπική τράπουλα 52 χαρτιών (4 χρώματα × 13 βαθμοί, χωρίς τζόκερ), που ταιριάζει με την τράπουλα που χρησιμοποιείται στα περισσότερα παιχνίδια με χαρτιά. Τα τζόκερ δεν αποτελούν μέρος της τυπικής τράπουλας που ανακατεύει αυτό το εργαλείο." },
+      ],
+    },
+    zh: {
+      title: "洗牌后的扑克牌",
+      intro: "选择要从一副刚洗好的标准52张扑克牌中抽取多少张牌。",
+      description: "将一副标准52张扑克牌洗成随机顺序，或抽取指定数量的随机牌。",
+      faq: [
+        { q: "这副牌是如何洗的？", a: "使用费希尔-耶茨洗牌算法——这是一种成熟的算法，能让52！种（约8×10^67）可能的排列顺序各有相等的概率，使用浏览器的随机数生成器运行。" },
+        { q: "我可以抽取少于52张牌吗，比如用于一手扑克牌？", a: "可以——将「要抽取的牌数」设置为你需要的数量（扑克手牌为5张，桥牌手牌为13张等），这样就会从一副刚洗好的牌顶部抽取相应数量的牌。" },
+        { q: "这里面包含大小王吗？", a: "不包含——这是一副标准的52张扑克牌（4种花色×13个点数，不含大小王），与大多数纸牌游戏使用的牌组相符。大小王不属于这个工具洗的标准牌组。" },
+      ],
+    },
+    ar: {
+      title: "أوراق لعب مخلوطة",
+      intro: "اختر عدد الأوراق المراد سحبها من مجموعة أوراق قياسية مكونة من 52 ورقة مخلوطة حديثًا.",
+      description: "اخلط مجموعة أوراق قياسية من 52 ورقة بترتيب عشوائي، أو اسحب عددًا محددًا من الأوراق العشوائية.",
+      faq: [
+        { q: "كيف تُخلط هذه المجموعة؟", a: "باستخدام خلط فيشر-ييتس - خوارزمية راسخة تمنح كل ترتيب من الـ52! (حوالي 8×10^67) ترتيب ممكن فرصة متساوية، تعمل باستخدام مولد الأرقام العشوائية في متصفحك." },
+        { q: "هل يمكنني سحب أقل من 52 ورقة، مثل يد بوكر؟", a: "نعم - اضبط \"الأوراق المراد سحبها\" على العدد الذي تحتاجه (5 ليد بوكر، 13 ليد بريدج، إلخ) وهذا يسحب هذا العدد من الأوراق من أعلى مجموعة مخلوطة حديثًا." },
+        { q: "هل يشمل هذا الجوكر؟", a: "لا - هذه مجموعة قياسية من 52 ورقة (4 ألوان × 13 رتبة، بدون جوكر)، وهو ما يطابق المجموعة المستخدمة في معظم ألعاب الورق. الجوكر ليس جزءًا من المجموعة القياسية التي تخلطها هذه الأداة." },
+      ],
+    },
+    th: {
+      title: "สับไพ่",
+      intro: "เลือกจำนวนไพ่ที่จะจั่วจากสำรับไพ่มาตรฐาน 52 ใบที่สับใหม่",
+      description: "สับสำรับไพ่มาตรฐาน 52 ใบให้เป็นลำดับสุ่ม หรือจั่วไพ่สุ่มตามจำนวนที่กำหนด",
+      faq: [
+        { q: "สำรับนี้ถูกสับอย่างไร?", a: "ใช้การสับแบบ Fisher-Yates - อัลกอริทึมที่ได้รับการยอมรับอย่างดีซึ่งให้โอกาสเท่ากันแก่การเรียงลำดับที่เป็นไปได้ทั้ง 52! แบบ (ประมาณ 8×10^67) ทำงานโดยใช้ตัวสร้างตัวเลขสุ่มของเบราว์เซอร์ของคุณ" },
+        { q: "ฉันสามารถจั่วไพ่น้อยกว่า 52 ใบได้หรือไม่ เช่น สำหรับมือโป๊กเกอร์?", a: "ได้ - ตั้งค่า \"ไพ่ที่จะจั่ว\" ตามจำนวนที่คุณต้องการ (5 ใบสำหรับมือโป๊กเกอร์ 13 ใบสำหรับมือบริดจ์ ฯลฯ) และสิ่งนี้จะดึงไพ่จำนวนนั้นจากด้านบนของสำรับที่สับใหม่" },
+        { q: "สิ่งนี้รวมไพ่โจ๊กเกอร์ด้วยหรือไม่?", a: "ไม่ - นี่คือสำรับไพ่มาตรฐาน 52 ใบ (4 ชุด × 13 อันดับ ไม่มีโจ๊กเกอร์) ซึ่งตรงกับสำรับที่ใช้ในเกมไพ่ส่วนใหญ่ โจ๊กเกอร์ไม่ได้เป็นส่วนหนึ่งของสำรับมาตรฐานที่เครื่องมือนี้สับ" },
+      ],
+    },
+  },
+
+  "color-mixer": {
+    es: {
+      title: "Mezclador de Colores",
+      intro: "Introduce dos colores hexadecimales y una proporción de mezcla para ver el color combinado.",
+      description: "Mezcla dos colores juntos en cualquier proporción para ver el color hexadecimal y RGB resultante.",
+      faq: [
+        { q: "¿Cómo funciona la mezcla de colores aquí - como pintura o como luz?", a: "Como luz (mezcla aditiva RGB), no como pintura (mezcla sustractiva de pigmentos) - esta calculadora interpola linealmente los canales rojo, verde, y azul entre tus dos colores, que es cómo las pantallas digitales y herramientas de diseño mezclan colores, no cómo se combinan físicamente los pigmentos de pintura." },
+        { q: "¿Qué proporción da una mezcla equitativa 50/50?", a: "Establece el peso del primer color a 50% - cada canal se convierte en el promedio exacto de los canales de los dos colores de entrada en esa configuración." },
+        { q: "¿Puedo usar nombres de colores en lugar de códigos hexadecimales?", a: "No - introduce colores como códigos hexadecimales de 6 dígitos (como #FF0000 para rojo), ya que ese es el formato preciso y sin ambigüedades que analiza esta calculadora. La mayoría de las herramientas de diseño y navegadores pueden mostrarte el código hexadecimal de cualquier color que elijas visualmente." },
+      ],
+    },
+    fr: {
+      title: "Mélangeur de Couleurs",
+      intro: "Entrez deux couleurs hexadécimales et un ratio de mélange pour voir la couleur résultante.",
+      description: "Mélangez deux couleurs ensemble dans n'importe quel ratio pour voir la couleur hexadécimale et RVB résultante.",
+      faq: [
+        { q: "Comment fonctionne le mélange de couleurs ici - comme de la peinture ou comme de la lumière ?", a: "Comme de la lumière (mélange additif RVB), pas comme de la peinture (mélange soustractif de pigments) - cette calculatrice interpole linéairement les canaux rouge, vert, et bleu entre vos deux couleurs, c'est ainsi que les écrans numériques et outils de conception mélangent les couleurs, pas comme les pigments de peinture physiques se combinent." },
+        { q: "Quel ratio donne un mélange équitable 50/50 ?", a: "Réglez le poids de la première couleur sur 50 % - chaque canal devient la moyenne exacte des canaux des deux couleurs d'entrée à ce réglage." },
+        { q: "Puis-je utiliser des noms de couleurs au lieu de codes hexadécimaux ?", a: "Non - entrez les couleurs sous forme de codes hexadécimaux à 6 chiffres (comme #FF0000 pour le rouge), car c'est le format précis et sans ambiguïté que cette calculatrice analyse. La plupart des outils de conception et navigateurs peuvent vous montrer le code hexadécimal de n'importe quelle couleur que vous choisissez visuellement." },
+      ],
+    },
+    de: {
+      title: "Farbmischer",
+      intro: "Geben Sie zwei Hex-Farben und ein Mischverhältnis ein, um die gemischte Farbe zu sehen.",
+      description: "Mischen Sie zwei Farben in beliebigem Verhältnis, um die resultierende Hex- und RGB-Farbe zu sehen.",
+      faq: [
+        { q: "Wie funktioniert Farbmischung hier - wie Farbe oder wie Licht?", a: "Wie Licht (additive RGB-Mischung), nicht wie Farbe (subtraktive Pigmentmischung) - dieser Rechner interpoliert linear die roten, grünen, und blauen Kanäle zwischen Ihren zwei Farben, so wie digitale Displays und Design-Tools Farben mischen, nicht wie physische Farbpigmente sich verbinden." },
+        { q: "Welches Verhältnis ergibt eine gleichmäßige 50/50-Mischung?", a: "Stellen Sie das Gewicht der ersten Farbe auf 50 % ein - jeder Kanal wird bei dieser Einstellung zum exakten Durchschnitt der Kanäle beider Eingabefarben." },
+        { q: "Kann ich Farbnamen anstelle von Hex-Codes verwenden?", a: "Nein - geben Sie Farben als 6-stellige Hex-Codes ein (wie #FF0000 für Rot), da dies das präzise, eindeutige Format ist, das dieser Rechner parst. Die meisten Design-Tools und Browser können Ihnen den Hex-Code für jede visuell ausgewählte Farbe anzeigen." },
+      ],
+    },
+    pt: {
+      title: "Misturador de Cores",
+      intro: "Digite duas cores hexadecimais e uma proporção de mistura para ver a cor combinada.",
+      description: "Misture duas cores em qualquer proporção para ver a cor hexadecimal e RGB resultante.",
+      faq: [
+        { q: "Como funciona a mistura de cores aqui - como tinta ou como luz?", a: "Como luz (mistura aditiva RGB), não como tinta (mistura subtrativa de pigmentos) - esta calculadora interpola linearmente os canais vermelho, verde, e azul entre suas duas cores, que é como as telas digitais e ferramentas de design misturam cores, não como os pigmentos físicos de tinta se combinam." },
+        { q: "Qual proporção dá uma mistura equilibrada 50/50?", a: "Defina o peso da primeira cor para 50% - cada canal se torna a média exata dos canais das duas cores de entrada nessa configuração." },
+        { q: "Posso usar nomes de cores em vez de códigos hexadecimais?", a: "Não - digite as cores como códigos hexadecimais de 6 dígitos (como #FF0000 para vermelho), pois esse é o formato preciso e inequívoco que esta calculadora analisa. A maioria das ferramentas de design e navegadores pode mostrar o código hexadecimal de qualquer cor que você escolher visualmente." },
+      ],
+    },
+    it: {
+      title: "Miscelatore di Colori",
+      intro: "Inserisci due colori esadecimali e un rapporto di miscelazione per vedere il colore risultante.",
+      description: "Mescola due colori insieme in qualsiasi rapporto per vedere il colore esadecimale e RGB risultante.",
+      faq: [
+        { q: "Come funziona la miscelazione dei colori qui - come la vernice o come la luce?", a: "Come la luce (miscelazione additiva RGB), non come la vernice (miscelazione sottrattiva di pigmenti) - questa calcolatrice interpola linearmente i canali rosso, verde, e blu tra i tuoi due colori, che è il modo in cui i display digitali e gli strumenti di design mescolano i colori, non come si combinano fisicamente i pigmenti della vernice." },
+        { q: "Quale rapporto dà una miscela equa 50/50?", a: "Imposta il peso del primo colore al 50% - ogni canale diventa la media esatta dei canali dei due colori di input a quell'impostazione." },
+        { q: "Posso usare nomi di colori invece di codici esadecimali?", a: "No - inserisci i colori come codici esadecimali a 6 cifre (come #FF0000 per il rosso), poiché questo è il formato preciso e non ambiguo che questa calcolatrice analizza. La maggior parte degli strumenti di design e browser può mostrarti il codice esadecimale di qualsiasi colore tu scelga visivamente." },
+      ],
+    },
+    ja: {
+      title: "カラーミキサー",
+      intro: "2つの16進数カラーと混合比率を入力すると、混合後の色を表示します。",
+      description: "2つの色を任意の比率で混ぜて、結果の16進数とRGBカラーを確認します。",
+      faq: [
+        { q: "ここでの色の混合はどう機能しますか - 絵の具のようにですか、それとも光のようにですか？", a: "光のように（加法RGB混合）機能します。絵の具のように（減法顔料混合）ではありません。この計算機は2つの色の赤、緑、青のチャンネルを線形補間します。これはデジタルディスプレイやデザインツールが色を混合する方法であり、物理的な絵の具の顔料が結合する方法ではありません。" },
+        { q: "どの比率で均等な50/50の混合になりますか？", a: "最初の色の重みを50%に設定します。その設定では、各チャンネルが2つの入力色のチャンネルの正確な平均になります。" },
+        { q: "16進コードの代わりに色の名前を使用できますか？", a: "いいえ。色は6桁の16進コードとして入力してください（赤なら#FF0000など）。これがこの計算機が解析する正確で曖昧さのない形式だからです。ほとんどのデザインツールやブラウザは、視覚的に選んだ任意の色の16進コードを表示できます。" },
+      ],
+    },
+    ro: {
+      title: "Amestecător de Culori",
+      intro: "Introdu două culori hex și un raport de amestecare pentru a vedea culoarea combinată.",
+      description: "Amestecă două culori împreună în orice raport pentru a vedea culoarea hex și RGB rezultată.",
+      faq: [
+        { q: "Cum funcționează amestecarea culorilor aici - ca vopseaua sau ca lumina?", a: "Ca lumina (amestec aditiv RGB), nu ca vopseaua (amestec substractiv de pigmenți) - acest calculator interpolează liniar canalele roșu, verde, și albastru dintre cele două culori ale tale, așa cum ecranele digitale și instrumentele de design amestecă culorile, nu cum se combină fizic pigmenții de vopsea." },
+        { q: "Ce raport dă un amestec egal 50/50?", a: "Setează greutatea primei culori la 50% - fiecare canal devine media exactă a canalelor celor două culori de intrare la acea setare." },
+        { q: "Pot folosi nume de culori în loc de coduri hex?", a: "Nu - introdu culorile ca coduri hex de 6 cifre (precum #FF0000 pentru roșu), deoarece acesta este formatul precis, neambiguu pe care îl analizează acest calculator. Majoritatea instrumentelor de design și browserelor îți pot arăta codul hex pentru orice culoare pe care o alegi vizual." },
+      ],
+    },
+    el: {
+      title: "Αναμίκτης Χρωμάτων",
+      intro: "Εισάγετε δύο χρώματα hex και μια αναλογία ανάμειξης για να δείτε το αναμεμειγμένο χρώμα.",
+      description: "Ανάμειξε δύο χρώματα μαζί σε οποιαδήποτε αναλογία για να δεις το προκύπτον χρώμα hex και RGB.",
+      faq: [
+        { q: "Πώς λειτουργεί η ανάμειξη χρωμάτων εδώ - σαν μπογιά ή σαν φως;", a: "Σαν φως (προσθετική ανάμειξη RGB), όχι σαν μπογιά (αφαιρετική ανάμειξη χρωστικών) - αυτή η αριθμομηχανή παρεμβάλλει γραμμικά τα κόκκινα, πράσινα, και μπλε κανάλια μεταξύ των δύο χρωμάτων σας, που είναι ο τρόπος με τον οποίο οι ψηφιακές οθόνες και τα εργαλεία σχεδίασης αναμειγνύουν χρώματα, όχι ο τρόπος που συνδυάζονται φυσικά οι χρωστικές μπογιάς." },
+        { q: "Ποια αναλογία δίνει ισομερή ανάμειξη 50/50;", a: "Ορίστε το βάρος του πρώτου χρώματος σε 50% - κάθε κανάλι γίνεται ο ακριβής μέσος όρος των καναλιών των δύο χρωμάτων εισόδου σε αυτή τη ρύθμιση." },
+        { q: "Μπορώ να χρησιμοποιήσω ονόματα χρωμάτων αντί για κωδικούς hex;", a: "Όχι - εισάγετε χρώματα ως 6ψήφιους κωδικούς hex (όπως #FF0000 για κόκκινο), καθώς αυτή είναι η ακριβής, μη διφορούμενη μορφή που αναλύει αυτή η αριθμομηχανή. Τα περισσότερα εργαλεία σχεδίασης και προγράμματα περιήγησης μπορούν να σας δείξουν τον κωδικό hex για οποιοδήποτε χρώμα επιλέξετε οπτικά." },
+      ],
+    },
+    zh: {
+      title: "颜色混合器",
+      intro: "输入两个十六进制颜色和一个混合比例，查看混合后的颜色。",
+      description: "以任意比例混合两种颜色，查看得到的十六进制和RGB颜色。",
+      faq: [
+        { q: "这里的颜色混合是如何工作的——像颜料还是像光？", a: "像光（RGB加色混合），不像颜料（减色颜料混合）——这个计算器在你的两种颜色之间线性插值红、绿、蓝通道，这是数字显示器和设计工具混合颜色的方式，而不是物理颜料的混合方式。" },
+        { q: "什么比例能得到均等的50/50混合？", a: "将第一种颜色的权重设置为50%——在该设置下，每个通道都会变成两种输入颜色对应通道的精确平均值。" },
+        { q: "我可以使用颜色名称代替十六进制代码吗？", a: "不可以——请以6位十六进制代码输入颜色（如红色为#FF0000），因为这是这个计算器解析的精确、无歧义的格式。大多数设计工具和浏览器都可以显示你视觉上选择的任何颜色对应的十六进制代码。" },
+      ],
+    },
+    ar: {
+      title: "خالط الألوان",
+      intro: "أدخل لونين سداسي عشري ونسبة مزج لرؤية اللون الممزوج.",
+      description: "امزج لونين معًا بأي نسبة لرؤية اللون السداسي عشري وRGB الناتج.",
+      faq: [
+        { q: "كيف يعمل مزج الألوان هنا - مثل الطلاء أم مثل الضوء؟", a: "مثل الضوء (مزج RGB الجمعي)، وليس مثل الطلاء (مزج الصبغات الطرحي) - تقوم هذه الحاسبة باستيفاء القنوات الحمراء والخضراء والزرقاء خطيًا بين لونيك، وهذه هي طريقة مزج الألوان في الشاشات الرقمية وأدوات التصميم، وليس كيفية اتحاد صبغات الطلاء الفعلية." },
+        { q: "ما النسبة التي تعطي مزيجًا متساويًا 50/50؟", a: "اضبط وزن اللون الأول على 50% - تصبح كل قناة المتوسط الدقيق لقنوات لوني الإدخال عند هذا الإعداد." },
+        { q: "هل يمكنني استخدام أسماء الألوان بدلاً من الرموز السداسية العشرية؟", a: "لا - أدخل الألوان كرموز سداسية عشرية مكونة من 6 أرقام (مثل #FF0000 للأحمر)، لأن هذا هو التنسيق الدقيق وغير الغامض الذي تحلله هذه الحاسبة. يمكن لمعظم أدوات التصميم والمتصفحات عرض الرمز السداسي العشري لأي لون تختاره بصريًا." },
+      ],
+    },
+    th: {
+      title: "เครื่องผสมสี",
+      intro: "ป้อนสีเลขฐานสิบหกสองสีและอัตราส่วนการผสมเพื่อดูสีที่ผสมกัน",
+      description: "ผสมสองสีเข้าด้วยกันในอัตราส่วนใดก็ได้เพื่อดูสีเลขฐานสิบหกและ RGB ที่ได้",
+      faq: [
+        { q: "การผสมสีที่นี่ทำงานอย่างไร - เหมือนสีทาหรือเหมือนแสง?", a: "เหมือนแสง (การผสมแบบบวก RGB) ไม่เหมือนสีทา (การผสมเม็ดสีแบบลบ) - เครื่องคำนวณนี้ทำการประมาณค่าเชิงเส้นของช่องสีแดง เขียว และน้ำเงินระหว่างสองสีของคุณ ซึ่งเป็นวิธีที่จอแสดงผลดิจิทัลและเครื่องมือออกแบบผสมสี ไม่ใช่วิธีที่เม็ดสีทางกายภาพรวมกัน" },
+        { q: "อัตราส่วนใดที่ให้การผสมแบบ 50/50 เท่ากัน?", a: "ตั้งค่าน้ำหนักของสีแรกเป็น 50% - แต่ละช่องสีจะกลายเป็นค่าเฉลี่ยที่แน่นอนของช่องสีของสองสีที่ป้อนเข้าที่การตั้งค่านั้น" },
+        { q: "ฉันสามารถใช้ชื่อสีแทนรหัสเลขฐานสิบหกได้หรือไม่?", a: "ไม่ได้ - ป้อนสีเป็นรหัสเลขฐานสิบหก 6 หลัก (เช่น #FF0000 สำหรับสีแดง) เนื่องจากนี่คือรูปแบบที่แม่นยำและไม่คลุมเครือที่เครื่องคำนวณนี้แยกวิเคราะห์ เครื่องมือออกแบบและเบราว์เซอร์ส่วนใหญ่สามารถแสดงรหัสเลขฐานสิบหกสำหรับสีใดก็ตามที่คุณเลือกด้วยสายตา" },
+      ],
+    },
+  },
+
+  "lorem-ipsum-generator": {
+    es: {
+      title: "Generador de Lorem Ipsum",
+      intro: "Elige cuántos párrafos y palabras por párrafo para generar texto de relleno Lorem Ipsum.",
+      description: "Genera texto de relleno Lorem Ipsum para maquetas y diseños.",
+      faq: [
+        { q: "¿Para qué se usa el texto Lorem Ipsum?", a: "Es texto de relleno usado en maquetas de diseño y diseños de página para que los espectadores se concentren en el diseño visual en lugar de distraerse con contenido legible." },
+        { q: "¿Por qué el Lorem Ipsum parece latín?", a: "Se deriva de un pasaje del texto de Cicerón sobre ética latina del siglo I a.C. - las palabras fueron mezcladas y alteradas a lo largo de siglos de uso en impresión y tipografía hasta convertirse en el texto de relleno estándar usado hoy." },
+        { q: "¿Es el Lorem Ipsum latín real con significado real?", a: "No - está mezclado y alterado de un pasaje de la escritura de Cicerón del 45 a.C., hasta el punto de que ya no forma oraciones latinas coherentes. Eso es intencional: necesita parecer un idioma real a primera vista sin ningún significado real que pudiera distraer de evaluar un diseño." },
+        { q: "¿Por qué se sigue usando Lorem Ipsum cuando existen otras opciones de texto de relleno?", a: "Las longitudes de palabras y frecuencias de letras del Lorem Ipsum imitan aproximadamente los idiomas reales derivados del latín como el inglés, así que llena un diseño con un peso visual y ritmo de párrafo realistas sin que el lector se distraiga tratando de leerlo realmente - a diferencia del relleno estilo 'the quick brown fox', que atrae la atención hacia su significado." },
+      ],
+    },
+    fr: {
+      title: "Générateur de Lorem Ipsum",
+      intro: "Choisissez combien de paragraphes et de mots par paragraphe pour générer du texte de remplissage Lorem Ipsum.",
+      description: "Générez du texte de remplissage Lorem Ipsum pour maquettes et designs.",
+      faq: [
+        { q: "À quoi sert le texte Lorem Ipsum ?", a: "C'est du texte de remplissage utilisé dans les maquettes de conception et les mises en page pour que les spectateurs se concentrent sur le design visuel plutôt que d'être distraits par un contenu lisible." },
+        { q: "Pourquoi le Lorem Ipsum ressemble-t-il à du latin ?", a: "Il est dérivé d'un passage du texte de Cicéron du 1er siècle av. J.-C. sur l'éthique latine - les mots ont été mélangés et modifiés au fil des siècles d'utilisation en imprimerie et typographie pour devenir le texte de remplissage standard utilisé aujourd'hui." },
+        { q: "Le Lorem Ipsum est-il du vrai latin avec une signification réelle ?", a: "Non - il est mélangé et modifié à partir d'un passage de l'écriture de Cicéron de 45 av. J.-C., au point qu'il ne forme plus de phrases latines cohérentes. C'est intentionnel : il doit ressembler à un langage réel à première vue sans aucune signification réelle qui pourrait distraire de l'évaluation d'un design." },
+        { q: "Pourquoi le Lorem Ipsum est-il encore utilisé alors que d'autres options de texte de remplissage existent ?", a: "Les longueurs de mots et fréquences de lettres du Lorem Ipsum imitent approximativement de vraies langues dérivées du latin comme le français, il remplit donc une mise en page avec un poids visuel et un rythme de paragraphe réalistes sans que le lecteur soit distrait en essayant de vraiment le lire - contrairement au remplissage style « le vif renard brun », qui attire l'attention sur sa signification." },
+      ],
+    },
+    de: {
+      title: "Lorem-Ipsum-Generator",
+      intro: "Wählen Sie, wie viele Absätze und Wörter pro Absatz, um Lorem-Ipsum-Platzhaltertext zu generieren.",
+      description: "Generieren Sie Lorem-Ipsum-Platzhaltertext für Mockups und Designs.",
+      faq: [
+        { q: "Wofür wird Lorem-Ipsum-Text verwendet?", a: "Es ist Platzhaltertext, der in Design-Mockups und Layouts verwendet wird, damit sich Betrachter auf das visuelle Design konzentrieren, anstatt von lesbarem Inhalt abgelenkt zu werden." },
+        { q: "Warum sieht Lorem Ipsum wie Latein aus?", a: "Es stammt aus einer Passage von Ciceros Text über lateinische Ethik aus dem 1. Jahrhundert v. Chr. - die Wörter wurden über Jahrhunderte der Nutzung im Druck und Schriftsatz verwürfelt und verändert, um zum heute verwendeten Standard-Platzhaltertext zu werden." },
+        { q: "Ist Lorem Ipsum echtes Latein mit echter Bedeutung?", a: "Nein - es ist verwürfelt und verändert aus einer Passage von Ciceros Schrift aus dem Jahr 45 v. Chr., bis zu dem Punkt, dass es keine kohärenten lateinischen Sätze mehr bildet. Das ist beabsichtigt: Es muss auf den ersten Blick wie echte Sprache aussehen, ohne eine tatsächliche Bedeutung, die von der Bewertung eines Designs ablenken könnte." },
+        { q: "Warum wird Lorem Ipsum noch verwendet, obwohl andere Platzhaltertext-Optionen existieren?", a: "Die Wortlängen und Buchstabenhäufigkeiten von Lorem Ipsum ahmen grob echte lateinstämmige Sprachen wie Deutsch nach, sodass es ein Layout mit realistischem visuellem Gewicht und Absatzrhythmus füllt, ohne dass der Leser abgelenkt wird, indem er versucht, es tatsächlich zu lesen - im Gegensatz zu Füllung im Stil von „der schnelle braune Fuchs“, die Aufmerksamkeit auf ihre Bedeutung lenkt." },
+      ],
+    },
+    pt: {
+      title: "Gerador de Lorem Ipsum",
+      intro: "Escolha quantos parágrafos e palavras por parágrafo para gerar texto de preenchimento Lorem Ipsum.",
+      description: "Gere texto de preenchimento Lorem Ipsum para maquetes e designs.",
+      faq: [
+        { q: "Para que é usado o texto Lorem Ipsum?", a: "É texto de preenchimento usado em maquetes de design e layouts para que os espectadores se concentrem no design visual em vez de se distraírem com conteúdo legível." },
+        { q: "Por que o Lorem Ipsum parece latim?", a: "É derivado de uma passagem do texto de Cícero sobre ética latina do século I a.C. - as palavras foram embaralhadas e alteradas ao longo de séculos de uso em impressão e tipografia até se tornarem o texto de preenchimento padrão usado hoje." },
+        { q: "O Lorem Ipsum é latim real com significado real?", a: "Não - está embaralhado e alterado de uma passagem da escrita de Cícero de 45 a.C., a ponto de não formar mais frases latinas coerentes. Isso é intencional: precisa parecer um idioma real à primeira vista sem nenhum significado real que possa distrair da avaliação de um design." },
+        { q: "Por que o Lorem Ipsum ainda é usado quando existem outras opções de texto de preenchimento?", a: "Os comprimentos das palavras e frequências de letras do Lorem Ipsum imitam aproximadamente idiomas reais derivados do latim como o português, então preenche um layout com peso visual e ritmo de parágrafo realistas sem que o leitor se distraia tentando realmente lê-lo - ao contrário de preenchimento estilo 'the quick brown fox', que atrai atenção para seu significado." },
+      ],
+    },
+    it: {
+      title: "Generatore di Lorem Ipsum",
+      intro: "Scegli quanti paragrafi e parole per paragrafo per generare testo segnaposto Lorem Ipsum.",
+      description: "Genera testo segnaposto Lorem Ipsum per mockup e design.",
+      faq: [
+        { q: "A cosa serve il testo Lorem Ipsum?", a: "È testo segnaposto usato in mockup di design e layout affinché gli spettatori si concentrino sul design visivo piuttosto che essere distratti da contenuti leggibili." },
+        { q: "Perché il Lorem Ipsum sembra latino?", a: "Deriva da un passaggio del testo di Cicerone sull'etica latina del I secolo a.C. - le parole sono state mescolate e alterate nel corso di secoli di uso nella stampa e tipografia fino a diventare il testo segnaposto standard usato oggi." },
+        { q: "Il Lorem Ipsum è vero latino con un significato reale?", a: "No - è mescolato e alterato da un passaggio degli scritti di Cicerone del 45 a.C., al punto da non formare più frasi latine coerenti. È intenzionale: deve sembrare una lingua reale a prima vista senza alcun significato reale che possa distrarre dalla valutazione di un design." },
+        { q: "Perché il Lorem Ipsum è ancora usato quando esistono altre opzioni di testo segnaposto?", a: "Le lunghezze delle parole e le frequenze delle lettere del Lorem Ipsum imitano approssimativamente lingue reali derivate dal latino come l'italiano, quindi riempie un layout con un peso visivo e un ritmo di paragrafo realistici senza che il lettore si distragga cercando di leggerlo davvero - a differenza del riempimento in stile 'the quick brown fox', che attira l'attenzione sul suo significato." },
+      ],
+    },
+    ja: {
+      title: "ロレムイプサム生成機",
+      intro: "段落数と段落あたりの単語数を選択すると、ロレムイプサムのプレースホルダーテキストを生成します。",
+      description: "モックアップやデザイン用のロレムイプサムのプレースホルダーテキストを生成します。",
+      faq: [
+        { q: "ロレムイプサムのテキストは何に使われますか？", a: "デザインのモックアップやレイアウトで使用されるプレースホルダーテキストで、閲覧者が読める内容に気を取られるのではなく、ビジュアルデザインに集中できるようにするためのものです。" },
+        { q: "なぜロレムイプサムはラテン語のように見えるのですか？", a: "紀元前1世紀のキケロによるラテン語倫理に関する文章の一節に由来しています。印刷と組版で数世紀にわたって使用される中で、単語が並べ替えられ、変更され、今日使われている標準的なプレースホルダーテキストになりました。" },
+        { q: "ロレムイプサムは実際の意味を持つ本物のラテン語ですか？", a: "いいえ。紀元前45年のキケロの著作の一節から並べ替えられ、変更されており、もはや首尾一貫したラテン語の文章を形成していません。これは意図的なものです。デザインの評価から気をそらす可能性のある実際の意味を持たずに、一見して本物の言語のように見える必要があるからです。" },
+        { q: "他のプレースホルダーテキストの選択肢がある中で、なぜロレムイプサムがまだ使われているのですか？", a: "ロレムイプサムの単語の長さと文字の頻度は、英語のような実際のラテン語派生言語をおおまかに模倣しているため、読者が実際に読もうとして気を取られることなく、現実的な視覚的な重みと段落のリズムでレイアウトを埋めます。「the quick brown fox」スタイルの穴埋めとは異なり、その意味に注意を引くことがありません。" },
+      ],
+    },
+    ro: {
+      title: "Generator de Lorem Ipsum",
+      intro: "Alege câte paragrafe și cuvinte per paragraf pentru a genera text de umplutură Lorem Ipsum.",
+      description: "Generează text de umplutură Lorem Ipsum pentru machete și designuri.",
+      faq: [
+        { q: "Pentru ce este folosit textul Lorem Ipsum?", a: "Este text de umplutură folosit în machete de design și layout-uri astfel încât spectatorii să se concentreze pe designul vizual în loc să fie distrași de conținut lizibil." },
+        { q: "De ce Lorem Ipsum arată ca latina?", a: "Este derivat dintr-un pasaj din textul lui Cicero despre etica latină din secolul I î.Hr. - cuvintele au fost amestecate și alterate de-a lungul secolelor de utilizare în tipărire și tehnoredactare pentru a deveni textul standard de umplutură folosit astăzi." },
+        { q: "Este Lorem Ipsum latină reală cu sens real?", a: "Nu - este amestecat și alterat dintr-un pasaj al scrierii lui Cicero din 45 î.Hr., până la punctul în care nu mai formează propoziții latine coerente. Acest lucru este intenționat: trebuie să arate ca o limbă reală la prima vedere fără niciun sens real care ar putea distrage de la evaluarea unui design." },
+        { q: "De ce se mai folosește Lorem Ipsum când există alte opțiuni de text de umplutură?", a: "Lungimile cuvintelor și frecvențele literelor din Lorem Ipsum imită aproximativ limbi reale derivate din latină precum româna, deci umple un layout cu o greutate vizuală și ritm de paragraf realiste fără ca cititorul să fie distras încercând să-l citească efectiv - spre deosebire de umplutura în stil \"the quick brown fox\", care atrage atenția asupra sensului său." },
+      ],
+    },
+    el: {
+      title: "Γεννήτρια Lorem Ipsum",
+      intro: "Επιλέξτε πόσες παραγράφους και λέξεις ανά παράγραφο για να δημιουργήσετε κείμενο υποκατάστασης Lorem Ipsum.",
+      description: "Δημιούργησε κείμενο υποκατάστασης Lorem Ipsum για μακέτες και σχέδια.",
+      faq: [
+        { q: "Για τι χρησιμοποιείται το κείμενο Lorem Ipsum;", a: "Είναι κείμενο υποκατάστασης που χρησιμοποιείται σε μακέτες σχεδίασης και διατάξεις ώστε οι θεατές να εστιάζουν στον οπτικό σχεδιασμό αντί να αποσπάται η προσοχή τους από αναγνώσιμο περιεχόμενο." },
+        { q: "Γιατί το Lorem Ipsum μοιάζει με λατινικά;", a: "Προέρχεται από ένα απόσπασμα του κειμένου του Κικέρωνα του 1ου αιώνα π.Χ. για τη λατινική ηθική - οι λέξεις αναμείχθηκαν και τροποποιήθηκαν κατά τη διάρκεια αιώνων χρήσης στην εκτύπωση και τη στοιχειοθεσία για να γίνουν το τυπικό κείμενο υποκατάστασης που χρησιμοποιείται σήμερα." },
+        { q: "Είναι το Lorem Ipsum πραγματικά λατινικά με πραγματικό νόημα;", a: "Όχι - είναι αναμεμειγμένο και τροποποιημένο από ένα απόσπασμα των γραπτών του Κικέρωνα από το 45 π.Χ., σε σημείο που δεν σχηματίζει πλέον συνεκτικές λατινικές προτάσεις. Αυτό είναι σκόπιμο: πρέπει να μοιάζει με πραγματική γλώσσα με μια ματιά χωρίς κανένα πραγματικό νόημα που θα μπορούσε να αποσπάσει την προσοχή από την αξιολόγηση ενός σχεδίου." },
+        { q: "Γιατί το Lorem Ipsum χρησιμοποιείται ακόμα όταν υπάρχουν άλλες επιλογές κειμένου υποκατάστασης;", a: "Τα μήκη λέξεων και οι συχνότητες γραμμάτων του Lorem Ipsum μιμούνται περίπου πραγματικές γλώσσες με λατινική προέλευση όπως τα ελληνικά, οπότε γεμίζει μια διάταξη με ρεαλιστικό οπτικό βάρος και ρυθμό παραγράφου χωρίς ο αναγνώστης να αποσπάται προσπαθώντας να το διαβάσει πραγματικά - σε αντίθεση με το γέμισμα στυλ «the quick brown fox», που τραβάει την προσοχή στο νόημά του." },
+      ],
+    },
+    zh: {
+      title: "Lorem Ipsum 生成器",
+      intro: "选择段落数量以及每段的字数，生成 Lorem Ipsum 占位文本。",
+      description: "为模型图和设计生成 Lorem Ipsum 占位文本。",
+      faq: [
+        { q: "Lorem Ipsum 文本是用来做什么的？", a: "它是在设计模型图和布局中使用的占位文本，让观看者专注于视觉设计，而不会被可读的内容分散注意力。" },
+        { q: "为什么 Lorem Ipsum 看起来像拉丁文？", a: "它源自公元前一世纪西塞罗关于拉丁伦理学的一段文字——经过几个世纪在印刷和排版中的使用，这些词汇被打乱并改变，最终成为今天使用的标准占位文本。" },
+        { q: "Lorem Ipsum 是有实际含义的真正拉丁文吗？", a: "不是——它是从公元前45年西塞罗著作的一段文字中打乱并改变而来的，已经不再构成连贯的拉丁文句子。这是故意的：它需要一眼看上去像真实的语言，但没有任何实际含义，以免分散人们评估设计的注意力。" },
+        { q: "既然存在其他占位文本选项，为什么仍然使用 Lorem Ipsum？", a: "Lorem Ipsum 的词长和字母频率大致模仿了英语等真实的拉丁语派生语言，因此它能以逼真的视觉重量和段落节奏填充布局，而不会让读者因试图真正阅读它而分心——这与「the quick brown fox」风格的填充文本不同，后者会把注意力引向其含义。" },
+      ],
+    },
+    ar: {
+      title: "مولد لوريم إبسوم",
+      intro: "اختر عدد الفقرات وعدد الكلمات لكل فقرة لتوليد نص عنصر نائب Lorem Ipsum.",
+      description: "ولّد نص عنصر نائب Lorem Ipsum للنماذج الأولية والتصاميم.",
+      faq: [
+        { q: "لماذا يُستخدم نص Lorem Ipsum؟", a: "إنه نص عنصر نائب يُستخدم في نماذج التصميم الأولية والتخطيطات حتى يركز المشاهدون على التصميم المرئي بدلاً من الانشغال بمحتوى قابل للقراءة." },
+        { q: "لماذا يبدو Lorem Ipsum مثل اللاتينية؟", a: "مشتق من مقطع من نص شيشرون حول الأخلاق اللاتينية من القرن الأول قبل الميلاد - تم خلط الكلمات وتعديلها على مدى قرون من الاستخدام في الطباعة وتنضيد الحروف لتصبح نص العنصر النائب القياسي المستخدم اليوم." },
+        { q: "هل Lorem Ipsum لاتينية حقيقية ذات معنى فعلي؟", a: "لا - إنه مخلوط ومعدل من مقطع من كتابات شيشرون عام 45 قبل الميلاد، إلى درجة أنه لم يعد يشكل جملاً لاتينية متماسكة. هذا مقصود: يجب أن يبدو كلغة حقيقية للوهلة الأولى دون أي معنى فعلي قد يشتت الانتباه عن تقييم التصميم." },
+        { q: "لماذا لا يزال Lorem Ipsum يُستخدم رغم وجود خيارات نص عنصر نائب أخرى؟", a: "أطوال كلمات Lorem Ipsum وتكرارات حروفه تحاكي تقريبًا اللغات الحقيقية المشتقة من اللاتينية مثل الإنجليزية، لذا فإنه يملأ التخطيط بوزن بصري وإيقاع فقرات واقعي دون أن يتشتت انتباه القارئ في محاولة قراءته فعليًا - على عكس الحشو بأسلوب \"the quick brown fox\" الذي يجذب الانتباه إلى معناه." },
+      ],
+    },
+    th: {
+      title: "เครื่องสร้างข้อความ Lorem Ipsum",
+      intro: "เลือกจำนวนย่อหน้าและจำนวนคำต่อย่อหน้าเพื่อสร้างข้อความตัวแทน Lorem Ipsum",
+      description: "สร้างข้อความตัวแทน Lorem Ipsum สำหรับแบบจำลองและการออกแบบ",
+      faq: [
+        { q: "ข้อความ Lorem Ipsum ใช้ทำอะไร?", a: "เป็นข้อความตัวแทนที่ใช้ในแบบจำลองการออกแบบและเลย์เอาต์ เพื่อให้ผู้ชมมุ่งเน้นไปที่การออกแบบภาพแทนที่จะเสียสมาธิกับเนื้อหาที่อ่านได้" },
+        { q: "ทำไม Lorem Ipsum ถึงดูเหมือนภาษาละติน?", a: "มาจากข้อความของซิเซโรเกี่ยวกับจริยธรรมภาษาละตินในศตวรรษที่ 1 ก่อนคริสตกาล - คำต่างๆ ถูกสับเปลี่ยนและเปลี่ยนแปลงตลอดหลายศตวรรษของการใช้งานในการพิมพ์และการเรียงพิมพ์จนกลายเป็นข้อความตัวแทนมาตรฐานที่ใช้กันในปัจจุบัน" },
+        { q: "Lorem Ipsum เป็นภาษาละตินจริงที่มีความหมายจริงหรือไม่?", a: "ไม่ใช่ - มันถูกสับเปลี่ยนและเปลี่ยนแปลงจากข้อความของซิเซโรจาก 45 ปีก่อนคริสตกาล จนถึงจุดที่ไม่ก่อให้เกิดประโยคภาษาละตินที่สอดคล้องกันอีกต่อไป นี่เป็นความตั้งใจ: มันต้องดูเหมือนภาษาจริงเมื่อมองผ่านๆ โดยไม่มีความหมายที่แท้จริงใดๆ ที่อาจทำให้เสียสมาธิจากการประเมินการออกแบบ" },
+        { q: "ทำไม Lorem Ipsum ยังคงถูกใช้อยู่ในเมื่อมีตัวเลือกข้อความตัวแทนอื่นๆ?", a: "ความยาวของคำและความถี่ของตัวอักษรใน Lorem Ipsum เลียนแบบภาษาจริงที่มาจากภาษาละตินเช่นภาษาอังกฤษโดยประมาณ จึงเติมเต็มเลย์เอาต์ด้วยน้ำหนักภาพและจังหวะย่อหน้าที่สมจริงโดยไม่ทำให้ผู้อ่านเสียสมาธิพยายามอ่านมันจริงๆ - ต่างจากการเติมข้อความสไตล์ \"the quick brown fox\" ที่ดึงความสนใจไปที่ความหมายของมัน" },
+      ],
+    },
+  },
+
+  "text-to-slug-generator": {
+    es: {
+      title: "Generador de Slugs a partir de Texto",
+      intro: "Introduce un título o frase para convertirlo en un slug de URL en minúsculas separado por guiones.",
+      description: "Convierte texto en un slug limpio y compatible con URL.",
+      faq: [
+        { q: "¿Qué hace bueno a un slug de URL?", a: "Solo letras minúsculas, números, y guiones - sin espacios, puntuación, o caracteres especiales. Los slugs deben ser cortos, legibles, y describir el contenido de la página." },
+        { q: "¿Por qué se reemplazan los espacios con guiones en lugar de guiones bajos?", a: "Los motores de búsqueda generalmente tratan los guiones como separadores de palabras pero no los guiones bajos, así que los guiones son la opción estándar para URLs amigables con SEO." },
+        { q: "¿Los slugs deben incluir números o solo letras?", a: "Los números están bien y se usan comúnmente en slugs (por ejemplo, números de modelo de producto o años), siempre que estén separados por guiones como otras palabras - este generador conserva los números mientras convierte todo lo demás a texto en minúsculas separado por guiones." },
+        { q: "¿Los slugs de URL deben incluir palabras vacías como 'el' y 'y'?", a: "Eliminar palabras vacías comunes es opcional pero a menudo mejora la legibilidad y acorta ligeramente la URL sin perder significado - 'mejor-pizza-en-madrid' funciona tan bien como 'la-mejor-pizza-en-madrid'. Esta herramienta conserva tu orden de palabras original y te permite decidir qué mantener." },
+      ],
+    },
+    fr: {
+      title: "Générateur de Slug à partir de Texte",
+      intro: "Entrez un titre ou une phrase pour le convertir en un slug d'URL en minuscules séparé par des tirets.",
+      description: "Convertissez du texte en un slug propre et adapté aux URL.",
+      faq: [
+        { q: "Qu'est-ce qui fait un bon slug d'URL ?", a: "Uniquement des lettres minuscules, des chiffres, et des tirets - pas d'espaces, de ponctuation, ou de caractères spéciaux. Les slugs doivent être courts, lisibles, et décrire le contenu de la page." },
+        { q: "Pourquoi les espaces sont-ils remplacés par des tirets plutôt que des underscores ?", a: "Les moteurs de recherche traitent généralement les tirets comme des séparateurs de mots mais pas les underscores, donc les tirets sont le choix standard pour des URL adaptées au SEO." },
+        { q: "Les slugs doivent-ils inclure des chiffres ou seulement des lettres ?", a: "Les chiffres sont acceptables et couramment utilisés dans les slugs (par exemple, les numéros de modèle de produit ou les années), à condition qu'ils soient séparés par des tirets comme les autres mots - ce générateur préserve les chiffres tout en convertissant tout le reste en texte minuscule séparé par des tirets." },
+        { q: "Les slugs d'URL doivent-ils inclure des mots vides comme « le » et « et » ?", a: "Supprimer les mots vides courants est optionnel mais améliore souvent la lisibilité et raccourcit légèrement l'URL sans perdre de sens - « meilleure-pizza-a-paris » fonctionne aussi bien que « la-meilleure-pizza-a-paris ». Cet outil préserve votre ordre de mots original et vous laisse décider quoi garder." },
+      ],
+    },
+    de: {
+      title: "Text-zu-Slug-Generator",
+      intro: "Geben Sie einen Titel oder Satz ein, um ihn in einen kleingeschriebenen, bindestrichgetrennten URL-Slug umzuwandeln.",
+      description: "Konvertieren Sie Text in einen sauberen, URL-freundlichen Slug.",
+      faq: [
+        { q: "Was macht einen guten URL-Slug aus?", a: "Nur Kleinbuchstaben, Zahlen, und Bindestriche - keine Leerzeichen, Zeichensetzung, oder Sonderzeichen. Slugs sollten kurz, lesbar, und beschreibend für den Seiteninhalt sein." },
+        { q: "Warum werden Leerzeichen durch Bindestriche anstelle von Unterstrichen ersetzt?", a: "Suchmaschinen behandeln Bindestriche im Allgemeinen als Worttrenner, Unterstriche jedoch nicht, daher sind Bindestriche die Standardwahl für SEO-freundliche URLs." },
+        { q: "Sollten Slugs Zahlen oder nur Buchstaben enthalten?", a: "Zahlen sind in Ordnung und werden häufig in Slugs verwendet (z.B. Produktmodellnummern oder Jahre), solange sie wie andere Wörter durch Bindestriche getrennt sind - dieser Generator behält Zahlen bei, während alles andere in kleingeschriebenen, bindestrichgetrennten Text umgewandelt wird." },
+        { q: "Sollten URL-Slugs Füllwörter wie „der“ und „und“ enthalten?", a: "Das Entfernen gängiger Füllwörter ist optional, verbessert aber oft die Lesbarkeit und verkürzt die URL leicht ohne Bedeutungsverlust - „beste-pizza-in-berlin“ funktioniert genauso gut wie „die-beste-pizza-in-berlin“. Dieses Tool behält Ihre ursprüngliche Wortreihenfolge bei und lässt Sie entscheiden, was Sie behalten möchten." },
+      ],
+    },
+    pt: {
+      title: "Gerador de Slug a partir de Texto",
+      intro: "Digite um título ou frase para convertê-lo em um slug de URL em minúsculas separado por hifens.",
+      description: "Converta texto em um slug limpo e amigável para URL.",
+      faq: [
+        { q: "O que faz um bom slug de URL?", a: "Apenas letras minúsculas, números, e hifens - sem espaços, pontuação, ou caracteres especiais. Slugs devem ser curtos, legíveis, e descrever o conteúdo da página." },
+        { q: "Por que espaços são substituídos por hifens em vez de sublinhados?", a: "Os motores de busca geralmente tratam hifens como separadores de palavras, mas não sublinhados, então hifens são a escolha padrão para URLs amigáveis para SEO." },
+        { q: "Slugs devem incluir números ou apenas letras?", a: "Números são aceitáveis e comumente usados em slugs (por exemplo, números de modelo de produto ou anos), desde que separados por hifens como outras palavras - este gerador preserva números enquanto converte todo o resto em texto minúsculo separado por hifens." },
+        { q: "Slugs de URL devem incluir palavras vazias como 'o' e 'e'?", a: "Remover palavras vazias comuns é opcional mas frequentemente melhora a legibilidade e encurta ligeiramente a URL sem perder significado - 'melhor-pizza-em-lisboa' funciona tão bem quanto 'a-melhor-pizza-em-lisboa'. Esta ferramenta preserva sua ordem de palavras original e permite que você decida o que manter." },
+      ],
+    },
+    it: {
+      title: "Generatore di Slug da Testo",
+      intro: "Inserisci un titolo o una frase per convertirlo in uno slug URL minuscolo separato da trattini.",
+      description: "Convertire il testo in uno slug pulito e adatto agli URL.",
+      faq: [
+        { q: "Cosa rende un buon slug URL?", a: "Solo lettere minuscole, numeri, e trattini - niente spazi, punteggiatura, o caratteri speciali. Gli slug dovrebbero essere corti, leggibili, e descrivere il contenuto della pagina." },
+        { q: "Perché gli spazi vengono sostituiti con trattini invece di underscore?", a: "I motori di ricerca generalmente trattano i trattini come separatori di parole ma non gli underscore, quindi i trattini sono la scelta standard per URL ottimizzati per SEO." },
+        { q: "Gli slug dovrebbero includere numeri o solo lettere?", a: "I numeri vanno bene e sono comunemente usati negli slug (ad esempio, numeri di modello di prodotto o anni), purché siano separati da trattini come le altre parole - questo generatore conserva i numeri mentre converte tutto il resto in testo minuscolo separato da trattini." },
+        { q: "Gli slug URL dovrebbero includere parole vuote come 'il' e 'e'?", a: "Rimuovere le parole vuote comuni è opzionale ma spesso migliora la leggibilità e abbrevia leggermente l'URL senza perdere significato - 'migliore-pizza-a-roma' funziona altrettanto bene di 'la-migliore-pizza-a-roma'. Questo strumento conserva il tuo ordine di parole originale e ti lascia decidere cosa mantenere." },
+      ],
+    },
+    ja: {
+      title: "テキストからスラッグ生成機",
+      intro: "タイトルやフレーズを入力すると、小文字でハイフン区切りのURLスラッグに変換します。",
+      description: "テキストをクリーンでURLフレンドリーなスラッグに変換します。",
+      faq: [
+        { q: "良いURLスラッグとは何ですか？", a: "小文字、数字、ハイフンのみです。スペース、句読点、特殊文字はありません。スラッグは短く、読みやすく、ページの内容を説明するものであるべきです。" },
+        { q: "なぜスペースはアンダースコアではなくハイフンに置き換えられるのですか？", a: "検索エンジンは一般的にハイフンを単語の区切りとして扱いますが、アンダースコアはそうではないため、ハイフンはSEOに適したURLの標準的な選択です。" },
+        { q: "スラッグには数字を含めるべきですか、それとも文字だけですか？", a: "数字は問題なく、スラッグでよく使われます（例：製品モデル番号や年）。他の単語と同様にハイフンで区切られていれば大丈夫です。この生成機は数字を保持しながら、他のすべてを小文字のハイフン区切りテキストに変換します。" },
+        { q: "URLスラッグには「the」や「and」のようなストップワードを含めるべきですか？", a: "一般的なストップワードを削除することは任意ですが、しばしば読みやすさを向上させ、意味を失うことなくURLをわずかに短縮します。「best-pizza-in-tokyo」は「the-best-pizza-in-tokyo」と同様に機能します。このツールは元の単語順を保持し、何を残すかを決めることができます。" },
+      ],
+    },
+    ro: {
+      title: "Generator de Slug din Text",
+      intro: "Introdu un titlu sau o frază pentru a-l converti într-un slug URL cu litere mici separat prin liniuțe.",
+      description: "Convertește textul într-un slug curat, prietenos cu URL-urile.",
+      faq: [
+        { q: "Ce face un slug URL bun?", a: "Doar litere mici, numere, și liniuțe - fără spații, punctuație, sau caractere speciale. Slug-urile ar trebui să fie scurte, ușor de citit, și să descrie conținutul paginii." },
+        { q: "De ce sunt spațiile înlocuite cu liniuțe în loc de underscore?", a: "Motoarele de căutare tratează în general liniuțele ca separatori de cuvinte dar nu și underscore-urile, deci liniuțele sunt alegerea standard pentru URL-uri prietenoase cu SEO." },
+        { q: "Ar trebui slug-urile să includă numere sau doar litere?", a: "Numerele sunt bune și frecvent folosite în slug-uri (de exemplu, numere de model de produs sau ani), atâta timp cât sunt separate prin liniuțe ca alte cuvinte - acest generator păstrează numerele în timp ce convertește tot restul în text cu litere mici separat prin liniuțe." },
+        { q: "Ar trebui slug-urile URL să includă cuvinte de umplutură precum \"the\" și \"and\"?", a: "Eliminarea cuvintelor de umplutură comune este opțională dar de obicei îmbunătățește lizibilitatea și scurtează ușor URL-ul fără a pierde sensul - \"cea-mai-buna-pizza-din-bucuresti\" funcționează la fel de bine ca \"aceasta-este-cea-mai-buna-pizza-din-bucuresti\". Acest instrument păstrează ordinea originală a cuvintelor tale și te lasă să decizi ce să păstrezi." },
+      ],
+    },
+    el: {
+      title: "Γεννήτρια Slug από Κείμενο",
+      intro: "Εισάγετε έναν τίτλο ή φράση για να τον μετατρέψετε σε ένα πεζό, με ενωτικά διαχωρισμένο URL slug.",
+      description: "Μετατρέψτε κείμενο σε ένα καθαρό, φιλικό προς URL slug.",
+      faq: [
+        { q: "Τι κάνει ένα καλό URL slug;", a: "Μόνο πεζά γράμματα, αριθμοί, και ενωτικά - χωρίς κενά, στίξη, ή ειδικούς χαρακτήρες. Τα slugs θα πρέπει να είναι κοντά, ευανάγνωστα, και να περιγράφουν το περιεχόμενο της σελίδας." },
+        { q: "Γιατί τα κενά αντικαθίστανται με ενωτικά αντί για κάτω παύλες;", a: "Οι μηχανές αναζήτησης γενικά αντιμετωπίζουν τα ενωτικά ως διαχωριστές λέξεων αλλά όχι τις κάτω παύλες, οπότε τα ενωτικά είναι η τυπική επιλογή για URL φιλικά προς το SEO." },
+        { q: "Θα πρέπει τα slugs να περιλαμβάνουν αριθμούς ή μόνο γράμματα;", a: "Οι αριθμοί είναι εντάξει και χρησιμοποιούνται συνήθως σε slugs (π.χ., αριθμοί μοντέλου προϊόντος ή έτη), αρκεί να διαχωρίζονται με ενωτικά όπως άλλες λέξεις - αυτή η γεννήτρια διατηρεί τους αριθμούς ενώ μετατρέπει όλα τα άλλα σε πεζό, με ενωτικά διαχωρισμένο κείμενο." },
+        { q: "Θα πρέπει τα URL slugs να περιλαμβάνουν λέξεις-κενό όπως «το» και «και»;", a: "Η αφαίρεση κοινών λέξεων-κενού είναι προαιρετική αλλά συχνά βελτιώνει την αναγνωσιμότητα και συντομεύει ελαφρώς το URL χωρίς να χάνεται η σημασία - «καλυτερη-πιτσα-στην-αθηνα» λειτουργεί το ίδιο καλά με «η-καλυτερη-πιτσα-στην-αθηνα». Αυτό το εργαλείο διατηρεί την αρχική σειρά λέξεων σας και σας αφήνει να αποφασίσετε τι θα κρατήσετε." },
+      ],
+    },
+    zh: {
+      title: "文本转Slug生成器",
+      intro: "输入标题或短语，将其转换为小写、用连字符分隔的URL slug。",
+      description: "将文本转换为干净、适合URL的slug。",
+      faq: [
+        { q: "什么才是好的URL slug？", a: "只包含小写字母、数字和连字符——没有空格、标点符号或特殊字符。slug应该简短、易读，并能描述页面内容。" },
+        { q: "为什么用连字符而不是下划线替换空格？", a: "搜索引擎通常将连字符视为单词分隔符，而不将下划线视为分隔符，因此连字符是对SEO友好URL的标准选择。" },
+        { q: "slug应该包含数字还是只能是字母？", a: "数字是可以的，并且在slug中很常见（例如产品型号或年份），只要像其他单词一样用连字符分隔即可——这个生成器会保留数字，同时把其余内容转换为用连字符分隔的小写文本。" },
+        { q: "URL slug应该包含像\"the\"和\"and\"这样的停用词吗？", a: "去除常见的停用词是可选的，但通常能提高可读性并略微缩短URL，同时不会丢失含义——「best-pizza-shanghai」和「the-best-pizza-in-shanghai」一样有效。这个工具会保留你原来的词序，让你决定要保留什么。" },
+      ],
+    },
+    ar: {
+      title: "مولد Slug من النص",
+      intro: "أدخل عنوانًا أو عبارة لتحويلها إلى Slug URL بحروف صغيرة مفصولة بشرطات.",
+      description: "حوّل النص إلى Slug نظيف وملائم لعناوين URL.",
+      faq: [
+        { q: "ما الذي يجعل Slug URL جيدًا؟", a: "فقط الحروف الصغيرة والأرقام والشرطات - بدون مسافات أو علامات ترقيم أو أحرف خاصة. يجب أن تكون Slugs قصيرة وقابلة للقراءة وتصف محتوى الصفحة." },
+        { q: "لماذا يتم استبدال المسافات بشرطات بدلاً من الشرطات السفلية؟", a: "تعامل محركات البحث عمومًا الشرطات كفواصل بين الكلمات ولكن ليس الشرطات السفلية، لذا فإن الشرطات هي الخيار القياسي لعناوين URL الملائمة لتحسين محركات البحث." },
+        { q: "هل يجب أن تحتوي Slugs على أرقام أم أحرف فقط؟", a: "الأرقام مقبولة ومستخدمة بشكل شائع في Slugs (مثل أرقام موديلات المنتجات أو السنوات)، طالما أنها مفصولة بشرطات مثل الكلمات الأخرى - يحافظ هذا المولد على الأرقام بينما يحول كل شيء آخر إلى نص بحروف صغيرة مفصول بشرطات." },
+        { q: "هل يجب أن تشمل Slugs عناوين URL كلمات وقف مثل \"the\" و\"and\"؟", a: "إزالة كلمات الوقف الشائعة اختيارية لكنها غالبًا تحسن القابلية للقراءة وتقصر عنوان URL قليلاً دون فقدان المعنى - \"افضل-بيتزا-في-القاهرة\" يعمل بشكل جيد مثل \"هذه-هي-افضل-بيتزا-في-القاهرة\". تحافظ هذه الأداة على ترتيب كلماتك الأصلي وتتيح لك تحديد ما تريد الاحتفاظ به." },
+      ],
+    },
+    th: {
+      title: "เครื่องสร้าง Slug จากข้อความ",
+      intro: "ป้อนชื่อเรื่องหรือวลีเพื่อแปลงเป็น URL slug ตัวพิมพ์เล็กที่คั่นด้วยขีดกลาง",
+      description: "แปลงข้อความเป็น slug ที่สะอาดและเหมาะกับ URL",
+      faq: [
+        { q: "อะไรที่ทำให้ URL slug ดี?", a: "ตัวอักษรพิมพ์เล็ก ตัวเลข และขีดกลางเท่านั้น - ไม่มีเว้นวรรค เครื่องหมายวรรคตอน หรืออักขระพิเศษ Slug ควรสั้น อ่านง่าย และอธิบายเนื้อหาของหน้า" },
+        { q: "ทำไมช่องว่างถูกแทนที่ด้วยขีดกลางแทนขีดล่าง?", a: "โดยทั่วไปเครื่องมือค้นหาจะถือว่าขีดกลางเป็นตัวแยกคำแต่ไม่ใช่ขีดล่าง ดังนั้นขีดกลางจึงเป็นตัวเลือกมาตรฐานสำหรับ URL ที่เป็นมิตรกับ SEO" },
+        { q: "Slug ควรมีตัวเลขหรือมีแต่ตัวอักษรเท่านั้น?", a: "ตัวเลขใช้ได้และมักใช้ใน slug (เช่น หมายเลขรุ่นผลิตภัณฑ์หรือปี) ตราบใดที่ถูกแยกด้วยขีดกลางเหมือนคำอื่นๆ - เครื่องสร้างนี้จะเก็บตัวเลขไว้ในขณะที่แปลงส่วนที่เหลือทั้งหมดเป็นข้อความตัวพิมพ์เล็กที่คั่นด้วยขีดกลาง" },
+        { q: "URL slug ควรมีคำหยุด เช่น \"the\" และ \"and\" หรือไม่?", a: "การลบคำหยุดทั่วไปเป็นทางเลือก แต่มักช่วยปรับปรุงความสามารถในการอ่านและย่อ URL ลงเล็กน้อยโดยไม่สูญเสียความหมาย - \"pizza-ที่ดีที่สุด-ในกรุงเทพ\" ทำงานได้ดีเท่ากับ \"the-pizza-ที่ดีที่สุด-ในกรุงเทพ\" เครื่องมือนี้จะเก็บลำดับคำเดิมของคุณไว้และให้คุณตัดสินใจว่าจะเก็บอะไรไว้" },
+      ],
+    },
+  },
+
+  "binary-to-text-converter": {
+    es: {
+      title: "Convertidor de Binario a Texto",
+      intro: "Introduce texto o binario y elige una dirección para convertir entre texto plano y binario de 8 bits.",
+      description: "Convierte texto a binario o binario de vuelta a texto.",
+      faq: [
+        { q: "¿Cómo se convierte el texto a binario?", a: "El código numérico de cada carácter (de la tabla ASCII/Unicode) se convierte a base 2 y se rellena a 8 bits - 'H' tiene código 72, que es 01001000 en binario." },
+        { q: "¿Por qué 8 bits por carácter?", a: "8 bits (1 byte) cubre el conjunto de caracteres ASCII estándar (0-255), que incluye todas las letras inglesas, números, y símbolos comunes." },
+        { q: "¿Qué pasa si introduzco una cadena binaria que no es múltiplo de 8 bits?", a: "La codificación de texto estándar (ASCII/UTF-8) representa cada carácter como un byte completo de 8 bits, así que una cadena binaria que no es un múltiplo limpio de 8 bits no se puede convertir a caracteres válidos y probablemente producirá un error o resultado inesperado - verifica que tu entrada binaria esté agrupada correctamente." },
+        { q: "¿Esto puede convertir binario a números además de texto?", a: "Esta herramienta convierte binario directamente a texto legible usando codificación estándar de 8 bits (ASCII/UTF-8). Para convertir binario a un valor numérico plano en su lugar, trata la cadena binaria como un número en base 2 y conviértela a base 10 usando un cálculo de binario a decimal en su lugar." },
+      ],
+    },
+    fr: {
+      title: "Convertisseur Binaire vers Texte",
+      intro: "Entrez du texte ou du binaire et choisissez une direction pour convertir entre texte brut et binaire 8 bits.",
+      description: "Convertissez du texte en binaire ou du binaire en texte.",
+      faq: [
+        { q: "Comment le texte est-il converti en binaire ?", a: "Le code numérique de chaque caractère (de la table ASCII/Unicode) est converti en base 2 et complété à 8 bits - « H » a le code 72, qui est 01001000 en binaire." },
+        { q: "Pourquoi 8 bits par caractère ?", a: "8 bits (1 octet) couvrent l'ensemble de caractères ASCII standard (0-255), qui inclut toutes les lettres anglaises, chiffres, et symboles courants." },
+        { q: "Que se passe-t-il si j'entre une chaîne binaire qui n'est pas un multiple de 8 bits ?", a: "L'encodage de texte standard (ASCII/UTF-8) représente chaque caractère comme un octet complet de 8 bits, donc une chaîne binaire qui n'est pas un multiple exact de 8 bits ne peut pas être convertie en caractères valides et produira probablement une erreur ou un résultat inattendu - vérifiez que votre entrée binaire est correctement groupée." },
+        { q: "Cela peut-il convertir le binaire en nombres aussi bien qu'en texte ?", a: "Cet outil convertit le binaire directement en texte lisible en utilisant l'encodage de caractères 8 bits standard (ASCII/UTF-8). Pour convertir le binaire en une valeur numérique brute à la place, traitez la chaîne binaire comme un nombre en base 2 et convertissez-la en base 10 en utilisant plutôt un calcul binaire vers décimal." },
+      ],
+    },
+    de: {
+      title: "Binär-zu-Text-Konverter",
+      intro: "Geben Sie Text oder Binärcode ein und wählen Sie eine Richtung, um zwischen Klartext und 8-Bit-Binär zu konvertieren.",
+      description: "Konvertieren Sie Text in Binärcode oder Binärcode zurück in Text.",
+      faq: [
+        { q: "Wie wird Text in Binärcode umgewandelt?", a: "Der numerische Code jedes Zeichens (aus der ASCII/Unicode-Tabelle) wird in Basis 2 umgewandelt und auf 8 Bit aufgefüllt - 'H' hat den Code 72, was 01001000 in Binär ist." },
+        { q: "Warum 8 Bit pro Zeichen?", a: "8 Bit (1 Byte) decken den Standard-ASCII-Zeichensatz (0-255) ab, der alle englischen Buchstaben, Zahlen, und gängigen Symbole umfasst." },
+        { q: "Was passiert, wenn ich eine Binärzeichenfolge eingebe, die kein Vielfaches von 8 Bit ist?", a: "Die Standard-Textkodierung (ASCII/UTF-8) stellt jedes Zeichen als vollständiges 8-Bit-Byte dar, sodass eine Binärzeichenfolge, die kein glattes Vielfaches von 8 Bit ist, nicht in gültige Zeichen umgewandelt werden kann und wahrscheinlich einen Fehler oder ein unerwartetes Ergebnis erzeugt - überprüfen Sie, ob Ihre Binäreingabe korrekt gruppiert ist." },
+        { q: "Kann dies Binärcode auch in Zahlen umwandeln, nicht nur in Text?", a: "Dieses Tool wandelt Binärcode direkt in lesbaren Text um, wobei die Standard-8-Bit-Zeichenkodierung (ASCII/UTF-8) verwendet wird. Um Binärcode stattdessen in einen reinen numerischen Wert umzuwandeln, behandeln Sie die Binärzeichenfolge als Basis-2-Zahl und konvertieren Sie sie stattdessen mit einer Binär-zu-Dezimal-Berechnung in Basis 10." },
+      ],
+    },
+    pt: {
+      title: "Conversor de Binário para Texto",
+      intro: "Digite texto ou binário e escolha uma direção para converter entre texto simples e binário de 8 bits.",
+      description: "Converta texto para binário ou binário de volta para texto.",
+      faq: [
+        { q: "Como o texto é convertido para binário?", a: "O código numérico de cada caractere (da tabela ASCII/Unicode) é convertido para base 2 e preenchido para 8 bits - 'H' tem código 72, que é 01001000 em binário." },
+        { q: "Por que 8 bits por caractere?", a: "8 bits (1 byte) cobrem o conjunto de caracteres ASCII padrão (0-255), que inclui todas as letras inglesas, números, e símbolos comuns." },
+        { q: "O que acontece se eu digitar uma string binária que não é múltiplo de 8 bits?", a: "A codificação de texto padrão (ASCII/UTF-8) representa cada caractere como um byte completo de 8 bits, então uma string binária que não é um múltiplo exato de 8 bits não pode ser convertida em caracteres válidos e provavelmente produzirá um erro ou resultado inesperado - verifique se sua entrada binária está agrupada corretamente." },
+        { q: "Isso pode converter binário em números além de texto?", a: "Esta ferramenta converte binário diretamente em texto legível usando codificação padrão de 8 bits (ASCII/UTF-8). Para converter binário em um valor numérico simples em vez disso, trate a string binária como um número em base 2 e converta-a para base 10 usando um cálculo de binário para decimal em vez disso." },
+      ],
+    },
+    it: {
+      title: "Convertitore da Binario a Testo",
+      intro: "Inserisci testo o binario e scegli una direzione per convertire tra testo semplice e binario a 8 bit.",
+      description: "Convertire il testo in binario o il binario in testo.",
+      faq: [
+        { q: "Come viene convertito il testo in binario?", a: "Il codice numerico di ogni carattere (dalla tabella ASCII/Unicode) viene convertito in base 2 e riempito a 8 bit - 'H' ha codice 72, che è 01001000 in binario." },
+        { q: "Perché 8 bit per carattere?", a: "8 bit (1 byte) coprono il set di caratteri ASCII standard (0-255), che include tutte le lettere inglesi, numeri, e simboli comuni." },
+        { q: "Cosa succede se inserisco una stringa binaria che non è un multiplo di 8 bit?", a: "La codifica di testo standard (ASCII/UTF-8) rappresenta ogni carattere come un byte completo di 8 bit, quindi una stringa binaria che non è un multiplo esatto di 8 bit non può essere convertita in caratteri validi e probabilmente produrrà un errore o un risultato inaspettato - controlla che il tuo input binario sia raggruppato correttamente." },
+        { q: "Questo può convertire il binario in numeri oltre che in testo?", a: "Questo strumento converte il binario direttamente in testo leggibile usando la codifica standard a 8 bit (ASCII/UTF-8). Per convertire il binario in un valore numerico semplice invece, tratta la stringa binaria come un numero in base 2 e convertila in base 10 usando invece un calcolo da binario a decimale." },
+      ],
+    },
+    ja: {
+      title: "バイナリからテキストへの変換機",
+      intro: "テキストまたはバイナリを入力し、方向を選択してプレーンテキストと8ビットバイナリの間を変換します。",
+      description: "テキストをバイナリに、またはバイナリをテキストに変換します。",
+      faq: [
+        { q: "テキストはどのようにバイナリに変換されますか？", a: "各文字の数値コード（ASCII/Unicodeテーブルから）は2進数に変換され、8ビットにパディングされます。「H」はコード72で、バイナリでは01001000です。" },
+        { q: "なぜ文字あたり8ビットですか？", a: "8ビット（1バイト）は標準のASCII文字セット（0-255）をカバーし、すべての英字、数字、一般的な記号を含みます。" },
+        { q: "8ビットの倍数ではないバイナリ文字列を入力した場合どうなりますか？", a: "標準的なテキストエンコーディング（ASCII/UTF-8）は各文字を完全な8ビットバイトとして表現するため、8ビットの整数倍ではないバイナリ文字列は有効な文字に変換できず、エラーまたは予期しない結果が生じる可能性が高いです。バイナリ入力が正しくグループ化されているか確認してください。" },
+        { q: "これはテキストだけでなくバイナリを数値に変換できますか？", a: "このツールは標準の8ビット文字エンコーディング（ASCII/UTF-8）を使用して、バイナリを直接読み取り可能なテキストに変換します。代わりにバイナリを単純な数値に変換するには、バイナリ文字列を2進数として扱い、バイナリから10進数への計算を使用して10進数に変換してください。" },
+      ],
+    },
+    ro: {
+      title: "Convertor din Binar în Text",
+      intro: "Introdu text sau binar și alege o direcție pentru a converti între text simplu și binar pe 8 biți.",
+      description: "Convertește text în binar sau binar înapoi în text.",
+      faq: [
+        { q: "Cum este convertit textul în binar?", a: "Codul numeric al fiecărui caracter (din tabelul ASCII/Unicode) este convertit în baza 2 și completat la 8 biți - 'H' are codul 72, care este 01001000 în binar." },
+        { q: "De ce 8 biți per caracter?", a: "8 biți (1 byte) acoperă setul standard de caractere ASCII (0-255), care include toate literele englezești, numerele, și simbolurile comune." },
+        { q: "Ce se întâmplă dacă introduc un șir binar care nu este multiplu de 8 biți?", a: "Codificarea standard de text (ASCII/UTF-8) reprezintă fiecare caracter ca un byte complet de 8 biți, deci un șir binar care nu este un multiplu exact de 8 biți nu poate fi convertit în caractere valide și probabil va produce o eroare sau un rezultat neașteptat - verifică dacă intrarea binară este grupată corect." },
+        { q: "Poate acest lucru converti binar în numere la fel de bine ca în text?", a: "Acest instrument convertește binarul direct în text lizibil folosind codificarea standard de caractere pe 8 biți (ASCII/UTF-8). Pentru a converti binar într-o valoare numerică simplă în schimb, tratează șirul binar ca un număr în baza 2 și convertește-l în baza 10 folosind în schimb un calcul binar-la-decimal." },
+      ],
+    },
+    el: {
+      title: "Μετατροπέας Δυαδικού σε Κείμενο",
+      intro: "Εισάγετε κείμενο ή δυαδικό και επιλέξτε μια κατεύθυνση για μετατροπή μεταξύ απλού κειμένου και δυαδικού 8-bit.",
+      description: "Μετατρέψτε κείμενο σε δυαδικό ή δυαδικό πίσω σε κείμενο.",
+      faq: [
+        { q: "Πώς μετατρέπεται το κείμενο σε δυαδικό;", a: "Ο αριθμητικός κωδικός κάθε χαρακτήρα (από τον πίνακα ASCII/Unicode) μετατρέπεται σε βάση 2 και συμπληρώνεται σε 8 bit - το 'H' έχει κωδικό 72, που είναι 01001000 σε δυαδικό." },
+        { q: "Γιατί 8 bit ανά χαρακτήρα;", a: "8 bit (1 byte) καλύπτουν το τυπικό σύνολο χαρακτήρων ASCII (0-255), που περιλαμβάνει όλα τα αγγλικά γράμματα, αριθμούς, και κοινά σύμβολα." },
+        { q: "Τι συμβαίνει αν εισάγω μια δυαδική συμβολοσειρά που δεν είναι πολλαπλάσιο των 8 bit;", a: "Η τυπική κωδικοποίηση κειμένου (ASCII/UTF-8) αναπαριστά κάθε χαρακτήρα ως πλήρες byte 8 bit, οπότε μια δυαδική συμβολοσειρά που δεν είναι ακέραιο πολλαπλάσιο των 8 bit δεν μπορεί να μετατραπεί σε έγκυρους χαρακτήρες και πιθανώς θα παράγει σφάλμα ή μη αναμενόμενο αποτέλεσμα - ελέγξτε ότι η δυαδική είσοδός σας είναι σωστά ομαδοποιημένη." },
+        { q: "Μπορεί αυτό να μετατρέψει δυαδικό σε αριθμούς όπως και σε κείμενο;", a: "Αυτό το εργαλείο μετατρέπει το δυαδικό απευθείας σε αναγνώσιμο κείμενο χρησιμοποιώντας τυπική κωδικοποίηση χαρακτήρων 8-bit (ASCII/UTF-8). Για να μετατρέψετε το δυαδικό σε απλή αριθμητική τιμή αντ' αυτού, αντιμετωπίστε τη δυαδική συμβολοσειρά ως αριθμό βάσης 2 και μετατρέψτε την σε βάση 10 χρησιμοποιώντας αντ' αυτού έναν υπολογισμό δυαδικού σε δεκαδικό." },
+      ],
+    },
+    zh: {
+      title: "二进制转文本转换器",
+      intro: "输入文本或二进制并选择转换方向，在纯文本和8位二进制之间进行转换。",
+      description: "将文本转换为二进制，或将二进制转换回文本。",
+      faq: [
+        { q: "文本如何转换成二进制？", a: "每个字符的数字编码（来自ASCII/Unicode表）被转换为二进制（以2为基数）并填充为8位——「H」的编码是72，二进制表示为01001000。" },
+        { q: "为什么每个字符是8位？", a: "8位（1字节）涵盖了标准ASCII字符集（0-255），包括所有英文字母、数字和常见符号。" },
+        { q: "如果我输入的二进制字符串不是8位的倍数会怎样？", a: "标准文本编码（ASCII/UTF-8）将每个字符表示为完整的8位字节，因此不是8位整数倍的二进制字符串无法转换为有效字符，可能会产生错误或意外结果——请检查你的二进制输入是否正确分组。" },
+        { q: "这个工具能把二进制转换成数字而不仅是文本吗？", a: "这个工具使用标准的8位字符编码（ASCII/UTF-8）将二进制直接转换为可读文本。如果要将二进制转换为纯数值，请将该二进制字符串视为以2为基数的数字，并使用二进制转十进制的计算方法将其转换为以10为基数的数字。" },
+      ],
+    },
+    ar: {
+      title: "محول من ثنائي إلى نص",
+      intro: "أدخل نصًا أو ثنائيًا واختر اتجاهًا للتحويل بين النص العادي والثنائي 8 بت.",
+      description: "حوّل النص إلى ثنائي أو الثنائي إلى نص.",
+      faq: [
+        { q: "كيف يتم تحويل النص إلى ثنائي؟", a: "يتم تحويل الرمز الرقمي لكل حرف (من جدول ASCII/Unicode) إلى الأساس 2 ويُكمَّل إلى 8 بت - الحرف 'H' له الرمز 72، وهو 01001000 بالنظام الثنائي." },
+        { q: "لماذا 8 بت لكل حرف؟", a: "8 بت (بايت واحد) تغطي مجموعة أحرف ASCII القياسية (0-255)، التي تشمل جميع الحروف الإنجليزية والأرقام والرموز الشائعة." },
+        { q: "ماذا يحدث إذا أدخلت سلسلة ثنائية ليست من مضاعفات 8 بت؟", a: "يمثل ترميز النص القياسي (ASCII/UTF-8) كل حرف كبايت كامل مكون من 8 بت، لذا فإن السلسلة الثنائية التي ليست مضاعفًا نظيفًا لـ8 بت لا يمكن تحويلها إلى أحرف صالحة وستؤدي غالبًا إلى خطأ أو نتيجة غير متوقعة - تأكد من تجميع إدخالك الثنائي بشكل صحيح." },
+        { q: "هل يمكن لهذا تحويل الثنائي إلى أرقام أيضًا وليس فقط نص؟", a: "تحول هذه الأداة الثنائي مباشرة إلى نص قابل للقراءة باستخدام ترميز أحرف 8 بت القياسي (ASCII/UTF-8). لتحويل الثنائي إلى قيمة رقمية بسيطة بدلاً من ذلك، عامل السلسلة الثنائية كرقم بالأساس 2 وحوّلها إلى الأساس 10 باستخدام حساب من ثنائي إلى عشري بدلاً من ذلك." },
+      ],
+    },
+    th: {
+      title: "เครื่องแปลงไบนารีเป็นข้อความ",
+      intro: "ป้อนข้อความหรือไบนารีและเลือกทิศทางเพื่อแปลงระหว่างข้อความธรรมดาและไบนารี 8 บิต",
+      description: "แปลงข้อความเป็นไบนารีหรือไบนารีกลับเป็นข้อความ",
+      faq: [
+        { q: "ข้อความถูกแปลงเป็นไบนารีอย่างไร?", a: "รหัสตัวเลขของแต่ละตัวอักษร (จากตาราง ASCII/Unicode) จะถูกแปลงเป็นเลขฐาน 2 และเติมให้เป็น 8 บิต - 'H' มีรหัส 72 ซึ่งเป็น 01001000 ในระบบไบนารี" },
+        { q: "ทำไมต้องใช้ 8 บิตต่อตัวอักษร?", a: "8 บิต (1 ไบต์) ครอบคลุมชุดตัวอักษร ASCII มาตรฐาน (0-255) ซึ่งรวมถึงตัวอักษรภาษาอังกฤษ ตัวเลข และสัญลักษณ์ทั่วไปทั้งหมด" },
+        { q: "จะเกิดอะไรขึ้นถ้าฉันป้อนสตริงไบนารีที่ไม่ใช่ผลคูณของ 8 บิต?", a: "การเข้ารหัสข้อความมาตรฐาน (ASCII/UTF-8) แสดงแต่ละตัวอักษรเป็นไบต์ 8 บิตแบบเต็ม ดังนั้นสตริงไบนารีที่ไม่ใช่ผลคูณที่แน่นอนของ 8 บิตจึงไม่สามารถแปลงเป็นตัวอักษรที่ถูกต้องได้ และมักจะทำให้เกิดข้อผิดพลาดหรือผลลัพธ์ที่ไม่คาดคิด - ตรวจสอบให้แน่ใจว่าอินพุตไบนารีของคุณถูกจัดกลุ่มอย่างถูกต้อง" },
+        { q: "สิ่งนี้สามารถแปลงไบนารีเป็นตัวเลขได้เช่นเดียวกับข้อความหรือไม่?", a: "เครื่องมือนี้แปลงไบนารีเป็นข้อความที่อ่านได้โดยตรงโดยใช้การเข้ารหัสตัวอักษร 8 บิตมาตรฐาน (ASCII/UTF-8) หากต้องการแปลงไบนารีเป็นค่าตัวเลขธรรมดาแทน ให้ถือว่าสตริงไบนารีเป็นตัวเลขฐาน 2 และแปลงเป็นฐาน 10 โดยใช้การคำนวณจากไบนารีเป็นทศนิยมแทน" },
+      ],
+    },
+  },
+
+  "word-frequency-counter": {
+    es: {
+      title: "Contador de Frecuencia de Palabras",
+      intro: "Pega tu texto para ver qué palabras aparecen más a menudo, clasificadas por frecuencia.",
+      description: "Encuentra las palabras más usadas frecuentemente en un bloque de texto.",
+      faq: [
+        { q: "¿Cómo se calcula la frecuencia de palabras?", a: "El texto se divide en palabras individuales (sin distinción de mayúsculas, ignorando la puntuación), luego cada palabra única se cuenta y se ordena por cuántas veces aparece." },
+        { q: "¿Para qué se usa el análisis de frecuencia de palabras?", a: "Se usa para verificaciones de densidad de palabras clave SEO, análisis de estilo de escritura, y encontrar palabras o frases sobreutilizadas en un documento." },
+        { q: "¿Esto cuenta 'el' y 'El' como la misma palabra?", a: "Sí - el conteo de frecuencia de palabras no distingue mayúsculas por defecto aquí, así que la mayúscula al inicio de una oración no divide el conteo de una palabra en dos entradas separadas." },
+        { q: "¿Cómo puede ayudar el análisis de frecuencia de palabras con SEO o escritura?", a: "El análisis de frecuencia de palabras revela repetición involuntaria, ayuda a confirmar que las palabras clave objetivo aparecen en una densidad natural en lugar de estar sobrecargadas, y puede resaltar palabras de relleno sobreutilizadas que debilitan la escritura - útil tanto para editar prosa como para verificar el contenido SEO en la página antes de publicar." },
+      ],
+    },
+    fr: {
+      title: "Compteur de Fréquence de Mots",
+      intro: "Collez votre texte pour voir quels mots apparaissent le plus souvent, classés par fréquence.",
+      description: "Trouvez les mots les plus fréquemment utilisés dans un bloc de texte.",
+      faq: [
+        { q: "Comment la fréquence des mots est-elle calculée ?", a: "Le texte est divisé en mots individuels (insensible à la casse, ponctuation ignorée), puis chaque mot unique est compté et trié selon sa fréquence d'apparition." },
+        { q: "À quoi sert l'analyse de fréquence des mots ?", a: "Elle est utilisée pour les vérifications de densité de mots-clés SEO, l'analyse du style d'écriture, et la recherche de mots ou phrases surutilisés dans un document." },
+        { q: "Cela compte-t-il « le » et « Le » comme le même mot ?", a: "Oui - le comptage de fréquence des mots est insensible à la casse par défaut ici, donc la majuscule au début d'une phrase ne divise pas le comptage d'un mot en deux entrées séparées." },
+        { q: "Comment l'analyse de fréquence des mots peut-elle aider avec le SEO ou l'écriture ?", a: "L'analyse de fréquence des mots révèle la répétition involontaire, aide à confirmer que les mots-clés cibles apparaissent à une densité naturelle plutôt que d'être surchargés, et peut faire ressortir des mots de remplissage surutilisés qui affaiblissent l'écriture - utile à la fois pour éditer de la prose et pour vérifier le contenu SEO sur la page avant publication." },
+      ],
+    },
+    de: {
+      title: "Wortfrequenz-Zähler",
+      intro: "Fügen Sie Ihren Text ein, um zu sehen, welche Wörter am häufigsten vorkommen, sortiert nach Häufigkeit.",
+      description: "Finden Sie die am häufigsten verwendeten Wörter in einem Textblock.",
+      faq: [
+        { q: "Wie wird die Wortfrequenz berechnet?", a: "Der Text wird in einzelne Wörter aufgeteilt (ohne Berücksichtigung der Groß-/Kleinschreibung, Zeichensetzung ignoriert), dann wird jedes einzigartige Wort gezählt und danach sortiert, wie oft es vorkommt." },
+        { q: "Wofür wird die Wortfrequenzanalyse verwendet?", a: "Sie wird für SEO-Keyword-Dichteprüfungen, Schreibstilanalysen, und das Finden von überstrapazierten Wörtern oder Phrasen in einem Dokument verwendet." },
+        { q: "Zählt dies 'der' und 'Der' als dasselbe Wort?", a: "Ja - die Wortfrequenzzählung ist hier standardmäßig ohne Berücksichtigung der Groß-/Kleinschreibung, sodass die Großschreibung am Satzanfang die Zählung eines Wortes nicht in zwei separate Einträge aufteilt." },
+        { q: "Wie kann die Wortfrequenzanalyse bei SEO oder Schreiben helfen?", a: "Die Wortfrequenzanalyse zeigt unbeabsichtigte Wiederholungen auf, hilft zu bestätigen, dass Ziel-Keywords in einer natürlichen Dichte erscheinen, statt überladen zu sein, und kann überstrapazierte Füllwörter aufdecken, die das Schreiben schwächen - nützlich sowohl zum Bearbeiten von Prosa als auch zum Überprüfen von On-Page-SEO-Inhalten vor der Veröffentlichung." },
+      ],
+    },
+    pt: {
+      title: "Contador de Frequência de Palavras",
+      intro: "Cole seu texto para ver quais palavras aparecem com mais frequência, classificadas por frequência.",
+      description: "Encontre as palavras mais frequentemente usadas em um bloco de texto.",
+      faq: [
+        { q: "Como a frequência de palavras é calculada?", a: "O texto é dividido em palavras individuais (sem distinção de maiúsculas/minúsculas, pontuação ignorada), então cada palavra única é contada e ordenada por quantas vezes aparece." },
+        { q: "Para que é usada a análise de frequência de palavras?", a: "É usada para verificações de densidade de palavras-chave SEO, análise de estilo de escrita, e encontrar palavras ou frases superutilizadas em um documento." },
+        { q: "Isso conta 'o' e 'O' como a mesma palavra?", a: "Sim - a contagem de frequência de palavras não diferencia maiúsculas/minúsculas por padrão aqui, então a maiúscula no início de uma frase não divide a contagem de uma palavra em duas entradas separadas." },
+        { q: "Como a análise de frequência de palavras pode ajudar com SEO ou escrita?", a: "A análise de frequência de palavras revela repetição não intencional, ajuda a confirmar que palavras-chave alvo aparecem em uma densidade natural em vez de serem forçadas, e pode revelar palavras de preenchimento superutilizadas que enfraquecem a escrita - útil tanto para editar prosa quanto para verificar o conteúdo SEO na página antes de publicar." },
+      ],
+    },
+    it: {
+      title: "Contatore di Frequenza delle Parole",
+      intro: "Incolla il tuo testo per vedere quali parole appaiono più spesso, classificate per frequenza.",
+      description: "Trova le parole più frequentemente usate in un blocco di testo.",
+      faq: [
+        { q: "Come viene calcolata la frequenza delle parole?", a: "Il testo è diviso in parole singole (senza distinzione tra maiuscole e minuscole, punteggiatura ignorata), poi ogni parola unica viene contata e ordinata in base a quante volte appare." },
+        { q: "A cosa serve l'analisi della frequenza delle parole?", a: "Viene usata per verifiche di densità di parole chiave SEO, analisi dello stile di scrittura, e trovare parole o frasi sovrautilizzate in un documento." },
+        { q: "Questo conta 'il' e 'Il' come la stessa parola?", a: "Sì - il conteggio della frequenza delle parole non distingue tra maiuscole e minuscole per impostazione predefinita qui, quindi la maiuscola all'inizio di una frase non divide il conteggio di una parola in due voci separate." },
+        { q: "Come può l'analisi della frequenza delle parole aiutare con la SEO o la scrittura?", a: "L'analisi della frequenza delle parole rivela ripetizioni involontarie, aiuta a confermare che le parole chiave target appaiano a una densità naturale piuttosto che essere sovraccaricate, e può far emergere parole di riempimento sovrautilizzate che debilitano la scrittura - utile sia per modificare la prosa che per verificare il contenuto SEO sulla pagina prima della pubblicazione." },
+      ],
+    },
+    ja: {
+      title: "単語頻度カウンター",
+      intro: "テキストを貼り付けると、どの単語が最も頻繁に出現するかを頻度別にランク付けして表示します。",
+      description: "テキストブロック内で最も頻繁に使用される単語を見つけます。",
+      faq: [
+        { q: "単語の頻度はどのように計算されますか？", a: "テキストは個々の単語に分割され（大文字小文字を区別せず、句読点は無視されます）、各ユニークな単語がカウントされ、出現頻度でソートされます。" },
+        { q: "単語頻度分析は何に使われますか？", a: "SEOキーワード密度チェック、文章スタイル分析、文書内で過度に使われている単語やフレーズを見つけるために使用されます。" },
+        { q: "これは「the」と「The」を同じ単語としてカウントしますか？", a: "はい。ここでの単語頻度カウントはデフォルトで大文字小文字を区別しないため、文の最初の大文字化によって単語のカウントが2つの別々のエントリに分割されることはありません。" },
+        { q: "単語頻度分析はSEOや文章にどのように役立ちますか？", a: "単語頻度分析は意図しない繰り返しを明らかにし、ターゲットキーワードが詰め込まれるのではなく自然な密度で出現することを確認するのに役立ち、文章を弱める過度に使われたつなぎ言葉を浮き上がらせることができます。文章の編集とページ内SEOコンテンツの公開前チェックの両方に役立ちます。" },
+      ],
+    },
+    ro: {
+      title: "Contor de Frecvență a Cuvintelor",
+      intro: "Lipește textul tău pentru a vedea care cuvinte apar cel mai des, clasificate după frecvență.",
+      description: "Găsește cele mai frecvent folosite cuvinte într-un bloc de text.",
+      faq: [
+        { q: "Cum este calculată frecvența cuvintelor?", a: "Textul este împărțit în cuvinte individuale (fără a distinge majusculele, punctuația este ignorată), apoi fiecare cuvânt unic este numărat și sortat după cât de des apare." },
+        { q: "Pentru ce este folosită analiza frecvenței cuvintelor?", a: "Este folosită pentru verificări ale densității cuvintelor cheie SEO, analiza stilului de scriere, și găsirea cuvintelor sau frazelor suprautilizate într-un document." },
+        { q: "Aceasta numără \"the\" și \"The\" ca fiind același cuvânt?", a: "Da - numărarea frecvenței cuvintelor nu distinge majusculele în mod implicit aici, deci majuscula de la începutul unei propoziții nu împarte numărarea unui cuvânt în două intrări separate." },
+        { q: "Cum poate ajuta analiza frecvenței cuvintelor cu SEO sau scrisul?", a: "Analiza frecvenței cuvintelor dezvăluie repetiția neintenționată, ajută la confirmarea că cuvintele cheie țintă apar la o densitate naturală în loc să fie înghesuite, și poate scoate la iveală cuvinte de umplutură suprautilizate care slăbesc scrisul - util atât pentru editarea prozei cât și pentru verificarea conținutului SEO pe pagină înainte de publicare." },
+      ],
+    },
+    el: {
+      title: "Μετρητής Συχνότητας Λέξεων",
+      intro: "Επικολλήστε το κείμενό σας για να δείτε ποιες λέξεις εμφανίζονται πιο συχνά, κατηγοριοποιημένες κατά συχνότητα.",
+      description: "Βρείτε τις πιο συχνά χρησιμοποιούμενες λέξεις σε ένα κομμάτι κειμένου.",
+      faq: [
+        { q: "Πώς υπολογίζεται η συχνότητα λέξεων;", a: "Το κείμενο χωρίζεται σε μεμονωμένες λέξεις (χωρίς διάκριση πεζών-κεφαλαίων, η στίξη αγνοείται), μετά κάθε μοναδική λέξη μετριέται και ταξινομείται με βάση πόσο συχνά εμφανίζεται." },
+        { q: "Για τι χρησιμοποιείται η ανάλυση συχνότητας λέξεων;", a: "Χρησιμοποιείται για ελέγχους πυκνότητας λέξεων-κλειδιών SEO, ανάλυση στυλ γραφής, και εύρεση υπερχρησιμοποιημένων λέξεων ή φράσεων σε ένα έγγραφο." },
+        { q: "Μετρά αυτό τις λέξεις «το» και «Το» ως την ίδια λέξη;", a: "Ναι - η μέτρηση συχνότητας λέξεων δεν διακρίνει πεζά-κεφαλαία από προεπιλογή εδώ, οπότε η κεφαλαιοποίηση στην αρχή μιας πρότασης δεν διαχωρίζει τη μέτρηση μιας λέξης σε δύο ξεχωριστές καταχωρήσεις." },
+        { q: "Πώς μπορεί η ανάλυση συχνότητας λέξεων να βοηθήσει με το SEO ή τη γραφή;", a: "Η ανάλυση συχνότητας λέξεων αποκαλύπτει ακούσια επανάληψη, βοηθά να επιβεβαιωθεί ότι οι λέξεις-κλειδιά στόχου εμφανίζονται σε φυσική πυκνότητα αντί να είναι παραγεμισμένες, και μπορεί να αναδείξει υπερχρησιμοποιημένες λέξεις-γέμισμα που αδυνατίζουν τη γραφή - χρήσιμο τόσο για την επεξεργασία πρόζας όσο και για τον έλεγχο περιεχομένου SEO στη σελίδα πριν τη δημοσίευση." },
+      ],
+    },
+    zh: {
+      title: "词频统计器",
+      intro: "粘贴你的文本，查看哪些词出现频率最高，按频率排序。",
+      description: "找出一段文本中最常使用的词语。",
+      faq: [
+        { q: "词频是如何计算的？", a: "文本被拆分成单个词（不区分大小写，忽略标点符号），然后统计每个独特的词并按出现次数排序。" },
+        { q: "词频分析用来做什么？", a: "它用于SEO关键词密度检查、写作风格分析，以及找出文档中过度使用的词或短语。" },
+        { q: "这会把\"the\"和\"The\"算作同一个词吗？", a: "会——这里的词频统计默认不区分大小写，因此句首的大写不会把一个词的计数拆分成两个单独的条目。" },
+        { q: "词频分析如何帮助SEO或写作？", a: "词频分析能揭示无意识的重复，有助于确认目标关键词以自然的密度出现而不是被堆砌，还能揪出削弱文笔的过度使用的填充词——对编辑文章和发布前检查页面SEO内容都很有用。" },
+      ],
+    },
+    ar: {
+      title: "عداد تكرار الكلمات",
+      intro: "لصق نصك لمعرفة الكلمات التي تظهر بشكل متكرر، مرتبة حسب التكرار.",
+      description: "اعثر على الكلمات الأكثر استخدامًا في مقطع نصي.",
+      faq: [
+        { q: "كيف يتم حساب تكرار الكلمات؟", a: "يُقسّم النص إلى كلمات فردية (غير حساسة لحالة الأحرف، مع تجاهل علامات الترقيم)، ثم يتم عد كل كلمة فريدة وترتيبها بحسب عدد مرات ظهورها." },
+        { q: "ما هو استخدام تحليل تكرار الكلمات؟", a: "يُستخدم لفحوصات كثافة الكلمات المفتاحية لتحسين محركات البحث، وتحليل أسلوب الكتابة، والعثور على الكلمات أو العبارات المستخدمة بشكل مفرط في وثيقة." },
+        { q: "هل يحتسب هذا \"the\" و\"The\" كنفس الكلمة؟", a: "نعم - عد تكرار الكلمات هنا غير حساس لحالة الأحرف بشكل افتراضي، لذا فإن الحرف الكبير في بداية الجملة لا يقسم عد الكلمة إلى إدخالين منفصلين." },
+        { q: "كيف يمكن لتحليل تكرار الكلمات أن يساعد في تحسين محركات البحث أو الكتابة؟", a: "يكشف تحليل تكرار الكلمات عن التكرار غير المقصود، ويساعد في تأكيد ظهور الكلمات المفتاحية المستهدفة بكثافة طبيعية بدلاً من حشوها، ويمكن أن يُظهر كلمات الحشو المستخدمة بشكل مفرط التي تضعف الكتابة - مفيد لتحرير النصوص وفحص محتوى تحسين محركات البحث في الصفحة قبل النشر." },
+      ],
+    },
+    th: {
+      title: "เครื่องนับความถี่คำ",
+      intro: "วางข้อความของคุณเพื่อดูว่าคำใดปรากฏบ่อยที่สุด จัดลำดับตามความถี่",
+      description: "ค้นหาคำที่ใช้บ่อยที่สุดในบล็อกข้อความ",
+      faq: [
+        { q: "ความถี่ของคำคำนวณอย่างไร?", a: "ข้อความจะถูกแยกออกเป็นคำแต่ละคำ (ไม่แยกตัวพิมพ์ใหญ่เล็ก ไม่สนใจเครื่องหมายวรรคตอน) จากนั้นแต่ละคำที่ไม่ซ้ำกันจะถูกนับและจัดเรียงตามความถี่ที่ปรากฏ" },
+        { q: "การวิเคราะห์ความถี่คำใช้ทำอะไร?", a: "ใช้สำหรับตรวจสอบความหนาแน่นของคำสำคัญ SEO การวิเคราะห์สไตล์การเขียน และการค้นหาคำหรือวลีที่ใช้มากเกินไปในเอกสาร" },
+        { q: "สิ่งนี้นับ \"the\" และ \"The\" เป็นคำเดียวกันหรือไม่?", a: "ใช่ - การนับความถี่คำที่นี่ไม่แยกตัวพิมพ์ใหญ่เล็กโดยค่าเริ่มต้น ดังนั้นการใช้ตัวพิมพ์ใหญ่ที่จุดเริ่มต้นของประโยคจะไม่แยกการนับคำออกเป็นสองรายการที่แยกกัน" },
+        { q: "การวิเคราะห์ความถี่คำช่วยเรื่อง SEO หรือการเขียนได้อย่างไร?", a: "การวิเคราะห์ความถี่คำเผยให้เห็นการซ้ำซ้อนที่ไม่ได้ตั้งใจ ช่วยยืนยันว่าคำสำคัญเป้าหมายปรากฏในความหนาแน่นที่เป็นธรรมชาติแทนที่จะถูกยัดเยียด และสามารถเปิดเผยคำเติมที่ใช้มากเกินไปซึ่งทำให้งานเขียนอ่อนแอ - มีประโยชน์ทั้งสำหรับการแก้ไขข้อความและการตรวจสอบเนื้อหา SEO บนหน้าเว็บก่อนเผยแพร่" },
+      ],
+    },
+  },
 };
 
 // Static-page copy for wave one. Privacy and Terms are flagged explicitly
