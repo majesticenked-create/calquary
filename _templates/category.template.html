@@ -37,7 +37,7 @@
         // Locale pages only have a localized tool page for the wave-one
         // batch — link straight through to it when it exists, otherwise
         // fall back to the English canonical rather than a 404.
-        a.href = translatedIds[calc.id] ? `/{{LOCALE_PATH}}tool/${calc.id}.html` : `https://calquary.com/tool/${calc.id}.html`;
+        a.href = translatedIds[calc.id] ? `/{{LOCALE_PATH}}tool/${calc.id}` : `https://calquary.com/tool/${calc.id}`;
         a.className = "tool-card";
         a.innerHTML = `
           <div class="cat-label">${calc.keyword}</div>

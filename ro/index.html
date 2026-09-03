@@ -76,10 +76,10 @@
       return LOC !== "en" && window.I18N_TOOLS && window.I18N_TOOLS[calcId] && window.I18N_TOOLS[calcId][LOC];
     }
     function toolHref(calcId) {
-      return isTranslated(calcId) ? `/${LPATH}tool/${calcId}.html` : `https://calquary.com/tool/${calcId}.html`;
+      return isTranslated(calcId) ? `/${LPATH}tool/${calcId}` : `https://calquary.com/tool/${calcId}`;
     }
     function catHref(catId) {
-      return `/${LPATH}category/${catId}.html`;
+      return `/${LPATH}category/${catId}`;
     }
 
     document.addEventListener("DOMContentLoaded", () => {
@@ -359,7 +359,7 @@
         <nav class="header-nav">
           <a href="#categories">Categorii</a>
           <a href="#tools">Toate instrumentele</a>
-          <a href="/ro/about.html">Despre noi</a>
+          <a href="/ro/about">Despre noi</a>
         </nav>
         <div class="locale-switcher">
           <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Română">
@@ -402,7 +402,7 @@
           <div class="kicker">Explorează</div>
           <h2>Fiecare categorie, propriul raft</h2>
         </div>
-        <a href="/all-calculators.html">Vezi toate →</a>
+        <a href="/all-calculators">Vezi toate →</a>
       </div>
       <div class="catalog-grid" id="catalog-grid"></div>
     </div>
@@ -483,9 +483,9 @@
         <div>
           <h4>Populare</h4>
           <ul>
-            <li><a href="/ro/tool/percentage-calculator.html">Calculator de Procente</a></li>
-            <li><a href="/ro/tool/loan-calculator.html">Calculator de Rată la Împrumut</a></li>
-            <li><a href="/ro/tool/bmi-calculator.html">Calculator IMC</a></li>
+            <li><a href="/ro/tool/percentage-calculator">Calculator de Procente</a></li>
+            <li><a href="/ro/tool/loan-calculator">Calculator de Rată la Împrumut</a></li>
+            <li><a href="/ro/tool/bmi-calculator">Calculator IMC</a></li>
           </ul>
         </div>
         <div>
@@ -493,11 +493,11 @@
           <ul>
             <li><a href="#categories">Toate categoriile</a></li>
             <li><a href="#tools">Toate instrumentele</a></li>
-            <li><a href="/all-calculators.html">Toate calculatoarele</a></li>
-            <li><a href="/ro/about.html">Despre noi</a></li>
-            <li><a href="/ro/contact.html">Contact</a></li>
-            <li><a href="/ro/privacy.html">Confidențialitate</a></li>
-            <li><a href="/ro/terms.html">Termeni</a></li>
+            <li><a href="/all-calculators">Toate calculatoarele</a></li>
+            <li><a href="/ro/about">Despre noi</a></li>
+            <li><a href="/ro/contact">Contact</a></li>
+            <li><a href="/ro/privacy">Confidențialitate</a></li>
+            <li><a href="/ro/terms">Termeni</a></li>
           </ul>
         </div>
       </div>

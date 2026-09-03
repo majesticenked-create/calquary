@@ -9,7 +9,7 @@
   <meta property="og:title" content="Pet &amp; Lifestyle Calculators | Calquary">
   <meta property="og:description" content="Age charts and everyday pet math.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://calquary.com/category/pets.html">
+  <meta property="og:url" content="https://calquary.com/category/pets">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Calquary">
   <meta property="og:image" content="https://calquary.com/og-images/category-pets.png">
@@ -19,20 +19,20 @@
   <meta name="twitter:title" content="Pet &amp; Lifestyle Calculators | Calquary">
   <meta name="twitter:description" content="Age charts and everyday pet math.">
   <meta name="twitter:image" content="https://calquary.com/og-images/category-pets.png">
-    <link rel="alternate" hreflang="en" href="https://calquary.com/category/pets.html">
-  <link rel="alternate" hreflang="es" href="https://calquary.com/es/category/pets.html">
-  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/pets.html">
-  <link rel="alternate" hreflang="de" href="https://calquary.com/de/category/pets.html">
-  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/category/pets.html">
-  <link rel="alternate" hreflang="it" href="https://calquary.com/it/category/pets.html">
-  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/category/pets.html">
-  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/category/pets.html">
-  <link rel="alternate" hreflang="el" href="https://calquary.com/el/category/pets.html">
-  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/category/pets.html">
-  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/category/pets.html">
-  <link rel="alternate" hreflang="th" href="https://calquary.com/th/category/pets.html">
-  <link rel="alternate" hreflang="x-default" href="https://calquary.com/category/pets.html">
-    <link rel="canonical" href="https://calquary.com/category/pets.html">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/category/pets">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/category/pets">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/pets">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/category/pets">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/category/pets">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/category/pets">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/category/pets">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/category/pets">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/category/pets">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/category/pets">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/category/pets">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/category/pets">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/category/pets">
+    <link rel="canonical" href="https://calquary.com/category/pets">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -65,7 +65,7 @@
         // Locale pages only have a localized tool page for the wave-one
         // batch — link straight through to it when it exists, otherwise
         // fall back to the English canonical rather than a 404.
-        a.href = translatedIds[calc.id] ? `/tool/${calc.id}.html` : `https://calquary.com/tool/${calc.id}.html`;
+        a.href = translatedIds[calc.id] ? `/tool/${calc.id}` : `https://calquary.com/tool/${calc.id}`;
         a.className = "tool-card";
         a.innerHTML = `
           <div class="cat-label">${calc.keyword}</div>
@@ -96,7 +96,7 @@
           "@type": "ListItem",
           "position": 2,
           "name": "Pet & Lifestyle Calculators",
-          "item": "https://calquary.com/category/pets.html"
+          "item": "https://calquary.com/category/pets"
         }
       ]
     }
@@ -113,14 +113,14 @@
         <nav class="header-nav">
           <a href="/#categories">Categories</a>
           <a href="/#tools">All tools</a>
-          <a href="/about.html">About</a>
+          <a href="/about">About</a>
         </nav>
         <div class="locale-switcher">
           <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: English">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
             <span>EN</span>
           </button>
-          <div class="locale-menu" role="menu"><span class="locale-item current" role="menuitem" aria-current="true">English</span><a class="locale-item" role="menuitem" href="/es/category/pets.html">Español</a><a class="locale-item" role="menuitem" href="/fr/category/pets.html">Français</a><a class="locale-item" role="menuitem" href="/de/category/pets.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/category/pets.html">Português</a><a class="locale-item" role="menuitem" href="/it/category/pets.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/category/pets.html">日本語</a><a class="locale-item" role="menuitem" href="/ro/category/pets.html">Română</a><a class="locale-item" role="menuitem" href="/el/category/pets.html">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/category/pets.html">中文</a><a class="locale-item" role="menuitem" href="/ar/category/pets.html">العربية</a><a class="locale-item" role="menuitem" href="/th/category/pets.html">ไทย</a></div>
+          <div class="locale-menu" role="menu"><span class="locale-item current" role="menuitem" aria-current="true">English</span><a class="locale-item" role="menuitem" href="/es/category/pets">Español</a><a class="locale-item" role="menuitem" href="/fr/category/pets">Français</a><a class="locale-item" role="menuitem" href="/de/category/pets">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/category/pets">Português</a><a class="locale-item" role="menuitem" href="/it/category/pets">Italiano</a><a class="locale-item" role="menuitem" href="/ja/category/pets">日本語</a><a class="locale-item" role="menuitem" href="/ro/category/pets">Română</a><a class="locale-item" role="menuitem" href="/el/category/pets">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/category/pets">中文</a><a class="locale-item" role="menuitem" href="/ar/category/pets">العربية</a><a class="locale-item" role="menuitem" href="/th/category/pets">ไทย</a></div>
         </div>
         <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
       </div>
@@ -151,7 +151,7 @@
   <footer class="site-footer">
     <div class="wrap">
       <div class="footer-base">
-        <p style="margin:0;"><a href="/">← Back to all calculators</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · © 2026 Calquary</p>
+        <p style="margin:0;"><a href="/">← Back to all calculators</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · © 2026 Calquary</p>
       </div>
     </div>
   </footer>

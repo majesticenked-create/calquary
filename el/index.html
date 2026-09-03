@@ -76,10 +76,10 @@
       return LOC !== "en" && window.I18N_TOOLS && window.I18N_TOOLS[calcId] && window.I18N_TOOLS[calcId][LOC];
     }
     function toolHref(calcId) {
-      return isTranslated(calcId) ? `/${LPATH}tool/${calcId}.html` : `https://calquary.com/tool/${calcId}.html`;
+      return isTranslated(calcId) ? `/${LPATH}tool/${calcId}` : `https://calquary.com/tool/${calcId}`;
     }
     function catHref(catId) {
-      return `/${LPATH}category/${catId}.html`;
+      return `/${LPATH}category/${catId}`;
     }
 
     document.addEventListener("DOMContentLoaded", () => {
@@ -359,7 +359,7 @@
         <nav class="header-nav">
           <a href="#categories">Κατηγορίες</a>
           <a href="#tools">Όλα τα εργαλεία</a>
-          <a href="/el/about.html">Σχετικά</a>
+          <a href="/el/about">Σχετικά</a>
         </nav>
         <div class="locale-switcher">
           <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Ελληνικά">
@@ -402,7 +402,7 @@
           <div class="kicker">Εξερεύνηση</div>
           <h2>Κάθε κατηγορία, το δικό της ράφι</h2>
         </div>
-        <a href="/all-calculators.html">Δείτε όλα →</a>
+        <a href="/all-calculators">Δείτε όλα →</a>
       </div>
       <div class="catalog-grid" id="catalog-grid"></div>
     </div>
@@ -483,9 +483,9 @@
         <div>
           <h4>Δημοφιλή</h4>
           <ul>
-            <li><a href="/el/tool/percentage-calculator.html">Αριθμομηχανή Ποσοστών</a></li>
-            <li><a href="/el/tool/loan-calculator.html">Αριθμομηχανή Δόσης Δανείου</a></li>
-            <li><a href="/el/tool/bmi-calculator.html">Αριθμομηχανή ΔΜΣ</a></li>
+            <li><a href="/el/tool/percentage-calculator">Αριθμομηχανή Ποσοστών</a></li>
+            <li><a href="/el/tool/loan-calculator">Αριθμομηχανή Δόσης Δανείου</a></li>
+            <li><a href="/el/tool/bmi-calculator">Αριθμομηχανή ΔΜΣ</a></li>
           </ul>
         </div>
         <div>
@@ -493,11 +493,11 @@
           <ul>
             <li><a href="#categories">Όλες οι κατηγορίες</a></li>
             <li><a href="#tools">Όλα τα εργαλεία</a></li>
-            <li><a href="/all-calculators.html">Όλες οι αριθμομηχανές</a></li>
-            <li><a href="/el/about.html">Σχετικά</a></li>
-            <li><a href="/el/contact.html">Επικοινωνία</a></li>
-            <li><a href="/el/privacy.html">Απόρρητο</a></li>
-            <li><a href="/el/terms.html">Όροι</a></li>
+            <li><a href="/all-calculators">Όλες οι αριθμομηχανές</a></li>
+            <li><a href="/el/about">Σχετικά</a></li>
+            <li><a href="/el/contact">Επικοινωνία</a></li>
+            <li><a href="/el/privacy">Απόρρητο</a></li>
+            <li><a href="/el/terms">Όροι</a></li>
           </ul>
         </div>
       </div>

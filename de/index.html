@@ -76,10 +76,10 @@
       return LOC !== "en" && window.I18N_TOOLS && window.I18N_TOOLS[calcId] && window.I18N_TOOLS[calcId][LOC];
     }
     function toolHref(calcId) {
-      return isTranslated(calcId) ? `/${LPATH}tool/${calcId}.html` : `https://calquary.com/tool/${calcId}.html`;
+      return isTranslated(calcId) ? `/${LPATH}tool/${calcId}` : `https://calquary.com/tool/${calcId}`;
     }
     function catHref(catId) {
-      return `/${LPATH}category/${catId}.html`;
+      return `/${LPATH}category/${catId}`;
     }
 
     document.addEventListener("DOMContentLoaded", () => {
@@ -359,7 +359,7 @@
         <nav class="header-nav">
           <a href="#categories">Kategorien</a>
           <a href="#tools">Alle Tools</a>
-          <a href="/de/about.html">Über uns</a>
+          <a href="/de/about">Über uns</a>
         </nav>
         <div class="locale-switcher">
           <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Deutsch">
@@ -402,7 +402,7 @@
           <div class="kicker">Durchsuchen</div>
           <h2>Jede Kategorie, ihr eigenes Regal</h2>
         </div>
-        <a href="/all-calculators.html">Alle ansehen →</a>
+        <a href="/all-calculators">Alle ansehen →</a>
       </div>
       <div class="catalog-grid" id="catalog-grid"></div>
     </div>
@@ -483,9 +483,9 @@
         <div>
           <h4>Beliebt</h4>
           <ul>
-            <li><a href="/de/tool/percentage-calculator.html">Prozentrechner</a></li>
-            <li><a href="/de/tool/loan-calculator.html">Kreditratenrechner</a></li>
-            <li><a href="/de/tool/bmi-calculator.html">BMI-Rechner</a></li>
+            <li><a href="/de/tool/percentage-calculator">Prozentrechner</a></li>
+            <li><a href="/de/tool/loan-calculator">Kreditratenrechner</a></li>
+            <li><a href="/de/tool/bmi-calculator">BMI-Rechner</a></li>
           </ul>
         </div>
         <div>
@@ -493,11 +493,11 @@
           <ul>
             <li><a href="#categories">Alle Kategorien</a></li>
             <li><a href="#tools">Alle Tools</a></li>
-            <li><a href="/all-calculators.html">Alle Rechner</a></li>
-            <li><a href="/de/about.html">Über uns</a></li>
-            <li><a href="/de/contact.html">Kontakt</a></li>
-            <li><a href="/de/privacy.html">Datenschutz</a></li>
-            <li><a href="/de/terms.html">Nutzungsbedingungen</a></li>
+            <li><a href="/all-calculators">Alle Rechner</a></li>
+            <li><a href="/de/about">Über uns</a></li>
+            <li><a href="/de/contact">Kontakt</a></li>
+            <li><a href="/de/privacy">Datenschutz</a></li>
+            <li><a href="/de/terms">Nutzungsbedingungen</a></li>
           </ul>
         </div>
       </div>

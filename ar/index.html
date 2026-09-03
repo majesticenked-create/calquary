@@ -76,10 +76,10 @@
       return LOC !== "en" && window.I18N_TOOLS && window.I18N_TOOLS[calcId] && window.I18N_TOOLS[calcId][LOC];
     }
     function toolHref(calcId) {
-      return isTranslated(calcId) ? `/${LPATH}tool/${calcId}.html` : `https://calquary.com/tool/${calcId}.html`;
+      return isTranslated(calcId) ? `/${LPATH}tool/${calcId}` : `https://calquary.com/tool/${calcId}`;
     }
     function catHref(catId) {
-      return `/${LPATH}category/${catId}.html`;
+      return `/${LPATH}category/${catId}`;
     }
 
     document.addEventListener("DOMContentLoaded", () => {
@@ -359,7 +359,7 @@
         <nav class="header-nav">
           <a href="#categories">التصنيفات</a>
           <a href="#tools">جميع الأدوات</a>
-          <a href="/ar/about.html">من نحن</a>
+          <a href="/ar/about">من نحن</a>
         </nav>
         <div class="locale-switcher">
           <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: العربية">
@@ -402,7 +402,7 @@
           <div class="kicker">تصفّح</div>
           <h2>لكل تصنيف رفّه الخاص</h2>
         </div>
-        <a href="/all-calculators.html">عرض الكل ←</a>
+        <a href="/all-calculators">عرض الكل ←</a>
       </div>
       <div class="catalog-grid" id="catalog-grid"></div>
     </div>
@@ -483,9 +483,9 @@
         <div>
           <h4>الأكثر استخدامًا</h4>
           <ul>
-            <li><a href="/ar/tool/percentage-calculator.html">حاسبة النسبة المئوية</a></li>
-            <li><a href="/ar/tool/loan-calculator.html">حاسبة قسط القرض</a></li>
-            <li><a href="/ar/tool/bmi-calculator.html">حاسبة مؤشر كتلة الجسم</a></li>
+            <li><a href="/ar/tool/percentage-calculator">حاسبة النسبة المئوية</a></li>
+            <li><a href="/ar/tool/loan-calculator">حاسبة قسط القرض</a></li>
+            <li><a href="/ar/tool/bmi-calculator">حاسبة مؤشر كتلة الجسم</a></li>
           </ul>
         </div>
         <div>
@@ -493,11 +493,11 @@
           <ul>
             <li><a href="#categories">جميع التصنيفات</a></li>
             <li><a href="#tools">جميع الأدوات</a></li>
-            <li><a href="/all-calculators.html">جميع الحاسبات</a></li>
-            <li><a href="/ar/about.html">من نحن</a></li>
-            <li><a href="/ar/contact.html">تواصل معنا</a></li>
-            <li><a href="/ar/privacy.html">سياسة الخصوصية</a></li>
-            <li><a href="/ar/terms.html">شروط الاستخدام</a></li>
+            <li><a href="/all-calculators">جميع الحاسبات</a></li>
+            <li><a href="/ar/about">من نحن</a></li>
+            <li><a href="/ar/contact">تواصل معنا</a></li>
+            <li><a href="/ar/privacy">سياسة الخصوصية</a></li>
+            <li><a href="/ar/terms">شروط الاستخدام</a></li>
           </ul>
         </div>
       </div>

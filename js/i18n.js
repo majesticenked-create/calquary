@@ -27170,17 +27170,17 @@ const I18N_STATIC = {
   // publishing a translated legal document as if it carried the same
   // authority as the reviewed English source.
   translationNotice: {
-    es: 'Esta es una traducción de la Política de Privacidad y los Términos de Servicio originales en inglés, ofrecida por comodidad. En caso de discrepancia, prevalece la <a href="/privacy.html">versión en inglés</a>. Esta traducción no ha pasado por una revisión legal independiente.',
-    fr: 'Ceci est une traduction de la Politique de Confidentialité et des Conditions d\'Utilisation originales en anglais, fournie par commodité. En cas de divergence, la <a href="/privacy.html">version anglaise</a> fait foi. Cette traduction n\'a pas fait l\'objet d\'une relecture juridique indépendante.',
-    de: 'Dies ist eine Übersetzung der ursprünglichen englischen Datenschutzerklärung und Nutzungsbedingungen, bereitgestellt aus Gründen der Übersichtlichkeit. Bei Abweichungen ist die <a href="/privacy.html">englische Fassung</a> maßgeblich. Diese Übersetzung wurde keiner separaten rechtlichen Prüfung unterzogen.',
-    pt: 'Esta é uma tradução da Política de Privacidade e dos Termos de Serviço originais em inglês, oferecida por conveniência. Em caso de divergência, prevalece a <a href="/privacy.html">versão em inglês</a>. Esta tradução não passou por uma revisão jurídica independente.',
-    it: 'Questa è una traduzione dell\'Informativa sulla Privacy e dei Termini di Servizio originali in inglese, fornita per comodità. In caso di discrepanza, prevale la <a href="/privacy.html">versione inglese</a>. Questa traduzione non è stata sottoposta a una revisione legale indipendente.',
-    ja: 'これは英語版のプライバシーポリシーおよび利用規約の翻訳であり、利便性のために提供されています。内容に相違がある場合は、<a href="/privacy.html">英語版</a>が優先されます。この翻訳は独立した法的レビューを受けていません。',
-    ro: 'Aceasta este o traducere a Politicii de Confidențialitate și a Termenilor de Serviciu originale în limba engleză, oferită pentru comoditate. În caz de discrepanță, prevalează <a href="/privacy.html">versiunea în limba engleză</a>. Această traducere nu a trecut printr-o revizuire juridică independentă.',
-    el: 'Αυτή είναι μια μετάφραση της αρχικής αγγλικής Πολιτικής Απορρήτου και των Όρων Χρήσης, που παρέχεται για ευκολία. Σε περίπτωση διαφοράς, υπερισχύει η <a href="/privacy.html">αγγλική έκδοση</a>. Αυτή η μετάφραση δεν έχει περάσει από ανεξάρτητο νομικό έλεγχο.',
-    zh: '本文是英文原版隐私政策和使用条款的翻译，仅为方便阅读而提供。如内容有出入，以<a href="/privacy.html">英文版本</a>为准。本翻译未经过独立的法律审查。',
-    ar: 'هذه ترجمة لسياسة الخصوصية وشروط الاستخدام الأصلية باللغة الإنجليزية، مقدَّمة للتسهيل. في حال وجود أي تعارض، تسود <a href="/privacy.html">النسخة الإنجليزية</a>. لم تخضع هذه الترجمة لمراجعة قانونية مستقلة.',
-    th: 'นี่คือคำแปลของนโยบายความเป็นส่วนตัวและข้อกำหนดการใช้งานต้นฉบับภาษาอังกฤษ ซึ่งจัดทำขึ้นเพื่อความสะดวก หากมีความขัดแย้งใดๆ ให้ยึดตาม<a href="/privacy.html">ฉบับภาษาอังกฤษ</a>เป็นหลัก คำแปลนี้ยังไม่ได้ผ่านการตรวจสอบทางกฎหมายโดยอิสระ',
+    es: 'Esta es una traducción de la Política de Privacidad y los Términos de Servicio originales en inglés, ofrecida por comodidad. En caso de discrepancia, prevalece la <a href="/privacy">versión en inglés</a>. Esta traducción no ha pasado por una revisión legal independiente.',
+    fr: 'Ceci est une traduction de la Politique de Confidentialité et des Conditions d\'Utilisation originales en anglais, fournie par commodité. En cas de divergence, la <a href="/privacy">version anglaise</a> fait foi. Cette traduction n\'a pas fait l\'objet d\'une relecture juridique indépendante.',
+    de: 'Dies ist eine Übersetzung der ursprünglichen englischen Datenschutzerklärung und Nutzungsbedingungen, bereitgestellt aus Gründen der Übersichtlichkeit. Bei Abweichungen ist die <a href="/privacy">englische Fassung</a> maßgeblich. Diese Übersetzung wurde keiner separaten rechtlichen Prüfung unterzogen.',
+    pt: 'Esta é uma tradução da Política de Privacidade e dos Termos de Serviço originais em inglês, oferecida por conveniência. Em caso de divergência, prevalece a <a href="/privacy">versão em inglês</a>. Esta tradução não passou por uma revisão jurídica independente.',
+    it: 'Questa è una traduzione dell\'Informativa sulla Privacy e dei Termini di Servizio originali in inglese, fornita per comodità. In caso di discrepanza, prevale la <a href="/privacy">versione inglese</a>. Questa traduzione non è stata sottoposta a una revisione legale indipendente.',
+    ja: 'これは英語版のプライバシーポリシーおよび利用規約の翻訳であり、利便性のために提供されています。内容に相違がある場合は、<a href="/privacy">英語版</a>が優先されます。この翻訳は独立した法的レビューを受けていません。',
+    ro: 'Aceasta este o traducere a Politicii de Confidențialitate și a Termenilor de Serviciu originale în limba engleză, oferită pentru comoditate. În caz de discrepanță, prevalează <a href="/privacy">versiunea în limba engleză</a>. Această traducere nu a trecut printr-o revizuire juridică independentă.',
+    el: 'Αυτή είναι μια μετάφραση της αρχικής αγγλικής Πολιτικής Απορρήτου και των Όρων Χρήσης, που παρέχεται για ευκολία. Σε περίπτωση διαφοράς, υπερισχύει η <a href="/privacy">αγγλική έκδοση</a>. Αυτή η μετάφραση δεν έχει περάσει από ανεξάρτητο νομικό έλεγχο.',
+    zh: '本文是英文原版隐私政策和使用条款的翻译，仅为方便阅读而提供。如内容有出入，以<a href="/privacy">英文版本</a>为准。本翻译未经过独立的法律审查。',
+    ar: 'هذه ترجمة لسياسة الخصوصية وشروط الاستخدام الأصلية باللغة الإنجليزية، مقدَّمة للتسهيل. في حال وجود أي تعارض، تسود <a href="/privacy">النسخة الإنجليزية</a>. لم تخضع هذه الترجمة لمراجعة قانونية مستقلة.',
+    th: 'นี่คือคำแปลของนโยบายความเป็นส่วนตัวและข้อกำหนดการใช้งานต้นฉบับภาษาอังกฤษ ซึ่งจัดทำขึ้นเพื่อความสะดวก หากมีความขัดแย้งใดๆ ให้ยึดตาม<a href="/privacy">ฉบับภาษาอังกฤษ</a>เป็นหลัก คำแปลนี้ยังไม่ได้ผ่านการตรวจสอบทางกฎหมายโดยอิสระ',
   },
 
   privacy: {
@@ -27201,7 +27201,7 @@ const I18N_STATIC = {
         { h2: "Third-party services", p: ["We may use third-party services for analytics, hosting, and advertising (such as Google AdSense and Google Analytics). These providers may collect information sent by your browser as part of a web page request, such as cookies or your IP address, and are governed by their own privacy policies, not this one."] },
         { h2: "Children's privacy", p: ["Calquary is not directed at children under 13, and we do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us so we can address it."] },
         { h2: "Changes to this policy", p: ['We may update this Privacy Policy from time to time to reflect changes in our practices or for legal, operational, or regulatory reasons. The "Effective date" at the top of this page will reflect the most recent revision. Continued use of the Site after changes take effect constitutes acceptance of the revised policy.'] },
-        { h2: "Contact us", p: ['If you have questions about this Privacy Policy, please <a href="/contact.html">contact us</a>.'] },
+        { h2: "Contact us", p: ['If you have questions about this Privacy Policy, please <a href="/contact">contact us</a>.'] },
       ],
     },
     es: {
@@ -27221,7 +27221,7 @@ const I18N_STATIC = {
         { h2: "Servicios de terceros", p: ["Podemos utilizar servicios de terceros para análisis, alojamiento y publicidad (como Google AdSense y Google Analytics). Estos proveedores pueden recopilar información enviada por tu navegador como parte de una solicitud de página web, como cookies o tu dirección IP, y se rigen por sus propias políticas de privacidad, no por esta."] },
         { h2: "Privacidad de menores", p: ["Calquary no está dirigido a menores de 13 años, y no recopilamos conscientemente información personal de menores de 13 años. Si crees que un menor nos ha proporcionado información personal, por favor contáctanos para que podamos resolverlo."] },
         { h2: "Cambios a esta política", p: ['Podemos actualizar esta Política de Privacidad periódicamente para reflejar cambios en nuestras prácticas o por razones legales, operativas o regulatorias. La "Fecha de vigencia" en la parte superior de esta página reflejará la revisión más reciente. El uso continuado del Sitio después de que los cambios entren en vigor constituye la aceptación de la política revisada.'] },
-        { h2: "Contáctanos", p: ['Si tienes preguntas sobre esta Política de Privacidad, por favor <a href="/contact.html">contáctanos</a>.'] },
+        { h2: "Contáctanos", p: ['Si tienes preguntas sobre esta Política de Privacidad, por favor <a href="/contact">contáctanos</a>.'] },
       ],
     },
     fr: {
@@ -27241,7 +27241,7 @@ const I18N_STATIC = {
         { h2: "Services tiers", p: ["Nous pouvons utiliser des services tiers pour l'analyse, l'hébergement et la publicité (comme Google AdSense et Google Analytics). Ces prestataires peuvent collecter des informations envoyées par votre navigateur dans le cadre d'une requête de page web, telles que des cookies ou votre adresse IP, et sont régis par leurs propres politiques de confidentialité, et non par la présente."] },
         { h2: "Confidentialité des mineurs", p: ["Calquary ne s'adresse pas aux enfants de moins de 13 ans, et nous ne collectons pas sciemment d'informations personnelles auprès d'enfants de moins de 13 ans. Si vous pensez qu'un enfant nous a fourni des informations personnelles, veuillez nous contacter afin que nous puissions y remédier."] },
         { h2: "Modifications de cette politique", p: ['Nous pouvons mettre à jour cette Politique de Confidentialité de temps à autre pour refléter des changements dans nos pratiques ou pour des raisons légales, opérationnelles ou réglementaires. La « Date d\'entrée en vigueur » en haut de cette page reflétera la révision la plus récente. La poursuite de l\'utilisation du Site après l\'entrée en vigueur des modifications constitue une acceptation de la politique révisée.'] },
-        { h2: "Nous contacter", p: ['Si vous avez des questions concernant cette Politique de Confidentialité, veuillez <a href="/contact.html">nous contacter</a>.'] },
+        { h2: "Nous contacter", p: ['Si vous avez des questions concernant cette Politique de Confidentialité, veuillez <a href="/contact">nous contacter</a>.'] },
       ],
     },
     de: {
@@ -27261,7 +27261,7 @@ const I18N_STATIC = {
         { h2: "Dienste Dritter", p: ["Wir können Dienste Dritter für Analyse, Hosting und Werbung nutzen (wie Google AdSense und Google Analytics). Diese Anbieter können Informationen erheben, die Ihr Browser im Rahmen einer Webseitenanfrage sendet, wie Cookies oder Ihre IP-Adresse, und unterliegen ihren eigenen Datenschutzerklärungen, nicht dieser."] },
         { h2: "Datenschutz von Kindern", p: ["Calquary richtet sich nicht an Kinder unter 13 Jahren, und wir erheben wissentlich keine personenbezogenen Daten von Kindern unter 13 Jahren. Wenn Sie glauben, dass ein Kind uns persönliche Informationen mitgeteilt hat, kontaktieren Sie uns bitte, damit wir dies klären können."] },
         { h2: "Änderungen dieser Richtlinie", p: ['Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren, um Änderungen unserer Praktiken oder aus rechtlichen, betrieblichen oder regulatorischen Gründen widerzuspiegeln. Das „Datum des Inkrafttretens" oben auf dieser Seite spiegelt die jüngste Überarbeitung wider. Die fortgesetzte Nutzung der Website nach Inkrafttreten der Änderungen stellt die Annahme der überarbeiteten Richtlinie dar.'] },
-        { h2: "Kontakt", p: ['Wenn Sie Fragen zu dieser Datenschutzerklärung haben, <a href="/contact.html">kontaktieren Sie uns bitte</a>.'] },
+        { h2: "Kontakt", p: ['Wenn Sie Fragen zu dieser Datenschutzerklärung haben, <a href="/contact">kontaktieren Sie uns bitte</a>.'] },
       ],
     },
     pt: {
@@ -27281,7 +27281,7 @@ const I18N_STATIC = {
         { h2: "Serviços de terceiros", p: ["Podemos usar serviços de terceiros para análise, hospedagem e publicidade (como Google AdSense e Google Analytics). Esses provedores podem coletar informações enviadas pelo seu navegador como parte de uma solicitação de página da web, como cookies ou seu endereço IP, e são regidos por suas próprias políticas de privacidade, não por esta."] },
         { h2: "Privacidade infantil", p: ["A Calquary não é direcionada a crianças menores de 13 anos, e não coletamos intencionalmente informações pessoais de crianças menores de 13 anos. Se você acredita que uma criança nos forneceu informações pessoais, entre em contato conosco para que possamos resolver a situação."] },
         { h2: "Alterações a esta política", p: ['Podemos atualizar esta Política de Privacidade periodicamente para refletir mudanças em nossas práticas ou por motivos legais, operacionais ou regulatórios. A "Data de vigência" no topo desta página refletirá a revisão mais recente. O uso continuado do Site após a entrada em vigor das alterações constitui aceitação da política revisada.'] },
-        { h2: "Fale conosco", p: ['Se você tiver dúvidas sobre esta Política de Privacidade, por favor <a href="/contact.html">entre em contato conosco</a>.'] },
+        { h2: "Fale conosco", p: ['Se você tiver dúvidas sobre esta Política de Privacidade, por favor <a href="/contact">entre em contato conosco</a>.'] },
       ],
     },
     it: {
@@ -27301,7 +27301,7 @@ const I18N_STATIC = {
         { h2: "Servizi di terze parti", p: ["Potremmo utilizzare servizi di terze parti per analisi, hosting e pubblicità (come Google AdSense e Google Analytics). Questi fornitori potrebbero raccogliere informazioni inviate dal tuo browser come parte di una richiesta di pagina web, come cookie o il tuo indirizzo IP, e sono regolati dalle proprie informative sulla privacy, non da questa."] },
         { h2: "Privacy dei minori", p: ["Calquary non è rivolto a bambini di età inferiore ai 13 anni, e non raccogliamo consapevolmente informazioni personali da bambini di età inferiore ai 13 anni. Se ritieni che un bambino ci abbia fornito informazioni personali, contattaci in modo da poter risolvere la situazione."] },
         { h2: "Modifiche a questa informativa", p: ['Potremmo aggiornare questa Informativa sulla Privacy di tanto in tanto per riflettere cambiamenti nelle nostre pratiche o per motivi legali, operativi o normativi. La "Data di entrata in vigore" in cima a questa pagina rifletterà la revisione più recente. L\'uso continuato del Sito dopo l\'entrata in vigore delle modifiche costituisce accettazione dell\'informativa rivista.'] },
-        { h2: "Contattaci", p: ['Se hai domande su questa Informativa sulla Privacy, <a href="/contact.html">contattaci</a>.'] },
+        { h2: "Contattaci", p: ['Se hai domande su questa Informativa sulla Privacy, <a href="/contact">contattaci</a>.'] },
       ],
     },
     ja: {
@@ -27321,7 +27321,7 @@ const I18N_STATIC = {
         { h2: "第三者サービス", p: ["当社は、分析、ホスティング、広告のために第三者サービス（Google AdSenseやGoogle Analyticsなど）を利用する場合があります。これらのプロバイダーは、Cookieやお客様のIPアドレスなど、ウェブページのリクエストの一部としてブラウザから送信される情報を収集する場合があり、本ポリシーではなく、各社独自のプライバシーポリシーに準拠します。"] },
         { h2: "児童のプライバシー", p: ["Calquaryは13歳未満のお子様を対象としておらず、13歳未満のお子様の個人情報を意図的に収集することはありません。お子様が当社に個人情報を提供したと思われる場合は、対応いたしますので当社までご連絡ください。"] },
         { h2: "本ポリシーの変更", p: ["当社は、実務内容の変更、または法的・運用上・規制上の理由により、本プライバシーポリシーを随時更新する場合があります。本ページ上部の「発効日」は最新の改定日を反映しています。変更の発効後も本サイトをご利用いただいた場合、改定後のポリシーに同意したものとみなされます。"] },
-        { h2: "お問い合わせ", p: ['本プライバシーポリシーに関するご質問は、<a href="/contact.html">お問い合わせ</a>ください。'] },
+        { h2: "お問い合わせ", p: ['本プライバシーポリシーに関するご質問は、<a href="/contact">お問い合わせ</a>ください。'] },
       ],
     },
     ro: {
@@ -27341,7 +27341,7 @@ const I18N_STATIC = {
         { h2: "Servicii terțe", p: ["Putem folosi servicii terțe pentru analiză, găzduire și publicitate (precum Google AdSense și Google Analytics). Acești furnizori pot colecta informații trimise de browserul tău ca parte a unei solicitări de pagină web, precum cookie-uri sau adresa ta IP, și sunt guvernați de propriile politici de confidențialitate, nu de aceasta."] },
         { h2: "Confidențialitatea copiilor", p: ["Calquary nu se adresează copiilor sub 13 ani și nu colectăm cu bună știință informații personale de la copii sub 13 ani. Dacă crezi că un copil ne-a furnizat informații personale, te rugăm să ne contactezi pentru a putea remedia situația."] },
         { h2: "Modificări ale acestei politici", p: ['Putem actualiza această Politică de Confidențialitate din când în când pentru a reflecta schimbări în practicile noastre sau din motive legale, operaționale sau de reglementare. "Data intrării în vigoare" din partea de sus a acestei pagini va reflecta cea mai recentă revizuire. Continuarea utilizării Site-ului după intrarea în vigoare a modificărilor constituie acceptarea politicii revizuite.'] },
-        { h2: "Contactează-ne", p: ['Dacă ai întrebări despre această Politică de Confidențialitate, te rugăm să <a href="/contact.html">ne contactezi</a>.'] },
+        { h2: "Contactează-ne", p: ['Dacă ai întrebări despre această Politică de Confidențialitate, te rugăm să <a href="/contact">ne contactezi</a>.'] },
       ],
     },
     el: {
@@ -27361,7 +27361,7 @@ const I18N_STATIC = {
         { h2: "Υπηρεσίες τρίτων", p: ["Ενδέχεται να χρησιμοποιούμε υπηρεσίες τρίτων για ανάλυση, φιλοξενία και διαφήμιση (όπως το Google AdSense και το Google Analytics). Αυτοί οι πάροχοι ενδέχεται να συλλέγουν πληροφορίες που αποστέλλονται από το πρόγραμμα περιήγησής σας ως μέρος ενός αιτήματος ιστοσελίδας, όπως cookies ή τη διεύθυνση IP σας, και διέπονται από τις δικές τους πολιτικές απορρήτου, όχι από αυτήν."] },
         { h2: "Απόρρητο παιδιών", p: ["Το Calquary δεν απευθύνεται σε παιδιά κάτω των 13 ετών, και δεν συλλέγουμε εν γνώσει μας προσωπικές πληροφορίες από παιδιά κάτω των 13 ετών. Αν πιστεύετε ότι ένα παιδί μας έχει παράσχει προσωπικές πληροφορίες, επικοινωνήστε μαζί μας ώστε να μπορέσουμε να το αντιμετωπίσουμε."] },
         { h2: "Αλλαγές σε αυτή την πολιτική", p: ['Ενδέχεται να ενημερώνουμε αυτή την Πολιτική Απορρήτου κατά καιρούς για να αντικατοπτρίζει αλλαγές στις πρακτικές μας ή για νομικούς, λειτουργικούς ή κανονιστικούς λόγους. Η "Ημερομηνία έναρξης ισχύος" στην κορυφή αυτής της σελίδας θα αντικατοπτρίζει την πιο πρόσφατη αναθεώρηση. Η συνεχής χρήση του Ιστότοπου μετά την έναρξη ισχύος των αλλαγών συνιστά αποδοχή της αναθεωρημένης πολιτικής.'] },
-        { h2: "Επικοινωνήστε μαζί μας", p: ['Αν έχετε ερωτήσεις σχετικά με αυτή την Πολιτική Απορρήτου, παρακαλούμε <a href="/contact.html">επικοινωνήστε μαζί μας</a>.'] },
+        { h2: "Επικοινωνήστε μαζί μας", p: ['Αν έχετε ερωτήσεις σχετικά με αυτή την Πολιτική Απορρήτου, παρακαλούμε <a href="/contact">επικοινωνήστε μαζί μας</a>.'] },
       ],
     },
     zh: {
@@ -27381,7 +27381,7 @@ const I18N_STATIC = {
         { h2: "第三方服务", p: ["我们可能使用第三方服务进行分析、托管和广告投放（例如 Google AdSense 和 Google Analytics）。这些服务提供商可能会收集你的浏览器在网页请求过程中发送的信息，例如 cookie 或你的 IP 地址，并受其各自隐私政策的约束，而非本政策。"] },
         { h2: "儿童隐私", p: ["Calquary 并非面向13岁以下儿童，我们也不会在明知情况下收集13岁以下儿童的个人信息。如果你认为某位儿童向我们提供了个人信息，请联系我们，以便我们妥善处理。"] },
         { h2: "本政策的变更", p: ["我们可能会不时更新本隐私政策，以反映我们做法的变化，或出于法律、运营或监管方面的原因。本页顶部的「生效日期」将反映最近一次修订的时间。在变更生效后继续使用本网站，即表示接受修订后的政策。"] },
-        { h2: "联系我们", p: ['如果你对本隐私政策有任何疑问，请<a href="/contact.html">联系我们</a>。'] },
+        { h2: "联系我们", p: ['如果你对本隐私政策有任何疑问，请<a href="/contact">联系我们</a>。'] },
       ],
     },
     ar: {
@@ -27401,7 +27401,7 @@ const I18N_STATIC = {
         { h2: "خدمات الطرف الثالث", p: ["قد نستخدم خدمات طرف ثالث للتحليل والاستضافة والإعلان (مثل Google AdSense وGoogle Analytics). قد يجمع هؤلاء المزوّدون معلومات يرسلها متصفحك كجزء من طلب صفحة ويب، مثل ملفات تعريف الارتباط أو عنوان IP الخاص بك، ويخضعون لسياسات الخصوصية الخاصة بهم، وليس لهذه السياسة."] },
         { h2: "خصوصية الأطفال", p: ["لا يستهدف Calquary الأطفال دون سن 13 عامًا، ولا نجمع عن قصد معلومات شخصية من أطفال دون سن 13 عامًا. إذا كنت تعتقد أن طفلًا قد زوّدنا بمعلومات شخصية، يُرجى التواصل معنا حتى نتمكن من معالجة الأمر."] },
         { h2: "التغييرات على هذه السياسة", p: ['قد نحدّث سياسة الخصوصية هذه من وقت لآخر لتعكس تغييرات في ممارساتنا أو لأسباب قانونية أو تشغيلية أو تنظيمية. سيعكس "تاريخ السريان" في أعلى هذه الصفحة أحدث مراجعة. يشكّل استمرار استخدام الموقع بعد سريان التغييرات قبولًا للسياسة المُعدَّلة.'] },
-        { h2: "تواصل معنا", p: ['إذا كانت لديك أسئلة حول سياسة الخصوصية هذه، يُرجى <a href="/contact.html">التواصل معنا</a>.'] },
+        { h2: "تواصل معنا", p: ['إذا كانت لديك أسئلة حول سياسة الخصوصية هذه، يُرجى <a href="/contact">التواصل معنا</a>.'] },
       ],
     },
     th: {
@@ -27421,7 +27421,7 @@ const I18N_STATIC = {
         { h2: "บริการของบุคคลที่สาม", p: ["เราอาจใช้บริการของบุคคลที่สามสำหรับการวิเคราะห์ การโฮสต์ และการโฆษณา (เช่น Google AdSense และ Google Analytics) ผู้ให้บริการเหล่านี้อาจเก็บรวบรวมข้อมูลที่เบราว์เซอร์ของคุณส่งเป็นส่วนหนึ่งของคำขอหน้าเว็บ เช่น คุกกี้หรือที่อยู่ IP ของคุณ และอยู่ภายใต้นโยบายความเป็นส่วนตัวของตนเอง ไม่ใช่นโยบายนี้"] },
         { h2: "ความเป็นส่วนตัวของเด็ก", p: ["Calquary ไม่ได้มุ่งเป้าไปที่เด็กอายุต่ำกว่า 13 ปี และเราไม่เก็บรวบรวมข้อมูลส่วนบุคคลจากเด็กอายุต่ำกว่า 13 ปีโดยเจตนา หากคุณเชื่อว่าเด็กได้ให้ข้อมูลส่วนบุคคลแก่เรา โปรดติดต่อเราเพื่อให้เราสามารถจัดการเรื่องนี้ได้"] },
         { h2: "การเปลี่ยนแปลงนโยบายนี้", p: ['เราอาจอัปเดตนโยบายความเป็นส่วนตัวนี้เป็นครั้งคราวเพื่อสะท้อนการเปลี่ยนแปลงในแนวทางปฏิบัติของเรา หรือด้วยเหตุผลทางกฎหมาย การดำเนินงาน หรือกฎระเบียบ "วันที่มีผลบังคับใช้" ที่ด้านบนของหน้านี้จะสะท้อนการแก้ไขล่าสุด การใช้เว็บไซต์อย่างต่อเนื่องหลังจากการเปลี่ยนแปลงมีผลบังคับใช้ถือเป็นการยอมรับนโยบายที่แก้ไขแล้ว'] },
-        { h2: "ติดต่อเรา", p: ['หากคุณมีคำถามเกี่ยวกับนโยบายความเป็นส่วนตัวนี้ โปรด<a href="/contact.html">ติดต่อเรา</a>'] },
+        { h2: "ติดต่อเรา", p: ['หากคุณมีคำถามเกี่ยวกับนโยบายความเป็นส่วนตัวนี้ โปรด<a href="/contact">ติดต่อเรา</a>'] },
       ],
     },
   },
@@ -27441,7 +27441,7 @@ const I18N_STATIC = {
         { h2: "Acceptable use", p: ["You agree not to misuse the Site, including but not limited to: attempting to disrupt or overload the Site's infrastructure, scraping content at a rate that degrades service for other users, or using the Site for any unlawful purpose. We reserve the right to restrict access for any use that violates these terms."] },
         { h2: "Third-party links and advertising", p: ["The Site may contain links to third-party websites or display third-party advertising. We are not responsible for the content, accuracy, or practices of any third-party site, and inclusion of a link or advertisement does not imply endorsement."] },
         { h2: "Changes to these terms", p: ['We may update these Terms of Service from time to time. The "Effective date" at the top of this page reflects the most recent revision. Continued use of the Site after changes take effect constitutes acceptance of the revised terms.'] },
-        { h2: "Contact us", p: ['If you have questions about these Terms of Service, please <a href="/contact.html">contact us</a>.'] },
+        { h2: "Contact us", p: ['If you have questions about these Terms of Service, please <a href="/contact">contact us</a>.'] },
       ],
     },
     es: {
@@ -27458,7 +27458,7 @@ const I18N_STATIC = {
         { h2: "Uso aceptable", p: ["Aceptas no hacer un uso indebido del Sitio, incluyendo, entre otros: intentar interrumpir o sobrecargar la infraestructura del Sitio, extraer contenido a un ritmo que degrade el servicio para otros usuarios, o utilizar el Sitio para cualquier propósito ilegal. Nos reservamos el derecho de restringir el acceso por cualquier uso que viole estos términos."] },
         { h2: "Enlaces de terceros y publicidad", p: ["El Sitio puede contener enlaces a sitios web de terceros o mostrar publicidad de terceros. No somos responsables del contenido, la precisión ni las prácticas de ningún sitio de terceros, y la inclusión de un enlace o anuncio no implica respaldo."] },
         { h2: "Cambios a estos términos", p: ['Podemos actualizar estos Términos de Servicio periódicamente. La "Fecha de vigencia" en la parte superior de esta página refleja la revisión más reciente. El uso continuado del Sitio después de que los cambios entren en vigor constituye la aceptación de los términos revisados.'] },
-        { h2: "Contáctanos", p: ['Si tienes preguntas sobre estos Términos de Servicio, por favor <a href="/contact.html">contáctanos</a>.'] },
+        { h2: "Contáctanos", p: ['Si tienes preguntas sobre estos Términos de Servicio, por favor <a href="/contact">contáctanos</a>.'] },
       ],
     },
     fr: {
@@ -27475,7 +27475,7 @@ const I18N_STATIC = {
         { h2: "Utilisation acceptable", p: ["Vous acceptez de ne pas faire un usage abusif du Site, y compris, sans s'y limiter : tenter de perturber ou de surcharger l'infrastructure du Site, extraire du contenu à un rythme qui dégrade le service pour les autres utilisateurs, ou utiliser le Site à des fins illégales. Nous nous réservons le droit de restreindre l'accès pour tout usage contraire à ces conditions."] },
         { h2: "Liens tiers et publicité", p: ["Le Site peut contenir des liens vers des sites web tiers ou afficher de la publicité tierce. Nous ne sommes pas responsables du contenu, de l'exactitude ni des pratiques d'un site tiers, et l'inclusion d'un lien ou d'une publicité n'implique aucun soutien de notre part."] },
         { h2: "Modifications de ces conditions", p: ['Nous pouvons mettre à jour ces Conditions d\'Utilisation de temps à autre. La « Date d\'entrée en vigueur » en haut de cette page reflète la révision la plus récente. La poursuite de l\'utilisation du Site après l\'entrée en vigueur des modifications constitue une acceptation des conditions révisées.'] },
-        { h2: "Nous contacter", p: ['Si vous avez des questions concernant ces Conditions d\'Utilisation, veuillez <a href="/contact.html">nous contacter</a>.'] },
+        { h2: "Nous contacter", p: ['Si vous avez des questions concernant ces Conditions d\'Utilisation, veuillez <a href="/contact">nous contacter</a>.'] },
       ],
     },
     de: {
@@ -27492,7 +27492,7 @@ const I18N_STATIC = {
         { h2: "Zulässige Nutzung", p: ["Sie verpflichten sich, die Website nicht missbräuchlich zu nutzen, einschließlich, aber nicht beschränkt auf: Versuche, die Infrastruktur der Website zu stören oder zu überlasten, Inhalte in einem Umfang zu scrapen, der den Dienst für andere Nutzer beeinträchtigt, oder die Website für rechtswidrige Zwecke zu nutzen. Wir behalten uns das Recht vor, den Zugang bei jeder Nutzung, die gegen diese Bedingungen verstößt, einzuschränken."] },
         { h2: "Links Dritter und Werbung", p: ["Die Website kann Links zu Websites Dritter enthalten oder Werbung Dritter anzeigen. Wir sind nicht verantwortlich für den Inhalt, die Genauigkeit oder die Praktiken einer Website Dritter, und die Aufnahme eines Links oder einer Anzeige impliziert keine Empfehlung unsererseits."] },
         { h2: "Änderungen dieser Bedingungen", p: ['Wir können diese Nutzungsbedingungen von Zeit zu Zeit aktualisieren. Das „Datum des Inkrafttretens" oben auf dieser Seite spiegelt die jüngste Überarbeitung wider. Die fortgesetzte Nutzung der Website nach Inkrafttreten der Änderungen stellt die Annahme der überarbeiteten Bedingungen dar.'] },
-        { h2: "Kontakt", p: ['Wenn Sie Fragen zu diesen Nutzungsbedingungen haben, <a href="/contact.html">kontaktieren Sie uns bitte</a>.'] },
+        { h2: "Kontakt", p: ['Wenn Sie Fragen zu diesen Nutzungsbedingungen haben, <a href="/contact">kontaktieren Sie uns bitte</a>.'] },
       ],
     },
     pt: {
@@ -27509,7 +27509,7 @@ const I18N_STATIC = {
         { h2: "Uso aceitável", p: ["Você concorda em não fazer uso indevido do Site, incluindo, mas não se limitando a: tentar interromper ou sobrecarregar a infraestrutura do Site, extrair conteúdo em um ritmo que degrade o serviço para outros usuários, ou usar o Site para qualquer propósito ilegal. Reservamo-nos o direito de restringir o acesso para qualquer uso que viole estes termos."] },
         { h2: "Links de terceiros e publicidade", p: ["O Site pode conter links para sites de terceiros ou exibir publicidade de terceiros. Não somos responsáveis pelo conteúdo, precisão ou práticas de qualquer site de terceiros, e a inclusão de um link ou anúncio não implica endosso."] },
         { h2: "Alterações a estes termos", p: ['Podemos atualizar estes Termos de Serviço periodicamente. A "Data de vigência" no topo desta página reflete a revisão mais recente. O uso continuado do Site após a entrada em vigor das alterações constitui aceitação dos termos revisados.'] },
-        { h2: "Fale conosco", p: ['Se você tiver dúvidas sobre estes Termos de Serviço, por favor <a href="/contact.html">entre em contato conosco</a>.'] },
+        { h2: "Fale conosco", p: ['Se você tiver dúvidas sobre estes Termos de Serviço, por favor <a href="/contact">entre em contato conosco</a>.'] },
       ],
     },
     it: {
@@ -27526,7 +27526,7 @@ const I18N_STATIC = {
         { h2: "Uso consentito", p: ["Accetti di non fare un uso improprio del Sito, incluso, a titolo esemplificativo ma non esaustivo: tentare di interrompere o sovraccaricare l'infrastruttura del Sito, effettuare scraping di contenuti a un ritmo che degradi il servizio per altri utenti, o utilizzare il Sito per scopi illeciti. Ci riserviamo il diritto di limitare l'accesso per qualsiasi uso che violi questi termini."] },
         { h2: "Link di terze parti e pubblicità", p: ["Il Sito potrebbe contenere link a siti web di terze parti o mostrare pubblicità di terze parti. Non siamo responsabili per il contenuto, l'accuratezza o le pratiche di alcun sito di terze parti, e l'inclusione di un link o di un annuncio non implica alcuna approvazione."] },
         { h2: "Modifiche a questi termini", p: ['Potremmo aggiornare questi Termini di Servizio di tanto in tanto. La "Data di entrata in vigore" in cima a questa pagina riflette la revisione più recente. L\'uso continuato del Sito dopo l\'entrata in vigore delle modifiche costituisce accettazione dei termini rivisti.'] },
-        { h2: "Contattaci", p: ['Se hai domande su questi Termini di Servizio, <a href="/contact.html">contattaci</a>.'] },
+        { h2: "Contattaci", p: ['Se hai domande su questi Termini di Servizio, <a href="/contact">contattaci</a>.'] },
       ],
     },
     ja: {
@@ -27543,7 +27543,7 @@ const I18N_STATIC = {
         { h2: "許容される利用", p: ["お客様は、本サイトのインフラの妨害または過負荷を試みること、他のユーザーのサービスを低下させる速度でのコンテンツのスクレイピング、または違法な目的での本サイトの利用を含むがこれらに限定されない、本サイトの不正利用を行わないことに同意するものとします。当社は、これらの規約に違反する利用に対してアクセスを制限する権利を留保します。"] },
         { h2: "第三者リンクおよび広告", p: ["本サイトには、第三者ウェブサイトへのリンクが含まれている場合や、第三者の広告が表示される場合があります。当社は、いかなる第三者サイトのコンテンツ、正確性、または取り扱いについても責任を負わず、リンクや広告の掲載は推奨を意味するものではありません。"] },
         { h2: "本規約の変更", p: ["当社は、本利用規約を随時更新する場合があります。本ページ上部の「発効日」は最新の改定日を反映しています。変更の発効後も本サイトをご利用いただいた場合、改定後の規約に同意したものとみなされます。"] },
-        { h2: "お問い合わせ", p: ['本利用規約に関するご質問は、<a href="/contact.html">お問い合わせ</a>ください。'] },
+        { h2: "お問い合わせ", p: ['本利用規約に関するご質問は、<a href="/contact">お問い合わせ</a>ください。'] },
       ],
     },
     ro: {
@@ -27560,7 +27560,7 @@ const I18N_STATIC = {
         { h2: "Utilizare acceptabilă", p: ["Ești de acord să nu abuzezi de Site, incluzând dar fără a se limita la: încercarea de a perturba sau supraîncărca infrastructura Site-ului, extragerea conținutului într-un ritm care degradează serviciul pentru alți utilizatori sau utilizarea Site-ului în orice scop ilegal. Ne rezervăm dreptul de a restricționa accesul pentru orice utilizare care încalcă acești termeni."] },
         { h2: "Link-uri terțe și publicitate", p: ["Site-ul poate conține link-uri către site-uri web terțe sau poate afișa publicitate terță. Nu suntem responsabili pentru conținutul, acuratețea sau practicile niciunui site terț, iar includerea unui link sau a unei reclame nu implică o recomandare din partea noastră."] },
         { h2: "Modificări ale acestor termeni", p: ['Putem actualiza acești Termeni de Serviciu din când în când. "Data intrării în vigoare" din partea de sus a acestei pagini reflectă cea mai recentă revizuire. Continuarea utilizării Site-ului după intrarea în vigoare a modificărilor constituie acceptarea termenilor revizuiți.'] },
-        { h2: "Contactează-ne", p: ['Dacă ai întrebări despre acești Termeni de Serviciu, te rugăm să <a href="/contact.html">ne contactezi</a>.'] },
+        { h2: "Contactează-ne", p: ['Dacă ai întrebări despre acești Termeni de Serviciu, te rugăm să <a href="/contact">ne contactezi</a>.'] },
       ],
     },
     el: {
@@ -27577,7 +27577,7 @@ const I18N_STATIC = {
         { h2: "Αποδεκτή χρήση", p: ["Συμφωνείτε να μην κάνετε κακή χρήση του Ιστότοπου, συμπεριλαμβανομένων ενδεικτικά: προσπάθειας διατάραξης ή υπερφόρτωσης της υποδομής του Ιστότοπου, εξαγωγής περιεχομένου με ρυθμό που υποβαθμίζει την υπηρεσία για άλλους χρήστες, ή χρήσης του Ιστότοπου για οποιονδήποτε παράνομο σκοπό. Διατηρούμε το δικαίωμα να περιορίσουμε την πρόσβαση για οποιαδήποτε χρήση που παραβιάζει αυτούς τους όρους."] },
         { h2: "Σύνδεσμοι τρίτων και διαφήμιση", p: ["Ο Ιστότοπος ενδέχεται να περιέχει συνδέσμους προς ιστότοπους τρίτων ή να εμφανίζει διαφημίσεις τρίτων. Δεν είμαστε υπεύθυνοι για το περιεχόμενο, την ακρίβεια ή τις πρακτικές οποιουδήποτε ιστότοπου τρίτου, και η συμπερίληψη ενός συνδέσμου ή διαφήμισης δεν συνεπάγεται έγκριση από εμάς."] },
         { h2: "Αλλαγές σε αυτούς τους όρους", p: ['Ενδέχεται να ενημερώνουμε αυτούς τους Όρους Χρήσης κατά καιρούς. Η "Ημερομηνία έναρξης ισχύος" στην κορυφή αυτής της σελίδας αντικατοπτρίζει την πιο πρόσφατη αναθεώρηση. Η συνεχής χρήση του Ιστότοπου μετά την έναρξη ισχύος των αλλαγών συνιστά αποδοχή των αναθεωρημένων όρων.'] },
-        { h2: "Επικοινωνήστε μαζί μας", p: ['Αν έχετε ερωτήσεις σχετικά με αυτούς τους Όρους Χρήσης, παρακαλούμε <a href="/contact.html">επικοινωνήστε μαζί μας</a>.'] },
+        { h2: "Επικοινωνήστε μαζί μας", p: ['Αν έχετε ερωτήσεις σχετικά με αυτούς τους Όρους Χρήσης, παρακαλούμε <a href="/contact">επικοινωνήστε μαζί μας</a>.'] },
       ],
     },
     zh: {
@@ -27594,7 +27594,7 @@ const I18N_STATIC = {
         { h2: "可接受的使用方式", p: ["你同意不滥用本网站，包括但不限于：试图干扰或使本网站的基础设施过载、以损害其他用户使用体验的速度抓取内容，或将本网站用于任何非法目的。我们保留对任何违反本条款的使用行为限制访问的权利。"] },
         { h2: "第三方链接与广告", p: ["本网站可能包含指向第三方网站的链接，或展示第三方广告。我们对任何第三方网站的内容、准确性或做法不承担责任，链接或广告的存在并不意味着我们对其表示认可。"] },
         { h2: "本条款的变更", p: ["我们可能会不时更新本使用条款。本页顶部的「生效日期」反映最近一次修订的时间。在变更生效后继续使用本网站，即表示接受修订后的条款。"] },
-        { h2: "联系我们", p: ['如果你对本使用条款有任何疑问，请<a href="/contact.html">联系我们</a>。'] },
+        { h2: "联系我们", p: ['如果你对本使用条款有任何疑问，请<a href="/contact">联系我们</a>。'] },
       ],
     },
     ar: {
@@ -27611,7 +27611,7 @@ const I18N_STATIC = {
         { h2: "الاستخدام المقبول", p: ["توافق على عدم إساءة استخدام الموقع، بما في ذلك على سبيل المثال لا الحصر: محاولة تعطيل أو إثقال بنية الموقع التحتية، أو استخراج المحتوى بمعدل يُضعف الخدمة لمستخدمين آخرين، أو استخدام الموقع لأي غرض غير قانوني. نحتفظ بالحق في تقييد الوصول لأي استخدام ينتهك هذه الشروط."] },
         { h2: "روابط الطرف الثالث والإعلانات", p: ["قد يحتوي الموقع على روابط لمواقع طرف ثالث أو يعرض إعلانات من طرف ثالث. نحن غير مسؤولين عن محتوى أو دقة أو ممارسات أي موقع طرف ثالث، ولا يعني إدراج رابط أو إعلان تأييدنا له."] },
         { h2: "التغييرات على هذه الشروط", p: ['قد نحدّث شروط الاستخدام هذه من وقت لآخر. يعكس "تاريخ السريان" في أعلى هذه الصفحة أحدث مراجعة. يشكّل استمرار استخدام الموقع بعد سريان التغييرات قبولًا للشروط المُعدَّلة.'] },
-        { h2: "تواصل معنا", p: ['إذا كانت لديك أسئلة حول شروط الاستخدام هذه، يُرجى <a href="/contact.html">التواصل معنا</a>.'] },
+        { h2: "تواصل معنا", p: ['إذا كانت لديك أسئلة حول شروط الاستخدام هذه، يُرجى <a href="/contact">التواصل معنا</a>.'] },
       ],
     },
     th: {
@@ -27628,7 +27628,7 @@ const I18N_STATIC = {
         { h2: "การใช้งานที่ยอมรับได้", p: ["คุณตกลงที่จะไม่ใช้เว็บไซต์ในทางที่ผิด รวมถึงแต่ไม่จำกัดเพียง: การพยายามรบกวนหรือทำให้โครงสร้างพื้นฐานของเว็บไซต์ทำงานหนักเกินไป การดึงเนื้อหาในอัตราที่ทำให้บริการสำหรับผู้ใช้อื่นด้อยลง หรือการใช้เว็บไซต์เพื่อวัตถุประสงค์ที่ผิดกฎหมายใดๆ เราขอสงวนสิทธิ์ในการจำกัดการเข้าถึงสำหรับการใช้งานใดๆ ที่ละเมิดข้อกำหนดเหล่านี้"] },
         { h2: "ลิงก์และโฆษณาของบุคคลที่สาม", p: ["เว็บไซต์อาจมีลิงก์ไปยังเว็บไซต์ของบุคคลที่สามหรือแสดงโฆษณาของบุคคลที่สาม เราไม่รับผิดชอบต่อเนื้อหา ความถูกต้อง หรือแนวทางปฏิบัติของเว็บไซต์บุคคลที่สามใดๆ และการรวมลิงก์หรือโฆษณาไม่ได้หมายความว่าเรารับรองสิ่งนั้น"] },
         { h2: "การเปลี่ยนแปลงข้อกำหนดเหล่านี้", p: ['เราอาจอัปเดตข้อกำหนดการใช้งานนี้เป็นครั้งคราว "วันที่มีผลบังคับใช้" ที่ด้านบนของหน้านี้สะท้อนการแก้ไขล่าสุด การใช้เว็บไซต์อย่างต่อเนื่องหลังจากการเปลี่ยนแปลงมีผลบังคับใช้ถือเป็นการยอมรับข้อกำหนดที่แก้ไขแล้ว'] },
-        { h2: "ติดต่อเรา", p: ['หากคุณมีคำถามเกี่ยวกับข้อกำหนดการใช้งานนี้ โปรด<a href="/contact.html">ติดต่อเรา</a>'] },
+        { h2: "ติดต่อเรา", p: ['หากคุณมีคำถามเกี่ยวกับข้อกำหนดการใช้งานนี้ โปรด<a href="/contact">ติดต่อเรา</a>'] },
       ],
     },
   },

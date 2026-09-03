@@ -76,10 +76,10 @@
       return LOC !== "en" && window.I18N_TOOLS && window.I18N_TOOLS[calcId] && window.I18N_TOOLS[calcId][LOC];
     }
     function toolHref(calcId) {
-      return isTranslated(calcId) ? `/${LPATH}tool/${calcId}.html` : `https://calquary.com/tool/${calcId}.html`;
+      return isTranslated(calcId) ? `/${LPATH}tool/${calcId}` : `https://calquary.com/tool/${calcId}`;
     }
     function catHref(catId) {
-      return `/${LPATH}category/${catId}.html`;
+      return `/${LPATH}category/${catId}`;
     }
 
     document.addEventListener("DOMContentLoaded", () => {
@@ -359,7 +359,7 @@
         <nav class="header-nav">
           <a href="#categories">カテゴリー</a>
           <a href="#tools">すべてのツール</a>
-          <a href="/ja/about.html">このサイトについて</a>
+          <a href="/ja/about">このサイトについて</a>
         </nav>
         <div class="locale-switcher">
           <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: 日本語">
@@ -402,7 +402,7 @@
           <div class="kicker">カテゴリー</div>
           <h2>カテゴリーごとに整理された計算ツール</h2>
         </div>
-        <a href="/all-calculators.html">すべて見る →</a>
+        <a href="/all-calculators">すべて見る →</a>
       </div>
       <div class="catalog-grid" id="catalog-grid"></div>
     </div>
@@ -483,9 +483,9 @@
         <div>
           <h4>人気</h4>
           <ul>
-            <li><a href="/ja/tool/percentage-calculator.html">パーセント計算機</a></li>
-            <li><a href="/ja/tool/loan-calculator.html">ローン返済額計算機</a></li>
-            <li><a href="/ja/tool/bmi-calculator.html">BMI計算機</a></li>
+            <li><a href="/ja/tool/percentage-calculator">パーセント計算機</a></li>
+            <li><a href="/ja/tool/loan-calculator">ローン返済額計算機</a></li>
+            <li><a href="/ja/tool/bmi-calculator">BMI計算機</a></li>
           </ul>
         </div>
         <div>
@@ -493,11 +493,11 @@
           <ul>
             <li><a href="#categories">すべてのカテゴリー</a></li>
             <li><a href="#tools">すべてのツール</a></li>
-            <li><a href="/all-calculators.html">すべての計算ツール</a></li>
-            <li><a href="/ja/about.html">このサイトについて</a></li>
-            <li><a href="/ja/contact.html">お問い合わせ</a></li>
-            <li><a href="/ja/privacy.html">プライバシー</a></li>
-            <li><a href="/ja/terms.html">利用規約</a></li>
+            <li><a href="/all-calculators">すべての計算ツール</a></li>
+            <li><a href="/ja/about">このサイトについて</a></li>
+            <li><a href="/ja/contact">お問い合わせ</a></li>
+            <li><a href="/ja/privacy">プライバシー</a></li>
+            <li><a href="/ja/terms">利用規約</a></li>
           </ul>
         </div>
       </div>

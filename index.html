@@ -76,10 +76,10 @@
       return LOC !== "en" && window.I18N_TOOLS && window.I18N_TOOLS[calcId] && window.I18N_TOOLS[calcId][LOC];
     }
     function toolHref(calcId) {
-      return isTranslated(calcId) ? `/${LPATH}tool/${calcId}.html` : `https://calquary.com/tool/${calcId}.html`;
+      return isTranslated(calcId) ? `/${LPATH}tool/${calcId}` : `https://calquary.com/tool/${calcId}`;
     }
     function catHref(catId) {
-      return `/${LPATH}category/${catId}.html`;
+      return `/${LPATH}category/${catId}`;
     }
 
     document.addEventListener("DOMContentLoaded", () => {
@@ -359,7 +359,7 @@
         <nav class="header-nav">
           <a href="#categories">Categories</a>
           <a href="#tools">All tools</a>
-          <a href="/about.html">About</a>
+          <a href="/about">About</a>
         </nav>
         <div class="locale-switcher">
           <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: English">
@@ -402,7 +402,7 @@
           <div class="kicker">Browse</div>
           <h2>Every category, one shelf each</h2>
         </div>
-        <a href="/all-calculators.html">Browse all →</a>
+        <a href="/all-calculators">Browse all →</a>
       </div>
       <div class="catalog-grid" id="catalog-grid"></div>
     </div>
@@ -483,9 +483,9 @@
         <div>
           <h4>Popular</h4>
           <ul>
-            <li><a href="/tool/percentage-calculator.html">Percentage Calculator</a></li>
-            <li><a href="/tool/loan-calculator.html">Loan Payment Calculator</a></li>
-            <li><a href="/tool/bmi-calculator.html">BMI Calculator</a></li>
+            <li><a href="/tool/percentage-calculator">Percentage Calculator</a></li>
+            <li><a href="/tool/loan-calculator">Loan Payment Calculator</a></li>
+            <li><a href="/tool/bmi-calculator">BMI Calculator</a></li>
           </ul>
         </div>
         <div>
@@ -493,11 +493,11 @@
           <ul>
             <li><a href="#categories">All categories</a></li>
             <li><a href="#tools">All tools</a></li>
-            <li><a href="/all-calculators.html">All calculators</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/contact.html">Contact</a></li>
-            <li><a href="/privacy.html">Privacy</a></li>
-            <li><a href="/terms.html">Terms</a></li>
+            <li><a href="/all-calculators">All calculators</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
           </ul>
         </div>
       </div>

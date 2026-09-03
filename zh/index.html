@@ -76,10 +76,10 @@
       return LOC !== "en" && window.I18N_TOOLS && window.I18N_TOOLS[calcId] && window.I18N_TOOLS[calcId][LOC];
     }
     function toolHref(calcId) {
-      return isTranslated(calcId) ? `/${LPATH}tool/${calcId}.html` : `https://calquary.com/tool/${calcId}.html`;
+      return isTranslated(calcId) ? `/${LPATH}tool/${calcId}` : `https://calquary.com/tool/${calcId}`;
     }
     function catHref(catId) {
-      return `/${LPATH}category/${catId}.html`;
+      return `/${LPATH}category/${catId}`;
     }
 
     document.addEventListener("DOMContentLoaded", () => {
@@ -359,7 +359,7 @@
         <nav class="header-nav">
           <a href="#categories">分类</a>
           <a href="#tools">所有工具</a>
-          <a href="/zh/about.html">关于我们</a>
+          <a href="/zh/about">关于我们</a>
         </nav>
         <div class="locale-switcher">
           <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: 中文">
@@ -402,7 +402,7 @@
           <div class="kicker">浏览</div>
           <h2>每个分类，都有专属板块</h2>
         </div>
-        <a href="/all-calculators.html">查看全部 →</a>
+        <a href="/all-calculators">查看全部 →</a>
       </div>
       <div class="catalog-grid" id="catalog-grid"></div>
     </div>
@@ -483,9 +483,9 @@
         <div>
           <h4>热门</h4>
           <ul>
-            <li><a href="/zh/tool/percentage-calculator.html">百分比计算器</a></li>
-            <li><a href="/zh/tool/loan-calculator.html">贷款月供计算器</a></li>
-            <li><a href="/zh/tool/bmi-calculator.html">BMI 计算器</a></li>
+            <li><a href="/zh/tool/percentage-calculator">百分比计算器</a></li>
+            <li><a href="/zh/tool/loan-calculator">贷款月供计算器</a></li>
+            <li><a href="/zh/tool/bmi-calculator">BMI 计算器</a></li>
           </ul>
         </div>
         <div>
@@ -493,11 +493,11 @@
           <ul>
             <li><a href="#categories">所有分类</a></li>
             <li><a href="#tools">所有工具</a></li>
-            <li><a href="/all-calculators.html">所有计算器</a></li>
-            <li><a href="/zh/about.html">关于我们</a></li>
-            <li><a href="/zh/contact.html">联系我们</a></li>
-            <li><a href="/zh/privacy.html">隐私政策</a></li>
-            <li><a href="/zh/terms.html">使用条款</a></li>
+            <li><a href="/all-calculators">所有计算器</a></li>
+            <li><a href="/zh/about">关于我们</a></li>
+            <li><a href="/zh/contact">联系我们</a></li>
+            <li><a href="/zh/privacy">隐私政策</a></li>
+            <li><a href="/zh/terms">使用条款</a></li>
           </ul>
         </div>
       </div>

@@ -37,7 +37,7 @@
         const rel = getCalculator(relId);
         if (!rel) return;
         const li = document.createElement("li");
-        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
         relWrap.appendChild(li);
       });
 

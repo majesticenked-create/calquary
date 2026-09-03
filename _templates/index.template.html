@@ -52,10 +52,10 @@
       return LOC !== "en" && window.I18N_TOOLS && window.I18N_TOOLS[calcId] && window.I18N_TOOLS[calcId][LOC];
     }
     function toolHref(calcId) {
-      return isTranslated(calcId) ? `/${LPATH}tool/${calcId}.html` : `https://calquary.com/tool/${calcId}.html`;
+      return isTranslated(calcId) ? `/${LPATH}tool/${calcId}` : `https://calquary.com/tool/${calcId}`;
     }
     function catHref(catId) {
-      return `/${LPATH}category/${catId}.html`;
+      return `/${LPATH}category/${catId}`;
     }
 
     document.addEventListener("DOMContentLoaded", () => {
@@ -262,7 +262,7 @@
         <nav class="header-nav">
           <a href="#categories">{{NAV_CATEGORIES}}</a>
           <a href="#tools">{{NAV_ALL_TOOLS}}</a>
-          <a href="/{{LOCALE_PATH}}about.html">{{NAV_ABOUT}}</a>
+          <a href="/{{LOCALE_PATH}}about">{{NAV_ABOUT}}</a>
         </nav>
         {{LOCALE_SWITCHER}}
         <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
@@ -299,7 +299,7 @@
           <div class="kicker">{{SEC_BROWSE_KICKER}}</div>
           <h2>{{SEC_BROWSE_H2}}</h2>
         </div>
-        <a href="/all-calculators.html">{{BTN_BROWSE_ALL}}</a>
+        <a href="/all-calculators">{{BTN_BROWSE_ALL}}</a>
       </div>
       <div class="catalog-grid" id="catalog-grid"></div>
     </div>
@@ -365,11 +365,11 @@
           <ul>
             <li><a href="#categories">{{FOOTER_ALL_CATEGORIES}}</a></li>
             <li><a href="#tools">{{FOOTER_ALL_TOOLS}}</a></li>
-            <li><a href="/all-calculators.html">{{FOOTER_ALL_CALCULATORS}}</a></li>
-            <li><a href="/{{LOCALE_PATH}}about.html">{{NAV_ABOUT}}</a></li>
-            <li><a href="/{{LOCALE_PATH}}contact.html">{{FOOTER_CONTACT}}</a></li>
-            <li><a href="/{{LOCALE_PATH}}privacy.html">{{FOOTER_PRIVACY}}</a></li>
-            <li><a href="/{{LOCALE_PATH}}terms.html">{{FOOTER_TERMS}}</a></li>
+            <li><a href="/all-calculators">{{FOOTER_ALL_CALCULATORS}}</a></li>
+            <li><a href="/{{LOCALE_PATH}}about">{{NAV_ABOUT}}</a></li>
+            <li><a href="/{{LOCALE_PATH}}contact">{{FOOTER_CONTACT}}</a></li>
+            <li><a href="/{{LOCALE_PATH}}privacy">{{FOOTER_PRIVACY}}</a></li>
+            <li><a href="/{{LOCALE_PATH}}terms">{{FOOTER_TERMS}}</a></li>
           </ul>
         </div>
       </div>

@@ -76,10 +76,10 @@
       return LOC !== "en" && window.I18N_TOOLS && window.I18N_TOOLS[calcId] && window.I18N_TOOLS[calcId][LOC];
     }
     function toolHref(calcId) {
-      return isTranslated(calcId) ? `/${LPATH}tool/${calcId}.html` : `https://calquary.com/tool/${calcId}.html`;
+      return isTranslated(calcId) ? `/${LPATH}tool/${calcId}` : `https://calquary.com/tool/${calcId}`;
     }
     function catHref(catId) {
-      return `/${LPATH}category/${catId}.html`;
+      return `/${LPATH}category/${catId}`;
     }
 
     document.addEventListener("DOMContentLoaded", () => {
@@ -359,7 +359,7 @@
         <nav class="header-nav">
           <a href="#categories">หมวดหมู่</a>
           <a href="#tools">เครื่องมือทั้งหมด</a>
-          <a href="/th/about.html">เกี่ยวกับเรา</a>
+          <a href="/th/about">เกี่ยวกับเรา</a>
         </nav>
         <div class="locale-switcher">
           <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: ไทย">
@@ -402,7 +402,7 @@
           <div class="kicker">เรียกดู</div>
           <h2>แต่ละหมวดหมู่มีชั้นวางของตัวเอง</h2>
         </div>
-        <a href="/all-calculators.html">ดูทั้งหมด →</a>
+        <a href="/all-calculators">ดูทั้งหมด →</a>
       </div>
       <div class="catalog-grid" id="catalog-grid"></div>
     </div>
@@ -483,9 +483,9 @@
         <div>
           <h4>ยอดนิยม</h4>
           <ul>
-            <li><a href="/th/tool/percentage-calculator.html">เครื่องคำนวณเปอร์เซ็นต์</a></li>
-            <li><a href="/th/tool/loan-calculator.html">เครื่องคำนวณค่างวดสินเชื่อ</a></li>
-            <li><a href="/th/tool/bmi-calculator.html">เครื่องคำนวณ BMI</a></li>
+            <li><a href="/th/tool/percentage-calculator">เครื่องคำนวณเปอร์เซ็นต์</a></li>
+            <li><a href="/th/tool/loan-calculator">เครื่องคำนวณค่างวดสินเชื่อ</a></li>
+            <li><a href="/th/tool/bmi-calculator">เครื่องคำนวณ BMI</a></li>
           </ul>
         </div>
         <div>
@@ -493,11 +493,11 @@
           <ul>
             <li><a href="#categories">หมวดหมู่ทั้งหมด</a></li>
             <li><a href="#tools">เครื่องมือทั้งหมด</a></li>
-            <li><a href="/all-calculators.html">เครื่องคำนวณทั้งหมด</a></li>
-            <li><a href="/th/about.html">เกี่ยวกับเรา</a></li>
-            <li><a href="/th/contact.html">ติดต่อเรา</a></li>
-            <li><a href="/th/privacy.html">ความเป็นส่วนตัว</a></li>
-            <li><a href="/th/terms.html">ข้อกำหนด</a></li>
+            <li><a href="/all-calculators">เครื่องคำนวณทั้งหมด</a></li>
+            <li><a href="/th/about">เกี่ยวกับเรา</a></li>
+            <li><a href="/th/contact">ติดต่อเรา</a></li>
+            <li><a href="/th/privacy">ความเป็นส่วนตัว</a></li>
+            <li><a href="/th/terms">ข้อกำหนด</a></li>
           </ul>
         </div>
       </div>

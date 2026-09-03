@@ -309,16 +309,20 @@ function htmlDirAttr(locale) {
   return RTL_LOCALES.includes(locale) ? ' dir="rtl"' : "";
 }
 function toolUrl(locale, id) {
-  return `${SITE_URL}/${localePath(locale)}tool/${id}.html`;
+  return `${SITE_URL}/${localePath(locale)}tool/${id}`;
 }
 function categoryUrl(locale, id) {
-  return `${SITE_URL}/${localePath(locale)}category/${id}.html`;
+  return `${SITE_URL}/${localePath(locale)}category/${id}`;
 }
 function homeUrl(locale) {
   return `${SITE_URL}/${localePath(locale)}`;
 }
+// Cloudflare Pages' clean-URL rewrite serves the on-disk `${page}` file at
+// its extensionless URL and 308-redirects the .html form to it — so every
+// generated URL (sitemap, canonical, hreflang, internal links) must drop
+// the suffix even though the file itself is still written as page.html.
 function staticUrl(locale, page) {
-  return `${SITE_URL}/${localePath(locale)}${page}`;
+  return `${SITE_URL}/${localePath(locale)}${page.replace(/\.html$/, "")}`;
 }
 
 // hreflang <link> block for a page that exists in `builtLocales` (a subset
@@ -621,11 +625,11 @@ function buildToolPage(template, locale, calc, cat, I18N) {
     .split("{{FOOTER_PRIVACY}}").join(ui.footer.privacy)
     .split("{{FOOTER_TERMS}}").join(ui.footer.terms)
     .split("{{HOME_HREF}}").join(`/${localePath(locale)}`)
-    .split("{{ABOUT_HREF}}").join(`/${localePath(locale)}about.html`)
-    .split("{{CONTACT_HREF}}").join(`/${localePath(locale)}contact.html`)
-    .split("{{PRIVACY_HREF}}").join(`/${localePath(locale)}privacy.html`)
-    .split("{{TERMS_HREF}}").join(`/${localePath(locale)}terms.html`)
-    .split("{{CAT_HREF}}").join(`/${localePath(locale)}category/${cat.id}.html`)
+    .split("{{ABOUT_HREF}}").join(`/${localePath(locale)}about`)
+    .split("{{CONTACT_HREF}}").join(`/${localePath(locale)}contact`)
+    .split("{{PRIVACY_HREF}}").join(`/${localePath(locale)}privacy`)
+    .split("{{TERMS_HREF}}").join(`/${localePath(locale)}terms`)
+    .split("{{CAT_HREF}}").join(`/${localePath(locale)}category/${cat.id}`)
     .split("{{CAT_NAME}}").join(locale === "en" ? cat.name : I18N.categories[cat.id][locale].name)
     .split("{{FAVICON_LINKS}}").join(faviconLinks())
     .split("{{THEME_INIT}}").join(themeInitScript())
@@ -683,10 +687,10 @@ function buildCategoryPage(template, locale, cat, calculators, I18N) {
     .split("{{FOOTER_TERMS}}").join(ui.footer.terms)
     .split("{{BTN_BACK_TO_ALL}}").join(ui.buttons.backToAll)
     .split("{{HOME_HREF}}").join(`/${localePath(locale)}`)
-    .split("{{ABOUT_HREF}}").join(`/${localePath(locale)}about.html`)
-    .split("{{CONTACT_HREF}}").join(`/${localePath(locale)}contact.html`)
-    .split("{{PRIVACY_HREF}}").join(`/${localePath(locale)}privacy.html`)
-    .split("{{TERMS_HREF}}").join(`/${localePath(locale)}terms.html`)
+    .split("{{ABOUT_HREF}}").join(`/${localePath(locale)}about`)
+    .split("{{CONTACT_HREF}}").join(`/${localePath(locale)}contact`)
+    .split("{{PRIVACY_HREF}}").join(`/${localePath(locale)}privacy`)
+    .split("{{TERMS_HREF}}").join(`/${localePath(locale)}terms`)
     .split("{{FAVICON_LINKS}}").join(faviconLinks())
     .split("{{THEME_INIT}}").join(themeInitScript())
     .split("{{OG_META}}").join(ogMetaTags({ title: `${nameFull} | Calquary`, description, url, image, locale }))
@@ -713,7 +717,7 @@ function buildHomePage(template, locale, categories, calculators, I18N) {
   const footerPopularLinks = popularIds.map((id) => {
     const calc = calculators.find((c) => c.id === id);
     const label = locale === "en" ? calc.title : I18N.tools[id][locale].title;
-    const href = locale === "en" ? `/tool/${id}.html` : `/${localePath(locale)}tool/${id}.html`;
+    const href = locale === "en" ? `/tool/${id}` : `/${localePath(locale)}tool/${id}`;
     return `<li><a href="${href}">${label}</a></li>`;
   }).join("\n            ");
 
@@ -882,7 +886,7 @@ function buildLegalPage(template, locale, docKey, I18N) {
     .split("{{NAV_ABOUT}}").join(ui.nav.about)
     .split("{{FOOTER_CONTACT}}").join(ui.footer.contact)
     .split("{{BTN_BACK_TO_ALL}}").join(ui.buttons.backToAll)
-    .split("{{OTHER_LEGAL_HREF}}").join(`/${localePath(locale)}${otherDocKey}.html`)
+    .split("{{OTHER_LEGAL_HREF}}").join(`/${localePath(locale)}${otherDocKey}`)
     .split("{{OTHER_LEGAL_LABEL}}").join(otherLabel)
     .split("{{OG_META}}").join(ogMetaTags({ title: `${doc.title} | Calquary`, description: doc.sections[0].p[0], url, image, locale }))
     .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => staticUrl(loc, `${docKey}.html`), LOCALES))
@@ -1034,7 +1038,7 @@ function buildSitemap(categories, calculators) {
 
   // English-only pages (no locale siblings): homepage-adjacent standard
   // pages plus privacy/terms/all-calculators, unchanged single-locale URLs.
-  entries.push(...STANDARD_PAGES.map((p) => ({ loc: `${SITE_URL}/${p}`, lastmod: getFileLastModDate(p), xhtml: "" })));
+  entries.push(...STANDARD_PAGES.map((p) => ({ loc: `${SITE_URL}/${p.replace(/\.html$/, "")}`, lastmod: getFileLastModDate(p), xhtml: "" })));
 
   const body = entries
     .map((e) => `  <url>\n    <loc>${e.loc}</loc>\n    <lastmod>${e.lastmod}</lastmod>\n${e.xhtml ? e.xhtml + "\n" : ""}  </url>`)

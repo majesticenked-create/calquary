@@ -76,10 +76,10 @@
       return LOC !== "en" && window.I18N_TOOLS && window.I18N_TOOLS[calcId] && window.I18N_TOOLS[calcId][LOC];
     }
     function toolHref(calcId) {
-      return isTranslated(calcId) ? `/${LPATH}tool/${calcId}.html` : `https://calquary.com/tool/${calcId}.html`;
+      return isTranslated(calcId) ? `/${LPATH}tool/${calcId}` : `https://calquary.com/tool/${calcId}`;
     }
     function catHref(catId) {
-      return `/${LPATH}category/${catId}.html`;
+      return `/${LPATH}category/${catId}`;
     }
 
     document.addEventListener("DOMContentLoaded", () => {
@@ -359,7 +359,7 @@
         <nav class="header-nav">
           <a href="#categories">Categorías</a>
           <a href="#tools">Todas las herramientas</a>
-          <a href="/es/about.html">Acerca de</a>
+          <a href="/es/about">Acerca de</a>
         </nav>
         <div class="locale-switcher">
           <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Español">
@@ -402,7 +402,7 @@
           <div class="kicker">Explorar</div>
           <h2>Cada categoría, su propio estante</h2>
         </div>
-        <a href="/all-calculators.html">Ver todas →</a>
+        <a href="/all-calculators">Ver todas →</a>
       </div>
       <div class="catalog-grid" id="catalog-grid"></div>
     </div>
@@ -483,9 +483,9 @@
         <div>
           <h4>Popular</h4>
           <ul>
-            <li><a href="/es/tool/percentage-calculator.html">Calculadora de Porcentajes</a></li>
-            <li><a href="/es/tool/loan-calculator.html">Calculadora de Pago de Préstamo</a></li>
-            <li><a href="/es/tool/bmi-calculator.html">Calculadora de IMC</a></li>
+            <li><a href="/es/tool/percentage-calculator">Calculadora de Porcentajes</a></li>
+            <li><a href="/es/tool/loan-calculator">Calculadora de Pago de Préstamo</a></li>
+            <li><a href="/es/tool/bmi-calculator">Calculadora de IMC</a></li>
           </ul>
         </div>
         <div>
@@ -493,11 +493,11 @@
           <ul>
             <li><a href="#categories">Todas las categorías</a></li>
             <li><a href="#tools">Todas las herramientas</a></li>
-            <li><a href="/all-calculators.html">Todas las calculadoras</a></li>
-            <li><a href="/es/about.html">Acerca de</a></li>
-            <li><a href="/es/contact.html">Contacto</a></li>
-            <li><a href="/es/privacy.html">Privacidad</a></li>
-            <li><a href="/es/terms.html">Términos</a></li>
+            <li><a href="/all-calculators">Todas las calculadoras</a></li>
+            <li><a href="/es/about">Acerca de</a></li>
+            <li><a href="/es/contact">Contacto</a></li>
+            <li><a href="/es/privacy">Privacidad</a></li>
+            <li><a href="/es/terms">Términos</a></li>
           </ul>
         </div>
       </div>
