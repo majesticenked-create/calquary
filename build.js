@@ -105,6 +105,10 @@ const WAVE_ONE_TOOL_IDS = [
   "standard-deviation-calculator", "t-test-calculator", "effect-size-calculator",
   "mann-whitney-u-calculator", "sequences-series-calculator", "coupon-collector-calculator",
   "similarity-ratio-calculator",
+  // Math category, batch 3
+  "correlation-calculator", "z-score-calculator", "confusion-matrix-calculator",
+  "odds-probability-converter", "normal-distribution-calculator", "lottery-odds-calculator",
+  "poker-hand-probability-calculator",
 ];
 
 function loadData() {

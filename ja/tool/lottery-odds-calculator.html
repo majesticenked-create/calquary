@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>宝くじ当選確率計算機 - 無料オンライン計算ツール | Calquary</title>
+  <meta name="description" content="プールサイズと引かれる番号の数から、宝くじのジャックポットに当たる確率を計算します。" />
+  <meta property="og:title" content="宝くじ当選確率計算機 | Calquary">
+  <meta property="og:description" content="プールサイズと引かれる番号の数から、宝くじのジャックポットに当たる確率を計算します。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/ja/tool/lottery-odds-calculator.html">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/lottery-odds-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="宝くじ当選確率計算機 | Calquary">
+  <meta name="twitter:description" content="プールサイズと引かれる番号の数から、宝くじのジャックポットに当たる確率を計算します。">
+  <meta name="twitter:image" content="https://calquary.com/og-images/lottery-odds-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/lottery-odds-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/lottery-odds-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/lottery-odds-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/lottery-odds-calculator.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/lottery-odds-calculator.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/lottery-odds-calculator.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/lottery-odds-calculator.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/lottery-odds-calculator.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/lottery-odds-calculator.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/lottery-odds-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/lottery-odds-calculator.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/lottery-odds-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/lottery-odds-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("lottery-odds-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("lottery-odds-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "宝くじ当選確率計算機",
+      "description": "プールサイズと引かれる番号の数から、宝くじのジャックポットに当たる確率を計算します。",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/ja/tool/lottery-odds-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-30",
+      "inLanguage": "ja"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/ja/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Math",
+          "item": "https://calquary.com/ja/category/math.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "宝くじ当選確率計算機",
+          "item": "https://calquary.com/ja/tool/lottery-odds-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "パワーボールのジャックポットに当たる実際の確率はいくつですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "292,201,338分の1です。69個から5個の番号を正しく選ぶ（11,238,513通り）確率を計算し、その後26通りの可能なパワーボール番号を掛け合わせます。この別々に引かれる番号も一致させる必要があるためです。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "可能な組み合わせの数はどう計算されますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "組み合わせの公式（nCk）= n! / (k!(n−k)!)を使用します。これは順序が関係ないn個のプールからk個の番号を選ぶ方法が何通りあるかを数えます。これが宝くじの確率が順列ではなく組み合わせを使う理由です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "なぜボーナスボールを追加すると確率がこんなに悪化するのですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "メインプールの組み合わせにボーナスプールのサイズを掛けるためです。正しいメイン番号と正しいボーナス番号の両方が必要だからです。パワーボールのメインプールのみの確率は約1120万分の1ですが、正しいパワーボール番号（26分の1）も要求すると、それが約2億9200万分の1に増加します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "「宝くじに当たる確率」「宝くじに当たる可能性」「宝くじに当たる確率」はこのツールと同じですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。これらの言い回しはすべて同じことを尋ねています：宝くじのジャックポット番号に一致する確率で、この計算機は上記のプールサイズ、選択数、ボーナスボールの設定から計算します。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/ja/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/ja/index.html#categories">カテゴリー</a>
+          <a href="/ja/index.html#tools">すべてのツール</a>
+          <a href="/ja/about.html">このサイトについて</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: 日本語">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>JA</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/lottery-odds-calculator.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/lottery-odds-calculator.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/lottery-odds-calculator.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/lottery-odds-calculator.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/lottery-odds-calculator.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/lottery-odds-calculator.html">Italiano</a><span class="locale-item current" role="menuitem" aria-current="true">日本語</span><a class="locale-item" role="menuitem" href="/ro/tool/lottery-odds-calculator.html">Română</a><a class="locale-item" role="menuitem" href="/el/tool/lottery-odds-calculator.html">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/lottery-odds-calculator.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/lottery-odds-calculator.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/lottery-odds-calculator.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/ja/index.html">Calquary</a> / <a href="/ja/category/math.html">数学</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>宝くじ当選確率計算機</h1>
+        <p style="max-width:60ch;">宝くじのメイン番号プールと選択数、およびオプションのボーナスボールプールを入力すると、ジャックポットの確率を計算します。デフォルトはパワーボールの実際のルールに設定されています。</p>
+        <p class="last-updated">最終更新日： August 30, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">計算する</button>
+              <button type="button" id="calc-reset" class="btn-ghost">リセット</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>よくある質問</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>パワーボールのジャックポットに当たる実際の確率はいくつですか？</h3>
+<p>292,201,338分の1です。69個から5個の番号を正しく選ぶ（11,238,513通り）確率を計算し、その後26通りの可能なパワーボール番号を掛け合わせます。この別々に引かれる番号も一致させる必要があるためです。</p>
+</div>
+<div class="faq-item">
+<h3>可能な組み合わせの数はどう計算されますか？</h3>
+<p>組み合わせの公式（nCk）= n! / (k!(n−k)!)を使用します。これは順序が関係ないn個のプールからk個の番号を選ぶ方法が何通りあるかを数えます。これが宝くじの確率が順列ではなく組み合わせを使う理由です。</p>
+</div>
+<div class="faq-item">
+<h3>なぜボーナスボールを追加すると確率がこんなに悪化するのですか？</h3>
+<p>メインプールの組み合わせにボーナスプールのサイズを掛けるためです。正しいメイン番号と正しいボーナス番号の両方が必要だからです。パワーボールのメインプールのみの確率は約1120万分の1ですが、正しいパワーボール番号（26分の1）も要求すると、それが約2億9200万分の1に増加します。</p>
+</div>
+<div class="faq-item">
+<h3>「宝くじに当たる確率」「宝くじに当たる可能性」「宝くじに当たる確率」はこのツールと同じですか？</h3>
+<p>はい。これらの言い回しはすべて同じことを尋ねています：宝くじのジャックポット番号に一致する確率で、この計算機は上記のプールサイズ、選択数、ボーナスボールの設定から計算します。</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>関連ツール</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>精度について</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquaryの計算ツールは、迅速で信頼できる概算を目的としています。実際の財務、構造、医療に関わる重要な決定を行う前には、必ず専門家にご確認ください。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/ja/index.html">← すべての計算ツールに戻る</a> · <a href="/ja/about.html">このサイトについて</a> · <a href="/ja/contact.html">お問い合わせ</a> · <a href="/ja/privacy.html">プライバシー</a> · <a href="/ja/terms.html">利用規約</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

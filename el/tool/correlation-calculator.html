@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Υπολογιστής Συντελεστή Συσχέτισης - Δωρεάν Online Αριθμομηχανή | Calquary</title>
+  <meta name="description" content="Υπολόγισε τον συντελεστή συσχέτισης Pearson (r) μεταξύ δύο ζευγαρωμένων συνόλων αριθμών." />
+  <meta property="og:title" content="Υπολογιστής Συντελεστή Συσχέτισης | Calquary">
+  <meta property="og:description" content="Υπολόγισε τον συντελεστή συσχέτισης Pearson (r) μεταξύ δύο ζευγαρωμένων συνόλων αριθμών.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/el/tool/correlation-calculator.html">
+  <meta property="og:locale" content="el_GR">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/correlation-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Υπολογιστής Συντελεστή Συσχέτισης | Calquary">
+  <meta name="twitter:description" content="Υπολόγισε τον συντελεστή συσχέτισης Pearson (r) μεταξύ δύο ζευγαρωμένων συνόλων αριθμών.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/correlation-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/correlation-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/correlation-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/correlation-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/correlation-calculator.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/correlation-calculator.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/correlation-calculator.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/correlation-calculator.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/correlation-calculator.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/correlation-calculator.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/correlation-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/correlation-calculator.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/correlation-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/correlation-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("correlation-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("correlation-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Υπολογιστής Συντελεστή Συσχέτισης",
+      "description": "Υπολόγισε τον συντελεστή συσχέτισης Pearson (r) μεταξύ δύο ζευγαρωμένων συνόλων αριθμών.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/el/tool/correlation-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-30",
+      "inLanguage": "el"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/el/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Math",
+          "item": "https://calquary.com/el/category/math.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Υπολογιστής Συντελεστή Συσχέτισης",
+          "item": "https://calquary.com/el/tool/correlation-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Τι σημαίνει συντελεστής συσχέτισης 1 ή -1;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Μια συσχέτιση ακριβώς 1 σημαίνει ότι οι δύο μεταβλητές έχουν μια τέλεια θετική γραμμική σχέση (καθώς η μία αυξάνεται, η άλλη αυξάνεται αναλογικά)· -1 σημαίνει μια τέλεια αρνητική γραμμική σχέση (καθώς η μία αυξάνεται, η άλλη μειώνεται αναλογικά). Τα πραγματικά δεδομένα σπάνια φτάνουν ακριβώς στο 1 ή -1."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Η συσχέτιση αποδεικνύει αιτιότητα;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Όχι - δύο μεταβλητές μπορούν να συσχετίζονται ισχυρά χωρίς η μία να προκαλεί την άλλη, λόγω σύμπτωσης, μιας κοινής υποκείμενης αιτίας, ή αντίστροφης αιτιότητας. Η συσχέτιση μετρά μόνο αν δύο μεταβλητές τείνουν να κινούνται μαζί, όχι γιατί."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Τι θεωρείται «ισχυρή» συσχέτιση;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Δεν υπάρχει καθολικό όριο, αλλά ένας κοινός χονδρικός οδηγός είναι: 0,8+ πολύ ισχυρή, 0,6-0,8 ισχυρή, 0,4-0,6 μέτρια, 0,2-0,4 ασθενής, και κάτω από 0,2 πολύ ασθενής ή καθόλου - αν και το τι μετράει ως «αρκετά ισχυρό» ποικίλλει πολύ ανάλογα με τον τομέα (κοινωνικές επιστήμες έναντι φυσικών επιστημών, για παράδειγμα)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Είναι ένας «υπολογιστής συσχέτισης Pearson» ή «υπολογιστής συντελεστή Pearson» το ίδιο με αυτό το εργαλείο;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ναι - το «Pearson» αναφέρεται στον συντελεστή συσχέτισης ροπής γινομένου Pearson, που είναι το τυπικό μέτρο συσχέτισης που υπολογίζει αυτή η αριθμομηχανή. Είναι ο πιο κοινός τύπος συσχέτισης που εννοούν οι άνθρωποι με τον όρο «συσχέτιση» χωρίς περαιτέρω προσδιορισμό."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Είναι ένας «υπολογιστής συσχέτισης r» το ίδιο με αυτό το εργαλείο;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ναι - το «r» είναι το τυπικό σύμβολο για τον συντελεστή συσχέτισης Pearson, οπότε ένας «υπολογιστής συσχέτισης r» ζητά την ίδια τιμή που υπολογίζει αυτό το εργαλείο."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/el/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/el/index.html#categories">Κατηγορίες</a>
+          <a href="/el/index.html#tools">Όλα τα εργαλεία</a>
+          <a href="/el/about.html">Σχετικά</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Ελληνικά">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>undefined</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/correlation-calculator.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/correlation-calculator.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/correlation-calculator.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/correlation-calculator.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/correlation-calculator.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/correlation-calculator.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/correlation-calculator.html">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/correlation-calculator.html">Română</a><span class="locale-item current" role="menuitem" aria-current="true">Ελληνικά</span><a class="locale-item" role="menuitem" href="/zh/tool/correlation-calculator.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/correlation-calculator.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/correlation-calculator.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/el/index.html">Calquary</a> / <a href="/el/category/math.html">Μαθηματικά</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Υπολογιστής Συντελεστή Συσχέτισης</h1>
+        <p style="max-width:60ch;">Εισάγετε δύο λίστες ζευγαρωμένων αριθμών (ίδιο μήκος, χωρισμένων με κόμματα ή κενά) για να υπολογίσετε τον συντελεστή συσχέτισης Pearson.</p>
+        <p class="last-updated">Τελευταία ενημέρωση: August 30, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Υπολογισμός</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Επαναφορά</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Συχνές ερωτήσεις</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Τι σημαίνει συντελεστής συσχέτισης 1 ή -1;</h3>
+<p>Μια συσχέτιση ακριβώς 1 σημαίνει ότι οι δύο μεταβλητές έχουν μια τέλεια θετική γραμμική σχέση (καθώς η μία αυξάνεται, η άλλη αυξάνεται αναλογικά)· -1 σημαίνει μια τέλεια αρνητική γραμμική σχέση (καθώς η μία αυξάνεται, η άλλη μειώνεται αναλογικά). Τα πραγματικά δεδομένα σπάνια φτάνουν ακριβώς στο 1 ή -1.</p>
+</div>
+<div class="faq-item">
+<h3>Η συσχέτιση αποδεικνύει αιτιότητα;</h3>
+<p>Όχι - δύο μεταβλητές μπορούν να συσχετίζονται ισχυρά χωρίς η μία να προκαλεί την άλλη, λόγω σύμπτωσης, μιας κοινής υποκείμενης αιτίας, ή αντίστροφης αιτιότητας. Η συσχέτιση μετρά μόνο αν δύο μεταβλητές τείνουν να κινούνται μαζί, όχι γιατί.</p>
+</div>
+<div class="faq-item">
+<h3>Τι θεωρείται «ισχυρή» συσχέτιση;</h3>
+<p>Δεν υπάρχει καθολικό όριο, αλλά ένας κοινός χονδρικός οδηγός είναι: 0,8+ πολύ ισχυρή, 0,6-0,8 ισχυρή, 0,4-0,6 μέτρια, 0,2-0,4 ασθενής, και κάτω από 0,2 πολύ ασθενής ή καθόλου - αν και το τι μετράει ως «αρκετά ισχυρό» ποικίλλει πολύ ανάλογα με τον τομέα (κοινωνικές επιστήμες έναντι φυσικών επιστημών, για παράδειγμα).</p>
+</div>
+<div class="faq-item">
+<h3>Είναι ένας «υπολογιστής συσχέτισης Pearson» ή «υπολογιστής συντελεστή Pearson» το ίδιο με αυτό το εργαλείο;</h3>
+<p>Ναι - το «Pearson» αναφέρεται στον συντελεστή συσχέτισης ροπής γινομένου Pearson, που είναι το τυπικό μέτρο συσχέτισης που υπολογίζει αυτή η αριθμομηχανή. Είναι ο πιο κοινός τύπος συσχέτισης που εννοούν οι άνθρωποι με τον όρο «συσχέτιση» χωρίς περαιτέρω προσδιορισμό.</p>
+</div>
+<div class="faq-item">
+<h3>Είναι ένας «υπολογιστής συσχέτισης r» το ίδιο με αυτό το εργαλείο;</h3>
+<p>Ναι - το «r» είναι το τυπικό σύμβολο για τον συντελεστή συσχέτισης Pearson, οπότε ένας «υπολογιστής συσχέτισης r» ζητά την ίδια τιμή που υπολογίζει αυτό το εργαλείο.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Σχετικά εργαλεία</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Σημείωση ακρίβειας</h4>
+          <p style="margin:0;font-size:0.85rem;">Οι αριθμομηχανές του Calquary έχουν σχεδιαστεί για να παρέχουν γρήγορες και αξιόπιστες εκτιμήσεις. Για αποφάσεις με πραγματικές οικονομικές, δομικές ή ιατρικές επιπτώσεις, συμβουλευτείτε έναν ειδικευμένο επαγγελματία.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/el/index.html">← Πίσω σε όλες τις αριθμομηχανές</a> · <a href="/el/about.html">Σχετικά</a> · <a href="/el/contact.html">Επικοινωνία</a> · <a href="/el/privacy.html">Απόρρητο</a> · <a href="/el/terms.html">Όροι</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>
