@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Distância e Rumo (Lat/Long) - Calculadora Gratuita Online | Calquary</title>
+  <meta name="description" content="Calcule a distância de grande círculo e o rumo da bússola entre duas coordenadas GPS." />
+  <meta property="og:title" content="Calculadora de Distância e Rumo (Lat/Long) | Calquary">
+  <meta property="og:description" content="Calcule a distância de grande círculo e o rumo da bússola entre duas coordenadas GPS.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/pt/tool/haversine-distance-calculator.html">
+  <meta property="og:locale" content="pt_PT">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/haversine-distance-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculadora de Distância e Rumo (Lat/Long) | Calquary">
+  <meta name="twitter:description" content="Calcule a distância de grande círculo e o rumo da bússola entre duas coordenadas GPS.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/haversine-distance-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/haversine-distance-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/haversine-distance-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/haversine-distance-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/haversine-distance-calculator.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/haversine-distance-calculator.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/haversine-distance-calculator.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/haversine-distance-calculator.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/haversine-distance-calculator.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/haversine-distance-calculator.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/haversine-distance-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/haversine-distance-calculator.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/haversine-distance-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/haversine-distance-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("haversine-distance-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("haversine-distance-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calculadora de Distância e Rumo (Lat/Long)",
+      "description": "Calcule a distância de grande círculo e o rumo da bússola entre duas coordenadas GPS.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/pt/tool/haversine-distance-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-01",
+      "inLanguage": "pt"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/pt/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Math",
+          "item": "https://calquary.com/pt/category/math.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calculadora de Distância e Rumo (Lat/Long)",
+          "item": "https://calquary.com/pt/tool/haversine-distance-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "O que é a fórmula haversine?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Uma fórmula que calcula a distância de grande círculo entre dois pontos em uma esfera a partir de sua latitude e longitude - ela considera a curvatura da Terra, ao contrário de um cálculo de distância em linha reta (mapa plano), que se torna cada vez mais impreciso em distâncias maiores."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual é a distância de Nova York a Londres?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cerca de 5.570 km (3.461 milhas) em linha reta, usando suas coordenadas (40,71°N, 74,01°O) e (51,51°N, 0,13°O)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que significa 'rumo'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A direção da bússola (em graus, 0-360°, onde 0°/360° é norte) para a qual você precisaria inicialmente se dirigir para viajar do primeiro ponto ao segundo ao longo da rota de grande círculo - ela muda continuamente ao longo de uma rota longa, então este é o rumo apenas no ponto de partida."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quão precisa é essa comparada às distâncias reais de voo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dentro de cerca de 0,5%, já que trata a Terra como uma esfera perfeita em vez de sua forma real de elipsoide ligeiramente achatado - próxima o suficiente para praticamente todos os propósitos práticos de estimativa de distância, embora a navegação aeronáutica oficial use modelos elipsoidais mais precisos."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/pt/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/pt/index.html#categories">Categorias</a>
+          <a href="/pt/index.html#tools">Todas as ferramentas</a>
+          <a href="/pt/about.html">Sobre</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Português">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>PT</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/haversine-distance-calculator.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/haversine-distance-calculator.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/haversine-distance-calculator.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/haversine-distance-calculator.html">Deutsch</a><span class="locale-item current" role="menuitem" aria-current="true">Português</span><a class="locale-item" role="menuitem" href="/it/tool/haversine-distance-calculator.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/haversine-distance-calculator.html">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/haversine-distance-calculator.html">Română</a><a class="locale-item" role="menuitem" href="/el/tool/haversine-distance-calculator.html">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/haversine-distance-calculator.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/haversine-distance-calculator.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/haversine-distance-calculator.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/pt/index.html">Calquary</a> / <a href="/pt/category/math.html">Matemática</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calculadora de Distância e Rumo (Lat/Long)</h1>
+        <p style="max-width:60ch;">Digite a latitude e longitude de dois pontos para calcular a distância entre eles e o rumo da bússola do primeiro para o segundo.</p>
+        <p class="last-updated">Última atualização: September 1, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calcular</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Redefinir</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Perguntas frequentes</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>O que é a fórmula haversine?</h3>
+<p>Uma fórmula que calcula a distância de grande círculo entre dois pontos em uma esfera a partir de sua latitude e longitude - ela considera a curvatura da Terra, ao contrário de um cálculo de distância em linha reta (mapa plano), que se torna cada vez mais impreciso em distâncias maiores.</p>
+</div>
+<div class="faq-item">
+<h3>Qual é a distância de Nova York a Londres?</h3>
+<p>Cerca de 5.570 km (3.461 milhas) em linha reta, usando suas coordenadas (40,71°N, 74,01°O) e (51,51°N, 0,13°O).</p>
+</div>
+<div class="faq-item">
+<h3>O que significa 'rumo'?</h3>
+<p>A direção da bússola (em graus, 0-360°, onde 0°/360° é norte) para a qual você precisaria inicialmente se dirigir para viajar do primeiro ponto ao segundo ao longo da rota de grande círculo - ela muda continuamente ao longo de uma rota longa, então este é o rumo apenas no ponto de partida.</p>
+</div>
+<div class="faq-item">
+<h3>Quão precisa é essa comparada às distâncias reais de voo?</h3>
+<p>Dentro de cerca de 0,5%, já que trata a Terra como uma esfera perfeita em vez de sua forma real de elipsoide ligeiramente achatado - próxima o suficiente para praticamente todos os propósitos práticos de estimativa de distância, embora a navegação aeronáutica oficial use modelos elipsoidais mais precisos.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Ferramentas relacionadas</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Nota sobre precisão</h4>
+          <p style="margin:0;font-size:0.85rem;">As calculadoras da Calquary são feitas para estimativas rápidas e confiáveis. Para decisões com implicações financeiras, estruturais ou médicas reais, consulte um profissional qualificado.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/pt/index.html">← Voltar a todas as calculadoras</a> · <a href="/pt/about.html">Sobre</a> · <a href="/pt/contact.html">Contato</a> · <a href="/pt/privacy.html">Privacidade</a> · <a href="/pt/terms.html">Termos</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

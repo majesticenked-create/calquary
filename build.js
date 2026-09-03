@@ -109,6 +109,10 @@ const WAVE_ONE_TOOL_IDS = [
   "correlation-calculator", "z-score-calculator", "confusion-matrix-calculator",
   "odds-probability-converter", "normal-distribution-calculator", "lottery-odds-calculator",
   "poker-hand-probability-calculator",
+  // Math category, batch 4
+  "square-root-calculator", "ratio-calculator", "aspect-ratio-calculator",
+  "exponent-calculator", "logarithm-calculator", "vector-calculator",
+  "haversine-distance-calculator",
 ];
 
 function loadData() {

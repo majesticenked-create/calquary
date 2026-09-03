@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>比例计算器 - 免费在线计算器 | Calquary</title>
+  <meta name="description" content="将比例化简为最简形式。" />
+  <meta property="og:title" content="比例计算器 | Calquary">
+  <meta property="og:description" content="将比例化简为最简形式。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/zh/tool/ratio-calculator.html">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/ratio-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="比例计算器 | Calquary">
+  <meta name="twitter:description" content="将比例化简为最简形式。">
+  <meta name="twitter:image" content="https://calquary.com/og-images/ratio-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/ratio-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/ratio-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/ratio-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/ratio-calculator.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/ratio-calculator.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/ratio-calculator.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/ratio-calculator.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/ratio-calculator.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/ratio-calculator.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/ratio-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/ratio-calculator.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/ratio-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/ratio-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("ratio-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("ratio-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "比例计算器",
+      "description": "将比例化简为最简形式。",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/zh/tool/ratio-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-30",
+      "inLanguage": "zh"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/zh/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Math",
+          "item": "https://calquary.com/zh/category/math.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "比例计算器",
+          "item": "https://calquary.com/zh/tool/ratio-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "如何化简像8:12这样的比例？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "用两个数字分别除以它们的最大公约数。GCD(8, 12) = 4，所以8:12化简为2:3。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "比例和分数有什么不同？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "比例直接比较两个量（如2:3），而分数表达的是一个量占整体的部分（如2/3）——不过化简的数学方法是一样的。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "如何把比例按不同的总量进行放缩？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "用目标总量除以比例各部分之和，然后把每部分乘以这个系数。要按2:3的比例分配300美元：2+3=5份，300美元÷5=每份60美元，所以分配结果是120美元和180美元。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "如何在比例式中求出缺失的值，比如3:4 = x:20？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "交叉相乘并求解：3/4 = x/20变成3*20 = 4*x，所以x = 60/4 = 15。只要你在一个比例式中提供了四个值中的三个，这个计算器就会自动处理这种交叉相乘。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "「比例计算器」和这个比率计算器是一回事吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "是的——比例式其实就是两个比率相等，所以比例计算器和比率计算器解决的是同样的基础数学问题。在上面输入你已知的两个值来化简比率，或者使用上面的比例常见问题来求解缺失的第四个值。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "「比例求解器」和比例计算器不同吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不同——「求解器」和「计算器」在这里描述的是同一件事：求出比例式中缺失的值，或化简比率。这个工具两者都能处理。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/zh/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/zh/index.html#categories">分类</a>
+          <a href="/zh/index.html#tools">所有工具</a>
+          <a href="/zh/about.html">关于我们</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: 中文">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>undefined</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/ratio-calculator.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/ratio-calculator.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/ratio-calculator.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/ratio-calculator.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/ratio-calculator.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/ratio-calculator.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/ratio-calculator.html">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/ratio-calculator.html">Română</a><a class="locale-item" role="menuitem" href="/el/tool/ratio-calculator.html">Ελληνικά</a><span class="locale-item current" role="menuitem" aria-current="true">中文</span><a class="locale-item" role="menuitem" href="/ar/tool/ratio-calculator.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/ratio-calculator.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/zh/index.html">Calquary</a> / <a href="/zh/category/math.html">数学</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>比例计算器</h1>
+        <p style="max-width:60ch;">输入两个数字，将它们的比例化简为最简形式，并查看对应的小数值。</p>
+        <p class="last-updated">最后更新： August 30, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">计算</button>
+              <button type="button" id="calc-reset" class="btn-ghost">重置</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>常见问题</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>如何化简像8:12这样的比例？</h3>
+<p>用两个数字分别除以它们的最大公约数。GCD(8, 12) = 4，所以8:12化简为2:3。</p>
+</div>
+<div class="faq-item">
+<h3>比例和分数有什么不同？</h3>
+<p>比例直接比较两个量（如2:3），而分数表达的是一个量占整体的部分（如2/3）——不过化简的数学方法是一样的。</p>
+</div>
+<div class="faq-item">
+<h3>如何把比例按不同的总量进行放缩？</h3>
+<p>用目标总量除以比例各部分之和，然后把每部分乘以这个系数。要按2:3的比例分配300美元：2+3=5份，300美元÷5=每份60美元，所以分配结果是120美元和180美元。</p>
+</div>
+<div class="faq-item">
+<h3>如何在比例式中求出缺失的值，比如3:4 = x:20？</h3>
+<p>交叉相乘并求解：3/4 = x/20变成3*20 = 4*x，所以x = 60/4 = 15。只要你在一个比例式中提供了四个值中的三个，这个计算器就会自动处理这种交叉相乘。</p>
+</div>
+<div class="faq-item">
+<h3>「比例计算器」和这个比率计算器是一回事吗？</h3>
+<p>是的——比例式其实就是两个比率相等，所以比例计算器和比率计算器解决的是同样的基础数学问题。在上面输入你已知的两个值来化简比率，或者使用上面的比例常见问题来求解缺失的第四个值。</p>
+</div>
+<div class="faq-item">
+<h3>「比例求解器」和比例计算器不同吗？</h3>
+<p>不同——「求解器」和「计算器」在这里描述的是同一件事：求出比例式中缺失的值，或化简比率。这个工具两者都能处理。</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>相关工具</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>准确性说明</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquary 的计算器旨在提供快速、可靠的估算。对于涉及重大财务、结构或医疗后果的决定，请咨询合格的专业人士。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/zh/index.html">← 返回所有计算器</a> · <a href="/zh/about.html">关于我们</a> · <a href="/zh/contact.html">联系我们</a> · <a href="/zh/privacy.html">隐私政策</a> · <a href="/zh/terms.html">使用条款</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>
