@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Υπολογιστής Ισορροπίας Hardy-Weinberg - Δωρεάν Online Αριθμομηχανή | Calquary</title>
+  <meta name="description" content="Υπολόγισε τις συχνότητες γονοτύπου και αλληλομόρφων χρησιμοποιώντας την εξίσωση ισορροπίας Hardy-Weinberg." />
+  <meta property="og:title" content="Υπολογιστής Ισορροπίας Hardy-Weinberg | Calquary">
+  <meta property="og:description" content="Υπολόγισε τις συχνότητες γονοτύπου και αλληλομόρφων χρησιμοποιώντας την εξίσωση ισορροπίας Hardy-Weinberg.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/el/tool/hardy-weinberg-calculator.html">
+  <meta property="og:locale" content="el_GR">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/hardy-weinberg-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Υπολογιστής Ισορροπίας Hardy-Weinberg | Calquary">
+  <meta name="twitter:description" content="Υπολόγισε τις συχνότητες γονοτύπου και αλληλομόρφων χρησιμοποιώντας την εξίσωση ισορροπίας Hardy-Weinberg.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/hardy-weinberg-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/hardy-weinberg-calculator.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/hardy-weinberg-calculator.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/hardy-weinberg-calculator.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/hardy-weinberg-calculator.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/hardy-weinberg-calculator.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/hardy-weinberg-calculator.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/hardy-weinberg-calculator.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/hardy-weinberg-calculator.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/hardy-weinberg-calculator.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/hardy-weinberg-calculator.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/hardy-weinberg-calculator.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/hardy-weinberg-calculator.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/hardy-weinberg-calculator.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("hardy-weinberg-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("hardy-weinberg-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Υπολογιστής Ισορροπίας Hardy-Weinberg",
+      "description": "Υπολόγισε τις συχνότητες γονοτύπου και αλληλομόρφων χρησιμοποιώντας την εξίσωση ισορροπίας Hardy-Weinberg.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/el/tool/hardy-weinberg-calculator.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-01",
+      "inLanguage": "el"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/el/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Math",
+          "item": "https://calquary.com/el/category/math.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Υπολογιστής Ισορροπίας Hardy-Weinberg",
+          "item": "https://calquary.com/el/tool/hardy-weinberg-calculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Τι είναι η εξίσωση Hardy-Weinberg;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "p² + 2pq + q² = 1, όπου p και q είναι οι συχνότητες δύο αλληλομόρφων σε ένα γονίδιο (p + q = 1). Το p² είναι η συχνότητα ομόζυγων κυρίαρχων ατόμων, το 2pq είναι ετερόζυγο, και το q² είναι ομόζυγο υπολειπόμενο."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Αν η συχνότητα του κυρίαρχου αλληλομόρφου (p) είναι 0,7, ποιες είναι οι συχνότητες γονοτύπου;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "q = 1 − 0,7 = 0,3. p² = 0,49 (49% ομόζυγο κυρίαρχο), 2pq = 0,42 (42% ετερόζυγο), q² = 0,09 (9% ομόζυγο υπολειπόμενο)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Πώς βρίσκω τις συχνότητες αλληλομόρφων αν γνωρίζω μόνο τη συχνότητα του υπολειπόμενου φαινοτύπου;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Η συχνότητα του υπολειπόμενου φαινοτύπου ισούται με q² (μόνο τα ομόζυγα υπολειπόμενα άτομα εμφανίζουν το υπολειπόμενο χαρακτηριστικό), οπότε πάρτε την τετραγωνική ρίζα του για να πάρετε το q, μετά p = 1 − q."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ποιες υποθέσεις απαιτεί η ισορροπία Hardy-Weinberg;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Καμία μετάλλαξη, καμία μετανάστευση, καμία φυσική επιλογή, τυχαία ζευγάρωση, και έναν άπειρα μεγάλο πληθυσμό (καμία γενετική παρέκκλιση) - οι πραγματικοί πληθυσμοί σπάνια πληρούν όλα αυτά τέλεια, οπότε το Hardy-Weinberg χρησιμεύει ως θεωρητική γραμμή βάσης για την ανίχνευση του πότε συμβαίνει εξέλιξη, συγκρίνοντας τις παρατηρούμενες συχνότητες με την αναμενόμενη ισορροπία."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/el/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/el/index.html#categories">Κατηγορίες</a>
+          <a href="/el/index.html#tools">Όλα τα εργαλεία</a>
+          <a href="/el/about.html">Σχετικά</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Ελληνικά">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>undefined</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/hardy-weinberg-calculator.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/hardy-weinberg-calculator.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/hardy-weinberg-calculator.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/hardy-weinberg-calculator.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/hardy-weinberg-calculator.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/hardy-weinberg-calculator.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/hardy-weinberg-calculator.html">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/hardy-weinberg-calculator.html">Română</a><span class="locale-item current" role="menuitem" aria-current="true">Ελληνικά</span><a class="locale-item" role="menuitem" href="/zh/tool/hardy-weinberg-calculator.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/hardy-weinberg-calculator.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/hardy-weinberg-calculator.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/el/index.html">Calquary</a> / <a href="/el/category/math.html">Μαθηματικά</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Υπολογιστής Ισορροπίας Hardy-Weinberg</h1>
+        <p style="max-width:60ch;">Εισάγετε μια συχνότητα αλληλομόρφου (ή μια συχνότητα γονοτύπου) για να υπολογίσετε τις αναμενόμενες συχνότητες γονοτύπου υπό την ισορροπία Hardy-Weinberg.</p>
+        <p class="last-updated">Τελευταία ενημέρωση: September 1, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Υπολογισμός</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Επαναφορά</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Συχνές ερωτήσεις</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Τι είναι η εξίσωση Hardy-Weinberg;</h3>
+<p>p² + 2pq + q² = 1, όπου p και q είναι οι συχνότητες δύο αλληλομόρφων σε ένα γονίδιο (p + q = 1). Το p² είναι η συχνότητα ομόζυγων κυρίαρχων ατόμων, το 2pq είναι ετερόζυγο, και το q² είναι ομόζυγο υπολειπόμενο.</p>
+</div>
+<div class="faq-item">
+<h3>Αν η συχνότητα του κυρίαρχου αλληλομόρφου (p) είναι 0,7, ποιες είναι οι συχνότητες γονοτύπου;</h3>
+<p>q = 1 − 0,7 = 0,3. p² = 0,49 (49% ομόζυγο κυρίαρχο), 2pq = 0,42 (42% ετερόζυγο), q² = 0,09 (9% ομόζυγο υπολειπόμενο).</p>
+</div>
+<div class="faq-item">
+<h3>Πώς βρίσκω τις συχνότητες αλληλομόρφων αν γνωρίζω μόνο τη συχνότητα του υπολειπόμενου φαινοτύπου;</h3>
+<p>Η συχνότητα του υπολειπόμενου φαινοτύπου ισούται με q² (μόνο τα ομόζυγα υπολειπόμενα άτομα εμφανίζουν το υπολειπόμενο χαρακτηριστικό), οπότε πάρτε την τετραγωνική ρίζα του για να πάρετε το q, μετά p = 1 − q.</p>
+</div>
+<div class="faq-item">
+<h3>Ποιες υποθέσεις απαιτεί η ισορροπία Hardy-Weinberg;</h3>
+<p>Καμία μετάλλαξη, καμία μετανάστευση, καμία φυσική επιλογή, τυχαία ζευγάρωση, και έναν άπειρα μεγάλο πληθυσμό (καμία γενετική παρέκκλιση) - οι πραγματικοί πληθυσμοί σπάνια πληρούν όλα αυτά τέλεια, οπότε το Hardy-Weinberg χρησιμεύει ως θεωρητική γραμμή βάσης για την ανίχνευση του πότε συμβαίνει εξέλιξη, συγκρίνοντας τις παρατηρούμενες συχνότητες με την αναμενόμενη ισορροπία.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Σχετικά εργαλεία</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Σημείωση ακρίβειας</h4>
+          <p style="margin:0;font-size:0.85rem;">Οι αριθμομηχανές του Calquary έχουν σχεδιαστεί για να παρέχουν γρήγορες και αξιόπιστες εκτιμήσεις. Για αποφάσεις με πραγματικές οικονομικές, δομικές ή ιατρικές επιπτώσεις, συμβουλευτείτε έναν ειδικευμένο επαγγελματία.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/el/index.html">← Πίσω σε όλες τις αριθμομηχανές</a> · <a href="/el/about.html">Σχετικά</a> · <a href="/el/contact.html">Επικοινωνία</a> · <a href="/el/privacy.html">Απόρρητο</a> · <a href="/el/terms.html">Όροι</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

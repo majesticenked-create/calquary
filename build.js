@@ -125,6 +125,10 @@ const WAVE_ONE_TOOL_IDS = [
   "system-of-equations-solver", "linear-equation-solver", "eigenvalue-calculator",
   "inequality-solver", "chemical-equation-balancer", "solubility-product-calculator",
   "titration-ph-calculator",
+  // Math category, batch 8
+  "limiting-reagent-calculator", "half-life-calculator", "hardy-weinberg-calculator",
+  "grade-calculator", "weighted-grade-calculator", "speed-distance-time-calculator",
+  "projectile-motion-calculator",
 ];
 
 function loadData() {

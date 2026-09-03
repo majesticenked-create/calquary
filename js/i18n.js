@@ -24469,6 +24469,841 @@ const I18N_TOOLS = {
       ],
     },
   },
+
+  "limiting-reagent-calculator": {
+    es: {
+      title: "Calculadora de Reactivo Limitante",
+      intro: "Introduce la fórmula química de cada reactivo, su masa, y su coeficiente en la ecuación balanceada para encontrar el reactivo limitante.",
+      description: "Encuentra cuál de dos reactivos es el reactivo limitante a partir de su masa, fórmula, y coeficiente estequiométrico.",
+      faq: [
+        { q: "¿Cómo encuentro el reactivo limitante?", a: "Convierte la masa de cada reactivo a moles (masa ÷ masa molar), divide entre su coeficiente en la ecuación balanceada, luego compara - el reactivo con el resultado más pequeño es el reactivo limitante, ya que se agotará primero." },
+        { q: "¿Por qué importa el coeficiente, no solo los moles?", a: "Los coeficientes de la ecuación balanceada muestran la proporción requerida entre reactivos - tener más moles brutos de un reactivo no ayuda si la reacción necesita proporcionalmente aún más de él. Dividir entre el coeficiente normaliza cada reactivo a \"cuántas reacciones completas vale\" lo que tienes." },
+        { q: "¿Qué pasa con el reactivo en exceso?", a: "El reactivo no limitante queda sobrante (en exceso) una vez que el reactivo limitante se consume completamente - la reacción se detiene ahí, y cualquier exceso restante no reacciona más sin agregar más reactivo limitante." },
+      ],
+    },
+    fr: {
+      title: "Calculateur de Réactif Limitant",
+      intro: "Entrez la formule chimique de chaque réactif, sa masse, et son coefficient dans l'équation équilibrée pour trouver le réactif limitant.",
+      description: "Trouvez lequel des deux réactifs est le réactif limitant à partir de leur masse, formule, et coefficient stœchiométrique.",
+      faq: [
+        { q: "Comment trouver le réactif limitant ?", a: "Convertissez la masse de chaque réactif en moles (masse ÷ masse molaire), divisez par son coefficient dans l'équation équilibrée, puis comparez - le réactif avec le plus petit résultat est le réactif limitant, puisqu'il s'épuisera en premier." },
+        { q: "Pourquoi le coefficient compte-t-il, pas seulement les moles ?", a: "Les coefficients de l'équation équilibrée montrent le ratio requis entre réactifs - avoir plus de moles brutes d'un réactif n'aide pas si la réaction en a proportionnellement besoin de plus encore. Diviser par le coefficient normalise chaque réactif en « combien de réactions complètes valent » ce que vous avez." },
+        { q: "Que se passe-t-il avec le réactif en excès ?", a: "Le réactif non limitant reste en surplus (en excès) une fois que le réactif limitant est entièrement consommé - la réaction s'arrête là, et tout excès restant ne réagit plus sans l'ajout de plus de réactif limitant." },
+      ],
+    },
+    de: {
+      title: "Limitierender-Reaktand-Rechner",
+      intro: "Geben Sie die chemische Formel, Masse, und den Koeffizienten in der ausgeglichenen Gleichung jedes Reaktanden ein, um den limitierenden Reaktanden zu finden.",
+      description: "Finden Sie, welcher von zwei Reaktanden der limitierende Reaktand ist, aus ihrer Masse, Formel, und dem stöchiometrischen Koeffizienten.",
+      faq: [
+        { q: "Wie finde ich den limitierenden Reaktanden?", a: "Wandeln Sie die Masse jedes Reaktanden in Mol um (Masse ÷ Molmasse), teilen Sie durch seinen Koeffizienten in der ausgeglichenen Gleichung, dann vergleichen Sie - welcher Reaktand das kleinere Ergebnis hat, ist der limitierende Reaktand, da er zuerst ausgeht." },
+        { q: "Warum ist der Koeffizient wichtig, nicht nur die Mole?", a: "Die Koeffizienten der ausgeglichenen Gleichung zeigen das erforderliche Verhältnis zwischen Reaktanden - mehr rohe Mole eines Reaktanden zu haben hilft nicht, wenn die Reaktion proportional noch mehr davon benötigt. Das Teilen durch den Koeffizienten normalisiert jeden Reaktanden auf „wie viele vollständige Reaktionen wert“ Sie haben." },
+        { q: "Was passiert mit dem überschüssigen Reaktanden?", a: "Der nicht-limitierende Reaktand bleibt übrig (im Überschuss), sobald der limitierende Reaktand vollständig verbraucht ist - die Reaktion stoppt dort, und jeglicher verbleibender Überschuss reagiert nicht weiter, ohne dass mehr des limitierenden Reaktanden hinzugefügt wird." },
+      ],
+    },
+    pt: {
+      title: "Calculadora de Reagente Limitante",
+      intro: "Digite a fórmula química de cada reagente, sua massa, e seu coeficiente na equação balanceada para encontrar o reagente limitante.",
+      description: "Encontre qual de dois reagentes é o reagente limitante a partir de sua massa, fórmula, e coeficiente estequiométrico.",
+      faq: [
+        { q: "Como encontro o reagente limitante?", a: "Converta a massa de cada reagente para mols (massa ÷ massa molar), divida pelo seu coeficiente na equação balanceada, depois compare - qualquer reagente que tiver o menor resultado é o reagente limitante, já que ele vai acabar primeiro." },
+        { q: "Por que o coeficiente importa, não apenas os mols?", a: "Os coeficientes da equação balanceada mostram a proporção necessária entre reagentes - ter mais mols brutos de um reagente não ajuda se a reação precisa proporcionalmente de ainda mais dele. Dividir pelo coeficiente normaliza cada reagente para \"quantas reações completas valem\" o que você tem." },
+        { q: "O que acontece com o reagente em excesso?", a: "O reagente não limitante sobra (em excesso) assim que o reagente limitante é totalmente consumido - a reação para ali, e qualquer excesso restante não reage mais sem que mais reagente limitante seja adicionado." },
+      ],
+    },
+    it: {
+      title: "Calcolatore del Reagente Limitante",
+      intro: "Inserisci la formula chimica di ciascun reagente, la sua massa, e il suo coefficiente nell'equazione bilanciata per trovare il reagente limitante.",
+      description: "Trova quale dei due reagenti è il reagente limitante dalla loro massa, formula, e coefficiente stechiometrico.",
+      faq: [
+        { q: "Come trovo il reagente limitante?", a: "Converti la massa di ciascun reagente in moli (massa ÷ massa molare), dividi per il suo coefficiente nell'equazione bilanciata, poi confronta - qualsiasi reagente abbia il risultato più piccolo è il reagente limitante, poiché si esaurirà per primo." },
+        { q: "Perché il coefficiente conta, non solo le moli?", a: "I coefficienti dell'equazione bilanciata mostrano il rapporto richiesto tra i reagenti - avere più moli grezze di un reagente non aiuta se la reazione ne richiede proporzionalmente ancora di più. Dividere per il coefficiente normalizza ogni reagente a \"quante reazioni complete vale\" ciò che hai." },
+        { q: "Cosa succede al reagente in eccesso?", a: "Il reagente non limitante rimane in eccesso una volta che il reagente limitante è completamente consumato - la reazione si ferma lì, e qualsiasi eccesso rimanente non reagisce ulteriormente senza l'aggiunta di più reagente limitante." },
+      ],
+    },
+    ja: {
+      title: "限定反応剤計算機",
+      intro: "各反応物の化学式、質量、およびバランスの取れた方程式での係数を入力すると、限定反応剤を見つけます。",
+      description: "質量、化学式、化学量論係数から、2つの反応物のどちらが限定反応剤であるかを見つけます。",
+      faq: [
+        { q: "限定反応剤をどう見つけますか？", a: "各反応物の質量をモルに変換し（質量 ÷ モル質量）、バランスの取れた方程式での係数で割り、比較します。より小さい結果を持つ反応物が限定反応剤です。それが最初になくなるからです。" },
+        { q: "なぜモルだけでなく係数が重要なのですか？", a: "バランスの取れた方程式の係数は、反応物間の必要な比率を示しています。反応が比例してさらに多くのそれを必要とする場合、ある反応物のより多くの生モルを持っていても役に立ちません。係数で割ることで、各反応物を「持っている量が完全な反応何回分に相当するか」に正規化します。" },
+        { q: "過剰な反応剤はどうなりますか？", a: "限定反応剤が完全に消費されると、非限定反応剤が残ります（過剰）。反応はそこで停止し、残りの過剰な反応剤は限定反応剤がさらに追加されない限り、それ以上反応しません。" },
+      ],
+    },
+    ro: {
+      title: "Calculator de Reactant Limitativ",
+      intro: "Introdu formula chimică a fiecărui reactant, masa sa, și coeficientul său în ecuația echilibrată pentru a găsi reactantul limitativ.",
+      description: "Găsește care dintre doi reactanți este reactantul limitativ din masa, formula, și coeficientul stoichiometric al acestora.",
+      faq: [
+        { q: "Cum găsesc reactantul limitativ?", a: "Convertește masa fiecărui reactant în moli (masă ÷ masă molară), împarte la coeficientul său din ecuația echilibrată, apoi compară - orice reactant care are rezultatul mai mic este reactantul limitativ, deoarece se va termina primul." },
+        { q: "De ce contează coeficientul, nu doar molii?", a: "Coeficienții ecuației echilibrate arată raportul necesar între reactanți - a avea mai mulți moli bruti dintr-un reactant nu ajută dacă reacția are nevoie proporțional de și mai mult din el. Împărțirea la coeficient normalizează fiecare reactant la \"câte reacții complete valorează\" ceea ce ai." },
+        { q: "Ce se întâmplă cu reactantul în exces?", a: "Reactantul nelimitativ rămâne în exces odată ce reactantul limitativ este consumat complet - reacția se oprește acolo, iar orice exces rămas nu mai reacționează fără adăugarea de mai mult reactant limitativ." },
+      ],
+    },
+    el: {
+      title: "Υπολογιστής Περιοριστικού Αντιδραστηρίου",
+      intro: "Εισάγετε τον χημικό τύπο κάθε αντιδραστηρίου, τη μάζα του, και τον συντελεστή του στην ισοσταθμισμένη εξίσωση για να βρείτε το περιοριστικό αντιδραστήριο.",
+      description: "Βρες ποιο από δύο αντιδραστήρια είναι το περιοριστικό αντιδραστήριο από τη μάζα, τύπο, και στοιχειομετρικό συντελεστή τους.",
+      faq: [
+        { q: "Πώς βρίσκω το περιοριστικό αντιδραστήριο;", a: "Μετατρέψτε τη μάζα κάθε αντιδραστηρίου σε mol (μάζα ÷ μοριακή μάζα), διαιρέστε με τον συντελεστή του στην ισοσταθμισμένη εξίσωση, μετά συγκρίνετε - όποιο αντιδραστήριο έχει το μικρότερο αποτέλεσμα είναι το περιοριστικό αντιδραστήριο, αφού θα εξαντληθεί πρώτο." },
+        { q: "Γιατί έχει σημασία ο συντελεστής, όχι μόνο τα mol;", a: "Οι συντελεστές της ισοσταθμισμένης εξίσωσης δείχνουν την απαιτούμενη αναλογία μεταξύ αντιδραστηρίων - το να έχετε περισσότερα ακατέργαστα mol ενός αντιδραστηρίου δεν βοηθά αν η αντίδραση χρειάζεται αναλογικά ακόμα περισσότερο από αυτό. Η διαίρεση με τον συντελεστή κανονικοποιεί κάθε αντιδραστήριο σε «πόσες πλήρεις αντιδράσεις αξίζει» αυτό που έχετε." },
+        { q: "Τι συμβαίνει με το περίσσιο αντιδραστήριο;", a: "Το μη περιοριστικό αντιδραστήριο μένει σε περίσσεια αφού το περιοριστικό αντιδραστήριο καταναλωθεί πλήρως - η αντίδραση σταματά εκεί, και οποιαδήποτε εναπομείνασα περίσσεια δεν αντιδρά περαιτέρω χωρίς να προστεθεί περισσότερο περιοριστικό αντιδραστήριο." },
+      ],
+    },
+    zh: {
+      title: "限量试剂计算器",
+      intro: "输入每种反应物的化学式、质量以及它在配平方程式中的系数，找出限量试剂。",
+      description: "根据质量、化学式和化学计量系数，找出两种反应物中哪一种是限量试剂。",
+      faq: [
+        { q: "如何找出限量试剂？", a: "把每种反应物的质量转换成摩尔数（质量÷摩尔质量），除以它在配平方程式中的系数，然后比较——结果较小的那种反应物就是限量试剂，因为它会先被耗尽。" },
+        { q: "为什么系数很重要，而不仅仅是摩尔数？", a: "配平方程式的系数显示了反应物之间所需的比例——如果反应按比例还需要更多某种反应物，那么拥有更多该反应物的原始摩尔数并没有帮助。除以系数能把每种反应物换算成「你所拥有的量相当于多少次完整反应」。" },
+        { q: "过量的试剂会怎样？", a: "一旦限量试剂完全耗尽，非限量试剂就会剩余（过量）——反应到此停止，剩余的过量试剂在没有添加更多限量试剂的情况下不会继续反应。" },
+      ],
+    },
+    ar: {
+      title: "حاسبة الكاشف المحدد",
+      intro: "أدخل الصيغة الكيميائية لكل متفاعل وكتلته ومعامله في المعادلة الموزونة لإيجاد الكاشف المحدد.",
+      description: "أوجد أي من متفاعلين هو الكاشف المحدد من كتلتهما وصيغتهما ومعاملهما القياسي المتكافئ.",
+      faq: [
+        { q: "كيف أجد الكاشف المحدد؟", a: "حوّل كتلة كل متفاعل إلى مولات (الكتلة ÷ الكتلة المولية)، اقسم على معامله في المعادلة الموزونة، ثم قارن - أي متفاعل له النتيجة الأصغر هو الكاشف المحدد، لأنه سينفد أولاً." },
+        { q: "لماذا يهم المعامل، وليس فقط المولات؟", a: "تُظهر معاملات المعادلة الموزونة النسبة المطلوبة بين المتفاعلات - وجود مولات خام أكثر لمتفاعل لا يساعد إذا كان التفاعل يحتاج بشكل متناسب إلى المزيد منه. القسمة على المعامل توحد كل متفاعل إلى \"كم عدد التفاعلات الكاملة\" التي تمتلكها." },
+        { q: "ماذا يحدث للكاشف الزائد؟", a: "يتبقى الكاشف غير المحدد (بفائض) بمجرد استهلاك الكاشف المحدد بالكامل - يتوقف التفاعل عند تلك النقطة، ولا يتفاعل أي فائض متبقٍ أكثر دون إضافة المزيد من الكاشف المحدد." },
+      ],
+    },
+    th: {
+      title: "เครื่องคำนวณสารกำหนดปริมาณ",
+      intro: "ป้อนสูตรเคมี มวล และสัมประสิทธิ์ในสมการที่ดุลแล้วของสารตั้งต้นแต่ละตัวเพื่อหาสารกำหนดปริมาณ",
+      description: "หาว่าสารตั้งต้นสองตัวใดเป็นสารกำหนดปริมาณจากมวล สูตร และสัมประสิทธิ์สโตอิชิโอเมตริกของพวกมัน",
+      faq: [
+        { q: "ฉันจะหาสารกำหนดปริมาณได้อย่างไร?", a: "แปลงมวลของสารตั้งต้นแต่ละตัวเป็นโมล (มวล ÷ มวลโมลาร์) หารด้วยสัมประสิทธิ์ในสมการที่ดุลแล้ว จากนั้นเปรียบเทียบ - สารตั้งต้นใดที่มีผลลัพธ์น้อยกว่าคือสารกำหนดปริมาณ เนื่องจากมันจะหมดก่อน" },
+        { q: "ทำไมสัมประสิทธิ์จึงสำคัญ ไม่ใช่แค่โมล?", a: "สัมประสิทธิ์ของสมการที่ดุลแล้วแสดงอัตราส่วนที่จำเป็นระหว่างสารตั้งต้น - การมีโมลดิบมากกว่าของสารตั้งต้นตัวหนึ่งไม่ช่วยถ้าปฏิกิริยาต้องการมันมากขึ้นตามสัดส่วน การหารด้วยสัมประสิทธิ์จะทำให้สารตั้งต้นแต่ละตัวเป็นมาตรฐานเป็น \"มีค่าเท่ากับปฏิกิริยาสมบูรณ์กี่ครั้ง\"" },
+        { q: "สารกำหนดปริมาณส่วนเกินจะเกิดอะไรขึ้น?", a: "สารตั้งต้นที่ไม่ใช่สารกำหนดปริมาณจะเหลืออยู่ (ส่วนเกิน) เมื่อสารกำหนดปริมาณถูกใช้หมด - ปฏิกิริยาจะหยุดที่นั่น และส่วนเกินที่เหลือจะไม่ทำปฏิกิริยาต่อไปโดยไม่มีการเพิ่มสารกำหนดปริมาณมากขึ้น" },
+      ],
+    },
+  },
+
+  "half-life-calculator": {
+    es: {
+      title: "Calculadora de Vida Media",
+      intro: "Elige qué resolver, luego introduce los valores conocidos para calcular la desintegración de primer orden - usado para desintegración radiactiva y cinética de reacción química de primer orden.",
+      description: "Calcula la vida media, cantidad restante, o tiempo transcurrido para desintegración de primer orden (desintegración radiactiva o cinética de reacción de primer orden).",
+      faq: [
+        { q: "¿Cuál es la fórmula de la vida media de primer orden?", a: "Vida media = ln(2) / k, donde k es la constante de velocidad. De manera equivalente, k = ln(2) / vida media. Esto se aplica tanto a la desintegración radiactiva como a la cinética de reacción química de primer orden." },
+        { q: "¿Cuánta sustancia queda después de varias vidas medias?", a: "N(t) = N₀ × (1/2)^(t / vida media). Después de 1 vida media, queda el 50%; después de 2, el 25%; después de 3, el 12.5% - cada vida media reduce la cantidad restante a la mitad, sin importar la cantidad inicial." },
+        { q: "¿Cuánto de 100 unidades queda después de 25 unidades de tiempo, con una vida media de 10?", a: "Aproximadamente 17.7 unidades (17.7% del original) - 100 × (1/2)^(25/10) = 100 × 0.5^2.5 ≈ 17.68." },
+        { q: "¿Esto se aplica tanto a la desintegración radiactiva como a las reacciones químicas?", a: "Sí, para procesos de primer orden - la desintegración radiactiva es inherentemente de primer orden, y muchas reacciones químicas (donde la velocidad depende de la concentración de un solo reactivo) siguen las mismas matemáticas de desintegración exponencial." },
+      ],
+    },
+    fr: {
+      title: "Calculateur de Demi-vie",
+      intro: "Choisissez quoi résoudre, puis entrez les valeurs connues pour calculer la désintégration de premier ordre - utilisé pour la désintégration radioactive et la cinétique de réaction chimique de premier ordre.",
+      description: "Calculez la demi-vie, la quantité restante, ou le temps écoulé pour une désintégration de premier ordre (désintégration radioactive ou cinétique de réaction de premier ordre).",
+      faq: [
+        { q: "Quelle est la formule de la demi-vie de premier ordre ?", a: "Demi-vie = ln(2) / k, où k est la constante de vitesse. De manière équivalente, k = ln(2) / demi-vie. Cela s'applique à la fois à la désintégration radioactive et à la cinétique de réaction chimique de premier ordre." },
+        { q: "Combien reste-t-il d'une substance après plusieurs demi-vies ?", a: "N(t) = N₀ × (1/2)^(t / demi-vie). Après 1 demi-vie, 50 % reste ; après 2, 25 % ; après 3, 12,5 % - chaque demi-vie réduit de moitié la quantité restante, quelle que soit la quantité de départ." },
+        { q: "Combien de 100 unités reste-t-il après 25 unités de temps, avec une demi-vie de 10 ?", a: "Environ 17,7 unités (17,7 % de l'original) - 100 × (1/2)^(25/10) = 100 × 0,5^2,5 ≈ 17,68." },
+        { q: "Cela s'applique-t-il à la fois à la désintégration radioactive et aux réactions chimiques ?", a: "Oui, pour les processus de premier ordre - la désintégration radioactive est intrinsèquement de premier ordre, et de nombreuses réactions chimiques (où la vitesse dépend de la concentration d'un seul réactif) suivent les mêmes mathématiques de décroissance exponentielle." },
+      ],
+    },
+    de: {
+      title: "Halbwertszeit-Rechner",
+      intro: "Wählen Sie, wonach Sie auflösen möchten, dann geben Sie die bekannten Werte ein, um den Zerfall erster Ordnung zu berechnen - verwendet für radioaktiven Zerfall und chemische Reaktionskinetik erster Ordnung.",
+      description: "Berechnen Sie Halbwertszeit, verbleibende Menge, oder verstrichene Zeit für Zerfall erster Ordnung (radioaktiver Zerfall oder Reaktionskinetik erster Ordnung).",
+      faq: [
+        { q: "Was ist die Formel für die Halbwertszeit erster Ordnung?", a: "Halbwertszeit = ln(2) / k, wobei k die Geschwindigkeitskonstante ist. Gleichwertig: k = ln(2) / Halbwertszeit. Dies gilt sowohl für radioaktiven Zerfall als auch für chemische Reaktionskinetik erster Ordnung." },
+        { q: "Wie viel einer Substanz bleibt nach mehreren Halbwertszeiten übrig?", a: "N(t) = N₀ × (1/2)^(t / Halbwertszeit). Nach 1 Halbwertszeit bleiben 50 % übrig; nach 2, 25 %; nach 3, 12,5 % - jede Halbwertszeit halbiert die verbleibende Menge, unabhängig von der Anfangsmenge." },
+        { q: "Wie viel von 100 Einheiten bleibt nach 25 Zeiteinheiten übrig, bei einer Halbwertszeit von 10?", a: "Etwa 17,7 Einheiten (17,7 % des Originals) - 100 × (1/2)^(25/10) = 100 × 0,5^2,5 ≈ 17,68." },
+        { q: "Gilt dies sowohl für radioaktiven Zerfall als auch für chemische Reaktionen?", a: "Ja, für Prozesse erster Ordnung - radioaktiver Zerfall ist von Natur aus erster Ordnung, und viele chemische Reaktionen (bei denen die Geschwindigkeit von der Konzentration eines einzelnen Reaktanden abhängt) folgen der gleichen exponentiellen Zerfallsmathematik." },
+      ],
+    },
+    pt: {
+      title: "Calculadora de Meia-vida",
+      intro: "Escolha o que resolver, depois digite os valores conhecidos para calcular o decaimento de primeira ordem - usado para decaimento radioativo e cinética de reação química de primeira ordem.",
+      description: "Calcule a meia-vida, quantidade restante, ou tempo decorrido para decaimento de primeira ordem (decaimento radioativo ou cinética de reação de primeira ordem).",
+      faq: [
+        { q: "Qual é a fórmula da meia-vida de primeira ordem?", a: "Meia-vida = ln(2) / k, onde k é a constante de taxa. Equivalentemente, k = ln(2) / meia-vida. Isso se aplica tanto ao decaimento radioativo quanto à cinética de reação química de primeira ordem." },
+        { q: "Quanto de uma substância resta depois de várias meias-vidas?", a: "N(t) = N₀ × (1/2)^(t / meia-vida). Depois de 1 meia-vida, resta 50%; depois de 2, 25%; depois de 3, 12,5% - cada meia-vida corta pela metade a quantidade restante, independentemente da quantidade inicial." },
+        { q: "Quanto de 100 unidades resta depois de 25 unidades de tempo, com uma meia-vida de 10?", a: "Cerca de 17,7 unidades (17,7% do original) - 100 × (1/2)^(25/10) = 100 × 0,5^2,5 ≈ 17,68." },
+        { q: "Isso se aplica tanto ao decaimento radioativo quanto às reações químicas?", a: "Sim, para processos de primeira ordem - o decaimento radioativo é inerentemente de primeira ordem, e muitas reações químicas (onde a taxa depende da concentração de um único reagente) seguem a mesma matemática de decaimento exponencial." },
+      ],
+    },
+    it: {
+      title: "Calcolatore di Emivita",
+      intro: "Scegli cosa risolvere, poi inserisci i valori noti per calcolare il decadimento del primo ordine - usato per il decadimento radioattivo e la cinetica di reazione chimica del primo ordine.",
+      description: "Calcola l'emivita, la quantità rimanente, o il tempo trascorso per il decadimento del primo ordine (decadimento radioattivo o cinetica di reazione del primo ordine).",
+      faq: [
+        { q: "Qual è la formula dell'emivita del primo ordine?", a: "Emivita = ln(2) / k, dove k è la costante di velocità. Equivalentemente, k = ln(2) / emivita. Questo si applica sia al decadimento radioattivo che alla cinetica di reazione chimica del primo ordine." },
+        { q: "Quanto di una sostanza rimane dopo diverse emivite?", a: "N(t) = N₀ × (1/2)^(t / emivita). Dopo 1 emivita, rimane il 50%; dopo 2, il 25%; dopo 3, il 12,5% - ogni emivita dimezza la quantità rimanente, indipendentemente dalla quantità iniziale." },
+        { q: "Quanto di 100 unità rimane dopo 25 unità di tempo, con un'emivita di 10?", a: "Circa 17,7 unità (17,7% dell'originale) - 100 × (1/2)^(25/10) = 100 × 0,5^2,5 ≈ 17,68." },
+        { q: "Questo si applica sia al decadimento radioattivo che alle reazioni chimiche?", a: "Sì, per processi del primo ordine - il decadimento radioattivo è intrinsecamente del primo ordine, e molte reazioni chimiche (dove la velocità dipende dalla concentrazione di un singolo reagente) seguono la stessa matematica del decadimento esponenziale." },
+      ],
+    },
+    ja: {
+      title: "半減期計算機",
+      intro: "何を求めるかを選択し、既知の値を入力すると、一次減衰を計算します。放射性崩壊や一次化学反応速度論に使用されます。",
+      description: "一次減衰（放射性崩壊または一次反応速度論）の半減期、残存量、または経過時間を計算します。",
+      faq: [
+        { q: "一次半減期の公式は何ですか？", a: "半減期 = ln(2) / kです。kは速度定数です。同等に、k = ln(2) / 半減期です。これは放射性崩壊と一次化学反応速度論の両方に適用されます。" },
+        { q: "いくつかの半減期の後、物質はどれだけ残りますか？", a: "N(t) = N₀ × (1/2)^(t / 半減期)です。1半減期後には50%が残り、2半減期後には25%、3半減期後には12.5%です。開始量に関係なく、各半減期で残量が半分になります。" },
+        { q: "半減期10で、100単位のうち25時間単位後にはどれだけ残りますか？", a: "約17.7単位（元の17.7%）です。100 × (1/2)^(25/10) = 100 × 0.5^2.5 ≈ 17.68。" },
+        { q: "これは放射性崩壊と化学反応の両方に適用されますか？", a: "はい、一次過程には適用されます。放射性崩壊は本質的に一次であり、多くの化学反応（速度が単一の反応物の濃度に依存する）は同じ指数関数的減衰の数学に従います。" },
+      ],
+    },
+    ro: {
+      title: "Calculator de Timp de Înjumătățire",
+      intro: "Alege ce să rezolvi, apoi introdu valorile cunoscute pentru a calcula dezintegrarea de ordinul întâi - folosit pentru dezintegrarea radioactivă și cinetica reacției chimice de ordinul întâi.",
+      description: "Calculează timpul de înjumătățire, cantitatea rămasă, sau timpul scurs pentru dezintegrarea de ordinul întâi (dezintegrare radioactivă sau cinetică de reacție de ordinul întâi).",
+      faq: [
+        { q: "Care este formula pentru timpul de înjumătățire de ordinul întâi?", a: "Timp de înjumătățire = ln(2) / k, unde k este constanta de viteză. Echivalent, k = ln(2) / timp de înjumătățire. Acest lucru se aplică atât dezintegrării radioactive cât și cineticii reacției chimice de ordinul întâi." },
+        { q: "Cât de multă substanță rămâne după mai multe timpi de înjumătățire?", a: "N(t) = N₀ × (1/2)^(t / timp de înjumătățire). După 1 timp de înjumătățire, rămâne 50%; după 2, 25%; după 3, 12,5% - fiecare timp de înjumătățire reduce cantitatea rămasă la jumătate, indiferent de cantitatea inițială." },
+        { q: "Cât de mult din 100 de unități rămâne după 25 de unități de timp, cu un timp de înjumătățire de 10?", a: "Aproximativ 17,7 unități (17,7% din original) - 100 × (1/2)^(25/10) = 100 × 0,5^2,5 ≈ 17,68." },
+        { q: "Se aplică asta atât dezintegrării radioactive cât și reacțiilor chimice?", a: "Da, pentru procese de ordinul întâi - dezintegrarea radioactivă este inerent de ordinul întâi, iar multe reacții chimice (unde viteza depinde de concentrația unui singur reactant) urmează aceeași matematică de dezintegrare exponențială." },
+      ],
+    },
+    el: {
+      title: "Υπολογιστής Χρόνου Ημιζωής",
+      intro: "Επιλέξτε τι να λύσετε, μετά εισάγετε τις γνωστές τιμές για να υπολογίσετε τη διάσπαση πρώτης τάξης - χρησιμοποιείται για ραδιενεργό διάσπαση και κινητική χημικής αντίδρασης πρώτης τάξης.",
+      description: "Υπολόγισε τον χρόνο ημιζωής, την εναπομένουσα ποσότητα, ή τον χρόνο που πέρασε για διάσπαση πρώτης τάξης (ραδιενεργός διάσπαση ή κινητική αντίδρασης πρώτης τάξης).",
+      faq: [
+        { q: "Ποιος είναι ο τύπος για τον χρόνο ημιζωής πρώτης τάξης;", a: "Χρόνος ημιζωής = ln(2) / k, όπου k είναι η σταθερά ρυθμού. Ισοδύναμα, k = ln(2) / χρόνος ημιζωής. Αυτό ισχύει τόσο για ραδιενεργό διάσπαση όσο και για κινητική χημικής αντίδρασης πρώτης τάξης." },
+        { q: "Πόσο από μια ουσία παραμένει μετά από αρκετούς χρόνους ημιζωής;", a: "N(t) = N₀ × (1/2)^(t / χρόνος ημιζωής). Μετά από 1 χρόνο ημιζωής, παραμένει το 50%· μετά από 2, το 25%· μετά από 3, το 12,5% - κάθε χρόνος ημιζωής μειώνει την εναπομένουσα ποσότητα στο μισό, ανεξάρτητα από την αρχική ποσότητα." },
+        { q: "Πόσο από 100 μονάδες παραμένει μετά από 25 μονάδες χρόνου, με χρόνο ημιζωής 10;", a: "Περίπου 17,7 μονάδες (17,7% του αρχικού) - 100 × (1/2)^(25/10) = 100 × 0,5^2,5 ≈ 17,68." },
+        { q: "Ισχύει αυτό τόσο για ραδιενεργό διάσπαση όσο και για χημικές αντιδράσεις;", a: "Ναι, για διεργασίες πρώτης τάξης - η ραδιενεργός διάσπαση είναι εγγενώς πρώτης τάξης, και πολλές χημικές αντιδράσεις (όπου ο ρυθμός εξαρτάται από τη συγκέντρωση ενός μόνο αντιδραστηρίου) ακολουθούν τα ίδια μαθηματικά εκθετικής διάσπασης." },
+      ],
+    },
+    zh: {
+      title: "半衰期计算器",
+      intro: "选择要求解的内容，然后输入已知值来计算一级衰变——用于放射性衰变和一级化学反应动力学。",
+      description: "计算一级衰变（放射性衰变或一级反应动力学）的半衰期、剩余量或经过的时间。",
+      faq: [
+        { q: "一级半衰期的公式是什么？", a: "半衰期 = ln(2) / k，其中k是速率常数。等价地，k = ln(2) / 半衰期。这既适用于放射性衰变，也适用于一级化学反应动力学。" },
+        { q: "经过几个半衰期后，还剩多少物质？", a: "N(t) = N₀ × (1/2)^(t / 半衰期)。经过1个半衰期后，剩余50%；经过2个，剩余25%；经过3个，剩余12.5%——无论起始量是多少，每经过一个半衰期，剩余量就会减半。" },
+        { q: "半衰期为10，经过25个时间单位后，100个单位还剩多少？", a: "约17.7个单位（原来的17.7%）——100 × (1/2)^(25/10) = 100 × 0.5^2.5 ≈ 17.68。" },
+        { q: "这既适用于放射性衰变也适用于化学反应吗？", a: "是的，适用于一级过程——放射性衰变本质上就是一级过程，而许多化学反应（反应速率取决于单一反应物浓度）遵循相同的指数衰减数学规律。" },
+      ],
+    },
+    ar: {
+      title: "حاسبة عمر النصف",
+      intro: "اختر ما تريد حله، ثم أدخل القيم المعروفة لحساب الاضمحلال من الرتبة الأولى - يُستخدم للاضمحلال الإشعاعي وحركية التفاعل الكيميائي من الرتبة الأولى.",
+      description: "احسب عمر النصف أو الكمية المتبقية أو الوقت المنقضي للاضمحلال من الرتبة الأولى (الاضمحلال الإشعاعي أو حركية التفاعل من الرتبة الأولى).",
+      faq: [
+        { q: "ما هي صيغة عمر النصف من الرتبة الأولى؟", a: "عمر النصف = ln(2) / k، حيث k هو ثابت المعدل. بشكل مكافئ، k = ln(2) / عمر النصف. ينطبق هذا على كل من الاضمحلال الإشعاعي وحركية التفاعل الكيميائي من الرتبة الأولى." },
+        { q: "كم تبقى من مادة بعد عدة أعمار نصف؟", a: "N(t) = N₀ × (1/2)^(t / عمر النصف). بعد عمر نصف واحد، يتبقى 50%؛ بعد اثنين، 25%؛ بعد ثلاثة، 12.5% - كل عمر نصف يقلل الكمية المتبقية إلى النصف، بغض النظر عن الكمية الأولية." },
+        { q: "كم يتبقى من 100 وحدة بعد 25 وحدة زمنية، بعمر نصف قدره 10؟", a: "حوالي 17.7 وحدة (17.7% من الأصل) - 100 × (1/2)^(25/10) = 100 × 0.5^2.5 ≈ 17.68." },
+        { q: "هل ينطبق هذا على الاضمحلال الإشعاعي والتفاعلات الكيميائية معًا؟", a: "نعم، للعمليات من الرتبة الأولى - الاضمحلال الإشعاعي هو بطبيعته من الرتبة الأولى، والعديد من التفاعلات الكيميائية (حيث يعتمد المعدل على تركيز متفاعل واحد) تتبع نفس رياضيات الاضمحلال الأسي." },
+      ],
+    },
+    th: {
+      title: "เครื่องคำนวณครึ่งชีวิต",
+      intro: "เลือกสิ่งที่ต้องการหา จากนั้นป้อนค่าที่ทราบเพื่อคำนวณการสลายตัวอันดับหนึ่ง - ใช้สำหรับการสลายตัวของสารกัมมันตรังสีและจลนศาสตร์ปฏิกิริยาเคมีอันดับหนึ่ง",
+      description: "คำนวณครึ่งชีวิต ปริมาณที่เหลือ หรือเวลาที่ผ่านไปสำหรับการสลายตัวอันดับหนึ่ง (การสลายตัวของสารกัมมันตรังสีหรือจลนศาสตร์ปฏิกิริยาอันดับหนึ่ง)",
+      faq: [
+        { q: "สูตรของครึ่งชีวิตอันดับหนึ่งคืออะไร?", a: "ครึ่งชีวิต = ln(2) / k โดยที่ k คือค่าคงที่อัตรา ในทางเทียบเท่า k = ln(2) / ครึ่งชีวิต สิ่งนี้ใช้ได้กับทั้งการสลายตัวของสารกัมมันตรังสีและจลนศาสตร์ปฏิกิริยาเคมีอันดับหนึ่ง" },
+        { q: "มีสารเหลืออยู่เท่าไหร่หลังจากผ่านครึ่งชีวิตหลายครั้ง?", a: "N(t) = N₀ × (1/2)^(t / ครึ่งชีวิต) หลังจาก 1 ครึ่งชีวิต เหลือ 50% หลังจาก 2 ครึ่งชีวิต เหลือ 25% หลังจาก 3 ครึ่งชีวิต เหลือ 12.5% - แต่ละครึ่งชีวิตจะลดปริมาณที่เหลือลงครึ่งหนึ่ง ไม่ว่าปริมาณเริ่มต้นจะเป็นเท่าไหร่" },
+        { q: "มี 100 หน่วยเหลืออยู่เท่าไหร่หลังจากผ่านไป 25 หน่วยเวลา โดยมีครึ่งชีวิต 10?", a: "ประมาณ 17.7 หน่วย (17.7% ของค่าเดิม) - 100 × (1/2)^(25/10) = 100 × 0.5^2.5 ≈ 17.68" },
+        { q: "สิ่งนี้ใช้ได้กับทั้งการสลายตัวของสารกัมมันตรังสีและปฏิกิริยาเคมีหรือไม่?", a: "ใช่ สำหรับกระบวนการอันดับหนึ่ง - การสลายตัวของสารกัมมันตรังสีเป็นอันดับหนึ่งโดยธรรมชาติ และปฏิกิริยาเคมีหลายชนิด (ที่อัตราขึ้นอยู่กับความเข้มข้นของสารตั้งต้นเพียงตัวเดียว) เป็นไปตามคณิตศาสตร์การสลายตัวแบบเอกซ์โพเนนเชียลเดียวกัน" },
+      ],
+    },
+  },
+
+  "hardy-weinberg-calculator": {
+    es: {
+      title: "Calculadora de Equilibrio de Hardy-Weinberg",
+      intro: "Introduce una frecuencia alélica (o una frecuencia genotípica) para calcular las frecuencias genotípicas esperadas bajo el equilibrio de Hardy-Weinberg.",
+      description: "Calcula las frecuencias genotípicas y alélicas usando la ecuación de equilibrio de Hardy-Weinberg.",
+      faq: [
+        { q: "¿Cuál es la ecuación de Hardy-Weinberg?", a: "p² + 2pq + q² = 1, donde p y q son las frecuencias de dos alelos en un gen (p + q = 1). p² es la frecuencia de individuos homocigotos dominantes, 2pq es heterocigotos, y q² es homocigotos recesivos." },
+        { q: "Si la frecuencia del alelo dominante (p) es 0.7, ¿cuáles son las frecuencias genotípicas?", a: "q = 1 − 0.7 = 0.3. p² = 0.49 (49% homocigoto dominante), 2pq = 0.42 (42% heterocigoto), q² = 0.09 (9% homocigoto recesivo)." },
+        { q: "¿Cómo encuentro las frecuencias alélicas si solo conozco la frecuencia del fenotipo recesivo?", a: "La frecuencia del fenotipo recesivo es igual a q² (solo los individuos homocigotos recesivos muestran el rasgo recesivo), así que toma su raíz cuadrada para obtener q, luego p = 1 − q." },
+        { q: "¿Qué suposiciones requiere el equilibrio de Hardy-Weinberg?", a: "Sin mutación, sin migración, sin selección natural, apareamiento aleatorio, y una población infinitamente grande (sin deriva genética) - las poblaciones reales rara vez cumplen todo esto perfectamente, así que Hardy-Weinberg sirve como línea base teórica para detectar cuándo está ocurriendo evolución, comparando las frecuencias observadas con el equilibrio esperado." },
+      ],
+    },
+    fr: {
+      title: "Calculateur d'Équilibre de Hardy-Weinberg",
+      intro: "Entrez une fréquence allélique (ou une fréquence génotypique) pour calculer les fréquences génotypiques attendues sous l'équilibre de Hardy-Weinberg.",
+      description: "Calculez les fréquences génotypiques et alléliques en utilisant l'équation d'équilibre de Hardy-Weinberg.",
+      faq: [
+        { q: "Qu'est-ce que l'équation de Hardy-Weinberg ?", a: "p² + 2pq + q² = 1, où p et q sont les fréquences de deux allèles à un gène (p + q = 1). p² est la fréquence des individus homozygotes dominants, 2pq est hétérozygote, et q² est homozygote récessif." },
+        { q: "Si la fréquence de l'allèle dominant (p) est 0,7, quelles sont les fréquences génotypiques ?", a: "q = 1 − 0,7 = 0,3. p² = 0,49 (49 % homozygote dominant), 2pq = 0,42 (42 % hétérozygote), q² = 0,09 (9 % homozygote récessif)." },
+        { q: "Comment trouver les fréquences alléliques si je ne connais que la fréquence du phénotype récessif ?", a: "La fréquence du phénotype récessif équivaut à q² (seuls les individus homozygotes récessifs montrent le trait récessif), donc prenez sa racine carrée pour obtenir q, puis p = 1 − q." },
+        { q: "Quelles hypothèses l'équilibre de Hardy-Weinberg nécessite-t-il ?", a: "Pas de mutation, pas de migration, pas de sélection naturelle, accouplement aléatoire, et une population infiniment grande (pas de dérive génétique) - les populations réelles remplissent rarement toutes ces conditions parfaitement, donc Hardy-Weinberg sert de référence théorique pour détecter quand l'évolution se produit, en comparant les fréquences observées à l'équilibre attendu." },
+      ],
+    },
+    de: {
+      title: "Hardy-Weinberg-Gleichgewicht-Rechner",
+      intro: "Geben Sie eine Allelfrequenz (oder eine Genotypfrequenz) ein, um die erwarteten Genotypfrequenzen unter dem Hardy-Weinberg-Gleichgewicht zu berechnen.",
+      description: "Berechnen Sie Genotyp- und Allelfrequenzen mit der Hardy-Weinberg-Gleichgewichtsgleichung.",
+      faq: [
+        { q: "Was ist die Hardy-Weinberg-Gleichung?", a: "p² + 2pq + q² = 1, wobei p und q die Frequenzen zweier Allele an einem Gen sind (p + q = 1). p² ist die Frequenz homozygot dominanter Individuen, 2pq ist heterozygot, und q² ist homozygot rezessiv." },
+        { q: "Wenn die dominante Allelfrequenz (p) 0,7 beträgt, wie hoch sind die Genotypfrequenzen?", a: "q = 1 − 0,7 = 0,3. p² = 0,49 (49 % homozygot dominant), 2pq = 0,42 (42 % heterozygot), q² = 0,09 (9 % homozygot rezessiv)." },
+        { q: "Wie finde ich Allelfrequenzen, wenn ich nur die rezessive Phänotypfrequenz kenne?", a: "Die rezessive Phänotypfrequenz entspricht q² (nur homozygot rezessive Individuen zeigen das rezessive Merkmal), also ziehen Sie die Quadratwurzel, um q zu erhalten, dann p = 1 − q." },
+        { q: "Welche Annahmen erfordert das Hardy-Weinberg-Gleichgewicht?", a: "Keine Mutation, keine Migration, keine natürliche Selektion, zufällige Paarung, und eine unendlich große Population (keine genetische Drift) - reale Populationen erfüllen selten alle diese perfekt, sodass Hardy-Weinberg als theoretische Basislinie dient, um zu erkennen, wann Evolution stattfindet, indem beobachtete Frequenzen mit dem erwarteten Gleichgewicht verglichen werden." },
+      ],
+    },
+    pt: {
+      title: "Calculadora de Equilíbrio de Hardy-Weinberg",
+      intro: "Digite uma frequência alélica (ou uma frequência genotípica) para calcular as frequências genotípicas esperadas sob o equilíbrio de Hardy-Weinberg.",
+      description: "Calcule as frequências genotípicas e alélicas usando a equação de equilíbrio de Hardy-Weinberg.",
+      faq: [
+        { q: "O que é a equação de Hardy-Weinberg?", a: "p² + 2pq + q² = 1, onde p e q são as frequências de dois alelos em um gene (p + q = 1). p² é a frequência de indivíduos homozigotos dominantes, 2pq é heterozigoto, e q² é homozigoto recessivo." },
+        { q: "Se a frequência do alelo dominante (p) é 0,7, quais são as frequências genotípicas?", a: "q = 1 − 0,7 = 0,3. p² = 0,49 (49% homozigoto dominante), 2pq = 0,42 (42% heterozigoto), q² = 0,09 (9% homozigoto recessivo)." },
+        { q: "Como encontro as frequências alélicas se eu só sei a frequência do fenótipo recessivo?", a: "A frequência do fenótipo recessivo é igual a q² (apenas indivíduos homozigotos recessivos mostram a característica recessiva), então tire sua raiz quadrada para obter q, depois p = 1 − q." },
+        { q: "Que suposições o equilíbrio de Hardy-Weinberg requer?", a: "Sem mutação, sem migração, sem seleção natural, acasalamento aleatório, e uma população infinitamente grande (sem deriva genética) - populações reais raramente atendem a tudo isso perfeitamente, então Hardy-Weinberg serve como uma linha de base teórica para detectar quando a evolução está acontecendo, comparando frequências observadas com o equilíbrio esperado." },
+      ],
+    },
+    it: {
+      title: "Calcolatore dell'Equilibrio di Hardy-Weinberg",
+      intro: "Inserisci una frequenza allelica (o una frequenza genotipica) per calcolare le frequenze genotipiche attese sotto l'equilibrio di Hardy-Weinberg.",
+      description: "Calcola le frequenze genotipiche e alleliche usando l'equazione dell'equilibrio di Hardy-Weinberg.",
+      faq: [
+        { q: "Cos'è l'equazione di Hardy-Weinberg?", a: "p² + 2pq + q² = 1, dove p e q sono le frequenze di due alleli su un gene (p + q = 1). p² è la frequenza di individui omozigoti dominanti, 2pq è eterozigote, e q² è omozigote recessivo." },
+        { q: "Se la frequenza dell'allele dominante (p) è 0,7, quali sono le frequenze genotipiche?", a: "q = 1 − 0,7 = 0,3. p² = 0,49 (49% omozigote dominante), 2pq = 0,42 (42% eterozigote), q² = 0,09 (9% omozigote recessivo)." },
+        { q: "Come trovo le frequenze alleliche se conosco solo la frequenza del fenotipo recessivo?", a: "La frequenza del fenotipo recessivo è uguale a q² (solo gli individui omozigoti recessivi mostrano il tratto recessivo), quindi prendi la sua radice quadrata per ottenere q, poi p = 1 − q." },
+        { q: "Quali presupposti richiede l'equilibrio di Hardy-Weinberg?", a: "Nessuna mutazione, nessuna migrazione, nessuna selezione naturale, accoppiamento casuale, e una popolazione infinitamente grande (nessuna deriva genetica) - le popolazioni reali raramente soddisfano tutto ciò perfettamente, quindi Hardy-Weinberg funge da base teorica per rilevare quando sta avvenendo l'evoluzione, confrontando le frequenze osservate con l'equilibrio atteso." },
+      ],
+    },
+    ja: {
+      title: "ハーディ・ワインベルグ平衡計算機",
+      intro: "1つの対立遺伝子頻度（または遺伝子型頻度）を入力すると、ハーディ・ワインベルグ平衡下での予想される遺伝子型頻度を計算します。",
+      description: "ハーディ・ワインベルグ平衡方程式を使用して、遺伝子型頻度と対立遺伝子頻度を計算します。",
+      faq: [
+        { q: "ハーディ・ワインベルグ方程式とは何ですか？", a: "p² + 2pq + q² = 1です。pとqは遺伝子における2つの対立遺伝子の頻度です（p + q = 1）。p²はホモ接合優性個体の頻度、2pqはヘテロ接合、q²はホモ接合劣性です。" },
+        { q: "優性対立遺伝子頻度（p）が0.7の場合、遺伝子型頻度はいくつですか？", a: "q = 1 − 0.7 = 0.3です。p² = 0.49（49%がホモ接合優性）、2pq = 0.42（42%がヘテロ接合）、q² = 0.09（9%がホモ接合劣性）です。" },
+        { q: "劣性表現型頻度しか知らない場合、対立遺伝子頻度をどう求めますか？", a: "劣性表現型頻度はq²に等しくなります（ホモ接合劣性個体のみが劣性形質を示すため）。その平方根を取ってqを求め、その後p = 1 − qとします。" },
+        { q: "ハーディ・ワインベルグ平衡にはどのような前提条件が必要ですか？", a: "突然変異なし、移住なし、自然選択なし、ランダムな交配、そして無限に大きな集団（遺伝的浮動なし）です。実際の集団がこれらすべてを完全に満たすことはめったにないため、ハーディ・ワインベルグは、観察された頻度を予想される平衡と比較することで、進化がいつ起こっているかを検出するための理論的なベースラインとして機能します。" },
+      ],
+    },
+    ro: {
+      title: "Calculator de Echilibru Hardy-Weinberg",
+      intro: "Introdu o frecvență alelică (sau o frecvență a genotipului) pentru a calcula frecvențele genotipului așteptate sub echilibrul Hardy-Weinberg.",
+      description: "Calculează frecvențele genotipului și alelelor folosind ecuația de echilibru Hardy-Weinberg.",
+      faq: [
+        { q: "Ce este ecuația Hardy-Weinberg?", a: "p² + 2pq + q² = 1, unde p și q sunt frecvențele a două alele la o genă (p + q = 1). p² este frecvența indivizilor homozigoți dominanți, 2pq este heterozigot, iar q² este homozigot recesiv." },
+        { q: "Dacă frecvența alelei dominante (p) este 0,7, care sunt frecvențele genotipului?", a: "q = 1 − 0,7 = 0,3. p² = 0,49 (49% homozigot dominant), 2pq = 0,42 (42% heterozigot), q² = 0,09 (9% homozigot recesiv)." },
+        { q: "Cum găsesc frecvențele alelelor dacă știu doar frecvența fenotipului recesiv?", a: "Frecvența fenotipului recesiv este egală cu q² (doar indivizii homozigoți recesivi arată trăsătura recesivă), deci ia rădăcina sa pătrată pentru a obține q, apoi p = 1 − q." },
+        { q: "Ce presupuneri necesită echilibrul Hardy-Weinberg?", a: "Fără mutație, fără migrație, fără selecție naturală, împerechere aleatorie, și o populație infinit de mare (fără deriva genetică) - populațiile reale rareori îndeplinesc perfect toate acestea, deci Hardy-Weinberg servește ca linie de bază teoretică pentru a detecta când are loc evoluția, comparând frecvențele observate cu echilibrul așteptat." },
+      ],
+    },
+    el: {
+      title: "Υπολογιστής Ισορροπίας Hardy-Weinberg",
+      intro: "Εισάγετε μια συχνότητα αλληλομόρφου (ή μια συχνότητα γονοτύπου) για να υπολογίσετε τις αναμενόμενες συχνότητες γονοτύπου υπό την ισορροπία Hardy-Weinberg.",
+      description: "Υπολόγισε τις συχνότητες γονοτύπου και αλληλομόρφων χρησιμοποιώντας την εξίσωση ισορροπίας Hardy-Weinberg.",
+      faq: [
+        { q: "Τι είναι η εξίσωση Hardy-Weinberg;", a: "p² + 2pq + q² = 1, όπου p και q είναι οι συχνότητες δύο αλληλομόρφων σε ένα γονίδιο (p + q = 1). Το p² είναι η συχνότητα ομόζυγων κυρίαρχων ατόμων, το 2pq είναι ετερόζυγο, και το q² είναι ομόζυγο υπολειπόμενο." },
+        { q: "Αν η συχνότητα του κυρίαρχου αλληλομόρφου (p) είναι 0,7, ποιες είναι οι συχνότητες γονοτύπου;", a: "q = 1 − 0,7 = 0,3. p² = 0,49 (49% ομόζυγο κυρίαρχο), 2pq = 0,42 (42% ετερόζυγο), q² = 0,09 (9% ομόζυγο υπολειπόμενο)." },
+        { q: "Πώς βρίσκω τις συχνότητες αλληλομόρφων αν γνωρίζω μόνο τη συχνότητα του υπολειπόμενου φαινοτύπου;", a: "Η συχνότητα του υπολειπόμενου φαινοτύπου ισούται με q² (μόνο τα ομόζυγα υπολειπόμενα άτομα εμφανίζουν το υπολειπόμενο χαρακτηριστικό), οπότε πάρτε την τετραγωνική ρίζα του για να πάρετε το q, μετά p = 1 − q." },
+        { q: "Ποιες υποθέσεις απαιτεί η ισορροπία Hardy-Weinberg;", a: "Καμία μετάλλαξη, καμία μετανάστευση, καμία φυσική επιλογή, τυχαία ζευγάρωση, και έναν άπειρα μεγάλο πληθυσμό (καμία γενετική παρέκκλιση) - οι πραγματικοί πληθυσμοί σπάνια πληρούν όλα αυτά τέλεια, οπότε το Hardy-Weinberg χρησιμεύει ως θεωρητική γραμμή βάσης για την ανίχνευση του πότε συμβαίνει εξέλιξη, συγκρίνοντας τις παρατηρούμενες συχνότητες με την αναμενόμενη ισορροπία." },
+      ],
+    },
+    zh: {
+      title: "哈迪-温伯格平衡计算器",
+      intro: "输入一个等位基因频率（或基因型频率），计算哈迪-温伯格平衡下预期的基因型频率。",
+      description: "使用哈迪-温伯格平衡方程计算基因型和等位基因频率。",
+      faq: [
+        { q: "什么是哈迪-温伯格方程？", a: "p² + 2pq + q² = 1，其中p和q是一个基因上两个等位基因的频率（p + q = 1）。p²是纯合显性个体的频率，2pq是杂合子，q²是纯合隐性。" },
+        { q: "如果显性等位基因频率（p）是0.7，基因型频率是多少？", a: "q = 1 − 0.7 = 0.3。p² = 0.49（49%为纯合显性），2pq = 0.42（42%为杂合子），q² = 0.09（9%为纯合隐性）。" },
+        { q: "如果我只知道隐性表现型频率，如何求等位基因频率？", a: "隐性表现型频率等于q²（只有纯合隐性个体才会表现出隐性性状），所以取其平方根得到q，然后p = 1 − q。" },
+        { q: "哈迪-温伯格平衡需要哪些假设？", a: "没有突变、没有迁移、没有自然选择、随机交配，以及无限大的种群（没有遗传漂变）——现实种群很少能完美满足所有这些条件，因此哈迪-温伯格平衡作为理论基准，通过比较观察到的频率与预期平衡，来检测进化何时正在发生。" },
+      ],
+    },
+    ar: {
+      title: "حاسبة توازن هاردي-واينبرغ",
+      intro: "أدخل تردد أليل واحد (أو تردد نمط جيني) لحساب ترددات الأنماط الجينية المتوقعة تحت توازن هاردي-واينبرغ.",
+      description: "احسب ترددات الأنماط الجينية والأليلات باستخدام معادلة توازن هاردي-واينبرغ.",
+      faq: [
+        { q: "ما هي معادلة هاردي-واينبرغ؟", a: "p² + 2pq + q² = 1، حيث p وq هما ترددا أليلين لجين واحد (p + q = 1). p² هو تردد الأفراد المتماثلي اللواقح السائدين، و2pq هو الهجين، وq² هو المتماثل اللواقح المتنحي." },
+        { q: "إذا كان تردد الأليل السائد (p) هو 0.7، فما هي ترددات الأنماط الجينية؟", a: "q = 1 − 0.7 = 0.3. p² = 0.49 (49% متماثل اللواقح سائد)، 2pq = 0.42 (42% هجين)، q² = 0.09 (9% متماثل اللواقح متنحي)." },
+        { q: "كيف أجد ترددات الأليلات إذا كنت أعرف فقط تردد الطراز الظاهري المتنحي؟", a: "يساوي تردد الطراز الظاهري المتنحي q² (فقط الأفراد المتماثلو اللواقح المتنحيون يظهرون الصفة المتنحية)، لذا خذ جذره التربيعي للحصول على q، ثم p = 1 − q." },
+        { q: "ما هي الافتراضات التي يتطلبها توازن هاردي-واينبرغ؟", a: "لا طفرة، لا هجرة، لا انتقاء طبيعي، تزاوج عشوائي، ومجتمع كبير بشكل لا نهائي (بدون انحراف جيني) - نادرًا ما تلبي المجتمعات الحقيقية كل هذا بشكل مثالي، لذا يعمل توازن هاردي-واينبرغ كخط أساس نظري للكشف عن متى يحدث التطور، من خلال مقارنة الترددات المرصودة بالتوازن المتوقع." },
+      ],
+    },
+    th: {
+      title: "เครื่องคำนวณสมดุลฮาร์ดี-ไวน์เบิร์ก",
+      intro: "ป้อนความถี่แอลลีลหนึ่งตัว (หรือความถี่จีโนไทป์) เพื่อคำนวณความถี่จีโนไทป์ที่คาดหวังภายใต้สมดุลฮาร์ดี-ไวน์เบิร์ก",
+      description: "คำนวณความถี่จีโนไทป์และแอลลีลโดยใช้สมการสมดุลฮาร์ดี-ไวน์เบิร์ก",
+      faq: [
+        { q: "สมการฮาร์ดี-ไวน์เบิร์กคืออะไร?", a: "p² + 2pq + q² = 1 โดยที่ p และ q คือความถี่ของแอลลีลสองตัวในยีนหนึ่ง (p + q = 1) p² คือความถี่ของบุคคลที่มีจีโนไทป์เด่นแบบโฮโมไซกัส 2pq คือเฮเทอโรไซกัส และ q² คือด้อยแบบโฮโมไซกัส" },
+        { q: "ถ้าความถี่ของแอลลีลเด่น (p) คือ 0.7 ความถี่จีโนไทป์คือเท่าไหร่?", a: "q = 1 − 0.7 = 0.3 p² = 0.49 (49% โฮโมไซกัสเด่น) 2pq = 0.42 (42% เฮเทอโรไซกัส) q² = 0.09 (9% โฮโมไซกัสด้อย)" },
+        { q: "ฉันจะหาความถี่แอลลีลได้อย่างไรถ้าฉันรู้แค่ความถี่ฟีโนไทป์ด้อย?", a: "ความถี่ฟีโนไทป์ด้อยเท่ากับ q² (มีเพียงบุคคลที่เป็นโฮโมไซกัสด้อยเท่านั้นที่แสดงลักษณะด้อย) ดังนั้นหารากที่สองของมันเพื่อได้ q จากนั้น p = 1 − q" },
+        { q: "สมดุลฮาร์ดี-ไวน์เบิร์กต้องการสมมติฐานอะไรบ้าง?", a: "ไม่มีการกลายพันธุ์ ไม่มีการอพยพ ไม่มีการคัดเลือกโดยธรรมชาติ การผสมพันธุ์แบบสุ่ม และประชากรที่มีขนาดใหญ่ไม่จำกัด (ไม่มีการเบี่ยงเบนทางพันธุกรรม) - ประชากรจริงไม่ค่อยเป็นไปตามเงื่อนไขทั้งหมดนี้อย่างสมบูรณ์แบบ ดังนั้นฮาร์ดี-ไวน์เบิร์กจึงทำหน้าที่เป็นเส้นฐานทางทฤษฎีเพื่อตรวจจับว่าเมื่อใดที่วิวัฒนาการกำลังเกิดขึ้น โดยการเปรียบเทียบความถี่ที่สังเกตได้กับสมดุลที่คาดหวัง" },
+      ],
+    },
+  },
+
+  "grade-calculator": {
+    es: {
+      title: "Calculadora de Calificación",
+      intro: "Introduce los puntos obtenidos y el total de puntos posibles para calcular tu porcentaje y calificación con letra.",
+      description: "Calcula la calificación de un examen o prueba como porcentaje y calificación con letra a partir de puntos obtenidos y puntos totales.",
+      faq: [
+        { q: "¿Cómo calculo mi calificación como porcentaje?", a: "Divide los puntos que obtuviste entre el total de puntos posibles, luego multiplica por 100. Obtener 85 de 100 da 85/100 × 100 = 85%." },
+        { q: "¿Qué porcentaje corresponde a cada calificación con letra?", a: "En la escala estándar de EE.UU. que usa esta calculadora: 90-100% es el rango A, 80-89% es B, 70-79% es C, 60-69% es D, y por debajo de 60% es F, cada una dividida además en bandas +/- (por ejemplo, 93-96% es A directa, 90-92% es A-)." },
+        { q: "¿Es esto lo mismo que una calculadora de libro de calificaciones?", a: "Sí - \"calculadora de libro de calificaciones\" y \"calculadora de calificación\" ambas describen calcular un porcentaje de calificación y calificación con letra a partir de puntos obtenidos, que es exactamente lo que hace esta herramienta para una sola prueba, tarea, o examen." },
+      ],
+    },
+    fr: {
+      title: "Calculateur de Note",
+      intro: "Entrez les points obtenus et le total de points possibles pour calculer votre pourcentage et note en lettre.",
+      description: "Calculez une note de test ou d'examen en pourcentage et note en lettre à partir des points obtenus et des points totaux.",
+      faq: [
+        { q: "Comment calculer ma note en pourcentage ?", a: "Divisez les points que vous avez obtenus par le total de points possibles, puis multipliez par 100. Obtenir 85 sur 100 donne 85/100 × 100 = 85 %." },
+        { q: "Quel pourcentage correspond à chaque note en lettre ?", a: "Sur l'échelle standard américaine que cette calculatrice utilise : 90-100 % est la plage A, 80-89 % est B, 70-79 % est C, 60-69 % est D, et en dessous de 60 % est F, chacune divisée davantage en bandes +/- (par exemple, 93-96 % est un A direct, 90-92 % est A-)." },
+        { q: "Est-ce la même chose qu'un calculateur de carnet de notes ?", a: "Oui - « calculateur de carnet de notes » et « calculateur de notation » décrivent tous deux le calcul d'un pourcentage de note et d'une note en lettre à partir de points obtenus, ce qui est exactement ce que fait cet outil pour un seul test, devoir, ou examen." },
+      ],
+    },
+    de: {
+      title: "Notenrechner",
+      intro: "Geben Sie die erreichten Punkte und die maximal möglichen Punkte ein, um Ihren Prozentsatz und Ihre Buchstabennote zu berechnen.",
+      description: "Berechnen Sie eine Test- oder Prüfungsnote als Prozentsatz und Buchstabennote aus erreichten Punkten und Gesamtpunkten.",
+      faq: [
+        { q: "Wie berechne ich meine Note als Prozentsatz?", a: "Teilen Sie die erreichten Punkte durch die maximal möglichen Punkte, dann multiplizieren Sie mit 100. 85 von 100 Punkten ergibt 85/100 × 100 = 85 %." },
+        { q: "Welcher Prozentsatz entspricht welcher Buchstabennote?", a: "Auf der US-Standardskala, die dieser Rechner verwendet: 90-100 % ist der A-Bereich, 80-89 % ist B, 70-79 % ist C, 60-69 % ist D, und unter 60 % ist F, jeweils weiter unterteilt in +/- Bänder (z.B. 93-96 % ist ein glattes A, 90-92 % ist A-)." },
+        { q: "Ist das dasselbe wie ein Notenbuch-Rechner?", a: "Ja - „Notenbuch-Rechner“ und „Notierungsrechner“ beschreiben beide die Berechnung eines Notenprozentsatzes und einer Buchstabennote aus erreichten Punkten, was genau das ist, was dieses Tool für einen einzelnen Test, eine Aufgabe, oder eine Prüfung tut." },
+      ],
+    },
+    pt: {
+      title: "Calculadora de Nota",
+      intro: "Digite os pontos ganhos e o total de pontos possíveis para calcular sua porcentagem e nota em letra.",
+      description: "Calcule a nota de um teste ou exame como porcentagem e nota em letra a partir de pontos ganhos e pontos totais.",
+      faq: [
+        { q: "Como calculo minha nota como porcentagem?", a: "Divida os pontos que você ganhou pelo total de pontos possíveis, depois multiplique por 100. Obter 85 de 100 dá 85/100 × 100 = 85%." },
+        { q: "Qual porcentagem é cada nota em letra?", a: "Na escala padrão dos EUA que esta calculadora usa: 90-100% é a faixa A, 80-89% é B, 70-79% é C, 60-69% é D, e abaixo de 60% é F, cada uma dividida ainda mais em faixas +/- (por exemplo, 93-96% é um A puro, 90-92% é A-)." },
+        { q: "Isso é o mesmo que uma calculadora de diário de classe?", a: "Sim - \"calculadora de diário de classe\" e \"calculadora de notas\" ambas descrevem calcular uma porcentagem de nota e nota em letra a partir de pontos ganhos, que é exatamente o que esta ferramenta faz para um único teste, tarefa, ou exame." },
+      ],
+    },
+    it: {
+      title: "Calcolatore di Voto",
+      intro: "Inserisci i punti guadagnati e il totale di punti possibili per calcolare la tua percentuale e voto in lettera.",
+      description: "Calcola un voto di test o esame come percentuale e voto in lettera da punti guadagnati e punti totali.",
+      faq: [
+        { q: "Come calcolo il mio voto in percentuale?", a: "Dividi i punti che hai guadagnato per il totale dei punti possibili, poi moltiplica per 100. Ottenere 85 su 100 dà 85/100 × 100 = 85%." },
+        { q: "Quale percentuale corrisponde a ciascun voto in lettera?", a: "Sulla scala standard statunitense che questa calcolatrice usa: 90-100% è l'intervallo A, 80-89% è B, 70-79% è C, 60-69% è D, e sotto il 60% è F, ciascuno ulteriormente diviso in bande +/- (es. 93-96% è un A diretto, 90-92% è A-)." },
+        { q: "È lo stesso di un calcolatore di registro voti?", a: "Sì - \"calcolatore di registro voti\" e \"calcolatore di valutazione\" descrivono entrambi il calcolo di una percentuale di voto e voto in lettera da punti guadagnati, che è esattamente ciò che fa questo strumento per un singolo test, compito, o esame." },
+      ],
+    },
+    ja: {
+      title: "成績計算機",
+      intro: "獲得点数と可能な合計点数を入力すると、パーセンテージと文字による成績を計算します。",
+      description: "獲得点数と合計点数から、テストや試験の成績をパーセンテージと文字による成績として計算します。",
+      faq: [
+        { q: "成績をパーセンテージでどう計算しますか？", a: "獲得した点数を可能な合計点数で割り、100を掛けます。100点満点で85点を取ると85/100 × 100 = 85%になります。" },
+        { q: "各文字の成績はどのパーセンテージに対応しますか？", a: "この計算機が使用する標準的な米国式の尺度では：90〜100%がAの範囲、80〜89%がB、70〜79%がC、60〜69%がD、60%未満がFで、それぞれさらに+/-のバンドに分かれています（例：93〜96%はストレートA、90〜92%はA-）。" },
+        { q: "これは成績簿計算機と同じですか？", a: "はい。「成績簿計算機」と「採点計算機」はどちらも、獲得点数から成績パーセンテージと文字による成績を計算することを表しており、これはこのツールが単一のテスト、課題、または試験に対して行うことです。" },
+      ],
+    },
+    ro: {
+      title: "Calculator de Notă",
+      intro: "Introdu punctele obținute și totalul de puncte posibile pentru a calcula procentajul și nota literală.",
+      description: "Calculează o notă de test sau examen ca procentaj și notă literală din punctele obținute și punctele totale.",
+      faq: [
+        { q: "Cum îmi calculez nota ca procentaj?", a: "Împarte punctele pe care le-ai obținut la totalul de puncte posibile, apoi înmulțește cu 100. Obținerea a 85 din 100 dă 85/100 × 100 = 85%." },
+        { q: "Ce procentaj corespunde fiecărei note literale?", a: "Pe scala standard americană pe care o folosește acest calculator: 90-100% este intervalul A, 80-89% este B, 70-79% este C, 60-69% este D, și sub 60% este F, fiecare împărțită în continuare în benzi +/- (de exemplu, 93-96% este un A direct, 90-92% este A-)." },
+        { q: "Este asta la fel cu un calculator de catalog?", a: "Da - \"calculator de catalog\" și \"calculator de notare\" descriu ambele calcularea unui procentaj de notă și notă literală din punctele obținute, ceea ce este exact ceea ce face acest instrument pentru un singur test, temă, sau examen." },
+      ],
+    },
+    el: {
+      title: "Υπολογιστής Βαθμού",
+      intro: "Εισάγετε τους βαθμούς που κερδίσατε και το σύνολο των πιθανών βαθμών για να υπολογίσετε το ποσοστό σας και τον γραμμάτινο βαθμό.",
+      description: "Υπολόγισε έναν βαθμό τεστ ή εξέτασης ως ποσοστό και γραμμάτινο βαθμό από τους βαθμούς που κερδίσατε και το σύνολο βαθμών.",
+      faq: [
+        { q: "Πώς υπολογίζω τον βαθμό μου ως ποσοστό;", a: "Διαιρέστε τους βαθμούς που κερδίσατε με το σύνολο των πιθανών βαθμών, μετά πολλαπλασιάστε επί 100. Το να σκοράρετε 85 από 100 δίνει 85/100 × 100 = 85%." },
+        { q: "Ποιο ποσοστό είναι κάθε γραμμάτινος βαθμός;", a: "Στην τυπική αμερικανική κλίμακα που χρησιμοποιεί αυτή η αριθμομηχανή: 90-100% είναι το εύρος Α, 80-89% είναι Β, 70-79% είναι Γ, 60-69% είναι Δ, και κάτω από 60% είναι Ε, κάθε ένα περαιτέρω χωρισμένο σε ζώνες +/- (π.χ. 93-96% είναι απευθείας Α, 90-92% είναι Α-)." },
+        { q: "Είναι αυτό το ίδιο με έναν υπολογιστή βιβλίου βαθμών;", a: "Ναι - «υπολογιστής βιβλίου βαθμών» και «υπολογιστής βαθμολόγησης» περιγράφουν και οι δύο τον υπολογισμό ενός ποσοστού βαθμού και γραμμάτινου βαθμού από τους κερδισμένους βαθμούς, που είναι ακριβώς αυτό που κάνει αυτό το εργαλείο για ένα μόνο τεστ, εργασία, ή εξέταση." },
+      ],
+    },
+    zh: {
+      title: "成绩计算器",
+      intro: "输入获得的分数和总可能分数，计算你的百分比和等级分数。",
+      description: "根据获得的分数和总分数，计算测验或考试的百分比成绩和等级分数。",
+      faq: [
+        { q: "如何把成绩计算成百分比？", a: "用你获得的分数除以总可能分数，然后乘以100。100分中得85分，就是85/100 × 100 = 85%。" },
+        { q: "每个等级分数对应多少百分比？", a: "在这个计算器使用的美国标准评分体系中：90-100%是A档，80-89%是B档，70-79%是C档，60-69%是D档，60%以下是F档，每个档次又进一步细分为+/-区间（例如93-96%是纯A，90-92%是A-）。" },
+        { q: "这和成绩册计算器是一回事吗？", a: "是的——「成绩册计算器」和「评分计算器」描述的都是根据获得的分数计算成绩百分比和等级分数，这正是这个工具为单次测验、作业或考试所做的事情。" },
+      ],
+    },
+    ar: {
+      title: "حاسبة الدرجات",
+      intro: "أدخل النقاط المكتسبة وإجمالي النقاط الممكنة لحساب نسبتك المئوية ودرجتك الحرفية.",
+      description: "احسب درجة اختبار أو امتحان كنسبة مئوية ودرجة حرفية من النقاط المكتسبة وإجمالي النقاط.",
+      faq: [
+        { q: "كيف أحسب درجتي كنسبة مئوية؟", a: "اقسم النقاط التي حصلت عليها على إجمالي النقاط الممكنة، ثم اضرب في 100. الحصول على 85 من 100 يعطي 85/100 × 100 = 85%." },
+        { q: "ما النسبة المئوية لكل درجة حرفية؟", a: "على المقياس الأمريكي القياسي الذي تستخدمه هذه الحاسبة: 90-100% هو نطاق A، و80-89% هو B، و70-79% هو C، و60-69% هو D، وأقل من 60% هو F، كل منها مقسم أيضًا إلى نطاقات +/- (مثلاً 93-96% هو A مباشرة، 90-92% هو A-)." },
+        { q: "هل هذا نفس حاسبة سجل الدرجات؟", a: "نعم - يصف كل من \"حاسبة سجل الدرجات\" و\"حاسبة التقييم\" حساب نسبة مئوية للدرجة ودرجة حرفية من النقاط المكتسبة، وهو بالضبط ما تفعله هذه الأداة لاختبار أو واجب أو امتحان واحد." },
+      ],
+    },
+    th: {
+      title: "เครื่องคำนวณเกรด",
+      intro: "ป้อนคะแนนที่ได้รับและคะแนนเต็มที่เป็นไปได้เพื่อคำนวณเปอร์เซ็นต์และเกรดตัวอักษรของคุณ",
+      description: "คำนวณเกรดสอบหรือข้อสอบเป็นเปอร์เซ็นต์และเกรดตัวอักษรจากคะแนนที่ได้รับและคะแนนรวม",
+      faq: [
+        { q: "ฉันจะคำนวณเกรดของฉันเป็นเปอร์เซ็นต์ได้อย่างไร?", a: "หารคะแนนที่คุณได้รับด้วยคะแนนเต็มที่เป็นไปได้ จากนั้นคูณด้วย 100 การได้ 85 จาก 100 คะแนนจะได้ 85/100 × 100 = 85%" },
+        { q: "แต่ละเกรดตัวอักษรคิดเป็นเปอร์เซ็นต์เท่าไหร่?", a: "ในระดับมาตรฐานของสหรัฐฯ ที่เครื่องคำนวณนี้ใช้: 90-100% คือช่วง A, 80-89% คือ B, 70-79% คือ C, 60-69% คือ D และต่ำกว่า 60% คือ F แต่ละช่วงยังแบ่งย่อยเป็นแถบ +/- อีก (เช่น 93-96% คือ A ตรงๆ, 90-92% คือ A-)" },
+        { q: "นี่เหมือนกับเครื่องคำนวณสมุดเกรดหรือไม่?", a: "ใช่ - \"เครื่องคำนวณสมุดเกรด\" และ \"เครื่องคำนวณการให้เกรด\" ทั้งคู่อธิบายการคำนวณเปอร์เซ็นต์เกรดและเกรดตัวอักษรจากคะแนนที่ได้รับ ซึ่งเป็นสิ่งที่เครื่องมือนี้ทำสำหรับการทดสอบ งานมอบหมาย หรือการสอบครั้งเดียว" },
+      ],
+    },
+  },
+
+  "weighted-grade-calculator": {
+    es: {
+      title: "Calculadora de Calificación Ponderada",
+      intro: "Introduce tu puntuación y peso para cada categoría para calcular tu calificación ponderada general.",
+      description: "Calcula una calificación general del curso a partir de puntuaciones y pesos de categoría, como tareas, exámenes, y un examen final.",
+      faq: [
+        { q: "¿Cómo calculo una calificación ponderada?", a: "Multiplica la puntuación de cada categoría por su peso, súmalas, luego divide entre el peso total. Para 95% de tareas al 20%, 82% de exámenes al 40%, y 88% de final al 40%: (95×20 + 82×40 + 88×40) / 100 = 87.4%." },
+        { q: "¿Qué pasa si mis pesos de categoría no suman 100%?", a: "Esta calculadora sigue funcionando correctamente - divide entre lo que realmente sumen tus pesos, lo cual maneja un escenario de progreso parcial (como pesos que solo cubren el trabajo completado hasta ahora). Solo asegúrate de que los pesos que introduzcas coincidan con las categorías que tu instructor realmente usa." },
+        { q: "¿Esto es diferente de la Calculadora de Calificación regular?", a: "Sí - la Calculadora de Calificación regular convierte una sola puntuación (como un examen) en un porcentaje y calificación con letra. Esta herramienta combina múltiples categorías ponderadas - tareas, exámenes, un examen final, etc. - en una calificación general del curso." },
+      ],
+    },
+    fr: {
+      title: "Calculateur de Note Pondérée",
+      intro: "Entrez votre score et poids pour chaque catégorie pour calculer votre note pondérée globale.",
+      description: "Calculez une note globale de cours à partir des scores et poids de catégorie, comme les devoirs, tests, et un examen final.",
+      faq: [
+        { q: "Comment calculer une note pondérée ?", a: "Multipliez le score de chaque catégorie par son poids, additionnez-les, puis divisez par le poids total. Pour 95 % de devoirs à 20 %, 82 % de tests à 40 %, et 88 % de final à 40 % : (95×20 + 82×40 + 88×40) / 100 = 87,4 %." },
+        { q: "Que se passe-t-il si mes poids de catégorie ne totalisent pas 100 % ?", a: "Cette calculatrice fonctionne toujours correctement - elle divise par ce que vos poids totalisent réellement, ce qui gère un scénario de progrès partiel (comme des poids qui ne couvrent que le travail effectué jusqu'à présent). Assurez-vous simplement que les poids que vous entrez correspondent aux catégories que votre instructeur utilise réellement." },
+        { q: "Est-ce différent du Calculateur de Note régulier ?", a: "Oui - le Calculateur de Note régulier convertit un seul score (comme un test) en pourcentage et note en lettre. Cet outil combine plusieurs catégories pondérées - devoirs, tests, un examen final, etc. - en une note globale de cours." },
+      ],
+    },
+    de: {
+      title: "Gewichtete-Note-Rechner",
+      intro: "Geben Sie Ihre Punktzahl und Gewichtung für jede Kategorie ein, um Ihre gesamte gewichtete Note zu berechnen.",
+      description: "Berechnen Sie eine gesamte Kursnote aus Kategoriepunktzahlen und -gewichtungen, wie Hausaufgaben, Tests, und einer Abschlussprüfung.",
+      faq: [
+        { q: "Wie berechne ich eine gewichtete Note?", a: "Multiplizieren Sie die Punktzahl jeder Kategorie mit ihrer Gewichtung, addieren Sie diese zusammen, dann teilen Sie durch die Gesamtgewichtung. Für 95 % Hausaufgaben mit 20 %, 82 % Tests mit 40 %, und 88 % Abschluss mit 40 %: (95×20 + 82×40 + 88×40) / 100 = 87,4 %." },
+        { q: "Was ist, wenn meine Kategoriegewichtungen nicht 100 % ergeben?", a: "Dieser Rechner funktioniert trotzdem korrekt - er teilt durch das, was Ihre Gewichtungen tatsächlich ergeben, was ein teilweises Fortschrittsszenario handhabt (wie Gewichtungen, die nur bisher abgeschlossene Arbeit abdecken). Stellen Sie nur sicher, dass die eingegebenen Gewichtungen mit den Kategorien übereinstimmen, die Ihr Lehrer tatsächlich verwendet." },
+        { q: "Ist das anders als der reguläre Notenrechner?", a: "Ja - der reguläre Notenrechner wandelt eine einzelne Punktzahl (wie einen Test) in einen Prozentsatz und eine Buchstabennote um. Dieses Tool kombiniert mehrere gewichtete Kategorien - Hausaufgaben, Tests, eine Abschlussprüfung usw. - zu einer gesamten Kursnote." },
+      ],
+    },
+    pt: {
+      title: "Calculadora de Nota Ponderada",
+      intro: "Digite sua pontuação e peso para cada categoria para calcular sua nota ponderada geral.",
+      description: "Calcule uma nota geral do curso a partir de pontuações e pesos de categoria, como trabalhos, testes, e um exame final.",
+      faq: [
+        { q: "Como calculo uma nota ponderada?", a: "Multiplique a pontuação de cada categoria pelo seu peso, some tudo, depois divida pelo peso total. Para 95% de trabalhos a 20%, 82% de testes a 40%, e 88% de final a 40%: (95×20 + 82×40 + 88×40) / 100 = 87,4%." },
+        { q: "E se meus pesos de categoria não somarem 100%?", a: "Esta calculadora ainda funciona corretamente - ela divide pelo que seus pesos realmente somam, o que lida com um cenário de progresso parcial (como pesos que cobrem apenas o trabalho concluído até agora). Apenas certifique-se de que os pesos que você digitar correspondam às categorias que seu instrutor realmente usa." },
+        { q: "Isso é diferente da Calculadora de Nota regular?", a: "Sim - a Calculadora de Nota regular converte uma única pontuação (como um teste) em uma porcentagem e nota em letra. Esta ferramenta combina múltiplas categorias ponderadas - trabalhos, testes, um exame final, etc. - em uma nota geral do curso." },
+      ],
+    },
+    it: {
+      title: "Calcolatore di Voto Ponderato",
+      intro: "Inserisci il tuo punteggio e peso per ciascuna categoria per calcolare il tuo voto ponderato complessivo.",
+      description: "Calcola un voto complessivo del corso da punteggi e pesi di categoria, come compiti, test, e un esame finale.",
+      faq: [
+        { q: "Come calcolo un voto ponderato?", a: "Moltiplica il punteggio di ciascuna categoria per il suo peso, somma tutto, poi dividi per il peso totale. Per 95% compiti al 20%, 82% test al 40%, e 88% finale al 40%: (95×20 + 82×40 + 88×40) / 100 = 87,4%." },
+        { q: "Cosa succede se i miei pesi di categoria non sommano a 100%?", a: "Questa calcolatrice funziona comunque correttamente - divide per quello che i tuoi pesi effettivamente sommano, il che gestisce uno scenario di progresso parziale (come pesi che coprono solo il lavoro completato finora). Assicurati solo che i pesi che inserisci corrispondano alle categorie che il tuo istruttore usa effettivamente." },
+        { q: "Questo è diverso dal Calcolatore di Voto normale?", a: "Sì - il Calcolatore di Voto normale converte un singolo punteggio (come un test) in una percentuale e voto in lettera. Questo strumento combina più categorie ponderate - compiti, test, un esame finale, ecc. - in un voto complessivo del corso." },
+      ],
+    },
+    ja: {
+      title: "加重成績計算機",
+      intro: "各カテゴリのスコアと重みを入力すると、全体の加重成績を計算します。",
+      description: "宿題、テスト、期末試験などのカテゴリスコアと重みから、コース全体の成績を計算します。",
+      faq: [
+        { q: "加重成績はどう計算しますか？", a: "各カテゴリのスコアにその重みを掛け、それらを合計し、その後合計の重みで割ります。宿題95%（重み20%）、テスト82%（重み40%）、期末88%（重み40%）の場合：(95×20 + 82×40 + 88×40) / 100 = 87.4%。" },
+        { q: "カテゴリの重みの合計が100%にならない場合はどうなりますか？", a: "この計算機はそれでも正しく機能します。重みの実際の合計で割るため、部分的な進捗のシナリオ（これまでに完了した作業のみをカバーする重みなど）を処理します。入力する重みが講師が実際に使用するカテゴリと一致していることを確認してください。" },
+        { q: "これは通常の成績計算機と異なりますか？", a: "はい。通常の成績計算機は単一のスコア（テストなど）をパーセンテージと文字による成績に変換します。このツールは、宿題、テスト、期末試験など、複数の加重カテゴリを1つのコース全体の成績に組み合わせます。" },
+      ],
+    },
+    ro: {
+      title: "Calculator de Notă Ponderată",
+      intro: "Introdu scorul și ponderea pentru fiecare categorie pentru a calcula nota ta ponderată generală.",
+      description: "Calculează o notă generală a cursului din scorurile și ponderile categoriilor, precum teme, teste, și un examen final.",
+      faq: [
+        { q: "Cum calculez o notă ponderată?", a: "Înmulțește scorul fiecărei categorii cu ponderea sa, adună-le, apoi împarte la ponderea totală. Pentru 95% teme la 20%, 82% teste la 40%, și 88% final la 40%: (95×20 + 82×40 + 88×40) / 100 = 87,4%." },
+        { q: "Ce se întâmplă dacă ponderile categoriilor mele nu însumează 100%?", a: "Acest calculator încă funcționează corect - împarte la ceea ce ponderile tale însumează efectiv, ceea ce gestionează un scenariu de progres parțial (precum ponderi care acoperă doar munca finalizată până acum). Asigură-te doar că ponderile pe care le introduci se potrivesc cu categoriile pe care instructorul tău le folosește efectiv." },
+        { q: "Este asta diferit de Calculatorul de Notă obișnuit?", a: "Da - Calculatorul de Notă obișnuit convertește un singur scor (precum un test) într-un procentaj și notă literală. Acest instrument combină mai multe categorii ponderate - teme, teste, un examen final, etc. - într-o notă generală a cursului." },
+      ],
+    },
+    el: {
+      title: "Υπολογιστής Σταθμισμένου Βαθμού",
+      intro: "Εισάγετε τη βαθμολογία και το βάρος σας για κάθε κατηγορία για να υπολογίσετε τον συνολικό σταθμισμένο βαθμό σας.",
+      description: "Υπολόγισε έναν συνολικό βαθμό μαθήματος από βαθμολογίες και βάρη κατηγοριών, όπως εργασίες, τεστ, και μια τελική εξέταση.",
+      faq: [
+        { q: "Πώς υπολογίζω έναν σταθμισμένο βαθμό;", a: "Πολλαπλασιάστε τη βαθμολογία κάθε κατηγορίας με το βάρος της, προσθέστε τα μαζί, μετά διαιρέστε με το συνολικό βάρος. Για 95% εργασίες σε 20%, 82% τεστ σε 40%, και 88% τελικό σε 40%: (95×20 + 82×40 + 88×40) / 100 = 87,4%." },
+        { q: "Τι γίνεται αν τα βάρη κατηγορίας μου δεν αθροίζουν στο 100%;", a: "Αυτή η αριθμομηχανή λειτουργεί ακόμα σωστά - διαιρεί με ό,τι τα βάρη σας πραγματικά αθροίζουν, που χειρίζεται ένα σενάριο μερικής προόδου (όπως βάρη που καλύπτουν μόνο την εργασία που έχει ολοκληρωθεί μέχρι τώρα). Απλά βεβαιωθείτε ότι τα βάρη που εισάγετε ταιριάζουν με τις κατηγορίες που χρησιμοποιεί πραγματικά ο εκπαιδευτής σας." },
+        { q: "Είναι αυτό διαφορετικό από τον κανονικό Υπολογιστή Βαθμού;", a: "Ναι - ο κανονικός Υπολογιστής Βαθμού μετατρέπει μια μεμονωμένη βαθμολογία (όπως ένα τεστ) σε ποσοστό και γραμμάτινο βαθμό. Αυτό το εργαλείο συνδυάζει πολλαπλές σταθμισμένες κατηγορίες - εργασίες, τεστ, μια τελική εξέταση, κ.λπ. - σε έναν συνολικό βαθμό μαθήματος." },
+      ],
+    },
+    zh: {
+      title: "加权成绩计算器",
+      intro: "输入每个类别的分数和权重，计算你的整体加权成绩。",
+      description: "根据各类别分数和权重（如作业、测验和期末考试）计算课程的总体成绩。",
+      faq: [
+        { q: "如何计算加权成绩？", a: "把每个类别的分数乘以它的权重，把这些结果相加，再除以总权重。例如作业95%权重20%，测验82%权重40%，期末88%权重40%：(95×20 + 82×40 + 88×40) / 100 = 87.4%。" },
+        { q: "如果我的类别权重加起来不等于100%怎么办？", a: "这个计算器仍然能正确运行——它会除以你实际输入的权重总和，这样就能处理部分进度的情况（比如权重只涵盖目前已完成的作业）。只需确保你输入的权重与老师实际使用的类别相符即可。" },
+        { q: "这和普通的成绩计算器有什么不同？", a: "有不同——普通的成绩计算器把单一分数（如一次测验）转换成百分比和等级成绩。这个工具则把多个加权类别——作业、测验、期末考试等——合并成一个整体的课程成绩。" },
+      ],
+    },
+    ar: {
+      title: "حاسبة الدرجة المرجحة",
+      intro: "أدخل درجتك ووزنها لكل فئة لحساب درجتك المرجحة الإجمالية.",
+      description: "احسب درجة إجمالية للمقرر من درجات الفئات وأوزانها، مثل الواجبات المنزلية والاختبارات والامتحان النهائي.",
+      faq: [
+        { q: "كيف أحسب الدرجة المرجحة؟", a: "اضرب درجة كل فئة في وزنها، اجمعها معًا، ثم اقسم على الوزن الإجمالي. لـ95% واجبات بوزن 20%، و82% اختبارات بوزن 40%، و88% نهائي بوزن 40%: (95×20 + 82×40 + 88×40) / 100 = 87.4%." },
+        { q: "ماذا لو كانت أوزان الفئات لدي لا تصل مجموعها إلى 100%؟", a: "لا تزال هذه الحاسبة تعمل بشكل صحيح - تقسم على ما تصل إليه أوزانك فعليًا، مما يتعامل مع سيناريو التقدم الجزئي (مثل الأوزان التي تغطي فقط العمل المكتمل حتى الآن). فقط تأكد من أن الأوزان التي تدخلها تتطابق مع الفئات التي يستخدمها معلمك فعليًا." },
+        { q: "هل هذا مختلف عن حاسبة الدرجات العادية؟", a: "نعم - تحول حاسبة الدرجات العادية درجة واحدة (مثل اختبار واحد) إلى نسبة مئوية ودرجة حرفية. تجمع هذه الأداة عدة فئات مرجحة - الواجبات المنزلية والاختبارات والامتحان النهائي وما إلى ذلك - في درجة إجمالية واحدة للمقرر." },
+      ],
+    },
+    th: {
+      title: "เครื่องคำนวณเกรดถ่วงน้ำหนัก",
+      intro: "ป้อนคะแนนและน้ำหนักของคุณสำหรับแต่ละหมวดหมู่เพื่อคำนวณเกรดถ่วงน้ำหนักโดยรวมของคุณ",
+      description: "คำนวณเกรดรวมของหลักสูตรจากคะแนนและน้ำหนักหมวดหมู่ เช่น การบ้าน การทดสอบ และการสอบปลายภาค",
+      faq: [
+        { q: "ฉันจะคำนวณเกรดถ่วงน้ำหนักได้อย่างไร?", a: "คูณคะแนนของแต่ละหมวดหมู่ด้วยน้ำหนักของมัน บวกเข้าด้วยกัน จากนั้นหารด้วยน้ำหนักรวม สำหรับการบ้าน 95% ที่น้ำหนัก 20%, การทดสอบ 82% ที่น้ำหนัก 40% และปลายภาค 88% ที่น้ำหนัก 40%: (95×20 + 82×40 + 88×40) / 100 = 87.4%" },
+        { q: "ถ้าน้ำหนักหมวดหมู่ของฉันรวมกันไม่ได้ 100% ล่ะ?", a: "เครื่องคำนวณนี้ยังคงทำงานได้อย่างถูกต้อง - มันหารด้วยผลรวมน้ำหนักจริงของคุณ ซึ่งจัดการกับสถานการณ์ความคืบหน้าบางส่วน (เช่น น้ำหนักที่ครอบคลุมเฉพาะงานที่เสร็จแล้วจนถึงตอนนี้) เพียงตรวจสอบให้แน่ใจว่าน้ำหนักที่คุณป้อนตรงกับหมวดหมู่ที่ผู้สอนของคุณใช้จริง" },
+        { q: "สิ่งนี้แตกต่างจากเครื่องคำนวณเกรดทั่วไปหรือไม่?", a: "ใช่ - เครื่องคำนวณเกรดทั่วไปแปลงคะแนนเดียว (เช่น การทดสอบครั้งเดียว) เป็นเปอร์เซ็นต์และเกรดตัวอักษร เครื่องมือนี้รวมหมวดหมู่ถ่วงน้ำหนักหลายหมวด - การบ้าน การทดสอบ การสอบปลายภาค ฯลฯ - เป็นเกรดรวมของหลักสูตรเดียว" },
+      ],
+    },
+  },
+
+  "speed-distance-time-calculator": {
+    es: {
+      title: "Calculadora de Velocidad, Distancia y Tiempo",
+      intro: "Elige qué valor resolver, luego introduce los otros dos - velocidad, distancia, y tiempo están todos conectados por velocidad = distancia / tiempo.",
+      description: "Resuelve velocidad, distancia, o tiempo usando velocidad = distancia / tiempo - introduce dos cualesquiera para encontrar el tercero.",
+      faq: [
+        { q: "¿Cuál es la fórmula que conecta velocidad, distancia, y tiempo?", a: "Velocidad = distancia ÷ tiempo. Reordenado, distancia = velocidad × tiempo, y tiempo = distancia ÷ velocidad - las tres fórmulas describen la misma relación, solo resuelta para una variable diferente." },
+        { q: "¿Cómo calculo la velocidad si conozco la distancia y el tiempo?", a: "Divide la distancia entre el tiempo. Un viaje que cubre 120 millas en 2 horas promedia 120 ÷ 2 = 60 mph." },
+        { q: "¿Las unidades deben coincidir, como millas y horas?", a: "Sí - esta calculadora no convierte unidades, así que asegúrate de que distancia y velocidad usen la misma unidad (ambas millas o ambas km) y el tiempo esté en horas para obtener un resultado correctamente escalado. Usa primero el convertidor de longitud de unidades si tu distancia está en una unidad diferente a tu velocidad." },
+        { q: "¿Son 'convertidor de velocidad distancia tiempo,' 'calculadora de tiempo para velocidad y distancia,' y 'calculadora de distancia a partir de velocidad y tiempo' todos lo mismo que esta herramienta?", a: "Sí - cada una de estas formulaciones describe la misma relación tripartita (velocidad = distancia ÷ tiempo), solo nombrando una variable diferente primero. Elige lo que estás resolviendo arriba e introduce los otros dos valores." },
+      ],
+    },
+    fr: {
+      title: "Calculateur de Vitesse, Distance et Temps",
+      intro: "Choisissez quelle valeur résoudre, puis entrez les deux autres - vitesse, distance, et temps sont tous connectés par vitesse = distance / temps.",
+      description: "Résolvez la vitesse, distance, ou temps en utilisant vitesse = distance / temps - entrez deux valeurs quelconques pour trouver la troisième.",
+      faq: [
+        { q: "Quelle est la formule reliant vitesse, distance, et temps ?", a: "Vitesse = distance ÷ temps. Réarrangé, distance = vitesse × temps, et temps = distance ÷ vitesse - les trois formules décrivent la même relation, juste résolue pour une variable différente." },
+        { q: "Comment calculer la vitesse si je connais la distance et le temps ?", a: "Divisez la distance par le temps. Un trajet couvrant 120 miles en 2 heures a une moyenne de 120 ÷ 2 = 60 mph." },
+        { q: "Les unités doivent-elles correspondre, comme miles et heures ?", a: "Oui - cette calculatrice ne convertit pas les unités, donc assurez-vous que distance et vitesse utilisent la même unité (miles ou km pour les deux) et que le temps soit en heures pour obtenir un résultat correctement mis à l'échelle. Utilisez d'abord le convertisseur de longueur d'unité si votre distance est dans une unité différente de votre vitesse." },
+        { q: "« Convertisseur vitesse distance temps », « calculateur de temps pour vitesse et distance », et « calculateur de distance à partir de vitesse et temps » sont-ils tous la même chose que cet outil ?", a: "Oui - chacune de ces formulations décrit la même relation à trois voies (vitesse = distance ÷ temps), en nommant simplement une variable différente en premier. Choisissez ce que vous résolvez ci-dessus et entrez les deux autres valeurs." },
+      ],
+    },
+    de: {
+      title: "Geschwindigkeit-Distanz-Zeit-Rechner",
+      intro: "Wählen Sie, welchen Wert Sie auflösen möchten, dann geben Sie die anderen beiden ein - Geschwindigkeit, Distanz, und Zeit sind alle durch Geschwindigkeit = Distanz / Zeit verbunden.",
+      description: "Lösen Sie nach Geschwindigkeit, Distanz, oder Zeit mit Geschwindigkeit = Distanz / Zeit - geben Sie zwei beliebige ein, um den dritten zu finden.",
+      faq: [
+        { q: "Was ist die Formel, die Geschwindigkeit, Distanz, und Zeit verbindet?", a: "Geschwindigkeit = Distanz ÷ Zeit. Umgestellt, Distanz = Geschwindigkeit × Zeit, und Zeit = Distanz ÷ Geschwindigkeit - alle drei Formeln beschreiben dieselbe Beziehung, nur nach einer anderen Variable aufgelöst." },
+        { q: "Wie berechne ich die Geschwindigkeit, wenn ich Distanz und Zeit kenne?", a: "Teilen Sie die Distanz durch die Zeit. Eine Reise über 120 Meilen in 2 Stunden ergibt im Durchschnitt 120 ÷ 2 = 60 mph." },
+        { q: "Müssen die Einheiten übereinstimmen, wie Meilen und Stunden?", a: "Ja - dieser Rechner konvertiert keine Einheiten, stellen Sie also sicher, dass Distanz und Geschwindigkeit dieselbe Einheit verwenden (beide Meilen oder beide km) und die Zeit in Stunden ist, um ein korrekt skaliertes Ergebnis zu erhalten. Verwenden Sie zuerst den Längeneinheiten-Konverter, wenn Ihre Distanz in einer anderen Einheit als Ihre Geschwindigkeit vorliegt." },
+        { q: "Sind „Geschwindigkeit-Distanz-Zeit-Konverter“, „Zeitrechner für Geschwindigkeit und Distanz“, und „Distanzrechner aus Geschwindigkeit und Zeit“ alle dasselbe wie dieses Tool?", a: "Ja - jede dieser Formulierungen beschreibt dieselbe Dreifachbeziehung (Geschwindigkeit = Distanz ÷ Zeit), nur mit einer anderen zuerst genannten Variable. Wählen Sie oben, wonach Sie auflösen, und geben Sie die anderen beiden Werte ein." },
+      ],
+    },
+    pt: {
+      title: "Calculadora de Velocidade, Distância e Tempo",
+      intro: "Escolha qual valor resolver, depois digite os outros dois - velocidade, distância, e tempo estão todos conectados por velocidade = distância / tempo.",
+      description: "Resolva velocidade, distância, ou tempo usando velocidade = distância / tempo - digite dois quaisquer para encontrar o terceiro.",
+      faq: [
+        { q: "Qual é a fórmula que conecta velocidade, distância, e tempo?", a: "Velocidade = distância ÷ tempo. Reorganizado, distância = velocidade × tempo, e tempo = distância ÷ velocidade - as três fórmulas descrevem a mesma relação, apenas resolvida para uma variável diferente." },
+        { q: "Como calculo a velocidade se eu sei a distância e o tempo?", a: "Divida a distância pelo tempo. Uma viagem cobrindo 120 milhas em 2 horas tem média de 120 ÷ 2 = 60 mph." },
+        { q: "As unidades precisam corresponder, como milhas e horas?", a: "Sim - esta calculadora não converte unidades, então certifique-se de que distância e velocidade usem a mesma unidade (ambas milhas ou ambas km) e o tempo esteja em horas para obter um resultado corretamente escalado. Use primeiro o conversor de comprimento de unidade se sua distância estiver em uma unidade diferente da sua velocidade." },
+        { q: "'Conversor de velocidade distância tempo,' 'calculadora de tempo para velocidade e distância,' e 'calculadora de distância a partir de velocidade e tempo' são todos a mesma coisa que esta ferramenta?", a: "Sim - cada uma dessas formulações descreve a mesma relação tripla (velocidade = distância ÷ tempo), apenas nomeando uma variável diferente primeiro. Escolha o que você está resolvendo acima e digite os outros dois valores." },
+      ],
+    },
+    it: {
+      title: "Calcolatore di Velocità, Distanza e Tempo",
+      intro: "Scegli quale valore risolvere, poi inserisci gli altri due - velocità, distanza, e tempo sono tutti collegati da velocità = distanza / tempo.",
+      description: "Risolvi velocità, distanza, o tempo usando velocità = distanza / tempo - inserisci due qualsiasi per trovare il terzo.",
+      faq: [
+        { q: "Qual è la formula che collega velocità, distanza, e tempo?", a: "Velocità = distanza ÷ tempo. Riorganizzato, distanza = velocità × tempo, e tempo = distanza ÷ velocità - tutte e tre le formule descrivono la stessa relazione, solo risolta per una variabile diversa." },
+        { q: "Come calcolo la velocità se conosco distanza e tempo?", a: "Dividi la distanza per il tempo. Un viaggio che copre 120 miglia in 2 ore ha una media di 120 ÷ 2 = 60 mph." },
+        { q: "Le unità devono corrispondere, come miglia e ore?", a: "Sì - questa calcolatrice non converte le unità, quindi assicurati che distanza e velocità usino la stessa unità (entrambe miglia o entrambe km) e il tempo sia in ore per ottenere un risultato correttamente scalato. Usa prima il convertitore di lunghezza unità se la tua distanza è in un'unità diversa dalla tua velocità." },
+        { q: "'Convertitore velocità distanza tempo,' 'calcolatore di tempo per velocità e distanza,' e 'calcolatore di distanza da velocità e tempo' sono tutti la stessa cosa di questo strumento?", a: "Sì - ognuna di queste formulazioni descrive la stessa relazione a tre vie (velocità = distanza ÷ tempo), semplicemente nominando prima una variabile diversa. Scegli cosa stai risolvendo sopra e inserisci gli altri due valori." },
+      ],
+    },
+    ja: {
+      title: "速度・距離・時間計算機",
+      intro: "求める値を選択し、他の2つを入力します。速度、距離、時間はすべて速度 = 距離 / 時間で結びついています。",
+      description: "速度 = 距離 / 時間を使用して、速度、距離、または時間を求めます。任意の2つを入力して3つ目を求めます。",
+      faq: [
+        { q: "速度、距離、時間を結びつける公式は何ですか？", a: "速度 = 距離 ÷ 時間です。並べ替えると、距離 = 速度 × 時間、時間 = 距離 ÷ 速度になります。3つの公式はすべて同じ関係を表していますが、異なる変数について解いているだけです。" },
+        { q: "距離と時間がわかっている場合、速度をどう計算しますか？", a: "距離を時間で割ります。2時間で120マイルをカバーする旅行の平均は120 ÷ 2 = 60 mphです。" },
+        { q: "マイルと時間のように、単位を合わせる必要がありますか？", a: "はい。この計算機は単位を変換しないため、正しくスケーリングされた結果を得るには、距離と速度が同じ単位（両方マイルまたは両方km）を使用し、時間が時間単位であることを確認してください。距離の単位が速度の単位と異なる場合は、まず単位長変換機を使用してください。" },
+        { q: "「速度距離時間変換機」「速度と距離の時間計算機」「速度と時間からの距離計算機」はすべてこのツールと同じですか？", a: "はい。これらの言い回しはすべて同じ三者関係（速度 = 距離 ÷ 時間）を表しており、最初に異なる変数を名付けているだけです。上で何を求めているかを選択し、他の2つの値を入力してください。" },
+      ],
+    },
+    ro: {
+      title: "Calculator de Viteză, Distanță și Timp",
+      intro: "Alege ce valoare să rezolvi, apoi introdu celelalte două - viteza, distanța, și timpul sunt toate conectate prin viteză = distanță / timp.",
+      description: "Rezolvă pentru viteză, distanță, sau timp folosind viteză = distanță / timp - introdu oricare două pentru a găsi al treilea.",
+      faq: [
+        { q: "Care este formula care conectează viteza, distanța, și timpul?", a: "Viteză = distanță ÷ timp. Rearanjat, distanță = viteză × timp, și timp = distanță ÷ viteză - toate cele trei formule descriu aceeași relație, doar rezolvată pentru o variabilă diferită." },
+        { q: "Cum calculez viteza dacă știu distanța și timpul?", a: "Împarte distanța la timp. O călătorie care acoperă 120 de mile în 2 ore are o medie de 120 ÷ 2 = 60 mph." },
+        { q: "Trebuie ca unitățile să se potrivească, precum mile și ore?", a: "Da - acest calculator nu convertește unități, deci asigură-te că distanța și viteza folosesc aceeași unitate (ambele mile sau ambele km) și timpul este în ore pentru a obține un rezultat scalat corect. Folosește mai întâi convertorul de lungime al unităților dacă distanța ta este într-o unitate diferită de viteza ta." },
+        { q: "Sunt \"convertor viteză distanță timp,\" \"calculator de timp pentru viteză și distanță,\" și \"calculator de distanță din viteză și timp\" toate același lucru cu acest instrument?", a: "Da - fiecare dintre aceste formulări descrie aceeași relație tripartită (viteză = distanță ÷ timp), doar numind mai întâi o variabilă diferită. Alege ce rezolvi mai sus și introdu celelalte două valori." },
+      ],
+    },
+    el: {
+      title: "Υπολογιστής Ταχύτητας, Απόστασης και Χρόνου",
+      intro: "Επιλέξτε ποια τιμή να λύσετε, μετά εισάγετε τις άλλες δύο - ταχύτητα, απόσταση, και χρόνος συνδέονται όλα με ταχύτητα = απόσταση / χρόνος.",
+      description: "Λύσε ως προς ταχύτητα, απόσταση, ή χρόνο χρησιμοποιώντας ταχύτητα = απόσταση / χρόνος - εισάγετε οποιεσδήποτε δύο για να βρείτε την τρίτη.",
+      faq: [
+        { q: "Ποιος είναι ο τύπος που συνδέει ταχύτητα, απόσταση, και χρόνο;", a: "Ταχύτητα = απόσταση ÷ χρόνος. Αναδιαταγμένο, απόσταση = ταχύτητα × χρόνος, και χρόνος = απόσταση ÷ ταχύτητα - και οι τρεις τύποι περιγράφουν την ίδια σχέση, απλά λυμένη ως προς διαφορετική μεταβλητή." },
+        { q: "Πώς υπολογίζω την ταχύτητα αν γνωρίζω την απόσταση και τον χρόνο;", a: "Διαιρέστε την απόσταση με τον χρόνο. Ένα ταξίδι που καλύπτει 120 μίλια σε 2 ώρες έχει μέσο όρο 120 ÷ 2 = 60 mph." },
+        { q: "Πρέπει οι μονάδες να ταιριάζουν, όπως μίλια και ώρες;", a: "Ναι - αυτή η αριθμομηχανή δεν μετατρέπει μονάδες, οπότε βεβαιωθείτε ότι απόσταση και ταχύτητα χρησιμοποιούν την ίδια μονάδα (και τα δύο μίλια ή και τα δύο km) και ο χρόνος είναι σε ώρες για να πάρετε ένα σωστά κλιμακωμένο αποτέλεσμα. Χρησιμοποιήστε πρώτα τον μετατροπέα μήκους μονάδων αν η απόστασή σας είναι σε διαφορετική μονάδα από την ταχύτητά σας." },
+        { q: "Είναι «μετατροπέας ταχύτητας απόστασης χρόνου», «υπολογιστής χρόνου για ταχύτητα και απόσταση», και «υπολογιστής απόστασης από ταχύτητα και χρόνο» όλα το ίδιο με αυτό το εργαλείο;", a: "Ναι - κάθε μία από αυτές τις διατυπώσεις περιγράφει την ίδια τριμερή σχέση (ταχύτητα = απόσταση ÷ χρόνος), απλά ονομάζοντας πρώτα διαφορετική μεταβλητή. Επιλέξτε τι λύνετε παραπάνω και εισάγετε τις άλλες δύο τιμές." },
+      ],
+    },
+    zh: {
+      title: "速度、距离和时间计算器",
+      intro: "选择要求解的值，然后输入另外两个——速度、距离和时间通过速度 = 距离 / 时间相互关联。",
+      description: "使用速度 = 距离 / 时间求解速度、距离或时间——输入任意两个值即可求出第三个。",
+      faq: [
+        { q: "连接速度、距离和时间的公式是什么？", a: "速度 = 距离 ÷ 时间。变形后，距离 = 速度 × 时间，时间 = 距离 ÷ 速度——这三个公式描述的是同一个关系，只是求解的变量不同。" },
+        { q: "如果我知道距离和时间，如何计算速度？", a: "用距离除以时间。一趟2小时行驶120英里的旅程平均速度为120 ÷ 2 = 60英里/小时。" },
+        { q: "单位需要一致吗，比如英里和小时？", a: "是的——这个计算器不会转换单位，所以要确保距离和速度使用相同的单位（都用英里或都用千米），时间以小时为单位，才能得到正确换算的结果。如果你的距离单位和速度单位不同，请先使用长度单位转换器。" },
+        { q: "「速度距离时间转换器」、「速度和距离的时间计算器」和「根据速度和时间计算距离的计算器」都和这个工具一样吗？", a: "是的——这些说法描述的都是同一个三方关系（速度 = 距离 ÷ 时间），只是先命名了不同的变量。在上方选择你要求解的量，然后输入另外两个值。" },
+      ],
+    },
+    ar: {
+      title: "حاسبة السرعة والمسافة والزمن",
+      intro: "اختر القيمة التي تريد حلها، ثم أدخل القيمتين الأخريين - السرعة والمسافة والزمن كلها مرتبطة بـالسرعة = المسافة / الزمن.",
+      description: "احسب السرعة أو المسافة أو الزمن باستخدام السرعة = المسافة / الزمن - أدخل أي قيمتين لإيجاد الثالثة.",
+      faq: [
+        { q: "ما هي الصيغة التي تربط بين السرعة والمسافة والزمن؟", a: "السرعة = المسافة ÷ الزمن. بإعادة الترتيب، المسافة = السرعة × الزمن، والزمن = المسافة ÷ السرعة - تصف الصيغ الثلاث نفس العلاقة، فقط محلولة لمتغير مختلف." },
+        { q: "كيف أحسب السرعة إذا كنت أعرف المسافة والزمن؟", a: "اقسم المسافة على الزمن. رحلة تغطي 120 ميلاً في ساعتين يبلغ متوسطها 120 ÷ 2 = 60 ميلاً في الساعة." },
+        { q: "هل تحتاج الوحدات إلى التطابق، مثل الأميال والساعات؟", a: "نعم - لا تحول هذه الحاسبة الوحدات، لذا تأكد من أن المسافة والسرعة تستخدمان نفس الوحدة (كلاهما أميال أو كلاهما كيلومترات) وأن الزمن بالساعات للحصول على نتيجة مُقاسة بشكل صحيح. استخدم محول طول الوحدة أولاً إذا كانت مسافتك بوحدة مختلفة عن سرعتك." },
+        { q: "هل \"محول السرعة والمسافة والزمن\" و\"حاسبة الزمن للسرعة والمسافة\" و\"حاسبة المسافة من السرعة والزمن\" كلها نفس هذه الأداة؟", a: "نعم - يصف كل من هذه الصياغات نفس العلاقة الثلاثية (السرعة = المسافة ÷ الزمن)، فقط بتسمية متغير مختلف أولاً. اختر ما تحله أعلاه وأدخل القيمتين الأخريين." },
+      ],
+    },
+    th: {
+      title: "เครื่องคำนวณความเร็ว ระยะทาง และเวลา",
+      intro: "เลือกค่าที่จะแก้หา จากนั้นป้อนอีกสองค่า - ความเร็ว ระยะทาง และเวลาเชื่อมโยงกันทั้งหมดด้วยความเร็ว = ระยะทาง / เวลา",
+      description: "แก้หาความเร็ว ระยะทาง หรือเวลาโดยใช้ความเร็ว = ระยะทาง / เวลา - ป้อนสองค่าใดๆ เพื่อหาค่าที่สาม",
+      faq: [
+        { q: "สูตรที่เชื่อมโยงความเร็ว ระยะทาง และเวลาคืออะไร?", a: "ความเร็ว = ระยะทาง ÷ เวลา จัดเรียงใหม่ ระยะทาง = ความเร็ว × เวลา และเวลา = ระยะทาง ÷ ความเร็ว - ทั้งสามสูตรอธิบายความสัมพันธ์เดียวกัน เพียงแต่แก้หาตัวแปรต่างกัน" },
+        { q: "ฉันจะคำนวณความเร็วได้อย่างไรถ้ารู้ระยะทางและเวลา?", a: "หารระยะทางด้วยเวลา การเดินทาง 120 ไมล์ใน 2 ชั่วโมงมีค่าเฉลี่ย 120 ÷ 2 = 60 ไมล์ต่อชั่วโมง" },
+        { q: "หน่วยต้องตรงกันหรือไม่ เช่น ไมล์และชั่วโมง?", a: "ใช่ - เครื่องคำนวณนี้ไม่แปลงหน่วย ดังนั้นตรวจสอบให้แน่ใจว่าระยะทางและความเร็วใช้หน่วยเดียวกัน (ทั้งไมล์หรือทั้งกม.) และเวลาเป็นชั่วโมงเพื่อให้ได้ผลลัพธ์ที่ปรับสเกลอย่างถูกต้อง ใช้ตัวแปลงความยาวหน่วยก่อนถ้าระยะทางของคุณเป็นหน่วยที่ต่างจากความเร็ว" },
+        { q: "\"ตัวแปลงความเร็วระยะทางเวลา\" \"เครื่องคำนวณเวลาสำหรับความเร็วและระยะทาง\" และ \"เครื่องคำนวณระยะทางจากความเร็วและเวลา\" ทั้งหมดเหมือนกับเครื่องมือนี้หรือไม่?", a: "ใช่ - แต่ละวลีเหล่านี้อธิบายความสัมพันธ์สามทางเดียวกัน (ความเร็ว = ระยะทาง ÷ เวลา) เพียงแต่ตั้งชื่อตัวแปรต่างกันก่อน เลือกสิ่งที่คุณกำลังแก้หาด้านบนและป้อนอีกสองค่า" },
+      ],
+    },
+  },
+
+  "projectile-motion-calculator": {
+    es: {
+      title: "Calculadora de Movimiento de Proyectil",
+      intro: "Introduce la velocidad y ángulo de lanzamiento para calcular el tiempo de vuelo, altura máxima, y alcance horizontal, ignorando la resistencia del aire.",
+      description: "Calcula el tiempo de vuelo, altura máxima, y alcance de un proyectil lanzado en un ángulo.",
+      faq: [
+        { q: "¿Qué ángulo da el alcance máximo?", a: "45° - para una velocidad de lanzamiento dada en terreno plano sin resistencia del aire, 45° divide la velocidad uniformemente entre los componentes horizontal y vertical de una manera que maximiza la distancia horizontal. Cualquier otro ángulo (manteniendo la velocidad y el nivel del suelo fijos) produce un alcance más corto." },
+        { q: "¿Cuál es el alcance de un proyectil lanzado a 20 m/s a 45°?", a: "Aproximadamente 40.77 m - vₓ = vy = 20×cos(45°) = 20×sin(45°) ≈ 14.14 m/s, tiempo de vuelo = 2×14.14÷9.81 ≈ 2.88 s, alcance = 14.14×2.88 ≈ 40.77 m." },
+        { q: "¿Por qué 30° y 60° dan el mismo alcance?", a: "Los ángulos de lanzamiento complementarios (ángulos que suman 90°) siempre producen el mismo alcance en terreno plano, porque la fórmula del alcance depende de sin(2×ángulo), y sin(2×30°) = sin(60°) es igual a sin(2×60°) = sin(120°) - ambos son el mismo valor." },
+        { q: "¿Esto tiene en cuenta la resistencia del aire?", a: "No - esto usa movimiento de proyectil ideal (solo la gravedad actuando sobre el objeto), que es preciso para objetos densos y compactos que se mueven a velocidades moderadas en distancias cortas, pero diverge cada vez más de la realidad para objetos ligeros o de movimiento rápido donde importa la resistencia del aire." },
+      ],
+    },
+    fr: {
+      title: "Calculateur de Mouvement de Projectile",
+      intro: "Entrez la vitesse et l'angle de lancement pour calculer le temps de vol, la hauteur maximale, et la portée horizontale, en ignorant la résistance de l'air.",
+      description: "Calculez le temps de vol, la hauteur maximale, et la portée d'un projectile lancé à un angle.",
+      faq: [
+        { q: "Quel angle donne la portée maximale ?", a: "45° - pour une vitesse de lancement donnée sur terrain plat sans résistance de l'air, 45° divise la vitesse uniformément entre les composantes horizontale et verticale d'une manière qui maximise la distance horizontale. Tout autre angle (en gardant la vitesse et le niveau du sol fixes) produit une portée plus courte." },
+        { q: "Quelle est la portée d'un projectile lancé à 20 m/s à 45° ?", a: "Environ 40,77 m - vₓ = vy = 20×cos(45°) = 20×sin(45°) ≈ 14,14 m/s, temps de vol = 2×14,14÷9,81 ≈ 2,88 s, portée = 14,14×2,88 ≈ 40,77 m." },
+        { q: "Pourquoi 30° et 60° donnent-ils la même portée ?", a: "Les angles de lancement complémentaires (angles qui totalisent 90°) produisent toujours la même portée sur terrain plat, car la formule de portée dépend de sin(2×angle), et sin(2×30°) = sin(60°) est égal à sin(2×60°) = sin(120°) - les deux sont la même valeur." },
+        { q: "Cela tient-il compte de la résistance de l'air ?", a: "Non - cela utilise le mouvement de projectile idéal (seule la gravité agissant sur l'objet), ce qui est précis pour des objets denses et compacts se déplaçant à des vitesses modérées sur de courtes distances, mais diverge de plus en plus de la réalité pour des objets légers ou se déplaçant rapidement où la traînée de l'air compte." },
+      ],
+    },
+    de: {
+      title: "Wurfbewegung-Rechner",
+      intro: "Geben Sie die Abschussgeschwindigkeit und den Winkel ein, um Flugzeit, maximale Höhe, und horizontale Reichweite zu berechnen, unter Vernachlässigung des Luftwiderstands.",
+      description: "Berechnen Sie die Flugzeit, maximale Höhe, und Reichweite eines in einem Winkel abgeschossenen Projektils.",
+      faq: [
+        { q: "Welcher Winkel ergibt die maximale Reichweite?", a: "45° - für eine gegebene Abschussgeschwindigkeit auf flachem Boden ohne Luftwiderstand teilt 45° die Geschwindigkeit gleichmäßig zwischen horizontalen und vertikalen Komponenten auf eine Weise, die die horizontale Distanz maximiert. Jeder andere Winkel (bei fester Geschwindigkeit und Bodenhöhe) ergibt eine kürzere Reichweite." },
+        { q: "Wie groß ist die Reichweite eines Projektils, das mit 20 m/s bei 45° abgeschossen wird?", a: "Etwa 40,77 m - vₓ = vy = 20×cos(45°) = 20×sin(45°) ≈ 14,14 m/s, Flugzeit = 2×14,14÷9,81 ≈ 2,88 s, Reichweite = 14,14×2,88 ≈ 40,77 m." },
+        { q: "Warum ergeben 30° und 60° dieselbe Reichweite?", a: "Komplementäre Abschusswinkel (Winkel, die sich zu 90° summieren) ergeben immer dieselbe Reichweite auf flachem Boden, weil die Reichweitenformel von sin(2×Winkel) abhängt, und sin(2×30°) = sin(60°) gleich sin(2×60°) = sin(120°) ist - beide sind derselbe Wert." },
+        { q: "Berücksichtigt dies den Luftwiderstand?", a: "Nein - dies verwendet ideale Wurfbewegung (nur Schwerkraft wirkt auf das Objekt), was für dichte, kompakte Objekte, die sich mit moderaten Geschwindigkeiten über kurze Distanzen bewegen, genau ist, aber zunehmend von der Realität abweicht für leichte oder sich schnell bewegende Objekte, bei denen der Luftwiderstand eine Rolle spielt." },
+      ],
+    },
+    pt: {
+      title: "Calculadora de Movimento de Projétil",
+      intro: "Digite a velocidade e ângulo de lançamento para calcular o tempo de voo, altura máxima, e alcance horizontal, ignorando a resistência do ar.",
+      description: "Calcule o tempo de voo, altura máxima, e alcance de um projétil lançado em um ângulo.",
+      faq: [
+        { q: "Qual ângulo dá o alcance máximo?", a: "45° - para uma velocidade de lançamento dada em terreno plano sem resistência do ar, 45° divide a velocidade igualmente entre os componentes horizontal e vertical de uma forma que maximiza a distância horizontal. Qualquer outro ângulo (mantendo a velocidade e o nível do solo fixos) produz um alcance mais curto." },
+        { q: "Qual é o alcance de um projétil lançado a 20 m/s a 45°?", a: "Cerca de 40,77 m - vₓ = vy = 20×cos(45°) = 20×sin(45°) ≈ 14,14 m/s, tempo de voo = 2×14,14÷9,81 ≈ 2,88 s, alcance = 14,14×2,88 ≈ 40,77 m." },
+        { q: "Por que 30° e 60° dão o mesmo alcance?", a: "Ângulos de lançamento complementares (ângulos que somam 90°) sempre produzem o mesmo alcance em terreno plano, porque a fórmula do alcance depende de sen(2×ângulo), e sen(2×30°) = sen(60°) é igual a sen(2×60°) = sen(120°) - ambos são o mesmo valor." },
+        { q: "Isso considera a resistência do ar?", a: "Não - isso usa movimento de projétil ideal (apenas a gravidade agindo sobre o objeto), que é preciso para objetos densos e compactos movendo-se em velocidades moderadas por curtas distâncias, mas diverge cada vez mais da realidade para objetos leves ou de movimento rápido onde o arrasto do ar importa." },
+      ],
+    },
+    it: {
+      title: "Calcolatore di Moto del Proiettile",
+      intro: "Inserisci la velocità e l'angolo di lancio per calcolare il tempo di volo, l'altezza massima, e la gittata orizzontale, ignorando la resistenza dell'aria.",
+      description: "Calcola il tempo di volo, l'altezza massima, e la gittata di un proiettile lanciato a un angolo.",
+      faq: [
+        { q: "Quale angolo dà la gittata massima?", a: "45° - per una data velocità di lancio su terreno piatto senza resistenza dell'aria, 45° divide la velocità uniformemente tra i componenti orizzontale e verticale in un modo che massimizza la distanza orizzontale. Qualsiasi altro angolo (mantenendo fisse velocità e livello del suolo) produce una gittata più corta." },
+        { q: "Qual è la gittata di un proiettile lanciato a 20 m/s a 45°?", a: "Circa 40,77 m - vₓ = vy = 20×cos(45°) = 20×sin(45°) ≈ 14,14 m/s, tempo di volo = 2×14,14÷9,81 ≈ 2,88 s, gittata = 14,14×2,88 ≈ 40,77 m." },
+        { q: "Perché 30° e 60° danno la stessa gittata?", a: "Angoli di lancio complementari (angoli che sommano a 90°) producono sempre la stessa gittata su terreno piatto, perché la formula della gittata dipende da sin(2×angolo), e sin(2×30°) = sin(60°) è uguale a sin(2×60°) = sin(120°) - entrambi sono lo stesso valore." },
+        { q: "Questo tiene conto della resistenza dell'aria?", a: "No - questo usa il moto ideale del proiettile (solo la gravità che agisce sull'oggetto), che è accurato per oggetti densi e compatti che si muovono a velocità moderate su brevi distanze, ma diverge sempre più dalla realtà per oggetti leggeri o in rapido movimento dove conta la resistenza dell'aria." },
+      ],
+    },
+    ja: {
+      title: "放物運動計算機",
+      intro: "発射速度と角度を入力すると、空気抵抗を無視して飛行時間、最大高度、水平到達距離を計算します。",
+      description: "角度をつけて発射された物体の飛行時間、最大高度、および到達距離を計算します。",
+      faq: [
+        { q: "最大到達距離を与える角度は何度ですか？", a: "45°です。空気抵抗のない平地での特定の発射速度に対して、45°は水平方向を最大化する方法で速度を水平成分と垂直成分に均等に分割します。他の角度（速度と地面レベルを固定した場合）はすべてより短い到達距離を生じます。" },
+        { q: "20 m/sで45°で発射された物体の到達距離はいくつですか？", a: "約40.77 mです。vₓ = vy = 20×cos(45°) = 20×sin(45°) ≈ 14.14 m/s、飛行時間 = 2×14.14÷9.81 ≈ 2.88 s、到達距離 = 14.14×2.88 ≈ 40.77 m。" },
+        { q: "なぜ30°と60°は同じ到達距離になるのですか？", a: "補角の発射角度（合計が90°になる角度）は、平地では常に同じ到達距離を生じます。到達距離の公式はsin(2×角度)に依存し、sin(2×30°) = sin(60°)はsin(2×60°) = sin(120°)に等しいためです。両方とも同じ値です。" },
+        { q: "これは空気抵抗を考慮していますか？", a: "いいえ。これは理想的な放物運動（物体に作用するのは重力のみ）を使用しており、短距離を中程度の速度で移動する高密度でコンパクトな物体には正確ですが、空気抵抗が重要になる軽量または高速で移動する物体では現実からますます乖離します。" },
+      ],
+    },
+    ro: {
+      title: "Calculator de Mișcare a Proiectilului",
+      intro: "Introdu viteza de lansare și unghiul pentru a calcula timpul de zbor, înălțimea maximă, și raza orizontală, ignorând rezistența aerului.",
+      description: "Calculează timpul de zbor, înălțimea maximă, și raza unui proiectil lansat la un unghi.",
+      faq: [
+        { q: "Ce unghi dă raza maximă?", a: "45° - pentru o viteză de lansare dată pe teren plat fără rezistența aerului, 45° împarte viteza uniform între componentele orizontale și verticale într-un mod care maximizează distanța orizontală. Orice alt unghi (menținând viteza și nivelul solului fixe) produce o rază mai scurtă." },
+        { q: "Care este raza unui proiectil lansat la 20 m/s la 45°?", a: "Aproximativ 40,77 m - vₓ = vy = 20×cos(45°) = 20×sin(45°) ≈ 14,14 m/s, timp de zbor = 2×14,14÷9,81 ≈ 2,88 s, rază = 14,14×2,88 ≈ 40,77 m." },
+        { q: "De ce 30° și 60° dau aceeași rază?", a: "Unghiurile de lansare complementare (unghiuri care însumează 90°) produc întotdeauna aceeași rază pe teren plat, deoarece formula razei depinde de sin(2×unghi), iar sin(2×30°) = sin(60°) este egal cu sin(2×60°) = sin(120°) - ambele sunt aceeași valoare." },
+        { q: "Ține asta cont de rezistența aerului?", a: "Nu - aceasta folosește mișcarea ideală a proiectilului (doar gravitația acționând asupra obiectului), care este precisă pentru obiecte dense, compacte care se mișcă la viteze moderate pe distanțe scurte, dar diverge tot mai mult de realitate pentru obiecte ușoare sau cu mișcare rapidă unde rezistența aerului contează." },
+      ],
+    },
+    el: {
+      title: "Υπολογιστής Βλητικής Κίνησης",
+      intro: "Εισάγετε την ταχύτητα εκτόξευσης και τη γωνία για να υπολογίσετε τον χρόνο πτήσης, το μέγιστο ύψος, και το οριζόντιο βεληνεκές, αγνοώντας την αντίσταση του αέρα.",
+      description: "Υπολόγισε τον χρόνο πτήσης, το μέγιστο ύψος, και το βεληνεκές ενός βλήματος που εκτοξεύεται υπό γωνία.",
+      faq: [
+        { q: "Ποια γωνία δίνει το μέγιστο βεληνεκές;", a: "45° - για μια δεδομένη ταχύτητα εκτόξευσης σε επίπεδο έδαφος χωρίς αντίσταση αέρα, οι 45° χωρίζουν την ταχύτητα ομοιόμορφα μεταξύ οριζόντιων και κατακόρυφων συνιστωσών με τρόπο που μεγιστοποιεί την οριζόντια απόσταση. Οποιαδήποτε άλλη γωνία (διατηρώντας σταθερή την ταχύτητα και το επίπεδο εδάφους) παράγει μικρότερο βεληνεκές." },
+        { q: "Ποιο είναι το βεληνεκές ενός βλήματος που εκτοξεύεται στα 20 m/s στις 45°;", a: "Περίπου 40,77 m - vₓ = vy = 20×cos(45°) = 20×sin(45°) ≈ 14,14 m/s, χρόνος πτήσης = 2×14,14÷9,81 ≈ 2,88 s, βεληνεκές = 14,14×2,88 ≈ 40,77 m." },
+        { q: "Γιατί οι 30° και 60° δίνουν το ίδιο βεληνεκές;", a: "Οι συμπληρωματικές γωνίες εκτόξευσης (γωνίες που αθροίζουν στις 90°) παράγουν πάντα το ίδιο βεληνεκές σε επίπεδο έδαφος, επειδή ο τύπος βεληνεκούς εξαρτάται από το sin(2×γωνία), και sin(2×30°) = sin(60°) ισούται με sin(2×60°) = sin(120°) - και οι δύο είναι η ίδια τιμή." },
+        { q: "Λαμβάνει αυτό υπόψη την αντίσταση του αέρα;", a: "Όχι - αυτό χρησιμοποιεί ιδανική βλητική κίνηση (μόνο η βαρύτητα ενεργεί στο αντικείμενο), που είναι ακριβής για πυκνά, συμπαγή αντικείμενα που κινούνται σε μέτριες ταχύτητες σε μικρές αποστάσεις, αλλά αποκλίνει όλο και περισσότερο από την πραγματικότητα για ελαφρά ή γρήγορα κινούμενα αντικείμενα όπου η αντίσταση αέρα έχει σημασία." },
+      ],
+    },
+    zh: {
+      title: "抛体运动计算器",
+      intro: "输入发射速度和角度，计算飞行时间、最大高度和水平射程，忽略空气阻力。",
+      description: "计算以某个角度发射的抛体的飞行时间、最大高度和射程。",
+      faq: [
+        { q: "什么角度能得到最大射程？", a: "45°——在没有空气阻力的平地上，给定发射速度时，45°能以最大化水平距离的方式将速度均匀分配在水平和垂直分量上。在速度和地面高度保持不变的情况下，任何其他角度产生的射程都更短。" },
+        { q: "以20 m/s、45°发射的抛体射程是多少？", a: "约40.77米——vₓ = vy = 20×cos(45°) = 20×sin(45°) ≈ 14.14 m/s，飞行时间 = 2×14.14÷9.81 ≈ 2.88秒，射程 = 14.14×2.88 ≈ 40.77米。" },
+        { q: "为什么30°和60°得到相同的射程？", a: "互补的发射角度（两角之和为90°）在平地上总是产生相同的射程，因为射程公式取决于sin(2×角度)，而sin(2×30°) = sin(60°)等于sin(2×60°) = sin(120°)——两者是同一个值。" },
+        { q: "这个计算考虑空气阻力吗？", a: "不考虑——这使用的是理想抛体运动（只有重力作用于物体），这对于在短距离内以适中速度移动的致密、紧凑物体是准确的，但对于空气阻力起作用的轻质或快速移动物体，结果会越来越偏离现实。" },
+      ],
+    },
+    ar: {
+      title: "حاسبة الحركة القذفية",
+      intro: "أدخل سرعة الإطلاق والزاوية لحساب زمن الطيران والارتفاع الأقصى والمدى الأفقي، متجاهلاً مقاومة الهواء.",
+      description: "احسب زمن الطيران والارتفاع الأقصى ومدى قذيفة أُطلقت بزاوية معينة.",
+      faq: [
+        { q: "أي زاوية تعطي أقصى مدى؟", a: "45° - لسرعة إطلاق معينة على أرض مستوية بدون مقاومة هواء، تقسم الزاوية 45° السرعة بالتساوي بين المكونين الأفقي والرأسي بطريقة تعظم المسافة الأفقية. أي زاوية أخرى (مع ثبات السرعة ومستوى الأرض) تنتج مدى أقصر." },
+        { q: "ما هو مدى قذيفة أُطلقت بسرعة 20 م/ث بزاوية 45°؟", a: "حوالي 40.77 م - vₓ = vy = 20×cos(45°) = 20×sin(45°) ≈ 14.14 م/ث، زمن الطيران = 2×14.14÷9.81 ≈ 2.88 ث، المدى = 14.14×2.88 ≈ 40.77 م." },
+        { q: "لماذا تعطي 30° و60° نفس المدى؟", a: "زوايا الإطلاق المتكاملة (الزوايا التي يبلغ مجموعها 90°) تنتج دائمًا نفس المدى على الأرض المستوية، لأن صيغة المدى تعتمد على sin(2×الزاوية)، وsin(2×30°) = sin(60°) يساوي sin(2×60°) = sin(120°) - كلاهما نفس القيمة." },
+        { q: "هل يراعي هذا مقاومة الهواء؟", a: "لا - يستخدم هذا حركة قذفية مثالية (فقط الجاذبية تؤثر على الجسم)، وهي دقيقة للأجسام الكثيفة المدمجة المتحركة بسرعات معتدلة عبر مسافات قصيرة، لكنها تنحرف بشكل متزايد عن الواقع بالنسبة للأجسام الخفيفة أو سريعة الحركة حيث تهم مقاومة الهواء." },
+      ],
+    },
+    th: {
+      title: "เครื่องคำนวณการเคลื่อนที่แบบวิถีโค้ง",
+      intro: "ป้อนความเร็วในการยิงและมุมเพื่อคำนวณเวลาการบิน ความสูงสูงสุด และระยะทางแนวนอน โดยไม่คำนึงถึงแรงต้านอากาศ",
+      description: "คำนวณเวลาการบิน ความสูงสูงสุด และระยะของวัตถุที่ถูกยิงเป็นมุม",
+      faq: [
+        { q: "มุมใดให้ระยะสูงสุด?", a: "45° - สำหรับความเร็วในการยิงที่กำหนดบนพื้นราบโดยไม่มีแรงต้านอากาศ 45° จะแบ่งความเร็วเท่าๆ กันระหว่างองค์ประกอบแนวนอนและแนวตั้งในลักษณะที่ทำให้ระยะทางแนวนอนสูงสุด มุมอื่นๆ (โดยรักษาความเร็วและระดับพื้นให้คงที่) จะให้ระยะสั้นกว่า" },
+        { q: "ระยะของวัตถุที่ถูกยิงด้วยความเร็ว 20 m/s ที่มุม 45° คือเท่าไหร่?", a: "ประมาณ 40.77 ม. - vₓ = vy = 20×cos(45°) = 20×sin(45°) ≈ 14.14 m/s เวลาการบิน = 2×14.14÷9.81 ≈ 2.88 s ระยะ = 14.14×2.88 ≈ 40.77 m" },
+        { q: "ทำไม 30° และ 60° จึงให้ระยะเท่ากัน?", a: "มุมยิงที่เติมเต็มกัน (มุมที่รวมกันได้ 90°) จะให้ระยะเท่ากันเสมอบนพื้นราบ เพราะสูตรระยะขึ้นอยู่กับ sin(2×มุม) และ sin(2×30°) = sin(60°) เท่ากับ sin(2×60°) = sin(120°) - ทั้งสองมีค่าเท่ากัน" },
+        { q: "สิ่งนี้คำนึงถึงแรงต้านอากาศหรือไม่?", a: "ไม่ - สิ่งนี้ใช้การเคลื่อนที่แบบวิถีโค้งในอุดมคติ (มีเพียงแรงโน้มถ่วงที่กระทำต่อวัตถุ) ซึ่งแม่นยำสำหรับวัตถุที่มีความหนาแน่นและกะทัดรัดเคลื่อนที่ด้วยความเร็วปานกลางในระยะทางสั้น แต่จะเบี่ยงเบนจากความเป็นจริงมากขึ้นเรื่อยๆ สำหรับวัตถุที่เบาหรือเคลื่อนที่เร็วซึ่งแรงต้านอากาศมีความสำคัญ" },
+      ],
+    },
+  },
 };
 
 // Static-page copy for wave one. Privacy and Terms are flagged explicitly
