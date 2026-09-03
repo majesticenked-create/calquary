@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Convertor din Grame în Căni - Calculator Gratuit Online | Calquary</title>
+  <meta name="description" content="Convertește ingrediente comune de patiserie între căni și grame." />
+  <meta property="og:title" content="Convertor din Grame în Căni | Calquary">
+  <meta property="og:description" content="Convertește ingrediente comune de patiserie între căni și grame.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/ro/tool/cooking-converter.html">
+  <meta property="og:locale" content="ro_RO">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/cooking-converter.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Convertor din Grame în Căni | Calquary">
+  <meta name="twitter:description" content="Convertește ingrediente comune de patiserie între căni și grame.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/cooking-converter.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/cooking-converter.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("cooking-converter");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("cooking-converter");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Convertor din Grame în Căni",
+      "description": "Convertește ingrediente comune de patiserie între căni și grame.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/ro/tool/cooking-converter.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-30",
+      "inLanguage": "ro"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/ro/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Everyday Conversions",
+          "item": "https://calquary.com/ro/category/conversions.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Convertor din Grame în Căni",
+          "item": "https://calquary.com/ro/tool/cooking-converter.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "De ce 1 cană de făină și 1 cană de zahăr cântăresc cantități diferite?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cănile măsoară volumul, nu greutatea - ingredientele mai dense precum zahărul cântăresc mai mult per cană decât cele mai ușoare precum făina."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cât cântărește un baton de unt în acest convertor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un baton american standard de unt este 1/2 cană, care se convertește în aproximativ 113,5g - jumătate din cifra de 227g per cană folosită de acest calculator."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "De ce tipul de făină afectează greutatea per cană?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cât de dens este ambalată făina în cana de măsurat - și diferențele dintre tipurile de făină precum universală, de pâine, sau de prăjituri - ambele afectează greutatea per cană, motiv pentru care rețetele profesionale specifică adesea greutatea în loc de măsurători în căni pentru consistență."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Câte grame sunt într-o cană?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depinde de ingredient - o cană de făină este aproximativ 120g, o cană de zahăr granulat este aproximativ 200g, și o cană de unt este aproximativ 227g, deoarece cănile măsoară volumul iar gramele măsoară greutatea. Alege ingredientul tău mai sus pentru cifra exactă."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Este \"1 cană în grame\" sau \"1 cană la g\" aceeași întrebare cu \"cană la grame\"?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da - toate acestea întreabă același lucru: câte grame sunt într-o cană dintr-un ingredient dat. Introdu 1 în câmpul căni și alege ingredientul tău mai sus pentru cifra exactă."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Este \"1 căni la grame\" (plural) diferit de \"1 cană la grame\"?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nu - este aceeași întrebare cu o greșeală gramaticală. Introdu 1 în câmpul căni de mai sus pentru răspuns oricum ar fi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Este un \"calculator de cană la gram\" același lucru cu acest instrument?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da - exact asta face acest calculator. Alege ingredientul tău și introdu un număr de căni mai sus pentru a obține greutatea echivalentă în grame."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Este \"căni la grame\" fără număr aceeași întrebare?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da - cere aceeași conversie, doar fără a specifica o cantitate. Introdu câte căni ai mai sus (1, 2, 0,5, etc.) pentru a obține gramele exacte pentru ingredientul tău."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Câte căni sunt într-un anumit număr de grame?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Împarte cantitatea în grame la cifra de grame per cană a ingredientului tău - 240g de făină, de exemplu, sunt 240 ÷ 120 = 2 căni. Acest calculator convertește căni în grame direct; pentru grame în căni, împarte cantitatea ta în grame la greutatea per cană arătată pentru ingredientul tău mai sus."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O cană este câte grame?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depinde în întregime de ingredient, deoarece o cană măsoară volumul iar gramele măsoară greutatea - selectează ingredientul tău mai sus (făină, zahăr, unt, sau zahăr brun) pentru a vedea cifra sa specifică de grame per cană."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Câte grame sunt 1/2 cană?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Introdu 0,5 în câmpul căni de mai sus - de exemplu, 1/2 cană de făină este aproximativ 60g, în timp ce 1/2 cană de unt este aproximativ 113,5g, deoarece greutatea per cană variază în funcție de densitatea ingredientului."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Câte grame sunt în 1 1/2 căni de zahăr?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aproximativ 300g pentru zahăr granulat - introdu 1,5 în câmpul căni cu zahărul selectat mai sus (200g per cană × 1,5 = 300g)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Câte grame sunt 2 1/2 căni?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depinde de ingredient - introdu 2,5 în câmpul căni de mai sus cu ingredientul tău selectat. Pentru făină sunt aproximativ 300g, iar pentru zahăr sunt aproximativ 500g, deoarece greutatea per cană variază în funcție de densitate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Câte grame sunt 3/4 de cană?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Introdu 0,75 în câmpul căni de mai sus cu ingredientul tău selectat - pentru făină sunt aproximativ 90g, iar pentru zahăr sunt aproximativ 150g."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Câte grame este 1 cană, în general?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nu există un singur răspuns fără a cunoaște ingredientul - variază de la aproximativ 120g (făină) la 227g (unt) per cană pentru ingredientele acoperite de acest calculator, deoarece ingredientele mai dense concentrează mai multă greutate în același volum."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "De ce rețetele din țări diferite folosesc sisteme diferite de măsurare?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SUA folosește în principal măsurători în căni și linguri bazate pe volum, în timp ce cea mai mare parte a restului lumii folosește măsurători metrice bazate pe greutate (grame), care sunt mai precise pentru patiserie deoarece densitatea ingredientelor variază. Acest convertor face legătura între cele două, astfel încât poți urma o rețetă scrisă în oricare dintre sisteme."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/ro/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/ro/index.html#categories">Categorii</a>
+          <a href="/ro/index.html#tools">Toate instrumentele</a>
+          <a href="/ro/about.html">Despre noi</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Română">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>undefined</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/cooking-converter.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/cooking-converter.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/cooking-converter.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/cooking-converter.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/cooking-converter.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/cooking-converter.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/cooking-converter.html">日本語</a><span class="locale-item current" role="menuitem" aria-current="true">Română</span><a class="locale-item" role="menuitem" href="/el/tool/cooking-converter.html">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/cooking-converter.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/cooking-converter.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/cooking-converter.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/ro/index.html">Calquary</a> / <a href="/ro/category/conversions.html">Conversii Zilnice</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Convertor din Grame în Căni</h1>
+        <p style="max-width:60ch;">Alege un ingredient și introdu căni pentru a vedea greutatea echivalentă în grame - densitatea ingredientului afectează conversia.</p>
+        <p class="last-updated">Ultima actualizare: August 30, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculează</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Resetează</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Întrebări frecvente</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>De ce 1 cană de făină și 1 cană de zahăr cântăresc cantități diferite?</h3>
+<p>Cănile măsoară volumul, nu greutatea - ingredientele mai dense precum zahărul cântăresc mai mult per cană decât cele mai ușoare precum făina.</p>
+</div>
+<div class="faq-item">
+<h3>Cât cântărește un baton de unt în acest convertor?</h3>
+<p>Un baton american standard de unt este 1/2 cană, care se convertește în aproximativ 113,5g - jumătate din cifra de 227g per cană folosită de acest calculator.</p>
+</div>
+<div class="faq-item">
+<h3>De ce tipul de făină afectează greutatea per cană?</h3>
+<p>Cât de dens este ambalată făina în cana de măsurat - și diferențele dintre tipurile de făină precum universală, de pâine, sau de prăjituri - ambele afectează greutatea per cană, motiv pentru care rețetele profesionale specifică adesea greutatea în loc de măsurători în căni pentru consistență.</p>
+</div>
+<div class="faq-item">
+<h3>Câte grame sunt într-o cană?</h3>
+<p>Depinde de ingredient - o cană de făină este aproximativ 120g, o cană de zahăr granulat este aproximativ 200g, și o cană de unt este aproximativ 227g, deoarece cănile măsoară volumul iar gramele măsoară greutatea. Alege ingredientul tău mai sus pentru cifra exactă.</p>
+</div>
+<div class="faq-item">
+<h3>Este "1 cană în grame" sau "1 cană la g" aceeași întrebare cu "cană la grame"?</h3>
+<p>Da - toate acestea întreabă același lucru: câte grame sunt într-o cană dintr-un ingredient dat. Introdu 1 în câmpul căni și alege ingredientul tău mai sus pentru cifra exactă.</p>
+</div>
+<div class="faq-item">
+<h3>Este "1 căni la grame" (plural) diferit de "1 cană la grame"?</h3>
+<p>Nu - este aceeași întrebare cu o greșeală gramaticală. Introdu 1 în câmpul căni de mai sus pentru răspuns oricum ar fi.</p>
+</div>
+<div class="faq-item">
+<h3>Este un "calculator de cană la gram" același lucru cu acest instrument?</h3>
+<p>Da - exact asta face acest calculator. Alege ingredientul tău și introdu un număr de căni mai sus pentru a obține greutatea echivalentă în grame.</p>
+</div>
+<div class="faq-item">
+<h3>Este "căni la grame" fără număr aceeași întrebare?</h3>
+<p>Da - cere aceeași conversie, doar fără a specifica o cantitate. Introdu câte căni ai mai sus (1, 2, 0,5, etc.) pentru a obține gramele exacte pentru ingredientul tău.</p>
+</div>
+<div class="faq-item">
+<h3>Câte căni sunt într-un anumit număr de grame?</h3>
+<p>Împarte cantitatea în grame la cifra de grame per cană a ingredientului tău - 240g de făină, de exemplu, sunt 240 ÷ 120 = 2 căni. Acest calculator convertește căni în grame direct; pentru grame în căni, împarte cantitatea ta în grame la greutatea per cană arătată pentru ingredientul tău mai sus.</p>
+</div>
+<div class="faq-item">
+<h3>O cană este câte grame?</h3>
+<p>Depinde în întregime de ingredient, deoarece o cană măsoară volumul iar gramele măsoară greutatea - selectează ingredientul tău mai sus (făină, zahăr, unt, sau zahăr brun) pentru a vedea cifra sa specifică de grame per cană.</p>
+</div>
+<div class="faq-item">
+<h3>Câte grame sunt 1/2 cană?</h3>
+<p>Introdu 0,5 în câmpul căni de mai sus - de exemplu, 1/2 cană de făină este aproximativ 60g, în timp ce 1/2 cană de unt este aproximativ 113,5g, deoarece greutatea per cană variază în funcție de densitatea ingredientului.</p>
+</div>
+<div class="faq-item">
+<h3>Câte grame sunt în 1 1/2 căni de zahăr?</h3>
+<p>Aproximativ 300g pentru zahăr granulat - introdu 1,5 în câmpul căni cu zahărul selectat mai sus (200g per cană × 1,5 = 300g).</p>
+</div>
+<div class="faq-item">
+<h3>Câte grame sunt 2 1/2 căni?</h3>
+<p>Depinde de ingredient - introdu 2,5 în câmpul căni de mai sus cu ingredientul tău selectat. Pentru făină sunt aproximativ 300g, iar pentru zahăr sunt aproximativ 500g, deoarece greutatea per cană variază în funcție de densitate.</p>
+</div>
+<div class="faq-item">
+<h3>Câte grame sunt 3/4 de cană?</h3>
+<p>Introdu 0,75 în câmpul căni de mai sus cu ingredientul tău selectat - pentru făină sunt aproximativ 90g, iar pentru zahăr sunt aproximativ 150g.</p>
+</div>
+<div class="faq-item">
+<h3>Câte grame este 1 cană, în general?</h3>
+<p>Nu există un singur răspuns fără a cunoaște ingredientul - variază de la aproximativ 120g (făină) la 227g (unt) per cană pentru ingredientele acoperite de acest calculator, deoarece ingredientele mai dense concentrează mai multă greutate în același volum.</p>
+</div>
+<div class="faq-item">
+<h3>De ce rețetele din țări diferite folosesc sisteme diferite de măsurare?</h3>
+<p>SUA folosește în principal măsurători în căni și linguri bazate pe volum, în timp ce cea mai mare parte a restului lumii folosește măsurători metrice bazate pe greutate (grame), care sunt mai precise pentru patiserie deoarece densitatea ingredientelor variază. Acest convertor face legătura între cele două, astfel încât poți urma o rețetă scrisă în oricare dintre sisteme.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Instrumente similare</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Notă privind precizia</h4>
+          <p style="margin:0;font-size:0.85rem;">Calculatoarele Calquary sunt concepute pentru a oferi estimări rapide și fiabile. Pentru decizii cu implicații financiare, structurale sau medicale reale, consultă un profesionist calificat.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/ro/index.html">← Înapoi la toate calculatoarele</a> · <a href="/ro/about.html">Despre noi</a> · <a href="/ro/contact.html">Contact</a> · <a href="/ro/privacy.html">Confidențialitate</a> · <a href="/ro/terms.html">Termeni</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

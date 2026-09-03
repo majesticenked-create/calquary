@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Convertitore da Grammi a Tazze - Calcolatrice Online Gratuita | Calquary</title>
+  <meta name="description" content="Converti ingredienti comuni da forno tra tazze e grammi." />
+  <meta property="og:title" content="Convertitore da Grammi a Tazze | Calquary">
+  <meta property="og:description" content="Converti ingredienti comuni da forno tra tazze e grammi.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/it/tool/cooking-converter.html">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/cooking-converter.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Convertitore da Grammi a Tazze | Calquary">
+  <meta name="twitter:description" content="Converti ingredienti comuni da forno tra tazze e grammi.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/cooking-converter.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/cooking-converter.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("cooking-converter");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("cooking-converter");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Convertitore da Grammi a Tazze",
+      "description": "Converti ingredienti comuni da forno tra tazze e grammi.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/it/tool/cooking-converter.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-30",
+      "inLanguage": "it"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/it/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Everyday Conversions",
+          "item": "https://calquary.com/it/category/conversions.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Convertitore da Grammi a Tazze",
+          "item": "https://calquary.com/it/tool/cooking-converter.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Perché 1 tazza di farina e 1 tazza di zucchero pesano quantità diverse?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le tazze misurano il volume, non il peso - gli ingredienti più densi come lo zucchero pesano di più per tazza rispetto a quelli più leggeri come la farina."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto pesa un panetto di burro in questo convertitore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un panetto standard americano di burro è 1/2 tazza, che si converte in circa 113,5g - metà della cifra di 227g per tazza usata da questa calcolatrice."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Perché il tipo di farina influisce sul suo peso per tazza?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Quanto densamente la farina è compressa nella tazza dosatrice - e le differenze tra tipi di farina come multiuso, per pane, o per dolci - influiscono entrambe sul peso per tazza, motivo per cui le ricette professionali spesso specificano il peso anziché le misure in tazze per coerenza."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanti grammi ci sono in una tazza?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dipende dall'ingrediente - una tazza di farina è circa 120g, una tazza di zucchero semolato è circa 200g, e una tazza di burro è circa 227g, poiché le tazze misurano il volume e i grammi misurano il peso. Scegli il tuo ingrediente sopra per la cifra esatta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "'1 tazza in grammi' o '1 tazza a g' è la stessa domanda di 'tazza a grammi'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì - tutte queste chiedono la stessa cosa: quanti grammi ci sono in una tazza di un dato ingrediente. Inserisci 1 nel campo tazze e scegli il tuo ingrediente sopra per la cifra esatta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "'1 tazze a grammi' (plurale) è diverso da '1 tazza a grammi'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - è la stessa domanda con un errore grammaticale. Inserisci 1 nel campo tazze sopra per la risposta in entrambi i casi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Una 'calcolatrice da tazza a grammo' è la stessa cosa di questo strumento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì - è esattamente quello che fa questa calcolatrice. Scegli il tuo ingrediente e inserisci un numero di tazze sopra per ottenere il peso equivalente in grammi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "'tazze a grammi' senza numero è la stessa domanda?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì - sta chiedendo la stessa conversione, solo senza specificare una quantità. Inserisci quante tazze hai sopra (1, 2, 0,5, ecc.) per ottenere i grammi esatti per il tuo ingrediente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quante tazze ci sono in un certo numero di grammi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dividi la quantità in grammi per la cifra di grammi per tazza del tuo ingrediente - 240g di farina, ad esempio, sono 240 ÷ 120 = 2 tazze. Questa calcolatrice converte le tazze in grammi direttamente; per grammi in tazze, dividi la tua quantità in grammi per il peso per tazza mostrato per il tuo ingrediente sopra."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Una tazza è quanti grammi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dipende interamente dall'ingrediente, poiché una tazza misura il volume e i grammi misurano il peso - seleziona il tuo ingrediente sopra (farina, zucchero, burro, o zucchero di canna) per vedere la sua cifra specifica di grammi per tazza."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanti grammi sono 1/2 tazza?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Inserisci 0,5 nel campo tazze sopra - ad esempio, 1/2 tazza di farina è circa 60g, mentre 1/2 tazza di burro è circa 113,5g, poiché il peso per tazza varia in base alla densità dell'ingrediente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanti grammi ci sono in 1 1/2 tazze di zucchero?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Circa 300g per zucchero semolato - inserisci 1,5 nel campo tazze con lo zucchero selezionato sopra (200g per tazza × 1,5 = 300g)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanti grammi sono 2 1/2 tazze?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dipende dall'ingrediente - inserisci 2,5 nel campo tazze sopra con il tuo ingrediente selezionato. Per la farina sono circa 300g, e per lo zucchero sono circa 500g, poiché il peso per tazza varia in base alla densità."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanti grammi sono 3/4 di tazza?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Inserisci 0,75 nel campo tazze sopra con il tuo ingrediente selezionato - per la farina sono circa 90g, e per lo zucchero sono circa 150g."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanti grammi è 1 tazza, in generale?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non c'è una singola risposta senza conoscere l'ingrediente - varia da circa 120g (farina) a 227g (burro) per tazza per gli ingredienti coperti da questa calcolatrice, poiché gli ingredienti più densi concentrano più peso nello stesso volume."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Perché le ricette di paesi diversi usano sistemi di misurazione diversi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gli USA usano principalmente misure in tazze e cucchiai basate sul volume, mentre la maggior parte del resto del mondo usa misure metriche basate sul peso (grammi), più precise per la panificazione poiché la densità degli ingredienti varia. Questo convertitore fa da ponte tra i due così puoi seguire una ricetta scritta in entrambi i sistemi."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/it/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/it/index.html#categories">Categorie</a>
+          <a href="/it/index.html#tools">Tutti gli strumenti</a>
+          <a href="/it/about.html">Chi siamo</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Italiano">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>IT</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/cooking-converter.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/cooking-converter.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/cooking-converter.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/cooking-converter.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/cooking-converter.html">Português</a><span class="locale-item current" role="menuitem" aria-current="true">Italiano</span><a class="locale-item" role="menuitem" href="/ja/tool/cooking-converter.html">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/cooking-converter.html">Română</a><a class="locale-item" role="menuitem" href="/el/tool/cooking-converter.html">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/cooking-converter.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/cooking-converter.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/cooking-converter.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/it/index.html">Calquary</a> / <a href="/it/category/conversions.html">Conversioni Quotidiane</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Convertitore da Grammi a Tazze</h1>
+        <p style="max-width:60ch;">Scegli un ingrediente e inserisci le tazze per vedere il peso equivalente in grammi - la densità dell'ingrediente influisce sulla conversione.</p>
+        <p class="last-updated">Ultimo aggiornamento: August 30, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calcola</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reimposta</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Domande frequenti</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Perché 1 tazza di farina e 1 tazza di zucchero pesano quantità diverse?</h3>
+<p>Le tazze misurano il volume, non il peso - gli ingredienti più densi come lo zucchero pesano di più per tazza rispetto a quelli più leggeri come la farina.</p>
+</div>
+<div class="faq-item">
+<h3>Quanto pesa un panetto di burro in questo convertitore?</h3>
+<p>Un panetto standard americano di burro è 1/2 tazza, che si converte in circa 113,5g - metà della cifra di 227g per tazza usata da questa calcolatrice.</p>
+</div>
+<div class="faq-item">
+<h3>Perché il tipo di farina influisce sul suo peso per tazza?</h3>
+<p>Quanto densamente la farina è compressa nella tazza dosatrice - e le differenze tra tipi di farina come multiuso, per pane, o per dolci - influiscono entrambe sul peso per tazza, motivo per cui le ricette professionali spesso specificano il peso anziché le misure in tazze per coerenza.</p>
+</div>
+<div class="faq-item">
+<h3>Quanti grammi ci sono in una tazza?</h3>
+<p>Dipende dall'ingrediente - una tazza di farina è circa 120g, una tazza di zucchero semolato è circa 200g, e una tazza di burro è circa 227g, poiché le tazze misurano il volume e i grammi misurano il peso. Scegli il tuo ingrediente sopra per la cifra esatta.</p>
+</div>
+<div class="faq-item">
+<h3>'1 tazza in grammi' o '1 tazza a g' è la stessa domanda di 'tazza a grammi'?</h3>
+<p>Sì - tutte queste chiedono la stessa cosa: quanti grammi ci sono in una tazza di un dato ingrediente. Inserisci 1 nel campo tazze e scegli il tuo ingrediente sopra per la cifra esatta.</p>
+</div>
+<div class="faq-item">
+<h3>'1 tazze a grammi' (plurale) è diverso da '1 tazza a grammi'?</h3>
+<p>No - è la stessa domanda con un errore grammaticale. Inserisci 1 nel campo tazze sopra per la risposta in entrambi i casi.</p>
+</div>
+<div class="faq-item">
+<h3>Una 'calcolatrice da tazza a grammo' è la stessa cosa di questo strumento?</h3>
+<p>Sì - è esattamente quello che fa questa calcolatrice. Scegli il tuo ingrediente e inserisci un numero di tazze sopra per ottenere il peso equivalente in grammi.</p>
+</div>
+<div class="faq-item">
+<h3>'tazze a grammi' senza numero è la stessa domanda?</h3>
+<p>Sì - sta chiedendo la stessa conversione, solo senza specificare una quantità. Inserisci quante tazze hai sopra (1, 2, 0,5, ecc.) per ottenere i grammi esatti per il tuo ingrediente.</p>
+</div>
+<div class="faq-item">
+<h3>Quante tazze ci sono in un certo numero di grammi?</h3>
+<p>Dividi la quantità in grammi per la cifra di grammi per tazza del tuo ingrediente - 240g di farina, ad esempio, sono 240 ÷ 120 = 2 tazze. Questa calcolatrice converte le tazze in grammi direttamente; per grammi in tazze, dividi la tua quantità in grammi per il peso per tazza mostrato per il tuo ingrediente sopra.</p>
+</div>
+<div class="faq-item">
+<h3>Una tazza è quanti grammi?</h3>
+<p>Dipende interamente dall'ingrediente, poiché una tazza misura il volume e i grammi misurano il peso - seleziona il tuo ingrediente sopra (farina, zucchero, burro, o zucchero di canna) per vedere la sua cifra specifica di grammi per tazza.</p>
+</div>
+<div class="faq-item">
+<h3>Quanti grammi sono 1/2 tazza?</h3>
+<p>Inserisci 0,5 nel campo tazze sopra - ad esempio, 1/2 tazza di farina è circa 60g, mentre 1/2 tazza di burro è circa 113,5g, poiché il peso per tazza varia in base alla densità dell'ingrediente.</p>
+</div>
+<div class="faq-item">
+<h3>Quanti grammi ci sono in 1 1/2 tazze di zucchero?</h3>
+<p>Circa 300g per zucchero semolato - inserisci 1,5 nel campo tazze con lo zucchero selezionato sopra (200g per tazza × 1,5 = 300g).</p>
+</div>
+<div class="faq-item">
+<h3>Quanti grammi sono 2 1/2 tazze?</h3>
+<p>Dipende dall'ingrediente - inserisci 2,5 nel campo tazze sopra con il tuo ingrediente selezionato. Per la farina sono circa 300g, e per lo zucchero sono circa 500g, poiché il peso per tazza varia in base alla densità.</p>
+</div>
+<div class="faq-item">
+<h3>Quanti grammi sono 3/4 di tazza?</h3>
+<p>Inserisci 0,75 nel campo tazze sopra con il tuo ingrediente selezionato - per la farina sono circa 90g, e per lo zucchero sono circa 150g.</p>
+</div>
+<div class="faq-item">
+<h3>Quanti grammi è 1 tazza, in generale?</h3>
+<p>Non c'è una singola risposta senza conoscere l'ingrediente - varia da circa 120g (farina) a 227g (burro) per tazza per gli ingredienti coperti da questa calcolatrice, poiché gli ingredienti più densi concentrano più peso nello stesso volume.</p>
+</div>
+<div class="faq-item">
+<h3>Perché le ricette di paesi diversi usano sistemi di misurazione diversi?</h3>
+<p>Gli USA usano principalmente misure in tazze e cucchiai basate sul volume, mentre la maggior parte del resto del mondo usa misure metriche basate sul peso (grammi), più precise per la panificazione poiché la densità degli ingredienti varia. Questo convertitore fa da ponte tra i due così puoi seguire una ricetta scritta in entrambi i sistemi.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Strumenti correlati</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Nota sulla precisione</h4>
+          <p style="margin:0;font-size:0.85rem;">Le calcolatrici di Calquary sono pensate per stime rapide e affidabili. Per decisioni con reali implicazioni finanziarie, strutturali o mediche, consulta un professionista qualificato.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/it/index.html">← Torna a tutte le calcolatrici</a> · <a href="/it/about.html">Chi siamo</a> · <a href="/it/contact.html">Contatti</a> · <a href="/it/privacy.html">Privacy</a> · <a href="/it/terms.html">Termini</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

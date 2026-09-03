@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gramm-zu-Tassen-Umrechner - Kostenloser Online-Rechner | Calquary</title>
+  <meta name="description" content="Rechnen Sie gängige Backzutaten zwischen Tassen und Gramm um." />
+  <meta property="og:title" content="Gramm-zu-Tassen-Umrechner | Calquary">
+  <meta property="og:description" content="Rechnen Sie gängige Backzutaten zwischen Tassen und Gramm um.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/de/tool/cooking-converter.html">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/cooking-converter.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gramm-zu-Tassen-Umrechner | Calquary">
+  <meta name="twitter:description" content="Rechnen Sie gängige Backzutaten zwischen Tassen und Gramm um.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/cooking-converter.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/cooking-converter.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("cooking-converter");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("cooking-converter");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Gramm-zu-Tassen-Umrechner",
+      "description": "Rechnen Sie gängige Backzutaten zwischen Tassen und Gramm um.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/de/tool/cooking-converter.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-30",
+      "inLanguage": "de"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/de/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Everyday Conversions",
+          "item": "https://calquary.com/de/category/conversions.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Gramm-zu-Tassen-Umrechner",
+          "item": "https://calquary.com/de/tool/cooking-converter.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Warum wiegen 1 Tasse Mehl und 1 Tasse Zucker unterschiedlich viel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tassen messen Volumen, nicht Gewicht - dichtere Zutaten wie Zucker wiegen pro Tasse mehr als leichtere wie Mehl."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie viel wiegt ein Stück Butter in diesem Umrechner?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ein standardmäßiges US-Butterstück ist 1/2 Tasse, was etwa 113,5g entspricht - die Hälfte des 227g-pro-Tasse-Werts, den dieser Rechner verwendet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Warum beeinflusst die Mehlsorte ihr Gewicht pro Tasse?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wie dicht das Mehl in der Messbecher gepackt ist - und Unterschiede zwischen Mehlsorten wie Universalmehl, Brotmehl oder Kuchenmehl - beeinflussen beide das Gewicht pro Tasse, weshalb professionelle Rezepte oft das Gewicht statt Tassenmaße für Konsistenz angeben."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie viele Gramm sind in einer Tasse?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Das hängt von der Zutat ab - eine Tasse Mehl sind etwa 120g, eine Tasse Kristallzucker sind etwa 200g, und eine Tasse Butter sind etwa 227g, da Tassen Volumen messen und Gramm Gewicht messen. Wählen Sie oben Ihre Zutat für den genauen Wert."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ist „1 Tasse in Gramm“ oder „1 Tasse zu g“ dieselbe Frage wie „Tasse zu Gramm“?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja - all diese fragen dasselbe: wie viele Gramm sind in einer Tasse einer bestimmten Zutat. Geben Sie 1 in das Tassenfeld ein und wählen Sie oben Ihre Zutat für den genauen Wert."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ist „1 Tassen zu Gramm“ (Plural) anders als „1 Tasse zu Gramm“?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein - es ist dieselbe Frage mit einem Grammatikfehler. Geben Sie oben 1 in das Tassenfeld ein, um die Antwort so oder so zu erhalten."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ist ein „Tasse-zu-Gramm-Rechner“ dasselbe wie dieses Tool?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja - genau das macht dieser Rechner. Wählen Sie Ihre Zutat und geben Sie oben eine Anzahl Tassen ein, um das entsprechende Gewicht in Gramm zu erhalten."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ist „Tassen zu Gramm“ ohne Zahl dieselbe Frage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja - es fragt nach derselben Umrechnung, nur ohne eine Menge anzugeben. Geben Sie oben ein, wie viele Tassen Sie haben (1, 2, 0,5 usw.), um die genauen Gramm für Ihre Zutat zu erhalten."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie viele Tassen sind in einer bestimmten Anzahl von Gramm?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Teilen Sie die Grammmenge durch den Gramm-pro-Tasse-Wert Ihrer Zutat - 240g Mehl zum Beispiel sind 240 ÷ 120 = 2 Tassen. Dieser Rechner rechnet Tassen direkt in Gramm um; für Gramm zu Tassen teilen Sie Ihre Grammmenge durch das oben gezeigte Pro-Tasse-Gewicht Ihrer Zutat."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Eine Tasse sind wie viele Gramm?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Das hängt ganz von der Zutat ab, da eine Tasse Volumen misst und Gramm Gewicht misst - wählen Sie oben Ihre Zutat (Mehl, Zucker, Butter, oder brauner Zucker), um ihren spezifischen Gramm-pro-Tasse-Wert zu sehen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie viele Gramm sind 1/2 Tasse?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Geben Sie oben 0,5 in das Tassenfeld ein - zum Beispiel sind 1/2 Tasse Mehl etwa 60g, während 1/2 Tasse Butter etwa 113,5g sind, da das Gewicht pro Tasse je nach Zutatendichte variiert."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie viele Gramm sind in 1 1/2 Tassen Zucker?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Etwa 300g für Kristallzucker - geben Sie oben 1,5 in das Tassenfeld ein mit ausgewähltem Zucker (200g pro Tasse × 1,5 = 300g)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie viele Gramm sind 2 1/2 Tassen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Das hängt von der Zutat ab - geben Sie oben 2,5 in das Tassenfeld ein mit ausgewählter Zutat. Für Mehl sind das etwa 300g, und für Zucker sind es etwa 500g, da das Gewicht pro Tasse je nach Dichte variiert."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie viele Gramm sind 3/4 Tasse?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Geben Sie oben 0,75 in das Tassenfeld ein mit ausgewählter Zutat - für Mehl sind das etwa 90g, und für Zucker sind es etwa 150g."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie viele Gramm sind 1 Tasse, allgemein?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ohne Kenntnis der Zutat gibt es keine einzige Antwort - es reicht von etwa 120g (Mehl) bis 227g (Butter) pro Tasse für die von diesem Rechner abgedeckten Zutaten, da dichtere Zutaten mehr Gewicht in dasselbe Volumen packen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Warum verwenden Rezepte aus verschiedenen Ländern unterschiedliche Maßsysteme?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die USA verwenden hauptsächlich volumenbasierte Tassen- und Löffelmaße, während der größte Teil des restlichen Welt gewichtsbasierte metrische Maße (Gramm) verwendet, die für das Backen präziser sind, da die Zutatendichte variiert. Dieser Umrechner überbrückt beide, sodass Sie ein in beiden Systemen geschriebenes Rezept befolgen können."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/de/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/de/index.html#categories">Kategorien</a>
+          <a href="/de/index.html#tools">Alle Tools</a>
+          <a href="/de/about.html">Über uns</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Deutsch">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>DE</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/cooking-converter.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/cooking-converter.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/cooking-converter.html">Français</a><span class="locale-item current" role="menuitem" aria-current="true">Deutsch</span><a class="locale-item" role="menuitem" href="/pt/tool/cooking-converter.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/cooking-converter.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/cooking-converter.html">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/cooking-converter.html">Română</a><a class="locale-item" role="menuitem" href="/el/tool/cooking-converter.html">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/cooking-converter.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/cooking-converter.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/cooking-converter.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/de/index.html">Calquary</a> / <a href="/de/category/conversions.html">Alltagsumrechnungen</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Gramm-zu-Tassen-Umrechner</h1>
+        <p style="max-width:60ch;">Wählen Sie eine Zutat und geben Sie Tassen ein, um das entsprechende Gewicht in Gramm zu sehen - die Zutatendichte beeinflusst die Umrechnung.</p>
+        <p class="last-updated">Zuletzt aktualisiert: August 30, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Berechnen</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Zurücksetzen</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Häufig gestellte Fragen</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Warum wiegen 1 Tasse Mehl und 1 Tasse Zucker unterschiedlich viel?</h3>
+<p>Tassen messen Volumen, nicht Gewicht - dichtere Zutaten wie Zucker wiegen pro Tasse mehr als leichtere wie Mehl.</p>
+</div>
+<div class="faq-item">
+<h3>Wie viel wiegt ein Stück Butter in diesem Umrechner?</h3>
+<p>Ein standardmäßiges US-Butterstück ist 1/2 Tasse, was etwa 113,5g entspricht - die Hälfte des 227g-pro-Tasse-Werts, den dieser Rechner verwendet.</p>
+</div>
+<div class="faq-item">
+<h3>Warum beeinflusst die Mehlsorte ihr Gewicht pro Tasse?</h3>
+<p>Wie dicht das Mehl in der Messbecher gepackt ist - und Unterschiede zwischen Mehlsorten wie Universalmehl, Brotmehl oder Kuchenmehl - beeinflussen beide das Gewicht pro Tasse, weshalb professionelle Rezepte oft das Gewicht statt Tassenmaße für Konsistenz angeben.</p>
+</div>
+<div class="faq-item">
+<h3>Wie viele Gramm sind in einer Tasse?</h3>
+<p>Das hängt von der Zutat ab - eine Tasse Mehl sind etwa 120g, eine Tasse Kristallzucker sind etwa 200g, und eine Tasse Butter sind etwa 227g, da Tassen Volumen messen und Gramm Gewicht messen. Wählen Sie oben Ihre Zutat für den genauen Wert.</p>
+</div>
+<div class="faq-item">
+<h3>Ist „1 Tasse in Gramm“ oder „1 Tasse zu g“ dieselbe Frage wie „Tasse zu Gramm“?</h3>
+<p>Ja - all diese fragen dasselbe: wie viele Gramm sind in einer Tasse einer bestimmten Zutat. Geben Sie 1 in das Tassenfeld ein und wählen Sie oben Ihre Zutat für den genauen Wert.</p>
+</div>
+<div class="faq-item">
+<h3>Ist „1 Tassen zu Gramm“ (Plural) anders als „1 Tasse zu Gramm“?</h3>
+<p>Nein - es ist dieselbe Frage mit einem Grammatikfehler. Geben Sie oben 1 in das Tassenfeld ein, um die Antwort so oder so zu erhalten.</p>
+</div>
+<div class="faq-item">
+<h3>Ist ein „Tasse-zu-Gramm-Rechner“ dasselbe wie dieses Tool?</h3>
+<p>Ja - genau das macht dieser Rechner. Wählen Sie Ihre Zutat und geben Sie oben eine Anzahl Tassen ein, um das entsprechende Gewicht in Gramm zu erhalten.</p>
+</div>
+<div class="faq-item">
+<h3>Ist „Tassen zu Gramm“ ohne Zahl dieselbe Frage?</h3>
+<p>Ja - es fragt nach derselben Umrechnung, nur ohne eine Menge anzugeben. Geben Sie oben ein, wie viele Tassen Sie haben (1, 2, 0,5 usw.), um die genauen Gramm für Ihre Zutat zu erhalten.</p>
+</div>
+<div class="faq-item">
+<h3>Wie viele Tassen sind in einer bestimmten Anzahl von Gramm?</h3>
+<p>Teilen Sie die Grammmenge durch den Gramm-pro-Tasse-Wert Ihrer Zutat - 240g Mehl zum Beispiel sind 240 ÷ 120 = 2 Tassen. Dieser Rechner rechnet Tassen direkt in Gramm um; für Gramm zu Tassen teilen Sie Ihre Grammmenge durch das oben gezeigte Pro-Tasse-Gewicht Ihrer Zutat.</p>
+</div>
+<div class="faq-item">
+<h3>Eine Tasse sind wie viele Gramm?</h3>
+<p>Das hängt ganz von der Zutat ab, da eine Tasse Volumen misst und Gramm Gewicht misst - wählen Sie oben Ihre Zutat (Mehl, Zucker, Butter, oder brauner Zucker), um ihren spezifischen Gramm-pro-Tasse-Wert zu sehen.</p>
+</div>
+<div class="faq-item">
+<h3>Wie viele Gramm sind 1/2 Tasse?</h3>
+<p>Geben Sie oben 0,5 in das Tassenfeld ein - zum Beispiel sind 1/2 Tasse Mehl etwa 60g, während 1/2 Tasse Butter etwa 113,5g sind, da das Gewicht pro Tasse je nach Zutatendichte variiert.</p>
+</div>
+<div class="faq-item">
+<h3>Wie viele Gramm sind in 1 1/2 Tassen Zucker?</h3>
+<p>Etwa 300g für Kristallzucker - geben Sie oben 1,5 in das Tassenfeld ein mit ausgewähltem Zucker (200g pro Tasse × 1,5 = 300g).</p>
+</div>
+<div class="faq-item">
+<h3>Wie viele Gramm sind 2 1/2 Tassen?</h3>
+<p>Das hängt von der Zutat ab - geben Sie oben 2,5 in das Tassenfeld ein mit ausgewählter Zutat. Für Mehl sind das etwa 300g, und für Zucker sind es etwa 500g, da das Gewicht pro Tasse je nach Dichte variiert.</p>
+</div>
+<div class="faq-item">
+<h3>Wie viele Gramm sind 3/4 Tasse?</h3>
+<p>Geben Sie oben 0,75 in das Tassenfeld ein mit ausgewählter Zutat - für Mehl sind das etwa 90g, und für Zucker sind es etwa 150g.</p>
+</div>
+<div class="faq-item">
+<h3>Wie viele Gramm sind 1 Tasse, allgemein?</h3>
+<p>Ohne Kenntnis der Zutat gibt es keine einzige Antwort - es reicht von etwa 120g (Mehl) bis 227g (Butter) pro Tasse für die von diesem Rechner abgedeckten Zutaten, da dichtere Zutaten mehr Gewicht in dasselbe Volumen packen.</p>
+</div>
+<div class="faq-item">
+<h3>Warum verwenden Rezepte aus verschiedenen Ländern unterschiedliche Maßsysteme?</h3>
+<p>Die USA verwenden hauptsächlich volumenbasierte Tassen- und Löffelmaße, während der größte Teil des restlichen Welt gewichtsbasierte metrische Maße (Gramm) verwendet, die für das Backen präziser sind, da die Zutatendichte variiert. Dieser Umrechner überbrückt beide, sodass Sie ein in beiden Systemen geschriebenes Rezept befolgen können.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Ähnliche Rechner</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Hinweis zur Genauigkeit</h4>
+          <p style="margin:0;font-size:0.85rem;">Die Rechner von Calquary sind für schnelle, zuverlässige Schätzungen ausgelegt. Bei Entscheidungen mit echten finanziellen, baulichen oder medizinischen Konsequenzen wenden Sie sich bitte an eine qualifizierte Fachperson.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/de/index.html">← Zurück zu allen Rechnern</a> · <a href="/de/about.html">Über uns</a> · <a href="/de/contact.html">Kontakt</a> · <a href="/de/privacy.html">Datenschutz</a> · <a href="/de/terms.html">Nutzungsbedingungen</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

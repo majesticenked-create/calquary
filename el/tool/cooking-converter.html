@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Μετατροπέας Γραμμαρίων σε Φλιτζάνια - Δωρεάν Online Αριθμομηχανή | Calquary</title>
+  <meta name="description" content="Μετέτρεψε κοινά συστατικά ζαχαροπλαστικής μεταξύ φλιτζανιών και γραμμαρίων." />
+  <meta property="og:title" content="Μετατροπέας Γραμμαρίων σε Φλιτζάνια | Calquary">
+  <meta property="og:description" content="Μετέτρεψε κοινά συστατικά ζαχαροπλαστικής μεταξύ φλιτζανιών και γραμμαρίων.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/el/tool/cooking-converter.html">
+  <meta property="og:locale" content="el_GR">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/cooking-converter.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Μετατροπέας Γραμμαρίων σε Φλιτζάνια | Calquary">
+  <meta name="twitter:description" content="Μετέτρεψε κοινά συστατικά ζαχαροπλαστικής μεταξύ φλιτζανιών και γραμμαρίων.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/cooking-converter.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/cooking-converter.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("cooking-converter");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("cooking-converter");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Μετατροπέας Γραμμαρίων σε Φλιτζάνια",
+      "description": "Μετέτρεψε κοινά συστατικά ζαχαροπλαστικής μεταξύ φλιτζανιών και γραμμαρίων.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/el/tool/cooking-converter.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-30",
+      "inLanguage": "el"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/el/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Everyday Conversions",
+          "item": "https://calquary.com/el/category/conversions.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Μετατροπέας Γραμμαρίων σε Φλιτζάνια",
+          "item": "https://calquary.com/el/tool/cooking-converter.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Γιατί 1 φλιτζάνι αλεύρι και 1 φλιτζάνι ζάχαρη ζυγίζουν διαφορετικές ποσότητες;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Τα φλιτζάνια μετρούν όγκο, όχι βάρος - πιο πυκνά συστατικά όπως η ζάχαρη ζυγίζουν περισσότερο ανά φλιτζάνι από ελαφρύτερα όπως το αλεύρι."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Πόσο ζυγίζει ένα κομμάτι βούτυρο σε αυτόν τον μετατροπέα;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ένα τυπικό αμερικανικό κομμάτι βούτυρο είναι 1/2 φλιτζάνι, που μετατρέπεται σε περίπου 113,5g - το μισό του αριθμού 227g ανά φλιτζάνι που χρησιμοποιεί αυτή η αριθμομηχανή."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Γιατί ο τύπος αλεύρου επηρεάζει το βάρος του ανά φλιτζάνι;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Πόσο πυκνά είναι πακεταρισμένο το αλεύρι στο μεζούρα - και οι διαφορές μεταξύ τύπων αλεύρου όπως γενικής χρήσης, ψωμιού, ή κέικ - και τα δύο επηρεάζουν το βάρος ανά φλιτζάνι, γι' αυτό οι επαγγελματικές συνταγές συχνά προσδιορίζουν βάρος αντί για μετρήσεις φλιτζανιού για συνέπεια."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Πόσα γραμμάρια υπάρχουν σε ένα φλιτζάνι;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Εξαρτάται από το συστατικό - ένα φλιτζάνι αλεύρι είναι περίπου 120g, ένα φλιτζάνι κρυσταλλική ζάχαρη είναι περίπου 200g, και ένα φλιτζάνι βούτυρο είναι περίπου 227g, αφού τα φλιτζάνια μετρούν όγκο και τα γραμμάρια μετρούν βάρος. Επιλέξτε το συστατικό σας παραπάνω για τον ακριβή αριθμό."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Είναι το «1 φλιτζάνι σε γραμμάρια» ή «1 φλιτζάνι σε g» η ίδια ερώτηση με «φλιτζάνι σε γραμμάρια»;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ναι - όλα αυτά ρωτούν το ίδιο πράγμα: πόσα γραμμάρια υπάρχουν σε ένα φλιτζάνι ενός δεδομένου συστατικού. Εισάγετε 1 στο πεδίο φλιτζανιών και επιλέξτε το συστατικό σας παραπάνω για τον ακριβή αριθμό."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Είναι το «1 φλιτζάνια σε γραμμάρια» (πληθυντικός) διαφορετικό από το «1 φλιτζάνι σε γραμμάρια»;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Όχι - είναι η ίδια ερώτηση με ένα γραμματικό λάθος. Εισάγετε 1 στο πεδίο φλιτζανιών παραπάνω για την απάντηση όποια κι αν είναι η διατύπωση."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Είναι μια «αριθμομηχανή φλιτζανιού σε γραμμάριο» το ίδιο με αυτό το εργαλείο;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ναι - αυτό ακριβώς κάνει αυτή η αριθμομηχανή. Επιλέξτε το συστατικό σας και εισάγετε έναν αριθμό φλιτζανιών παραπάνω για να λάβετε το ισοδύναμο βάρος σε γραμμάρια."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Είναι το «φλιτζάνια σε γραμμάρια» χωρίς αριθμό η ίδια ερώτηση;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ναι - ζητάει την ίδια μετατροπή, απλά χωρίς να προσδιορίζει ποσότητα. Εισάγετε όσα φλιτζάνια έχετε παραπάνω (1, 2, 0,5, κ.λπ.) για να λάβετε τα ακριβή γραμμάρια για το συστατικό σας."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Πόσα φλιτζάνια υπάρχουν σε έναν συγκεκριμένο αριθμό γραμμαρίων;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Διαιρέστε την ποσότητα γραμμαρίων με τον αριθμό γραμμαρίων ανά φλιτζάνι του συστατικού σας - 240g αλεύρι, για παράδειγμα, είναι 240 ÷ 120 = 2 φλιτζάνια. Αυτή η αριθμομηχανή μετατρέπει φλιτζάνια σε γραμμάρια απευθείας· για γραμμάρια σε φλιτζάνια, διαιρέστε την ποσότητα γραμμαρίων σας με το βάρος ανά φλιτζάνι που εμφανίζεται για το συστατικό σας παραπάνω."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ένα φλιτζάνι είναι πόσα γραμμάρια;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Εξαρτάται εξολοκλήρου από το συστατικό, αφού ένα φλιτζάνι μετρά όγκο και τα γραμμάρια μετρούν βάρος - επιλέξτε το συστατικό σας παραπάνω (αλεύρι, ζάχαρη, βούτυρο, ή καστανή ζάχαρη) για να δείτε τον συγκεκριμένο αριθμό γραμμαρίων ανά φλιτζάνι."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Πόσα γραμμάρια είναι το 1/2 φλιτζάνι;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Εισάγετε 0,5 στο πεδίο φλιτζανιών παραπάνω - για παράδειγμα, 1/2 φλιτζάνι αλεύρι είναι περίπου 60g, ενώ 1/2 φλιτζάνι βούτυρο είναι περίπου 113,5g, αφού το βάρος ανά φλιτζάνι διαφέρει ανάλογα με την πυκνότητα του συστατικού."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Πόσα γραμμάρια υπάρχουν σε 1 1/2 φλιτζάνια ζάχαρη;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Περίπου 300g για κρυσταλλική ζάχαρη - εισάγετε 1,5 στο πεδίο φλιτζανιών με τη ζάχαρη επιλεγμένη παραπάνω (200g ανά φλιτζάνι × 1,5 = 300g)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Πόσα γραμμάρια είναι τα 2 1/2 φλιτζάνια;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Εξαρτάται από το συστατικό - εισάγετε 2,5 στο πεδίο φλιτζανιών παραπάνω με το συστατικό σας επιλεγμένο. Για αλεύρι είναι περίπου 300g, και για ζάχαρη είναι περίπου 500g, αφού το βάρος ανά φλιτζάνι διαφέρει ανάλογα με την πυκνότητα."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Πόσα γραμμάρια είναι τα 3/4 φλιτζανιού;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Εισάγετε 0,75 στο πεδίο φλιτζανιών παραπάνω με το συστατικό σας επιλεγμένο - για αλεύρι είναι περίπου 90g, και για ζάχαρη είναι περίπου 150g."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Πόσα γραμμάρια είναι 1 φλιτζάνι, γενικά;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Δεν υπάρχει μία απάντηση χωρίς να γνωρίζουμε το συστατικό - κυμαίνεται από περίπου 120g (αλεύρι) έως 227g (βούτυρο) ανά φλιτζάνι για τα συστατικά που καλύπτει αυτή η αριθμομηχανή, αφού τα πιο πυκνά συστατικά συγκεντρώνουν περισσότερο βάρος στον ίδιο όγκο."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Γιατί οι συνταγές από διαφορετικές χώρες χρησιμοποιούν διαφορετικά συστήματα μέτρησης;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Οι ΗΠΑ χρησιμοποιούν κυρίως μετρήσεις φλιτζανιού και κουταλιού βασισμένες στον όγκο, ενώ το μεγαλύτερο μέρος του υπόλοιπου κόσμου χρησιμοποιεί μετρικές μετρήσεις βασισμένες στο βάρος (γραμμάρια), που είναι πιο ακριβείς για ζαχαροπλαστική αφού η πυκνότητα των συστατικών διαφέρει. Αυτός ο μετατροπέας γεφυρώνει τα δύο ώστε να μπορείτε να ακολουθήσετε μια συνταγή γραμμένη σε οποιοδήποτε σύστημα."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/el/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/el/index.html#categories">Κατηγορίες</a>
+          <a href="/el/index.html#tools">Όλα τα εργαλεία</a>
+          <a href="/el/about.html">Σχετικά</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Ελληνικά">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>undefined</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/cooking-converter.html">English</a><a class="locale-item" role="menuitem" href="/es/tool/cooking-converter.html">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/cooking-converter.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/cooking-converter.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/cooking-converter.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/cooking-converter.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/cooking-converter.html">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/cooking-converter.html">Română</a><span class="locale-item current" role="menuitem" aria-current="true">Ελληνικά</span><a class="locale-item" role="menuitem" href="/zh/tool/cooking-converter.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/cooking-converter.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/cooking-converter.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/el/index.html">Calquary</a> / <a href="/el/category/conversions.html">Καθημερινές Μετατροπές</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Μετατροπέας Γραμμαρίων σε Φλιτζάνια</h1>
+        <p style="max-width:60ch;">Επιλέξτε ένα συστατικό και εισάγετε φλιτζάνια για να δείτε το ισοδύναμο βάρος σε γραμμάρια - η πυκνότητα του συστατικού επηρεάζει τη μετατροπή.</p>
+        <p class="last-updated">Τελευταία ενημέρωση: August 30, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Υπολογισμός</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Επαναφορά</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Συχνές ερωτήσεις</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Γιατί 1 φλιτζάνι αλεύρι και 1 φλιτζάνι ζάχαρη ζυγίζουν διαφορετικές ποσότητες;</h3>
+<p>Τα φλιτζάνια μετρούν όγκο, όχι βάρος - πιο πυκνά συστατικά όπως η ζάχαρη ζυγίζουν περισσότερο ανά φλιτζάνι από ελαφρύτερα όπως το αλεύρι.</p>
+</div>
+<div class="faq-item">
+<h3>Πόσο ζυγίζει ένα κομμάτι βούτυρο σε αυτόν τον μετατροπέα;</h3>
+<p>Ένα τυπικό αμερικανικό κομμάτι βούτυρο είναι 1/2 φλιτζάνι, που μετατρέπεται σε περίπου 113,5g - το μισό του αριθμού 227g ανά φλιτζάνι που χρησιμοποιεί αυτή η αριθμομηχανή.</p>
+</div>
+<div class="faq-item">
+<h3>Γιατί ο τύπος αλεύρου επηρεάζει το βάρος του ανά φλιτζάνι;</h3>
+<p>Πόσο πυκνά είναι πακεταρισμένο το αλεύρι στο μεζούρα - και οι διαφορές μεταξύ τύπων αλεύρου όπως γενικής χρήσης, ψωμιού, ή κέικ - και τα δύο επηρεάζουν το βάρος ανά φλιτζάνι, γι' αυτό οι επαγγελματικές συνταγές συχνά προσδιορίζουν βάρος αντί για μετρήσεις φλιτζανιού για συνέπεια.</p>
+</div>
+<div class="faq-item">
+<h3>Πόσα γραμμάρια υπάρχουν σε ένα φλιτζάνι;</h3>
+<p>Εξαρτάται από το συστατικό - ένα φλιτζάνι αλεύρι είναι περίπου 120g, ένα φλιτζάνι κρυσταλλική ζάχαρη είναι περίπου 200g, και ένα φλιτζάνι βούτυρο είναι περίπου 227g, αφού τα φλιτζάνια μετρούν όγκο και τα γραμμάρια μετρούν βάρος. Επιλέξτε το συστατικό σας παραπάνω για τον ακριβή αριθμό.</p>
+</div>
+<div class="faq-item">
+<h3>Είναι το «1 φλιτζάνι σε γραμμάρια» ή «1 φλιτζάνι σε g» η ίδια ερώτηση με «φλιτζάνι σε γραμμάρια»;</h3>
+<p>Ναι - όλα αυτά ρωτούν το ίδιο πράγμα: πόσα γραμμάρια υπάρχουν σε ένα φλιτζάνι ενός δεδομένου συστατικού. Εισάγετε 1 στο πεδίο φλιτζανιών και επιλέξτε το συστατικό σας παραπάνω για τον ακριβή αριθμό.</p>
+</div>
+<div class="faq-item">
+<h3>Είναι το «1 φλιτζάνια σε γραμμάρια» (πληθυντικός) διαφορετικό από το «1 φλιτζάνι σε γραμμάρια»;</h3>
+<p>Όχι - είναι η ίδια ερώτηση με ένα γραμματικό λάθος. Εισάγετε 1 στο πεδίο φλιτζανιών παραπάνω για την απάντηση όποια κι αν είναι η διατύπωση.</p>
+</div>
+<div class="faq-item">
+<h3>Είναι μια «αριθμομηχανή φλιτζανιού σε γραμμάριο» το ίδιο με αυτό το εργαλείο;</h3>
+<p>Ναι - αυτό ακριβώς κάνει αυτή η αριθμομηχανή. Επιλέξτε το συστατικό σας και εισάγετε έναν αριθμό φλιτζανιών παραπάνω για να λάβετε το ισοδύναμο βάρος σε γραμμάρια.</p>
+</div>
+<div class="faq-item">
+<h3>Είναι το «φλιτζάνια σε γραμμάρια» χωρίς αριθμό η ίδια ερώτηση;</h3>
+<p>Ναι - ζητάει την ίδια μετατροπή, απλά χωρίς να προσδιορίζει ποσότητα. Εισάγετε όσα φλιτζάνια έχετε παραπάνω (1, 2, 0,5, κ.λπ.) για να λάβετε τα ακριβή γραμμάρια για το συστατικό σας.</p>
+</div>
+<div class="faq-item">
+<h3>Πόσα φλιτζάνια υπάρχουν σε έναν συγκεκριμένο αριθμό γραμμαρίων;</h3>
+<p>Διαιρέστε την ποσότητα γραμμαρίων με τον αριθμό γραμμαρίων ανά φλιτζάνι του συστατικού σας - 240g αλεύρι, για παράδειγμα, είναι 240 ÷ 120 = 2 φλιτζάνια. Αυτή η αριθμομηχανή μετατρέπει φλιτζάνια σε γραμμάρια απευθείας· για γραμμάρια σε φλιτζάνια, διαιρέστε την ποσότητα γραμμαρίων σας με το βάρος ανά φλιτζάνι που εμφανίζεται για το συστατικό σας παραπάνω.</p>
+</div>
+<div class="faq-item">
+<h3>Ένα φλιτζάνι είναι πόσα γραμμάρια;</h3>
+<p>Εξαρτάται εξολοκλήρου από το συστατικό, αφού ένα φλιτζάνι μετρά όγκο και τα γραμμάρια μετρούν βάρος - επιλέξτε το συστατικό σας παραπάνω (αλεύρι, ζάχαρη, βούτυρο, ή καστανή ζάχαρη) για να δείτε τον συγκεκριμένο αριθμό γραμμαρίων ανά φλιτζάνι.</p>
+</div>
+<div class="faq-item">
+<h3>Πόσα γραμμάρια είναι το 1/2 φλιτζάνι;</h3>
+<p>Εισάγετε 0,5 στο πεδίο φλιτζανιών παραπάνω - για παράδειγμα, 1/2 φλιτζάνι αλεύρι είναι περίπου 60g, ενώ 1/2 φλιτζάνι βούτυρο είναι περίπου 113,5g, αφού το βάρος ανά φλιτζάνι διαφέρει ανάλογα με την πυκνότητα του συστατικού.</p>
+</div>
+<div class="faq-item">
+<h3>Πόσα γραμμάρια υπάρχουν σε 1 1/2 φλιτζάνια ζάχαρη;</h3>
+<p>Περίπου 300g για κρυσταλλική ζάχαρη - εισάγετε 1,5 στο πεδίο φλιτζανιών με τη ζάχαρη επιλεγμένη παραπάνω (200g ανά φλιτζάνι × 1,5 = 300g).</p>
+</div>
+<div class="faq-item">
+<h3>Πόσα γραμμάρια είναι τα 2 1/2 φλιτζάνια;</h3>
+<p>Εξαρτάται από το συστατικό - εισάγετε 2,5 στο πεδίο φλιτζανιών παραπάνω με το συστατικό σας επιλεγμένο. Για αλεύρι είναι περίπου 300g, και για ζάχαρη είναι περίπου 500g, αφού το βάρος ανά φλιτζάνι διαφέρει ανάλογα με την πυκνότητα.</p>
+</div>
+<div class="faq-item">
+<h3>Πόσα γραμμάρια είναι τα 3/4 φλιτζανιού;</h3>
+<p>Εισάγετε 0,75 στο πεδίο φλιτζανιών παραπάνω με το συστατικό σας επιλεγμένο - για αλεύρι είναι περίπου 90g, και για ζάχαρη είναι περίπου 150g.</p>
+</div>
+<div class="faq-item">
+<h3>Πόσα γραμμάρια είναι 1 φλιτζάνι, γενικά;</h3>
+<p>Δεν υπάρχει μία απάντηση χωρίς να γνωρίζουμε το συστατικό - κυμαίνεται από περίπου 120g (αλεύρι) έως 227g (βούτυρο) ανά φλιτζάνι για τα συστατικά που καλύπτει αυτή η αριθμομηχανή, αφού τα πιο πυκνά συστατικά συγκεντρώνουν περισσότερο βάρος στον ίδιο όγκο.</p>
+</div>
+<div class="faq-item">
+<h3>Γιατί οι συνταγές από διαφορετικές χώρες χρησιμοποιούν διαφορετικά συστήματα μέτρησης;</h3>
+<p>Οι ΗΠΑ χρησιμοποιούν κυρίως μετρήσεις φλιτζανιού και κουταλιού βασισμένες στον όγκο, ενώ το μεγαλύτερο μέρος του υπόλοιπου κόσμου χρησιμοποιεί μετρικές μετρήσεις βασισμένες στο βάρος (γραμμάρια), που είναι πιο ακριβείς για ζαχαροπλαστική αφού η πυκνότητα των συστατικών διαφέρει. Αυτός ο μετατροπέας γεφυρώνει τα δύο ώστε να μπορείτε να ακολουθήσετε μια συνταγή γραμμένη σε οποιοδήποτε σύστημα.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Σχετικά εργαλεία</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Σημείωση ακρίβειας</h4>
+          <p style="margin:0;font-size:0.85rem;">Οι αριθμομηχανές του Calquary έχουν σχεδιαστεί για να παρέχουν γρήγορες και αξιόπιστες εκτιμήσεις. Για αποφάσεις με πραγματικές οικονομικές, δομικές ή ιατρικές επιπτώσεις, συμβουλευτείτε έναν ειδικευμένο επαγγελματία.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/el/index.html">← Πίσω σε όλες τις αριθμομηχανές</a> · <a href="/el/about.html">Σχετικά</a> · <a href="/el/contact.html">Επικοινωνία</a> · <a href="/el/privacy.html">Απόρρητο</a> · <a href="/el/terms.html">Όροι</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

@@ -84,6 +84,8 @@ const WAVE_ONE_TOOL_IDS = [
   "leap-year-calculator", "birth-year-calculator", "time-zone-meeting-planner", "day-of-the-week-calculator",
   "screen-ppi-calculator", "print-dpi-calculator", "time-unit-converter", "oven-temperature-converter",
   "rainfall-volume-calculator", "water-density-calculator", "weight-converter",
+  "volume-converter", "cooking-converter", "microwave-wattage-converter",
+  "electricity-cost-calculator", "ppm-percent-converter", "speed-converter", "area-converter",
 ];
 
 function loadData() {

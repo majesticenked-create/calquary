@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conversor de Gramos a Tazas - Calculadora Gratis Online | Calquary</title>
+  <meta name="description" content="Convierte ingredientes comunes de repostería entre tazas y gramos." />
+  <meta property="og:title" content="Conversor de Gramos a Tazas | Calquary">
+  <meta property="og:description" content="Convierte ingredientes comunes de repostería entre tazas y gramos.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/es/tool/cooking-converter.html">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/cooking-converter.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Conversor de Gramos a Tazas | Calquary">
+  <meta name="twitter:description" content="Convierte ingredientes comunes de repostería entre tazas y gramos.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/cooking-converter.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/cooking-converter.html">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/cooking-converter.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("cooking-converter");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}.html">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("cooking-converter");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Conversor de Gramos a Tazas",
+      "description": "Convierte ingredientes comunes de repostería entre tazas y gramos.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/es/tool/cooking-converter.html",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-08-30",
+      "inLanguage": "es"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/es/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Everyday Conversions",
+          "item": "https://calquary.com/es/category/conversions.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Conversor de Gramos a Tazas",
+          "item": "https://calquary.com/es/tool/cooking-converter.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Por qué 1 taza de harina y 1 taza de azúcar pesan cantidades diferentes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Las tazas miden volumen, no peso - los ingredientes más densos como el azúcar pesan más por taza que los más ligeros como la harina."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto pesa una barra de mantequilla en este conversor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Una barra estándar estadounidense de mantequilla es 1/2 taza, que se convierte en aproximadamente 113.5g - la mitad de la cifra de 227g por taza que usa esta calculadora."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué el tipo de harina afecta su peso por taza?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Qué tan densamente se empaqueta la harina en la taza medidora - y las diferencias entre tipos de harina como todo uso, pan, o repostería - ambos afectan el peso por taza, por lo cual las recetas profesionales a menudo especifican peso en lugar de medidas de taza para consistencia."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuántos gramos hay en una taza?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende del ingrediente - una taza de harina son aproximadamente 120g, una taza de azúcar granulada son aproximadamente 200g, y una taza de mantequilla son aproximadamente 227g, ya que las tazas miden volumen y los gramos miden peso. Elige tu ingrediente arriba para la cifra exacta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Es '1 taza en gramos' o '1 taza a g' la misma pregunta que 'taza a gramos'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí - todas estas preguntan lo mismo: cuántos gramos hay en una taza de un ingrediente dado. Introduce 1 en el campo de tazas y elige tu ingrediente arriba para la cifra exacta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Es '1 tazas a gramos' (plural) diferente de '1 taza a gramos'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - es la misma pregunta con un desliz gramatical. Introduce 1 en el campo de tazas arriba para la respuesta de cualquier manera."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Es una 'calculadora de taza a gramo' lo mismo que esta herramienta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí - eso es exactamente lo que hace esta calculadora. Elige tu ingrediente e introduce un número de tazas arriba para obtener el peso equivalente en gramos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Es 'tazas a gramos' sin número la misma pregunta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí - está pidiendo la misma conversión, solo sin especificar una cantidad. Introduce cuantas tazas tengas arriba (1, 2, 0.5, etc.) para obtener los gramos exactos para tu ingrediente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuántas tazas hay en cierto número de gramos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Divide la cantidad de gramos entre la cifra de gramos por taza de tu ingrediente - 240g de harina, por ejemplo, son 240 ÷ 120 = 2 tazas. Esta calculadora convierte tazas a gramos directamente; para gramos a tazas, divide tu cantidad de gramos entre el peso por taza mostrado para tu ingrediente arriba."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Una taza son cuántos gramos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende completamente del ingrediente, ya que una taza mide volumen y los gramos miden peso - selecciona tu ingrediente arriba (harina, azúcar, mantequilla, o azúcar morena) para ver su cifra específica de gramos por taza."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuántos gramos es 1/2 taza?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Introduce 0.5 en el campo de tazas arriba - por ejemplo, 1/2 taza de harina son aproximadamente 60g, mientras que 1/2 taza de mantequilla son aproximadamente 113.5g, ya que el peso por taza varía según la densidad del ingrediente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuántos gramos hay en 1 1/2 tazas de azúcar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aproximadamente 300g para azúcar granulada - introduce 1.5 en el campo de tazas con azúcar seleccionada arriba (200g por taza × 1.5 = 300g)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuántos gramos es 2 1/2 tazas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende del ingrediente - introduce 2.5 en el campo de tazas arriba con tu ingrediente seleccionado. Para harina son aproximadamente 300g, y para azúcar son aproximadamente 500g, ya que el peso por taza varía según la densidad."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuántos gramos es 3/4 taza?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Introduce 0.75 en el campo de tazas arriba con tu ingrediente seleccionado - para harina son aproximadamente 90g, y para azúcar son aproximadamente 150g."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuántos gramos es 1 taza, en general?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No hay una única respuesta sin saber el ingrediente - varía desde aproximadamente 120g (harina) hasta 227g (mantequilla) por taza para los ingredientes que cubre esta calculadora, ya que los ingredientes más densos empaquetan más peso en el mismo volumen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué las recetas de diferentes países usan diferentes sistemas de medición?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "EE.UU. usa principalmente medidas de taza y cuchara basadas en volumen, mientras que la mayor parte del resto del mundo usa medidas métricas basadas en peso (gramos), que son más precisas para repostería ya que la densidad de los ingredientes varía. Este conversor conecta ambos sistemas para que puedas seguir una receta escrita en cualquiera de los dos."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/es/index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/es/index.html#categories">Categorías</a>
+          <a href="/es/index.html#tools">Todas las herramientas</a>
+          <a href="/es/about.html">Acerca de</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Español">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>ES</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/cooking-converter.html">English</a><span class="locale-item current" role="menuitem" aria-current="true">Español</span><a class="locale-item" role="menuitem" href="/fr/tool/cooking-converter.html">Français</a><a class="locale-item" role="menuitem" href="/de/tool/cooking-converter.html">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/cooking-converter.html">Português</a><a class="locale-item" role="menuitem" href="/it/tool/cooking-converter.html">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/cooking-converter.html">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/cooking-converter.html">Română</a><a class="locale-item" role="menuitem" href="/el/tool/cooking-converter.html">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/cooking-converter.html">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/cooking-converter.html">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/cooking-converter.html">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/es/index.html">Calquary</a> / <a href="/es/category/conversions.html">Conversiones Cotidianas</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Conversor de Gramos a Tazas</h1>
+        <p style="max-width:60ch;">Elige un ingrediente e introduce tazas para ver el peso equivalente en gramos - la densidad del ingrediente afecta la conversión.</p>
+        <p class="last-updated">Última actualización: August 30, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calcular</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reiniciar</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Preguntas frecuentes</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>¿Por qué 1 taza de harina y 1 taza de azúcar pesan cantidades diferentes?</h3>
+<p>Las tazas miden volumen, no peso - los ingredientes más densos como el azúcar pesan más por taza que los más ligeros como la harina.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cuánto pesa una barra de mantequilla en este conversor?</h3>
+<p>Una barra estándar estadounidense de mantequilla es 1/2 taza, que se convierte en aproximadamente 113.5g - la mitad de la cifra de 227g por taza que usa esta calculadora.</p>
+</div>
+<div class="faq-item">
+<h3>¿Por qué el tipo de harina afecta su peso por taza?</h3>
+<p>Qué tan densamente se empaqueta la harina en la taza medidora - y las diferencias entre tipos de harina como todo uso, pan, o repostería - ambos afectan el peso por taza, por lo cual las recetas profesionales a menudo especifican peso en lugar de medidas de taza para consistencia.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cuántos gramos hay en una taza?</h3>
+<p>Depende del ingrediente - una taza de harina son aproximadamente 120g, una taza de azúcar granulada son aproximadamente 200g, y una taza de mantequilla son aproximadamente 227g, ya que las tazas miden volumen y los gramos miden peso. Elige tu ingrediente arriba para la cifra exacta.</p>
+</div>
+<div class="faq-item">
+<h3>¿Es '1 taza en gramos' o '1 taza a g' la misma pregunta que 'taza a gramos'?</h3>
+<p>Sí - todas estas preguntan lo mismo: cuántos gramos hay en una taza de un ingrediente dado. Introduce 1 en el campo de tazas y elige tu ingrediente arriba para la cifra exacta.</p>
+</div>
+<div class="faq-item">
+<h3>¿Es '1 tazas a gramos' (plural) diferente de '1 taza a gramos'?</h3>
+<p>No - es la misma pregunta con un desliz gramatical. Introduce 1 en el campo de tazas arriba para la respuesta de cualquier manera.</p>
+</div>
+<div class="faq-item">
+<h3>¿Es una 'calculadora de taza a gramo' lo mismo que esta herramienta?</h3>
+<p>Sí - eso es exactamente lo que hace esta calculadora. Elige tu ingrediente e introduce un número de tazas arriba para obtener el peso equivalente en gramos.</p>
+</div>
+<div class="faq-item">
+<h3>¿Es 'tazas a gramos' sin número la misma pregunta?</h3>
+<p>Sí - está pidiendo la misma conversión, solo sin especificar una cantidad. Introduce cuantas tazas tengas arriba (1, 2, 0.5, etc.) para obtener los gramos exactos para tu ingrediente.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cuántas tazas hay en cierto número de gramos?</h3>
+<p>Divide la cantidad de gramos entre la cifra de gramos por taza de tu ingrediente - 240g de harina, por ejemplo, son 240 ÷ 120 = 2 tazas. Esta calculadora convierte tazas a gramos directamente; para gramos a tazas, divide tu cantidad de gramos entre el peso por taza mostrado para tu ingrediente arriba.</p>
+</div>
+<div class="faq-item">
+<h3>¿Una taza son cuántos gramos?</h3>
+<p>Depende completamente del ingrediente, ya que una taza mide volumen y los gramos miden peso - selecciona tu ingrediente arriba (harina, azúcar, mantequilla, o azúcar morena) para ver su cifra específica de gramos por taza.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cuántos gramos es 1/2 taza?</h3>
+<p>Introduce 0.5 en el campo de tazas arriba - por ejemplo, 1/2 taza de harina son aproximadamente 60g, mientras que 1/2 taza de mantequilla son aproximadamente 113.5g, ya que el peso por taza varía según la densidad del ingrediente.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cuántos gramos hay en 1 1/2 tazas de azúcar?</h3>
+<p>Aproximadamente 300g para azúcar granulada - introduce 1.5 en el campo de tazas con azúcar seleccionada arriba (200g por taza × 1.5 = 300g).</p>
+</div>
+<div class="faq-item">
+<h3>¿Cuántos gramos es 2 1/2 tazas?</h3>
+<p>Depende del ingrediente - introduce 2.5 en el campo de tazas arriba con tu ingrediente seleccionado. Para harina son aproximadamente 300g, y para azúcar son aproximadamente 500g, ya que el peso por taza varía según la densidad.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cuántos gramos es 3/4 taza?</h3>
+<p>Introduce 0.75 en el campo de tazas arriba con tu ingrediente seleccionado - para harina son aproximadamente 90g, y para azúcar son aproximadamente 150g.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cuántos gramos es 1 taza, en general?</h3>
+<p>No hay una única respuesta sin saber el ingrediente - varía desde aproximadamente 120g (harina) hasta 227g (mantequilla) por taza para los ingredientes que cubre esta calculadora, ya que los ingredientes más densos empaquetan más peso en el mismo volumen.</p>
+</div>
+<div class="faq-item">
+<h3>¿Por qué las recetas de diferentes países usan diferentes sistemas de medición?</h3>
+<p>EE.UU. usa principalmente medidas de taza y cuchara basadas en volumen, mientras que la mayor parte del resto del mundo usa medidas métricas basadas en peso (gramos), que son más precisas para repostería ya que la densidad de los ingredientes varía. Este conversor conecta ambos sistemas para que puedas seguir una receta escrita en cualquiera de los dos.</p>
+</div></div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Herramientas relacionadas</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Nota sobre precisión</h4>
+          <p style="margin:0;font-size:0.85rem;">Las calculadoras de Calquary están diseñadas para ofrecer estimaciones rápidas y fiables. Para decisiones con implicaciones financieras, estructurales o médicas reales, consulta con un profesional cualificado.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/es/index.html">← Volver a todas las calculadoras</a> · <a href="/es/about.html">Acerca de</a> · <a href="/es/contact.html">Contacto</a> · <a href="/es/privacy.html">Privacidad</a> · <a href="/es/terms.html">Términos</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>
