@@ -8,6 +8,7 @@
   <meta name="description" content="{{DESCRIPTION}}" />
   {{OG_META}}
   {{HREFLANG_LINKS}}
+  {{CANONICAL_LINK}}
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -24,11 +25,11 @@
 
   <header class="site-header">
     <div class="wrap">
-      <a href="/{{LOCALE_PATH}}index.html" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <a href="/{{LOCALE_PATH}}" class="brand-mark">Calquary<span class="dot">.</span></a>
       <div class="header-right">
         <nav class="header-nav">
-          <a href="/{{LOCALE_PATH}}index.html#categories">{{NAV_CATEGORIES}}</a>
-          <a href="/{{LOCALE_PATH}}index.html#tools">{{NAV_ALL_TOOLS}}</a>
+          <a href="/{{LOCALE_PATH}}#categories">{{NAV_CATEGORIES}}</a>
+          <a href="/{{LOCALE_PATH}}#tools">{{NAV_ALL_TOOLS}}</a>
           <a href="/{{LOCALE_PATH}}about.html">{{NAV_ABOUT}}</a>
         </nav>
         {{LOCALE_SWITCHER}}
@@ -39,7 +40,7 @@
 
   <section class="category-hero">
     <div class="wrap">
-      <div class="breadcrumb"><a href="/{{LOCALE_PATH}}index.html">{{BREADCRUMB_HOME}}</a> / {{TITLE}}</div>
+      <div class="breadcrumb"><a href="/{{LOCALE_PATH}}">{{BREADCRUMB_HOME}}</a> / {{TITLE}}</div>
       <h1>{{TITLE}}</h1>
       <p style="max-width:56ch;">{{EFFECTIVE_DATE_LABEL}}</p>
     </div>
@@ -58,7 +59,7 @@
   <footer class="site-footer">
     <div class="wrap">
       <div class="footer-base">
-        <p style="margin:0;"><a href="/{{LOCALE_PATH}}index.html">{{BTN_BACK_TO_ALL}}</a> · <a href="/{{LOCALE_PATH}}about.html">{{NAV_ABOUT}}</a> · <a href="/{{LOCALE_PATH}}contact.html">{{FOOTER_CONTACT}}</a> · <a href="{{OTHER_LEGAL_HREF}}">{{OTHER_LEGAL_LABEL}}</a> · © 2026 Calquary</p>
+        <p style="margin:0;"><a href="/{{LOCALE_PATH}}">{{BTN_BACK_TO_ALL}}</a> · <a href="/{{LOCALE_PATH}}about.html">{{NAV_ABOUT}}</a> · <a href="/{{LOCALE_PATH}}contact.html">{{FOOTER_CONTACT}}</a> · <a href="{{OTHER_LEGAL_HREF}}">{{OTHER_LEGAL_LABEL}}</a> · © 2026 Calquary</p>
       </div>
     </div>
   </footer>

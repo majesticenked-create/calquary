@@ -315,7 +315,7 @@ function categoryUrl(locale, id) {
   return `${SITE_URL}/${localePath(locale)}category/${id}.html`;
 }
 function homeUrl(locale) {
-  return `${SITE_URL}/${localePath(locale)}index.html`;
+  return `${SITE_URL}/${localePath(locale)}`;
 }
 function staticUrl(locale, page) {
   return `${SITE_URL}/${localePath(locale)}${page}`;
@@ -331,6 +331,10 @@ function hreflangLinks(urlFor, builtLocales) {
   );
   lines.push(`  <link rel="alternate" hreflang="x-default" href="${urlFor("en")}">`);
   return lines.join("\n");
+}
+
+function canonicalTag(url) {
+  return `  <link rel="canonical" href="${url}">`;
 }
 
 // Visible language switcher for the header — reuses the exact same
@@ -616,7 +620,7 @@ function buildToolPage(template, locale, calc, cat, I18N) {
     .split("{{FOOTER_CONTACT}}").join(ui.footer.contact)
     .split("{{FOOTER_PRIVACY}}").join(ui.footer.privacy)
     .split("{{FOOTER_TERMS}}").join(ui.footer.terms)
-    .split("{{HOME_HREF}}").join(`/${localePath(locale)}index.html`)
+    .split("{{HOME_HREF}}").join(`/${localePath(locale)}`)
     .split("{{ABOUT_HREF}}").join(`/${localePath(locale)}about.html`)
     .split("{{CONTACT_HREF}}").join(`/${localePath(locale)}contact.html`)
     .split("{{PRIVACY_HREF}}").join(`/${localePath(locale)}privacy.html`)
@@ -627,6 +631,7 @@ function buildToolPage(template, locale, calc, cat, I18N) {
     .split("{{THEME_INIT}}").join(themeInitScript())
     .split("{{OG_META}}").join(ogMetaTags({ title: `${t.title} | Calquary`, description: t.description, url, image, locale }))
     .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => toolUrl(loc, calc.id), calc.builtLocales))
+    .split("{{CANONICAL_LINK}}").join(canonicalTag(toolUrl(locale, calc.id)))
     .split("{{LOCALE_SWITCHER}}").join(localeSwitcherHtml(locale, (loc) => toolUrl(loc, calc.id), calc.builtLocales))
     .split("{{SCHEMA_JSON}}").join(buildToolSchema(locale, calc, cat, t.title, t.description, t.faq));
 }
@@ -677,7 +682,7 @@ function buildCategoryPage(template, locale, cat, calculators, I18N) {
     .split("{{FOOTER_PRIVACY}}").join(ui.footer.privacy)
     .split("{{FOOTER_TERMS}}").join(ui.footer.terms)
     .split("{{BTN_BACK_TO_ALL}}").join(ui.buttons.backToAll)
-    .split("{{HOME_HREF}}").join(`/${localePath(locale)}index.html`)
+    .split("{{HOME_HREF}}").join(`/${localePath(locale)}`)
     .split("{{ABOUT_HREF}}").join(`/${localePath(locale)}about.html`)
     .split("{{CONTACT_HREF}}").join(`/${localePath(locale)}contact.html`)
     .split("{{PRIVACY_HREF}}").join(`/${localePath(locale)}privacy.html`)
@@ -686,6 +691,7 @@ function buildCategoryPage(template, locale, cat, calculators, I18N) {
     .split("{{THEME_INIT}}").join(themeInitScript())
     .split("{{OG_META}}").join(ogMetaTags({ title: `${nameFull} | Calquary`, description, url, image, locale }))
     .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => categoryUrl(loc, cat.id), LOCALES))
+    .split("{{CANONICAL_LINK}}").join(canonicalTag(categoryUrl(locale, cat.id)))
     .split("{{LOCALE_SWITCHER}}").join(localeSwitcherHtml(locale, (loc) => categoryUrl(loc, cat.id), LOCALES))
     .split("{{SCHEMA_JSON}}").join(buildCategorySchema(locale, cat, nameFull));
 }
@@ -776,6 +782,7 @@ function buildHomePage(template, locale, categories, calculators, I18N) {
     .split("{{FOOTER_COPYRIGHT}}").join(ui.footer.copyright)
     .split("{{OG_META}}").join(ogMetaTags({ title, description, url, image, locale }))
     .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => homeUrl(loc), LOCALES))
+    .split("{{CANONICAL_LINK}}").join(canonicalTag(homeUrl(locale)))
     .split("{{LOCALE_SWITCHER}}").join(localeSwitcherHtml(locale, (loc) => homeUrl(loc), LOCALES))
     .split("{{SCHEMA_JSON}}").join(toLdJsonScript(schemaGraph));
 }
@@ -806,6 +813,7 @@ function buildAboutPage(template, locale, I18N) {
     .split("{{BTN_BACK_TO_ALL}}").join(ui.buttons.backToAll)
     .split("{{OG_META}}").join(ogMetaTags({ title: `${s.title} | Calquary`, description: s.lede, url, image, locale }))
     .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => staticUrl(loc, "about.html"), LOCALES))
+    .split("{{CANONICAL_LINK}}").join(canonicalTag(staticUrl(locale, "about.html")))
     .split("{{LOCALE_SWITCHER}}").join(localeSwitcherHtml(locale, (loc) => staticUrl(loc, "about.html"), LOCALES));
 }
 
@@ -834,6 +842,7 @@ function buildContactPage(template, locale, I18N) {
     .split("{{BTN_BACK_TO_ALL}}").join(ui.buttons.backToAll)
     .split("{{OG_META}}").join(ogMetaTags({ title: `${s.title} | Calquary`, description: s.body, url, image, locale }))
     .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => staticUrl(loc, "contact.html"), LOCALES))
+    .split("{{CANONICAL_LINK}}").join(canonicalTag(staticUrl(locale, "contact.html")))
     .split("{{LOCALE_SWITCHER}}").join(localeSwitcherHtml(locale, (loc) => staticUrl(loc, "contact.html"), LOCALES));
 }
 
@@ -877,6 +886,7 @@ function buildLegalPage(template, locale, docKey, I18N) {
     .split("{{OTHER_LEGAL_LABEL}}").join(otherLabel)
     .split("{{OG_META}}").join(ogMetaTags({ title: `${doc.title} | Calquary`, description: doc.sections[0].p[0], url, image, locale }))
     .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => staticUrl(loc, `${docKey}.html`), LOCALES))
+    .split("{{CANONICAL_LINK}}").join(canonicalTag(staticUrl(locale, `${docKey}.html`)))
     .split("{{LOCALE_SWITCHER}}").join(localeSwitcherHtml(locale, (loc) => staticUrl(loc, `${docKey}.html`), LOCALES));
 }
 
