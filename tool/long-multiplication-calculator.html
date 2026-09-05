@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "This calculator works with the absolute (positive) value of whatever you enter, since long multiplication as a step-by-step method is defined for positive whole numbers - apply sign rules separately afterward (a result is negative if exactly one of the two numbers was negative)."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How many partial products will there be?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "One partial product per digit in the second number - multiplying by a 2-digit number produces 2 partial products, a 3-digit number produces 3, and so on, before they're all added together."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's 234 × 56 using long multiplication?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "234 × 6 = 1,404 (ones-digit partial product), 234 × 5 = 1,170 shifted one place left = 11,700 (tens-digit partial product). Adding them: 1,404 + 11,700 = 13,104."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is long multiplication the same as the standard column multiplication taught in school?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - 'long multiplication,' 'column multiplication,' and 'the standard algorithm' all refer to the same method of multiplying digit by digit and summing shifted partial products."
+          }
         }
       ]
     }
@@ -182,7 +206,7 @@
       <main>
         <h1>Long Multiplication Calculator</h1>
         <p style="max-width:60ch;">Enter two numbers to see the product, plus the full step-by-step long multiplication work (partial products for each digit).</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Does this work with negative numbers?</h3>
 <p>This calculator works with the absolute (positive) value of whatever you enter, since long multiplication as a step-by-step method is defined for positive whole numbers - apply sign rules separately afterward (a result is negative if exactly one of the two numbers was negative).</p>
+</div>
+<div class="faq-item">
+<h3>How many partial products will there be?</h3>
+<p>One partial product per digit in the second number - multiplying by a 2-digit number produces 2 partial products, a 3-digit number produces 3, and so on, before they're all added together.</p>
+</div>
+<div class="faq-item">
+<h3>What's 234 × 56 using long multiplication?</h3>
+<p>234 × 6 = 1,404 (ones-digit partial product), 234 × 5 = 1,170 shifted one place left = 11,700 (tens-digit partial product). Adding them: 1,404 + 11,700 = 13,104.</p>
+</div>
+<div class="faq-item">
+<h3>Is long multiplication the same as the standard column multiplication taught in school?</h3>
+<p>Yes - 'long multiplication,' 'column multiplication,' and 'the standard algorithm' all refer to the same method of multiplying digit by digit and summing shifted partial products.</p>
 </div></div>
         </div>
       </main>

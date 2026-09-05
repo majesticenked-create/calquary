@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "This tool reports which of the two JSON inputs is invalid, along with the parser's error message, rather than attempting a partial or guessed comparison - fix the syntax error first, then compare."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "If a key exists in both JSON objects but has the exact same value, does it show up in the diff?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - only keys that differ (added, removed, or changed in value) appear in the results. Identical keys with identical values are considered unchanged and aren't flagged."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "In the default example, what's the difference between the two JSON objects?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "\"age\" is changed (30 to 31), \"city\" is removed (only in the first JSON), and \"country\" is added (only in the second JSON) - \"name\" stays the same in both, so it's not flagged."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does key order in the JSON matter for the comparison?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - the comparison is based on key names and values, not the order keys appear in the text, since JSON objects are inherently unordered collections of key-value pairs by specification."
+          }
         }
       ]
     }
@@ -182,7 +206,7 @@
       <main>
         <h1>JSON Compare</h1>
         <p style="max-width:60ch;">Paste two JSON objects to see a field-by-field diff - what's added, removed, or changed between them.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>What happens if my JSON has a syntax error?</h3>
 <p>This tool reports which of the two JSON inputs is invalid, along with the parser's error message, rather than attempting a partial or guessed comparison - fix the syntax error first, then compare.</p>
+</div>
+<div class="faq-item">
+<h3>If a key exists in both JSON objects but has the exact same value, does it show up in the diff?</h3>
+<p>No - only keys that differ (added, removed, or changed in value) appear in the results. Identical keys with identical values are considered unchanged and aren't flagged.</p>
+</div>
+<div class="faq-item">
+<h3>In the default example, what's the difference between the two JSON objects?</h3>
+<p>"age" is changed (30 to 31), "city" is removed (only in the first JSON), and "country" is added (only in the second JSON) - "name" stays the same in both, so it's not flagged.</p>
+</div>
+<div class="faq-item">
+<h3>Does key order in the JSON matter for the comparison?</h3>
+<p>No - the comparison is based on key names and values, not the order keys appear in the text, since JSON objects are inherently unordered collections of key-value pairs by specification.</p>
 </div></div>
         </div>
       </main>

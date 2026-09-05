@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Effectively negligible - with 122 random bits (a few bits are fixed to mark the version), you'd need to generate roughly a billion UUIDs per second for about 85 years before a 50% chance of any collision, which is why UUIDs are trusted as unique identifiers without checking a central registry."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use a UUID as a database primary key?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this is one of the most common uses - UUIDs let you generate unique IDs independently across multiple servers or services without checking a central database first, avoiding the collisions that could happen with simple auto-incrementing numbers in a distributed system."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do the UUIDs generated here always follow the same format, like 8-4-4-4-12?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - every UUID follows the standard 36-character format of five hyphen-separated hex groups (8-4-4-4-12 digits), which is the RFC 4122 layout that databases, APIs, and libraries expect to parse."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a GUID the same thing as a UUID?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Functionally yes - GUID (Globally Unique Identifier) is Microsoft's term for the same 128-bit identifier concept as a UUID, and the two terms are used interchangeably in most contexts, including by this generator's output."
+          }
         }
       ]
     }
@@ -182,7 +206,7 @@
       <main>
         <h1>UUID Generator</h1>
         <p style="max-width:60ch;">Choose how many UUIDs to generate - each one is a random version-4 UUID, formatted per the standard.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>How likely is a UUID collision?</h3>
 <p>Effectively negligible - with 122 random bits (a few bits are fixed to mark the version), you'd need to generate roughly a billion UUIDs per second for about 85 years before a 50% chance of any collision, which is why UUIDs are trusted as unique identifiers without checking a central registry.</p>
+</div>
+<div class="faq-item">
+<h3>Can I use a UUID as a database primary key?</h3>
+<p>Yes, this is one of the most common uses - UUIDs let you generate unique IDs independently across multiple servers or services without checking a central database first, avoiding the collisions that could happen with simple auto-incrementing numbers in a distributed system.</p>
+</div>
+<div class="faq-item">
+<h3>Do the UUIDs generated here always follow the same format, like 8-4-4-4-12?</h3>
+<p>Yes - every UUID follows the standard 36-character format of five hyphen-separated hex groups (8-4-4-4-12 digits), which is the RFC 4122 layout that databases, APIs, and libraries expect to parse.</p>
+</div>
+<div class="faq-item">
+<h3>Is a GUID the same thing as a UUID?</h3>
+<p>Functionally yes - GUID (Globally Unique Identifier) is Microsoft's term for the same 128-bit identifier concept as a UUID, and the two terms are used interchangeably in most contexts, including by this generator's output.</p>
 </div></div>
         </div>
       </main>

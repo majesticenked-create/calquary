@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Yes - all of these describe finding the minimum sample size needed for a survey or study at a chosen confidence level and margin of error, which is exactly what this calculator does."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does doubling the margin of error change the required sample size?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It cuts the required sample size to roughly a quarter, since sample size is inversely proportional to the square of the margin of error (n ∝ 1/e²) - halving your desired margin of error, conversely, roughly quadruples the sample you need."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What sample size is needed for a 95% confidence level and 5% margin of error with an unknown proportion?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "About 385 - using n = (1.96² × 0.5 × 0.5) / 0.05² = 0.9604 / 0.0025 ≈ 384.16, rounded up to 385, the commonly cited figure for a general population survey."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does the calculator ask for an estimated response proportion if I don't have survey results yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The proportion affects how much variability the formula assumes exists in responses - if you have a rough prior estimate (from past research or a pilot study), entering it can lower the required sample size compared to the conservative 50% default, since p×(1−p) is smaller the further p is from 0.5."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Sample Size Calculator</h1>
         <p style="max-width:60ch;">Choose a confidence level and margin of error to calculate the minimum sample size needed for a survey or study.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Is 'calculating sample size online' or 'determine sample size calculator' the same as this tool?</h3>
 <p>Yes - all of these describe finding the minimum sample size needed for a survey or study at a chosen confidence level and margin of error, which is exactly what this calculator does.</p>
+</div>
+<div class="faq-item">
+<h3>How much does doubling the margin of error change the required sample size?</h3>
+<p>It cuts the required sample size to roughly a quarter, since sample size is inversely proportional to the square of the margin of error (n ∝ 1/e²) - halving your desired margin of error, conversely, roughly quadruples the sample you need.</p>
+</div>
+<div class="faq-item">
+<h3>What sample size is needed for a 95% confidence level and 5% margin of error with an unknown proportion?</h3>
+<p>About 385 - using n = (1.96² × 0.5 × 0.5) / 0.05² = 0.9604 / 0.0025 ≈ 384.16, rounded up to 385, the commonly cited figure for a general population survey.</p>
+</div>
+<div class="faq-item">
+<h3>Why does the calculator ask for an estimated response proportion if I don't have survey results yet?</h3>
+<p>The proportion affects how much variability the formula assumes exists in responses - if you have a rough prior estimate (from past research or a pilot study), entering it can lower the required sample size compared to the conservative 50% default, since p×(1−p) is smaller the further p is from 0.5.</p>
 </div></div>
         </div>
       </main>

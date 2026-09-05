@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "No - it assumes 100% of the rain falling on the area is captured, which is realistic for a smooth, sealed roof feeding a collection system but overestimates yield for permeable surfaces like soil or gravel, where some water soaks in or evaporates instead of running off."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How much water can I collect from a 50m² roof during 1 inch of rain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "About 1,270 liters - 1 inch equals 25.4mm, and 25.4mm × 50m² = 1,270 liters, since each 1mm-over-1m² unit equals 1 liter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I use my roof's footprint area or its sloped surface area?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the horizontal footprint (the area as seen from directly above), not the sloped roof surface area - rainfall is measured as vertical depth falling onto a horizontal plane, so a sloped roof collects the same volume as a flat roof of the same footprint, just spread over more physical roof material."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is this different from a rainwater harvesting or tank sizing calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This tool only converts rainfall depth and area into a volume of water produced - it doesn't account for tank capacity, first-flush diversion, or overflow, which a dedicated rainwater harvesting sizing calculator would factor in for planning a storage system."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Rainfall to Volume Calculator</h1>
         <p style="max-width:60ch;">Enter the rainfall depth and the catchment area to calculate the total volume of water collected.</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Does this account for runoff losses?</h3>
 <p>No - it assumes 100% of the rain falling on the area is captured, which is realistic for a smooth, sealed roof feeding a collection system but overestimates yield for permeable surfaces like soil or gravel, where some water soaks in or evaporates instead of running off.</p>
+</div>
+<div class="faq-item">
+<h3>How much water can I collect from a 50m² roof during 1 inch of rain?</h3>
+<p>About 1,270 liters - 1 inch equals 25.4mm, and 25.4mm × 50m² = 1,270 liters, since each 1mm-over-1m² unit equals 1 liter.</p>
+</div>
+<div class="faq-item">
+<h3>Should I use my roof's footprint area or its sloped surface area?</h3>
+<p>Use the horizontal footprint (the area as seen from directly above), not the sloped roof surface area - rainfall is measured as vertical depth falling onto a horizontal plane, so a sloped roof collects the same volume as a flat roof of the same footprint, just spread over more physical roof material.</p>
+</div>
+<div class="faq-item">
+<h3>How is this different from a rainwater harvesting or tank sizing calculator?</h3>
+<p>This tool only converts rainfall depth and area into a volume of water produced - it doesn't account for tank capacity, first-flush diversion, or overflow, which a dedicated rainwater harvesting sizing calculator would factor in for planning a storage system.</p>
 </div></div>
         </div>
       </main>

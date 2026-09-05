@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "This calculator computes GCD and LCM for two numbers at a time. For three or more numbers, apply the calculation pairwise - find the GCD or LCM of the first two, then combine that result with the next number, repeating until all values are included."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What if the two numbers share no common factors besides 1?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Then their GCD is 1 (they're called coprime), and their LCM is simply the product of the two numbers - for example, GCD(8, 9) = 1 and LCM(8, 9) = 72."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the GCD and LCM of two identical numbers, like 15 and 15?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both the GCD and LCM equal that number itself - GCD(15, 15) = 15 and LCM(15, 15) = 15, since a number always divides itself evenly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a 'GCF' the same as a 'GCD'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - 'greatest common factor' (GCF) and 'greatest common divisor' (GCD) are two names for the same value: the largest number that divides evenly into both inputs."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>GCD and LCM Calculator</h1>
         <p style="max-width:60ch;">This GCD calculator finds the greatest common divisor and least common multiple (LCM) of two whole numbers in one step.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Can this find the GCD or LCM of more than two numbers?</h3>
 <p>This calculator computes GCD and LCM for two numbers at a time. For three or more numbers, apply the calculation pairwise - find the GCD or LCM of the first two, then combine that result with the next number, repeating until all values are included.</p>
+</div>
+<div class="faq-item">
+<h3>What if the two numbers share no common factors besides 1?</h3>
+<p>Then their GCD is 1 (they're called coprime), and their LCM is simply the product of the two numbers - for example, GCD(8, 9) = 1 and LCM(8, 9) = 72.</p>
+</div>
+<div class="faq-item">
+<h3>What's the GCD and LCM of two identical numbers, like 15 and 15?</h3>
+<p>Both the GCD and LCM equal that number itself - GCD(15, 15) = 15 and LCM(15, 15) = 15, since a number always divides itself evenly.</p>
+</div>
+<div class="faq-item">
+<h3>Is a 'GCF' the same as a 'GCD'?</h3>
+<p>Yes - 'greatest common factor' (GCF) and 'greatest common divisor' (GCD) are two names for the same value: the largest number that divides evenly into both inputs.</p>
 </div></div>
         </div>
       </main>

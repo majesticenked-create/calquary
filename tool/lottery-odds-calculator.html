@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Yes - every one of these phrasings is asking for the same thing: the probability of matching a lottery jackpot's numbers, which this calculator computes from the pool size, picks, and bonus ball settings above."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the odds if there's no bonus ball at all?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Set the bonus pool field to 0 - the calculator will then compute odds using only the main-pool combinations (n choose k), skipping the bonus multiplier entirely."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much do the odds change if the main pool grows by just a few numbers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Substantially - combinations grow combinatorially, so raising a 5-number pick pool from 69 to 70 numbers increases the number of combinations by roughly 12%, making the jackpot noticeably harder to win."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do smaller regional or scratch-off lotteries use the same odds formula?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - any lottery based on picking a fixed number of balls from a pool (with an optional separate bonus number) uses the same combinations formula shown here, just with different pool sizes and pick counts."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Lottery Odds Calculator</h1>
         <p style="max-width:60ch;">Enter the lottery's main number pool and picks, plus an optional bonus-ball pool, to calculate the jackpot odds. Defaults are set to Powerball's actual rules.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Is 'odds for winning lottery,' 'what are chances of winning lotto,' and 'odds of winning the lottery' the same as this tool?</h3>
 <p>Yes - every one of these phrasings is asking for the same thing: the probability of matching a lottery jackpot's numbers, which this calculator computes from the pool size, picks, and bonus ball settings above.</p>
+</div>
+<div class="faq-item">
+<h3>What are the odds if there's no bonus ball at all?</h3>
+<p>Set the bonus pool field to 0 - the calculator will then compute odds using only the main-pool combinations (n choose k), skipping the bonus multiplier entirely.</p>
+</div>
+<div class="faq-item">
+<h3>How much do the odds change if the main pool grows by just a few numbers?</h3>
+<p>Substantially - combinations grow combinatorially, so raising a 5-number pick pool from 69 to 70 numbers increases the number of combinations by roughly 12%, making the jackpot noticeably harder to win.</p>
+</div>
+<div class="faq-item">
+<h3>Do smaller regional or scratch-off lotteries use the same odds formula?</h3>
+<p>Yes - any lottery based on picking a fixed number of balls from a pool (with an optional separate bonus number) uses the same combinations formula shown here, just with different pool sizes and pick counts.</p>
 </div></div>
         </div>
       </main>

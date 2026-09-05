@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-02",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "0.5 × leg a × leg b - the two legs meet at the right angle, so they serve directly as the triangle's base and height."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I solve a right triangle if I only know one side and one angle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - this calculator requires two known sides (any two of the two legs and the hypotenuse) to apply the Pythagorean theorem. If you only have one side and one angle, you'd need trigonometric ratios (sine, cosine, tangent) instead, which this tool doesn't take as direct inputs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I check that three side lengths actually form a valid right triangle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Verify that the square of the longest side equals the sum of squares of the other two (a² + b² = c²). For sides 6, 8, and 10: 6² + 8² = 36 + 64 = 100 = 10², confirming a valid right triangle."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between this and a general (non-right) triangle calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This tool relies on the Pythagorean theorem, which only holds when one angle is exactly 90° - a general triangle (acute or obtuse) needs the Law of Sines or Law of Cosines instead, since side-angle relationships aren't as simple without a right angle."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Right Triangle Calculator</h1>
         <p style="max-width:60ch;">Enter any two of a right triangle's sides (two legs, or one leg and the hypotenuse) to calculate everything else.</p>
-        <p class="last-updated">Last updated: September 2, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>What's the area of a right triangle?</h3>
 <p>0.5 × leg a × leg b - the two legs meet at the right angle, so they serve directly as the triangle's base and height.</p>
+</div>
+<div class="faq-item">
+<h3>Can I solve a right triangle if I only know one side and one angle?</h3>
+<p>No - this calculator requires two known sides (any two of the two legs and the hypotenuse) to apply the Pythagorean theorem. If you only have one side and one angle, you'd need trigonometric ratios (sine, cosine, tangent) instead, which this tool doesn't take as direct inputs.</p>
+</div>
+<div class="faq-item">
+<h3>How do I check that three side lengths actually form a valid right triangle?</h3>
+<p>Verify that the square of the longest side equals the sum of squares of the other two (a² + b² = c²). For sides 6, 8, and 10: 6² + 8² = 36 + 64 = 100 = 10², confirming a valid right triangle.</p>
+</div>
+<div class="faq-item">
+<h3>What's the difference between this and a general (non-right) triangle calculator?</h3>
+<p>This tool relies on the Pythagorean theorem, which only holds when one angle is exactly 90° - a general triangle (acute or obtuse) needs the Law of Sines or Law of Cosines instead, since side-angle relationships aren't as simple without a right angle.</p>
 </div></div>
         </div>
       </main>

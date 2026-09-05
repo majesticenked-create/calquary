@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "If a is 0, there's no x term left to solve for - the equation becomes just b = c. If that's true (like 5 = 5), every value of x satisfies it; if it's false (like 5 = 7), no value of x can, since the x term can't change the outcome."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Can this solve equations where x has a fractional or decimal coefficient?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - a doesn't need to be a whole number. For example, 0.5x + 5 = 20 solves the same way: x = (20 − 5) / 0.5 = 30."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the solution to 3x + 5 = 20?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "x = 5 - using x = (c − b)/a: x = (20 − 5)/3 = 15/3 = 5."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a 'linear equation' the same as an 'algebraic equation'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not quite - a linear equation specifically means the variable appears only to the first power (no x², √x, or 1/x terms), making its graph a straight line. 'Algebraic equation' is a broader term that includes linear, quadratic, and higher-degree equations."
+          }
         }
       ]
     }
@@ -182,7 +206,7 @@
       <main>
         <h1>Linear Equation Solver</h1>
         <p style="max-width:60ch;">Enter the coefficients for ax + b = c to solve for x.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>What does it mean if a = 0 in this calculator?</h3>
 <p>If a is 0, there's no x term left to solve for - the equation becomes just b = c. If that's true (like 5 = 5), every value of x satisfies it; if it's false (like 5 = 7), no value of x can, since the x term can't change the outcome.</p>
+</div>
+<div class="faq-item">
+<h3>Can this solve equations where x has a fractional or decimal coefficient?</h3>
+<p>Yes - a doesn't need to be a whole number. For example, 0.5x + 5 = 20 solves the same way: x = (20 − 5) / 0.5 = 30.</p>
+</div>
+<div class="faq-item">
+<h3>What's the solution to 3x + 5 = 20?</h3>
+<p>x = 5 - using x = (c − b)/a: x = (20 − 5)/3 = 15/3 = 5.</p>
+</div>
+<div class="faq-item">
+<h3>Is a 'linear equation' the same as an 'algebraic equation'?</h3>
+<p>Not quite - a linear equation specifically means the variable appears only to the first power (no x², √x, or 1/x terms), making its graph a straight line. 'Algebraic equation' is a broader term that includes linear, quadratic, and higher-degree equations.</p>
 </div></div>
         </div>
       </main>

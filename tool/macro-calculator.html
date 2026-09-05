@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Yes - protein needs generally scale with body weight and activity level regardless of whether you're cutting or maintaining, while carbohydrate needs rise with training volume since carbs fuel intense exercise. Two people with the same calorie target can have different ideal macro splits based on how active they are."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What's a balanced macro split if I don't have a specific goal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A common general-purpose starting point is roughly 30% protein, 30% fat, 40% carbs, though this calculator lets you enter any percentages that sum to 100% so you can adjust for your own goals or dietary preferences."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if my percentages don't add up to 100%?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The math only works cleanly when protein, fat, and carb percentages sum to 100% of your daily calories - if they don't, the resulting gram amounts won't actually account for your full calorie target, so double-check the three inputs add up before relying on the results."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is fat calculated differently from protein and carbs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fat provides 9 calories per gram, more than double the 4 calories per gram from protein or carbs - so the same percentage of daily calories converts to fewer grams of fat than of protein or carbs. At 2,000 calories, 30% fat is about 67g, while 30% protein is about 150g."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Macro Calculator</h1>
         <p style="max-width:60ch;">Enter your daily calorie target and a macro split to see your protein, fat, and carb targets in grams.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Do macro targets change based on activity level, not just calorie goals?</h3>
 <p>Yes - protein needs generally scale with body weight and activity level regardless of whether you're cutting or maintaining, while carbohydrate needs rise with training volume since carbs fuel intense exercise. Two people with the same calorie target can have different ideal macro splits based on how active they are.</p>
+</div>
+<div class="faq-item">
+<h3>What's a balanced macro split if I don't have a specific goal?</h3>
+<p>A common general-purpose starting point is roughly 30% protein, 30% fat, 40% carbs, though this calculator lets you enter any percentages that sum to 100% so you can adjust for your own goals or dietary preferences.</p>
+</div>
+<div class="faq-item">
+<h3>What happens if my percentages don't add up to 100%?</h3>
+<p>The math only works cleanly when protein, fat, and carb percentages sum to 100% of your daily calories - if they don't, the resulting gram amounts won't actually account for your full calorie target, so double-check the three inputs add up before relying on the results.</p>
+</div>
+<div class="faq-item">
+<h3>Why is fat calculated differently from protein and carbs?</h3>
+<p>Fat provides 9 calories per gram, more than double the 4 calories per gram from protein or carbs - so the same percentage of daily calories converts to fewer grams of fat than of protein or carbs. At 2,000 calories, 30% fat is about 67g, while 30% protein is about 150g.</p>
 </div></div>
         </div>
       </main>

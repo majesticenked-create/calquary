@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Within about 0.5%, since it treats Earth as a perfect sphere rather than its actual slightly flattened ellipsoid shape - close enough for virtually all practical distance-estimation purposes, though official aviation navigation uses more precise ellipsoidal models."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Why isn't the great-circle distance the same as a straight line on a flat map?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A flat map distorts distances because it projects a curved 3D surface onto a 2D plane - the true shortest path between two points on a sphere follows a great circle (part of a circle whose center is Earth's center), which usually looks curved, not straight, when drawn on a standard map projection."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to know the exact altitude or elevation of each point?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - the haversine formula only uses latitude and longitude and assumes both points sit on Earth's surface at sea level. Elevation differences are negligible compared to Earth's ~6,371 km radius for virtually all distance-estimation purposes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between this and a 'geodesic distance calculator'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They're closely related - 'geodesic distance' is the more general term for the shortest path on any curved surface, while 'haversine distance' specifically refers to this formula's spherical-Earth approximation. For most everyday distance checks, the two terms are used interchangeably."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Distance and Bearing Calculator (Lat/Long)</h1>
         <p style="max-width:60ch;">Enter the latitude and longitude of two points to calculate the distance between them and the compass bearing from the first to the second.</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>How accurate is this compared to real-world flight distances?</h3>
 <p>Within about 0.5%, since it treats Earth as a perfect sphere rather than its actual slightly flattened ellipsoid shape - close enough for virtually all practical distance-estimation purposes, though official aviation navigation uses more precise ellipsoidal models.</p>
+</div>
+<div class="faq-item">
+<h3>Why isn't the great-circle distance the same as a straight line on a flat map?</h3>
+<p>A flat map distorts distances because it projects a curved 3D surface onto a 2D plane - the true shortest path between two points on a sphere follows a great circle (part of a circle whose center is Earth's center), which usually looks curved, not straight, when drawn on a standard map projection.</p>
+</div>
+<div class="faq-item">
+<h3>Do I need to know the exact altitude or elevation of each point?</h3>
+<p>No - the haversine formula only uses latitude and longitude and assumes both points sit on Earth's surface at sea level. Elevation differences are negligible compared to Earth's ~6,371 km radius for virtually all distance-estimation purposes.</p>
+</div>
+<div class="faq-item">
+<h3>What's the difference between this and a 'geodesic distance calculator'?</h3>
+<p>They're closely related - 'geodesic distance' is the more general term for the shortest path on any curved surface, while 'haversine distance' specifically refers to this formula's spherical-Earth approximation. For most everyday distance checks, the two terms are used interchangeably.</p>
 </div></div>
         </div>
       </main>

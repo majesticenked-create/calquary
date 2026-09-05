@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-31",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Divide the minutes by 60. 30 minutes = 0.5 hours, 15 minutes = 0.25 hours, 45 minutes = 0.75 hours - add that decimal to the whole-hour count for each day."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I worked overtime on just one day, not the whole week?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This calculator sums all entered hours into one weekly total at a single flat rate, so it doesn't split out a single day's overtime automatically - calculate that day's regular and overtime portions separately, then add the result into your total pay outside the tool."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is gross pay calculated from a time card?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gross pay is total hours worked multiplied by the hourly rate. If your daily hours sum to 38.5 for the week at $18/hour, gross pay is 38.5 × $18 = $693, before any tax withholding or deductions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a time card calculator the same as a payroll calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - a time card calculator like this one only converts hours worked into gross pay. A payroll calculator goes further, applying tax withholding, deductions, and benefits to arrive at net (take-home) pay."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Time Card Calculator</h1>
         <p style="max-width:60ch;">Enter hours worked each day and an hourly rate to total your weekly hours and gross pay.</p>
-        <p class="last-updated">Last updated: August 31, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>How do I convert minutes to a decimal for a time card?</h3>
 <p>Divide the minutes by 60. 30 minutes = 0.5 hours, 15 minutes = 0.25 hours, 45 minutes = 0.75 hours - add that decimal to the whole-hour count for each day.</p>
+</div>
+<div class="faq-item">
+<h3>What if I worked overtime on just one day, not the whole week?</h3>
+<p>This calculator sums all entered hours into one weekly total at a single flat rate, so it doesn't split out a single day's overtime automatically - calculate that day's regular and overtime portions separately, then add the result into your total pay outside the tool.</p>
+</div>
+<div class="faq-item">
+<h3>How is gross pay calculated from a time card?</h3>
+<p>Gross pay is total hours worked multiplied by the hourly rate. If your daily hours sum to 38.5 for the week at $18/hour, gross pay is 38.5 × $18 = $693, before any tax withholding or deductions.</p>
+</div>
+<div class="faq-item">
+<h3>Is a time card calculator the same as a payroll calculator?</h3>
+<p>No - a time card calculator like this one only converts hours worked into gross pay. A payroll calculator goes further, applying tax withholding, deductions, and benefits to arrive at net (take-home) pay.</p>
 </div></div>
         </div>
       </main>

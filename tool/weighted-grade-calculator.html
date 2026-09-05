@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Yes - the regular Grade Calculator converts a single score (like one test) into a percentage and letter grade. This tool combines multiple weighted categories - homework, tests, a final exam, etc. - into one overall course grade."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if I enter a weight as 0 for a category I haven't started yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "That category is excluded from the calculation entirely (multiplying by 0 contributes nothing to the numerator or denominator), so your current grade reflects only the categories with a nonzero weight - useful for tracking a running average as the semester progresses."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much would the final exam need to be to get an overall A if I already know my homework and test scores?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This calculator solves for the overall grade from all three categories at once, so to find a required final score, work backward: target = (desired overall × 100 − homework×weight − tests×weight) / final weight. For example, needing an 90 overall with 95×20 + 82×40 already locked in and a 40% final weight: (9000 − 1900 − 3280) / 40 = 95.5%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use this for more than three grade categories, like quizzes plus homework, tests, and a final?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This version handles exactly three categories (homework, tests, final) - for a course with a quiz category too, combine quizzes into whichever existing category shares a similar weight, or compute a sub-average for quizzes first and treat that as one of the three inputs."
+          }
         }
       ]
     }
@@ -182,7 +206,7 @@
       <main>
         <h1>Weighted Grade Calculator</h1>
         <p style="max-width:60ch;">Enter your score and weight for each category to calculate your overall weighted grade.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Is this different from the regular Grade Calculator?</h3>
 <p>Yes - the regular Grade Calculator converts a single score (like one test) into a percentage and letter grade. This tool combines multiple weighted categories - homework, tests, a final exam, etc. - into one overall course grade.</p>
+</div>
+<div class="faq-item">
+<h3>What happens if I enter a weight as 0 for a category I haven't started yet?</h3>
+<p>That category is excluded from the calculation entirely (multiplying by 0 contributes nothing to the numerator or denominator), so your current grade reflects only the categories with a nonzero weight - useful for tracking a running average as the semester progresses.</p>
+</div>
+<div class="faq-item">
+<h3>How much would the final exam need to be to get an overall A if I already know my homework and test scores?</h3>
+<p>This calculator solves for the overall grade from all three categories at once, so to find a required final score, work backward: target = (desired overall × 100 − homework×weight − tests×weight) / final weight. For example, needing an 90 overall with 95×20 + 82×40 already locked in and a 40% final weight: (9000 − 1900 − 3280) / 40 = 95.5%.</p>
+</div>
+<div class="faq-item">
+<h3>Can I use this for more than three grade categories, like quizzes plus homework, tests, and a final?</h3>
+<p>This version handles exactly three categories (homework, tests, final) - for a course with a quiz category too, combine quizzes into whichever existing category shares a similar weight, or compute a sub-average for quizzes first and treat that as one of the three inputs.</p>
 </div></div>
         </div>
       </main>

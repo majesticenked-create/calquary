@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "No - this is a statistics reference calculator for understanding how these numbers are computed, not a substitute for a full clinical study's confidence intervals, population characteristics, and a qualified professional's interpretation. Always discuss treatment decisions with a healthcare provider."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate ARR if the control group event rate is 25% and the treatment group is 15%?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ARR = 25% − 15% = 10 percentage points (0.10). RRR = 0.10 ÷ 0.25 = 40%. NNT = 1 ÷ 0.10 = 10, meaning about 10 people need treatment to prevent one additional event."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why can RRR make a treatment sound more effective than ARR suggests?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because RRR is a ratio relative to the baseline rate, a treatment reducing a rare event from 0.2% to 0.1% has a dramatic-sounding 50% RRR but only a 0.1 percentage point ARR (and an NNT of 1,000) - both numbers are mathematically correct, but ARR better reflects the real-world impact on a population."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does a negative ARR mean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A negative ARR means the treatment group actually had a higher event rate than the control group - the treatment appears harmful rather than beneficial for the outcome measured, and this calculator will show the reduction as negative to reflect that."
+          }
         }
       ]
     }
@@ -182,7 +206,7 @@
       <main>
         <h1>Absolute Risk Reduction Calculator</h1>
         <p style="max-width:60ch;">Enter the event rate in a control group and a treatment group to calculate absolute risk reduction, relative risk reduction, and number needed to treat.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Is this appropriate for making medical treatment decisions?</h3>
 <p>No - this is a statistics reference calculator for understanding how these numbers are computed, not a substitute for a full clinical study's confidence intervals, population characteristics, and a qualified professional's interpretation. Always discuss treatment decisions with a healthcare provider.</p>
+</div>
+<div class="faq-item">
+<h3>How do I calculate ARR if the control group event rate is 25% and the treatment group is 15%?</h3>
+<p>ARR = 25% − 15% = 10 percentage points (0.10). RRR = 0.10 ÷ 0.25 = 40%. NNT = 1 ÷ 0.10 = 10, meaning about 10 people need treatment to prevent one additional event.</p>
+</div>
+<div class="faq-item">
+<h3>Why can RRR make a treatment sound more effective than ARR suggests?</h3>
+<p>Because RRR is a ratio relative to the baseline rate, a treatment reducing a rare event from 0.2% to 0.1% has a dramatic-sounding 50% RRR but only a 0.1 percentage point ARR (and an NNT of 1,000) - both numbers are mathematically correct, but ARR better reflects the real-world impact on a population.</p>
+</div>
+<div class="faq-item">
+<h3>What does a negative ARR mean?</h3>
+<p>A negative ARR means the treatment group actually had a higher event rate than the control group - the treatment appears harmful rather than beneficial for the outcome measured, and this calculator will show the reduction as negative to reflect that.</p>
 </div></div>
         </div>
       </main>

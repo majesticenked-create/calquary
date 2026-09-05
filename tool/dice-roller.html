@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Set \"number of dice\" to 2 and \"sides per die\" to 6 - the result shows each individual roll plus the total, which is exactly what \"2d6\" notation from tabletop games means."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I roll dice that don't exist physically, like a D7 or D13?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - since \"sides per die\" accepts any number from 2 to 100, you can simulate dice with side counts that don't exist as physical objects, useful for custom games or probability experiments."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I roll something like 4d10, and what does that notation mean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Set \"number of dice\" to 4 and \"sides per die\" to 10. In tabletop notation, \"4d10\" means \"roll four 10-sided dice,\" and the number before the d is always the dice count while the number after is the side count."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a roll of the same number on every die, like all sixes, suspicious?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - each die roll is independent, so getting the same result on multiple dice happens by chance sometimes, especially with fewer sides per die (a 6-sided die has a 1-in-6 chance of matching another 6-sided die's roll)."
+          }
         }
       ]
     }
@@ -182,7 +206,7 @@
       <main>
         <h1>Dice Roller</h1>
         <p style="max-width:60ch;">Choose how many dice to roll and how many sides each die has, then roll.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>How do I roll multiple dice and add them together, like 2d6?</h3>
 <p>Set "number of dice" to 2 and "sides per die" to 6 - the result shows each individual roll plus the total, which is exactly what "2d6" notation from tabletop games means.</p>
+</div>
+<div class="faq-item">
+<h3>Can I roll dice that don't exist physically, like a D7 or D13?</h3>
+<p>Yes - since "sides per die" accepts any number from 2 to 100, you can simulate dice with side counts that don't exist as physical objects, useful for custom games or probability experiments.</p>
+</div>
+<div class="faq-item">
+<h3>How do I roll something like 4d10, and what does that notation mean?</h3>
+<p>Set "number of dice" to 4 and "sides per die" to 10. In tabletop notation, "4d10" means "roll four 10-sided dice," and the number before the d is always the dice count while the number after is the side count.</p>
+</div>
+<div class="faq-item">
+<h3>Is a roll of the same number on every die, like all sixes, suspicious?</h3>
+<p>No - each die roll is independent, so getting the same result on multiple dice happens by chance sometimes, especially with fewer sides per die (a 6-sided die has a 1-in-6 chance of matching another 6-sided die's roll).</p>
 </div></div>
         </div>
       </main>

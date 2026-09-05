@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Sum = a₁(1 − rⁿ) / (1 − r) for r ≠ 1. For a₁=2, r=3, n=6: 2×(1−729)/(1−3) = 728. If r = 1, every term equals a₁, so the sum is simply a₁ × n."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to a geometric series if the ratio r is between -1 and 1?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each term shrinks toward zero, and while this calculator computes the sum of a finite number of terms n, an infinite geometric series with |r| < 1 would converge to a finite total of a1 / (1 − r)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can the common difference or ratio be negative?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - a negative common difference produces a decreasing arithmetic sequence (like 10, 7, 4, 1...), and a negative common ratio produces a geometric sequence that alternates sign each term (like 2, -6, 18, -54...)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a Fibonacci sequence the same as an arithmetic or geometric sequence?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - a Fibonacci sequence adds the two previous terms to get the next one (1, 1, 2, 3, 5, 8...), which is neither a constant difference (arithmetic) nor a constant ratio (geometric), so this calculator doesn't cover it."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Sequences and Series Calculator</h1>
         <p style="max-width:60ch;">Choose a sequence type, enter the first term and common difference or ratio, and how many terms to find the nth term and the sum.</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>What's the formula for the sum of a geometric sequence?</h3>
 <p>Sum = a₁(1 − rⁿ) / (1 − r) for r ≠ 1. For a₁=2, r=3, n=6: 2×(1−729)/(1−3) = 728. If r = 1, every term equals a₁, so the sum is simply a₁ × n.</p>
+</div>
+<div class="faq-item">
+<h3>What happens to a geometric series if the ratio r is between -1 and 1?</h3>
+<p>Each term shrinks toward zero, and while this calculator computes the sum of a finite number of terms n, an infinite geometric series with |r| < 1 would converge to a finite total of a1 / (1 − r).</p>
+</div>
+<div class="faq-item">
+<h3>Can the common difference or ratio be negative?</h3>
+<p>Yes - a negative common difference produces a decreasing arithmetic sequence (like 10, 7, 4, 1...), and a negative common ratio produces a geometric sequence that alternates sign each term (like 2, -6, 18, -54...).</p>
+</div>
+<div class="faq-item">
+<h3>Is a Fibonacci sequence the same as an arithmetic or geometric sequence?</h3>
+<p>No - a Fibonacci sequence adds the two previous terms to get the next one (1, 1, 2, 3, 5, 8...), which is neither a constant difference (arithmetic) nor a constant ratio (geometric), so this calculator doesn't cover it.</p>
 </div></div>
         </div>
       </main>

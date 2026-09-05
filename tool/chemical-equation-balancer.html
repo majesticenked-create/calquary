@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Usually because of a typo in a chemical formula, or because the reaction as written isn't chemically valid (the same elements don't appear on both sides). Double-check each formula's capitalization and parentheses - chemical symbols are case-sensitive (Co is cobalt, CO is carbon monoxide)."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do balanced coefficients need to be the smallest possible whole numbers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Any multiple of a balanced set of coefficients (like doubling every coefficient) is technically still balanced, but chemists use the smallest whole-number ratio by convention since it represents the simplest, most standard way to express the reaction."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can this balance equations that include ionic charges, like Fe³⁺ + e⁻ → Fe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This calculator is built for balancing atoms in molecular equations, not charge-balancing half-reactions - redox half-reactions with electrons and ionic charges need a separate charge-balancing step in addition to atom balancing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the balanced equation for the combustion of methane (CH4 + O2 -> CO2 + H2O)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CH₄ + 2O₂ → CO₂ + 2H₂O - one methane molecule needs two oxygen molecules to fully convert its carbon to CO₂ and its four hydrogens to two water molecules, balancing 1 C, 4 H, and 4 O on each side."
+          }
         }
       ]
     }
@@ -182,7 +206,7 @@
       <main>
         <h1>Chemical Equation Balancer</h1>
         <p style="max-width:60ch;">Enter an unbalanced equation (like Fe + O2 -> Fe2O3) using + between compounds and -> between reactants and products.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Why does this calculator sometimes say it can't balance my equation?</h3>
 <p>Usually because of a typo in a chemical formula, or because the reaction as written isn't chemically valid (the same elements don't appear on both sides). Double-check each formula's capitalization and parentheses - chemical symbols are case-sensitive (Co is cobalt, CO is carbon monoxide).</p>
+</div>
+<div class="faq-item">
+<h3>Why do balanced coefficients need to be the smallest possible whole numbers?</h3>
+<p>Any multiple of a balanced set of coefficients (like doubling every coefficient) is technically still balanced, but chemists use the smallest whole-number ratio by convention since it represents the simplest, most standard way to express the reaction.</p>
+</div>
+<div class="faq-item">
+<h3>Can this balance equations that include ionic charges, like Fe³⁺ + e⁻ → Fe?</h3>
+<p>This calculator is built for balancing atoms in molecular equations, not charge-balancing half-reactions - redox half-reactions with electrons and ionic charges need a separate charge-balancing step in addition to atom balancing.</p>
+</div>
+<div class="faq-item">
+<h3>What's the balanced equation for the combustion of methane (CH4 + O2 -&gt; CO2 + H2O)?</h3>
+<p>CH₄ + 2O₂ → CO₂ + 2H₂O - one methane molecule needs two oxygen molecules to fully convert its carbon to CO₂ and its four hydrogens to two water molecules, balancing 1 C, 4 H, and 4 O on each side.</p>
 </div></div>
         </div>
       </main>

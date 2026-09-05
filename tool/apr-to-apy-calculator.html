@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "APY/EAR - it accounts for compounding frequency, so it's the only rate that lets you fairly compare two products with different compounding schedules (like monthly vs. daily) on equal terms."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What is 24% APR on a credit card, compounded daily, as an APY?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "About 27.11% - (1 + 0.24/365)^365 − 1 ≈ 0.2711, illustrating why credit card APY can run noticeably higher than the quoted APR once daily compounding is factored in."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "If compounding is annual, does APY equal APR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - with compounds per year set to 1, the formula (1 + APR/1)^1 − 1 simplifies to exactly APR, since there's no intra-year compounding to create a gap between the nominal and effective rates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is 'effective interest rate' the same thing as APY?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - APY, EAR (effective annual rate), and effective interest rate all refer to the same concept: the true annualized return or cost once compounding within the year is accounted for, which is exactly what this calculator computes from a nominal APR."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>APR to APY (EAR) Calculator</h1>
         <p style="max-width:60ch;">Enter a nominal annual rate and how often it compounds to calculate the effective annual rate (APY/EAR).</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Which rate should I use to compare two loans or savings accounts?</h3>
 <p>APY/EAR - it accounts for compounding frequency, so it's the only rate that lets you fairly compare two products with different compounding schedules (like monthly vs. daily) on equal terms.</p>
+</div>
+<div class="faq-item">
+<h3>What is 24% APR on a credit card, compounded daily, as an APY?</h3>
+<p>About 27.11% - (1 + 0.24/365)^365 − 1 ≈ 0.2711, illustrating why credit card APY can run noticeably higher than the quoted APR once daily compounding is factored in.</p>
+</div>
+<div class="faq-item">
+<h3>If compounding is annual, does APY equal APR?</h3>
+<p>Yes - with compounds per year set to 1, the formula (1 + APR/1)^1 − 1 simplifies to exactly APR, since there's no intra-year compounding to create a gap between the nominal and effective rates.</p>
+</div>
+<div class="faq-item">
+<h3>Is 'effective interest rate' the same thing as APY?</h3>
+<p>Yes - APY, EAR (effective annual rate), and effective interest rate all refer to the same concept: the true annualized return or cost once compounding within the year is accounted for, which is exactly what this calculator computes from a nominal APR.</p>
 </div></div>
         </div>
       </main>

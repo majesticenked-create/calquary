@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Word frequency analysis reveals unintentional repetition, helps confirm target keywords appear at a natural density rather than being stuffed, and can surface overused filler words that weaken writing - useful for both editing prose and checking on-page SEO content before publishing."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Does punctuation attached to a word, like 'dog,' or 'dog.', get counted separately from 'dog'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - punctuation is stripped before counting, so \"dog,\" \"dog.\" and \"dog\" are all tallied as the same word, avoiding artificially split counts caused by trailing commas or periods."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "In the example text, how many times does 'the' appear?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Twice - \"the quick brown fox jumps over the lazy dog the fox runs fast\" actually has 'the' three times (before 'quick,' before 'lazy,' and before second 'fox'), each counted the same regardless of position in the sentence."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this the same as a 'keyword density checker'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They're closely related - a keyword density checker usually expresses a target word's frequency as a percentage of total words, while this tool ranks all words by raw frequency count. You can manually compute density from the counts and total word count this tool provides."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Word Frequency Counter</h1>
         <p style="max-width:60ch;">Paste your text to see which words appear most often, ranked by frequency.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>How can word frequency analysis help with SEO or writing?</h3>
 <p>Word frequency analysis reveals unintentional repetition, helps confirm target keywords appear at a natural density rather than being stuffed, and can surface overused filler words that weaken writing - useful for both editing prose and checking on-page SEO content before publishing.</p>
+</div>
+<div class="faq-item">
+<h3>Does punctuation attached to a word, like 'dog,' or 'dog.', get counted separately from 'dog'?</h3>
+<p>No - punctuation is stripped before counting, so "dog," "dog." and "dog" are all tallied as the same word, avoiding artificially split counts caused by trailing commas or periods.</p>
+</div>
+<div class="faq-item">
+<h3>In the example text, how many times does 'the' appear?</h3>
+<p>Twice - "the quick brown fox jumps over the lazy dog the fox runs fast" actually has 'the' three times (before 'quick,' before 'lazy,' and before second 'fox'), each counted the same regardless of position in the sentence.</p>
+</div>
+<div class="faq-item">
+<h3>Is this the same as a 'keyword density checker'?</h3>
+<p>They're closely related - a keyword density checker usually expresses a target word's frequency as a percentage of total words, while this tool ranks all words by raw frequency count. You can manually compute density from the counts and total word count this tool provides.</p>
 </div></div>
         </div>
       </main>

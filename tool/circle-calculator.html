@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-02",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Divide the area by π, then take the square root: radius = √(area ÷ π)."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I find a circle's diameter if I know its area?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "First find the radius with radius = √(area ÷ π), then double it for the diameter. For an area of 78.54: radius = √(78.54/π) ≈ 5, so diameter = 10."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the diameter of a circle with a circumference of 31.42?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "About 10 - diameter = circumference ÷ π = 31.42 ÷ π ≈ 10, since circumference always equals π times the diameter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does area grow faster than circumference as radius increases?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Circumference scales linearly with radius (2πr) while area scales with radius squared (πr²) - so doubling the radius only doubles the circumference but quadruples the area, which is why larger circles hold disproportionately more area relative to their edge length."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Circle Calculator</h1>
         <p style="max-width:60ch;">Enter any one measurement of a circle - radius, diameter, circumference, or area - to calculate the rest.</p>
-        <p class="last-updated">Last updated: September 2, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>How do I find the radius from the area?</h3>
 <p>Divide the area by π, then take the square root: radius = √(area ÷ π).</p>
+</div>
+<div class="faq-item">
+<h3>How do I find a circle's diameter if I know its area?</h3>
+<p>First find the radius with radius = √(area ÷ π), then double it for the diameter. For an area of 78.54: radius = √(78.54/π) ≈ 5, so diameter = 10.</p>
+</div>
+<div class="faq-item">
+<h3>What is the diameter of a circle with a circumference of 31.42?</h3>
+<p>About 10 - diameter = circumference ÷ π = 31.42 ÷ π ≈ 10, since circumference always equals π times the diameter.</p>
+</div>
+<div class="faq-item">
+<h3>Why does area grow faster than circumference as radius increases?</h3>
+<p>Circumference scales linearly with radius (2πr) while area scales with radius squared (πr²) - so doubling the radius only doubles the circumference but quadruples the area, which is why larger circles hold disproportionately more area relative to their edge length.</p>
 </div></div>
         </div>
       </main>

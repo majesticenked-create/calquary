@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "The snowball method pays off the smallest balance first for quick psychological wins, then rolls that payment into the next-smallest debt; the avalanche method pays off the highest-interest debt first to minimize total interest paid. Avalanche saves more money mathematically, but snowball's early wins help some people stay motivated."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if I set a payment lower than the interest that accrues each month?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The balance won't shrink and can grow instead, since the fixed payment isn't covering the monthly interest charge - this calculator requires a payment above the interest-only amount to produce a finite payoff time; otherwise the debt would never be paid off."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is the payoff time actually calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each month the calculator applies interest to the current balance, subtracts your fixed payment, and repeats until the balance reaches zero, counting the number of months it takes - the same iterative process used in an amortization schedule, just tracked until payoff rather than for a fixed term."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much interest would I pay off a $15,000 balance at 15% with $400/month payments?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It takes about 47 months to pay off, with roughly $3,700 in total interest paid over that period - increasing the monthly payment amount would shorten both the payoff time and the total interest."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Debt Payoff Calculator</h1>
         <p style="max-width:60ch;">Enter your balance, interest rate, and a fixed monthly payment to see how many months it will take to pay off and how much interest you'll pay.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>What's the difference between the debt snowball and debt avalanche methods?</h3>
 <p>The snowball method pays off the smallest balance first for quick psychological wins, then rolls that payment into the next-smallest debt; the avalanche method pays off the highest-interest debt first to minimize total interest paid. Avalanche saves more money mathematically, but snowball's early wins help some people stay motivated.</p>
+</div>
+<div class="faq-item">
+<h3>What happens if I set a payment lower than the interest that accrues each month?</h3>
+<p>The balance won't shrink and can grow instead, since the fixed payment isn't covering the monthly interest charge - this calculator requires a payment above the interest-only amount to produce a finite payoff time; otherwise the debt would never be paid off.</p>
+</div>
+<div class="faq-item">
+<h3>How is the payoff time actually calculated?</h3>
+<p>Each month the calculator applies interest to the current balance, subtracts your fixed payment, and repeats until the balance reaches zero, counting the number of months it takes - the same iterative process used in an amortization schedule, just tracked until payoff rather than for a fixed term.</p>
+</div>
+<div class="faq-item">
+<h3>How much interest would I pay off a $15,000 balance at 15% with $400/month payments?</h3>
+<p>It takes about 47 months to pay off, with roughly $3,700 in total interest paid over that period - increasing the monthly payment amount would shorten both the payoff time and the total interest.</p>
 </div></div>
         </div>
       </main>

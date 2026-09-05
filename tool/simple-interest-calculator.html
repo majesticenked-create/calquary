@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-02",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "For a single compounding period (like one year with annual compounding), simple and compound interest give the same result. Over multiple periods, compound interest always produces more total interest for the lender/investor (or costs more for the borrower) than simple interest at the same nominal rate."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How much total will I repay on a $2,000 loan at 4% simple interest over 5 years?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Interest = $2,000 × 0.04 × 5 = $400, so total repayment is $2,000 + $400 = $2,400 - simple interest stays flat each year since it's always calculated on the original $2,000, not a growing balance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use this calculator for a time period in months instead of years?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Convert months to years first by dividing by 12 - for a 6-month period, enter 0.5 for time, since the formula (principal × rate × time) expects time in years to match the annual interest rate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a simple interest calculator useful for a savings account?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rarely - most savings accounts compound interest (typically daily or monthly), so a simple interest calculation would understate actual growth. Simple interest calculators are more accurate for products explicitly structured that way, like some short-term promissory notes or certain installment loans."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Simple Interest Calculator</h1>
         <p style="max-width:60ch;">Enter the principal, annual interest rate, and time period to calculate simple interest (no compounding).</p>
-        <p class="last-updated">Last updated: September 2, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Does simple interest ever beat compound interest?</h3>
 <p>For a single compounding period (like one year with annual compounding), simple and compound interest give the same result. Over multiple periods, compound interest always produces more total interest for the lender/investor (or costs more for the borrower) than simple interest at the same nominal rate.</p>
+</div>
+<div class="faq-item">
+<h3>How much total will I repay on a $2,000 loan at 4% simple interest over 5 years?</h3>
+<p>Interest = $2,000 × 0.04 × 5 = $400, so total repayment is $2,000 + $400 = $2,400 - simple interest stays flat each year since it's always calculated on the original $2,000, not a growing balance.</p>
+</div>
+<div class="faq-item">
+<h3>Can I use this calculator for a time period in months instead of years?</h3>
+<p>Convert months to years first by dividing by 12 - for a 6-month period, enter 0.5 for time, since the formula (principal × rate × time) expects time in years to match the annual interest rate.</p>
+</div>
+<div class="faq-item">
+<h3>Is a simple interest calculator useful for a savings account?</h3>
+<p>Rarely - most savings accounts compound interest (typically daily or monthly), so a simple interest calculation would understate actual growth. Simple interest calculators are more accurate for products explicitly structured that way, like some short-term promissory notes or certain installment loans.</p>
 </div></div>
         </div>
       </main>

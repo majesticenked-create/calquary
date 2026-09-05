@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-31",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Yes - change the date and time fields to any date; the tool still applies the correct daylight-saving rules for whichever zones and date you choose."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if I convert a time that falls during a DST transition, like the night clocks change?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The tool applies whichever UTC offset is officially in effect for that zone at that exact date and time, so a time that doesn't exist (skipped during spring-forward) or occurs twice (repeated during fall-back) is resolved using the standard time zone database rules rather than left ambiguous."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I convert 2:00 PM Eastern to India time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Set the date and time to 14:00, choose US Eastern as the From zone and India (Kolkata) as the To zone - the result reflects the full offset (typically 9.5 or 10.5 hours depending on US daylight saving), including the half-hour that IST adds."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this the same as a 'UTC time converter'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, in effect - selecting UTC as either the From or To zone converts directly to or from Coordinated Universal Time, which is what most 'UTC converter' tools do specifically."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Time Zone Converter</h1>
         <p style="max-width:60ch;">Enter a date and time in one time zone to see the equivalent time in another - defaults to right now.</p>
-        <p class="last-updated">Last updated: August 31, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Can I convert a time from the past or future, not just right now?</h3>
 <p>Yes - change the date and time fields to any date; the tool still applies the correct daylight-saving rules for whichever zones and date you choose.</p>
+</div>
+<div class="faq-item">
+<h3>What happens if I convert a time that falls during a DST transition, like the night clocks change?</h3>
+<p>The tool applies whichever UTC offset is officially in effect for that zone at that exact date and time, so a time that doesn't exist (skipped during spring-forward) or occurs twice (repeated during fall-back) is resolved using the standard time zone database rules rather than left ambiguous.</p>
+</div>
+<div class="faq-item">
+<h3>How do I convert 2:00 PM Eastern to India time?</h3>
+<p>Set the date and time to 14:00, choose US Eastern as the From zone and India (Kolkata) as the To zone - the result reflects the full offset (typically 9.5 or 10.5 hours depending on US daylight saving), including the half-hour that IST adds.</p>
+</div>
+<div class="faq-item">
+<h3>Is this the same as a 'UTC time converter'?</h3>
+<p>Yes, in effect - selecting UTC as either the From or To zone converts directly to or from Coordinated Universal Time, which is what most 'UTC converter' tools do specifically.</p>
 </div></div>
         </div>
       </main>

@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-02",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Use a t-score (from the t-distribution) for smaller samples, typically under 30, since it accounts for extra uncertainty in a small-sample standard deviation estimate. This calculator uses the z-distribution, which is a reasonable approximation once your sample size is 30 or more."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate a 99% confidence interval instead of 95%?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Select 99% as the confidence level, which uses a larger z-score (about 2.576 instead of 1.96) - the resulting interval will be wider than a 95% interval for the same data, since higher confidence requires a larger margin of error."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the confidence interval for a sample mean of 50, standard deviation of 10, and n=100 at 95% confidence?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Margin of error = 1.96 × (10/√100) = 1.96 × 1 = 1.96. The interval is 50 ± 1.96, or about 48.04 to 51.96."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a wider confidence interval mean the estimate is less accurate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It means there's more uncertainty about the true population mean's exact location, often because of a smaller sample size, higher variability in the data, or a higher chosen confidence level - it's not that the sample mean itself is wrong, just that the range of plausible true values is broader."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Confidence Interval Calculator</h1>
         <p style="max-width:60ch;">Enter a sample mean, standard deviation, and sample size to calculate a confidence interval.</p>
-        <p class="last-updated">Last updated: September 2, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Should I use a z-score or t-score for my confidence interval?</h3>
 <p>Use a t-score (from the t-distribution) for smaller samples, typically under 30, since it accounts for extra uncertainty in a small-sample standard deviation estimate. This calculator uses the z-distribution, which is a reasonable approximation once your sample size is 30 or more.</p>
+</div>
+<div class="faq-item">
+<h3>How do I calculate a 99% confidence interval instead of 95%?</h3>
+<p>Select 99% as the confidence level, which uses a larger z-score (about 2.576 instead of 1.96) - the resulting interval will be wider than a 95% interval for the same data, since higher confidence requires a larger margin of error.</p>
+</div>
+<div class="faq-item">
+<h3>What's the confidence interval for a sample mean of 50, standard deviation of 10, and n=100 at 95% confidence?</h3>
+<p>Margin of error = 1.96 × (10/√100) = 1.96 × 1 = 1.96. The interval is 50 ± 1.96, or about 48.04 to 51.96.</p>
+</div>
+<div class="faq-item">
+<h3>Does a wider confidence interval mean the estimate is less accurate?</h3>
+<p>It means there's more uncertainty about the true population mean's exact location, often because of a smaller sample size, higher variability in the data, or a higher chosen confidence level - it's not that the sample mean itself is wrong, just that the range of plausible true values is broader.</p>
 </div></div>
         </div>
       </main>

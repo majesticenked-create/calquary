@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Both formulas are empirical regressions only validated within specific conditions - heat index needs warm, humid conditions (roughly 80°F+ with 40%+ humidity) and wind chill needs cold, breezy conditions (roughly 50°F or below with wind of at least 3 mph). Outside those ranges the formulas can produce misleading results, so they're hidden instead."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "At what dew point does it start to feel muggy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most people start noticing humidity as uncomfortable around a 60-65°F dew point, with 70°F+ considered oppressive - below 55°F generally feels comfortable regardless of the air temperature."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can heat index and wind chill both apply at the same time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - they're mutually exclusive by design, since heat index requires warm conditions (roughly 80°F+) and wind chill requires cold conditions (roughly 50°F or below). Outside either range, or in the gap between them, this calculator shows N/A for whichever doesn't apply."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does the calculator need wind speed for wind chill but not for heat index?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wind chill's formula is specifically built around how moving air strips heat from exposed skin, so wind speed is a required input - heat index instead models how humidity impairs sweat evaporation, a process wind speed doesn't factor into in the standard NWS heat index formula this calculator uses."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Dew Point, Heat Index & Wind Chill Calculator</h1>
         <p style="max-width:60ch;">Enter temperature, relative humidity, and wind speed to calculate dew point, heat index, and wind chill.</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Why does the calculator sometimes show heat index or wind chill as N/A?</h3>
 <p>Both formulas are empirical regressions only validated within specific conditions - heat index needs warm, humid conditions (roughly 80°F+ with 40%+ humidity) and wind chill needs cold, breezy conditions (roughly 50°F or below with wind of at least 3 mph). Outside those ranges the formulas can produce misleading results, so they're hidden instead.</p>
+</div>
+<div class="faq-item">
+<h3>At what dew point does it start to feel muggy?</h3>
+<p>Most people start noticing humidity as uncomfortable around a 60-65°F dew point, with 70°F+ considered oppressive - below 55°F generally feels comfortable regardless of the air temperature.</p>
+</div>
+<div class="faq-item">
+<h3>Can heat index and wind chill both apply at the same time?</h3>
+<p>No - they're mutually exclusive by design, since heat index requires warm conditions (roughly 80°F+) and wind chill requires cold conditions (roughly 50°F or below). Outside either range, or in the gap between them, this calculator shows N/A for whichever doesn't apply.</p>
+</div>
+<div class="faq-item">
+<h3>Why does the calculator need wind speed for wind chill but not for heat index?</h3>
+<p>Wind chill's formula is specifically built around how moving air strips heat from exposed skin, so wind speed is a required input - heat index instead models how humidity impairs sweat evaporation, a process wind speed doesn't factor into in the standard NWS heat index formula this calculator uses.</p>
 </div></div>
         </div>
       </main>

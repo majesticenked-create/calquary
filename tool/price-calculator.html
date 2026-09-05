@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-31",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "No - the Discount Calculator works backward from a sale price and discount percentage to find savings. This tool works forward from your cost and a target profit margin to find what price to charge."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "If I want a 50% markup instead of a 50% margin, do I get the same selling price?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - a 50% markup means selling price = cost × 1.50, while a 50% margin means selling price = cost ÷ (1 − 0.50) = cost × 2. On a $40 cost, a 50% markup gives a $60 price, but a 50% margin gives an $80 price, since margin is measured against the selling price, not the cost."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What margin do I need to double my cost as the selling price?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A 50% margin. Selling price = cost ÷ (1 − margin), and setting that equal to 2 × cost means (1 − margin) = 0.5, so margin = 50% - the same margin percentage that maps to a 100% markup."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can this calculator be used to price a service instead of a product?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - the math is identical whether 'cost' represents your material cost for a product or your total cost to deliver a service (labor, overhead, etc.); enter your total cost and target margin and the formula works the same way either way."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Price Calculator</h1>
         <p style="max-width:60ch;">Enter your cost and target profit margin to calculate the selling price, profit, and equivalent markup.</p>
-        <p class="last-updated">Last updated: August 31, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Is this the same as the Discount Calculator?</h3>
 <p>No - the Discount Calculator works backward from a sale price and discount percentage to find savings. This tool works forward from your cost and a target profit margin to find what price to charge.</p>
+</div>
+<div class="faq-item">
+<h3>If I want a 50% markup instead of a 50% margin, do I get the same selling price?</h3>
+<p>No - a 50% markup means selling price = cost × 1.50, while a 50% margin means selling price = cost ÷ (1 − 0.50) = cost × 2. On a $40 cost, a 50% markup gives a $60 price, but a 50% margin gives an $80 price, since margin is measured against the selling price, not the cost.</p>
+</div>
+<div class="faq-item">
+<h3>What margin do I need to double my cost as the selling price?</h3>
+<p>A 50% margin. Selling price = cost ÷ (1 − margin), and setting that equal to 2 × cost means (1 − margin) = 0.5, so margin = 50% - the same margin percentage that maps to a 100% markup.</p>
+</div>
+<div class="faq-item">
+<h3>Can this calculator be used to price a service instead of a product?</h3>
+<p>Yes - the math is identical whether 'cost' represents your material cost for a product or your total cost to deliver a service (labor, overhead, etc.); enter your total cost and target margin and the formula works the same way either way.</p>
 </div></div>
         </div>
       </main>

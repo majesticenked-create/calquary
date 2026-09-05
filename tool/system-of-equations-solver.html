@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Yes - \"systems of equations solver\" and \"systems of equations calculator\" both describe finding the (x, y) that satisfies two linear equations simultaneously, which is exactly what this tool does."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What does the determinant (ad − bc) actually represent geometrically?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It reflects whether the two lines have different slopes - a nonzero determinant means the lines intersect at exactly one point (a unique solution), while a zero determinant means the lines are parallel (either no solution or infinitely many, depending on the intercepts)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can this solve equations with fractions or decimals as coefficients?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - Cramer's rule works with any real number coefficients, including decimals and negative values, so equations like 2.5x + 1.2y = 7.4 work exactly like whole-number ones."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the solution to 2x + 3y = 16 and x − y = 2?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "x = 4.4, y = 2.4 - using Cramer's rule: determinant = (2)(-1) − (3)(1) = -5, x = ((16)(-1) − (3)(2))/(-5) = (-22)/(-5) = 4.4, y = ((2)(2) − (16)(1))/(-5) = (-12)/(-5) = 2.4."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>System of Equations Solver</h1>
         <p style="max-width:60ch;">Enter the coefficients for two linear equations (ax + by = e and cx + dy = f) to solve for x and y.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Is a 'systems of equations calculator' the same as this solver?</h3>
 <p>Yes - "systems of equations solver" and "systems of equations calculator" both describe finding the (x, y) that satisfies two linear equations simultaneously, which is exactly what this tool does.</p>
+</div>
+<div class="faq-item">
+<h3>What does the determinant (ad − bc) actually represent geometrically?</h3>
+<p>It reflects whether the two lines have different slopes - a nonzero determinant means the lines intersect at exactly one point (a unique solution), while a zero determinant means the lines are parallel (either no solution or infinitely many, depending on the intercepts).</p>
+</div>
+<div class="faq-item">
+<h3>Can this solve equations with fractions or decimals as coefficients?</h3>
+<p>Yes - Cramer's rule works with any real number coefficients, including decimals and negative values, so equations like 2.5x + 1.2y = 7.4 work exactly like whole-number ones.</p>
+</div>
+<div class="faq-item">
+<h3>What's the solution to 2x + 3y = 16 and x − y = 2?</h3>
+<p>x = 4.4, y = 2.4 - using Cramer's rule: determinant = (2)(-1) − (3)(1) = -5, x = ((16)(-1) − (3)(2))/(-5) = (-22)/(-5) = 4.4, y = ((2)(2) − (16)(1))/(-5) = (-12)/(-5) = 2.4.</p>
 </div></div>
         </div>
       </main>

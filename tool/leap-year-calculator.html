@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "A solar year is about 365.2422 days, not exactly 365, so without leap years the calendar would drift out of sync with the seasons by about a day every four years. Adding a leap day roughly every four years (with century-year exceptions) keeps the calendar aligned with Earth's orbit over long periods."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How many days are in February during a leap year?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "29 days, instead of the usual 28 - the extra day is always added to February specifically, which is why leap years have 366 total days instead of 365."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was the year 2000 a leap year, given it's a century year?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - 2000 is divisible by 400 (not just 100), so it satisfies the century-year exception and counts as a leap year, unlike 1900 or 2100 which are divisible by 100 but not 400."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I find the next leap year after any given year, not just 2024?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Enter any year above and the calculator finds the next one after it automatically - it checks each following year against the divisible-by-4/century/400 rule until it finds a match, typically within 4 years."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Leap Year Calculator</h1>
         <p style="max-width:60ch;">Enter a year to check whether it's a leap year and find the next leap year after it.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Why was the leap year rule created in the first place?</h3>
 <p>A solar year is about 365.2422 days, not exactly 365, so without leap years the calendar would drift out of sync with the seasons by about a day every four years. Adding a leap day roughly every four years (with century-year exceptions) keeps the calendar aligned with Earth's orbit over long periods.</p>
+</div>
+<div class="faq-item">
+<h3>How many days are in February during a leap year?</h3>
+<p>29 days, instead of the usual 28 - the extra day is always added to February specifically, which is why leap years have 366 total days instead of 365.</p>
+</div>
+<div class="faq-item">
+<h3>Was the year 2000 a leap year, given it's a century year?</h3>
+<p>Yes - 2000 is divisible by 400 (not just 100), so it satisfies the century-year exception and counts as a leap year, unlike 1900 or 2100 which are divisible by 100 but not 400.</p>
+</div>
+<div class="faq-item">
+<h3>How do I find the next leap year after any given year, not just 2024?</h3>
+<p>Enter any year above and the calculator finds the next one after it automatically - it checks each following year against the divisible-by-4/century/400 rule until it finds a match, typically within 4 years.</p>
 </div></div>
         </div>
       </main>

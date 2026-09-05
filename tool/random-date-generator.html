@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Yes - choose your start date, end date, and how many dates you need above, then click Calculate to get one or more random dates."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Can the same random date be generated twice if I ask for multiple dates?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - each date is picked independently, so with a wide enough range and enough picks, duplicates are possible, similar to rolling the same number twice on a die."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "If I set the range to just one single day, what happens?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Setting the start and end date to the same day returns that day every time, since there's only one possible date in the range to pick from."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is this different from a 'random day of the week' generator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This tool picks a full calendar date (day, month, and year) from your chosen range, not just a weekday name - if you only need a random weekday, you'd want a simpler day-of-week picker instead."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Random Date Generator</h1>
         <p style="max-width:60ch;">Choose a start date, end date, and how many random dates to generate.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Is 'get random date' the same as this random date generator?</h3>
 <p>Yes - choose your start date, end date, and how many dates you need above, then click Calculate to get one or more random dates.</p>
+</div>
+<div class="faq-item">
+<h3>Can the same random date be generated twice if I ask for multiple dates?</h3>
+<p>Yes - each date is picked independently, so with a wide enough range and enough picks, duplicates are possible, similar to rolling the same number twice on a die.</p>
+</div>
+<div class="faq-item">
+<h3>If I set the range to just one single day, what happens?</h3>
+<p>Setting the start and end date to the same day returns that day every time, since there's only one possible date in the range to pick from.</p>
+</div>
+<div class="faq-item">
+<h3>How is this different from a 'random day of the week' generator?</h3>
+<p>This tool picks a full calendar date (day, month, and year) from your chosen range, not just a weekday name - if you only need a random weekday, you'd want a simpler day-of-week picker instead.</p>
 </div></div>
         </div>
       </main>

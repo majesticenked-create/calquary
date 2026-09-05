@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-02",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Ohm's law (V=IR) relates three quantities - knowing any two lets you solve for the third algebraically, but with only one known value, there isn't enough information to determine the other two uniquely."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate resistance if I know voltage and current?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "R = V / I. For a circuit with 12 volts and 3 amps of current: R = 12 / 3 = 4 ohms."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the voltage across a 5-ohm resistor carrying 4 amps?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "20 volts - using V = I × R = 4 × 5 = 20 V."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I enter voltage and power instead of voltage and current?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - this calculator solves specifically from two of voltage, current, and resistance. If you have voltage and power instead, first find current with I = P/V, then enter voltage and that current to get resistance and confirm power."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Ohm's Law Calculator</h1>
         <p style="max-width:60ch;">Enter any two of voltage, current, and resistance to calculate the other two, plus power.</p>
-        <p class="last-updated">Last updated: September 2, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Why do I need to enter exactly two known values?</h3>
 <p>Ohm's law (V=IR) relates three quantities - knowing any two lets you solve for the third algebraically, but with only one known value, there isn't enough information to determine the other two uniquely.</p>
+</div>
+<div class="faq-item">
+<h3>How do I calculate resistance if I know voltage and current?</h3>
+<p>R = V / I. For a circuit with 12 volts and 3 amps of current: R = 12 / 3 = 4 ohms.</p>
+</div>
+<div class="faq-item">
+<h3>What is the voltage across a 5-ohm resistor carrying 4 amps?</h3>
+<p>20 volts - using V = I × R = 4 × 5 = 20 V.</p>
+</div>
+<div class="faq-item">
+<h3>Can I enter voltage and power instead of voltage and current?</h3>
+<p>No - this calculator solves specifically from two of voltage, current, and resistance. If you have voltage and power instead, first find current with I = P/V, then enter voltage and that current to get resistance and confirm power.</p>
 </div></div>
         </div>
       </main>

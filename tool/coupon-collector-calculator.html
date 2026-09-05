@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Yes - this calculation assumes a uniform distribution, where each of the n items has an equal 1/n chance on every draw. If some items are rarer than others, the actual expected number of draws will be higher than this estimate."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the expected draws change as n grows larger?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It grows roughly as n × ln(n), so doubling n more than doubles the expected number of draws - for 100 items, expected draws are about 519, far more than double the ~14.7 draws needed for 6 items."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the minimum possible number of draws to collect all n items?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "n draws - that's the theoretical best case where every single draw happens to be a new, previously uncollected item. The expected value calculated here is always higher than this minimum, since collisions with already-collected items are likely."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this the same math used for calculating trading card or loot box collection odds?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - the coupon collector's problem is the standard model for how many random pulls it takes to complete a full set, whether that's cereal box prizes, trading cards, or in-game loot drops with equal drop rates."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Coupon Collector Calculator</h1>
         <p style="max-width:60ch;">Enter how many distinct items exist (like coupon types, cards, or prizes) to find the expected number of random draws to collect them all.</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Does this assume every item is equally likely to be drawn?</h3>
 <p>Yes - this calculation assumes a uniform distribution, where each of the n items has an equal 1/n chance on every draw. If some items are rarer than others, the actual expected number of draws will be higher than this estimate.</p>
+</div>
+<div class="faq-item">
+<h3>How does the expected draws change as n grows larger?</h3>
+<p>It grows roughly as n × ln(n), so doubling n more than doubles the expected number of draws - for 100 items, expected draws are about 519, far more than double the ~14.7 draws needed for 6 items.</p>
+</div>
+<div class="faq-item">
+<h3>What's the minimum possible number of draws to collect all n items?</h3>
+<p>n draws - that's the theoretical best case where every single draw happens to be a new, previously uncollected item. The expected value calculated here is always higher than this minimum, since collisions with already-collected items are likely.</p>
+</div>
+<div class="faq-item">
+<h3>Is this the same math used for calculating trading card or loot box collection odds?</h3>
+<p>Yes - the coupon collector's problem is the standard model for how many random pulls it takes to complete a full set, whether that's cereal box prizes, trading cards, or in-game loot drops with equal drop rates.</p>
 </div></div>
         </div>
       </main>

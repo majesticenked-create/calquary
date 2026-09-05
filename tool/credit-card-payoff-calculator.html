@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Yes - credit card interest typically compounds daily on your outstanding balance, so an extra payment made as soon as possible reduces the balance interest accrues on sooner, saving more than the same amount paid at the end of the billing cycle."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the 'minimum payment floor' field actually for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Card issuers typically require the minimum payment to be the greater of a percentage of the balance or a flat dollar floor (often around $25-35) - this ensures the calculated minimum payment never drops below that floor amount even as the balance shrinks and the percentage-based portion gets very small."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does the required minimum payment decrease every month?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because it's calculated as a percentage of the current balance (plus interest), and the balance shrinks slightly each month as you pay it down - a smaller balance produces a smaller required percentage-based payment, which is exactly why minimum-payment payoffs stretch out for so long."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this the same as the Debt Payoff Calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - the Debt Payoff Calculator assumes a fixed payment amount every month until the balance is gone. This calculator models a declining minimum payment that shrinks as the balance shrinks, which is how real credit card minimums typically work and why payoff times run much longer."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Credit Card Payoff Calculator</h1>
         <p style="max-width:60ch;">Enter your balance, APR, and minimum payment structure to see how long it takes to pay off - and how much interest you'll pay - if you only pay the minimum.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Does making an extra payment mid-month reduce interest faster than a normal payment?</h3>
 <p>Yes - credit card interest typically compounds daily on your outstanding balance, so an extra payment made as soon as possible reduces the balance interest accrues on sooner, saving more than the same amount paid at the end of the billing cycle.</p>
+</div>
+<div class="faq-item">
+<h3>What's the 'minimum payment floor' field actually for?</h3>
+<p>Card issuers typically require the minimum payment to be the greater of a percentage of the balance or a flat dollar floor (often around $25-35) - this ensures the calculated minimum payment never drops below that floor amount even as the balance shrinks and the percentage-based portion gets very small.</p>
+</div>
+<div class="faq-item">
+<h3>Why does the required minimum payment decrease every month?</h3>
+<p>Because it's calculated as a percentage of the current balance (plus interest), and the balance shrinks slightly each month as you pay it down - a smaller balance produces a smaller required percentage-based payment, which is exactly why minimum-payment payoffs stretch out for so long.</p>
+</div>
+<div class="faq-item">
+<h3>Is this the same as the Debt Payoff Calculator?</h3>
+<p>No - the Debt Payoff Calculator assumes a fixed payment amount every month until the balance is gone. This calculator models a declining minimum payment that shrinks as the balance shrinks, which is how real credit card minimums typically work and why payoff times run much longer.</p>
 </div></div>
         </div>
       </main>

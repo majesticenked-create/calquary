@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Pick any two points on the line, subtract their y-coordinates and their x-coordinates, then divide: slope = (y2 − y1) / (x2 − x1). Enter your two points above and this calculator does that division for you, along with the line's full equation."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What does an 'undefined slope' mean and when does it happen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Slope is undefined when the two points share the same x-coordinate (a vertical line), because the slope formula's denominator (x2 − x1) becomes zero, and division by zero has no defined result."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I convert a slope value into an angle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Take the inverse tangent (arctan) of the slope: angle = arctan(m). A slope of 1 corresponds to a 45° angle, since tan(45°) = 1."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the slope between (1,2) and (4,8)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "2 - m = (8-2)/(4-1) = 6/3 = 2, meaning y increases by 2 units for every 1 unit increase in x."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Slope Calculator</h1>
         <p style="max-width:60ch;">Enter the coordinates of two points to calculate the slope of the line between them, using m = (y2 − y1) / (x2 − x1).</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>How do you find slope?</h3>
 <p>Pick any two points on the line, subtract their y-coordinates and their x-coordinates, then divide: slope = (y2 − y1) / (x2 − x1). Enter your two points above and this calculator does that division for you, along with the line's full equation.</p>
+</div>
+<div class="faq-item">
+<h3>What does an 'undefined slope' mean and when does it happen?</h3>
+<p>Slope is undefined when the two points share the same x-coordinate (a vertical line), because the slope formula's denominator (x2 − x1) becomes zero, and division by zero has no defined result.</p>
+</div>
+<div class="faq-item">
+<h3>How do I convert a slope value into an angle?</h3>
+<p>Take the inverse tangent (arctan) of the slope: angle = arctan(m). A slope of 1 corresponds to a 45° angle, since tan(45°) = 1.</p>
+</div>
+<div class="faq-item">
+<h3>What's the slope between (1,2) and (4,8)?</h3>
+<p>2 - m = (8-2)/(4-1) = 6/3 = 2, meaning y increases by 2 units for every 1 unit increase in x.</p>
 </div></div>
         </div>
       </main>

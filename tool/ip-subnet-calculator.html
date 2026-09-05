@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-02",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "A /32 has exactly one address total (used to identify a single host, like a loopback interface), and a /31 has only 2 addresses with no room for separate network/broadcast addresses - both are typically used for point-to-point links where every address is directly usable."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the CIDR prefix length change if I switch from /24 to /25?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A /25 splits what would be one /24 network into two smaller subnets, each with 128 total addresses (126 usable hosts) instead of 256 (254 usable) - moving to a longer prefix always shrinks the address space per subnet while creating more subnets overall."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the usable host range for 192.168.1.0/24?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "192.168.1.1 through 192.168.1.254 - the network address (192.168.1.0) and broadcast address (192.168.1.255) are excluded, leaving 254 assignable host addresses in between."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is 'IP subnet calculator' the same tool as a 'CIDR calculator'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, essentially - both take an IP address and a prefix length (or combined CIDR notation) and compute the same network address, broadcast address, and usable host range; this tool takes the IP and prefix as separate fields rather than combined slash notation."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>IP Subnet Calculator</h1>
         <p style="max-width:60ch;">Enter an IPv4 address and CIDR prefix length to calculate the subnet's network address, broadcast address, and usable host range.</p>
-        <p class="last-updated">Last updated: September 2, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Why do /31 and /32 subnets have no usable host range?</h3>
 <p>A /32 has exactly one address total (used to identify a single host, like a loopback interface), and a /31 has only 2 addresses with no room for separate network/broadcast addresses - both are typically used for point-to-point links where every address is directly usable.</p>
+</div>
+<div class="faq-item">
+<h3>How does the CIDR prefix length change if I switch from /24 to /25?</h3>
+<p>A /25 splits what would be one /24 network into two smaller subnets, each with 128 total addresses (126 usable hosts) instead of 256 (254 usable) - moving to a longer prefix always shrinks the address space per subnet while creating more subnets overall.</p>
+</div>
+<div class="faq-item">
+<h3>What's the usable host range for 192.168.1.0/24?</h3>
+<p>192.168.1.1 through 192.168.1.254 - the network address (192.168.1.0) and broadcast address (192.168.1.255) are excluded, leaving 254 assignable host addresses in between.</p>
+</div>
+<div class="faq-item">
+<h3>Is 'IP subnet calculator' the same tool as a 'CIDR calculator'?</h3>
+<p>Yes, essentially - both take an IP address and a prefix length (or combined CIDR notation) and compute the same network address, broadcast address, and usable host range; this tool takes the IP and prefix as separate fields rather than combined slash notation.</p>
 </div></div>
         </div>
       </main>

@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "The probability of getting k or fewer successes, not exactly k - useful for questions like \"what's the probability of drawing at most 2 hearts,\" which sums the individual probabilities for 0, 1, and 2 hearts."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What do N, K, n, and k each represent in plain terms?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "N is the total population (e.g., a full deck of 52 cards), K is how many 'success' items are in that population (e.g., 13 hearts), n is how many items you draw (your sample size), and k is how many successes you want among those drawn."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if k is larger than either n or K?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The probability is 0 - you can't draw more successes than you actually sampled (k > n) or more successes than exist in the population (k > K), so those combinations are mathematically impossible."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is the mean of a hypergeometric distribution calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mean = n × (K/N) - for the 5-card hand from a 52-card deck with 13 hearts, the expected number of hearts is 5 × (13/52) = 1.25, even though you can't actually draw a fractional number of hearts in any single hand."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Hypergeometric Distribution Calculator</h1>
         <p style="max-width:60ch;">Enter the population size, number of successes in the population, sample size, and number of successes you want to find the exact and cumulative probability.</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>What does the cumulative probability (P(X ≤ k)) tell me?</h3>
 <p>The probability of getting k or fewer successes, not exactly k - useful for questions like "what's the probability of drawing at most 2 hearts," which sums the individual probabilities for 0, 1, and 2 hearts.</p>
+</div>
+<div class="faq-item">
+<h3>What do N, K, n, and k each represent in plain terms?</h3>
+<p>N is the total population (e.g., a full deck of 52 cards), K is how many 'success' items are in that population (e.g., 13 hearts), n is how many items you draw (your sample size), and k is how many successes you want among those drawn.</p>
+</div>
+<div class="faq-item">
+<h3>What happens if k is larger than either n or K?</h3>
+<p>The probability is 0 - you can't draw more successes than you actually sampled (k > n) or more successes than exist in the population (k > K), so those combinations are mathematically impossible.</p>
+</div>
+<div class="faq-item">
+<h3>How is the mean of a hypergeometric distribution calculated?</h3>
+<p>Mean = n × (K/N) - for the 5-card hand from a 52-card deck with 13 hearts, the expected number of hearts is 5 × (13/52) = 1.25, even though you can't actually draw a fractional number of hearts in any single hand.</p>
 </div></div>
         </div>
       </main>

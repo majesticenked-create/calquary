@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-02",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Range measures the spread of the data (maximum minus minimum), while mean and median describe its center - two data sets can have identical means but very different ranges, reflecting very different amounts of variability."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How does this calculator find the median for an even number of data points?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It averages the two middle values after sorting the data. For the set 2, 4, 6, 8, the two middle numbers are 4 and 6, so the median is (4+6)/2 = 5."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the mean, median, and mode of 3, 7, 7, 9, 100?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mean = (3+7+7+9+100)/5 = 25.2. Median (middle of sorted list) = 7. Mode = 7 (appears twice). Notice how the single outlier (100) pulls the mean well above the median and mode."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to sort my numbers before entering them?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - this calculator sorts the data automatically to find the median and identify the range's minimum and maximum, so you can paste numbers in any order, separated by commas or line breaks."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Mean, Median, Mode & Range Calculator</h1>
         <p style="max-width:60ch;">Enter a list of numbers (comma or line separated) to calculate the mean, median, mode, and range.</p>
-        <p class="last-updated">Last updated: September 2, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>What does range tell you that mean or median doesn't?</h3>
 <p>Range measures the spread of the data (maximum minus minimum), while mean and median describe its center - two data sets can have identical means but very different ranges, reflecting very different amounts of variability.</p>
+</div>
+<div class="faq-item">
+<h3>How does this calculator find the median for an even number of data points?</h3>
+<p>It averages the two middle values after sorting the data. For the set 2, 4, 6, 8, the two middle numbers are 4 and 6, so the median is (4+6)/2 = 5.</p>
+</div>
+<div class="faq-item">
+<h3>What is the mean, median, and mode of 3, 7, 7, 9, 100?</h3>
+<p>Mean = (3+7+7+9+100)/5 = 25.2. Median (middle of sorted list) = 7. Mode = 7 (appears twice). Notice how the single outlier (100) pulls the mean well above the median and mode.</p>
+</div>
+<div class="faq-item">
+<h3>Do I need to sort my numbers before entering them?</h3>
+<p>No - this calculator sorts the data automatically to find the median and identify the range's minimum and maximum, so you can paste numbers in any order, separated by commas or line breaks.</p>
 </div></div>
         </div>
       </main>

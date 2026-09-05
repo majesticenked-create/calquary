@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "It converts to other forms of energy - heat from friction and deformation, sound from the impact, and permanent structural deformation of the colliding objects - rather than disappearing, consistent with the overall conservation of energy."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What if the two objects have equal mass in an elastic collision?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They simply exchange velocities - the elastic collision formulas simplify so that v1f = v2 and v2f = v1 when m1 = m2, a classic result you can see with equal-mass billiard balls or Newton's cradle."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I find the final velocity of a perfectly inelastic collision?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "v_final = (m1×v1 + m2×v2) / (m1+m2), since the objects stick together and move at one shared velocity. For a 2 kg object at 5 m/s hitting a stationary 3 kg object: (2×5 + 3×0)/(2+3) = 10/5 = 2 m/s."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this calculator handle collisions in two dimensions, like an angled impact?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - this calculator only solves 1D (head-on) collisions along a single line of motion. A 2D collision requires separately conserving momentum along two perpendicular axes, which needs the objects' angles as additional inputs."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Momentum and Collision Calculator</h1>
         <p style="max-width:60ch;">Enter the mass and velocity of two objects to calculate their velocities after an elastic or perfectly inelastic collision.</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>What happens to the 'lost' kinetic energy in an inelastic collision?</h3>
 <p>It converts to other forms of energy - heat from friction and deformation, sound from the impact, and permanent structural deformation of the colliding objects - rather than disappearing, consistent with the overall conservation of energy.</p>
+</div>
+<div class="faq-item">
+<h3>What if the two objects have equal mass in an elastic collision?</h3>
+<p>They simply exchange velocities - the elastic collision formulas simplify so that v1f = v2 and v2f = v1 when m1 = m2, a classic result you can see with equal-mass billiard balls or Newton's cradle.</p>
+</div>
+<div class="faq-item">
+<h3>How do I find the final velocity of a perfectly inelastic collision?</h3>
+<p>v_final = (m1×v1 + m2×v2) / (m1+m2), since the objects stick together and move at one shared velocity. For a 2 kg object at 5 m/s hitting a stationary 3 kg object: (2×5 + 3×0)/(2+3) = 10/5 = 2 m/s.</p>
+</div>
+<div class="faq-item">
+<h3>Does this calculator handle collisions in two dimensions, like an angled impact?</h3>
+<p>No - this calculator only solves 1D (head-on) collisions along a single line of motion. A 2D collision requires separately conserving momentum along two perpendicular axes, which needs the objects' angles as additional inputs.</p>
 </div></div>
         </div>
       </main>

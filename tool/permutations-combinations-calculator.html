@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Every combination of r items can be arranged in r! different orders, and each of those orderings counts as a separate permutation - so permutations = combinations × r!, or equivalently combinations = permutations ÷ r!."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What is 5 choose 5 (5C5), and why does it equal 1?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1 - there's only one way to choose all 5 items from a group of 5 (you simply take everyone), which the formula confirms: 5!/(5!×0!) = 1, since 0! is defined as 1."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many different 4-letter arrangements can be made from 6 distinct letters?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "360 - using nPr = n!/(n-r)! = 6!/(6-4)! = 720/2 = 360, since order matters for an arrangement (permutation)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is nCr always the same value whether you compute it as 'n choose r' or 'n choose (n-r)'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Choosing r items to include is mathematically identical to choosing the (n-r) items to leave out - for example, 10C3 = 10C7 = 120, because both describe the same act of splitting 10 items into a group of 3 and a group of 7."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Permutations and Combinations Calculator</h1>
         <p style="max-width:60ch;">Enter n (total items) and r (items chosen) to calculate permutations (order matters) and combinations (order doesn't matter).</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Why is nPr always nCr multiplied by r!?</h3>
 <p>Every combination of r items can be arranged in r! different orders, and each of those orderings counts as a separate permutation - so permutations = combinations × r!, or equivalently combinations = permutations ÷ r!.</p>
+</div>
+<div class="faq-item">
+<h3>What is 5 choose 5 (5C5), and why does it equal 1?</h3>
+<p>1 - there's only one way to choose all 5 items from a group of 5 (you simply take everyone), which the formula confirms: 5!/(5!×0!) = 1, since 0! is defined as 1.</p>
+</div>
+<div class="faq-item">
+<h3>How many different 4-letter arrangements can be made from 6 distinct letters?</h3>
+<p>360 - using nPr = n!/(n-r)! = 6!/(6-4)! = 720/2 = 360, since order matters for an arrangement (permutation).</p>
+</div>
+<div class="faq-item">
+<h3>Why is nCr always the same value whether you compute it as 'n choose r' or 'n choose (n-r)'?</h3>
+<p>Choosing r items to include is mathematically identical to choosing the (n-r) items to leave out - for example, 10C3 = 10C7 = 120, because both describe the same act of splitting 10 items into a group of 3 and a group of 7.</p>
 </div></div>
         </div>
       </main>

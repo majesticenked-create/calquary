@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "One item per line, formatted as \"name, weight\" - for example \"Bronze, 6\". The last comma-separated value on each line is read as the weight, and everything before it is the item name."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if I give an item a weight of 0?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It's included in the list but can never be selected - a weight of 0 means a 0% share of the total, so the picker effectively skips it while still displaying it as an option."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "If I have three items each weighted 1, what are the odds for each?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Exactly 1/3 (about 33.3%) each, since the weights are equal - the total is 3, and each item's share is 1 divided by 3, regardless of what the actual weight numbers are."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is this different from a 'random name picker' or 'wheel spinner'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A plain random name picker or wheel spinner gives every entry an equal chance. This tool is for when outcomes shouldn't be equally likely - like a loot table where rare items should come up less often than common ones."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Weighted Random Picker</h1>
         <p style="max-width:60ch;">Enter items with their weights (one "item, weight" pair per line) to pick a random winner, where higher weights are more likely.</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>What format does my list need to be in?</h3>
 <p>One item per line, formatted as "name, weight" - for example "Bronze, 6". The last comma-separated value on each line is read as the weight, and everything before it is the item name.</p>
+</div>
+<div class="faq-item">
+<h3>What happens if I give an item a weight of 0?</h3>
+<p>It's included in the list but can never be selected - a weight of 0 means a 0% share of the total, so the picker effectively skips it while still displaying it as an option.</p>
+</div>
+<div class="faq-item">
+<h3>If I have three items each weighted 1, what are the odds for each?</h3>
+<p>Exactly 1/3 (about 33.3%) each, since the weights are equal - the total is 3, and each item's share is 1 divided by 3, regardless of what the actual weight numbers are.</p>
+</div>
+<div class="faq-item">
+<h3>How is this different from a 'random name picker' or 'wheel spinner'?</h3>
+<p>A plain random name picker or wheel spinner gives every entry an equal chance. This tool is for when outcomes shouldn't be equally likely - like a loot table where rare items should come up less often than common ones.</p>
 </div></div>
         </div>
       </main>

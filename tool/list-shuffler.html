@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Yes - paste any list (songs, names, topics) one per line, and it works for any of those use cases the same way."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Will shuffling the same list twice give the same result?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - each shuffle draws fresh random values, so running the tool again on the same input list produces a new, independent random order each time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "If I shuffle a 5-item list, how many possible orders are there?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "120 (5 factorial: 5×4×3×2×1). Fisher-Yates gives each of those 120 orderings an equal chance of being the result."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this the same as a 'randomize order' or 'randomize list' tool?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - 'list shuffler,' 'randomize list order,' and 'random list sorter' all describe the same task: taking a list and outputting it in a random sequence, which is exactly what this tool does."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>List Shuffler</h1>
         <p style="max-width:60ch;">Paste a list of items (one per line) to shuffle them into random order.</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Can I use this to randomize the order of a playlist, raffle entries, or presentation order?</h3>
 <p>Yes - paste any list (songs, names, topics) one per line, and it works for any of those use cases the same way.</p>
+</div>
+<div class="faq-item">
+<h3>Will shuffling the same list twice give the same result?</h3>
+<p>No - each shuffle draws fresh random values, so running the tool again on the same input list produces a new, independent random order each time.</p>
+</div>
+<div class="faq-item">
+<h3>If I shuffle a 5-item list, how many possible orders are there?</h3>
+<p>120 (5 factorial: 5×4×3×2×1). Fisher-Yates gives each of those 120 orderings an equal chance of being the result.</p>
+</div>
+<div class="faq-item">
+<h3>Is this the same as a 'randomize order' or 'randomize list' tool?</h3>
+<p>Yes - 'list shuffler,' 'randomize list order,' and 'random list sorter' all describe the same task: taking a list and outputting it in a random sequence, which is exactly what this tool does.</p>
 </div></div>
         </div>
       </main>

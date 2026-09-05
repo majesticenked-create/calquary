@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Yes - leave the non-repeating field empty and enter \"72\" as the repeating digits; the calculator treats a blank non-repeating part as zero digits."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I enter a decimal like 2.5555... that has a whole number part?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Enter just the decimal portion - non-repeating digits \"5\" would be wrong here since the 5 itself repeats, so leave non-repeating empty and enter \"5\" as repeating, getting 5/9, then add the whole number 2 separately to get 2 + 5/9 = 23/9."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is 0.8333... (0.8 with 3 repeating) as a fraction?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "5/6 - with non-repeating digit \"8\" and repeating digit \"3\": numerator = 83 − 8 = 75, denominator = 900 − 100 = 800... using the simpler rule (100−10)=90 for one repeating digit after one non-repeating digit: 75/90 simplifies to 5/6."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can every repeating decimal be written as an exact fraction?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - any decimal that eventually repeats forever is by definition a rational number, meaning it can always be expressed as a ratio of two integers. Only non-repeating, non-terminating decimals (like π) are irrational and can't be converted this way."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Repeating Decimal to Fraction Calculator</h1>
         <p style="max-width:60ch;">Enter the non-repeating digits and repeating digits after the decimal point to convert to an exact fraction.</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Does this work for decimals with no non-repeating part, like 0.727272...?</h3>
 <p>Yes - leave the non-repeating field empty and enter "72" as the repeating digits; the calculator treats a blank non-repeating part as zero digits.</p>
+</div>
+<div class="faq-item">
+<h3>How do I enter a decimal like 2.5555... that has a whole number part?</h3>
+<p>Enter just the decimal portion - non-repeating digits "5" would be wrong here since the 5 itself repeats, so leave non-repeating empty and enter "5" as repeating, getting 5/9, then add the whole number 2 separately to get 2 + 5/9 = 23/9.</p>
+</div>
+<div class="faq-item">
+<h3>What is 0.8333... (0.8 with 3 repeating) as a fraction?</h3>
+<p>5/6 - with non-repeating digit "8" and repeating digit "3": numerator = 83 − 8 = 75, denominator = 900 − 100 = 800... using the simpler rule (100−10)=90 for one repeating digit after one non-repeating digit: 75/90 simplifies to 5/6.</p>
+</div>
+<div class="faq-item">
+<h3>Can every repeating decimal be written as an exact fraction?</h3>
+<p>Yes - any decimal that eventually repeats forever is by definition a rational number, meaning it can always be expressed as a ratio of two integers. Only non-repeating, non-terminating decimals (like π) are irrational and can't be converted this way.</p>
 </div></div>
         </div>
       </main>

@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Enter your value, the distribution's mean, and its standard deviation above - this calculator converts that into a z-score, then into a percentile using the normal distribution. That's the standard method for calculating percentile when you know a distribution's mean and spread."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What does a negative z-score mean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It means the value is below the mean - a z-score of -1.5 indicates the value sits 1.5 standard deviations below average, corresponding to a low percentile (around the 7th percentile)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the z-score and percentile for a value exactly equal to the mean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The z-score is 0, and the percentile is 50% - a value equal to the mean sits at the exact center of a normal distribution, with half the data above and half below."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a 'standard score' the same thing as a 'z-score'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - 'standard score' and 'z-score' are interchangeable terms for the same calculation: how many standard deviations a value is from the mean."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Z-Score (Standardized Score) Calculator</h1>
         <p style="max-width:60ch;">Enter a value, the mean, and the standard deviation of its distribution to calculate the z-score and percentile.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>How do you calculate percentile in general?</h3>
 <p>Enter your value, the distribution's mean, and its standard deviation above - this calculator converts that into a z-score, then into a percentile using the normal distribution. That's the standard method for calculating percentile when you know a distribution's mean and spread.</p>
+</div>
+<div class="faq-item">
+<h3>What does a negative z-score mean?</h3>
+<p>It means the value is below the mean - a z-score of -1.5 indicates the value sits 1.5 standard deviations below average, corresponding to a low percentile (around the 7th percentile).</p>
+</div>
+<div class="faq-item">
+<h3>What's the z-score and percentile for a value exactly equal to the mean?</h3>
+<p>The z-score is 0, and the percentile is 50% - a value equal to the mean sits at the exact center of a normal distribution, with half the data above and half below.</p>
+</div>
+<div class="faq-item">
+<h3>Is a 'standard score' the same thing as a 'z-score'?</h3>
+<p>Yes - 'standard score' and 'z-score' are interchangeable terms for the same calculation: how many standard deviations a value is from the mean.</p>
 </div></div>
         </div>
       </main>

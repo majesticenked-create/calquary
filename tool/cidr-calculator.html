@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "A /32 is a single address with no room for a network/broadcast pair, and a /31 is a special case (defined in RFC 3021) used for point-to-point links where both addresses in the 2-address block are usable as host addresses, since there's no broadcast needed."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the subnet mask for a /24 network?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "255.255.255.0 - a /24 prefix means the first 24 bits are all 1s (three full octets of 255), leaving the last octet as all 0s for host addresses."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is this different from the IP Subnet Calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They compute the same results (network address, broadcast address, usable range), but this tool takes input as a single combined CIDR string like \"192.168.1.0/24,\" while the IP Subnet Calculator uses separate fields for the IP address and prefix length."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What subnet mask corresponds to a /29 network?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "255.255.255.248 - a /29 prefix uses 29 of the 32 bits for the network, leaving only 3 host bits (8 total addresses, 6 usable), which as a mask is 255.255.255 followed by 248 (11111000 in binary)."
+          }
         }
       ]
     }
@@ -182,7 +206,7 @@
       <main>
         <h1>CIDR / Subnet Calculator</h1>
         <p style="max-width:60ch;">Enter an IP address in CIDR notation (like 192.168.1.0/24) to calculate the subnet's network address, broadcast address, and usable host range.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Why are there no usable hosts for a /31 or /32?</h3>
 <p>A /32 is a single address with no room for a network/broadcast pair, and a /31 is a special case (defined in RFC 3021) used for point-to-point links where both addresses in the 2-address block are usable as host addresses, since there's no broadcast needed.</p>
+</div>
+<div class="faq-item">
+<h3>What's the subnet mask for a /24 network?</h3>
+<p>255.255.255.0 - a /24 prefix means the first 24 bits are all 1s (three full octets of 255), leaving the last octet as all 0s for host addresses.</p>
+</div>
+<div class="faq-item">
+<h3>How is this different from the IP Subnet Calculator?</h3>
+<p>They compute the same results (network address, broadcast address, usable range), but this tool takes input as a single combined CIDR string like "192.168.1.0/24," while the IP Subnet Calculator uses separate fields for the IP address and prefix length.</p>
+</div>
+<div class="faq-item">
+<h3>What subnet mask corresponds to a /29 network?</h3>
+<p>255.255.255.248 - a /29 prefix uses 29 of the 32 bits for the network, leaving only 3 host bits (8 total addresses, 6 usable), which as a mask is 255.255.255 followed by 248 (11111000 in binary).</p>
 </div></div>
         </div>
       </main>

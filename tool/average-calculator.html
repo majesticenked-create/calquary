@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "A simple average treats every number equally; a weighted average multiplies each number by its own weight before dividing by the total weight, so values that matter more (like a test worth 40% of a grade) count for more. This calculator computes a simple average - for weighted averages you'd multiply each value by its weight first."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the median of an even-numbered list?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Average the two middle values after sorting. For 4, 8, 15, 16, 23, 42 (already sorted, 6 numbers), the two middle values are 15 and 16, so the median is (15+16)/2 = 15.5."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I paste a very long list of numbers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - there's no fixed limit on how many numbers you enter; separate them with commas, spaces, or new lines and the calculator will sum, average, and find the median across the entire list."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is my average so different from my median?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A large gap usually means outliers are pulling the mean away from the bulk of the data. For 1, 2, 3, 4, 100: the mean is 22 but the median is 3 - the median better represents the 'typical' value when extreme numbers are present."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Average Calculator</h1>
         <p style="max-width:60ch;">Enter a list of numbers separated by commas or spaces to calculate the mean, median, and sum.</p>
-        <p class="last-updated">Last updated: August 27, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>What's the difference between an average and a weighted average?</h3>
 <p>A simple average treats every number equally; a weighted average multiplies each number by its own weight before dividing by the total weight, so values that matter more (like a test worth 40% of a grade) count for more. This calculator computes a simple average - for weighted averages you'd multiply each value by its weight first.</p>
+</div>
+<div class="faq-item">
+<h3>What's the median of an even-numbered list?</h3>
+<p>Average the two middle values after sorting. For 4, 8, 15, 16, 23, 42 (already sorted, 6 numbers), the two middle values are 15 and 16, so the median is (15+16)/2 = 15.5.</p>
+</div>
+<div class="faq-item">
+<h3>Can I paste a very long list of numbers?</h3>
+<p>Yes - there's no fixed limit on how many numbers you enter; separate them with commas, spaces, or new lines and the calculator will sum, average, and find the median across the entire list.</p>
+</div>
+<div class="faq-item">
+<h3>Why is my average so different from my median?</h3>
+<p>A large gap usually means outliers are pulling the mean away from the bulk of the data. For 1, 2, 3, 4, 100: the mean is 22 but the median is 3 - the median better represents the 'typical' value when extreme numbers are present.</p>
 </div></div>
         </div>
       </main>

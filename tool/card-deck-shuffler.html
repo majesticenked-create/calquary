@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "No - this is a standard 52-card deck (4 suits × 13 ranks, no jokers), which matches the deck used in most card games. Jokers aren't part of the standard deck this tool shuffles."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "If I draw fewer than 52 cards, could I get the same card twice?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - drawing pulls cards from a single shuffled 52-card deck without replacement, so every card drawn in one run is guaranteed unique, just like dealing from a real deck."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use this to deal a hand for a specific game, like blackjack or bridge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - set \"cards to draw\" to the hand size you need (2 for a blackjack starting hand, 13 for a bridge hand) and the tool draws that many cards from a freshly shuffled deck, though for multi-player games you'd run separate draws or split the drawn cards yourself."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is this different from a 'random card generator'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They're closely related: a random card generator often pulls a single card independently (which could repeat on a second pull), while this shuffler draws from one full deck without replacement, matching how a physical deck of cards actually behaves when dealt."
+          }
         }
       ]
     }
@@ -182,7 +206,7 @@
       <main>
         <h1>Shuffled Deck of Cards</h1>
         <p style="max-width:60ch;">Choose how many cards to draw from a freshly shuffled standard 52-card deck.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Does this include jokers?</h3>
 <p>No - this is a standard 52-card deck (4 suits × 13 ranks, no jokers), which matches the deck used in most card games. Jokers aren't part of the standard deck this tool shuffles.</p>
+</div>
+<div class="faq-item">
+<h3>If I draw fewer than 52 cards, could I get the same card twice?</h3>
+<p>No - drawing pulls cards from a single shuffled 52-card deck without replacement, so every card drawn in one run is guaranteed unique, just like dealing from a real deck.</p>
+</div>
+<div class="faq-item">
+<h3>Can I use this to deal a hand for a specific game, like blackjack or bridge?</h3>
+<p>Yes - set "cards to draw" to the hand size you need (2 for a blackjack starting hand, 13 for a bridge hand) and the tool draws that many cards from a freshly shuffled deck, though for multi-player games you'd run separate draws or split the drawn cards yourself.</p>
+</div>
+<div class="faq-item">
+<h3>How is this different from a 'random card generator'?</h3>
+<p>They're closely related: a random card generator often pulls a single card independently (which could repeat on a second pull), while this shuffler draws from one full deck without replacement, matching how a physical deck of cards actually behaves when dealt.</p>
 </div></div>
         </div>
       </main>

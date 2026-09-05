@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Enter the rate per period, not the annual rate - if you're compounding monthly and have a 6% annual rate, enter 0.5 (6 ÷ 12) as the rate per period, and set periods in months to match."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Can this calculator solve for the number of periods or the interest rate instead?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This version solves for present value, future value, or payment given the other inputs - it's not built to solve for rate or number of periods, which typically require iterative (trial-and-error) methods rather than a direct formula."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if I leave PV at zero and solve for FV?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "With PV set to 0, the future value comes entirely from the payment stream compounding over time - for example, PMT of -200 per month at a 0.5% monthly rate for 120 periods, with PV of 0, yields an FV of roughly $32,700, matching a standard savings annuity calculation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this the same as an 'annuity calculator'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Very similar - an annuity calculator usually solves for one of these same values (future value, payment, or present value) for a stream of equal periodic payments, which is exactly the calculation this TVM solver performs."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>TVM Solver (PV, FV, PMT)</h1>
         <p style="max-width:60ch;">Choose what to solve for, then enter the other known values - rate per period, number of periods, and the known amounts.</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>What rate should I enter?</h3>
 <p>Enter the rate per period, not the annual rate - if you're compounding monthly and have a 6% annual rate, enter 0.5 (6 ÷ 12) as the rate per period, and set periods in months to match.</p>
+</div>
+<div class="faq-item">
+<h3>Can this calculator solve for the number of periods or the interest rate instead?</h3>
+<p>This version solves for present value, future value, or payment given the other inputs - it's not built to solve for rate or number of periods, which typically require iterative (trial-and-error) methods rather than a direct formula.</p>
+</div>
+<div class="faq-item">
+<h3>What happens if I leave PV at zero and solve for FV?</h3>
+<p>With PV set to 0, the future value comes entirely from the payment stream compounding over time - for example, PMT of -200 per month at a 0.5% monthly rate for 120 periods, with PV of 0, yields an FV of roughly $32,700, matching a standard savings annuity calculation.</p>
+</div>
+<div class="faq-item">
+<h3>Is this the same as an 'annuity calculator'?</h3>
+<p>Very similar - an annuity calculator usually solves for one of these same values (future value, payment, or present value) for a stream of equal periodic payments, which is exactly the calculation this TVM solver performs.</p>
 </div></div>
         </div>
       </main>

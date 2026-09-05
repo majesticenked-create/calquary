@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Lumber is named by its nominal (pre-milling) size, but planing and drying reduce the actual finished dimensions - a nominal 2x4 measures about 1.5 by 3.5 inches actual. This calculator uses actual dimensions for board-foot calculations, since that's the real material you're buying."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How many board feet for 15 boards of nominal 2×4×10 ft lumber?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Using actual dimensions of 1.5×3.5 inches: 1.5 × 3.5 × 10 ÷ 12 = 4.375 board feet per board. For 15 boards that's about 65.6 total board feet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does board length affect board feet the same way width and thickness do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, all three dimensions contribute proportionally - board feet is thickness × width × length ÷ 12, so doubling any one of the three (with the others held constant) doubles the board feet, whether that's a longer board, a wider board, or a thicker one."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is a board foot different from a linear foot of lumber?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A linear foot only measures length, ignoring width and thickness, so it can't compare boards of different sizes fairly. A board foot is a volume measurement (12×12×1 inch), which is why lumber of varying widths and thicknesses is priced by board feet rather than by linear foot."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Lumber Calculator</h1>
         <p style="max-width:60ch;">Enter your board dimensions and quantity to calculate total board feet - the standard unit lumber is priced and sold by.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Why is a 2x4 not actually 2 inches by 4 inches?</h3>
 <p>Lumber is named by its nominal (pre-milling) size, but planing and drying reduce the actual finished dimensions - a nominal 2x4 measures about 1.5 by 3.5 inches actual. This calculator uses actual dimensions for board-foot calculations, since that's the real material you're buying.</p>
+</div>
+<div class="faq-item">
+<h3>How many board feet for 15 boards of nominal 2×4×10 ft lumber?</h3>
+<p>Using actual dimensions of 1.5×3.5 inches: 1.5 × 3.5 × 10 ÷ 12 = 4.375 board feet per board. For 15 boards that's about 65.6 total board feet.</p>
+</div>
+<div class="faq-item">
+<h3>Does board length affect board feet the same way width and thickness do?</h3>
+<p>Yes, all three dimensions contribute proportionally - board feet is thickness × width × length ÷ 12, so doubling any one of the three (with the others held constant) doubles the board feet, whether that's a longer board, a wider board, or a thicker one.</p>
+</div>
+<div class="faq-item">
+<h3>How is a board foot different from a linear foot of lumber?</h3>
+<p>A linear foot only measures length, ignoring width and thickness, so it can't compare boards of different sizes fairly. A board foot is a volume measurement (12×12×1 inch), which is why lumber of varying widths and thicknesses is priced by board feet rather than by linear foot.</p>
 </div></div>
         </div>
       </main>

@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Body condition score is generally more reliable than a single ideal-weight number, since it accounts for your dog's individual frame and muscle mass rather than a breed-average target; use ideal weight as a starting reference and body condition score to fine-tune the actual goal."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What does a body condition score of 4 or 5 mean for the calculation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A BCS of 4-5 is treated as ideal, so the calculator returns the current weight unchanged - there's no estimated excess to subtract because the dog is already considered at a healthy weight."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much weight should a dog with a BCS of 9 lose?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A BCS of 9 (severely overweight) implies roughly 40% excess body weight - a 60 lb dog at BCS 9 would have an estimated ideal weight around 36 lb, a reduction of about 24 lb, ideally pursued gradually under veterinary guidance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is 'ideal weight' from this calculator the same as a breed's average weight chart?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - breed weight charts give a population average, while this calculator estimates an individual dog's ideal weight from their current weight and body condition score, which better accounts for that specific dog's frame size and existing fat coverage."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Ideal Dog Weight Calculator</h1>
         <p style="max-width:60ch;">Enter your dog's current weight and body condition score (1-9 scale) to estimate their ideal weight.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Should I use ideal weight or body condition score to judge if my dog needs to lose weight?</h3>
 <p>Body condition score is generally more reliable than a single ideal-weight number, since it accounts for your dog's individual frame and muscle mass rather than a breed-average target; use ideal weight as a starting reference and body condition score to fine-tune the actual goal.</p>
+</div>
+<div class="faq-item">
+<h3>What does a body condition score of 4 or 5 mean for the calculation?</h3>
+<p>A BCS of 4-5 is treated as ideal, so the calculator returns the current weight unchanged - there's no estimated excess to subtract because the dog is already considered at a healthy weight.</p>
+</div>
+<div class="faq-item">
+<h3>How much weight should a dog with a BCS of 9 lose?</h3>
+<p>A BCS of 9 (severely overweight) implies roughly 40% excess body weight - a 60 lb dog at BCS 9 would have an estimated ideal weight around 36 lb, a reduction of about 24 lb, ideally pursued gradually under veterinary guidance.</p>
+</div>
+<div class="faq-item">
+<h3>Is 'ideal weight' from this calculator the same as a breed's average weight chart?</h3>
+<p>No - breed weight charts give a population average, while this calculator estimates an individual dog's ideal weight from their current weight and body condition score, which better accounts for that specific dog's frame size and existing fat coverage.</p>
 </div></div>
         </div>
       </main>

@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Beyond the shingles themselves (measured in squares), a full roofing estimate usually accounts for underlayment, starter strips, ridge cap shingles, and flashing - this calculator estimates the shingle quantity specifically, which is the largest cost component, but always add a margin for these additional materials."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How many squares do I need for a 2000 sq ft footprint with a 4/12 pitch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A 4/12 pitch gives a multiplier of about 1.054, so 2000 sq ft becomes roughly 2108 sq ft of actual roof area. With a 10% waste allowance that's about 2319 sq ft, or 24 squares after rounding up."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a steeper roof always need proportionally more waste allowance too?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This calculator applies a flat waste percentage regardless of pitch, but in practice very steep roofs (above roughly 9/12) or roofs with many hips and valleys need a higher waste allowance than a simple roof, since more shingles get cut at odd angles - increase the waste input above 10% for complex, steep rooflines."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between 'roofing squares' and plain square footage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Square footage measures flat area; a roofing square is a sales unit equal to 100 sq ft of the actual sloped roof surface. Because pitch increases the sloped area beyond the footprint, a 1500 sq ft footprint isn't 15 squares of shingles - it's more, which is exactly what the pitch multiplier in this calculator corrects for."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Roofing Calculator</h1>
         <p style="max-width:60ch;">Enter your roof's footprint area and pitch to estimate the actual sloped roof area and how many squares of shingles you'll need.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>What's included in a typical roofing material estimate beyond shingles?</h3>
 <p>Beyond the shingles themselves (measured in squares), a full roofing estimate usually accounts for underlayment, starter strips, ridge cap shingles, and flashing - this calculator estimates the shingle quantity specifically, which is the largest cost component, but always add a margin for these additional materials.</p>
+</div>
+<div class="faq-item">
+<h3>How many squares do I need for a 2000 sq ft footprint with a 4/12 pitch?</h3>
+<p>A 4/12 pitch gives a multiplier of about 1.054, so 2000 sq ft becomes roughly 2108 sq ft of actual roof area. With a 10% waste allowance that's about 2319 sq ft, or 24 squares after rounding up.</p>
+</div>
+<div class="faq-item">
+<h3>Does a steeper roof always need proportionally more waste allowance too?</h3>
+<p>This calculator applies a flat waste percentage regardless of pitch, but in practice very steep roofs (above roughly 9/12) or roofs with many hips and valleys need a higher waste allowance than a simple roof, since more shingles get cut at odd angles - increase the waste input above 10% for complex, steep rooflines.</p>
+</div>
+<div class="faq-item">
+<h3>What's the difference between 'roofing squares' and plain square footage?</h3>
+<p>Square footage measures flat area; a roofing square is a sales unit equal to 100 sq ft of the actual sloped roof surface. Because pitch increases the sloped area beyond the footprint, a 1500 sq ft footprint isn't 15 squares of shingles - it's more, which is exactly what the pitch multiplier in this calculator corrects for.</p>
 </div></div>
         </div>
       </main>

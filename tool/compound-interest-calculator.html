@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Compound interest earns interest on both principal and previously earned interest, so it always outpaces simple interest (which only earns on the original principal) given enough time. The longer the time horizon and the higher the compounding frequency, the bigger the gap becomes."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does $10,000 grow to in 20 years at 6% compounded annually?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Using A = P(1 + r/n)^(nt) with P=$10,000, r=0.06, n=1, t=20: A = $10,000 × 1.06^20 ≈ $32,071 - roughly $22,071 in interest earned on top of the original principal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this calculator account for regular contributions, or just a one-time lump sum?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This tool models a single lump-sum principal growing on its own - it doesn't add recurring monthly deposits. For growth that includes ongoing contributions, use a calculator built for regular deposits, such as an investment or savings calculator."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is 'continuous compounding' the same as entering a very high compounding frequency?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not exactly the same, but a close approximation - continuous compounding uses the formula A = Pe^(rt) and represents the theoretical limit as compounding frequency approaches infinity. Entering a very large number like 365 (daily) or higher for compounds per year gets you very close to that continuous-compounding result."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Compound Interest Calculator</h1>
         <p style="max-width:60ch;">Enter a principal amount, interest rate, compounding frequency, and time frame to see how much your money could grow.</p>
-        <p class="last-updated">Last updated: August 27, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Is compound interest always better than simple interest?</h3>
 <p>Compound interest earns interest on both principal and previously earned interest, so it always outpaces simple interest (which only earns on the original principal) given enough time. The longer the time horizon and the higher the compounding frequency, the bigger the gap becomes.</p>
+</div>
+<div class="faq-item">
+<h3>How much does $10,000 grow to in 20 years at 6% compounded annually?</h3>
+<p>Using A = P(1 + r/n)^(nt) with P=$10,000, r=0.06, n=1, t=20: A = $10,000 × 1.06^20 ≈ $32,071 - roughly $22,071 in interest earned on top of the original principal.</p>
+</div>
+<div class="faq-item">
+<h3>Does this calculator account for regular contributions, or just a one-time lump sum?</h3>
+<p>This tool models a single lump-sum principal growing on its own - it doesn't add recurring monthly deposits. For growth that includes ongoing contributions, use a calculator built for regular deposits, such as an investment or savings calculator.</p>
+</div>
+<div class="faq-item">
+<h3>Is 'continuous compounding' the same as entering a very high compounding frequency?</h3>
+<p>Not exactly the same, but a close approximation - continuous compounding uses the formula A = Pe^(rt) and represents the theoretical limit as compounding frequency approaches infinity. Entering a very large number like 365 (daily) or higher for compounds per year gets you very close to that continuous-compounding result.</p>
 </div></div>
         </div>
       </main>

@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "This calculator estimates posts and panels for a continuous fence run; if your fence includes one or more gates, subtract the gate width from the total fence length before calculating, since gates use separate hardware rather than standard panels."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How many posts and panels do I need for 150 ft of fence with 6 ft panels?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "150 ÷ 6 = 25 panels exactly, which needs 26 posts - one more than the panel count to close both ends of the run."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a fence line with corners need more posts than this calculator shows?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - this calculator assumes one continuous straight run. Each corner needs its own post regardless of panel spacing, so measure and calculate each straight segment separately, then add one extra post per corner rather than treating the whole perimeter as a single length."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why can't I just divide fence length by panel width to get the post count?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dividing length by panel width gives you the panel count, but undercounts posts by one on a straight run, since adjacent panels share a post except at the two open ends of the line - that's why this calculator reports posts as panels plus one."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Fence Calculator</h1>
         <p style="max-width:60ch;">Enter your total fence length and panel width to estimate how many panels and posts to buy.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Does this account for gates in the fence line?</h3>
 <p>This calculator estimates posts and panels for a continuous fence run; if your fence includes one or more gates, subtract the gate width from the total fence length before calculating, since gates use separate hardware rather than standard panels.</p>
+</div>
+<div class="faq-item">
+<h3>How many posts and panels do I need for 150 ft of fence with 6 ft panels?</h3>
+<p>150 ÷ 6 = 25 panels exactly, which needs 26 posts - one more than the panel count to close both ends of the run.</p>
+</div>
+<div class="faq-item">
+<h3>Does a fence line with corners need more posts than this calculator shows?</h3>
+<p>Yes - this calculator assumes one continuous straight run. Each corner needs its own post regardless of panel spacing, so measure and calculate each straight segment separately, then add one extra post per corner rather than treating the whole perimeter as a single length.</p>
+</div>
+<div class="faq-item">
+<h3>Why can't I just divide fence length by panel width to get the post count?</h3>
+<p>Dividing length by panel width gives you the panel count, but undercounts posts by one on a straight run, since adjacent panels share a post except at the two open ends of the line - that's why this calculator reports posts as panels plus one.</p>
 </div></div>
         </div>
       </main>

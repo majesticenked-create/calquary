@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "No - many jurisdictions exempt or reduce the tax rate on groceries, prescription medication, and sometimes clothing, while taxing general merchandise at the standard rate. Check your local tax authority's rules if you're calculating tax for a specific exempt category rather than a general purchase."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I back into the pre-tax price if I only know the total I paid?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Divide the total by (1 + tax rate as a decimal). If you paid $107.50 total at an 7.5% tax rate, the pre-tax price was $107.50 ÷ 1.075 ≈ $100.00."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between sales tax and use tax?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sales tax is collected by the seller at the point of purchase within a taxing jurisdiction. Use tax applies when you buy something without paying sales tax (often from an out-of-state seller) and are responsible for remitting an equivalent tax yourself - the calculation for the amount owed is the same math either way."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a VAT calculator the same as a sales tax calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The core math is similar - both apply a percentage rate to a price - but VAT (value-added tax) is typically included in a displayed price and collected at each stage of production, while US sales tax is usually added on top of the listed price at final sale, which is how this calculator is set up."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Sales Tax Calculator</h1>
         <p style="max-width:60ch;">Enter a price and your local sales tax rate to calculate the tax amount and total cost.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Are groceries and clothing always taxed at the same rate as other purchases?</h3>
 <p>No - many jurisdictions exempt or reduce the tax rate on groceries, prescription medication, and sometimes clothing, while taxing general merchandise at the standard rate. Check your local tax authority's rules if you're calculating tax for a specific exempt category rather than a general purchase.</p>
+</div>
+<div class="faq-item">
+<h3>How do I back into the pre-tax price if I only know the total I paid?</h3>
+<p>Divide the total by (1 + tax rate as a decimal). If you paid $107.50 total at an 7.5% tax rate, the pre-tax price was $107.50 ÷ 1.075 ≈ $100.00.</p>
+</div>
+<div class="faq-item">
+<h3>What's the difference between sales tax and use tax?</h3>
+<p>Sales tax is collected by the seller at the point of purchase within a taxing jurisdiction. Use tax applies when you buy something without paying sales tax (often from an out-of-state seller) and are responsible for remitting an equivalent tax yourself - the calculation for the amount owed is the same math either way.</p>
+</div>
+<div class="faq-item">
+<h3>Is a VAT calculator the same as a sales tax calculator?</h3>
+<p>The core math is similar - both apply a percentage rate to a price - but VAT (value-added tax) is typically included in a displayed price and collected at each stage of production, while US sales tax is usually added on top of the listed price at final sale, which is how this calculator is set up.</p>
 </div></div>
         </div>
       </main>

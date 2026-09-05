@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Yes - encoding uses exactly that function, which is the standard way to safely encode a single value (like a query parameter) for use in a URL, as opposed to encodeURI() which is meant for encoding a whole URL and leaves characters like / and : untouched."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What does the & character become when encoded?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "%26 - since & has special meaning in URLs (separating query parameters), it needs to be percent-encoded to %26 whenever it appears as literal data rather than as an actual parameter separator."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "If I encode a URL that's already fully valid, like https://example.com, does it break it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Encoding is meant for individual values (like a search query), not whole URLs - running a complete URL through this tool's encode mode will also convert its own slashes and colons (: becomes %3A, / becomes %2F), breaking it as a clickable link. Only encode the parameter value itself, not the surrounding URL structure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I decode a URL that has both %20 and + representing spaces?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This tool's decode mode converts %XX percent-sequences back to their original characters, but a literal + in a query string is a separate legacy convention for spaces that percent-decoding alone won't touch - if your input mixes both conventions, you may need to replace + with a space manually before or after decoding."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>URL Encoder / Decoder</h1>
         <p style="max-width:60ch;">Enter text or a URL-encoded string, choose a direction, and get the encoded or decoded result instantly.</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Is this the same as encodeURIComponent() in JavaScript?</h3>
 <p>Yes - encoding uses exactly that function, which is the standard way to safely encode a single value (like a query parameter) for use in a URL, as opposed to encodeURI() which is meant for encoding a whole URL and leaves characters like / and : untouched.</p>
+</div>
+<div class="faq-item">
+<h3>What does the &amp; character become when encoded?</h3>
+<p>%26 - since & has special meaning in URLs (separating query parameters), it needs to be percent-encoded to %26 whenever it appears as literal data rather than as an actual parameter separator.</p>
+</div>
+<div class="faq-item">
+<h3>If I encode a URL that's already fully valid, like https://example.com, does it break it?</h3>
+<p>Encoding is meant for individual values (like a search query), not whole URLs - running a complete URL through this tool's encode mode will also convert its own slashes and colons (: becomes %3A, / becomes %2F), breaking it as a clickable link. Only encode the parameter value itself, not the surrounding URL structure.</p>
+</div>
+<div class="faq-item">
+<h3>Can I decode a URL that has both %20 and + representing spaces?</h3>
+<p>This tool's decode mode converts %XX percent-sequences back to their original characters, but a literal + in a query string is a separate legacy convention for spaces that percent-decoding alone won't touch - if your input mixes both conventions, you may need to replace + with a space manually before or after decoding.</p>
 </div></div>
         </div>
       </main>

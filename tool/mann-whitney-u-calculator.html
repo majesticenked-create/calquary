@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "When your data isn't normally distributed, contains outliers, or is ordinal rather than truly numeric - the Mann-Whitney test only relies on rank order, making it more robust than the t-test to non-normal distributions and extreme values."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What does it mean if the two groups have completely non-overlapping ranks?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "That's the most extreme possible result - if every value in one group ranks below every value in the other, U for the lower-ranked group is 0, indicating the strongest possible separation between the groups."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How are tied values handled when ranking?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tied values are given the average of the ranks they would have occupied - for example, if two values tie for 3rd and 4th place, both receive a rank of 3.5, keeping the total sum of ranks consistent."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the Mann-Whitney U test the same as the Wilcoxon rank-sum test?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - they're mathematically equivalent tests with different names; the Wilcoxon rank-sum statistic can be converted directly to the Mann-Whitney U statistic and both compare two independent groups using rank order."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Mann-Whitney U Test Calculator</h1>
         <p style="max-width:60ch;">Enter two groups of numbers (one per line or comma-separated) to calculate the Mann-Whitney U statistic.</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>When should I use this instead of a t-test?</h3>
 <p>When your data isn't normally distributed, contains outliers, or is ordinal rather than truly numeric - the Mann-Whitney test only relies on rank order, making it more robust than the t-test to non-normal distributions and extreme values.</p>
+</div>
+<div class="faq-item">
+<h3>What does it mean if the two groups have completely non-overlapping ranks?</h3>
+<p>That's the most extreme possible result - if every value in one group ranks below every value in the other, U for the lower-ranked group is 0, indicating the strongest possible separation between the groups.</p>
+</div>
+<div class="faq-item">
+<h3>How are tied values handled when ranking?</h3>
+<p>Tied values are given the average of the ranks they would have occupied - for example, if two values tie for 3rd and 4th place, both receive a rank of 3.5, keeping the total sum of ranks consistent.</p>
+</div>
+<div class="faq-item">
+<h3>Is the Mann-Whitney U test the same as the Wilcoxon rank-sum test?</h3>
+<p>Yes - they're mathematically equivalent tests with different names; the Wilcoxon rank-sum statistic can be converted directly to the Mann-Whitney U statistic and both compare two independent groups using rank order.</p>
 </div></div>
         </div>
       </main>

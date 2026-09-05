@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "No mutation, no migration, no natural selection, random mating, and an infinitely large population (no genetic drift) - real populations rarely meet all these perfectly, so Hardy-Weinberg serves as a theoretical baseline to detect when evolution is happening, by comparing observed frequencies to the expected equilibrium."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I calculate genotype frequencies starting from the heterozygous (2pq) frequency instead?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It's harder because 2pq maps to two different p values (p and q are interchangeable in that term) - most calculators, including this one, expect you to start from p, q, or one of the homozygous frequencies (p² or q²), which each correspond to a single, unambiguous allele frequency."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does it mean if my observed genotype frequencies don't match the Hardy-Weinberg prediction?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It suggests the population isn't in equilibrium - one of the assumptions (random mating, no selection, no migration, no mutation, large population) is being violated, which is exactly why biologists use Hardy-Weinberg as a null hypothesis to detect evolutionary forces at work."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "If 9% of a population shows a recessive trait, what are p and q?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "q² = 0.09, so q = √0.09 = 0.3, and p = 1 − 0.3 = 0.7. That means 49% are homozygous dominant and 42% are heterozygous carriers of the recessive allele."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Hardy-Weinberg Equilibrium Calculator</h1>
         <p style="max-width:60ch;">Enter one allele frequency (or a genotype frequency) to calculate the expected genotype frequencies under Hardy-Weinberg equilibrium.</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>What assumptions does Hardy-Weinberg equilibrium require?</h3>
 <p>No mutation, no migration, no natural selection, random mating, and an infinitely large population (no genetic drift) - real populations rarely meet all these perfectly, so Hardy-Weinberg serves as a theoretical baseline to detect when evolution is happening, by comparing observed frequencies to the expected equilibrium.</p>
+</div>
+<div class="faq-item">
+<h3>Can I calculate genotype frequencies starting from the heterozygous (2pq) frequency instead?</h3>
+<p>It's harder because 2pq maps to two different p values (p and q are interchangeable in that term) - most calculators, including this one, expect you to start from p, q, or one of the homozygous frequencies (p² or q²), which each correspond to a single, unambiguous allele frequency.</p>
+</div>
+<div class="faq-item">
+<h3>What does it mean if my observed genotype frequencies don't match the Hardy-Weinberg prediction?</h3>
+<p>It suggests the population isn't in equilibrium - one of the assumptions (random mating, no selection, no migration, no mutation, large population) is being violated, which is exactly why biologists use Hardy-Weinberg as a null hypothesis to detect evolutionary forces at work.</p>
+</div>
+<div class="faq-item">
+<h3>If 9% of a population shows a recessive trait, what are p and q?</h3>
+<p>q² = 0.09, so q = √0.09 = 0.3, and p = 1 − 0.3 = 0.7. That means 49% are homozygous dominant and 42% are heterozygous carriers of the recessive allele.</p>
 </div></div>
         </div>
       </main>

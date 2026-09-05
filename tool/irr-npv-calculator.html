@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "NPV is generally considered more reliable, especially when comparing projects of different sizes or with unconventional cash flow patterns, since NPV directly measures value created in dollar terms. IRR is intuitive as a percentage return but can behave oddly (multiple or no solutions) with cash flows that change sign more than once."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Can IRR and NPV disagree about which project is better?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - when comparing projects of different sizes or cash flow timing, NPV and IRR can rank them differently. A smaller project might show a higher IRR (percentage return) while a larger project shows a higher NPV (total dollar value created); most finance guidance favors NPV in that conflict."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does it mean if this calculator shows no IRR or multiple IRRs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IRR can fail to have a single solution when cash flows switch sign more than once (for example negative, positive, negative again) - in that case the equation that sets NPV to zero may have zero or multiple valid roots, and NPV at your actual discount rate is the more reliable figure to rely on."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "For a $5,000 investment returning $1,500 a year for 5 years, what's the NPV at a 10% discount rate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Discounting each $1,500 inflow back at 10% and summing them gives about $5,685 in present value; subtracting the $5,000 initial outlay gives an NPV of roughly $685, meaning the investment clears its 10% hurdle rate."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>IRR and NPV Calculator</h1>
         <p style="max-width:60ch;">Enter a series of cash flows (starting with your initial investment as a negative number) to calculate NPV at your discount rate and the IRR.</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Should I use NPV or IRR to compare investments?</h3>
 <p>NPV is generally considered more reliable, especially when comparing projects of different sizes or with unconventional cash flow patterns, since NPV directly measures value created in dollar terms. IRR is intuitive as a percentage return but can behave oddly (multiple or no solutions) with cash flows that change sign more than once.</p>
+</div>
+<div class="faq-item">
+<h3>Can IRR and NPV disagree about which project is better?</h3>
+<p>Yes - when comparing projects of different sizes or cash flow timing, NPV and IRR can rank them differently. A smaller project might show a higher IRR (percentage return) while a larger project shows a higher NPV (total dollar value created); most finance guidance favors NPV in that conflict.</p>
+</div>
+<div class="faq-item">
+<h3>What does it mean if this calculator shows no IRR or multiple IRRs?</h3>
+<p>IRR can fail to have a single solution when cash flows switch sign more than once (for example negative, positive, negative again) - in that case the equation that sets NPV to zero may have zero or multiple valid roots, and NPV at your actual discount rate is the more reliable figure to rely on.</p>
+</div>
+<div class="faq-item">
+<h3>For a $5,000 investment returning $1,500 a year for 5 years, what's the NPV at a 10% discount rate?</h3>
+<p>Discounting each $1,500 inflow back at 10% and summing them gives about $5,685 in present value; subtracting the $5,000 initial outlay gives an NPV of roughly $685, meaning the investment clears its 10% hurdle rate.</p>
 </div></div>
         </div>
       </main>

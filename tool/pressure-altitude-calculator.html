@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Pressure altitude only accounts for atmospheric pressure. Density altitude goes a step further and also corrects for temperature (and humidity), since less dense air - whether from lower pressure or higher temperature - affects aircraft and engine performance similarly."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What pressure altitude results from a field elevation of 500 ft with an altimeter setting of 30.42?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "0 ft - since (29.92 − 30.42) × 1,000 = −500, adding that to the 500 ft elevation gives exactly 0. A higher-than-standard altimeter setting reduces pressure altitude below field elevation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do pilots need pressure altitude instead of just using field elevation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aircraft performance charts (takeoff distance, climb rate, engine output) are calibrated to standard atmospheric conditions, so pressure altitude - which normalizes for the day's actual barometric pressure - gives a consistent baseline for those calculations regardless of local weather."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is pressure altitude the same as flight level?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They're closely related - flight levels (like FL350) are pressure altitudes above the transition altitude, expressed in hundreds of feet with the altimeter always set to the standard 29.92 inHg, exactly how this calculator computes pressure altitude."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Pressure Altitude Calculator</h1>
         <p style="max-width:60ch;">Enter your field elevation and current altimeter setting to calculate pressure altitude, using the standard atmosphere reference of 29.92 inHg.</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>What's the difference between pressure altitude and density altitude?</h3>
 <p>Pressure altitude only accounts for atmospheric pressure. Density altitude goes a step further and also corrects for temperature (and humidity), since less dense air - whether from lower pressure or higher temperature - affects aircraft and engine performance similarly.</p>
+</div>
+<div class="faq-item">
+<h3>What pressure altitude results from a field elevation of 500 ft with an altimeter setting of 30.42?</h3>
+<p>0 ft - since (29.92 − 30.42) × 1,000 = −500, adding that to the 500 ft elevation gives exactly 0. A higher-than-standard altimeter setting reduces pressure altitude below field elevation.</p>
+</div>
+<div class="faq-item">
+<h3>Why do pilots need pressure altitude instead of just using field elevation?</h3>
+<p>Aircraft performance charts (takeoff distance, climb rate, engine output) are calibrated to standard atmospheric conditions, so pressure altitude - which normalizes for the day's actual barometric pressure - gives a consistent baseline for those calculations regardless of local weather.</p>
+</div>
+<div class="faq-item">
+<h3>Is pressure altitude the same as flight level?</h3>
+<p>They're closely related - flight levels (like FL350) are pressure altitudes above the transition altitude, expressed in hundreds of feet with the altimeter always set to the standard 29.92 inHg, exactly how this calculator computes pressure altitude.</p>
 </div></div>
         </div>
       </main>

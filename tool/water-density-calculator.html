@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Enter that temperature above and this calculator gives you the density directly, interpolated from standard reference values between 0°C and 100°C - no need to look it up in a printed table."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the density of boiling water (100°C)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "About 958.4 kg/m³ - notably lower than water's density at room temperature (998.2 kg/m³ at 20°C), since water expands and becomes less dense as it's heated toward its boiling point."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why would I need to know water's density at different temperatures?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Precise density matters for calibrating lab instruments, calculating buoyancy, converting between volume and mass in scientific or brewing contexts, and hydraulic engineering - everyday uses like cooking rarely need more precision than the standard 1 kg/liter approximation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does altitude or air pressure affect water's density?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only very slightly under normal conditions - pressure has a much smaller effect on liquid water's density than temperature does, since water is nearly incompressible. This calculator accounts for temperature only, which is the dominant factor for everyday and most scientific purposes."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Water Density Calculator</h1>
         <p style="max-width:60ch;">Enter a water temperature to calculate its density, since water's density changes slightly (and non-linearly) with temperature.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Where can I find the density of the water at a specific temperature?</h3>
 <p>Enter that temperature above and this calculator gives you the density directly, interpolated from standard reference values between 0°C and 100°C - no need to look it up in a printed table.</p>
+</div>
+<div class="faq-item">
+<h3>What is the density of boiling water (100°C)?</h3>
+<p>About 958.4 kg/m³ - notably lower than water's density at room temperature (998.2 kg/m³ at 20°C), since water expands and becomes less dense as it's heated toward its boiling point.</p>
+</div>
+<div class="faq-item">
+<h3>Why would I need to know water's density at different temperatures?</h3>
+<p>Precise density matters for calibrating lab instruments, calculating buoyancy, converting between volume and mass in scientific or brewing contexts, and hydraulic engineering - everyday uses like cooking rarely need more precision than the standard 1 kg/liter approximation.</p>
+</div>
+<div class="faq-item">
+<h3>Does altitude or air pressure affect water's density?</h3>
+<p>Only very slightly under normal conditions - pressure has a much smaller effect on liquid water's density than temperature does, since water is nearly incompressible. This calculator accounts for temperature only, which is the dominant factor for everyday and most scientific purposes.</p>
 </div></div>
         </div>
       </main>

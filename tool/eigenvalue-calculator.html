@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Complex eigenvalues mean the matrix has no real eigenvectors - geometrically, this happens for matrices that rotate vectors (like a rotation matrix) rather than just stretching them along fixed directions, since a rotation has no direction that stays unchanged (except a 180° rotation)."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What real-world things do eigenvalues and eigenvectors represent?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They describe directions that a matrix transformation doesn't rotate, only stretches or shrinks - the eigenvector is that unchanged direction, and the eigenvalue is the stretch factor. This shows up in applications like vibration analysis, principal component analysis, and Google's PageRank algorithm."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the eigenvalues of the matrix [[2,1],[1,2]]?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "3 and 1 - trace = 2+2 = 4, determinant = (2×2)-(1×1) = 3, so λ² − 4λ + 3 = 0 factors to (λ−3)(λ−1) = 0, giving λ = 3 and λ = 1."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a 2x2 matrix have only one eigenvalue?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - this happens when the discriminant of the characteristic equation is zero (a 'repeated' or 'degenerate' eigenvalue), which occurs for matrices like [[2,1],[0,2]], where both roots of the quadratic coincide at the same value."
+          }
         }
       ]
     }
@@ -182,7 +206,7 @@
       <main>
         <h1>Eigenvalue & Eigenvector Calculator (2x2)</h1>
         <p style="max-width:60ch;">Enter the four entries of a 2x2 matrix [[a, b], [c, d]] to calculate its eigenvalues and eigenvectors.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>What does it mean if the eigenvalues are complex?</h3>
 <p>Complex eigenvalues mean the matrix has no real eigenvectors - geometrically, this happens for matrices that rotate vectors (like a rotation matrix) rather than just stretching them along fixed directions, since a rotation has no direction that stays unchanged (except a 180° rotation).</p>
+</div>
+<div class="faq-item">
+<h3>What real-world things do eigenvalues and eigenvectors represent?</h3>
+<p>They describe directions that a matrix transformation doesn't rotate, only stretches or shrinks - the eigenvector is that unchanged direction, and the eigenvalue is the stretch factor. This shows up in applications like vibration analysis, principal component analysis, and Google's PageRank algorithm.</p>
+</div>
+<div class="faq-item">
+<h3>What are the eigenvalues of the matrix [[2,1],[1,2]]?</h3>
+<p>3 and 1 - trace = 2+2 = 4, determinant = (2×2)-(1×1) = 3, so λ² − 4λ + 3 = 0 factors to (λ−3)(λ−1) = 0, giving λ = 3 and λ = 1.</p>
+</div>
+<div class="faq-item">
+<h3>Can a 2x2 matrix have only one eigenvalue?</h3>
+<p>Yes - this happens when the discriminant of the characteristic equation is zero (a 'repeated' or 'degenerate' eigenvalue), which occurs for matrices like [[2,1],[0,2]], where both roots of the quadratic coincide at the same value.</p>
 </div></div>
         </div>
       </main>

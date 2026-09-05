@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "The non-limiting reagent is left over (in excess) once the limiting reagent is fully consumed - the reaction stops there, and any remaining excess reagent doesn't react further without more of the limiting reagent being added."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How much product can theoretically form once the limiting reagent is identified?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Multiply the limiting reagent's moles by the mole ratio (from the balanced equation) between the limiting reagent and the product, then convert to grams using the product's molar mass - this calculator identifies which reactant limits the reaction, the first step toward that yield calculation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if both reactants give the exact same mol-to-coefficient ratio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Neither reagent is in excess - both are consumed completely at the same time, which is called a 'stoichiometric' mixture. In practice this is rare, since it requires the reactants to be measured in exactly the ratio the equation calls for."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the limiting reagent have to be the one with the smaller mass?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not necessarily - a reactant with a larger mass can still be limiting if it has a much higher molar mass or a larger required coefficient, since what matters is moles divided by the coefficient, not raw mass."
+          }
         }
       ]
     }
@@ -182,7 +206,7 @@
       <main>
         <h1>Limiting Reagent Calculator</h1>
         <p style="max-width:60ch;">Enter each reactant's chemical formula, mass, and its coefficient in the balanced equation to find the limiting reagent.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>What happens to the excess reagent?</h3>
 <p>The non-limiting reagent is left over (in excess) once the limiting reagent is fully consumed - the reaction stops there, and any remaining excess reagent doesn't react further without more of the limiting reagent being added.</p>
+</div>
+<div class="faq-item">
+<h3>How much product can theoretically form once the limiting reagent is identified?</h3>
+<p>Multiply the limiting reagent's moles by the mole ratio (from the balanced equation) between the limiting reagent and the product, then convert to grams using the product's molar mass - this calculator identifies which reactant limits the reaction, the first step toward that yield calculation.</p>
+</div>
+<div class="faq-item">
+<h3>What if both reactants give the exact same mol-to-coefficient ratio?</h3>
+<p>Neither reagent is in excess - both are consumed completely at the same time, which is called a 'stoichiometric' mixture. In practice this is rare, since it requires the reactants to be measured in exactly the ratio the equation calls for.</p>
+</div>
+<div class="faq-item">
+<h3>Does the limiting reagent have to be the one with the smaller mass?</h3>
+<p>Not necessarily - a reactant with a larger mass can still be limiting if it has a much higher molar mass or a larger required coefficient, since what matters is moles divided by the coefficient, not raw mass.</p>
 </div></div>
         </div>
       </main>

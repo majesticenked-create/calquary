@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Related but different - the Z-Score Calculator finds the percentile below a single value. This calculator finds the probability a value falls between two bounds, which is more useful for questions like \"what fraction of scores are between 85 and 115?\""
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I set the lower and upper bound to the same value?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The probability comes out to essentially 0% - a continuous normal distribution assigns zero probability to hitting one exact point, only to falling within a range."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I find the probability of a value being above or below a single bound instead of between two?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Set the lower bound to a very small number (like mean − 10×SD) to effectively capture everything below your upper bound, or set the upper bound very high to capture everything above your lower bound - this approximates a one-sided probability using the two-bound tool."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this work for distributions that aren't normal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - this calculator specifically assumes a normal (bell-curve) distribution defined by its mean and standard deviation; skewed or non-normal data won't give accurate probabilities with this method."
+          }
         }
       ]
     }
@@ -182,7 +206,7 @@
       <main>
         <h1>Normal Distribution Calculator</h1>
         <p style="max-width:60ch;">Enter a mean, standard deviation, and a value range to calculate the probability that a normally distributed value falls within that range.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Is this the same as the Z-Score Calculator?</h3>
 <p>Related but different - the Z-Score Calculator finds the percentile below a single value. This calculator finds the probability a value falls between two bounds, which is more useful for questions like "what fraction of scores are between 85 and 115?"</p>
+</div>
+<div class="faq-item">
+<h3>What if I set the lower and upper bound to the same value?</h3>
+<p>The probability comes out to essentially 0% - a continuous normal distribution assigns zero probability to hitting one exact point, only to falling within a range.</p>
+</div>
+<div class="faq-item">
+<h3>How do I find the probability of a value being above or below a single bound instead of between two?</h3>
+<p>Set the lower bound to a very small number (like mean − 10×SD) to effectively capture everything below your upper bound, or set the upper bound very high to capture everything above your lower bound - this approximates a one-sided probability using the two-bound tool.</p>
+</div>
+<div class="faq-item">
+<h3>Does this work for distributions that aren't normal?</h3>
+<p>No - this calculator specifically assumes a normal (bell-curve) distribution defined by its mean and standard deviation; skewed or non-normal data won't give accurate probabilities with this method.</p>
 </div></div>
         </div>
       </main>

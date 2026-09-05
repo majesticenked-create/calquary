@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "PPI (pixels per inch) describes screen or digital image resolution. DPI (dots per inch) technically refers to physical printer output resolution, though the terms are often used interchangeably in casual conversation."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the PPI of a typical smartphone screen, like 1080×2400 at 6.1 inches?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "About 442 PPI - the diagonal resolution is √(1080² + 2400²) ≈ 2632.6 pixels, divided by the 6.1-inch diagonal. That's why phone screens look noticeably sharper up close than a monitor with a much lower PPI."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a higher-resolution screen always have a higher PPI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not necessarily - PPI depends on both resolution and physical size. A 4K (3840×2160) 43-inch TV has a lower PPI (~102) than a 1080p (1920×1080) 24-inch monitor (~92 is close, but a 15-inch 1080p laptop hits ~147 PPI) because the same pixel count is spread over more or less physical space."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is PPI the same as 'Retina' display quality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not exactly - Apple's 'Retina' marketing term refers to a PPI high enough that individual pixels become imperceptible at a typical viewing distance for that device (roughly 300 PPI for phones held close, lower for monitors viewed farther away), not a fixed PPI number across all screen types."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Screen PPI Calculator</h1>
         <p style="max-width:60ch;">Enter a screen's pixel resolution and diagonal size to calculate its pixels per inch (PPI).</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>What's the difference between PPI and DPI?</h3>
 <p>PPI (pixels per inch) describes screen or digital image resolution. DPI (dots per inch) technically refers to physical printer output resolution, though the terms are often used interchangeably in casual conversation.</p>
+</div>
+<div class="faq-item">
+<h3>What is the PPI of a typical smartphone screen, like 1080×2400 at 6.1 inches?</h3>
+<p>About 442 PPI - the diagonal resolution is √(1080² + 2400²) ≈ 2632.6 pixels, divided by the 6.1-inch diagonal. That's why phone screens look noticeably sharper up close than a monitor with a much lower PPI.</p>
+</div>
+<div class="faq-item">
+<h3>Does a higher-resolution screen always have a higher PPI?</h3>
+<p>Not necessarily - PPI depends on both resolution and physical size. A 4K (3840×2160) 43-inch TV has a lower PPI (~102) than a 1080p (1920×1080) 24-inch monitor (~92 is close, but a 15-inch 1080p laptop hits ~147 PPI) because the same pixel count is spread over more or less physical space.</p>
+</div>
+<div class="faq-item">
+<h3>Is PPI the same as 'Retina' display quality?</h3>
+<p>Not exactly - Apple's 'Retina' marketing term refers to a PPI high enough that individual pixels become imperceptible at a typical viewing distance for that device (roughly 300 PPI for phones held close, lower for monitors viewed farther away), not a fixed PPI number across all screen types.</p>
 </div></div>
         </div>
       </main>

@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Yes - alongside the word count, it shows character count both with and without spaces, plus sentence and paragraph counts, which is useful for meeting strict character limits like social media posts or meta descriptions."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a hyphenated word like 'well-known' count as one word or two?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "One word - the counter splits on whitespace, and since there's no space inside 'well-known,' it's treated as a single word, matching how most word processors handle hyphenated compounds."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "If I paste in three blank lines between paragraphs, does that affect the count?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Extra blank lines don't add to the word or character count (there are no words on them), but they do count toward paragraph detection, since a blank line is typically what separates one paragraph from the next."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is 'word count' different from 'character count' for things like Twitter/X limits?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Word count tallies whitespace-separated words, while character count tallies every individual letter, number, space, and symbol. Platforms like X limit by character count, not word count, so check the character count (with spaces) this tool shows if you're working against a platform's character limit."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Word Counter</h1>
         <p style="max-width:60ch;">Paste or type text below to instantly count words, characters, and sentences.</p>
-        <p class="last-updated">Last updated: August 27, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Does this tool count characters as well as words?</h3>
 <p>Yes - alongside the word count, it shows character count both with and without spaces, plus sentence and paragraph counts, which is useful for meeting strict character limits like social media posts or meta descriptions.</p>
+</div>
+<div class="faq-item">
+<h3>Does a hyphenated word like 'well-known' count as one word or two?</h3>
+<p>One word - the counter splits on whitespace, and since there's no space inside 'well-known,' it's treated as a single word, matching how most word processors handle hyphenated compounds.</p>
+</div>
+<div class="faq-item">
+<h3>If I paste in three blank lines between paragraphs, does that affect the count?</h3>
+<p>Extra blank lines don't add to the word or character count (there are no words on them), but they do count toward paragraph detection, since a blank line is typically what separates one paragraph from the next.</p>
+</div>
+<div class="faq-item">
+<h3>How is 'word count' different from 'character count' for things like Twitter/X limits?</h3>
+<p>Word count tallies whitespace-separated words, while character count tallies every individual letter, number, space, and symbol. Platforms like X limit by character count, not word count, so check the character count (with spaces) this tool shows if you're working against a platform's character limit.</p>
 </div></div>
         </div>
       </main>

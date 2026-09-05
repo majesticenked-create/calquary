@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "No - this uses ideal projectile motion (only gravity acting on the object), which is accurate for dense, compact objects moving at moderate speeds over short distances, but increasingly diverges from reality for light or fast-moving objects where air drag matters."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate the maximum height of a projectile?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Max height = (v × sin(angle))² / (2 × g). For a launch at 20 m/s and 45° with g = 9.81: (20×sin45°)² / (2×9.81) = (14.14)² / 19.62 ≈ 10.19 m."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to the range if I double the launch velocity?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The range quadruples - since range is proportional to velocity squared (range = v²×sin(2×angle)/g), doubling v multiplies the range by 2² = 4, holding angle and gravity constant."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use this for a projectile launched from a height, like off a cliff?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - this calculator assumes launch and landing occur at the same height (ground level), which simplifies the flight-time formula. A projectile launched from an elevated point needs an additional term accounting for the extra fall distance, which this tool doesn't include."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Projectile Motion Calculator</h1>
         <p style="max-width:60ch;">Enter the launch speed and angle to calculate flight time, maximum height, and horizontal range, ignoring air resistance.</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Does this account for air resistance?</h3>
 <p>No - this uses ideal projectile motion (only gravity acting on the object), which is accurate for dense, compact objects moving at moderate speeds over short distances, but increasingly diverges from reality for light or fast-moving objects where air drag matters.</p>
+</div>
+<div class="faq-item">
+<h3>How do I calculate the maximum height of a projectile?</h3>
+<p>Max height = (v × sin(angle))² / (2 × g). For a launch at 20 m/s and 45° with g = 9.81: (20×sin45°)² / (2×9.81) = (14.14)² / 19.62 ≈ 10.19 m.</p>
+</div>
+<div class="faq-item">
+<h3>What happens to the range if I double the launch velocity?</h3>
+<p>The range quadruples - since range is proportional to velocity squared (range = v²×sin(2×angle)/g), doubling v multiplies the range by 2² = 4, holding angle and gravity constant.</p>
+</div>
+<div class="faq-item">
+<h3>Can I use this for a projectile launched from a height, like off a cliff?</h3>
+<p>No - this calculator assumes launch and landing occur at the same height (ground level), which simplifies the flight-time formula. A projectile launched from an elevated point needs an additional term accounting for the extra fall distance, which this tool doesn't include.</p>
 </div></div>
         </div>
       </main>

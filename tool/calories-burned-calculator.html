@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "They're population averages, not individual measurements - actual calorie burn varies with fitness level, exact intensity, terrain, and individual metabolism, so treat this as a reasonable estimate rather than a precise figure, similar to what fitness trackers and gym equipment typically show."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What's an example calculation for a different activity?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cycling at a moderate pace (MET 8.0) for a 180 lb (81.6 kg) person for 45 minutes (0.75 hours): 8.0 × 81.6 × 0.75 ≈ 490 calories burned."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do two similar activities have very different MET values?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MET values reflect measured average energy cost at a specific intensity - brisk walking (MET ~4) and running (MET ~10) both involve similar muscles, but running requires far more energy output per minute, which is captured in its higher MET value."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this the same as what my fitness tracker or gym machine shows?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It's a similar MET-based estimate, though trackers and machines may use slightly different MET tables or incorporate heart rate data, which can produce a somewhat different number for the same activity and duration - both are estimates rather than precise measurements."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Calories Burned Calculator</h1>
         <p style="max-width:60ch;">Choose an activity and enter your weight and duration to estimate calories burned, using standard MET (Metabolic Equivalent of Task) values.</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>How accurate are MET-based calorie estimates?</h3>
 <p>They're population averages, not individual measurements - actual calorie burn varies with fitness level, exact intensity, terrain, and individual metabolism, so treat this as a reasonable estimate rather than a precise figure, similar to what fitness trackers and gym equipment typically show.</p>
+</div>
+<div class="faq-item">
+<h3>What's an example calculation for a different activity?</h3>
+<p>Cycling at a moderate pace (MET 8.0) for a 180 lb (81.6 kg) person for 45 minutes (0.75 hours): 8.0 × 81.6 × 0.75 ≈ 490 calories burned.</p>
+</div>
+<div class="faq-item">
+<h3>Why do two similar activities have very different MET values?</h3>
+<p>MET values reflect measured average energy cost at a specific intensity - brisk walking (MET ~4) and running (MET ~10) both involve similar muscles, but running requires far more energy output per minute, which is captured in its higher MET value.</p>
+</div>
+<div class="faq-item">
+<h3>Is this the same as what my fitness tracker or gym machine shows?</h3>
+<p>It's a similar MET-based estimate, though trackers and machines may use slightly different MET tables or incorporate heart rate data, which can produce a somewhat different number for the same activity and duration - both are estimates rather than precise measurements.</p>
 </div></div>
         </div>
       </main>

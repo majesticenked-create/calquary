@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "If your device's clock hasn't synced recently (or is set manually), it can drift slightly from an atomic-clock reference - most computers and phones auto-sync periodically to correct this."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this show seconds, or just hours and minutes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It displays down to the second, updating live each second, so you can use it for precise timing needs like coordinating a countdown, not just a general glance at the clock."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use this to check the time in another country?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This page only shows your own device's local time. To check the current time in a different city or time zone, use the Time Zone Converter instead."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the displayed date change automatically at midnight?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - since the page reads your system clock continuously, both the time and date update live, rolling over to the next calendar day the moment your device's clock crosses midnight."
+          }
         }
       ]
     }
@@ -182,7 +206,7 @@
       <main>
         <h1>Current Time</h1>
         <p style="max-width:60ch;">This shows your device's current time and date, updating every second.</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Why might this be a minute or two off from an official time source?</h3>
 <p>If your device's clock hasn't synced recently (or is set manually), it can drift slightly from an atomic-clock reference - most computers and phones auto-sync periodically to correct this.</p>
+</div>
+<div class="faq-item">
+<h3>Does this show seconds, or just hours and minutes?</h3>
+<p>It displays down to the second, updating live each second, so you can use it for precise timing needs like coordinating a countdown, not just a general glance at the clock.</p>
+</div>
+<div class="faq-item">
+<h3>Can I use this to check the time in another country?</h3>
+<p>This page only shows your own device's local time. To check the current time in a different city or time zone, use the Time Zone Converter instead.</p>
+</div>
+<div class="faq-item">
+<h3>Does the displayed date change automatically at midnight?</h3>
+<p>Yes - since the page reads your system clock continuously, both the time and date update live, rolling over to the next calendar day the moment your device's clock crosses midnight.</p>
 </div></div>
         </div>
       </main>

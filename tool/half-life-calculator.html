@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Yes, for first-order processes - radioactive decay is inherently first-order, and many chemical reactions (where the rate depends on the concentration of a single reactant) follow the same exponential decay math."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I find the half-life if I know the rate constant instead?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - use the same relationship rearranged: half-life = ln(2) / k. If a reaction has a rate constant k = 0.0231 per year, its half-life is ln(2) / 0.0231 ≈ 30 years."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long until only 5% of a substance remains?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "About 4.32 half-lives - solve (1/2)^n = 0.05 for n, which gives n = ln(0.05) / ln(0.5) ≈ 4.32. Multiply that by the half-life to get the elapsed time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is half-life the same as the average lifetime of a particle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - the mean lifetime (often called τ) is 1/k, which is longer than the half-life. Half-life = ln(2) × mean lifetime ≈ 0.693 × mean lifetime, since half-life measures when half the population has decayed, not the average time any single particle survives."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Half-Life Calculator</h1>
         <p style="max-width:60ch;">Choose what to solve for, then enter the known values to calculate first-order decay - used for radioactive decay and first-order chemical reaction kinetics.</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Does this apply to both radioactive decay and chemical reactions?</h3>
 <p>Yes, for first-order processes - radioactive decay is inherently first-order, and many chemical reactions (where the rate depends on the concentration of a single reactant) follow the same exponential decay math.</p>
+</div>
+<div class="faq-item">
+<h3>Can I find the half-life if I know the rate constant instead?</h3>
+<p>Yes - use the same relationship rearranged: half-life = ln(2) / k. If a reaction has a rate constant k = 0.0231 per year, its half-life is ln(2) / 0.0231 ≈ 30 years.</p>
+</div>
+<div class="faq-item">
+<h3>How long until only 5% of a substance remains?</h3>
+<p>About 4.32 half-lives - solve (1/2)^n = 0.05 for n, which gives n = ln(0.05) / ln(0.5) ≈ 4.32. Multiply that by the half-life to get the elapsed time.</p>
+</div>
+<div class="faq-item">
+<h3>Is half-life the same as the average lifetime of a particle?</h3>
+<p>No - the mean lifetime (often called τ) is 1/k, which is longer than the half-life. Half-life = ln(2) × mean lifetime ≈ 0.693 × mean lifetime, since half-life measures when half the population has decayed, not the average time any single particle survives.</p>
 </div></div>
         </div>
       </main>

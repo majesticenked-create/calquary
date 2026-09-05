@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "No - enter colors as 6-digit hex codes (like #FF0000 for red), since that's the precise, unambiguous format this calculator parses. Most design tools and browsers can show you the hex code for any color you pick visually."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What color do you get from mixing pure red and pure blue at 50/50?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A mid-purple/magenta, roughly #7F007F - since red is (255,0,0) and blue is (0,0,255), averaging each channel gives (127,0,127), the RGB midpoint between the two."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why doesn't mixing red and green give brown or yellow like paint would?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because this tool blends light (additive RGB), not pigment (subtractive mixing). Additively, red (255,0,0) and green (0,255,0) mixed 50/50 average to (127,127,0), a yellow-olive tone - similar to yellow, but by an entirely different mechanism than mixing paint pigments, which is why intuitions from painting don't always transfer here."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if I set the ratio to 0% or 100%?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "At 0% first-color weight, the output is simply the second color unchanged; at 100%, it's the first color unchanged - the ratio only matters for values between those two extremes."
+          }
         }
       ]
     }
@@ -182,7 +206,7 @@
       <main>
         <h1>Color Mixer</h1>
         <p style="max-width:60ch;">Enter two hex colors and a mix ratio to see the blended color.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Can I use color names instead of hex codes?</h3>
 <p>No - enter colors as 6-digit hex codes (like #FF0000 for red), since that's the precise, unambiguous format this calculator parses. Most design tools and browsers can show you the hex code for any color you pick visually.</p>
+</div>
+<div class="faq-item">
+<h3>What color do you get from mixing pure red and pure blue at 50/50?</h3>
+<p>A mid-purple/magenta, roughly #7F007F - since red is (255,0,0) and blue is (0,0,255), averaging each channel gives (127,0,127), the RGB midpoint between the two.</p>
+</div>
+<div class="faq-item">
+<h3>Why doesn't mixing red and green give brown or yellow like paint would?</h3>
+<p>Because this tool blends light (additive RGB), not pigment (subtractive mixing). Additively, red (255,0,0) and green (0,255,0) mixed 50/50 average to (127,127,0), a yellow-olive tone - similar to yellow, but by an entirely different mechanism than mixing paint pigments, which is why intuitions from painting don't always transfer here.</p>
+</div>
+<div class="faq-item">
+<h3>What happens if I set the ratio to 0% or 100%?</h3>
+<p>At 0% first-color weight, the output is simply the second color unchanged; at 100%, it's the first color unchanged - the ratio only matters for values between those two extremes.</p>
 </div></div>
         </div>
       </main>

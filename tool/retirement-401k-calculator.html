@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-02",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Real investment returns vary significantly year to year - this calculator uses a constant average return as a simplifying assumption for a long-term projection, not a prediction of actual year-by-year performance, which will include both up and down years."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the employer match count toward the IRS annual 401(k) contribution limit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Employer matching contributions are generally not counted against your personal elective-deferral limit, though they do count toward a separate, higher combined limit for total annual additions to the account - this calculator only models the match amount itself, not IRS limit rules."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "On an $80,000 salary contributing 6% with a 100% match up to 3%, how much goes in annually before growth?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your contribution is 6% of $80,000 = $4,800; the employer match caps at 3% of salary = $2,400 (100% of your contribution up to that 3% limit), for a combined $7,200 added to the account that year before any investment growth."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why would increasing contribution percentage beyond the match limit still matter for the projection?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Even once you've captured the full employer match, additional personal contributions keep compounding for the same number of years at the assumed return rate, so contributing more (subject to IRS limits) still meaningfully increases the projected balance at retirement - the match limit only affects how much extra money the employer adds, not how much you're allowed to contribute yourself."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>401(k) Retirement Calculator</h1>
         <p style="max-width:60ch;">Enter your salary, contribution rate, employer match, current balance, and years until retirement to project your 401(k) balance.</p>
-        <p class="last-updated">Last updated: September 2, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Why does the projection assume a constant annual return?</h3>
 <p>Real investment returns vary significantly year to year - this calculator uses a constant average return as a simplifying assumption for a long-term projection, not a prediction of actual year-by-year performance, which will include both up and down years.</p>
+</div>
+<div class="faq-item">
+<h3>Does the employer match count toward the IRS annual 401(k) contribution limit?</h3>
+<p>Employer matching contributions are generally not counted against your personal elective-deferral limit, though they do count toward a separate, higher combined limit for total annual additions to the account - this calculator only models the match amount itself, not IRS limit rules.</p>
+</div>
+<div class="faq-item">
+<h3>On an $80,000 salary contributing 6% with a 100% match up to 3%, how much goes in annually before growth?</h3>
+<p>Your contribution is 6% of $80,000 = $4,800; the employer match caps at 3% of salary = $2,400 (100% of your contribution up to that 3% limit), for a combined $7,200 added to the account that year before any investment growth.</p>
+</div>
+<div class="faq-item">
+<h3>Why would increasing contribution percentage beyond the match limit still matter for the projection?</h3>
+<p>Even once you've captured the full employer match, additional personal contributions keep compounding for the same number of years at the assumed return rate, so contributing more (subject to IRS limits) still meaningfully increases the projected balance at retirement - the match limit only affects how much extra money the employer adds, not how much you're allowed to contribute yourself.</p>
 </div></div>
         </div>
       </main>

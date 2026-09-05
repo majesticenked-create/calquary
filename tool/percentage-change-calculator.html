@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Yes - if a value more than doubles, the percentage change exceeds 100%. Going from 10 to 25 is a 150% increase: (25-10)/10*100 = 150%. There's no upper limit on increases, but a decrease can never exceed -100% (a value can't drop below zero relative to itself)."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What does it mean if the percentage change is 0%?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It means the starting and ending values are identical - there was no increase or decrease. Entering 80 for both the starting and ending value returns 0%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate the percentage change from 50 to 75?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "(75 − 50) ÷ 50 × 100 = 50%. The ending value is 50% higher than the starting value."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is 'percent change' the same as 'percent difference'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not quite - percentage change treats one value as the original and the other as the new value, so the order matters (going from 50 to 100 is +100%, but 100 to 50 is −50%). Percent difference is typically symmetric, comparing two values against their average rather than treating either as the baseline."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Percentage Change Calculator</h1>
         <p style="max-width:60ch;">Enter a starting and ending value to see the percentage increase or decrease between them.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Can percentage change be greater than 100%?</h3>
 <p>Yes - if a value more than doubles, the percentage change exceeds 100%. Going from 10 to 25 is a 150% increase: (25-10)/10*100 = 150%. There's no upper limit on increases, but a decrease can never exceed -100% (a value can't drop below zero relative to itself).</p>
+</div>
+<div class="faq-item">
+<h3>What does it mean if the percentage change is 0%?</h3>
+<p>It means the starting and ending values are identical - there was no increase or decrease. Entering 80 for both the starting and ending value returns 0%.</p>
+</div>
+<div class="faq-item">
+<h3>How do I calculate the percentage change from 50 to 75?</h3>
+<p>(75 − 50) ÷ 50 × 100 = 50%. The ending value is 50% higher than the starting value.</p>
+</div>
+<div class="faq-item">
+<h3>Is 'percent change' the same as 'percent difference'?</h3>
+<p>Not quite - percentage change treats one value as the original and the other as the new value, so the order matters (going from 50 to 100 is +100%, but 100 to 50 is −50%). Percent difference is typically symmetric, comparing two values against their average rather than treating either as the baseline.</p>
 </div></div>
         </div>
       </main>

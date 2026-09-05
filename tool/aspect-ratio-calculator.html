@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "It's the proportional relationship between an image's width and height - 4:3 is a more square-ish traditional photo/TV shape, while 16:9 is the wider, more cinematic shape used by most modern screens and video."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the aspect ratio of a 1080×1920 vertical (portrait) video?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "9:16 - the same ratio as 16:9 landscape video but rotated, since GCD(1080, 1920) = 120, giving 1080÷120=9 and 1920÷120=16."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I find the new width instead of the new height when resizing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This calculator solves for a matching height given a new width; to go the other direction, swap the original width and height values you enter so the field effectively solves for the corresponding width instead."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between aspect ratio and resolution?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Resolution (like 1920×1080) gives the exact pixel dimensions of an image, while aspect ratio (like 16:9) only describes the proportional shape - many different resolutions (1920×1080, 1280×720, 3840×2160) all share the same 16:9 aspect ratio."
+          }
         }
       ]
     }
@@ -182,7 +206,7 @@
       <main>
         <h1>Aspect Ratio Calculator</h1>
         <p style="max-width:60ch;">Enter a width and height to find the simplified aspect ratio, plus the matching dimension for a new size.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>What does a 'photo ratio' like 4:3 or 16:9 mean?</h3>
 <p>It's the proportional relationship between an image's width and height - 4:3 is a more square-ish traditional photo/TV shape, while 16:9 is the wider, more cinematic shape used by most modern screens and video.</p>
+</div>
+<div class="faq-item">
+<h3>What's the aspect ratio of a 1080×1920 vertical (portrait) video?</h3>
+<p>9:16 - the same ratio as 16:9 landscape video but rotated, since GCD(1080, 1920) = 120, giving 1080÷120=9 and 1920÷120=16.</p>
+</div>
+<div class="faq-item">
+<h3>Can I find the new width instead of the new height when resizing?</h3>
+<p>This calculator solves for a matching height given a new width; to go the other direction, swap the original width and height values you enter so the field effectively solves for the corresponding width instead.</p>
+</div>
+<div class="faq-item">
+<h3>What's the difference between aspect ratio and resolution?</h3>
+<p>Resolution (like 1920×1080) gives the exact pixel dimensions of an image, while aspect ratio (like 16:9) only describes the proportional shape - many different resolutions (1920×1080, 1280×720, 3840×2160) all share the same 16:9 aspect ratio.</p>
 </div></div>
         </div>
       </main>

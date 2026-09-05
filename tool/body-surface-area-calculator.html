@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-02",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "No - this is a general reference calculation. Medication dosing based on BSA should always be determined and verified by a qualified healthcare provider, since dosing also depends on the specific drug, your medical history, and other clinical factors this calculator doesn't account for."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What's an example BSA calculation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For someone 180 cm tall weighing 80 kg: BSA = √((180 × 80) ÷ 3600) = √4 = 2.0 m². That's on the higher end of the typical adult range."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does BSA differ from BMI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BMI (weight ÷ height²) is a screening tool for weight status relative to height, while BSA estimates total skin surface area and is used mainly for medical dosing and physiological measurements like cardiac index - they answer different questions and aren't interchangeable."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the Mosteller formula work the same for children as adults?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - the Mosteller formula uses the same equation regardless of age, since it's based purely on height and weight rather than age-specific constants. This makes it a common choice in pediatric dosing calculations as well as adult ones."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Body Surface Area Calculator</h1>
         <p style="max-width:60ch;">Enter height and weight to calculate body surface area (BSA), commonly used for medication dosing.</p>
-        <p class="last-updated">Last updated: September 2, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Should I use this to calculate my own medication dose?</h3>
 <p>No - this is a general reference calculation. Medication dosing based on BSA should always be determined and verified by a qualified healthcare provider, since dosing also depends on the specific drug, your medical history, and other clinical factors this calculator doesn't account for.</p>
+</div>
+<div class="faq-item">
+<h3>What's an example BSA calculation?</h3>
+<p>For someone 180 cm tall weighing 80 kg: BSA = √((180 × 80) ÷ 3600) = √4 = 2.0 m². That's on the higher end of the typical adult range.</p>
+</div>
+<div class="faq-item">
+<h3>How does BSA differ from BMI?</h3>
+<p>BMI (weight ÷ height²) is a screening tool for weight status relative to height, while BSA estimates total skin surface area and is used mainly for medical dosing and physiological measurements like cardiac index - they answer different questions and aren't interchangeable.</p>
+</div>
+<div class="faq-item">
+<h3>Does the Mosteller formula work the same for children as adults?</h3>
+<p>Yes - the Mosteller formula uses the same equation regardless of age, since it's based purely on height and weight rather than age-specific constants. This makes it a common choice in pediatric dosing calculations as well as adult ones.</p>
 </div></div>
         </div>
       </main>

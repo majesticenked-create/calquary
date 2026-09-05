@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Yes - this calculator weights each course's grade by its credit hours, which is exactly what \"weighted GPA\" means in this context. Enter your grades and credit hours above to get your overall GPA."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What GPA scale does this calculator use for each letter grade?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The standard unweighted 4.0 scale: A=4.0, A-=3.7, B+=3.3, B=3.0, B-=2.7, C+=2.3, C=2.0, C-=1.7, D+=1.3, D=1.0, F=0.0 - the same scale most US colleges use for a base (non-honors) GPA."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate my GPA for just 2 courses, one worth 3 credits at an A and one worth 4 credits at a B?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Quality points: (4.0×3) + (3.0×4) = 12 + 12 = 24. Total credits: 3 + 4 = 7. GPA = 24 ÷ 7 ≈ 3.43."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a Pass/Fail or Withdraw grade affect my GPA in this calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This calculator only accepts standard letter grades (A through F) with defined grade points, so pass/fail or withdrawal courses - which most schools exclude from GPA math entirely - should simply be left out by setting their credit hours to 0."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Weighted GPA Calculator</h1>
         <p style="max-width:60ch;">Enter a letter grade and credit hours for each course to calculate your credit-weighted GPA.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Is a 'GPA calculator with weighted grades' the same as this tool?</h3>
 <p>Yes - this calculator weights each course's grade by its credit hours, which is exactly what "weighted GPA" means in this context. Enter your grades and credit hours above to get your overall GPA.</p>
+</div>
+<div class="faq-item">
+<h3>What GPA scale does this calculator use for each letter grade?</h3>
+<p>The standard unweighted 4.0 scale: A=4.0, A-=3.7, B+=3.3, B=3.0, B-=2.7, C+=2.3, C=2.0, C-=1.7, D+=1.3, D=1.0, F=0.0 - the same scale most US colleges use for a base (non-honors) GPA.</p>
+</div>
+<div class="faq-item">
+<h3>How do I calculate my GPA for just 2 courses, one worth 3 credits at an A and one worth 4 credits at a B?</h3>
+<p>Quality points: (4.0×3) + (3.0×4) = 12 + 12 = 24. Total credits: 3 + 4 = 7. GPA = 24 ÷ 7 ≈ 3.43.</p>
+</div>
+<div class="faq-item">
+<h3>Does a Pass/Fail or Withdraw grade affect my GPA in this calculator?</h3>
+<p>This calculator only accepts standard letter grades (A through F) with defined grade points, so pass/fail or withdrawal courses - which most schools exclude from GPA math entirely - should simply be left out by setting their credit hours to 0.</p>
 </div></div>
         </div>
       </main>

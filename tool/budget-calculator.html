@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-31",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Use after-tax (take-home) income - it reflects money actually available to spend or save, which is what a monthly budget is built around."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I don't have a 'housing' or 'transportation' cost some months?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Enter 0 for any category that doesn't apply to you - the calculator just sums whatever categories have a value, so leaving one at zero simply excludes it from your total spending and the needs/wants comparison."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is the 20% savings portion calculated if I don't enter a separate savings amount?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The calculator infers it: it subtracts your total entered expenses from your income, and whatever's left over is treated as your effective savings/leftover rate to compare against the 20% target - it isn't a category you fill in directly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a 50/30/20 budget the same as a zero-based budget?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - the 50/30/20 rule sets broad percentage targets across three buckets (needs, wants, savings) without assigning every dollar a specific job. A zero-based budget assigns every dollar of income to a specific category until income minus allocations equals zero, which is a more granular approach than this calculator models."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Budget Calculator</h1>
         <p style="max-width:60ch;">Enter your monthly take-home income and spending by category to see what's left over and how your budget compares to the 50/30/20 guideline.</p>
-        <p class="last-updated">Last updated: August 31, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Should my income here be gross or after-tax?</h3>
 <p>Use after-tax (take-home) income - it reflects money actually available to spend or save, which is what a monthly budget is built around.</p>
+</div>
+<div class="faq-item">
+<h3>What if I don't have a 'housing' or 'transportation' cost some months?</h3>
+<p>Enter 0 for any category that doesn't apply to you - the calculator just sums whatever categories have a value, so leaving one at zero simply excludes it from your total spending and the needs/wants comparison.</p>
+</div>
+<div class="faq-item">
+<h3>How is the 20% savings portion calculated if I don't enter a separate savings amount?</h3>
+<p>The calculator infers it: it subtracts your total entered expenses from your income, and whatever's left over is treated as your effective savings/leftover rate to compare against the 20% target - it isn't a category you fill in directly.</p>
+</div>
+<div class="faq-item">
+<h3>Is a 50/30/20 budget the same as a zero-based budget?</h3>
+<p>No - the 50/30/20 rule sets broad percentage targets across three buckets (needs, wants, savings) without assigning every dollar a specific job. A zero-based budget assigns every dollar of income to a specific category until income minus allocations equals zero, which is a more granular approach than this calculator models.</p>
 </div></div>
         </div>
       </main>

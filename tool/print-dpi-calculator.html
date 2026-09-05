@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "If your print aspect ratio doesn't exactly match your image's pixel aspect ratio, one dimension will have a higher effective DPI than the other - the lower value is the true limiting factor for overall image sharpness, since you can't exceed it without either cropping or distorting the image."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What DPI does a professional photo lab require for prints?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most labs want at least 300 DPI at the final print size, though many accept down to 200 DPI without a visible quality drop - check your specific lab's requirements, since some large-format printers use different thresholds."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I increase my image's DPI without adding real detail?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can resample (upscale) an image to report a higher DPI, but this doesn't add genuine pixel detail - it just spreads existing pixels over more print area or interpolates new ones, which can look softer or blurrier than a native high-resolution capture."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is DPI for printing the same as PPI for screens?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They're closely related but describe different outputs - PPI (pixels per inch) describes a digital image or screen's resolution, while DPI (dots per inch) technically refers to a printer's physical dot output. This calculator treats them as effectively interchangeable for figuring out print sharpness, which is standard practice outside of strict prepress work."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Print DPI Calculator</h1>
         <p style="max-width:60ch;">Enter your image's pixel dimensions and the print size to calculate the effective DPI (dots per inch).</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Why does the calculator use the lower of the two DPI values?</h3>
 <p>If your print aspect ratio doesn't exactly match your image's pixel aspect ratio, one dimension will have a higher effective DPI than the other - the lower value is the true limiting factor for overall image sharpness, since you can't exceed it without either cropping or distorting the image.</p>
+</div>
+<div class="faq-item">
+<h3>What DPI does a professional photo lab require for prints?</h3>
+<p>Most labs want at least 300 DPI at the final print size, though many accept down to 200 DPI without a visible quality drop - check your specific lab's requirements, since some large-format printers use different thresholds.</p>
+</div>
+<div class="faq-item">
+<h3>Can I increase my image's DPI without adding real detail?</h3>
+<p>You can resample (upscale) an image to report a higher DPI, but this doesn't add genuine pixel detail - it just spreads existing pixels over more print area or interpolates new ones, which can look softer or blurrier than a native high-resolution capture.</p>
+</div>
+<div class="faq-item">
+<h3>Is DPI for printing the same as PPI for screens?</h3>
+<p>They're closely related but describe different outputs - PPI (pixels per inch) describes a digital image or screen's resolution, while DPI (dots per inch) technically refers to a printer's physical dot output. This calculator treats them as effectively interchangeable for figuring out print sharpness, which is standard practice outside of strict prepress work.</p>
 </div></div>
         </div>
       </main>

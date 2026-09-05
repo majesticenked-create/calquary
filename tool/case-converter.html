@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Beyond title case and sentence case, it converts to UPPERCASE, lowercase, camelCase, and other common formatting styles used in writing and code, so you can reformat text for whichever context you need."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How does title case decide which words to capitalize?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It capitalizes the first letter of every word in the text, without special handling for smaller words like 'a,' 'the,' or 'of' - so 'the lord of the rings' becomes 'The Lord Of The Rings' here, rather than the style-guide convention that lowercases minor words."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does sentence case do with a text that has multiple sentences?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It capitalizes only the very first letter of the entire input, leaving everything else lowercase - it doesn't detect individual sentence boundaries and re-capitalize each one, so a multi-sentence paragraph gets exactly one capital letter overall."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "If my text has ALL CAPS acronyms like 'NASA,' does converting to lowercase break them?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - converting to lowercase treats every letter the same way regardless of context, so 'NASA' becomes 'nasa.' There's no acronym detection, so review text with acronyms or proper nouns after converting."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Case Converter</h1>
         <p style="max-width:60ch;">Paste your text and choose a case to convert it to UPPERCASE, lowercase, Title Case, or Sentence case.</p>
-        <p class="last-updated">Last updated: August 27, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>What case styles does this converter support?</h3>
 <p>Beyond title case and sentence case, it converts to UPPERCASE, lowercase, camelCase, and other common formatting styles used in writing and code, so you can reformat text for whichever context you need.</p>
+</div>
+<div class="faq-item">
+<h3>How does title case decide which words to capitalize?</h3>
+<p>It capitalizes the first letter of every word in the text, without special handling for smaller words like 'a,' 'the,' or 'of' - so 'the lord of the rings' becomes 'The Lord Of The Rings' here, rather than the style-guide convention that lowercases minor words.</p>
+</div>
+<div class="faq-item">
+<h3>What does sentence case do with a text that has multiple sentences?</h3>
+<p>It capitalizes only the very first letter of the entire input, leaving everything else lowercase - it doesn't detect individual sentence boundaries and re-capitalize each one, so a multi-sentence paragraph gets exactly one capital letter overall.</p>
+</div>
+<div class="faq-item">
+<h3>If my text has ALL CAPS acronyms like 'NASA,' does converting to lowercase break them?</h3>
+<p>Yes - converting to lowercase treats every letter the same way regardless of context, so 'NASA' becomes 'nasa.' There's no acronym detection, so review text with acronyms or proper nouns after converting.</p>
 </div></div>
         </div>
       </main>

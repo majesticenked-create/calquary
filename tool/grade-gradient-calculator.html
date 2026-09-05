@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "US highways are typically limited to about 6-8% grade, residential driveways often go up to 15-20%, and ADA-compliant wheelchair ramps are limited to about 8.3% (1:12) - though exact limits depend on the specific code or standard that applies to your situation."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I convert a percentage grade into a ratio like '1:12'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Divide 100 by the percentage: for an 8.33% grade, 100/8.33 ≈ 12, giving a ratio of 1:12 (1 unit of rise for every 12 units of run) - a format commonly used for ramp and stair codes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can grade percentage exceed 100%?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - unlike a percentage of a whole, grade percentage is simply rise divided by run and has no upper cap. A grade over 100% means the rise is greater than the run, corresponding to an angle steeper than 45°."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a negative rise value make sense in this calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - a negative rise represents a downhill slope (descending), and the calculator will return a negative grade percentage and angle, mirroring the same magnitude as the equivalent uphill grade but in the opposite direction."
+          }
         }
       ]
     }
@@ -182,7 +206,7 @@
       <main>
         <h1>Grade / Gradient Calculator</h1>
         <p style="max-width:60ch;">Enter the rise (vertical change) and run (horizontal distance) to calculate the grade as a percentage, angle, and ratio.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>What's a typical maximum grade for roads or wheelchair ramps?</h3>
 <p>US highways are typically limited to about 6-8% grade, residential driveways often go up to 15-20%, and ADA-compliant wheelchair ramps are limited to about 8.3% (1:12) - though exact limits depend on the specific code or standard that applies to your situation.</p>
+</div>
+<div class="faq-item">
+<h3>How do I convert a percentage grade into a ratio like '1:12'?</h3>
+<p>Divide 100 by the percentage: for an 8.33% grade, 100/8.33 ≈ 12, giving a ratio of 1:12 (1 unit of rise for every 12 units of run) - a format commonly used for ramp and stair codes.</p>
+</div>
+<div class="faq-item">
+<h3>Can grade percentage exceed 100%?</h3>
+<p>Yes - unlike a percentage of a whole, grade percentage is simply rise divided by run and has no upper cap. A grade over 100% means the rise is greater than the run, corresponding to an angle steeper than 45°.</p>
+</div>
+<div class="faq-item">
+<h3>Does a negative rise value make sense in this calculator?</h3>
+<p>Yes - a negative rise represents a downhill slope (descending), and the calculator will return a negative grade percentage and angle, mirroring the same magnitude as the equivalent uphill grade but in the opposite direction.</p>
 </div></div>
         </div>
       </main>

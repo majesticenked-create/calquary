@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Each formula was developed from different population samples and study periods, so they weight height and frame size slightly differently. The results typically fall within a few pounds of each other, and none of them should be treated as a precise target - they're rough reference points, not medical prescriptions."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What's an example ideal weight calculation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For a woman who is 5'4\" (64 in), the Devine formula gives 45.5 kg + (2.3 kg × 4 inches over 5 feet) = 54.7 kg, or about 121 lb."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should ideal weight match the middle of a healthy BMI range?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not always - Devine-formula results and BMI-based healthy-weight ranges are calculated differently and can diverge, especially at taller or shorter heights, since Devine grows linearly with height while BMI ranges grow with height squared."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this account for body frame size (small, medium, large)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - the Devine formula used here is based only on height and gender, not wrist circumference or frame size. Some other ideal-weight methods add a frame-size adjustment, which can shift the estimate up or down by several pounds for the same height."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Ideal Weight Calculator</h1>
         <p style="max-width:60ch;">Enter your height and gender to estimate an ideal body weight range using the Devine formula.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Why do different ideal weight formulas (Devine, Robinson, Hamwi) give different results?</h3>
 <p>Each formula was developed from different population samples and study periods, so they weight height and frame size slightly differently. The results typically fall within a few pounds of each other, and none of them should be treated as a precise target - they're rough reference points, not medical prescriptions.</p>
+</div>
+<div class="faq-item">
+<h3>What's an example ideal weight calculation?</h3>
+<p>For a woman who is 5'4" (64 in), the Devine formula gives 45.5 kg + (2.3 kg × 4 inches over 5 feet) = 54.7 kg, or about 121 lb.</p>
+</div>
+<div class="faq-item">
+<h3>Should ideal weight match the middle of a healthy BMI range?</h3>
+<p>Not always - Devine-formula results and BMI-based healthy-weight ranges are calculated differently and can diverge, especially at taller or shorter heights, since Devine grows linearly with height while BMI ranges grow with height squared.</p>
+</div>
+<div class="faq-item">
+<h3>Does this account for body frame size (small, medium, large)?</h3>
+<p>No - the Devine formula used here is based only on height and gender, not wrist circumference or frame size. Some other ideal-weight methods add a frame-size adjustment, which can shift the estimate up or down by several pounds for the same height.</p>
 </div></div>
         </div>
       </main>

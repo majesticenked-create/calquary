@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "This tool converts binary directly to readable text using standard 8-bit character encoding (ASCII/UTF-8). To convert binary to a plain numeric value instead, treat the binary string as a base-2 number and convert it to base-10 using a binary-to-decimal calculation instead."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Do the binary groups need spaces between each 8-bit byte?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, when converting binary to text - each character's binary should be separated (like \"01001000 01101001\" for \"Hi\") so the converter knows where one character's 8 bits end and the next begins."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the binary for the letter 'A'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "01000001 - 'A' has ASCII code 65, and 65 in binary is 1000001, padded to a full 8 bits by adding a leading zero."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this the same as an 'ASCII to binary converter' or 'text to binary translator'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - all of those describe the same underlying process of mapping each character to its numeric character code and expressing that code in base-2, which is exactly what this tool's text-to-binary mode does."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Binary to Text Converter</h1>
         <p style="max-width:60ch;">Enter text or binary and choose a direction to convert between plain text and 8-bit binary.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Can this convert binary to numbers as well as text?</h3>
 <p>This tool converts binary directly to readable text using standard 8-bit character encoding (ASCII/UTF-8). To convert binary to a plain numeric value instead, treat the binary string as a base-2 number and convert it to base-10 using a binary-to-decimal calculation instead.</p>
+</div>
+<div class="faq-item">
+<h3>Do the binary groups need spaces between each 8-bit byte?</h3>
+<p>Yes, when converting binary to text - each character's binary should be separated (like "01001000 01101001" for "Hi") so the converter knows where one character's 8 bits end and the next begins.</p>
+</div>
+<div class="faq-item">
+<h3>What's the binary for the letter 'A'?</h3>
+<p>01000001 - 'A' has ASCII code 65, and 65 in binary is 1000001, padded to a full 8 bits by adding a leading zero.</p>
+</div>
+<div class="faq-item">
+<h3>Is this the same as an 'ASCII to binary converter' or 'text to binary translator'?</h3>
+<p>Yes - all of those describe the same underlying process of mapping each character to its numeric character code and expressing that code in base-2, which is exactly what this tool's text-to-binary mode does.</p>
 </div></div>
         </div>
       </main>

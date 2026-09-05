@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Yes - every one of these phrasings describes the same three-way relationship (speed = distance ÷ time), just naming a different variable first. Choose what you're solving for above and enter the other two values."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I find the time for a trip if I know distance and speed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Time = distance ÷ speed. Driving 150 miles at 50 mph takes 150 ÷ 50 = 3 hours."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does my answer look wrong when I enter time in minutes instead of hours?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This calculator treats the time field as a plain number in whatever unit you intend, so if your speed is in mph but you enter time in minutes, the math is internally consistent but the units don't match - convert minutes to hours (divide by 60) first, or convert your speed to per-minute units instead."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this the same as an average speed calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - 'average speed calculator' and 'speed distance time calculator' both refer to solving speed = distance ÷ time (or one of its rearrangements), which is exactly what this tool does when you select speed as the value to solve for."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Speed, Distance & Time Calculator</h1>
         <p style="max-width:60ch;">Choose which value to solve for, then enter the other two - speed, distance, and time are all connected by speed = distance / time.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Is 'speed distance time converter,' 'time calculator for speed and distance,' and 'distance calculator from speed and time' all the same as this tool?</h3>
 <p>Yes - every one of these phrasings describes the same three-way relationship (speed = distance ÷ time), just naming a different variable first. Choose what you're solving for above and enter the other two values.</p>
+</div>
+<div class="faq-item">
+<h3>How do I find the time for a trip if I know distance and speed?</h3>
+<p>Time = distance ÷ speed. Driving 150 miles at 50 mph takes 150 ÷ 50 = 3 hours.</p>
+</div>
+<div class="faq-item">
+<h3>Why does my answer look wrong when I enter time in minutes instead of hours?</h3>
+<p>This calculator treats the time field as a plain number in whatever unit you intend, so if your speed is in mph but you enter time in minutes, the math is internally consistent but the units don't match - convert minutes to hours (divide by 60) first, or convert your speed to per-minute units instead.</p>
+</div>
+<div class="faq-item">
+<h3>Is this the same as an average speed calculator?</h3>
+<p>Yes - 'average speed calculator' and 'speed distance time calculator' both refer to solving speed = distance ÷ time (or one of its rearrangements), which is exactly what this tool does when you select speed as the value to solve for.</p>
 </div></div>
         </div>
       </main>

@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-31",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Yes - times are shown in the selected city's local time zone, which automatically reflects daylight saving time if that zone observes it on the chosen date."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What is 'civil twilight' and does this tool show it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Civil twilight is the period before sunrise or after sunset when the sun is up to 6° below the horizon and there's still usable natural light. This calculator reports the standard sunrise and sunset times (sun at the horizon) rather than separate twilight boundaries."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much shorter is daylight in December compared to June for a city like London?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "London's day length swings from around 7.5 hours near the December solstice to about 16.5 hours near the June solstice - roughly a 9-hour difference caused by Earth's axial tilt, far more pronounced than at a city near the equator."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do sunrise and sunset times differ from what's shown in a generic weather app?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Small differences (usually under a minute) can arise from rounding, atmospheric refraction assumptions, or slightly different reference coordinates for a city; the underlying solar position math is the same standard method used across most sources."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Sunrise and Sunset Calculator</h1>
         <p style="max-width:60ch;">Choose a city and date to see when the sun rises and sets there.</p>
-        <p class="last-updated">Last updated: August 31, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Does this account for daylight saving time?</h3>
 <p>Yes - times are shown in the selected city's local time zone, which automatically reflects daylight saving time if that zone observes it on the chosen date.</p>
+</div>
+<div class="faq-item">
+<h3>What is 'civil twilight' and does this tool show it?</h3>
+<p>Civil twilight is the period before sunrise or after sunset when the sun is up to 6° below the horizon and there's still usable natural light. This calculator reports the standard sunrise and sunset times (sun at the horizon) rather than separate twilight boundaries.</p>
+</div>
+<div class="faq-item">
+<h3>How much shorter is daylight in December compared to June for a city like London?</h3>
+<p>London's day length swings from around 7.5 hours near the December solstice to about 16.5 hours near the June solstice - roughly a 9-hour difference caused by Earth's axial tilt, far more pronounced than at a city near the equator.</p>
+</div>
+<div class="faq-item">
+<h3>Why do sunrise and sunset times differ from what's shown in a generic weather app?</h3>
+<p>Small differences (usually under a minute) can arise from rounding, atmospheric refraction assumptions, or slightly different reference coordinates for a city; the underlying solar position math is the same standard method used across most sources.</p>
 </div></div>
         </div>
       </main>

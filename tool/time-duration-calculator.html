@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Yes - alongside the hours-and-minutes breakdown, this calculator shows the total duration as a decimal (e.g., 7 hours 30 minutes displays as 7.5 hours), which is useful for timesheets and billing that require decimal time entries."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate duration for a night shift, like 11 PM to 7 AM?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Enter 23:00 as the start and 07:00 as the end - since the end hour is numerically smaller, the calculator treats it as crossing midnight and returns 8 hours, the correct overnight shift length."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if the start and end time are identical?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The calculator treats an identical start and end time as a full 24-hour span (crossing midnight back to the same clock time) rather than zero, since it always measures forward from start to end."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this the same as an 'elapsed time calculator'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - both terms describe finding the span between two clock times. This tool works specifically with hours and minutes on a 24-hour clock rather than full calendar dates."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Time Duration Calculator</h1>
         <p style="max-width:60ch;">Enter a start and end time to calculate the duration between them, in hours and minutes.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Can I calculate duration in decimal hours instead of hours and minutes?</h3>
 <p>Yes - alongside the hours-and-minutes breakdown, this calculator shows the total duration as a decimal (e.g., 7 hours 30 minutes displays as 7.5 hours), which is useful for timesheets and billing that require decimal time entries.</p>
+</div>
+<div class="faq-item">
+<h3>How do I calculate duration for a night shift, like 11 PM to 7 AM?</h3>
+<p>Enter 23:00 as the start and 07:00 as the end - since the end hour is numerically smaller, the calculator treats it as crossing midnight and returns 8 hours, the correct overnight shift length.</p>
+</div>
+<div class="faq-item">
+<h3>What if the start and end time are identical?</h3>
+<p>The calculator treats an identical start and end time as a full 24-hour span (crossing midnight back to the same clock time) rather than zero, since it always measures forward from start to end.</p>
+</div>
+<div class="faq-item">
+<h3>Is this the same as an 'elapsed time calculator'?</h3>
+<p>Yes - both terms describe finding the span between two clock times. This tool works specifically with hours and minutes on a 24-hour clock rather than full calendar dates.</p>
 </div></div>
         </div>
       </main>

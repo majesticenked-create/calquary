@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-02",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "No - width is just one factor. Overall diameter depends on width, aspect ratio (sidewall height), and rim diameter together, which is why two tires with different width/aspect/rim combinations can end up nearly the same overall size."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How much bigger is a 235/40R18 tire than a 225/45R17?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on the specific combination - you need to calculate overall diameter for both (width × aspect ratio × 2, converted to inches, plus rim diameter) since a wider tire with a lower aspect ratio can end up close in overall size to a narrower tire with a taller sidewall, which is exactly the comparison this calculator performs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "If my new tire's diameter is 2% larger, will my speedometer read low or high?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your speedometer will read lower than your actual speed - a larger tire covers more ground per rotation, so at any given speedometer reading (based on wheel rotations) you're actually traveling faster than the display shows."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is 'plus sizing' the same thing as what this calculator compares?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - plus sizing refers to fitting a larger-diameter wheel with a lower-profile (lower aspect ratio) tire while keeping the overall tire diameter close to stock, which is exactly the width/aspect/rim tradeoff this calculator lets you check between two tire specs."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Tire Size Comparison Calculator</h1>
         <p style="max-width:60ch;">Enter two tire sizes (width/aspect ratio/rim diameter) to compare their overall diameter and the resulting speedometer difference.</p>
-        <p class="last-updated">Last updated: September 2, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Does tire width alone tell you the overall size?</h3>
 <p>No - width is just one factor. Overall diameter depends on width, aspect ratio (sidewall height), and rim diameter together, which is why two tires with different width/aspect/rim combinations can end up nearly the same overall size.</p>
+</div>
+<div class="faq-item">
+<h3>How much bigger is a 235/40R18 tire than a 225/45R17?</h3>
+<p>It depends on the specific combination - you need to calculate overall diameter for both (width × aspect ratio × 2, converted to inches, plus rim diameter) since a wider tire with a lower aspect ratio can end up close in overall size to a narrower tire with a taller sidewall, which is exactly the comparison this calculator performs.</p>
+</div>
+<div class="faq-item">
+<h3>If my new tire's diameter is 2% larger, will my speedometer read low or high?</h3>
+<p>Your speedometer will read lower than your actual speed - a larger tire covers more ground per rotation, so at any given speedometer reading (based on wheel rotations) you're actually traveling faster than the display shows.</p>
+</div>
+<div class="faq-item">
+<h3>Is 'plus sizing' the same thing as what this calculator compares?</h3>
+<p>Yes - plus sizing refers to fitting a larger-diameter wheel with a lower-profile (lower aspect ratio) tire while keeping the overall tire diameter close to stock, which is exactly the width/aspect/rim tradeoff this calculator lets you check between two tire specs.</p>
 </div></div>
         </div>
       </main>

@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Enter their age above to get the two possible birth years - without knowing whether their birthday has happened yet this year, that's as precise as age alone allows."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "If someone is 25 today, what are the two possible birth years?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If the current year is 2026, they were born in either 2001 (if their birthday already passed this year) or 2000 (if it hasn't yet) - both are consistent with being 25 right now."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can this handle an age given in months, like for a baby?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - this calculator works with whole years of age only. For a baby or young child's age in months, you'd need a tool that tracks age with finer granularity than a single birth year."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why can't the calculator narrow it down to just one birth year?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Age alone only tells you how many full years have elapsed since birth, not where in the calendar year the birthday falls - without that extra piece of information, both candidate years remain equally possible."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Birth Year Calculator</h1>
         <p style="max-width:60ch;">Enter a current age to estimate the birth year - since the exact birthday isn't known, this gives the two possible years.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Someone told me their age - how do I figure out 'when was he born'?</h3>
 <p>Enter their age above to get the two possible birth years - without knowing whether their birthday has happened yet this year, that's as precise as age alone allows.</p>
+</div>
+<div class="faq-item">
+<h3>If someone is 25 today, what are the two possible birth years?</h3>
+<p>If the current year is 2026, they were born in either 2001 (if their birthday already passed this year) or 2000 (if it hasn't yet) - both are consistent with being 25 right now.</p>
+</div>
+<div class="faq-item">
+<h3>Can this handle an age given in months, like for a baby?</h3>
+<p>No - this calculator works with whole years of age only. For a baby or young child's age in months, you'd need a tool that tracks age with finer granularity than a single birth year.</p>
+</div>
+<div class="faq-item">
+<h3>Why can't the calculator narrow it down to just one birth year?</h3>
+<p>Age alone only tells you how many full years have elapsed since birth, not where in the calendar year the birthday falls - without that extra piece of information, both candidate years remain equally possible.</p>
 </div></div>
         </div>
       </main>

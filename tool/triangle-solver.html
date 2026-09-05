@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "This tool solves the SSS (side-side-side) case specifically. Other cases like SAS (two sides and the included angle) or ASA (two angles and the included side) need different starting formulas - the law of cosines shown here works directly from three known sides."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if the three sides I enter can't form a real triangle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The calculator can't produce a valid result - by the triangle inequality, the sum of any two sides must be greater than the third side (e.g., 2, 3, and 10 can't form a triangle since 2+3 < 10). If your sides fail this check, double-check your measurements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I find the largest angle in a triangle from its side lengths?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The largest angle is always opposite the longest side - plug the longest side in as 'c' in the law of cosines rearrangement, cos(C) = (a² + b² − c²)/(2ab), then take the inverse cosine of the result."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do the three angles always add up to 180°?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, for any triangle in standard flat (Euclidean) geometry - this is a useful check: after this calculator solves all three angles, they should sum to 180° (allowing for tiny rounding differences)."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Triangle Solver (SSS)</h1>
         <p style="max-width:60ch;">Enter the three side lengths of a triangle to calculate all three angles and the area, using the law of cosines and Heron's formula.</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Why does this need three sides, and not angles or other combinations?</h3>
 <p>This tool solves the SSS (side-side-side) case specifically. Other cases like SAS (two sides and the included angle) or ASA (two angles and the included side) need different starting formulas - the law of cosines shown here works directly from three known sides.</p>
+</div>
+<div class="faq-item">
+<h3>What happens if the three sides I enter can't form a real triangle?</h3>
+<p>The calculator can't produce a valid result - by the triangle inequality, the sum of any two sides must be greater than the third side (e.g., 2, 3, and 10 can't form a triangle since 2+3 < 10). If your sides fail this check, double-check your measurements.</p>
+</div>
+<div class="faq-item">
+<h3>How do I find the largest angle in a triangle from its side lengths?</h3>
+<p>The largest angle is always opposite the longest side - plug the longest side in as 'c' in the law of cosines rearrangement, cos(C) = (a² + b² − c²)/(2ab), then take the inverse cosine of the result.</p>
+</div>
+<div class="faq-item">
+<h3>Do the three angles always add up to 180°?</h3>
+<p>Yes, for any triangle in standard flat (Euclidean) geometry - this is a useful check: after this calculator solves all three angles, they should sum to 180° (allowing for tiny rounding differences).</p>
 </div></div>
         </div>
       </main>

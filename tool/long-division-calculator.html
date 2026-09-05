@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "This calculator works with the absolute (positive) value of whatever you enter, since long division as a step-by-step method is defined for positive whole numbers - apply the sign rules separately (a negative dividend or divisor, but not both, gives a negative result) after getting the positive quotient and remainder here."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if the divisor is 0?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Division by zero is undefined, so entering 0 as the divisor won't produce a valid quotient - always use a nonzero divisor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I do long division for 987 ÷ 7?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "9÷7 = 1 remainder 2; bring down the 8 to make 28, 28÷7 = 4 remainder 0; bring down the 7 to make 7, 7÷7 = 1 remainder 0. The quotient is 141 with no remainder."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is 'long division' the same as 'synthetic division'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - long division (shown here) works with plain numbers digit by digit. Synthetic division is a shortcut method specifically for dividing polynomials by a linear factor, using only coefficients."
+          }
         }
       ]
     }
@@ -182,7 +206,7 @@
       <main>
         <h1>Long Division Calculator</h1>
         <p style="max-width:60ch;">Enter a dividend and divisor to see the quotient, remainder, and the full step-by-step long division work.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Does this work with negative numbers?</h3>
 <p>This calculator works with the absolute (positive) value of whatever you enter, since long division as a step-by-step method is defined for positive whole numbers - apply the sign rules separately (a negative dividend or divisor, but not both, gives a negative result) after getting the positive quotient and remainder here.</p>
+</div>
+<div class="faq-item">
+<h3>What happens if the divisor is 0?</h3>
+<p>Division by zero is undefined, so entering 0 as the divisor won't produce a valid quotient - always use a nonzero divisor.</p>
+</div>
+<div class="faq-item">
+<h3>How do I do long division for 987 ÷ 7?</h3>
+<p>9÷7 = 1 remainder 2; bring down the 8 to make 28, 28÷7 = 4 remainder 0; bring down the 7 to make 7, 7÷7 = 1 remainder 0. The quotient is 141 with no remainder.</p>
+</div>
+<div class="faq-item">
+<h3>Is 'long division' the same as 'synthetic division'?</h3>
+<p>No - long division (shown here) works with plain numbers digit by digit. Synthetic division is a shortcut method specifically for dividing polynomials by a linear factor, using only coefficients.</p>
 </div></div>
         </div>
       </main>

@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Yes - \"gradebook calculator\" and \"grading calculator\" both describe figuring out a grade percentage and letter grade from points earned, which is exactly what this tool does for a single test, assignment, or exam."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How many points can I miss and still get an A?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on the total points and where the A cutoff falls (90% on this calculator's default scale) - for a 100-point test, you can miss up to 10 points; for a 50-point test, up to 5 points, since the cutoff scales with the total."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What score do I need on the next section to raise a 78% to an 80%?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This calculator computes a single grade from one earned/total pair, so to plan a target grade, treat your desired percentage as the goal and solve total × 0.80 = points needed - for example, on a 100-point assignment you'd need 80 points, 2 more than the 78 you have now."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a 0.5% difference actually change my letter grade?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It can - since letter-grade cutoffs are hard boundaries (like 89.5% rounding to 90%), a fraction of a percentage point can be the difference between a B+ and an A-, which is why it's worth double-checking earned and total points for rounding errors before accepting a borderline grade."
+          }
         }
       ]
     }
@@ -182,7 +206,7 @@
       <main>
         <h1>Grade Calculator</h1>
         <p style="max-width:60ch;">Enter the points earned and total possible points to calculate your percentage and letter grade.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Is this the same as a gradebook calculator?</h3>
 <p>Yes - "gradebook calculator" and "grading calculator" both describe figuring out a grade percentage and letter grade from points earned, which is exactly what this tool does for a single test, assignment, or exam.</p>
+</div>
+<div class="faq-item">
+<h3>How many points can I miss and still get an A?</h3>
+<p>It depends on the total points and where the A cutoff falls (90% on this calculator's default scale) - for a 100-point test, you can miss up to 10 points; for a 50-point test, up to 5 points, since the cutoff scales with the total.</p>
+</div>
+<div class="faq-item">
+<h3>What score do I need on the next section to raise a 78% to an 80%?</h3>
+<p>This calculator computes a single grade from one earned/total pair, so to plan a target grade, treat your desired percentage as the goal and solve total × 0.80 = points needed - for example, on a 100-point assignment you'd need 80 points, 2 more than the 78 you have now.</p>
+</div>
+<div class="faq-item">
+<h3>Does a 0.5% difference actually change my letter grade?</h3>
+<p>It can - since letter-grade cutoffs are hard boundaries (like 89.5% rounding to 90%), a fraction of a percentage point can be the difference between a B+ and an A-, which is why it's worth double-checking earned and total points for rounding errors before accepting a borderline grade.</p>
 </div></div>
         </div>
       </main>

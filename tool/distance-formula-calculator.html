@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-31",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Average the x-coordinates and average the y-coordinates separately: midpoint = ((x₁+x₂)/2, (y₁+y₂)/2). For (1,2) and (4,6), the midpoint is (2.5, 4)."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Can the distance formula give a negative result?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - distance is always zero or positive because the formula squares the differences (removing any negative sign) before taking a square root, which by convention returns the non-negative root."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this work for points in 3D space?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This calculator handles 2D coordinate pairs only, but the same idea extends to 3D by adding a z-term: d = √((x₂-x₁)² + (y₂-y₁)² + (z₂-z₁)²)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if both points are the same?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The distance is 0 - if (x1,y1) equals (x2,y2), then Δx and Δy are both 0, so d = √(0² + 0²) = 0, correctly indicating there's no separation between the points."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Distance Formula Calculator</h1>
         <p style="max-width:60ch;">Enter the coordinates of two points to calculate the straight-line distance and midpoint between them.</p>
-        <p class="last-updated">Last updated: August 31, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>How do I find the midpoint between two points?</h3>
 <p>Average the x-coordinates and average the y-coordinates separately: midpoint = ((x₁+x₂)/2, (y₁+y₂)/2). For (1,2) and (4,6), the midpoint is (2.5, 4).</p>
+</div>
+<div class="faq-item">
+<h3>Can the distance formula give a negative result?</h3>
+<p>No - distance is always zero or positive because the formula squares the differences (removing any negative sign) before taking a square root, which by convention returns the non-negative root.</p>
+</div>
+<div class="faq-item">
+<h3>Does this work for points in 3D space?</h3>
+<p>This calculator handles 2D coordinate pairs only, but the same idea extends to 3D by adding a z-term: d = √((x₂-x₁)² + (y₂-y₁)² + (z₂-z₁)²).</p>
+</div>
+<div class="faq-item">
+<h3>What if both points are the same?</h3>
+<p>The distance is 0 - if (x1,y1) equals (x2,y2), then Δx and Δy are both 0, so d = √(0² + 0²) = 0, correctly indicating there's no separation between the points.</p>
 </div></div>
         </div>
       </main>

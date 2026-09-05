@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Set both z components to 0 - the dot product and angle calculations work identically, and the cross product will only have a z component, which represents the 2D \"cross product\" (a scalar in most 2D contexts)."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What does it mean if the dot product of two vectors is zero?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The vectors are perpendicular (orthogonal) to each other - regardless of their individual magnitudes, a zero dot product means there's no component of one vector pointing along the other."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the magnitude of the vector (4, 5, 6)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "About 8.775 - magnitude is √(x² + y² + z²), so √(4² + 5² + 6²) = √(16+25+36) = √77 ≈ 8.775, calculated for each vector separately by this tool."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is the cross product order-dependent (A×B vs B×A)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A×B and B×A point in exactly opposite directions (same magnitude, flipped sign) because the cross product is anti-commutative - swapping the order reverses which way the 'right-hand rule' points the resulting perpendicular vector."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Vector Calculator</h1>
         <p style="max-width:60ch;">Enter the components of two vectors to calculate their dot product, cross product, magnitudes, and the angle between them.</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>How do I use this for 2D vectors?</h3>
 <p>Set both z components to 0 - the dot product and angle calculations work identically, and the cross product will only have a z component, which represents the 2D "cross product" (a scalar in most 2D contexts).</p>
+</div>
+<div class="faq-item">
+<h3>What does it mean if the dot product of two vectors is zero?</h3>
+<p>The vectors are perpendicular (orthogonal) to each other - regardless of their individual magnitudes, a zero dot product means there's no component of one vector pointing along the other.</p>
+</div>
+<div class="faq-item">
+<h3>What's the magnitude of the vector (4, 5, 6)?</h3>
+<p>About 8.775 - magnitude is √(x² + y² + z²), so √(4² + 5² + 6²) = √(16+25+36) = √77 ≈ 8.775, calculated for each vector separately by this tool.</p>
+</div>
+<div class="faq-item">
+<h3>Why is the cross product order-dependent (A×B vs B×A)?</h3>
+<p>A×B and B×A point in exactly opposite directions (same magnitude, flipped sign) because the cross product is anti-commutative - swapping the order reverses which way the 'right-hand rule' points the resulting perpendicular vector.</p>
 </div></div>
         </div>
       </main>

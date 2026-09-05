@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Historically, diversified stock market index funds have averaged roughly 7-10% annual returns before inflation over multi-decade periods, though any single year can vary wildly. Using a more conservative estimate (6-7%) for planning purposes accounts for volatility and fees better than assuming a best-case average every year."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between the nominal and inflation-adjusted future value shown?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The nominal value is the raw dollar total your investment grows to at the stated return rate. The inflation-adjusted (real) value discounts that nominal figure by the inflation rate over the same period, showing what that future amount is actually worth in today's purchasing power."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "If I invest $10,000 with $300/month contributions at 7% for 20 years, roughly what's the nominal result?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Growing the $10,000 lump sum plus $300 monthly contributions at 7% annually compounded monthly for 20 years lands around $195,000 nominal - the exact figure depends on the compounding assumptions, but contributions dominate lump-sum growth over a horizon that long at typical contribution levels."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this the same as a compound interest calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It builds on the same compounding math but adds two things a basic compound interest calculator doesn't: regular monthly contributions on top of the starting balance, and an inflation adjustment to show real (purchasing-power) value alongside the nominal total."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Investment Calculator</h1>
         <p style="max-width:60ch;">Enter your starting investment, monthly contribution, expected return, and inflation rate to see both the nominal and inflation-adjusted future value.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>What's a realistic average annual return to assume for long-term projections?</h3>
 <p>Historically, diversified stock market index funds have averaged roughly 7-10% annual returns before inflation over multi-decade periods, though any single year can vary wildly. Using a more conservative estimate (6-7%) for planning purposes accounts for volatility and fees better than assuming a best-case average every year.</p>
+</div>
+<div class="faq-item">
+<h3>What's the difference between the nominal and inflation-adjusted future value shown?</h3>
+<p>The nominal value is the raw dollar total your investment grows to at the stated return rate. The inflation-adjusted (real) value discounts that nominal figure by the inflation rate over the same period, showing what that future amount is actually worth in today's purchasing power.</p>
+</div>
+<div class="faq-item">
+<h3>If I invest $10,000 with $300/month contributions at 7% for 20 years, roughly what's the nominal result?</h3>
+<p>Growing the $10,000 lump sum plus $300 monthly contributions at 7% annually compounded monthly for 20 years lands around $195,000 nominal - the exact figure depends on the compounding assumptions, but contributions dominate lump-sum growth over a horizon that long at typical contribution levels.</p>
+</div>
+<div class="faq-item">
+<h3>Is this the same as a compound interest calculator?</h3>
+<p>It builds on the same compounding math but adds two things a basic compound interest calculator doesn't: regular monthly contributions on top of the starting balance, and an inflation adjustment to show real (purchasing-power) value alongside the nominal total.</p>
 </div></div>
         </div>
       </main>

@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Multiply parsecs by about 3.26156 - one parsec equals approximately 3.26 light-years."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I find the absolute magnitude if I know apparent magnitude and distance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "M = m − 5×log₁₀(d) + 5, where d is in parsecs. For an apparent magnitude of 8 at a distance of 50 parsecs: M = 8 − 5×log₁₀(50) + 5 = 8 − 8.49 + 5 ≈ 4.51."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does a larger distance modulus mean a more distant object?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because apparent brightness fades with distance (following the inverse square law) while absolute magnitude is fixed for a given object, a bigger gap between how bright something looks (m) versus its true brightness (M) can only come from it being farther away."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can the distance modulus be negative?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - a negative distance modulus (m less than M) means the object is closer than 10 parsecs, since it appears brighter than its standard absolute-magnitude reference distance would suggest. This is common for very nearby stars."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Distance Modulus Calculator</h1>
         <p style="max-width:60ch;">Enter apparent magnitude (m) and absolute magnitude (M) to find distance, or distance and one magnitude to find the other.</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>How do I convert the distance to light-years?</h3>
 <p>Multiply parsecs by about 3.26156 - one parsec equals approximately 3.26 light-years.</p>
+</div>
+<div class="faq-item">
+<h3>How do I find the absolute magnitude if I know apparent magnitude and distance?</h3>
+<p>M = m − 5×log₁₀(d) + 5, where d is in parsecs. For an apparent magnitude of 8 at a distance of 50 parsecs: M = 8 − 5×log₁₀(50) + 5 = 8 − 8.49 + 5 ≈ 4.51.</p>
+</div>
+<div class="faq-item">
+<h3>Why does a larger distance modulus mean a more distant object?</h3>
+<p>Because apparent brightness fades with distance (following the inverse square law) while absolute magnitude is fixed for a given object, a bigger gap between how bright something looks (m) versus its true brightness (M) can only come from it being farther away.</p>
+</div>
+<div class="faq-item">
+<h3>Can the distance modulus be negative?</h3>
+<p>Yes - a negative distance modulus (m less than M) means the object is closer than 10 parsecs, since it appears brighter than its standard absolute-magnitude reference distance would suggest. This is common for very nearby stars.</p>
 </div></div>
         </div>
       </main>

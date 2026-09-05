@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "No - this calculator assumes both the acid and base are strong (fully dissociate), which is what makes the simple excess-ion math valid. Weak acid/base titrations need equilibrium (Ka/Kb) calculations and produce a different, non-7 pH at the equivalence point due to the conjugate base or acid remaining in solution."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to the pH exactly at the equivalence point if the volumes I enter are exactly matched in moles?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The calculator returns pH 7, since equal moles of a strong acid and strong base neutralize completely - if your acid and base volumes/concentrations give exactly equal moles, you've hit the equivalence point."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the pH after adding 40 mL of 0.1 mol/L base to 50 mL of 0.1 mol/L acid?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "About 1.95 - moles of acid = 0.050 L × 0.1 = 0.005 mol, moles of base = 0.040 L × 0.1 = 0.004 mol, excess H⁺ = 0.001 mol over a total volume of 0.090 L, giving [H⁺] ≈ 0.0111 mol/L, so pH = −log₁₀(0.0111) ≈ 1.95."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does the total volume matter in the pH calculation, not just the leftover moles?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "pH depends on concentration, not just the raw amount of excess ion - the same leftover 0.001 mol of H⁺ produces a different pH depending on whether it's diluted into 50 mL or 500 mL, so the calculator divides by the combined acid + base volume at each point."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Titration pH Calculator</h1>
         <p style="max-width:60ch;">Enter the acid and base concentrations and volumes to calculate the resulting pH - works for any point before, at, or after the equivalence point.</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Does this work for weak acids or weak bases?</h3>
 <p>No - this calculator assumes both the acid and base are strong (fully dissociate), which is what makes the simple excess-ion math valid. Weak acid/base titrations need equilibrium (Ka/Kb) calculations and produce a different, non-7 pH at the equivalence point due to the conjugate base or acid remaining in solution.</p>
+</div>
+<div class="faq-item">
+<h3>What happens to the pH exactly at the equivalence point if the volumes I enter are exactly matched in moles?</h3>
+<p>The calculator returns pH 7, since equal moles of a strong acid and strong base neutralize completely - if your acid and base volumes/concentrations give exactly equal moles, you've hit the equivalence point.</p>
+</div>
+<div class="faq-item">
+<h3>What's the pH after adding 40 mL of 0.1 mol/L base to 50 mL of 0.1 mol/L acid?</h3>
+<p>About 1.95 - moles of acid = 0.050 L × 0.1 = 0.005 mol, moles of base = 0.040 L × 0.1 = 0.004 mol, excess H⁺ = 0.001 mol over a total volume of 0.090 L, giving [H⁺] ≈ 0.0111 mol/L, so pH = −log₁₀(0.0111) ≈ 1.95.</p>
+</div>
+<div class="faq-item">
+<h3>Why does the total volume matter in the pH calculation, not just the leftover moles?</h3>
+<p>pH depends on concentration, not just the raw amount of excess ion - the same leftover 0.001 mol of H⁺ produces a different pH depending on whether it's diluted into 50 mL or 500 mL, so the calculator divides by the combined acid + base volume at each point.</p>
 </div></div>
         </div>
       </main>

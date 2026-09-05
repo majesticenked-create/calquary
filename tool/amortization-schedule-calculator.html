@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Yes - enter your loan amount, rate, and term above to see the full amortization schedule for that loan, exactly what this phrase is asking for."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Does making one extra payment change the whole schedule?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - an extra payment applied to principal reduces the balance that all future interest is calculated on, so every remaining line of the schedule shifts: less interest and more principal in each subsequent payment, and the loan finishes earlier than the original term."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much interest do I pay in total on a $250,000 loan at 6% over 30 years?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The monthly payment is about $1,499, and over 360 payments that totals roughly $539,600 - meaning about $289,600 of it is interest, which the schedule breaks out payment by payment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is an amortization schedule the same as a loan payment calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Related but not identical - a basic loan payment calculator just gives you the single monthly payment amount, while an amortization schedule shows that same payment split into principal and interest for every period, plus the running balance."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Amortization Schedule Calculator</h1>
         <p style="max-width:60ch;">Enter a loan amount, rate, and term to see the monthly payment plus the complete amortization schedule below.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Is 'amortization schedule for loan' the same as this calculator?</h3>
 <p>Yes - enter your loan amount, rate, and term above to see the full amortization schedule for that loan, exactly what this phrase is asking for.</p>
+</div>
+<div class="faq-item">
+<h3>Does making one extra payment change the whole schedule?</h3>
+<p>Yes - an extra payment applied to principal reduces the balance that all future interest is calculated on, so every remaining line of the schedule shifts: less interest and more principal in each subsequent payment, and the loan finishes earlier than the original term.</p>
+</div>
+<div class="faq-item">
+<h3>How much interest do I pay in total on a $250,000 loan at 6% over 30 years?</h3>
+<p>The monthly payment is about $1,499, and over 360 payments that totals roughly $539,600 - meaning about $289,600 of it is interest, which the schedule breaks out payment by payment.</p>
+</div>
+<div class="faq-item">
+<h3>Is an amortization schedule the same as a loan payment calculator?</h3>
+<p>Related but not identical - a basic loan payment calculator just gives you the single monthly payment amount, while an amortization schedule shows that same payment split into principal and interest for every period, plus the running balance.</p>
 </div></div>
         </div>
       </main>

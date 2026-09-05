@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-02",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Real bills often include additional fixed charges, taxes, and tiered or time-of-use pricing that a simple flat-rate calculation doesn't capture - this tool gives a good estimate for a single device's marginal cost, not a full bill prediction."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does it cost to run a 1500W space heater for 8 hours a day?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "At $0.15/kWh: about $1.80 per day, or roughly $54 over 30 days - 1500W × 8 hours = 12 kWh per day, times $0.15."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does standby power (phantom load) get included in this calculation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - this calculator assumes the device only draws power during the hours you specify. Many electronics continue drawing a small amount of standby power even when 'off,' which this tool doesn't account for unless you add that time separately."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is 'kWh cost calculator' the same thing as this electricity cost calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - both describe converting an appliance's power draw and usage time into a dollar cost based on your electricity rate, which is exactly what this tool calculates."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Electricity Cost Calculator</h1>
         <p style="max-width:60ch;">Enter an appliance's wattage, how long you run it, and your electricity rate to calculate the cost.</p>
-        <p class="last-updated">Last updated: September 2, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Why does my calculated cost differ from my actual bill?</h3>
 <p>Real bills often include additional fixed charges, taxes, and tiered or time-of-use pricing that a simple flat-rate calculation doesn't capture - this tool gives a good estimate for a single device's marginal cost, not a full bill prediction.</p>
+</div>
+<div class="faq-item">
+<h3>How much does it cost to run a 1500W space heater for 8 hours a day?</h3>
+<p>At $0.15/kWh: about $1.80 per day, or roughly $54 over 30 days - 1500W × 8 hours = 12 kWh per day, times $0.15.</p>
+</div>
+<div class="faq-item">
+<h3>Does standby power (phantom load) get included in this calculation?</h3>
+<p>No - this calculator assumes the device only draws power during the hours you specify. Many electronics continue drawing a small amount of standby power even when 'off,' which this tool doesn't account for unless you add that time separately.</p>
+</div>
+<div class="faq-item">
+<h3>Is 'kWh cost calculator' the same thing as this electricity cost calculator?</h3>
+<p>Yes - both describe converting an appliance's power draw and usage time into a dollar cost based on your electricity rate, which is exactly what this tool calculates.</p>
 </div></div>
         </div>
       </main>

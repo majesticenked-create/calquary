@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Pooling combines both groups' variance into a single weighted estimate, which is the standard approach when you can reasonably assume both groups have similar underlying variance - it uses more of your data than relying on either group's variance alone."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What does it mean if t is negative?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A negative t simply means Group 1's mean is lower than Group 2's mean - the sign reflects direction, not strength. Only the magnitude (|t|) matters for judging how far apart the groups are."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How are degrees of freedom calculated for this test?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For the pooled two-sample t-test, degrees of freedom = n1 + n2 − 2. With 30 people in each group, that's 30 + 30 − 2 = 58 degrees of freedom."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if my two groups have very different sample sizes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The pooled standard deviation formula already weights each group's variance by its own sample size, so unequal n1 and n2 are handled correctly - just be aware that if the group variances are also very different, an unequal-variance (Welch's) t-test may be more appropriate than this pooled version."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>T-Test Calculator</h1>
         <p style="max-width:60ch;">Enter each group's mean, standard deviation, and sample size to calculate the t-statistic and degrees of freedom.</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Why does this use "pooled" standard deviation?</h3>
 <p>Pooling combines both groups' variance into a single weighted estimate, which is the standard approach when you can reasonably assume both groups have similar underlying variance - it uses more of your data than relying on either group's variance alone.</p>
+</div>
+<div class="faq-item">
+<h3>What does it mean if t is negative?</h3>
+<p>A negative t simply means Group 1's mean is lower than Group 2's mean - the sign reflects direction, not strength. Only the magnitude (|t|) matters for judging how far apart the groups are.</p>
+</div>
+<div class="faq-item">
+<h3>How are degrees of freedom calculated for this test?</h3>
+<p>For the pooled two-sample t-test, degrees of freedom = n1 + n2 − 2. With 30 people in each group, that's 30 + 30 − 2 = 58 degrees of freedom.</p>
+</div>
+<div class="faq-item">
+<h3>What if my two groups have very different sample sizes?</h3>
+<p>The pooled standard deviation formula already weights each group's variance by its own sample size, so unequal n1 and n2 are handled correctly - just be aware that if the group variances are also very different, an unequal-variance (Welch's) t-test may be more appropriate than this pooled version.</p>
 </div></div>
         </div>
       </main>

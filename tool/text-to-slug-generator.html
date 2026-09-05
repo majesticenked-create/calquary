@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Removing common stop words is optional but often improves readability and slightly shortens the URL without losing meaning - 'best-pizza-in-chicago' works as well as 'the-best-pizza-in-chicago'. This tool preserves your original word order and lets you decide what to keep."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to punctuation like apostrophes or exclamation points in my text?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They're stripped out entirely, since a slug only keeps lowercase letters, numbers, and hyphens - \"Joe's Pizza!\" becomes \"joes-pizza\" rather than keeping the apostrophe or exclamation mark."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are multiple spaces or repeated punctuation collapsed into one hyphen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - consecutive spaces or special characters collapse into a single hyphen rather than producing several hyphens in a row, so \"Hello   World!!\" becomes \"hello-world,\" not \"hello---world.\""
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is 'slugify' the same thing as what this tool does?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - \"slugify,\" \"URL slug generator,\" and \"convert to slug\" all describe converting arbitrary text into the lowercase, hyphenated, URL-safe format this tool produces."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Text to Slug Generator</h1>
         <p style="max-width:60ch;">Enter a title or phrase to convert it into a lowercase, hyphenated URL slug.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Should URL slugs include stop words like 'the' and 'and'?</h3>
 <p>Removing common stop words is optional but often improves readability and slightly shortens the URL without losing meaning - 'best-pizza-in-chicago' works as well as 'the-best-pizza-in-chicago'. This tool preserves your original word order and lets you decide what to keep.</p>
+</div>
+<div class="faq-item">
+<h3>What happens to punctuation like apostrophes or exclamation points in my text?</h3>
+<p>They're stripped out entirely, since a slug only keeps lowercase letters, numbers, and hyphens - "Joe's Pizza!" becomes "joes-pizza" rather than keeping the apostrophe or exclamation mark.</p>
+</div>
+<div class="faq-item">
+<h3>Are multiple spaces or repeated punctuation collapsed into one hyphen?</h3>
+<p>Yes - consecutive spaces or special characters collapse into a single hyphen rather than producing several hyphens in a row, so "Hello   World!!" becomes "hello-world," not "hello---world."</p>
+</div>
+<div class="faq-item">
+<h3>Is 'slugify' the same thing as what this tool does?</h3>
+<p>Yes - "slugify," "URL slug generator," and "convert to slug" all describe converting arbitrary text into the lowercase, hyphenated, URL-safe format this tool produces.</p>
 </div></div>
         </div>
       </main>

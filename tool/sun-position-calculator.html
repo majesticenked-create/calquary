@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Two reasons: your exact longitude within your time zone shifts solar noon from the zone's reference meridian, and the \"equation of time\" (Earth's elliptical orbit and axial tilt) shifts it by up to about 16 minutes throughout the year, even at a fixed longitude."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What altitude does the sun reach at solar noon in summer versus winter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "At mid-latitude cities, solar noon altitude is much higher in summer (the sun can pass near-overhead) and much lower in winter (staying closer to the horizon even at its peak) - the exact angle depends on the city's latitude and the date's solar declination."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can this tell me which direction to face to see the sunset?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - enter the date, time, and city near sunset, and the azimuth value (plus its compass direction like WNW) tells you exactly where on the horizon the sun sits at that moment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is 'sun angle calculator' the same thing as this tool?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - 'sun angle,' 'solar altitude,' and 'sun elevation' are different names for the same altitude value this calculator returns, describing how high the sun sits above the horizon."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Sun Position Calculator</h1>
         <p style="max-width:60ch;">Choose a city, date, and time to find the sun's altitude and azimuth (compass direction) at that moment, plus solar noon for the day.</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Why isn't solar noon at exactly 12:00?</h3>
 <p>Two reasons: your exact longitude within your time zone shifts solar noon from the zone's reference meridian, and the "equation of time" (Earth's elliptical orbit and axial tilt) shifts it by up to about 16 minutes throughout the year, even at a fixed longitude.</p>
+</div>
+<div class="faq-item">
+<h3>What altitude does the sun reach at solar noon in summer versus winter?</h3>
+<p>At mid-latitude cities, solar noon altitude is much higher in summer (the sun can pass near-overhead) and much lower in winter (staying closer to the horizon even at its peak) - the exact angle depends on the city's latitude and the date's solar declination.</p>
+</div>
+<div class="faq-item">
+<h3>Can this tell me which direction to face to see the sunset?</h3>
+<p>Yes - enter the date, time, and city near sunset, and the azimuth value (plus its compass direction like WNW) tells you exactly where on the horizon the sun sits at that moment.</p>
+</div>
+<div class="faq-item">
+<h3>Is 'sun angle calculator' the same thing as this tool?</h3>
+<p>Yes - 'sun angle,' 'solar altitude,' and 'sun elevation' are different names for the same altitude value this calculator returns, describing how high the sun sits above the horizon.</p>
 </div></div>
         </div>
       </main>

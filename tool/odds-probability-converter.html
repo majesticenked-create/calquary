@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "50% (0.5) - this is the only point where probability and odds \"look\" similar in a sense (even money), since favorable and unfavorable outcomes are equally likely."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What probability corresponds to odds of 1 (even odds)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "50%, since 1 ÷ (1 + 1) = 0.5 - 'even odds' and a 50% probability describe the same likelihood, just expressed in different formats."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can probability be entered as a percentage instead of a decimal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Enter it as a decimal between 0 and 1 (like 0.25 for 25%) - the field expects the raw probability value, not a percentage sign, since the underlying formulas divide directly by that decimal value."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do gambling odds like '3 to 1' relate to this converter's 'odds' format?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "'3 to 1' means the same as entering 3 as the odds value here (favorable-to-unfavorable ratio), which converts to a probability of 3 ÷ (1+3) = 75% using this tool's odds-to-probability formula."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Odds to Probability Converter</h1>
         <p style="max-width:60ch;">Enter a value and choose a starting format to convert between probability and odds.</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>At what probability are odds exactly 1-to-1?</h3>
 <p>50% (0.5) - this is the only point where probability and odds "look" similar in a sense (even money), since favorable and unfavorable outcomes are equally likely.</p>
+</div>
+<div class="faq-item">
+<h3>What probability corresponds to odds of 1 (even odds)?</h3>
+<p>50%, since 1 ÷ (1 + 1) = 0.5 - 'even odds' and a 50% probability describe the same likelihood, just expressed in different formats.</p>
+</div>
+<div class="faq-item">
+<h3>Can probability be entered as a percentage instead of a decimal?</h3>
+<p>Enter it as a decimal between 0 and 1 (like 0.25 for 25%) - the field expects the raw probability value, not a percentage sign, since the underlying formulas divide directly by that decimal value.</p>
+</div>
+<div class="faq-item">
+<h3>How do gambling odds like '3 to 1' relate to this converter's 'odds' format?</h3>
+<p>'3 to 1' means the same as entering 3 as the odds value here (favorable-to-unfavorable ratio), which converts to a probability of 3 ÷ (1+3) = 75% using this tool's odds-to-probability formula.</p>
 </div></div>
         </div>
       </main>

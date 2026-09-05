@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-02",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "No - it assumes a fixed rate throughout for simplicity. Most real-world HELOCs have variable rates tied to a benchmark index, so your actual payments will likely fluctuate over time as rates change."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How is the draw period payment calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It's interest-only: the amount drawn multiplied by the periodic interest rate (annual rate divided by 12). On a $30,000 balance at 8%, the monthly draw-period payment is about $30,000 × (0.08/12) = $200, with none of it reducing principal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does my payment jump so much when repayment starts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "During the draw period you're only covering interest, so the full drawn balance is still owed. Once repayment begins, that same balance has to fully amortize (principal plus interest) over the shorter repayment period, which produces a much larger monthly payment than the interest-only draw payment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a HELOC calculator the same as a home equity loan calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - a home equity loan is a lump sum with fixed payments from day one, calculated like a standard amortizing loan. A HELOC is a revolving line with a distinct interest-only draw period followed by a separate amortizing repayment period, which is what this calculator is built to model."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>HELOC Payment Calculator</h1>
         <p style="max-width:60ch;">Enter your drawn balance, interest rate, and draw/repayment periods to calculate HELOC payments in both phases.</p>
-        <p class="last-updated">Last updated: September 2, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Does this calculator account for HELOC rates changing?</h3>
 <p>No - it assumes a fixed rate throughout for simplicity. Most real-world HELOCs have variable rates tied to a benchmark index, so your actual payments will likely fluctuate over time as rates change.</p>
+</div>
+<div class="faq-item">
+<h3>How is the draw period payment calculated?</h3>
+<p>It's interest-only: the amount drawn multiplied by the periodic interest rate (annual rate divided by 12). On a $30,000 balance at 8%, the monthly draw-period payment is about $30,000 × (0.08/12) = $200, with none of it reducing principal.</p>
+</div>
+<div class="faq-item">
+<h3>Why does my payment jump so much when repayment starts?</h3>
+<p>During the draw period you're only covering interest, so the full drawn balance is still owed. Once repayment begins, that same balance has to fully amortize (principal plus interest) over the shorter repayment period, which produces a much larger monthly payment than the interest-only draw payment.</p>
+</div>
+<div class="faq-item">
+<h3>Is a HELOC calculator the same as a home equity loan calculator?</h3>
+<p>No - a home equity loan is a lump sum with fixed payments from day one, calculated like a standard amortizing loan. A HELOC is a revolving line with a distinct interest-only draw period followed by a separate amortizing repayment period, which is what this calculator is built to model.</p>
 </div></div>
         </div>
       </main>

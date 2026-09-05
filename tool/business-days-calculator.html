@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Weekends are automatically excluded from the count - if you start on a Thursday and need 5 business days, the calculator skips the intervening Saturday and Sunday and lands on the following Thursday, rather than counting them as business days."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Are the start and end dates both counted as business days?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, if they fall on a weekday - the calculator counts every weekday from the start date through the end date inclusive. For example, Monday to Friday of the same week counts as 5 business days, not 4."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many business days are in a typical 2-week (10 business day) sprint?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Two full Monday-Friday weeks give exactly 10 business days, assuming no holidays fall in that span - if either end date lands on a weekend, the count will be lower since weekend days are excluded."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this the same as a 'working days calculator' or 'weekday counter'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - 'business days,' 'working days,' and 'weekdays between dates' all refer to the same Monday-Friday count this tool produces; only the terminology differs by region and industry."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Business Days Calculator</h1>
         <p style="max-width:60ch;">Enter a start and end date to count the number of business days (Monday through Friday) between them.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>How does this handle a business day count that crosses a weekend?</h3>
 <p>Weekends are automatically excluded from the count - if you start on a Thursday and need 5 business days, the calculator skips the intervening Saturday and Sunday and lands on the following Thursday, rather than counting them as business days.</p>
+</div>
+<div class="faq-item">
+<h3>Are the start and end dates both counted as business days?</h3>
+<p>Yes, if they fall on a weekday - the calculator counts every weekday from the start date through the end date inclusive. For example, Monday to Friday of the same week counts as 5 business days, not 4.</p>
+</div>
+<div class="faq-item">
+<h3>How many business days are in a typical 2-week (10 business day) sprint?</h3>
+<p>Two full Monday-Friday weeks give exactly 10 business days, assuming no holidays fall in that span - if either end date lands on a weekend, the count will be lower since weekend days are excluded.</p>
+</div>
+<div class="faq-item">
+<h3>Is this the same as a 'working days calculator' or 'weekday counter'?</h3>
+<p>Yes - 'business days,' 'working days,' and 'weekdays between dates' all refer to the same Monday-Friday count this tool produces; only the terminology differs by region and industry.</p>
 </div></div>
         </div>
       </main>

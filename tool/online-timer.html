@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Yes - enter any number of minutes (there's no upper limit), so you can set a 90-minute or multi-hour timer just as easily as a short one."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the timer keep counting down if my computer goes to sleep?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - if the device sleeps or the browser is suspended, the countdown pauses along with it and resumes (slightly behind) when the device wakes, since it relies on the browser tab actively running."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I set a timer for an exact number of seconds only, like 90 seconds?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - enter 0 minutes and 90 seconds, or 1 minute and 30 seconds; both produce the same 90-second countdown since minutes and seconds are combined into total time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this the same as a 'countdown clock' for a specific event date?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - this timer counts down a fixed duration you set in minutes and seconds, like a kitchen timer. To count down to a specific future date, you'd want a date-based countdown tool instead."
+          }
         }
       ]
     }
@@ -182,7 +206,7 @@
       <main>
         <h1>Online Timer</h1>
         <p style="max-width:60ch;">Set a countdown time, then hit start - this timer counts down and alerts you when time's up.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Can I set a timer for longer than an hour?</h3>
 <p>Yes - enter any number of minutes (there's no upper limit), so you can set a 90-minute or multi-hour timer just as easily as a short one.</p>
+</div>
+<div class="faq-item">
+<h3>Does the timer keep counting down if my computer goes to sleep?</h3>
+<p>No - if the device sleeps or the browser is suspended, the countdown pauses along with it and resumes (slightly behind) when the device wakes, since it relies on the browser tab actively running.</p>
+</div>
+<div class="faq-item">
+<h3>Can I set a timer for an exact number of seconds only, like 90 seconds?</h3>
+<p>Yes - enter 0 minutes and 90 seconds, or 1 minute and 30 seconds; both produce the same 90-second countdown since minutes and seconds are combined into total time.</p>
+</div>
+<div class="faq-item">
+<h3>Is this the same as a 'countdown clock' for a specific event date?</h3>
+<p>No - this timer counts down a fixed duration you set in minutes and seconds, like a kitchen timer. To count down to a specific future date, you'd want a date-based countdown tool instead.</p>
 </div></div>
         </div>
       </main>

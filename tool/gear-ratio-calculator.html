@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "No - it's an idealized calculation assuming no wheel slip and perfectly efficient power transfer, which is a reasonable approximation for most road and trail conditions but won't be perfectly exact."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What speed does 90 rpm cadence produce with a 50/14 gear on a 27-inch wheel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "About 26 mph - the gear inches are 27 × (50÷14) ≈ 96.4, each pedal revolution covers 96.4 × π ≈ 302.9 inches, and at 90 rpm that's 27,264 inches per minute, which converts to roughly 25.8 mph."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do gear inches use the wheel diameter instead of the tire's actual rolling diameter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This calculator uses the nominal wheel diameter you enter as an approximation - the true rolling diameter (which includes tire size and slight compression under load) differs slightly, so gear-inch figures are a standardized comparison tool rather than a precise real-world distance measurement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is 'gear inches' the same measurement as 'development' or 'roll-out' used in some cycling computers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They're related but not identical - development (or roll-out) is the actual distance traveled per pedal revolution, typically given in meters or inches, while gear inches is a slightly different traditional unit (effective wheel diameter). Development equals gear inches × π, which is exactly the relationship this calculator uses internally to derive speed."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Bike Gear Ratio Calculator</h1>
         <p style="max-width:60ch;">Enter your wheel diameter, chainring and cog teeth, and pedaling cadence to calculate gear inches and resulting speed.</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Does this account for real-world factors like tire slip or drivetrain loss?</h3>
 <p>No - it's an idealized calculation assuming no wheel slip and perfectly efficient power transfer, which is a reasonable approximation for most road and trail conditions but won't be perfectly exact.</p>
+</div>
+<div class="faq-item">
+<h3>What speed does 90 rpm cadence produce with a 50/14 gear on a 27-inch wheel?</h3>
+<p>About 26 mph - the gear inches are 27 × (50÷14) ≈ 96.4, each pedal revolution covers 96.4 × π ≈ 302.9 inches, and at 90 rpm that's 27,264 inches per minute, which converts to roughly 25.8 mph.</p>
+</div>
+<div class="faq-item">
+<h3>Why do gear inches use the wheel diameter instead of the tire's actual rolling diameter?</h3>
+<p>This calculator uses the nominal wheel diameter you enter as an approximation - the true rolling diameter (which includes tire size and slight compression under load) differs slightly, so gear-inch figures are a standardized comparison tool rather than a precise real-world distance measurement.</p>
+</div>
+<div class="faq-item">
+<h3>Is 'gear inches' the same measurement as 'development' or 'roll-out' used in some cycling computers?</h3>
+<p>They're related but not identical - development (or roll-out) is the actual distance traveled per pedal revolution, typically given in meters or inches, while gear inches is a slightly different traditional unit (effective wheel diameter). Development equals gear inches × π, which is exactly the relationship this calculator uses internally to derive speed.</p>
 </div></div>
         </div>
       </main>

@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "A sector is the full \"pie slice\" bounded by two radii and the arc between them. A segment is just the region between a chord (straight line connecting the two arc endpoints) and the arc itself - a segment is always smaller than its corresponding sector."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between a sector's arc length and its chord length?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Arc length follows the curved edge of the sector (r×θ in radians), while the chord is the straight line directly connecting the two endpoints of that arc - the chord is always shorter than the arc except in the limiting case of a very small angle."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I find the sector area if I only know the arc length, not the angle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "First find the angle in radians by dividing arc length by radius (θ = s/r), then plug that into the area formula: area = 0.5 × r² × θ. This calculator does it directly from the angle, so convert first if arc length is all you have."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the area of a full 360° sector?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It equals the full circle's area, πr² - a 360° sector is just the entire circle, since the two bounding radii coincide and the 'arc' wraps all the way around."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Circle Sector Calculator</h1>
         <p style="max-width:60ch;">Enter a circle's radius and the sector's angle to calculate its arc length and area.</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>How is a sector different from a segment?</h3>
 <p>A sector is the full "pie slice" bounded by two radii and the arc between them. A segment is just the region between a chord (straight line connecting the two arc endpoints) and the arc itself - a segment is always smaller than its corresponding sector.</p>
+</div>
+<div class="faq-item">
+<h3>What's the difference between a sector's arc length and its chord length?</h3>
+<p>Arc length follows the curved edge of the sector (r×θ in radians), while the chord is the straight line directly connecting the two endpoints of that arc - the chord is always shorter than the arc except in the limiting case of a very small angle.</p>
+</div>
+<div class="faq-item">
+<h3>How do I find the sector area if I only know the arc length, not the angle?</h3>
+<p>First find the angle in radians by dividing arc length by radius (θ = s/r), then plug that into the area formula: area = 0.5 × r² × θ. This calculator does it directly from the angle, so convert first if arc length is all you have.</p>
+</div>
+<div class="faq-item">
+<h3>What's the area of a full 360° sector?</h3>
+<p>It equals the full circle's area, πr² - a 360° sector is just the entire circle, since the two bounding radii coincide and the 'arc' wraps all the way around.</p>
 </div></div>
         </div>
       </main>

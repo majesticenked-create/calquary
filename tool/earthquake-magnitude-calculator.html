@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "The energy formula works the same way for both, since modern earthquake reporting mostly uses moment magnitude (Mw), which was designed to align closely with the original Richter scale's numbers for most earthquakes while working better for very large events."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How much more energy does a magnitude 9 earthquake release than a magnitude 6?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "About 31,623 times more - a 3-point magnitude difference means (10^1.5)³ = 10^4.5 ≈ 31,623 times the energy, since each whole point multiplies energy by roughly 31.6×."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can this calculator compare a fractional magnitude difference, like 6.5 versus 6.0?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - enter both magnitudes as decimals and the formula energy = 10^(1.5×M + 4.8) handles any fractional value, giving an energy ratio of 10^(1.5×0.5) ≈ 5.6 times more energy for a 0.5-point increase."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a higher magnitude always mean more damage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not necessarily - magnitude measures total energy released at the source, but felt damage also depends on depth, distance from populated areas, soil type, and building construction, so a smaller, shallow, nearby earthquake can sometimes cause more damage than a larger, deep, or remote one."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Earthquake Magnitude Energy Calculator</h1>
         <p style="max-width:60ch;">Enter two earthquake magnitudes to compare how much more energy the larger one releases.</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Is this the Richter scale or the moment magnitude scale?</h3>
 <p>The energy formula works the same way for both, since modern earthquake reporting mostly uses moment magnitude (Mw), which was designed to align closely with the original Richter scale's numbers for most earthquakes while working better for very large events.</p>
+</div>
+<div class="faq-item">
+<h3>How much more energy does a magnitude 9 earthquake release than a magnitude 6?</h3>
+<p>About 31,623 times more - a 3-point magnitude difference means (10^1.5)³ = 10^4.5 ≈ 31,623 times the energy, since each whole point multiplies energy by roughly 31.6×.</p>
+</div>
+<div class="faq-item">
+<h3>Can this calculator compare a fractional magnitude difference, like 6.5 versus 6.0?</h3>
+<p>Yes - enter both magnitudes as decimals and the formula energy = 10^(1.5×M + 4.8) handles any fractional value, giving an energy ratio of 10^(1.5×0.5) ≈ 5.6 times more energy for a 0.5-point increase.</p>
+</div>
+<div class="faq-item">
+<h3>Does a higher magnitude always mean more damage?</h3>
+<p>Not necessarily - magnitude measures total energy released at the source, but felt damage also depends on depth, distance from populated areas, soil type, and building construction, so a smaller, shallow, nearby earthquake can sometimes cause more damage than a larger, deep, or remote one.</p>
 </div></div>
         </div>
       </main>

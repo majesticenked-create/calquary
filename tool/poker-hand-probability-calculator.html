@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Yes - the table above shows the exact percentage (and odds) for every standard poker hand ranking."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How many total 5-card hands are possible from a 52-card deck?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "2,598,960 - calculated as 52 choose 5 = 52!/(5!×47!), which is the denominator used for every hand-ranking probability in the table."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the odds of getting a pair, the most common made hand?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "About 1 in 2.37 (roughly 42.3%) - one pair occurs in 1,098,240 of the 2,598,960 possible hands, making it by far the most frequently dealt hand ranking."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this table account for wild cards or jokers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - these probabilities are for a standard 52-card deck with no wild cards or jokers; adding wild cards changes the combinatorics and would shift every probability in the table."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Poker Hand Probability Calculator</h1>
         <p style="max-width:60ch;">This table shows the exact count, probability, and odds of every 5-card poker hand ranking from a standard 52-card deck.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Is a 'poker hand percentage calculator' the same as this tool?</h3>
 <p>Yes - the table above shows the exact percentage (and odds) for every standard poker hand ranking.</p>
+</div>
+<div class="faq-item">
+<h3>How many total 5-card hands are possible from a 52-card deck?</h3>
+<p>2,598,960 - calculated as 52 choose 5 = 52!/(5!×47!), which is the denominator used for every hand-ranking probability in the table.</p>
+</div>
+<div class="faq-item">
+<h3>What are the odds of getting a pair, the most common made hand?</h3>
+<p>About 1 in 2.37 (roughly 42.3%) - one pair occurs in 1,098,240 of the 2,598,960 possible hands, making it by far the most frequently dealt hand ranking.</p>
+</div>
+<div class="faq-item">
+<h3>Does this table account for wild cards or jokers?</h3>
+<p>No - these probabilities are for a standard 52-card deck with no wild cards or jokers; adding wild cards changes the combinatorics and would shift every probability in the table.</p>
 </div></div>
         </div>
       </main>

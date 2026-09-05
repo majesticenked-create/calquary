@@ -89,7 +89,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-05",
       "inLanguage": "en"
     },
     {
@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Yes, as a rough check - a low RGB distance (under about 30) suggests colors that could be hard to tell apart, useful for flagging potential branding or accessibility conflicts before a more rigorous perceptual check."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Does color order matter - is comparing Color 1 to Color 2 the same as Color 2 to Color 1?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, the result is identical either way. Euclidean distance is symmetric, so swapping which hex code goes in which box doesn't change the calculated difference."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between #FF0000 (red) and #00FF00 (green) using this calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "About 360.6. Red is (255,0,0) and green is (0,255,0), so the distance is √(255² + 255² + 0²) ≈ 360.6 - close to the maximum, reflecting how visually distinct the two colors are."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this the same thing as a 'color contrast checker' for accessibility?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - contrast checkers for WCAG accessibility measure luminance contrast (important for text readability), while this tool measures raw RGB distance between two colors. A pair of colors can have a large RGB distance but still fail a luminance contrast test, or vice versa."
+          }
         }
       ]
     }
@@ -190,7 +214,7 @@
       <main>
         <h1>Color Difference Checker</h1>
         <p style="max-width:60ch;">Enter two hex colors to see how visually different they are, from identical to very different.</p>
-        <p class="last-updated">Last updated: September 1, 2026</p>
+        <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Can I use this to check if two brand colors are too similar?</h3>
 <p>Yes, as a rough check - a low RGB distance (under about 30) suggests colors that could be hard to tell apart, useful for flagging potential branding or accessibility conflicts before a more rigorous perceptual check.</p>
+</div>
+<div class="faq-item">
+<h3>Does color order matter - is comparing Color 1 to Color 2 the same as Color 2 to Color 1?</h3>
+<p>No, the result is identical either way. Euclidean distance is symmetric, so swapping which hex code goes in which box doesn't change the calculated difference.</p>
+</div>
+<div class="faq-item">
+<h3>What's the difference between #FF0000 (red) and #00FF00 (green) using this calculator?</h3>
+<p>About 360.6. Red is (255,0,0) and green is (0,255,0), so the distance is √(255² + 255² + 0²) ≈ 360.6 - close to the maximum, reflecting how visually distinct the two colors are.</p>
+</div>
+<div class="faq-item">
+<h3>Is this the same thing as a 'color contrast checker' for accessibility?</h3>
+<p>No - contrast checkers for WCAG accessibility measure luminance contrast (important for text readability), while this tool measures raw RGB distance between two colors. A pair of colors can have a large RGB distance but still fail a luminance contrast test, or vice versa.</p>
 </div></div>
         </div>
       </main>
