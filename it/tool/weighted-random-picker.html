@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Un elemento per riga, formattato come \"nome, peso\" - ad esempio \"Bronzo, 6\". L'ultimo valore separato da virgola su ogni riga viene letto come il peso, e tutto ciò che precede è il nome dell'elemento."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Cosa succede se do a un elemento un peso di 0?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "È incluso nella lista ma non può mai essere selezionato - un peso di 0 significa una quota dello 0% del totale, quindi lo strumento lo salta effettivamente pur continuando a mostrarlo come opzione."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Se ho tre elementi ciascuno con peso 1, quali sono le probabilità per ciascuno?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Esattamente 1/3 (circa il 33,3%) ciascuno, poiché i pesi sono uguali - il totale è 3, e la quota di ogni elemento è 1 diviso per 3, indipendentemente da quali siano i numeri effettivi dei pesi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "In cosa differisce questo da un 'selettore casuale di nomi' o una 'ruota della fortuna'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un semplice selettore casuale di nomi o una ruota della fortuna dà a ogni voce una probabilità uguale. Questo strumento serve per quando i risultati non dovrebbero essere ugualmente probabili - come una tabella del bottino in cui gli oggetti rari dovrebbero uscire meno spesso di quelli comuni."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>In quale formato deve essere la mia lista?</h3>
 <p>Un elemento per riga, formattato come "nome, peso" - ad esempio "Bronzo, 6". L'ultimo valore separato da virgola su ogni riga viene letto come il peso, e tutto ciò che precede è il nome dell'elemento.</p>
+</div>
+<div class="faq-item">
+<h3>Cosa succede se do a un elemento un peso di 0?</h3>
+<p>È incluso nella lista ma non può mai essere selezionato - un peso di 0 significa una quota dello 0% del totale, quindi lo strumento lo salta effettivamente pur continuando a mostrarlo come opzione.</p>
+</div>
+<div class="faq-item">
+<h3>Se ho tre elementi ciascuno con peso 1, quali sono le probabilità per ciascuno?</h3>
+<p>Esattamente 1/3 (circa il 33,3%) ciascuno, poiché i pesi sono uguali - il totale è 3, e la quota di ogni elemento è 1 diviso per 3, indipendentemente da quali siano i numeri effettivi dei pesi.</p>
+</div>
+<div class="faq-item">
+<h3>In cosa differisce questo da un 'selettore casuale di nomi' o una 'ruota della fortuna'?</h3>
+<p>Un semplice selettore casuale di nomi o una ruota della fortuna dà a ogni voce una probabilità uguale. Questo strumento serve per quando i risultati non dovrebbero essere ugualmente probabili - come una tabella del bottino in cui gli oggetti rari dovrebbero uscire meno spesso di quelli comuni.</p>
 </div></div>
         </div>
       </main>

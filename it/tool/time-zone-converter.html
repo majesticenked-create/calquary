@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Sì - cambia i campi data e ora su qualsiasi data; lo strumento continua ad applicare le regole corrette dell'ora legale per qualsiasi fuso e data tu scelga."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Cosa succede se converto un orario che cade durante una transizione dell'ora legale, come la notte del cambio orologi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lo strumento applica lo scostamento UTC ufficialmente in vigore per quel fuso in quella data e ora esatte, quindi un orario che non esiste (saltato durante il passaggio all'ora legale) o che si verifica due volte (ripetuto durante il ritorno all'ora solare) viene risolto usando le regole standard del database dei fusi orari invece di rimanere ambiguo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Come converto le 14:00 orario dell'Est USA nell'ora indiana?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Imposta data e ora sulle 14:00, scegli US Eastern come fuso 'Da' e India (Calcutta) come fuso 'A' - il risultato riflette lo scostamento completo (tipicamente 9,5 o 10,5 ore a seconda dell'ora legale statunitense), inclusa la mezz'ora aggiunta dall'IST."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "È lo stesso di un 'convertitore di ora UTC'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì, in effetti - selezionare UTC come fuso 'Da' o 'A' converte direttamente da o verso il Tempo Coordinato Universale, che è esattamente ciò che fanno la maggior parte degli strumenti 'convertitore UTC'."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Posso convertire un'ora del passato o futuro, non solo adesso?</h3>
 <p>Sì - cambia i campi data e ora su qualsiasi data; lo strumento continua ad applicare le regole corrette dell'ora legale per qualsiasi fuso e data tu scelga.</p>
+</div>
+<div class="faq-item">
+<h3>Cosa succede se converto un orario che cade durante una transizione dell'ora legale, come la notte del cambio orologi?</h3>
+<p>Lo strumento applica lo scostamento UTC ufficialmente in vigore per quel fuso in quella data e ora esatte, quindi un orario che non esiste (saltato durante il passaggio all'ora legale) o che si verifica due volte (ripetuto durante il ritorno all'ora solare) viene risolto usando le regole standard del database dei fusi orari invece di rimanere ambiguo.</p>
+</div>
+<div class="faq-item">
+<h3>Come converto le 14:00 orario dell'Est USA nell'ora indiana?</h3>
+<p>Imposta data e ora sulle 14:00, scegli US Eastern come fuso 'Da' e India (Calcutta) come fuso 'A' - il risultato riflette lo scostamento completo (tipicamente 9,5 o 10,5 ore a seconda dell'ora legale statunitense), inclusa la mezz'ora aggiunta dall'IST.</p>
+</div>
+<div class="faq-item">
+<h3>È lo stesso di un 'convertitore di ora UTC'?</h3>
+<p>Sì, in effetti - selezionare UTC come fuso 'Da' o 'A' converte direttamente da o verso il Tempo Coordinato Universale, che è esattamente ciò che fanno la maggior parte degli strumenti 'convertitore UTC'.</p>
 </div></div>
         </div>
       </main>

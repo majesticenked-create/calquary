@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Rimuovere le parole vuote comuni è opzionale ma spesso migliora la leggibilità e abbrevia leggermente l'URL senza perdere significato - 'migliore-pizza-a-roma' funziona altrettanto bene di 'la-migliore-pizza-a-roma'. Questo strumento conserva il tuo ordine di parole originale e ti lascia decidere cosa mantenere."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Cosa succede alla punteggiatura come apostrofi o punti esclamativi nel mio testo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vengono rimossi completamente, dato che uno slug conserva solo lettere minuscole, numeri, e trattini - \"Joe's Pizza!\" diventa \"joes-pizza\" invece di mantenere l'apostrofo o il punto esclamativo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Spazi multipli o punteggiatura ripetuta vengono compressi in un solo trattino?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì - spazi consecutivi o caratteri speciali si comprimono in un unico trattino invece di produrre più trattini di fila, quindi \"Ciao   Mondo!!\" diventa \"ciao-mondo,\" non \"ciao---mondo.\""
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "'Slugify' è la stessa cosa di quello che fa questo strumento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì - \"slugify,\" \"generatore di slug URL,\" e \"converti in slug\" descrivono tutti la conversione di un testo arbitrario nel formato minuscolo, separato da trattini, e sicuro per URL che produce questo strumento."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Gli slug URL dovrebbero includere parole vuote come 'il' e 'e'?</h3>
 <p>Rimuovere le parole vuote comuni è opzionale ma spesso migliora la leggibilità e abbrevia leggermente l'URL senza perdere significato - 'migliore-pizza-a-roma' funziona altrettanto bene di 'la-migliore-pizza-a-roma'. Questo strumento conserva il tuo ordine di parole originale e ti lascia decidere cosa mantenere.</p>
+</div>
+<div class="faq-item">
+<h3>Cosa succede alla punteggiatura come apostrofi o punti esclamativi nel mio testo?</h3>
+<p>Vengono rimossi completamente, dato che uno slug conserva solo lettere minuscole, numeri, e trattini - "Joe's Pizza!" diventa "joes-pizza" invece di mantenere l'apostrofo o il punto esclamativo.</p>
+</div>
+<div class="faq-item">
+<h3>Spazi multipli o punteggiatura ripetuta vengono compressi in un solo trattino?</h3>
+<p>Sì - spazi consecutivi o caratteri speciali si comprimono in un unico trattino invece di produrre più trattini di fila, quindi "Ciao   Mondo!!" diventa "ciao-mondo," non "ciao---mondo."</p>
+</div>
+<div class="faq-item">
+<h3>'Slugify' è la stessa cosa di quello che fa questo strumento?</h3>
+<p>Sì - "slugify," "generatore di slug URL," e "converti in slug" descrivono tutti la conversione di un testo arbitrario nel formato minuscolo, separato da trattini, e sicuro per URL che produce questo strumento.</p>
 </div></div>
         </div>
       </main>

@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Inserisci il tasso per periodo, non il tasso annuo - se capitalizzi mensilmente e hai un tasso annuo del 6%, inserisci 0,5 (6 ÷ 12) come tasso per periodo, e imposta i periodi in mesi per corrispondere."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Questa calcolatrice può invece risolvere per il numero di periodi o per il tasso di interesse?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Questa versione risolve per valore attuale, valore futuro o pagamento date le altre variabili - non è costruita per risolvere per il tasso o il numero di periodi, che tipicamente richiedono metodi iterativi (per tentativi) piuttosto che una formula diretta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cosa succede se lascio il VA a zero e risolvo per il VF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Con il VA impostato a 0, il valore futuro deriva interamente dal flusso di pagamenti che si capitalizza nel tempo - ad esempio, un PMT di -200 al mese a un tasso mensile dello 0,5% per 120 periodi, con VA di 0, produce un VF di circa $32.700, corrispondente a un calcolo standard di rendita di risparmio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Questo è lo stesso di una \"calcolatrice di rendita\"?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Molto simile - una calcolatrice di rendita di solito risolve per uno di questi stessi valori (valore futuro, pagamento o valore attuale) per un flusso di pagamenti periodici uguali, che è esattamente il calcolo che esegue questo risolutore TVM."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Quale tasso dovrei inserire?</h3>
 <p>Inserisci il tasso per periodo, non il tasso annuo - se capitalizzi mensilmente e hai un tasso annuo del 6%, inserisci 0,5 (6 ÷ 12) come tasso per periodo, e imposta i periodi in mesi per corrispondere.</p>
+</div>
+<div class="faq-item">
+<h3>Questa calcolatrice può invece risolvere per il numero di periodi o per il tasso di interesse?</h3>
+<p>Questa versione risolve per valore attuale, valore futuro o pagamento date le altre variabili - non è costruita per risolvere per il tasso o il numero di periodi, che tipicamente richiedono metodi iterativi (per tentativi) piuttosto che una formula diretta.</p>
+</div>
+<div class="faq-item">
+<h3>Cosa succede se lascio il VA a zero e risolvo per il VF?</h3>
+<p>Con il VA impostato a 0, il valore futuro deriva interamente dal flusso di pagamenti che si capitalizza nel tempo - ad esempio, un PMT di -200 al mese a un tasso mensile dello 0,5% per 120 periodi, con VA di 0, produce un VF di circa $32.700, corrispondente a un calcolo standard di rendita di risparmio.</p>
+</div>
+<div class="faq-item">
+<h3>Questo è lo stesso di una "calcolatrice di rendita"?</h3>
+<p>Molto simile - una calcolatrice di rendita di solito risolve per uno di questi stessi valori (valore futuro, pagamento o valore attuale) per un flusso di pagamenti periodici uguali, che è esattamente il calcolo che esegue questo risolutore TVM.</p>
 </div></div>
         </div>
       </main>

@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Sì - tutto ciò descrive la ricerca della dimensione minima del campione necessaria per un sondaggio o studio a un livello di confidenza e margine di errore scelti, che è esattamente ciò che fa questa calcolatrice."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto cambia la dimensione del campione richiesta raddoppiando il margine di errore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La riduce a circa un quarto, poiché la dimensione del campione è inversamente proporzionale al quadrato del margine di errore (n ∝ 1/e²) - dimezzare il margine di errore desiderato, al contrario, quadruplica circa il campione necessario."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quale dimensione del campione serve per un livello di confidenza del 95% e un margine di errore del 5% con una proporzione sconosciuta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Circa 385 - usando n = (1,96² × 0,5 × 0,5) / 0,05² = 0,9604 / 0,0025 ≈ 384,16, arrotondato per eccesso a 385, la cifra comunemente citata per un sondaggio sulla popolazione generale."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Perché la calcolatrice chiede una proporzione di risposta stimata se non ho ancora risultati del sondaggio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La proporzione influisce su quanta variabilità la formula presume esista nelle risposte - se hai una stima approssimativa precedente (da ricerche passate o uno studio pilota), inserirla può abbassare la dimensione del campione richiesta rispetto al valore predefinito conservativo del 50%, poiché p×(1−p) è più piccolo quanto più p si allontana da 0,5."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>'Calcolare la dimensione del campione online' o 'calcolatore per determinare la dimensione del campione' sono la stessa cosa di questo strumento?</h3>
 <p>Sì - tutto ciò descrive la ricerca della dimensione minima del campione necessaria per un sondaggio o studio a un livello di confidenza e margine di errore scelti, che è esattamente ciò che fa questa calcolatrice.</p>
+</div>
+<div class="faq-item">
+<h3>Quanto cambia la dimensione del campione richiesta raddoppiando il margine di errore?</h3>
+<p>La riduce a circa un quarto, poiché la dimensione del campione è inversamente proporzionale al quadrato del margine di errore (n ∝ 1/e²) - dimezzare il margine di errore desiderato, al contrario, quadruplica circa il campione necessario.</p>
+</div>
+<div class="faq-item">
+<h3>Quale dimensione del campione serve per un livello di confidenza del 95% e un margine di errore del 5% con una proporzione sconosciuta?</h3>
+<p>Circa 385 - usando n = (1,96² × 0,5 × 0,5) / 0,05² = 0,9604 / 0,0025 ≈ 384,16, arrotondato per eccesso a 385, la cifra comunemente citata per un sondaggio sulla popolazione generale.</p>
+</div>
+<div class="faq-item">
+<h3>Perché la calcolatrice chiede una proporzione di risposta stimata se non ho ancora risultati del sondaggio?</h3>
+<p>La proporzione influisce su quanta variabilità la formula presume esista nelle risposte - se hai una stima approssimativa precedente (da ricerche passate o uno studio pilota), inserirla può abbassare la dimensione del campione richiesta rispetto al valore predefinito conservativo del 50%, poiché p×(1−p) è più piccolo quanto più p si allontana da 0,5.</p>
 </div></div>
         </div>
       </main>

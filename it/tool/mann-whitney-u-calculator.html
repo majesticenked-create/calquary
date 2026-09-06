@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Quando i tuoi dati non sono distribuiti normalmente, contengono valori anomali, o sono ordinali piuttosto che veramente numerici - il test di Mann-Whitney si basa solo sull'ordine di rango, rendendolo più robusto del test t rispetto a distribuzioni non normali e valori estremi."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Cosa significa se i due gruppi hanno ranghi completamente non sovrapposti?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "È il risultato più estremo possibile - se ogni valore di un gruppo ha un rango inferiore a ogni valore dell'altro, U per il gruppo con ranghi più bassi è 0, indicando la massima separazione possibile tra i gruppi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Come vengono gestiti i valori in parità nella classifica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ai valori in parità viene assegnata la media dei ranghi che avrebbero occupato - per esempio, se due valori sono a pari merito per il 3° e 4° posto, entrambi ricevono un rango di 3,5, mantenendo coerente la somma totale dei ranghi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Il test U di Mann-Whitney è la stessa cosa del test dei ranghi con segno di Wilcoxon per campioni indipendenti?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì - sono test matematicamente equivalenti con nomi diversi; la statistica dei ranghi somma di Wilcoxon può essere convertita direttamente nella statistica U di Mann-Whitney ed entrambi confrontano due gruppi indipendenti usando l'ordine dei ranghi."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Quando dovrei usare questo invece di un test t?</h3>
 <p>Quando i tuoi dati non sono distribuiti normalmente, contengono valori anomali, o sono ordinali piuttosto che veramente numerici - il test di Mann-Whitney si basa solo sull'ordine di rango, rendendolo più robusto del test t rispetto a distribuzioni non normali e valori estremi.</p>
+</div>
+<div class="faq-item">
+<h3>Cosa significa se i due gruppi hanno ranghi completamente non sovrapposti?</h3>
+<p>È il risultato più estremo possibile - se ogni valore di un gruppo ha un rango inferiore a ogni valore dell'altro, U per il gruppo con ranghi più bassi è 0, indicando la massima separazione possibile tra i gruppi.</p>
+</div>
+<div class="faq-item">
+<h3>Come vengono gestiti i valori in parità nella classifica?</h3>
+<p>Ai valori in parità viene assegnata la media dei ranghi che avrebbero occupato - per esempio, se due valori sono a pari merito per il 3° e 4° posto, entrambi ricevono un rango di 3,5, mantenendo coerente la somma totale dei ranghi.</p>
+</div>
+<div class="faq-item">
+<h3>Il test U di Mann-Whitney è la stessa cosa del test dei ranghi con segno di Wilcoxon per campioni indipendenti?</h3>
+<p>Sì - sono test matematicamente equivalenti con nomi diversi; la statistica dei ranghi somma di Wilcoxon può essere convertita direttamente nella statistica U di Mann-Whitney ed entrambi confrontano due gruppi indipendenti usando l'ordine dei ranghi.</p>
 </div></div>
         </div>
       </main>

@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Usa un punteggio t (dalla distribuzione t) per campioni più piccoli, tipicamente sotto 30, poiché tiene conto dell'incertezza extra in una stima di deviazione standard di campione piccolo. Questa calcolatrice usa la distribuzione z, che è un'approssimazione ragionevole una volta che la dimensione del tuo campione è 30 o più."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Come calcolo un intervallo di confidenza del 99% invece del 95%?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Seleziona 99% come livello di confidenza, che usa un punteggio z più grande (circa 2,576 invece di 1,96) - l'intervallo risultante sarà più ampio di un intervallo al 95% per gli stessi dati, poiché una confidenza maggiore richiede un margine di errore più grande."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual è l'intervallo di confidenza per una media campionaria di 50, deviazione standard di 10, e n=100 al 95% di confidenza?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Margine di errore = 1,96 × (10/√100) = 1,96 × 1 = 1,96. L'intervallo è 50 ± 1,96, ovvero circa da 48,04 a 51,96."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Un intervallo di confidenza più ampio significa che la stima è meno accurata?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Significa che c'è più incertezza sulla posizione esatta della vera media della popolazione, spesso a causa di una dimensione del campione più piccola, una maggiore variabilità nei dati, o un livello di confidenza scelto più alto - non è che la media campionaria sia sbagliata, semplicemente l'intervallo di valori veri plausibili è più ampio."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Dovrei usare un punteggio z o t per il mio intervallo di confidenza?</h3>
 <p>Usa un punteggio t (dalla distribuzione t) per campioni più piccoli, tipicamente sotto 30, poiché tiene conto dell'incertezza extra in una stima di deviazione standard di campione piccolo. Questa calcolatrice usa la distribuzione z, che è un'approssimazione ragionevole una volta che la dimensione del tuo campione è 30 o più.</p>
+</div>
+<div class="faq-item">
+<h3>Come calcolo un intervallo di confidenza del 99% invece del 95%?</h3>
+<p>Seleziona 99% come livello di confidenza, che usa un punteggio z più grande (circa 2,576 invece di 1,96) - l'intervallo risultante sarà più ampio di un intervallo al 95% per gli stessi dati, poiché una confidenza maggiore richiede un margine di errore più grande.</p>
+</div>
+<div class="faq-item">
+<h3>Qual è l'intervallo di confidenza per una media campionaria di 50, deviazione standard di 10, e n=100 al 95% di confidenza?</h3>
+<p>Margine di errore = 1,96 × (10/√100) = 1,96 × 1 = 1,96. L'intervallo è 50 ± 1,96, ovvero circa da 48,04 a 51,96.</p>
+</div>
+<div class="faq-item">
+<h3>Un intervallo di confidenza più ampio significa che la stima è meno accurata?</h3>
+<p>Significa che c'è più incertezza sulla posizione esatta della vera media della popolazione, spesso a causa di una dimensione del campione più piccola, una maggiore variabilità nei dati, o un livello di confidenza scelto più alto - non è che la media campionaria sia sbagliata, semplicemente l'intervallo di valori veri plausibili è più ampio.</p>
 </div></div>
         </div>
       </main>

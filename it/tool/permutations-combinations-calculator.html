@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Ogni combinazione di r elementi può essere disposta in r! ordini diversi, e ognuno di questi ordinamenti conta come una permutazione separata - quindi permutazioni = combinazioni × r!, o equivalentemente combinazioni = permutazioni ÷ r!."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Cos'è 5 scegli 5 (5C5), e perché è uguale a 1?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1 - c'è un solo modo per scegliere tutti e 5 gli elementi da un gruppo di 5 (semplicemente li prendi tutti), come conferma la formula: 5!/(5!×0!) = 1, poiché 0! è definito come 1."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quante disposizioni diverse di 4 lettere si possono formare da 6 lettere distinte?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "360 - usando nPr = n!/(n-r)! = 6!/(6-4)! = 720/2 = 360, poiché l'ordine conta per una disposizione (permutazione)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Perché nCr è sempre lo stesso valore sia calcolato come 'n scegli r' o 'n scegli (n-r)'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Scegliere r elementi da includere è matematicamente identico a scegliere gli (n-r) elementi da escludere - ad esempio, 10C3 = 10C7 = 120, perché entrambi descrivono lo stesso atto di dividere 10 elementi in un gruppo di 3 e uno di 7."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Perché nPr è sempre nCr moltiplicato per r!?</h3>
 <p>Ogni combinazione di r elementi può essere disposta in r! ordini diversi, e ognuno di questi ordinamenti conta come una permutazione separata - quindi permutazioni = combinazioni × r!, o equivalentemente combinazioni = permutazioni ÷ r!.</p>
+</div>
+<div class="faq-item">
+<h3>Cos'è 5 scegli 5 (5C5), e perché è uguale a 1?</h3>
+<p>1 - c'è un solo modo per scegliere tutti e 5 gli elementi da un gruppo di 5 (semplicemente li prendi tutti), come conferma la formula: 5!/(5!×0!) = 1, poiché 0! è definito come 1.</p>
+</div>
+<div class="faq-item">
+<h3>Quante disposizioni diverse di 4 lettere si possono formare da 6 lettere distinte?</h3>
+<p>360 - usando nPr = n!/(n-r)! = 6!/(6-4)! = 720/2 = 360, poiché l'ordine conta per una disposizione (permutazione).</p>
+</div>
+<div class="faq-item">
+<h3>Perché nCr è sempre lo stesso valore sia calcolato come 'n scegli r' o 'n scegli (n-r)'?</h3>
+<p>Scegliere r elementi da includere è matematicamente identico a scegliere gli (n-r) elementi da escludere - ad esempio, 10C3 = 10C7 = 120, perché entrambi descrivono lo stesso atto di dividere 10 elementi in un gruppo di 3 e uno di 7.</p>
 </div></div>
         </div>
       </main>

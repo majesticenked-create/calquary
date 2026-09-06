@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "No - questa calcolatrice presuppone che sia l'acido che la base siano forti (si dissociano completamente), il che è ciò che rende valida la semplice matematica degli ioni in eccesso. Le titolazioni acido/base debole necessitano di calcoli di equilibrio (Ka/Kb) e producono un pH diverso, non 7, al punto di equivalenza a causa della base o acido coniugato rimanente in soluzione."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Cosa succede al pH esattamente al punto di equivalenza se i volumi che inserisco corrispondono esattamente in moli?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La calcolatrice restituisce pH 7, poiché moli uguali di un acido forte e una base forte si neutralizzano completamente - se i tuoi volumi/concentrazioni di acido e base danno esattamente moli uguali, hai raggiunto il punto di equivalenza."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual è il pH dopo aver aggiunto 40 mL di base 0,1 mol/L a 50 mL di acido 0,1 mol/L?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Circa 1,95 - moli di acido = 0,050 L × 0,1 = 0,005 mol, moli di base = 0,040 L × 0,1 = 0,004 mol, H⁺ in eccesso = 0,001 mol su un volume totale di 0,090 L, dando [H⁺] ≈ 0,0111 mol/L, quindi pH = −log₁₀(0,0111) ≈ 1,95."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Perché il volume totale è importante nel calcolo del pH, e non solo le moli residue?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Il pH dipende dalla concentrazione, non solo dalla quantità grezza di ione in eccesso - le stesse 0,001 mol residue di H⁺ producono un pH diverso a seconda che siano diluite in 50 mL o 500 mL, quindi la calcolatrice divide per il volume combinato di acido + base in ogni punto."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Questo funziona per acidi deboli o basi deboli?</h3>
 <p>No - questa calcolatrice presuppone che sia l'acido che la base siano forti (si dissociano completamente), il che è ciò che rende valida la semplice matematica degli ioni in eccesso. Le titolazioni acido/base debole necessitano di calcoli di equilibrio (Ka/Kb) e producono un pH diverso, non 7, al punto di equivalenza a causa della base o acido coniugato rimanente in soluzione.</p>
+</div>
+<div class="faq-item">
+<h3>Cosa succede al pH esattamente al punto di equivalenza se i volumi che inserisco corrispondono esattamente in moli?</h3>
+<p>La calcolatrice restituisce pH 7, poiché moli uguali di un acido forte e una base forte si neutralizzano completamente - se i tuoi volumi/concentrazioni di acido e base danno esattamente moli uguali, hai raggiunto il punto di equivalenza.</p>
+</div>
+<div class="faq-item">
+<h3>Qual è il pH dopo aver aggiunto 40 mL di base 0,1 mol/L a 50 mL di acido 0,1 mol/L?</h3>
+<p>Circa 1,95 - moli di acido = 0,050 L × 0,1 = 0,005 mol, moli di base = 0,040 L × 0,1 = 0,004 mol, H⁺ in eccesso = 0,001 mol su un volume totale di 0,090 L, dando [H⁺] ≈ 0,0111 mol/L, quindi pH = −log₁₀(0,0111) ≈ 1,95.</p>
+</div>
+<div class="faq-item">
+<h3>Perché il volume totale è importante nel calcolo del pH, e non solo le moli residue?</h3>
+<p>Il pH dipende dalla concentrazione, non solo dalla quantità grezza di ione in eccesso - le stesse 0,001 mol residue di H⁺ producono un pH diverso a seconda che siano diluite in 50 mL o 500 mL, quindi la calcolatrice divide per il volume combinato di acido + base in ogni punto.</p>
 </div></div>
         </div>
       </main>

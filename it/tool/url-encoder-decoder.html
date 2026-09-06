@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Sì - la codifica usa esattamente quella funzione, che è il modo standard per codificare in sicurezza un singolo valore (come un parametro di query) per l'uso in un URL, a differenza di encodeURI() che è pensata per codificare un intero URL e lascia intoccati caratteri come / e :."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Cosa diventa il carattere & quando viene codificato?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "%26 - dato che & ha un significato speciale negli URL (separa i parametri di query), deve essere codificato in percentuale come %26 ogni volta che appare come dato letterale piuttosto che come effettivo separatore di parametri."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Se codifico un URL già completamente valido, come https://example.com, lo rompo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La codifica è pensata per singoli valori (come una query di ricerca), non per URL interi - far passare un URL completo attraverso la modalità di codifica di questo strumento convertirà anche le sue proprie barre e i due punti (: diventa %3A, / diventa %2F), rompendolo come link cliccabile. Codifica solo il valore del parametro stesso, non la struttura circostante dell'URL."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso decodificare un URL che ha sia %20 che + a rappresentare gli spazi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La modalità di decodifica di questo strumento converte le sequenze percentuali %XX di nuovo nei loro caratteri originali, ma un + letterale in una stringa di query è una convenzione legacy separata per gli spazi che la sola decodifica percentuale non tocca - se il tuo input mescola entrambe le convenzioni, potresti dover sostituire manualmente + con uno spazio prima o dopo la decodifica."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Questo è lo stesso di encodeURIComponent() in JavaScript?</h3>
 <p>Sì - la codifica usa esattamente quella funzione, che è il modo standard per codificare in sicurezza un singolo valore (come un parametro di query) per l'uso in un URL, a differenza di encodeURI() che è pensata per codificare un intero URL e lascia intoccati caratteri come / e :.</p>
+</div>
+<div class="faq-item">
+<h3>Cosa diventa il carattere &amp; quando viene codificato?</h3>
+<p>%26 - dato che & ha un significato speciale negli URL (separa i parametri di query), deve essere codificato in percentuale come %26 ogni volta che appare come dato letterale piuttosto che come effettivo separatore di parametri.</p>
+</div>
+<div class="faq-item">
+<h3>Se codifico un URL già completamente valido, come https://example.com, lo rompo?</h3>
+<p>La codifica è pensata per singoli valori (come una query di ricerca), non per URL interi - far passare un URL completo attraverso la modalità di codifica di questo strumento convertirà anche le sue proprie barre e i due punti (: diventa %3A, / diventa %2F), rompendolo come link cliccabile. Codifica solo il valore del parametro stesso, non la struttura circostante dell'URL.</p>
+</div>
+<div class="faq-item">
+<h3>Posso decodificare un URL che ha sia %20 che + a rappresentare gli spazi?</h3>
+<p>La modalità di decodifica di questo strumento converte le sequenze percentuali %XX di nuovo nei loro caratteri originali, ma un + letterale in una stringa di query è una convenzione legacy separata per gli spazi che la sola decodifica percentuale non tocca - se il tuo input mescola entrambe le convenzioni, potresti dover sostituire manualmente + con uno spazio prima o dopo la decodifica.</p>
 </div></div>
         </div>
       </main>

@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Una /32 ha esattamente un indirizzo totale (usato per identificare un singolo host, come un'interfaccia loopback), e una /31 ha solo 2 indirizzi senza spazio per indirizzi di rete/broadcast separati - entrambe sono tipicamente usate per collegamenti punto-punto dove ogni indirizzo è direttamente utilizzabile."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Come cambia la lunghezza del prefisso CIDR se passo da /24 a /25?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Una /25 divide quella che sarebbe una rete /24 in due sottoreti più piccole, ognuna con 128 indirizzi totali (126 host utilizzabili) invece di 256 (254 utilizzabili) - passare a un prefisso più lungo riduce sempre lo spazio di indirizzi per sottorete creando allo stesso tempo più sottoreti complessivamente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual è l'intervallo host utilizzabile per 192.168.1.0/24?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da 192.168.1.1 a 192.168.1.254 - l'indirizzo di rete (192.168.1.0) e l'indirizzo di broadcast (192.168.1.255) sono esclusi, lasciando 254 indirizzi host assegnabili in mezzo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "'Calcolatore di sottoreti IP' è lo stesso strumento di un 'calcolatore CIDR'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì, essenzialmente - entrambi prendono un indirizzo IP e una lunghezza di prefisso (o notazione CIDR combinata) e calcolano lo stesso indirizzo di rete, indirizzo di broadcast, e intervallo host utilizzabile; questo strumento prende l'IP e il prefisso come campi separati invece che in notazione combinata con barra."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Perché le sottoreti /31 e /32 non hanno intervallo host utilizzabile?</h3>
 <p>Una /32 ha esattamente un indirizzo totale (usato per identificare un singolo host, come un'interfaccia loopback), e una /31 ha solo 2 indirizzi senza spazio per indirizzi di rete/broadcast separati - entrambe sono tipicamente usate per collegamenti punto-punto dove ogni indirizzo è direttamente utilizzabile.</p>
+</div>
+<div class="faq-item">
+<h3>Come cambia la lunghezza del prefisso CIDR se passo da /24 a /25?</h3>
+<p>Una /25 divide quella che sarebbe una rete /24 in due sottoreti più piccole, ognuna con 128 indirizzi totali (126 host utilizzabili) invece di 256 (254 utilizzabili) - passare a un prefisso più lungo riduce sempre lo spazio di indirizzi per sottorete creando allo stesso tempo più sottoreti complessivamente.</p>
+</div>
+<div class="faq-item">
+<h3>Qual è l'intervallo host utilizzabile per 192.168.1.0/24?</h3>
+<p>Da 192.168.1.1 a 192.168.1.254 - l'indirizzo di rete (192.168.1.0) e l'indirizzo di broadcast (192.168.1.255) sono esclusi, lasciando 254 indirizzi host assegnabili in mezzo.</p>
+</div>
+<div class="faq-item">
+<h3>'Calcolatore di sottoreti IP' è lo stesso strumento di un 'calcolatore CIDR'?</h3>
+<p>Sì, essenzialmente - entrambi prendono un indirizzo IP e una lunghezza di prefisso (o notazione CIDR combinata) e calcolano lo stesso indirizzo di rete, indirizzo di broadcast, e intervallo host utilizzabile; questo strumento prende l'IP e il prefisso come campi separati invece che in notazione combinata con barra.</p>
 </div></div>
         </div>
       </main>

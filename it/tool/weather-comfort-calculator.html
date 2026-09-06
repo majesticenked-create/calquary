@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Entrambe le formule sono regressioni empiriche validate solo entro condizioni specifiche - l'indice di calore necessita di condizioni calde e umide (circa 27°C+ con 40%+ di umidità) e il wind chill necessita di condizioni fredde e ventose (circa 10°C o inferiori con vento di almeno 5 km/h). Al di fuori di questi intervalli le formule possono produrre risultati fuorvianti, quindi vengono nascosti invece."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "A quale punto di rugiada inizia a sembrare afoso?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La maggior parte delle persone inizia a percepire l'umidità come sgradevole intorno a un punto di rugiada di 15-18°C, con 21°C+ considerato opprimente - sotto i 13°C generalmente ci si sente comodi indipendentemente dalla temperatura dell'aria."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "L'indice di calore e il wind chill possono applicarsi entrambi contemporaneamente?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - si escludono a vicenda per design, poiché l'indice di calore richiede condizioni calde (circa 27°C+) e il wind chill richiede condizioni fredde (circa 10°C o inferiori). Al di fuori di entrambi gli intervalli, o nel divario tra loro, questa calcolatrice mostra N/D per quello che non si applica."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Perché la calcolatrice richiede la velocità del vento per il wind chill ma non per l'indice di calore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La formula del wind chill è costruita specificamente attorno a come l'aria in movimento sottrae calore dalla pelle esposta, quindi la velocità del vento è un dato richiesto - l'indice di calore modella invece come l'umidità compromette l'evaporazione del sudore, un processo in cui la velocità del vento non entra nella formula standard del NWS usata da questa calcolatrice."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Perché la calcolatrice a volte mostra l'indice di calore o il wind chill come N/D?</h3>
 <p>Entrambe le formule sono regressioni empiriche validate solo entro condizioni specifiche - l'indice di calore necessita di condizioni calde e umide (circa 27°C+ con 40%+ di umidità) e il wind chill necessita di condizioni fredde e ventose (circa 10°C o inferiori con vento di almeno 5 km/h). Al di fuori di questi intervalli le formule possono produrre risultati fuorvianti, quindi vengono nascosti invece.</p>
+</div>
+<div class="faq-item">
+<h3>A quale punto di rugiada inizia a sembrare afoso?</h3>
+<p>La maggior parte delle persone inizia a percepire l'umidità come sgradevole intorno a un punto di rugiada di 15-18°C, con 21°C+ considerato opprimente - sotto i 13°C generalmente ci si sente comodi indipendentemente dalla temperatura dell'aria.</p>
+</div>
+<div class="faq-item">
+<h3>L'indice di calore e il wind chill possono applicarsi entrambi contemporaneamente?</h3>
+<p>No - si escludono a vicenda per design, poiché l'indice di calore richiede condizioni calde (circa 27°C+) e il wind chill richiede condizioni fredde (circa 10°C o inferiori). Al di fuori di entrambi gli intervalli, o nel divario tra loro, questa calcolatrice mostra N/D per quello che non si applica.</p>
+</div>
+<div class="faq-item">
+<h3>Perché la calcolatrice richiede la velocità del vento per il wind chill ma non per l'indice di calore?</h3>
+<p>La formula del wind chill è costruita specificamente attorno a come l'aria in movimento sottrae calore dalla pelle esposta, quindi la velocità del vento è un dato richiesto - l'indice di calore modella invece come l'umidità compromette l'evaporazione del sudore, un processo in cui la velocità del vento non entra nella formula standard del NWS usata da questa calcolatrice.</p>
 </div></div>
         </div>
       </main>

@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Calcola la media delle coordinate x e la media delle coordinate y separatamente: punto medio = ((x₁+x₂)/2, (y₁+y₂)/2). Per (1,2) e (4,6), il punto medio è (2,5, 4)."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "La formula della distanza può dare un risultato negativo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - la distanza è sempre zero o positiva perché la formula eleva al quadrato le differenze (eliminando qualsiasi segno negativo) prima di estrarre la radice quadrata, che per convenzione restituisce la radice non negativa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Funziona per punti nello spazio 3D?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Questa calcolatrice gestisce solo coppie di coordinate 2D, ma la stessa idea si estende al 3D aggiungendo un termine z: d = √((x₂-x₁)² + (y₂-y₁)² + (z₂-z₁)²)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cosa succede se entrambi i punti sono uguali?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La distanza è 0 - se (x1,y1) è uguale a (x2,y2), allora Δx e Δy sono entrambi 0, quindi d = √(0² + 0²) = 0, indicando correttamente che non c'è separazione tra i punti."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Come trovo il punto medio tra due punti?</h3>
 <p>Calcola la media delle coordinate x e la media delle coordinate y separatamente: punto medio = ((x₁+x₂)/2, (y₁+y₂)/2). Per (1,2) e (4,6), il punto medio è (2,5, 4).</p>
+</div>
+<div class="faq-item">
+<h3>La formula della distanza può dare un risultato negativo?</h3>
+<p>No - la distanza è sempre zero o positiva perché la formula eleva al quadrato le differenze (eliminando qualsiasi segno negativo) prima di estrarre la radice quadrata, che per convenzione restituisce la radice non negativa.</p>
+</div>
+<div class="faq-item">
+<h3>Funziona per punti nello spazio 3D?</h3>
+<p>Questa calcolatrice gestisce solo coppie di coordinate 2D, ma la stessa idea si estende al 3D aggiungendo un termine z: d = √((x₂-x₁)² + (y₂-y₁)² + (z₂-z₁)²).</p>
+</div>
+<div class="faq-item">
+<h3>Cosa succede se entrambi i punti sono uguali?</h3>
+<p>La distanza è 0 - se (x1,y1) è uguale a (x2,y2), allora Δx e Δy sono entrambi 0, quindi d = √(0² + 0²) = 0, indicando correttamente che non c'è separazione tra i punti.</p>
 </div></div>
         </div>
       </main>

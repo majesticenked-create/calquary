@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Oltre al maiuscolo del titolo e al maiuscolo della frase, converte in MAIUSCOLO, minuscolo, camelCase e altri stili di formattazione comuni usati nella scrittura e nel codice, così puoi riformattare il testo per qualsiasi contesto ti serva."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Come decide il formato titolo quali parole mettere in maiuscolo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mette in maiuscolo la prima lettera di ogni parola del testo, senza gestione speciale per parole minori come 'a,' 'il,' o 'di' - così 'il signore degli anelli' diventa 'Il Signore Degli Anelli' qui, invece della convenzione da manuale di stile che mantiene minuscole le parole minori."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cosa fa il formato frase con un testo che ha più frasi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mette in maiuscolo solo la primissima lettera dell'intero input, lasciando tutto il resto in minuscolo - non rileva i confini delle singole frasi per mettere in maiuscolo ognuna, quindi un paragrafo con più frasi ottiene esattamente una maiuscola in totale."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Se il mio testo ha acronimi TUTTO MAIUSCOLO come 'NASA,' convertirlo in minuscolo li rovina?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì - convertire in minuscolo tratta ogni lettera allo stesso modo indipendentemente dal contesto, quindi 'NASA' diventa 'nasa.' Non c'è rilevamento degli acronimi, quindi rivedi il testo con acronimi o nomi propri dopo la conversione."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Quali stili di maiuscole/minuscole supporta questo convertitore?</h3>
 <p>Oltre al maiuscolo del titolo e al maiuscolo della frase, converte in MAIUSCOLO, minuscolo, camelCase e altri stili di formattazione comuni usati nella scrittura e nel codice, così puoi riformattare il testo per qualsiasi contesto ti serva.</p>
+</div>
+<div class="faq-item">
+<h3>Come decide il formato titolo quali parole mettere in maiuscolo?</h3>
+<p>Mette in maiuscolo la prima lettera di ogni parola del testo, senza gestione speciale per parole minori come 'a,' 'il,' o 'di' - così 'il signore degli anelli' diventa 'Il Signore Degli Anelli' qui, invece della convenzione da manuale di stile che mantiene minuscole le parole minori.</p>
+</div>
+<div class="faq-item">
+<h3>Cosa fa il formato frase con un testo che ha più frasi?</h3>
+<p>Mette in maiuscolo solo la primissima lettera dell'intero input, lasciando tutto il resto in minuscolo - non rileva i confini delle singole frasi per mettere in maiuscolo ognuna, quindi un paragrafo con più frasi ottiene esattamente una maiuscola in totale.</p>
+</div>
+<div class="faq-item">
+<h3>Se il mio testo ha acronimi TUTTO MAIUSCOLO come 'NASA,' convertirlo in minuscolo li rovina?</h3>
+<p>Sì - convertire in minuscolo tratta ogni lettera allo stesso modo indipendentemente dal contesto, quindi 'NASA' diventa 'nasa.' Non c'è rilevamento degli acronimi, quindi rivedi il testo con acronimi o nomi propri dopo la conversione.</p>
 </div></div>
         </div>
       </main>

@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Il raggruppamento combina la varianza di entrambi i gruppi in un'unica stima ponderata, che è l'approccio standard quando puoi ragionevolmente assumere che entrambi i gruppi abbiano una varianza sottostante simile - usa più dei tuoi dati che affidarsi solo alla varianza di uno dei gruppi."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Cosa significa se t è negativo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un t negativo significa semplicemente che la media del Gruppo 1 è inferiore a quella del Gruppo 2 - il segno riflette la direzione, non l'intensità. Per giudicare quanto sono distanti i gruppi conta solo il valore assoluto (|t|)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Come vengono calcolati i gradi di libertà per questo test?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Per il test t a due campioni con deviazione standard raggruppata, i gradi di libertà = n1 + n2 − 2. Con 30 persone in ciascun gruppo, sono 30 + 30 − 2 = 58 gradi di libertà."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cosa succede se i miei due gruppi hanno dimensioni campionarie molto diverse?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La formula della deviazione standard raggruppata già pesa la varianza di ogni gruppo in base alla propria dimensione campionaria, quindi n1 e n2 diseguali vengono gestiti correttamente - tieni solo presente che se anche le varianze dei gruppi sono molto diverse, un test t a varianze disuguali (di Welch) potrebbe essere più appropriato di questa versione raggruppata."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Perché questo usa la deviazione standard 'raggruppata'?</h3>
 <p>Il raggruppamento combina la varianza di entrambi i gruppi in un'unica stima ponderata, che è l'approccio standard quando puoi ragionevolmente assumere che entrambi i gruppi abbiano una varianza sottostante simile - usa più dei tuoi dati che affidarsi solo alla varianza di uno dei gruppi.</p>
+</div>
+<div class="faq-item">
+<h3>Cosa significa se t è negativo?</h3>
+<p>Un t negativo significa semplicemente che la media del Gruppo 1 è inferiore a quella del Gruppo 2 - il segno riflette la direzione, non l'intensità. Per giudicare quanto sono distanti i gruppi conta solo il valore assoluto (|t|).</p>
+</div>
+<div class="faq-item">
+<h3>Come vengono calcolati i gradi di libertà per questo test?</h3>
+<p>Per il test t a due campioni con deviazione standard raggruppata, i gradi di libertà = n1 + n2 − 2. Con 30 persone in ciascun gruppo, sono 30 + 30 − 2 = 58 gradi di libertà.</p>
+</div>
+<div class="faq-item">
+<h3>Cosa succede se i miei due gruppi hanno dimensioni campionarie molto diverse?</h3>
+<p>La formula della deviazione standard raggruppata già pesa la varianza di ogni gruppo in base alla propria dimensione campionaria, quindi n1 e n2 diseguali vengono gestiti correttamente - tieni solo presente che se anche le varianze dei gruppi sono molto diverse, un test t a varianze disuguali (di Welch) potrebbe essere più appropriato di questa versione raggruppata.</p>
 </div></div>
         </div>
       </main>

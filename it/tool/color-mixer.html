@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "No - inserisci i colori come codici esadecimali a 6 cifre (come #FF0000 per il rosso), poiché questo è il formato preciso e non ambiguo che questa calcolatrice analizza. La maggior parte degli strumenti di design e browser può mostrarti il codice esadecimale di qualsiasi colore tu scelga visivamente."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Che colore si ottiene mescolando rosso puro e blu puro al 50/50?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un viola/magenta medio, circa #7F007F - dato che il rosso è (255,0,0) e il blu è (0,0,255), facendo la media di ogni canale si ottiene (127,0,127), il punto medio RGB tra i due."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Perché mescolare rosso e verde non dà marrone o giallo come farebbe la vernice?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Perché questo strumento mescola la luce (miscelazione additiva RGB), non il pigmento (miscelazione sottrattiva). In modo additivo, rosso (255,0,0) e verde (0,255,0) mescolati al 50/50 danno in media (127,127,0), un tono giallo-oliva - simile al giallo, ma con un meccanismo completamente diverso rispetto alla miscelazione dei pigmenti di vernice, motivo per cui le intuizioni derivate dalla pittura non sempre si applicano qui."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cosa succede se imposto il rapporto a 0% o 100%?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Con il peso del primo colore a 0%, il risultato è semplicemente il secondo colore invariato; al 100%, è il primo colore invariato - il rapporto conta solo per i valori tra questi due estremi."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Posso usare nomi di colori invece di codici esadecimali?</h3>
 <p>No - inserisci i colori come codici esadecimali a 6 cifre (come #FF0000 per il rosso), poiché questo è il formato preciso e non ambiguo che questa calcolatrice analizza. La maggior parte degli strumenti di design e browser può mostrarti il codice esadecimale di qualsiasi colore tu scelga visivamente.</p>
+</div>
+<div class="faq-item">
+<h3>Che colore si ottiene mescolando rosso puro e blu puro al 50/50?</h3>
+<p>Un viola/magenta medio, circa #7F007F - dato che il rosso è (255,0,0) e il blu è (0,0,255), facendo la media di ogni canale si ottiene (127,0,127), il punto medio RGB tra i due.</p>
+</div>
+<div class="faq-item">
+<h3>Perché mescolare rosso e verde non dà marrone o giallo come farebbe la vernice?</h3>
+<p>Perché questo strumento mescola la luce (miscelazione additiva RGB), non il pigmento (miscelazione sottrattiva). In modo additivo, rosso (255,0,0) e verde (0,255,0) mescolati al 50/50 danno in media (127,127,0), un tono giallo-oliva - simile al giallo, ma con un meccanismo completamente diverso rispetto alla miscelazione dei pigmenti di vernice, motivo per cui le intuizioni derivate dalla pittura non sempre si applicano qui.</p>
+</div>
+<div class="faq-item">
+<h3>Cosa succede se imposto il rapporto a 0% o 100%?</h3>
+<p>Con il peso del primo colore a 0%, il risultato è semplicemente il secondo colore invariato; al 100%, è il primo colore invariato - il rapporto conta solo per i valori tra questi due estremi.</p>
 </div></div>
         </div>
       </main>

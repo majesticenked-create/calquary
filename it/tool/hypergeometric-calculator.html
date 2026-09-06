@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "La probabilità di ottenere k o meno successi, non esattamente k - utile per domande come \"qual è la probabilità di estrarre al massimo 2 cuori\", che somma le probabilità individuali per 0, 1, e 2 cuori."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Cosa rappresentano in termini semplici N, K, n e k?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "N è la popolazione totale (ad esempio, un mazzo completo di 52 carte), K è il numero di elementi 'di successo' in quella popolazione (ad esempio, 13 cuori), n è il numero di elementi che estrai (la dimensione del tuo campione), e k è il numero di successi che desideri tra quelli estratti."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cosa succede se k è maggiore di n o di K?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La probabilità è 0 - non puoi estrarre più successi di quanti ne hai effettivamente campionati (k > n) o più successi di quanti ne esistono nella popolazione (k > K), quindi queste combinazioni sono matematicamente impossibili."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Come si calcola la media di una distribuzione ipergeometrica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Media = n × (K/N) - per una mano di 5 carte da un mazzo di 52 carte con 13 cuori, il numero atteso di cuori è 5 × (13/52) = 1,25, anche se non puoi effettivamente estrarre un numero frazionario di cuori in una singola mano."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Cosa mi dice la probabilità cumulativa (P(X ≤ k))?</h3>
 <p>La probabilità di ottenere k o meno successi, non esattamente k - utile per domande come "qual è la probabilità di estrarre al massimo 2 cuori", che somma le probabilità individuali per 0, 1, e 2 cuori.</p>
+</div>
+<div class="faq-item">
+<h3>Cosa rappresentano in termini semplici N, K, n e k?</h3>
+<p>N è la popolazione totale (ad esempio, un mazzo completo di 52 carte), K è il numero di elementi 'di successo' in quella popolazione (ad esempio, 13 cuori), n è il numero di elementi che estrai (la dimensione del tuo campione), e k è il numero di successi che desideri tra quelli estratti.</p>
+</div>
+<div class="faq-item">
+<h3>Cosa succede se k è maggiore di n o di K?</h3>
+<p>La probabilità è 0 - non puoi estrarre più successi di quanti ne hai effettivamente campionati (k > n) o più successi di quanti ne esistono nella popolazione (k > K), quindi queste combinazioni sono matematicamente impossibili.</p>
+</div>
+<div class="faq-item">
+<h3>Come si calcola la media di una distribuzione ipergeometrica?</h3>
+<p>Media = n × (K/N) - per una mano di 5 carte da un mazzo di 52 carte con 13 cuori, il numero atteso di cuori è 5 × (13/52) = 1,25, anche se non puoi effettivamente estrarre un numero frazionario di cuori in una singola mano.</p>
 </div></div>
         </div>
       </main>

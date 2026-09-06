@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "I weekend sono automaticamente esclusi dal conteggio - se inizi di giovedì e hai bisogno di 5 giorni lavorativi, la calcolatrice salta il sabato e la domenica intermedi e arriva al giovedì successivo, invece di contarli come giorni lavorativi."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "La data di inizio e quella di fine vengono entrambe conteggiate come giorni lavorativi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì, se cadono in un giorno feriale - la calcolatrice conta ogni giorno feriale dalla data di inizio alla data di fine, inclusi entrambi gli estremi. Per esempio, da lunedì a venerdì della stessa settimana conta come 5 giorni lavorativi, non 4."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanti giorni lavorativi ci sono in uno sprint tipico di 2 settimane (10 giorni lavorativi)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Due settimane complete da lunedì a venerdì danno esattamente 10 giorni lavorativi, presumendo che nessuna festività cada in quel periodo - se una delle due date estreme cade in un weekend, il conteggio sarà inferiore poiché i giorni del weekend sono esclusi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "È la stessa cosa di una \"calcolatrice dei giorni feriali\" o di un \"contatore di giorni lavorativi\"?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì - \"giorni lavorativi\", \"giorni feriali\" e \"giorni feriali tra due date\" si riferiscono tutti allo stesso conteggio da lunedì a venerdì che produce questo strumento; solo la terminologia cambia per regione e settore."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Come gestisce questo un conteggio di giorni lavorativi che attraversa un weekend?</h3>
 <p>I weekend sono automaticamente esclusi dal conteggio - se inizi di giovedì e hai bisogno di 5 giorni lavorativi, la calcolatrice salta il sabato e la domenica intermedi e arriva al giovedì successivo, invece di contarli come giorni lavorativi.</p>
+</div>
+<div class="faq-item">
+<h3>La data di inizio e quella di fine vengono entrambe conteggiate come giorni lavorativi?</h3>
+<p>Sì, se cadono in un giorno feriale - la calcolatrice conta ogni giorno feriale dalla data di inizio alla data di fine, inclusi entrambi gli estremi. Per esempio, da lunedì a venerdì della stessa settimana conta come 5 giorni lavorativi, non 4.</p>
+</div>
+<div class="faq-item">
+<h3>Quanti giorni lavorativi ci sono in uno sprint tipico di 2 settimane (10 giorni lavorativi)?</h3>
+<p>Due settimane complete da lunedì a venerdì danno esattamente 10 giorni lavorativi, presumendo che nessuna festività cada in quel periodo - se una delle due date estreme cade in un weekend, il conteggio sarà inferiore poiché i giorni del weekend sono esclusi.</p>
+</div>
+<div class="faq-item">
+<h3>È la stessa cosa di una "calcolatrice dei giorni feriali" o di un "contatore di giorni lavorativi"?</h3>
+<p>Sì - "giorni lavorativi", "giorni feriali" e "giorni feriali tra due date" si riferiscono tutti allo stesso conteggio da lunedì a venerdì che produce questo strumento; solo la terminologia cambia per regione e settore.</p>
 </div></div>
         </div>
       </main>

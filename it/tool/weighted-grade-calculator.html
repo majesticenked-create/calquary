@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Sì - il Calcolatore di Voto normale converte un singolo punteggio (come un test) in una percentuale e voto in lettera. Questo strumento combina più categorie ponderate - compiti, test, un esame finale, ecc. - in un voto complessivo del corso."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Cosa succede se inserisco un peso di 0 per una categoria che non ho ancora iniziato?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Quella categoria viene esclusa completamente dal calcolo (moltiplicare per 0 non contribuisce né al numeratore né al denominatore), quindi il tuo voto attuale riflette solo le categorie con peso diverso da zero - utile per tenere traccia di una media in corso man mano che il semestre avanza."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto dovrebbe valere l'esame finale per ottenere una A complessiva se conosco già i voti di compiti e test?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Questa calcolatrice risolve il voto complessivo da tutte e tre le categorie contemporaneamente, quindi per trovare il punteggio finale richiesto, procedi al contrario: obiettivo = (voto complessivo desiderato × 100 − compiti×peso − test×peso) / peso del finale. Ad esempio, per un 90 complessivo con 95×20 + 82×40 già fissati e un peso del 40% per il finale: (9000 − 1900 − 3280) / 40 = 95,5%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso usarla per più di tre categorie di voto, come quiz più compiti, test e un finale?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Questa versione gestisce esattamente tre categorie (compiti, test, finale) - per un corso con anche una categoria quiz, unisci i quiz a qualunque categoria esistente abbia un peso simile, oppure calcola prima una media parziale per i quiz e trattala come uno dei tre input."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Questo è diverso dal Calcolatore di Voto normale?</h3>
 <p>Sì - il Calcolatore di Voto normale converte un singolo punteggio (come un test) in una percentuale e voto in lettera. Questo strumento combina più categorie ponderate - compiti, test, un esame finale, ecc. - in un voto complessivo del corso.</p>
+</div>
+<div class="faq-item">
+<h3>Cosa succede se inserisco un peso di 0 per una categoria che non ho ancora iniziato?</h3>
+<p>Quella categoria viene esclusa completamente dal calcolo (moltiplicare per 0 non contribuisce né al numeratore né al denominatore), quindi il tuo voto attuale riflette solo le categorie con peso diverso da zero - utile per tenere traccia di una media in corso man mano che il semestre avanza.</p>
+</div>
+<div class="faq-item">
+<h3>Quanto dovrebbe valere l'esame finale per ottenere una A complessiva se conosco già i voti di compiti e test?</h3>
+<p>Questa calcolatrice risolve il voto complessivo da tutte e tre le categorie contemporaneamente, quindi per trovare il punteggio finale richiesto, procedi al contrario: obiettivo = (voto complessivo desiderato × 100 − compiti×peso − test×peso) / peso del finale. Ad esempio, per un 90 complessivo con 95×20 + 82×40 già fissati e un peso del 40% per il finale: (9000 − 1900 − 3280) / 40 = 95,5%.</p>
+</div>
+<div class="faq-item">
+<h3>Posso usarla per più di tre categorie di voto, come quiz più compiti, test e un finale?</h3>
+<p>Questa versione gestisce esattamente tre categorie (compiti, test, finale) - per un corso con anche una categoria quiz, unisci i quiz a qualunque categoria esistente abbia un peso simile, oppure calcola prima una media parziale per i quiz e trattala come uno dei tre input.</p>
 </div></div>
         </div>
       </main>

@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Sì - questo calcolo presuppone una distribuzione uniforme, in cui ciascuno degli n elementi ha una probabilità uguale di 1/n ad ogni estrazione. Se alcuni elementi sono più rari di altri, il numero atteso effettivo di estrazioni sarà maggiore di questa stima."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Come cambia il numero atteso di estrazioni al crescere di n?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cresce approssimativamente come n × ln(n), quindi raddoppiare n più che raddoppia il numero atteso di estrazioni - per 100 elementi, le estrazioni attese sono circa 519, molto più del doppio delle ~14,7 estrazioni necessarie per 6 elementi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual è il numero minimo possibile di estrazioni per raccogliere tutti gli n elementi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "n estrazioni - questo è il caso migliore teorico in cui ogni singola estrazione risulta essere un elemento nuovo, mai raccolto prima. Il valore atteso calcolato qui è sempre più alto di questo minimo, poiché è probabile incontrare collisioni con elementi già raccolti."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Questa è la stessa matematica usata per calcolare le probabilità di collezione di carte collezionabili o loot box?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì - il problema del collezionista di coupon è il modello standard per calcolare quante estrazioni casuali servono per completare un set completo, che si tratti di premi in scatole di cereali, carte collezionabili, o drop di oggetti in gioco con probabilità uguali."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Questo presuppone che ogni elemento abbia uguale probabilità di essere estratto?</h3>
 <p>Sì - questo calcolo presuppone una distribuzione uniforme, in cui ciascuno degli n elementi ha una probabilità uguale di 1/n ad ogni estrazione. Se alcuni elementi sono più rari di altri, il numero atteso effettivo di estrazioni sarà maggiore di questa stima.</p>
+</div>
+<div class="faq-item">
+<h3>Come cambia il numero atteso di estrazioni al crescere di n?</h3>
+<p>Cresce approssimativamente come n × ln(n), quindi raddoppiare n più che raddoppia il numero atteso di estrazioni - per 100 elementi, le estrazioni attese sono circa 519, molto più del doppio delle ~14,7 estrazioni necessarie per 6 elementi.</p>
+</div>
+<div class="faq-item">
+<h3>Qual è il numero minimo possibile di estrazioni per raccogliere tutti gli n elementi?</h3>
+<p>n estrazioni - questo è il caso migliore teorico in cui ogni singola estrazione risulta essere un elemento nuovo, mai raccolto prima. Il valore atteso calcolato qui è sempre più alto di questo minimo, poiché è probabile incontrare collisioni con elementi già raccolti.</p>
+</div>
+<div class="faq-item">
+<h3>Questa è la stessa matematica usata per calcolare le probabilità di collezione di carte collezionabili o loot box?</h3>
+<p>Sì - il problema del collezionista di coupon è il modello standard per calcolare quante estrazioni casuali servono per completare un set completo, che si tratti di premi in scatole di cereali, carte collezionabili, o drop di oggetti in gioco con probabilità uguali.</p>
 </div></div>
         </div>
       </main>

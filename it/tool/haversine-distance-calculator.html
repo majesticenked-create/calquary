@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Entro circa lo 0,5%, poiché tratta la Terra come una sfera perfetta piuttosto che la sua forma effettiva di ellissoide leggermente schiacciato - abbastanza vicino per praticamente tutti gli scopi pratici di stima della distanza, sebbene la navigazione aeronautica ufficiale usi modelli ellissoidali più precisi."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Perché la distanza ortodromica non è uguale a una linea retta su una mappa piatta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Una mappa piatta distorce le distanze perché proietta una superficie 3D curva su un piano 2D - il percorso più breve reale tra due punti su una sfera segue un cerchio massimo (parte di un cerchio il cui centro è il centro della Terra), che appare solitamente curvo, non dritto, quando disegnato su una proiezione cartografica standard."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Devo conoscere l'altitudine o l'elevazione esatta di ogni punto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - la formula haversine usa solo latitudine e longitudine e presuppone che entrambi i punti si trovino sulla superficie terrestre al livello del mare. Le differenze di elevazione sono trascurabili rispetto al raggio terrestre di circa 6.371 km per praticamente tutti gli scopi di stima della distanza."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual è la differenza tra questo e una 'calcolatrice della distanza geodetica'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sono strettamente correlati - 'distanza geodetica' è il termine più generale per il percorso più breve su qualsiasi superficie curva, mentre 'distanza haversine' si riferisce specificamente all'approssimazione sferica della Terra usata da questa formula. Per la maggior parte dei controlli di distanza quotidiani, i due termini sono usati in modo intercambiabile."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Quanto è accurato questo rispetto alle distanze di volo reali?</h3>
 <p>Entro circa lo 0,5%, poiché tratta la Terra come una sfera perfetta piuttosto che la sua forma effettiva di ellissoide leggermente schiacciato - abbastanza vicino per praticamente tutti gli scopi pratici di stima della distanza, sebbene la navigazione aeronautica ufficiale usi modelli ellissoidali più precisi.</p>
+</div>
+<div class="faq-item">
+<h3>Perché la distanza ortodromica non è uguale a una linea retta su una mappa piatta?</h3>
+<p>Una mappa piatta distorce le distanze perché proietta una superficie 3D curva su un piano 2D - il percorso più breve reale tra due punti su una sfera segue un cerchio massimo (parte di un cerchio il cui centro è il centro della Terra), che appare solitamente curvo, non dritto, quando disegnato su una proiezione cartografica standard.</p>
+</div>
+<div class="faq-item">
+<h3>Devo conoscere l'altitudine o l'elevazione esatta di ogni punto?</h3>
+<p>No - la formula haversine usa solo latitudine e longitudine e presuppone che entrambi i punti si trovino sulla superficie terrestre al livello del mare. Le differenze di elevazione sono trascurabili rispetto al raggio terrestre di circa 6.371 km per praticamente tutti gli scopi di stima della distanza.</p>
+</div>
+<div class="faq-item">
+<h3>Qual è la differenza tra questo e una 'calcolatrice della distanza geodetica'?</h3>
+<p>Sono strettamente correlati - 'distanza geodetica' è il termine più generale per il percorso più breve su qualsiasi superficie curva, mentre 'distanza haversine' si riferisce specificamente all'approssimazione sferica della Terra usata da questa formula. Per la maggior parte dei controlli di distanza quotidiani, i due termini sono usati in modo intercambiabile.</p>
 </div></div>
         </div>
       </main>

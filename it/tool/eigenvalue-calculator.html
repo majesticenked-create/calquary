@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Autovalori complessi significano che la matrice non ha autovettori reali - geometricamente, questo accade per matrici che ruotano vettori (come una matrice di rotazione) piuttosto che semplicemente allungarli lungo direzioni fisse, poiché una rotazione non ha alcuna direzione che rimane invariata (tranne una rotazione di 180°)."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Cosa rappresentano nel mondo reale gli autovalori e gli autovettori?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Descrivono direzioni che una trasformazione matriciale non ruota, ma solo allunga o comprime - l'autovettore è quella direzione invariata, e l'autovalore è il fattore di allungamento. Questo compare in applicazioni come l'analisi delle vibrazioni, l'analisi delle componenti principali e l'algoritmo PageRank di Google."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quali sono gli autovalori della matrice [[2,1],[1,2]]?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "3 e 1 - traccia = 2+2 = 4, determinante = (2×2)-(1×1) = 3, quindi λ² − 4λ + 3 = 0 si scompone in (λ−3)(λ−1) = 0, dando λ = 3 e λ = 1."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Una matrice 2x2 può avere un solo autovalore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì - questo accade quando il discriminante dell'equazione caratteristica è zero (un autovalore 'ripetuto' o 'degenere'), il che si verifica per matrici come [[2,1],[0,2]], dove entrambe le radici dell'equazione quadratica coincidono nello stesso valore."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Cosa significa se gli autovalori sono complessi?</h3>
 <p>Autovalori complessi significano che la matrice non ha autovettori reali - geometricamente, questo accade per matrici che ruotano vettori (come una matrice di rotazione) piuttosto che semplicemente allungarli lungo direzioni fisse, poiché una rotazione non ha alcuna direzione che rimane invariata (tranne una rotazione di 180°).</p>
+</div>
+<div class="faq-item">
+<h3>Cosa rappresentano nel mondo reale gli autovalori e gli autovettori?</h3>
+<p>Descrivono direzioni che una trasformazione matriciale non ruota, ma solo allunga o comprime - l'autovettore è quella direzione invariata, e l'autovalore è il fattore di allungamento. Questo compare in applicazioni come l'analisi delle vibrazioni, l'analisi delle componenti principali e l'algoritmo PageRank di Google.</p>
+</div>
+<div class="faq-item">
+<h3>Quali sono gli autovalori della matrice [[2,1],[1,2]]?</h3>
+<p>3 e 1 - traccia = 2+2 = 4, determinante = (2×2)-(1×1) = 3, quindi λ² − 4λ + 3 = 0 si scompone in (λ−3)(λ−1) = 0, dando λ = 3 e λ = 1.</p>
+</div>
+<div class="faq-item">
+<h3>Una matrice 2x2 può avere un solo autovalore?</h3>
+<p>Sì - questo accade quando il discriminante dell'equazione caratteristica è zero (un autovalore 'ripetuto' o 'degenere'), il che si verifica per matrici come [[2,1],[0,2]], dove entrambe le radici dell'equazione quadratica coincidono nello stesso valore.</p>
 </div></div>
         </div>
       </main>

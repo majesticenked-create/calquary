@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Una /32 è un singolo indirizzo senza spazio per una coppia rete/broadcast, e una /31 è un caso speciale (definito nella RFC 3021) usato per collegamenti punto-punto dove entrambi gli indirizzi nel blocco di 2 indirizzi sono utilizzabili come indirizzi host, poiché non è necessario alcun broadcast."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual è la maschera di sottorete per una rete /24?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "255.255.255.0 - un prefisso /24 significa che i primi 24 bit sono tutti 1 (tre ottetti completi da 255), lasciando l'ultimo ottetto tutto a 0 per gli indirizzi host."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "In cosa è diverso dal Calcolatore di Sottoreti IP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Calcolano gli stessi risultati (indirizzo di rete, indirizzo di broadcast, intervallo utilizzabile), ma questo strumento prende come input una singola stringa CIDR combinata come \"192.168.1.0/24,\" mentre il Calcolatore di Sottoreti IP usa campi separati per l'indirizzo IP e la lunghezza del prefisso."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "A quale maschera di sottorete corrisponde una rete /29?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "255.255.255.248 - un prefisso /29 usa 29 dei 32 bit per la rete, lasciando solo 3 bit host (8 indirizzi totali, 6 utilizzabili), che come maschera è 255.255.255 seguito da 248 (11111000 in binario)."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Perché non ci sono host utilizzabili per una /31 o /32?</h3>
 <p>Una /32 è un singolo indirizzo senza spazio per una coppia rete/broadcast, e una /31 è un caso speciale (definito nella RFC 3021) usato per collegamenti punto-punto dove entrambi gli indirizzi nel blocco di 2 indirizzi sono utilizzabili come indirizzi host, poiché non è necessario alcun broadcast.</p>
+</div>
+<div class="faq-item">
+<h3>Qual è la maschera di sottorete per una rete /24?</h3>
+<p>255.255.255.0 - un prefisso /24 significa che i primi 24 bit sono tutti 1 (tre ottetti completi da 255), lasciando l'ultimo ottetto tutto a 0 per gli indirizzi host.</p>
+</div>
+<div class="faq-item">
+<h3>In cosa è diverso dal Calcolatore di Sottoreti IP?</h3>
+<p>Calcolano gli stessi risultati (indirizzo di rete, indirizzo di broadcast, intervallo utilizzabile), ma questo strumento prende come input una singola stringa CIDR combinata come "192.168.1.0/24," mentre il Calcolatore di Sottoreti IP usa campi separati per l'indirizzo IP e la lunghezza del prefisso.</p>
+</div>
+<div class="faq-item">
+<h3>A quale maschera di sottorete corrisponde una rete /29?</h3>
+<p>255.255.255.248 - un prefisso /29 usa 29 dei 32 bit per la rete, lasciando solo 3 bit host (8 indirizzi totali, 6 utilizzabili), che come maschera è 255.255.255 seguito da 248 (11111000 in binario).</p>
 </div></div>
         </div>
       </main>

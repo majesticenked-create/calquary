@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Correlato ma diverso - il Calcolatore del Punteggio Z trova il percentile sotto un singolo valore. Questa calcolatrice trova la probabilità che un valore cada tra due limiti, il che è più utile per domande come \"quale frazione di punteggi è tra 85 e 115?\""
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Cosa succede se imposto lo stesso valore per il limite inferiore e quello superiore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La probabilità risulta essenzialmente 0% - una distribuzione normale continua assegna probabilità zero al colpire un punto esatto, solo al ricadere in un intervallo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Come trovo la probabilità che un valore sia sopra o sotto un singolo limite invece che tra due?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Imposta il limite inferiore su un numero molto piccolo (come media − 10×DS) per catturare effettivamente tutto ciò che è sotto il tuo limite superiore, oppure imposta il limite superiore molto alto per catturare tutto ciò che è sopra il tuo limite inferiore - questo approssima una probabilità a un lato usando lo strumento a due limiti."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Questo funziona per distribuzioni che non sono normali?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - questa calcolatrice presuppone specificamente una distribuzione normale (a campana) definita dalla sua media e deviazione standard; dati asimmetrici o non normali non daranno probabilità accurate con questo metodo."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Questo è lo stesso del Calcolatore del Punteggio Z?</h3>
 <p>Correlato ma diverso - il Calcolatore del Punteggio Z trova il percentile sotto un singolo valore. Questa calcolatrice trova la probabilità che un valore cada tra due limiti, il che è più utile per domande come "quale frazione di punteggi è tra 85 e 115?"</p>
+</div>
+<div class="faq-item">
+<h3>Cosa succede se imposto lo stesso valore per il limite inferiore e quello superiore?</h3>
+<p>La probabilità risulta essenzialmente 0% - una distribuzione normale continua assegna probabilità zero al colpire un punto esatto, solo al ricadere in un intervallo.</p>
+</div>
+<div class="faq-item">
+<h3>Come trovo la probabilità che un valore sia sopra o sotto un singolo limite invece che tra due?</h3>
+<p>Imposta il limite inferiore su un numero molto piccolo (come media − 10×DS) per catturare effettivamente tutto ciò che è sotto il tuo limite superiore, oppure imposta il limite superiore molto alto per catturare tutto ciò che è sopra il tuo limite inferiore - questo approssima una probabilità a un lato usando lo strumento a due limiti.</p>
+</div>
+<div class="faq-item">
+<h3>Questo funziona per distribuzioni che non sono normali?</h3>
+<p>No - questa calcolatrice presuppone specificamente una distribuzione normale (a campana) definita dalla sua media e deviazione standard; dati asimmetrici o non normali non daranno probabilità accurate con questo metodo.</p>
 </div></div>
         </div>
       </main>

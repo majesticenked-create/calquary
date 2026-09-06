@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Sì - insieme alla scomposizione ore-minuti, questa calcolatrice mostra la durata totale come decimale (ad esempio, 7 ore 30 minuti viene mostrato come 7,5 ore), il che è utile per fogli presenze e fatturazione che richiedono voci di tempo decimali."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Come calcolo la durata di un turno notturno, ad esempio dalle 23:00 alle 7:00?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Inserisci 23:00 come orario di inizio e 07:00 come orario di fine - poiché l'ora di fine è numericamente più piccola, la calcolatrice la considera come un attraversamento della mezzanotte e restituisce 8 ore, la durata corretta del turno notturno."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cosa succede se l'ora di inizio e quella di fine sono identiche?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La calcolatrice tratta un'ora di inizio e fine identiche come un intervallo completo di 24 ore (attraversando la mezzanotte fino a tornare allo stesso orario) anziché come zero, poiché misura sempre in avanti dall'inizio alla fine."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "È la stessa cosa di una \"calcolatrice del tempo trascorso\"?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì - entrambi i termini descrivono il calcolo dell'intervallo tra due orari. Questo strumento lavora specificamente con ore e minuti su un orologio di 24 ore, non con date di calendario complete."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Posso calcolare la durata in ore decimali invece di ore e minuti?</h3>
 <p>Sì - insieme alla scomposizione ore-minuti, questa calcolatrice mostra la durata totale come decimale (ad esempio, 7 ore 30 minuti viene mostrato come 7,5 ore), il che è utile per fogli presenze e fatturazione che richiedono voci di tempo decimali.</p>
+</div>
+<div class="faq-item">
+<h3>Come calcolo la durata di un turno notturno, ad esempio dalle 23:00 alle 7:00?</h3>
+<p>Inserisci 23:00 come orario di inizio e 07:00 come orario di fine - poiché l'ora di fine è numericamente più piccola, la calcolatrice la considera come un attraversamento della mezzanotte e restituisce 8 ore, la durata corretta del turno notturno.</p>
+</div>
+<div class="faq-item">
+<h3>Cosa succede se l'ora di inizio e quella di fine sono identiche?</h3>
+<p>La calcolatrice tratta un'ora di inizio e fine identiche come un intervallo completo di 24 ore (attraversando la mezzanotte fino a tornare allo stesso orario) anziché come zero, poiché misura sempre in avanti dall'inizio alla fine.</p>
+</div>
+<div class="faq-item">
+<h3>È la stessa cosa di una "calcolatrice del tempo trascorso"?</h3>
+<p>Sì - entrambi i termini descrivono il calcolo dell'intervallo tra due orari. Questo strumento lavora specificamente con ore e minuti su un orologio di 24 ore, non con date di calendario complete.</p>
 </div></div>
         </div>
       </main>

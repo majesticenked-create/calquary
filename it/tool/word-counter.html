@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Sì - oltre al conteggio delle parole, mostra il conteggio dei caratteri con e senza spazi, oltre al conteggio di frasi e paragrafi, utile per rispettare limiti rigidi di caratteri come nei post sui social media o nelle meta description."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Una parola con trattino come 'ben noto' conta come una parola o due?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Due parole se separate da uno spazio - il contatore divide in base agli spazi bianchi, quindi solo le parole realmente unite da un trattino senza spazio (come 'ben-noto' scritto tutto attaccato) verrebbero trattate come una sola parola, in linea con il modo in cui la maggior parte degli elaboratori di testo gestisce i composti con trattino."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Se incollo tre righe vuote tra i paragrafi, questo influisce sul conteggio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le righe vuote in più non aggiungono al conteggio di parole o caratteri (non ci sono parole su di esse), ma contano ai fini del rilevamento dei paragrafi, poiché una riga vuota è tipicamente ciò che separa un paragrafo dal successivo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "In cosa differisce il 'conteggio parole' dal 'conteggio caratteri' per cose come i limiti di Twitter/X?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Il conteggio delle parole conta le parole separate da spazi bianchi, mentre il conteggio dei caratteri conta ogni singola lettera, numero, spazio e simbolo. Piattaforme come X limitano in base al conteggio dei caratteri, non delle parole, quindi controlla il conteggio dei caratteri (con spazi) mostrato da questo strumento se stai lavorando rispetto al limite di caratteri di una piattaforma."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Questo strumento conta anche i caratteri oltre alle parole?</h3>
 <p>Sì - oltre al conteggio delle parole, mostra il conteggio dei caratteri con e senza spazi, oltre al conteggio di frasi e paragrafi, utile per rispettare limiti rigidi di caratteri come nei post sui social media o nelle meta description.</p>
+</div>
+<div class="faq-item">
+<h3>Una parola con trattino come 'ben noto' conta come una parola o due?</h3>
+<p>Due parole se separate da uno spazio - il contatore divide in base agli spazi bianchi, quindi solo le parole realmente unite da un trattino senza spazio (come 'ben-noto' scritto tutto attaccato) verrebbero trattate come una sola parola, in linea con il modo in cui la maggior parte degli elaboratori di testo gestisce i composti con trattino.</p>
+</div>
+<div class="faq-item">
+<h3>Se incollo tre righe vuote tra i paragrafi, questo influisce sul conteggio?</h3>
+<p>Le righe vuote in più non aggiungono al conteggio di parole o caratteri (non ci sono parole su di esse), ma contano ai fini del rilevamento dei paragrafi, poiché una riga vuota è tipicamente ciò che separa un paragrafo dal successivo.</p>
+</div>
+<div class="faq-item">
+<h3>In cosa differisce il 'conteggio parole' dal 'conteggio caratteri' per cose come i limiti di Twitter/X?</h3>
+<p>Il conteggio delle parole conta le parole separate da spazi bianchi, mentre il conteggio dei caratteri conta ogni singola lettera, numero, spazio e simbolo. Piattaforme come X limitano in base al conteggio dei caratteri, non delle parole, quindi controlla il conteggio dei caratteri (con spazi) mostrato da questo strumento se stai lavorando rispetto al limite di caratteri di una piattaforma.</p>
 </div></div>
         </div>
       </main>
