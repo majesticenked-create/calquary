@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Chaque combinaison de r éléments peut être arrangée en r! ordres différents, et chacun de ces ordonnancements compte comme une permutation séparée - donc permutations = combinaisons × r!, ou de manière équivalente combinaisons = permutations ÷ r!."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce que 5 choisir 5 (5C5), et pourquoi cela vaut-il 1 ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1 - il n'existe qu'une seule façon de choisir les 5 éléments d'un groupe de 5 (vous prenez simplement tout le monde), ce que la formule confirme : 5!/(5!×0!) = 1, puisque 0! est défini comme 1."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien d'arrangements différents de 4 lettres peut-on faire à partir de 6 lettres distinctes ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "360 - en utilisant nPr = n!/(n-r)! = 6!/(6-4)! = 720/2 = 360, puisque l'ordre compte pour un arrangement (permutation)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pourquoi nCr donne-t-il toujours la même valeur qu'on le calcule comme « n choisir r » ou « n choisir (n-r) » ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Choisir r éléments à inclure est mathématiquement identique à choisir les (n-r) éléments à laisser de côté - par exemple, 10C3 = 10C7 = 120, car les deux décrivent le même acte de diviser 10 éléments en un groupe de 3 et un groupe de 7."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Pourquoi nPr est-il toujours nCr multiplié par r! ?</h3>
 <p>Chaque combinaison de r éléments peut être arrangée en r! ordres différents, et chacun de ces ordonnancements compte comme une permutation séparée - donc permutations = combinaisons × r!, ou de manière équivalente combinaisons = permutations ÷ r!.</p>
+</div>
+<div class="faq-item">
+<h3>Qu'est-ce que 5 choisir 5 (5C5), et pourquoi cela vaut-il 1 ?</h3>
+<p>1 - il n'existe qu'une seule façon de choisir les 5 éléments d'un groupe de 5 (vous prenez simplement tout le monde), ce que la formule confirme : 5!/(5!×0!) = 1, puisque 0! est défini comme 1.</p>
+</div>
+<div class="faq-item">
+<h3>Combien d'arrangements différents de 4 lettres peut-on faire à partir de 6 lettres distinctes ?</h3>
+<p>360 - en utilisant nPr = n!/(n-r)! = 6!/(6-4)! = 720/2 = 360, puisque l'ordre compte pour un arrangement (permutation).</p>
+</div>
+<div class="faq-item">
+<h3>Pourquoi nCr donne-t-il toujours la même valeur qu'on le calcule comme « n choisir r » ou « n choisir (n-r) » ?</h3>
+<p>Choisir r éléments à inclure est mathématiquement identique à choisir les (n-r) éléments à laisser de côté - par exemple, 10C3 = 10C7 = 120, car les deux décrivent le même acte de diviser 10 éléments en un groupe de 3 et un groupe de 7.</p>
 </div></div>
         </div>
       </main>

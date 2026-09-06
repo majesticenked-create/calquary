@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Oui - l'encodage utilise exactement cette fonction, qui est la façon standard d'encoder en toute sécurité une seule valeur (comme un paramètre de requête) pour une utilisation dans une URL, contrairement à encodeURI() qui est destinée à encoder une URL entière et laisse des caractères comme / et : intacts."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Que devient le caractère & une fois encodé ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "%26 - puisque & a une signification particulière dans les URL (séparation des paramètres de requête), il doit être encodé en pourcentage en %26 chaque fois qu'il apparaît comme donnée littérale plutôt que comme véritable séparateur de paramètre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Si j'encode une URL déjà entièrement valide, comme https://example.com, est-ce que cela la casse ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L'encodage est destiné aux valeurs individuelles (comme une requête de recherche), pas aux URL entières - faire passer une URL complète dans le mode d'encodage de cet outil convertira aussi ses propres barres obliques et deux-points (: devient %3A, / devient %2F), la cassant en tant que lien cliquable. N'encodez que la valeur du paramètre elle-même, pas la structure de l'URL environnante."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Puis-je décoder une URL qui contient à la fois %20 et + pour représenter des espaces ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le mode de décodage de cet outil convertit les séquences pourcentage %XX en leurs caractères d'origine, mais un + littéral dans une chaîne de requête est une convention héritée distincte pour les espaces que le décodage pourcentage seul ne touchera pas - si votre entrée mélange les deux conventions, vous devrez peut-être remplacer manuellement + par un espace avant ou après le décodage."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Est-ce la même chose que encodeURIComponent() en JavaScript ?</h3>
 <p>Oui - l'encodage utilise exactement cette fonction, qui est la façon standard d'encoder en toute sécurité une seule valeur (comme un paramètre de requête) pour une utilisation dans une URL, contrairement à encodeURI() qui est destinée à encoder une URL entière et laisse des caractères comme / et : intacts.</p>
+</div>
+<div class="faq-item">
+<h3>Que devient le caractère &amp; une fois encodé ?</h3>
+<p>%26 - puisque & a une signification particulière dans les URL (séparation des paramètres de requête), il doit être encodé en pourcentage en %26 chaque fois qu'il apparaît comme donnée littérale plutôt que comme véritable séparateur de paramètre.</p>
+</div>
+<div class="faq-item">
+<h3>Si j'encode une URL déjà entièrement valide, comme https://example.com, est-ce que cela la casse ?</h3>
+<p>L'encodage est destiné aux valeurs individuelles (comme une requête de recherche), pas aux URL entières - faire passer une URL complète dans le mode d'encodage de cet outil convertira aussi ses propres barres obliques et deux-points (: devient %3A, / devient %2F), la cassant en tant que lien cliquable. N'encodez que la valeur du paramètre elle-même, pas la structure de l'URL environnante.</p>
+</div>
+<div class="faq-item">
+<h3>Puis-je décoder une URL qui contient à la fois %20 et + pour représenter des espaces ?</h3>
+<p>Le mode de décodage de cet outil convertit les séquences pourcentage %XX en leurs caractères d'origine, mais un + littéral dans une chaîne de requête est une convention héritée distincte pour les espaces que le décodage pourcentage seul ne touchera pas - si votre entrée mélange les deux conventions, vous devrez peut-être remplacer manuellement + par un espace avant ou après le décodage.</p>
 </div></div>
         </div>
       </main>

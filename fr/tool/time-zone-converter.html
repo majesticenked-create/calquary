@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Oui - changez les champs de date et heure à n'importe quelle date ; l'outil applique toujours les règles d'heure d'été correctes pour quels que soient les fuseaux et la date que vous choisissez."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Que se passe-t-il si je convertis une heure qui tombe pendant une transition de l'heure d'été, comme la nuit où les horloges changent ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L'outil applique le décalage UTC officiellement en vigueur pour ce fuseau à cette date et heure précises, donc une heure qui n'existe pas (sautée lors du passage à l'heure d'été) ou qui se produit deux fois (répétée lors du retour à l'heure d'hiver) est résolue en utilisant les règles standard de la base de données des fuseaux horaires plutôt que laissée ambiguë."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment convertir 14h00 heure de l'Est en heure de l'Inde ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Réglez la date et l'heure sur 14h00, choisissez l'heure de l'Est américain comme fuseau « De » et l'Inde (Calcutta) comme fuseau « À » - le résultat reflète le décalage complet (généralement 9h30 ou 10h30 selon l'heure d'été américaine), y compris la demi-heure qu'ajoute l'IST."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Est-ce la même chose qu'un « convertisseur d'heure UTC » ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, en effet - sélectionner UTC comme fuseau « De » ou « À » convertit directement vers ou depuis le temps universel coordonné, ce que font spécifiquement la plupart des outils « convertisseur UTC »."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Puis-je convertir une heure du passé ou du futur, pas seulement maintenant ?</h3>
 <p>Oui - changez les champs de date et heure à n'importe quelle date ; l'outil applique toujours les règles d'heure d'été correctes pour quels que soient les fuseaux et la date que vous choisissez.</p>
+</div>
+<div class="faq-item">
+<h3>Que se passe-t-il si je convertis une heure qui tombe pendant une transition de l'heure d'été, comme la nuit où les horloges changent ?</h3>
+<p>L'outil applique le décalage UTC officiellement en vigueur pour ce fuseau à cette date et heure précises, donc une heure qui n'existe pas (sautée lors du passage à l'heure d'été) ou qui se produit deux fois (répétée lors du retour à l'heure d'hiver) est résolue en utilisant les règles standard de la base de données des fuseaux horaires plutôt que laissée ambiguë.</p>
+</div>
+<div class="faq-item">
+<h3>Comment convertir 14h00 heure de l'Est en heure de l'Inde ?</h3>
+<p>Réglez la date et l'heure sur 14h00, choisissez l'heure de l'Est américain comme fuseau « De » et l'Inde (Calcutta) comme fuseau « À » - le résultat reflète le décalage complet (généralement 9h30 ou 10h30 selon l'heure d'été américaine), y compris la demi-heure qu'ajoute l'IST.</p>
+</div>
+<div class="faq-item">
+<h3>Est-ce la même chose qu'un « convertisseur d'heure UTC » ?</h3>
+<p>Oui, en effet - sélectionner UTC comme fuseau « De » ou « À » convertit directement vers ou depuis le temps universel coordonné, ce que font spécifiquement la plupart des outils « convertisseur UTC ».</p>
 </div></div>
         </div>
       </main>

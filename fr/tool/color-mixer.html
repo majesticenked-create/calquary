@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Non - entrez les couleurs sous forme de codes hexadécimaux à 6 chiffres (comme #FF0000 pour le rouge), car c'est le format précis et sans ambiguïté que cette calculatrice analyse. La plupart des outils de conception et navigateurs peuvent vous montrer le code hexadécimal de n'importe quelle couleur que vous choisissez visuellement."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelle couleur obtient-on en mélangeant du rouge pur et du bleu pur à 50/50 ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un violet/magenta moyen, environ #7F007F - puisque le rouge est (255,0,0) et le bleu (0,0,255), faire la moyenne de chaque canal donne (127,0,127), le point médian RVB entre les deux."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pourquoi mélanger du rouge et du vert ne donne-t-il pas du marron ou du jaune comme avec de la peinture ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Parce que cet outil mélange de la lumière (RVB additif), pas du pigment (mélange soustractif). En mode additif, le rouge (255,0,0) et le vert (0,255,0) mélangés à 50/50 donnent en moyenne (127,127,0), une teinte jaune-olive - similaire au jaune, mais par un mécanisme entièrement différent du mélange de pigments de peinture, ce qui explique pourquoi les intuitions issues de la peinture ne s'appliquent pas toujours ici."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Que se passe-t-il si je règle le ratio sur 0 % ou 100 % ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "À 0 % de poids pour la première couleur, le résultat est simplement la seconde couleur inchangée ; à 100 %, c'est la première couleur inchangée - le ratio n'a d'importance que pour les valeurs entre ces deux extrêmes."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Puis-je utiliser des noms de couleurs au lieu de codes hexadécimaux ?</h3>
 <p>Non - entrez les couleurs sous forme de codes hexadécimaux à 6 chiffres (comme #FF0000 pour le rouge), car c'est le format précis et sans ambiguïté que cette calculatrice analyse. La plupart des outils de conception et navigateurs peuvent vous montrer le code hexadécimal de n'importe quelle couleur que vous choisissez visuellement.</p>
+</div>
+<div class="faq-item">
+<h3>Quelle couleur obtient-on en mélangeant du rouge pur et du bleu pur à 50/50 ?</h3>
+<p>Un violet/magenta moyen, environ #7F007F - puisque le rouge est (255,0,0) et le bleu (0,0,255), faire la moyenne de chaque canal donne (127,0,127), le point médian RVB entre les deux.</p>
+</div>
+<div class="faq-item">
+<h3>Pourquoi mélanger du rouge et du vert ne donne-t-il pas du marron ou du jaune comme avec de la peinture ?</h3>
+<p>Parce que cet outil mélange de la lumière (RVB additif), pas du pigment (mélange soustractif). En mode additif, le rouge (255,0,0) et le vert (0,255,0) mélangés à 50/50 donnent en moyenne (127,127,0), une teinte jaune-olive - similaire au jaune, mais par un mécanisme entièrement différent du mélange de pigments de peinture, ce qui explique pourquoi les intuitions issues de la peinture ne s'appliquent pas toujours ici.</p>
+</div>
+<div class="faq-item">
+<h3>Que se passe-t-il si je règle le ratio sur 0 % ou 100 % ?</h3>
+<p>À 0 % de poids pour la première couleur, le résultat est simplement la seconde couleur inchangée ; à 100 %, c'est la première couleur inchangée - le ratio n'a d'importance que pour les valeurs entre ces deux extrêmes.</p>
 </div></div>
         </div>
       </main>

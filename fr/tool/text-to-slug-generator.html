@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Supprimer les mots vides courants est optionnel mais améliore souvent la lisibilité et raccourcit légèrement l'URL sans perdre de sens - « meilleure-pizza-a-paris » fonctionne aussi bien que « la-meilleure-pizza-a-paris ». Cet outil préserve votre ordre de mots original et vous laisse décider quoi garder."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Qu'arrive-t-il à la ponctuation comme les apostrophes ou les points d'exclamation dans mon texte ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Elle est entièrement supprimée, car un slug ne conserve que des lettres minuscules, des chiffres et des tirets - « Joe's Pizza! » devient « joes-pizza » plutôt que de conserver l'apostrophe ou le point d'exclamation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Les espaces multiples ou la ponctuation répétée sont-ils fusionnés en un seul tiret ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui - les espaces consécutifs ou les caractères spéciaux fusionnent en un seul tiret plutôt que de produire plusieurs tirets à la suite, donc « Bonjour   Monde!! » devient « bonjour-monde », et non « bonjour---monde »."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "« Slugify » désigne-t-il la même chose que ce que fait cet outil ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui - « slugify », « générateur de slug d'URL » et « convertir en slug » décrivent tous la conversion d'un texte quelconque vers le format minuscule, à tirets, sûr pour les URL que cet outil produit."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Les slugs d'URL doivent-ils inclure des mots vides comme « le » et « et » ?</h3>
 <p>Supprimer les mots vides courants est optionnel mais améliore souvent la lisibilité et raccourcit légèrement l'URL sans perdre de sens - « meilleure-pizza-a-paris » fonctionne aussi bien que « la-meilleure-pizza-a-paris ». Cet outil préserve votre ordre de mots original et vous laisse décider quoi garder.</p>
+</div>
+<div class="faq-item">
+<h3>Qu'arrive-t-il à la ponctuation comme les apostrophes ou les points d'exclamation dans mon texte ?</h3>
+<p>Elle est entièrement supprimée, car un slug ne conserve que des lettres minuscules, des chiffres et des tirets - « Joe's Pizza! » devient « joes-pizza » plutôt que de conserver l'apostrophe ou le point d'exclamation.</p>
+</div>
+<div class="faq-item">
+<h3>Les espaces multiples ou la ponctuation répétée sont-ils fusionnés en un seul tiret ?</h3>
+<p>Oui - les espaces consécutifs ou les caractères spéciaux fusionnent en un seul tiret plutôt que de produire plusieurs tirets à la suite, donc « Bonjour   Monde!! » devient « bonjour-monde », et non « bonjour---monde ».</p>
+</div>
+<div class="faq-item">
+<h3>« Slugify » désigne-t-il la même chose que ce que fait cet outil ?</h3>
+<p>Oui - « slugify », « générateur de slug d'URL » et « convertir en slug » décrivent tous la conversion d'un texte quelconque vers le format minuscule, à tirets, sûr pour les URL que cet outil produit.</p>
 </div></div>
         </div>
       </main>

@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Oui - en plus du nombre de mots, il affiche le nombre de caractères avec et sans espaces, ainsi que le nombre de phrases et de paragraphes, utile pour respecter des limites strictes de caractères comme les publications sur les réseaux sociaux ou les méta-descriptions."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Un mot composé avec trait d'union comme « bien-être » compte-t-il pour un mot ou deux ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un seul mot - le compteur se base sur les espaces, et comme il n'y a pas d'espace à l'intérieur de « bien-être », il est traité comme un seul mot, correspondant à la façon dont la plupart des traitements de texte gèrent les mots composés avec trait d'union."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Si je colle trois lignes vides entre des paragraphes, cela affecte-t-il le comptage ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Les lignes vides supplémentaires n'ajoutent rien au comptage de mots ou de caractères (il n'y a pas de mots dessus), mais elles comptent pour la détection des paragraphes, puisqu'une ligne vide est généralement ce qui sépare un paragraphe du suivant."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "En quoi le « comptage de mots » diffère-t-il du « comptage de caractères » pour des choses comme les limites de Twitter/X ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le comptage de mots totalise les mots séparés par des espaces, tandis que le comptage de caractères totalise chaque lettre, chiffre, espace, et symbole individuellement. Des plateformes comme X limitent par comptage de caractères, pas par comptage de mots, donc vérifiez le comptage de caractères (avec espaces) que cet outil affiche si vous travaillez avec la limite de caractères d'une plateforme."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Cet outil compte-t-il aussi les caractères en plus des mots ?</h3>
 <p>Oui - en plus du nombre de mots, il affiche le nombre de caractères avec et sans espaces, ainsi que le nombre de phrases et de paragraphes, utile pour respecter des limites strictes de caractères comme les publications sur les réseaux sociaux ou les méta-descriptions.</p>
+</div>
+<div class="faq-item">
+<h3>Un mot composé avec trait d'union comme « bien-être » compte-t-il pour un mot ou deux ?</h3>
+<p>Un seul mot - le compteur se base sur les espaces, et comme il n'y a pas d'espace à l'intérieur de « bien-être », il est traité comme un seul mot, correspondant à la façon dont la plupart des traitements de texte gèrent les mots composés avec trait d'union.</p>
+</div>
+<div class="faq-item">
+<h3>Si je colle trois lignes vides entre des paragraphes, cela affecte-t-il le comptage ?</h3>
+<p>Les lignes vides supplémentaires n'ajoutent rien au comptage de mots ou de caractères (il n'y a pas de mots dessus), mais elles comptent pour la détection des paragraphes, puisqu'une ligne vide est généralement ce qui sépare un paragraphe du suivant.</p>
+</div>
+<div class="faq-item">
+<h3>En quoi le « comptage de mots » diffère-t-il du « comptage de caractères » pour des choses comme les limites de Twitter/X ?</h3>
+<p>Le comptage de mots totalise les mots séparés par des espaces, tandis que le comptage de caractères totalise chaque lettre, chiffre, espace, et symbole individuellement. Des plateformes comme X limitent par comptage de caractères, pas par comptage de mots, donc vérifiez le comptage de caractères (avec espaces) que cet outil affiche si vous travaillez avec la limite de caractères d'une plateforme.</p>
 </div></div>
         </div>
       </main>

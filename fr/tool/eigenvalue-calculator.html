@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Des valeurs propres complexes signifient que la matrice n'a pas de vecteurs propres réels - géométriquement, cela se produit pour des matrices qui font tourner des vecteurs (comme une matrice de rotation) plutôt que de simplement les étirer le long de directions fixes, puisqu'une rotation n'a aucune direction qui reste inchangée (sauf une rotation de 180°)."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Que représentent les valeurs propres et vecteurs propres dans la réalité ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ils décrivent des directions qu'une transformation matricielle ne fait pas tourner, mais seulement étire ou rétrécit - le vecteur propre est cette direction inchangée, et la valeur propre est le facteur d'étirement. Cela apparaît dans des applications comme l'analyse vibratoire, l'analyse en composantes principales, et l'algorithme PageRank de Google."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelles sont les valeurs propres de la matrice [[2,1],[1,2]] ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "3 et 1 - trace = 2+2 = 4, déterminant = (2×2)-(1×1) = 3, donc λ² − 4λ + 3 = 0 se factorise en (λ−3)(λ−1) = 0, donnant λ = 3 et λ = 1."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Une matrice 2x2 peut-elle n'avoir qu'une seule valeur propre ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui - cela se produit lorsque le discriminant de l'équation caractéristique est nul (une valeur propre « répétée » ou « dégénérée »), ce qui arrive pour des matrices comme [[2,1],[0,2]], où les deux racines de l'équation quadratique coïncident sur la même valeur."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Que signifie si les valeurs propres sont complexes ?</h3>
 <p>Des valeurs propres complexes signifient que la matrice n'a pas de vecteurs propres réels - géométriquement, cela se produit pour des matrices qui font tourner des vecteurs (comme une matrice de rotation) plutôt que de simplement les étirer le long de directions fixes, puisqu'une rotation n'a aucune direction qui reste inchangée (sauf une rotation de 180°).</p>
+</div>
+<div class="faq-item">
+<h3>Que représentent les valeurs propres et vecteurs propres dans la réalité ?</h3>
+<p>Ils décrivent des directions qu'une transformation matricielle ne fait pas tourner, mais seulement étire ou rétrécit - le vecteur propre est cette direction inchangée, et la valeur propre est le facteur d'étirement. Cela apparaît dans des applications comme l'analyse vibratoire, l'analyse en composantes principales, et l'algorithme PageRank de Google.</p>
+</div>
+<div class="faq-item">
+<h3>Quelles sont les valeurs propres de la matrice [[2,1],[1,2]] ?</h3>
+<p>3 et 1 - trace = 2+2 = 4, déterminant = (2×2)-(1×1) = 3, donc λ² − 4λ + 3 = 0 se factorise en (λ−3)(λ−1) = 0, donnant λ = 3 et λ = 1.</p>
+</div>
+<div class="faq-item">
+<h3>Une matrice 2x2 peut-elle n'avoir qu'une seule valeur propre ?</h3>
+<p>Oui - cela se produit lorsque le discriminant de l'équation caractéristique est nul (une valeur propre « répétée » ou « dégénérée »), ce qui arrive pour des matrices comme [[2,1],[0,2]], où les deux racines de l'équation quadratique coïncident sur la même valeur.</p>
 </div></div>
         </div>
       </main>

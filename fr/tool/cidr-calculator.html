@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Un /32 est une adresse unique sans place pour une paire réseau/diffusion, et un /31 est un cas spécial (défini dans la RFC 3021) utilisé pour les liaisons point à point où les deux adresses du bloc de 2 adresses sont utilisables comme adresses d'hôte, puisqu'aucune diffusion n'est nécessaire."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Quel est le masque de sous-réseau pour un réseau /24 ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "255.255.255.0 - un préfixe /24 signifie que les 24 premiers bits sont tous des 1 (trois octets entiers de 255), laissant le dernier octet entièrement à 0 pour les adresses d'hôtes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "En quoi cela diffère-t-il du calculateur de sous-réseau IP ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ils calculent les mêmes résultats (adresse réseau, adresse de diffusion, plage utilisable), mais cet outil prend en entrée une chaîne CIDR combinée unique comme « 192.168.1.0/24 », tandis que le calculateur de sous-réseau IP utilise des champs séparés pour l'adresse IP et la longueur du préfixe."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quel masque de sous-réseau correspond à un réseau /29 ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "255.255.255.248 - un préfixe /29 utilise 29 des 32 bits pour le réseau, laissant seulement 3 bits d'hôte (8 adresses totales, 6 utilisables), ce qui donne comme masque 255.255.255 suivi de 248 (11111000 en binaire)."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Pourquoi n'y a-t-il pas d'hôtes utilisables pour un /31 ou /32 ?</h3>
 <p>Un /32 est une adresse unique sans place pour une paire réseau/diffusion, et un /31 est un cas spécial (défini dans la RFC 3021) utilisé pour les liaisons point à point où les deux adresses du bloc de 2 adresses sont utilisables comme adresses d'hôte, puisqu'aucune diffusion n'est nécessaire.</p>
+</div>
+<div class="faq-item">
+<h3>Quel est le masque de sous-réseau pour un réseau /24 ?</h3>
+<p>255.255.255.0 - un préfixe /24 signifie que les 24 premiers bits sont tous des 1 (trois octets entiers de 255), laissant le dernier octet entièrement à 0 pour les adresses d'hôtes.</p>
+</div>
+<div class="faq-item">
+<h3>En quoi cela diffère-t-il du calculateur de sous-réseau IP ?</h3>
+<p>Ils calculent les mêmes résultats (adresse réseau, adresse de diffusion, plage utilisable), mais cet outil prend en entrée une chaîne CIDR combinée unique comme « 192.168.1.0/24 », tandis que le calculateur de sous-réseau IP utilise des champs séparés pour l'adresse IP et la longueur du préfixe.</p>
+</div>
+<div class="faq-item">
+<h3>Quel masque de sous-réseau correspond à un réseau /29 ?</h3>
+<p>255.255.255.248 - un préfixe /29 utilise 29 des 32 bits pour le réseau, laissant seulement 3 bits d'hôte (8 adresses totales, 6 utilisables), ce qui donne comme masque 255.255.255 suivi de 248 (11111000 en binaire).</p>
 </div></div>
         </div>
       </main>

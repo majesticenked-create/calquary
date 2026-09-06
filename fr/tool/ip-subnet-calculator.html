@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Un /32 a exactement une adresse au total (utilisée pour identifier un seul hôte, comme une interface loopback), et un /31 n'a que 2 adresses sans place pour des adresses réseau/diffusion séparées - les deux sont typiquement utilisés pour des liaisons point à point où chaque adresse est directement utilisable."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment la longueur du préfixe CIDR change-t-elle si je passe de /24 à /25 ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un /25 divise ce qui serait un réseau /24 en deux sous-réseaux plus petits, chacun avec 128 adresses totales (126 hôtes utilisables) au lieu de 256 (254 utilisables) - passer à un préfixe plus long réduit toujours l'espace d'adressage par sous-réseau tout en créant globalement plus de sous-réseaux."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelle est la plage d'hôtes utilisables pour 192.168.1.0/24 ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "192.168.1.1 à 192.168.1.254 - l'adresse réseau (192.168.1.0) et l'adresse de diffusion (192.168.1.255) sont exclues, laissant 254 adresses d'hôtes assignables entre les deux."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Le « calculateur de sous-réseau IP » est-il le même outil qu'un « calculateur CIDR » ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, essentiellement - les deux prennent une adresse IP et une longueur de préfixe (ou une notation CIDR combinée) et calculent la même adresse réseau, adresse de diffusion et plage d'hôtes utilisables ; cet outil prend l'IP et le préfixe comme champs séparés plutôt que sous forme combinée avec barre oblique."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Pourquoi les sous-réseaux /31 et /32 n'ont-ils pas de plage d'hôtes utilisable ?</h3>
 <p>Un /32 a exactement une adresse au total (utilisée pour identifier un seul hôte, comme une interface loopback), et un /31 n'a que 2 adresses sans place pour des adresses réseau/diffusion séparées - les deux sont typiquement utilisés pour des liaisons point à point où chaque adresse est directement utilisable.</p>
+</div>
+<div class="faq-item">
+<h3>Comment la longueur du préfixe CIDR change-t-elle si je passe de /24 à /25 ?</h3>
+<p>Un /25 divise ce qui serait un réseau /24 en deux sous-réseaux plus petits, chacun avec 128 adresses totales (126 hôtes utilisables) au lieu de 256 (254 utilisables) - passer à un préfixe plus long réduit toujours l'espace d'adressage par sous-réseau tout en créant globalement plus de sous-réseaux.</p>
+</div>
+<div class="faq-item">
+<h3>Quelle est la plage d'hôtes utilisables pour 192.168.1.0/24 ?</h3>
+<p>192.168.1.1 à 192.168.1.254 - l'adresse réseau (192.168.1.0) et l'adresse de diffusion (192.168.1.255) sont exclues, laissant 254 adresses d'hôtes assignables entre les deux.</p>
+</div>
+<div class="faq-item">
+<h3>Le « calculateur de sous-réseau IP » est-il le même outil qu'un « calculateur CIDR » ?</h3>
+<p>Oui, essentiellement - les deux prennent une adresse IP et une longueur de préfixe (ou une notation CIDR combinée) et calculent la même adresse réseau, adresse de diffusion et plage d'hôtes utilisables ; cet outil prend l'IP et le préfixe comme champs séparés plutôt que sous forme combinée avec barre oblique.</p>
 </div></div>
         </div>
       </main>

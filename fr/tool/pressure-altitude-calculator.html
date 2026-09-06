@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "L'altitude de pression tient compte uniquement de la pression atmosphérique. L'altitude de densité va plus loin et corrige aussi pour la température (et l'humidité), puisque l'air moins dense - qu'il provienne d'une pression plus basse ou d'une température plus élevée - affecte de manière similaire les performances de l'aéronef et du moteur."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelle altitude de pression résulte d'une élévation de terrain de 500 pieds avec un réglage altimétrique de 30,42 ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "0 pied - puisque (29,92 − 30,42) × 1 000 = −500, ajouter cela aux 500 pieds d'élévation donne exactement 0. Un réglage altimétrique supérieur à la norme réduit l'altitude de pression en dessous de l'élévation du terrain."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pourquoi les pilotes ont-ils besoin de l'altitude de pression plutôt que d'utiliser simplement l'élévation du terrain ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Les tables de performance des aéronefs (distance de décollage, taux de montée, puissance moteur) sont calibrées pour des conditions atmosphériques standard, donc l'altitude de pression - qui normalise pour la pression barométrique réelle du jour - fournit une base cohérente pour ces calculs quelle que soit la météo locale."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "L'altitude de pression est-elle la même chose que le niveau de vol ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Elles sont étroitement liées - les niveaux de vol (comme FL350) sont des altitudes de pression au-dessus de l'altitude de transition, exprimées en centaines de pieds avec l'altimètre toujours réglé sur la norme de 29,92 inHg, exactement la façon dont cette calculatrice calcule l'altitude de pression."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Quelle est la différence entre altitude de pression et altitude de densité ?</h3>
 <p>L'altitude de pression tient compte uniquement de la pression atmosphérique. L'altitude de densité va plus loin et corrige aussi pour la température (et l'humidité), puisque l'air moins dense - qu'il provienne d'une pression plus basse ou d'une température plus élevée - affecte de manière similaire les performances de l'aéronef et du moteur.</p>
+</div>
+<div class="faq-item">
+<h3>Quelle altitude de pression résulte d'une élévation de terrain de 500 pieds avec un réglage altimétrique de 30,42 ?</h3>
+<p>0 pied - puisque (29,92 − 30,42) × 1 000 = −500, ajouter cela aux 500 pieds d'élévation donne exactement 0. Un réglage altimétrique supérieur à la norme réduit l'altitude de pression en dessous de l'élévation du terrain.</p>
+</div>
+<div class="faq-item">
+<h3>Pourquoi les pilotes ont-ils besoin de l'altitude de pression plutôt que d'utiliser simplement l'élévation du terrain ?</h3>
+<p>Les tables de performance des aéronefs (distance de décollage, taux de montée, puissance moteur) sont calibrées pour des conditions atmosphériques standard, donc l'altitude de pression - qui normalise pour la pression barométrique réelle du jour - fournit une base cohérente pour ces calculs quelle que soit la météo locale.</p>
+</div>
+<div class="faq-item">
+<h3>L'altitude de pression est-elle la même chose que le niveau de vol ?</h3>
+<p>Elles sont étroitement liées - les niveaux de vol (comme FL350) sont des altitudes de pression au-dessus de l'altitude de transition, exprimées en centaines de pieds avec l'altimètre toujours réglé sur la norme de 29,92 inHg, exactement la façon dont cette calculatrice calcule l'altitude de pression.</p>
 </div></div>
         </div>
       </main>

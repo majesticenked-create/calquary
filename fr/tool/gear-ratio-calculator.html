@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Non - c'est un calcul idéalisé supposant aucun glissement de roue et un transfert de puissance parfaitement efficace, ce qui est une approximation raisonnable pour la plupart des conditions routières et de piste mais ne sera pas parfaitement exact."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelle vitesse produit une cadence de 90 tr/min avec un rapport 50/14 sur une roue de 27 pouces ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Environ 26 mph - les pouces de développement sont 27 × (50÷14) ≈ 96,4, chaque tour de pédale couvre 96,4 × π ≈ 302,9 pouces, et à 90 tr/min cela fait 27 264 pouces par minute, ce qui se convertit en environ 25,8 mph."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pourquoi les pouces de développement utilisent-ils le diamètre nominal de la roue plutôt que le diamètre de roulement réel du pneu ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cette calculatrice utilise le diamètre nominal de la roue que vous entrez comme approximation - le diamètre de roulement réel (qui inclut la taille du pneu et une légère compression sous charge) diffère légèrement, donc les valeurs en pouces de développement sont un outil de comparaison standardisé plutôt qu'une mesure de distance réelle précise."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Les « pouces de développement » sont-ils la même mesure que le « développement » ou le « roulement » utilisé dans certains compteurs de vélo ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ils sont liés mais pas identiques - le développement (ou roulement) est la distance réelle parcourue par tour de pédale, généralement donnée en mètres ou en pouces, tandis que les pouces de développement sont une unité traditionnelle légèrement différente (diamètre de roue effectif). Le développement égale les pouces de développement × π, ce qui est exactement la relation que cette calculatrice utilise en interne pour dériver la vitesse."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Cela tient-il compte de facteurs réels comme le glissement des pneus ou la perte de transmission ?</h3>
 <p>Non - c'est un calcul idéalisé supposant aucun glissement de roue et un transfert de puissance parfaitement efficace, ce qui est une approximation raisonnable pour la plupart des conditions routières et de piste mais ne sera pas parfaitement exact.</p>
+</div>
+<div class="faq-item">
+<h3>Quelle vitesse produit une cadence de 90 tr/min avec un rapport 50/14 sur une roue de 27 pouces ?</h3>
+<p>Environ 26 mph - les pouces de développement sont 27 × (50÷14) ≈ 96,4, chaque tour de pédale couvre 96,4 × π ≈ 302,9 pouces, et à 90 tr/min cela fait 27 264 pouces par minute, ce qui se convertit en environ 25,8 mph.</p>
+</div>
+<div class="faq-item">
+<h3>Pourquoi les pouces de développement utilisent-ils le diamètre nominal de la roue plutôt que le diamètre de roulement réel du pneu ?</h3>
+<p>Cette calculatrice utilise le diamètre nominal de la roue que vous entrez comme approximation - le diamètre de roulement réel (qui inclut la taille du pneu et une légère compression sous charge) diffère légèrement, donc les valeurs en pouces de développement sont un outil de comparaison standardisé plutôt qu'une mesure de distance réelle précise.</p>
+</div>
+<div class="faq-item">
+<h3>Les « pouces de développement » sont-ils la même mesure que le « développement » ou le « roulement » utilisé dans certains compteurs de vélo ?</h3>
+<p>Ils sont liés mais pas identiques - le développement (ou roulement) est la distance réelle parcourue par tour de pédale, généralement donnée en mètres ou en pouces, tandis que les pouces de développement sont une unité traditionnelle légèrement différente (diamètre de roue effectif). Le développement égale les pouces de développement × π, ce qui est exactement la relation que cette calculatrice utilise en interne pour dériver la vitesse.</p>
 </div></div>
         </div>
       </main>

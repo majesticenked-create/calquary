@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Non - cela utilise le mouvement de projectile idéal (seule la gravité agissant sur l'objet), ce qui est précis pour des objets denses et compacts se déplaçant à des vitesses modérées sur de courtes distances, mais diverge de plus en plus de la réalité pour des objets légers ou se déplaçant rapidement où la traînée de l'air compte."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment calculer la hauteur maximale d'un projectile ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hauteur max = (v × sin(angle))² / (2 × g). Pour un lancement à 20 m/s et 45° avec g = 9,81 : (20×sin45°)² / (2×9,81) = (14,14)² / 19,62 ≈ 10,19 m."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qu'arrive-t-il à la portée si je double la vitesse de lancement ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La portée quadruple - puisque la portée est proportionnelle au carré de la vitesse (portée = v²×sin(2×angle)/g), doubler v multiplie la portée par 2² = 4, à angle et gravité constants."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Puis-je utiliser cela pour un projectile lancé depuis une hauteur, comme du haut d'une falaise ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non - cette calculatrice suppose que le lancement et l'atterrissage se produisent à la même hauteur (niveau du sol), ce qui simplifie la formule du temps de vol. Un projectile lancé depuis un point élevé nécessite un terme supplémentaire tenant compte de la distance de chute additionnelle, que cet outil n'inclut pas."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Cela tient-il compte de la résistance de l'air ?</h3>
 <p>Non - cela utilise le mouvement de projectile idéal (seule la gravité agissant sur l'objet), ce qui est précis pour des objets denses et compacts se déplaçant à des vitesses modérées sur de courtes distances, mais diverge de plus en plus de la réalité pour des objets légers ou se déplaçant rapidement où la traînée de l'air compte.</p>
+</div>
+<div class="faq-item">
+<h3>Comment calculer la hauteur maximale d'un projectile ?</h3>
+<p>Hauteur max = (v × sin(angle))² / (2 × g). Pour un lancement à 20 m/s et 45° avec g = 9,81 : (20×sin45°)² / (2×9,81) = (14,14)² / 19,62 ≈ 10,19 m.</p>
+</div>
+<div class="faq-item">
+<h3>Qu'arrive-t-il à la portée si je double la vitesse de lancement ?</h3>
+<p>La portée quadruple - puisque la portée est proportionnelle au carré de la vitesse (portée = v²×sin(2×angle)/g), doubler v multiplie la portée par 2² = 4, à angle et gravité constants.</p>
+</div>
+<div class="faq-item">
+<h3>Puis-je utiliser cela pour un projectile lancé depuis une hauteur, comme du haut d'une falaise ?</h3>
+<p>Non - cette calculatrice suppose que le lancement et l'atterrissage se produisent à la même hauteur (niveau du sol), ce qui simplifie la formule du temps de vol. Un projectile lancé depuis un point élevé nécessite un terme supplémentaire tenant compte de la distance de chute additionnelle, que cet outil n'inclut pas.</p>
 </div></div>
         </div>
       </main>

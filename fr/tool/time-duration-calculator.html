@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Oui - en plus de la décomposition heures-minutes, cette calculatrice affiche la durée totale sous forme décimale (par exemple, 7 heures 30 minutes s'affiche comme 7,5 heures), ce qui est utile pour les feuilles de temps et la facturation nécessitant des entrées de temps décimales."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment calculer la durée d'un poste de nuit, comme de 23h à 7h ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Saisissez 23:00 comme heure de début et 07:00 comme heure de fin - puisque l'heure de fin est numériquement plus petite, la calculatrice considère qu'elle traverse minuit et retourne 8 heures, la durée correcte du poste de nuit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Que se passe-t-il si l'heure de début et l'heure de fin sont identiques ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La calculatrice traite une heure de début et de fin identique comme une durée complète de 24 heures (traversant minuit pour revenir à la même heure) plutôt que zéro, puisqu'elle mesure toujours vers l'avant du début à la fin."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Est-ce la même chose qu'une « calculatrice de temps écoulé » ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui - les deux termes décrivent le calcul de l'écart entre deux heures d'horloge. Cet outil fonctionne spécifiquement avec des heures et minutes sur une horloge de 24 heures plutôt qu'avec des dates calendaires complètes."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Puis-je calculer la durée en heures décimales au lieu d'heures et minutes ?</h3>
 <p>Oui - en plus de la décomposition heures-minutes, cette calculatrice affiche la durée totale sous forme décimale (par exemple, 7 heures 30 minutes s'affiche comme 7,5 heures), ce qui est utile pour les feuilles de temps et la facturation nécessitant des entrées de temps décimales.</p>
+</div>
+<div class="faq-item">
+<h3>Comment calculer la durée d'un poste de nuit, comme de 23h à 7h ?</h3>
+<p>Saisissez 23:00 comme heure de début et 07:00 comme heure de fin - puisque l'heure de fin est numériquement plus petite, la calculatrice considère qu'elle traverse minuit et retourne 8 heures, la durée correcte du poste de nuit.</p>
+</div>
+<div class="faq-item">
+<h3>Que se passe-t-il si l'heure de début et l'heure de fin sont identiques ?</h3>
+<p>La calculatrice traite une heure de début et de fin identique comme une durée complète de 24 heures (traversant minuit pour revenir à la même heure) plutôt que zéro, puisqu'elle mesure toujours vers l'avant du début à la fin.</p>
+</div>
+<div class="faq-item">
+<h3>Est-ce la même chose qu'une « calculatrice de temps écoulé » ?</h3>
+<p>Oui - les deux termes décrivent le calcul de l'écart entre deux heures d'horloge. Cet outil fonctionne spécifiquement avec des heures et minutes sur une horloge de 24 heures plutôt qu'avec des dates calendaires complètes.</p>
 </div></div>
         </div>
       </main>

@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Non - cette calculatrice suppose que l'acide et la base sont tous deux forts (se dissocient complètement), ce qui est ce qui rend valide le calcul simple de l'excès d'ions. Les titrages acide/base faible nécessitent des calculs d'équilibre (Ka/Kb) et produisent un pH différent, non égal à 7, au point d'équivalence en raison de la base ou de l'acide conjugué restant en solution."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Que devient le pH exactement au point d'équivalence si les volumes saisis correspondent exactement en moles ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La calculatrice renvoie un pH de 7, car des moles égales d'un acide fort et d'une base forte se neutralisent complètement - si vos volumes/concentrations d'acide et de base donnent exactement des moles égales, vous avez atteint le point d'équivalence."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quel est le pH après avoir ajouté 40 mL de base à 0,1 mol/L à 50 mL d'acide à 0,1 mol/L ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Environ 1,95 - moles d'acide = 0,050 L × 0,1 = 0,005 mol, moles de base = 0,040 L × 0,1 = 0,004 mol, excès de H⁺ = 0,001 mol pour un volume total de 0,090 L, ce qui donne [H⁺] ≈ 0,0111 mol/L, donc pH = −log₁₀(0,0111) ≈ 1,95."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pourquoi le volume total compte-t-il dans le calcul du pH, pas seulement les moles restantes ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le pH dépend de la concentration, pas seulement de la quantité brute d'ion en excès - les mêmes 0,001 mol de H⁺ restant produisent un pH différent selon qu'elles sont diluées dans 50 mL ou 500 mL, c'est pourquoi la calculatrice divise par le volume combiné acide + base à chaque étape."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Cela fonctionne-t-il pour les acides faibles ou les bases faibles ?</h3>
 <p>Non - cette calculatrice suppose que l'acide et la base sont tous deux forts (se dissocient complètement), ce qui est ce qui rend valide le calcul simple de l'excès d'ions. Les titrages acide/base faible nécessitent des calculs d'équilibre (Ka/Kb) et produisent un pH différent, non égal à 7, au point d'équivalence en raison de la base ou de l'acide conjugué restant en solution.</p>
+</div>
+<div class="faq-item">
+<h3>Que devient le pH exactement au point d'équivalence si les volumes saisis correspondent exactement en moles ?</h3>
+<p>La calculatrice renvoie un pH de 7, car des moles égales d'un acide fort et d'une base forte se neutralisent complètement - si vos volumes/concentrations d'acide et de base donnent exactement des moles égales, vous avez atteint le point d'équivalence.</p>
+</div>
+<div class="faq-item">
+<h3>Quel est le pH après avoir ajouté 40 mL de base à 0,1 mol/L à 50 mL d'acide à 0,1 mol/L ?</h3>
+<p>Environ 1,95 - moles d'acide = 0,050 L × 0,1 = 0,005 mol, moles de base = 0,040 L × 0,1 = 0,004 mol, excès de H⁺ = 0,001 mol pour un volume total de 0,090 L, ce qui donne [H⁺] ≈ 0,0111 mol/L, donc pH = −log₁₀(0,0111) ≈ 1,95.</p>
+</div>
+<div class="faq-item">
+<h3>Pourquoi le volume total compte-t-il dans le calcul du pH, pas seulement les moles restantes ?</h3>
+<p>Le pH dépend de la concentration, pas seulement de la quantité brute d'ion en excès - les mêmes 0,001 mol de H⁺ restant produisent un pH différent selon qu'elles sont diluées dans 50 mL ou 500 mL, c'est pourquoi la calculatrice divise par le volume combiné acide + base à chaque étape.</p>
 </div></div>
         </div>
       </main>

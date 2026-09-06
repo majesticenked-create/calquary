@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Oui - tout cela décrit la recherche de la taille minimale d'échantillon nécessaire pour un sondage ou une étude à un niveau de confiance et une marge d'erreur choisis, ce qui est exactement ce que fait cette calculatrice."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "De combien doubler la marge d'erreur change-t-il la taille d'échantillon requise ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cela réduit la taille d'échantillon requise à environ un quart, puisque la taille d'échantillon est inversement proportionnelle au carré de la marge d'erreur (n ∝ 1/e²) - à l'inverse, diviser par deux la marge d'erreur souhaitée quadruple à peu près l'échantillon nécessaire."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelle taille d'échantillon est nécessaire pour un niveau de confiance de 95 % et une marge d'erreur de 5 % avec une proportion inconnue ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Environ 385 - en utilisant n = (1,96² × 0,5 × 0,5) / 0,05² = 0,9604 / 0,0025 ≈ 384,16, arrondi à 385, le chiffre couramment cité pour une enquête auprès de la population générale."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pourquoi la calculatrice demande-t-elle une proportion de réponse estimée si je n'ai pas encore de résultats d'enquête ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La proportion affecte la variabilité que la formule suppose exister dans les réponses - si vous avez une estimation préalable approximative (issue de recherches passées ou d'une étude pilote), l'indiquer peut réduire la taille d'échantillon requise par rapport à la valeur par défaut conservatrice de 50 %, puisque p×(1−p) est plus petit lorsque p s'éloigne de 0,5."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>« Calculer la taille d'échantillon en ligne » ou « calculateur pour déterminer la taille d'échantillon » sont-ils la même chose que cet outil ?</h3>
 <p>Oui - tout cela décrit la recherche de la taille minimale d'échantillon nécessaire pour un sondage ou une étude à un niveau de confiance et une marge d'erreur choisis, ce qui est exactement ce que fait cette calculatrice.</p>
+</div>
+<div class="faq-item">
+<h3>De combien doubler la marge d'erreur change-t-il la taille d'échantillon requise ?</h3>
+<p>Cela réduit la taille d'échantillon requise à environ un quart, puisque la taille d'échantillon est inversement proportionnelle au carré de la marge d'erreur (n ∝ 1/e²) - à l'inverse, diviser par deux la marge d'erreur souhaitée quadruple à peu près l'échantillon nécessaire.</p>
+</div>
+<div class="faq-item">
+<h3>Quelle taille d'échantillon est nécessaire pour un niveau de confiance de 95 % et une marge d'erreur de 5 % avec une proportion inconnue ?</h3>
+<p>Environ 385 - en utilisant n = (1,96² × 0,5 × 0,5) / 0,05² = 0,9604 / 0,0025 ≈ 384,16, arrondi à 385, le chiffre couramment cité pour une enquête auprès de la population générale.</p>
+</div>
+<div class="faq-item">
+<h3>Pourquoi la calculatrice demande-t-elle une proportion de réponse estimée si je n'ai pas encore de résultats d'enquête ?</h3>
+<p>La proportion affecte la variabilité que la formule suppose exister dans les réponses - si vous avez une estimation préalable approximative (issue de recherches passées ou d'une étude pilote), l'indiquer peut réduire la taille d'échantillon requise par rapport à la valeur par défaut conservatrice de 50 %, puisque p×(1−p) est plus petit lorsque p s'éloigne de 0,5.</p>
 </div></div>
         </div>
       </main>

@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "La probabilité d'obtenir k succès ou moins, pas exactement k - utile pour des questions comme « quelle est la probabilité de tirer au plus 2 cœurs », qui additionne les probabilités individuelles pour 0, 1, et 2 cœurs."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Que représentent concrètement N, K, n et k ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "N est la population totale (par exemple, un jeu de 52 cartes complet), K est le nombre d'éléments « succès » dans cette population (par exemple, 13 cœurs), n est le nombre d'éléments que vous tirez (la taille de votre échantillon), et k est le nombre de succès souhaités parmi ceux tirés."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Que se passe-t-il si k est plus grand que n ou K ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La probabilité est de 0 - vous ne pouvez pas tirer plus de succès que vous n'en avez réellement échantillonné (k > n), ni plus de succès qu'il n'en existe dans la population (k > K), donc ces combinaisons sont mathématiquement impossibles."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment calcule-t-on la moyenne d'une distribution hypergéométrique ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Moyenne = n × (K/N) - pour une main de 5 cartes tirée d'un jeu de 52 cartes avec 13 cœurs, le nombre attendu de cœurs est 5 × (13/52) = 1,25, même si l'on ne peut pas réellement tirer un nombre fractionnaire de cœurs dans une seule main."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Que me dit la probabilité cumulative (P(X ≤ k)) ?</h3>
 <p>La probabilité d'obtenir k succès ou moins, pas exactement k - utile pour des questions comme « quelle est la probabilité de tirer au plus 2 cœurs », qui additionne les probabilités individuelles pour 0, 1, et 2 cœurs.</p>
+</div>
+<div class="faq-item">
+<h3>Que représentent concrètement N, K, n et k ?</h3>
+<p>N est la population totale (par exemple, un jeu de 52 cartes complet), K est le nombre d'éléments « succès » dans cette population (par exemple, 13 cœurs), n est le nombre d'éléments que vous tirez (la taille de votre échantillon), et k est le nombre de succès souhaités parmi ceux tirés.</p>
+</div>
+<div class="faq-item">
+<h3>Que se passe-t-il si k est plus grand que n ou K ?</h3>
+<p>La probabilité est de 0 - vous ne pouvez pas tirer plus de succès que vous n'en avez réellement échantillonné (k > n), ni plus de succès qu'il n'en existe dans la population (k > K), donc ces combinaisons sont mathématiquement impossibles.</p>
+</div>
+<div class="faq-item">
+<h3>Comment calcule-t-on la moyenne d'une distribution hypergéométrique ?</h3>
+<p>Moyenne = n × (K/N) - pour une main de 5 cartes tirée d'un jeu de 52 cartes avec 13 cœurs, le nombre attendu de cœurs est 5 × (13/52) = 1,25, même si l'on ne peut pas réellement tirer un nombre fractionnaire de cœurs dans une seule main.</p>
 </div></div>
         </div>
       </main>

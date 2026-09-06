@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Indiquez son âge ci-dessus pour obtenir les deux années de naissance possibles - sans savoir si son anniversaire a déjà eu lieu cette année, c'est aussi précis que l'âge seul le permet."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Si quelqu'un a 25 ans aujourd'hui, quelles sont les deux années de naissance possibles ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Si l'année en cours est 2026, cette personne est née soit en 2001 (si son anniversaire est déjà passé cette année), soit en 2000 (s'il n'a pas encore eu lieu) - les deux sont cohérentes avec le fait d'avoir 25 ans actuellement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cela peut-il gérer un âge donné en mois, comme pour un bébé ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non - cette calculatrice fonctionne uniquement avec des années d'âge complètes. Pour l'âge d'un bébé ou d'un jeune enfant en mois, il vous faudrait un outil qui suit l'âge avec une granularité plus fine qu'une simple année de naissance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pourquoi la calculatrice ne peut-elle pas déterminer une seule année de naissance ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L'âge seul indique uniquement combien d'années complètes se sont écoulées depuis la naissance, pas à quel moment de l'année civile tombe l'anniversaire - sans cette information supplémentaire, les deux années candidates restent également possibles."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Quelqu'un m'a dit son âge - comment savoir « quand il est né » ?</h3>
 <p>Indiquez son âge ci-dessus pour obtenir les deux années de naissance possibles - sans savoir si son anniversaire a déjà eu lieu cette année, c'est aussi précis que l'âge seul le permet.</p>
+</div>
+<div class="faq-item">
+<h3>Si quelqu'un a 25 ans aujourd'hui, quelles sont les deux années de naissance possibles ?</h3>
+<p>Si l'année en cours est 2026, cette personne est née soit en 2001 (si son anniversaire est déjà passé cette année), soit en 2000 (s'il n'a pas encore eu lieu) - les deux sont cohérentes avec le fait d'avoir 25 ans actuellement.</p>
+</div>
+<div class="faq-item">
+<h3>Cela peut-il gérer un âge donné en mois, comme pour un bébé ?</h3>
+<p>Non - cette calculatrice fonctionne uniquement avec des années d'âge complètes. Pour l'âge d'un bébé ou d'un jeune enfant en mois, il vous faudrait un outil qui suit l'âge avec une granularité plus fine qu'une simple année de naissance.</p>
+</div>
+<div class="faq-item">
+<h3>Pourquoi la calculatrice ne peut-elle pas déterminer une seule année de naissance ?</h3>
+<p>L'âge seul indique uniquement combien d'années complètes se sont écoulées depuis la naissance, pas à quel moment de l'année civile tombe l'anniversaire - sans cette information supplémentaire, les deux années candidates restent également possibles.</p>
 </div></div>
         </div>
       </main>

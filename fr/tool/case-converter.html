@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Au-delà de la casse de titre et de la casse de phrase, il convertit en MAJUSCULES, minuscules, camelCase et d'autres styles de formatage courants utilisés dans l'écriture et le code, afin de reformater le texte selon le contexte dont vous avez besoin."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment la casse de titre décide-t-elle quels mots mettre en majuscule ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Elle met une majuscule à la première lettre de chaque mot du texte, sans traitement spécial pour les petits mots comme « un », « le » ou « de » - ainsi « le seigneur des anneaux » devient « Le Seigneur Des Anneaux » ici, plutôt que la convention des guides de style qui met en minuscules les mots mineurs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Que fait la casse de phrase avec un texte contenant plusieurs phrases ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Elle met en majuscule uniquement la toute première lettre de l'ensemble du texte saisi, en laissant tout le reste en minuscules - elle ne détecte pas les limites de chaque phrase pour les mettre en majuscule individuellement, donc un paragraphe de plusieurs phrases n'obtient qu'une seule majuscule au total."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Si mon texte contient des acronymes en MAJUSCULES comme « NASA », la conversion en minuscules les casse-t-elle ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui - convertir en minuscules traite chaque lettre de la même façon quel que soit le contexte, donc « NASA » devient « nasa ». Il n'y a pas de détection d'acronymes, donc relisez les textes contenant des acronymes ou des noms propres après conversion."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Quels styles de casse ce convertisseur prend-il en charge ?</h3>
 <p>Au-delà de la casse de titre et de la casse de phrase, il convertit en MAJUSCULES, minuscules, camelCase et d'autres styles de formatage courants utilisés dans l'écriture et le code, afin de reformater le texte selon le contexte dont vous avez besoin.</p>
+</div>
+<div class="faq-item">
+<h3>Comment la casse de titre décide-t-elle quels mots mettre en majuscule ?</h3>
+<p>Elle met une majuscule à la première lettre de chaque mot du texte, sans traitement spécial pour les petits mots comme « un », « le » ou « de » - ainsi « le seigneur des anneaux » devient « Le Seigneur Des Anneaux » ici, plutôt que la convention des guides de style qui met en minuscules les mots mineurs.</p>
+</div>
+<div class="faq-item">
+<h3>Que fait la casse de phrase avec un texte contenant plusieurs phrases ?</h3>
+<p>Elle met en majuscule uniquement la toute première lettre de l'ensemble du texte saisi, en laissant tout le reste en minuscules - elle ne détecte pas les limites de chaque phrase pour les mettre en majuscule individuellement, donc un paragraphe de plusieurs phrases n'obtient qu'une seule majuscule au total.</p>
+</div>
+<div class="faq-item">
+<h3>Si mon texte contient des acronymes en MAJUSCULES comme « NASA », la conversion en minuscules les casse-t-elle ?</h3>
+<p>Oui - convertir en minuscules traite chaque lettre de la même façon quel que soit le contexte, donc « NASA » devient « nasa ». Il n'y a pas de détection d'acronymes, donc relisez les textes contenant des acronymes ou des noms propres après conversion.</p>
 </div></div>
         </div>
       </main>

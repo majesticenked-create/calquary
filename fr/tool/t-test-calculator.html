@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Le groupement combine la variance des deux groupes en une seule estimation pondérée, ce qui est l'approche standard lorsque vous pouvez raisonnablement supposer que les deux groupes ont une variance sous-jacente similaire - cela utilise plus de vos données que de se fier uniquement à la variance de l'un ou l'autre groupe."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Que signifie une statistique t négative ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Une valeur de t négative signifie simplement que la moyenne du groupe 1 est inférieure à celle du groupe 2 - le signe indique la direction, pas l'intensité. Seule l'ampleur (|t|) compte pour juger de l'écart entre les groupes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment les degrés de liberté sont-ils calculés pour ce test ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pour le test t à deux échantillons groupés, les degrés de liberté = n1 + n2 − 2. Avec 30 personnes dans chaque groupe, cela donne 30 + 30 − 2 = 58 degrés de liberté."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Que se passe-t-il si mes deux groupes ont des tailles d'échantillon très différentes ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La formule d'écart-type groupé pondère déjà la variance de chaque groupe par sa propre taille d'échantillon, donc des n1 et n2 inégaux sont pris en compte correctement - sachez simplement que si les variances des groupes sont aussi très différentes, un test t à variances inégales (test de Welch) pourrait être plus approprié que cette version groupée."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Pourquoi cela utilise-t-il un écart-type « groupé » ?</h3>
 <p>Le groupement combine la variance des deux groupes en une seule estimation pondérée, ce qui est l'approche standard lorsque vous pouvez raisonnablement supposer que les deux groupes ont une variance sous-jacente similaire - cela utilise plus de vos données que de se fier uniquement à la variance de l'un ou l'autre groupe.</p>
+</div>
+<div class="faq-item">
+<h3>Que signifie une statistique t négative ?</h3>
+<p>Une valeur de t négative signifie simplement que la moyenne du groupe 1 est inférieure à celle du groupe 2 - le signe indique la direction, pas l'intensité. Seule l'ampleur (|t|) compte pour juger de l'écart entre les groupes.</p>
+</div>
+<div class="faq-item">
+<h3>Comment les degrés de liberté sont-ils calculés pour ce test ?</h3>
+<p>Pour le test t à deux échantillons groupés, les degrés de liberté = n1 + n2 − 2. Avec 30 personnes dans chaque groupe, cela donne 30 + 30 − 2 = 58 degrés de liberté.</p>
+</div>
+<div class="faq-item">
+<h3>Que se passe-t-il si mes deux groupes ont des tailles d'échantillon très différentes ?</h3>
+<p>La formule d'écart-type groupé pondère déjà la variance de chaque groupe par sa propre taille d'échantillon, donc des n1 et n2 inégaux sont pris en compte correctement - sachez simplement que si les variances des groupes sont aussi très différentes, un test t à variances inégales (test de Welch) pourrait être plus approprié que cette version groupée.</p>
 </div></div>
         </div>
       </main>

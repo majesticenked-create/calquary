@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Les week-ends sont automatiquement exclus du compte - si vous commencez un jeudi et avez besoin de 5 jours ouvrables, la calculatrice saute le samedi et dimanche intermédiaires et arrive au jeudi suivant, plutôt que de les compter comme jours ouvrables."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Les dates de début et de fin sont-elles toutes deux comptées comme des jours ouvrables ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, si elles tombent un jour de semaine - la calculatrice compte chaque jour de semaine du début à la fin, inclusivement. Par exemple, du lundi au vendredi de la même semaine compte pour 5 jours ouvrables, pas 4."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de jours ouvrables compte un sprint typique de 2 semaines (10 jours ouvrables) ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Deux semaines complètes du lundi au vendredi donnent exactement 10 jours ouvrables, en supposant qu'aucun jour férié ne tombe dans cette période - si l'une des dates de fin tombe un week-end, le compte sera plus bas puisque les jours de week-end sont exclus."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Est-ce la même chose qu'une « calculatrice de jours ouvrés » ou un « compteur de jours de semaine » ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui - « jours ouvrables », « jours ouvrés » et « jours de semaine entre deux dates » désignent tous le même comptage du lundi au vendredi que produit cet outil ; seule la terminologie varie selon la région et le secteur."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Comment cela gère-t-il un compte de jours ouvrables qui traverse un week-end ?</h3>
 <p>Les week-ends sont automatiquement exclus du compte - si vous commencez un jeudi et avez besoin de 5 jours ouvrables, la calculatrice saute le samedi et dimanche intermédiaires et arrive au jeudi suivant, plutôt que de les compter comme jours ouvrables.</p>
+</div>
+<div class="faq-item">
+<h3>Les dates de début et de fin sont-elles toutes deux comptées comme des jours ouvrables ?</h3>
+<p>Oui, si elles tombent un jour de semaine - la calculatrice compte chaque jour de semaine du début à la fin, inclusivement. Par exemple, du lundi au vendredi de la même semaine compte pour 5 jours ouvrables, pas 4.</p>
+</div>
+<div class="faq-item">
+<h3>Combien de jours ouvrables compte un sprint typique de 2 semaines (10 jours ouvrables) ?</h3>
+<p>Deux semaines complètes du lundi au vendredi donnent exactement 10 jours ouvrables, en supposant qu'aucun jour férié ne tombe dans cette période - si l'une des dates de fin tombe un week-end, le compte sera plus bas puisque les jours de week-end sont exclus.</p>
+</div>
+<div class="faq-item">
+<h3>Est-ce la même chose qu'une « calculatrice de jours ouvrés » ou un « compteur de jours de semaine » ?</h3>
+<p>Oui - « jours ouvrables », « jours ouvrés » et « jours de semaine entre deux dates » désignent tous le même comptage du lundi au vendredi que produit cet outil ; seule la terminologie varie selon la région et le secteur.</p>
 </div></div>
         </div>
       </main>

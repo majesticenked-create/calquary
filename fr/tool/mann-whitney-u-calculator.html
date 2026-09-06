@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Lorsque vos données ne sont pas distribuées normalement, contiennent des valeurs aberrantes, ou sont ordinales plutôt que vraiment numériques - le test de Mann-Whitney ne repose que sur l'ordre de classement, ce qui le rend plus robuste que le test t face aux distributions non normales et aux valeurs extrêmes."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Que signifie le fait que les deux groupes aient des rangs complètement non chevauchants ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "C'est le résultat le plus extrême possible - si chaque valeur d'un groupe a un rang inférieur à toutes les valeurs de l'autre, U pour le groupe le moins bien classé vaut 0, indiquant la séparation la plus forte possible entre les groupes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment les valeurs à égalité sont-elles gérées lors du classement ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Les valeurs à égalité reçoivent la moyenne des rangs qu'elles auraient occupés - par exemple, si deux valeurs sont à égalité pour la 3e et la 4e place, elles reçoivent toutes deux un rang de 3,5, ce qui préserve la somme totale des rangs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Le test U de Mann-Whitney est-il la même chose que le test de la somme des rangs de Wilcoxon ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui - ce sont des tests mathématiquement équivalents portant des noms différents ; la statistique de la somme des rangs de Wilcoxon peut être convertie directement en statistique U de Mann-Whitney, et les deux comparent deux groupes indépendants en utilisant l'ordre de classement."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Quand dois-je utiliser ceci au lieu d'un test t ?</h3>
 <p>Lorsque vos données ne sont pas distribuées normalement, contiennent des valeurs aberrantes, ou sont ordinales plutôt que vraiment numériques - le test de Mann-Whitney ne repose que sur l'ordre de classement, ce qui le rend plus robuste que le test t face aux distributions non normales et aux valeurs extrêmes.</p>
+</div>
+<div class="faq-item">
+<h3>Que signifie le fait que les deux groupes aient des rangs complètement non chevauchants ?</h3>
+<p>C'est le résultat le plus extrême possible - si chaque valeur d'un groupe a un rang inférieur à toutes les valeurs de l'autre, U pour le groupe le moins bien classé vaut 0, indiquant la séparation la plus forte possible entre les groupes.</p>
+</div>
+<div class="faq-item">
+<h3>Comment les valeurs à égalité sont-elles gérées lors du classement ?</h3>
+<p>Les valeurs à égalité reçoivent la moyenne des rangs qu'elles auraient occupés - par exemple, si deux valeurs sont à égalité pour la 3e et la 4e place, elles reçoivent toutes deux un rang de 3,5, ce qui préserve la somme totale des rangs.</p>
+</div>
+<div class="faq-item">
+<h3>Le test U de Mann-Whitney est-il la même chose que le test de la somme des rangs de Wilcoxon ?</h3>
+<p>Oui - ce sont des tests mathématiquement équivalents portant des noms différents ; la statistique de la somme des rangs de Wilcoxon peut être convertie directement en statistique U de Mann-Whitney, et les deux comparent deux groupes indépendants en utilisant l'ordre de classement.</p>
 </div></div>
         </div>
       </main>

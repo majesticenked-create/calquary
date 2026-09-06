@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Les deux formules sont des régressions empiriques validées uniquement dans des conditions spécifiques - l'indice de chaleur nécessite des conditions chaudes et humides (environ 80°F+ avec 40%+ d'humidité) et le refroidissement éolien nécessite des conditions froides et venteuses (environ 50°F ou moins avec un vent d'au moins 3 mph). En dehors de ces plages, les formules peuvent produire des résultats trompeurs, donc elles sont masquées à la place."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "À quel point de rosée cela commence-t-il à devenir lourd et humide ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La plupart des gens commencent à remarquer l'humidité comme inconfortable autour d'un point de rosée de 60-65°F, avec 70°F+ considéré comme oppressant - en dessous de 55°F, cela semble généralement confortable peu importe la température de l'air."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "L'indice de chaleur et le refroidissement éolien peuvent-ils s'appliquer en même temps ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non - ils s'excluent mutuellement par conception, puisque l'indice de chaleur nécessite des conditions chaudes (environ 80°F+) et le refroidissement éolien nécessite des conditions froides (environ 50°F ou moins). En dehors de l'une ou l'autre plage, ou dans l'écart entre elles, cette calculatrice affiche N/A pour celui qui ne s'applique pas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pourquoi la calculatrice a-t-elle besoin de la vitesse du vent pour le refroidissement éolien mais pas pour l'indice de chaleur ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La formule du refroidissement éolien est spécifiquement construite autour de la façon dont l'air en mouvement enlève la chaleur de la peau exposée, donc la vitesse du vent est une donnée requise - l'indice de chaleur modélise plutôt comment l'humidité entrave l'évaporation de la transpiration, un processus dans lequel la vitesse du vent n'intervient pas dans la formule standard de l'indice de chaleur du NWS que cette calculatrice utilise."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Pourquoi la calculatrice affiche-t-elle parfois l'indice de chaleur ou le refroidissement éolien comme N/A ?</h3>
 <p>Les deux formules sont des régressions empiriques validées uniquement dans des conditions spécifiques - l'indice de chaleur nécessite des conditions chaudes et humides (environ 80°F+ avec 40%+ d'humidité) et le refroidissement éolien nécessite des conditions froides et venteuses (environ 50°F ou moins avec un vent d'au moins 3 mph). En dehors de ces plages, les formules peuvent produire des résultats trompeurs, donc elles sont masquées à la place.</p>
+</div>
+<div class="faq-item">
+<h3>À quel point de rosée cela commence-t-il à devenir lourd et humide ?</h3>
+<p>La plupart des gens commencent à remarquer l'humidité comme inconfortable autour d'un point de rosée de 60-65°F, avec 70°F+ considéré comme oppressant - en dessous de 55°F, cela semble généralement confortable peu importe la température de l'air.</p>
+</div>
+<div class="faq-item">
+<h3>L'indice de chaleur et le refroidissement éolien peuvent-ils s'appliquer en même temps ?</h3>
+<p>Non - ils s'excluent mutuellement par conception, puisque l'indice de chaleur nécessite des conditions chaudes (environ 80°F+) et le refroidissement éolien nécessite des conditions froides (environ 50°F ou moins). En dehors de l'une ou l'autre plage, ou dans l'écart entre elles, cette calculatrice affiche N/A pour celui qui ne s'applique pas.</p>
+</div>
+<div class="faq-item">
+<h3>Pourquoi la calculatrice a-t-elle besoin de la vitesse du vent pour le refroidissement éolien mais pas pour l'indice de chaleur ?</h3>
+<p>La formule du refroidissement éolien est spécifiquement construite autour de la façon dont l'air en mouvement enlève la chaleur de la peau exposée, donc la vitesse du vent est une donnée requise - l'indice de chaleur modélise plutôt comment l'humidité entrave l'évaporation de la transpiration, un processus dans lequel la vitesse du vent n'intervient pas dans la formule standard de l'indice de chaleur du NWS que cette calculatrice utilise.</p>
 </div></div>
         </div>
       </main>

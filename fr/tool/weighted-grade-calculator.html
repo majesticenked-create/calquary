@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Oui - le Calculateur de Note régulier convertit un seul score (comme un test) en pourcentage et note en lettre. Cet outil combine plusieurs catégories pondérées - devoirs, tests, un examen final, etc. - en une note globale de cours."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Que se passe-t-il si je saisis un poids de 0 pour une catégorie que je n'ai pas encore commencée ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cette catégorie est entièrement exclue du calcul (multiplier par 0 ne contribue rien au numérateur ni au dénominateur), donc votre note actuelle ne reflète que les catégories avec un poids non nul - utile pour suivre une moyenne courante au fil du semestre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quel score me faudrait-il à l'examen final pour obtenir un A global si je connais déjà mes notes de devoirs et de tests ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cette calculatrice résout la note globale à partir des trois catégories à la fois, donc pour trouver le score final requis, procédez à l'envers : cible = (note globale souhaitée × 100 − devoirs×poids − tests×poids) / poids du final. Par exemple, pour viser 90 % global avec 95×20 + 82×40 déjà acquis et un poids de final de 40 % : (9000 − 1900 − 3280) / 40 = 95,5 %."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Puis-je utiliser cet outil pour plus de trois catégories de notes, comme des quiz en plus des devoirs, tests et un final ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cette version gère exactement trois catégories (devoirs, tests, final) - pour un cours avec une catégorie de quiz en plus, combinez les quiz avec la catégorie existante ayant un poids similaire, ou calculez d'abord une sous-moyenne pour les quiz et traitez-la comme l'une des trois entrées."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Est-ce différent du Calculateur de Note régulier ?</h3>
 <p>Oui - le Calculateur de Note régulier convertit un seul score (comme un test) en pourcentage et note en lettre. Cet outil combine plusieurs catégories pondérées - devoirs, tests, un examen final, etc. - en une note globale de cours.</p>
+</div>
+<div class="faq-item">
+<h3>Que se passe-t-il si je saisis un poids de 0 pour une catégorie que je n'ai pas encore commencée ?</h3>
+<p>Cette catégorie est entièrement exclue du calcul (multiplier par 0 ne contribue rien au numérateur ni au dénominateur), donc votre note actuelle ne reflète que les catégories avec un poids non nul - utile pour suivre une moyenne courante au fil du semestre.</p>
+</div>
+<div class="faq-item">
+<h3>Quel score me faudrait-il à l'examen final pour obtenir un A global si je connais déjà mes notes de devoirs et de tests ?</h3>
+<p>Cette calculatrice résout la note globale à partir des trois catégories à la fois, donc pour trouver le score final requis, procédez à l'envers : cible = (note globale souhaitée × 100 − devoirs×poids − tests×poids) / poids du final. Par exemple, pour viser 90 % global avec 95×20 + 82×40 déjà acquis et un poids de final de 40 % : (9000 − 1900 − 3280) / 40 = 95,5 %.</p>
+</div>
+<div class="faq-item">
+<h3>Puis-je utiliser cet outil pour plus de trois catégories de notes, comme des quiz en plus des devoirs, tests et un final ?</h3>
+<p>Cette version gère exactement trois catégories (devoirs, tests, final) - pour un cours avec une catégorie de quiz en plus, combinez les quiz avec la catégorie existante ayant un poids similaire, ou calculez d'abord une sous-moyenne pour les quiz et traitez-la comme l'une des trois entrées.</p>
 </div></div>
         </div>
       </main>

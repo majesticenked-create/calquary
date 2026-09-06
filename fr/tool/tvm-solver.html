@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Saisissez le taux par période, pas le taux annuel - si vous capitalisez mensuellement et avez un taux annuel de 6 %, saisissez 0,5 (6 ÷ 12) comme taux par période, et réglez les périodes en mois pour correspondre."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Cette calculatrice peut-elle plutôt résoudre pour le nombre de périodes ou le taux d'intérêt ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cette version résout la valeur actuelle, la valeur future ou le paiement à partir des autres entrées - elle n'est pas conçue pour résoudre le taux ou le nombre de périodes, qui nécessitent généralement des méthodes itératives (essais-erreurs) plutôt qu'une formule directe."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Que se passe-t-il si je laisse VA à zéro et que je résous pour VF ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Avec VA réglée à 0, la valeur future provient entièrement de la série de paiements qui se capitalisent au fil du temps - par exemple, un PMT de -200 par mois à un taux mensuel de 0,5 % pendant 120 périodes, avec une VA de 0, donne une VF d'environ 32 700 $, correspondant à un calcul standard de rente d'épargne."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Est-ce la même chose qu'une « calculatrice de rente » ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Très similaire - une calculatrice de rente résout généralement l'une de ces mêmes valeurs (valeur future, paiement ou valeur actuelle) pour une série de paiements périodiques égaux, ce qui est exactement le calcul que ce solveur VTA effectue."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Quel taux dois-je saisir ?</h3>
 <p>Saisissez le taux par période, pas le taux annuel - si vous capitalisez mensuellement et avez un taux annuel de 6 %, saisissez 0,5 (6 ÷ 12) comme taux par période, et réglez les périodes en mois pour correspondre.</p>
+</div>
+<div class="faq-item">
+<h3>Cette calculatrice peut-elle plutôt résoudre pour le nombre de périodes ou le taux d'intérêt ?</h3>
+<p>Cette version résout la valeur actuelle, la valeur future ou le paiement à partir des autres entrées - elle n'est pas conçue pour résoudre le taux ou le nombre de périodes, qui nécessitent généralement des méthodes itératives (essais-erreurs) plutôt qu'une formule directe.</p>
+</div>
+<div class="faq-item">
+<h3>Que se passe-t-il si je laisse VA à zéro et que je résous pour VF ?</h3>
+<p>Avec VA réglée à 0, la valeur future provient entièrement de la série de paiements qui se capitalisent au fil du temps - par exemple, un PMT de -200 par mois à un taux mensuel de 0,5 % pendant 120 périodes, avec une VA de 0, donne une VF d'environ 32 700 $, correspondant à un calcul standard de rente d'épargne.</p>
+</div>
+<div class="faq-item">
+<h3>Est-ce la même chose qu'une « calculatrice de rente » ?</h3>
+<p>Très similaire - une calculatrice de rente résout généralement l'une de ces mêmes valeurs (valeur future, paiement ou valeur actuelle) pour une série de paiements périodiques égaux, ce qui est exactement le calcul que ce solveur VTA effectue.</p>
 </div></div>
         </div>
       </main>

@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Oui, comme vérification approximative - une faible distance RVB (moins d'environ 30) suggère des couleurs difficiles à distinguer, utile pour signaler des conflits potentiels de marque ou d'accessibilité avant une vérification perceptuelle plus rigoureuse."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "L'ordre des couleurs a-t-il de l'importance - comparer la couleur 1 à la couleur 2 donne-t-il le même résultat que la couleur 2 à la couleur 1 ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non, le résultat est identique dans les deux cas. La distance euclidienne est symétrique, donc inverser les codes hexadécimaux entre les deux champs ne change pas la différence calculée."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelle est la différence entre #FF0000 (rouge) et #00FF00 (vert) avec cette calculatrice ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Environ 360,6. Le rouge est (255,0,0) et le vert est (0,255,0), donc la distance est √(255² + 255² + 0²) ≈ 360,6 - proche du maximum, ce qui reflète à quel point les deux couleurs sont visuellement distinctes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Est-ce la même chose qu'un « vérificateur de contraste de couleur » pour l'accessibilité ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non - les vérificateurs de contraste pour l'accessibilité WCAG mesurent le contraste de luminance (important pour la lisibilité du texte), tandis que cet outil mesure la distance RVB brute entre deux couleurs. Une paire de couleurs peut avoir une grande distance RVB tout en échouant à un test de contraste de luminance, ou inversement."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Puis-je utiliser ceci pour vérifier si deux couleurs de marque sont trop similaires ?</h3>
 <p>Oui, comme vérification approximative - une faible distance RVB (moins d'environ 30) suggère des couleurs difficiles à distinguer, utile pour signaler des conflits potentiels de marque ou d'accessibilité avant une vérification perceptuelle plus rigoureuse.</p>
+</div>
+<div class="faq-item">
+<h3>L'ordre des couleurs a-t-il de l'importance - comparer la couleur 1 à la couleur 2 donne-t-il le même résultat que la couleur 2 à la couleur 1 ?</h3>
+<p>Non, le résultat est identique dans les deux cas. La distance euclidienne est symétrique, donc inverser les codes hexadécimaux entre les deux champs ne change pas la différence calculée.</p>
+</div>
+<div class="faq-item">
+<h3>Quelle est la différence entre #FF0000 (rouge) et #00FF00 (vert) avec cette calculatrice ?</h3>
+<p>Environ 360,6. Le rouge est (255,0,0) et le vert est (0,255,0), donc la distance est √(255² + 255² + 0²) ≈ 360,6 - proche du maximum, ce qui reflète à quel point les deux couleurs sont visuellement distinctes.</p>
+</div>
+<div class="faq-item">
+<h3>Est-ce la même chose qu'un « vérificateur de contraste de couleur » pour l'accessibilité ?</h3>
+<p>Non - les vérificateurs de contraste pour l'accessibilité WCAG mesurent le contraste de luminance (important pour la lisibilité du texte), tandis que cet outil mesure la distance RVB brute entre deux couleurs. Une paire de couleurs peut avoir une grande distance RVB tout en échouant à un test de contraste de luminance, ou inversement.</p>
 </div></div>
         </div>
       </main>

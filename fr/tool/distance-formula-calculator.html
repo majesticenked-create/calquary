@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Faites la moyenne des coordonnées x et la moyenne des coordonnées y séparément : point médian = ((x₁+x₂)/2, (y₁+y₂)/2). Pour (1,2) et (4,6), le point médian est (2,5, 4)."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "La formule de distance peut-elle donner un résultat négatif ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non - la distance est toujours nulle ou positive, car la formule met les différences au carré (supprimant tout signe négatif) avant de prendre une racine carrée, qui renvoie par convention la racine non négative."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cela fonctionne-t-il pour des points dans un espace 3D ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cette calculatrice ne gère que les paires de coordonnées 2D, mais la même idée s'étend en 3D en ajoutant un terme z : d = √((x₂-x₁)² + (y₂-y₁)² + (z₂-z₁)²)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Que se passe-t-il si les deux points sont identiques ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La distance est 0 - si (x1,y1) est égal à (x2,y2), alors Δx et Δy valent tous deux 0, donc d = √(0² + 0²) = 0, indiquant correctement qu'il n'y a aucune séparation entre les points."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Comment trouver le point médian entre deux points ?</h3>
 <p>Faites la moyenne des coordonnées x et la moyenne des coordonnées y séparément : point médian = ((x₁+x₂)/2, (y₁+y₂)/2). Pour (1,2) et (4,6), le point médian est (2,5, 4).</p>
+</div>
+<div class="faq-item">
+<h3>La formule de distance peut-elle donner un résultat négatif ?</h3>
+<p>Non - la distance est toujours nulle ou positive, car la formule met les différences au carré (supprimant tout signe négatif) avant de prendre une racine carrée, qui renvoie par convention la racine non négative.</p>
+</div>
+<div class="faq-item">
+<h3>Cela fonctionne-t-il pour des points dans un espace 3D ?</h3>
+<p>Cette calculatrice ne gère que les paires de coordonnées 2D, mais la même idée s'étend en 3D en ajoutant un terme z : d = √((x₂-x₁)² + (y₂-y₁)² + (z₂-z₁)²).</p>
+</div>
+<div class="faq-item">
+<h3>Que se passe-t-il si les deux points sont identiques ?</h3>
+<p>La distance est 0 - si (x1,y1) est égal à (x2,y2), alors Δx et Δy valent tous deux 0, donc d = √(0² + 0²) = 0, indiquant correctement qu'il n'y a aucune séparation entre les points.</p>
 </div></div>
         </div>
       </main>

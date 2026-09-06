@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Un élément par ligne, formaté comme « nom, poids » - par exemple « Bronze, 6 ». La dernière valeur séparée par une virgule sur chaque ligne est lue comme le poids, et tout ce qui précède est le nom de l'élément."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Que se passe-t-il si je donne à un élément un poids de 0 ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Il est inclus dans la liste mais ne peut jamais être sélectionné - un poids de 0 signifie une part de 0 % du total, donc le tirage l'ignore effectivement tout en continuant à l'afficher comme option."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Si j'ai trois éléments chacun pondéré à 1, quelles sont les chances pour chacun ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Exactement 1/3 (environ 33,3 %) chacun, puisque les poids sont égaux - le total est 3, et la part de chaque élément est 1 divisé par 3, peu importe les nombres de poids réels."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "En quoi cela diffère-t-il d'un « tirage au sort de noms » ou d'une « roue à faire tourner » ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un simple tirage au sort de noms ou une roue à faire tourner donne à chaque entrée une chance égale. Cet outil est pour quand les résultats ne devraient pas être également probables - comme une table de butin où les objets rares devraient apparaître moins souvent que les objets communs."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Dans quel format doit être ma liste ?</h3>
 <p>Un élément par ligne, formaté comme « nom, poids » - par exemple « Bronze, 6 ». La dernière valeur séparée par une virgule sur chaque ligne est lue comme le poids, et tout ce qui précède est le nom de l'élément.</p>
+</div>
+<div class="faq-item">
+<h3>Que se passe-t-il si je donne à un élément un poids de 0 ?</h3>
+<p>Il est inclus dans la liste mais ne peut jamais être sélectionné - un poids de 0 signifie une part de 0 % du total, donc le tirage l'ignore effectivement tout en continuant à l'afficher comme option.</p>
+</div>
+<div class="faq-item">
+<h3>Si j'ai trois éléments chacun pondéré à 1, quelles sont les chances pour chacun ?</h3>
+<p>Exactement 1/3 (environ 33,3 %) chacun, puisque les poids sont égaux - le total est 3, et la part de chaque élément est 1 divisé par 3, peu importe les nombres de poids réels.</p>
+</div>
+<div class="faq-item">
+<h3>En quoi cela diffère-t-il d'un « tirage au sort de noms » ou d'une « roue à faire tourner » ?</h3>
+<p>Un simple tirage au sort de noms ou une roue à faire tourner donne à chaque entrée une chance égale. Cet outil est pour quand les résultats ne devraient pas être également probables - comme une table de butin où les objets rares devraient apparaître moins souvent que les objets communs.</p>
 </div></div>
         </div>
       </main>

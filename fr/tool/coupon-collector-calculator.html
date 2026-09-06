@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Oui - ce calcul suppose une distribution uniforme, où chacun des n éléments a une chance égale de 1/n à chaque tirage. Si certains éléments sont plus rares que d'autres, le nombre attendu réel de tirages sera plus élevé que cette estimation."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment le nombre attendu de tirages évolue-t-il quand n augmente ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Il croît approximativement comme n × ln(n), donc doubler n fait plus que doubler le nombre attendu de tirages - pour 100 éléments, le nombre attendu de tirages est d'environ 519, bien plus que le double des ~14,7 tirages nécessaires pour 6 éléments."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quel est le nombre minimum possible de tirages pour collecter les n éléments ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "n tirages - c'est le meilleur cas théorique où chaque tirage tombe par chance sur un élément nouveau, jamais encore collecté. La valeur attendue calculée ici est toujours supérieure à ce minimum, puisque les collisions avec des éléments déjà collectés sont probables."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Est-ce le même calcul utilisé pour les probabilités de collection de cartes à jouer ou de loot box ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui - le problème du collectionneur de coupons est le modèle standard pour déterminer combien de tirages aléatoires sont nécessaires pour compléter une collection complète, que ce soit des prix dans des boîtes de céréales, des cartes à collectionner, ou des objets aléatoires en jeu avec des taux de drop égaux."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Cela suppose-t-il que chaque élément a une chance égale d'être tiré ?</h3>
 <p>Oui - ce calcul suppose une distribution uniforme, où chacun des n éléments a une chance égale de 1/n à chaque tirage. Si certains éléments sont plus rares que d'autres, le nombre attendu réel de tirages sera plus élevé que cette estimation.</p>
+</div>
+<div class="faq-item">
+<h3>Comment le nombre attendu de tirages évolue-t-il quand n augmente ?</h3>
+<p>Il croît approximativement comme n × ln(n), donc doubler n fait plus que doubler le nombre attendu de tirages - pour 100 éléments, le nombre attendu de tirages est d'environ 519, bien plus que le double des ~14,7 tirages nécessaires pour 6 éléments.</p>
+</div>
+<div class="faq-item">
+<h3>Quel est le nombre minimum possible de tirages pour collecter les n éléments ?</h3>
+<p>n tirages - c'est le meilleur cas théorique où chaque tirage tombe par chance sur un élément nouveau, jamais encore collecté. La valeur attendue calculée ici est toujours supérieure à ce minimum, puisque les collisions avec des éléments déjà collectés sont probables.</p>
+</div>
+<div class="faq-item">
+<h3>Est-ce le même calcul utilisé pour les probabilités de collection de cartes à jouer ou de loot box ?</h3>
+<p>Oui - le problème du collectionneur de coupons est le modèle standard pour déterminer combien de tirages aléatoires sont nécessaires pour compléter une collection complète, que ce soit des prix dans des boîtes de céréales, des cartes à collectionner, ou des objets aléatoires en jeu avec des taux de drop égaux.</p>
 </div></div>
         </div>
       </main>

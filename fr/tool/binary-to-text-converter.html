@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Cet outil convertit le binaire directement en texte lisible en utilisant l'encodage de caractères 8 bits standard (ASCII/UTF-8). Pour convertir le binaire en une valeur numérique brute à la place, traitez la chaîne binaire comme un nombre en base 2 et convertissez-la en base 10 en utilisant plutôt un calcul binaire vers décimal."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Les groupes binaires doivent-ils avoir des espaces entre chaque octet de 8 bits ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, lors de la conversion du binaire en texte - le binaire de chaque caractère doit être séparé (comme « 01001000 01101001 » pour « Hi ») afin que le convertisseur sache où se terminent les 8 bits d'un caractère et où commencent ceux du suivant."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quel est le binaire de la lettre « A » ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "01000001 - « A » a le code ASCII 65, et 65 en binaire est 1000001, complété à 8 bits pleins en ajoutant un zéro devant."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Est-ce la même chose qu'un « convertisseur ASCII vers binaire » ou un « traducteur texte vers binaire » ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui - toutes ces expressions décrivent le même processus sous-jacent consistant à faire correspondre chaque caractère à son code numérique et à exprimer ce code en base 2, ce qui est exactement ce que fait le mode texte-vers-binaire de cet outil."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Cela peut-il convertir le binaire en nombres aussi bien qu'en texte ?</h3>
 <p>Cet outil convertit le binaire directement en texte lisible en utilisant l'encodage de caractères 8 bits standard (ASCII/UTF-8). Pour convertir le binaire en une valeur numérique brute à la place, traitez la chaîne binaire comme un nombre en base 2 et convertissez-la en base 10 en utilisant plutôt un calcul binaire vers décimal.</p>
+</div>
+<div class="faq-item">
+<h3>Les groupes binaires doivent-ils avoir des espaces entre chaque octet de 8 bits ?</h3>
+<p>Oui, lors de la conversion du binaire en texte - le binaire de chaque caractère doit être séparé (comme « 01001000 01101001 » pour « Hi ») afin que le convertisseur sache où se terminent les 8 bits d'un caractère et où commencent ceux du suivant.</p>
+</div>
+<div class="faq-item">
+<h3>Quel est le binaire de la lettre « A » ?</h3>
+<p>01000001 - « A » a le code ASCII 65, et 65 en binaire est 1000001, complété à 8 bits pleins en ajoutant un zéro devant.</p>
+</div>
+<div class="faq-item">
+<h3>Est-ce la même chose qu'un « convertisseur ASCII vers binaire » ou un « traducteur texte vers binaire » ?</h3>
+<p>Oui - toutes ces expressions décrivent le même processus sous-jacent consistant à faire correspondre chaque caractère à son code numérique et à exprimer ce code en base 2, ce qui est exactement ce que fait le mode texte-vers-binaire de cet outil.</p>
 </div></div>
         </div>
       </main>

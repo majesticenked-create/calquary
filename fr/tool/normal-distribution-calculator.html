@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Lié mais différent - le Calculateur de Score Z trouve le percentile en dessous d'une seule valeur. Cette calculatrice trouve la probabilité qu'une valeur tombe entre deux bornes, ce qui est plus utile pour des questions comme « quelle fraction des scores se situe entre 85 et 115 ? »"
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Que se passe-t-il si je définis la borne inférieure et la borne supérieure à la même valeur ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La probabilité obtenue est essentiellement 0 % - une distribution normale continue attribue une probabilité nulle au fait de tomber exactement sur un point précis, uniquement une probabilité de tomber dans une plage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment trouver la probabilité qu'une valeur soit au-dessus ou en dessous d'une seule borne plutôt qu'entre deux ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fixez la borne inférieure à un nombre très petit (comme moyenne − 10×ET) pour capturer effectivement tout ce qui est en dessous de votre borne supérieure, ou fixez la borne supérieure très haut pour capturer tout ce qui est au-dessus de votre borne inférieure - cela approxime une probabilité unilatérale en utilisant l'outil à deux bornes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cela fonctionne-t-il pour des distributions qui ne sont pas normales ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non - cette calculatrice suppose spécifiquement une distribution normale (en courbe en cloche) définie par sa moyenne et son écart-type ; des données asymétriques ou non normales ne donneront pas de probabilités exactes avec cette méthode."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Est-ce la même chose que le Calculateur de Score Z ?</h3>
 <p>Lié mais différent - le Calculateur de Score Z trouve le percentile en dessous d'une seule valeur. Cette calculatrice trouve la probabilité qu'une valeur tombe entre deux bornes, ce qui est plus utile pour des questions comme « quelle fraction des scores se situe entre 85 et 115 ? »</p>
+</div>
+<div class="faq-item">
+<h3>Que se passe-t-il si je définis la borne inférieure et la borne supérieure à la même valeur ?</h3>
+<p>La probabilité obtenue est essentiellement 0 % - une distribution normale continue attribue une probabilité nulle au fait de tomber exactement sur un point précis, uniquement une probabilité de tomber dans une plage.</p>
+</div>
+<div class="faq-item">
+<h3>Comment trouver la probabilité qu'une valeur soit au-dessus ou en dessous d'une seule borne plutôt qu'entre deux ?</h3>
+<p>Fixez la borne inférieure à un nombre très petit (comme moyenne − 10×ET) pour capturer effectivement tout ce qui est en dessous de votre borne supérieure, ou fixez la borne supérieure très haut pour capturer tout ce qui est au-dessus de votre borne inférieure - cela approxime une probabilité unilatérale en utilisant l'outil à deux bornes.</p>
+</div>
+<div class="faq-item">
+<h3>Cela fonctionne-t-il pour des distributions qui ne sont pas normales ?</h3>
+<p>Non - cette calculatrice suppose spécifiquement une distribution normale (en courbe en cloche) définie par sa moyenne et son écart-type ; des données asymétriques ou non normales ne donneront pas de probabilités exactes avec cette méthode.</p>
 </div></div>
         </div>
       </main>

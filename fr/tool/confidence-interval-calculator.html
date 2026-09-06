@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Utilisez un score t (de la distribution t) pour des échantillons plus petits, généralement moins de 30, car il tient compte de l'incertitude supplémentaire dans une estimation d'écart-type d'échantillon petit. Cette calculatrice utilise la distribution z, qui est une approximation raisonnable une fois que votre taille d'échantillon est de 30 ou plus."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment calculer un intervalle de confiance à 99 % au lieu de 95 % ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sélectionnez 99 % comme niveau de confiance, ce qui utilise un score z plus grand (environ 2,576 au lieu de 1,96) - l'intervalle obtenu sera plus large qu'un intervalle à 95 % pour les mêmes données, puisqu'une confiance plus élevée nécessite une marge d'erreur plus grande."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quel est l'intervalle de confiance pour une moyenne d'échantillon de 50, un écart-type de 10, et n=100 à 95 % de confiance ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Marge d'erreur = 1,96 × (10/√100) = 1,96 × 1 = 1,96. L'intervalle est 50 ± 1,96, soit environ 48,04 à 51,96."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Un intervalle de confiance plus large signifie-t-il que l'estimation est moins précise ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cela signifie qu'il y a plus d'incertitude sur l'emplacement exact de la vraie moyenne de population, souvent à cause d'une taille d'échantillon plus petite, d'une variabilité plus élevée dans les données, ou d'un niveau de confiance choisi plus élevé - ce n'est pas que la moyenne d'échantillon elle-même soit erronée, seulement que la plage des vraies valeurs plausibles est plus large."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Dois-je utiliser un score z ou t pour mon intervalle de confiance ?</h3>
 <p>Utilisez un score t (de la distribution t) pour des échantillons plus petits, généralement moins de 30, car il tient compte de l'incertitude supplémentaire dans une estimation d'écart-type d'échantillon petit. Cette calculatrice utilise la distribution z, qui est une approximation raisonnable une fois que votre taille d'échantillon est de 30 ou plus.</p>
+</div>
+<div class="faq-item">
+<h3>Comment calculer un intervalle de confiance à 99 % au lieu de 95 % ?</h3>
+<p>Sélectionnez 99 % comme niveau de confiance, ce qui utilise un score z plus grand (environ 2,576 au lieu de 1,96) - l'intervalle obtenu sera plus large qu'un intervalle à 95 % pour les mêmes données, puisqu'une confiance plus élevée nécessite une marge d'erreur plus grande.</p>
+</div>
+<div class="faq-item">
+<h3>Quel est l'intervalle de confiance pour une moyenne d'échantillon de 50, un écart-type de 10, et n=100 à 95 % de confiance ?</h3>
+<p>Marge d'erreur = 1,96 × (10/√100) = 1,96 × 1 = 1,96. L'intervalle est 50 ± 1,96, soit environ 48,04 à 51,96.</p>
+</div>
+<div class="faq-item">
+<h3>Un intervalle de confiance plus large signifie-t-il que l'estimation est moins précise ?</h3>
+<p>Cela signifie qu'il y a plus d'incertitude sur l'emplacement exact de la vraie moyenne de population, souvent à cause d'une taille d'échantillon plus petite, d'une variabilité plus élevée dans les données, ou d'un niveau de confiance choisi plus élevé - ce n'est pas que la moyenne d'échantillon elle-même soit erronée, seulement que la plage des vraies valeurs plausibles est plus large.</p>
 </div></div>
         </div>
       </main>

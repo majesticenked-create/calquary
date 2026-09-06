@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "À environ 0,5 % près, puisqu'elle traite la Terre comme une sphère parfaite plutôt que sa forme réelle d'ellipsoïde légèrement aplati - suffisamment précis pour pratiquement tous les besoins pratiques d'estimation de distance, bien que la navigation aéronautique officielle utilise des modèles ellipsoïdaux plus précis."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Pourquoi la distance orthodromique n'est-elle pas la même qu'une ligne droite sur une carte plate ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Une carte plate déforme les distances car elle projette une surface courbe en 3D sur un plan en 2D - le véritable chemin le plus court entre deux points sur une sphère suit un grand cercle (une partie d'un cercle dont le centre est le centre de la Terre), ce qui apparaît généralement courbé, et non droit, sur une projection cartographique standard."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dois-je connaître l'altitude ou l'élévation exacte de chaque point ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non - la formule haversine n'utilise que la latitude et la longitude et suppose que les deux points se trouvent au niveau de la mer à la surface de la Terre. Les différences d'élévation sont négligeables par rapport au rayon d'environ 6 371 km de la Terre pour pratiquement tous les besoins d'estimation de distance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelle est la différence entre ceci et un « calculateur de distance géodésique » ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ils sont étroitement liés - la « distance géodésique » est le terme plus général pour le chemin le plus court sur toute surface courbe, tandis que la « distance haversine » désigne spécifiquement cette formule d'approximation de la Terre sphérique. Pour la plupart des vérifications de distance courantes, les deux termes sont utilisés de manière interchangeable."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Quelle est la précision de ceci comparée aux distances de vol réelles ?</h3>
 <p>À environ 0,5 % près, puisqu'elle traite la Terre comme une sphère parfaite plutôt que sa forme réelle d'ellipsoïde légèrement aplati - suffisamment précis pour pratiquement tous les besoins pratiques d'estimation de distance, bien que la navigation aéronautique officielle utilise des modèles ellipsoïdaux plus précis.</p>
+</div>
+<div class="faq-item">
+<h3>Pourquoi la distance orthodromique n'est-elle pas la même qu'une ligne droite sur une carte plate ?</h3>
+<p>Une carte plate déforme les distances car elle projette une surface courbe en 3D sur un plan en 2D - le véritable chemin le plus court entre deux points sur une sphère suit un grand cercle (une partie d'un cercle dont le centre est le centre de la Terre), ce qui apparaît généralement courbé, et non droit, sur une projection cartographique standard.</p>
+</div>
+<div class="faq-item">
+<h3>Dois-je connaître l'altitude ou l'élévation exacte de chaque point ?</h3>
+<p>Non - la formule haversine n'utilise que la latitude et la longitude et suppose que les deux points se trouvent au niveau de la mer à la surface de la Terre. Les différences d'élévation sont négligeables par rapport au rayon d'environ 6 371 km de la Terre pour pratiquement tous les besoins d'estimation de distance.</p>
+</div>
+<div class="faq-item">
+<h3>Quelle est la différence entre ceci et un « calculateur de distance géodésique » ?</h3>
+<p>Ils sont étroitement liés - la « distance géodésique » est le terme plus général pour le chemin le plus court sur toute surface courbe, tandis que la « distance haversine » désigne spécifiquement cette formule d'approximation de la Terre sphérique. Pour la plupart des vérifications de distance courantes, les deux termes sont utilisés de manière interchangeable.</p>
 </div></div>
         </div>
       </main>

@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Oui - collez n'importe quelle liste (chansons, noms, sujets) un par ligne, et cela fonctionne de la même manière pour tous ces cas d'usage."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Mélanger deux fois la même liste donnera-t-il le même résultat ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non - chaque mélange tire de nouvelles valeurs aléatoires, donc relancer l'outil sur la même liste d'entrée produit un nouvel ordre aléatoire indépendant à chaque fois."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Si je mélange une liste de 5 éléments, combien d'ordres possibles existe-t-il ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "120 (5 factorielle : 5×4×3×2×1). L'algorithme Fisher-Yates donne à chacun de ces 120 ordonnancements une chance égale d'être le résultat."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Est-ce la même chose qu'un outil « ordre aléatoire » ou « randomiser une liste » ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui - « mélangeur de liste », « randomiser l'ordre d'une liste », et « trieur de liste aléatoire » décrivent tous la même tâche : prendre une liste et la produire dans une séquence aléatoire, ce qui est exactement ce que fait cet outil."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Puis-je utiliser cela pour randomiser l'ordre d'une playlist, des participants à un tirage au sort, ou un ordre de présentation ?</h3>
 <p>Oui - collez n'importe quelle liste (chansons, noms, sujets) un par ligne, et cela fonctionne de la même manière pour tous ces cas d'usage.</p>
+</div>
+<div class="faq-item">
+<h3>Mélanger deux fois la même liste donnera-t-il le même résultat ?</h3>
+<p>Non - chaque mélange tire de nouvelles valeurs aléatoires, donc relancer l'outil sur la même liste d'entrée produit un nouvel ordre aléatoire indépendant à chaque fois.</p>
+</div>
+<div class="faq-item">
+<h3>Si je mélange une liste de 5 éléments, combien d'ordres possibles existe-t-il ?</h3>
+<p>120 (5 factorielle : 5×4×3×2×1). L'algorithme Fisher-Yates donne à chacun de ces 120 ordonnancements une chance égale d'être le résultat.</p>
+</div>
+<div class="faq-item">
+<h3>Est-ce la même chose qu'un outil « ordre aléatoire » ou « randomiser une liste » ?</h3>
+<p>Oui - « mélangeur de liste », « randomiser l'ordre d'une liste », et « trieur de liste aléatoire » décrivent tous la même tâche : prendre une liste et la produire dans une séquence aléatoire, ce qui est exactement ce que fait cet outil.</p>
 </div></div>
         </div>
       </main>

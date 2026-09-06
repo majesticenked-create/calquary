@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Oui, pour les processus de premier ordre - la désintégration radioactive est intrinsèquement de premier ordre, et de nombreuses réactions chimiques (où la vitesse dépend de la concentration d'un seul réactif) suivent les mêmes mathématiques de décroissance exponentielle."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Puis-je trouver la demi-vie si je connais plutôt la constante de vitesse ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui - utilisez la même relation réarrangée : demi-vie = ln(2) / k. Si une réaction a une constante de vitesse k = 0,0231 par an, sa demi-vie est ln(2) / 0,0231 ≈ 30 ans."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de temps faut-il pour qu'il ne reste que 5 % d'une substance ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Environ 4,32 demi-vies - résolvez (1/2)^n = 0,05 pour n, ce qui donne n = ln(0,05) / ln(0,5) ≈ 4,32. Multipliez cette valeur par la demi-vie pour obtenir le temps écoulé."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "La demi-vie est-elle la même chose que la durée de vie moyenne d'une particule ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non - la durée de vie moyenne (souvent notée τ) est 1/k, ce qui est plus long que la demi-vie. Demi-vie = ln(2) × durée de vie moyenne ≈ 0,693 × durée de vie moyenne, car la demi-vie mesure le moment où la moitié de la population s'est désintégrée, pas le temps moyen de survie d'une particule individuelle."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Cela s'applique-t-il à la fois à la désintégration radioactive et aux réactions chimiques ?</h3>
 <p>Oui, pour les processus de premier ordre - la désintégration radioactive est intrinsèquement de premier ordre, et de nombreuses réactions chimiques (où la vitesse dépend de la concentration d'un seul réactif) suivent les mêmes mathématiques de décroissance exponentielle.</p>
+</div>
+<div class="faq-item">
+<h3>Puis-je trouver la demi-vie si je connais plutôt la constante de vitesse ?</h3>
+<p>Oui - utilisez la même relation réarrangée : demi-vie = ln(2) / k. Si une réaction a une constante de vitesse k = 0,0231 par an, sa demi-vie est ln(2) / 0,0231 ≈ 30 ans.</p>
+</div>
+<div class="faq-item">
+<h3>Combien de temps faut-il pour qu'il ne reste que 5 % d'une substance ?</h3>
+<p>Environ 4,32 demi-vies - résolvez (1/2)^n = 0,05 pour n, ce qui donne n = ln(0,05) / ln(0,5) ≈ 4,32. Multipliez cette valeur par la demi-vie pour obtenir le temps écoulé.</p>
+</div>
+<div class="faq-item">
+<h3>La demi-vie est-elle la même chose que la durée de vie moyenne d'une particule ?</h3>
+<p>Non - la durée de vie moyenne (souvent notée τ) est 1/k, ce qui est plus long que la demi-vie. Demi-vie = ln(2) × durée de vie moyenne ≈ 0,693 × durée de vie moyenne, car la demi-vie mesure le moment où la moitié de la population s'est désintégrée, pas le temps moyen de survie d'une particule individuelle.</p>
 </div></div>
         </div>
       </main>

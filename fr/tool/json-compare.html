@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Cet outil signale laquelle des deux entrées JSON est invalide, avec le message d'erreur de l'analyseur, plutôt que de tenter une comparaison partielle ou devinée - corrigez d'abord l'erreur de syntaxe, puis comparez."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Si une clé existe dans les deux objets JSON mais avec exactement la même valeur, apparaît-elle dans le diff ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non - seules les clés qui diffèrent (ajoutées, supprimées ou dont la valeur a changé) apparaissent dans les résultats. Les clés identiques avec des valeurs identiques sont considérées inchangées et ne sont pas signalées."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dans l'exemple par défaut, quelle est la différence entre les deux objets JSON ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "« age » est modifié (30 à 31), « city » est supprimé (présent uniquement dans le premier JSON), et « country » est ajouté (présent uniquement dans le second JSON) - « name » reste identique dans les deux, donc il n'est pas signalé."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "L'ordre des clés dans le JSON a-t-il de l'importance pour la comparaison ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non - la comparaison se base sur les noms de clés et les valeurs, pas sur l'ordre d'apparition des clés dans le texte, puisque les objets JSON sont par spécification des collections de paires clé-valeur intrinsèquement non ordonnées."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Que se passe-t-il si mon JSON a une erreur de syntaxe ?</h3>
 <p>Cet outil signale laquelle des deux entrées JSON est invalide, avec le message d'erreur de l'analyseur, plutôt que de tenter une comparaison partielle ou devinée - corrigez d'abord l'erreur de syntaxe, puis comparez.</p>
+</div>
+<div class="faq-item">
+<h3>Si une clé existe dans les deux objets JSON mais avec exactement la même valeur, apparaît-elle dans le diff ?</h3>
+<p>Non - seules les clés qui diffèrent (ajoutées, supprimées ou dont la valeur a changé) apparaissent dans les résultats. Les clés identiques avec des valeurs identiques sont considérées inchangées et ne sont pas signalées.</p>
+</div>
+<div class="faq-item">
+<h3>Dans l'exemple par défaut, quelle est la différence entre les deux objets JSON ?</h3>
+<p>« age » est modifié (30 à 31), « city » est supprimé (présent uniquement dans le premier JSON), et « country » est ajouté (présent uniquement dans le second JSON) - « name » reste identique dans les deux, donc il n'est pas signalé.</p>
+</div>
+<div class="faq-item">
+<h3>L'ordre des clés dans le JSON a-t-il de l'importance pour la comparaison ?</h3>
+<p>Non - la comparaison se base sur les noms de clés et les valeurs, pas sur l'ordre d'apparition des clés dans le texte, puisque les objets JSON sont par spécification des collections de paires clé-valeur intrinsèquement non ordonnées.</p>
 </div></div>
         </div>
       </main>
