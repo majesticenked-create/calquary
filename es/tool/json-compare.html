@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Esta herramienta informa cuál de las dos entradas JSON es inválida, junto con el mensaje de error del analizador, en lugar de intentar una comparación parcial o adivinada - corrige el error de sintaxis primero, luego compara."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Si una clave existe en ambos objetos JSON pero tiene exactamente el mismo valor, ¿aparece en la diferencia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - solo aparecen en los resultados las claves que difieren (agregadas, eliminadas o con valor cambiado). Las claves idénticas con valores idénticos se consideran sin cambios y no se marcan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "En el ejemplo predeterminado, ¿cuál es la diferencia entre los dos objetos JSON?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "\"age\" cambia (30 a 31), \"city\" se elimina (solo está en el primer JSON), y \"country\" se agrega (solo está en el segundo JSON) - \"name\" permanece igual en ambos, así que no se marca."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Importa el orden de las claves en el JSON para la comparación?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - la comparación se basa en los nombres de las claves y sus valores, no en el orden en que aparecen las claves en el texto, ya que los objetos JSON son por especificación colecciones inherentemente sin orden de pares clave-valor."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>¿Qué pasa si mi JSON tiene un error de sintaxis?</h3>
 <p>Esta herramienta informa cuál de las dos entradas JSON es inválida, junto con el mensaje de error del analizador, en lugar de intentar una comparación parcial o adivinada - corrige el error de sintaxis primero, luego compara.</p>
+</div>
+<div class="faq-item">
+<h3>Si una clave existe en ambos objetos JSON pero tiene exactamente el mismo valor, ¿aparece en la diferencia?</h3>
+<p>No - solo aparecen en los resultados las claves que difieren (agregadas, eliminadas o con valor cambiado). Las claves idénticas con valores idénticos se consideran sin cambios y no se marcan.</p>
+</div>
+<div class="faq-item">
+<h3>En el ejemplo predeterminado, ¿cuál es la diferencia entre los dos objetos JSON?</h3>
+<p>"age" cambia (30 a 31), "city" se elimina (solo está en el primer JSON), y "country" se agrega (solo está en el segundo JSON) - "name" permanece igual en ambos, así que no se marca.</p>
+</div>
+<div class="faq-item">
+<h3>¿Importa el orden de las claves en el JSON para la comparación?</h3>
+<p>No - la comparación se basa en los nombres de las claves y sus valores, no en el orden en que aparecen las claves en el texto, ya que los objetos JSON son por especificación colecciones inherentemente sin orden de pares clave-valor.</p>
 </div></div>
         </div>
       </main>

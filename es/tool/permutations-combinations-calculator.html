@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Cada combinación de r elementos puede ordenarse en r! órdenes diferentes, y cada uno de esos ordenamientos cuenta como una permutación separada - así que permutaciones = combinaciones × r!, o equivalentemente combinaciones = permutaciones ÷ r!."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto es 5 elige 5 (5C5), y por qué es igual a 1?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1 - solo hay una forma de elegir los 5 elementos de un grupo de 5 (simplemente tomas a todos), lo cual confirma la fórmula: 5!/(5!×0!) = 1, ya que 0! se define como 1."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuántos arreglos diferentes de 4 letras se pueden formar con 6 letras distintas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "360 - usando nPr = n!/(n-r)! = 6!/(6-4)! = 720/2 = 360, ya que el orden importa para un arreglo (permutación)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué nCr siempre da el mismo valor sin importar si se calcula como 'n elige r' o 'n elige (n-r)'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Elegir r elementos para incluir es matemáticamente idéntico a elegir los (n-r) elementos para dejar fuera - por ejemplo, 10C3 = 10C7 = 120, porque ambos describen el mismo acto de dividir 10 elementos en un grupo de 3 y un grupo de 7."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>¿Por qué nPr siempre es nCr multiplicado por r!?</h3>
 <p>Cada combinación de r elementos puede ordenarse en r! órdenes diferentes, y cada uno de esos ordenamientos cuenta como una permutación separada - así que permutaciones = combinaciones × r!, o equivalentemente combinaciones = permutaciones ÷ r!.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cuánto es 5 elige 5 (5C5), y por qué es igual a 1?</h3>
+<p>1 - solo hay una forma de elegir los 5 elementos de un grupo de 5 (simplemente tomas a todos), lo cual confirma la fórmula: 5!/(5!×0!) = 1, ya que 0! se define como 1.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cuántos arreglos diferentes de 4 letras se pueden formar con 6 letras distintas?</h3>
+<p>360 - usando nPr = n!/(n-r)! = 6!/(6-4)! = 720/2 = 360, ya que el orden importa para un arreglo (permutación).</p>
+</div>
+<div class="faq-item">
+<h3>¿Por qué nCr siempre da el mismo valor sin importar si se calcula como 'n elige r' o 'n elige (n-r)'?</h3>
+<p>Elegir r elementos para incluir es matemáticamente idéntico a elegir los (n-r) elementos para dejar fuera - por ejemplo, 10C3 = 10C7 = 120, porque ambos describen el mismo acto de dividir 10 elementos en un grupo de 3 y un grupo de 7.</p>
 </div></div>
         </div>
       </main>

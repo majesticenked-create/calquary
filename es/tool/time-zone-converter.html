@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Sí - cambia los campos de fecha y hora a cualquier fecha; la herramienta sigue aplicando las reglas correctas de horario de verano para cualquier zona y fecha que elijas."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si convierto una hora que cae durante una transición de horario de verano, como la noche en que cambian los relojes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La herramienta aplica el desfase UTC que esté oficialmente vigente para esa zona en esa fecha y hora exactas, así que una hora que no existe (omitida al adelantar los relojes) o que ocurre dos veces (repetida al atrasarlos) se resuelve usando las reglas estándar de la base de datos de zonas horarias en lugar de dejarse ambigua."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo convierto las 2:00 PM hora del Este a hora de India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Establece la fecha y hora a 14:00, elige EE.UU. Este como zona \"Desde\" e India (Calcuta) como zona \"A\" - el resultado refleja el desfase completo (típicamente 9.5 o 10.5 horas dependiendo del horario de verano de EE.UU.), incluyendo la media hora que añade IST."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Es esto lo mismo que un 'conversor de hora UTC'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, en efecto - seleccionar UTC como zona \"Desde\" o \"A\" convierte directamente hacia o desde el Tiempo Universal Coordinado, que es lo que hacen específicamente la mayoría de las herramientas de \"conversor UTC\"."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>¿Puedo convertir una hora del pasado o futuro, no solo ahora mismo?</h3>
 <p>Sí - cambia los campos de fecha y hora a cualquier fecha; la herramienta sigue aplicando las reglas correctas de horario de verano para cualquier zona y fecha que elijas.</p>
+</div>
+<div class="faq-item">
+<h3>¿Qué pasa si convierto una hora que cae durante una transición de horario de verano, como la noche en que cambian los relojes?</h3>
+<p>La herramienta aplica el desfase UTC que esté oficialmente vigente para esa zona en esa fecha y hora exactas, así que una hora que no existe (omitida al adelantar los relojes) o que ocurre dos veces (repetida al atrasarlos) se resuelve usando las reglas estándar de la base de datos de zonas horarias en lugar de dejarse ambigua.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cómo convierto las 2:00 PM hora del Este a hora de India?</h3>
+<p>Establece la fecha y hora a 14:00, elige EE.UU. Este como zona "Desde" e India (Calcuta) como zona "A" - el resultado refleja el desfase completo (típicamente 9.5 o 10.5 horas dependiendo del horario de verano de EE.UU.), incluyendo la media hora que añade IST.</p>
+</div>
+<div class="faq-item">
+<h3>¿Es esto lo mismo que un 'conversor de hora UTC'?</h3>
+<p>Sí, en efecto - seleccionar UTC como zona "Desde" o "A" convierte directamente hacia o desde el Tiempo Universal Coordinado, que es lo que hacen específicamente la mayoría de las herramientas de "conversor UTC".</p>
 </div></div>
         </div>
       </main>

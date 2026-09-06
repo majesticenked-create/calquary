@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Promedia las coordenadas x y promedia las coordenadas y por separado: punto medio = ((x₁+x₂)/2, (y₁+y₂)/2). Para (1,2) y (4,6), el punto medio es (2.5, 4)."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puede la fórmula de distancia dar un resultado negativo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - la distancia siempre es cero o positiva porque la fórmula eleva al cuadrado las diferencias (eliminando cualquier signo negativo) antes de sacar la raíz cuadrada, que por convención devuelve la raíz no negativa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Funciona esto para puntos en el espacio 3D?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Esta calculadora maneja solo pares de coordenadas 2D, pero la misma idea se extiende a 3D añadiendo un término z: d = √((x₂-x₁)² + (y₂-y₁)² + (z₂-z₁)²)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si ambos puntos son el mismo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La distancia es 0 - si (x1,y1) es igual a (x2,y2), entonces Δx y Δy son ambos 0, así que d = √(0² + 0²) = 0, indicando correctamente que no hay separación entre los puntos."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>¿Cómo encuentro el punto medio entre dos puntos?</h3>
 <p>Promedia las coordenadas x y promedia las coordenadas y por separado: punto medio = ((x₁+x₂)/2, (y₁+y₂)/2). Para (1,2) y (4,6), el punto medio es (2.5, 4).</p>
+</div>
+<div class="faq-item">
+<h3>¿Puede la fórmula de distancia dar un resultado negativo?</h3>
+<p>No - la distancia siempre es cero o positiva porque la fórmula eleva al cuadrado las diferencias (eliminando cualquier signo negativo) antes de sacar la raíz cuadrada, que por convención devuelve la raíz no negativa.</p>
+</div>
+<div class="faq-item">
+<h3>¿Funciona esto para puntos en el espacio 3D?</h3>
+<p>Esta calculadora maneja solo pares de coordenadas 2D, pero la misma idea se extiende a 3D añadiendo un término z: d = √((x₂-x₁)² + (y₂-y₁)² + (z₂-z₁)²).</p>
+</div>
+<div class="faq-item">
+<h3>¿Qué pasa si ambos puntos son el mismo?</h3>
+<p>La distancia es 0 - si (x1,y1) es igual a (x2,y2), entonces Δx y Δy son ambos 0, así que d = √(0² + 0²) = 0, indicando correctamente que no hay separación entre los puntos.</p>
 </div></div>
         </div>
       </main>

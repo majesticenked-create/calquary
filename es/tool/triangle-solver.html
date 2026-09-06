@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Esta herramienta resuelve específicamente el caso LLL (lado-lado-lado). Otros casos como LAL (dos lados y el ángulo incluido) o ALA (dos ángulos y el lado incluido) necesitan fórmulas iniciales diferentes - la ley de cosenos mostrada aquí funciona directamente a partir de tres lados conocidos."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si los tres lados que introduzco no pueden formar un triángulo real?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La calculadora no puede producir un resultado válido - según la desigualdad triangular, la suma de dos lados cualesquiera debe ser mayor que el tercer lado (por ejemplo, 2, 3 y 10 no pueden formar un triángulo ya que 2+3 < 10). Si tus lados no pasan esta comprobación, verifica de nuevo tus medidas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo encuentro el ángulo más grande de un triángulo a partir de las longitudes de sus lados?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El ángulo más grande siempre está opuesto al lado más largo - sustituye el lado más largo como 'c' en el reordenamiento de la ley de cosenos, cos(C) = (a² + b² − c²)/(2ab), luego toma el coseno inverso del resultado."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Los tres ángulos siempre suman 180°?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, para cualquier triángulo en geometría plana (euclidiana) estándar - esto es una comprobación útil: después de que esta calculadora resuelva los tres ángulos, deberían sumar 180° (permitiendo pequeñas diferencias de redondeo)."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>¿Por qué esto necesita tres lados, y no ángulos u otras combinaciones?</h3>
 <p>Esta herramienta resuelve específicamente el caso LLL (lado-lado-lado). Otros casos como LAL (dos lados y el ángulo incluido) o ALA (dos ángulos y el lado incluido) necesitan fórmulas iniciales diferentes - la ley de cosenos mostrada aquí funciona directamente a partir de tres lados conocidos.</p>
+</div>
+<div class="faq-item">
+<h3>¿Qué pasa si los tres lados que introduzco no pueden formar un triángulo real?</h3>
+<p>La calculadora no puede producir un resultado válido - según la desigualdad triangular, la suma de dos lados cualesquiera debe ser mayor que el tercer lado (por ejemplo, 2, 3 y 10 no pueden formar un triángulo ya que 2+3 < 10). Si tus lados no pasan esta comprobación, verifica de nuevo tus medidas.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cómo encuentro el ángulo más grande de un triángulo a partir de las longitudes de sus lados?</h3>
+<p>El ángulo más grande siempre está opuesto al lado más largo - sustituye el lado más largo como 'c' en el reordenamiento de la ley de cosenos, cos(C) = (a² + b² − c²)/(2ab), luego toma el coseno inverso del resultado.</p>
+</div>
+<div class="faq-item">
+<h3>¿Los tres ángulos siempre suman 180°?</h3>
+<p>Sí, para cualquier triángulo en geometría plana (euclidiana) estándar - esto es una comprobación útil: después de que esta calculadora resuelva los tres ángulos, deberían sumar 180° (permitiendo pequeñas diferencias de redondeo).</p>
 </div></div>
         </div>
       </main>

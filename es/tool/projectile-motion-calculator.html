@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "No - esto usa movimiento de proyectil ideal (solo la gravedad actuando sobre el objeto), que es preciso para objetos densos y compactos que se mueven a velocidades moderadas en distancias cortas, pero diverge cada vez más de la realidad para objetos ligeros o de movimiento rápido donde importa la resistencia del aire."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo calculo la altura máxima de un proyectil?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Altura máxima = (v × sen(ángulo))² / (2 × g). Para un lanzamiento a 20 m/s y 45° con g = 9,81: (20×sen45°)² / (2×9,81) = (14,14)² / 19,62 ≈ 10,19 m."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa con el alcance si duplico la velocidad de lanzamiento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El alcance se cuadruplica - ya que el alcance es proporcional al cuadrado de la velocidad (alcance = v²×sen(2×ángulo)/g), duplicar v multiplica el alcance por 2² = 4, manteniendo fijos el ángulo y la gravedad."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo usar esto para un proyectil lanzado desde una altura, como desde un acantilado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - esta calculadora asume que el lanzamiento y el aterrizaje ocurren a la misma altura (nivel del suelo), lo que simplifica la fórmula del tiempo de vuelo. Un proyectil lanzado desde un punto elevado necesita un término adicional que tenga en cuenta la distancia extra de caída, lo cual esta herramienta no incluye."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>¿Esto tiene en cuenta la resistencia del aire?</h3>
 <p>No - esto usa movimiento de proyectil ideal (solo la gravedad actuando sobre el objeto), que es preciso para objetos densos y compactos que se mueven a velocidades moderadas en distancias cortas, pero diverge cada vez más de la realidad para objetos ligeros o de movimiento rápido donde importa la resistencia del aire.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cómo calculo la altura máxima de un proyectil?</h3>
+<p>Altura máxima = (v × sen(ángulo))² / (2 × g). Para un lanzamiento a 20 m/s y 45° con g = 9,81: (20×sen45°)² / (2×9,81) = (14,14)² / 19,62 ≈ 10,19 m.</p>
+</div>
+<div class="faq-item">
+<h3>¿Qué pasa con el alcance si duplico la velocidad de lanzamiento?</h3>
+<p>El alcance se cuadruplica - ya que el alcance es proporcional al cuadrado de la velocidad (alcance = v²×sen(2×ángulo)/g), duplicar v multiplica el alcance por 2² = 4, manteniendo fijos el ángulo y la gravedad.</p>
+</div>
+<div class="faq-item">
+<h3>¿Puedo usar esto para un proyectil lanzado desde una altura, como desde un acantilado?</h3>
+<p>No - esta calculadora asume que el lanzamiento y el aterrizaje ocurren a la misma altura (nivel del suelo), lo que simplifica la fórmula del tiempo de vuelo. Un proyectil lanzado desde un punto elevado necesita un término adicional que tenga en cuenta la distancia extra de caída, lo cual esta herramienta no incluye.</p>
 </div></div>
         </div>
       </main>

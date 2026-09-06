@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Una /32 tiene exactamente una dirección en total (usada para identificar un solo host, como una interfaz loopback), y una /31 tiene solo 2 direcciones sin espacio para direcciones de red/difusión separadas - ambas se usan típicamente para enlaces punto a punto donde cada dirección es directamente utilizable."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo cambia la longitud del prefijo CIDR si paso de /24 a /25?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Una /25 divide lo que sería una red /24 en dos subredes más pequeñas, cada una con 128 direcciones totales (126 hosts utilizables) en lugar de 256 (254 utilizables) - pasar a un prefijo más largo siempre reduce el espacio de direcciones por subred mientras crea más subredes en total."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es el rango de hosts utilizables para 192.168.1.0/24?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "192.168.1.1 hasta 192.168.1.254 - la dirección de red (192.168.1.0) y la dirección de difusión (192.168.1.255) quedan excluidas, dejando 254 direcciones de host asignables en medio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Es 'calculadora de subred IP' la misma herramienta que una 'calculadora CIDR'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, esencialmente - ambas toman una dirección IP y una longitud de prefijo (o notación CIDR combinada) y calculan la misma dirección de red, dirección de difusión y rango de hosts utilizables; esta herramienta toma la IP y el prefijo como campos separados en lugar de notación combinada con barra."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>¿Por qué las subredes /31 y /32 no tienen rango de host utilizable?</h3>
 <p>Una /32 tiene exactamente una dirección en total (usada para identificar un solo host, como una interfaz loopback), y una /31 tiene solo 2 direcciones sin espacio para direcciones de red/difusión separadas - ambas se usan típicamente para enlaces punto a punto donde cada dirección es directamente utilizable.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cómo cambia la longitud del prefijo CIDR si paso de /24 a /25?</h3>
+<p>Una /25 divide lo que sería una red /24 en dos subredes más pequeñas, cada una con 128 direcciones totales (126 hosts utilizables) en lugar de 256 (254 utilizables) - pasar a un prefijo más largo siempre reduce el espacio de direcciones por subred mientras crea más subredes en total.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cuál es el rango de hosts utilizables para 192.168.1.0/24?</h3>
+<p>192.168.1.1 hasta 192.168.1.254 - la dirección de red (192.168.1.0) y la dirección de difusión (192.168.1.255) quedan excluidas, dejando 254 direcciones de host asignables en medio.</p>
+</div>
+<div class="faq-item">
+<h3>¿Es 'calculadora de subred IP' la misma herramienta que una 'calculadora CIDR'?</h3>
+<p>Sí, esencialmente - ambas toman una dirección IP y una longitud de prefijo (o notación CIDR combinada) y calculan la misma dirección de red, dirección de difusión y rango de hosts utilizables; esta herramienta toma la IP y el prefijo como campos separados en lugar de notación combinada con barra.</p>
 </div></div>
         </div>
       </main>

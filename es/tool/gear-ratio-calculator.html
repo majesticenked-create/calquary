@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "No - es un cálculo idealizado que asume sin deslizamiento de rueda y transferencia de potencia perfectamente eficiente, lo cual es una aproximación razonable para la mayoría de condiciones de carretera y sendero pero no será perfectamente exacto."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué velocidad produce una cadencia de 90 rpm con una relación 50/14 en una rueda de 27 pulgadas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aproximadamente 26 mph - las pulgadas de desarrollo son 27 × (50÷14) ≈ 96.4, cada revolución del pedal cubre 96.4 × π ≈ 302.9 pulgadas, y a 90 rpm eso son 27,264 pulgadas por minuto, lo que se convierte en aproximadamente 25.8 mph."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué las pulgadas de desarrollo usan el diámetro nominal de la rueda en lugar del diámetro real de rodadura del neumático?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Esta calculadora usa el diámetro nominal de rueda que introduces como aproximación - el diámetro real de rodadura (que incluye el tamaño del neumático y una ligera compresión bajo carga) difiere un poco, así que las cifras de pulgadas de desarrollo son una herramienta de comparación estandarizada más que una medición precisa de distancia real."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿'Pulgadas de desarrollo' es la misma medida que 'development' o 'roll-out' usada en algunos ciclocomputadores?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Están relacionadas pero no son idénticas - el development (o roll-out) es la distancia real recorrida por revolución del pedal, típicamente dada en metros o pulgadas, mientras que las pulgadas de desarrollo son una unidad tradicional ligeramente distinta (diámetro efectivo de rueda). El development es igual a las pulgadas de desarrollo × π, que es exactamente la relación que usa internamente esta calculadora para obtener la velocidad."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>¿Esto considera factores del mundo real como el deslizamiento de la llanta o pérdida en la transmisión?</h3>
 <p>No - es un cálculo idealizado que asume sin deslizamiento de rueda y transferencia de potencia perfectamente eficiente, lo cual es una aproximación razonable para la mayoría de condiciones de carretera y sendero pero no será perfectamente exacto.</p>
+</div>
+<div class="faq-item">
+<h3>¿Qué velocidad produce una cadencia de 90 rpm con una relación 50/14 en una rueda de 27 pulgadas?</h3>
+<p>Aproximadamente 26 mph - las pulgadas de desarrollo son 27 × (50÷14) ≈ 96.4, cada revolución del pedal cubre 96.4 × π ≈ 302.9 pulgadas, y a 90 rpm eso son 27,264 pulgadas por minuto, lo que se convierte en aproximadamente 25.8 mph.</p>
+</div>
+<div class="faq-item">
+<h3>¿Por qué las pulgadas de desarrollo usan el diámetro nominal de la rueda en lugar del diámetro real de rodadura del neumático?</h3>
+<p>Esta calculadora usa el diámetro nominal de rueda que introduces como aproximación - el diámetro real de rodadura (que incluye el tamaño del neumático y una ligera compresión bajo carga) difiere un poco, así que las cifras de pulgadas de desarrollo son una herramienta de comparación estandarizada más que una medición precisa de distancia real.</p>
+</div>
+<div class="faq-item">
+<h3>¿'Pulgadas de desarrollo' es la misma medida que 'development' o 'roll-out' usada en algunos ciclocomputadores?</h3>
+<p>Están relacionadas pero no son idénticas - el development (o roll-out) es la distancia real recorrida por revolución del pedal, típicamente dada en metros o pulgadas, mientras que las pulgadas de desarrollo son una unidad tradicional ligeramente distinta (diámetro efectivo de rueda). El development es igual a las pulgadas de desarrollo × π, que es exactamente la relación que usa internamente esta calculadora para obtener la velocidad.</p>
 </div></div>
         </div>
       </main>

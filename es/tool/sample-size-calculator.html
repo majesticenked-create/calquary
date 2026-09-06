@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Sí - todo esto describe encontrar el tamaño mínimo de muestra necesario para una encuesta o estudio a un nivel de confianza y margen de error elegidos, que es exactamente lo que hace esta calculadora."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto cambia el tamaño de muestra requerido si duplico el margen de error?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Reduce el tamaño de muestra requerido a aproximadamente una cuarta parte, ya que el tamaño de muestra es inversamente proporcional al cuadrado del margen de error (n ∝ 1/e²) - reducir a la mitad tu margen de error deseado, por el contrario, aproximadamente cuadruplica la muestra que necesitas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué tamaño de muestra se necesita para un nivel de confianza del 95% y un margen de error del 5% con una proporción desconocida?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Alrededor de 385 - usando n = (1.96² × 0.5 × 0.5) / 0.05² = 0.9604 / 0.0025 ≈ 384.16, redondeado hacia arriba a 385, la cifra comúnmente citada para una encuesta de población general."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué la calculadora pide una proporción de respuesta estimada si aún no tengo resultados de la encuesta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La proporción afecta cuánta variabilidad asume la fórmula que existe en las respuestas - si tienes una estimación previa aproximada (de investigaciones anteriores o un estudio piloto), introducirla puede reducir el tamaño de muestra requerido comparado con el valor predeterminado conservador del 50%, ya que p×(1−p) es menor cuanto más se aleja p de 0.5."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>¿Es 'calcular tamaño de muestra en línea' o 'calculadora para determinar tamaño de muestra' lo mismo que esta herramienta?</h3>
 <p>Sí - todo esto describe encontrar el tamaño mínimo de muestra necesario para una encuesta o estudio a un nivel de confianza y margen de error elegidos, que es exactamente lo que hace esta calculadora.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cuánto cambia el tamaño de muestra requerido si duplico el margen de error?</h3>
+<p>Reduce el tamaño de muestra requerido a aproximadamente una cuarta parte, ya que el tamaño de muestra es inversamente proporcional al cuadrado del margen de error (n ∝ 1/e²) - reducir a la mitad tu margen de error deseado, por el contrario, aproximadamente cuadruplica la muestra que necesitas.</p>
+</div>
+<div class="faq-item">
+<h3>¿Qué tamaño de muestra se necesita para un nivel de confianza del 95% y un margen de error del 5% con una proporción desconocida?</h3>
+<p>Alrededor de 385 - usando n = (1.96² × 0.5 × 0.5) / 0.05² = 0.9604 / 0.0025 ≈ 384.16, redondeado hacia arriba a 385, la cifra comúnmente citada para una encuesta de población general.</p>
+</div>
+<div class="faq-item">
+<h3>¿Por qué la calculadora pide una proporción de respuesta estimada si aún no tengo resultados de la encuesta?</h3>
+<p>La proporción afecta cuánta variabilidad asume la fórmula que existe en las respuestas - si tienes una estimación previa aproximada (de investigaciones anteriores o un estudio piloto), introducirla puede reducir el tamaño de muestra requerido comparado con el valor predeterminado conservador del 50%, ya que p×(1−p) es menor cuanto más se aleja p de 0.5.</p>
 </div></div>
         </div>
       </main>

@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Cuando tus datos no están distribuidos normalmente, contienen valores atípicos, o son ordinales en lugar de verdaderamente numéricos - la prueba de Mann-Whitney solo depende del orden de rango, haciéndola más robusta que la prueba t frente a distribuciones no normales y valores extremos."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué significa si los dos grupos tienen rangos completamente sin superposición?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ese es el resultado extremo más posible - si cada valor de un grupo está por debajo de cada valor del otro, el U del grupo con rango más bajo es 0, lo que indica la mayor separación posible entre los grupos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo se manejan los valores empatados al clasificar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A los valores empatados se les asigna el promedio de los rangos que habrían ocupado - por ejemplo, si dos valores empatan en el 3er y 4º lugar, ambos reciben un rango de 3.5, manteniendo consistente la suma total de los rangos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Es la prueba U de Mann-Whitney lo mismo que la prueba de rangos con signo de Wilcoxon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí - son pruebas matemáticamente equivalentes con nombres distintos; el estadístico de rangos con signo de Wilcoxon puede convertirse directamente en el estadístico U de Mann-Whitney, y ambas comparan dos grupos independientes usando el orden de rangos."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>¿Cuándo debo usar esto en lugar de una prueba t?</h3>
 <p>Cuando tus datos no están distribuidos normalmente, contienen valores atípicos, o son ordinales en lugar de verdaderamente numéricos - la prueba de Mann-Whitney solo depende del orden de rango, haciéndola más robusta que la prueba t frente a distribuciones no normales y valores extremos.</p>
+</div>
+<div class="faq-item">
+<h3>¿Qué significa si los dos grupos tienen rangos completamente sin superposición?</h3>
+<p>Ese es el resultado extremo más posible - si cada valor de un grupo está por debajo de cada valor del otro, el U del grupo con rango más bajo es 0, lo que indica la mayor separación posible entre los grupos.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cómo se manejan los valores empatados al clasificar?</h3>
+<p>A los valores empatados se les asigna el promedio de los rangos que habrían ocupado - por ejemplo, si dos valores empatan en el 3er y 4º lugar, ambos reciben un rango de 3.5, manteniendo consistente la suma total de los rangos.</p>
+</div>
+<div class="faq-item">
+<h3>¿Es la prueba U de Mann-Whitney lo mismo que la prueba de rangos con signo de Wilcoxon?</h3>
+<p>Sí - son pruebas matemáticamente equivalentes con nombres distintos; el estadístico de rangos con signo de Wilcoxon puede convertirse directamente en el estadístico U de Mann-Whitney, y ambas comparan dos grupos independientes usando el orden de rangos.</p>
 </div></div>
         </div>
       </main>

@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "No - introduce colores como códigos hexadecimales de 6 dígitos (como #FF0000 para rojo), ya que ese es el formato preciso y sin ambigüedades que analiza esta calculadora. La mayoría de las herramientas de diseño y navegadores pueden mostrarte el código hexadecimal de cualquier color que elijas visualmente."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué color se obtiene al mezclar rojo puro y azul puro al 50/50?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un morado/magenta medio, aproximadamente #7F007F - dado que el rojo es (255,0,0) y el azul es (0,0,255), promediar cada canal da (127,0,127), el punto medio RGB entre los dos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué mezclar rojo y verde no da marrón o amarillo como lo haría la pintura?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Porque esta herramienta mezcla luz (aditiva RGB), no pigmento (mezcla sustractiva). De forma aditiva, el rojo (255,0,0) y el verde (0,255,0) mezclados 50/50 promedian a (127,127,0), un tono amarillo oliva - similar al amarillo, pero por un mecanismo completamente distinto al de mezclar pigmentos de pintura, por eso las intuiciones de la pintura no siempre se aplican aquí."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si establezco la proporción en 0% o 100%?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Con un peso del 0% para el primer color, el resultado es simplemente el segundo color sin cambios; con 100%, es el primer color sin cambios - la proporción solo importa para valores entre esos dos extremos."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>¿Puedo usar nombres de colores en lugar de códigos hexadecimales?</h3>
 <p>No - introduce colores como códigos hexadecimales de 6 dígitos (como #FF0000 para rojo), ya que ese es el formato preciso y sin ambigüedades que analiza esta calculadora. La mayoría de las herramientas de diseño y navegadores pueden mostrarte el código hexadecimal de cualquier color que elijas visualmente.</p>
+</div>
+<div class="faq-item">
+<h3>¿Qué color se obtiene al mezclar rojo puro y azul puro al 50/50?</h3>
+<p>Un morado/magenta medio, aproximadamente #7F007F - dado que el rojo es (255,0,0) y el azul es (0,0,255), promediar cada canal da (127,0,127), el punto medio RGB entre los dos.</p>
+</div>
+<div class="faq-item">
+<h3>¿Por qué mezclar rojo y verde no da marrón o amarillo como lo haría la pintura?</h3>
+<p>Porque esta herramienta mezcla luz (aditiva RGB), no pigmento (mezcla sustractiva). De forma aditiva, el rojo (255,0,0) y el verde (0,255,0) mezclados 50/50 promedian a (127,127,0), un tono amarillo oliva - similar al amarillo, pero por un mecanismo completamente distinto al de mezclar pigmentos de pintura, por eso las intuiciones de la pintura no siempre se aplican aquí.</p>
+</div>
+<div class="faq-item">
+<h3>¿Qué pasa si establezco la proporción en 0% o 100%?</h3>
+<p>Con un peso del 0% para el primer color, el resultado es simplemente el segundo color sin cambios; con 100%, es el primer color sin cambios - la proporción solo importa para valores entre esos dos extremos.</p>
 </div></div>
         </div>
       </main>

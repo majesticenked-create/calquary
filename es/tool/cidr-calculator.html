@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Una /32 es una única dirección sin espacio para un par red/difusión, y una /31 es un caso especial (definido en RFC 3021) usado para enlaces punto a punto donde ambas direcciones en el bloque de 2 direcciones son utilizables como direcciones de host, ya que no se necesita difusión."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es la máscara de subred para una red /24?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "255.255.255.0 - un prefijo /24 significa que los primeros 24 bits son todos 1s (tres octetos completos de 255), dejando el último octeto como todo 0s para direcciones de host."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿En qué se diferencia esto de la Calculadora de Subred IP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Calculan los mismos resultados (dirección de red, dirección de difusión, rango utilizable), pero esta herramienta toma la entrada como una sola cadena CIDR combinada como \"192.168.1.0/24,\" mientras que la Calculadora de Subred IP usa campos separados para la dirección IP y la longitud de prefijo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué máscara de subred corresponde a una red /29?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "255.255.255.248 - un prefijo /29 usa 29 de los 32 bits para la red, dejando solo 3 bits de host (8 direcciones totales, 6 utilizables), que como máscara es 255.255.255 seguido de 248 (11111000 en binario)."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>¿Por qué no hay hosts utilizables para una /31 o /32?</h3>
 <p>Una /32 es una única dirección sin espacio para un par red/difusión, y una /31 es un caso especial (definido en RFC 3021) usado para enlaces punto a punto donde ambas direcciones en el bloque de 2 direcciones son utilizables como direcciones de host, ya que no se necesita difusión.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cuál es la máscara de subred para una red /24?</h3>
+<p>255.255.255.0 - un prefijo /24 significa que los primeros 24 bits son todos 1s (tres octetos completos de 255), dejando el último octeto como todo 0s para direcciones de host.</p>
+</div>
+<div class="faq-item">
+<h3>¿En qué se diferencia esto de la Calculadora de Subred IP?</h3>
+<p>Calculan los mismos resultados (dirección de red, dirección de difusión, rango utilizable), pero esta herramienta toma la entrada como una sola cadena CIDR combinada como "192.168.1.0/24," mientras que la Calculadora de Subred IP usa campos separados para la dirección IP y la longitud de prefijo.</p>
+</div>
+<div class="faq-item">
+<h3>¿Qué máscara de subred corresponde a una red /29?</h3>
+<p>255.255.255.248 - un prefijo /29 usa 29 de los 32 bits para la red, dejando solo 3 bits de host (8 direcciones totales, 6 utilizables), que como máscara es 255.255.255 seguido de 248 (11111000 en binario).</p>
 </div></div>
         </div>
       </main>

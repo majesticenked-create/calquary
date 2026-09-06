@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Introduce la tasa por período, no la tasa anual - si capitalizas mensualmente y tienes una tasa anual del 6%, introduce 0.5 (6 ÷ 12) como tasa por período, y establece los períodos en meses para que coincidan."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Esta calculadora puede resolver en cambio para el número de períodos o la tasa de interés?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Esta versión resuelve el valor presente, el valor futuro o el pago dados los demás datos - no está diseñada para resolver la tasa o el número de períodos, que normalmente requieren métodos iterativos (de prueba y error) en lugar de una fórmula directa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si dejo el VP en cero y resuelvo para el VF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Con el VP en 0, el valor futuro proviene enteramente de la serie de pagos capitalizándose con el tiempo - por ejemplo, un PMT de -200 al mes a una tasa mensual del 0.5% durante 120 períodos, con un VP de 0, da un VF de aproximadamente $32,700, coincidiendo con un cálculo estándar de anualidad de ahorro."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Esto es lo mismo que una \"calculadora de anualidades\"?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Muy similar - una calculadora de anualidades normalmente resuelve uno de estos mismos valores (valor futuro, pago o valor presente) para una serie de pagos periódicos iguales, que es exactamente el cálculo que realiza este solucionador TVM."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>¿Qué tasa debo introducir?</h3>
 <p>Introduce la tasa por período, no la tasa anual - si capitalizas mensualmente y tienes una tasa anual del 6%, introduce 0.5 (6 ÷ 12) como tasa por período, y establece los períodos en meses para que coincidan.</p>
+</div>
+<div class="faq-item">
+<h3>¿Esta calculadora puede resolver en cambio para el número de períodos o la tasa de interés?</h3>
+<p>Esta versión resuelve el valor presente, el valor futuro o el pago dados los demás datos - no está diseñada para resolver la tasa o el número de períodos, que normalmente requieren métodos iterativos (de prueba y error) en lugar de una fórmula directa.</p>
+</div>
+<div class="faq-item">
+<h3>¿Qué pasa si dejo el VP en cero y resuelvo para el VF?</h3>
+<p>Con el VP en 0, el valor futuro proviene enteramente de la serie de pagos capitalizándose con el tiempo - por ejemplo, un PMT de -200 al mes a una tasa mensual del 0.5% durante 120 períodos, con un VP de 0, da un VF de aproximadamente $32,700, coincidiendo con un cálculo estándar de anualidad de ahorro.</p>
+</div>
+<div class="faq-item">
+<h3>¿Esto es lo mismo que una "calculadora de anualidades"?</h3>
+<p>Muy similar - una calculadora de anualidades normalmente resuelve uno de estos mismos valores (valor futuro, pago o valor presente) para una serie de pagos periódicos iguales, que es exactamente el cálculo que realiza este solucionador TVM.</p>
 </div></div>
         </div>
       </main>

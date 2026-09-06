@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Los fines de semana se excluyen automáticamente del conteo - si comienzas un jueves y necesitas 5 días hábiles, la calculadora salta el sábado y domingo intermedios y llega al jueves siguiente, en lugar de contarlos como días hábiles."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Se cuentan tanto la fecha de inicio como la de fin como días hábiles?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, si caen en día de semana - la calculadora cuenta cada día de semana desde la fecha de inicio hasta la fecha de fin, ambas inclusive. Por ejemplo, de lunes a viernes de la misma semana cuenta como 5 días hábiles, no 4."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuántos días hábiles hay en un sprint típico de 2 semanas (10 días hábiles)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dos semanas completas de lunes a viernes dan exactamente 10 días hábiles, suponiendo que no caiga ningún día festivo en ese período - si alguna de las fechas límite cae en fin de semana, el conteo será menor ya que los días de fin de semana quedan excluidos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Es esto lo mismo que una 'calculadora de días laborables' o un 'contador de días de la semana'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí - 'días hábiles,' 'días laborables' y 'días de semana entre fechas' se refieren todos al mismo conteo de lunes a viernes que produce esta herramienta; solo la terminología varía según la región y el sector."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>¿Cómo maneja esto un conteo de días hábiles que cruza un fin de semana?</h3>
 <p>Los fines de semana se excluyen automáticamente del conteo - si comienzas un jueves y necesitas 5 días hábiles, la calculadora salta el sábado y domingo intermedios y llega al jueves siguiente, en lugar de contarlos como días hábiles.</p>
+</div>
+<div class="faq-item">
+<h3>¿Se cuentan tanto la fecha de inicio como la de fin como días hábiles?</h3>
+<p>Sí, si caen en día de semana - la calculadora cuenta cada día de semana desde la fecha de inicio hasta la fecha de fin, ambas inclusive. Por ejemplo, de lunes a viernes de la misma semana cuenta como 5 días hábiles, no 4.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cuántos días hábiles hay en un sprint típico de 2 semanas (10 días hábiles)?</h3>
+<p>Dos semanas completas de lunes a viernes dan exactamente 10 días hábiles, suponiendo que no caiga ningún día festivo en ese período - si alguna de las fechas límite cae en fin de semana, el conteo será menor ya que los días de fin de semana quedan excluidos.</p>
+</div>
+<div class="faq-item">
+<h3>¿Es esto lo mismo que una 'calculadora de días laborables' o un 'contador de días de la semana'?</h3>
+<p>Sí - 'días hábiles,' 'días laborables' y 'días de semana entre fechas' se refieren todos al mismo conteo de lunes a viernes que produce esta herramienta; solo la terminología varía según la región y el sector.</p>
 </div></div>
         </div>
       </main>

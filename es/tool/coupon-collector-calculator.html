@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Sí - este cálculo asume una distribución uniforme, donde cada uno de los n elementos tiene una probabilidad igual de 1/n en cada extracción. Si algunos elementos son más raros que otros, el número esperado real de extracciones será mayor que esta estimación."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo cambia el número esperado de extracciones a medida que n crece?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Crece aproximadamente como n × ln(n), así que duplicar n más que duplica el número esperado de extracciones - para 100 elementos, las extracciones esperadas son aproximadamente 519, mucho más del doble de las ~14.7 extracciones necesarias para 6 elementos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es el número mínimo posible de extracciones para recolectar los n elementos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "n extracciones - ese es el mejor caso teórico, donde cada extracción resulta ser un elemento nuevo, no recolectado previamente. El valor esperado calculado aquí siempre es mayor que este mínimo, ya que es probable que ocurran coincidencias con elementos ya recolectados."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Es esta la misma matemática usada para calcular probabilidades de coleccionar cartas de intercambio o loot boxes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí - el problema del coleccionista de cupones es el modelo estándar para calcular cuántas extracciones aleatorias se necesitan para completar un conjunto, ya sean premios de cajas de cereal, cartas coleccionables, u objetos de botín en videojuegos con probabilidades iguales."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>¿Esto asume que cada elemento tiene la misma probabilidad de ser extraído?</h3>
 <p>Sí - este cálculo asume una distribución uniforme, donde cada uno de los n elementos tiene una probabilidad igual de 1/n en cada extracción. Si algunos elementos son más raros que otros, el número esperado real de extracciones será mayor que esta estimación.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cómo cambia el número esperado de extracciones a medida que n crece?</h3>
+<p>Crece aproximadamente como n × ln(n), así que duplicar n más que duplica el número esperado de extracciones - para 100 elementos, las extracciones esperadas son aproximadamente 519, mucho más del doble de las ~14.7 extracciones necesarias para 6 elementos.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cuál es el número mínimo posible de extracciones para recolectar los n elementos?</h3>
+<p>n extracciones - ese es el mejor caso teórico, donde cada extracción resulta ser un elemento nuevo, no recolectado previamente. El valor esperado calculado aquí siempre es mayor que este mínimo, ya que es probable que ocurran coincidencias con elementos ya recolectados.</p>
+</div>
+<div class="faq-item">
+<h3>¿Es esta la misma matemática usada para calcular probabilidades de coleccionar cartas de intercambio o loot boxes?</h3>
+<p>Sí - el problema del coleccionista de cupones es el modelo estándar para calcular cuántas extracciones aleatorias se necesitan para completar un conjunto, ya sean premios de cajas de cereal, cartas coleccionables, u objetos de botín en videojuegos con probabilidades iguales.</p>
 </div></div>
         </div>
       </main>

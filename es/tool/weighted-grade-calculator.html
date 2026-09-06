@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Sí - la Calculadora de Calificación regular convierte una sola puntuación (como un examen) en un porcentaje y calificación con letra. Esta herramienta combina múltiples categorías ponderadas - tareas, exámenes, un examen final, etc. - en una calificación general del curso."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si introduzco un peso de 0 para una categoría que aún no he empezado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Esa categoría queda excluida por completo del cálculo (multiplicar por 0 no aporta nada al numerador ni al denominador), así que tu calificación actual refleja solo las categorías con un peso distinto de cero - útil para llevar un promedio en progreso a medida que avanza el semestre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto necesitaría sacar en el examen final para obtener una A general si ya conozco mis puntuaciones de tareas y exámenes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Esta calculadora resuelve la calificación general a partir de las tres categorías a la vez, así que para encontrar la puntuación final requerida, trabaja hacia atrás: objetivo = (general deseado × 100 − tareas×peso − exámenes×peso) / peso del final. Por ejemplo, necesitando un 90 general con 95×20 + 82×40 ya asegurados y un peso del final del 40%: (9000 − 1900 − 3280) / 40 = 95.5%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo usar esto para más de tres categorías de calificación, como cuestionarios además de tareas, exámenes y un final?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Esta versión maneja exactamente tres categorías (tareas, exámenes, final) - para un curso que también tenga una categoría de cuestionarios, combina los cuestionarios con la categoría existente que comparta un peso similar, o calcula primero un subpromedio de los cuestionarios y trátalo como una de las tres entradas."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>¿Esto es diferente de la Calculadora de Calificación regular?</h3>
 <p>Sí - la Calculadora de Calificación regular convierte una sola puntuación (como un examen) en un porcentaje y calificación con letra. Esta herramienta combina múltiples categorías ponderadas - tareas, exámenes, un examen final, etc. - en una calificación general del curso.</p>
+</div>
+<div class="faq-item">
+<h3>¿Qué pasa si introduzco un peso de 0 para una categoría que aún no he empezado?</h3>
+<p>Esa categoría queda excluida por completo del cálculo (multiplicar por 0 no aporta nada al numerador ni al denominador), así que tu calificación actual refleja solo las categorías con un peso distinto de cero - útil para llevar un promedio en progreso a medida que avanza el semestre.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cuánto necesitaría sacar en el examen final para obtener una A general si ya conozco mis puntuaciones de tareas y exámenes?</h3>
+<p>Esta calculadora resuelve la calificación general a partir de las tres categorías a la vez, así que para encontrar la puntuación final requerida, trabaja hacia atrás: objetivo = (general deseado × 100 − tareas×peso − exámenes×peso) / peso del final. Por ejemplo, necesitando un 90 general con 95×20 + 82×40 ya asegurados y un peso del final del 40%: (9000 − 1900 − 3280) / 40 = 95.5%.</p>
+</div>
+<div class="faq-item">
+<h3>¿Puedo usar esto para más de tres categorías de calificación, como cuestionarios además de tareas, exámenes y un final?</h3>
+<p>Esta versión maneja exactamente tres categorías (tareas, exámenes, final) - para un curso que también tenga una categoría de cuestionarios, combina los cuestionarios con la categoría existente que comparta un peso similar, o calcula primero un subpromedio de los cuestionarios y trátalo como una de las tres entradas.</p>
 </div></div>
         </div>
       </main>

@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Además de tipo título y tipo oración, convierte a MAYÚSCULAS, minúsculas, camelCase y otros estilos de formato comunes usados en escritura y código, para que puedas reformatear texto según el contexto que necesites."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo decide el tipo título qué palabras poner en mayúscula?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pone en mayúscula la primera letra de cada palabra del texto, sin un manejo especial para palabras pequeñas como 'un,' 'el' o 'de' - así que 'el señor de los anillos' se convierte en 'El Señor De Los Anillos' aquí, en lugar de la convención de las guías de estilo que deja en minúscula las palabras menores."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué hace el tipo oración con un texto que tiene varias oraciones?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pone en mayúscula solo la primera letra de todo el texto de entrada, dejando todo lo demás en minúscula - no detecta límites de oraciones individuales para poner en mayúscula cada una, así que un párrafo con varias oraciones obtiene exactamente una letra mayúscula en total."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Si mi texto tiene siglas en MAYÚSCULAS como 'NASA,' ¿convertir a minúsculas las rompe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí - convertir a minúsculas trata cada letra de la misma forma sin importar el contexto, así que 'NASA' se convierte en 'nasa.' No hay detección de siglas, así que revisa el texto con siglas o nombres propios después de convertir."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>¿Qué estilos de mayúsculas/minúsculas admite este convertidor?</h3>
 <p>Además de tipo título y tipo oración, convierte a MAYÚSCULAS, minúsculas, camelCase y otros estilos de formato comunes usados en escritura y código, para que puedas reformatear texto según el contexto que necesites.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cómo decide el tipo título qué palabras poner en mayúscula?</h3>
+<p>Pone en mayúscula la primera letra de cada palabra del texto, sin un manejo especial para palabras pequeñas como 'un,' 'el' o 'de' - así que 'el señor de los anillos' se convierte en 'El Señor De Los Anillos' aquí, en lugar de la convención de las guías de estilo que deja en minúscula las palabras menores.</p>
+</div>
+<div class="faq-item">
+<h3>¿Qué hace el tipo oración con un texto que tiene varias oraciones?</h3>
+<p>Pone en mayúscula solo la primera letra de todo el texto de entrada, dejando todo lo demás en minúscula - no detecta límites de oraciones individuales para poner en mayúscula cada una, así que un párrafo con varias oraciones obtiene exactamente una letra mayúscula en total.</p>
+</div>
+<div class="faq-item">
+<h3>Si mi texto tiene siglas en MAYÚSCULAS como 'NASA,' ¿convertir a minúsculas las rompe?</h3>
+<p>Sí - convertir a minúsculas trata cada letra de la misma forma sin importar el contexto, así que 'NASA' se convierte en 'nasa.' No hay detección de siglas, así que revisa el texto con siglas o nombres propios después de convertir.</p>
 </div></div>
         </div>
       </main>

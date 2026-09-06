@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Esta herramienta convierte binario directamente a texto legible usando codificación estándar de 8 bits (ASCII/UTF-8). Para convertir binario a un valor numérico plano en su lugar, trata la cadena binaria como un número en base 2 y conviértela a base 10 usando un cálculo de binario a decimal en su lugar."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Los grupos binarios necesitan espacios entre cada byte de 8 bits?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, al convertir de binario a texto - el binario de cada carácter debe estar separado (como \"01001000 01101001\" para \"Hi\") para que el conversor sepa dónde terminan los 8 bits de un carácter y empiezan los del siguiente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es el binario para la letra 'A'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "01000001 - 'A' tiene el código ASCII 65, y 65 en binario es 1000001, rellenado hasta 8 bits completos agregando un cero inicial."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Esto es lo mismo que un 'conversor de ASCII a binario' o un 'traductor de texto a binario'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí - todos esos términos describen el mismo proceso subyacente de mapear cada carácter a su código numérico y expresar ese código en base 2, que es exactamente lo que hace el modo de texto a binario de esta herramienta."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>¿Esto puede convertir binario a números además de texto?</h3>
 <p>Esta herramienta convierte binario directamente a texto legible usando codificación estándar de 8 bits (ASCII/UTF-8). Para convertir binario a un valor numérico plano en su lugar, trata la cadena binaria como un número en base 2 y conviértela a base 10 usando un cálculo de binario a decimal en su lugar.</p>
+</div>
+<div class="faq-item">
+<h3>¿Los grupos binarios necesitan espacios entre cada byte de 8 bits?</h3>
+<p>Sí, al convertir de binario a texto - el binario de cada carácter debe estar separado (como "01001000 01101001" para "Hi") para que el conversor sepa dónde terminan los 8 bits de un carácter y empiezan los del siguiente.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cuál es el binario para la letra 'A'?</h3>
+<p>01000001 - 'A' tiene el código ASCII 65, y 65 en binario es 1000001, rellenado hasta 8 bits completos agregando un cero inicial.</p>
+</div>
+<div class="faq-item">
+<h3>¿Esto es lo mismo que un 'conversor de ASCII a binario' o un 'traductor de texto a binario'?</h3>
+<p>Sí - todos esos términos describen el mismo proceso subyacente de mapear cada carácter a su código numérico y expresar ese código en base 2, que es exactamente lo que hace el modo de texto a binario de esta herramienta.</p>
 </div></div>
         </div>
       </main>

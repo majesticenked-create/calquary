@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Sí, como una verificación aproximada - una distancia RGB baja (menos de aproximadamente 30) sugiere colores que podrían ser difíciles de distinguir, útil para señalar posibles conflictos de marca o accesibilidad antes de una verificación perceptual más rigurosa."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Importa el orden de los colores - es lo mismo comparar el Color 1 con el Color 2 que el Color 2 con el Color 1?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, el resultado es idéntico en ambos casos. La distancia euclidiana es simétrica, así que intercambiar qué código hexadecimal va en cada casilla no cambia la diferencia calculada."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es la diferencia entre #FF0000 (rojo) y #00FF00 (verde) usando esta calculadora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Alrededor de 360.6. El rojo es (255,0,0) y el verde es (0,255,0), así que la distancia es √(255² + 255² + 0²) ≈ 360.6 - cercana al máximo, lo que refleja lo visualmente distintos que son los dos colores."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Es esto lo mismo que un 'verificador de contraste de color' para accesibilidad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - los verificadores de contraste para accesibilidad WCAG miden el contraste de luminancia (importante para la legibilidad del texto), mientras que esta herramienta mide la distancia RGB en bruto entre dos colores. Un par de colores puede tener una gran distancia RGB pero aun así fallar una prueba de contraste de luminancia, o viceversa."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>¿Puedo usar esto para verificar si dos colores de marca son demasiado similares?</h3>
 <p>Sí, como una verificación aproximada - una distancia RGB baja (menos de aproximadamente 30) sugiere colores que podrían ser difíciles de distinguir, útil para señalar posibles conflictos de marca o accesibilidad antes de una verificación perceptual más rigurosa.</p>
+</div>
+<div class="faq-item">
+<h3>¿Importa el orden de los colores - es lo mismo comparar el Color 1 con el Color 2 que el Color 2 con el Color 1?</h3>
+<p>No, el resultado es idéntico en ambos casos. La distancia euclidiana es simétrica, así que intercambiar qué código hexadecimal va en cada casilla no cambia la diferencia calculada.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cuál es la diferencia entre #FF0000 (rojo) y #00FF00 (verde) usando esta calculadora?</h3>
+<p>Alrededor de 360.6. El rojo es (255,0,0) y el verde es (0,255,0), así que la distancia es √(255² + 255² + 0²) ≈ 360.6 - cercana al máximo, lo que refleja lo visualmente distintos que son los dos colores.</p>
+</div>
+<div class="faq-item">
+<h3>¿Es esto lo mismo que un 'verificador de contraste de color' para accesibilidad?</h3>
+<p>No - los verificadores de contraste para accesibilidad WCAG miden el contraste de luminancia (importante para la legibilidad del texto), mientras que esta herramienta mide la distancia RGB en bruto entre dos colores. Un par de colores puede tener una gran distancia RGB pero aun así fallar una prueba de contraste de luminancia, o viceversa.</p>
 </div></div>
         </div>
       </main>

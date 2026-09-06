@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "La probabilidad de obtener k o menos éxitos, no exactamente k - útil para preguntas como \"¿cuál es la probabilidad de sacar como máximo 2 corazones?\", que suma las probabilidades individuales para 0, 1, y 2 corazones."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué representan N, K, n, y k en términos sencillos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "N es la población total (por ejemplo, una baraja completa de 52 cartas), K es cuántos elementos de 'éxito' hay en esa población (por ejemplo, 13 corazones), n es cuántos elementos extraes (tu tamaño de muestra), y k es cuántos éxitos quieres entre los extraídos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si k es mayor que n o que K?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La probabilidad es 0 - no puedes extraer más éxitos de los que realmente muestreaste (k > n) ni más éxitos de los que existen en la población (k > K), así que esas combinaciones son matemáticamente imposibles."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo se calcula la media de una distribución hipergeométrica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Media = n × (K/N) - para la mano de 5 cartas de una baraja de 52 con 13 corazones, el número esperado de corazones es 5 × (13/52) = 1.25, aunque no puedas extraer realmente un número fraccionario de corazones en una sola mano."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>¿Qué me dice la probabilidad acumulativa (P(X ≤ k))?</h3>
 <p>La probabilidad de obtener k o menos éxitos, no exactamente k - útil para preguntas como "¿cuál es la probabilidad de sacar como máximo 2 corazones?", que suma las probabilidades individuales para 0, 1, y 2 corazones.</p>
+</div>
+<div class="faq-item">
+<h3>¿Qué representan N, K, n, y k en términos sencillos?</h3>
+<p>N es la población total (por ejemplo, una baraja completa de 52 cartas), K es cuántos elementos de 'éxito' hay en esa población (por ejemplo, 13 corazones), n es cuántos elementos extraes (tu tamaño de muestra), y k es cuántos éxitos quieres entre los extraídos.</p>
+</div>
+<div class="faq-item">
+<h3>¿Qué pasa si k es mayor que n o que K?</h3>
+<p>La probabilidad es 0 - no puedes extraer más éxitos de los que realmente muestreaste (k > n) ni más éxitos de los que existen en la población (k > K), así que esas combinaciones son matemáticamente imposibles.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cómo se calcula la media de una distribución hipergeométrica?</h3>
+<p>Media = n × (K/N) - para la mano de 5 cartas de una baraja de 52 con 13 corazones, el número esperado de corazones es 5 × (13/52) = 1.25, aunque no puedas extraer realmente un número fraccionario de corazones en una sola mano.</p>
 </div></div>
         </div>
       </main>

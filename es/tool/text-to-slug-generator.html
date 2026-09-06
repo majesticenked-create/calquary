@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Eliminar palabras vacías comunes es opcional pero a menudo mejora la legibilidad y acorta ligeramente la URL sin perder significado - 'mejor-pizza-en-madrid' funciona tan bien como 'la-mejor-pizza-en-madrid'. Esta herramienta conserva tu orden de palabras original y te permite decidir qué mantener."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa con la puntuación como apóstrofes o signos de exclamación en mi texto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Se eliminan por completo, ya que un slug solo conserva letras minúsculas, números y guiones - \"¡Pizza de Joe!\" se convierte en \"pizza-de-joe\" en lugar de conservar el apóstrofe o el signo de exclamación."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Los espacios múltiples o la puntuación repetida se colapsan en un solo guion?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí - los espacios o caracteres especiales consecutivos se colapsan en un solo guion en lugar de producir varios guiones seguidos, así que \"Hola   Mundo!!\" se convierte en \"hola-mundo,\" no en \"hola---mundo.\""
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿'Slugify' es lo mismo que lo que hace esta herramienta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí - \"slugify,\" \"generador de slugs de URL\" y \"convertir a slug\" describen todos convertir texto arbitrario al formato en minúsculas, con guiones y apto para URL que produce esta herramienta."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>¿Los slugs de URL deben incluir palabras vacías como 'el' y 'y'?</h3>
 <p>Eliminar palabras vacías comunes es opcional pero a menudo mejora la legibilidad y acorta ligeramente la URL sin perder significado - 'mejor-pizza-en-madrid' funciona tan bien como 'la-mejor-pizza-en-madrid'. Esta herramienta conserva tu orden de palabras original y te permite decidir qué mantener.</p>
+</div>
+<div class="faq-item">
+<h3>¿Qué pasa con la puntuación como apóstrofes o signos de exclamación en mi texto?</h3>
+<p>Se eliminan por completo, ya que un slug solo conserva letras minúsculas, números y guiones - "¡Pizza de Joe!" se convierte en "pizza-de-joe" en lugar de conservar el apóstrofe o el signo de exclamación.</p>
+</div>
+<div class="faq-item">
+<h3>¿Los espacios múltiples o la puntuación repetida se colapsan en un solo guion?</h3>
+<p>Sí - los espacios o caracteres especiales consecutivos se colapsan en un solo guion en lugar de producir varios guiones seguidos, así que "Hola   Mundo!!" se convierte en "hola-mundo," no en "hola---mundo."</p>
+</div>
+<div class="faq-item">
+<h3>¿'Slugify' es lo mismo que lo que hace esta herramienta?</h3>
+<p>Sí - "slugify," "generador de slugs de URL" y "convertir a slug" describen todos convertir texto arbitrario al formato en minúsculas, con guiones y apto para URL que produce esta herramienta.</p>
 </div></div>
         </div>
       </main>

@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Sí - junto con el desglose de horas y minutos, esta calculadora muestra la duración total como decimal (por ejemplo, 7 horas 30 minutos se muestra como 7.5 horas), lo cual es útil para hojas de tiempo y facturación que requieren entradas de tiempo decimal."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo calculo la duración de un turno nocturno, como de 11 PM a 7 AM?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Introduce 23:00 como inicio y 07:00 como fin - como la hora de fin es numéricamente menor, la calculadora lo trata como un cruce de medianoche y devuelve 8 horas, la duración correcta del turno nocturno."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si la hora de inicio y de fin son idénticas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La calculadora trata una hora de inicio y fin idénticas como un período completo de 24 horas (cruzando la medianoche de vuelta a la misma hora del reloj) en lugar de cero, ya que siempre mide hacia adelante desde el inicio hasta el fin."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Es esto lo mismo que una 'calculadora de tiempo transcurrido'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí - ambos términos describen encontrar el intervalo entre dos horas del reloj. Esta herramienta trabaja específicamente con horas y minutos en un reloj de 24 horas en lugar de fechas de calendario completas."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>¿Puedo calcular la duración en horas decimales en lugar de horas y minutos?</h3>
 <p>Sí - junto con el desglose de horas y minutos, esta calculadora muestra la duración total como decimal (por ejemplo, 7 horas 30 minutos se muestra como 7.5 horas), lo cual es útil para hojas de tiempo y facturación que requieren entradas de tiempo decimal.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cómo calculo la duración de un turno nocturno, como de 11 PM a 7 AM?</h3>
+<p>Introduce 23:00 como inicio y 07:00 como fin - como la hora de fin es numéricamente menor, la calculadora lo trata como un cruce de medianoche y devuelve 8 horas, la duración correcta del turno nocturno.</p>
+</div>
+<div class="faq-item">
+<h3>¿Qué pasa si la hora de inicio y de fin son idénticas?</h3>
+<p>La calculadora trata una hora de inicio y fin idénticas como un período completo de 24 horas (cruzando la medianoche de vuelta a la misma hora del reloj) en lugar de cero, ya que siempre mide hacia adelante desde el inicio hasta el fin.</p>
+</div>
+<div class="faq-item">
+<h3>¿Es esto lo mismo que una 'calculadora de tiempo transcurrido'?</h3>
+<p>Sí - ambos términos describen encontrar el intervalo entre dos horas del reloj. Esta herramienta trabaja específicamente con horas y minutos en un reloj de 24 horas en lugar de fechas de calendario completas.</p>
 </div></div>
         </div>
       </main>

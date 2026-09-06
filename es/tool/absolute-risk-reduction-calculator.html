@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "No - esta es una calculadora de referencia estadística para entender cómo se calculan estos números, no un sustituto de los intervalos de confianza de un estudio clínico completo, características de la población, y la interpretación de un profesional calificado. Siempre discute las decisiones de tratamiento con un proveedor de atención médica."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo calculo el ARR si la tasa de eventos del grupo control es 25% y la del grupo de tratamiento es 15%?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ARR = 25% − 15% = 10 puntos porcentuales (0.10). RRR = 0.10 ÷ 0.25 = 40%. NNT = 1 ÷ 0.10 = 10, lo que significa que aproximadamente 10 personas necesitan ser tratadas para prevenir un evento adicional."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué el RRR puede hacer que un tratamiento parezca más efectivo de lo que sugiere el ARR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Porque el RRR es una razón relativa a la tasa base, un tratamiento que reduce un evento raro de 0.2% a 0.1% tiene un RRR del 50% que suena dramático, pero solo un ARR de 0.1 puntos porcentuales (y un NNT de 1,000) - ambos números son matemáticamente correctos, pero el ARR refleja mejor el impacto real en una población."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué significa un ARR negativo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un ARR negativo significa que el grupo de tratamiento en realidad tuvo una tasa de eventos más alta que el grupo control - el tratamiento parece perjudicial en lugar de beneficioso para el resultado medido, y esta calculadora mostrará la reducción como negativa para reflejarlo."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>¿Es esto apropiado para tomar decisiones de tratamiento médico?</h3>
 <p>No - esta es una calculadora de referencia estadística para entender cómo se calculan estos números, no un sustituto de los intervalos de confianza de un estudio clínico completo, características de la población, y la interpretación de un profesional calificado. Siempre discute las decisiones de tratamiento con un proveedor de atención médica.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cómo calculo el ARR si la tasa de eventos del grupo control es 25% y la del grupo de tratamiento es 15%?</h3>
+<p>ARR = 25% − 15% = 10 puntos porcentuales (0.10). RRR = 0.10 ÷ 0.25 = 40%. NNT = 1 ÷ 0.10 = 10, lo que significa que aproximadamente 10 personas necesitan ser tratadas para prevenir un evento adicional.</p>
+</div>
+<div class="faq-item">
+<h3>¿Por qué el RRR puede hacer que un tratamiento parezca más efectivo de lo que sugiere el ARR?</h3>
+<p>Porque el RRR es una razón relativa a la tasa base, un tratamiento que reduce un evento raro de 0.2% a 0.1% tiene un RRR del 50% que suena dramático, pero solo un ARR de 0.1 puntos porcentuales (y un NNT de 1,000) - ambos números son matemáticamente correctos, pero el ARR refleja mejor el impacto real en una población.</p>
+</div>
+<div class="faq-item">
+<h3>¿Qué significa un ARR negativo?</h3>
+<p>Un ARR negativo significa que el grupo de tratamiento en realidad tuvo una tasa de eventos más alta que el grupo control - el tratamiento parece perjudicial en lugar de beneficioso para el resultado medido, y esta calculadora mostrará la reducción como negativa para reflejarlo.</p>
 </div></div>
         </div>
       </main>

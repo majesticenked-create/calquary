@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Sí - pega cualquier lista (canciones, nombres, temas) una por línea, y funciona igual para cualquiera de esos casos de uso."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Mezclar la misma lista dos veces da el mismo resultado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - cada mezcla obtiene valores aleatorios nuevos, así que ejecutar la herramienta otra vez sobre la misma lista de entrada produce un orden aleatorio nuevo e independiente cada vez."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Si mezclo una lista de 5 elementos, ¿cuántos órdenes posibles hay?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "120 (5 factorial: 5×4×3×2×1). Fisher-Yates le da a cada uno de esos 120 ordenamientos la misma probabilidad de ser el resultado."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Es esto lo mismo que una herramienta para 'aleatorizar orden' o 'aleatorizar lista'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí - 'mezclador de listas', 'aleatorizar orden de lista' y 'ordenador aleatorio de listas' describen todas la misma tarea: tomar una lista y presentarla en una secuencia aleatoria, que es exactamente lo que hace esta herramienta."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>¿Puedo usar esto para aleatorizar el orden de una lista de reproducción, entradas de rifa, u orden de presentación?</h3>
 <p>Sí - pega cualquier lista (canciones, nombres, temas) una por línea, y funciona igual para cualquiera de esos casos de uso.</p>
+</div>
+<div class="faq-item">
+<h3>¿Mezclar la misma lista dos veces da el mismo resultado?</h3>
+<p>No - cada mezcla obtiene valores aleatorios nuevos, así que ejecutar la herramienta otra vez sobre la misma lista de entrada produce un orden aleatorio nuevo e independiente cada vez.</p>
+</div>
+<div class="faq-item">
+<h3>Si mezclo una lista de 5 elementos, ¿cuántos órdenes posibles hay?</h3>
+<p>120 (5 factorial: 5×4×3×2×1). Fisher-Yates le da a cada uno de esos 120 ordenamientos la misma probabilidad de ser el resultado.</p>
+</div>
+<div class="faq-item">
+<h3>¿Es esto lo mismo que una herramienta para 'aleatorizar orden' o 'aleatorizar lista'?</h3>
+<p>Sí - 'mezclador de listas', 'aleatorizar orden de lista' y 'ordenador aleatorio de listas' describen todas la misma tarea: tomar una lista y presentarla en una secuencia aleatoria, que es exactamente lo que hace esta herramienta.</p>
 </div></div>
         </div>
       </main>

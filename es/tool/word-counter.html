@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Sí - además del conteo de palabras, muestra el conteo de caracteres con y sin espacios, además del conteo de oraciones y párrafos, útil para cumplir límites estrictos de caracteres como en publicaciones de redes sociales o metadescripciones."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Una palabra con guion como 'bien-conocido' cuenta como una palabra o dos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Como una palabra - el contador divide por espacios en blanco, y como no hay espacio dentro de 'bien-conocido', se trata como una sola palabra, igual que la mayoría de los procesadores de texto tratan los compuestos con guion."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Si pego tres líneas en blanco entre párrafos, ¿afecta eso el conteo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Las líneas en blanco extra no suman al conteo de palabras o caracteres (no hay palabras en ellas), pero sí cuentan para la detección de párrafos, ya que una línea en blanco es típicamente lo que separa un párrafo del siguiente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿En qué se diferencia el 'conteo de palabras' del 'conteo de caracteres' para cosas como los límites de Twitter/X?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El conteo de palabras cuenta las palabras separadas por espacios, mientras que el conteo de caracteres cuenta cada letra, número, espacio y símbolo individual. Plataformas como X limitan por conteo de caracteres, no por conteo de palabras, así que revisa el conteo de caracteres (con espacios) que muestra esta herramienta si estás trabajando contra el límite de caracteres de una plataforma."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>¿Esta herramienta cuenta caracteres además de palabras?</h3>
 <p>Sí - además del conteo de palabras, muestra el conteo de caracteres con y sin espacios, además del conteo de oraciones y párrafos, útil para cumplir límites estrictos de caracteres como en publicaciones de redes sociales o metadescripciones.</p>
+</div>
+<div class="faq-item">
+<h3>¿Una palabra con guion como 'bien-conocido' cuenta como una palabra o dos?</h3>
+<p>Como una palabra - el contador divide por espacios en blanco, y como no hay espacio dentro de 'bien-conocido', se trata como una sola palabra, igual que la mayoría de los procesadores de texto tratan los compuestos con guion.</p>
+</div>
+<div class="faq-item">
+<h3>Si pego tres líneas en blanco entre párrafos, ¿afecta eso el conteo?</h3>
+<p>Las líneas en blanco extra no suman al conteo de palabras o caracteres (no hay palabras en ellas), pero sí cuentan para la detección de párrafos, ya que una línea en blanco es típicamente lo que separa un párrafo del siguiente.</p>
+</div>
+<div class="faq-item">
+<h3>¿En qué se diferencia el 'conteo de palabras' del 'conteo de caracteres' para cosas como los límites de Twitter/X?</h3>
+<p>El conteo de palabras cuenta las palabras separadas por espacios, mientras que el conteo de caracteres cuenta cada letra, número, espacio y símbolo individual. Plataformas como X limitan por conteo de caracteres, no por conteo de palabras, así que revisa el conteo de caracteres (con espacios) que muestra esta herramienta si estás trabajando contra el límite de caracteres de una plataforma.</p>
 </div></div>
         </div>
       </main>

@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Relacionado pero diferente - la Calculadora de Puntuación Z encuentra el percentil por debajo de un solo valor. Esta calculadora encuentra la probabilidad de que un valor caiga entre dos límites, lo cual es más útil para preguntas como \"¿qué fracción de puntuaciones están entre 85 y 115?\""
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si establezco el límite inferior y el superior en el mismo valor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La probabilidad resulta esencialmente 0% - una distribución normal continua asigna una probabilidad de cero a acertar exactamente un punto, solo a caer dentro de un rango."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo encuentro la probabilidad de que un valor esté por encima o por debajo de un solo límite en lugar de entre dos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Establece el límite inferior en un número muy pequeño (como media − 10×DE) para capturar efectivamente todo lo que esté por debajo de tu límite superior, o establece el límite superior muy alto para capturar todo lo que esté por encima de tu límite inferior - esto aproxima una probabilidad de un solo lado usando la herramienta de dos límites."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Esto funciona para distribuciones que no son normales?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - esta calculadora asume específicamente una distribución normal (campana) definida por su media y desviación estándar; los datos sesgados o no normales no darán probabilidades precisas con este método."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>¿Es esto lo mismo que la Calculadora de Puntuación Z?</h3>
 <p>Relacionado pero diferente - la Calculadora de Puntuación Z encuentra el percentil por debajo de un solo valor. Esta calculadora encuentra la probabilidad de que un valor caiga entre dos límites, lo cual es más útil para preguntas como "¿qué fracción de puntuaciones están entre 85 y 115?"</p>
+</div>
+<div class="faq-item">
+<h3>¿Qué pasa si establezco el límite inferior y el superior en el mismo valor?</h3>
+<p>La probabilidad resulta esencialmente 0% - una distribución normal continua asigna una probabilidad de cero a acertar exactamente un punto, solo a caer dentro de un rango.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cómo encuentro la probabilidad de que un valor esté por encima o por debajo de un solo límite en lugar de entre dos?</h3>
+<p>Establece el límite inferior en un número muy pequeño (como media − 10×DE) para capturar efectivamente todo lo que esté por debajo de tu límite superior, o establece el límite superior muy alto para capturar todo lo que esté por encima de tu límite inferior - esto aproxima una probabilidad de un solo lado usando la herramienta de dos límites.</p>
+</div>
+<div class="faq-item">
+<h3>¿Esto funciona para distribuciones que no son normales?</h3>
+<p>No - esta calculadora asume específicamente una distribución normal (campana) definida por su media y desviación estándar; los datos sesgados o no normales no darán probabilidades precisas con este método.</p>
 </div></div>
         </div>
       </main>

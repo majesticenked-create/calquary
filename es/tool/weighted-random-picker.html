@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Un elemento por línea, formateado como \"nombre, peso\" - por ejemplo \"Bronce, 6\". El último valor separado por comas en cada línea se lee como el peso, y todo lo anterior es el nombre del elemento."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si le doy a un elemento un peso de 0?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Se incluye en la lista pero nunca puede ser seleccionado - un peso de 0 significa una participación de 0% del total, así que el selector efectivamente lo omite mientras sigue mostrándolo como opción."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Si tengo tres elementos con peso 1 cada uno, ¿cuáles son las probabilidades de cada uno?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Exactamente 1/3 (aproximadamente 33.3%) cada uno, ya que los pesos son iguales - el total es 3, y la participación de cada elemento es 1 dividido entre 3, sin importar cuáles sean los números de peso reales."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿En qué se diferencia esto de un 'selector de nombres aleatorio' o una 'ruleta giratoria'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un selector de nombres aleatorio simple o una ruleta giratoria le da a cada entrada la misma probabilidad. Esta herramienta es para cuando los resultados no deben ser igualmente probables - como una tabla de botín donde los elementos raros deben aparecer con menos frecuencia que los comunes."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>¿En qué formato debe estar mi lista?</h3>
 <p>Un elemento por línea, formateado como "nombre, peso" - por ejemplo "Bronce, 6". El último valor separado por comas en cada línea se lee como el peso, y todo lo anterior es el nombre del elemento.</p>
+</div>
+<div class="faq-item">
+<h3>¿Qué pasa si le doy a un elemento un peso de 0?</h3>
+<p>Se incluye en la lista pero nunca puede ser seleccionado - un peso de 0 significa una participación de 0% del total, así que el selector efectivamente lo omite mientras sigue mostrándolo como opción.</p>
+</div>
+<div class="faq-item">
+<h3>Si tengo tres elementos con peso 1 cada uno, ¿cuáles son las probabilidades de cada uno?</h3>
+<p>Exactamente 1/3 (aproximadamente 33.3%) cada uno, ya que los pesos son iguales - el total es 3, y la participación de cada elemento es 1 dividido entre 3, sin importar cuáles sean los números de peso reales.</p>
+</div>
+<div class="faq-item">
+<h3>¿En qué se diferencia esto de un 'selector de nombres aleatorio' o una 'ruleta giratoria'?</h3>
+<p>Un selector de nombres aleatorio simple o una ruleta giratoria le da a cada entrada la misma probabilidad. Esta herramienta es para cuando los resultados no deben ser igualmente probables - como una tabla de botín donde los elementos raros deben aparecer con menos frecuencia que los comunes.</p>
 </div></div>
         </div>
       </main>

@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Efectivamente insignificante - con 122 bits aleatorios (unos pocos bits están fijos para marcar la versión), necesitarías generar aproximadamente mil millones de UUID por segundo durante unos 85 años antes de tener un 50% de probabilidad de cualquier colisión, por lo que los UUID se consideran identificadores únicos confiables sin verificar un registro central."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo usar un UUID como clave primaria de base de datos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, este es uno de los usos más comunes - los UUID te permiten generar identificadores únicos de forma independiente en varios servidores o servicios sin consultar primero una base de datos central, evitando las colisiones que podrían ocurrir con simples números autoincrementales en un sistema distribuido."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Los UUID generados aquí siempre siguen el mismo formato, como 8-4-4-4-12?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí - todo UUID sigue el formato estándar de 36 caracteres de cinco grupos hexadecimales separados por guiones (8-4-4-4-12 dígitos), que es el esquema RFC 4122 que las bases de datos, APIs, y bibliotecas esperan poder interpretar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Un GUID es lo mismo que un UUID?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Funcionalmente sí - GUID (Identificador Único Global) es el término de Microsoft para el mismo concepto de identificador de 128 bits que un UUID, y ambos términos se usan indistintamente en la mayoría de los contextos, incluyendo la salida de este generador."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>¿Qué tan probable es una colisión de UUID?</h3>
 <p>Efectivamente insignificante - con 122 bits aleatorios (unos pocos bits están fijos para marcar la versión), necesitarías generar aproximadamente mil millones de UUID por segundo durante unos 85 años antes de tener un 50% de probabilidad de cualquier colisión, por lo que los UUID se consideran identificadores únicos confiables sin verificar un registro central.</p>
+</div>
+<div class="faq-item">
+<h3>¿Puedo usar un UUID como clave primaria de base de datos?</h3>
+<p>Sí, este es uno de los usos más comunes - los UUID te permiten generar identificadores únicos de forma independiente en varios servidores o servicios sin consultar primero una base de datos central, evitando las colisiones que podrían ocurrir con simples números autoincrementales en un sistema distribuido.</p>
+</div>
+<div class="faq-item">
+<h3>¿Los UUID generados aquí siempre siguen el mismo formato, como 8-4-4-4-12?</h3>
+<p>Sí - todo UUID sigue el formato estándar de 36 caracteres de cinco grupos hexadecimales separados por guiones (8-4-4-4-12 dígitos), que es el esquema RFC 4122 que las bases de datos, APIs, y bibliotecas esperan poder interpretar.</p>
+</div>
+<div class="faq-item">
+<h3>¿Un GUID es lo mismo que un UUID?</h3>
+<p>Funcionalmente sí - GUID (Identificador Único Global) es el término de Microsoft para el mismo concepto de identificador de 128 bits que un UUID, y ambos términos se usan indistintamente en la mayoría de los contextos, incluyendo la salida de este generador.</p>
 </div></div>
         </div>
       </main>

@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Agrupar combina la varianza de ambos grupos en una única estimación ponderada, que es el enfoque estándar cuando puedes asumir razonablemente que ambos grupos tienen varianza subyacente similar - usa más de tus datos que confiar solo en la varianza de un grupo."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué significa si t es negativo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un t negativo simplemente significa que la media del Grupo 1 es menor que la media del Grupo 2 - el signo refleja dirección, no fuerza. Solo la magnitud (|t|) importa para juzgar qué tan separados están los grupos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo se calculan los grados de libertad para esta prueba?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Para la prueba t de dos muestras agrupada, los grados de libertad = n1 + n2 − 2. Con 30 personas en cada grupo, eso es 30 + 30 − 2 = 58 grados de libertad."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si mis dos grupos tienen tamaños de muestra muy diferentes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La fórmula de desviación estándar agrupada ya pondera la varianza de cada grupo según su propio tamaño de muestra, así que n1 y n2 desiguales se manejan correctamente - solo ten en cuenta que si las varianzas de los grupos también son muy diferentes, una prueba t de varianza desigual (Welch) puede ser más apropiada que esta versión agrupada."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>¿Por qué esto usa la desviación estándar 'agrupada'?</h3>
 <p>Agrupar combina la varianza de ambos grupos en una única estimación ponderada, que es el enfoque estándar cuando puedes asumir razonablemente que ambos grupos tienen varianza subyacente similar - usa más de tus datos que confiar solo en la varianza de un grupo.</p>
+</div>
+<div class="faq-item">
+<h3>¿Qué significa si t es negativo?</h3>
+<p>Un t negativo simplemente significa que la media del Grupo 1 es menor que la media del Grupo 2 - el signo refleja dirección, no fuerza. Solo la magnitud (|t|) importa para juzgar qué tan separados están los grupos.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cómo se calculan los grados de libertad para esta prueba?</h3>
+<p>Para la prueba t de dos muestras agrupada, los grados de libertad = n1 + n2 − 2. Con 30 personas en cada grupo, eso es 30 + 30 − 2 = 58 grados de libertad.</p>
+</div>
+<div class="faq-item">
+<h3>¿Qué pasa si mis dos grupos tienen tamaños de muestra muy diferentes?</h3>
+<p>La fórmula de desviación estándar agrupada ya pondera la varianza de cada grupo según su propio tamaño de muestra, así que n1 y n2 desiguales se manejan correctamente - solo ten en cuenta que si las varianzas de los grupos también son muy diferentes, una prueba t de varianza desigual (Welch) puede ser más apropiada que esta versión agrupada.</p>
 </div></div>
         </div>
       </main>
