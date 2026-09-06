@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Dieses Tool löst speziell den SSS-Fall (Seite-Seite-Seite). Andere Fälle wie SWS (zwei Seiten und der eingeschlossene Winkel) oder WSW (zwei Winkel und die eingeschlossene Seite) benötigen andere Ausgangsformeln - der hier gezeigte Kosinussatz funktioniert direkt aus drei bekannten Seiten."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Was passiert, wenn die drei von mir eingegebenen Seiten kein reales Dreieck bilden können?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Der Rechner kann kein gültiges Ergebnis liefern - nach der Dreiecksungleichung muss die Summe zweier beliebiger Seiten größer sein als die dritte Seite (z. B. können 2, 3 und 10 kein Dreieck bilden, da 2+3 < 10). Wenn Ihre Seiten diese Prüfung nicht bestehen, überprüfen Sie Ihre Messungen noch einmal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie finde ich den größten Winkel eines Dreiecks aus seinen Seitenlängen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Der größte Winkel liegt immer gegenüber der längsten Seite - setzen Sie die längste Seite als 'c' in die umgestellte Kosinussatz-Formel ein, cos(C) = (a² + b² − c²)/(2ab), und nehmen Sie dann den Arkuskosinus des Ergebnisses."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ergeben die drei Winkel eines Dreiecks immer 180°?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, für jedes Dreieck in der üblichen flachen (euklidischen) Geometrie - das ist eine nützliche Kontrolle: nachdem dieser Rechner alle drei Winkel bestimmt hat, sollten sie sich zu 180° summieren (kleine Rundungsdifferenzen ausgenommen)."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Warum werden hier drei Seiten benötigt, und nicht Winkel oder andere Kombinationen?</h3>
 <p>Dieses Tool löst speziell den SSS-Fall (Seite-Seite-Seite). Andere Fälle wie SWS (zwei Seiten und der eingeschlossene Winkel) oder WSW (zwei Winkel und die eingeschlossene Seite) benötigen andere Ausgangsformeln - der hier gezeigte Kosinussatz funktioniert direkt aus drei bekannten Seiten.</p>
+</div>
+<div class="faq-item">
+<h3>Was passiert, wenn die drei von mir eingegebenen Seiten kein reales Dreieck bilden können?</h3>
+<p>Der Rechner kann kein gültiges Ergebnis liefern - nach der Dreiecksungleichung muss die Summe zweier beliebiger Seiten größer sein als die dritte Seite (z. B. können 2, 3 und 10 kein Dreieck bilden, da 2+3 < 10). Wenn Ihre Seiten diese Prüfung nicht bestehen, überprüfen Sie Ihre Messungen noch einmal.</p>
+</div>
+<div class="faq-item">
+<h3>Wie finde ich den größten Winkel eines Dreiecks aus seinen Seitenlängen?</h3>
+<p>Der größte Winkel liegt immer gegenüber der längsten Seite - setzen Sie die längste Seite als 'c' in die umgestellte Kosinussatz-Formel ein, cos(C) = (a² + b² − c²)/(2ab), und nehmen Sie dann den Arkuskosinus des Ergebnisses.</p>
+</div>
+<div class="faq-item">
+<h3>Ergeben die drei Winkel eines Dreiecks immer 180°?</h3>
+<p>Ja, für jedes Dreieck in der üblichen flachen (euklidischen) Geometrie - das ist eine nützliche Kontrolle: nachdem dieser Rechner alle drei Winkel bestimmt hat, sollten sie sich zu 180° summieren (kleine Rundungsdifferenzen ausgenommen).</p>
 </div></div>
         </div>
       </main>

@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Ja, als grobe Prüfung - ein niedriger RGB-Abstand (unter etwa 30) deutet auf Farben hin, die schwer zu unterscheiden sein könnten, nützlich, um potenzielle Marken- oder Barrierefreiheitskonflikte zu erkennen, bevor eine strengere wahrnehmungsbezogene Prüfung durchgeführt wird."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Spielt die Reihenfolge der Farben eine Rolle - ist der Vergleich von Farbe 1 zu Farbe 2 dasselbe wie von Farbe 2 zu Farbe 1?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein, das Ergebnis ist in beiden Fällen identisch. Der euklidische Abstand ist symmetrisch, sodass ein Tausch der Hex-Codes in den Feldern den berechneten Unterschied nicht verändert."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie groß ist der Unterschied zwischen #FF0000 (Rot) und #00FF00 (Grün) mit diesem Rechner?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Etwa 360,6. Rot ist (255,0,0) und Grün ist (0,255,0), sodass der Abstand √(255² + 255² + 0²) ≈ 360,6 beträgt - nahe am Maximum, was widerspiegelt, wie visuell unterscheidbar die beiden Farben sind."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ist das dasselbe wie ein „Farbkontrast-Checker“ für Barrierefreiheit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein - Kontrast-Checker für WCAG-Barrierefreiheit messen den Leuchtdichtekontrast (wichtig für die Lesbarkeit von Text), während dieses Tool den reinen RGB-Abstand zwischen zwei Farben misst. Ein Farbpaar kann einen großen RGB-Abstand haben und trotzdem einen Leuchtdichtekontrast-Test nicht bestehen, oder umgekehrt."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Kann ich dies verwenden, um zu prüfen, ob zwei Markenfarben zu ähnlich sind?</h3>
 <p>Ja, als grobe Prüfung - ein niedriger RGB-Abstand (unter etwa 30) deutet auf Farben hin, die schwer zu unterscheiden sein könnten, nützlich, um potenzielle Marken- oder Barrierefreiheitskonflikte zu erkennen, bevor eine strengere wahrnehmungsbezogene Prüfung durchgeführt wird.</p>
+</div>
+<div class="faq-item">
+<h3>Spielt die Reihenfolge der Farben eine Rolle - ist der Vergleich von Farbe 1 zu Farbe 2 dasselbe wie von Farbe 2 zu Farbe 1?</h3>
+<p>Nein, das Ergebnis ist in beiden Fällen identisch. Der euklidische Abstand ist symmetrisch, sodass ein Tausch der Hex-Codes in den Feldern den berechneten Unterschied nicht verändert.</p>
+</div>
+<div class="faq-item">
+<h3>Wie groß ist der Unterschied zwischen #FF0000 (Rot) und #00FF00 (Grün) mit diesem Rechner?</h3>
+<p>Etwa 360,6. Rot ist (255,0,0) und Grün ist (0,255,0), sodass der Abstand √(255² + 255² + 0²) ≈ 360,6 beträgt - nahe am Maximum, was widerspiegelt, wie visuell unterscheidbar die beiden Farben sind.</p>
+</div>
+<div class="faq-item">
+<h3>Ist das dasselbe wie ein „Farbkontrast-Checker“ für Barrierefreiheit?</h3>
+<p>Nein - Kontrast-Checker für WCAG-Barrierefreiheit messen den Leuchtdichtekontrast (wichtig für die Lesbarkeit von Text), während dieses Tool den reinen RGB-Abstand zwischen zwei Farben misst. Ein Farbpaar kann einen großen RGB-Abstand haben und trotzdem einen Leuchtdichtekontrast-Test nicht bestehen, oder umgekehrt.</p>
 </div></div>
         </div>
       </main>

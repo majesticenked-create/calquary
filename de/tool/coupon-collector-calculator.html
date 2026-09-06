@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Ja - diese Berechnung geht von einer gleichmäßigen Verteilung aus, bei der jedes der n Elemente bei jeder Ziehung eine gleiche Chance von 1/n hat. Wenn einige Elemente seltener sind als andere, wird die tatsächliche erwartete Anzahl von Ziehungen höher sein als diese Schätzung."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie ändert sich die erwartete Anzahl von Ziehungen mit wachsendem n?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sie wächst etwa mit n × ln(n), sodass eine Verdopplung von n die erwartete Anzahl von Ziehungen mehr als verdoppelt - für 100 Elemente liegt die erwartete Anzahl bei etwa 519, weit mehr als das Doppelte der etwa 14,7 Ziehungen, die für 6 Elemente nötig sind."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was ist die minimal mögliche Anzahl von Ziehungen, um alle n Elemente zu sammeln?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "n Ziehungen - das ist der theoretisch beste Fall, bei dem jede einzelne Ziehung zufällig ein neues, bisher nicht gesammeltes Element ist. Der hier berechnete Erwartungswert ist immer höher als dieses Minimum, da Kollisionen mit bereits gesammelten Elementen wahrscheinlich sind."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ist das dieselbe Mathematik, die zur Berechnung von Sammelkarten- oder Lootbox-Chancen verwendet wird?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja - das Sammelbilder-Problem ist das Standardmodell dafür, wie viele zufällige Ziehungen es dauert, ein vollständiges Set zusammenzubekommen, egal ob es sich um Preise aus Cerealienpackungen, Sammelkarten oder Ingame-Loot-Drops mit gleichen Dropraten handelt."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Wird angenommen, dass jedes Element gleich wahrscheinlich gezogen wird?</h3>
 <p>Ja - diese Berechnung geht von einer gleichmäßigen Verteilung aus, bei der jedes der n Elemente bei jeder Ziehung eine gleiche Chance von 1/n hat. Wenn einige Elemente seltener sind als andere, wird die tatsächliche erwartete Anzahl von Ziehungen höher sein als diese Schätzung.</p>
+</div>
+<div class="faq-item">
+<h3>Wie ändert sich die erwartete Anzahl von Ziehungen mit wachsendem n?</h3>
+<p>Sie wächst etwa mit n × ln(n), sodass eine Verdopplung von n die erwartete Anzahl von Ziehungen mehr als verdoppelt - für 100 Elemente liegt die erwartete Anzahl bei etwa 519, weit mehr als das Doppelte der etwa 14,7 Ziehungen, die für 6 Elemente nötig sind.</p>
+</div>
+<div class="faq-item">
+<h3>Was ist die minimal mögliche Anzahl von Ziehungen, um alle n Elemente zu sammeln?</h3>
+<p>n Ziehungen - das ist der theoretisch beste Fall, bei dem jede einzelne Ziehung zufällig ein neues, bisher nicht gesammeltes Element ist. Der hier berechnete Erwartungswert ist immer höher als dieses Minimum, da Kollisionen mit bereits gesammelten Elementen wahrscheinlich sind.</p>
+</div>
+<div class="faq-item">
+<h3>Ist das dieselbe Mathematik, die zur Berechnung von Sammelkarten- oder Lootbox-Chancen verwendet wird?</h3>
+<p>Ja - das Sammelbilder-Problem ist das Standardmodell dafür, wie viele zufällige Ziehungen es dauert, ein vollständiges Set zusammenzubekommen, egal ob es sich um Preise aus Cerealienpackungen, Sammelkarten oder Ingame-Loot-Drops mit gleichen Dropraten handelt.</p>
 </div></div>
         </div>
       </main>

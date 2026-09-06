@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Ja - neben der Stunden-und-Minuten-Aufschlüsselung zeigt dieser Rechner die Gesamtdauer als Dezimalzahl an (z. B. wird 7 Stunden 30 Minuten als 7,5 Stunden angezeigt), was für Zeiterfassungen und Abrechnungen nützlich ist, die dezimale Zeiteinträge erfordern."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie berechne ich die Dauer für eine Nachtschicht, zum Beispiel von 23 Uhr bis 7 Uhr?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Geben Sie 23:00 als Start und 07:00 als Ende ein - da die Endstunde zahlenmäßig kleiner ist, behandelt der Rechner dies als Überschreitung von Mitternacht und liefert 8 Stunden, die korrekte Dauer der Nachtschicht."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was passiert, wenn Start- und Endzeit identisch sind?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Der Rechner behandelt eine identische Start- und Endzeit als volle 24-Stunden-Spanne (die bis zurück zur selben Uhrzeit Mitternacht überschreitet) statt als null, da er immer vorwärts von Start bis Ende misst."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ist das dasselbe wie ein „Zeitspannenrechner“?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja - beide Begriffe beschreiben das Finden der Spanne zwischen zwei Uhrzeiten. Dieses Tool arbeitet speziell mit Stunden und Minuten auf einer 24-Stunden-Uhr statt mit vollständigen Kalenderdaten."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Kann ich die Dauer in Dezimalstunden statt Stunden und Minuten berechnen?</h3>
 <p>Ja - neben der Stunden-und-Minuten-Aufschlüsselung zeigt dieser Rechner die Gesamtdauer als Dezimalzahl an (z. B. wird 7 Stunden 30 Minuten als 7,5 Stunden angezeigt), was für Zeiterfassungen und Abrechnungen nützlich ist, die dezimale Zeiteinträge erfordern.</p>
+</div>
+<div class="faq-item">
+<h3>Wie berechne ich die Dauer für eine Nachtschicht, zum Beispiel von 23 Uhr bis 7 Uhr?</h3>
+<p>Geben Sie 23:00 als Start und 07:00 als Ende ein - da die Endstunde zahlenmäßig kleiner ist, behandelt der Rechner dies als Überschreitung von Mitternacht und liefert 8 Stunden, die korrekte Dauer der Nachtschicht.</p>
+</div>
+<div class="faq-item">
+<h3>Was passiert, wenn Start- und Endzeit identisch sind?</h3>
+<p>Der Rechner behandelt eine identische Start- und Endzeit als volle 24-Stunden-Spanne (die bis zurück zur selben Uhrzeit Mitternacht überschreitet) statt als null, da er immer vorwärts von Start bis Ende misst.</p>
+</div>
+<div class="faq-item">
+<h3>Ist das dasselbe wie ein „Zeitspannenrechner“?</h3>
+<p>Ja - beide Begriffe beschreiben das Finden der Spanne zwischen zwei Uhrzeiten. Dieses Tool arbeitet speziell mit Stunden und Minuten auf einer 24-Stunden-Uhr statt mit vollständigen Kalenderdaten.</p>
 </div></div>
         </div>
       </main>

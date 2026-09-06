@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Beide Formeln sind empirische Regressionen, die nur unter bestimmten Bedingungen validiert wurden - der Hitzeindex benötigt warme, feuchte Bedingungen (etwa 27°C+ mit 40%+ Luftfeuchtigkeit) und der Windchill benötigt kalte, windige Bedingungen (etwa 10°C oder darunter mit Wind von mindestens 5 km/h). Außerhalb dieser Bereiche können die Formeln irreführende Ergebnisse liefern, weshalb sie stattdessen ausgeblendet werden."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Bei welchem Taupunkt fühlt sich die Luft schwül an?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die meisten Menschen empfinden Feuchtigkeit ab einem Taupunkt von etwa 15-18°C als unangenehm, ab 21°C+ gilt es als drückend - unter 13°C fühlt es sich in der Regel unabhängig von der Lufttemperatur angenehm an."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Können Hitzeindex und Windchill gleichzeitig gelten?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein - sie schließen sich per Definition gegenseitig aus, da der Hitzeindex warme Bedingungen erfordert (etwa 27°C+) und Windchill kalte Bedingungen erfordert (etwa 10°C oder darunter). Außerhalb dieser Bereiche, oder in der Lücke dazwischen, zeigt dieser Rechner für den jeweils nicht zutreffenden Wert N/V an."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Warum benötigt der Rechner die Windgeschwindigkeit für den Windchill, aber nicht für den Hitzeindex?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die Windchill-Formel basiert speziell darauf, wie bewegte Luft der freiliegenden Haut Wärme entzieht, weshalb die Windgeschwindigkeit eine erforderliche Eingabe ist - der Hitzeindex modelliert stattdessen, wie Luftfeuchtigkeit die Schweißverdunstung beeinträchtigt, ein Vorgang, den die Windgeschwindigkeit in der standardmäßigen NWS-Hitzeindex-Formel, die dieser Rechner verwendet, nicht berücksichtigt."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Warum zeigt der Rechner manchmal Hitzeindex oder Windchill als N/A an?</h3>
 <p>Beide Formeln sind empirische Regressionen, die nur unter bestimmten Bedingungen validiert wurden - der Hitzeindex benötigt warme, feuchte Bedingungen (etwa 27°C+ mit 40%+ Luftfeuchtigkeit) und der Windchill benötigt kalte, windige Bedingungen (etwa 10°C oder darunter mit Wind von mindestens 5 km/h). Außerhalb dieser Bereiche können die Formeln irreführende Ergebnisse liefern, weshalb sie stattdessen ausgeblendet werden.</p>
+</div>
+<div class="faq-item">
+<h3>Bei welchem Taupunkt fühlt sich die Luft schwül an?</h3>
+<p>Die meisten Menschen empfinden Feuchtigkeit ab einem Taupunkt von etwa 15-18°C als unangenehm, ab 21°C+ gilt es als drückend - unter 13°C fühlt es sich in der Regel unabhängig von der Lufttemperatur angenehm an.</p>
+</div>
+<div class="faq-item">
+<h3>Können Hitzeindex und Windchill gleichzeitig gelten?</h3>
+<p>Nein - sie schließen sich per Definition gegenseitig aus, da der Hitzeindex warme Bedingungen erfordert (etwa 27°C+) und Windchill kalte Bedingungen erfordert (etwa 10°C oder darunter). Außerhalb dieser Bereiche, oder in der Lücke dazwischen, zeigt dieser Rechner für den jeweils nicht zutreffenden Wert N/V an.</p>
+</div>
+<div class="faq-item">
+<h3>Warum benötigt der Rechner die Windgeschwindigkeit für den Windchill, aber nicht für den Hitzeindex?</h3>
+<p>Die Windchill-Formel basiert speziell darauf, wie bewegte Luft der freiliegenden Haut Wärme entzieht, weshalb die Windgeschwindigkeit eine erforderliche Eingabe ist - der Hitzeindex modelliert stattdessen, wie Luftfeuchtigkeit die Schweißverdunstung beeinträchtigt, ein Vorgang, den die Windgeschwindigkeit in der standardmäßigen NWS-Hitzeindex-Formel, die dieser Rechner verwendet, nicht berücksichtigt.</p>
 </div></div>
         </div>
       </main>

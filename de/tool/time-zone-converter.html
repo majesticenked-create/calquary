@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Ja - ändern Sie die Datums- und Zeitfelder auf ein beliebiges Datum; das Tool wendet weiterhin die korrekten Sommerzeitregeln für welche Zonen und welches Datum Sie auch wählen an."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Was passiert, wenn ich eine Zeit umrechne, die in eine Sommerzeit-Umstellung fällt, wie die Nacht der Uhrumstellung?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Das Tool wendet den UTC-Versatz an, der für diese Zone genau zu diesem Datum und dieser Uhrzeit offiziell gilt, sodass eine Zeit, die nicht existiert (übersprungen beim Vorstellen) oder zweimal auftritt (wiederholt beim Zurückstellen), nach den standardmäßigen Zeitzonenregeln aufgelöst wird, statt mehrdeutig zu bleiben."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie rechne ich 14:00 Uhr US-Ostküstenzeit in indische Zeit um?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Stellen Sie Datum und Uhrzeit auf 14:00, wählen Sie US-Ostküste als „Von“-Zone und Indien (Kolkata) als „Nach“-Zone - das Ergebnis spiegelt den vollen Versatz wider (typischerweise 9,5 oder 10,5 Stunden, je nach US-Sommerzeit), einschließlich der halben Stunde, die IST hinzufügt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ist dies dasselbe wie ein „UTC-Zeitumrechner“?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, im Wesentlichen - die Auswahl von UTC als „Von“- oder „Nach“-Zone rechnet direkt zu oder von koordinierter Weltzeit um, was genau das ist, was die meisten „UTC-Umrechner“-Tools tun."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Kann ich eine Zeit aus der Vergangenheit oder Zukunft umrechnen, nicht nur jetzt?</h3>
 <p>Ja - ändern Sie die Datums- und Zeitfelder auf ein beliebiges Datum; das Tool wendet weiterhin die korrekten Sommerzeitregeln für welche Zonen und welches Datum Sie auch wählen an.</p>
+</div>
+<div class="faq-item">
+<h3>Was passiert, wenn ich eine Zeit umrechne, die in eine Sommerzeit-Umstellung fällt, wie die Nacht der Uhrumstellung?</h3>
+<p>Das Tool wendet den UTC-Versatz an, der für diese Zone genau zu diesem Datum und dieser Uhrzeit offiziell gilt, sodass eine Zeit, die nicht existiert (übersprungen beim Vorstellen) oder zweimal auftritt (wiederholt beim Zurückstellen), nach den standardmäßigen Zeitzonenregeln aufgelöst wird, statt mehrdeutig zu bleiben.</p>
+</div>
+<div class="faq-item">
+<h3>Wie rechne ich 14:00 Uhr US-Ostküstenzeit in indische Zeit um?</h3>
+<p>Stellen Sie Datum und Uhrzeit auf 14:00, wählen Sie US-Ostküste als „Von“-Zone und Indien (Kolkata) als „Nach“-Zone - das Ergebnis spiegelt den vollen Versatz wider (typischerweise 9,5 oder 10,5 Stunden, je nach US-Sommerzeit), einschließlich der halben Stunde, die IST hinzufügt.</p>
+</div>
+<div class="faq-item">
+<h3>Ist dies dasselbe wie ein „UTC-Zeitumrechner“?</h3>
+<p>Ja, im Wesentlichen - die Auswahl von UTC als „Von“- oder „Nach“-Zone rechnet direkt zu oder von koordinierter Weltzeit um, was genau das ist, was die meisten „UTC-Umrechner“-Tools tun.</p>
 </div></div>
         </div>
       </main>

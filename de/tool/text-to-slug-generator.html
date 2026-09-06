@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Das Entfernen gängiger Füllwörter ist optional, verbessert aber oft die Lesbarkeit und verkürzt die URL leicht ohne Bedeutungsverlust - „beste-pizza-in-berlin“ funktioniert genauso gut wie „die-beste-pizza-in-berlin“. Dieses Tool behält Ihre ursprüngliche Wortreihenfolge bei und lässt Sie entscheiden, was Sie behalten möchten."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Was passiert mit Satzzeichen wie Apostrophen oder Ausrufezeichen in meinem Text?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sie werden vollständig entfernt, da ein Slug nur Kleinbuchstaben, Zahlen und Bindestriche behält - aus „Joe's Pizza!\" wird „joes-pizza\", statt den Apostroph oder das Ausrufezeichen zu behalten."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Werden mehrere Leerzeichen oder wiederholte Satzzeichen zu einem einzigen Bindestrich zusammengefasst?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja - aufeinanderfolgende Leerzeichen oder Sonderzeichen werden zu einem einzigen Bindestrich zusammengefasst, statt mehrere Bindestriche hintereinander zu erzeugen, sodass aus „Hello   World!!\" „hello-world\" wird, nicht „hello---world\"."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ist „slugify\" dasselbe wie das, was dieses Tool tut?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja - „slugify\", „URL-Slug-Generator\" und „in Slug umwandeln\" beschreiben alle die Umwandlung von beliebigem Text in das kleingeschriebene, mit Bindestrichen versehene, URL-sichere Format, das dieses Tool erzeugt."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Sollten URL-Slugs Füllwörter wie „der“ und „und“ enthalten?</h3>
 <p>Das Entfernen gängiger Füllwörter ist optional, verbessert aber oft die Lesbarkeit und verkürzt die URL leicht ohne Bedeutungsverlust - „beste-pizza-in-berlin“ funktioniert genauso gut wie „die-beste-pizza-in-berlin“. Dieses Tool behält Ihre ursprüngliche Wortreihenfolge bei und lässt Sie entscheiden, was Sie behalten möchten.</p>
+</div>
+<div class="faq-item">
+<h3>Was passiert mit Satzzeichen wie Apostrophen oder Ausrufezeichen in meinem Text?</h3>
+<p>Sie werden vollständig entfernt, da ein Slug nur Kleinbuchstaben, Zahlen und Bindestriche behält - aus „Joe's Pizza!" wird „joes-pizza", statt den Apostroph oder das Ausrufezeichen zu behalten.</p>
+</div>
+<div class="faq-item">
+<h3>Werden mehrere Leerzeichen oder wiederholte Satzzeichen zu einem einzigen Bindestrich zusammengefasst?</h3>
+<p>Ja - aufeinanderfolgende Leerzeichen oder Sonderzeichen werden zu einem einzigen Bindestrich zusammengefasst, statt mehrere Bindestriche hintereinander zu erzeugen, sodass aus „Hello   World!!" „hello-world" wird, nicht „hello---world".</p>
+</div>
+<div class="faq-item">
+<h3>Ist „slugify" dasselbe wie das, was dieses Tool tut?</h3>
+<p>Ja - „slugify", „URL-Slug-Generator" und „in Slug umwandeln" beschreiben alle die Umwandlung von beliebigem Text in das kleingeschriebene, mit Bindestrichen versehene, URL-sichere Format, das dieses Tool erzeugt.</p>
 </div></div>
         </div>
       </main>

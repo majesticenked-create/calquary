@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Ja - der reguläre Notenrechner wandelt eine einzelne Punktzahl (wie einen Test) in einen Prozentsatz und eine Buchstabennote um. Dieses Tool kombiniert mehrere gewichtete Kategorien - Hausaufgaben, Tests, eine Abschlussprüfung usw. - zu einer gesamten Kursnote."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Was passiert, wenn ich für eine Kategorie, die ich noch nicht begonnen habe, eine Gewichtung von 0 eingebe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Diese Kategorie wird vollständig von der Berechnung ausgeschlossen (Multiplikation mit 0 trägt weder zum Zähler noch zum Nenner bei), sodass Ihre aktuelle Note nur die Kategorien mit einer Gewichtung ungleich null widerspiegelt - nützlich, um einen laufenden Durchschnitt im Verlauf des Semesters zu verfolgen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie gut müsste die Abschlussprüfung ausfallen, um insgesamt ein A zu erreichen, wenn ich Hausaufgaben- und Testnoten bereits kenne?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dieser Rechner löst die Gesamtnote aus allen drei Kategorien auf einmal, um also eine erforderliche Abschlussnote zu ermitteln, arbeiten Sie rückwärts: Ziel = (gewünschte Gesamtnote × 100 − Hausaufgaben×Gewichtung − Tests×Gewichtung) / Abschlussgewichtung. Beispiel: Für eine Gesamtnote von 90 mit bereits feststehenden 95×20 + 82×40 und einer Abschlussgewichtung von 40 %: (9000 − 1900 − 3280) / 40 = 95,5 %."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann ich dies für mehr als drei Notenkategorien verwenden, wie Quizze plus Hausaufgaben, Tests und eine Abschlussprüfung?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Diese Version verarbeitet genau drei Kategorien (Hausaufgaben, Tests, Abschluss) - bei einem Kurs mit zusätzlicher Quiz-Kategorie kombinieren Sie Quizze mit der bestehenden Kategorie ähnlicher Gewichtung, oder berechnen Sie zuerst einen Teildurchschnitt für Quizze und behandeln Sie diesen als einen der drei Eingabewerte."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Ist das anders als der reguläre Notenrechner?</h3>
 <p>Ja - der reguläre Notenrechner wandelt eine einzelne Punktzahl (wie einen Test) in einen Prozentsatz und eine Buchstabennote um. Dieses Tool kombiniert mehrere gewichtete Kategorien - Hausaufgaben, Tests, eine Abschlussprüfung usw. - zu einer gesamten Kursnote.</p>
+</div>
+<div class="faq-item">
+<h3>Was passiert, wenn ich für eine Kategorie, die ich noch nicht begonnen habe, eine Gewichtung von 0 eingebe?</h3>
+<p>Diese Kategorie wird vollständig von der Berechnung ausgeschlossen (Multiplikation mit 0 trägt weder zum Zähler noch zum Nenner bei), sodass Ihre aktuelle Note nur die Kategorien mit einer Gewichtung ungleich null widerspiegelt - nützlich, um einen laufenden Durchschnitt im Verlauf des Semesters zu verfolgen.</p>
+</div>
+<div class="faq-item">
+<h3>Wie gut müsste die Abschlussprüfung ausfallen, um insgesamt ein A zu erreichen, wenn ich Hausaufgaben- und Testnoten bereits kenne?</h3>
+<p>Dieser Rechner löst die Gesamtnote aus allen drei Kategorien auf einmal, um also eine erforderliche Abschlussnote zu ermitteln, arbeiten Sie rückwärts: Ziel = (gewünschte Gesamtnote × 100 − Hausaufgaben×Gewichtung − Tests×Gewichtung) / Abschlussgewichtung. Beispiel: Für eine Gesamtnote von 90 mit bereits feststehenden 95×20 + 82×40 und einer Abschlussgewichtung von 40 %: (9000 − 1900 − 3280) / 40 = 95,5 %.</p>
+</div>
+<div class="faq-item">
+<h3>Kann ich dies für mehr als drei Notenkategorien verwenden, wie Quizze plus Hausaufgaben, Tests und eine Abschlussprüfung?</h3>
+<p>Diese Version verarbeitet genau drei Kategorien (Hausaufgaben, Tests, Abschluss) - bei einem Kurs mit zusätzlicher Quiz-Kategorie kombinieren Sie Quizze mit der bestehenden Kategorie ähnlicher Gewichtung, oder berechnen Sie zuerst einen Teildurchschnitt für Quizze und behandeln Sie diesen als einen der drei Eingabewerte.</p>
 </div></div>
         </div>
       </main>

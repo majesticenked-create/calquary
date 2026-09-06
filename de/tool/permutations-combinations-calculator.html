@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Jede Kombination von r Elementen kann in r! verschiedenen Reihenfolgen angeordnet werden, und jede dieser Anordnungen zählt als separate Permutation - also Permutationen = Kombinationen × r!, oder gleichwertig Kombinationen = Permutationen ÷ r!."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Was ist 5 wähle 5 (5C5), und warum ergibt das 1?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1 - es gibt nur eine Möglichkeit, alle 5 Elemente aus einer Gruppe von 5 auszuwählen (Sie nehmen einfach alle), was die Formel bestätigt: 5!/(5!×0!) = 1, da 0! als 1 definiert ist."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie viele verschiedene 4-Buchstaben-Anordnungen können aus 6 verschiedenen Buchstaben gebildet werden?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "360 - mit nPr = n!/(n-r)! = 6!/(6-4)! = 720/2 = 360, da die Reihenfolge bei einer Anordnung (Permutation) eine Rolle spielt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Warum ist nCr immer derselbe Wert, egal ob man es als „n wähle r“ oder „n wähle (n-r)“ berechnet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die Auswahl von r Elementen zum Einschließen ist mathematisch identisch mit der Auswahl der (n-r) Elemente zum Ausschließen - zum Beispiel ist 10C3 = 10C7 = 120, da beide dieselbe Aufteilung von 10 Elementen in eine Gruppe von 3 und eine Gruppe von 7 beschreiben."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Warum ist nPr immer nCr multipliziert mit r!?</h3>
 <p>Jede Kombination von r Elementen kann in r! verschiedenen Reihenfolgen angeordnet werden, und jede dieser Anordnungen zählt als separate Permutation - also Permutationen = Kombinationen × r!, oder gleichwertig Kombinationen = Permutationen ÷ r!.</p>
+</div>
+<div class="faq-item">
+<h3>Was ist 5 wähle 5 (5C5), und warum ergibt das 1?</h3>
+<p>1 - es gibt nur eine Möglichkeit, alle 5 Elemente aus einer Gruppe von 5 auszuwählen (Sie nehmen einfach alle), was die Formel bestätigt: 5!/(5!×0!) = 1, da 0! als 1 definiert ist.</p>
+</div>
+<div class="faq-item">
+<h3>Wie viele verschiedene 4-Buchstaben-Anordnungen können aus 6 verschiedenen Buchstaben gebildet werden?</h3>
+<p>360 - mit nPr = n!/(n-r)! = 6!/(6-4)! = 720/2 = 360, da die Reihenfolge bei einer Anordnung (Permutation) eine Rolle spielt.</p>
+</div>
+<div class="faq-item">
+<h3>Warum ist nCr immer derselbe Wert, egal ob man es als „n wähle r“ oder „n wähle (n-r)“ berechnet?</h3>
+<p>Die Auswahl von r Elementen zum Einschließen ist mathematisch identisch mit der Auswahl der (n-r) Elemente zum Ausschließen - zum Beispiel ist 10C3 = 10C7 = 120, da beide dieselbe Aufteilung von 10 Elementen in eine Gruppe von 3 und eine Gruppe von 7 beschreiben.</p>
 </div></div>
         </div>
       </main>

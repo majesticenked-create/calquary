@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Pooling kombiniert die Varianz beider Gruppen zu einer einzigen gewichteten Schätzung, was der Standardansatz ist, wenn Sie vernünftigerweise annehmen können, dass beide Gruppen eine ähnliche zugrunde liegende Varianz haben - es nutzt mehr Ihrer Daten, als sich nur auf die Varianz einer Gruppe zu verlassen."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Was bedeutet es, wenn t negativ ist?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ein negatives t bedeutet lediglich, dass der Mittelwert von Gruppe 1 niedriger ist als der von Gruppe 2 - das Vorzeichen zeigt die Richtung, nicht die Stärke. Für die Beurteilung, wie weit die Gruppen auseinanderliegen, zählt nur der Betrag (|t|)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie werden die Freiheitsgrade für diesen Test berechnet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Für den gepoolten Zwei-Stichproben-t-Test gilt: Freiheitsgrade = n1 + n2 − 2. Bei 30 Personen in jeder Gruppe sind das 30 + 30 − 2 = 58 Freiheitsgrade."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was, wenn meine beiden Gruppen sehr unterschiedliche Stichprobengrößen haben?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die Formel für die gepoolte Standardabweichung gewichtet die Varianz jeder Gruppe bereits nach ihrer eigenen Stichprobengröße, sodass unterschiedliche n1 und n2 korrekt behandelt werden - beachten Sie jedoch, dass bei stark unterschiedlichen Gruppenvarianzen ein t-Test mit ungleichen Varianzen (Welch-Test) angemessener sein kann als diese gepoolte Version."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Warum wird hier eine „gepoolte“ Standardabweichung verwendet?</h3>
 <p>Pooling kombiniert die Varianz beider Gruppen zu einer einzigen gewichteten Schätzung, was der Standardansatz ist, wenn Sie vernünftigerweise annehmen können, dass beide Gruppen eine ähnliche zugrunde liegende Varianz haben - es nutzt mehr Ihrer Daten, als sich nur auf die Varianz einer Gruppe zu verlassen.</p>
+</div>
+<div class="faq-item">
+<h3>Was bedeutet es, wenn t negativ ist?</h3>
+<p>Ein negatives t bedeutet lediglich, dass der Mittelwert von Gruppe 1 niedriger ist als der von Gruppe 2 - das Vorzeichen zeigt die Richtung, nicht die Stärke. Für die Beurteilung, wie weit die Gruppen auseinanderliegen, zählt nur der Betrag (|t|).</p>
+</div>
+<div class="faq-item">
+<h3>Wie werden die Freiheitsgrade für diesen Test berechnet?</h3>
+<p>Für den gepoolten Zwei-Stichproben-t-Test gilt: Freiheitsgrade = n1 + n2 − 2. Bei 30 Personen in jeder Gruppe sind das 30 + 30 − 2 = 58 Freiheitsgrade.</p>
+</div>
+<div class="faq-item">
+<h3>Was, wenn meine beiden Gruppen sehr unterschiedliche Stichprobengrößen haben?</h3>
+<p>Die Formel für die gepoolte Standardabweichung gewichtet die Varianz jeder Gruppe bereits nach ihrer eigenen Stichprobengröße, sodass unterschiedliche n1 und n2 korrekt behandelt werden - beachten Sie jedoch, dass bei stark unterschiedlichen Gruppenvarianzen ein t-Test mit ungleichen Varianzen (Welch-Test) angemessener sein kann als diese gepoolte Version.</p>
 </div></div>
         </div>
       </main>

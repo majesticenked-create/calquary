@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Ein /32 ist eine einzelne Adresse ohne Platz für ein Netzwerk-/Broadcast-Paar, und ein /31 ist ein Sonderfall (definiert in RFC 3021), der für Punkt-zu-Punkt-Verbindungen verwendet wird, bei denen beide Adressen im 2-Adressen-Block als Host-Adressen nutzbar sind, da kein Broadcast benötigt wird."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Was ist die Subnetzmaske für ein /24-Netzwerk?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "255.255.255.0 - ein /24-Präfix bedeutet, dass die ersten 24 Bit alle 1 sind (drei volle Oktette mit 255), sodass das letzte Oktett vollständig aus 0 für Host-Adressen besteht."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie unterscheidet sich das vom IP-Subnetz-Rechner?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sie berechnen dieselben Ergebnisse (Netzwerkadresse, Broadcast-Adresse, nutzbarer Bereich), aber dieses Tool nimmt die Eingabe als einzelne kombinierte CIDR-Zeichenfolge wie „192.168.1.0/24\", während der IP-Subnetz-Rechner separate Felder für die IP-Adresse und die Präfixlänge verwendet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Welche Subnetzmaske entspricht einem /29-Netzwerk?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "255.255.255.248 - ein /29-Präfix verwendet 29 der 32 Bit für das Netzwerk, sodass nur 3 Host-Bit übrig bleiben (8 Adressen insgesamt, 6 nutzbar), was als Maske 255.255.255 gefolgt von 248 (11111000 in Binär) ergibt."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Warum gibt es keine nutzbaren Hosts für ein /31 oder /32?</h3>
 <p>Ein /32 ist eine einzelne Adresse ohne Platz für ein Netzwerk-/Broadcast-Paar, und ein /31 ist ein Sonderfall (definiert in RFC 3021), der für Punkt-zu-Punkt-Verbindungen verwendet wird, bei denen beide Adressen im 2-Adressen-Block als Host-Adressen nutzbar sind, da kein Broadcast benötigt wird.</p>
+</div>
+<div class="faq-item">
+<h3>Was ist die Subnetzmaske für ein /24-Netzwerk?</h3>
+<p>255.255.255.0 - ein /24-Präfix bedeutet, dass die ersten 24 Bit alle 1 sind (drei volle Oktette mit 255), sodass das letzte Oktett vollständig aus 0 für Host-Adressen besteht.</p>
+</div>
+<div class="faq-item">
+<h3>Wie unterscheidet sich das vom IP-Subnetz-Rechner?</h3>
+<p>Sie berechnen dieselben Ergebnisse (Netzwerkadresse, Broadcast-Adresse, nutzbarer Bereich), aber dieses Tool nimmt die Eingabe als einzelne kombinierte CIDR-Zeichenfolge wie „192.168.1.0/24", während der IP-Subnetz-Rechner separate Felder für die IP-Adresse und die Präfixlänge verwendet.</p>
+</div>
+<div class="faq-item">
+<h3>Welche Subnetzmaske entspricht einem /29-Netzwerk?</h3>
+<p>255.255.255.248 - ein /29-Präfix verwendet 29 der 32 Bit für das Netzwerk, sodass nur 3 Host-Bit übrig bleiben (8 Adressen insgesamt, 6 nutzbar), was als Maske 255.255.255 gefolgt von 248 (11111000 in Binär) ergibt.</p>
 </div></div>
         </div>
       </main>

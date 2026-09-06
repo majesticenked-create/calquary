@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Ein /32 hat genau eine Adresse insgesamt (verwendet, um einen einzelnen Host zu identifizieren, wie eine Loopback-Schnittstelle), und ein /31 hat nur 2 Adressen ohne Platz für separate Netzwerk-/Broadcast-Adressen - beide werden typischerweise für Punkt-zu-Punkt-Verbindungen verwendet, bei denen jede Adresse direkt nutzbar ist."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie ändert sich die CIDR-Präfixlänge, wenn ich von /24 zu /25 wechsle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Eine /25 teilt das, was ein /24-Netzwerk wäre, in zwei kleinere Subnetze auf, jedes mit 128 Adressen insgesamt (126 nutzbare Hosts) statt 256 (254 nutzbar) - der Wechsel zu einem längeren Präfix verkleinert immer den Adressraum pro Subnetz, während insgesamt mehr Subnetze entstehen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was ist der nutzbare Host-Bereich für 192.168.1.0/24?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "192.168.1.1 bis 192.168.1.254 - die Netzwerkadresse (192.168.1.0) und die Broadcast-Adresse (192.168.1.255) sind ausgeschlossen, sodass dazwischen 254 zuweisbare Host-Adressen bleiben."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ist „IP-Subnetz-Rechner\" dasselbe Tool wie ein „CIDR-Rechner\"?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, im Wesentlichen - beide nehmen eine IP-Adresse und eine Präfixlänge (oder kombinierte CIDR-Notation) und berechnen dieselbe Netzwerkadresse, Broadcast-Adresse und nutzbaren Host-Bereich; dieses Tool nimmt die IP und das Präfix als separate Felder statt kombinierter Schrägstrich-Notation."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Warum haben /31- und /32-Subnetze keinen nutzbaren Host-Bereich?</h3>
 <p>Ein /32 hat genau eine Adresse insgesamt (verwendet, um einen einzelnen Host zu identifizieren, wie eine Loopback-Schnittstelle), und ein /31 hat nur 2 Adressen ohne Platz für separate Netzwerk-/Broadcast-Adressen - beide werden typischerweise für Punkt-zu-Punkt-Verbindungen verwendet, bei denen jede Adresse direkt nutzbar ist.</p>
+</div>
+<div class="faq-item">
+<h3>Wie ändert sich die CIDR-Präfixlänge, wenn ich von /24 zu /25 wechsle?</h3>
+<p>Eine /25 teilt das, was ein /24-Netzwerk wäre, in zwei kleinere Subnetze auf, jedes mit 128 Adressen insgesamt (126 nutzbare Hosts) statt 256 (254 nutzbar) - der Wechsel zu einem längeren Präfix verkleinert immer den Adressraum pro Subnetz, während insgesamt mehr Subnetze entstehen.</p>
+</div>
+<div class="faq-item">
+<h3>Was ist der nutzbare Host-Bereich für 192.168.1.0/24?</h3>
+<p>192.168.1.1 bis 192.168.1.254 - die Netzwerkadresse (192.168.1.0) und die Broadcast-Adresse (192.168.1.255) sind ausgeschlossen, sodass dazwischen 254 zuweisbare Host-Adressen bleiben.</p>
+</div>
+<div class="faq-item">
+<h3>Ist „IP-Subnetz-Rechner" dasselbe Tool wie ein „CIDR-Rechner"?</h3>
+<p>Ja, im Wesentlichen - beide nehmen eine IP-Adresse und eine Präfixlänge (oder kombinierte CIDR-Notation) und berechnen dieselbe Netzwerkadresse, Broadcast-Adresse und nutzbaren Host-Bereich; dieses Tool nimmt die IP und das Präfix als separate Felder statt kombinierter Schrägstrich-Notation.</p>
 </div></div>
         </div>
       </main>

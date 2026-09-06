@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Wenn Ihre Daten nicht normalverteilt sind, Ausreißer enthalten, oder ordinal statt wirklich numerisch sind - der Mann-Whitney-Test verlässt sich nur auf die Rangordnung, was ihn robuster als den t-Test gegenüber nicht-normalen Verteilungen und Extremwerten macht."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Was bedeutet es, wenn die beiden Gruppen sich überhaupt nicht in ihren Rängen überschneiden?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Das ist das extremste mögliche Ergebnis - wenn jeder Wert einer Gruppe unter jedem Wert der anderen Gruppe rangiert, ist U für die niedriger rangierte Gruppe 0, was auf die stärkstmögliche Trennung zwischen den Gruppen hinweist."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie werden gleiche Werte (Bindungen) beim Rangieren behandelt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gebundene Werte erhalten den Durchschnitt der Ränge, die sie belegt hätten - zum Beispiel erhalten beide Werte, wenn zwei Werte um Platz 3 und 4 gebunden sind, einen Rang von 3,5, wodurch die Gesamtsumme der Ränge konsistent bleibt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ist der Mann-Whitney-U-Test dasselbe wie der Wilcoxon-Rangsummentest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja - sie sind mathematisch äquivalente Tests mit unterschiedlichen Namen; die Wilcoxon-Rangsummenstatistik kann direkt in die Mann-Whitney-U-Statistik umgerechnet werden, und beide vergleichen zwei unabhängige Gruppen anhand der Rangordnung."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Wann sollte ich dies anstelle eines t-Tests verwenden?</h3>
 <p>Wenn Ihre Daten nicht normalverteilt sind, Ausreißer enthalten, oder ordinal statt wirklich numerisch sind - der Mann-Whitney-Test verlässt sich nur auf die Rangordnung, was ihn robuster als den t-Test gegenüber nicht-normalen Verteilungen und Extremwerten macht.</p>
+</div>
+<div class="faq-item">
+<h3>Was bedeutet es, wenn die beiden Gruppen sich überhaupt nicht in ihren Rängen überschneiden?</h3>
+<p>Das ist das extremste mögliche Ergebnis - wenn jeder Wert einer Gruppe unter jedem Wert der anderen Gruppe rangiert, ist U für die niedriger rangierte Gruppe 0, was auf die stärkstmögliche Trennung zwischen den Gruppen hinweist.</p>
+</div>
+<div class="faq-item">
+<h3>Wie werden gleiche Werte (Bindungen) beim Rangieren behandelt?</h3>
+<p>Gebundene Werte erhalten den Durchschnitt der Ränge, die sie belegt hätten - zum Beispiel erhalten beide Werte, wenn zwei Werte um Platz 3 und 4 gebunden sind, einen Rang von 3,5, wodurch die Gesamtsumme der Ränge konsistent bleibt.</p>
+</div>
+<div class="faq-item">
+<h3>Ist der Mann-Whitney-U-Test dasselbe wie der Wilcoxon-Rangsummentest?</h3>
+<p>Ja - sie sind mathematisch äquivalente Tests mit unterschiedlichen Namen; die Wilcoxon-Rangsummenstatistik kann direkt in die Mann-Whitney-U-Statistik umgerechnet werden, und beide vergleichen zwei unabhängige Gruppen anhand der Rangordnung.</p>
 </div></div>
         </div>
       </main>

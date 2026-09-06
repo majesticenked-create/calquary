@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Die Wahrscheinlichkeit, k oder weniger Erfolge zu erhalten, nicht genau k - nützlich für Fragen wie „wie hoch ist die Wahrscheinlichkeit, höchstens 2 Herzen zu ziehen“, was die einzelnen Wahrscheinlichkeiten für 0, 1, und 2 Herzen summiert."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Was bedeuten N, K, n und k jeweils in einfachen Worten?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "N ist die Gesamtpopulation (z. B. ein volles Kartendeck mit 52 Karten), K ist die Anzahl der „Erfolgs“-Elemente in dieser Population (z. B. 13 Herzkarten), n ist die Anzahl der gezogenen Elemente (Ihre Stichprobengröße), und k ist die gewünschte Anzahl an Erfolgen unter den gezogenen Elementen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was passiert, wenn k größer als n oder K ist?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die Wahrscheinlichkeit ist 0 - Sie können nicht mehr Erfolge ziehen, als Sie tatsächlich gezogen haben (k > n), oder mehr Erfolge, als in der Population existieren (k > K), sodass diese Kombinationen mathematisch unmöglich sind."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie wird der Mittelwert einer hypergeometrischen Verteilung berechnet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mittelwert = n × (K/N) - für die 5-Karten-Hand aus einem 52-Karten-Deck mit 13 Herzkarten beträgt die erwartete Anzahl an Herzkarten 5 × (13/52) = 1,25, auch wenn man in einer einzelnen Hand keine gebrochene Anzahl von Herzkarten ziehen kann."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Was sagt mir die kumulative Wahrscheinlichkeit (P(X ≤ k))?</h3>
 <p>Die Wahrscheinlichkeit, k oder weniger Erfolge zu erhalten, nicht genau k - nützlich für Fragen wie „wie hoch ist die Wahrscheinlichkeit, höchstens 2 Herzen zu ziehen“, was die einzelnen Wahrscheinlichkeiten für 0, 1, und 2 Herzen summiert.</p>
+</div>
+<div class="faq-item">
+<h3>Was bedeuten N, K, n und k jeweils in einfachen Worten?</h3>
+<p>N ist die Gesamtpopulation (z. B. ein volles Kartendeck mit 52 Karten), K ist die Anzahl der „Erfolgs“-Elemente in dieser Population (z. B. 13 Herzkarten), n ist die Anzahl der gezogenen Elemente (Ihre Stichprobengröße), und k ist die gewünschte Anzahl an Erfolgen unter den gezogenen Elementen.</p>
+</div>
+<div class="faq-item">
+<h3>Was passiert, wenn k größer als n oder K ist?</h3>
+<p>Die Wahrscheinlichkeit ist 0 - Sie können nicht mehr Erfolge ziehen, als Sie tatsächlich gezogen haben (k > n), oder mehr Erfolge, als in der Population existieren (k > K), sodass diese Kombinationen mathematisch unmöglich sind.</p>
+</div>
+<div class="faq-item">
+<h3>Wie wird der Mittelwert einer hypergeometrischen Verteilung berechnet?</h3>
+<p>Mittelwert = n × (K/N) - für die 5-Karten-Hand aus einem 52-Karten-Deck mit 13 Herzkarten beträgt die erwartete Anzahl an Herzkarten 5 × (13/52) = 1,25, auch wenn man in einer einzelnen Hand keine gebrochene Anzahl von Herzkarten ziehen kann.</p>
 </div></div>
         </div>
       </main>

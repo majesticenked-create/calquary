@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Ja - all dies beschreibt das Finden der minimalen Stichprobengröße, die für eine Umfrage oder Studie bei einem gewählten Konfidenzniveau und einer Fehlermarge benötigt wird, was genau das ist, was dieser Rechner tut."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie stark ändert eine Verdopplung der Fehlermarge die benötigte Stichprobengröße?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sie senkt die benötigte Stichprobengröße auf etwa ein Viertel, da die Stichprobengröße umgekehrt proportional zum Quadrat der Fehlermarge ist (n ∝ 1/e²) - umgekehrt vervierfacht eine Halbierung der gewünschten Fehlermarge etwa die benötigte Stichprobe."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Welche Stichprobengröße wird für ein Konfidenzniveau von 95 % und eine Fehlermarge von 5 % bei unbekanntem Anteil benötigt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Etwa 385 - mit n = (1,96² × 0,5 × 0,5) / 0,05² = 0,9604 / 0,0025 ≈ 384,16, aufgerundet auf 385, die häufig zitierte Zahl für eine allgemeine Bevölkerungsumfrage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Warum fragt der Rechner nach einem geschätzten Antwortanteil, wenn ich noch keine Umfrageergebnisse habe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Der Anteil beeinflusst, wie viel Variabilität die Formel in den Antworten annimmt - wenn Sie eine grobe vorherige Schätzung haben (aus früherer Forschung oder einer Pilotstudie), kann deren Eingabe die benötigte Stichprobengröße im Vergleich zum konservativen Standardwert von 50 % senken, da p×(1−p) kleiner wird, je weiter p von 0,5 entfernt ist."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Ist „Stichprobengröße online berechnen“ oder „Rechner zur Bestimmung der Stichprobengröße“ dasselbe wie dieses Tool?</h3>
 <p>Ja - all dies beschreibt das Finden der minimalen Stichprobengröße, die für eine Umfrage oder Studie bei einem gewählten Konfidenzniveau und einer Fehlermarge benötigt wird, was genau das ist, was dieser Rechner tut.</p>
+</div>
+<div class="faq-item">
+<h3>Wie stark ändert eine Verdopplung der Fehlermarge die benötigte Stichprobengröße?</h3>
+<p>Sie senkt die benötigte Stichprobengröße auf etwa ein Viertel, da die Stichprobengröße umgekehrt proportional zum Quadrat der Fehlermarge ist (n ∝ 1/e²) - umgekehrt vervierfacht eine Halbierung der gewünschten Fehlermarge etwa die benötigte Stichprobe.</p>
+</div>
+<div class="faq-item">
+<h3>Welche Stichprobengröße wird für ein Konfidenzniveau von 95 % und eine Fehlermarge von 5 % bei unbekanntem Anteil benötigt?</h3>
+<p>Etwa 385 - mit n = (1,96² × 0,5 × 0,5) / 0,05² = 0,9604 / 0,0025 ≈ 384,16, aufgerundet auf 385, die häufig zitierte Zahl für eine allgemeine Bevölkerungsumfrage.</p>
+</div>
+<div class="faq-item">
+<h3>Warum fragt der Rechner nach einem geschätzten Antwortanteil, wenn ich noch keine Umfrageergebnisse habe?</h3>
+<p>Der Anteil beeinflusst, wie viel Variabilität die Formel in den Antworten annimmt - wenn Sie eine grobe vorherige Schätzung haben (aus früherer Forschung oder einer Pilotstudie), kann deren Eingabe die benötigte Stichprobengröße im Vergleich zum konservativen Standardwert von 50 % senken, da p×(1−p) kleiner wird, je weiter p von 0,5 entfernt ist.</p>
 </div></div>
         </div>
       </main>

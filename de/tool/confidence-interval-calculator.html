@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Verwenden Sie einen t-Wert (aus der t-Verteilung) für kleinere Stichproben, typischerweise unter 30, da er die zusätzliche Unsicherheit bei einer Standardabweichungsschätzung mit kleiner Stichprobe berücksichtigt. Dieser Rechner verwendet die z-Verteilung, die eine vernünftige Näherung ist, sobald Ihre Stichprobengröße 30 oder mehr beträgt."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie berechne ich ein 99%-Konfidenzintervall statt eines 95%-Intervalls?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wählen Sie 99 % als Konfidenzniveau, was einen größeren z-Wert verwendet (etwa 2,576 statt 1,96) - das resultierende Intervall ist für dieselben Daten breiter als ein 95%-Intervall, da eine höhere Konfidenz eine größere Fehlermarge erfordert."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie lautet das Konfidenzintervall für einen Stichprobenmittelwert von 50, eine Standardabweichung von 10 und n=100 bei 95 % Konfidenz?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fehlermarge = 1,96 × (10/√100) = 1,96 × 1 = 1,96. Das Intervall ist 50 ± 1,96, also etwa 48,04 bis 51,96."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Bedeutet ein breiteres Konfidenzintervall, dass die Schätzung weniger genau ist?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es bedeutet, dass mehr Unsicherheit über die genaue Lage des wahren Populationsmittelwerts besteht, oft aufgrund einer kleineren Stichprobengröße, höherer Variabilität in den Daten oder eines höher gewählten Konfidenzniveaus - der Stichprobenmittelwert selbst ist dabei nicht falsch, nur die Spanne plausibler wahrer Werte ist breiter."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Sollte ich einen z-Wert oder t-Wert für mein Konfidenzintervall verwenden?</h3>
 <p>Verwenden Sie einen t-Wert (aus der t-Verteilung) für kleinere Stichproben, typischerweise unter 30, da er die zusätzliche Unsicherheit bei einer Standardabweichungsschätzung mit kleiner Stichprobe berücksichtigt. Dieser Rechner verwendet die z-Verteilung, die eine vernünftige Näherung ist, sobald Ihre Stichprobengröße 30 oder mehr beträgt.</p>
+</div>
+<div class="faq-item">
+<h3>Wie berechne ich ein 99%-Konfidenzintervall statt eines 95%-Intervalls?</h3>
+<p>Wählen Sie 99 % als Konfidenzniveau, was einen größeren z-Wert verwendet (etwa 2,576 statt 1,96) - das resultierende Intervall ist für dieselben Daten breiter als ein 95%-Intervall, da eine höhere Konfidenz eine größere Fehlermarge erfordert.</p>
+</div>
+<div class="faq-item">
+<h3>Wie lautet das Konfidenzintervall für einen Stichprobenmittelwert von 50, eine Standardabweichung von 10 und n=100 bei 95 % Konfidenz?</h3>
+<p>Fehlermarge = 1,96 × (10/√100) = 1,96 × 1 = 1,96. Das Intervall ist 50 ± 1,96, also etwa 48,04 bis 51,96.</p>
+</div>
+<div class="faq-item">
+<h3>Bedeutet ein breiteres Konfidenzintervall, dass die Schätzung weniger genau ist?</h3>
+<p>Es bedeutet, dass mehr Unsicherheit über die genaue Lage des wahren Populationsmittelwerts besteht, oft aufgrund einer kleineren Stichprobengröße, höherer Variabilität in den Daten oder eines höher gewählten Konfidenzniveaus - der Stichprobenmittelwert selbst ist dabei nicht falsch, nur die Spanne plausibler wahrer Werte ist breiter.</p>
 </div></div>
         </div>
       </main>

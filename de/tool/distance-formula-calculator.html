@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Bilden Sie den Durchschnitt der x-Koordinaten und den Durchschnitt der y-Koordinaten getrennt: Mittelpunkt = ((x₁+x₂)/2, (y₁+y₂)/2). Für (1,2) und (4,6) ist der Mittelpunkt (2,5, 4)."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann die Abstandsformel ein negatives Ergebnis liefern?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein - der Abstand ist immer null oder positiv, da die Formel die Differenzen quadriert (wodurch jedes negative Vorzeichen entfällt), bevor eine Quadratwurzel gezogen wird, die konventionell die nicht-negative Wurzel zurückgibt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Funktioniert das auch für Punkte im 3D-Raum?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dieser Rechner behandelt nur 2D-Koordinatenpaare, aber dieselbe Idee lässt sich mit einem z-Term auf 3D erweitern: d = √((x₂-x₁)² + (y₂-y₁)² + (z₂-z₁)²)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was ist, wenn beide Punkte identisch sind?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Der Abstand ist 0 - wenn (x1,y1) gleich (x2,y2) ist, sind sowohl Δx als auch Δy 0, also d = √(0² + 0²) = 0, was korrekt anzeigt, dass zwischen den Punkten kein Abstand besteht."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Wie finde ich den Mittelpunkt zwischen zwei Punkten?</h3>
 <p>Bilden Sie den Durchschnitt der x-Koordinaten und den Durchschnitt der y-Koordinaten getrennt: Mittelpunkt = ((x₁+x₂)/2, (y₁+y₂)/2). Für (1,2) und (4,6) ist der Mittelpunkt (2,5, 4).</p>
+</div>
+<div class="faq-item">
+<h3>Kann die Abstandsformel ein negatives Ergebnis liefern?</h3>
+<p>Nein - der Abstand ist immer null oder positiv, da die Formel die Differenzen quadriert (wodurch jedes negative Vorzeichen entfällt), bevor eine Quadratwurzel gezogen wird, die konventionell die nicht-negative Wurzel zurückgibt.</p>
+</div>
+<div class="faq-item">
+<h3>Funktioniert das auch für Punkte im 3D-Raum?</h3>
+<p>Dieser Rechner behandelt nur 2D-Koordinatenpaare, aber dieselbe Idee lässt sich mit einem z-Term auf 3D erweitern: d = √((x₂-x₁)² + (y₂-y₁)² + (z₂-z₁)²).</p>
+</div>
+<div class="faq-item">
+<h3>Was ist, wenn beide Punkte identisch sind?</h3>
+<p>Der Abstand ist 0 - wenn (x1,y1) gleich (x2,y2) ist, sind sowohl Δx als auch Δy 0, also d = √(0² + 0²) = 0, was korrekt anzeigt, dass zwischen den Punkten kein Abstand besteht.</p>
 </div></div>
         </div>
       </main>

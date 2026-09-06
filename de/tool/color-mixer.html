@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Nein - geben Sie Farben als 6-stellige Hex-Codes ein (wie #FF0000 für Rot), da dies das präzise, eindeutige Format ist, das dieser Rechner parst. Die meisten Design-Tools und Browser können Ihnen den Hex-Code für jede visuell ausgewählte Farbe anzeigen."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Welche Farbe entsteht, wenn man reines Rot und reines Blau im Verhältnis 50/50 mischt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ein mittleres Lila/Magenta, etwa #7F007F - da Rot (255,0,0) und Blau (0,0,255) sind, ergibt der Durchschnitt jedes Kanals (127,0,127), den RGB-Mittelpunkt zwischen beiden."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Warum ergibt das Mischen von Rot und Grün nicht Braun oder Gelb wie bei Farbe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Weil dieses Tool Licht mischt (additives RGB), nicht Pigmente (subtraktive Mischung). Additiv ergeben Rot (255,0,0) und Grün (0,255,0) bei einer 50/50-Mischung im Durchschnitt (127,127,0), einen gelb-olivfarbenen Ton - ähnlich wie Gelb, aber durch einen völlig anderen Mechanismus als das Mischen von Farbpigmenten, weshalb Intuitionen aus dem Malen hier nicht immer übertragbar sind."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was passiert, wenn ich das Verhältnis auf 0 % oder 100 % setze?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bei 0 % Gewichtung der ersten Farbe ist das Ergebnis einfach die unveränderte zweite Farbe; bei 100 % ist es die unveränderte erste Farbe - das Verhältnis wirkt sich nur auf Werte zwischen diesen beiden Extremen aus."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Kann ich Farbnamen anstelle von Hex-Codes verwenden?</h3>
 <p>Nein - geben Sie Farben als 6-stellige Hex-Codes ein (wie #FF0000 für Rot), da dies das präzise, eindeutige Format ist, das dieser Rechner parst. Die meisten Design-Tools und Browser können Ihnen den Hex-Code für jede visuell ausgewählte Farbe anzeigen.</p>
+</div>
+<div class="faq-item">
+<h3>Welche Farbe entsteht, wenn man reines Rot und reines Blau im Verhältnis 50/50 mischt?</h3>
+<p>Ein mittleres Lila/Magenta, etwa #7F007F - da Rot (255,0,0) und Blau (0,0,255) sind, ergibt der Durchschnitt jedes Kanals (127,0,127), den RGB-Mittelpunkt zwischen beiden.</p>
+</div>
+<div class="faq-item">
+<h3>Warum ergibt das Mischen von Rot und Grün nicht Braun oder Gelb wie bei Farbe?</h3>
+<p>Weil dieses Tool Licht mischt (additives RGB), nicht Pigmente (subtraktive Mischung). Additiv ergeben Rot (255,0,0) und Grün (0,255,0) bei einer 50/50-Mischung im Durchschnitt (127,127,0), einen gelb-olivfarbenen Ton - ähnlich wie Gelb, aber durch einen völlig anderen Mechanismus als das Mischen von Farbpigmenten, weshalb Intuitionen aus dem Malen hier nicht immer übertragbar sind.</p>
+</div>
+<div class="faq-item">
+<h3>Was passiert, wenn ich das Verhältnis auf 0 % oder 100 % setze?</h3>
+<p>Bei 0 % Gewichtung der ersten Farbe ist das Ergebnis einfach die unveränderte zweite Farbe; bei 100 % ist es die unveränderte erste Farbe - das Verhältnis wirkt sich nur auf Werte zwischen diesen beiden Extremen aus.</p>
 </div></div>
         </div>
       </main>

@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Nein - dieser Rechner geht davon aus, dass sowohl Säure als auch Base stark sind (vollständig dissoziieren), was die einfache Überschuss-Ionen-Mathematik gültig macht. Schwache Säure/Base-Titrationen benötigen Gleichgewichtsberechnungen (Ka/Kb) und ergeben am Äquivalenzpunkt einen anderen, nicht-7-pH-Wert aufgrund der in Lösung verbleibenden konjugierten Base oder Säure."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Was passiert mit dem pH-Wert genau am Äquivalenzpunkt, wenn die eingegebenen Volumina in Mol exakt übereinstimmen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Der Rechner liefert dann pH 7, da sich gleiche Mol einer starken Säure und einer starken Base vollständig neutralisieren - wenn Ihre Säure- und Basenvolumina/-konzentrationen genau gleiche Molzahlen ergeben, haben Sie den Äquivalenzpunkt erreicht."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie hoch ist der pH-Wert nach Zugabe von 40 mL einer 0,1 mol/L Base zu 50 mL einer 0,1 mol/L Säure?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Etwa 1,95 - Mol Säure = 0,050 L × 0,1 = 0,005 mol, Mol Base = 0,040 L × 0,1 = 0,004 mol, überschüssiges H⁺ = 0,001 mol bei einem Gesamtvolumen von 0,090 L, was [H⁺] ≈ 0,0111 mol/L ergibt, also pH = −log₁₀(0,0111) ≈ 1,95."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Warum spielt das Gesamtvolumen bei der pH-Berechnung eine Rolle, nicht nur die übrig gebliebenen Mole?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Der pH-Wert hängt von der Konzentration ab, nicht nur von der reinen Menge an überschüssigem Ion - dieselben übrig gebliebenen 0,001 mol H⁺ ergeben einen anderen pH-Wert, je nachdem, ob sie in 50 mL oder 500 mL verdünnt werden, daher teilt der Rechner an jedem Punkt durch das kombinierte Säure- plus Basenvolumen."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Funktioniert dies für schwache Säuren oder schwache Basen?</h3>
 <p>Nein - dieser Rechner geht davon aus, dass sowohl Säure als auch Base stark sind (vollständig dissoziieren), was die einfache Überschuss-Ionen-Mathematik gültig macht. Schwache Säure/Base-Titrationen benötigen Gleichgewichtsberechnungen (Ka/Kb) und ergeben am Äquivalenzpunkt einen anderen, nicht-7-pH-Wert aufgrund der in Lösung verbleibenden konjugierten Base oder Säure.</p>
+</div>
+<div class="faq-item">
+<h3>Was passiert mit dem pH-Wert genau am Äquivalenzpunkt, wenn die eingegebenen Volumina in Mol exakt übereinstimmen?</h3>
+<p>Der Rechner liefert dann pH 7, da sich gleiche Mol einer starken Säure und einer starken Base vollständig neutralisieren - wenn Ihre Säure- und Basenvolumina/-konzentrationen genau gleiche Molzahlen ergeben, haben Sie den Äquivalenzpunkt erreicht.</p>
+</div>
+<div class="faq-item">
+<h3>Wie hoch ist der pH-Wert nach Zugabe von 40 mL einer 0,1 mol/L Base zu 50 mL einer 0,1 mol/L Säure?</h3>
+<p>Etwa 1,95 - Mol Säure = 0,050 L × 0,1 = 0,005 mol, Mol Base = 0,040 L × 0,1 = 0,004 mol, überschüssiges H⁺ = 0,001 mol bei einem Gesamtvolumen von 0,090 L, was [H⁺] ≈ 0,0111 mol/L ergibt, also pH = −log₁₀(0,0111) ≈ 1,95.</p>
+</div>
+<div class="faq-item">
+<h3>Warum spielt das Gesamtvolumen bei der pH-Berechnung eine Rolle, nicht nur die übrig gebliebenen Mole?</h3>
+<p>Der pH-Wert hängt von der Konzentration ab, nicht nur von der reinen Menge an überschüssigem Ion - dieselben übrig gebliebenen 0,001 mol H⁺ ergeben einen anderen pH-Wert, je nachdem, ob sie in 50 mL oder 500 mL verdünnt werden, daher teilt der Rechner an jedem Punkt durch das kombinierte Säure- plus Basenvolumen.</p>
 </div></div>
         </div>
       </main>

@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Summe = a₁(1 − rⁿ) / (1 − r) für r ≠ 1. Für a₁=2, r=3, n=6: 2×(1−729)/(1−3) = 728. Wenn r = 1 ist, ist jedes Glied gleich a₁, sodass die Summe einfach a₁ × n ist."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Was passiert mit einer geometrischen Reihe, wenn der Quotient r zwischen -1 und 1 liegt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Jedes Glied schrumpft gegen null, und während dieser Rechner die Summe einer endlichen Anzahl von Gliedern n berechnet, würde eine unendliche geometrische Reihe mit |r| < 1 gegen eine endliche Gesamtsumme von a1 / (1 − r) konvergieren."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Können die gemeinsame Differenz oder der gemeinsame Quotient negativ sein?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja - eine negative gemeinsame Differenz erzeugt eine fallende arithmetische Folge (wie 10, 7, 4, 1...), und ein negativer gemeinsamer Quotient erzeugt eine geometrische Folge, die bei jedem Glied das Vorzeichen wechselt (wie 2, -6, 18, -54...)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ist eine Fibonacci-Folge dasselbe wie eine arithmetische oder geometrische Folge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein - eine Fibonacci-Folge addiert die beiden vorherigen Glieder, um das nächste zu erhalten (1, 1, 2, 3, 5, 8...), was weder eine konstante Differenz (arithmetisch) noch ein konstantes Verhältnis (geometrisch) ist, sodass dieser Rechner sie nicht abdeckt."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Was ist die Formel für die Summe einer geometrischen Folge?</h3>
 <p>Summe = a₁(1 − rⁿ) / (1 − r) für r ≠ 1. Für a₁=2, r=3, n=6: 2×(1−729)/(1−3) = 728. Wenn r = 1 ist, ist jedes Glied gleich a₁, sodass die Summe einfach a₁ × n ist.</p>
+</div>
+<div class="faq-item">
+<h3>Was passiert mit einer geometrischen Reihe, wenn der Quotient r zwischen -1 und 1 liegt?</h3>
+<p>Jedes Glied schrumpft gegen null, und während dieser Rechner die Summe einer endlichen Anzahl von Gliedern n berechnet, würde eine unendliche geometrische Reihe mit |r| < 1 gegen eine endliche Gesamtsumme von a1 / (1 − r) konvergieren.</p>
+</div>
+<div class="faq-item">
+<h3>Können die gemeinsame Differenz oder der gemeinsame Quotient negativ sein?</h3>
+<p>Ja - eine negative gemeinsame Differenz erzeugt eine fallende arithmetische Folge (wie 10, 7, 4, 1...), und ein negativer gemeinsamer Quotient erzeugt eine geometrische Folge, die bei jedem Glied das Vorzeichen wechselt (wie 2, -6, 18, -54...).</p>
+</div>
+<div class="faq-item">
+<h3>Ist eine Fibonacci-Folge dasselbe wie eine arithmetische oder geometrische Folge?</h3>
+<p>Nein - eine Fibonacci-Folge addiert die beiden vorherigen Glieder, um das nächste zu erhalten (1, 1, 2, 3, 5, 8...), was weder eine konstante Differenz (arithmetisch) noch ein konstantes Verhältnis (geometrisch) ist, sodass dieser Rechner sie nicht abdeckt.</p>
 </div></div>
         </div>
       </main>

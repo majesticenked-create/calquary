@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Ein Element pro Zeile, formatiert als „Name, Gewicht“ - zum Beispiel „Bronze, 6“. Der letzte durch Komma getrennte Wert in jeder Zeile wird als Gewicht gelesen, und alles davor ist der Elementname."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Was passiert, wenn ich einem Element ein Gewicht von 0 gebe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es ist in der Liste enthalten, kann aber nie ausgewählt werden - ein Gewicht von 0 bedeutet 0 % Anteil an der Gesamtsumme, sodass der Picker es effektiv überspringt, während es weiterhin als Option angezeigt wird."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wenn ich drei Elemente habe, die jeweils mit 1 gewichtet sind, wie hoch sind die Chancen für jedes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Genau 1/3 (etwa 33,3 %) für jedes, da die Gewichte gleich sind - die Summe ist 3, und der Anteil jedes Elements ist 1 geteilt durch 3, unabhängig davon, wie hoch die tatsächlichen Gewichtszahlen sind."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie unterscheidet sich das von einem „Zufallsnamen-Generator“ oder „Glücksrad“?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ein einfacher Zufallsnamen-Generator oder ein Glücksrad gibt jedem Eintrag die gleiche Chance. Dieses Tool ist für Fälle gedacht, in denen Ergebnisse nicht gleich wahrscheinlich sein sollen - wie bei einer Beute-Tabelle, bei der seltene Gegenstände seltener vorkommen sollen als gewöhnliche."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>In welchem Format muss meine Liste sein?</h3>
 <p>Ein Element pro Zeile, formatiert als „Name, Gewicht“ - zum Beispiel „Bronze, 6“. Der letzte durch Komma getrennte Wert in jeder Zeile wird als Gewicht gelesen, und alles davor ist der Elementname.</p>
+</div>
+<div class="faq-item">
+<h3>Was passiert, wenn ich einem Element ein Gewicht von 0 gebe?</h3>
+<p>Es ist in der Liste enthalten, kann aber nie ausgewählt werden - ein Gewicht von 0 bedeutet 0 % Anteil an der Gesamtsumme, sodass der Picker es effektiv überspringt, während es weiterhin als Option angezeigt wird.</p>
+</div>
+<div class="faq-item">
+<h3>Wenn ich drei Elemente habe, die jeweils mit 1 gewichtet sind, wie hoch sind die Chancen für jedes?</h3>
+<p>Genau 1/3 (etwa 33,3 %) für jedes, da die Gewichte gleich sind - die Summe ist 3, und der Anteil jedes Elements ist 1 geteilt durch 3, unabhängig davon, wie hoch die tatsächlichen Gewichtszahlen sind.</p>
+</div>
+<div class="faq-item">
+<h3>Wie unterscheidet sich das von einem „Zufallsnamen-Generator“ oder „Glücksrad“?</h3>
+<p>Ein einfacher Zufallsnamen-Generator oder ein Glücksrad gibt jedem Eintrag die gleiche Chance. Dieses Tool ist für Fälle gedacht, in denen Ergebnisse nicht gleich wahrscheinlich sein sollen - wie bei einer Beute-Tabelle, bei der seltene Gegenstände seltener vorkommen sollen als gewöhnliche.</p>
 </div></div>
         </div>
       </main>

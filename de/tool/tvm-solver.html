@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Geben Sie den Zinssatz pro Periode ein, nicht den Jahreszins - wenn Sie monatlich verzinsen und einen Jahreszins von 6 % haben, geben Sie 0,5 (6 ÷ 12) als Zinssatz pro Periode ein und stellen Sie die Perioden entsprechend in Monaten ein."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann dieser Rechner stattdessen die Anzahl der Perioden oder den Zinssatz lösen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Diese Version löst nach Barwert, Endwert oder Zahlung bei gegebenen anderen Eingaben - sie ist nicht darauf ausgelegt, nach Zinssatz oder Anzahl der Perioden zu lösen, was typischerweise iterative (Trial-and-Error-)Methoden statt einer direkten Formel erfordert."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was passiert, wenn ich PV auf null lasse und nach FV löse?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bei PV = 0 stammt der Endwert vollständig aus dem sich über die Zeit verzinsenden Zahlungsstrom - beispielsweise ergibt eine Zahlung von -200 pro Monat bei einem monatlichen Zinssatz von 0,5 % über 120 Perioden mit PV von 0 einen FV von rund 32.700 $, was einer standardmäßigen Sparrentenberechnung entspricht."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ist das dasselbe wie ein „Rentenrechner“?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sehr ähnlich - ein Rentenrechner löst normalerweise nach einem dieser gleichen Werte (Endwert, Zahlung oder Barwert) für einen Strom gleicher periodischer Zahlungen, was genau die Berechnung ist, die dieser TVM-Löser durchführt."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Welchen Zinssatz soll ich eingeben?</h3>
 <p>Geben Sie den Zinssatz pro Periode ein, nicht den Jahreszins - wenn Sie monatlich verzinsen und einen Jahreszins von 6 % haben, geben Sie 0,5 (6 ÷ 12) als Zinssatz pro Periode ein und stellen Sie die Perioden entsprechend in Monaten ein.</p>
+</div>
+<div class="faq-item">
+<h3>Kann dieser Rechner stattdessen die Anzahl der Perioden oder den Zinssatz lösen?</h3>
+<p>Diese Version löst nach Barwert, Endwert oder Zahlung bei gegebenen anderen Eingaben - sie ist nicht darauf ausgelegt, nach Zinssatz oder Anzahl der Perioden zu lösen, was typischerweise iterative (Trial-and-Error-)Methoden statt einer direkten Formel erfordert.</p>
+</div>
+<div class="faq-item">
+<h3>Was passiert, wenn ich PV auf null lasse und nach FV löse?</h3>
+<p>Bei PV = 0 stammt der Endwert vollständig aus dem sich über die Zeit verzinsenden Zahlungsstrom - beispielsweise ergibt eine Zahlung von -200 pro Monat bei einem monatlichen Zinssatz von 0,5 % über 120 Perioden mit PV von 0 einen FV von rund 32.700 $, was einer standardmäßigen Sparrentenberechnung entspricht.</p>
+</div>
+<div class="faq-item">
+<h3>Ist das dasselbe wie ein „Rentenrechner“?</h3>
+<p>Sehr ähnlich - ein Rentenrechner löst normalerweise nach einem dieser gleichen Werte (Endwert, Zahlung oder Barwert) für einen Strom gleicher periodischer Zahlungen, was genau die Berechnung ist, die dieser TVM-Löser durchführt.</p>
 </div></div>
         </div>
       </main>

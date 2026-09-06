@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Innerhalb etwa 0,5 %, da die Erde als perfekte Kugel behandelt wird und nicht als ihre tatsächliche, leicht abgeflachte Ellipsoidform - nah genug für praktisch alle praktischen Entfernungsschätzungen, obwohl die offizielle Luftfahrtnavigation präzisere ellipsoidische Modelle verwendet."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Warum ist die Großkreisentfernung nicht dasselbe wie eine gerade Linie auf einer flachen Karte?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Eine flache Karte verzerrt Entfernungen, weil sie eine gekrümmte 3D-Oberfläche auf eine 2D-Ebene projiziert - der wahre kürzeste Weg zwischen zwei Punkten auf einer Kugel folgt einem Großkreis (Teil eines Kreises, dessen Mittelpunkt der Erdmittelpunkt ist), der auf einer gewöhnlichen Kartenprojektion meist gekrümmt, nicht gerade, dargestellt wird."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Muss ich die genaue Höhe oder Seehöhe jedes Punktes kennen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein - die Haversine-Formel verwendet nur Breiten- und Längengrad und geht davon aus, dass sich beide Punkte auf der Erdoberfläche auf Meereshöhe befinden. Höhenunterschiede sind im Vergleich zum Erdradius von ~6.371 km für praktisch alle Entfernungsschätzungen vernachlässigbar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was ist der Unterschied zwischen diesem und einem „geodätischen Entfernungsrechner“?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sie sind eng verwandt - „geodätische Entfernung“ ist der allgemeinere Begriff für den kürzesten Weg auf jeder gekrümmten Oberfläche, während sich „Haversine-Entfernung“ speziell auf diese Formel bezieht, die die Erde als Kugel annähert. Für die meisten alltäglichen Entfernungsprüfungen werden beide Begriffe synonym verwendet."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Wie genau ist das im Vergleich zu realen Flugentfernungen?</h3>
 <p>Innerhalb etwa 0,5 %, da die Erde als perfekte Kugel behandelt wird und nicht als ihre tatsächliche, leicht abgeflachte Ellipsoidform - nah genug für praktisch alle praktischen Entfernungsschätzungen, obwohl die offizielle Luftfahrtnavigation präzisere ellipsoidische Modelle verwendet.</p>
+</div>
+<div class="faq-item">
+<h3>Warum ist die Großkreisentfernung nicht dasselbe wie eine gerade Linie auf einer flachen Karte?</h3>
+<p>Eine flache Karte verzerrt Entfernungen, weil sie eine gekrümmte 3D-Oberfläche auf eine 2D-Ebene projiziert - der wahre kürzeste Weg zwischen zwei Punkten auf einer Kugel folgt einem Großkreis (Teil eines Kreises, dessen Mittelpunkt der Erdmittelpunkt ist), der auf einer gewöhnlichen Kartenprojektion meist gekrümmt, nicht gerade, dargestellt wird.</p>
+</div>
+<div class="faq-item">
+<h3>Muss ich die genaue Höhe oder Seehöhe jedes Punktes kennen?</h3>
+<p>Nein - die Haversine-Formel verwendet nur Breiten- und Längengrad und geht davon aus, dass sich beide Punkte auf der Erdoberfläche auf Meereshöhe befinden. Höhenunterschiede sind im Vergleich zum Erdradius von ~6.371 km für praktisch alle Entfernungsschätzungen vernachlässigbar.</p>
+</div>
+<div class="faq-item">
+<h3>Was ist der Unterschied zwischen diesem und einem „geodätischen Entfernungsrechner“?</h3>
+<p>Sie sind eng verwandt - „geodätische Entfernung“ ist der allgemeinere Begriff für den kürzesten Weg auf jeder gekrümmten Oberfläche, während sich „Haversine-Entfernung“ speziell auf diese Formel bezieht, die die Erde als Kugel annähert. Für die meisten alltäglichen Entfernungsprüfungen werden beide Begriffe synonym verwendet.</p>
 </div></div>
         </div>
       </main>

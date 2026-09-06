@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Neben Titel- und Satzschreibweise wandelt er auch in GROSSBUCHSTABEN, Kleinbuchstaben, camelCase und andere gängige Formatierungsstile in Text und Code um, sodass Sie Text für jeden benötigten Kontext neu formatieren können."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie entscheidet die Titelschreibweise, welche Wörter großgeschrieben werden?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sie schreibt den ersten Buchstaben jedes Wortes im Text groß, ohne besondere Behandlung kleinerer Wörter wie „ein\", „der\" oder „von\" - so wird aus „der herr der ringe\" hier „Der Herr Der Ringe\", statt der Stilkonvention, die kleinere Wörter kleinschreibt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was macht die Satzschreibweise mit einem Text, der mehrere Sätze enthält?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sie schreibt nur den allerersten Buchstaben der gesamten Eingabe groß und lässt alles andere klein - sie erkennt keine einzelnen Satzgrenzen und schreibt nicht jeden Satz neu groß, sodass ein mehrsätziger Absatz insgesamt genau einen Großbuchstaben erhält."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wenn mein Text GROSSGESCHRIEBENE Abkürzungen wie „NASA\" enthält, zerstört die Umwandlung in Kleinbuchstaben diese?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja - die Umwandlung in Kleinbuchstaben behandelt jeden Buchstaben unabhängig vom Kontext gleich, sodass aus „NASA\" „nasa\" wird. Es gibt keine Erkennung von Abkürzungen, überprüfen Sie also Text mit Abkürzungen oder Eigennamen nach der Umwandlung."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Welche Schreibweisen unterstützt dieser Konverter?</h3>
 <p>Neben Titel- und Satzschreibweise wandelt er auch in GROSSBUCHSTABEN, Kleinbuchstaben, camelCase und andere gängige Formatierungsstile in Text und Code um, sodass Sie Text für jeden benötigten Kontext neu formatieren können.</p>
+</div>
+<div class="faq-item">
+<h3>Wie entscheidet die Titelschreibweise, welche Wörter großgeschrieben werden?</h3>
+<p>Sie schreibt den ersten Buchstaben jedes Wortes im Text groß, ohne besondere Behandlung kleinerer Wörter wie „ein", „der" oder „von" - so wird aus „der herr der ringe" hier „Der Herr Der Ringe", statt der Stilkonvention, die kleinere Wörter kleinschreibt.</p>
+</div>
+<div class="faq-item">
+<h3>Was macht die Satzschreibweise mit einem Text, der mehrere Sätze enthält?</h3>
+<p>Sie schreibt nur den allerersten Buchstaben der gesamten Eingabe groß und lässt alles andere klein - sie erkennt keine einzelnen Satzgrenzen und schreibt nicht jeden Satz neu groß, sodass ein mehrsätziger Absatz insgesamt genau einen Großbuchstaben erhält.</p>
+</div>
+<div class="faq-item">
+<h3>Wenn mein Text GROSSGESCHRIEBENE Abkürzungen wie „NASA" enthält, zerstört die Umwandlung in Kleinbuchstaben diese?</h3>
+<p>Ja - die Umwandlung in Kleinbuchstaben behandelt jeden Buchstaben unabhängig vom Kontext gleich, sodass aus „NASA" „nasa" wird. Es gibt keine Erkennung von Abkürzungen, überprüfen Sie also Text mit Abkürzungen oder Eigennamen nach der Umwandlung.</p>
 </div></div>
         </div>
       </main>

@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Dieses Tool meldet, welche der beiden JSON-Eingaben ungültig ist, zusammen mit der Fehlermeldung des Parsers, anstatt einen teilweisen oder geratenen Vergleich zu versuchen - beheben Sie zuerst den Syntaxfehler und vergleichen Sie dann."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Wenn ein Schlüssel in beiden JSON-Objekten existiert, aber genau denselben Wert hat, taucht er dann im Diff auf?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein - nur Schlüssel, die sich unterscheiden (hinzugefügt, entfernt oder im Wert geändert), erscheinen im Ergebnis. Identische Schlüssel mit identischen Werten gelten als unverändert und werden nicht markiert."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was ist im Standardbeispiel der Unterschied zwischen den beiden JSON-Objekten?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "„age\" ist geändert (30 auf 31), „city\" ist entfernt (nur im ersten JSON vorhanden), und „country\" ist hinzugefügt (nur im zweiten JSON vorhanden) - „name\" bleibt in beiden gleich, wird also nicht markiert."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Spielt die Reihenfolge der Schlüssel im JSON für den Vergleich eine Rolle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein - der Vergleich basiert auf Schlüsselnamen und Werten, nicht auf der Reihenfolge, in der die Schlüssel im Text erscheinen, da JSON-Objekte per Spezifikation von Natur aus ungeordnete Sammlungen von Schlüssel-Wert-Paaren sind."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Was passiert, wenn mein JSON einen Syntaxfehler hat?</h3>
 <p>Dieses Tool meldet, welche der beiden JSON-Eingaben ungültig ist, zusammen mit der Fehlermeldung des Parsers, anstatt einen teilweisen oder geratenen Vergleich zu versuchen - beheben Sie zuerst den Syntaxfehler und vergleichen Sie dann.</p>
+</div>
+<div class="faq-item">
+<h3>Wenn ein Schlüssel in beiden JSON-Objekten existiert, aber genau denselben Wert hat, taucht er dann im Diff auf?</h3>
+<p>Nein - nur Schlüssel, die sich unterscheiden (hinzugefügt, entfernt oder im Wert geändert), erscheinen im Ergebnis. Identische Schlüssel mit identischen Werten gelten als unverändert und werden nicht markiert.</p>
+</div>
+<div class="faq-item">
+<h3>Was ist im Standardbeispiel der Unterschied zwischen den beiden JSON-Objekten?</h3>
+<p>„age" ist geändert (30 auf 31), „city" ist entfernt (nur im ersten JSON vorhanden), und „country" ist hinzugefügt (nur im zweiten JSON vorhanden) - „name" bleibt in beiden gleich, wird also nicht markiert.</p>
+</div>
+<div class="faq-item">
+<h3>Spielt die Reihenfolge der Schlüssel im JSON für den Vergleich eine Rolle?</h3>
+<p>Nein - der Vergleich basiert auf Schlüsselnamen und Werten, nicht auf der Reihenfolge, in der die Schlüssel im Text erscheinen, da JSON-Objekte per Spezifikation von Natur aus ungeordnete Sammlungen von Schlüssel-Wert-Paaren sind.</p>
 </div></div>
         </div>
       </main>

@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Komplexe Eigenwerte bedeuten, dass die Matrix keine reellen Eigenvektoren hat - geometrisch geschieht dies bei Matrizen, die Vektoren drehen (wie eine Rotationsmatrix), anstatt sie nur entlang fester Richtungen zu strecken, da eine Rotation keine Richtung hat, die unverändert bleibt (außer einer 180°-Drehung)."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Was stellen Eigenwerte und Eigenvektoren in der realen Welt dar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sie beschreiben Richtungen, die eine Matrixtransformation nicht dreht, sondern nur streckt oder staucht - der Eigenvektor ist diese unveränderte Richtung, und der Eigenwert ist der Streckfaktor. Das kommt in Anwendungen wie Schwingungsanalyse, Hauptkomponentenanalyse und Googles PageRank-Algorithmus vor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was sind die Eigenwerte der Matrix [[2,1],[1,2]]?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "3 und 1 - Spur = 2+2 = 4, Determinante = (2×2)-(1×1) = 3, also faktorisiert sich λ² − 4λ + 3 = 0 zu (λ−3)(λ−1) = 0, was λ = 3 und λ = 1 ergibt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann eine 2x2-Matrix nur einen einzigen Eigenwert haben?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja - das geschieht, wenn die Diskriminante der charakteristischen Gleichung null ist (ein „wiederholter“ oder „entarteter“ Eigenwert), was zum Beispiel bei Matrizen wie [[2,1],[0,2]] auftritt, bei denen beide Wurzeln der quadratischen Gleichung auf denselben Wert zusammenfallen."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Was bedeutet es, wenn die Eigenwerte komplex sind?</h3>
 <p>Komplexe Eigenwerte bedeuten, dass die Matrix keine reellen Eigenvektoren hat - geometrisch geschieht dies bei Matrizen, die Vektoren drehen (wie eine Rotationsmatrix), anstatt sie nur entlang fester Richtungen zu strecken, da eine Rotation keine Richtung hat, die unverändert bleibt (außer einer 180°-Drehung).</p>
+</div>
+<div class="faq-item">
+<h3>Was stellen Eigenwerte und Eigenvektoren in der realen Welt dar?</h3>
+<p>Sie beschreiben Richtungen, die eine Matrixtransformation nicht dreht, sondern nur streckt oder staucht - der Eigenvektor ist diese unveränderte Richtung, und der Eigenwert ist der Streckfaktor. Das kommt in Anwendungen wie Schwingungsanalyse, Hauptkomponentenanalyse und Googles PageRank-Algorithmus vor.</p>
+</div>
+<div class="faq-item">
+<h3>Was sind die Eigenwerte der Matrix [[2,1],[1,2]]?</h3>
+<p>3 und 1 - Spur = 2+2 = 4, Determinante = (2×2)-(1×1) = 3, also faktorisiert sich λ² − 4λ + 3 = 0 zu (λ−3)(λ−1) = 0, was λ = 3 und λ = 1 ergibt.</p>
+</div>
+<div class="faq-item">
+<h3>Kann eine 2x2-Matrix nur einen einzigen Eigenwert haben?</h3>
+<p>Ja - das geschieht, wenn die Diskriminante der charakteristischen Gleichung null ist (ein „wiederholter“ oder „entarteter“ Eigenwert), was zum Beispiel bei Matrizen wie [[2,1],[0,2]] auftritt, bei denen beide Wurzeln der quadratischen Gleichung auf denselben Wert zusammenfallen.</p>
 </div></div>
         </div>
       </main>

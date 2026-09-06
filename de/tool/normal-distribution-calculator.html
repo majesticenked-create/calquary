@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Verwandt aber anders - der Z-Wert-Rechner findet das Perzentil unterhalb eines einzelnen Wertes. Dieser Rechner findet die Wahrscheinlichkeit, dass ein Wert zwischen zwei Grenzen liegt, was nützlicher ist für Fragen wie „welcher Anteil der Werte liegt zwischen 85 und 115?“"
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Was, wenn ich die untere und obere Grenze auf denselben Wert setze?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die Wahrscheinlichkeit ergibt praktisch 0 % - eine kontinuierliche Normalverteilung weist einem exakten Punkt keine Wahrscheinlichkeit zu, sondern nur dem Fallen in einen Bereich."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie finde ich die Wahrscheinlichkeit, dass ein Wert über oder unter einer einzelnen Grenze statt zwischen zwei Grenzen liegt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Setzen Sie die untere Grenze auf eine sehr kleine Zahl (wie Mittelwert − 10×SD), um effektiv alles unterhalb Ihrer oberen Grenze zu erfassen, oder setzen Sie die obere Grenze sehr hoch, um alles oberhalb Ihrer unteren Grenze zu erfassen - dies nähert eine einseitige Wahrscheinlichkeit mit dem Zwei-Grenzen-Tool an."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Funktioniert das auch für Verteilungen, die nicht normal sind?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein - dieser Rechner geht speziell von einer Normalverteilung (Glockenkurve) aus, die durch ihren Mittelwert und ihre Standardabweichung definiert ist; schiefe oder nicht-normale Daten liefern mit dieser Methode keine genauen Wahrscheinlichkeiten."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Ist das dasselbe wie der Z-Wert-Rechner?</h3>
 <p>Verwandt aber anders - der Z-Wert-Rechner findet das Perzentil unterhalb eines einzelnen Wertes. Dieser Rechner findet die Wahrscheinlichkeit, dass ein Wert zwischen zwei Grenzen liegt, was nützlicher ist für Fragen wie „welcher Anteil der Werte liegt zwischen 85 und 115?“</p>
+</div>
+<div class="faq-item">
+<h3>Was, wenn ich die untere und obere Grenze auf denselben Wert setze?</h3>
+<p>Die Wahrscheinlichkeit ergibt praktisch 0 % - eine kontinuierliche Normalverteilung weist einem exakten Punkt keine Wahrscheinlichkeit zu, sondern nur dem Fallen in einen Bereich.</p>
+</div>
+<div class="faq-item">
+<h3>Wie finde ich die Wahrscheinlichkeit, dass ein Wert über oder unter einer einzelnen Grenze statt zwischen zwei Grenzen liegt?</h3>
+<p>Setzen Sie die untere Grenze auf eine sehr kleine Zahl (wie Mittelwert − 10×SD), um effektiv alles unterhalb Ihrer oberen Grenze zu erfassen, oder setzen Sie die obere Grenze sehr hoch, um alles oberhalb Ihrer unteren Grenze zu erfassen - dies nähert eine einseitige Wahrscheinlichkeit mit dem Zwei-Grenzen-Tool an.</p>
+</div>
+<div class="faq-item">
+<h3>Funktioniert das auch für Verteilungen, die nicht normal sind?</h3>
+<p>Nein - dieser Rechner geht speziell von einer Normalverteilung (Glockenkurve) aus, die durch ihren Mittelwert und ihre Standardabweichung definiert ist; schiefe oder nicht-normale Daten liefern mit dieser Methode keine genauen Wahrscheinlichkeiten.</p>
 </div></div>
         </div>
       </main>

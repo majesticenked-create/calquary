@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Dieses Tool wandelt Binärcode direkt in lesbaren Text um, wobei die Standard-8-Bit-Zeichenkodierung (ASCII/UTF-8) verwendet wird. Um Binärcode stattdessen in einen reinen numerischen Wert umzuwandeln, behandeln Sie die Binärzeichenfolge als Basis-2-Zahl und konvertieren Sie sie stattdessen mit einer Binär-zu-Dezimal-Berechnung in Basis 10."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Müssen die Binärgruppen zwischen jedem 8-Bit-Byte durch Leerzeichen getrennt sein?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, bei der Umwandlung von Binär in Text - der Binärcode jedes Zeichens sollte getrennt sein (wie „01001000 01101001\" für „Hi\"), damit der Konverter weiß, wo die 8 Bit eines Zeichens enden und die des nächsten beginnen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was ist der Binärcode für den Buchstaben „A\"?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "01000001 - „A\" hat den ASCII-Code 65, und 65 in Binär ist 1000001, aufgefüllt auf volle 8 Bit durch eine führende Null."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ist das dasselbe wie ein „ASCII-zu-Binär-Konverter\" oder „Text-zu-Binär-Übersetzer\"?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja - all diese Begriffe beschreiben denselben zugrunde liegenden Prozess, jedes Zeichen auf seinen numerischen Zeichencode abzubilden und diesen Code im Zweiersystem auszudrücken, was genau das ist, was der Text-zu-Binär-Modus dieses Tools tut."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Kann dies Binärcode auch in Zahlen umwandeln, nicht nur in Text?</h3>
 <p>Dieses Tool wandelt Binärcode direkt in lesbaren Text um, wobei die Standard-8-Bit-Zeichenkodierung (ASCII/UTF-8) verwendet wird. Um Binärcode stattdessen in einen reinen numerischen Wert umzuwandeln, behandeln Sie die Binärzeichenfolge als Basis-2-Zahl und konvertieren Sie sie stattdessen mit einer Binär-zu-Dezimal-Berechnung in Basis 10.</p>
+</div>
+<div class="faq-item">
+<h3>Müssen die Binärgruppen zwischen jedem 8-Bit-Byte durch Leerzeichen getrennt sein?</h3>
+<p>Ja, bei der Umwandlung von Binär in Text - der Binärcode jedes Zeichens sollte getrennt sein (wie „01001000 01101001" für „Hi"), damit der Konverter weiß, wo die 8 Bit eines Zeichens enden und die des nächsten beginnen.</p>
+</div>
+<div class="faq-item">
+<h3>Was ist der Binärcode für den Buchstaben „A"?</h3>
+<p>01000001 - „A" hat den ASCII-Code 65, und 65 in Binär ist 1000001, aufgefüllt auf volle 8 Bit durch eine führende Null.</p>
+</div>
+<div class="faq-item">
+<h3>Ist das dasselbe wie ein „ASCII-zu-Binär-Konverter" oder „Text-zu-Binär-Übersetzer"?</h3>
+<p>Ja - all diese Begriffe beschreiben denselben zugrunde liegenden Prozess, jedes Zeichen auf seinen numerischen Zeichencode abzubilden und diesen Code im Zweiersystem auszudrücken, was genau das ist, was der Text-zu-Binär-Modus dieses Tools tut.</p>
 </div></div>
         </div>
       </main>

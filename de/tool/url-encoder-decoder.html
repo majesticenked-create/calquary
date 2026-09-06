@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Ja - die Codierung verwendet genau diese Funktion, die die Standardmethode ist, um einen einzelnen Wert (wie einen Query-Parameter) sicher für die Verwendung in einer URL zu codieren, im Gegensatz zu encodeURI(), das für die Codierung einer ganzen URL gedacht ist und Zeichen wie / und : unberührt lässt."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Was wird aus dem &-Zeichen beim Kodieren?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "%26 - da & in URLs eine besondere Bedeutung hat (es trennt Abfrageparameter), muss es zu %26 prozent-kodiert werden, wann immer es als wörtliches Datum auftritt statt als tatsächlicher Parametertrenner."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wenn ich eine bereits vollständig gültige URL kodiere, wie https://example.com, zerstört das sie?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die Kodierung ist für einzelne Werte gedacht (wie eine Suchanfrage), nicht für ganze URLs - wenn Sie eine vollständige URL durch den Kodiermodus dieses Tools laufen lassen, werden auch deren eigene Schrägstriche und Doppelpunkte umgewandelt (: wird zu %3A, / wird zu %2F), wodurch sie als klickbarer Link zerstört wird. Kodieren Sie nur den Parameterwert selbst, nicht die umgebende URL-Struktur."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann ich eine URL dekodieren, die sowohl %20 als auch + zur Darstellung von Leerzeichen enthält?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Der Dekodiermodus dieses Tools wandelt %XX-Prozentsequenzen zurück in ihre ursprünglichen Zeichen um, aber ein wörtliches + in einer Abfragezeichenfolge ist eine separate, veraltete Konvention für Leerzeichen, die die reine Prozent-Dekodierung nicht anfasst - wenn Ihre Eingabe beide Konventionen mischt, müssen Sie möglicherweise + manuell vor oder nach dem Dekodieren durch ein Leerzeichen ersetzen."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Ist das dasselbe wie encodeURIComponent() in JavaScript?</h3>
 <p>Ja - die Codierung verwendet genau diese Funktion, die die Standardmethode ist, um einen einzelnen Wert (wie einen Query-Parameter) sicher für die Verwendung in einer URL zu codieren, im Gegensatz zu encodeURI(), das für die Codierung einer ganzen URL gedacht ist und Zeichen wie / und : unberührt lässt.</p>
+</div>
+<div class="faq-item">
+<h3>Was wird aus dem &amp;-Zeichen beim Kodieren?</h3>
+<p>%26 - da & in URLs eine besondere Bedeutung hat (es trennt Abfrageparameter), muss es zu %26 prozent-kodiert werden, wann immer es als wörtliches Datum auftritt statt als tatsächlicher Parametertrenner.</p>
+</div>
+<div class="faq-item">
+<h3>Wenn ich eine bereits vollständig gültige URL kodiere, wie https://example.com, zerstört das sie?</h3>
+<p>Die Kodierung ist für einzelne Werte gedacht (wie eine Suchanfrage), nicht für ganze URLs - wenn Sie eine vollständige URL durch den Kodiermodus dieses Tools laufen lassen, werden auch deren eigene Schrägstriche und Doppelpunkte umgewandelt (: wird zu %3A, / wird zu %2F), wodurch sie als klickbarer Link zerstört wird. Kodieren Sie nur den Parameterwert selbst, nicht die umgebende URL-Struktur.</p>
+</div>
+<div class="faq-item">
+<h3>Kann ich eine URL dekodieren, die sowohl %20 als auch + zur Darstellung von Leerzeichen enthält?</h3>
+<p>Der Dekodiermodus dieses Tools wandelt %XX-Prozentsequenzen zurück in ihre ursprünglichen Zeichen um, aber ein wörtliches + in einer Abfragezeichenfolge ist eine separate, veraltete Konvention für Leerzeichen, die die reine Prozent-Dekodierung nicht anfasst - wenn Ihre Eingabe beide Konventionen mischt, müssen Sie möglicherweise + manuell vor oder nach dem Dekodieren durch ein Leerzeichen ersetzen.</p>
 </div></div>
         </div>
       </main>
