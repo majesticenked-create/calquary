@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Nu - acest calculator presupune că atât acidul cât și baza sunt puternici (se disociază complet), ceea ce face valabilă matematica simplă a ionilor în exces. Titrările acid/bază slab au nevoie de calcule de echilibru (Ka/Kb) și produc un pH diferit, nu 7, la punctul de echivalență din cauza bazei sau acidului conjugat rămas în soluție."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Ce se întâmplă cu pH-ul exact la punctul de echivalență dacă volumele pe care le introduc sunt exact egale în moli?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Calculatorul returnează pH 7, deoarece moli egali de acid puternic și bază puternică se neutralizează complet - dacă volumele/concentrațiile tale de acid și bază dau exact aceiași moli, ai atins punctul de echivalență."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Care este pH-ul după adăugarea a 40 mL de bază 0,1 mol/L la 50 mL de acid 0,1 mol/L?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aproximativ 1,95 - moli de acid = 0,050 L × 0,1 = 0,005 mol, moli de bază = 0,040 L × 0,1 = 0,004 mol, H⁺ în exces = 0,001 mol într-un volum total de 0,090 L, ceea ce dă [H⁺] ≈ 0,0111 mol/L, deci pH = −log₁₀(0,0111) ≈ 1,95."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "De ce contează volumul total în calculul pH-ului, nu doar molii rămași?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "pH-ul depinde de concentrație, nu doar de cantitatea brută de ion în exces - aceiași 0,001 mol H⁺ rămași produc un pH diferit în funcție de dacă sunt diluați în 50 mL sau 500 mL, deci calculatorul împarte la volumul combinat de acid + bază la fiecare pas."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Funcționează asta pentru acizi slabi sau baze slabe?</h3>
 <p>Nu - acest calculator presupune că atât acidul cât și baza sunt puternici (se disociază complet), ceea ce face valabilă matematica simplă a ionilor în exces. Titrările acid/bază slab au nevoie de calcule de echilibru (Ka/Kb) și produc un pH diferit, nu 7, la punctul de echivalență din cauza bazei sau acidului conjugat rămas în soluție.</p>
+</div>
+<div class="faq-item">
+<h3>Ce se întâmplă cu pH-ul exact la punctul de echivalență dacă volumele pe care le introduc sunt exact egale în moli?</h3>
+<p>Calculatorul returnează pH 7, deoarece moli egali de acid puternic și bază puternică se neutralizează complet - dacă volumele/concentrațiile tale de acid și bază dau exact aceiași moli, ai atins punctul de echivalență.</p>
+</div>
+<div class="faq-item">
+<h3>Care este pH-ul după adăugarea a 40 mL de bază 0,1 mol/L la 50 mL de acid 0,1 mol/L?</h3>
+<p>Aproximativ 1,95 - moli de acid = 0,050 L × 0,1 = 0,005 mol, moli de bază = 0,040 L × 0,1 = 0,004 mol, H⁺ în exces = 0,001 mol într-un volum total de 0,090 L, ceea ce dă [H⁺] ≈ 0,0111 mol/L, deci pH = −log₁₀(0,0111) ≈ 1,95.</p>
+</div>
+<div class="faq-item">
+<h3>De ce contează volumul total în calculul pH-ului, nu doar molii rămași?</h3>
+<p>pH-ul depinde de concentrație, nu doar de cantitatea brută de ion în exces - aceiași 0,001 mol H⁺ rămași produc un pH diferit în funcție de dacă sunt diluați în 50 mL sau 500 mL, deci calculatorul împarte la volumul combinat de acid + bază la fiecare pas.</p>
 </div></div>
         </div>
       </main>

@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Un element pe rând, formatat ca \"nume, pondere\" - de exemplu \"Bronz, 6\". Ultima valoare separată prin virgulă de pe fiecare rând este citită ca pondere, iar tot ce este înainte de aceasta este numele elementului."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Ce se întâmplă dacă dau unui element o pondere de 0?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Este inclus în listă, dar nu poate fi niciodată selectat - o pondere de 0 înseamnă o cotă de 0% din total, deci selectorul îl omite efectiv, deși continuă să-l afișeze ca opțiune."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dacă am trei elemente ponderate fiecare cu 1, care sunt șansele pentru fiecare?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Exact 1/3 (aproximativ 33,3%) fiecare, deoarece ponderile sunt egale - totalul este 3, iar cota fiecărui element este 1 împărțit la 3, indiferent de care sunt numerele efective ale ponderii."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cum diferă asta de un \"selector aleatoriu de nume\" sau \"roată norocoasă\"?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un simplu selector aleatoriu de nume sau roată norocoasă oferă fiecărei intrări o șansă egală. Acest instrument este pentru situațiile în care rezultatele nu ar trebui să fie la fel de probabile - precum un tabel de recompense în care elementele rare ar trebui să apară mai rar decât cele comune."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>În ce format trebuie să fie lista mea?</h3>
 <p>Un element pe rând, formatat ca "nume, pondere" - de exemplu "Bronz, 6". Ultima valoare separată prin virgulă de pe fiecare rând este citită ca pondere, iar tot ce este înainte de aceasta este numele elementului.</p>
+</div>
+<div class="faq-item">
+<h3>Ce se întâmplă dacă dau unui element o pondere de 0?</h3>
+<p>Este inclus în listă, dar nu poate fi niciodată selectat - o pondere de 0 înseamnă o cotă de 0% din total, deci selectorul îl omite efectiv, deși continuă să-l afișeze ca opțiune.</p>
+</div>
+<div class="faq-item">
+<h3>Dacă am trei elemente ponderate fiecare cu 1, care sunt șansele pentru fiecare?</h3>
+<p>Exact 1/3 (aproximativ 33,3%) fiecare, deoarece ponderile sunt egale - totalul este 3, iar cota fiecărui element este 1 împărțit la 3, indiferent de care sunt numerele efective ale ponderii.</p>
+</div>
+<div class="faq-item">
+<h3>Cum diferă asta de un "selector aleatoriu de nume" sau "roată norocoasă"?</h3>
+<p>Un simplu selector aleatoriu de nume sau roată norocoasă oferă fiecărei intrări o șansă egală. Acest instrument este pentru situațiile în care rezultatele nu ar trebui să fie la fel de probabile - precum un tabel de recompense în care elementele rare ar trebui să apară mai rar decât cele comune.</p>
 </div></div>
         </div>
       </main>

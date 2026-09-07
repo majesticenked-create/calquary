@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Da - codificarea folosește exact acea funcție, care este modul standard de a codifica în siguranță o singură valoare (precum un parametru de interogare) pentru utilizare într-un URL, spre deosebire de encodeURI() care este menită pentru codificarea unui URL întreg și lasă neatinse caractere precum / și :."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Ce devine caracterul & atunci când este codificat?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "%26 - deoarece & are un sens special în URL-uri (separă parametrii de interogare), trebuie codificat cu semnul procent la %26 ori de câte ori apare ca dată literală, nu ca separator real de parametri."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dacă codific un URL care este deja complet valid, precum https://example.com, îl strică?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Codificarea este menită pentru valori individuale (precum o interogare de căutare), nu pentru URL-uri întregi - trecerea unui URL complet prin modul de codificare al acestui instrument va converti și barele oblice și două puncte proprii (: devine %3A, / devine %2F), stricându-l ca link accesibil. Codifică doar valoarea parametrului în sine, nu structura URL-ului din jur."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pot decodifica un URL care are atât %20 cât și + reprezentând spații?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Modul de decodificare al acestui instrument convertește secvențele procent %XX înapoi la caracterele lor originale, dar un + literal într-un șir de interogare este o convenție moștenită separată pentru spații pe care decodificarea procentuală singură nu o va atinge - dacă intrarea ta amestecă ambele convenții, ar putea fi nevoie să înlocuiești manual + cu spațiu înainte sau după decodificare."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Este aceasta la fel cu encodeURIComponent() din JavaScript?</h3>
 <p>Da - codificarea folosește exact acea funcție, care este modul standard de a codifica în siguranță o singură valoare (precum un parametru de interogare) pentru utilizare într-un URL, spre deosebire de encodeURI() care este menită pentru codificarea unui URL întreg și lasă neatinse caractere precum / și :.</p>
+</div>
+<div class="faq-item">
+<h3>Ce devine caracterul &amp; atunci când este codificat?</h3>
+<p>%26 - deoarece & are un sens special în URL-uri (separă parametrii de interogare), trebuie codificat cu semnul procent la %26 ori de câte ori apare ca dată literală, nu ca separator real de parametri.</p>
+</div>
+<div class="faq-item">
+<h3>Dacă codific un URL care este deja complet valid, precum https://example.com, îl strică?</h3>
+<p>Codificarea este menită pentru valori individuale (precum o interogare de căutare), nu pentru URL-uri întregi - trecerea unui URL complet prin modul de codificare al acestui instrument va converti și barele oblice și două puncte proprii (: devine %3A, / devine %2F), stricându-l ca link accesibil. Codifică doar valoarea parametrului în sine, nu structura URL-ului din jur.</p>
+</div>
+<div class="faq-item">
+<h3>Pot decodifica un URL care are atât %20 cât și + reprezentând spații?</h3>
+<p>Modul de decodificare al acestui instrument convertește secvențele procent %XX înapoi la caracterele lor originale, dar un + literal într-un șir de interogare este o convenție moștenită separată pentru spații pe care decodificarea procentuală singură nu o va atinge - dacă intrarea ta amestecă ambele convenții, ar putea fi nevoie să înlocuiești manual + cu spațiu înainte sau după decodificare.</p>
 </div></div>
         </div>
       </main>

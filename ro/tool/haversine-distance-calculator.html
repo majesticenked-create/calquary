@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "În limita a aproximativ 0,5%, deoarece tratează Pământul ca o sferă perfectă mai degrabă decât forma sa reală de elipsoid ușor turtit - suficient de aproape pentru practic toate scopurile practice de estimare a distanței, deși navigația aviatică oficială folosește modele elipsoidale mai precise."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "De ce distanța pe cerc mare nu este aceeași cu o linie dreaptă pe o hartă plată?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O hartă plată distorsionează distanțele deoarece proiectează o suprafață 3D curbă pe un plan 2D - cel mai scurt traseu real dintre două puncte pe o sferă urmează un cerc mare (parte a unui cerc al cărui centru este centrul Pământului), care de obicei apare curbat, nu drept, atunci când este desenat pe o proiecție cartografică standard."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Trebuie să știu altitudinea sau elevația exactă a fiecărui punct?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nu - formula haversine folosește doar latitudinea și longitudinea și presupune că ambele puncte se află pe suprafața Pământului, la nivelul mării. Diferențele de elevație sunt neglijabile comparativ cu raza Pământului de ~6.371 km, pentru practic toate scopurile de estimare a distanței."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Care este diferența dintre acesta și un \"calculator de distanță geodezică\"?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sunt strâns legate - \"distanța geodezică\" este termenul mai general pentru cel mai scurt traseu pe orice suprafață curbă, în timp ce \"distanța haversine\" se referă specific la această aproximare a formulei pentru o Terră sferică. Pentru majoritatea verificărilor de distanță din viața de zi cu zi, cei doi termeni sunt folosiți interschimbabil."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Cât de precis este acest lucru comparat cu distanțele reale de zbor?</h3>
 <p>În limita a aproximativ 0,5%, deoarece tratează Pământul ca o sferă perfectă mai degrabă decât forma sa reală de elipsoid ușor turtit - suficient de aproape pentru practic toate scopurile practice de estimare a distanței, deși navigația aviatică oficială folosește modele elipsoidale mai precise.</p>
+</div>
+<div class="faq-item">
+<h3>De ce distanța pe cerc mare nu este aceeași cu o linie dreaptă pe o hartă plată?</h3>
+<p>O hartă plată distorsionează distanțele deoarece proiectează o suprafață 3D curbă pe un plan 2D - cel mai scurt traseu real dintre două puncte pe o sferă urmează un cerc mare (parte a unui cerc al cărui centru este centrul Pământului), care de obicei apare curbat, nu drept, atunci când este desenat pe o proiecție cartografică standard.</p>
+</div>
+<div class="faq-item">
+<h3>Trebuie să știu altitudinea sau elevația exactă a fiecărui punct?</h3>
+<p>Nu - formula haversine folosește doar latitudinea și longitudinea și presupune că ambele puncte se află pe suprafața Pământului, la nivelul mării. Diferențele de elevație sunt neglijabile comparativ cu raza Pământului de ~6.371 km, pentru practic toate scopurile de estimare a distanței.</p>
+</div>
+<div class="faq-item">
+<h3>Care este diferența dintre acesta și un "calculator de distanță geodezică"?</h3>
+<p>Sunt strâns legate - "distanța geodezică" este termenul mai general pentru cel mai scurt traseu pe orice suprafață curbă, în timp ce "distanța haversine" se referă specific la această aproximare a formulei pentru o Terră sferică. Pentru majoritatea verificărilor de distanță din viața de zi cu zi, cei doi termeni sunt folosiți interschimbabil.</p>
 </div></div>
         </div>
       </main>

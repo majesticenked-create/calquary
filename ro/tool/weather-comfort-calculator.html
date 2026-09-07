@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Ambele formule sunt regresii empirice validate doar în condiții specifice - indicele de căldură necesită condiții calde, umede (aproximativ 27°C+ cu umiditate de 40%+) iar senzația termică necesită condiții reci, cu vânt (aproximativ 10°C sau mai puțin cu vânt de cel puțin 5 km/h). În afara acestor intervale formulele pot produce rezultate înșelătoare, deci sunt ascunse în schimb."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "La ce punct de rouă începe să se simtă înăbușitor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Majoritatea oamenilor încep să observe umiditatea ca fiind neplăcută în jurul unui punct de rouă de 15-18°C, cu 21°C+ considerat apăsător - sub 13°C în general se simte confortabil, indiferent de temperatura aerului."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pot indicele de căldură și senzația termică să se aplice în același timp?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nu - se exclud reciproc prin design, deoarece indicele de căldură necesită condiții calde (aproximativ 27°C+), iar senzația termică necesită condiții reci (aproximativ 10°C sau mai puțin). În afara oricărui interval, sau în golul dintre ele, acest calculator arată N/A pentru cel care nu se aplică."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "De ce calculatorul are nevoie de viteza vântului pentru senzația termică, dar nu și pentru indicele de căldură?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Formula senzației termice este construită special în jurul modului în care aerul în mișcare îndepărtează căldura de pe pielea expusă, deci viteza vântului este o intrare necesară - indicele de căldură modelează în schimb modul în care umiditatea afectează evaporarea transpirației, un proces în care viteza vântului nu intervine în formula standard NWS pentru indicele de căldură folosită de acest calculator."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>De ce calculatorul arată uneori indicele de căldură sau senzația termică ca N/A?</h3>
 <p>Ambele formule sunt regresii empirice validate doar în condiții specifice - indicele de căldură necesită condiții calde, umede (aproximativ 27°C+ cu umiditate de 40%+) iar senzația termică necesită condiții reci, cu vânt (aproximativ 10°C sau mai puțin cu vânt de cel puțin 5 km/h). În afara acestor intervale formulele pot produce rezultate înșelătoare, deci sunt ascunse în schimb.</p>
+</div>
+<div class="faq-item">
+<h3>La ce punct de rouă începe să se simtă înăbușitor?</h3>
+<p>Majoritatea oamenilor încep să observe umiditatea ca fiind neplăcută în jurul unui punct de rouă de 15-18°C, cu 21°C+ considerat apăsător - sub 13°C în general se simte confortabil, indiferent de temperatura aerului.</p>
+</div>
+<div class="faq-item">
+<h3>Pot indicele de căldură și senzația termică să se aplice în același timp?</h3>
+<p>Nu - se exclud reciproc prin design, deoarece indicele de căldură necesită condiții calde (aproximativ 27°C+), iar senzația termică necesită condiții reci (aproximativ 10°C sau mai puțin). În afara oricărui interval, sau în golul dintre ele, acest calculator arată N/A pentru cel care nu se aplică.</p>
+</div>
+<div class="faq-item">
+<h3>De ce calculatorul are nevoie de viteza vântului pentru senzația termică, dar nu și pentru indicele de căldură?</h3>
+<p>Formula senzației termice este construită special în jurul modului în care aerul în mișcare îndepărtează căldura de pe pielea expusă, deci viteza vântului este o intrare necesară - indicele de căldură modelează în schimb modul în care umiditatea afectează evaporarea transpirației, un proces în care viteza vântului nu intervine în formula standard NWS pentru indicele de căldură folosită de acest calculator.</p>
 </div></div>
         </div>
       </main>

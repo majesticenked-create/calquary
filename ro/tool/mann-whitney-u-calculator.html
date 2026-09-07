@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Când datele tale nu sunt distribuite normal, conțin valori aberante, sau sunt ordinale mai degrabă decât cu adevărat numerice - testul Mann-Whitney se bazează doar pe ordinea rangurilor, făcându-l mai robust decât testul t la distribuții non-normale și valori extreme."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Ce înseamnă dacă cele două grupuri au ranguri complet neseparate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Acesta este cel mai extrem rezultat posibil - dacă fiecare valoare dintr-un grup se clasează sub fiecare valoare din celălalt, U pentru grupul cu rang mai mic este 0, indicând cea mai puternică separare posibilă între grupuri."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cum sunt gestionate valorile egale la clasificare?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Valorile egale primesc media rangurilor pe care le-ar fi ocupat - de exemplu, dacă două valori sunt egale pentru locurile 3 și 4, ambele primesc rangul 3,5, păstrând suma totală a rangurilor consistentă."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Este testul U Mann-Whitney același lucru cu testul rangurilor Wilcoxon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da - sunt teste echivalente din punct de vedere matematic, dar cu denumiri diferite; statistica rangurilor Wilcoxon poate fi convertită direct în statistica U Mann-Whitney, iar ambele compară două grupuri independente folosind ordinea rangurilor."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Când ar trebui să folosesc asta în loc de un test t?</h3>
 <p>Când datele tale nu sunt distribuite normal, conțin valori aberante, sau sunt ordinale mai degrabă decât cu adevărat numerice - testul Mann-Whitney se bazează doar pe ordinea rangurilor, făcându-l mai robust decât testul t la distribuții non-normale și valori extreme.</p>
+</div>
+<div class="faq-item">
+<h3>Ce înseamnă dacă cele două grupuri au ranguri complet neseparate?</h3>
+<p>Acesta este cel mai extrem rezultat posibil - dacă fiecare valoare dintr-un grup se clasează sub fiecare valoare din celălalt, U pentru grupul cu rang mai mic este 0, indicând cea mai puternică separare posibilă între grupuri.</p>
+</div>
+<div class="faq-item">
+<h3>Cum sunt gestionate valorile egale la clasificare?</h3>
+<p>Valorile egale primesc media rangurilor pe care le-ar fi ocupat - de exemplu, dacă două valori sunt egale pentru locurile 3 și 4, ambele primesc rangul 3,5, păstrând suma totală a rangurilor consistentă.</p>
+</div>
+<div class="faq-item">
+<h3>Este testul U Mann-Whitney același lucru cu testul rangurilor Wilcoxon?</h3>
+<p>Da - sunt teste echivalente din punct de vedere matematic, dar cu denumiri diferite; statistica rangurilor Wilcoxon poate fi convertită direct în statistica U Mann-Whitney, iar ambele compară două grupuri independente folosind ordinea rangurilor.</p>
 </div></div>
         </div>
       </main>

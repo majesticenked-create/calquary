@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "O /32 are exact o adresă în total (folosită pentru a identifica o singură gazdă, precum o interfață loopback), iar o /31 are doar 2 adrese fără loc pentru adrese de rețea/broadcast separate - ambele sunt folosite de obicei pentru legături punct-la-punct unde fiecare adresă este direct utilizabilă."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Cum se schimbă lungimea prefixului CIDR dacă trec de la /24 la /25?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O /25 împarte ceea ce ar fi fost o rețea /24 în două subrețele mai mici, fiecare cu 128 de adrese totale (126 gazde utilizabile) în loc de 256 (254 utilizabile) - trecerea la un prefix mai lung micșorează întotdeauna spațiul de adrese per subrețea, creând în același timp mai multe subrețele în total."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Care este intervalul de gazde utilizabile pentru 192.168.1.0/24?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "192.168.1.1 până la 192.168.1.254 - adresa de rețea (192.168.1.0) și adresa de broadcast (192.168.1.255) sunt excluse, lăsând 254 de adrese de gazdă asignabile între ele."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Este \"calculator subrețea IP\" același instrument cu un \"calculator CIDR\"?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da, în esență - ambele iau o adresă IP și o lungime de prefix (sau notație CIDR combinată) și calculează aceeași adresă de rețea, adresă de broadcast, și interval de gazde utilizabile; acest instrument primește IP-ul și prefixul ca și câmpuri separate, nu ca notație combinată cu bară oblică."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>De ce subrețelele /31 și /32 nu au interval de gazdă utilizabil?</h3>
 <p>O /32 are exact o adresă în total (folosită pentru a identifica o singură gazdă, precum o interfață loopback), iar o /31 are doar 2 adrese fără loc pentru adrese de rețea/broadcast separate - ambele sunt folosite de obicei pentru legături punct-la-punct unde fiecare adresă este direct utilizabilă.</p>
+</div>
+<div class="faq-item">
+<h3>Cum se schimbă lungimea prefixului CIDR dacă trec de la /24 la /25?</h3>
+<p>O /25 împarte ceea ce ar fi fost o rețea /24 în două subrețele mai mici, fiecare cu 128 de adrese totale (126 gazde utilizabile) în loc de 256 (254 utilizabile) - trecerea la un prefix mai lung micșorează întotdeauna spațiul de adrese per subrețea, creând în același timp mai multe subrețele în total.</p>
+</div>
+<div class="faq-item">
+<h3>Care este intervalul de gazde utilizabile pentru 192.168.1.0/24?</h3>
+<p>192.168.1.1 până la 192.168.1.254 - adresa de rețea (192.168.1.0) și adresa de broadcast (192.168.1.255) sunt excluse, lăsând 254 de adrese de gazdă asignabile între ele.</p>
+</div>
+<div class="faq-item">
+<h3>Este "calculator subrețea IP" același instrument cu un "calculator CIDR"?</h3>
+<p>Da, în esență - ambele iau o adresă IP și o lungime de prefix (sau notație CIDR combinată) și calculează aceeași adresă de rețea, adresă de broadcast, și interval de gazde utilizabile; acest instrument primește IP-ul și prefixul ca și câmpuri separate, nu ca notație combinată cu bară oblică.</p>
 </div></div>
         </div>
       </main>

@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Acest instrument rezolvă specific cazul LLL (latură-latură-latură). Alte cazuri precum LUL (două laturi și unghiul inclus) sau ULU (două unghiuri și latura inclusă) necesită formule de pornire diferite - teorema cosinusului prezentată aici funcționează direct din trei laturi cunoscute."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Ce se întâmplă dacă cele trei laturi pe care le introduc nu pot forma un triunghi real?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Calculatorul nu poate produce un rezultat valid - conform inegalității triunghiului, suma oricăror două laturi trebuie să fie mai mare decât a treia (de exemplu, 2, 3 și 10 nu pot forma un triunghi, deoarece 2+3 < 10). Dacă laturile tale nu trec de această verificare, verifică din nou măsurătorile."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cum găsesc cel mai mare unghi al unui triunghi din lungimile laturilor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cel mai mare unghi este întotdeauna opus celei mai lungi laturi - introdu cea mai lungă latură ca \"c\" în forma rearanjată a teoremei cosinusului, cos(C) = (a² + b² − c²)/(2ab), apoi aplică arccos rezultatului."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cele trei unghiuri însumează întotdeauna 180°?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da, pentru orice triunghi în geometria plană (euclidiană) standard - aceasta este o verificare utilă: după ce acest calculator rezolvă toate cele trei unghiuri, ele ar trebui să însumeze 180° (permițând mici diferențe de rotunjire)."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>De ce este nevoie de trei laturi, și nu de unghiuri sau alte combinații?</h3>
 <p>Acest instrument rezolvă specific cazul LLL (latură-latură-latură). Alte cazuri precum LUL (două laturi și unghiul inclus) sau ULU (două unghiuri și latura inclusă) necesită formule de pornire diferite - teorema cosinusului prezentată aici funcționează direct din trei laturi cunoscute.</p>
+</div>
+<div class="faq-item">
+<h3>Ce se întâmplă dacă cele trei laturi pe care le introduc nu pot forma un triunghi real?</h3>
+<p>Calculatorul nu poate produce un rezultat valid - conform inegalității triunghiului, suma oricăror două laturi trebuie să fie mai mare decât a treia (de exemplu, 2, 3 și 10 nu pot forma un triunghi, deoarece 2+3 < 10). Dacă laturile tale nu trec de această verificare, verifică din nou măsurătorile.</p>
+</div>
+<div class="faq-item">
+<h3>Cum găsesc cel mai mare unghi al unui triunghi din lungimile laturilor?</h3>
+<p>Cel mai mare unghi este întotdeauna opus celei mai lungi laturi - introdu cea mai lungă latură ca "c" în forma rearanjată a teoremei cosinusului, cos(C) = (a² + b² − c²)/(2ab), apoi aplică arccos rezultatului.</p>
+</div>
+<div class="faq-item">
+<h3>Cele trei unghiuri însumează întotdeauna 180°?</h3>
+<p>Da, pentru orice triunghi în geometria plană (euclidiană) standard - aceasta este o verificare utilă: după ce acest calculator rezolvă toate cele trei unghiuri, ele ar trebui să însumeze 180° (permițând mici diferențe de rotunjire).</p>
 </div></div>
         </div>
       </main>

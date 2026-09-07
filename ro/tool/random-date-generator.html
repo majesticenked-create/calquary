@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Da - alege data ta de început, data de sfârșit, și câte date ai nevoie mai sus, apoi apasă Calculează pentru a obține una sau mai multe date aleatorii."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Poate fi generată aceeași dată aleatorie de două ori dacă cer mai multe date?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da - fiecare dată este aleasă independent, deci cu un interval suficient de larg și suficiente alegeri, duplicatele sunt posibile, similar cu a obține același număr de două ori la aruncarea unui zar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dacă setez intervalul la o singură zi, ce se întâmplă?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Setarea datei de început și de sfârșit la aceeași zi returnează acea zi de fiecare dată, deoarece există o singură dată posibilă în interval din care să se aleagă."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cum diferă asta de un generator de 'zi aleatorie a săptămânii'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Acest instrument alege o dată de calendar completă (zi, lună și an) din intervalul ales, nu doar un nume de zi a săptămânii - dacă ai nevoie doar de o zi aleatorie a săptămânii, ai avea nevoie de un selector mai simplu pentru ziua săptămânii."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Este "obține dată aleatorie" același lucru cu acest generator de date aleatorii?</h3>
 <p>Da - alege data ta de început, data de sfârșit, și câte date ai nevoie mai sus, apoi apasă Calculează pentru a obține una sau mai multe date aleatorii.</p>
+</div>
+<div class="faq-item">
+<h3>Poate fi generată aceeași dată aleatorie de două ori dacă cer mai multe date?</h3>
+<p>Da - fiecare dată este aleasă independent, deci cu un interval suficient de larg și suficiente alegeri, duplicatele sunt posibile, similar cu a obține același număr de două ori la aruncarea unui zar.</p>
+</div>
+<div class="faq-item">
+<h3>Dacă setez intervalul la o singură zi, ce se întâmplă?</h3>
+<p>Setarea datei de început și de sfârșit la aceeași zi returnează acea zi de fiecare dată, deoarece există o singură dată posibilă în interval din care să se aleagă.</p>
+</div>
+<div class="faq-item">
+<h3>Cum diferă asta de un generator de 'zi aleatorie a săptămânii'?</h3>
+<p>Acest instrument alege o dată de calendar completă (zi, lună și an) din intervalul ales, nu doar un nume de zi a săptămânii - dacă ai nevoie doar de o zi aleatorie a săptămânii, ai avea nevoie de un selector mai simplu pentru ziua săptămânii.</p>
 </div></div>
         </div>
       </main>

@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Pe lângă formatul titlu și formatul propoziție, convertește și în majuscule, minuscule și camelCase - stiluri de formatare comune în scriere și programare, ca să poți formata textul exact așa cum ai nevoie."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Cum decide formatul titlu ce cuvinte să scrie cu majusculă?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Scrie cu majusculă prima literă a fiecărui cuvânt din text, fără tratament special pentru cuvintele mai mici precum \"un\", \"the\" sau \"of\" - deci \"the lord of the rings\" devine \"The Lord Of The Rings\" aici, mai degrabă decât convenția din ghidurile de stil care scrie cu minusculă cuvintele minore."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ce face formatul propoziție cu un text care are mai multe propoziții?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Scrie cu majusculă doar prima literă a întregii intrări, lăsând restul cu minusculă - nu detectează limitele fiecărei propoziții individuale pentru a le scrie din nou cu majusculă, deci un paragraf cu mai multe propoziții primește exact o singură literă mare în total."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dacă textul meu are acronime scrise cu majuscule, precum \"NASA\", conversia la minuscule le strică?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da - conversia la minuscule tratează fiecare literă la fel, indiferent de context, deci \"NASA\" devine \"nasa\". Nu există detectare de acronime, așa că verifică textul cu acronime sau substantive proprii după conversie."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Ce alte stiluri de majuscule/minuscule gestionează acest convertor?</h3>
 <p>Pe lângă formatul titlu și formatul propoziție, convertește și în majuscule, minuscule și camelCase - stiluri de formatare comune în scriere și programare, ca să poți formata textul exact așa cum ai nevoie.</p>
+</div>
+<div class="faq-item">
+<h3>Cum decide formatul titlu ce cuvinte să scrie cu majusculă?</h3>
+<p>Scrie cu majusculă prima literă a fiecărui cuvânt din text, fără tratament special pentru cuvintele mai mici precum "un", "the" sau "of" - deci "the lord of the rings" devine "The Lord Of The Rings" aici, mai degrabă decât convenția din ghidurile de stil care scrie cu minusculă cuvintele minore.</p>
+</div>
+<div class="faq-item">
+<h3>Ce face formatul propoziție cu un text care are mai multe propoziții?</h3>
+<p>Scrie cu majusculă doar prima literă a întregii intrări, lăsând restul cu minusculă - nu detectează limitele fiecărei propoziții individuale pentru a le scrie din nou cu majusculă, deci un paragraf cu mai multe propoziții primește exact o singură literă mare în total.</p>
+</div>
+<div class="faq-item">
+<h3>Dacă textul meu are acronime scrise cu majuscule, precum "NASA", conversia la minuscule le strică?</h3>
+<p>Da - conversia la minuscule tratează fiecare literă la fel, indiferent de context, deci "NASA" devine "nasa". Nu există detectare de acronime, așa că verifică textul cu acronime sau substantive proprii după conversie.</p>
 </div></div>
         </div>
       </main>

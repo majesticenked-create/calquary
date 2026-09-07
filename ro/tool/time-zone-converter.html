@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Da - schimbă câmpurile de dată și oră la orice dată; instrumentul aplică în continuare regulile corecte de oră de vară pentru orice fusuri și dată alegi."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Ce se întâmplă dacă convertesc o oră care cade în timpul unei tranziții de oră de vară, precum noaptea în care se schimbă ceasurile?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Instrumentul aplică decalajul UTC oficial în vigoare pentru acel fus la data și ora exactă respectivă, deci o oră care nu există (omisă la trecerea înainte) sau apare de două ori (repetată la trecerea înapoi) este rezolvată folosind regulile standard ale bazei de date de fusuri orare, nu lăsată ambiguă."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cum convertesc ora 14:00 din Est SUA în ora Indiei?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Setează data și ora la 14:00, alege US Eastern ca fus 'De la' și India (Kolkata) ca fus 'La' - rezultatul reflectă decalajul complet (de obicei 9,5 sau 10,5 ore în funcție de ora de vară din SUA), inclusiv jumătatea de oră pe care IST o adaugă."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Este acest lucru la fel cu un 'convertor de oră UTC'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da, în esență - selectarea UTC fie ca fus 'De la', fie ca fus 'La' convertește direct la sau de la Timpul Universal Coordonat, exact ceea ce fac majoritatea instrumentelor de 'convertor UTC'."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Pot converti o oră din trecut sau viitor, nu doar chiar acum?</h3>
 <p>Da - schimbă câmpurile de dată și oră la orice dată; instrumentul aplică în continuare regulile corecte de oră de vară pentru orice fusuri și dată alegi.</p>
+</div>
+<div class="faq-item">
+<h3>Ce se întâmplă dacă convertesc o oră care cade în timpul unei tranziții de oră de vară, precum noaptea în care se schimbă ceasurile?</h3>
+<p>Instrumentul aplică decalajul UTC oficial în vigoare pentru acel fus la data și ora exactă respectivă, deci o oră care nu există (omisă la trecerea înainte) sau apare de două ori (repetată la trecerea înapoi) este rezolvată folosind regulile standard ale bazei de date de fusuri orare, nu lăsată ambiguă.</p>
+</div>
+<div class="faq-item">
+<h3>Cum convertesc ora 14:00 din Est SUA în ora Indiei?</h3>
+<p>Setează data și ora la 14:00, alege US Eastern ca fus 'De la' și India (Kolkata) ca fus 'La' - rezultatul reflectă decalajul complet (de obicei 9,5 sau 10,5 ore în funcție de ora de vară din SUA), inclusiv jumătatea de oră pe care IST o adaugă.</p>
+</div>
+<div class="faq-item">
+<h3>Este acest lucru la fel cu un 'convertor de oră UTC'?</h3>
+<p>Da, în esență - selectarea UTC fie ca fus 'De la', fie ca fus 'La' convertește direct la sau de la Timpul Universal Coordonat, exact ceea ce fac majoritatea instrumentelor de 'convertor UTC'.</p>
 </div></div>
         </div>
       </main>

@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Da - Calculatorul de Notă obișnuit convertește un singur scor (precum un test) într-un procentaj și notă literală. Acest instrument combină mai multe categorii ponderate - teme, teste, un examen final, etc. - într-o notă generală a cursului."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Ce se întâmplă dacă introduc o pondere de 0 pentru o categorie pe care nu am început-o încă?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Acea categorie este exclusă complet din calcul (înmulțirea cu 0 nu contribuie cu nimic la numărător sau numitor), deci nota ta curentă reflectă doar categoriile cu o pondere nenulă - util pentru a urmări o medie curentă pe măsură ce semestrul avansează."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cât ar trebui să fie examenul final pentru a obține un A general dacă știu deja notele la teme și teste?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Acest calculator rezolvă nota generală din toate cele trei categorii simultan, deci pentru a găsi scorul final necesar, lucrează invers: țintă = (nota generală dorită × 100 − teme×pondere − teste×pondere) / pondere final. De exemplu, având nevoie de 90 general cu 95×20 + 82×40 deja fixate și o pondere de 40% pentru final: (9000 − 1900 − 3280) / 40 = 95,5%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pot folosi acest calculator pentru mai mult de trei categorii de notare, precum teste rapide plus teme, teste și un final?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Această versiune gestionează exact trei categorii (teme, teste, final) - pentru un curs cu și o categorie de teste rapide, combină testele rapide în oricare dintre categoriile existente cu o pondere similară, sau calculează mai întâi o medie parțială pentru testele rapide și tratează-o ca una dintre cele trei valori de intrare."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Este asta diferit de Calculatorul de Notă obișnuit?</h3>
 <p>Da - Calculatorul de Notă obișnuit convertește un singur scor (precum un test) într-un procentaj și notă literală. Acest instrument combină mai multe categorii ponderate - teme, teste, un examen final, etc. - într-o notă generală a cursului.</p>
+</div>
+<div class="faq-item">
+<h3>Ce se întâmplă dacă introduc o pondere de 0 pentru o categorie pe care nu am început-o încă?</h3>
+<p>Acea categorie este exclusă complet din calcul (înmulțirea cu 0 nu contribuie cu nimic la numărător sau numitor), deci nota ta curentă reflectă doar categoriile cu o pondere nenulă - util pentru a urmări o medie curentă pe măsură ce semestrul avansează.</p>
+</div>
+<div class="faq-item">
+<h3>Cât ar trebui să fie examenul final pentru a obține un A general dacă știu deja notele la teme și teste?</h3>
+<p>Acest calculator rezolvă nota generală din toate cele trei categorii simultan, deci pentru a găsi scorul final necesar, lucrează invers: țintă = (nota generală dorită × 100 − teme×pondere − teste×pondere) / pondere final. De exemplu, având nevoie de 90 general cu 95×20 + 82×40 deja fixate și o pondere de 40% pentru final: (9000 − 1900 − 3280) / 40 = 95,5%.</p>
+</div>
+<div class="faq-item">
+<h3>Pot folosi acest calculator pentru mai mult de trei categorii de notare, precum teste rapide plus teme, teste și un final?</h3>
+<p>Această versiune gestionează exact trei categorii (teme, teste, final) - pentru un curs cu și o categorie de teste rapide, combină testele rapide în oricare dintre categoriile existente cu o pondere similară, sau calculează mai întâi o medie parțială pentru testele rapide și tratează-o ca una dintre cele trei valori de intrare.</p>
 </div></div>
         </div>
       </main>

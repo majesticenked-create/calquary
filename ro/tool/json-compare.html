@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Acest instrument raportează care dintre cele două intrări JSON este invalidă, împreună cu mesajul de eroare al parserului, în loc să încerce o comparație parțială sau ghicită - corectează mai întâi eroarea de sintaxă, apoi compară."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Dacă o cheie există în ambele obiecte JSON dar are exact aceeași valoare, apare în diferență?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nu - doar cheile care diferă (adăugate, eliminate, sau cu valoarea schimbată) apar în rezultate. Cheile identice cu valori identice sunt considerate neschimbate și nu sunt semnalate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "În exemplul implicit, care este diferența dintre cele două obiecte JSON?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "\"age\" este schimbat (30 în 31), \"city\" este eliminat (prezent doar în primul JSON), iar \"country\" este adăugat (prezent doar în al doilea JSON) - \"name\" rămâne la fel în ambele, deci nu este semnalat."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ordinea cheilor în JSON contează pentru comparație?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nu - comparația se bazează pe numele și valorile cheilor, nu pe ordinea în care apar cheile în text, deoarece obiectele JSON sunt prin specificație colecții neordonate de perechi cheie-valoare."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Ce se întâmplă dacă JSON-ul meu are o eroare de sintaxă?</h3>
 <p>Acest instrument raportează care dintre cele două intrări JSON este invalidă, împreună cu mesajul de eroare al parserului, în loc să încerce o comparație parțială sau ghicită - corectează mai întâi eroarea de sintaxă, apoi compară.</p>
+</div>
+<div class="faq-item">
+<h3>Dacă o cheie există în ambele obiecte JSON dar are exact aceeași valoare, apare în diferență?</h3>
+<p>Nu - doar cheile care diferă (adăugate, eliminate, sau cu valoarea schimbată) apar în rezultate. Cheile identice cu valori identice sunt considerate neschimbate și nu sunt semnalate.</p>
+</div>
+<div class="faq-item">
+<h3>În exemplul implicit, care este diferența dintre cele două obiecte JSON?</h3>
+<p>"age" este schimbat (30 în 31), "city" este eliminat (prezent doar în primul JSON), iar "country" este adăugat (prezent doar în al doilea JSON) - "name" rămâne la fel în ambele, deci nu este semnalat.</p>
+</div>
+<div class="faq-item">
+<h3>Ordinea cheilor în JSON contează pentru comparație?</h3>
+<p>Nu - comparația se bazează pe numele și valorile cheilor, nu pe ordinea în care apar cheile în text, deoarece obiectele JSON sunt prin specificație colecții neordonate de perechi cheie-valoare.</p>
 </div></div>
         </div>
       </main>

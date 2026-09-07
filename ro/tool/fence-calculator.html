@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Acest calculator estimează stâlpi și panouri pentru un tronson continuu de gard; dacă gardul tău include una sau mai multe porți, scade lățimea porții din lungimea totală a gardului înainte de a calcula, deoarece porțile folosesc feronerie separată, nu panouri standard."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Câți stâlpi și panouri îmi trebuie pentru 150 picioare de gard cu panouri de 6 picioare?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "150 ÷ 6 = 25 de panouri exact, ceea ce necesită 26 de stâlpi - unul mai mult decât numărul de panouri pentru a închide ambele capete ale tronsonului."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O linie de gard cu colțuri are nevoie de mai mulți stâlpi decât arată acest calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da - acest calculator presupune un singur tronson drept continuu. Fiecare colț are nevoie de propriul stâlp indiferent de distanțarea panourilor, deci măsoară și calculează fiecare segment drept separat, apoi adaugă un stâlp suplimentar per colț, în loc să tratezi întregul perimetru ca o singură lungime."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "De ce nu pot pur și simplu să împart lungimea gardului la lățimea panoului ca să obțin numărul de stâlpi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Împărțirea lungimii la lățimea panoului îți dă numărul de panouri, dar subestimează numărul de stâlpi cu unu pe un tronson drept, deoarece panourile adiacente împart un stâlp, cu excepția celor două capete deschise ale liniei - de aceea acest calculator raportează stâlpii ca panouri plus unu."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Se ține cont de porți în linia gardului?</h3>
 <p>Acest calculator estimează stâlpi și panouri pentru un tronson continuu de gard; dacă gardul tău include una sau mai multe porți, scade lățimea porții din lungimea totală a gardului înainte de a calcula, deoarece porțile folosesc feronerie separată, nu panouri standard.</p>
+</div>
+<div class="faq-item">
+<h3>Câți stâlpi și panouri îmi trebuie pentru 150 picioare de gard cu panouri de 6 picioare?</h3>
+<p>150 ÷ 6 = 25 de panouri exact, ceea ce necesită 26 de stâlpi - unul mai mult decât numărul de panouri pentru a închide ambele capete ale tronsonului.</p>
+</div>
+<div class="faq-item">
+<h3>O linie de gard cu colțuri are nevoie de mai mulți stâlpi decât arată acest calculator?</h3>
+<p>Da - acest calculator presupune un singur tronson drept continuu. Fiecare colț are nevoie de propriul stâlp indiferent de distanțarea panourilor, deci măsoară și calculează fiecare segment drept separat, apoi adaugă un stâlp suplimentar per colț, în loc să tratezi întregul perimetru ca o singură lungime.</p>
+</div>
+<div class="faq-item">
+<h3>De ce nu pot pur și simplu să împart lungimea gardului la lățimea panoului ca să obțin numărul de stâlpi?</h3>
+<p>Împărțirea lungimii la lățimea panoului îți dă numărul de panouri, dar subestimează numărul de stâlpi cu unu pe un tronson drept, deoarece panourile adiacente împart un stâlp, cu excepția celor două capete deschise ale liniei - de aceea acest calculator raportează stâlpii ca panouri plus unu.</p>
 </div></div>
         </div>
       </main>

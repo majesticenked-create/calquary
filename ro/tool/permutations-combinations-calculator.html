@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Fiecare combinare de r elemente poate fi aranjată în r! ordini diferite, și fiecare dintre aceste ordonări contează ca o permutare separată - deci permutări = combinări × r!, sau echivalent combinări = permutări ÷ r!."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Cât este 5 alege 5 (5C5), și de ce este egal cu 1?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1 - există o singură modalitate de a alege toate cele 5 elemente dintr-un grup de 5 (pur și simplu îi iei pe toți), fapt confirmat de formulă: 5!/(5!×0!) = 1, deoarece 0! este definit ca 1."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Câte aranjamente diferite de 4 litere se pot face din 6 litere distincte?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "360 - folosind nPr = n!/(n-r)! = 6!/(6-4)! = 720/2 = 360, deoarece ordinea contează pentru un aranjament (permutare)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "De ce nCr are întotdeauna aceeași valoare fie că este calculat ca \"n alege r\" sau \"n alege (n-r)\"?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A alege r elemente pentru a le include este matematic identic cu a alege cele (n-r) elemente pentru a le exclude - de exemplu, 10C3 = 10C7 = 120, deoarece ambele descriu același act de a împărți 10 elemente într-un grup de 3 și unul de 7."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>De ce nPr este întotdeauna nCr înmulțit cu r!?</h3>
 <p>Fiecare combinare de r elemente poate fi aranjată în r! ordini diferite, și fiecare dintre aceste ordonări contează ca o permutare separată - deci permutări = combinări × r!, sau echivalent combinări = permutări ÷ r!.</p>
+</div>
+<div class="faq-item">
+<h3>Cât este 5 alege 5 (5C5), și de ce este egal cu 1?</h3>
+<p>1 - există o singură modalitate de a alege toate cele 5 elemente dintr-un grup de 5 (pur și simplu îi iei pe toți), fapt confirmat de formulă: 5!/(5!×0!) = 1, deoarece 0! este definit ca 1.</p>
+</div>
+<div class="faq-item">
+<h3>Câte aranjamente diferite de 4 litere se pot face din 6 litere distincte?</h3>
+<p>360 - folosind nPr = n!/(n-r)! = 6!/(6-4)! = 720/2 = 360, deoarece ordinea contează pentru un aranjament (permutare).</p>
+</div>
+<div class="faq-item">
+<h3>De ce nCr are întotdeauna aceeași valoare fie că este calculat ca "n alege r" sau "n alege (n-r)"?</h3>
+<p>A alege r elemente pentru a le include este matematic identic cu a alege cele (n-r) elemente pentru a le exclude - de exemplu, 10C3 = 10C7 = 120, deoarece ambele descriu același act de a împărți 10 elemente într-un grup de 3 și unul de 7.</p>
 </div></div>
         </div>
       </main>

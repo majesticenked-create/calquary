@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Nu - introdu culorile ca coduri hex de 6 cifre (precum #FF0000 pentru roșu), deoarece acesta este formatul precis, neambiguu pe care îl analizează acest calculator. Majoritatea instrumentelor de design și browserelor îți pot arăta codul hex pentru orice culoare pe care o alegi vizual."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Ce culoare obții din amestecarea roșu pur și albastru pur la 50/50?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un mov mijlociu/magenta, aproximativ #7F007F - deoarece roșu este (255,0,0) și albastru este (0,0,255), calcularea mediei fiecărui canal dă (127,0,127), punctul median RGB dintre cele două."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "De ce amestecarea roșului cu verdele nu dă maro sau galben precum ar face vopseaua?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Deoarece acest instrument amestecă lumină (aditiv RGB), nu pigment (amestec substractiv). Aditiv, roșu (255,0,0) și verde (0,255,0) amestecate 50/50 au ca medie (127,127,0), o nuanță galben-măsliniu - similară cu galbenul, dar printr-un mecanism complet diferit față de amestecarea pigmenților de vopsea, motiv pentru care intuițiile din pictură nu se transferă întotdeauna aici."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ce se întâmplă dacă setez raportul la 0% sau 100%?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La o greutate de 0% pentru prima culoare, rezultatul este pur și simplu a doua culoare neschimbată; la 100%, este prima culoare neschimbată - raportul contează doar pentru valorile dintre aceste două extreme."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Pot folosi nume de culori în loc de coduri hex?</h3>
 <p>Nu - introdu culorile ca coduri hex de 6 cifre (precum #FF0000 pentru roșu), deoarece acesta este formatul precis, neambiguu pe care îl analizează acest calculator. Majoritatea instrumentelor de design și browserelor îți pot arăta codul hex pentru orice culoare pe care o alegi vizual.</p>
+</div>
+<div class="faq-item">
+<h3>Ce culoare obții din amestecarea roșu pur și albastru pur la 50/50?</h3>
+<p>Un mov mijlociu/magenta, aproximativ #7F007F - deoarece roșu este (255,0,0) și albastru este (0,0,255), calcularea mediei fiecărui canal dă (127,0,127), punctul median RGB dintre cele două.</p>
+</div>
+<div class="faq-item">
+<h3>De ce amestecarea roșului cu verdele nu dă maro sau galben precum ar face vopseaua?</h3>
+<p>Deoarece acest instrument amestecă lumină (aditiv RGB), nu pigment (amestec substractiv). Aditiv, roșu (255,0,0) și verde (0,255,0) amestecate 50/50 au ca medie (127,127,0), o nuanță galben-măsliniu - similară cu galbenul, dar printr-un mecanism complet diferit față de amestecarea pigmenților de vopsea, motiv pentru care intuițiile din pictură nu se transferă întotdeauna aici.</p>
+</div>
+<div class="faq-item">
+<h3>Ce se întâmplă dacă setez raportul la 0% sau 100%?</h3>
+<p>La o greutate de 0% pentru prima culoare, rezultatul este pur și simplu a doua culoare neschimbată; la 100%, este prima culoare neschimbată - raportul contează doar pentru valorile dintre aceste două extreme.</p>
 </div></div>
         </div>
       </main>

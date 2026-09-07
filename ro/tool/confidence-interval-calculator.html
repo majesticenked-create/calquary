@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Folosește un scor t (din distribuția t) pentru eșantioane mai mici, de obicei sub 30, deoarece ține cont de incertitudinea suplimentară într-o estimare a deviației standard pentru eșantion mic. Acest calculator folosește distribuția z, care este o aproximare rezonabilă odată ce dimensiunea eșantionului tău este 30 sau mai mult."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Cum calculez un interval de încredere de 99% în loc de 95%?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Selectează 99% ca nivel de încredere, care folosește un scor z mai mare (aproximativ 2,576 în loc de 1,96) - intervalul rezultat va fi mai larg decât unul de 95% pentru aceleași date, deoarece o încredere mai mare necesită o marjă de eroare mai mare."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Care este intervalul de încredere pentru o medie de eșantion de 50, o deviație standard de 10 și n=100 la o încredere de 95%?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Marja de eroare = 1,96 × (10/√100) = 1,96 × 1 = 1,96. Intervalul este 50 ± 1,96, sau aproximativ 48,04 până la 51,96."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Un interval de încredere mai larg înseamnă că estimarea este mai puțin precisă?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Înseamnă că există mai multă incertitudine despre locația exactă a adevăratei medii a populației, adesea din cauza unei dimensiuni mai mici a eșantionului, unei variabilități mai mari în date, sau unui nivel de încredere ales mai mare - nu că media eșantionului în sine este greșită, ci doar că intervalul valorilor adevărate plauzibile este mai larg."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Ar trebui să folosesc un scor z sau t pentru intervalul meu de încredere?</h3>
 <p>Folosește un scor t (din distribuția t) pentru eșantioane mai mici, de obicei sub 30, deoarece ține cont de incertitudinea suplimentară într-o estimare a deviației standard pentru eșantion mic. Acest calculator folosește distribuția z, care este o aproximare rezonabilă odată ce dimensiunea eșantionului tău este 30 sau mai mult.</p>
+</div>
+<div class="faq-item">
+<h3>Cum calculez un interval de încredere de 99% în loc de 95%?</h3>
+<p>Selectează 99% ca nivel de încredere, care folosește un scor z mai mare (aproximativ 2,576 în loc de 1,96) - intervalul rezultat va fi mai larg decât unul de 95% pentru aceleași date, deoarece o încredere mai mare necesită o marjă de eroare mai mare.</p>
+</div>
+<div class="faq-item">
+<h3>Care este intervalul de încredere pentru o medie de eșantion de 50, o deviație standard de 10 și n=100 la o încredere de 95%?</h3>
+<p>Marja de eroare = 1,96 × (10/√100) = 1,96 × 1 = 1,96. Intervalul este 50 ± 1,96, sau aproximativ 48,04 până la 51,96.</p>
+</div>
+<div class="faq-item">
+<h3>Un interval de încredere mai larg înseamnă că estimarea este mai puțin precisă?</h3>
+<p>Înseamnă că există mai multă incertitudine despre locația exactă a adevăratei medii a populației, adesea din cauza unei dimensiuni mai mici a eșantionului, unei variabilități mai mari în date, sau unui nivel de încredere ales mai mare - nu că media eșantionului în sine este greșită, ci doar că intervalul valorilor adevărate plauzibile este mai larg.</p>
 </div></div>
         </div>
       </main>

@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "O /32 este o singură adresă fără loc pentru o pereche rețea/broadcast, iar o /31 este un caz special (definit în RFC 3021) folosit pentru legături punct-la-punct unde ambele adrese din blocul de 2 adrese sunt utilizabile ca adrese de gazdă, deoarece nu este necesar niciun broadcast."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Care este masca de subrețea pentru o rețea /24?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "255.255.255.0 - un prefix /24 înseamnă că primii 24 de biți sunt toți 1 (trei octeți întregi de 255), lăsând ultimul octet ca fiind toți 0 pentru adresele de gazdă."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cum diferă acesta de Calculatorul de subrețea IP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Calculează aceleași rezultate (adresă de rețea, adresă de broadcast, interval utilizabil), dar acest instrument primește intrarea ca un singur șir CIDR combinat precum \"192.168.1.0/24\", în timp ce Calculatorul de subrețea IP folosește câmpuri separate pentru adresa IP și lungimea prefixului."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ce mască de subrețea corespunde unei rețele /29?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "255.255.255.248 - un prefix /29 folosește 29 din cei 32 de biți pentru rețea, lăsând doar 3 biți de gazdă (8 adrese totale, 6 utilizabile), ceea ce ca mască este 255.255.255 urmat de 248 (11111000 în binar)."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>De ce nu există gazde utilizabile pentru o /31 sau /32?</h3>
 <p>O /32 este o singură adresă fără loc pentru o pereche rețea/broadcast, iar o /31 este un caz special (definit în RFC 3021) folosit pentru legături punct-la-punct unde ambele adrese din blocul de 2 adrese sunt utilizabile ca adrese de gazdă, deoarece nu este necesar niciun broadcast.</p>
+</div>
+<div class="faq-item">
+<h3>Care este masca de subrețea pentru o rețea /24?</h3>
+<p>255.255.255.0 - un prefix /24 înseamnă că primii 24 de biți sunt toți 1 (trei octeți întregi de 255), lăsând ultimul octet ca fiind toți 0 pentru adresele de gazdă.</p>
+</div>
+<div class="faq-item">
+<h3>Cum diferă acesta de Calculatorul de subrețea IP?</h3>
+<p>Calculează aceleași rezultate (adresă de rețea, adresă de broadcast, interval utilizabil), dar acest instrument primește intrarea ca un singur șir CIDR combinat precum "192.168.1.0/24", în timp ce Calculatorul de subrețea IP folosește câmpuri separate pentru adresa IP și lungimea prefixului.</p>
+</div>
+<div class="faq-item">
+<h3>Ce mască de subrețea corespunde unei rețele /29?</h3>
+<p>255.255.255.248 - un prefix /29 folosește 29 din cei 32 de biți pentru rețea, lăsând doar 3 biți de gazdă (8 adrese totale, 6 utilizabile), ceea ce ca mască este 255.255.255 urmat de 248 (11111000 în binar).</p>
 </div></div>
         </div>
       </main>

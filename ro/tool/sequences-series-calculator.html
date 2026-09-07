@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Sumă = a₁(1 − rⁿ) / (1 − r) pentru r ≠ 1. Pentru a₁=2, r=3, n=6: 2×(1−729)/(1−3) = 728. Dacă r = 1, fiecare termen este egal cu a₁, deci suma este pur și simplu a₁ × n."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Ce se întâmplă cu o serie geometrică dacă rația r este între -1 și 1?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fiecare termen se micșorează spre zero, iar deși acest calculator calculează suma unui număr finit de termeni n, o serie geometrică infinită cu |r| < 1 ar converge către un total finit de a1 / (1 − r)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pot diferența comună sau rația să fie negative?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da - o diferență comună negativă produce un șir aritmetic descrescător (precum 10, 7, 4, 1...), iar o rație comună negativă produce un șir geometric care alternează semnul la fiecare termen (precum 2, -6, 18, -54...)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Este un șir Fibonacci același lucru cu un șir aritmetic sau geometric?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nu - un șir Fibonacci adună cei doi termeni anteriori pentru a obține următorul (1, 1, 2, 3, 5, 8...), ceea ce nu este nici o diferență constantă (aritmetic), nici o rație constantă (geometric), deci acest calculator nu îl acoperă."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Care este formula pentru suma unui șir geometric?</h3>
 <p>Sumă = a₁(1 − rⁿ) / (1 − r) pentru r ≠ 1. Pentru a₁=2, r=3, n=6: 2×(1−729)/(1−3) = 728. Dacă r = 1, fiecare termen este egal cu a₁, deci suma este pur și simplu a₁ × n.</p>
+</div>
+<div class="faq-item">
+<h3>Ce se întâmplă cu o serie geometrică dacă rația r este între -1 și 1?</h3>
+<p>Fiecare termen se micșorează spre zero, iar deși acest calculator calculează suma unui număr finit de termeni n, o serie geometrică infinită cu |r| < 1 ar converge către un total finit de a1 / (1 − r).</p>
+</div>
+<div class="faq-item">
+<h3>Pot diferența comună sau rația să fie negative?</h3>
+<p>Da - o diferență comună negativă produce un șir aritmetic descrescător (precum 10, 7, 4, 1...), iar o rație comună negativă produce un șir geometric care alternează semnul la fiecare termen (precum 2, -6, 18, -54...).</p>
+</div>
+<div class="faq-item">
+<h3>Este un șir Fibonacci același lucru cu un șir aritmetic sau geometric?</h3>
+<p>Nu - un șir Fibonacci adună cei doi termeni anteriori pentru a obține următorul (1, 1, 2, 3, 5, 8...), ceea ce nu este nici o diferență constantă (aritmetic), nici o rație constantă (geometric), deci acest calculator nu îl acoperă.</p>
 </div></div>
         </div>
       </main>

@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Practic neglijabilă - cu 122 de biți aleatorii (câțiva biți sunt fixați pentru a marca versiunea), ai avea nevoie să generezi aproximativ un miliard de UUID-uri pe secundă timp de aproximativ 85 de ani înainte de a avea 50% șanse de orice coliziune, motiv pentru care UUID-urile sunt de încredere ca identificatori unici fără a verifica un registru central."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Pot folosi un UUID ca cheie primară în baza de date?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da, aceasta este una dintre cele mai comune utilizări - UUID-urile îți permit să generezi ID-uri unice independent pe mai multe servere sau servicii fără a verifica mai întâi o bază de date centrală, evitând coliziunile care ar putea apărea cu numere simple auto-incrementate într-un sistem distribuit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "UUID-urile generate aici urmează întotdeauna același format, precum 8-4-4-4-12?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da - fiecare UUID urmează formatul standard de 36 de caractere, cu cinci grupuri hexazecimale separate prin cratimă (cifre 8-4-4-4-12), care este structura RFC 4122 pe care bazele de date, API-urile și bibliotecile se așteaptă să o poată analiza."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Este un GUID același lucru cu un UUID?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Funcțional, da - GUID (Globally Unique Identifier) este termenul Microsoft pentru același concept de identificator de 128 de biți ca un UUID, iar cei doi termeni sunt folosiți interschimbabil în majoritatea contextelor, inclusiv de acest generator."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Cât de probabilă este o coliziune UUID?</h3>
 <p>Practic neglijabilă - cu 122 de biți aleatorii (câțiva biți sunt fixați pentru a marca versiunea), ai avea nevoie să generezi aproximativ un miliard de UUID-uri pe secundă timp de aproximativ 85 de ani înainte de a avea 50% șanse de orice coliziune, motiv pentru care UUID-urile sunt de încredere ca identificatori unici fără a verifica un registru central.</p>
+</div>
+<div class="faq-item">
+<h3>Pot folosi un UUID ca cheie primară în baza de date?</h3>
+<p>Da, aceasta este una dintre cele mai comune utilizări - UUID-urile îți permit să generezi ID-uri unice independent pe mai multe servere sau servicii fără a verifica mai întâi o bază de date centrală, evitând coliziunile care ar putea apărea cu numere simple auto-incrementate într-un sistem distribuit.</p>
+</div>
+<div class="faq-item">
+<h3>UUID-urile generate aici urmează întotdeauna același format, precum 8-4-4-4-12?</h3>
+<p>Da - fiecare UUID urmează formatul standard de 36 de caractere, cu cinci grupuri hexazecimale separate prin cratimă (cifre 8-4-4-4-12), care este structura RFC 4122 pe care bazele de date, API-urile și bibliotecile se așteaptă să o poată analiza.</p>
+</div>
+<div class="faq-item">
+<h3>Este un GUID același lucru cu un UUID?</h3>
+<p>Funcțional, da - GUID (Globally Unique Identifier) este termenul Microsoft pentru același concept de identificator de 128 de biți ca un UUID, iar cei doi termeni sunt folosiți interschimbabil în majoritatea contextelor, inclusiv de acest generator.</p>
 </div></div>
         </div>
       </main>

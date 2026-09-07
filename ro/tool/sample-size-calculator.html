@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Da - toate acestea descriu găsirea dimensiunii minime a eșantionului necesar pentru un sondaj sau studiu la un nivel de încredere și marjă de eroare alese, ceea ce este exact ceea ce face acest calculator."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Cât de mult schimbă dublarea marjei de eroare dimensiunea eșantionului necesar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Reduce dimensiunea eșantionului necesar la aproximativ un sfert, deoarece dimensiunea eșantionului este invers proporțională cu pătratul marjei de eroare (n ∝ 1/e²) - înjumătățirea marjei de eroare dorite, dimpotrivă, cvadruplează aproximativ eșantionul de care ai nevoie."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ce dimensiune a eșantionului este necesară pentru un nivel de încredere de 95% și o marjă de eroare de 5% cu o proporție necunoscută?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aproximativ 385 - folosind n = (1,96² × 0,5 × 0,5) / 0,05² = 0,9604 / 0,0025 ≈ 384,16, rotunjit în sus la 385, cifra citată de obicei pentru un sondaj asupra populației generale."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "De ce calculatorul cere o proporție estimată a răspunsurilor dacă nu am încă rezultate de sondaj?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Proporția afectează cât de multă variabilitate presupune formula că există în răspunsuri - dacă ai o estimare anterioară aproximativă (din cercetări trecute sau un studiu pilot), introducerea ei poate reduce dimensiunea eșantionului necesar comparativ cu valoarea implicită conservatoare de 50%, deoarece p×(1−p) este mai mic cu cât p este mai departe de 0,5."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Este "calcularea dimensiunii eșantionului online" sau "calculator pentru determinarea dimensiunii eșantionului" același lucru cu acest instrument?</h3>
 <p>Da - toate acestea descriu găsirea dimensiunii minime a eșantionului necesar pentru un sondaj sau studiu la un nivel de încredere și marjă de eroare alese, ceea ce este exact ceea ce face acest calculator.</p>
+</div>
+<div class="faq-item">
+<h3>Cât de mult schimbă dublarea marjei de eroare dimensiunea eșantionului necesar?</h3>
+<p>Reduce dimensiunea eșantionului necesar la aproximativ un sfert, deoarece dimensiunea eșantionului este invers proporțională cu pătratul marjei de eroare (n ∝ 1/e²) - înjumătățirea marjei de eroare dorite, dimpotrivă, cvadruplează aproximativ eșantionul de care ai nevoie.</p>
+</div>
+<div class="faq-item">
+<h3>Ce dimensiune a eșantionului este necesară pentru un nivel de încredere de 95% și o marjă de eroare de 5% cu o proporție necunoscută?</h3>
+<p>Aproximativ 385 - folosind n = (1,96² × 0,5 × 0,5) / 0,05² = 0,9604 / 0,0025 ≈ 384,16, rotunjit în sus la 385, cifra citată de obicei pentru un sondaj asupra populației generale.</p>
+</div>
+<div class="faq-item">
+<h3>De ce calculatorul cere o proporție estimată a răspunsurilor dacă nu am încă rezultate de sondaj?</h3>
+<p>Proporția afectează cât de multă variabilitate presupune formula că există în răspunsuri - dacă ai o estimare anterioară aproximativă (din cercetări trecute sau un studiu pilot), introducerea ei poate reduce dimensiunea eșantionului necesar comparativ cu valoarea implicită conservatoare de 50%, deoarece p×(1−p) este mai mic cu cât p este mai departe de 0,5.</p>
 </div></div>
         </div>
       </main>

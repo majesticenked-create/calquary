@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Da - acest calcul presupune o distribuție uniformă, în care fiecare dintre cele n elemente are o șansă egală de 1/n la fiecare extragere. Dacă unele elemente sunt mai rare decât altele, numărul real așteptat de extrageri va fi mai mare decât această estimare."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Cum se schimbă numărul așteptat de extrageri pe măsură ce n crește?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Crește aproximativ ca n × ln(n), deci dublarea lui n mai mult decât dublează numărul așteptat de extrageri - pentru 100 de elemente, extragerile așteptate sunt aproximativ 519, cu mult mai mult decât dublul celor ~14,7 extrageri necesare pentru 6 elemente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Care este numărul minim posibil de extrageri pentru a colecta toate cele n elemente?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "n extrageri - acesta este cazul teoretic cel mai bun, în care fiecare extragere se întâmplă să fie un element nou, necolectat anterior. Valoarea așteptată calculată aici este întotdeauna mai mare decât acest minim, deoarece coliziunile cu elemente deja colectate sunt probabile."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Este aceasta aceeași matematică folosită pentru calcularea șanselor de colecție a cardurilor sau a cutiilor cu recompense (loot box)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da - problema colecționarului de cupoane este modelul standard pentru câte extrageri aleatorii sunt necesare pentru a completa un set întreg, fie că este vorba de premii din cutii de cereale, carduri de colecție, sau recompense din jocuri cu șanse egale de apariție."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Se presupune că fiecare element are șanse egale de a fi extras?</h3>
 <p>Da - acest calcul presupune o distribuție uniformă, în care fiecare dintre cele n elemente are o șansă egală de 1/n la fiecare extragere. Dacă unele elemente sunt mai rare decât altele, numărul real așteptat de extrageri va fi mai mare decât această estimare.</p>
+</div>
+<div class="faq-item">
+<h3>Cum se schimbă numărul așteptat de extrageri pe măsură ce n crește?</h3>
+<p>Crește aproximativ ca n × ln(n), deci dublarea lui n mai mult decât dublează numărul așteptat de extrageri - pentru 100 de elemente, extragerile așteptate sunt aproximativ 519, cu mult mai mult decât dublul celor ~14,7 extrageri necesare pentru 6 elemente.</p>
+</div>
+<div class="faq-item">
+<h3>Care este numărul minim posibil de extrageri pentru a colecta toate cele n elemente?</h3>
+<p>n extrageri - acesta este cazul teoretic cel mai bun, în care fiecare extragere se întâmplă să fie un element nou, necolectat anterior. Valoarea așteptată calculată aici este întotdeauna mai mare decât acest minim, deoarece coliziunile cu elemente deja colectate sunt probabile.</p>
+</div>
+<div class="faq-item">
+<h3>Este aceasta aceeași matematică folosită pentru calcularea șanselor de colecție a cardurilor sau a cutiilor cu recompense (loot box)?</h3>
+<p>Da - problema colecționarului de cupoane este modelul standard pentru câte extrageri aleatorii sunt necesare pentru a completa un set întreg, fie că este vorba de premii din cutii de cereale, carduri de colecție, sau recompense din jocuri cu șanse egale de apariție.</p>
 </div></div>
         </div>
       </main>

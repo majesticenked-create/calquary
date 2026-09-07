@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Probabilitatea de a obține k sau mai puține succese, nu exact k - utilă pentru întrebări precum \"care este probabilitatea de a extrage cel mult 2 inimi\", care însumează probabilitățile individuale pentru 0, 1, și 2 inimi."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Ce reprezintă în termeni simpli N, K, n și k?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "N este populația totală (de exemplu, un pachet complet de 52 de cărți), K este numărul de elemente \"de succes\" din acea populație (de exemplu, 13 inimi), n este câte elemente extragi (dimensiunea eșantionului tău), iar k este câte succese dorești dintre cele extrase."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ce se întâmplă dacă k este mai mare decât n sau K?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Probabilitatea este 0 - nu poți extrage mai multe succese decât ai eșantionat efectiv (k > n) sau mai multe succese decât există în populație (k > K), deci acele combinații sunt imposibile din punct de vedere matematic."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cum se calculează media unei distribuții hipergeometrice?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Medie = n × (K/N) - pentru o mână de 5 cărți dintr-un pachet de 52 cu 13 inimi, numărul așteptat de inimi este 5 × (13/52) = 1,25, chiar dacă nu poți extrage efectiv un număr fracționar de inimi într-o singură mână."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Ce îmi spune probabilitatea cumulativă (P(X ≤ k))?</h3>
 <p>Probabilitatea de a obține k sau mai puține succese, nu exact k - utilă pentru întrebări precum "care este probabilitatea de a extrage cel mult 2 inimi", care însumează probabilitățile individuale pentru 0, 1, și 2 inimi.</p>
+</div>
+<div class="faq-item">
+<h3>Ce reprezintă în termeni simpli N, K, n și k?</h3>
+<p>N este populația totală (de exemplu, un pachet complet de 52 de cărți), K este numărul de elemente "de succes" din acea populație (de exemplu, 13 inimi), n este câte elemente extragi (dimensiunea eșantionului tău), iar k este câte succese dorești dintre cele extrase.</p>
+</div>
+<div class="faq-item">
+<h3>Ce se întâmplă dacă k este mai mare decât n sau K?</h3>
+<p>Probabilitatea este 0 - nu poți extrage mai multe succese decât ai eșantionat efectiv (k > n) sau mai multe succese decât există în populație (k > K), deci acele combinații sunt imposibile din punct de vedere matematic.</p>
+</div>
+<div class="faq-item">
+<h3>Cum se calculează media unei distribuții hipergeometrice?</h3>
+<p>Medie = n × (K/N) - pentru o mână de 5 cărți dintr-un pachet de 52 cu 13 inimi, numărul așteptat de inimi este 5 × (13/52) = 1,25, chiar dacă nu poți extrage efectiv un număr fracționar de inimi într-o singură mână.</p>
 </div></div>
         </div>
       </main>

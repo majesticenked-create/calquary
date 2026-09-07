@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Eliminarea cuvintelor de umplutură comune este opțională dar de obicei îmbunătățește lizibilitatea și scurtează ușor URL-ul fără a pierde sensul - \"cea-mai-buna-pizza-din-bucuresti\" funcționează la fel de bine ca \"aceasta-este-cea-mai-buna-pizza-din-bucuresti\". Acest instrument păstrează ordinea originală a cuvintelor tale și te lasă să decizi ce să păstrezi."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Ce se întâmplă cu punctuația precum apostrofurile sau semnele de exclamare din textul meu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sunt eliminate complet, deoarece un slug păstrează doar litere mici, numere, și liniuțe - \"Joe's Pizza!\" devine \"joes-pizza\" în loc să păstreze apostroful sau semnul de exclamare."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Spațiile multiple sau punctuația repetată sunt reduse la o singură liniuță?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da - spațiile sau caracterele speciale consecutive se reduc la o singură liniuță, în loc să producă mai multe liniuțe la rând, deci \"Hello   World!!\" devine \"hello-world\", nu \"hello---world\"."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Este \"slugify\" același lucru cu ceea ce face acest instrument?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da - \"slugify\", \"generator de slug URL\" și \"convertire în slug\" descriu toate conversia unui text oarecare în formatul cu litere mici, cu liniuțe, sigur pentru URL, pe care îl produce acest instrument."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Ar trebui slug-urile URL să includă cuvinte de umplutură precum "the" și "and"?</h3>
 <p>Eliminarea cuvintelor de umplutură comune este opțională dar de obicei îmbunătățește lizibilitatea și scurtează ușor URL-ul fără a pierde sensul - "cea-mai-buna-pizza-din-bucuresti" funcționează la fel de bine ca "aceasta-este-cea-mai-buna-pizza-din-bucuresti". Acest instrument păstrează ordinea originală a cuvintelor tale și te lasă să decizi ce să păstrezi.</p>
+</div>
+<div class="faq-item">
+<h3>Ce se întâmplă cu punctuația precum apostrofurile sau semnele de exclamare din textul meu?</h3>
+<p>Sunt eliminate complet, deoarece un slug păstrează doar litere mici, numere, și liniuțe - "Joe's Pizza!" devine "joes-pizza" în loc să păstreze apostroful sau semnul de exclamare.</p>
+</div>
+<div class="faq-item">
+<h3>Spațiile multiple sau punctuația repetată sunt reduse la o singură liniuță?</h3>
+<p>Da - spațiile sau caracterele speciale consecutive se reduc la o singură liniuță, în loc să producă mai multe liniuțe la rând, deci "Hello   World!!" devine "hello-world", nu "hello---world".</p>
+</div>
+<div class="faq-item">
+<h3>Este "slugify" același lucru cu ceea ce face acest instrument?</h3>
+<p>Da - "slugify", "generator de slug URL" și "convertire în slug" descriu toate conversia unui text oarecare în formatul cu litere mici, cu liniuțe, sigur pentru URL, pe care îl produce acest instrument.</p>
 </div></div>
         </div>
       </main>

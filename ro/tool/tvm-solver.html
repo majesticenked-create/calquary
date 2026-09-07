@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Introdu rata pe perioadă, nu rata anuală - dacă capitalizezi lunar și ai o rată anuală de 6%, introdu 0,5 (6 ÷ 12) ca rată pe perioadă, și setează perioadele în luni pentru a se potrivi."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Poate acest calculator rezolva pentru numărul de perioade sau rata dobânzii în schimb?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Această versiune rezolvă pentru valoarea prezentă, valoarea viitoare sau plată, date fiind celelalte valori de intrare - nu este construită să rezolve pentru rată sau numărul de perioade, care de obicei necesită metode iterative (încercare-eroare) mai degrabă decât o formulă directă."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ce se întâmplă dacă las VP la zero și rezolv pentru VV?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cu VP setat la 0, valoarea viitoare provine în întregime din fluxul de plăți care se capitalizează în timp - de exemplu, o PMT de -200 pe lună la o rată lunară de 0,5% pentru 120 de perioade, cu VP de 0, dă o VV de aproximativ 32.700$, corespunzând unui calcul standard de anuitate de economisire."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Este acesta același lucru cu un „calculator de anuitate”?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Foarte similar - un calculator de anuitate rezolvă de obicei pentru una dintre aceleași valori (valoare viitoare, plată sau valoare prezentă) pentru un flux de plăți periodice egale, ceea ce este exact calculul pe care îl efectuează acest rezolvator TVM."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Ce rată ar trebui să introduc?</h3>
 <p>Introdu rata pe perioadă, nu rata anuală - dacă capitalizezi lunar și ai o rată anuală de 6%, introdu 0,5 (6 ÷ 12) ca rată pe perioadă, și setează perioadele în luni pentru a se potrivi.</p>
+</div>
+<div class="faq-item">
+<h3>Poate acest calculator rezolva pentru numărul de perioade sau rata dobânzii în schimb?</h3>
+<p>Această versiune rezolvă pentru valoarea prezentă, valoarea viitoare sau plată, date fiind celelalte valori de intrare - nu este construită să rezolve pentru rată sau numărul de perioade, care de obicei necesită metode iterative (încercare-eroare) mai degrabă decât o formulă directă.</p>
+</div>
+<div class="faq-item">
+<h3>Ce se întâmplă dacă las VP la zero și rezolv pentru VV?</h3>
+<p>Cu VP setat la 0, valoarea viitoare provine în întregime din fluxul de plăți care se capitalizează în timp - de exemplu, o PMT de -200 pe lună la o rată lunară de 0,5% pentru 120 de perioade, cu VP de 0, dă o VV de aproximativ 32.700$, corespunzând unui calcul standard de anuitate de economisire.</p>
+</div>
+<div class="faq-item">
+<h3>Este acesta același lucru cu un „calculator de anuitate”?</h3>
+<p>Foarte similar - un calculator de anuitate rezolvă de obicei pentru una dintre aceleași valori (valoare viitoare, plată sau valoare prezentă) pentru un flux de plăți periodice egale, ceea ce este exact calculul pe care îl efectuează acest rezolvator TVM.</p>
 </div></div>
         </div>
       </main>

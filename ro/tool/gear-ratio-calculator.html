@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Nu - este un calcul idealizat care presupune fără alunecare a roții și transfer de putere perfect eficient, ceea ce este o aproximare rezonabilă pentru majoritatea condițiilor de drum și traseu, dar nu va fi perfect exact."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Ce viteză produce o cadență de 90 rpm cu o transmisie 50/14 pe o roată de 27 inci?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aproximativ 26 mph - incii de transmisie sunt 27 × (50÷14) ≈ 96,4, fiecare rotație de pedală acoperă 96,4 × π ≈ 302,9 inci, iar la 90 rpm asta înseamnă 27.264 inci pe minut, ceea ce se convertește la aproximativ 25,8 mph."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "De ce incii de transmisie folosesc diametrul roții în loc de diametrul real de rulare al anvelopei?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Acest calculator folosește diametrul nominal al roții pe care îl introduci ca aproximare - diametrul real de rulare (care include mărimea anvelopei și ușoara compresie sub sarcină) diferă puțin, deci cifrele în inci de transmisie sunt un instrument standardizat de comparație, nu o măsurătoare precisă a distanței reale."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Este \"inci de transmisie\" aceeași măsurătoare cu \"dezvoltare\" sau \"roll-out\" folosită pe unele computere de ciclism?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sunt legate, dar nu identice - dezvoltarea (sau roll-out) este distanța reală parcursă per rotație de pedală, dată de obicei în metri sau inci, în timp ce incii de transmisie reprezintă o unitate tradițională ușor diferită (diametrul efectiv al roții). Dezvoltarea este egală cu incii de transmisie × π, exact relația pe care o folosește acest calculator intern pentru a deriva viteza."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Ține asta cont de factori din lumea reală precum alunecarea anvelopei sau pierderea de transmisie?</h3>
 <p>Nu - este un calcul idealizat care presupune fără alunecare a roții și transfer de putere perfect eficient, ceea ce este o aproximare rezonabilă pentru majoritatea condițiilor de drum și traseu, dar nu va fi perfect exact.</p>
+</div>
+<div class="faq-item">
+<h3>Ce viteză produce o cadență de 90 rpm cu o transmisie 50/14 pe o roată de 27 inci?</h3>
+<p>Aproximativ 26 mph - incii de transmisie sunt 27 × (50÷14) ≈ 96,4, fiecare rotație de pedală acoperă 96,4 × π ≈ 302,9 inci, iar la 90 rpm asta înseamnă 27.264 inci pe minut, ceea ce se convertește la aproximativ 25,8 mph.</p>
+</div>
+<div class="faq-item">
+<h3>De ce incii de transmisie folosesc diametrul roții în loc de diametrul real de rulare al anvelopei?</h3>
+<p>Acest calculator folosește diametrul nominal al roții pe care îl introduci ca aproximare - diametrul real de rulare (care include mărimea anvelopei și ușoara compresie sub sarcină) diferă puțin, deci cifrele în inci de transmisie sunt un instrument standardizat de comparație, nu o măsurătoare precisă a distanței reale.</p>
+</div>
+<div class="faq-item">
+<h3>Este "inci de transmisie" aceeași măsurătoare cu "dezvoltare" sau "roll-out" folosită pe unele computere de ciclism?</h3>
+<p>Sunt legate, dar nu identice - dezvoltarea (sau roll-out) este distanța reală parcursă per rotație de pedală, dată de obicei în metri sau inci, în timp ce incii de transmisie reprezintă o unitate tradițională ușor diferită (diametrul efectiv al roții). Dezvoltarea este egală cu incii de transmisie × π, exact relația pe care o folosește acest calculator intern pentru a deriva viteza.</p>
 </div></div>
         </div>
       </main>

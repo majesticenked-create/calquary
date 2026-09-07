@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Combinarea unește varianța ambelor grupuri într-o singură estimare ponderată, care este abordarea standard atunci când poți presupune în mod rezonabil că ambele grupuri au varianță de bază similară - folosește mai mult din datele tale decât bazarea doar pe varianța unui singur grup."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Ce înseamnă dacă t este negativ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un t negativ înseamnă pur și simplu că media Grupului 1 este mai mică decât media Grupului 2 - semnul reflectă direcția, nu intensitatea. Doar mărimea (|t|) contează pentru a judeca cât de departe sunt grupurile."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cum se calculează gradele de libertate pentru acest test?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pentru testul t cu două eșantioane independente și abatere combinată, gradele de libertate = n1 + n2 − 2. Cu 30 de persoane în fiecare grup, asta înseamnă 30 + 30 − 2 = 58 de grade de libertate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ce se întâmplă dacă cele două grupuri ale mele au dimensiuni foarte diferite ale eșantionului?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Formula deviației standard combinate ponderează deja varianța fiecărui grup în funcție de propria dimensiune a eșantionului, deci n1 și n2 inegale sunt gestionate corect - reține însă că, dacă și varianțele grupurilor sunt foarte diferite, un test t cu varianțe inegale (testul Welch) ar putea fi mai potrivit decât această versiune combinată."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>De ce se folosește deviația standard "combinată"?</h3>
 <p>Combinarea unește varianța ambelor grupuri într-o singură estimare ponderată, care este abordarea standard atunci când poți presupune în mod rezonabil că ambele grupuri au varianță de bază similară - folosește mai mult din datele tale decât bazarea doar pe varianța unui singur grup.</p>
+</div>
+<div class="faq-item">
+<h3>Ce înseamnă dacă t este negativ?</h3>
+<p>Un t negativ înseamnă pur și simplu că media Grupului 1 este mai mică decât media Grupului 2 - semnul reflectă direcția, nu intensitatea. Doar mărimea (|t|) contează pentru a judeca cât de departe sunt grupurile.</p>
+</div>
+<div class="faq-item">
+<h3>Cum se calculează gradele de libertate pentru acest test?</h3>
+<p>Pentru testul t cu două eșantioane independente și abatere combinată, gradele de libertate = n1 + n2 − 2. Cu 30 de persoane în fiecare grup, asta înseamnă 30 + 30 − 2 = 58 de grade de libertate.</p>
+</div>
+<div class="faq-item">
+<h3>Ce se întâmplă dacă cele două grupuri ale mele au dimensiuni foarte diferite ale eșantionului?</h3>
+<p>Formula deviației standard combinate ponderează deja varianța fiecărui grup în funcție de propria dimensiune a eșantionului, deci n1 și n2 inegale sunt gestionate corect - reține însă că, dacă și varianțele grupurilor sunt foarte diferite, un test t cu varianțe inegale (testul Welch) ar putea fi mai potrivit decât această versiune combinată.</p>
 </div></div>
         </div>
       </main>

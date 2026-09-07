@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Da, ca verificare aproximativă - o distanță RGB scăzută (sub aproximativ 30) sugerează culori care ar putea fi greu de distins, utilă pentru semnalarea potențialelor conflicte de branding sau accesibilitate înainte de o verificare perceptuală mai riguroasă."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Contează ordinea culorilor - este comparația Culoare 1 cu Culoare 2 la fel ca Culoare 2 cu Culoare 1?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nu, rezultatul este identic în ambele sensuri. Distanța euclidiană este simetrică, deci schimbarea ordinii codurilor hex nu modifică diferența calculată."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Care este diferența dintre #FF0000 (roșu) și #00FF00 (verde) folosind acest calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aproximativ 360,6. Roșul este (255,0,0), iar verdele este (0,255,0), deci distanța este √(255² + 255² + 0²) ≈ 360,6 - aproape de maxim, reflectând cât de distincte sunt vizual cele două culori."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Este acest lucru la fel cu un \"verificator de contrast al culorilor\" pentru accesibilitate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nu - verificatoarele de contrast pentru accesibilitatea WCAG măsoară contrastul de luminanță (important pentru lizibilitatea textului), în timp ce acest instrument măsoară distanța RGB brută dintre două culori. O pereche de culori poate avea o distanță RGB mare, dar totuși să eșueze la un test de contrast al luminanței, sau invers."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Pot folosi asta pentru a verifica dacă două culori de brand sunt prea similare?</h3>
 <p>Da, ca verificare aproximativă - o distanță RGB scăzută (sub aproximativ 30) sugerează culori care ar putea fi greu de distins, utilă pentru semnalarea potențialelor conflicte de branding sau accesibilitate înainte de o verificare perceptuală mai riguroasă.</p>
+</div>
+<div class="faq-item">
+<h3>Contează ordinea culorilor - este comparația Culoare 1 cu Culoare 2 la fel ca Culoare 2 cu Culoare 1?</h3>
+<p>Nu, rezultatul este identic în ambele sensuri. Distanța euclidiană este simetrică, deci schimbarea ordinii codurilor hex nu modifică diferența calculată.</p>
+</div>
+<div class="faq-item">
+<h3>Care este diferența dintre #FF0000 (roșu) și #00FF00 (verde) folosind acest calculator?</h3>
+<p>Aproximativ 360,6. Roșul este (255,0,0), iar verdele este (0,255,0), deci distanța este √(255² + 255² + 0²) ≈ 360,6 - aproape de maxim, reflectând cât de distincte sunt vizual cele două culori.</p>
+</div>
+<div class="faq-item">
+<h3>Este acest lucru la fel cu un "verificator de contrast al culorilor" pentru accesibilitate?</h3>
+<p>Nu - verificatoarele de contrast pentru accesibilitatea WCAG măsoară contrastul de luminanță (important pentru lizibilitatea textului), în timp ce acest instrument măsoară distanța RGB brută dintre două culori. O pereche de culori poate avea o distanță RGB mare, dar totuși să eșueze la un test de contrast al luminanței, sau invers.</p>
 </div></div>
         </div>
       </main>

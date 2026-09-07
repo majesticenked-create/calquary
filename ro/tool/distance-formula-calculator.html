@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Fă media coordonatelor x și media coordonatelor y separat: mijloc = ((x₁+x₂)/2, (y₁+y₂)/2). Pentru (1,2) și (4,6), mijlocul este (2,5, 4)."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Formula distanței poate da un rezultat negativ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nu - distanța este întotdeauna zero sau pozitivă, deoarece formula ridică la pătrat diferențele (eliminând orice semn negativ) înainte de a extrage rădăcina pătrată, care prin convenție returnează rădăcina nenegativă."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Funcționează asta pentru puncte în spațiul 3D?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Acest calculator gestionează doar perechi de coordonate 2D, dar aceeași idee se extinde la 3D adăugând un termen z: d = √((x₂-x₁)² + (y₂-y₁)² + (z₂-z₁)²)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ce se întâmplă dacă ambele puncte sunt identice?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Distanța este 0 - dacă (x1,y1) este egal cu (x2,y2), atunci Δx și Δy sunt ambele 0, deci d = √(0² + 0²) = 0, indicând corect că nu există nicio separare între puncte."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Cum găsesc mijlocul dintre două puncte?</h3>
 <p>Fă media coordonatelor x și media coordonatelor y separat: mijloc = ((x₁+x₂)/2, (y₁+y₂)/2). Pentru (1,2) și (4,6), mijlocul este (2,5, 4).</p>
+</div>
+<div class="faq-item">
+<h3>Formula distanței poate da un rezultat negativ?</h3>
+<p>Nu - distanța este întotdeauna zero sau pozitivă, deoarece formula ridică la pătrat diferențele (eliminând orice semn negativ) înainte de a extrage rădăcina pătrată, care prin convenție returnează rădăcina nenegativă.</p>
+</div>
+<div class="faq-item">
+<h3>Funcționează asta pentru puncte în spațiul 3D?</h3>
+<p>Acest calculator gestionează doar perechi de coordonate 2D, dar aceeași idee se extinde la 3D adăugând un termen z: d = √((x₂-x₁)² + (y₂-y₁)² + (z₂-z₁)²).</p>
+</div>
+<div class="faq-item">
+<h3>Ce se întâmplă dacă ambele puncte sunt identice?</h3>
+<p>Distanța este 0 - dacă (x1,y1) este egal cu (x2,y2), atunci Δx și Δy sunt ambele 0, deci d = √(0² + 0²) = 0, indicând corect că nu există nicio separare între puncte.</p>
 </div></div>
         </div>
       </main>

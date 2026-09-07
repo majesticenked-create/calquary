@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Da - pe lângă numărul de cuvinte, afișează numărul de caractere cu și fără spații, precum și numărul de propoziții și paragrafe - util pentru respectarea limitelor stricte de caractere, cum ar fi postările pe rețele sociale sau meta descrierile."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Un cuvânt cu cratimă precum \"bine-cunoscut\" se numără ca un cuvânt sau două?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un cuvânt - numărătorul se împarte după spații albe, și deoarece nu există spațiu în interiorul lui \"bine-cunoscut\", este tratat ca un singur cuvânt, la fel cum majoritatea procesoarelor de text tratează cuvintele compuse cu cratimă."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dacă lipesc trei linii goale între paragrafe, afectează asta numărătoarea?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Liniile goale suplimentare nu adaugă la numărul de cuvinte sau caractere (nu există cuvinte pe ele), dar contează pentru detectarea paragrafelor, deoarece o linie goală este de obicei ceea ce separă un paragraf de următorul."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cum diferă \"numărul de cuvinte\" de \"numărul de caractere\" pentru lucruri precum limitele Twitter/X?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Numărul de cuvinte contorizează cuvintele separate prin spații albe, în timp ce numărul de caractere contorizează fiecare literă, cifră, spațiu și simbol în parte. Platforme precum X limitează după numărul de caractere, nu după numărul de cuvinte, deci verifică numărul de caractere (cu spații) afișat de acest instrument dacă lucrezi cu o limită de caractere impusă de o platformă."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Numără și caracterele, nu doar cuvintele?</h3>
 <p>Da - pe lângă numărul de cuvinte, afișează numărul de caractere cu și fără spații, precum și numărul de propoziții și paragrafe - util pentru respectarea limitelor stricte de caractere, cum ar fi postările pe rețele sociale sau meta descrierile.</p>
+</div>
+<div class="faq-item">
+<h3>Un cuvânt cu cratimă precum "bine-cunoscut" se numără ca un cuvânt sau două?</h3>
+<p>Un cuvânt - numărătorul se împarte după spații albe, și deoarece nu există spațiu în interiorul lui "bine-cunoscut", este tratat ca un singur cuvânt, la fel cum majoritatea procesoarelor de text tratează cuvintele compuse cu cratimă.</p>
+</div>
+<div class="faq-item">
+<h3>Dacă lipesc trei linii goale între paragrafe, afectează asta numărătoarea?</h3>
+<p>Liniile goale suplimentare nu adaugă la numărul de cuvinte sau caractere (nu există cuvinte pe ele), dar contează pentru detectarea paragrafelor, deoarece o linie goală este de obicei ceea ce separă un paragraf de următorul.</p>
+</div>
+<div class="faq-item">
+<h3>Cum diferă "numărul de cuvinte" de "numărul de caractere" pentru lucruri precum limitele Twitter/X?</h3>
+<p>Numărul de cuvinte contorizează cuvintele separate prin spații albe, în timp ce numărul de caractere contorizează fiecare literă, cifră, spațiu și simbol în parte. Platforme precum X limitează după numărul de caractere, nu după numărul de cuvinte, deci verifică numărul de caractere (cu spații) afișat de acest instrument dacă lucrezi cu o limită de caractere impusă de o platformă.</p>
 </div></div>
         </div>
       </main>

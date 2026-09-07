@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Da - alături de descompunerea în ore și minute, acest calculator arată durata totală ca zecimală (de exemplu, 7 ore 30 de minute se afișează ca 7,5 ore), ceea ce este util pentru fișele de pontaj și facturarea care necesită intrări de timp zecimale."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Cum calculez durata pentru o tură de noapte, precum de la 23:00 la 7:00?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Introdu 23:00 ca oră de început și 07:00 ca oră de sfârșit - deoarece ora de sfârșit este numeric mai mică, calculatorul o tratează ca traversând miezul nopții și returnează 8 ore, lungimea corectă a turei de noapte."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ce se întâmplă dacă ora de început și cea de sfârșit sunt identice?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Calculatorul tratează o oră de început și de sfârșit identică ca un interval complet de 24 de ore (traversând miezul nopții înapoi la aceeași oră de ceas), nu ca zero, deoarece măsoară întotdeauna înainte, de la început la sfârșit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Este acesta același lucru cu un \"calculator de timp scurs\"?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da - ambii termeni descriu găsirea intervalului dintre două ore de ceas. Acest instrument lucrează specific cu ore și minute pe un ceas de 24 de ore, nu cu date calendaristice complete."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Pot calcula durata în ore zecimale în loc de ore și minute?</h3>
 <p>Da - alături de descompunerea în ore și minute, acest calculator arată durata totală ca zecimală (de exemplu, 7 ore 30 de minute se afișează ca 7,5 ore), ceea ce este util pentru fișele de pontaj și facturarea care necesită intrări de timp zecimale.</p>
+</div>
+<div class="faq-item">
+<h3>Cum calculez durata pentru o tură de noapte, precum de la 23:00 la 7:00?</h3>
+<p>Introdu 23:00 ca oră de început și 07:00 ca oră de sfârșit - deoarece ora de sfârșit este numeric mai mică, calculatorul o tratează ca traversând miezul nopții și returnează 8 ore, lungimea corectă a turei de noapte.</p>
+</div>
+<div class="faq-item">
+<h3>Ce se întâmplă dacă ora de început și cea de sfârșit sunt identice?</h3>
+<p>Calculatorul tratează o oră de început și de sfârșit identică ca un interval complet de 24 de ore (traversând miezul nopții înapoi la aceeași oră de ceas), nu ca zero, deoarece măsoară întotdeauna înainte, de la început la sfârșit.</p>
+</div>
+<div class="faq-item">
+<h3>Este acesta același lucru cu un "calculator de timp scurs"?</h3>
+<p>Da - ambii termeni descriu găsirea intervalului dintre două ore de ceas. Acest instrument lucrează specific cu ore și minute pe un ceas de 24 de ore, nu cu date calendaristice complete.</p>
 </div></div>
         </div>
       </main>

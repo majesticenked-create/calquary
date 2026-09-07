@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Valorile proprii complexe înseamnă că matricea nu are vectori proprii reali - geometric, acest lucru se întâmplă pentru matrici care rotesc vectori (precum o matrice de rotație) mai degrabă decât să îi întindă pur și simplu de-a lungul direcțiilor fixe, deoarece o rotație nu are nicio direcție care rămâne neschimbată (cu excepția unei rotații de 180°)."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Ce reprezintă valorile proprii și vectorii proprii în lumea reală?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Descriu direcțiile pe care o transformare matriceală nu le rotește, ci doar le întinde sau le comprimă - vectorul propriu este acea direcție neschimbată, iar valoarea proprie este factorul de întindere. Acest lucru apare în aplicații precum analiza vibrațiilor, analiza componentelor principale și algoritmul PageRank al Google."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Care sunt valorile proprii ale matricei [[2,1],[1,2]]?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "3 și 1 - urma = 2+2 = 4, determinant = (2×2)-(1×1) = 3, deci λ² − 4λ + 3 = 0 se factorizează ca (λ−3)(λ−1) = 0, dând λ = 3 și λ = 1."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Poate o matrice 2x2 să aibă o singură valoare proprie?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da - acest lucru se întâmplă atunci când discriminantul ecuației caracteristice este zero (o valoare proprie \"repetată\" sau \"degenerată\"), ceea ce apare pentru matrici precum [[2,1],[0,2]], unde ambele rădăcini ale ecuației pătratice coincid la aceeași valoare."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Ce înseamnă dacă valorile proprii sunt complexe?</h3>
 <p>Valorile proprii complexe înseamnă că matricea nu are vectori proprii reali - geometric, acest lucru se întâmplă pentru matrici care rotesc vectori (precum o matrice de rotație) mai degrabă decât să îi întindă pur și simplu de-a lungul direcțiilor fixe, deoarece o rotație nu are nicio direcție care rămâne neschimbată (cu excepția unei rotații de 180°).</p>
+</div>
+<div class="faq-item">
+<h3>Ce reprezintă valorile proprii și vectorii proprii în lumea reală?</h3>
+<p>Descriu direcțiile pe care o transformare matriceală nu le rotește, ci doar le întinde sau le comprimă - vectorul propriu este acea direcție neschimbată, iar valoarea proprie este factorul de întindere. Acest lucru apare în aplicații precum analiza vibrațiilor, analiza componentelor principale și algoritmul PageRank al Google.</p>
+</div>
+<div class="faq-item">
+<h3>Care sunt valorile proprii ale matricei [[2,1],[1,2]]?</h3>
+<p>3 și 1 - urma = 2+2 = 4, determinant = (2×2)-(1×1) = 3, deci λ² − 4λ + 3 = 0 se factorizează ca (λ−3)(λ−1) = 0, dând λ = 3 și λ = 1.</p>
+</div>
+<div class="faq-item">
+<h3>Poate o matrice 2x2 să aibă o singură valoare proprie?</h3>
+<p>Da - acest lucru se întâmplă atunci când discriminantul ecuației caracteristice este zero (o valoare proprie "repetată" sau "degenerată"), ceea ce apare pentru matrici precum [[2,1],[0,2]], unde ambele rădăcini ale ecuației pătratice coincid la aceeași valoare.</p>
 </div></div>
         </div>
       </main>

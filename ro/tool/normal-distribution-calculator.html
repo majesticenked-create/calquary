@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Legat dar diferit - Calculatorul de Scor Z găsește percentila sub o singură valoare. Acest calculator găsește probabilitatea ca o valoare să se afle între două limite, ceea ce este mai util pentru întrebări precum \"ce fracțiune din scoruri se află între 85 și 115?\""
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Ce se întâmplă dacă setez limita inferioară și cea superioară la aceeași valoare?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Probabilitatea rezultă practic 0% - o distribuție normală continuă atribuie o probabilitate de zero pentru a atinge exact un punct, doar pentru a se afla într-un interval."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cum găsesc probabilitatea ca o valoare să fie peste sau sub o singură limită, în loc de între două?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Setează limita inferioară la un număr foarte mic (precum medie − 10×DS) pentru a captura efectiv tot ce este sub limita superioară, sau setează limita superioară foarte sus pentru a captura tot ce este peste limita inferioară - astfel se aproximează o probabilitate unilaterală folosind instrumentul cu două limite."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Funcționează acest lucru pentru distribuții care nu sunt normale?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nu - acest calculator presupune în mod specific o distribuție normală (în formă de clopot), definită prin media și deviația sa standard; datele asimetrice sau non-normale nu vor da probabilități corecte cu această metodă."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Este acesta același lucru cu Calculatorul de Scor Z?</h3>
 <p>Legat dar diferit - Calculatorul de Scor Z găsește percentila sub o singură valoare. Acest calculator găsește probabilitatea ca o valoare să se afle între două limite, ceea ce este mai util pentru întrebări precum "ce fracțiune din scoruri se află între 85 și 115?"</p>
+</div>
+<div class="faq-item">
+<h3>Ce se întâmplă dacă setez limita inferioară și cea superioară la aceeași valoare?</h3>
+<p>Probabilitatea rezultă practic 0% - o distribuție normală continuă atribuie o probabilitate de zero pentru a atinge exact un punct, doar pentru a se afla într-un interval.</p>
+</div>
+<div class="faq-item">
+<h3>Cum găsesc probabilitatea ca o valoare să fie peste sau sub o singură limită, în loc de între două?</h3>
+<p>Setează limita inferioară la un număr foarte mic (precum medie − 10×DS) pentru a captura efectiv tot ce este sub limita superioară, sau setează limita superioară foarte sus pentru a captura tot ce este peste limita inferioară - astfel se aproximează o probabilitate unilaterală folosind instrumentul cu două limite.</p>
+</div>
+<div class="faq-item">
+<h3>Funcționează acest lucru pentru distribuții care nu sunt normale?</h3>
+<p>Nu - acest calculator presupune în mod specific o distribuție normală (în formă de clopot), definită prin media și deviația sa standard; datele asimetrice sau non-normale nu vor da probabilități corecte cu această metodă.</p>
 </div></div>
         </div>
       </main>
