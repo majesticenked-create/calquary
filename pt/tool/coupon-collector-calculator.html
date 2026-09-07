@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Sim - este cálculo assume uma distribuição uniforme, onde cada um dos n itens tem uma chance igual de 1/n em cada sorteio. Se alguns itens são mais raros que outros, o número real esperado de sorteios será maior que esta estimativa."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Como o número esperado de sorteios muda à medida que n cresce?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cresce aproximadamente como n × ln(n), então dobrar n mais do que dobra o número esperado de sorteios - para 100 itens, os sorteios esperados são cerca de 519, bem mais que o dobro dos ~14,7 sorteios necessários para 6 itens."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual é o número mínimo possível de sorteios para coletar todos os n itens?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "n sorteios - esse é o melhor caso teórico, em que cada sorteio realizado é um item novo e ainda não coletado. O valor esperado calculado aqui é sempre maior que esse mínimo, já que colisões com itens já coletados são prováveis."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Essa é a mesma matemática usada para calcular as chances de colecionar cartas colecionáveis ou itens de loot box?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim - o problema do colecionador de cupons é o modelo padrão para quantos sorteios aleatórios são necessários para completar um conjunto, seja em prêmios de caixa de cereal, cartas colecionáveis, ou itens de loot em jogos com taxas de drop iguais."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Isso assume que cada item tem igual probabilidade de ser sorteado?</h3>
 <p>Sim - este cálculo assume uma distribuição uniforme, onde cada um dos n itens tem uma chance igual de 1/n em cada sorteio. Se alguns itens são mais raros que outros, o número real esperado de sorteios será maior que esta estimativa.</p>
+</div>
+<div class="faq-item">
+<h3>Como o número esperado de sorteios muda à medida que n cresce?</h3>
+<p>Cresce aproximadamente como n × ln(n), então dobrar n mais do que dobra o número esperado de sorteios - para 100 itens, os sorteios esperados são cerca de 519, bem mais que o dobro dos ~14,7 sorteios necessários para 6 itens.</p>
+</div>
+<div class="faq-item">
+<h3>Qual é o número mínimo possível de sorteios para coletar todos os n itens?</h3>
+<p>n sorteios - esse é o melhor caso teórico, em que cada sorteio realizado é um item novo e ainda não coletado. O valor esperado calculado aqui é sempre maior que esse mínimo, já que colisões com itens já coletados são prováveis.</p>
+</div>
+<div class="faq-item">
+<h3>Essa é a mesma matemática usada para calcular as chances de colecionar cartas colecionáveis ou itens de loot box?</h3>
+<p>Sim - o problema do colecionador de cupons é o modelo padrão para quantos sorteios aleatórios são necessários para completar um conjunto, seja em prêmios de caixa de cereal, cartas colecionáveis, ou itens de loot em jogos com taxas de drop iguais.</p>
 </div></div>
         </div>
       </main>

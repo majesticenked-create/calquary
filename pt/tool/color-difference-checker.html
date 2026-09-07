@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Sim, como uma verificação aproximada - uma distância RGB baixa (abaixo de cerca de 30) sugere cores que podem ser difíceis de distinguir, útil para sinalizar possíveis conflitos de marca ou acessibilidade antes de uma verificação perceptual mais rigorosa."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "A ordem das cores importa - comparar a Cor 1 com a Cor 2 é o mesmo que comparar a Cor 2 com a Cor 1?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não, o resultado é idêntico em ambos os casos. A distância euclidiana é simétrica, então trocar qual código hexadecimal vai em qual campo não muda a diferença calculada."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual é a diferença entre #FF0000 (vermelho) e #00FF00 (verde) usando esta calculadora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cerca de 360,6. O vermelho é (255,0,0) e o verde é (0,255,0), então a distância é √(255² + 255² + 0²) ≈ 360,6 - próxima do máximo, refletindo o quão visualmente distintas as duas cores são."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Isso é a mesma coisa que um 'verificador de contraste de cores' para acessibilidade?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não - verificadores de contraste para acessibilidade WCAG medem o contraste de luminância (importante para a legibilidade de texto), enquanto esta ferramenta mede a distância RGB bruta entre duas cores. Um par de cores pode ter uma grande distância RGB e ainda assim falhar em um teste de contraste de luminância, ou vice-versa."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Posso usar isso para verificar se duas cores de marca são muito similares?</h3>
 <p>Sim, como uma verificação aproximada - uma distância RGB baixa (abaixo de cerca de 30) sugere cores que podem ser difíceis de distinguir, útil para sinalizar possíveis conflitos de marca ou acessibilidade antes de uma verificação perceptual mais rigorosa.</p>
+</div>
+<div class="faq-item">
+<h3>A ordem das cores importa - comparar a Cor 1 com a Cor 2 é o mesmo que comparar a Cor 2 com a Cor 1?</h3>
+<p>Não, o resultado é idêntico em ambos os casos. A distância euclidiana é simétrica, então trocar qual código hexadecimal vai em qual campo não muda a diferença calculada.</p>
+</div>
+<div class="faq-item">
+<h3>Qual é a diferença entre #FF0000 (vermelho) e #00FF00 (verde) usando esta calculadora?</h3>
+<p>Cerca de 360,6. O vermelho é (255,0,0) e o verde é (0,255,0), então a distância é √(255² + 255² + 0²) ≈ 360,6 - próxima do máximo, refletindo o quão visualmente distintas as duas cores são.</p>
+</div>
+<div class="faq-item">
+<h3>Isso é a mesma coisa que um 'verificador de contraste de cores' para acessibilidade?</h3>
+<p>Não - verificadores de contraste para acessibilidade WCAG medem o contraste de luminância (importante para a legibilidade de texto), enquanto esta ferramenta mede a distância RGB bruta entre duas cores. Um par de cores pode ter uma grande distância RGB e ainda assim falhar em um teste de contraste de luminância, ou vice-versa.</p>
 </div></div>
         </div>
       </main>

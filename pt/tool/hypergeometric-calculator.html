@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "A probabilidade de obter k ou menos sucessos, não exatamente k - útil para perguntas como \"qual é a probabilidade de tirar no máximo 2 copas\", que soma as probabilidades individuais para 0, 1, e 2 copas."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "O que N, K, n e k representam em termos simples?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "N é a população total (por exemplo, um baralho completo de 52 cartas), K é quantos itens de 'sucesso' existem nessa população (por exemplo, 13 copas), n é quantos itens você retira (o tamanho da sua amostra), e k é quantos sucessos você quer entre os retirados."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que acontece se k for maior que n ou K?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A probabilidade é 0 - você não pode retirar mais sucessos do que realmente amostrou (k > n) ou mais sucessos do que existem na população (k > K), então essas combinações são matematicamente impossíveis."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como se calcula a média de uma distribuição hipergeométrica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Média = n × (K/N) - para uma mão de 5 cartas de um baralho de 52 cartas com 13 copas, o número esperado de copas é 5 × (13/52) = 1,25, mesmo que você não possa realmente tirar um número fracionário de copas em uma única mão."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>O que a probabilidade cumulativa (P(X ≤ k)) me diz?</h3>
 <p>A probabilidade de obter k ou menos sucessos, não exatamente k - útil para perguntas como "qual é a probabilidade de tirar no máximo 2 copas", que soma as probabilidades individuais para 0, 1, e 2 copas.</p>
+</div>
+<div class="faq-item">
+<h3>O que N, K, n e k representam em termos simples?</h3>
+<p>N é a população total (por exemplo, um baralho completo de 52 cartas), K é quantos itens de 'sucesso' existem nessa população (por exemplo, 13 copas), n é quantos itens você retira (o tamanho da sua amostra), e k é quantos sucessos você quer entre os retirados.</p>
+</div>
+<div class="faq-item">
+<h3>O que acontece se k for maior que n ou K?</h3>
+<p>A probabilidade é 0 - você não pode retirar mais sucessos do que realmente amostrou (k > n) ou mais sucessos do que existem na população (k > K), então essas combinações são matematicamente impossíveis.</p>
+</div>
+<div class="faq-item">
+<h3>Como se calcula a média de uma distribuição hipergeométrica?</h3>
+<p>Média = n × (K/N) - para uma mão de 5 cartas de um baralho de 52 cartas com 13 copas, o número esperado de copas é 5 × (13/52) = 1,25, mesmo que você não possa realmente tirar um número fracionário de copas em uma única mão.</p>
 </div></div>
         </div>
       </main>

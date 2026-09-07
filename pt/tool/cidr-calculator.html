@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Uma /32 é um único endereço sem espaço para um par rede/broadcast, e uma /31 é um caso especial (definido na RFC 3021) usado para links ponto a ponto onde ambos os endereços no bloco de 2 endereços são utilizáveis como endereços de host, já que nenhum broadcast é necessário."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual é a máscara de sub-rede para uma rede /24?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "255.255.255.0 - um prefixo /24 significa que os primeiros 24 bits são todos 1s (três octetos completos de 255), deixando o último octeto como todos 0s para endereços de host."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual a diferença entre isso e a Calculadora de Sub-rede IP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Elas calculam os mesmos resultados (endereço de rede, endereço de broadcast, faixa utilizável), mas esta ferramenta recebe a entrada como uma única string CIDR combinada como \"192.168.1.0/24,\" enquanto a Calculadora de Sub-rede IP usa campos separados para o endereço IP e o comprimento do prefixo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual máscara de sub-rede corresponde a uma rede /29?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "255.255.255.248 - um prefixo /29 usa 29 dos 32 bits para a rede, deixando apenas 3 bits de host (8 endereços totais, 6 utilizáveis), que como máscara é 255.255.255 seguido de 248 (11111000 em binário)."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Por que não há hosts utilizáveis para uma /31 ou /32?</h3>
 <p>Uma /32 é um único endereço sem espaço para um par rede/broadcast, e uma /31 é um caso especial (definido na RFC 3021) usado para links ponto a ponto onde ambos os endereços no bloco de 2 endereços são utilizáveis como endereços de host, já que nenhum broadcast é necessário.</p>
+</div>
+<div class="faq-item">
+<h3>Qual é a máscara de sub-rede para uma rede /24?</h3>
+<p>255.255.255.0 - um prefixo /24 significa que os primeiros 24 bits são todos 1s (três octetos completos de 255), deixando o último octeto como todos 0s para endereços de host.</p>
+</div>
+<div class="faq-item">
+<h3>Qual a diferença entre isso e a Calculadora de Sub-rede IP?</h3>
+<p>Elas calculam os mesmos resultados (endereço de rede, endereço de broadcast, faixa utilizável), mas esta ferramenta recebe a entrada como uma única string CIDR combinada como "192.168.1.0/24," enquanto a Calculadora de Sub-rede IP usa campos separados para o endereço IP e o comprimento do prefixo.</p>
+</div>
+<div class="faq-item">
+<h3>Qual máscara de sub-rede corresponde a uma rede /29?</h3>
+<p>255.255.255.248 - um prefixo /29 usa 29 dos 32 bits para a rede, deixando apenas 3 bits de host (8 endereços totais, 6 utilizáveis), que como máscara é 255.255.255 seguido de 248 (11111000 em binário).</p>
 </div></div>
         </div>
       </main>

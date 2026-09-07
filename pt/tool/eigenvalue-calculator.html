@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Autovalores complexos significam que a matriz não tem autovetores reais - geometricamente, isso acontece para matrizes que rotacionam vetores (como uma matriz de rotação) em vez de apenas esticá-los ao longo de direções fixas, já que uma rotação não tem nenhuma direção que permaneça inalterada (exceto uma rotação de 180°)."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "O que autovalores e autovetores representam no mundo real?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Eles descrevem direções que uma transformação matricial não rotaciona, apenas estica ou encolhe - o autovetor é essa direção inalterada, e o autovalor é o fator de esticamento. Isso aparece em aplicações como análise de vibração, análise de componentes principais e o algoritmo PageRank do Google."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais são os autovalores da matriz [[2,1],[1,2]]?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "3 e 1 - traço = 2+2 = 4, determinante = (2×2)-(1×1) = 3, então λ² − 4λ + 3 = 0 se fatora em (λ−3)(λ−1) = 0, dando λ = 3 e λ = 1."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Uma matriz 2x2 pode ter apenas um autovalor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim - isso acontece quando o discriminante da equação característica é zero (um autovalor 'repetido' ou 'degenerado'), o que ocorre para matrizes como [[2,1],[0,2]], onde ambas as raízes da quadrática coincidem no mesmo valor."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>O que significa se os autovalores são complexos?</h3>
 <p>Autovalores complexos significam que a matriz não tem autovetores reais - geometricamente, isso acontece para matrizes que rotacionam vetores (como uma matriz de rotação) em vez de apenas esticá-los ao longo de direções fixas, já que uma rotação não tem nenhuma direção que permaneça inalterada (exceto uma rotação de 180°).</p>
+</div>
+<div class="faq-item">
+<h3>O que autovalores e autovetores representam no mundo real?</h3>
+<p>Eles descrevem direções que uma transformação matricial não rotaciona, apenas estica ou encolhe - o autovetor é essa direção inalterada, e o autovalor é o fator de esticamento. Isso aparece em aplicações como análise de vibração, análise de componentes principais e o algoritmo PageRank do Google.</p>
+</div>
+<div class="faq-item">
+<h3>Quais são os autovalores da matriz [[2,1],[1,2]]?</h3>
+<p>3 e 1 - traço = 2+2 = 4, determinante = (2×2)-(1×1) = 3, então λ² − 4λ + 3 = 0 se fatora em (λ−3)(λ−1) = 0, dando λ = 3 e λ = 1.</p>
+</div>
+<div class="faq-item">
+<h3>Uma matriz 2x2 pode ter apenas um autovalor?</h3>
+<p>Sim - isso acontece quando o discriminante da equação característica é zero (um autovalor 'repetido' ou 'degenerado'), o que ocorre para matrizes como [[2,1],[0,2]], onde ambas as raízes da quadrática coincidem no mesmo valor.</p>
 </div></div>
         </div>
       </main>

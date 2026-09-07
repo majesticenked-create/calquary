@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Não - esta calculadora assume que tanto o ácido quanto a base são fortes (dissociam-se completamente), que é o que torna válida a matemática simples de íons em excesso. Titulações de ácido/base fraca precisam de cálculos de equilíbrio (Ka/Kb) e produzem um pH diferente, não 7, no ponto de equivalência devido à base ou ácido conjugado que permanece em solução."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "O que acontece com o pH exatamente no ponto de equivalência se os volumes que eu inserir corresponderem exatamente em mols?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A calculadora retorna pH 7, já que mols iguais de um ácido forte e uma base forte se neutralizam completamente - se os volumes/concentrações do seu ácido e base derem mols exatamente iguais, você atingiu o ponto de equivalência."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual é o pH depois de adicionar 40 mL de base 0,1 mol/L a 50 mL de ácido 0,1 mol/L?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cerca de 1,95 - mols de ácido = 0,050 L × 0,1 = 0,005 mol, mols de base = 0,040 L × 0,1 = 0,004 mol, H⁺ em excesso = 0,001 mol em um volume total de 0,090 L, dando [H⁺] ≈ 0,0111 mol/L, então pH = −log₁₀(0,0111) ≈ 1,95."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Por que o volume total importa no cálculo do pH, não apenas os mols restantes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O pH depende da concentração, não apenas da quantidade bruta de íon em excesso - os mesmos 0,001 mol restantes de H⁺ produzem um pH diferente dependendo de estarem diluídos em 50 mL ou em 500 mL, então a calculadora divide pelo volume combinado de ácido + base em cada ponto."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Isso funciona para ácidos fracos ou bases fracas?</h3>
 <p>Não - esta calculadora assume que tanto o ácido quanto a base são fortes (dissociam-se completamente), que é o que torna válida a matemática simples de íons em excesso. Titulações de ácido/base fraca precisam de cálculos de equilíbrio (Ka/Kb) e produzem um pH diferente, não 7, no ponto de equivalência devido à base ou ácido conjugado que permanece em solução.</p>
+</div>
+<div class="faq-item">
+<h3>O que acontece com o pH exatamente no ponto de equivalência se os volumes que eu inserir corresponderem exatamente em mols?</h3>
+<p>A calculadora retorna pH 7, já que mols iguais de um ácido forte e uma base forte se neutralizam completamente - se os volumes/concentrações do seu ácido e base derem mols exatamente iguais, você atingiu o ponto de equivalência.</p>
+</div>
+<div class="faq-item">
+<h3>Qual é o pH depois de adicionar 40 mL de base 0,1 mol/L a 50 mL de ácido 0,1 mol/L?</h3>
+<p>Cerca de 1,95 - mols de ácido = 0,050 L × 0,1 = 0,005 mol, mols de base = 0,040 L × 0,1 = 0,004 mol, H⁺ em excesso = 0,001 mol em um volume total de 0,090 L, dando [H⁺] ≈ 0,0111 mol/L, então pH = −log₁₀(0,0111) ≈ 1,95.</p>
+</div>
+<div class="faq-item">
+<h3>Por que o volume total importa no cálculo do pH, não apenas os mols restantes?</h3>
+<p>O pH depende da concentração, não apenas da quantidade bruta de íon em excesso - os mesmos 0,001 mol restantes de H⁺ produzem um pH diferente dependendo de estarem diluídos em 50 mL ou em 500 mL, então a calculadora divide pelo volume combinado de ácido + base em cada ponto.</p>
 </div></div>
         </div>
       </main>

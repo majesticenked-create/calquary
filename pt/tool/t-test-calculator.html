@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "A combinação junta a variância de ambos os grupos em uma única estimativa ponderada, que é a abordagem padrão quando você pode razoavelmente assumir que ambos os grupos têm variância subjacente semelhante - isso usa mais dos seus dados do que confiar apenas na variância de um dos grupos."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "O que significa se t for negativo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Um t negativo simplesmente significa que a média do Grupo 1 é menor que a média do Grupo 2 - o sinal reflete direção, não intensidade. Apenas a magnitude (|t|) importa para avaliar o quão distantes os grupos estão."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como os graus de liberdade são calculados para este teste?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Para o teste t combinado de duas amostras, graus de liberdade = n1 + n2 − 2. Com 30 pessoas em cada grupo, isso dá 30 + 30 − 2 = 58 graus de liberdade."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "E se meus dois grupos tiverem tamanhos de amostra muito diferentes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A fórmula do desvio padrão combinado já pondera a variância de cada grupo pelo seu próprio tamanho de amostra, então n1 e n2 diferentes são tratados corretamente - apenas tenha em mente que, se as variâncias dos grupos também forem muito diferentes, um teste t de variância desigual (teste de Welch) pode ser mais apropriado do que esta versão combinada."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Por que isso usa desvio padrão 'combinado'?</h3>
 <p>A combinação junta a variância de ambos os grupos em uma única estimativa ponderada, que é a abordagem padrão quando você pode razoavelmente assumir que ambos os grupos têm variância subjacente semelhante - isso usa mais dos seus dados do que confiar apenas na variância de um dos grupos.</p>
+</div>
+<div class="faq-item">
+<h3>O que significa se t for negativo?</h3>
+<p>Um t negativo simplesmente significa que a média do Grupo 1 é menor que a média do Grupo 2 - o sinal reflete direção, não intensidade. Apenas a magnitude (|t|) importa para avaliar o quão distantes os grupos estão.</p>
+</div>
+<div class="faq-item">
+<h3>Como os graus de liberdade são calculados para este teste?</h3>
+<p>Para o teste t combinado de duas amostras, graus de liberdade = n1 + n2 − 2. Com 30 pessoas em cada grupo, isso dá 30 + 30 − 2 = 58 graus de liberdade.</p>
+</div>
+<div class="faq-item">
+<h3>E se meus dois grupos tiverem tamanhos de amostra muito diferentes?</h3>
+<p>A fórmula do desvio padrão combinado já pondera a variância de cada grupo pelo seu próprio tamanho de amostra, então n1 e n2 diferentes são tratados corretamente - apenas tenha em mente que, se as variâncias dos grupos também forem muito diferentes, um teste t de variância desigual (teste de Welch) pode ser mais apropriado do que esta versão combinada.</p>
 </div></div>
         </div>
       </main>

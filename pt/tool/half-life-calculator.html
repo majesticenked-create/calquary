@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Sim, para processos de primeira ordem - o decaimento radioativo é inerentemente de primeira ordem, e muitas reações químicas (onde a taxa depende da concentração de um único reagente) seguem a mesma matemática de decaimento exponencial."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso encontrar a meia-vida se eu souber a constante de taxa em vez disso?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim - use a mesma relação reorganizada: meia-vida = ln(2) / k. Se uma reação tem uma constante de taxa k = 0,0231 por ano, sua meia-vida é ln(2) / 0,0231 ≈ 30 anos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto tempo até restar apenas 5% de uma substância?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cerca de 4,32 meias-vidas - resolva (1/2)^n = 0,05 para n, o que dá n = ln(0,05) / ln(0,5) ≈ 4,32. Multiplique isso pela meia-vida para obter o tempo decorrido."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "A meia-vida é a mesma coisa que a vida média de uma partícula?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não - a vida média (frequentemente chamada de τ) é 1/k, que é maior do que a meia-vida. Meia-vida = ln(2) × vida média ≈ 0,693 × vida média, já que a meia-vida mede quando metade da população decaiu, não o tempo médio que uma única partícula sobrevive."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Isso se aplica tanto ao decaimento radioativo quanto às reações químicas?</h3>
 <p>Sim, para processos de primeira ordem - o decaimento radioativo é inerentemente de primeira ordem, e muitas reações químicas (onde a taxa depende da concentração de um único reagente) seguem a mesma matemática de decaimento exponencial.</p>
+</div>
+<div class="faq-item">
+<h3>Posso encontrar a meia-vida se eu souber a constante de taxa em vez disso?</h3>
+<p>Sim - use a mesma relação reorganizada: meia-vida = ln(2) / k. Se uma reação tem uma constante de taxa k = 0,0231 por ano, sua meia-vida é ln(2) / 0,0231 ≈ 30 anos.</p>
+</div>
+<div class="faq-item">
+<h3>Quanto tempo até restar apenas 5% de uma substância?</h3>
+<p>Cerca de 4,32 meias-vidas - resolva (1/2)^n = 0,05 para n, o que dá n = ln(0,05) / ln(0,5) ≈ 4,32. Multiplique isso pela meia-vida para obter o tempo decorrido.</p>
+</div>
+<div class="faq-item">
+<h3>A meia-vida é a mesma coisa que a vida média de uma partícula?</h3>
+<p>Não - a vida média (frequentemente chamada de τ) é 1/k, que é maior do que a meia-vida. Meia-vida = ln(2) × vida média ≈ 0,693 × vida média, já que a meia-vida mede quando metade da população decaiu, não o tempo médio que uma única partícula sobrevive.</p>
 </div></div>
         </div>
       </main>

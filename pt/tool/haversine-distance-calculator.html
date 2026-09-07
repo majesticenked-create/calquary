@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Dentro de cerca de 0,5%, já que trata a Terra como uma esfera perfeita em vez de sua forma real de elipsoide ligeiramente achatado - próxima o suficiente para praticamente todos os propósitos práticos de estimativa de distância, embora a navegação aeronáutica oficial use modelos elipsoidais mais precisos."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Por que a distância de grande círculo não é a mesma que uma linha reta em um mapa plano?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Um mapa plano distorce as distâncias porque projeta uma superfície 3D curva em um plano 2D - o verdadeiro caminho mais curto entre dois pontos em uma esfera segue um grande círculo (parte de um círculo cujo centro é o centro da Terra), que geralmente parece curvo, não reto, quando desenhado em uma projeção de mapa padrão."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Preciso saber a altitude ou elevação exata de cada ponto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não - a fórmula haversine usa apenas latitude e longitude e assume que ambos os pontos estão na superfície da Terra ao nível do mar. Diferenças de elevação são desprezíveis em comparação com o raio de ~6.371 km da Terra para praticamente todos os propósitos de estimativa de distância."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual é a diferença entre isto e uma 'calculadora de distância geodésica'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Estão intimamente relacionadas - 'distância geodésica' é o termo mais geral para o caminho mais curto em qualquer superfície curva, enquanto 'distância haversine' se refere especificamente a esta aproximação de Terra esférica. Para a maioria das verificações cotidianas de distância, os dois termos são usados de forma intercambiável."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Quão precisa é essa comparada às distâncias reais de voo?</h3>
 <p>Dentro de cerca de 0,5%, já que trata a Terra como uma esfera perfeita em vez de sua forma real de elipsoide ligeiramente achatado - próxima o suficiente para praticamente todos os propósitos práticos de estimativa de distância, embora a navegação aeronáutica oficial use modelos elipsoidais mais precisos.</p>
+</div>
+<div class="faq-item">
+<h3>Por que a distância de grande círculo não é a mesma que uma linha reta em um mapa plano?</h3>
+<p>Um mapa plano distorce as distâncias porque projeta uma superfície 3D curva em um plano 2D - o verdadeiro caminho mais curto entre dois pontos em uma esfera segue um grande círculo (parte de um círculo cujo centro é o centro da Terra), que geralmente parece curvo, não reto, quando desenhado em uma projeção de mapa padrão.</p>
+</div>
+<div class="faq-item">
+<h3>Preciso saber a altitude ou elevação exata de cada ponto?</h3>
+<p>Não - a fórmula haversine usa apenas latitude e longitude e assume que ambos os pontos estão na superfície da Terra ao nível do mar. Diferenças de elevação são desprezíveis em comparação com o raio de ~6.371 km da Terra para praticamente todos os propósitos de estimativa de distância.</p>
+</div>
+<div class="faq-item">
+<h3>Qual é a diferença entre isto e uma 'calculadora de distância geodésica'?</h3>
+<p>Estão intimamente relacionadas - 'distância geodésica' é o termo mais geral para o caminho mais curto em qualquer superfície curva, enquanto 'distância haversine' se refere especificamente a esta aproximação de Terra esférica. Para a maioria das verificações cotidianas de distância, os dois termos são usados de forma intercambiável.</p>
 </div></div>
         </div>
       </main>

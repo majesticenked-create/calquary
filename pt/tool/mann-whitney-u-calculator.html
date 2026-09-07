@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Quando seus dados não são distribuídos normalmente, contêm outliers, ou são ordinais em vez de verdadeiramente numéricos - o teste de Mann-Whitney depende apenas da ordem de classificação, tornando-o mais robusto que o teste t para distribuições não normais e valores extremos."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "O que significa se os dois grupos tiverem rankings completamente sem sobreposição?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Esse é o resultado mais extremo possível - se todos os valores de um grupo ficam classificados abaixo de todos os valores do outro, U para o grupo de ranking mais baixo é 0, indicando a maior separação possível entre os grupos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como valores empatados são tratados na classificação?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Valores empatados recebem a média dos rankings que ocupariam - por exemplo, se dois valores empatam no 3º e 4º lugar, ambos recebem o ranking 3,5, mantendo consistente a soma total dos rankings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O teste U de Mann-Whitney é o mesmo que o teste de soma de postos de Wilcoxon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim - são testes matematicamente equivalentes com nomes diferentes; a estatística de soma de postos de Wilcoxon pode ser convertida diretamente na estatística U de Mann-Whitney, e ambos comparam dois grupos independentes usando a ordem de classificação."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Quando devo usar isso em vez de um teste t?</h3>
 <p>Quando seus dados não são distribuídos normalmente, contêm outliers, ou são ordinais em vez de verdadeiramente numéricos - o teste de Mann-Whitney depende apenas da ordem de classificação, tornando-o mais robusto que o teste t para distribuições não normais e valores extremos.</p>
+</div>
+<div class="faq-item">
+<h3>O que significa se os dois grupos tiverem rankings completamente sem sobreposição?</h3>
+<p>Esse é o resultado mais extremo possível - se todos os valores de um grupo ficam classificados abaixo de todos os valores do outro, U para o grupo de ranking mais baixo é 0, indicando a maior separação possível entre os grupos.</p>
+</div>
+<div class="faq-item">
+<h3>Como valores empatados são tratados na classificação?</h3>
+<p>Valores empatados recebem a média dos rankings que ocupariam - por exemplo, se dois valores empatam no 3º e 4º lugar, ambos recebem o ranking 3,5, mantendo consistente a soma total dos rankings.</p>
+</div>
+<div class="faq-item">
+<h3>O teste U de Mann-Whitney é o mesmo que o teste de soma de postos de Wilcoxon?</h3>
+<p>Sim - são testes matematicamente equivalentes com nomes diferentes; a estatística de soma de postos de Wilcoxon pode ser convertida diretamente na estatística U de Mann-Whitney, e ambos comparam dois grupos independentes usando a ordem de classificação.</p>
 </div></div>
         </div>
       </main>

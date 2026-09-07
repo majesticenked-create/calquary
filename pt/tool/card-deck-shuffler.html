@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Não - este é um baralho padrão de 52 cartas (4 naipes × 13 valores, sem coringas), que corresponde ao baralho usado na maioria dos jogos de cartas. Coringas não fazem parte do baralho padrão que esta ferramenta embaralha."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Se eu sacar menos de 52 cartas, posso pegar a mesma carta duas vezes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não - sacar cartas retira cartas de um único baralho embaralhado de 52 cartas sem reposição, então toda carta sacada em uma execução é garantidamente única, assim como distribuir de um baralho real."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso usar isso para distribuir uma mão para um jogo específico, como blackjack ou bridge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim - defina \"cartas a sacar\" para o tamanho de mão que você precisa (2 para uma mão inicial de blackjack, 13 para uma mão de bridge) e a ferramenta saca essa quantidade de cartas de um baralho recém-embaralhado, embora para jogos com vários jogadores você precise fazer sorteios separados ou dividir as cartas sacadas você mesmo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual a diferença entre isso e um 'gerador de carta aleatória'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Eles são bem parecidos: um gerador de carta aleatória geralmente sorteia uma única carta de forma independente (que poderia se repetir em um segundo sorteio), enquanto este embaralhador saca de um baralho completo sem reposição, correspondendo a como um baralho físico de cartas realmente se comporta quando distribuído."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Isso inclui coringas?</h3>
 <p>Não - este é um baralho padrão de 52 cartas (4 naipes × 13 valores, sem coringas), que corresponde ao baralho usado na maioria dos jogos de cartas. Coringas não fazem parte do baralho padrão que esta ferramenta embaralha.</p>
+</div>
+<div class="faq-item">
+<h3>Se eu sacar menos de 52 cartas, posso pegar a mesma carta duas vezes?</h3>
+<p>Não - sacar cartas retira cartas de um único baralho embaralhado de 52 cartas sem reposição, então toda carta sacada em uma execução é garantidamente única, assim como distribuir de um baralho real.</p>
+</div>
+<div class="faq-item">
+<h3>Posso usar isso para distribuir uma mão para um jogo específico, como blackjack ou bridge?</h3>
+<p>Sim - defina "cartas a sacar" para o tamanho de mão que você precisa (2 para uma mão inicial de blackjack, 13 para uma mão de bridge) e a ferramenta saca essa quantidade de cartas de um baralho recém-embaralhado, embora para jogos com vários jogadores você precise fazer sorteios separados ou dividir as cartas sacadas você mesmo.</p>
+</div>
+<div class="faq-item">
+<h3>Qual a diferença entre isso e um 'gerador de carta aleatória'?</h3>
+<p>Eles são bem parecidos: um gerador de carta aleatória geralmente sorteia uma única carta de forma independente (que poderia se repetir em um segundo sorteio), enquanto este embaralhador saca de um baralho completo sem reposição, correspondendo a como um baralho físico de cartas realmente se comporta quando distribuído.</p>
 </div></div>
         </div>
       </main>

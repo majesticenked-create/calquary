@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Ambas as fórmulas são regressões empíricas validadas apenas dentro de condições específicas - o índice de calor precisa de condições quentes e úmidas (aproximadamente 27°C+ com 40%+ de umidade) e a sensação térmica precisa de condições frias e ventosas (aproximadamente 10°C ou menos com vento de pelo menos 5 km/h). Fora dessas faixas as fórmulas podem produzir resultados enganosos, então são ocultadas em vez disso."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "A partir de que ponto de orvalho começa a parecer abafado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A maioria das pessoas começa a perceber a umidade como desconfortável a partir de um ponto de orvalho de 15-18°C, com 21°C+ sendo considerado opressivo - abaixo de 13°C geralmente parece confortável independentemente da temperatura do ar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O índice de calor e a sensação térmica podem se aplicar ao mesmo tempo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não - eles são mutuamente exclusivos por design, já que o índice de calor requer condições quentes (aproximadamente 27°C+) e a sensação térmica requer condições frias (aproximadamente 10°C ou menos). Fora de qualquer uma das faixas, ou no intervalo entre elas, esta calculadora mostra N/D para o que não se aplica."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Por que a calculadora precisa da velocidade do vento para a sensação térmica, mas não para o índice de calor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A fórmula da sensação térmica é especificamente construída em torno de como o ar em movimento retira calor da pele exposta, então a velocidade do vento é uma entrada obrigatória - o índice de calor, por sua vez, modela como a umidade prejudica a evaporação do suor, um processo em que a velocidade do vento não entra na fórmula padrão do NWS que esta calculadora usa."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Por que a calculadora às vezes mostra o índice de calor ou sensação térmica como N/D?</h3>
 <p>Ambas as fórmulas são regressões empíricas validadas apenas dentro de condições específicas - o índice de calor precisa de condições quentes e úmidas (aproximadamente 27°C+ com 40%+ de umidade) e a sensação térmica precisa de condições frias e ventosas (aproximadamente 10°C ou menos com vento de pelo menos 5 km/h). Fora dessas faixas as fórmulas podem produzir resultados enganosos, então são ocultadas em vez disso.</p>
+</div>
+<div class="faq-item">
+<h3>A partir de que ponto de orvalho começa a parecer abafado?</h3>
+<p>A maioria das pessoas começa a perceber a umidade como desconfortável a partir de um ponto de orvalho de 15-18°C, com 21°C+ sendo considerado opressivo - abaixo de 13°C geralmente parece confortável independentemente da temperatura do ar.</p>
+</div>
+<div class="faq-item">
+<h3>O índice de calor e a sensação térmica podem se aplicar ao mesmo tempo?</h3>
+<p>Não - eles são mutuamente exclusivos por design, já que o índice de calor requer condições quentes (aproximadamente 27°C+) e a sensação térmica requer condições frias (aproximadamente 10°C ou menos). Fora de qualquer uma das faixas, ou no intervalo entre elas, esta calculadora mostra N/D para o que não se aplica.</p>
+</div>
+<div class="faq-item">
+<h3>Por que a calculadora precisa da velocidade do vento para a sensação térmica, mas não para o índice de calor?</h3>
+<p>A fórmula da sensação térmica é especificamente construída em torno de como o ar em movimento retira calor da pele exposta, então a velocidade do vento é uma entrada obrigatória - o índice de calor, por sua vez, modela como a umidade prejudica a evaporação do suor, um processo em que a velocidade do vento não entra na fórmula padrão do NWS que esta calculadora usa.</p>
 </div></div>
         </div>
       </main>

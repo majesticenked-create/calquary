@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Sim - tudo isso descreve encontrar o tamanho mínimo de amostra necessário para uma pesquisa ou estudo em um nível de confiança e margem de erro escolhidos, que é exatamente o que esta calculadora faz."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto dobrar a margem de erro muda o tamanho de amostra necessário?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Reduz o tamanho de amostra necessário para aproximadamente um quarto, já que o tamanho de amostra é inversamente proporcional ao quadrado da margem de erro (n ∝ 1/e²) - reduzir pela metade a margem de erro desejada, por outro lado, aproximadamente quadruplica a amostra necessária."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual tamanho de amostra é necessário para um nível de confiança de 95% e margem de erro de 5% com proporção desconhecida?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cerca de 385 - usando n = (1,96² × 0,5 × 0,5) / 0,05² = 0,9604 / 0,0025 ≈ 384,16, arredondado para 385, o valor comumente citado para uma pesquisa com população geral."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Por que a calculadora pede uma proporção de resposta estimada se eu ainda não tenho resultados de pesquisa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A proporção afeta quanta variabilidade a fórmula assume existir nas respostas - se você tem uma estimativa prévia aproximada (de pesquisas anteriores ou de um estudo piloto), inserir esse valor pode reduzir o tamanho de amostra necessário em comparação com o padrão conservador de 50%, já que p×(1−p) é menor quanto mais p se afasta de 0,5."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>'Calcular tamanho de amostra online' ou 'calculadora para determinar tamanho de amostra' é a mesma coisa que esta ferramenta?</h3>
 <p>Sim - tudo isso descreve encontrar o tamanho mínimo de amostra necessário para uma pesquisa ou estudo em um nível de confiança e margem de erro escolhidos, que é exatamente o que esta calculadora faz.</p>
+</div>
+<div class="faq-item">
+<h3>Quanto dobrar a margem de erro muda o tamanho de amostra necessário?</h3>
+<p>Reduz o tamanho de amostra necessário para aproximadamente um quarto, já que o tamanho de amostra é inversamente proporcional ao quadrado da margem de erro (n ∝ 1/e²) - reduzir pela metade a margem de erro desejada, por outro lado, aproximadamente quadruplica a amostra necessária.</p>
+</div>
+<div class="faq-item">
+<h3>Qual tamanho de amostra é necessário para um nível de confiança de 95% e margem de erro de 5% com proporção desconhecida?</h3>
+<p>Cerca de 385 - usando n = (1,96² × 0,5 × 0,5) / 0,05² = 0,9604 / 0,0025 ≈ 384,16, arredondado para 385, o valor comumente citado para uma pesquisa com população geral.</p>
+</div>
+<div class="faq-item">
+<h3>Por que a calculadora pede uma proporção de resposta estimada se eu ainda não tenho resultados de pesquisa?</h3>
+<p>A proporção afeta quanta variabilidade a fórmula assume existir nas respostas - se você tem uma estimativa prévia aproximada (de pesquisas anteriores ou de um estudo piloto), inserir esse valor pode reduzir o tamanho de amostra necessário em comparação com o padrão conservador de 50%, já que p×(1−p) é menor quanto mais p se afasta de 0,5.</p>
 </div></div>
         </div>
       </main>

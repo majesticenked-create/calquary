@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Sim - além da contagem de palavras, ela mostra a contagem de caracteres com e sem espaços, além da contagem de frases e parágrafos, útil para cumprir limites rígidos de caracteres, como em postagens de redes sociais ou meta descrições."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Uma palavra hifenizada como 'bem-estar' conta como uma palavra ou duas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Uma palavra - o contador divide o texto por espaços em branco, e como não há espaço dentro de 'bem-estar', ela é tratada como uma única palavra, correspondendo à forma como a maioria dos processadores de texto trata compostos com hífen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Se eu colar três linhas em branco entre parágrafos, isso afeta a contagem?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Linhas em branco extras não somam à contagem de palavras ou caracteres (não há palavras nelas), mas contam para a detecção de parágrafos, já que uma linha em branco é tipicamente o que separa um parágrafo do próximo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual a diferença entre 'contagem de palavras' e 'contagem de caracteres' para coisas como limites do Twitter/X?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A contagem de palavras soma palavras separadas por espaços em branco, enquanto a contagem de caracteres soma cada letra, número, espaço e símbolo individualmente. Plataformas como o X limitam por contagem de caracteres, não de palavras, então verifique a contagem de caracteres (com espaços) que esta ferramenta mostra se você estiver trabalhando dentro do limite de caracteres de uma plataforma."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Esta ferramenta conta caracteres além de palavras?</h3>
 <p>Sim - além da contagem de palavras, ela mostra a contagem de caracteres com e sem espaços, além da contagem de frases e parágrafos, útil para cumprir limites rígidos de caracteres, como em postagens de redes sociais ou meta descrições.</p>
+</div>
+<div class="faq-item">
+<h3>Uma palavra hifenizada como 'bem-estar' conta como uma palavra ou duas?</h3>
+<p>Uma palavra - o contador divide o texto por espaços em branco, e como não há espaço dentro de 'bem-estar', ela é tratada como uma única palavra, correspondendo à forma como a maioria dos processadores de texto trata compostos com hífen.</p>
+</div>
+<div class="faq-item">
+<h3>Se eu colar três linhas em branco entre parágrafos, isso afeta a contagem?</h3>
+<p>Linhas em branco extras não somam à contagem de palavras ou caracteres (não há palavras nelas), mas contam para a detecção de parágrafos, já que uma linha em branco é tipicamente o que separa um parágrafo do próximo.</p>
+</div>
+<div class="faq-item">
+<h3>Qual a diferença entre 'contagem de palavras' e 'contagem de caracteres' para coisas como limites do Twitter/X?</h3>
+<p>A contagem de palavras soma palavras separadas por espaços em branco, enquanto a contagem de caracteres soma cada letra, número, espaço e símbolo individualmente. Plataformas como o X limitam por contagem de caracteres, não de palavras, então verifique a contagem de caracteres (com espaços) que esta ferramenta mostra se você estiver trabalhando dentro do limite de caracteres de uma plataforma.</p>
 </div></div>
         </div>
       </main>

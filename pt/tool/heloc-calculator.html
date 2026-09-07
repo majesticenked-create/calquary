@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Não - ela assume uma taxa fixa durante todo o período por simplicidade. A maioria dos HELOCs do mundo real tem taxas variáveis vinculadas a um índice de referência, então seus pagamentos reais provavelmente flutuarão ao longo do tempo conforme as taxas mudam."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Como é calculado o pagamento do período de utilização?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "É somente juros: o valor utilizado multiplicado pela taxa de juros periódica (taxa anual dividida por 12). Em um saldo de $30.000 a 8%, o pagamento mensal do período de utilização é de cerca de $30.000 × (0,08/12) = $200, sem nenhuma redução do principal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Por que meu pagamento aumenta tanto quando começa o reembolso?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Durante o período de utilização você só cobre os juros, então o saldo utilizado total ainda é devido. Quando o reembolso começa, esse mesmo saldo precisa ser totalmente amortizado (principal mais juros) ao longo do período de reembolso mais curto, o que produz um pagamento mensal muito maior do que o pagamento de juros do período de utilização."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Uma calculadora de HELOC é a mesma coisa que uma calculadora de empréstimo com garantia imobiliária?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não - um empréstimo com garantia imobiliária é uma quantia única com pagamentos fixos desde o primeiro dia, calculado como um empréstimo amortizável padrão. Um HELOC é uma linha rotativa com um período distinto de utilização somente com juros seguido de um período separado de reembolso amortizável, que é exatamente o que esta calculadora foi criada para modelar."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Esta calculadora considera mudanças nas taxas de HELOC?</h3>
 <p>Não - ela assume uma taxa fixa durante todo o período por simplicidade. A maioria dos HELOCs do mundo real tem taxas variáveis vinculadas a um índice de referência, então seus pagamentos reais provavelmente flutuarão ao longo do tempo conforme as taxas mudam.</p>
+</div>
+<div class="faq-item">
+<h3>Como é calculado o pagamento do período de utilização?</h3>
+<p>É somente juros: o valor utilizado multiplicado pela taxa de juros periódica (taxa anual dividida por 12). Em um saldo de $30.000 a 8%, o pagamento mensal do período de utilização é de cerca de $30.000 × (0,08/12) = $200, sem nenhuma redução do principal.</p>
+</div>
+<div class="faq-item">
+<h3>Por que meu pagamento aumenta tanto quando começa o reembolso?</h3>
+<p>Durante o período de utilização você só cobre os juros, então o saldo utilizado total ainda é devido. Quando o reembolso começa, esse mesmo saldo precisa ser totalmente amortizado (principal mais juros) ao longo do período de reembolso mais curto, o que produz um pagamento mensal muito maior do que o pagamento de juros do período de utilização.</p>
+</div>
+<div class="faq-item">
+<h3>Uma calculadora de HELOC é a mesma coisa que uma calculadora de empréstimo com garantia imobiliária?</h3>
+<p>Não - um empréstimo com garantia imobiliária é uma quantia única com pagamentos fixos desde o primeiro dia, calculado como um empréstimo amortizável padrão. Um HELOC é uma linha rotativa com um período distinto de utilização somente com juros seguido de um período separado de reembolso amortizável, que é exatamente o que esta calculadora foi criada para modelar.</p>
 </div></div>
         </div>
       </main>

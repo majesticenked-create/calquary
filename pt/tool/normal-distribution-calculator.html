@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Relacionado mas diferente - a Calculadora de Escore Z encontra o percentil abaixo de um único valor. Esta calculadora encontra a probabilidade de um valor cair entre dois limites, o que é mais útil para perguntas como \"que fração de escores está entre 85 e 115?\""
           }
+        },
+        {
+          "@type": "Question",
+          "name": "E se eu definir o limite inferior e o superior com o mesmo valor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A probabilidade resulta essencialmente em 0% - uma distribuição normal contínua atribui probabilidade zero a atingir exatamente um ponto, apenas a cair dentro de um intervalo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como encontro a probabilidade de um valor estar acima ou abaixo de um único limite, em vez de entre dois?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Defina o limite inferior com um número muito pequeno (como média − 10×DP) para capturar efetivamente tudo abaixo do seu limite superior, ou defina o limite superior muito alto para capturar tudo acima do seu limite inferior - isso aproxima uma probabilidade unilateral usando a ferramenta de dois limites."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Isso funciona para distribuições que não são normais?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não - esta calculadora assume especificamente uma distribuição normal (curva em sino) definida pela sua média e desvio padrão; dados assimétricos ou não normais não fornecerão probabilidades precisas com este método."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Isso é o mesmo que a Calculadora de Escore Z?</h3>
 <p>Relacionado mas diferente - a Calculadora de Escore Z encontra o percentil abaixo de um único valor. Esta calculadora encontra a probabilidade de um valor cair entre dois limites, o que é mais útil para perguntas como "que fração de escores está entre 85 e 115?"</p>
+</div>
+<div class="faq-item">
+<h3>E se eu definir o limite inferior e o superior com o mesmo valor?</h3>
+<p>A probabilidade resulta essencialmente em 0% - uma distribuição normal contínua atribui probabilidade zero a atingir exatamente um ponto, apenas a cair dentro de um intervalo.</p>
+</div>
+<div class="faq-item">
+<h3>Como encontro a probabilidade de um valor estar acima ou abaixo de um único limite, em vez de entre dois?</h3>
+<p>Defina o limite inferior com um número muito pequeno (como média − 10×DP) para capturar efetivamente tudo abaixo do seu limite superior, ou defina o limite superior muito alto para capturar tudo acima do seu limite inferior - isso aproxima uma probabilidade unilateral usando a ferramenta de dois limites.</p>
+</div>
+<div class="faq-item">
+<h3>Isso funciona para distribuições que não são normais?</h3>
+<p>Não - esta calculadora assume especificamente uma distribuição normal (curva em sino) definida pela sua média e desvio padrão; dados assimétricos ou não normais não fornecerão probabilidades precisas com este método.</p>
 </div></div>
         </div>
       </main>

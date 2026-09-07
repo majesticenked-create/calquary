@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Calcule a média das coordenadas x e a média das coordenadas y separadamente: ponto médio = ((x₁+x₂)/2, (y₁+y₂)/2). Para (1,2) e (4,6), o ponto médio é (2,5, 4)."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "A fórmula de distância pode dar um resultado negativo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não - a distância é sempre zero ou positiva, porque a fórmula eleva ao quadrado as diferenças (removendo qualquer sinal negativo) antes de tirar a raiz quadrada, que por convenção retorna a raiz não negativa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Isso funciona para pontos no espaço 3D?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Esta calculadora trabalha apenas com pares de coordenadas 2D, mas a mesma ideia se estende para 3D adicionando um termo z: d = √((x₂-x₁)² + (y₂-y₁)² + (z₂-z₁)²)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "E se os dois pontos forem os mesmos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A distância é 0 - se (x1,y1) for igual a (x2,y2), então Δx e Δy são ambos 0, então d = √(0² + 0²) = 0, indicando corretamente que não há separação entre os pontos."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Como encontro o ponto médio entre dois pontos?</h3>
 <p>Calcule a média das coordenadas x e a média das coordenadas y separadamente: ponto médio = ((x₁+x₂)/2, (y₁+y₂)/2). Para (1,2) e (4,6), o ponto médio é (2,5, 4).</p>
+</div>
+<div class="faq-item">
+<h3>A fórmula de distância pode dar um resultado negativo?</h3>
+<p>Não - a distância é sempre zero ou positiva, porque a fórmula eleva ao quadrado as diferenças (removendo qualquer sinal negativo) antes de tirar a raiz quadrada, que por convenção retorna a raiz não negativa.</p>
+</div>
+<div class="faq-item">
+<h3>Isso funciona para pontos no espaço 3D?</h3>
+<p>Esta calculadora trabalha apenas com pares de coordenadas 2D, mas a mesma ideia se estende para 3D adicionando um termo z: d = √((x₂-x₁)² + (y₂-y₁)² + (z₂-z₁)²).</p>
+</div>
+<div class="faq-item">
+<h3>E se os dois pontos forem os mesmos?</h3>
+<p>A distância é 0 - se (x1,y1) for igual a (x2,y2), então Δx e Δy são ambos 0, então d = √(0² + 0²) = 0, indicando corretamente que não há separação entre os pontos.</p>
 </div></div>
         </div>
       </main>

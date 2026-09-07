@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Sim - a Calculadora de Nota regular converte uma única pontuação (como um teste) em uma porcentagem e nota em letra. Esta ferramenta combina múltiplas categorias ponderadas - trabalhos, testes, um exame final, etc. - em uma nota geral do curso."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "O que acontece se eu inserir um peso de 0 para uma categoria que ainda não comecei?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Essa categoria é totalmente excluída do cálculo (multiplicar por 0 não contribui nada para o numerador nem para o denominador), então sua nota atual reflete apenas as categorias com peso diferente de zero - útil para acompanhar uma média em andamento ao longo do semestre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto o exame final precisaria valer para eu tirar A geral, se já sei minhas notas de trabalhos e provas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Esta calculadora resolve a nota geral a partir das três categorias de uma vez, então para descobrir a nota final necessária, trabalhe de trás para frente: alvo = (nota geral desejada × 100 − trabalhos×peso − provas×peso) / peso do final. Por exemplo, precisando de 90 geral com 95×20 + 82×40 já definidos e um peso de 40% para o final: (9000 − 1900 − 3280) / 40 = 95,5%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso usar isso para mais de três categorias de nota, como provas curtas além de trabalhos, testes e um final?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Esta versão lida com exatamente três categorias (trabalhos, testes, final) - para um curso que também tenha categoria de provas curtas, combine-as com a categoria existente que tiver peso semelhante, ou calcule primeiro uma subméida para as provas curtas e trate-a como uma das três entradas."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Isso é diferente da Calculadora de Nota regular?</h3>
 <p>Sim - a Calculadora de Nota regular converte uma única pontuação (como um teste) em uma porcentagem e nota em letra. Esta ferramenta combina múltiplas categorias ponderadas - trabalhos, testes, um exame final, etc. - em uma nota geral do curso.</p>
+</div>
+<div class="faq-item">
+<h3>O que acontece se eu inserir um peso de 0 para uma categoria que ainda não comecei?</h3>
+<p>Essa categoria é totalmente excluída do cálculo (multiplicar por 0 não contribui nada para o numerador nem para o denominador), então sua nota atual reflete apenas as categorias com peso diferente de zero - útil para acompanhar uma média em andamento ao longo do semestre.</p>
+</div>
+<div class="faq-item">
+<h3>Quanto o exame final precisaria valer para eu tirar A geral, se já sei minhas notas de trabalhos e provas?</h3>
+<p>Esta calculadora resolve a nota geral a partir das três categorias de uma vez, então para descobrir a nota final necessária, trabalhe de trás para frente: alvo = (nota geral desejada × 100 − trabalhos×peso − provas×peso) / peso do final. Por exemplo, precisando de 90 geral com 95×20 + 82×40 já definidos e um peso de 40% para o final: (9000 − 1900 − 3280) / 40 = 95,5%.</p>
+</div>
+<div class="faq-item">
+<h3>Posso usar isso para mais de três categorias de nota, como provas curtas além de trabalhos, testes e um final?</h3>
+<p>Esta versão lida com exatamente três categorias (trabalhos, testes, final) - para um curso que também tenha categoria de provas curtas, combine-as com a categoria existente que tiver peso semelhante, ou calcule primeiro uma subméida para as provas curtas e trate-a como uma das três entradas.</p>
 </div></div>
         </div>
       </main>

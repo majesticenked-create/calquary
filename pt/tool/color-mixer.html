@@ -141,6 +141,30 @@
             "@type": "Answer",
             "text": "Não - digite as cores como códigos hexadecimais de 6 dígitos (como #FF0000 para vermelho), pois esse é o formato preciso e inequívoco que esta calculadora analisa. A maioria das ferramentas de design e navegadores pode mostrar o código hexadecimal de qualquer cor que você escolher visualmente."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Que cor você obtém ao misturar vermelho puro e azul puro em 50/50?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Um roxo/magenta médio, aproximadamente #7F007F - já que o vermelho é (255,0,0) e o azul é (0,0,255), calcular a média de cada canal dá (127,0,127), o ponto médio RGB entre os dois."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Por que misturar vermelho e verde não dá marrom ou amarelo como a tinta daria?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Porque esta ferramenta mistura luz (RGB aditivo), não pigmento (mistura subtrativa). De forma aditiva, vermelho (255,0,0) e verde (0,255,0) misturados 50/50 fazem uma média de (127,127,0), um tom amarelo-oliva - parecido com amarelo, mas por um mecanismo totalmente diferente da mistura de pigmentos de tinta, e é por isso que as intuições da pintura nem sempre se aplicam aqui."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que acontece se eu definir a proporção para 0% ou 100%?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Em 0% de peso da primeira cor, a saída é simplesmente a segunda cor sem alteração; em 100%, é a primeira cor sem alteração - a proporção só importa para valores entre esses dois extremos."
+          }
         }
       ]
     }
@@ -219,6 +243,18 @@
 <div class="faq-item">
 <h3>Posso usar nomes de cores em vez de códigos hexadecimais?</h3>
 <p>Não - digite as cores como códigos hexadecimais de 6 dígitos (como #FF0000 para vermelho), pois esse é o formato preciso e inequívoco que esta calculadora analisa. A maioria das ferramentas de design e navegadores pode mostrar o código hexadecimal de qualquer cor que você escolher visualmente.</p>
+</div>
+<div class="faq-item">
+<h3>Que cor você obtém ao misturar vermelho puro e azul puro em 50/50?</h3>
+<p>Um roxo/magenta médio, aproximadamente #7F007F - já que o vermelho é (255,0,0) e o azul é (0,0,255), calcular a média de cada canal dá (127,0,127), o ponto médio RGB entre os dois.</p>
+</div>
+<div class="faq-item">
+<h3>Por que misturar vermelho e verde não dá marrom ou amarelo como a tinta daria?</h3>
+<p>Porque esta ferramenta mistura luz (RGB aditivo), não pigmento (mistura subtrativa). De forma aditiva, vermelho (255,0,0) e verde (0,255,0) misturados 50/50 fazem uma média de (127,127,0), um tom amarelo-oliva - parecido com amarelo, mas por um mecanismo totalmente diferente da mistura de pigmentos de tinta, e é por isso que as intuições da pintura nem sempre se aplicam aqui.</p>
+</div>
+<div class="faq-item">
+<h3>O que acontece se eu definir a proporção para 0% ou 100%?</h3>
+<p>Em 0% de peso da primeira cor, a saída é simplesmente a segunda cor sem alteração; em 100%, é a primeira cor sem alteração - a proporção só importa para valores entre esses dois extremos.</p>
 </div></div>
         </div>
       </main>

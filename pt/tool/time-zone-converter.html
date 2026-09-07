@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Sim - mude os campos de data e hora para qualquer data; a ferramenta ainda aplica as regras corretas de horário de verão para quaisquer fusos e data que você escolher."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "O que acontece se eu converter um horário que cai durante uma transição de horário de verão, como a noite em que os relógios mudam?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A ferramenta aplica o deslocamento UTC que estiver oficialmente em vigor para aquele fuso naquela data e horário exatos, então um horário que não existe (pulado durante o avanço da primavera) ou que ocorre duas vezes (repetido durante o retrocesso do outono) é resolvido usando as regras padrão do banco de dados de fusos horários, em vez de ficar ambíguo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como converto 14h do horário do Leste dos EUA para o horário da Índia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Defina a data e hora para 14:00, escolha Leste dos EUA como o fuso 'De' e Índia (Calcutá) como o fuso 'Para' - o resultado reflete o deslocamento completo (tipicamente 9,5 ou 10,5 horas dependendo do horário de verão dos EUA), incluindo a meia hora que o IST adiciona."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Isso é o mesmo que um 'conversor de horário UTC'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, na prática - selecionar UTC como o fuso 'De' ou 'Para' converte diretamente de ou para o Tempo Universal Coordenado, que é exatamente o que a maioria das ferramentas de 'conversor UTC' faz."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Posso converter uma hora do passado ou futuro, não apenas agora?</h3>
 <p>Sim - mude os campos de data e hora para qualquer data; a ferramenta ainda aplica as regras corretas de horário de verão para quaisquer fusos e data que você escolher.</p>
+</div>
+<div class="faq-item">
+<h3>O que acontece se eu converter um horário que cai durante uma transição de horário de verão, como a noite em que os relógios mudam?</h3>
+<p>A ferramenta aplica o deslocamento UTC que estiver oficialmente em vigor para aquele fuso naquela data e horário exatos, então um horário que não existe (pulado durante o avanço da primavera) ou que ocorre duas vezes (repetido durante o retrocesso do outono) é resolvido usando as regras padrão do banco de dados de fusos horários, em vez de ficar ambíguo.</p>
+</div>
+<div class="faq-item">
+<h3>Como converto 14h do horário do Leste dos EUA para o horário da Índia?</h3>
+<p>Defina a data e hora para 14:00, escolha Leste dos EUA como o fuso 'De' e Índia (Calcutá) como o fuso 'Para' - o resultado reflete o deslocamento completo (tipicamente 9,5 ou 10,5 horas dependendo do horário de verão dos EUA), incluindo a meia hora que o IST adiciona.</p>
+</div>
+<div class="faq-item">
+<h3>Isso é o mesmo que um 'conversor de horário UTC'?</h3>
+<p>Sim, na prática - selecionar UTC como o fuso 'De' ou 'Para' converte diretamente de ou para o Tempo Universal Coordenado, que é exatamente o que a maioria das ferramentas de 'conversor UTC' faz.</p>
 </div></div>
         </div>
       </main>

@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Use um escore t (da distribuição t) para amostras menores, tipicamente abaixo de 30, já que ele considera incerteza extra em uma estimativa de desvio padrão de amostra pequena. Esta calculadora usa a distribuição z, que é uma aproximação razoável assim que seu tamanho de amostra for 30 ou mais."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Como calculo um intervalo de confiança de 99% em vez de 95%?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Selecione 99% como nível de confiança, que usa um escore z maior (cerca de 2,576 em vez de 1,96) - o intervalo resultante será mais largo que um intervalo de 95% para os mesmos dados, já que maior confiança exige uma margem de erro maior."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual é o intervalo de confiança para uma média amostral de 50, desvio padrão de 10, e n=100 com 95% de confiança?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Margem de erro = 1,96 × (10/√100) = 1,96 × 1 = 1,96. O intervalo é 50 ± 1,96, ou cerca de 48,04 a 51,96."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Um intervalo de confiança mais largo significa que a estimativa é menos precisa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Significa que há mais incerteza sobre a localização exata da verdadeira média populacional, frequentemente por causa de um tamanho de amostra menor, maior variabilidade nos dados, ou um nível de confiança escolhido mais alto - não é que a média amostral em si esteja errada, apenas que o intervalo de valores verdadeiros plausíveis é mais amplo."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Devo usar um escore z ou t para meu intervalo de confiança?</h3>
 <p>Use um escore t (da distribuição t) para amostras menores, tipicamente abaixo de 30, já que ele considera incerteza extra em uma estimativa de desvio padrão de amostra pequena. Esta calculadora usa a distribuição z, que é uma aproximação razoável assim que seu tamanho de amostra for 30 ou mais.</p>
+</div>
+<div class="faq-item">
+<h3>Como calculo um intervalo de confiança de 99% em vez de 95%?</h3>
+<p>Selecione 99% como nível de confiança, que usa um escore z maior (cerca de 2,576 em vez de 1,96) - o intervalo resultante será mais largo que um intervalo de 95% para os mesmos dados, já que maior confiança exige uma margem de erro maior.</p>
+</div>
+<div class="faq-item">
+<h3>Qual é o intervalo de confiança para uma média amostral de 50, desvio padrão de 10, e n=100 com 95% de confiança?</h3>
+<p>Margem de erro = 1,96 × (10/√100) = 1,96 × 1 = 1,96. O intervalo é 50 ± 1,96, ou cerca de 48,04 a 51,96.</p>
+</div>
+<div class="faq-item">
+<h3>Um intervalo de confiança mais largo significa que a estimativa é menos precisa?</h3>
+<p>Significa que há mais incerteza sobre a localização exata da verdadeira média populacional, frequentemente por causa de um tamanho de amostra menor, maior variabilidade nos dados, ou um nível de confiança escolhido mais alto - não é que a média amostral em si esteja errada, apenas que o intervalo de valores verdadeiros plausíveis é mais amplo.</p>
 </div></div>
         </div>
       </main>

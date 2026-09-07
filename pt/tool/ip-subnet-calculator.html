@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Uma /32 tem exatamente um endereço no total (usado para identificar um único host, como uma interface loopback), e uma /31 tem apenas 2 endereços sem espaço para endereços de rede/broadcast separados - ambas são tipicamente usadas para links ponto a ponto onde cada endereço é diretamente utilizável."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Como o comprimento do prefixo CIDR muda se eu passar de /24 para /25?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Uma /25 divide o que seria uma rede /24 em duas sub-redes menores, cada uma com 128 endereços totais (126 hosts utilizáveis) em vez de 256 (254 utilizáveis) - passar para um prefixo mais longo sempre reduz o espaço de endereços por sub-rede enquanto cria mais sub-redes no total."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual é a faixa de hosts utilizáveis para 192.168.1.0/24?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "192.168.1.1 até 192.168.1.254 - o endereço de rede (192.168.1.0) e o endereço de broadcast (192.168.1.255) são excluídos, deixando 254 endereços de host atribuíveis entre eles."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "'Calculadora de sub-rede IP' é a mesma ferramenta que uma 'calculadora CIDR'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, essencialmente - ambas pegam um endereço IP e um comprimento de prefixo (ou notação CIDR combinada) e calculam o mesmo endereço de rede, endereço de broadcast, e faixa de hosts utilizáveis; esta ferramenta usa o IP e o prefixo como campos separados em vez de notação de barra combinada."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Por que sub-redes /31 e /32 não têm faixa de host utilizável?</h3>
 <p>Uma /32 tem exatamente um endereço no total (usado para identificar um único host, como uma interface loopback), e uma /31 tem apenas 2 endereços sem espaço para endereços de rede/broadcast separados - ambas são tipicamente usadas para links ponto a ponto onde cada endereço é diretamente utilizável.</p>
+</div>
+<div class="faq-item">
+<h3>Como o comprimento do prefixo CIDR muda se eu passar de /24 para /25?</h3>
+<p>Uma /25 divide o que seria uma rede /24 em duas sub-redes menores, cada uma com 128 endereços totais (126 hosts utilizáveis) em vez de 256 (254 utilizáveis) - passar para um prefixo mais longo sempre reduz o espaço de endereços por sub-rede enquanto cria mais sub-redes no total.</p>
+</div>
+<div class="faq-item">
+<h3>Qual é a faixa de hosts utilizáveis para 192.168.1.0/24?</h3>
+<p>192.168.1.1 até 192.168.1.254 - o endereço de rede (192.168.1.0) e o endereço de broadcast (192.168.1.255) são excluídos, deixando 254 endereços de host atribuíveis entre eles.</p>
+</div>
+<div class="faq-item">
+<h3>'Calculadora de sub-rede IP' é a mesma ferramenta que uma 'calculadora CIDR'?</h3>
+<p>Sim, essencialmente - ambas pegam um endereço IP e um comprimento de prefixo (ou notação CIDR combinada) e calculam o mesmo endereço de rede, endereço de broadcast, e faixa de hosts utilizáveis; esta ferramenta usa o IP e o prefixo como campos separados em vez de notação de barra combinada.</p>
 </div></div>
         </div>
       </main>

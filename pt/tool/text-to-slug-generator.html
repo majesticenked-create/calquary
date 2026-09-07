@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Remover palavras vazias comuns é opcional mas frequentemente melhora a legibilidade e encurta ligeiramente a URL sem perder significado - 'melhor-pizza-em-lisboa' funciona tão bem quanto 'a-melhor-pizza-em-lisboa'. Esta ferramenta preserva sua ordem de palavras original e permite que você decida o que manter."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "O que acontece com pontuações como apóstrofos ou pontos de exclamação no meu texto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Elas são completamente removidas, já que um slug mantém apenas letras minúsculas, números, e hifens - \"Pizza do Joe's!\" se torna \"pizza-do-joes\" em vez de manter o apóstrofo ou o ponto de exclamação."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Espaços múltiplos ou pontuação repetida são reduzidos a um único hífen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim - espaços consecutivos ou caracteres especiais são reduzidos a um único hífen em vez de produzir vários hifens seguidos, então \"Olá   Mundo!!\" se torna \"ola-mundo,\" não \"ola---mundo.\""
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "'Slugify' é a mesma coisa que esta ferramenta faz?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim - \"slugify,\" \"gerador de slug de URL,\" e \"converter para slug\" descrevem todos a conversão de texto arbitrário para o formato minúsculo, hifenizado, e seguro para URL que esta ferramenta produz."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Slugs de URL devem incluir palavras vazias como 'o' e 'e'?</h3>
 <p>Remover palavras vazias comuns é opcional mas frequentemente melhora a legibilidade e encurta ligeiramente a URL sem perder significado - 'melhor-pizza-em-lisboa' funciona tão bem quanto 'a-melhor-pizza-em-lisboa'. Esta ferramenta preserva sua ordem de palavras original e permite que você decida o que manter.</p>
+</div>
+<div class="faq-item">
+<h3>O que acontece com pontuações como apóstrofos ou pontos de exclamação no meu texto?</h3>
+<p>Elas são completamente removidas, já que um slug mantém apenas letras minúsculas, números, e hifens - "Pizza do Joe's!" se torna "pizza-do-joes" em vez de manter o apóstrofo ou o ponto de exclamação.</p>
+</div>
+<div class="faq-item">
+<h3>Espaços múltiplos ou pontuação repetida são reduzidos a um único hífen?</h3>
+<p>Sim - espaços consecutivos ou caracteres especiais são reduzidos a um único hífen em vez de produzir vários hifens seguidos, então "Olá   Mundo!!" se torna "ola-mundo," não "ola---mundo."</p>
+</div>
+<div class="faq-item">
+<h3>'Slugify' é a mesma coisa que esta ferramenta faz?</h3>
+<p>Sim - "slugify," "gerador de slug de URL," e "converter para slug" descrevem todos a conversão de texto arbitrário para o formato minúsculo, hifenizado, e seguro para URL que esta ferramenta produz.</p>
 </div></div>
         </div>
       </main>

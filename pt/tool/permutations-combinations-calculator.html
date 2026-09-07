@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Cada combinação de r itens pode ser organizada em r! ordens diferentes, e cada um desses ordenamentos conta como uma permutação separada - então permutações = combinações × r!, ou equivalentemente combinações = permutações ÷ r!."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "O que é 5 escolhe 5 (5C5), e por que é igual a 1?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1 - há apenas uma forma de escolher todos os 5 itens de um grupo de 5 (você simplesmente pega todo mundo), o que a fórmula confirma: 5!/(5!×0!) = 1, já que 0! é definido como 1."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quantos arranjos diferentes de 4 letras podem ser feitos a partir de 6 letras distintas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "360 - usando nPr = n!/(n-r)! = 6!/(6-4)! = 720/2 = 360, já que a ordem importa para um arranjo (permutação)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Por que nCr é sempre o mesmo valor, seja calculado como 'n escolhe r' ou 'n escolhe (n-r)'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Escolher r itens para incluir é matematicamente idêntico a escolher os (n-r) itens para deixar de fora - por exemplo, 10C3 = 10C7 = 120, porque ambos descrevem o mesmo ato de dividir 10 itens em um grupo de 3 e um grupo de 7."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Por que nPr é sempre nCr multiplicado por r!?</h3>
 <p>Cada combinação de r itens pode ser organizada em r! ordens diferentes, e cada um desses ordenamentos conta como uma permutação separada - então permutações = combinações × r!, ou equivalentemente combinações = permutações ÷ r!.</p>
+</div>
+<div class="faq-item">
+<h3>O que é 5 escolhe 5 (5C5), e por que é igual a 1?</h3>
+<p>1 - há apenas uma forma de escolher todos os 5 itens de um grupo de 5 (você simplesmente pega todo mundo), o que a fórmula confirma: 5!/(5!×0!) = 1, já que 0! é definido como 1.</p>
+</div>
+<div class="faq-item">
+<h3>Quantos arranjos diferentes de 4 letras podem ser feitos a partir de 6 letras distintas?</h3>
+<p>360 - usando nPr = n!/(n-r)! = 6!/(6-4)! = 720/2 = 360, já que a ordem importa para um arranjo (permutação).</p>
+</div>
+<div class="faq-item">
+<h3>Por que nCr é sempre o mesmo valor, seja calculado como 'n escolhe r' ou 'n escolhe (n-r)'?</h3>
+<p>Escolher r itens para incluir é matematicamente idêntico a escolher os (n-r) itens para deixar de fora - por exemplo, 10C3 = 10C7 = 120, porque ambos descrevem o mesmo ato de dividir 10 itens em um grupo de 3 e um grupo de 7.</p>
 </div></div>
         </div>
       </main>

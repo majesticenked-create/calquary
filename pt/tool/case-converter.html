@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Além do tipo título e tipo frase, ele converte para MAIÚSCULAS, minúsculas, camelCase e outros estilos de formatação comuns usados em textos e código, para que você reformate o texto conforme o contexto que precisar."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Como o formato de título decide quais palavras colocar em maiúscula?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ele coloca em maiúscula a primeira letra de cada palavra do texto, sem tratamento especial para palavras menores como 'um,' 'o,' ou 'de' - então 'o senhor dos anéis' se torna 'O Senhor Dos Anéis' aqui, em vez da convenção de guias de estilo que mantém palavras menores em minúscula."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que o formato de frase faz com um texto que tem várias frases?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ele coloca em maiúscula apenas a primeiríssima letra de toda a entrada, deixando o resto em minúscula - ele não detecta os limites de frases individuais para recapitalizar cada uma, então um parágrafo com várias frases recebe exatamente uma letra maiúscula no total."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Se meu texto tem siglas em CAIXA ALTA como 'NASA,' converter para minúsculas as quebra?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim - converter para minúsculas trata cada letra da mesma forma independentemente do contexto, então 'NASA' se torna 'nasa.' Não há detecção de siglas, então revise o texto com siglas ou nomes próprios depois de converter."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Quais estilos de capitalização este conversor suporta?</h3>
 <p>Além do tipo título e tipo frase, ele converte para MAIÚSCULAS, minúsculas, camelCase e outros estilos de formatação comuns usados em textos e código, para que você reformate o texto conforme o contexto que precisar.</p>
+</div>
+<div class="faq-item">
+<h3>Como o formato de título decide quais palavras colocar em maiúscula?</h3>
+<p>Ele coloca em maiúscula a primeira letra de cada palavra do texto, sem tratamento especial para palavras menores como 'um,' 'o,' ou 'de' - então 'o senhor dos anéis' se torna 'O Senhor Dos Anéis' aqui, em vez da convenção de guias de estilo que mantém palavras menores em minúscula.</p>
+</div>
+<div class="faq-item">
+<h3>O que o formato de frase faz com um texto que tem várias frases?</h3>
+<p>Ele coloca em maiúscula apenas a primeiríssima letra de toda a entrada, deixando o resto em minúscula - ele não detecta os limites de frases individuais para recapitalizar cada uma, então um parágrafo com várias frases recebe exatamente uma letra maiúscula no total.</p>
+</div>
+<div class="faq-item">
+<h3>Se meu texto tem siglas em CAIXA ALTA como 'NASA,' converter para minúsculas as quebra?</h3>
+<p>Sim - converter para minúsculas trata cada letra da mesma forma independentemente do contexto, então 'NASA' se torna 'nasa.' Não há detecção de siglas, então revise o texto com siglas ou nomes próprios depois de converter.</p>
 </div></div>
         </div>
       </main>

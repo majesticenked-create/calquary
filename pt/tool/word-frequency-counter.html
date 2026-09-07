@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "A análise de frequência de palavras revela repetição não intencional, ajuda a confirmar que palavras-chave alvo aparecem em uma densidade natural em vez de serem forçadas, e pode revelar palavras de preenchimento superutilizadas que enfraquecem a escrita - útil tanto para editar prosa quanto para verificar o conteúdo SEO na página antes de publicar."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Pontuação anexada a uma palavra, como 'cão,' ou 'cão.', é contada separadamente de 'cão'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não - a pontuação é removida antes da contagem, então \"cão,\" \"cão.\" e \"cão\" são todos contabilizados como a mesma palavra, evitando contagens artificialmente divididas causadas por vírgulas ou pontos finais."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "No texto de exemplo, quantas vezes 'the' aparece?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Duas vezes - \"the quick brown fox jumps over the lazy dog the fox runs fast\" na verdade tem 'the' três vezes (antes de 'quick,' antes de 'lazy,' e antes do segundo 'fox'), cada uma contada da mesma forma independentemente da posição na frase."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Isso é o mesmo que um 'verificador de densidade de palavras-chave'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Eles são bem relacionados - um verificador de densidade de palavras-chave geralmente expressa a frequência de uma palavra-alvo como uma porcentagem do total de palavras, enquanto esta ferramenta classifica todas as palavras por contagem bruta de frequência. Você pode calcular manualmente a densidade a partir das contagens e do total de palavras que esta ferramenta fornece."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Como a análise de frequência de palavras pode ajudar com SEO ou escrita?</h3>
 <p>A análise de frequência de palavras revela repetição não intencional, ajuda a confirmar que palavras-chave alvo aparecem em uma densidade natural em vez de serem forçadas, e pode revelar palavras de preenchimento superutilizadas que enfraquecem a escrita - útil tanto para editar prosa quanto para verificar o conteúdo SEO na página antes de publicar.</p>
+</div>
+<div class="faq-item">
+<h3>Pontuação anexada a uma palavra, como 'cão,' ou 'cão.', é contada separadamente de 'cão'?</h3>
+<p>Não - a pontuação é removida antes da contagem, então "cão," "cão." e "cão" são todos contabilizados como a mesma palavra, evitando contagens artificialmente divididas causadas por vírgulas ou pontos finais.</p>
+</div>
+<div class="faq-item">
+<h3>No texto de exemplo, quantas vezes 'the' aparece?</h3>
+<p>Duas vezes - "the quick brown fox jumps over the lazy dog the fox runs fast" na verdade tem 'the' três vezes (antes de 'quick,' antes de 'lazy,' e antes do segundo 'fox'), cada uma contada da mesma forma independentemente da posição na frase.</p>
+</div>
+<div class="faq-item">
+<h3>Isso é o mesmo que um 'verificador de densidade de palavras-chave'?</h3>
+<p>Eles são bem relacionados - um verificador de densidade de palavras-chave geralmente expressa a frequência de uma palavra-alvo como uma porcentagem do total de palavras, enquanto esta ferramenta classifica todas as palavras por contagem bruta de frequência. Você pode calcular manualmente a densidade a partir das contagens e do total de palavras que esta ferramenta fornece.</p>
 </div></div>
         </div>
       </main>

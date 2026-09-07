@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "Insira a taxa por período, não a taxa anual - se você está capitalizando mensalmente e tem uma taxa anual de 6%, insira 0,5 (6 ÷ 12) como a taxa por período, e defina os períodos em meses para corresponder."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Esta calculadora pode resolver para o número de períodos ou a taxa de juros?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Esta versão resolve para valor presente, valor futuro ou pagamento dados os outros valores - ela não foi criada para resolver taxa ou número de períodos, que normalmente exigem métodos iterativos (tentativa e erro) em vez de uma fórmula direta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que acontece se eu deixar o VP em zero e resolver para o VF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Com o VP definido como 0, o valor futuro vem inteiramente do fluxo de pagamentos capitalizando ao longo do tempo - por exemplo, um PGTO de -200 por mês a uma taxa mensal de 0,5% durante 120 períodos, com VP de 0, resulta em um VF de aproximadamente $32.700, correspondendo a um cálculo padrão de anuidade de poupança."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Isso é o mesmo que uma \"calculadora de anuidade\"?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Muito semelhante - uma calculadora de anuidade geralmente resolve um desses mesmos valores (valor futuro, pagamento ou valor presente) para uma sequência de pagamentos periódicos iguais, que é exatamente o cálculo que este solucionador TVM realiza."
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>Qual taxa devo inserir?</h3>
 <p>Insira a taxa por período, não a taxa anual - se você está capitalizando mensalmente e tem uma taxa anual de 6%, insira 0,5 (6 ÷ 12) como a taxa por período, e defina os períodos em meses para corresponder.</p>
+</div>
+<div class="faq-item">
+<h3>Esta calculadora pode resolver para o número de períodos ou a taxa de juros?</h3>
+<p>Esta versão resolve para valor presente, valor futuro ou pagamento dados os outros valores - ela não foi criada para resolver taxa ou número de períodos, que normalmente exigem métodos iterativos (tentativa e erro) em vez de uma fórmula direta.</p>
+</div>
+<div class="faq-item">
+<h3>O que acontece se eu deixar o VP em zero e resolver para o VF?</h3>
+<p>Com o VP definido como 0, o valor futuro vem inteiramente do fluxo de pagamentos capitalizando ao longo do tempo - por exemplo, um PGTO de -200 por mês a uma taxa mensal de 0,5% durante 120 períodos, com VP de 0, resulta em um VF de aproximadamente $32.700, correspondendo a um cálculo padrão de anuidade de poupança.</p>
+</div>
+<div class="faq-item">
+<h3>Isso é o mesmo que uma "calculadora de anuidade"?</h3>
+<p>Muito semelhante - uma calculadora de anuidade geralmente resolve um desses mesmos valores (valor futuro, pagamento ou valor presente) para uma sequência de pagamentos periódicos iguais, que é exatamente o cálculo que este solucionador TVM realiza.</p>
 </div></div>
         </div>
       </main>
