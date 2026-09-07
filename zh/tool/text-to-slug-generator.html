@@ -149,6 +149,30 @@
             "@type": "Answer",
             "text": "去除常见的停用词是可选的，但通常能提高可读性并略微缩短URL，同时不会丢失含义——「best-pizza-shanghai」和「the-best-pizza-in-shanghai」一样有效。这个工具会保留你原来的词序，让你决定要保留什么。"
           }
+        },
+        {
+          "@type": "Question",
+          "name": "文本中的标点符号，比如撇号或感叹号，会怎么处理？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "它们会被完全去除，因为slug只保留小写字母、数字和连字符——「Joe's Pizza!」会变成「joes-pizza」，而不会保留撇号或感叹号。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "多个空格或重复的标点符号会被合并成一个连字符吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "会——连续的空格或特殊字符会合并成单个连字符，而不会产生多个连续的连字符，所以「Hello   World!!」会变成「hello-world」，而不是「hello---world」。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "「slugify」和这个工具做的事情是一回事吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "是的——「slugify」「URL slug生成器」和「转换为slug」描述的都是把任意文本转换成这个工具生成的小写、带连字符、URL安全格式的过程。"
+          }
         }
       ]
     }
@@ -231,6 +255,18 @@
 <div class="faq-item">
 <h3>URL slug应该包含像"the"和"and"这样的停用词吗？</h3>
 <p>去除常见的停用词是可选的，但通常能提高可读性并略微缩短URL，同时不会丢失含义——「best-pizza-shanghai」和「the-best-pizza-in-shanghai」一样有效。这个工具会保留你原来的词序，让你决定要保留什么。</p>
+</div>
+<div class="faq-item">
+<h3>文本中的标点符号，比如撇号或感叹号，会怎么处理？</h3>
+<p>它们会被完全去除，因为slug只保留小写字母、数字和连字符——「Joe's Pizza!」会变成「joes-pizza」，而不会保留撇号或感叹号。</p>
+</div>
+<div class="faq-item">
+<h3>多个空格或重复的标点符号会被合并成一个连字符吗？</h3>
+<p>会——连续的空格或特殊字符会合并成单个连字符，而不会产生多个连续的连字符，所以「Hello   World!!」会变成「hello-world」，而不是「hello---world」。</p>
+</div>
+<div class="faq-item">
+<h3>「slugify」和这个工具做的事情是一回事吗？</h3>
+<p>是的——「slugify」「URL slug生成器」和「转换为slug」描述的都是把任意文本转换成这个工具生成的小写、带连字符、URL安全格式的过程。</p>
 </div></div>
         </div>
       </main>
