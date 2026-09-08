@@ -457,6 +457,18 @@ function themeInitScript() {
   return `<script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>`;
 }
 
+// Google Analytics (GA4). Site-wide, same tag on every page — kept as one
+// constant here rather than duplicated per template so the Measurement ID
+// only needs updating in one place.
+const GA_TAG = `<!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>`;
+
 function faviconLinks() {
   return [
     `<link rel="icon" href="/favicon.svg" type="image/svg+xml">`,
@@ -633,6 +645,7 @@ function buildToolPage(template, locale, calc, cat, I18N) {
     .split("{{CAT_NAME}}").join(locale === "en" ? cat.name : I18N.categories[cat.id][locale].name)
     .split("{{FAVICON_LINKS}}").join(faviconLinks())
     .split("{{THEME_INIT}}").join(themeInitScript())
+    .split("{{GA_TAG}}").join(GA_TAG)
     .split("{{OG_META}}").join(ogMetaTags({ title: `${t.title} | Calquary`, description: t.description, url, image, locale }))
     .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => toolUrl(loc, calc.id), calc.builtLocales))
     .split("{{CANONICAL_LINK}}").join(canonicalTag(toolUrl(locale, calc.id)))
@@ -693,6 +706,7 @@ function buildCategoryPage(template, locale, cat, calculators, I18N) {
     .split("{{TERMS_HREF}}").join(`/${localePath(locale)}terms`)
     .split("{{FAVICON_LINKS}}").join(faviconLinks())
     .split("{{THEME_INIT}}").join(themeInitScript())
+    .split("{{GA_TAG}}").join(GA_TAG)
     .split("{{OG_META}}").join(ogMetaTags({ title: `${nameFull} | Calquary`, description, url, image, locale }))
     .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => categoryUrl(loc, cat.id), LOCALES))
     .split("{{CANONICAL_LINK}}").join(canonicalTag(categoryUrl(locale, cat.id)))
@@ -784,6 +798,7 @@ function buildHomePage(template, locale, categories, calculators, I18N) {
     .split("{{FOOTER_PRIVACY}}").join(ui.footer.privacy)
     .split("{{FOOTER_TERMS}}").join(ui.footer.terms)
     .split("{{FOOTER_COPYRIGHT}}").join(ui.footer.copyright)
+    .split("{{GA_TAG}}").join(GA_TAG)
     .split("{{OG_META}}").join(ogMetaTags({ title, description, url, image, locale }))
     .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => homeUrl(loc), LOCALES))
     .split("{{CANONICAL_LINK}}").join(canonicalTag(homeUrl(locale)))
@@ -815,6 +830,7 @@ function buildAboutPage(template, locale, I18N) {
     .split("{{FOOTER_PRIVACY}}").join(ui.footer.privacy)
     .split("{{FOOTER_TERMS}}").join(ui.footer.terms)
     .split("{{BTN_BACK_TO_ALL}}").join(ui.buttons.backToAll)
+    .split("{{GA_TAG}}").join(GA_TAG)
     .split("{{OG_META}}").join(ogMetaTags({ title: `${s.title} | Calquary`, description: s.lede, url, image, locale }))
     .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => staticUrl(loc, "about.html"), LOCALES))
     .split("{{CANONICAL_LINK}}").join(canonicalTag(staticUrl(locale, "about.html")))
@@ -844,6 +860,7 @@ function buildContactPage(template, locale, I18N) {
     .split("{{FOOTER_TERMS}}").join(ui.footer.terms)
     .split("{{FOOTER_CONTACT}}").join(ui.footer.contact)
     .split("{{BTN_BACK_TO_ALL}}").join(ui.buttons.backToAll)
+    .split("{{GA_TAG}}").join(GA_TAG)
     .split("{{OG_META}}").join(ogMetaTags({ title: `${s.title} | Calquary`, description: s.body, url, image, locale }))
     .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => staticUrl(loc, "contact.html"), LOCALES))
     .split("{{CANONICAL_LINK}}").join(canonicalTag(staticUrl(locale, "contact.html")))
@@ -888,6 +905,7 @@ function buildLegalPage(template, locale, docKey, I18N) {
     .split("{{BTN_BACK_TO_ALL}}").join(ui.buttons.backToAll)
     .split("{{OTHER_LEGAL_HREF}}").join(`/${localePath(locale)}${otherDocKey}`)
     .split("{{OTHER_LEGAL_LABEL}}").join(otherLabel)
+    .split("{{GA_TAG}}").join(GA_TAG)
     .split("{{OG_META}}").join(ogMetaTags({ title: `${doc.title} | Calquary`, description: doc.sections[0].p[0], url, image, locale }))
     .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => staticUrl(loc, `${docKey}.html`), LOCALES))
     .split("{{CANONICAL_LINK}}").join(canonicalTag(staticUrl(locale, `${docKey}.html`)))
