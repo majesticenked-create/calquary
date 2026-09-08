@@ -43,7 +43,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="/css/styles.css" />
   <script src="/js/calculators-data.js" defer></script>
-  <script src="/js/i18n.js" defer></script>
+  <script src="/js/i18n-titles.js" defer></script>
   <script src="/js/theme.js" defer></script>
   <script src="/js/locale-switcher.js" defer></script>
   <script>window.CALQ_LOCALE = "ro"; window.CALQ_LOCALE_PATH = "ro/";</script>
@@ -69,11 +69,11 @@
         ? window.I18N_CATEGORIES[cat.id][LOC].description : cat.description;
     }
     function toolTitle(calc) {
-      return (LOC !== "en" && window.I18N_TOOLS && window.I18N_TOOLS[calc.id] && window.I18N_TOOLS[calc.id][LOC])
-        ? window.I18N_TOOLS[calc.id][LOC].title : calc.title;
+      return (LOC !== "en" && window.I18N_TITLES && window.I18N_TITLES[calc.id] && window.I18N_TITLES[calc.id][LOC])
+        ? window.I18N_TITLES[calc.id][LOC] : calc.title;
     }
     function isTranslated(calcId) {
-      return LOC !== "en" && window.I18N_TOOLS && window.I18N_TOOLS[calcId] && window.I18N_TOOLS[calcId][LOC];
+      return LOC !== "en" && window.I18N_TITLES && window.I18N_TITLES[calcId] && window.I18N_TITLES[calcId][LOC];
     }
     function toolHref(calcId) {
       return isTranslated(calcId) ? `/${LPATH}tool/${calcId}` : `https://calquary.com/tool/${calcId}`;

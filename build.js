@@ -901,6 +901,28 @@ function build() {
   const I18N = loadI18n();
   computeCalculatorDates(calculators); // sets calc.dateModified on every calculator
 
+  // The homepage's client-side card grid only ever reads a tool's translated
+  // *title* (see index.template.html's translatedTitle()/isTranslated()) —
+  // every other field (intro/description/faq) is baked into static HTML at
+  // build time and never read from JS. Shipping the full I18N_TOOLS object
+  // (with every locale's full FAQ array for every tool) to the browser was
+  // pure dead weight — it grew to several MB and became the dominant cost in
+  // page load time. Emit a slim id -> locale -> title map instead, and load
+  // *that* from the homepage template rather than js/i18n.js.
+  const titleMap = {};
+  for (const [toolId, perLocale] of Object.entries(I18N.tools)) {
+    const titles = {};
+    for (const [locale, entry] of Object.entries(perLocale)) {
+      if (entry && entry.title) titles[locale] = entry.title;
+    }
+    if (Object.keys(titles).length) titleMap[toolId] = titles;
+  }
+  fs.writeFileSync(
+    path.join(ROOT, "js/i18n-titles.js"),
+    `window.I18N_TITLES = ${JSON.stringify(titleMap)};\n` +
+    `window.I18N_CATEGORIES = ${JSON.stringify(I18N.categories)};\n`
+  );
+
   // Which locales actually get a page for each tool — English always;
   // es/fr/de only for the wave-one batch. Stashed on the calc object so
   // hreflangLinks() can build a correct (non-reciprocal-to-nowhere) set.
