@@ -469,6 +469,11 @@ const GA_TAG = `<!-- Google tag (gtag.js) -->
     gtag('config', 'G-F01ZNK7C3Q');
   </script>`;
 
+// Google AdSense site-verification/ad-loader script. Same client id on
+// every page, kept as one constant for the same reason as GA_TAG above.
+const ADSENSE_TAG = `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>`;
+
 function faviconLinks() {
   return [
     `<link rel="icon" href="/favicon.svg" type="image/svg+xml">`,
@@ -646,6 +651,7 @@ function buildToolPage(template, locale, calc, cat, I18N) {
     .split("{{FAVICON_LINKS}}").join(faviconLinks())
     .split("{{THEME_INIT}}").join(themeInitScript())
     .split("{{GA_TAG}}").join(GA_TAG)
+    .split("{{ADSENSE_TAG}}").join(ADSENSE_TAG)
     .split("{{OG_META}}").join(ogMetaTags({ title: `${t.title} | Calquary`, description: t.description, url, image, locale }))
     .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => toolUrl(loc, calc.id), calc.builtLocales))
     .split("{{CANONICAL_LINK}}").join(canonicalTag(toolUrl(locale, calc.id)))
@@ -707,6 +713,7 @@ function buildCategoryPage(template, locale, cat, calculators, I18N) {
     .split("{{FAVICON_LINKS}}").join(faviconLinks())
     .split("{{THEME_INIT}}").join(themeInitScript())
     .split("{{GA_TAG}}").join(GA_TAG)
+    .split("{{ADSENSE_TAG}}").join(ADSENSE_TAG)
     .split("{{OG_META}}").join(ogMetaTags({ title: `${nameFull} | Calquary`, description, url, image, locale }))
     .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => categoryUrl(loc, cat.id), LOCALES))
     .split("{{CANONICAL_LINK}}").join(canonicalTag(categoryUrl(locale, cat.id)))
@@ -799,6 +806,7 @@ function buildHomePage(template, locale, categories, calculators, I18N) {
     .split("{{FOOTER_TERMS}}").join(ui.footer.terms)
     .split("{{FOOTER_COPYRIGHT}}").join(ui.footer.copyright)
     .split("{{GA_TAG}}").join(GA_TAG)
+    .split("{{ADSENSE_TAG}}").join(ADSENSE_TAG)
     .split("{{OG_META}}").join(ogMetaTags({ title, description, url, image, locale }))
     .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => homeUrl(loc), LOCALES))
     .split("{{CANONICAL_LINK}}").join(canonicalTag(homeUrl(locale)))
@@ -831,6 +839,7 @@ function buildAboutPage(template, locale, I18N) {
     .split("{{FOOTER_TERMS}}").join(ui.footer.terms)
     .split("{{BTN_BACK_TO_ALL}}").join(ui.buttons.backToAll)
     .split("{{GA_TAG}}").join(GA_TAG)
+    .split("{{ADSENSE_TAG}}").join(ADSENSE_TAG)
     .split("{{OG_META}}").join(ogMetaTags({ title: `${s.title} | Calquary`, description: s.lede, url, image, locale }))
     .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => staticUrl(loc, "about.html"), LOCALES))
     .split("{{CANONICAL_LINK}}").join(canonicalTag(staticUrl(locale, "about.html")))
@@ -861,6 +870,7 @@ function buildContactPage(template, locale, I18N) {
     .split("{{FOOTER_CONTACT}}").join(ui.footer.contact)
     .split("{{BTN_BACK_TO_ALL}}").join(ui.buttons.backToAll)
     .split("{{GA_TAG}}").join(GA_TAG)
+    .split("{{ADSENSE_TAG}}").join(ADSENSE_TAG)
     .split("{{OG_META}}").join(ogMetaTags({ title: `${s.title} | Calquary`, description: s.body, url, image, locale }))
     .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => staticUrl(loc, "contact.html"), LOCALES))
     .split("{{CANONICAL_LINK}}").join(canonicalTag(staticUrl(locale, "contact.html")))
@@ -906,6 +916,7 @@ function buildLegalPage(template, locale, docKey, I18N) {
     .split("{{OTHER_LEGAL_HREF}}").join(`/${localePath(locale)}${otherDocKey}`)
     .split("{{OTHER_LEGAL_LABEL}}").join(otherLabel)
     .split("{{GA_TAG}}").join(GA_TAG)
+    .split("{{ADSENSE_TAG}}").join(ADSENSE_TAG)
     .split("{{OG_META}}").join(ogMetaTags({ title: `${doc.title} | Calquary`, description: doc.sections[0].p[0], url, image, locale }))
     .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => staticUrl(loc, `${docKey}.html`), LOCALES))
     .split("{{CANONICAL_LINK}}").join(canonicalTag(staticUrl(locale, `${docKey}.html`)))
