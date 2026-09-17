@@ -439,14 +439,9 @@ function buildCategorySchema(locale, cat, nameFull) {
   return toLdJsonScript(graph);
 }
 
-// all-calculators.html stays English-only (index page over the full 77-tool
-// catalog — most of those tools have no translation yet, so a localized
-// version would be mostly English content under a translated wrapper).
-// Privacy/Terms ARE translated (see buildLegalPage below) but carry a
-// visible translationNotice banner: translated in full, not legally
-// reviewed independently of the English original, which governs any
-// conflict — see the completion report for the reasoning.
-const STANDARD_PAGES = ["all-calculators.html"];
+// Privacy/Terms carry a visible translationNotice banner: translated in
+// full, not legally reviewed independently of the English original, which
+// governs any conflict — see the completion report for the reasoning.
 
 // Tiny blocking (non-deferred) script — must run before first paint so a
 // stored dark/light preference applies immediately, not after a flash of
@@ -846,6 +841,58 @@ function buildAboutPage(template, locale, I18N) {
     .split("{{LOCALE_SWITCHER}}").join(localeSwitcherHtml(locale, (loc) => staticUrl(loc, "about.html"), LOCALES));
 }
 
+// Full catalog index, one per locale. Unlike about/contact/privacy/terms,
+// there's no per-locale prose to translate here (previously the page had a
+// long English-only explanatory paragraph) — the substantive content is the
+// full category/tool listing, which is already fully localized client-side
+// via the same catName()/toolTitle() helpers the homepage uses (reading
+// I18N_CATEGORIES/I18N_TITLES from js/i18n-titles.js), so every locale gets
+// real translated category and tool names with zero new translation content
+// needed. Only the H1/lede/nav chrome need locale strings, reusing the same
+// ui.* labels already translated for every other page.
+function buildAllCalculatorsPage(template, locale, categories, calculators, I18N) {
+  const ui = uiFor(I18N, locale);
+  const url = staticUrl(locale, "all-calculators.html");
+  const image = `${SITE_URL}/og-images/site.png`;
+  const title = ui.footer.allCalculators;
+  const lede = `Every calculator in the catalog, grouped by category - ${calculators.length} tools in total.`;
+
+  return template
+    .split("{{LANG}}").join(locale)
+    .split("{{DIR}}").join(htmlDirAttr(locale))
+    .split("{{FONTS_LINK}}").join(fontsLink(locale))
+    .split("{{LOCALE_PATH}}").join(localePath(locale))
+    .split("{{LOCALE_CODE}}").join(locale)
+    .split("{{TITLE}}").join(`${title} | Calquary`)
+    .split("{{DESCRIPTION}}").join(lede)
+    .split("{{ALL_CALC_TITLE}}").join(title)
+    .split("{{ALL_CALC_LEDE}}").join(lede)
+    .split("{{BREADCRUMB_HOME}}").join(ui.labels.breadcrumbHome)
+    .split("{{NAV_CATEGORIES}}").join(ui.nav.categories)
+    .split("{{NAV_ALL_TOOLS}}").join(ui.nav.allTools)
+    .split("{{NAV_ABOUT}}").join(ui.nav.about)
+    .split("{{FOOTER_CONTACT}}").join(ui.footer.contact)
+    .split("{{FOOTER_PRIVACY}}").join(ui.footer.privacy)
+    .split("{{FOOTER_TERMS}}").join(ui.footer.terms)
+    .split("{{FOOTER_ALL_CALCULATORS}}").join(ui.footer.allCalculators)
+    .split("{{BTN_BACK_TO_ALL}}").join(ui.buttons.backToAll)
+    .split("{{GA_TAG}}").join(GA_TAG)
+    .split("{{ADSENSE_TAG}}").join(ADSENSE_TAG)
+    .split("{{OG_META}}").join(ogMetaTags({ title: `${title} | Calquary`, description: lede, url, image, locale }))
+    .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => staticUrl(loc, "all-calculators.html"), LOCALES))
+    .split("{{CANONICAL_LINK}}").join(canonicalTag(url))
+    .split("{{LOCALE_SWITCHER}}").join(localeSwitcherHtml(locale, (loc) => staticUrl(loc, "all-calculators.html"), LOCALES))
+    .split("{{SCHEMA_JSON}}").join(toLdJsonScript([
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Calquary", "item": homeUrl(locale) },
+          { "@type": "ListItem", "position": 2, "name": title, "item": url },
+        ],
+      },
+    ]));
+}
+
 function buildContactPage(template, locale, I18N) {
   const ui = uiFor(I18N, locale);
   const s = I18N.static.contact[locale];
@@ -971,6 +1018,7 @@ function build() {
   const aboutTemplate = fs.readFileSync(path.join(ROOT, "_templates/about.template.html"), "utf8");
   const contactTemplate = fs.readFileSync(path.join(ROOT, "_templates/contact.template.html"), "utf8");
   const legalTemplate = fs.readFileSync(path.join(ROOT, "_templates/legal.template.html"), "utf8");
+  const allCalculatorsTemplate = fs.readFileSync(path.join(ROOT, "_templates/all-calculators.template.html"), "utf8");
 
   let toolPageCount = 0;
   let categoryPageCount = 0;
@@ -1010,6 +1058,9 @@ function build() {
 
     const termsHtml = buildLegalPage(legalTemplate, locale, "terms", I18N);
     fs.writeFileSync(path.join(ROOT, prefix, "terms.html"), termsHtml);
+
+    const allCalcHtml = buildAllCalculatorsPage(allCalculatorsTemplate, locale, categories, calculators, I18N);
+    fs.writeFileSync(path.join(ROOT, prefix, "all-calculators.html"), allCalcHtml);
   });
 
   buildSitemap(categories, calculators);
@@ -1068,6 +1119,11 @@ function buildSitemap(categories, calculators) {
       lastmod: getFileLastModDate(locale === "en" ? "terms.html" : `${locale}/terms.html`),
       xhtml: xhtmlBlock((loc) => staticUrl(loc, "terms.html"), LOCALES),
     });
+    entries.push({
+      loc: staticUrl(locale, "all-calculators.html"),
+      lastmod: getFileLastModDate(locale === "en" ? "all-calculators.html" : `${locale}/all-calculators.html`),
+      xhtml: xhtmlBlock((loc) => staticUrl(loc, "all-calculators.html"), LOCALES),
+    });
     categories.forEach((c) => {
       const catCalcs = calculators.filter((calc) => calc.category === c.id);
       const lastmod = catCalcs.reduce((max, calc) => (calc.dateModified > max ? calc.dateModified : max), "0000-00-00");
@@ -1086,10 +1142,6 @@ function buildSitemap(categories, calculators) {
       });
     });
   });
-
-  // English-only pages (no locale siblings): homepage-adjacent standard
-  // pages plus privacy/terms/all-calculators, unchanged single-locale URLs.
-  entries.push(...STANDARD_PAGES.map((p) => ({ loc: `${SITE_URL}/${p.replace(/\.html$/, "")}`, lastmod: getFileLastModDate(p), xhtml: "" })));
 
   const body = entries
     .map((e) => `  <url>\n    <loc>${e.loc}</loc>\n    <lastmod>${e.lastmod}</lastmod>\n${e.xhtml ? e.xhtml + "\n" : ""}  </url>`)

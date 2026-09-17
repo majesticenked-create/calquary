@@ -86,6 +86,23 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/terms"/>
   </url>
   <url>
+    <loc>https://calquary.com/all-calculators</loc>
+    <lastmod>2026-09-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/all-calculators"/>
+  </url>
+  <url>
     <loc>https://calquary.com/category/math</loc>
     <lastmod>2026-09-05</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/math"/>
@@ -3742,7 +3759,7 @@
   </url>
   <url>
     <loc>https://calquary.com/es/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/"/>
@@ -3824,6 +3841,23 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/terms"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/terms"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/terms"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/es/all-calculators</loc>
+    <lastmod>2026-09-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/all-calculators"/>
   </url>
   <url>
     <loc>https://calquary.com/es/category/math</loc>
@@ -7482,7 +7516,7 @@
   </url>
   <url>
     <loc>https://calquary.com/fr/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/"/>
@@ -7564,6 +7598,23 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/terms"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/terms"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/terms"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/fr/all-calculators</loc>
+    <lastmod>2026-09-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/all-calculators"/>
   </url>
   <url>
     <loc>https://calquary.com/fr/category/math</loc>
@@ -11222,7 +11273,7 @@
   </url>
   <url>
     <loc>https://calquary.com/de/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/"/>
@@ -11304,6 +11355,23 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/terms"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/terms"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/terms"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/de/all-calculators</loc>
+    <lastmod>2026-09-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/all-calculators"/>
   </url>
   <url>
     <loc>https://calquary.com/de/category/math</loc>
@@ -14962,7 +15030,7 @@
   </url>
   <url>
     <loc>https://calquary.com/pt/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/"/>
@@ -15044,6 +15112,23 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/terms"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/terms"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/terms"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/pt/all-calculators</loc>
+    <lastmod>2026-09-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/all-calculators"/>
   </url>
   <url>
     <loc>https://calquary.com/pt/category/math</loc>
@@ -18702,7 +18787,7 @@
   </url>
   <url>
     <loc>https://calquary.com/it/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/"/>
@@ -18784,6 +18869,23 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/terms"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/terms"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/terms"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/it/all-calculators</loc>
+    <lastmod>2026-09-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/all-calculators"/>
   </url>
   <url>
     <loc>https://calquary.com/it/category/math</loc>
@@ -22442,7 +22544,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ja/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/"/>
@@ -22524,6 +22626,23 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/terms"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/terms"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/terms"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ja/all-calculators</loc>
+    <lastmod>2026-09-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/all-calculators"/>
   </url>
   <url>
     <loc>https://calquary.com/ja/category/math</loc>
@@ -26182,7 +26301,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ro/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/"/>
@@ -26264,6 +26383,23 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/terms"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/terms"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/terms"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ro/all-calculators</loc>
+    <lastmod>2026-09-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/all-calculators"/>
   </url>
   <url>
     <loc>https://calquary.com/ro/category/math</loc>
@@ -29922,7 +30058,7 @@
   </url>
   <url>
     <loc>https://calquary.com/el/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/"/>
@@ -30004,6 +30140,23 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/terms"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/terms"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/terms"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/el/all-calculators</loc>
+    <lastmod>2026-09-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/all-calculators"/>
   </url>
   <url>
     <loc>https://calquary.com/el/category/math</loc>
@@ -33662,7 +33815,7 @@
   </url>
   <url>
     <loc>https://calquary.com/zh/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/"/>
@@ -33744,6 +33897,23 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/terms"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/terms"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/terms"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/zh/all-calculators</loc>
+    <lastmod>2026-09-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/all-calculators"/>
   </url>
   <url>
     <loc>https://calquary.com/zh/category/math</loc>
@@ -37402,7 +37572,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ar/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/"/>
@@ -37484,6 +37654,23 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/terms"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/terms"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/terms"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ar/all-calculators</loc>
+    <lastmod>2026-09-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/all-calculators"/>
   </url>
   <url>
     <loc>https://calquary.com/ar/category/math</loc>
@@ -41142,7 +41329,7 @@
   </url>
   <url>
     <loc>https://calquary.com/th/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/"/>
@@ -41224,6 +41411,23 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/terms"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/terms"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/terms"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/th/all-calculators</loc>
+    <lastmod>2026-09-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/all-calculators"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/all-calculators"/>
   </url>
   <url>
     <loc>https://calquary.com/th/category/math</loc>
@@ -44879,9 +45083,5 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/cat-pregnancy-calculator"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/cat-pregnancy-calculator"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/cat-pregnancy-calculator"/>
-  </url>
-  <url>
-    <loc>https://calquary.com/all-calculators</loc>
-    <lastmod>2026-08-30</lastmod>
   </url>
 </urlset>
