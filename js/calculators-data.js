@@ -3739,7 +3739,7 @@ const CALCULATORS = [
     category: "finance",
     title: "Auto Loan Calculator",
     keyword: "auto loan calculator",
-    description: "Also works as a car loan, automobile loan, car payment, or auto payment estimator calculator - estimate your monthly car payment, including trade-in value and sales tax.",
+    description: "Also works as a car loan, automobile loan, car payment, or auto payment calculator - estimate your monthly car payment, including trade-in value and sales tax.",
     intro: "Enter your vehicle price, trade-in value, down payment, and loan terms to estimate your monthly payment, including sales tax.",
     fields: [
       { id: "vehiclePrice", label: "Vehicle price", type: "number", unit: "$", default: 32000, step: 500 },

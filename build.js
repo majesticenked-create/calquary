@@ -549,6 +549,19 @@ function fitToolTitle(title, titleSuffix) {
   return truncate(title, TITLE_MAX_LEN);
 }
 
+// Same cascade, generalized for the static pages (home, about, contact,
+// privacy, terms, category) - these build their <title> as either
+// "{page title} | Calquary" or, on the homepage, "Calquary - {tagline}",
+// rather than tool pages' "{title} - {suffix} | Calquary". Each caller
+// passes its own "with brand" and "without brand" strings since the
+// brand's position (prefix vs. suffix) differs by page; this only handles
+// the shared drop-brand-then-truncate cascade.
+function fitStaticTitle(withBrand, withoutBrand) {
+  if (withBrand.length <= TITLE_MAX_LEN) return withBrand;
+  if (withoutBrand.length <= TITLE_MAX_LEN) return withoutBrand;
+  return truncate(withoutBrand, TITLE_MAX_LEN);
+}
+
 // Meta descriptions run long in the same locale cluster for the same
 // reason (translated sentences are longer than their English source) -
 // truncate at a word boundary rather than let the SERP snippet get cut
@@ -723,6 +736,7 @@ function buildCategoryPage(template, locale, cat, calculators, I18N) {
   const description = locale === "en" ? cat.description : I18N.categories[cat.id][locale].description;
   const longDescription = locale === "en" ? cat.longDescription : I18N.categories[cat.id][locale].longDescription;
   const nameFull = categoryNameFull(locale, name, ui);
+  const catPageTitle = fitStaticTitle(`${nameFull} | Calquary`, nameFull);
   const url = categoryUrl(locale, cat.id);
   const image = `${SITE_URL}/og-images/category-${cat.id}.png`;
 
@@ -764,6 +778,7 @@ function buildCategoryPage(template, locale, cat, calculators, I18N) {
     .split("{{CAT_TOOL_GRID_HTML}}").join(toolGridHtml)
     .split("{{CAT_TOOLS_HEADING}}").join(ui.labels.categoryToolsHeading)
     .split("{{CAT_NAME_FULL}}").join(nameFull)
+    .split("{{CAT_PAGE_TITLE}}").join(catPageTitle)
     .split("{{CAT_DESCRIPTION}}").join(description)
     .split("{{CAT_LONG_DESCRIPTION}}").join(longDescription)
     .split("{{LOCALE_PATH}}").join(localePath(locale))
@@ -785,7 +800,7 @@ function buildCategoryPage(template, locale, cat, calculators, I18N) {
     .split("{{THEME_INIT}}").join(themeInitScript())
     .split("{{GA_TAG}}").join(GA_TAG)
     .split("{{ADSENSE_TAG}}").join(ADSENSE_TAG)
-    .split("{{OG_META}}").join(ogMetaTags({ title: `${nameFull} | Calquary`, description, url, image, locale }))
+    .split("{{OG_META}}").join(ogMetaTags({ title: catPageTitle, description, url, image, locale }))
     .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => categoryUrl(loc, cat.id), LOCALES))
     .split("{{CANONICAL_LINK}}").join(canonicalTag(categoryUrl(locale, cat.id)))
     .split("{{LOCALE_SWITCHER}}").join(localeSwitcherHtml(locale, (loc) => categoryUrl(loc, cat.id), LOCALES))
@@ -794,9 +809,14 @@ function buildCategoryPage(template, locale, cat, calculators, I18N) {
 
 function buildHomePage(template, locale, categories, calculators, I18N) {
   const ui = uiFor(I18N, locale);
+  // Brand comes first here ("Calquary - {tagline}"), unlike tool/about/
+  // contact/legal/category pages where it's a trailing " | Calquary"
+  // suffix - so the "without brand" fallback is the tagline alone rather
+  // than a suffix-stripped string. English was also over 60 chars (63)
+  // once the tagline is long enough, so this isn't locale-gated.
   const title = locale === "en"
-    ? "Calquary - Calculators, Organized Like a Library"
-    : `Calquary - ${ui.hero.h1}`;
+    ? fitStaticTitle("Calquary - Calculators, Organized Like a Library", "Calculators, Organized Like a Library")
+    : fitStaticTitle(`Calquary - ${ui.hero.h1}`, ui.hero.h1);
   const description = locale === "en"
     ? "Fast, accurate calculators for math, finance, home improvement, health, and everyday life - organized so you can actually find the one you need."
     : fitDescription(ui.hero.lede);
@@ -891,13 +911,18 @@ function buildAboutPage(template, locale, I18N) {
   const url = staticUrl(locale, "about.html");
   const image = `${SITE_URL}/og-images/site.png`;
   const metaDescription = fitDescription(s.lede);
+  // s.title already contains "Calquary" (e.g. "About Calquary - ...") -
+  // the " | Calquary" appended below was a redundant second brand mention
+  // that pushed several locales well past 60 chars. Drop it first before
+  // falling back to truncation.
+  const pageTitle = fitStaticTitle(`${s.title} | Calquary`, s.title);
 
   return template
     .split("{{LANG}}").join(locale)
     .split("{{DIR}}").join(htmlDirAttr(locale))
     .split("{{FONTS_LINK}}").join(fontsLink(locale))
     .split("{{LOCALE_PATH}}").join(localePath(locale))
-    .split("{{TITLE}}").join(`${s.title} | Calquary`)
+    .split("{{TITLE}}").join(pageTitle)
     .split("{{DESCRIPTION}}").join(metaDescription)
     .split("{{ABOUT_TITLE}}").join(s.title)
     .split("{{ABOUT_LEDE}}").join(s.lede)
@@ -912,7 +937,7 @@ function buildAboutPage(template, locale, I18N) {
     .split("{{BTN_BACK_TO_ALL}}").join(ui.buttons.backToAll)
     .split("{{GA_TAG}}").join(GA_TAG)
     .split("{{ADSENSE_TAG}}").join(ADSENSE_TAG)
-    .split("{{OG_META}}").join(ogMetaTags({ title: `${s.title} | Calquary`, description: metaDescription, url, image, locale }))
+    .split("{{OG_META}}").join(ogMetaTags({ title: pageTitle, description: metaDescription, url, image, locale }))
     .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => staticUrl(loc, "about.html"), LOCALES))
     .split("{{CANONICAL_LINK}}").join(canonicalTag(staticUrl(locale, "about.html")))
     .split("{{LOCALE_SWITCHER}}").join(localeSwitcherHtml(locale, (loc) => staticUrl(loc, "about.html"), LOCALES));
@@ -932,6 +957,7 @@ function buildAllCalculatorsPage(template, locale, categories, calculators, I18N
   const url = staticUrl(locale, "all-calculators.html");
   const image = `${SITE_URL}/og-images/site.png`;
   const title = ui.footer.allCalculators;
+  const pageTitle = fitStaticTitle(`${title} | Calquary`, title);
   const lede = `Every calculator in the catalog, grouped by category - ${calculators.length} tools in total.`;
   const metaDescription = fitDescription(I18N.static.allCalculators[locale].description.replace("{count}", calculators.length));
 
@@ -973,7 +999,7 @@ function buildAllCalculatorsPage(template, locale, categories, calculators, I18N
     .split("{{FONTS_LINK}}").join(fontsLink(locale))
     .split("{{LOCALE_PATH}}").join(localePath(locale))
     .split("{{LOCALE_CODE}}").join(locale)
-    .split("{{TITLE}}").join(`${title} | Calquary`)
+    .split("{{TITLE}}").join(pageTitle)
     .split("{{DESCRIPTION}}").join(metaDescription)
     .split("{{ALL_CALC_TITLE}}").join(title)
     .split("{{ALL_CALC_LEDE}}").join(lede)
@@ -989,7 +1015,7 @@ function buildAllCalculatorsPage(template, locale, categories, calculators, I18N
     .split("{{BTN_BACK_TO_ALL}}").join(ui.buttons.backToAll)
     .split("{{GA_TAG}}").join(GA_TAG)
     .split("{{ADSENSE_TAG}}").join(ADSENSE_TAG)
-    .split("{{OG_META}}").join(ogMetaTags({ title: `${title} | Calquary`, description: metaDescription, url, image, locale }))
+    .split("{{OG_META}}").join(ogMetaTags({ title: pageTitle, description: metaDescription, url, image, locale }))
     .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => staticUrl(loc, "all-calculators.html"), LOCALES))
     .split("{{CANONICAL_LINK}}").join(canonicalTag(url))
     .split("{{LOCALE_SWITCHER}}").join(localeSwitcherHtml(locale, (loc) => staticUrl(loc, "all-calculators.html"), LOCALES))
@@ -1019,6 +1045,9 @@ function buildContactPage(template, locale, I18N) {
   const obfuscatedEmail = '<a href="#" data-email-user="hello" data-email-domain="calquary.com">hello@calquary.com</a>';
   const contactBody = s.body.split("hello@calquary.com").join(obfuscatedEmail);
   const metaDescription = fitDescription(s.body);
+  // s.title already contains "Calquary" - same redundant-brand overflow
+  // as the about page.
+  const pageTitle = fitStaticTitle(`${s.title} | Calquary`, s.title);
 
   // A couple of FAQ entries, same pattern as every tool page - both because
   // the page genuinely benefits from them (people ask this before writing
@@ -1041,7 +1070,7 @@ function buildContactPage(template, locale, I18N) {
     .split("{{DIR}}").join(htmlDirAttr(locale))
     .split("{{FONTS_LINK}}").join(fontsLink(locale))
     .split("{{LOCALE_PATH}}").join(localePath(locale))
-    .split("{{TITLE}}").join(`${s.title} | Calquary`)
+    .split("{{TITLE}}").join(pageTitle)
     .split("{{DESCRIPTION}}").join(metaDescription)
     .split("{{CONTACT_TITLE}}").join(s.title)
     .split("{{CONTACT_BODY}}").join(contactBody)
@@ -1058,7 +1087,7 @@ function buildContactPage(template, locale, I18N) {
     .split("{{BTN_BACK_TO_ALL}}").join(ui.buttons.backToAll)
     .split("{{GA_TAG}}").join(GA_TAG)
     .split("{{ADSENSE_TAG}}").join(ADSENSE_TAG)
-    .split("{{OG_META}}").join(ogMetaTags({ title: `${s.title} | Calquary`, description: metaDescription, url, image, locale }))
+    .split("{{OG_META}}").join(ogMetaTags({ title: pageTitle, description: metaDescription, url, image, locale }))
     .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => staticUrl(loc, "contact.html"), LOCALES))
     .split("{{CANONICAL_LINK}}").join(canonicalTag(staticUrl(locale, "contact.html")))
     .split("{{LOCALE_SWITCHER}}").join(localeSwitcherHtml(locale, (loc) => staticUrl(loc, "contact.html"), LOCALES));
@@ -1084,13 +1113,18 @@ function buildLegalPage(template, locale, docKey, I18N) {
   const otherDocKey = docKey === "privacy" ? "terms" : "privacy";
   const otherLabel = docKey === "privacy" ? ui.footer.terms : ui.footer.privacy;
   const metaDescription = fitDescription(doc.sections[0].p[0]);
+  // doc.title already contains "Calquary" (e.g. "Privacy Policy - How
+  // Calquary Handles Your Data") - legal.template.html used to append a
+  // second, redundant " | Calquary" itself; that's now built here instead
+  // so it can be dropped when it pushes the title past 60 chars.
+  const pageTitle = fitStaticTitle(`${doc.title} | Calquary`, doc.title);
 
   return template
     .split("{{LANG}}").join(locale)
     .split("{{DIR}}").join(htmlDirAttr(locale))
     .split("{{FONTS_LINK}}").join(fontsLink(locale))
     .split("{{LOCALE_PATH}}").join(localePath(locale))
-    .split("{{TITLE}}").join(doc.title)
+    .split("{{TITLE}}").join(pageTitle)
     .split("{{DESCRIPTION}}").join(metaDescription)
     .split("{{EFFECTIVE_DATE_LABEL}}").join(doc.effectiveDateLabel)
     .split("{{SECTIONS_HTML}}").join(sectionsHtml)
@@ -1105,7 +1139,7 @@ function buildLegalPage(template, locale, docKey, I18N) {
     .split("{{OTHER_LEGAL_LABEL}}").join(otherLabel)
     .split("{{GA_TAG}}").join(GA_TAG)
     .split("{{ADSENSE_TAG}}").join(ADSENSE_TAG)
-    .split("{{OG_META}}").join(ogMetaTags({ title: `${doc.title} | Calquary`, description: metaDescription, url, image, locale }))
+    .split("{{OG_META}}").join(ogMetaTags({ title: pageTitle, description: metaDescription, url, image, locale }))
     .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => staticUrl(loc, `${docKey}.html`), LOCALES))
     .split("{{CANONICAL_LINK}}").join(canonicalTag(staticUrl(locale, `${docKey}.html`)))
     .split("{{LOCALE_SWITCHER}}").join(localeSwitcherHtml(locale, (loc) => staticUrl(loc, `${docKey}.html`), LOCALES));
