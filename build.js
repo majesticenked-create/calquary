@@ -183,6 +183,7 @@ const EN_UI = {
     lastUpdated: "Last updated:",
     faqTitle: "Frequently asked questions",
     breadcrumbHome: "Calquary",
+    categoryToolsHeading: "All Calculators in This Category",
   },
   hero: {
     eyebrow: "Reference index · calculators for everything",
@@ -527,12 +528,25 @@ function truncate(text, maxLen) {
 // it, pt, es, el, ro, de, th, ar all averaged well over the ~60-char
 // guideline once " - {titleSuffix} | Calquary" is appended on top of an
 // already-longer translated title), while English titles built from the
-// same template fit fine. Rather than truncate the tool name itself (the
-// part someone actually searched for), drop the " | Calquary" brand
-// suffix first - it's the one part of the title that's safe to lose.
+// same template fit fine. Cascades through progressively less-safe cuts,
+// stopping at the first one that fits, and only truncates the actual tool
+// name (the part someone searched for) as a last resort:
+//   1. title - suffix | Calquary   (full)
+//   2. title - suffix               (drop the brand suffix)
+//   3. title                        (drop the generic suffix too - still
+//                                     an exact match on the tool name)
+//   4. title, truncated at a word boundary with an ellipsis
+// Dropping the brand suffix alone (step 2) wasn't enough for a large
+// share of fr/it/pt/es/el/ro pages, where even "title - suffix" still
+// ran past 60 chars - hence steps 3 and 4.
 const TITLE_MAX_LEN = 60;
-function fitTitle(fullTitleWithBrand, titleWithoutBrand) {
-  return fullTitleWithBrand.length > TITLE_MAX_LEN ? titleWithoutBrand : fullTitleWithBrand;
+function fitToolTitle(title, titleSuffix) {
+  const withBrand = `${title} - ${titleSuffix} | Calquary`;
+  if (withBrand.length <= TITLE_MAX_LEN) return withBrand;
+  const withSuffix = `${title} - ${titleSuffix}`;
+  if (withSuffix.length <= TITLE_MAX_LEN) return withSuffix;
+  if (title.length <= TITLE_MAX_LEN) return title;
+  return truncate(title, TITLE_MAX_LEN);
 }
 
 // Meta descriptions run long in the same locale cluster for the same
@@ -638,10 +652,9 @@ function buildToolPage(template, locale, calc, cat, I18N) {
   // titles that are actually short get the suffix, so already-adequate
   // ones stay untouched.
   const baseEnTitle = `${t.title} | Calquary`;
-  const nonEnTitleWithoutBrand = `${t.title} - ${ui.labels.titleSuffix}`;
   const pageTitle = locale === "en"
     ? (baseEnTitle.length < 30 ? `${t.title} - Free Online Calculator | Calquary` : baseEnTitle)
-    : fitTitle(`${nonEnTitleWithoutBrand} | Calquary`, nonEnTitleWithoutBrand);
+    : fitToolTitle(t.title, ui.labels.titleSuffix);
 
   const metaDescription = locale === "en" ? t.description : fitDescription(t.description);
 
@@ -749,6 +762,7 @@ function buildCategoryPage(template, locale, cat, calculators, I18N) {
     .split("{{CAT_ID}}").join(cat.id)
     .split("{{CAT_ICON_SVG}}").join(catIconSvg)
     .split("{{CAT_TOOL_GRID_HTML}}").join(toolGridHtml)
+    .split("{{CAT_TOOLS_HEADING}}").join(ui.labels.categoryToolsHeading)
     .split("{{CAT_NAME_FULL}}").join(nameFull)
     .split("{{CAT_DESCRIPTION}}").join(description)
     .split("{{CAT_LONG_DESCRIPTION}}").join(longDescription)
@@ -785,7 +799,7 @@ function buildHomePage(template, locale, categories, calculators, I18N) {
     : `Calquary - ${ui.hero.h1}`;
   const description = locale === "en"
     ? "Fast, accurate calculators for math, finance, home improvement, health, and everyday life - organized so you can actually find the one you need."
-    : ui.hero.lede;
+    : fitDescription(ui.hero.lede);
   const url = homeUrl(locale);
   const image = `${SITE_URL}/og-images/site.png`;
 
@@ -876,6 +890,7 @@ function buildAboutPage(template, locale, I18N) {
   const s = I18N.static.about[locale];
   const url = staticUrl(locale, "about.html");
   const image = `${SITE_URL}/og-images/site.png`;
+  const metaDescription = fitDescription(s.lede);
 
   return template
     .split("{{LANG}}").join(locale)
@@ -883,7 +898,7 @@ function buildAboutPage(template, locale, I18N) {
     .split("{{FONTS_LINK}}").join(fontsLink(locale))
     .split("{{LOCALE_PATH}}").join(localePath(locale))
     .split("{{TITLE}}").join(`${s.title} | Calquary`)
-    .split("{{DESCRIPTION}}").join(s.lede)
+    .split("{{DESCRIPTION}}").join(metaDescription)
     .split("{{ABOUT_TITLE}}").join(s.title)
     .split("{{ABOUT_LEDE}}").join(s.lede)
     .split("{{ABOUT_BODY}}").join(s.body)
@@ -897,7 +912,7 @@ function buildAboutPage(template, locale, I18N) {
     .split("{{BTN_BACK_TO_ALL}}").join(ui.buttons.backToAll)
     .split("{{GA_TAG}}").join(GA_TAG)
     .split("{{ADSENSE_TAG}}").join(ADSENSE_TAG)
-    .split("{{OG_META}}").join(ogMetaTags({ title: `${s.title} | Calquary`, description: s.lede, url, image, locale }))
+    .split("{{OG_META}}").join(ogMetaTags({ title: `${s.title} | Calquary`, description: metaDescription, url, image, locale }))
     .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => staticUrl(loc, "about.html"), LOCALES))
     .split("{{CANONICAL_LINK}}").join(canonicalTag(staticUrl(locale, "about.html")))
     .split("{{LOCALE_SWITCHER}}").join(localeSwitcherHtml(locale, (loc) => staticUrl(loc, "about.html"), LOCALES));
@@ -918,7 +933,7 @@ function buildAllCalculatorsPage(template, locale, categories, calculators, I18N
   const image = `${SITE_URL}/og-images/site.png`;
   const title = ui.footer.allCalculators;
   const lede = `Every calculator in the catalog, grouped by category - ${calculators.length} tools in total.`;
-  const metaDescription = I18N.static.allCalculators[locale].description.replace("{count}", calculators.length);
+  const metaDescription = fitDescription(I18N.static.allCalculators[locale].description.replace("{count}", calculators.length));
 
   const translatedIds = {};
   WAVE_ONE_TOOL_IDS.forEach((id) => { translatedIds[id] = true; });
@@ -1003,6 +1018,23 @@ function buildContactPage(template, locale, I18N) {
   // replaces. Applied once here, so it covers every locale's translation.
   const obfuscatedEmail = '<a href="#" data-email-user="hello" data-email-domain="calquary.com">hello@calquary.com</a>';
   const contactBody = s.body.split("hello@calquary.com").join(obfuscatedEmail);
+  const metaDescription = fitDescription(s.body);
+
+  // A couple of FAQ entries, same pattern as every tool page - both because
+  // the page genuinely benefits from them (people ask this before writing
+  // in) and because the page was flagged thin (114-132 words) with only a
+  // single body paragraph as content.
+  const faqHtml = s.faq.map((item) => `<div class="faq-item">\n<h3>${escapeHtml(item.q)}</h3>\n<p>${escapeHtml(item.a)}</p>\n</div>`).join("\n");
+  const faqSchema = toLdJsonScript([
+    {
+      "@type": "FAQPage",
+      "mainEntity": s.faq.map((item) => ({
+        "@type": "Question",
+        "name": item.q,
+        "acceptedAnswer": { "@type": "Answer", "text": item.a },
+      })),
+    },
+  ]);
 
   return template
     .split("{{LANG}}").join(locale)
@@ -1010,9 +1042,12 @@ function buildContactPage(template, locale, I18N) {
     .split("{{FONTS_LINK}}").join(fontsLink(locale))
     .split("{{LOCALE_PATH}}").join(localePath(locale))
     .split("{{TITLE}}").join(`${s.title} | Calquary`)
-    .split("{{DESCRIPTION}}").join(s.body)
+    .split("{{DESCRIPTION}}").join(metaDescription)
     .split("{{CONTACT_TITLE}}").join(s.title)
     .split("{{CONTACT_BODY}}").join(contactBody)
+    .split("{{CONTACT_FAQ_TITLE}}").join(ui.labels.faqTitle)
+    .split("{{CONTACT_FAQ_HTML}}").join(faqHtml)
+    .split("{{SCHEMA_JSON}}").join(faqSchema)
     .split("{{BREADCRUMB_HOME}}").join(ui.labels.breadcrumbHome)
     .split("{{NAV_CATEGORIES}}").join(ui.nav.categories)
     .split("{{NAV_ALL_TOOLS}}").join(ui.nav.allTools)
@@ -1023,7 +1058,7 @@ function buildContactPage(template, locale, I18N) {
     .split("{{BTN_BACK_TO_ALL}}").join(ui.buttons.backToAll)
     .split("{{GA_TAG}}").join(GA_TAG)
     .split("{{ADSENSE_TAG}}").join(ADSENSE_TAG)
-    .split("{{OG_META}}").join(ogMetaTags({ title: `${s.title} | Calquary`, description: s.body, url, image, locale }))
+    .split("{{OG_META}}").join(ogMetaTags({ title: `${s.title} | Calquary`, description: metaDescription, url, image, locale }))
     .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => staticUrl(loc, "contact.html"), LOCALES))
     .split("{{CANONICAL_LINK}}").join(canonicalTag(staticUrl(locale, "contact.html")))
     .split("{{LOCALE_SWITCHER}}").join(localeSwitcherHtml(locale, (loc) => staticUrl(loc, "contact.html"), LOCALES));
@@ -1048,6 +1083,7 @@ function buildLegalPage(template, locale, docKey, I18N) {
 
   const otherDocKey = docKey === "privacy" ? "terms" : "privacy";
   const otherLabel = docKey === "privacy" ? ui.footer.terms : ui.footer.privacy;
+  const metaDescription = fitDescription(doc.sections[0].p[0]);
 
   return template
     .split("{{LANG}}").join(locale)
@@ -1055,7 +1091,7 @@ function buildLegalPage(template, locale, docKey, I18N) {
     .split("{{FONTS_LINK}}").join(fontsLink(locale))
     .split("{{LOCALE_PATH}}").join(localePath(locale))
     .split("{{TITLE}}").join(doc.title)
-    .split("{{DESCRIPTION}}").join(doc.sections[0].p[0])
+    .split("{{DESCRIPTION}}").join(metaDescription)
     .split("{{EFFECTIVE_DATE_LABEL}}").join(doc.effectiveDateLabel)
     .split("{{SECTIONS_HTML}}").join(sectionsHtml)
     .split("{{TRANSLATION_NOTICE_BLOCK}}").join(noticeBlock)
@@ -1069,7 +1105,7 @@ function buildLegalPage(template, locale, docKey, I18N) {
     .split("{{OTHER_LEGAL_LABEL}}").join(otherLabel)
     .split("{{GA_TAG}}").join(GA_TAG)
     .split("{{ADSENSE_TAG}}").join(ADSENSE_TAG)
-    .split("{{OG_META}}").join(ogMetaTags({ title: `${doc.title} | Calquary`, description: doc.sections[0].p[0], url, image, locale }))
+    .split("{{OG_META}}").join(ogMetaTags({ title: `${doc.title} | Calquary`, description: metaDescription, url, image, locale }))
     .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => staticUrl(loc, `${docKey}.html`), LOCALES))
     .split("{{CANONICAL_LINK}}").join(canonicalTag(staticUrl(locale, `${docKey}.html`)))
     .split("{{LOCALE_SWITCHER}}").join(localeSwitcherHtml(locale, (loc) => staticUrl(loc, `${docKey}.html`), LOCALES));

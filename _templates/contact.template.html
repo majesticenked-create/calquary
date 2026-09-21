@@ -35,6 +35,7 @@
       });
     });
   </script>
+  {{SCHEMA_JSON}}
 </head>
 <body>
 
@@ -58,6 +59,15 @@
       <div class="breadcrumb"><a href="/{{LOCALE_PATH}}">{{BREADCRUMB_HOME}}</a> / {{FOOTER_CONTACT}}</div>
       <h1>{{CONTACT_TITLE}}</h1>
       <p style="max-width:56ch;">{{CONTACT_BODY}}</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="article-block">
+        <h2>{{CONTACT_FAQ_TITLE}}</h2>
+        <div id="faq-list">{{CONTACT_FAQ_HTML}}</div>
+      </div>
     </div>
   </section>
 

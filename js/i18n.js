@@ -60,6 +60,7 @@ const I18N_UI = {
       faqTitle: "Preguntas frecuentes",
       titleSuffix: "Calculadora Gratis Online",
       breadcrumbHome: "Calquary",
+      categoryToolsHeading: "Todas las calculadoras de esta categoría",
     },
     hero: {
       eyebrow: "Índice de referencia · calculadoras para todo",
@@ -122,6 +123,7 @@ const I18N_UI = {
       faqTitle: "Questions fréquentes",
       titleSuffix: "Calculatrice Gratuite en Ligne",
       breadcrumbHome: "Calquary",
+      categoryToolsHeading: "Toutes les calculatrices de cette catégorie",
     },
     hero: {
       eyebrow: "Index de référence · des calculatrices pour tout",
@@ -184,6 +186,7 @@ const I18N_UI = {
       faqTitle: "Häufig gestellte Fragen",
       titleSuffix: "Kostenloser Online-Rechner",
       breadcrumbHome: "Calquary",
+      categoryToolsHeading: "Alle Rechner in dieser Kategorie",
     },
     hero: {
       eyebrow: "Referenzindex · Rechner für alles",
@@ -246,6 +249,7 @@ const I18N_UI = {
       faqTitle: "Perguntas frequentes",
       titleSuffix: "Calculadora Gratuita Online",
       breadcrumbHome: "Calquary",
+      categoryToolsHeading: "Todas as calculadoras desta categoria",
     },
     hero: {
       eyebrow: "Índice de referência · calculadoras para tudo",
@@ -308,6 +312,7 @@ const I18N_UI = {
       faqTitle: "Domande frequenti",
       titleSuffix: "Calcolatrice Online Gratuita",
       breadcrumbHome: "Calquary",
+      categoryToolsHeading: "Tutte le calcolatrici di questa categoria",
     },
     hero: {
       eyebrow: "Indice di riferimento · calcolatrici per tutto",
@@ -370,6 +375,7 @@ const I18N_UI = {
       faqTitle: "よくある質問",
       titleSuffix: "無料オンライン計算ツール",
       breadcrumbHome: "Calquary",
+      categoryToolsHeading: "このカテゴリーのすべての計算ツール",
     },
     hero: {
       eyebrow: "リファレンスインデックス・あらゆる計算ツール",
@@ -432,6 +438,7 @@ const I18N_UI = {
       faqTitle: "Întrebări frecvente",
       titleSuffix: "Calculator Gratuit Online",
       breadcrumbHome: "Calquary",
+      categoryToolsHeading: "Toate calculatoarele din această categorie",
     },
     hero: {
       eyebrow: "Index de referință · calculatoare pentru orice",
@@ -494,6 +501,7 @@ const I18N_UI = {
       faqTitle: "Συχνές ερωτήσεις",
       titleSuffix: "Δωρεάν Online Αριθμομηχανή",
       breadcrumbHome: "Calquary",
+      categoryToolsHeading: "Όλες οι αριθμομηχανές σε αυτή την κατηγορία",
     },
     hero: {
       eyebrow: "Ευρετήριο αναφοράς · αριθμομηχανές για τα πάντα",
@@ -556,6 +564,7 @@ const I18N_UI = {
       faqTitle: "常见问题",
       titleSuffix: "免费在线计算器",
       breadcrumbHome: "Calquary",
+      categoryToolsHeading: "本分类下的所有计算器",
     },
     hero: {
       eyebrow: "参考索引 · 各类计算器",
@@ -618,6 +627,7 @@ const I18N_UI = {
       faqTitle: "الأسئلة الشائعة",
       titleSuffix: "حاسبة مجانية عبر الإنترنت",
       breadcrumbHome: "Calquary",
+      categoryToolsHeading: "جميع الحاسبات في هذه الفئة",
     },
     hero: {
       eyebrow: "فهرس مرجعي · حاسبات لكل شيء",
@@ -680,6 +690,7 @@ const I18N_UI = {
       faqTitle: "คำถามที่พบบ่อย",
       titleSuffix: "เครื่องคำนวณออนไลน์ฟรี",
       breadcrumbHome: "Calquary",
+      categoryToolsHeading: "เครื่องคำนวณทั้งหมดในหมวดหมู่นี้",
     },
     hero: {
       eyebrow: "ดัชนีอ้างอิง · เครื่องคำนวณสำหรับทุกสิ่ง",
@@ -32929,50 +32940,98 @@ const I18N_STATIC = {
     en: {
       title: "Contact Calquary - Bugs, Ideas & Questions",
       body: "Found a bug, have a calculator idea, or have a question about how we handle data? Email us at hello@calquary.com - we read every message, though replies may take a few days. If you're reporting a bug, it helps to include the calculator name, the numbers you entered, and what result you expected versus what you saw. Calculator suggestions are especially welcome - most of the tools already on Calquary started as a reader request, and we track requested calculators against how often they come up before deciding what to build next.",
+      faq: [
+        { q: "How quickly do you respond to messages?", a: "We read every message that comes in, but replies can take a few days - especially for detailed bug reports or calculator ideas that need a closer look before we can give you a useful answer." },
+        { q: "Do you take requests for new calculators?", a: "Yes - many of the calculators already on Calquary started exactly that way. Tell us what you're trying to figure out and we'll track it against how often it comes up before deciding what to build next." },
+      ],
     },
     es: {
       title: "Contacto - Escríbenos a Calquary",
       body: "¿Encontraste un error, tienes una idea para una calculadora o una pregunta sobre cómo manejamos los datos? Escríbenos a hello@calquary.com - leemos todos los mensajes, aunque las respuestas pueden tardar unos días. Si reportas un error, ayuda incluir el nombre de la calculadora, los números que introdujiste y qué resultado esperabas frente al que obtuviste. Las sugerencias de calculadoras son especialmente bienvenidas - la mayoría de las herramientas de Calquary comenzaron como una petición de un lector, y llevamos seguimiento de las calculadoras solicitadas según su frecuencia antes de decidir qué construir a continuación.",
+      faq: [
+        { q: "¿Con qué rapidez responden a los mensajes?", a: "Leemos todos los mensajes que recibimos, pero las respuestas pueden tardar unos días, sobre todo si se trata de informes de errores detallados o ideas de calculadoras que requieren una revisión más detenida antes de poder darte una respuesta útil." },
+        { q: "¿Aceptan solicitudes de nuevas calculadoras?", a: "Sí - muchas de las calculadoras que ya están en Calquary empezaron exactamente así. Cuéntanos qué estás tratando de calcular y llevaremos seguimiento de la frecuencia con la que se solicita antes de decidir qué construir a continuación." },
+      ],
     },
     fr: {
       title: "Contactez-nous - Écrivez à Calquary",
       body: "Vous avez trouvé un bug, une idée de calculatrice, ou une question sur la gestion de vos données ? Écrivez-nous à hello@calquary.com - nous lisons chaque message, même si les réponses peuvent prendre quelques jours. Si vous signalez un bug, il est utile d'indiquer le nom de la calculatrice, les chiffres saisis et le résultat attendu par rapport à celui obtenu. Les suggestions de calculatrices sont particulièrement bienvenues - la plupart des outils déjà présents sur Calquary sont nés d'une demande de lecteur, et nous suivons la fréquence des demandes avant de décider quoi développer ensuite.",
+      faq: [
+        { q: "À quelle vitesse répondez-vous aux messages ?", a: "Nous lisons chaque message reçu, mais les réponses peuvent prendre quelques jours, surtout pour les rapports de bugs détaillés ou les idées de calculatrices qui nécessitent un examen plus approfondi avant que nous puissions vous donner une réponse utile." },
+        { q: "Acceptez-vous les demandes de nouvelles calculatrices ?", a: "Oui - de nombreuses calculatrices déjà présentes sur Calquary ont commencé exactement ainsi. Dites-nous ce que vous essayez de calculer et nous suivrons la fréquence de la demande avant de décider quoi développer ensuite." },
+      ],
     },
     de: {
       title: "Kontaktieren Sie uns - Schreiben Sie Calquary",
       body: "Einen Fehler gefunden, eine Idee für einen Rechner, oder eine Frage zu unserem Umgang mit Daten? Schreiben Sie uns an hello@calquary.com - wir lesen jede Nachricht, auch wenn Antworten ein paar Tage dauern können. Bei einer Fehlermeldung hilft es, den Namen des Rechners, die eingegebenen Zahlen sowie das erwartete gegenüber dem tatsächlichen Ergebnis anzugeben. Vorschläge für neue Rechner sind besonders willkommen - die meisten Tools auf Calquary begannen als Leseranfrage, und wir verfolgen, wie oft ein Rechner gewünscht wird, bevor wir entscheiden, was als Nächstes entwickelt wird.",
+      faq: [
+        { q: "Wie schnell antworten Sie auf Nachrichten?", a: "Wir lesen jede eingehende Nachricht, aber Antworten können ein paar Tage dauern - besonders bei detaillierten Fehlerberichten oder Ideen für neue Rechner, die eine genauere Prüfung erfordern, bevor wir Ihnen eine hilfreiche Antwort geben können." },
+        { q: "Nehmen Sie Wünsche für neue Rechner entgegen?", a: "Ja - viele der bereits vorhandenen Rechner auf Calquary sind genau so entstanden. Teilen Sie uns mit, was Sie berechnen möchten, und wir verfolgen, wie oft der Wunsch geäußert wird, bevor wir entscheiden, was als Nächstes entwickelt wird." },
+      ],
     },
     pt: {
       title: "Entre em Contato com a Calquary",
       body: "Encontrou um bug, tem uma ideia de calculadora ou uma dúvida sobre como tratamos os dados? Escreva para hello@calquary.com - lemos todas as mensagens, embora as respostas possam levar alguns dias. Se estiver relatando um bug, ajuda incluir o nome da calculadora, os números que você inseriu e o resultado esperado em comparação ao obtido. Sugestões de calculadoras são especialmente bem-vindas - a maioria das ferramentas já disponíveis na Calquary começou como um pedido de leitor, e acompanhamos a frequência dos pedidos antes de decidir o que desenvolver a seguir.",
+      faq: [
+        { q: "Com que rapidez vocês respondem às mensagens?", a: "Lemos todas as mensagens que recebemos, mas as respostas podem levar alguns dias - especialmente para relatos de erros detalhados ou ideias de calculadoras que precisam de uma análise mais cuidadosa antes de podermos dar uma resposta útil." },
+        { q: "Vocês aceitam pedidos de novas calculadoras?", a: "Sim - muitas das calculadoras já disponíveis na Calquary começaram exatamente assim. Conte-nos o que você está tentando calcular e acompanharemos a frequência do pedido antes de decidir o que desenvolver a seguir." },
+      ],
     },
     it: {
       title: "Contattaci - Scrivi a Calquary",
       body: "Hai trovato un bug, hai un'idea per una calcolatrice o una domanda su come gestiamo i dati? Scrivici a hello@calquary.com - leggiamo ogni messaggio, anche se le risposte potrebbero richiedere alcuni giorni. Se stai segnalando un bug, è utile includere il nome della calcolatrice, i numeri inseriti e il risultato atteso rispetto a quello ottenuto. I suggerimenti per nuove calcolatrici sono particolarmente graditi - la maggior parte degli strumenti già presenti su Calquary è nata da una richiesta dei lettori, e teniamo traccia della frequenza delle richieste prima di decidere cosa sviluppare in seguito.",
+      faq: [
+        { q: "Quanto velocemente rispondete ai messaggi?", a: "Leggiamo ogni messaggio che riceviamo, ma le risposte possono richiedere alcuni giorni - soprattutto per segnalazioni di bug dettagliate o idee per nuove calcolatrici che richiedono un esame più approfondito prima di poterti dare una risposta utile." },
+        { q: "Accettate richieste per nuove calcolatrici?", a: "Sì - molte delle calcolatrici già presenti su Calquary sono nate esattamente così. Dicci cosa stai cercando di calcolare e terremo traccia della frequenza della richiesta prima di decidere cosa sviluppare in seguito." },
+      ],
     },
     ja: {
       title: "お問い合わせ - Calquaryへのご連絡",
       body: "不具合の報告、計算ツールのアイデア、データの取り扱いについてのご質問などがございましたら、hello@calquary.com までご連絡ください。すべてのメッセージに目を通しておりますが、返信までに数日かかる場合があります。不具合を報告される際は、対象の計算ツール名、入力した数値、そして期待していた結果と実際の結果を書き添えていただけると助かります。新しい計算ツールのご提案も特に歓迎しています。Calquaryに掲載されているツールの多くは読者からのリクエストがきっかけで生まれており、リクエストの頻度を確認しながら次に開発するツールを決めています。",
+      faq: [
+        { q: "メッセージへの返信はどのくらいで届きますか？", a: "いただいたメッセージにはすべて目を通していますが、返信までに数日かかる場合があります。特に詳細な不具合報告や新しい計算ツールのアイデアについては、より丁寧に確認したうえでお答えするため、少しお時間をいただくことがあります。" },
+        { q: "新しい計算ツールのリクエストは受け付けていますか？", a: "はい。Calquaryにある計算ツールの多くは、まさにそうしたリクエストから生まれました。知りたい内容を教えていただければ、リクエストの頻度を確認しながら次に開発するツールを検討します。" },
+      ],
     },
     ro: {
       title: "Contactează Calquary - Erori, Idei și Întrebări",
       body: "Ai găsit o eroare, ai o idee pentru un calculator sau o întrebare despre cum gestionăm datele? Scrie-ne la hello@calquary.com - citim fiecare mesaj, deși răspunsul poate dura câteva zile. Dacă raportezi o eroare, ajută să incluzi numele calculatorului, numerele introduse și rezultatul așteptat comparat cu cel obținut. Sugestiile de calculatoare sunt binevenite - majoritatea instrumentelor deja prezente pe Calquary au pornit ca solicitări ale cititorilor, iar noi urmărim frecvența cererilor înainte de a decide ce construim în continuare.",
+      faq: [
+        { q: "Cât de repede răspundeți la mesaje?", a: "Citim fiecare mesaj primit, dar răspunsurile pot dura câteva zile - mai ales pentru rapoarte detaliate de erori sau idei de calculatoare care necesită o analiză mai atentă înainte să putem oferi un răspuns util." },
+        { q: "Acceptați solicitări pentru calculatoare noi?", a: "Da - multe dintre calculatoarele deja prezente pe Calquary au pornit exact așa. Spune-ne ce încerci să calculezi și vom urmări frecvența solicitării înainte de a decide ce construim în continuare." },
+      ],
     },
     el: {
       title: "Επικοινωνήστε με το Calquary - Σφάλματα, Ιδέες και Ερωτήσεις",
       body: "Βρήκατε ένα σφάλμα, έχετε μια ιδέα για αριθμομηχανή ή μια ερώτηση για το πώς διαχειριζόμαστε τα δεδομένα; Στείλτε μας email στο hello@calquary.com - διαβάζουμε κάθε μήνυμα, αν και οι απαντήσεις μπορεί να καθυστερήσουν μερικές ημέρες. Αν αναφέρετε ένα σφάλμα, βοηθάει να συμπεριλάβετε το όνομα της αριθμομηχανής, τους αριθμούς που εισάγατε, και το αποτέλεσμα που περιμένατε σε σύγκριση με αυτό που είδατε. Οι προτάσεις για αριθμομηχανές είναι ιδιαίτερα ευπρόσδεκτες - τα περισσότερα εργαλεία που ήδη υπάρχουν στο Calquary ξεκίνησαν ως αίτημα αναγνώστη, και παρακολουθούμε τη συχνότητα των αιτημάτων πριν αποφασίσουμε τι θα φτιάξουμε στη συνέχεια.",
+      faq: [
+        { q: "Πόσο γρήγορα απαντάτε στα μηνύματα;", a: "Διαβάζουμε κάθε μήνυμα που λαμβάνουμε, αλλά οι απαντήσεις μπορεί να καθυστερήσουν μερικές ημέρες - ειδικά για λεπτομερείς αναφορές σφαλμάτων ή ιδέες για νέες αριθμομηχανές που απαιτούν προσεκτικότερη εξέταση πριν μπορέσουμε να σας δώσουμε μια χρήσιμη απάντηση." },
+        { q: "Δέχεστε αιτήματα για νέες αριθμομηχανές;", a: "Ναι - πολλές από τις αριθμομηχανές που υπάρχουν ήδη στο Calquary ξεκίνησαν ακριβώς έτσι. Πείτε μας τι προσπαθείτε να υπολογίσετε και θα παρακολουθούμε τη συχνότητα του αιτήματος πριν αποφασίσουμε τι θα φτιάξουμε στη συνέχεια." },
+      ],
     },
     zh: {
       title: "联系 Calquary - 错误反馈、想法与问题",
       body: "发现了一个错误、有计算器的新想法，或者对我们如何处理数据有疑问？欢迎发送邮件至 hello@calquary.com——我们会阅读每一条消息，不过回复可能需要几天时间。如果你在反馈错误，附上计算器的名称、你输入的数字，以及你期望得到的结果和实际看到的结果会很有帮助。我们也特别欢迎计算器方面的建议——Calquary 上现有的大多数工具最初都是来自读者的请求，我们会关注请求出现的频率，再决定接下来要开发什么。",
+      faq: [
+        { q: "你们多久会回复消息？", a: "我们会阅读收到的每一条消息，但回复可能需要几天时间——尤其是详细的错误报告或需要仔细研究的计算器想法，我们需要更充分地了解情况才能给你有用的答复。" },
+        { q: "你们接受新计算器的建议吗？", a: "接受——Calquary 上现有的许多计算器最初正是这样诞生的。告诉我们你想计算的内容，我们会关注这个需求出现的频率，再决定接下来要开发什么。" },
+      ],
     },
     ar: {
       title: "تواصل مع Calquary - أخطاء وأفكار وأسئلة",
       body: "هل وجدت خطأ، أو لديك فكرة لحاسبة، أو سؤال حول كيفية تعاملنا مع البيانات؟ راسلنا على hello@calquary.com - نقرأ كل رسالة، رغم أن الرد قد يستغرق بضعة أيام. إذا كنت تبلّغ عن خطأ، يساعد إرفاق اسم الحاسبة والأرقام التي أدخلتها والنتيجة التي توقعتها مقارنة بما رأيته فعليًا. اقتراحات الحاسبات مرحّب بها بشكل خاص - بدأت معظم الأدوات الموجودة بالفعل على Calquary كطلب من أحد القراء، ونتابع مدى تكرار الطلبات قبل أن نقرر ما سنطوّره لاحقًا.",
+      faq: [
+        { q: "ما مدى سرعة ردكم على الرسائل؟", a: "نقرأ كل رسالة تصلنا، لكن الرد قد يستغرق بضعة أيام - خاصة بالنسبة لتقارير الأخطاء المفصّلة أو أفكار الحاسبات الجديدة التي تحتاج إلى مراجعة أدق قبل أن نتمكن من تقديم إجابة مفيدة." },
+        { q: "هل تقبلون طلبات لحاسبات جديدة؟", a: "نعم - العديد من الحاسبات الموجودة بالفعل على Calquary بدأت بهذه الطريقة تحديدًا. أخبرنا بما تحاول حسابه، وسنتابع مدى تكرار الطلب قبل أن نقرر ما سنطوّره لاحقًا." },
+      ],
     },
     th: {
       title: "ติดต่อ Calquary - ข้อผิดพลาด ไอเดีย และคำถาม",
       body: "พบข้อผิดพลาด มีไอเดียสำหรับเครื่องคำนวณ หรือมีคำถามเกี่ยวกับวิธีที่เราจัดการข้อมูลหรือไม่? ส่งอีเมลถึงเราที่ hello@calquary.com - เราอ่านทุกข้อความ แม้ว่าการตอบกลับอาจใช้เวลาสองสามวัน หากคุณกำลังรายงานข้อผิดพลาด การแนบชื่อเครื่องคำนวณ ตัวเลขที่คุณป้อน และผลลัพธ์ที่คุณคาดหวังเทียบกับสิ่งที่คุณเห็นจะช่วยได้มาก ข้อเสนอแนะสำหรับเครื่องคำนวณเป็นที่ยินดีอย่างยิ่ง - เครื่องมือส่วนใหญ่ที่มีอยู่แล้วบน Calquary เริ่มต้นจากคำขอของผู้อ่าน และเราติดตามความถี่ของคำขอก่อนตัดสินใจว่าจะพัฒนาอะไรต่อไป",
+      faq: [
+        { q: "คุณตอบกลับข้อความเร็วแค่ไหน?", a: "เราจะอ่านทุกข้อความที่ได้รับ แต่การตอบกลับอาจใช้เวลาสองสามวัน โดยเฉพาะรายงานข้อผิดพลาดที่ละเอียดหรือไอเดียเครื่องคำนวณใหม่ที่ต้องพิจารณาอย่างรอบคอบก่อนที่เราจะให้คำตอบที่เป็นประโยชน์ได้" },
+        { q: "คุณรับคำขอเครื่องคำนวณใหม่หรือไม่?", a: "รับ - เครื่องคำนวณหลายตัวที่มีอยู่แล้วบน Calquary เริ่มต้นจากคำขอแบบนี้เลย บอกเราว่าคุณกำลังพยายามคำนวณอะไร แล้วเราจะติดตามความถี่ของคำขอก่อนตัดสินใจว่าจะพัฒนาอะไรต่อไป" },
+      ],
     },
   },
 
