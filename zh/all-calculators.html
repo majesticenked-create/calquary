@@ -52,62 +52,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="/css/styles.css" />
-  <script src="/js/calculators-data.js" defer></script>
-  <script src="/js/i18n-titles.js" defer></script>
   <script src="/js/theme.js" defer></script>
   <script src="/js/locale-switcher.js" defer></script>
-  <script>window.CALQ_LOCALE = "zh"; window.CALQ_LOCALE_PATH = "zh/";</script>
-  <script defer>
-    document.addEventListener("DOMContentLoaded", () => {
-      const LOC = window.CALQ_LOCALE;
-      const LPATH = window.CALQ_LOCALE_PATH;
-      function catName(cat) {
-        return (LOC !== "en" && window.I18N_CATEGORIES && window.I18N_CATEGORIES[cat.id] && window.I18N_CATEGORIES[cat.id][LOC])
-          ? window.I18N_CATEGORIES[cat.id][LOC].name : cat.name;
-      }
-      function toolTitle(calc) {
-        return (LOC !== "en" && window.I18N_TITLES && window.I18N_TITLES[calc.id] && window.I18N_TITLES[calc.id][LOC])
-          ? window.I18N_TITLES[calc.id][LOC] : calc.title;
-      }
-      function isTranslated(calcId) {
-        return LOC !== "en" && window.I18N_TITLES && window.I18N_TITLES[calcId] && window.I18N_TITLES[calcId][LOC];
-      }
-      function toolHref(calcId) {
-        return isTranslated(calcId) ? `/${LPATH}tool/${calcId}` : `https://calquary.com/tool/${calcId}`;
-      }
-      function catHref(catId) {
-        return `/${LPATH}category/${catId}`;
-      }
-
-      const wrap = document.getElementById("index-categories");
-      CATEGORIES.forEach((cat) => {
-        const tools = calculatorsInCategory(cat.id);
-
-        const section = document.createElement("section");
-        section.className = "index-category";
-
-        const head = document.createElement("div");
-        head.className = "index-category-head";
-        head.innerHTML = `
-          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${cat.icon}</svg></span>
-          <h2><a href="${catHref(cat.id)}">${catName(cat)}</a></h2>
-          <span class="count">${tools.length} tool${tools.length === 1 ? "" : "s"}</span>
-        `;
-        section.appendChild(head);
-
-        const list = document.createElement("ul");
-        list.className = "related-list index-columns";
-        tools.forEach((calc) => {
-          const li = document.createElement("li");
-          li.innerHTML = `<a href="${toolHref(calc.id)}">${toolTitle(calc)}</a>`;
-          list.appendChild(li);
-        });
-        section.appendChild(list);
-
-        wrap.appendChild(section);
-      });
-    });
-  </script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -166,7 +112,287 @@
 
   <section class="section">
     <div class="wrap">
-      <div id="index-categories"></div>
+      <div id="index-categories">
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/><line x1="18" y1="6" x2="6" y2="18"/></svg></span>
+          <h2><a href="/zh/category/math">数学</a></h2>
+          <span class="count">73 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/zh/tool/percentage-calculator">百分比计算器</a></li>
+            <li><a href="/zh/tool/percentage-change-calculator">百分比变化计算器</a></li>
+            <li><a href="/zh/tool/average-calculator">平均值计算器</a></li>
+            <li><a href="/zh/tool/fraction-calculator">分数计算器</a></li>
+            <li><a href="/zh/tool/pi-digits-calculator">圆周率位数计算器</a></li>
+            <li><a href="/zh/tool/long-division-calculator">长除法计算器</a></li>
+            <li><a href="/zh/tool/long-multiplication-calculator">长乘法计算器</a></li>
+            <li><a href="/zh/tool/gcd-lcm-calculator">最大公约数与最小公倍数计算器</a></li>
+            <li><a href="/zh/tool/factor-calculator">因数计算器</a></li>
+            <li><a href="/zh/tool/standard-deviation-calculator">标准差计算器</a></li>
+            <li><a href="/zh/tool/t-test-calculator">t检验计算器</a></li>
+            <li><a href="/zh/tool/effect-size-calculator">效应量计算器（科恩d值）</a></li>
+            <li><a href="/zh/tool/mann-whitney-u-calculator">曼-惠特尼U检验计算器</a></li>
+            <li><a href="/zh/tool/sequences-series-calculator">数列与级数计算器</a></li>
+            <li><a href="/zh/tool/coupon-collector-calculator">优惠券收集者问题计算器</a></li>
+            <li><a href="/zh/tool/similarity-ratio-calculator">相似比计算器</a></li>
+            <li><a href="/zh/tool/correlation-calculator">相关系数计算器</a></li>
+            <li><a href="/zh/tool/z-score-calculator">Z分数（标准化分数）计算器</a></li>
+            <li><a href="/zh/tool/confusion-matrix-calculator">混淆矩阵计算器</a></li>
+            <li><a href="/zh/tool/odds-probability-converter">赔率转概率转换器</a></li>
+            <li><a href="/zh/tool/normal-distribution-calculator">正态分布计算器</a></li>
+            <li><a href="/zh/tool/lottery-odds-calculator">彩票中奖概率计算器</a></li>
+            <li><a href="/zh/tool/poker-hand-probability-calculator">扑克牌型概率计算器</a></li>
+            <li><a href="/zh/tool/square-root-calculator">平方根计算器</a></li>
+            <li><a href="/zh/tool/ratio-calculator">比例计算器</a></li>
+            <li><a href="/zh/tool/aspect-ratio-calculator">宽高比计算器</a></li>
+            <li><a href="/zh/tool/exponent-calculator">指数计算器</a></li>
+            <li><a href="/zh/tool/logarithm-calculator">对数计算器</a></li>
+            <li><a href="/zh/tool/vector-calculator">向量计算器</a></li>
+            <li><a href="/zh/tool/haversine-distance-calculator">距离与方位计算器（经纬度）</a></li>
+            <li><a href="/zh/tool/quadratic-formula-calculator">二次方程求根公式计算器</a></li>
+            <li><a href="/zh/tool/cone-volume-calculator">圆锥体积计算器</a></li>
+            <li><a href="/zh/tool/cylinder-volume-calculator">圆柱体积计算器</a></li>
+            <li><a href="/zh/tool/pythagorean-theorem-calculator">勾股定理计算器</a></li>
+            <li><a href="/zh/tool/distance-formula-calculator">距离公式计算器</a></li>
+            <li><a href="/zh/tool/triangle-solver">三角形求解器（SSS）</a></li>
+            <li><a href="/zh/tool/hypergeometric-calculator">超几何分布计算器</a></li>
+            <li><a href="/zh/tool/trapezoid-area-calculator">梯形面积计算器</a></li>
+            <li><a href="/zh/tool/rectangular-prism-volume-calculator">长方体体积计算器</a></li>
+            <li><a href="/zh/tool/slope-calculator">斜率计算器</a></li>
+            <li><a href="/zh/tool/sector-calculator">圆扇形计算器</a></li>
+            <li><a href="/zh/tool/grade-gradient-calculator">坡度/坡率计算器</a></li>
+            <li><a href="/zh/tool/molecular-weight-calculator">分子量计算器</a></li>
+            <li><a href="/zh/tool/empirical-formula-calculator">实验式计算器</a></li>
+            <li><a href="/zh/tool/system-of-equations-solver">方程组求解器</a></li>
+            <li><a href="/zh/tool/linear-equation-solver">一元一次方程求解器</a></li>
+            <li><a href="/zh/tool/eigenvalue-calculator">特征值与特征向量计算器（2x2）</a></li>
+            <li><a href="/zh/tool/inequality-solver">线性不等式求解器</a></li>
+            <li><a href="/zh/tool/chemical-equation-balancer">化学方程式配平器</a></li>
+            <li><a href="/zh/tool/solubility-product-calculator">溶度积计算器（Ksp）</a></li>
+            <li><a href="/zh/tool/titration-ph-calculator">滴定pH计算器</a></li>
+            <li><a href="/zh/tool/limiting-reagent-calculator">限量试剂计算器</a></li>
+            <li><a href="/zh/tool/half-life-calculator">半衰期计算器</a></li>
+            <li><a href="/zh/tool/hardy-weinberg-calculator">哈迪-温伯格平衡计算器</a></li>
+            <li><a href="/zh/tool/grade-calculator">成绩计算器</a></li>
+            <li><a href="/zh/tool/weighted-grade-calculator">加权成绩计算器</a></li>
+            <li><a href="/zh/tool/gpa-calculator">加权 GPA 计算器</a></li>
+            <li><a href="/zh/tool/speed-distance-time-calculator">速度、距离和时间计算器</a></li>
+            <li><a href="/zh/tool/projectile-motion-calculator">抛体运动计算器</a></li>
+            <li><a href="/zh/tool/collision-calculator">动量与碰撞计算器</a></li>
+            <li><a href="/zh/tool/ohms-law-calculator">欧姆定律计算器</a></li>
+            <li><a href="/zh/tool/right-triangle-calculator">直角三角形计算器</a></li>
+            <li><a href="/zh/tool/absolute-risk-reduction-calculator">绝对风险降低计算器</a></li>
+            <li><a href="/zh/tool/sample-size-calculator">样本量计算器</a></li>
+            <li><a href="/zh/tool/confidence-interval-calculator">置信区间计算器</a></li>
+            <li><a href="/zh/tool/mean-median-mode-calculator">均值、中位数、众数和极差计算器</a></li>
+            <li><a href="/zh/tool/roman-numeral-converter">罗马数字转换器</a></li>
+            <li><a href="/zh/tool/distance-modulus-calculator">距离模数计算器</a></li>
+            <li><a href="/zh/tool/earthquake-magnitude-calculator">地震震级能量计算器</a></li>
+            <li><a href="/zh/tool/pressure-altitude-calculator">气压高度计算器</a></li>
+            <li><a href="/zh/tool/circle-calculator">圆形计算器</a></li>
+            <li><a href="/zh/tool/repeating-decimal-to-fraction-calculator">循环小数转分数计算器</a></li>
+            <li><a href="/zh/tool/permutations-combinations-calculator">排列组合计算器</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="19" x2="5" y2="13"/><line x1="12" y1="19" x2="12" y2="9"/><line x1="19" y1="19" x2="19" y2="5"/></svg></span>
+          <h2><a href="/zh/category/finance">金融</a></h2>
+          <span class="count">27 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/zh/tool/loan-calculator">贷款月供计算器</a></li>
+            <li><a href="/zh/tool/amortization-schedule-calculator">还款计划表计算器</a></li>
+            <li><a href="/zh/tool/mortgage-payoff-calculator">房贷提前还款计算器</a></li>
+            <li><a href="/zh/tool/heloc-calculator">HELOC（房屋净值信贷额度）还款计算器</a></li>
+            <li><a href="/zh/tool/mortgage-calculator">房贷计算器</a></li>
+            <li><a href="/zh/tool/home-affordability-calculator">买得起多贵的房子计算器</a></li>
+            <li><a href="/zh/tool/hourly-to-salary-calculator">时薪转年薪计算器</a></li>
+            <li><a href="/zh/tool/time-card-calculator">考勤卡计算器</a></li>
+            <li><a href="/zh/tool/tip-calculator">小费计算器</a></li>
+            <li><a href="/zh/tool/savings-calculator">储蓄计算器</a></li>
+            <li><a href="/zh/tool/tvm-solver">货币时间价值求解器（现值、终值、支付额）</a></li>
+            <li><a href="/zh/tool/irr-npv-calculator">内部收益率（IRR）与净现值（NPV）计算器</a></li>
+            <li><a href="/zh/tool/budget-calculator">预算计算器</a></li>
+            <li><a href="/zh/tool/compound-interest-calculator">复利计算器</a></li>
+            <li><a href="/zh/tool/apr-to-apy-calculator">名义利率转实际年利率（APY/EAR）计算器</a></li>
+            <li><a href="/zh/tool/sales-tax-calculator">销售税计算器</a></li>
+            <li><a href="/zh/tool/discount-calculator">折扣计算器</a></li>
+            <li><a href="/zh/tool/price-calculator">定价计算器</a></li>
+            <li><a href="/zh/tool/debt-payoff-calculator">债务清偿计算器</a></li>
+            <li><a href="/zh/tool/dti-ratio-calculator">债务收入比（DTI）计算器</a></li>
+            <li><a href="/zh/tool/credit-card-payoff-calculator">信用卡还款计算器</a></li>
+            <li><a href="/zh/tool/auto-loan-calculator">汽车贷款计算器</a></li>
+            <li><a href="/zh/tool/investment-calculator">投资计算器</a></li>
+            <li><a href="/zh/tool/retirement-401k-calculator">401(k)退休计算器</a></li>
+            <li><a href="/zh/tool/bond-duration-calculator">债券久期计算器</a></li>
+            <li><a href="/zh/tool/gas-trip-cost-calculator">旅行汽油费用计算器</a></li>
+            <li><a href="/zh/tool/simple-interest-calculator">单利计算器</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.5 12 5l8 6.5"/><path d="M6 10v9h12v-9"/></svg></span>
+          <h2><a href="/zh/category/construction">建筑与家居</a></h2>
+          <span class="count">15 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/zh/tool/concrete-calculator">混凝土计算器</a></li>
+            <li><a href="/zh/tool/paint-calculator">油漆计算器</a></li>
+            <li><a href="/zh/tool/mulch-calculator">覆盖物计算器</a></li>
+            <li><a href="/zh/tool/gravel-calculator">碎石计算器</a></li>
+            <li><a href="/zh/tool/flooring-calculator">地板计算器</a></li>
+            <li><a href="/zh/tool/drywall-calculator">石膏板计算器</a></li>
+            <li><a href="/zh/tool/tile-calculator">瓷砖计算器</a></li>
+            <li><a href="/zh/tool/roofing-calculator">屋顶材料计算器</a></li>
+            <li><a href="/zh/tool/square-footage-calculator">平方英尺计算器</a></li>
+            <li><a href="/zh/tool/fence-calculator">围栏计算器</a></li>
+            <li><a href="/zh/tool/insulation-calculator">隔热材料计算器</a></li>
+            <li><a href="/zh/tool/ac-btu-calculator">空调尺寸计算器（BTU）</a></li>
+            <li><a href="/zh/tool/lumber-calculator">木材计算器</a></li>
+            <li><a href="/zh/tool/paver-calculator">地砖计算器</a></li>
+            <li><a href="/zh/tool/mix-ratio-calculator">混合比例计算器</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3,12 8,12 10,6 14,18 16,12 21,12"/></svg></span>
+          <h2><a href="/zh/category/health">健康与健身</a></h2>
+          <span class="count">17 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/zh/tool/bmi-calculator">BMI 计算器</a></li>
+            <li><a href="/zh/tool/height-percentile-calculator">身高百分位计算器</a></li>
+            <li><a href="/zh/tool/bmr-calculator">基础代谢率计算器</a></li>
+            <li><a href="/zh/tool/body-surface-area-calculator">体表面积计算器</a></li>
+            <li><a href="/zh/tool/calorie-calculator">卡路里计算器</a></li>
+            <li><a href="/zh/tool/body-fat-calculator">体脂率计算器</a></li>
+            <li><a href="/zh/tool/macro-calculator">宏量营养素计算器</a></li>
+            <li><a href="/zh/tool/water-intake-calculator">饮水量计算器</a></li>
+            <li><a href="/zh/tool/one-rep-max-calculator">单次最大重量计算器（1RM）</a></li>
+            <li><a href="/zh/tool/heart-rate-zone-calculator">心率区间计算器</a></li>
+            <li><a href="/zh/tool/ideal-weight-calculator">理想体重计算器</a></li>
+            <li><a href="/zh/tool/bra-size-calculator">胸罩尺寸计算器</a></li>
+            <li><a href="/zh/tool/pace-calculator">跑步配速计算器</a></li>
+            <li><a href="/zh/tool/steps-to-miles-calculator">步数转英里计算器</a></li>
+            <li><a href="/zh/tool/pregnancy-due-date-calculator">预产期计算器</a></li>
+            <li><a href="/zh/tool/ovulation-calculator">排卵期计算器</a></li>
+            <li><a href="/zh/tool/calories-burned-calculator">消耗卡路里计算器</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><line x1="12" y1="12" x2="12" y2="7"/><line x1="12" y1="12" x2="16" y2="14"/></svg></span>
+          <h2><a href="/zh/category/datetime">日期与时间</a></h2>
+          <span class="count">23 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/zh/tool/days-until-calculator">剩余天数计算器</a></li>
+            <li><a href="/zh/tool/date-duration-calculator">日期间隔计算器</a></li>
+            <li><a href="/zh/tool/business-days-calculator">工作日计算器</a></li>
+            <li><a href="/zh/tool/time-duration-calculator">时间长度计算器</a></li>
+            <li><a href="/zh/tool/time-add-calculator">时间加减计算器</a></li>
+            <li><a href="/zh/tool/online-timer">在线计时器</a></li>
+            <li><a href="/zh/tool/online-alarm-clock">在线闹钟</a></li>
+            <li><a href="/zh/tool/online-stopwatch">在线秒表</a></li>
+            <li><a href="/zh/tool/current-time">当前时间</a></li>
+            <li><a href="/zh/tool/random-date-generator">随机日期生成器</a></li>
+            <li><a href="/zh/tool/military-time-converter">军用时间转换器</a></li>
+            <li><a href="/zh/tool/unix-timestamp-converter">Unix时间戳转换器</a></li>
+            <li><a href="/zh/tool/week-number-calculator">周数计算器</a></li>
+            <li><a href="/zh/tool/time-zone-converter">时区转换器</a></li>
+            <li><a href="/zh/tool/daylight-saving-time-calculator">夏令时计算器</a></li>
+            <li><a href="/zh/tool/sunrise-sunset-calculator">日出日落计算器</a></li>
+            <li><a href="/zh/tool/sun-position-calculator">太阳位置计算器</a></li>
+            <li><a href="/zh/tool/day-of-week-calculator">星期计算器</a></li>
+            <li><a href="/zh/tool/leap-year-calculator">闰年计算器</a></li>
+            <li><a href="/zh/tool/age-calculator">年龄计算器</a></li>
+            <li><a href="/zh/tool/birth-year-calculator">出生年份计算器</a></li>
+            <li><a href="/zh/tool/time-zone-meeting-planner">跨时区会议规划器</a></li>
+            <li><a href="/zh/tool/day-of-the-week-calculator">星期计算器</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16,3 20,7 16,11"/><line x1="20" y1="7" x2="4" y2="7"/><polyline points="8,13 4,17 8,21"/><line x1="4" y1="17" x2="20" y2="17"/></svg></span>
+          <h2><a href="/zh/category/conversions">日常换算</a></h2>
+          <span class="count">23 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/zh/tool/screen-ppi-calculator">屏幕PPI计算器</a></li>
+            <li><a href="/zh/tool/print-dpi-calculator">打印DPI计算器</a></li>
+            <li><a href="/zh/tool/unit-length-converter">厘米-英寸换算器</a></li>
+            <li><a href="/zh/tool/time-unit-converter">时间单位转换器</a></li>
+            <li><a href="/zh/tool/temperature-converter">温度换算器</a></li>
+            <li><a href="/zh/tool/oven-temperature-converter">烤箱温度转换器</a></li>
+            <li><a href="/zh/tool/rainfall-volume-calculator">降雨量转体积计算器</a></li>
+            <li><a href="/zh/tool/water-density-calculator">水密度计算器</a></li>
+            <li><a href="/zh/tool/weight-converter">重量转换器</a></li>
+            <li><a href="/zh/tool/volume-converter">体积转换器</a></li>
+            <li><a href="/zh/tool/cooking-converter">克转杯计算器</a></li>
+            <li><a href="/zh/tool/microwave-wattage-converter">微波炉功率转换器</a></li>
+            <li><a href="/zh/tool/electricity-cost-calculator">电费计算器</a></li>
+            <li><a href="/zh/tool/ppm-percent-converter">PPM转百分比转换器</a></li>
+            <li><a href="/zh/tool/speed-converter">速度转换器</a></li>
+            <li><a href="/zh/tool/area-converter">面积转换器</a></li>
+            <li><a href="/zh/tool/data-storage-converter">数据存储转换器</a></li>
+            <li><a href="/zh/tool/pressure-converter">压力转换器</a></li>
+            <li><a href="/zh/tool/torque-converter">扭矩转换器</a></li>
+            <li><a href="/zh/tool/fuel-economy-converter">燃油经济性转换器</a></li>
+            <li><a href="/zh/tool/gear-ratio-calculator">自行车齿比计算器</a></li>
+            <li><a href="/zh/tool/tire-size-calculator">轮胎尺寸比较计算器</a></li>
+            <li><a href="/zh/tool/weather-comfort-calculator">露点、体感温度和风寒指数计算器</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4h6M12 4v16M9 20h6"/></svg></span>
+          <h2><a href="/zh/category/text">文本与数字工具</a></h2>
+          <span class="count">21 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/zh/tool/color-difference-checker">颜色差异检测器</a></li>
+            <li><a href="/zh/tool/list-shuffler">列表随机排序器</a></li>
+            <li><a href="/zh/tool/weighted-random-picker">加权随机选择器</a></li>
+            <li><a href="/zh/tool/word-counter">字数与字符数统计工具</a></li>
+            <li><a href="/zh/tool/password-generator">密码生成器</a></li>
+            <li><a href="/zh/tool/uuid-generator">UUID生成器</a></li>
+            <li><a href="/zh/tool/random-number-generator">随机数生成器</a></li>
+            <li><a href="/zh/tool/coin-flipper">抛硬币</a></li>
+            <li><a href="/zh/tool/dice-roller">掷骰子</a></li>
+            <li><a href="/zh/tool/card-deck-shuffler">洗牌后的扑克牌</a></li>
+            <li><a href="/zh/tool/color-mixer">颜色混合器</a></li>
+            <li><a href="/zh/tool/case-converter">大小写转换工具</a></li>
+            <li><a href="/zh/tool/lorem-ipsum-generator">Lorem Ipsum 生成器</a></li>
+            <li><a href="/zh/tool/text-to-slug-generator">文本转Slug生成器</a></li>
+            <li><a href="/zh/tool/binary-to-text-converter">二进制转文本转换器</a></li>
+            <li><a href="/zh/tool/word-frequency-counter">词频统计器</a></li>
+            <li><a href="/zh/tool/url-encoder-decoder">URL编码器/解码器</a></li>
+            <li><a href="/zh/tool/ip-subnet-calculator">IP子网计算器</a></li>
+            <li><a href="/zh/tool/json-compare">JSON比较</a></li>
+            <li><a href="/zh/tool/cidr-calculator">CIDR / 子网计算器</a></li>
+            <li><a href="/zh/tool/group-randomizer">分组随机器</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="15.5" r="4"/><circle cx="5.5" cy="9" r="2"/><circle cx="10" cy="4.5" r="2"/><circle cx="14" cy="4.5" r="2"/><circle cx="18.5" cy="9" r="2"/></svg></span>
+          <h2><a href="/zh/category/pets">宠物与生活</a></h2>
+          <span class="count">8 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/zh/tool/dog-age-calculator">狗狗年龄计算器</a></li>
+            <li><a href="/zh/tool/dog-food-calculator">狗粮计算器</a></li>
+            <li><a href="/zh/tool/cat-age-calculator">猫咪年龄计算器</a></li>
+            <li><a href="/zh/tool/rabbit-age-calculator">兔子年龄计算器</a></li>
+            <li><a href="/zh/tool/dog-pregnancy-calculator">狗狗怀孕计算器</a></li>
+            <li><a href="/zh/tool/horse-age-calculator">马匹年龄计算器</a></li>
+            <li><a href="/zh/tool/ideal-dog-weight-calculator">狗狗理想体重计算器</a></li>
+            <li><a href="/zh/tool/cat-pregnancy-calculator">猫咪怀孕计算器</a></li>
+        </ul>
+      </section>
+      </div>
     </div>
   </section>
 

@@ -52,62 +52,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="/css/styles.css" />
-  <script src="/js/calculators-data.js" defer></script>
-  <script src="/js/i18n-titles.js" defer></script>
   <script src="/js/theme.js" defer></script>
   <script src="/js/locale-switcher.js" defer></script>
-  <script>window.CALQ_LOCALE = "pt"; window.CALQ_LOCALE_PATH = "pt/";</script>
-  <script defer>
-    document.addEventListener("DOMContentLoaded", () => {
-      const LOC = window.CALQ_LOCALE;
-      const LPATH = window.CALQ_LOCALE_PATH;
-      function catName(cat) {
-        return (LOC !== "en" && window.I18N_CATEGORIES && window.I18N_CATEGORIES[cat.id] && window.I18N_CATEGORIES[cat.id][LOC])
-          ? window.I18N_CATEGORIES[cat.id][LOC].name : cat.name;
-      }
-      function toolTitle(calc) {
-        return (LOC !== "en" && window.I18N_TITLES && window.I18N_TITLES[calc.id] && window.I18N_TITLES[calc.id][LOC])
-          ? window.I18N_TITLES[calc.id][LOC] : calc.title;
-      }
-      function isTranslated(calcId) {
-        return LOC !== "en" && window.I18N_TITLES && window.I18N_TITLES[calcId] && window.I18N_TITLES[calcId][LOC];
-      }
-      function toolHref(calcId) {
-        return isTranslated(calcId) ? `/${LPATH}tool/${calcId}` : `https://calquary.com/tool/${calcId}`;
-      }
-      function catHref(catId) {
-        return `/${LPATH}category/${catId}`;
-      }
-
-      const wrap = document.getElementById("index-categories");
-      CATEGORIES.forEach((cat) => {
-        const tools = calculatorsInCategory(cat.id);
-
-        const section = document.createElement("section");
-        section.className = "index-category";
-
-        const head = document.createElement("div");
-        head.className = "index-category-head";
-        head.innerHTML = `
-          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${cat.icon}</svg></span>
-          <h2><a href="${catHref(cat.id)}">${catName(cat)}</a></h2>
-          <span class="count">${tools.length} tool${tools.length === 1 ? "" : "s"}</span>
-        `;
-        section.appendChild(head);
-
-        const list = document.createElement("ul");
-        list.className = "related-list index-columns";
-        tools.forEach((calc) => {
-          const li = document.createElement("li");
-          li.innerHTML = `<a href="${toolHref(calc.id)}">${toolTitle(calc)}</a>`;
-          list.appendChild(li);
-        });
-        section.appendChild(list);
-
-        wrap.appendChild(section);
-      });
-    });
-  </script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -166,7 +112,287 @@
 
   <section class="section">
     <div class="wrap">
-      <div id="index-categories"></div>
+      <div id="index-categories">
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/><line x1="18" y1="6" x2="6" y2="18"/></svg></span>
+          <h2><a href="/pt/category/math">Matemática</a></h2>
+          <span class="count">73 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/pt/tool/percentage-calculator">Calculadora de Porcentagem</a></li>
+            <li><a href="/pt/tool/percentage-change-calculator">Calculadora de Variação Percentual</a></li>
+            <li><a href="/pt/tool/average-calculator">Calculadora de Média</a></li>
+            <li><a href="/pt/tool/fraction-calculator">Calculadora de Frações</a></li>
+            <li><a href="/pt/tool/pi-digits-calculator">Calculadora de Dígitos de Pi</a></li>
+            <li><a href="/pt/tool/long-division-calculator">Calculadora de Divisão Longa</a></li>
+            <li><a href="/pt/tool/long-multiplication-calculator">Calculadora de Multiplicação Longa</a></li>
+            <li><a href="/pt/tool/gcd-lcm-calculator">Calculadora de MDC e MMC</a></li>
+            <li><a href="/pt/tool/factor-calculator">Calculadora de Fatores</a></li>
+            <li><a href="/pt/tool/standard-deviation-calculator">Calculadora de Desvio Padrão</a></li>
+            <li><a href="/pt/tool/t-test-calculator">Calculadora de Teste T</a></li>
+            <li><a href="/pt/tool/effect-size-calculator">Calculadora de Tamanho do Efeito (d de Cohen)</a></li>
+            <li><a href="/pt/tool/mann-whitney-u-calculator">Calculadora de Teste U de Mann-Whitney</a></li>
+            <li><a href="/pt/tool/sequences-series-calculator">Calculadora de Sequências e Séries</a></li>
+            <li><a href="/pt/tool/coupon-collector-calculator">Calculadora do Colecionador de Cupons</a></li>
+            <li><a href="/pt/tool/similarity-ratio-calculator">Calculadora de Razão de Semelhança</a></li>
+            <li><a href="/pt/tool/correlation-calculator">Calculadora de Coeficiente de Correlação</a></li>
+            <li><a href="/pt/tool/z-score-calculator">Calculadora de Escore Z (Escore Padronizado)</a></li>
+            <li><a href="/pt/tool/confusion-matrix-calculator">Calculadora de Matriz de Confusão</a></li>
+            <li><a href="/pt/tool/odds-probability-converter">Conversor de Chances para Probabilidade</a></li>
+            <li><a href="/pt/tool/normal-distribution-calculator">Calculadora de Distribuição Normal</a></li>
+            <li><a href="/pt/tool/lottery-odds-calculator">Calculadora de Probabilidades de Loteria</a></li>
+            <li><a href="/pt/tool/poker-hand-probability-calculator">Calculadora de Probabilidade de Mãos de Pôquer</a></li>
+            <li><a href="/pt/tool/square-root-calculator">Calculadora de Raiz Quadrada</a></li>
+            <li><a href="/pt/tool/ratio-calculator">Calculadora de Proporção</a></li>
+            <li><a href="/pt/tool/aspect-ratio-calculator">Calculadora de Proporção de Tela</a></li>
+            <li><a href="/pt/tool/exponent-calculator">Calculadora de Expoentes</a></li>
+            <li><a href="/pt/tool/logarithm-calculator">Calculadora de Logaritmos</a></li>
+            <li><a href="/pt/tool/vector-calculator">Calculadora de Vetores</a></li>
+            <li><a href="/pt/tool/haversine-distance-calculator">Calculadora de Distância e Rumo (Lat/Long)</a></li>
+            <li><a href="/pt/tool/quadratic-formula-calculator">Calculadora de Fórmula Quadrática</a></li>
+            <li><a href="/pt/tool/cone-volume-calculator">Calculadora de Volume de Cone</a></li>
+            <li><a href="/pt/tool/cylinder-volume-calculator">Calculadora de Volume de Cilindro</a></li>
+            <li><a href="/pt/tool/pythagorean-theorem-calculator">Calculadora do Teorema de Pitágoras</a></li>
+            <li><a href="/pt/tool/distance-formula-calculator">Calculadora de Fórmula de Distância</a></li>
+            <li><a href="/pt/tool/triangle-solver">Resolvedor de Triângulos (LLL)</a></li>
+            <li><a href="/pt/tool/hypergeometric-calculator">Calculadora de Distribuição Hipergeométrica</a></li>
+            <li><a href="/pt/tool/trapezoid-area-calculator">Calculadora de Área de Trapézio</a></li>
+            <li><a href="/pt/tool/rectangular-prism-volume-calculator">Calculadora de Volume de Prisma Retangular</a></li>
+            <li><a href="/pt/tool/slope-calculator">Calculadora de Inclinação</a></li>
+            <li><a href="/pt/tool/sector-calculator">Calculadora de Setor Circular</a></li>
+            <li><a href="/pt/tool/grade-gradient-calculator">Calculadora de Declive / Gradiente</a></li>
+            <li><a href="/pt/tool/molecular-weight-calculator">Calculadora de Peso Molecular</a></li>
+            <li><a href="/pt/tool/empirical-formula-calculator">Calculadora de Fórmula Empírica</a></li>
+            <li><a href="/pt/tool/system-of-equations-solver">Resolvedor de Sistema de Equações</a></li>
+            <li><a href="/pt/tool/linear-equation-solver">Resolvedor de Equações Lineares</a></li>
+            <li><a href="/pt/tool/eigenvalue-calculator">Calculadora de Autovalores e Autovetores (2x2)</a></li>
+            <li><a href="/pt/tool/inequality-solver">Resolvedor de Inequações Lineares</a></li>
+            <li><a href="/pt/tool/chemical-equation-balancer">Balanceador de Equações Químicas</a></li>
+            <li><a href="/pt/tool/solubility-product-calculator">Calculadora do Produto de Solubilidade (Ksp)</a></li>
+            <li><a href="/pt/tool/titration-ph-calculator">Calculadora de pH de Titulação</a></li>
+            <li><a href="/pt/tool/limiting-reagent-calculator">Calculadora de Reagente Limitante</a></li>
+            <li><a href="/pt/tool/half-life-calculator">Calculadora de Meia-vida</a></li>
+            <li><a href="/pt/tool/hardy-weinberg-calculator">Calculadora de Equilíbrio de Hardy-Weinberg</a></li>
+            <li><a href="/pt/tool/grade-calculator">Calculadora de Nota</a></li>
+            <li><a href="/pt/tool/weighted-grade-calculator">Calculadora de Nota Ponderada</a></li>
+            <li><a href="/pt/tool/gpa-calculator">Calculadora de Média Ponderada (GPA)</a></li>
+            <li><a href="/pt/tool/speed-distance-time-calculator">Calculadora de Velocidade, Distância e Tempo</a></li>
+            <li><a href="/pt/tool/projectile-motion-calculator">Calculadora de Movimento de Projétil</a></li>
+            <li><a href="/pt/tool/collision-calculator">Calculadora de Momento e Colisão</a></li>
+            <li><a href="/pt/tool/ohms-law-calculator">Calculadora da Lei de Ohm</a></li>
+            <li><a href="/pt/tool/right-triangle-calculator">Calculadora de Triângulo Retângulo</a></li>
+            <li><a href="/pt/tool/absolute-risk-reduction-calculator">Calculadora de Redução Absoluta do Risco</a></li>
+            <li><a href="/pt/tool/sample-size-calculator">Calculadora de Tamanho de Amostra</a></li>
+            <li><a href="/pt/tool/confidence-interval-calculator">Calculadora de Intervalo de Confiança</a></li>
+            <li><a href="/pt/tool/mean-median-mode-calculator">Calculadora de Média, Mediana, Moda e Amplitude</a></li>
+            <li><a href="/pt/tool/roman-numeral-converter">Conversor de Numerais Romanos</a></li>
+            <li><a href="/pt/tool/distance-modulus-calculator">Calculadora de Módulo de Distância</a></li>
+            <li><a href="/pt/tool/earthquake-magnitude-calculator">Calculadora de Energia de Magnitude de Terremoto</a></li>
+            <li><a href="/pt/tool/pressure-altitude-calculator">Calculadora de Altitude de Pressão</a></li>
+            <li><a href="/pt/tool/circle-calculator">Calculadora de Círculo</a></li>
+            <li><a href="/pt/tool/repeating-decimal-to-fraction-calculator">Calculadora de Decimal Periódica para Fração</a></li>
+            <li><a href="/pt/tool/permutations-combinations-calculator">Calculadora de Permutações e Combinações</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="19" x2="5" y2="13"/><line x1="12" y1="19" x2="12" y2="9"/><line x1="19" y1="19" x2="19" y2="5"/></svg></span>
+          <h2><a href="/pt/category/finance">Finanças</a></h2>
+          <span class="count">27 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/pt/tool/loan-calculator">Calculadora de Pagamento de Empréstimo</a></li>
+            <li><a href="/pt/tool/amortization-schedule-calculator">Calculadora de Tabela de Amortização</a></li>
+            <li><a href="/pt/tool/mortgage-payoff-calculator">Calculadora de Quitação Antecipada de Hipoteca</a></li>
+            <li><a href="/pt/tool/heloc-calculator">Calculadora de Pagamento de HELOC</a></li>
+            <li><a href="/pt/tool/mortgage-calculator">Calculadora de Financiamento Imobiliário</a></li>
+            <li><a href="/pt/tool/home-affordability-calculator">Calculadora de Quanto Posso Pagar por uma Casa</a></li>
+            <li><a href="/pt/tool/hourly-to-salary-calculator">Calculadora de Salário por Hora para Anual</a></li>
+            <li><a href="/pt/tool/time-card-calculator">Calculadora de Cartão de Ponto</a></li>
+            <li><a href="/pt/tool/tip-calculator">Calculadora de Gorjeta</a></li>
+            <li><a href="/pt/tool/savings-calculator">Calculadora de Poupança</a></li>
+            <li><a href="/pt/tool/tvm-solver">Solucionador TVM (VP, VF, PMT)</a></li>
+            <li><a href="/pt/tool/irr-npv-calculator">Calculadora de TIR e VPL</a></li>
+            <li><a href="/pt/tool/budget-calculator">Calculadora de Orçamento</a></li>
+            <li><a href="/pt/tool/compound-interest-calculator">Calculadora de Juros Compostos</a></li>
+            <li><a href="/pt/tool/apr-to-apy-calculator">Calculadora de Taxa Nominal para Taxa Efetiva Anual (APY/TAE)</a></li>
+            <li><a href="/pt/tool/sales-tax-calculator">Calculadora de Imposto sobre Vendas</a></li>
+            <li><a href="/pt/tool/discount-calculator">Calculadora de Desconto</a></li>
+            <li><a href="/pt/tool/price-calculator">Calculadora de Preço</a></li>
+            <li><a href="/pt/tool/debt-payoff-calculator">Calculadora de Quitação de Dívidas</a></li>
+            <li><a href="/pt/tool/dti-ratio-calculator">Calculadora de Relação Dívida-Renda (DTI)</a></li>
+            <li><a href="/pt/tool/credit-card-payoff-calculator">Calculadora de Quitação de Cartão de Crédito</a></li>
+            <li><a href="/pt/tool/auto-loan-calculator">Calculadora de Financiamento de Automóvel</a></li>
+            <li><a href="/pt/tool/investment-calculator">Calculadora de Investimento</a></li>
+            <li><a href="/pt/tool/retirement-401k-calculator">Calculadora de Aposentadoria 401(k)</a></li>
+            <li><a href="/pt/tool/bond-duration-calculator">Calculadora de Duração de Títulos</a></li>
+            <li><a href="/pt/tool/gas-trip-cost-calculator">Calculadora de Custo de Gasolina para Viagem</a></li>
+            <li><a href="/pt/tool/simple-interest-calculator">Calculadora de Juros Simples</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.5 12 5l8 6.5"/><path d="M6 10v9h12v-9"/></svg></span>
+          <h2><a href="/pt/category/construction">Construção e Casa</a></h2>
+          <span class="count">15 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/pt/tool/concrete-calculator">Calculadora de Concreto</a></li>
+            <li><a href="/pt/tool/paint-calculator">Calculadora de Tinta</a></li>
+            <li><a href="/pt/tool/mulch-calculator">Calculadora de Cobertura Morta (Mulch)</a></li>
+            <li><a href="/pt/tool/gravel-calculator">Calculadora de Cascalho</a></li>
+            <li><a href="/pt/tool/flooring-calculator">Calculadora de Piso</a></li>
+            <li><a href="/pt/tool/drywall-calculator">Calculadora de Drywall</a></li>
+            <li><a href="/pt/tool/tile-calculator">Calculadora de Azulejos</a></li>
+            <li><a href="/pt/tool/roofing-calculator">Calculadora de Telhado</a></li>
+            <li><a href="/pt/tool/square-footage-calculator">Calculadora de Metragem Quadrada</a></li>
+            <li><a href="/pt/tool/fence-calculator">Calculadora de Cerca</a></li>
+            <li><a href="/pt/tool/insulation-calculator">Calculadora de Isolamento Térmico</a></li>
+            <li><a href="/pt/tool/ac-btu-calculator">Calculadora de Tamanho de Ar Condicionado (BTU)</a></li>
+            <li><a href="/pt/tool/lumber-calculator">Calculadora de Madeira</a></li>
+            <li><a href="/pt/tool/paver-calculator">Calculadora de Pavimentos (Pavers)</a></li>
+            <li><a href="/pt/tool/mix-ratio-calculator">Calculadora de Proporção de Mistura</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3,12 8,12 10,6 14,18 16,12 21,12"/></svg></span>
+          <h2><a href="/pt/category/health">Saúde e Fitness</a></h2>
+          <span class="count">17 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/pt/tool/bmi-calculator">Calculadora de IMC</a></li>
+            <li><a href="/pt/tool/height-percentile-calculator">Calculadora de Percentil de Altura</a></li>
+            <li><a href="/pt/tool/bmr-calculator">Calculadora de TMB</a></li>
+            <li><a href="/pt/tool/body-surface-area-calculator">Calculadora de Superfície Corporal</a></li>
+            <li><a href="/pt/tool/calorie-calculator">Calculadora de Calorias</a></li>
+            <li><a href="/pt/tool/body-fat-calculator">Calculadora de Gordura Corporal</a></li>
+            <li><a href="/pt/tool/macro-calculator">Calculadora de Macronutrientes</a></li>
+            <li><a href="/pt/tool/water-intake-calculator">Calculadora de Ingestão de Água</a></li>
+            <li><a href="/pt/tool/one-rep-max-calculator">Calculadora de Repetição Máxima (1RM)</a></li>
+            <li><a href="/pt/tool/heart-rate-zone-calculator">Calculadora de Zonas de Frequência Cardíaca</a></li>
+            <li><a href="/pt/tool/ideal-weight-calculator">Calculadora de Peso Ideal</a></li>
+            <li><a href="/pt/tool/bra-size-calculator">Calculadora de Tamanho de Sutiã</a></li>
+            <li><a href="/pt/tool/pace-calculator">Calculadora de Ritmo de Corrida</a></li>
+            <li><a href="/pt/tool/steps-to-miles-calculator">Calculadora de Passos para Milhas</a></li>
+            <li><a href="/pt/tool/pregnancy-due-date-calculator">Calculadora de Data de Parto</a></li>
+            <li><a href="/pt/tool/ovulation-calculator">Calculadora de Ovulação</a></li>
+            <li><a href="/pt/tool/calories-burned-calculator">Calculadora de Calorias Queimadas</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><line x1="12" y1="12" x2="12" y2="7"/><line x1="12" y1="12" x2="16" y2="14"/></svg></span>
+          <h2><a href="/pt/category/datetime">Data e Hora</a></h2>
+          <span class="count">23 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/pt/tool/days-until-calculator">Calculadora de Dias Restantes</a></li>
+            <li><a href="/pt/tool/date-duration-calculator">Calculadora de Duração entre Datas</a></li>
+            <li><a href="/pt/tool/business-days-calculator">Calculadora de Dias Úteis</a></li>
+            <li><a href="/pt/tool/time-duration-calculator">Calculadora de Duração de Tempo</a></li>
+            <li><a href="/pt/tool/time-add-calculator">Calculadora de Somar/Subtrair Tempo</a></li>
+            <li><a href="/pt/tool/online-timer">Cronômetro Online</a></li>
+            <li><a href="/pt/tool/online-alarm-clock">Despertador Online</a></li>
+            <li><a href="/pt/tool/online-stopwatch">Cronômetro Online</a></li>
+            <li><a href="/pt/tool/current-time">Hora Atual</a></li>
+            <li><a href="/pt/tool/random-date-generator">Gerador de Datas Aleatórias</a></li>
+            <li><a href="/pt/tool/military-time-converter">Conversor de Hora Militar</a></li>
+            <li><a href="/pt/tool/unix-timestamp-converter">Conversor de Timestamp Unix</a></li>
+            <li><a href="/pt/tool/week-number-calculator">Calculadora de Número da Semana</a></li>
+            <li><a href="/pt/tool/time-zone-converter">Conversor de Fuso Horário</a></li>
+            <li><a href="/pt/tool/daylight-saving-time-calculator">Calculadora de Horário de Verão</a></li>
+            <li><a href="/pt/tool/sunrise-sunset-calculator">Calculadora de Nascer e Pôr do Sol</a></li>
+            <li><a href="/pt/tool/sun-position-calculator">Calculadora de Posição Solar</a></li>
+            <li><a href="/pt/tool/day-of-week-calculator">Calculadora do Dia da Semana</a></li>
+            <li><a href="/pt/tool/leap-year-calculator">Calculadora de Ano Bissexto</a></li>
+            <li><a href="/pt/tool/age-calculator">Calculadora de Idade</a></li>
+            <li><a href="/pt/tool/birth-year-calculator">Calculadora de Ano de Nascimento</a></li>
+            <li><a href="/pt/tool/time-zone-meeting-planner">Planejador de Reuniões em Fusos Horários</a></li>
+            <li><a href="/pt/tool/day-of-the-week-calculator">Calculadora do Dia da Semana</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16,3 20,7 16,11"/><line x1="20" y1="7" x2="4" y2="7"/><polyline points="8,13 4,17 8,21"/><line x1="4" y1="17" x2="20" y2="17"/></svg></span>
+          <h2><a href="/pt/category/conversions">Conversões do Dia a Dia</a></h2>
+          <span class="count">23 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/pt/tool/screen-ppi-calculator">Calculadora de PPI de Tela</a></li>
+            <li><a href="/pt/tool/print-dpi-calculator">Calculadora de DPI de Impressão</a></li>
+            <li><a href="/pt/tool/unit-length-converter">Conversor de CM para Polegadas</a></li>
+            <li><a href="/pt/tool/time-unit-converter">Conversor de Unidades de Tempo</a></li>
+            <li><a href="/pt/tool/temperature-converter">Conversor de Temperatura</a></li>
+            <li><a href="/pt/tool/oven-temperature-converter">Conversor de Temperatura de Forno</a></li>
+            <li><a href="/pt/tool/rainfall-volume-calculator">Calculadora de Volume de Chuva</a></li>
+            <li><a href="/pt/tool/water-density-calculator">Calculadora de Densidade da Água</a></li>
+            <li><a href="/pt/tool/weight-converter">Conversor de Peso</a></li>
+            <li><a href="/pt/tool/volume-converter">Conversor de Volume</a></li>
+            <li><a href="/pt/tool/cooking-converter">Conversor de Gramas para Xícaras</a></li>
+            <li><a href="/pt/tool/microwave-wattage-converter">Conversor de Wattagem do Micro-ondas</a></li>
+            <li><a href="/pt/tool/electricity-cost-calculator">Calculadora de Custo de Eletricidade</a></li>
+            <li><a href="/pt/tool/ppm-percent-converter">Conversor de PPM para Porcentagem</a></li>
+            <li><a href="/pt/tool/speed-converter">Conversor de Velocidade</a></li>
+            <li><a href="/pt/tool/area-converter">Conversor de Área</a></li>
+            <li><a href="/pt/tool/data-storage-converter">Conversor de Armazenamento de Dados</a></li>
+            <li><a href="/pt/tool/pressure-converter">Conversor de Pressão</a></li>
+            <li><a href="/pt/tool/torque-converter">Conversor de Torque</a></li>
+            <li><a href="/pt/tool/fuel-economy-converter">Conversor de Economia de Combustível</a></li>
+            <li><a href="/pt/tool/gear-ratio-calculator">Calculadora de Relação de Marchas de Bicicleta</a></li>
+            <li><a href="/pt/tool/tire-size-calculator">Calculadora de Comparação de Tamanho de Pneus</a></li>
+            <li><a href="/pt/tool/weather-comfort-calculator">Calculadora de Ponto de Orvalho, Índice de Calor e Sensação Térmica</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4h6M12 4v16M9 20h6"/></svg></span>
+          <h2><a href="/pt/category/text">Texto e Digital</a></h2>
+          <span class="count">21 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/pt/tool/color-difference-checker">Verificador de Diferença de Cor</a></li>
+            <li><a href="/pt/tool/list-shuffler">Embaralhador de Listas</a></li>
+            <li><a href="/pt/tool/weighted-random-picker">Seletor Aleatório Ponderado</a></li>
+            <li><a href="/pt/tool/word-counter">Contador de Palavras</a></li>
+            <li><a href="/pt/tool/password-generator">Gerador de Senhas</a></li>
+            <li><a href="/pt/tool/uuid-generator">Gerador de UUID</a></li>
+            <li><a href="/pt/tool/random-number-generator">Gerador de Números Aleatórios</a></li>
+            <li><a href="/pt/tool/coin-flipper">Cara ou Coroa</a></li>
+            <li><a href="/pt/tool/dice-roller">Lançador de Dados</a></li>
+            <li><a href="/pt/tool/card-deck-shuffler">Baralho Embaralhado</a></li>
+            <li><a href="/pt/tool/color-mixer">Misturador de Cores</a></li>
+            <li><a href="/pt/tool/case-converter">Conversor de Maiúsculas e Minúsculas</a></li>
+            <li><a href="/pt/tool/lorem-ipsum-generator">Gerador de Lorem Ipsum</a></li>
+            <li><a href="/pt/tool/text-to-slug-generator">Gerador de Slug a partir de Texto</a></li>
+            <li><a href="/pt/tool/binary-to-text-converter">Conversor de Binário para Texto</a></li>
+            <li><a href="/pt/tool/word-frequency-counter">Contador de Frequência de Palavras</a></li>
+            <li><a href="/pt/tool/url-encoder-decoder">Codificador / Decodificador de URL</a></li>
+            <li><a href="/pt/tool/ip-subnet-calculator">Calculadora de Sub-rede IP</a></li>
+            <li><a href="/pt/tool/json-compare">Comparação de JSON</a></li>
+            <li><a href="/pt/tool/cidr-calculator">Calculadora CIDR / Sub-rede</a></li>
+            <li><a href="/pt/tool/group-randomizer">Randomizador de Grupos</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="15.5" r="4"/><circle cx="5.5" cy="9" r="2"/><circle cx="10" cy="4.5" r="2"/><circle cx="14" cy="4.5" r="2"/><circle cx="18.5" cy="9" r="2"/></svg></span>
+          <h2><a href="/pt/category/pets">Animais de Estimação e Estilo de Vida</a></h2>
+          <span class="count">8 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/pt/tool/dog-age-calculator">Calculadora de Idade de Cães</a></li>
+            <li><a href="/pt/tool/dog-food-calculator">Calculadora de Ração para Cães</a></li>
+            <li><a href="/pt/tool/cat-age-calculator">Calculadora de Idade de Gatos</a></li>
+            <li><a href="/pt/tool/rabbit-age-calculator">Calculadora de Idade de Coelho</a></li>
+            <li><a href="/pt/tool/dog-pregnancy-calculator">Calculadora de Gestação de Cadelas</a></li>
+            <li><a href="/pt/tool/horse-age-calculator">Calculadora de Idade de Cavalo</a></li>
+            <li><a href="/pt/tool/ideal-dog-weight-calculator">Calculadora de Peso Ideal para Cães</a></li>
+            <li><a href="/pt/tool/cat-pregnancy-calculator">Calculadora de Gestação de Gatas</a></li>
+        </ul>
+      </section>
+      </div>
     </div>
   </section>
 

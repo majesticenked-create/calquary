@@ -16,43 +16,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   {{FONTS_LINK}}
   <link rel="stylesheet" href="/css/styles.css" />
-  <script src="/js/calculators-data.js" defer></script>
   <script src="/js/theme.js" defer></script>
   <script src="/js/locale-switcher.js" defer></script>
-  <script defer>
-    document.addEventListener("DOMContentLoaded", () => {
-      const cat = getCategory("{{CAT_ID}}");
-      document.getElementById("cat-code").innerHTML = `<svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${cat.icon}</svg>`;
-
-      // Card grid stays JS-rendered (interactive live-readout preview, same
-      // as the homepage) but is NOT the page's static SEO content — the h1,
-      // description, and breadcrumb above are baked directly into the HTML
-      // at build time (see build.js), not set here.
-      const tools = calculatorsInCategory(cat.id);
-      const translatedIds = {{TRANSLATED_TOOL_IDS_JSON}};
-      const grid = document.getElementById("cat-tool-grid");
-      tools.forEach((calc, i) => {
-        const sampleResult = calc.compute(
-          Object.fromEntries(calc.fields.map((f) => [f.id, f.type === "checkbox-group" ? (f.default || []) : f.default]))
-        );
-        const a = document.createElement("a");
-        // Locale pages only have a localized tool page for the wave-one
-        // batch — link straight through to it when it exists, otherwise
-        // fall back to the English canonical rather than a 404.
-        a.href = translatedIds[calc.id] ? `/{{LOCALE_PATH}}tool/${calc.id}` : `https://calquary.com/tool/${calc.id}`;
-        a.className = "tool-card";
-        a.innerHTML = `
-          <div class="cat-label">${calc.keyword}</div>
-          <h3>${calc.title}</h3>
-          <div class="readout">
-            <span class="rlabel">${sampleResult.primary.label}</span>
-            <span class="rvalue" style="--delay:${0.05 * i}s">${sampleResult.primary.value}</span>
-          </div>
-        `;
-        grid.appendChild(a);
-      });
-    });
-  </script>
   {{SCHEMA_JSON}}
 </head>
 <body>
@@ -75,7 +40,7 @@
   <section class="category-hero">
     <div class="wrap">
       <div class="breadcrumb"><a href="{{HOME_HREF}}">{{BREADCRUMB_HOME}}</a> / {{BREADCRUMB_CATEGORIES}}</div>
-      <span class="code-badge" id="cat-code"></span>
+      <span class="code-badge">{{CAT_ICON_SVG}}</span>
       <h1>{{CAT_NAME_FULL}}</h1>
       <p style="max-width:56ch;">{{CAT_DESCRIPTION}}</p>
     </div>
@@ -89,7 +54,9 @@
 
   <section class="section">
     <div class="wrap">
-      <div class="tool-grid" id="cat-tool-grid"></div>
+      <div class="tool-grid" id="cat-tool-grid">
+{{CAT_TOOL_GRID_HTML}}
+      </div>
     </div>
   </section>
 

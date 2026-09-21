@@ -20,62 +20,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   {{FONTS_LINK}}
   <link rel="stylesheet" href="/css/styles.css" />
-  <script src="/js/calculators-data.js" defer></script>
-  <script src="/js/i18n-titles.js" defer></script>
   <script src="/js/theme.js" defer></script>
   <script src="/js/locale-switcher.js" defer></script>
-  <script>window.CALQ_LOCALE = "{{LOCALE_CODE}}"; window.CALQ_LOCALE_PATH = "{{LOCALE_PATH}}";</script>
-  <script defer>
-    document.addEventListener("DOMContentLoaded", () => {
-      const LOC = window.CALQ_LOCALE;
-      const LPATH = window.CALQ_LOCALE_PATH;
-      function catName(cat) {
-        return (LOC !== "en" && window.I18N_CATEGORIES && window.I18N_CATEGORIES[cat.id] && window.I18N_CATEGORIES[cat.id][LOC])
-          ? window.I18N_CATEGORIES[cat.id][LOC].name : cat.name;
-      }
-      function toolTitle(calc) {
-        return (LOC !== "en" && window.I18N_TITLES && window.I18N_TITLES[calc.id] && window.I18N_TITLES[calc.id][LOC])
-          ? window.I18N_TITLES[calc.id][LOC] : calc.title;
-      }
-      function isTranslated(calcId) {
-        return LOC !== "en" && window.I18N_TITLES && window.I18N_TITLES[calcId] && window.I18N_TITLES[calcId][LOC];
-      }
-      function toolHref(calcId) {
-        return isTranslated(calcId) ? `/${LPATH}tool/${calcId}` : `https://calquary.com/tool/${calcId}`;
-      }
-      function catHref(catId) {
-        return `/${LPATH}category/${catId}`;
-      }
-
-      const wrap = document.getElementById("index-categories");
-      CATEGORIES.forEach((cat) => {
-        const tools = calculatorsInCategory(cat.id);
-
-        const section = document.createElement("section");
-        section.className = "index-category";
-
-        const head = document.createElement("div");
-        head.className = "index-category-head";
-        head.innerHTML = `
-          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${cat.icon}</svg></span>
-          <h2><a href="${catHref(cat.id)}">${catName(cat)}</a></h2>
-          <span class="count">${tools.length} tool${tools.length === 1 ? "" : "s"}</span>
-        `;
-        section.appendChild(head);
-
-        const list = document.createElement("ul");
-        list.className = "related-list index-columns";
-        tools.forEach((calc) => {
-          const li = document.createElement("li");
-          li.innerHTML = `<a href="${toolHref(calc.id)}">${toolTitle(calc)}</a>`;
-          list.appendChild(li);
-        });
-        section.appendChild(list);
-
-        wrap.appendChild(section);
-      });
-    });
-  </script>
   {{SCHEMA_JSON}}
 </head>
 <body>
@@ -105,7 +51,9 @@
 
   <section class="section">
     <div class="wrap">
-      <div id="index-categories"></div>
+      <div id="index-categories">
+{{ALL_CALC_CATEGORIES_HTML}}
+      </div>
     </div>
   </section>
 

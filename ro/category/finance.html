@@ -52,43 +52,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="/css/styles.css" />
-  <script src="/js/calculators-data.js" defer></script>
   <script src="/js/theme.js" defer></script>
   <script src="/js/locale-switcher.js" defer></script>
-  <script defer>
-    document.addEventListener("DOMContentLoaded", () => {
-      const cat = getCategory("finance");
-      document.getElementById("cat-code").innerHTML = `<svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${cat.icon}</svg>`;
-
-      // Card grid stays JS-rendered (interactive live-readout preview, same
-      // as the homepage) but is NOT the page's static SEO content — the h1,
-      // description, and breadcrumb above are baked directly into the HTML
-      // at build time (see build.js), not set here.
-      const tools = calculatorsInCategory(cat.id);
-      const translatedIds = {"percentage-calculator":true,"average-calculator":true,"mortgage-calculator":true,"loan-calculator":true,"compound-interest-calculator":true,"concrete-calculator":true,"flooring-calculator":true,"calorie-calculator":true,"bmi-calculator":true,"bmr-calculator":true,"age-calculator":true,"days-until-calculator":true,"unit-length-converter":true,"temperature-converter":true,"word-counter":true,"case-converter":true,"dog-age-calculator":true,"cat-age-calculator":true,"cat-pregnancy-calculator":true,"dog-pregnancy-calculator":true,"simple-interest-calculator":true,"sales-tax-calculator":true,"tip-calculator":true,"discount-calculator":true,"gpa-calculator":true,"body-fat-calculator":true,"amortization-schedule-calculator":true,"mortgage-payoff-calculator":true,"heloc-calculator":true,"home-affordability-calculator":true,"hourly-to-salary-calculator":true,"time-card-calculator":true,"savings-calculator":true,"tvm-solver":true,"irr-npv-calculator":true,"budget-calculator":true,"apr-to-apy-calculator":true,"price-calculator":true,"debt-payoff-calculator":true,"dti-ratio-calculator":true,"credit-card-payoff-calculator":true,"auto-loan-calculator":true,"investment-calculator":true,"retirement-401k-calculator":true,"bond-duration-calculator":true,"gas-trip-cost-calculator":true,"paint-calculator":true,"mulch-calculator":true,"gravel-calculator":true,"drywall-calculator":true,"tile-calculator":true,"roofing-calculator":true,"square-footage-calculator":true,"fence-calculator":true,"insulation-calculator":true,"ac-btu-calculator":true,"lumber-calculator":true,"paver-calculator":true,"mix-ratio-calculator":true,"height-percentile-calculator":true,"body-surface-area-calculator":true,"macro-calculator":true,"water-intake-calculator":true,"one-rep-max-calculator":true,"heart-rate-zone-calculator":true,"ideal-weight-calculator":true,"bra-size-calculator":true,"pace-calculator":true,"steps-to-miles-calculator":true,"pregnancy-due-date-calculator":true,"ovulation-calculator":true,"calories-burned-calculator":true,"dog-food-calculator":true,"rabbit-age-calculator":true,"horse-age-calculator":true,"ideal-dog-weight-calculator":true,"date-duration-calculator":true,"business-days-calculator":true,"time-duration-calculator":true,"time-add-calculator":true,"online-timer":true,"online-alarm-clock":true,"online-stopwatch":true,"current-time":true,"random-date-generator":true,"military-time-converter":true,"unix-timestamp-converter":true,"week-number-calculator":true,"time-zone-converter":true,"daylight-saving-time-calculator":true,"sunrise-sunset-calculator":true,"sun-position-calculator":true,"day-of-week-calculator":true,"leap-year-calculator":true,"birth-year-calculator":true,"time-zone-meeting-planner":true,"day-of-the-week-calculator":true,"screen-ppi-calculator":true,"print-dpi-calculator":true,"time-unit-converter":true,"oven-temperature-converter":true,"rainfall-volume-calculator":true,"water-density-calculator":true,"weight-converter":true,"volume-converter":true,"cooking-converter":true,"microwave-wattage-converter":true,"electricity-cost-calculator":true,"ppm-percent-converter":true,"speed-converter":true,"area-converter":true,"data-storage-converter":true,"pressure-converter":true,"torque-converter":true,"fuel-economy-converter":true,"gear-ratio-calculator":true,"tire-size-calculator":true,"weather-comfort-calculator":true,"color-difference-checker":true,"list-shuffler":true,"weighted-random-picker":true,"password-generator":true,"uuid-generator":true,"random-number-generator":true,"coin-flipper":true,"dice-roller":true,"card-deck-shuffler":true,"color-mixer":true,"lorem-ipsum-generator":true,"text-to-slug-generator":true,"binary-to-text-converter":true,"word-frequency-counter":true,"url-encoder-decoder":true,"ip-subnet-calculator":true,"json-compare":true,"cidr-calculator":true,"group-randomizer":true,"percentage-change-calculator":true,"fraction-calculator":true,"pi-digits-calculator":true,"long-division-calculator":true,"long-multiplication-calculator":true,"gcd-lcm-calculator":true,"factor-calculator":true,"standard-deviation-calculator":true,"t-test-calculator":true,"effect-size-calculator":true,"mann-whitney-u-calculator":true,"sequences-series-calculator":true,"coupon-collector-calculator":true,"similarity-ratio-calculator":true,"correlation-calculator":true,"z-score-calculator":true,"confusion-matrix-calculator":true,"odds-probability-converter":true,"normal-distribution-calculator":true,"lottery-odds-calculator":true,"poker-hand-probability-calculator":true,"square-root-calculator":true,"ratio-calculator":true,"aspect-ratio-calculator":true,"exponent-calculator":true,"logarithm-calculator":true,"vector-calculator":true,"haversine-distance-calculator":true,"quadratic-formula-calculator":true,"cone-volume-calculator":true,"cylinder-volume-calculator":true,"pythagorean-theorem-calculator":true,"distance-formula-calculator":true,"triangle-solver":true,"hypergeometric-calculator":true,"trapezoid-area-calculator":true,"rectangular-prism-volume-calculator":true,"slope-calculator":true,"sector-calculator":true,"grade-gradient-calculator":true,"molecular-weight-calculator":true,"empirical-formula-calculator":true,"system-of-equations-solver":true,"linear-equation-solver":true,"eigenvalue-calculator":true,"inequality-solver":true,"chemical-equation-balancer":true,"solubility-product-calculator":true,"titration-ph-calculator":true,"limiting-reagent-calculator":true,"half-life-calculator":true,"hardy-weinberg-calculator":true,"grade-calculator":true,"weighted-grade-calculator":true,"speed-distance-time-calculator":true,"projectile-motion-calculator":true,"collision-calculator":true,"ohms-law-calculator":true,"right-triangle-calculator":true,"absolute-risk-reduction-calculator":true,"sample-size-calculator":true,"confidence-interval-calculator":true,"mean-median-mode-calculator":true,"roman-numeral-converter":true,"distance-modulus-calculator":true,"earthquake-magnitude-calculator":true,"pressure-altitude-calculator":true,"circle-calculator":true,"repeating-decimal-to-fraction-calculator":true,"permutations-combinations-calculator":true};
-      const grid = document.getElementById("cat-tool-grid");
-      tools.forEach((calc, i) => {
-        const sampleResult = calc.compute(
-          Object.fromEntries(calc.fields.map((f) => [f.id, f.type === "checkbox-group" ? (f.default || []) : f.default]))
-        );
-        const a = document.createElement("a");
-        // Locale pages only have a localized tool page for the wave-one
-        // batch — link straight through to it when it exists, otherwise
-        // fall back to the English canonical rather than a 404.
-        a.href = translatedIds[calc.id] ? `/ro/tool/${calc.id}` : `https://calquary.com/tool/${calc.id}`;
-        a.className = "tool-card";
-        a.innerHTML = `
-          <div class="cat-label">${calc.keyword}</div>
-          <h3>${calc.title}</h3>
-          <div class="readout">
-            <span class="rlabel">${sampleResult.primary.label}</span>
-            <span class="rvalue" style="--delay:${0.05 * i}s">${sampleResult.primary.value}</span>
-          </div>
-        `;
-        grid.appendChild(a);
-      });
-    });
-  </script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -140,7 +105,7 @@
   <section class="category-hero">
     <div class="wrap">
       <div class="breadcrumb"><a href="/ro/">Calquary</a> / Categorii</div>
-      <span class="code-badge" id="cat-code"></span>
+      <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="19" x2="5" y2="13"/><line x1="12" y1="19" x2="12" y2="9"/><line x1="19" y1="19" x2="19" y2="5"/></svg></span>
       <h1>Finanțe Calculatoare</h1>
       <p style="max-width:56ch;">Împrumuturi, bacșișuri și calcule financiare zilnice.</p>
     </div>
@@ -154,7 +119,251 @@
 
   <section class="section">
     <div class="wrap">
-      <div class="tool-grid" id="cat-tool-grid"></div>
+      <div class="tool-grid" id="cat-tool-grid">
+        <a href="/ro/tool/loan-calculator" class="tool-card">
+          <div class="cat-label">loan calculator</div>
+          <h3>Calculator de Rată la Împrumut</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Estimează rata lunară pentru un împrumut cu dobândă fixă.</p>
+          <div class="readout">
+            <span class="rlabel">Estimated monthly payment</span>
+            <span class="rvalue settle-in" style="--delay:0s">$391.32</span>
+          </div>
+        </a>
+        <a href="/ro/tool/amortization-schedule-calculator" class="tool-card">
+          <div class="cat-label">amortization schedule calculator</div>
+          <h3>Calculator Grafic de Amortizare</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Vezi o defalcare lunară completă a plății - principal, dobândă și sold rămas - pentru un împrumut cu rată…</p>
+          <div class="readout">
+            <span class="rlabel">Monthly payment</span>
+            <span class="rvalue settle-in" style="--delay:0.05s">$391.32</span>
+          </div>
+        </a>
+        <a href="/ro/tool/mortgage-payoff-calculator" class="tool-card">
+          <div class="cat-label">mortgage payoff calculator</div>
+          <h3>Calculator de Achitare Anticipată a Creditului Ipotecar</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculează cât timp și dobândă ai economisi adăugând plăți suplimentare la creditul tău ipotecar.</p>
+          <div class="readout">
+            <span class="rlabel">Interest saved</span>
+            <span class="rvalue settle-in" style="--delay:0.1s">$103,449</span>
+          </div>
+        </a>
+        <a href="/ro/tool/heloc-calculator" class="tool-card">
+          <div class="cat-label">heloc calculator</div>
+          <h3>Calculator de Plată HELOC</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculează plățile doar cu dobândă din perioada de tragere și plățile amortizante din perioada de rambursare…</p>
+          <div class="readout">
+            <span class="rlabel">Draw period payment (interest-only)</span>
+            <span class="rvalue settle-in" style="--delay:0.15000000000000002s">$200/mo</span>
+          </div>
+        </a>
+        <a href="/ro/tool/mortgage-calculator" class="tool-card">
+          <div class="cat-label">mortgage calculator</div>
+          <h3>Calculator de Credit Ipotecar</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Estimează rata lunară totală a unui credit ipotecar, incluzând taxele și asigurarea.</p>
+          <div class="readout">
+            <span class="rlabel">Estimated monthly payment</span>
+            <span class="rvalue settle-in" style="--delay:0.2s">$2,207.29</span>
+          </div>
+        </a>
+        <a href="/ro/tool/home-affordability-calculator" class="tool-card">
+          <div class="cat-label">how much house can i afford</div>
+          <h3>Calculator Cât de Multă Casă Îmi Pot Permite</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Estimează prețul locuinței pe care ți-o poți permite, pe baza venitului, datoriilor și a unui avans.</p>
+          <div class="readout">
+            <span class="rlabel">Estimated affordable home price</span>
+            <span class="rvalue settle-in" style="--delay:0.25s">$324,779</span>
+          </div>
+        </a>
+        <a href="/ro/tool/hourly-to-salary-calculator" class="tool-card">
+          <div class="cat-label">hourly to salary calculator</div>
+          <h3>Calculator din Salariu pe Oră în Salariu Anual</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Convertește un salariu pe oră într-un salariu anual estimat, și invers.</p>
+          <div class="readout">
+            <span class="rlabel">Annual salary</span>
+            <span class="rvalue settle-in" style="--delay:0.30000000000000004s">$39,520</span>
+          </div>
+        </a>
+        <a href="/ro/tool/time-card-calculator" class="tool-card">
+          <div class="cat-label">time card calculator</div>
+          <h3>Calculator Pontaj</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Adună orele lucrate pe parcursul săptămânii și calculează salariul brut.</p>
+          <div class="readout">
+            <span class="rlabel">Total hours</span>
+            <span class="rvalue settle-in" style="--delay:0.35000000000000003s">40 hrs</span>
+          </div>
+        </a>
+        <a href="/ro/tool/tip-calculator" class="tool-card">
+          <div class="cat-label">tip calculator</div>
+          <h3>Calculator de Bacșiș</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Împarte o notă de plată și calculează bacșișul în câteva secunde.</p>
+          <div class="readout">
+            <span class="rlabel">Tip amount</span>
+            <span class="rvalue settle-in" style="--delay:0.4s">$11.61</span>
+          </div>
+        </a>
+        <a href="/ro/tool/savings-calculator" class="tool-card">
+          <div class="cat-label">savings calculator</div>
+          <h3>Calculator de Economii</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Estimează valoarea viitoare a economiilor tale cu contribuții regulate.</p>
+          <div class="readout">
+            <span class="rlabel">Estimated future value</span>
+            <span class="rvalue settle-in" style="--delay:0.45s">$31,806.61</span>
+          </div>
+        </a>
+        <a href="/ro/tool/tvm-solver" class="tool-card">
+          <div class="cat-label">tvm solver</div>
+          <h3>Rezolvator TVM (VP, VF, PMT)</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Rezolvă valoarea prezentă, valoarea viitoare sau plata într-o problemă de valoare a banilor în timp.</p>
+          <div class="readout">
+            <span class="rlabel">Future value (FV)</span>
+            <span class="rvalue settle-in" style="--delay:0.5s">$12,605.16</span>
+          </div>
+        </a>
+        <a href="/ro/tool/irr-npv-calculator" class="tool-card">
+          <div class="cat-label">irr calculator</div>
+          <h3>Calculator RIR și VAN</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculează valoarea actuală netă (VAN) și rata internă de rentabilitate (RIR) dintr-o serie de fluxuri de…</p>
+          <div class="readout">
+            <span class="rlabel">NPV</span>
+            <span class="rvalue settle-in" style="--delay:0.55s">$164.64</span>
+          </div>
+        </a>
+        <a href="/ro/tool/budget-calculator" class="tool-card">
+          <div class="cat-label">budget calculator</div>
+          <h3>Calculator de Buget</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Vezi unde se duce venitul tău lunar și cum se compară cu regula 50/30/20.</p>
+          <div class="readout">
+            <span class="rlabel">Left over each month</span>
+            <span class="rvalue settle-in" style="--delay:0.6000000000000001s">$1,250</span>
+          </div>
+        </a>
+        <a href="/ro/tool/compound-interest-calculator" class="tool-card">
+          <div class="cat-label">compound interest calculator</div>
+          <h3>Calculator de Dobândă Compusă</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculează cum crește o sumă de bani în timp prin dobândă compusă.</p>
+          <div class="readout">
+            <span class="rlabel">Future value</span>
+            <span class="rvalue settle-in" style="--delay:0.65s">$8,235.05</span>
+          </div>
+        </a>
+        <a href="/ro/tool/apr-to-apy-calculator" class="tool-card">
+          <div class="cat-label">apr to apy calculator</div>
+          <h3>Calculator din DAE în Rată Anuală Efectivă (APY/EAR)</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Convertește o rată nominală a dobânzii (APR) în rata sa anuală efectivă (APY/EAR), ținând cont de…</p>
+          <div class="readout">
+            <span class="rlabel">Effective annual rate (APY/EAR)</span>
+            <span class="rvalue settle-in" style="--delay:0.7000000000000001s">6.1678%</span>
+          </div>
+        </a>
+        <a href="/ro/tool/sales-tax-calculator" class="tool-card">
+          <div class="cat-label">sales tax calculator</div>
+          <h3>Calculator de Taxă pe Vânzări</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculează taxa pe vânzări și prețul total al unei achiziții.</p>
+          <div class="readout">
+            <span class="rlabel">Total with tax</span>
+            <span class="rvalue settle-in" style="--delay:0.75s">$53.61</span>
+          </div>
+        </a>
+        <a href="/ro/tool/discount-calculator" class="tool-card">
+          <div class="cat-label">discount calculator</div>
+          <h3>Calculator de Reducere</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculează prețul de vânzare și economiile la un articol redus.</p>
+          <div class="readout">
+            <span class="rlabel">Sale price</span>
+            <span class="rvalue settle-in" style="--delay:0.8s">$60</span>
+          </div>
+        </a>
+        <a href="/ro/tool/price-calculator" class="tool-card">
+          <div class="cat-label">price calculator</div>
+          <h3>Calculator de Preț</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculează un preț de vânzare din costul tău și marja de profit țintă.</p>
+          <div class="readout">
+            <span class="rlabel">Selling price</span>
+            <span class="rvalue settle-in" style="--delay:0.8500000000000001s">$71.43</span>
+          </div>
+        </a>
+        <a href="/ro/tool/debt-payoff-calculator" class="tool-card">
+          <div class="cat-label">debt payoff calculator</div>
+          <h3>Calculator de Achitare a Datoriilor</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculează cât timp va dura achitarea unei datorii cu plăți lunare fixe.</p>
+          <div class="readout">
+            <span class="rlabel">Months to pay off</span>
+            <span class="rvalue settle-in" style="--delay:0.9s">47</span>
+          </div>
+        </a>
+        <a href="/ro/tool/dti-ratio-calculator" class="tool-card">
+          <div class="cat-label">dti ratio calculator</div>
+          <h3>Calculator al Ratei Datorie-Venit (DTI)</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculează rata datorie-venit din plățile lunare de datorie și venitul brut lunar.</p>
+          <div class="readout">
+            <span class="rlabel">DTI ratio</span>
+            <span class="rvalue settle-in" style="--delay:0.9500000000000001s">30%</span>
+          </div>
+        </a>
+        <a href="/ro/tool/credit-card-payoff-calculator" class="tool-card">
+          <div class="cat-label">credit card payoff calculator</div>
+          <h3>Calculator de Achitare a Cardului de Credit</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Vezi cât timp durează achitarea unui sold de card de credit cu o plată minimă în scădere.</p>
+          <div class="readout">
+            <span class="rlabel">Months to pay off (minimum payments only)</span>
+            <span class="rvalue settle-in" style="--delay:1s">232</span>
+          </div>
+        </a>
+        <a href="/ro/tool/auto-loan-calculator" class="tool-card">
+          <div class="cat-label">auto loan calculator</div>
+          <h3>Calculator de Împrumut Auto</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Funcționează și ca un calculator de împrumut pentru mașină, împrumut auto sau estimator de plată auto -…</p>
+          <div class="readout">
+            <span class="rlabel">Estimated monthly payment</span>
+            <span class="rvalue settle-in" style="--delay:1.05s">$536.12</span>
+          </div>
+        </a>
+        <a href="/ro/tool/investment-calculator" class="tool-card">
+          <div class="cat-label">investment calculator</div>
+          <h3>Calculator de Investiții</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Estimează valoarea viitoare a unei investiții, ajustată la inflație.</p>
+          <div class="readout">
+            <span class="rlabel">Future value (nominal)</span>
+            <span class="rvalue settle-in" style="--delay:1.1s">$196,665.39</span>
+          </div>
+        </a>
+        <a href="/ro/tool/retirement-401k-calculator" class="tool-card">
+          <div class="cat-label">401k calculator</div>
+          <h3>Calculator de Pensie 401(k)</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Proiectează soldul tău 401(k) la pensionare, incluzând contribuția angajatorului și creșterea investiției.</p>
+          <div class="readout">
+            <span class="rlabel">Projected balance at retirement</span>
+            <span class="rvalue settle-in" style="--delay:1.1500000000000001s">$563,942</span>
+          </div>
+        </a>
+        <a href="/ro/tool/bond-duration-calculator" class="tool-card">
+          <div class="cat-label">bond duration calculator</div>
+          <h3>Calculator al Duratei Obligațiunii</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculează prețul unei obligațiuni, durata Macaulay, durata modificată, DV01 și convexitatea.</p>
+          <div class="readout">
+            <span class="rlabel">Bond price</span>
+            <span class="rvalue settle-in" style="--delay:1.2000000000000002s">$957.35</span>
+          </div>
+        </a>
+        <a href="/ro/tool/gas-trip-cost-calculator" class="tool-card">
+          <div class="cat-label">cost of gas calculator</div>
+          <h3>Calculator al Costului de Benzină pentru Călătorie</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculează cât va costa benzina pentru o călătorie pe baza distanței, consumului de combustibil și prețului…</p>
+          <div class="readout">
+            <span class="rlabel">Total gas cost</span>
+            <span class="rvalue settle-in" style="--delay:1.25s">$37.5</span>
+          </div>
+        </a>
+        <a href="/ro/tool/simple-interest-calculator" class="tool-card">
+          <div class="cat-label">simple interest calculator</div>
+          <h3>Calculator de Dobândă Simplă</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculează dobânda simplă și suma totală de rambursat din suma inițială, rată și timp.</p>
+          <div class="readout">
+            <span class="rlabel">Simple interest</span>
+            <span class="rvalue settle-in" style="--delay:1.3s">$150</span>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
 

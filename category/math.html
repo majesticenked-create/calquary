@@ -52,43 +52,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="/css/styles.css" />
-  <script src="/js/calculators-data.js" defer></script>
   <script src="/js/theme.js" defer></script>
   <script src="/js/locale-switcher.js" defer></script>
-  <script defer>
-    document.addEventListener("DOMContentLoaded", () => {
-      const cat = getCategory("math");
-      document.getElementById("cat-code").innerHTML = `<svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${cat.icon}</svg>`;
-
-      // Card grid stays JS-rendered (interactive live-readout preview, same
-      // as the homepage) but is NOT the page's static SEO content — the h1,
-      // description, and breadcrumb above are baked directly into the HTML
-      // at build time (see build.js), not set here.
-      const tools = calculatorsInCategory(cat.id);
-      const translatedIds = {"percentage-calculator":true,"average-calculator":true,"mortgage-calculator":true,"loan-calculator":true,"compound-interest-calculator":true,"concrete-calculator":true,"flooring-calculator":true,"calorie-calculator":true,"bmi-calculator":true,"bmr-calculator":true,"age-calculator":true,"days-until-calculator":true,"unit-length-converter":true,"temperature-converter":true,"word-counter":true,"case-converter":true,"dog-age-calculator":true,"cat-age-calculator":true,"cat-pregnancy-calculator":true,"dog-pregnancy-calculator":true,"simple-interest-calculator":true,"sales-tax-calculator":true,"tip-calculator":true,"discount-calculator":true,"gpa-calculator":true,"body-fat-calculator":true,"amortization-schedule-calculator":true,"mortgage-payoff-calculator":true,"heloc-calculator":true,"home-affordability-calculator":true,"hourly-to-salary-calculator":true,"time-card-calculator":true,"savings-calculator":true,"tvm-solver":true,"irr-npv-calculator":true,"budget-calculator":true,"apr-to-apy-calculator":true,"price-calculator":true,"debt-payoff-calculator":true,"dti-ratio-calculator":true,"credit-card-payoff-calculator":true,"auto-loan-calculator":true,"investment-calculator":true,"retirement-401k-calculator":true,"bond-duration-calculator":true,"gas-trip-cost-calculator":true,"paint-calculator":true,"mulch-calculator":true,"gravel-calculator":true,"drywall-calculator":true,"tile-calculator":true,"roofing-calculator":true,"square-footage-calculator":true,"fence-calculator":true,"insulation-calculator":true,"ac-btu-calculator":true,"lumber-calculator":true,"paver-calculator":true,"mix-ratio-calculator":true,"height-percentile-calculator":true,"body-surface-area-calculator":true,"macro-calculator":true,"water-intake-calculator":true,"one-rep-max-calculator":true,"heart-rate-zone-calculator":true,"ideal-weight-calculator":true,"bra-size-calculator":true,"pace-calculator":true,"steps-to-miles-calculator":true,"pregnancy-due-date-calculator":true,"ovulation-calculator":true,"calories-burned-calculator":true,"dog-food-calculator":true,"rabbit-age-calculator":true,"horse-age-calculator":true,"ideal-dog-weight-calculator":true,"date-duration-calculator":true,"business-days-calculator":true,"time-duration-calculator":true,"time-add-calculator":true,"online-timer":true,"online-alarm-clock":true,"online-stopwatch":true,"current-time":true,"random-date-generator":true,"military-time-converter":true,"unix-timestamp-converter":true,"week-number-calculator":true,"time-zone-converter":true,"daylight-saving-time-calculator":true,"sunrise-sunset-calculator":true,"sun-position-calculator":true,"day-of-week-calculator":true,"leap-year-calculator":true,"birth-year-calculator":true,"time-zone-meeting-planner":true,"day-of-the-week-calculator":true,"screen-ppi-calculator":true,"print-dpi-calculator":true,"time-unit-converter":true,"oven-temperature-converter":true,"rainfall-volume-calculator":true,"water-density-calculator":true,"weight-converter":true,"volume-converter":true,"cooking-converter":true,"microwave-wattage-converter":true,"electricity-cost-calculator":true,"ppm-percent-converter":true,"speed-converter":true,"area-converter":true,"data-storage-converter":true,"pressure-converter":true,"torque-converter":true,"fuel-economy-converter":true,"gear-ratio-calculator":true,"tire-size-calculator":true,"weather-comfort-calculator":true,"color-difference-checker":true,"list-shuffler":true,"weighted-random-picker":true,"password-generator":true,"uuid-generator":true,"random-number-generator":true,"coin-flipper":true,"dice-roller":true,"card-deck-shuffler":true,"color-mixer":true,"lorem-ipsum-generator":true,"text-to-slug-generator":true,"binary-to-text-converter":true,"word-frequency-counter":true,"url-encoder-decoder":true,"ip-subnet-calculator":true,"json-compare":true,"cidr-calculator":true,"group-randomizer":true,"percentage-change-calculator":true,"fraction-calculator":true,"pi-digits-calculator":true,"long-division-calculator":true,"long-multiplication-calculator":true,"gcd-lcm-calculator":true,"factor-calculator":true,"standard-deviation-calculator":true,"t-test-calculator":true,"effect-size-calculator":true,"mann-whitney-u-calculator":true,"sequences-series-calculator":true,"coupon-collector-calculator":true,"similarity-ratio-calculator":true,"correlation-calculator":true,"z-score-calculator":true,"confusion-matrix-calculator":true,"odds-probability-converter":true,"normal-distribution-calculator":true,"lottery-odds-calculator":true,"poker-hand-probability-calculator":true,"square-root-calculator":true,"ratio-calculator":true,"aspect-ratio-calculator":true,"exponent-calculator":true,"logarithm-calculator":true,"vector-calculator":true,"haversine-distance-calculator":true,"quadratic-formula-calculator":true,"cone-volume-calculator":true,"cylinder-volume-calculator":true,"pythagorean-theorem-calculator":true,"distance-formula-calculator":true,"triangle-solver":true,"hypergeometric-calculator":true,"trapezoid-area-calculator":true,"rectangular-prism-volume-calculator":true,"slope-calculator":true,"sector-calculator":true,"grade-gradient-calculator":true,"molecular-weight-calculator":true,"empirical-formula-calculator":true,"system-of-equations-solver":true,"linear-equation-solver":true,"eigenvalue-calculator":true,"inequality-solver":true,"chemical-equation-balancer":true,"solubility-product-calculator":true,"titration-ph-calculator":true,"limiting-reagent-calculator":true,"half-life-calculator":true,"hardy-weinberg-calculator":true,"grade-calculator":true,"weighted-grade-calculator":true,"speed-distance-time-calculator":true,"projectile-motion-calculator":true,"collision-calculator":true,"ohms-law-calculator":true,"right-triangle-calculator":true,"absolute-risk-reduction-calculator":true,"sample-size-calculator":true,"confidence-interval-calculator":true,"mean-median-mode-calculator":true,"roman-numeral-converter":true,"distance-modulus-calculator":true,"earthquake-magnitude-calculator":true,"pressure-altitude-calculator":true,"circle-calculator":true,"repeating-decimal-to-fraction-calculator":true,"permutations-combinations-calculator":true};
-      const grid = document.getElementById("cat-tool-grid");
-      tools.forEach((calc, i) => {
-        const sampleResult = calc.compute(
-          Object.fromEntries(calc.fields.map((f) => [f.id, f.type === "checkbox-group" ? (f.default || []) : f.default]))
-        );
-        const a = document.createElement("a");
-        // Locale pages only have a localized tool page for the wave-one
-        // batch — link straight through to it when it exists, otherwise
-        // fall back to the English canonical rather than a 404.
-        a.href = translatedIds[calc.id] ? `/tool/${calc.id}` : `https://calquary.com/tool/${calc.id}`;
-        a.className = "tool-card";
-        a.innerHTML = `
-          <div class="cat-label">${calc.keyword}</div>
-          <h3>${calc.title}</h3>
-          <div class="readout">
-            <span class="rlabel">${sampleResult.primary.label}</span>
-            <span class="rvalue" style="--delay:${0.05 * i}s">${sampleResult.primary.value}</span>
-          </div>
-        `;
-        grid.appendChild(a);
-      });
-    });
-  </script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -140,7 +105,7 @@
   <section class="category-hero">
     <div class="wrap">
       <div class="breadcrumb"><a href="/">Calquary</a> / Categories</div>
-      <span class="code-badge" id="cat-code"></span>
+      <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/><line x1="18" y1="6" x2="6" y2="18"/></svg></span>
       <h1>Math Calculators</h1>
       <p style="max-width:56ch;">Percentages, ratios, and everyday arithmetic.</p>
     </div>
@@ -154,7 +119,665 @@
 
   <section class="section">
     <div class="wrap">
-      <div class="tool-grid" id="cat-tool-grid"></div>
+      <div class="tool-grid" id="cat-tool-grid">
+        <a href="/tool/percentage-calculator" class="tool-card">
+          <div class="cat-label">percentage calculator</div>
+          <h3>Percentage Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Find what X percent of a number is, in one step.</p>
+          <div class="readout">
+            <span class="rlabel">20% of 150</span>
+            <span class="rvalue settle-in" style="--delay:0s">30</span>
+          </div>
+        </a>
+        <a href="/tool/percentage-change-calculator" class="tool-card">
+          <div class="cat-label">percentage change calculator</div>
+          <h3>Percentage Change Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate percentage increase or decrease between two values.</p>
+          <div class="readout">
+            <span class="rlabel">Percentage increase</span>
+            <span class="rvalue settle-in" style="--delay:0.05s">25%</span>
+          </div>
+        </a>
+        <a href="/tool/average-calculator" class="tool-card">
+          <div class="cat-label">average calculator</div>
+          <h3>Average Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate the mean, median, and sum of a list of numbers.</p>
+          <div class="readout">
+            <span class="rlabel">Average (mean)</span>
+            <span class="rvalue settle-in" style="--delay:0.1s">18</span>
+          </div>
+        </a>
+        <a href="/tool/fraction-calculator" class="tool-card">
+          <div class="cat-label">fraction calculator</div>
+          <h3>Fraction Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Add, subtract, multiply, or divide two fractions.</p>
+          <div class="readout">
+            <span class="rlabel">Result</span>
+            <span class="rvalue settle-in" style="--delay:0.15000000000000002s">5/6</span>
+          </div>
+        </a>
+        <a href="/tool/pi-digits-calculator" class="tool-card">
+          <div class="cat-label">pi digits calculator</div>
+          <h3>Digits of Pi Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Show pi (π) to a chosen number of decimal digits, up to 100.</p>
+          <div class="readout">
+            <span class="rlabel">π to 20 decimal digits</span>
+            <span class="rvalue settle-in" style="--delay:0.2s">3.14159265358979323846</span>
+          </div>
+        </a>
+        <a href="/tool/long-division-calculator" class="tool-card">
+          <div class="cat-label">long division calculator</div>
+          <h3>Long Division Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Divide two whole numbers and see the full step-by-step long division work.</p>
+          <div class="readout">
+            <span class="rlabel">Quotient</span>
+            <span class="rvalue settle-in" style="--delay:0.25s">141</span>
+          </div>
+        </a>
+        <a href="/tool/long-multiplication-calculator" class="tool-card">
+          <div class="cat-label">multiplication long</div>
+          <h3>Long Multiplication Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Multiply two whole numbers and see the full step-by-step long multiplication work.</p>
+          <div class="readout">
+            <span class="rlabel">Product</span>
+            <span class="rvalue settle-in" style="--delay:0.30000000000000004s">13,104</span>
+          </div>
+        </a>
+        <a href="/tool/gcd-lcm-calculator" class="tool-card">
+          <div class="cat-label">gcd calculator</div>
+          <h3>GCD and LCM Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Find the greatest common divisor and least common multiple of two numbers.</p>
+          <div class="readout">
+            <span class="rlabel">Greatest common divisor</span>
+            <span class="rvalue settle-in" style="--delay:0.35000000000000003s">12</span>
+          </div>
+        </a>
+        <a href="/tool/factor-calculator" class="tool-card">
+          <div class="cat-label">factor calculator</div>
+          <h3>Factor Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Find all factors and the prime factorization of a whole number.</p>
+          <div class="readout">
+            <span class="rlabel">Number of factors</span>
+            <span class="rvalue settle-in" style="--delay:0.4s">24</span>
+          </div>
+        </a>
+        <a href="/tool/standard-deviation-calculator" class="tool-card">
+          <div class="cat-label">standard deviation calculator</div>
+          <h3>Standard Deviation Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate the standard deviation and variance of a list of numbers.</p>
+          <div class="readout">
+            <span class="rlabel">Sample standard deviation</span>
+            <span class="rvalue settle-in" style="--delay:0.45s">13.49</span>
+          </div>
+        </a>
+        <a href="/tool/t-test-calculator" class="tool-card">
+          <div class="cat-label">t test calculator</div>
+          <h3>T-Test Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate the t-statistic for a two-sample independent t-test.</p>
+          <div class="readout">
+            <span class="rlabel">t-statistic</span>
+            <span class="rvalue settle-in" style="--delay:0.5s">1.3347</span>
+          </div>
+        </a>
+        <a href="/tool/effect-size-calculator" class="tool-card">
+          <div class="cat-label">effect size calculator</div>
+          <h3>Effect Size Calculator (Cohen's d)</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate Cohen's d to measure the standardized difference between two group means.</p>
+          <div class="readout">
+            <span class="rlabel">Cohen's d</span>
+            <span class="rvalue settle-in" style="--delay:0.55s">0.3446</span>
+          </div>
+        </a>
+        <a href="/tool/mann-whitney-u-calculator" class="tool-card">
+          <div class="cat-label">mann whitney u test calculator</div>
+          <h3>Mann-Whitney U Test Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate the Mann-Whitney U statistic for two independent groups, a non-parametric alternative to the t-test.</p>
+          <div class="readout">
+            <span class="rlabel">U statistic</span>
+            <span class="rvalue settle-in" style="--delay:0.6000000000000001s">10</span>
+          </div>
+        </a>
+        <a href="/tool/sequences-series-calculator" class="tool-card">
+          <div class="cat-label">sequences and series calculator</div>
+          <h3>Sequences and Series Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate the nth term and sum of an arithmetic or geometric sequence.</p>
+          <div class="readout">
+            <span class="rlabel">Term 10 (aₙ)</span>
+            <span class="rvalue settle-in" style="--delay:0.65s">48</span>
+          </div>
+        </a>
+        <a href="/tool/coupon-collector-calculator" class="tool-card">
+          <div class="cat-label">coupon collector calculator</div>
+          <h3>Coupon Collector Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate the expected number of draws needed to collect all n distinct items.</p>
+          <div class="readout">
+            <span class="rlabel">Expected draws to collect all</span>
+            <span class="rvalue settle-in" style="--delay:0.7000000000000001s">14.7</span>
+          </div>
+        </a>
+        <a href="/tool/similarity-ratio-calculator" class="tool-card">
+          <div class="cat-label">similarity ratio calculator</div>
+          <h3>Similarity Ratio Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate the area and volume ratio between two similar figures from their side length ratio.</p>
+          <div class="readout">
+            <span class="rlabel">Area ratio (k²)</span>
+            <span class="rvalue settle-in" style="--delay:0.75s">9</span>
+          </div>
+        </a>
+        <a href="/tool/correlation-calculator" class="tool-card">
+          <div class="cat-label">correlation test calculator</div>
+          <h3>Correlation Coefficient Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate the Pearson correlation coefficient (r) between two paired sets of numbers.</p>
+          <div class="readout">
+            <span class="rlabel">Correlation (r)</span>
+            <span class="rvalue settle-in" style="--delay:0.8s">0.8528</span>
+          </div>
+        </a>
+        <a href="/tool/z-score-calculator" class="tool-card">
+          <div class="cat-label">how to calculate standardized score</div>
+          <h3>Z-Score (Standardized Score) Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate a z-score (standardized score) and percentile from a value, mean, and standard deviation.</p>
+          <div class="readout">
+            <span class="rlabel">Z-score</span>
+            <span class="rvalue settle-in" style="--delay:0.8500000000000001s">1</span>
+          </div>
+        </a>
+        <a href="/tool/confusion-matrix-calculator" class="tool-card">
+          <div class="cat-label">confusion matrix calculator</div>
+          <h3>Confusion Matrix Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate precision, recall, F1, specificity, accuracy, and other diagnostic test metrics from a confusion…</p>
+          <div class="readout">
+            <span class="rlabel">Precision (PPV)</span>
+            <span class="rvalue settle-in" style="--delay:0.9s">88.89%</span>
+          </div>
+        </a>
+        <a href="/tool/odds-probability-converter" class="tool-card">
+          <div class="cat-label">odds probability converter</div>
+          <h3>Odds to Probability Converter</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Convert between probability and odds, in either direction.</p>
+          <div class="readout">
+            <span class="rlabel">Probability</span>
+            <span class="rvalue settle-in" style="--delay:0.9500000000000001s">0.25</span>
+          </div>
+        </a>
+        <a href="/tool/normal-distribution-calculator" class="tool-card">
+          <div class="cat-label">normal distribution calculator</div>
+          <h3>Normal Distribution Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate the probability that a normally distributed value falls between two values, given the mean and…</p>
+          <div class="readout">
+            <span class="rlabel">Probability</span>
+            <span class="rvalue settle-in" style="--delay:1s">68.27%</span>
+          </div>
+        </a>
+        <a href="/tool/lottery-odds-calculator" class="tool-card">
+          <div class="cat-label">lottery odds calculator</div>
+          <h3>Lottery Odds Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate the odds of winning a lottery jackpot from the pool size and how many numbers are drawn.</p>
+          <div class="readout">
+            <span class="rlabel">Odds of winning the jackpot</span>
+            <span class="rvalue settle-in" style="--delay:1.05s">1 in 292,201,338</span>
+          </div>
+        </a>
+        <a href="/tool/poker-hand-probability-calculator" class="tool-card">
+          <div class="cat-label">poker hand percentages calculator</div>
+          <h3>Poker Hand Probability Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">See the exact probability and odds of every 5-card poker hand ranking, out of a standard 52-card deck.</p>
+          <div class="readout">
+            <span class="rlabel">Total 5-card hands</span>
+            <span class="rvalue settle-in" style="--delay:1.1s">2,598,960</span>
+          </div>
+        </a>
+        <a href="/tool/square-root-calculator" class="tool-card">
+          <div class="cat-label">square root calculator</div>
+          <h3>Square Root Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate the square root, square, and cube root of a number.</p>
+          <div class="readout">
+            <span class="rlabel">Square root</span>
+            <span class="rvalue settle-in" style="--delay:1.1500000000000001s">12</span>
+          </div>
+        </a>
+        <a href="/tool/ratio-calculator" class="tool-card">
+          <div class="cat-label">ratio calculator</div>
+          <h3>Ratio Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Simplify a ratio to its lowest terms.</p>
+          <div class="readout">
+            <span class="rlabel">Simplified ratio</span>
+            <span class="rvalue settle-in" style="--delay:1.2000000000000002s">2:3</span>
+          </div>
+        </a>
+        <a href="/tool/aspect-ratio-calculator" class="tool-card">
+          <div class="cat-label">aspect ratio calculator</div>
+          <h3>Aspect Ratio Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate a photo or video's aspect ratio, and find a matching height or width for a new size.</p>
+          <div class="readout">
+            <span class="rlabel">Aspect ratio</span>
+            <span class="rvalue settle-in" style="--delay:1.25s">16:9</span>
+          </div>
+        </a>
+        <a href="/tool/exponent-calculator" class="tool-card">
+          <div class="cat-label">exponent calculator</div>
+          <h3>Exponent Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate a base raised to a power.</p>
+          <div class="readout">
+            <span class="rlabel">2^10</span>
+            <span class="rvalue settle-in" style="--delay:1.3s">1024</span>
+          </div>
+        </a>
+        <a href="/tool/logarithm-calculator" class="tool-card">
+          <div class="cat-label">logarithm calculator</div>
+          <h3>Logarithm Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate the logarithm of a number in any base, including natural log and log base 10.</p>
+          <div class="readout">
+            <span class="rlabel">log_2(8)</span>
+            <span class="rvalue settle-in" style="--delay:1.35s">3</span>
+          </div>
+        </a>
+        <a href="/tool/vector-calculator" class="tool-card">
+          <div class="cat-label">vector calculator</div>
+          <h3>Vector Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate dot product, cross product, magnitude, and angle between two 3D vectors.</p>
+          <div class="readout">
+            <span class="rlabel">Dot product (A·B)</span>
+            <span class="rvalue settle-in" style="--delay:1.4000000000000001s">32</span>
+          </div>
+        </a>
+        <a href="/tool/haversine-distance-calculator" class="tool-card">
+          <div class="cat-label">haversine distance calculator</div>
+          <h3>Distance and Bearing Calculator (Lat/Long)</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate the great-circle distance and compass bearing between two GPS coordinates.</p>
+          <div class="readout">
+            <span class="rlabel">Distance</span>
+            <span class="rvalue settle-in" style="--delay:1.4500000000000002s">5570.22 km</span>
+          </div>
+        </a>
+        <a href="/tool/quadratic-formula-calculator" class="tool-card">
+          <div class="cat-label">quadratic formula calculator</div>
+          <h3>Quadratic Formula Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Solve ax² + bx + c = 0 for x using the quadratic formula.</p>
+          <div class="readout">
+            <span class="rlabel">x =</span>
+            <span class="rvalue settle-in" style="--delay:1.5s">2 or 1</span>
+          </div>
+        </a>
+        <a href="/tool/cone-volume-calculator" class="tool-card">
+          <div class="cat-label">cone volume calculator</div>
+          <h3>Cone Volume Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Also works as a formula for the volume of a cone lookup - calculate the volume, surface area, and slant…</p>
+          <div class="readout">
+            <span class="rlabel">Volume</span>
+            <span class="rvalue settle-in" style="--delay:1.55s">75.3982</span>
+          </div>
+        </a>
+        <a href="/tool/cylinder-volume-calculator" class="tool-card">
+          <div class="cat-label">cylinder volume calculator</div>
+          <h3>Cylinder Volume Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Also works as a formula for the volume of a cylinder lookup - calculate the volume and surface area of a…</p>
+          <div class="readout">
+            <span class="rlabel">Volume</span>
+            <span class="rvalue settle-in" style="--delay:1.6s">502.6548</span>
+          </div>
+        </a>
+        <a href="/tool/pythagorean-theorem-calculator" class="tool-card">
+          <div class="cat-label">pythagorean theorem calculator</div>
+          <h3>Pythagorean Theorem Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate the hypotenuse (or a missing leg) of a right triangle using the Pythagorean theorem.</p>
+          <div class="readout">
+            <span class="rlabel">Hypotenuse (c)</span>
+            <span class="rvalue settle-in" style="--delay:1.6500000000000001s">5</span>
+          </div>
+        </a>
+        <a href="/tool/distance-formula-calculator" class="tool-card">
+          <div class="cat-label">distance formula calculator</div>
+          <h3>Distance Formula Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate the distance between two points on a coordinate plane.</p>
+          <div class="readout">
+            <span class="rlabel">Distance</span>
+            <span class="rvalue settle-in" style="--delay:1.7000000000000002s">5</span>
+          </div>
+        </a>
+        <a href="/tool/triangle-solver" class="tool-card">
+          <div class="cat-label">triangle solver</div>
+          <h3>Triangle Solver (SSS)</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate all three angles and the area of a triangle from its three side lengths.</p>
+          <div class="readout">
+            <span class="rlabel">Angle A (opposite side a)</span>
+            <span class="rvalue settle-in" style="--delay:1.75s">36.87°</span>
+          </div>
+        </a>
+        <a href="/tool/hypergeometric-calculator" class="tool-card">
+          <div class="cat-label">hypergeometric calculator</div>
+          <h3>Hypergeometric Distribution Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate the probability of drawing exactly k successes from a population without replacement.</p>
+          <div class="readout">
+            <span class="rlabel">P(X = 2)</span>
+            <span class="rvalue settle-in" style="--delay:1.8s">27.428%</span>
+          </div>
+        </a>
+        <a href="/tool/trapezoid-area-calculator" class="tool-card">
+          <div class="cat-label">trapezoid area calculator</div>
+          <h3>Trapezoid Area Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate the area and perimeter of a trapezoid.</p>
+          <div class="readout">
+            <span class="rlabel">Area</span>
+            <span class="rvalue settle-in" style="--delay:1.85s">32</span>
+          </div>
+        </a>
+        <a href="/tool/rectangular-prism-volume-calculator" class="tool-card">
+          <div class="cat-label">rectangular prism volume calculator</div>
+          <h3>Rectangular Prism Volume Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate the volume and surface area of a rectangular prism (box) from its length, width, and height.</p>
+          <div class="readout">
+            <span class="rlabel">Volume</span>
+            <span class="rvalue settle-in" style="--delay:1.9000000000000001s">60</span>
+          </div>
+        </a>
+        <a href="/tool/slope-calculator" class="tool-card">
+          <div class="cat-label">slope calculator</div>
+          <h3>Slope Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate the slope between two points, plus the line's equation and angle.</p>
+          <div class="readout">
+            <span class="rlabel">Slope (m)</span>
+            <span class="rvalue settle-in" style="--delay:1.9500000000000002s">2</span>
+          </div>
+        </a>
+        <a href="/tool/sector-calculator" class="tool-card">
+          <div class="cat-label">sector calculator</div>
+          <h3>Circle Sector Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate the arc length and area of a circle sector (pie-slice) from radius and angle.</p>
+          <div class="readout">
+            <span class="rlabel">Arc length</span>
+            <span class="rvalue settle-in" style="--delay:2s">15.708</span>
+          </div>
+        </a>
+        <a href="/tool/grade-gradient-calculator" class="tool-card">
+          <div class="cat-label">average gradient calculator</div>
+          <h3>Grade / Gradient Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate slope grade as a percentage, angle, and ratio from rise and run - for roads, ramps, and roofs.</p>
+          <div class="readout">
+            <span class="rlabel">Grade</span>
+            <span class="rvalue settle-in" style="--delay:2.0500000000000003s">6%</span>
+          </div>
+        </a>
+        <a href="/tool/molecular-weight-calculator" class="tool-card">
+          <div class="cat-label">molecular weight calculator</div>
+          <h3>Molecular Weight Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate the molecular weight (molar mass) of a chemical formula, like H2O or C6H12O6.</p>
+          <div class="readout">
+            <span class="rlabel">Molecular weight</span>
+            <span class="rvalue settle-in" style="--delay:2.1s">18.015 g/mol</span>
+          </div>
+        </a>
+        <a href="/tool/empirical-formula-calculator" class="tool-card">
+          <div class="cat-label">empirical formula calculator</div>
+          <h3>Empirical Formula Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate a compound's empirical formula from the mass percentage of each element.</p>
+          <div class="readout">
+            <span class="rlabel">Empirical formula</span>
+            <span class="rvalue settle-in" style="--delay:2.15s">CH2O</span>
+          </div>
+        </a>
+        <a href="/tool/system-of-equations-solver" class="tool-card">
+          <div class="cat-label">system of equations solver</div>
+          <h3>System of Equations Solver</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Solve a system of two linear equations (ax + by = e, cx + dy = f) for x and y.</p>
+          <div class="readout">
+            <span class="rlabel">Solution</span>
+            <span class="rvalue settle-in" style="--delay:2.2s">x = 4.4, y = 2.4</span>
+          </div>
+        </a>
+        <a href="/tool/linear-equation-solver" class="tool-card">
+          <div class="cat-label">linear equation solver</div>
+          <h3>Linear Equation Solver</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Solve a linear equation of the form ax + b = c for x.</p>
+          <div class="readout">
+            <span class="rlabel">x =</span>
+            <span class="rvalue settle-in" style="--delay:2.25s">5</span>
+          </div>
+        </a>
+        <a href="/tool/eigenvalue-calculator" class="tool-card">
+          <div class="cat-label">eigenvalues and eigenvectors calculator</div>
+          <h3>Eigenvalue &amp; Eigenvector Calculator (2x2)</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate the eigenvalues and eigenvectors of a 2x2 matrix.</p>
+          <div class="readout">
+            <span class="rlabel">Eigenvalues</span>
+            <span class="rvalue settle-in" style="--delay:2.3000000000000003s">λ₁ = 3, λ₂ = 1</span>
+          </div>
+        </a>
+        <a href="/tool/inequality-solver" class="tool-card">
+          <div class="cat-label">solution inequality calculator</div>
+          <h3>Linear Inequality Solver</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Solve a linear inequality of the form ax + b [&lt;, &gt;, ≤, ≥] c for x.</p>
+          <div class="readout">
+            <span class="rlabel">Solution</span>
+            <span class="rvalue settle-in" style="--delay:2.35s">x &gt; 2</span>
+          </div>
+        </a>
+        <a href="/tool/chemical-equation-balancer" class="tool-card">
+          <div class="cat-label">chemical equation balancer</div>
+          <h3>Chemical Equation Balancer</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Balance a chemical equation by finding the correct whole-number coefficients.</p>
+          <div class="readout">
+            <span class="rlabel">Balanced equation</span>
+            <span class="rvalue settle-in" style="--delay:2.4000000000000004s">4Fe + 3O2 → 2Fe2O3</span>
+          </div>
+        </a>
+        <a href="/tool/solubility-product-calculator" class="tool-card">
+          <div class="cat-label">solubility product calculator</div>
+          <h3>Solubility Product (Ksp) Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate the solubility product constant (Ksp) from molar solubility and ion stoichiometry.</p>
+          <div class="readout">
+            <span class="rlabel">Ksp</span>
+            <span class="rvalue settle-in" style="--delay:2.45s">3.7044e-11</span>
+          </div>
+        </a>
+        <a href="/tool/titration-ph-calculator" class="tool-card">
+          <div class="cat-label">titration ph calculator</div>
+          <h3>Titration pH Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate the pH at any point during a strong acid / strong base titration.</p>
+          <div class="readout">
+            <span class="rlabel">pH</span>
+            <span class="rvalue settle-in" style="--delay:2.5s">1.9542</span>
+          </div>
+        </a>
+        <a href="/tool/limiting-reagent-calculator" class="tool-card">
+          <div class="cat-label">how to do limiting reagent</div>
+          <h3>Limiting Reagent Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Find which of two reactants is the limiting reagent from their mass, formula, and stoichiometric coefficient.</p>
+          <div class="readout">
+            <span class="rlabel">Limiting reagent</span>
+            <span class="rvalue settle-in" style="--delay:2.5500000000000003s">O2</span>
+          </div>
+        </a>
+        <a href="/tool/half-life-calculator" class="tool-card">
+          <div class="cat-label">half life calculator</div>
+          <h3>Half-Life Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate half-life, remaining amount, or elapsed time for first-order decay (radioactive decay or…</p>
+          <div class="readout">
+            <span class="rlabel">Remaining amount</span>
+            <span class="rvalue settle-in" style="--delay:2.6s">17.67767</span>
+          </div>
+        </a>
+        <a href="/tool/hardy-weinberg-calculator" class="tool-card">
+          <div class="cat-label">hardy weinberg calculator</div>
+          <h3>Hardy-Weinberg Equilibrium Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate genotype and allele frequencies using the Hardy-Weinberg equilibrium equation.</p>
+          <div class="readout">
+            <span class="rlabel">Homozygous dominant (p²)</span>
+            <span class="rvalue settle-in" style="--delay:2.6500000000000004s">49%</span>
+          </div>
+        </a>
+        <a href="/tool/grade-calculator" class="tool-card">
+          <div class="cat-label">grade calculator</div>
+          <h3>Grade Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate a test or exam grade as a percentage and letter grade from points earned and total points.</p>
+          <div class="readout">
+            <span class="rlabel">Grade</span>
+            <span class="rvalue settle-in" style="--delay:2.7s">85%</span>
+          </div>
+        </a>
+        <a href="/tool/weighted-grade-calculator" class="tool-card">
+          <div class="cat-label">weighted grade calculator</div>
+          <h3>Weighted Grade Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate an overall course grade from category scores and weights, like homework, tests, and a final exam.</p>
+          <div class="readout">
+            <span class="rlabel">Overall grade</span>
+            <span class="rvalue settle-in" style="--delay:2.75s">87%</span>
+          </div>
+        </a>
+        <a href="/tool/gpa-calculator" class="tool-card">
+          <div class="cat-label">weighted calculator gpa</div>
+          <h3>Weighted GPA Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate your GPA on a 4.0 scale from letter grades and credit hours across up to 5 courses.</p>
+          <div class="readout">
+            <span class="rlabel">Weighted GPA</span>
+            <span class="rvalue settle-in" style="--delay:2.8000000000000003s">3.667</span>
+          </div>
+        </a>
+        <a href="/tool/speed-distance-time-calculator" class="tool-card">
+          <div class="cat-label">speed distance time calculator</div>
+          <h3>Speed, Distance &amp; Time Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Solve for speed, distance, or time using speed = distance / time - enter any two to find the third.</p>
+          <div class="readout">
+            <span class="rlabel">Speed</span>
+            <span class="rvalue settle-in" style="--delay:2.85s">60</span>
+          </div>
+        </a>
+        <a href="/tool/projectile-motion-calculator" class="tool-card">
+          <div class="cat-label">projectile motion calculator</div>
+          <h3>Projectile Motion Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate the flight time, maximum height, and range of a projectile launched at an angle.</p>
+          <div class="readout">
+            <span class="rlabel">Range</span>
+            <span class="rvalue settle-in" style="--delay:2.9000000000000004s">40.775 m</span>
+          </div>
+        </a>
+        <a href="/tool/collision-calculator" class="tool-card">
+          <div class="cat-label">collision calculator</div>
+          <h3>Momentum and Collision Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate final velocities for an elastic or perfectly inelastic collision between two objects.</p>
+          <div class="readout">
+            <span class="rlabel">Velocity 1 (after)</span>
+            <span class="rvalue settle-in" style="--delay:2.95s">-3.4 m/s</span>
+          </div>
+        </a>
+        <a href="/tool/ohms-law-calculator" class="tool-card">
+          <div class="cat-label">ohms law calculator</div>
+          <h3>Ohm's Law Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate voltage, current, resistance, or power - enter any two to find the other two.</p>
+          <div class="readout">
+            <span class="rlabel">Voltage</span>
+            <span class="rvalue settle-in" style="--delay:3s">20 V</span>
+          </div>
+        </a>
+        <a href="/tool/right-triangle-calculator" class="tool-card">
+          <div class="cat-label">right triangle calculator</div>
+          <h3>Right Triangle Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Solve a right triangle's missing sides, angles, and area from any two known sides.</p>
+          <div class="readout">
+            <span class="rlabel">Hypotenuse (c)</span>
+            <span class="rvalue settle-in" style="--delay:3.0500000000000003s">5</span>
+          </div>
+        </a>
+        <a href="/tool/absolute-risk-reduction-calculator" class="tool-card">
+          <div class="cat-label">absolute risk reduction calculator</div>
+          <h3>Absolute Risk Reduction Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate absolute risk reduction (ARR), relative risk reduction (RRR), and number needed to treat (NNT) from…</p>
+          <div class="readout">
+            <span class="rlabel">Absolute risk reduction (ARR)</span>
+            <span class="rvalue settle-in" style="--delay:3.1s">8 percentage points</span>
+          </div>
+        </a>
+        <a href="/tool/sample-size-calculator" class="tool-card">
+          <div class="cat-label">calculating sample size calculator</div>
+          <h3>Sample Size Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate the survey or study sample size needed for a chosen confidence level and margin of error.</p>
+          <div class="readout">
+            <span class="rlabel">Required sample size</span>
+            <span class="rvalue settle-in" style="--delay:3.1500000000000004s">385</span>
+          </div>
+        </a>
+        <a href="/tool/confidence-interval-calculator" class="tool-card">
+          <div class="cat-label">confidence interval calculator</div>
+          <h3>Confidence Interval Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate a confidence interval for a sample mean.</p>
+          <div class="readout">
+            <span class="rlabel">95% confidence interval</span>
+            <span class="rvalue settle-in" style="--delay:3.2s">94.6323 to 105.3677</span>
+          </div>
+        </a>
+        <a href="/tool/mean-median-mode-calculator" class="tool-card">
+          <div class="cat-label">mean median mode calculator</div>
+          <h3>Mean, Median, Mode &amp; Range Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate the mean, median, mode, and range of a data set.</p>
+          <div class="readout">
+            <span class="rlabel">Mean</span>
+            <span class="rvalue settle-in" style="--delay:3.25s">5</span>
+          </div>
+        </a>
+        <a href="/tool/roman-numeral-converter" class="tool-card">
+          <div class="cat-label">roman numeral converter</div>
+          <h3>Roman Numeral Converter</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Convert between numbers and Roman numerals, in either direction.</p>
+          <div class="readout">
+            <span class="rlabel">Roman numeral</span>
+            <span class="rvalue settle-in" style="--delay:3.3000000000000003s">MCMXCIV</span>
+          </div>
+        </a>
+        <a href="/tool/distance-modulus-calculator" class="tool-card">
+          <div class="cat-label">distance modulus calculator</div>
+          <h3>Distance Modulus Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate astronomical distance from apparent and absolute magnitude, or vice versa.</p>
+          <div class="readout">
+            <span class="rlabel">Distance</span>
+            <span class="rvalue settle-in" style="--delay:3.35s">100 pc</span>
+          </div>
+        </a>
+        <a href="/tool/earthquake-magnitude-calculator" class="tool-card">
+          <div class="cat-label">earthquake magnitude calculator</div>
+          <h3>Earthquake Magnitude Energy Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Compare the energy released by two earthquake magnitudes.</p>
+          <div class="readout">
+            <span class="rlabel">Energy ratio (M2 ÷ M1)</span>
+            <span class="rvalue settle-in" style="--delay:3.4000000000000004s">31.62×</span>
+          </div>
+        </a>
+        <a href="/tool/pressure-altitude-calculator" class="tool-card">
+          <div class="cat-label">pressure altitude calculator</div>
+          <h3>Pressure Altitude Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate pressure altitude from field elevation and altimeter setting.</p>
+          <div class="readout">
+            <span class="rlabel">Pressure altitude</span>
+            <span class="rvalue settle-in" style="--delay:3.45s">1500 ft</span>
+          </div>
+        </a>
+        <a href="/tool/circle-calculator" class="tool-card">
+          <div class="cat-label">circle calculator</div>
+          <h3>Circle Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate a circle's radius, diameter, circumference, and area from any one known value.</p>
+          <div class="readout">
+            <span class="rlabel">Radius</span>
+            <span class="rvalue settle-in" style="--delay:3.5s">5</span>
+          </div>
+        </a>
+        <a href="/tool/repeating-decimal-to-fraction-calculator" class="tool-card">
+          <div class="cat-label">repeating decimal to fraction calculator</div>
+          <h3>Repeating Decimal to Fraction Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Convert a repeating decimal into an exact fraction, with steps.</p>
+          <div class="readout">
+            <span class="rlabel">Fraction</span>
+            <span class="rvalue settle-in" style="--delay:3.5500000000000003s">1/6</span>
+          </div>
+        </a>
+        <a href="/tool/permutations-combinations-calculator" class="tool-card">
+          <div class="cat-label">permutations and combinations calculator</div>
+          <h3>Permutations and Combinations Calculator</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculate nPr (permutations) and nCr (combinations) for a set of n items chosen r at a time.</p>
+          <div class="readout">
+            <span class="rlabel">Permutations (nPr)</span>
+            <span class="rvalue settle-in" style="--delay:3.6s">720</span>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
 

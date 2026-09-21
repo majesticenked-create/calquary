@@ -52,43 +52,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="/css/styles.css" />
-  <script src="/js/calculators-data.js" defer></script>
   <script src="/js/theme.js" defer></script>
   <script src="/js/locale-switcher.js" defer></script>
-  <script defer>
-    document.addEventListener("DOMContentLoaded", () => {
-      const cat = getCategory("datetime");
-      document.getElementById("cat-code").innerHTML = `<svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${cat.icon}</svg>`;
-
-      // Card grid stays JS-rendered (interactive live-readout preview, same
-      // as the homepage) but is NOT the page's static SEO content — the h1,
-      // description, and breadcrumb above are baked directly into the HTML
-      // at build time (see build.js), not set here.
-      const tools = calculatorsInCategory(cat.id);
-      const translatedIds = {"percentage-calculator":true,"average-calculator":true,"mortgage-calculator":true,"loan-calculator":true,"compound-interest-calculator":true,"concrete-calculator":true,"flooring-calculator":true,"calorie-calculator":true,"bmi-calculator":true,"bmr-calculator":true,"age-calculator":true,"days-until-calculator":true,"unit-length-converter":true,"temperature-converter":true,"word-counter":true,"case-converter":true,"dog-age-calculator":true,"cat-age-calculator":true,"cat-pregnancy-calculator":true,"dog-pregnancy-calculator":true,"simple-interest-calculator":true,"sales-tax-calculator":true,"tip-calculator":true,"discount-calculator":true,"gpa-calculator":true,"body-fat-calculator":true,"amortization-schedule-calculator":true,"mortgage-payoff-calculator":true,"heloc-calculator":true,"home-affordability-calculator":true,"hourly-to-salary-calculator":true,"time-card-calculator":true,"savings-calculator":true,"tvm-solver":true,"irr-npv-calculator":true,"budget-calculator":true,"apr-to-apy-calculator":true,"price-calculator":true,"debt-payoff-calculator":true,"dti-ratio-calculator":true,"credit-card-payoff-calculator":true,"auto-loan-calculator":true,"investment-calculator":true,"retirement-401k-calculator":true,"bond-duration-calculator":true,"gas-trip-cost-calculator":true,"paint-calculator":true,"mulch-calculator":true,"gravel-calculator":true,"drywall-calculator":true,"tile-calculator":true,"roofing-calculator":true,"square-footage-calculator":true,"fence-calculator":true,"insulation-calculator":true,"ac-btu-calculator":true,"lumber-calculator":true,"paver-calculator":true,"mix-ratio-calculator":true,"height-percentile-calculator":true,"body-surface-area-calculator":true,"macro-calculator":true,"water-intake-calculator":true,"one-rep-max-calculator":true,"heart-rate-zone-calculator":true,"ideal-weight-calculator":true,"bra-size-calculator":true,"pace-calculator":true,"steps-to-miles-calculator":true,"pregnancy-due-date-calculator":true,"ovulation-calculator":true,"calories-burned-calculator":true,"dog-food-calculator":true,"rabbit-age-calculator":true,"horse-age-calculator":true,"ideal-dog-weight-calculator":true,"date-duration-calculator":true,"business-days-calculator":true,"time-duration-calculator":true,"time-add-calculator":true,"online-timer":true,"online-alarm-clock":true,"online-stopwatch":true,"current-time":true,"random-date-generator":true,"military-time-converter":true,"unix-timestamp-converter":true,"week-number-calculator":true,"time-zone-converter":true,"daylight-saving-time-calculator":true,"sunrise-sunset-calculator":true,"sun-position-calculator":true,"day-of-week-calculator":true,"leap-year-calculator":true,"birth-year-calculator":true,"time-zone-meeting-planner":true,"day-of-the-week-calculator":true,"screen-ppi-calculator":true,"print-dpi-calculator":true,"time-unit-converter":true,"oven-temperature-converter":true,"rainfall-volume-calculator":true,"water-density-calculator":true,"weight-converter":true,"volume-converter":true,"cooking-converter":true,"microwave-wattage-converter":true,"electricity-cost-calculator":true,"ppm-percent-converter":true,"speed-converter":true,"area-converter":true,"data-storage-converter":true,"pressure-converter":true,"torque-converter":true,"fuel-economy-converter":true,"gear-ratio-calculator":true,"tire-size-calculator":true,"weather-comfort-calculator":true,"color-difference-checker":true,"list-shuffler":true,"weighted-random-picker":true,"password-generator":true,"uuid-generator":true,"random-number-generator":true,"coin-flipper":true,"dice-roller":true,"card-deck-shuffler":true,"color-mixer":true,"lorem-ipsum-generator":true,"text-to-slug-generator":true,"binary-to-text-converter":true,"word-frequency-counter":true,"url-encoder-decoder":true,"ip-subnet-calculator":true,"json-compare":true,"cidr-calculator":true,"group-randomizer":true,"percentage-change-calculator":true,"fraction-calculator":true,"pi-digits-calculator":true,"long-division-calculator":true,"long-multiplication-calculator":true,"gcd-lcm-calculator":true,"factor-calculator":true,"standard-deviation-calculator":true,"t-test-calculator":true,"effect-size-calculator":true,"mann-whitney-u-calculator":true,"sequences-series-calculator":true,"coupon-collector-calculator":true,"similarity-ratio-calculator":true,"correlation-calculator":true,"z-score-calculator":true,"confusion-matrix-calculator":true,"odds-probability-converter":true,"normal-distribution-calculator":true,"lottery-odds-calculator":true,"poker-hand-probability-calculator":true,"square-root-calculator":true,"ratio-calculator":true,"aspect-ratio-calculator":true,"exponent-calculator":true,"logarithm-calculator":true,"vector-calculator":true,"haversine-distance-calculator":true,"quadratic-formula-calculator":true,"cone-volume-calculator":true,"cylinder-volume-calculator":true,"pythagorean-theorem-calculator":true,"distance-formula-calculator":true,"triangle-solver":true,"hypergeometric-calculator":true,"trapezoid-area-calculator":true,"rectangular-prism-volume-calculator":true,"slope-calculator":true,"sector-calculator":true,"grade-gradient-calculator":true,"molecular-weight-calculator":true,"empirical-formula-calculator":true,"system-of-equations-solver":true,"linear-equation-solver":true,"eigenvalue-calculator":true,"inequality-solver":true,"chemical-equation-balancer":true,"solubility-product-calculator":true,"titration-ph-calculator":true,"limiting-reagent-calculator":true,"half-life-calculator":true,"hardy-weinberg-calculator":true,"grade-calculator":true,"weighted-grade-calculator":true,"speed-distance-time-calculator":true,"projectile-motion-calculator":true,"collision-calculator":true,"ohms-law-calculator":true,"right-triangle-calculator":true,"absolute-risk-reduction-calculator":true,"sample-size-calculator":true,"confidence-interval-calculator":true,"mean-median-mode-calculator":true,"roman-numeral-converter":true,"distance-modulus-calculator":true,"earthquake-magnitude-calculator":true,"pressure-altitude-calculator":true,"circle-calculator":true,"repeating-decimal-to-fraction-calculator":true,"permutations-combinations-calculator":true};
-      const grid = document.getElementById("cat-tool-grid");
-      tools.forEach((calc, i) => {
-        const sampleResult = calc.compute(
-          Object.fromEntries(calc.fields.map((f) => [f.id, f.type === "checkbox-group" ? (f.default || []) : f.default]))
-        );
-        const a = document.createElement("a");
-        // Locale pages only have a localized tool page for the wave-one
-        // batch — link straight through to it when it exists, otherwise
-        // fall back to the English canonical rather than a 404.
-        a.href = translatedIds[calc.id] ? `/pt/tool/${calc.id}` : `https://calquary.com/tool/${calc.id}`;
-        a.className = "tool-card";
-        a.innerHTML = `
-          <div class="cat-label">${calc.keyword}</div>
-          <h3>${calc.title}</h3>
-          <div class="readout">
-            <span class="rlabel">${sampleResult.primary.label}</span>
-            <span class="rvalue" style="--delay:${0.05 * i}s">${sampleResult.primary.value}</span>
-          </div>
-        `;
-        grid.appendChild(a);
-      });
-    });
-  </script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -140,7 +105,7 @@
   <section class="category-hero">
     <div class="wrap">
       <div class="breadcrumb"><a href="/pt/">Calquary</a> / Categorias</div>
-      <span class="code-badge" id="cat-code"></span>
+      <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><line x1="12" y1="12" x2="12" y2="7"/><line x1="12" y1="12" x2="16" y2="14"/></svg></span>
       <h1>Calculadoras de Data e Hora</h1>
       <p style="max-width:56ch;">Contagens regressivas, durações e idade em dias.</p>
     </div>
@@ -154,7 +119,215 @@
 
   <section class="section">
     <div class="wrap">
-      <div class="tool-grid" id="cat-tool-grid"></div>
+      <div class="tool-grid" id="cat-tool-grid">
+        <a href="/pt/tool/days-until-calculator" class="tool-card">
+          <div class="cat-label">how many days until</div>
+          <h3>Calculadora de Dias Restantes</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Descubra quantos dias faltam até qualquer data futura.</p>
+          <div class="readout">
+            <span class="rlabel">Days remaining</span>
+            <span class="rvalue settle-in" style="--delay:0s">60</span>
+          </div>
+        </a>
+        <a href="/pt/tool/date-duration-calculator" class="tool-card">
+          <div class="cat-label">date calculator</div>
+          <h3>Calculadora de Duração entre Datas</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calcule o número de dias, semanas, meses e anos entre duas datas.</p>
+          <div class="readout">
+            <span class="rlabel">Days between</span>
+            <span class="rvalue settle-in" style="--delay:0.05s">365</span>
+          </div>
+        </a>
+        <a href="/pt/tool/business-days-calculator" class="tool-card">
+          <div class="cat-label">business days calculator</div>
+          <h3>Calculadora de Dias Úteis</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Conte o número de dias da semana entre duas datas.</p>
+          <div class="readout">
+            <span class="rlabel">Business days</span>
+            <span class="rvalue settle-in" style="--delay:0.1s">23</span>
+          </div>
+        </a>
+        <a href="/pt/tool/time-duration-calculator" class="tool-card">
+          <div class="cat-label">time duration calculator</div>
+          <h3>Calculadora de Duração de Tempo</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calcule a duração entre dois horários do dia, incluindo períodos noturnos.</p>
+          <div class="readout">
+            <span class="rlabel">Duration</span>
+            <span class="rvalue settle-in" style="--delay:0.15000000000000002s">8h 30m</span>
+          </div>
+        </a>
+        <a href="/pt/tool/time-add-calculator" class="tool-card">
+          <div class="cat-label">time add calculator</div>
+          <h3>Calculadora de Somar/Subtrair Tempo</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Some ou subtraia horas e minutos a ou de um horário inicial.</p>
+          <div class="readout">
+            <span class="rlabel">Resulting time</span>
+            <span class="rvalue settle-in" style="--delay:0.2s">14:45 (2:45 PM)</span>
+          </div>
+        </a>
+        <a href="/pt/tool/online-timer" class="tool-card">
+          <div class="cat-label">online timer</div>
+          <h3>Cronômetro Online</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Um cronômetro de contagem regressiva gratuito que funciona no seu navegador - defina minutos e segundos,…</p>
+          <div class="readout">
+            <span class="rlabel">Default duration</span>
+            <span class="rvalue settle-in" style="--delay:0.25s">5:00</span>
+          </div>
+        </a>
+        <a href="/pt/tool/online-alarm-clock" class="tool-card">
+          <div class="cat-label">online alarm clock</div>
+          <h3>Despertador Online</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Um despertador gratuito que funciona no seu navegador - defina um horário e ele alerta você quando seu…</p>
+          <div class="readout">
+            <span class="rlabel">Alarm status</span>
+            <span class="rvalue settle-in" style="--delay:0.30000000000000004s">Not set</span>
+          </div>
+        </a>
+        <a href="/pt/tool/online-stopwatch" class="tool-card">
+          <div class="cat-label">online stopwatch</div>
+          <h3>Cronômetro Online</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Um cronômetro gratuito que funciona no seu navegador - inicie, marque voltas e reinicie com precisão de…</p>
+          <div class="readout">
+            <span class="rlabel">Elapsed time</span>
+            <span class="rvalue settle-in" style="--delay:0.35000000000000003s">00:00.0</span>
+          </div>
+        </a>
+        <a href="/pt/tool/current-time" class="tool-card">
+          <div class="cat-label">current time</div>
+          <h3>Hora Atual</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Veja a hora e data atual exata, atualizando ao vivo no seu navegador.</p>
+          <div class="readout">
+            <span class="rlabel">Current time</span>
+            <span class="rvalue settle-in" style="--delay:0.4s">Live</span>
+          </div>
+        </a>
+        <a href="/pt/tool/random-date-generator" class="tool-card">
+          <div class="cat-label">generate random date</div>
+          <h3>Gerador de Datas Aleatórias</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Gere uma ou mais datas aleatórias dentro de um intervalo de datas escolhido.</p>
+          <div class="readout">
+            <span class="rlabel">Random date</span>
+            <span class="rvalue settle-in" style="--delay:0.45s">2026-06-01</span>
+          </div>
+        </a>
+        <a href="/pt/tool/military-time-converter" class="tool-card">
+          <div class="cat-label">military time converter</div>
+          <h3>Conversor de Hora Militar</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Converta hora de relógio de 12 horas para hora militar (exército) de 24 horas, e vice-versa.</p>
+          <div class="readout">
+            <span class="rlabel">Military time</span>
+            <span class="rvalue settle-in" style="--delay:0.5s">14:30</span>
+          </div>
+        </a>
+        <a href="/pt/tool/unix-timestamp-converter" class="tool-card">
+          <div class="cat-label">unix timestamp converter</div>
+          <h3>Conversor de Timestamp Unix</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Converta um timestamp Unix (tempo epoch) em uma data legível por humanos, ou uma data em timestamp.</p>
+          <div class="readout">
+            <span class="rlabel">Date from timestamp</span>
+            <span class="rvalue settle-in" style="--delay:0.55s">2025-01-01 00:00:00 UTC</span>
+          </div>
+        </a>
+        <a href="/pt/tool/week-number-calculator" class="tool-card">
+          <div class="cat-label">week number calculator</div>
+          <h3>Calculadora de Número da Semana</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Encontre o número da semana ISO para qualquer data.</p>
+          <div class="readout">
+            <span class="rlabel">ISO week number</span>
+            <span class="rvalue settle-in" style="--delay:0.6000000000000001s">24</span>
+          </div>
+        </a>
+        <a href="/pt/tool/time-zone-converter" class="tool-card">
+          <div class="cat-label">time zone converter</div>
+          <h3>Conversor de Fuso Horário</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Converta uma hora de um fuso horário para outro, incluindo a hora atual em qualquer fuso.</p>
+          <div class="readout">
+            <span class="rlabel">Time in destination zone</span>
+            <span class="rvalue settle-in" style="--delay:0.65s">Mon, Sep 21, 2026, 08:58 PM</span>
+          </div>
+        </a>
+        <a href="/pt/tool/daylight-saving-time-calculator" class="tool-card">
+          <div class="cat-label">daylight saving time calculator</div>
+          <h3>Calculadora de Horário de Verão</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Encontre quando os relógios mudam para o horário de verão em qualquer fuso horário.</p>
+          <div class="readout">
+            <span class="rlabel">Daylight saving time</span>
+            <span class="rvalue settle-in" style="--delay:0.7000000000000001s">Not observed</span>
+          </div>
+        </a>
+        <a href="/pt/tool/sunrise-sunset-calculator" class="tool-card">
+          <div class="cat-label">sunrise sunset calculator</div>
+          <h3>Calculadora de Nascer e Pôr do Sol</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Encontre os horários de nascer e pôr do sol para qualquer data e grande cidade.</p>
+          <div class="readout">
+            <span class="rlabel">Sunrise</span>
+            <span class="rvalue settle-in" style="--delay:0.75s">06:43 AM</span>
+          </div>
+        </a>
+        <a href="/pt/tool/sun-position-calculator" class="tool-card">
+          <div class="cat-label">sun position calculator</div>
+          <h3>Calculadora de Posição Solar</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Encontre a altitude e azimute do sol (meio-dia solar, direção e altura no céu) para qualquer data, hora e…</p>
+          <div class="readout">
+            <span class="rlabel">Sun altitude</span>
+            <span class="rvalue settle-in" style="--delay:0.8s">-23.4° (below horizon)</span>
+          </div>
+        </a>
+        <a href="/pt/tool/day-of-week-calculator" class="tool-card">
+          <div class="cat-label">day of the week calculator</div>
+          <h3>Calculadora do Dia da Semana</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Descubra em que dia da semana qualquer data cai.</p>
+          <div class="readout">
+            <span class="rlabel">Day of the week</span>
+            <span class="rvalue settle-in" style="--delay:0.8500000000000001s">Saturday</span>
+          </div>
+        </a>
+        <a href="/pt/tool/leap-year-calculator" class="tool-card">
+          <div class="cat-label">leap year calculator</div>
+          <h3>Calculadora de Ano Bissexto</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Verifique se um ano é bissexto e encontre o próximo.</p>
+          <div class="readout">
+            <span class="rlabel">Is it a leap year?</span>
+            <span class="rvalue settle-in" style="--delay:0.9s">Yes</span>
+          </div>
+        </a>
+        <a href="/pt/tool/age-calculator" class="tool-card">
+          <div class="cat-label">age calculator</div>
+          <h3>Calculadora de Idade</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calcule a idade exata em anos, meses e dias.</p>
+          <div class="readout">
+            <span class="rlabel">Age</span>
+            <span class="rvalue settle-in" style="--delay:0.9500000000000001s">31 yrs, 3 mo, 6 days</span>
+          </div>
+        </a>
+        <a href="/pt/tool/birth-year-calculator" class="tool-card">
+          <div class="cat-label">birth year calculator</div>
+          <h3>Calculadora de Ano de Nascimento</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Estime o ano de nascimento (ou intervalo de anos) de alguém a partir de sua idade atual.</p>
+          <div class="readout">
+            <span class="rlabel">Possible birth year</span>
+            <span class="rvalue settle-in" style="--delay:1s">1995 or 1996</span>
+          </div>
+        </a>
+        <a href="/pt/tool/time-zone-meeting-planner" class="tool-card">
+          <div class="cat-label">time zone meeting planner</div>
+          <h3>Planejador de Reuniões em Fusos Horários</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Veja um horário de reunião em múltiplos fusos horários ao mesmo tempo.</p>
+          <div class="readout">
+            <span class="rlabel">Your time</span>
+            <span class="rvalue settle-in" style="--delay:1.05s">Mon 08:58 PM</span>
+          </div>
+        </a>
+        <a href="/pt/tool/day-of-the-week-calculator" class="tool-card">
+          <div class="cat-label">day of the week calculator</div>
+          <h3>Calculadora do Dia da Semana</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Descubra em que dia da semana qualquer data cai, passada ou futura.</p>
+          <div class="readout">
+            <span class="rlabel">Day of the week</span>
+            <span class="rvalue settle-in" style="--delay:1.1s">Monday</span>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
 

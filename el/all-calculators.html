@@ -52,62 +52,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="/css/styles.css" />
-  <script src="/js/calculators-data.js" defer></script>
-  <script src="/js/i18n-titles.js" defer></script>
   <script src="/js/theme.js" defer></script>
   <script src="/js/locale-switcher.js" defer></script>
-  <script>window.CALQ_LOCALE = "el"; window.CALQ_LOCALE_PATH = "el/";</script>
-  <script defer>
-    document.addEventListener("DOMContentLoaded", () => {
-      const LOC = window.CALQ_LOCALE;
-      const LPATH = window.CALQ_LOCALE_PATH;
-      function catName(cat) {
-        return (LOC !== "en" && window.I18N_CATEGORIES && window.I18N_CATEGORIES[cat.id] && window.I18N_CATEGORIES[cat.id][LOC])
-          ? window.I18N_CATEGORIES[cat.id][LOC].name : cat.name;
-      }
-      function toolTitle(calc) {
-        return (LOC !== "en" && window.I18N_TITLES && window.I18N_TITLES[calc.id] && window.I18N_TITLES[calc.id][LOC])
-          ? window.I18N_TITLES[calc.id][LOC] : calc.title;
-      }
-      function isTranslated(calcId) {
-        return LOC !== "en" && window.I18N_TITLES && window.I18N_TITLES[calcId] && window.I18N_TITLES[calcId][LOC];
-      }
-      function toolHref(calcId) {
-        return isTranslated(calcId) ? `/${LPATH}tool/${calcId}` : `https://calquary.com/tool/${calcId}`;
-      }
-      function catHref(catId) {
-        return `/${LPATH}category/${catId}`;
-      }
-
-      const wrap = document.getElementById("index-categories");
-      CATEGORIES.forEach((cat) => {
-        const tools = calculatorsInCategory(cat.id);
-
-        const section = document.createElement("section");
-        section.className = "index-category";
-
-        const head = document.createElement("div");
-        head.className = "index-category-head";
-        head.innerHTML = `
-          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${cat.icon}</svg></span>
-          <h2><a href="${catHref(cat.id)}">${catName(cat)}</a></h2>
-          <span class="count">${tools.length} tool${tools.length === 1 ? "" : "s"}</span>
-        `;
-        section.appendChild(head);
-
-        const list = document.createElement("ul");
-        list.className = "related-list index-columns";
-        tools.forEach((calc) => {
-          const li = document.createElement("li");
-          li.innerHTML = `<a href="${toolHref(calc.id)}">${toolTitle(calc)}</a>`;
-          list.appendChild(li);
-        });
-        section.appendChild(list);
-
-        wrap.appendChild(section);
-      });
-    });
-  </script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -166,7 +112,287 @@
 
   <section class="section">
     <div class="wrap">
-      <div id="index-categories"></div>
+      <div id="index-categories">
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/><line x1="18" y1="6" x2="6" y2="18"/></svg></span>
+          <h2><a href="/el/category/math">Μαθηματικά</a></h2>
+          <span class="count">73 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/el/tool/percentage-calculator">Αριθμομηχανή Ποσοστών</a></li>
+            <li><a href="/el/tool/percentage-change-calculator">Υπολογιστής Ποσοστιαίας Μεταβολής</a></li>
+            <li><a href="/el/tool/average-calculator">Αριθμομηχανή Μέσου Όρου</a></li>
+            <li><a href="/el/tool/fraction-calculator">Υπολογιστής Κλασμάτων</a></li>
+            <li><a href="/el/tool/pi-digits-calculator">Υπολογιστής Ψηφίων του Πι</a></li>
+            <li><a href="/el/tool/long-division-calculator">Υπολογιστής Διαίρεσης με Υπόλοιπο</a></li>
+            <li><a href="/el/tool/long-multiplication-calculator">Υπολογιστής Πολλαπλασιασμού με Στήλες</a></li>
+            <li><a href="/el/tool/gcd-lcm-calculator">Υπολογιστής ΜΚΔ και ΕΚΠ</a></li>
+            <li><a href="/el/tool/factor-calculator">Υπολογιστής Παραγόντων</a></li>
+            <li><a href="/el/tool/standard-deviation-calculator">Υπολογιστής Τυπικής Απόκλισης</a></li>
+            <li><a href="/el/tool/t-test-calculator">Υπολογιστής Δοκιμής T</a></li>
+            <li><a href="/el/tool/effect-size-calculator">Υπολογιστής Μεγέθους Επίδρασης (d του Cohen)</a></li>
+            <li><a href="/el/tool/mann-whitney-u-calculator">Υπολογιστής Δοκιμής U Mann-Whitney</a></li>
+            <li><a href="/el/tool/sequences-series-calculator">Υπολογιστής Ακολουθιών και Σειρών</a></li>
+            <li><a href="/el/tool/coupon-collector-calculator">Υπολογιστής του Προβλήματος του Συλλέκτη Κουπονιών</a></li>
+            <li><a href="/el/tool/similarity-ratio-calculator">Υπολογιστής Λόγου Ομοιότητας</a></li>
+            <li><a href="/el/tool/correlation-calculator">Υπολογιστής Συντελεστή Συσχέτισης</a></li>
+            <li><a href="/el/tool/z-score-calculator">Υπολογιστής Βαθμολογίας Z (Τυποποιημένη Βαθμολογία)</a></li>
+            <li><a href="/el/tool/confusion-matrix-calculator">Υπολογιστής Πίνακα Σύγχυσης</a></li>
+            <li><a href="/el/tool/odds-probability-converter">Μετατροπέας Πιθανοτήτων σε Πιθανότητα</a></li>
+            <li><a href="/el/tool/normal-distribution-calculator">Υπολογιστής Κανονικής Κατανομής</a></li>
+            <li><a href="/el/tool/lottery-odds-calculator">Υπολογιστής Πιθανοτήτων Λαχείου</a></li>
+            <li><a href="/el/tool/poker-hand-probability-calculator">Υπολογιστής Πιθανότητας Χεριών Πόκερ</a></li>
+            <li><a href="/el/tool/square-root-calculator">Υπολογιστής Τετραγωνικής Ρίζας</a></li>
+            <li><a href="/el/tool/ratio-calculator">Υπολογιστής Λόγου</a></li>
+            <li><a href="/el/tool/aspect-ratio-calculator">Υπολογιστής Λόγου Διαστάσεων</a></li>
+            <li><a href="/el/tool/exponent-calculator">Υπολογιστής Εκθετών</a></li>
+            <li><a href="/el/tool/logarithm-calculator">Υπολογιστής Λογαρίθμων</a></li>
+            <li><a href="/el/tool/vector-calculator">Υπολογιστής Διανυσμάτων</a></li>
+            <li><a href="/el/tool/haversine-distance-calculator">Υπολογιστής Απόστασης και Κατεύθυνσης (Γεωγραφικό Πλάτος/Μήκος)</a></li>
+            <li><a href="/el/tool/quadratic-formula-calculator">Υπολογιστής Δευτεροβάθμιας Εξίσωσης</a></li>
+            <li><a href="/el/tool/cone-volume-calculator">Υπολογιστής Όγκου Κώνου</a></li>
+            <li><a href="/el/tool/cylinder-volume-calculator">Υπολογιστής Όγκου Κυλίνδρου</a></li>
+            <li><a href="/el/tool/pythagorean-theorem-calculator">Υπολογιστής Πυθαγορείου Θεωρήματος</a></li>
+            <li><a href="/el/tool/distance-formula-calculator">Υπολογιστής Τύπου Απόστασης</a></li>
+            <li><a href="/el/tool/triangle-solver">Επιλυτής Τριγώνου (ΠΠΠ)</a></li>
+            <li><a href="/el/tool/hypergeometric-calculator">Υπολογιστής Υπεργεωμετρικής Κατανομής</a></li>
+            <li><a href="/el/tool/trapezoid-area-calculator">Υπολογιστής Εμβαδού Τραπεζίου</a></li>
+            <li><a href="/el/tool/rectangular-prism-volume-calculator">Υπολογιστής Όγκου Ορθογωνίου Πρίσματος</a></li>
+            <li><a href="/el/tool/slope-calculator">Υπολογιστής Κλίσης</a></li>
+            <li><a href="/el/tool/sector-calculator">Υπολογιστής Κυκλικού Τομέα</a></li>
+            <li><a href="/el/tool/grade-gradient-calculator">Υπολογιστής Κλίσης / Διαβαθμίσεως</a></li>
+            <li><a href="/el/tool/molecular-weight-calculator">Υπολογιστής Μοριακού Βάρους</a></li>
+            <li><a href="/el/tool/empirical-formula-calculator">Υπολογιστής Εμπειρικού Τύπου</a></li>
+            <li><a href="/el/tool/system-of-equations-solver">Επιλυτής Συστήματος Εξισώσεων</a></li>
+            <li><a href="/el/tool/linear-equation-solver">Επιλυτής Γραμμικής Εξίσωσης</a></li>
+            <li><a href="/el/tool/eigenvalue-calculator">Υπολογιστής Ιδιοτιμών &amp; Ιδιοδιανυσμάτων (2x2)</a></li>
+            <li><a href="/el/tool/inequality-solver">Επιλυτής Γραμμικής Ανίσωσης</a></li>
+            <li><a href="/el/tool/chemical-equation-balancer">Εξισορροπητής Χημικών Εξισώσεων</a></li>
+            <li><a href="/el/tool/solubility-product-calculator">Υπολογιστής Γινομένου Διαλυτότητας (Ksp)</a></li>
+            <li><a href="/el/tool/titration-ph-calculator">Υπολογιστής pH Ογκομέτρησης</a></li>
+            <li><a href="/el/tool/limiting-reagent-calculator">Υπολογιστής Περιοριστικού Αντιδραστηρίου</a></li>
+            <li><a href="/el/tool/half-life-calculator">Υπολογιστής Χρόνου Ημιζωής</a></li>
+            <li><a href="/el/tool/hardy-weinberg-calculator">Υπολογιστής Ισορροπίας Hardy-Weinberg</a></li>
+            <li><a href="/el/tool/grade-calculator">Υπολογιστής Βαθμού</a></li>
+            <li><a href="/el/tool/weighted-grade-calculator">Υπολογιστής Σταθμισμένου Βαθμού</a></li>
+            <li><a href="/el/tool/gpa-calculator">Αριθμομηχανή Σταθμισμένου Μέσου Όρου (GPA)</a></li>
+            <li><a href="/el/tool/speed-distance-time-calculator">Υπολογιστής Ταχύτητας, Απόστασης και Χρόνου</a></li>
+            <li><a href="/el/tool/projectile-motion-calculator">Υπολογιστής Βλητικής Κίνησης</a></li>
+            <li><a href="/el/tool/collision-calculator">Υπολογιστής Ορμής και Σύγκρουσης</a></li>
+            <li><a href="/el/tool/ohms-law-calculator">Υπολογιστής Νόμου του Ωμ</a></li>
+            <li><a href="/el/tool/right-triangle-calculator">Υπολογιστής Ορθογωνίου Τριγώνου</a></li>
+            <li><a href="/el/tool/absolute-risk-reduction-calculator">Υπολογιστής Απόλυτης Μείωσης Κινδύνου</a></li>
+            <li><a href="/el/tool/sample-size-calculator">Υπολογιστής Μεγέθους Δείγματος</a></li>
+            <li><a href="/el/tool/confidence-interval-calculator">Υπολογιστής Διαστήματος Εμπιστοσύνης</a></li>
+            <li><a href="/el/tool/mean-median-mode-calculator">Υπολογιστής Μέσου Όρου, Διαμέσου, Επικρατούσας Τιμής και Εύρους</a></li>
+            <li><a href="/el/tool/roman-numeral-converter">Μετατροπέας Ρωμαϊκών Αριθμών</a></li>
+            <li><a href="/el/tool/distance-modulus-calculator">Υπολογιστής Δείκτη Απόστασης</a></li>
+            <li><a href="/el/tool/earthquake-magnitude-calculator">Υπολογιστής Ενέργειας Μεγέθους Σεισμού</a></li>
+            <li><a href="/el/tool/pressure-altitude-calculator">Υπολογιστής Ύψους Πίεσης</a></li>
+            <li><a href="/el/tool/circle-calculator">Υπολογιστής Κύκλου</a></li>
+            <li><a href="/el/tool/repeating-decimal-to-fraction-calculator">Υπολογιστής Περιοδικού Δεκαδικού σε Κλάσμα</a></li>
+            <li><a href="/el/tool/permutations-combinations-calculator">Υπολογιστής Μεταθέσεων και Συνδυασμών</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="19" x2="5" y2="13"/><line x1="12" y1="19" x2="12" y2="9"/><line x1="19" y1="19" x2="19" y2="5"/></svg></span>
+          <h2><a href="/el/category/finance">Οικονομικά</a></h2>
+          <span class="count">27 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/el/tool/loan-calculator">Αριθμομηχανή Δόσης Δανείου</a></li>
+            <li><a href="/el/tool/amortization-schedule-calculator">Αριθμομηχανή Πίνακα Απόσβεσης</a></li>
+            <li><a href="/el/tool/mortgage-payoff-calculator">Αριθμομηχανή Πρόωρης Εξόφλησης Στεγαστικού</a></li>
+            <li><a href="/el/tool/heloc-calculator">Αριθμομηχανή Πληρωμής HELOC</a></li>
+            <li><a href="/el/tool/mortgage-calculator">Αριθμομηχανή Στεγαστικού Δανείου</a></li>
+            <li><a href="/el/tool/home-affordability-calculator">Αριθμομηχανή Πόσο Σπίτι Μπορώ να Αντέξω</a></li>
+            <li><a href="/el/tool/hourly-to-salary-calculator">Αριθμομηχανή Ωρομισθίου σε Ετήσιο Μισθό</a></li>
+            <li><a href="/el/tool/time-card-calculator">Αριθμομηχανή Κάρτας Εργασίας</a></li>
+            <li><a href="/el/tool/tip-calculator">Αριθμομηχανή Φιλοδωρήματος</a></li>
+            <li><a href="/el/tool/savings-calculator">Αριθμομηχανή Αποταμίευσης</a></li>
+            <li><a href="/el/tool/tvm-solver">Επιλυτής TVM (ΠΑ, ΜΑ, PMT)</a></li>
+            <li><a href="/el/tool/irr-npv-calculator">Αριθμομηχανή IRR και NPV</a></li>
+            <li><a href="/el/tool/budget-calculator">Αριθμομηχανή Προϋπολογισμού</a></li>
+            <li><a href="/el/tool/compound-interest-calculator">Αριθμομηχανή Ανατοκισμού</a></li>
+            <li><a href="/el/tool/apr-to-apy-calculator">Αριθμομηχανή από ΕΕΠ σε Πραγματικό Ετήσιο Επιτόκιο (APY/EAR)</a></li>
+            <li><a href="/el/tool/sales-tax-calculator">Αριθμομηχανή Φόρου Πωλήσεων</a></li>
+            <li><a href="/el/tool/discount-calculator">Αριθμομηχανή Έκπτωσης</a></li>
+            <li><a href="/el/tool/price-calculator">Αριθμομηχανή Τιμής</a></li>
+            <li><a href="/el/tool/debt-payoff-calculator">Αριθμομηχανή Εξόφλησης Χρέους</a></li>
+            <li><a href="/el/tool/dti-ratio-calculator">Αριθμομηχανή Λόγου Χρέους προς Εισόδημα (DTI)</a></li>
+            <li><a href="/el/tool/credit-card-payoff-calculator">Αριθμομηχανή Εξόφλησης Πιστωτικής Κάρτας</a></li>
+            <li><a href="/el/tool/auto-loan-calculator">Αριθμομηχανή Δανείου Αυτοκινήτου</a></li>
+            <li><a href="/el/tool/investment-calculator">Αριθμομηχανή Επένδυσης</a></li>
+            <li><a href="/el/tool/retirement-401k-calculator">Αριθμομηχανή Συνταξιοδότησης 401(k)</a></li>
+            <li><a href="/el/tool/bond-duration-calculator">Αριθμομηχανή Διάρκειας Ομολόγου</a></li>
+            <li><a href="/el/tool/gas-trip-cost-calculator">Αριθμομηχανή Κόστους Βενζίνης Ταξιδιού</a></li>
+            <li><a href="/el/tool/simple-interest-calculator">Αριθμομηχανή Απλού Τόκου</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.5 12 5l8 6.5"/><path d="M6 10v9h12v-9"/></svg></span>
+          <h2><a href="/el/category/construction">Κατασκευές και Σπίτι</a></h2>
+          <span class="count">15 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/el/tool/concrete-calculator">Αριθμομηχανή Σκυροδέματος</a></li>
+            <li><a href="/el/tool/paint-calculator">Αριθμομηχανή Μπογιάς</a></li>
+            <li><a href="/el/tool/mulch-calculator">Αριθμομηχανή Επίστρωσης Εδάφους (Mulch)</a></li>
+            <li><a href="/el/tool/gravel-calculator">Αριθμομηχανή Χαλικιού</a></li>
+            <li><a href="/el/tool/flooring-calculator">Αριθμομηχανή Δαπέδου</a></li>
+            <li><a href="/el/tool/drywall-calculator">Αριθμομηχανή Γυψοσανίδας</a></li>
+            <li><a href="/el/tool/tile-calculator">Αριθμομηχανή Πλακιδίων</a></li>
+            <li><a href="/el/tool/roofing-calculator">Αριθμομηχανή Στέγης</a></li>
+            <li><a href="/el/tool/square-footage-calculator">Αριθμομηχανή Τετραγωνικών Ποδιών</a></li>
+            <li><a href="/el/tool/fence-calculator">Αριθμομηχανή Φράχτη</a></li>
+            <li><a href="/el/tool/insulation-calculator">Αριθμομηχανή Μόνωσης</a></li>
+            <li><a href="/el/tool/ac-btu-calculator">Αριθμομηχανή Μεγέθους Κλιματιστικού (BTU)</a></li>
+            <li><a href="/el/tool/lumber-calculator">Αριθμομηχανή Ξυλείας</a></li>
+            <li><a href="/el/tool/paver-calculator">Αριθμομηχανή Πλακών Πεζοδρομίου (Pavers)</a></li>
+            <li><a href="/el/tool/mix-ratio-calculator">Αριθμομηχανή Αναλογίας Μείγματος</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3,12 8,12 10,6 14,18 16,12 21,12"/></svg></span>
+          <h2><a href="/el/category/health">Υγεία και Φυσική Κατάσταση</a></h2>
+          <span class="count">17 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/el/tool/bmi-calculator">Αριθμομηχανή ΔΜΣ</a></li>
+            <li><a href="/el/tool/height-percentile-calculator">Αριθμομηχανή Εκατοστημορίου Ύψους</a></li>
+            <li><a href="/el/tool/bmr-calculator">Αριθμομηχανή Βασικού Μεταβολικού Ρυθμού</a></li>
+            <li><a href="/el/tool/body-surface-area-calculator">Αριθμομηχανή Επιφάνειας Σώματος</a></li>
+            <li><a href="/el/tool/calorie-calculator">Αριθμομηχανή Θερμίδων</a></li>
+            <li><a href="/el/tool/body-fat-calculator">Αριθμομηχανή Σωματικού Λίπους</a></li>
+            <li><a href="/el/tool/macro-calculator">Αριθμομηχανή Μακροθρεπτικών Συστατικών</a></li>
+            <li><a href="/el/tool/water-intake-calculator">Αριθμομηχανή Πρόσληψης Νερού</a></li>
+            <li><a href="/el/tool/one-rep-max-calculator">Αριθμομηχανή Μέγιστης Επανάληψης (1RM)</a></li>
+            <li><a href="/el/tool/heart-rate-zone-calculator">Αριθμομηχανή Ζωνών Καρδιακού Ρυθμού</a></li>
+            <li><a href="/el/tool/ideal-weight-calculator">Αριθμομηχανή Ιδανικού Βάρους</a></li>
+            <li><a href="/el/tool/bra-size-calculator">Αριθμομηχανή Μεγέθους Σουτιέν</a></li>
+            <li><a href="/el/tool/pace-calculator">Αριθμομηχανή Ρυθμού Τρεξίματος</a></li>
+            <li><a href="/el/tool/steps-to-miles-calculator">Αριθμομηχανή Βημάτων σε Μίλια</a></li>
+            <li><a href="/el/tool/pregnancy-due-date-calculator">Αριθμομηχανή Αναμενόμενης Ημερομηνίας Τοκετού</a></li>
+            <li><a href="/el/tool/ovulation-calculator">Αριθμομηχανή Ωορρηξίας</a></li>
+            <li><a href="/el/tool/calories-burned-calculator">Αριθμομηχανή Θερμίδων που Καίγονται</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><line x1="12" y1="12" x2="12" y2="7"/><line x1="12" y1="12" x2="16" y2="14"/></svg></span>
+          <h2><a href="/el/category/datetime">Ημερομηνία και Ώρα</a></h2>
+          <span class="count">23 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/el/tool/days-until-calculator">Αριθμομηχανή Ημερών που Απομένουν</a></li>
+            <li><a href="/el/tool/date-duration-calculator">Αριθμομηχανή Διάρκειας Ημερομηνιών</a></li>
+            <li><a href="/el/tool/business-days-calculator">Αριθμομηχανή Εργάσιμων Ημερών</a></li>
+            <li><a href="/el/tool/time-duration-calculator">Αριθμομηχανή Διάρκειας Χρόνου</a></li>
+            <li><a href="/el/tool/time-add-calculator">Αριθμομηχανή Πρόσθεσης/Αφαίρεσης Χρόνου</a></li>
+            <li><a href="/el/tool/online-timer">Διαδικτυακό Χρονόμετρο</a></li>
+            <li><a href="/el/tool/online-alarm-clock">Διαδικτυακό Ξυπνητήρι</a></li>
+            <li><a href="/el/tool/online-stopwatch">Διαδικτυακό Χρονόμετρο Ακριβείας</a></li>
+            <li><a href="/el/tool/current-time">Τρέχουσα Ώρα</a></li>
+            <li><a href="/el/tool/random-date-generator">Γεννήτρια Τυχαίων Ημερομηνιών</a></li>
+            <li><a href="/el/tool/military-time-converter">Μετατροπέας Στρατιωτικής Ώρας</a></li>
+            <li><a href="/el/tool/unix-timestamp-converter">Μετατροπέας Χρονοσφραγίδας Unix</a></li>
+            <li><a href="/el/tool/week-number-calculator">Αριθμομηχανή Αριθμού Εβδομάδας</a></li>
+            <li><a href="/el/tool/time-zone-converter">Μετατροπέας Ζώνης Ώρας</a></li>
+            <li><a href="/el/tool/daylight-saving-time-calculator">Αριθμομηχανή Θερινής Ώρας</a></li>
+            <li><a href="/el/tool/sunrise-sunset-calculator">Αριθμομηχανή Ανατολής και Δύσης Ηλίου</a></li>
+            <li><a href="/el/tool/sun-position-calculator">Αριθμομηχανή Θέσης Ήλιου</a></li>
+            <li><a href="/el/tool/day-of-week-calculator">Αριθμομηχανή Ημέρας της Εβδομάδας</a></li>
+            <li><a href="/el/tool/leap-year-calculator">Αριθμομηχανή Δίσεκτου Έτους</a></li>
+            <li><a href="/el/tool/age-calculator">Αριθμομηχανή Ηλικίας</a></li>
+            <li><a href="/el/tool/birth-year-calculator">Αριθμομηχανή Έτους Γέννησης</a></li>
+            <li><a href="/el/tool/time-zone-meeting-planner">Σχεδιαστής Συναντήσεων Ζωνών Ώρας</a></li>
+            <li><a href="/el/tool/day-of-the-week-calculator">Αριθμομηχανή Ημέρας της Εβδομάδας</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16,3 20,7 16,11"/><line x1="20" y1="7" x2="4" y2="7"/><polyline points="8,13 4,17 8,21"/><line x1="4" y1="17" x2="20" y2="17"/></svg></span>
+          <h2><a href="/el/category/conversions">Καθημερινές Μετατροπές</a></h2>
+          <span class="count">23 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/el/tool/screen-ppi-calculator">Αριθμομηχανή PPI Οθόνης</a></li>
+            <li><a href="/el/tool/print-dpi-calculator">Αριθμομηχανή DPI Εκτύπωσης</a></li>
+            <li><a href="/el/tool/unit-length-converter">Μετατροπέας εκ-ίντσες</a></li>
+            <li><a href="/el/tool/time-unit-converter">Μετατροπέας Μονάδων Χρόνου</a></li>
+            <li><a href="/el/tool/temperature-converter">Μετατροπέας Θερμοκρασίας</a></li>
+            <li><a href="/el/tool/oven-temperature-converter">Μετατροπέας Θερμοκρασίας Φούρνου</a></li>
+            <li><a href="/el/tool/rainfall-volume-calculator">Αριθμομηχανή Όγκου Βροχής</a></li>
+            <li><a href="/el/tool/water-density-calculator">Αριθμομηχανή Πυκνότητας Νερού</a></li>
+            <li><a href="/el/tool/weight-converter">Μετατροπέας Βάρους</a></li>
+            <li><a href="/el/tool/volume-converter">Μετατροπέας Όγκου</a></li>
+            <li><a href="/el/tool/cooking-converter">Μετατροπέας Γραμμαρίων σε Φλιτζάνια</a></li>
+            <li><a href="/el/tool/microwave-wattage-converter">Μετατροπέας Ισχύος Φούρνου Μικροκυμάτων</a></li>
+            <li><a href="/el/tool/electricity-cost-calculator">Αριθμομηχανή Κόστους Ηλεκτρικού Ρεύματος</a></li>
+            <li><a href="/el/tool/ppm-percent-converter">Μετατροπέας PPM σε Ποσοστό</a></li>
+            <li><a href="/el/tool/speed-converter">Μετατροπέας Ταχύτητας</a></li>
+            <li><a href="/el/tool/area-converter">Μετατροπέας Εμβαδού</a></li>
+            <li><a href="/el/tool/data-storage-converter">Μετατροπέας Αποθηκευτικού Χώρου Δεδομένων</a></li>
+            <li><a href="/el/tool/pressure-converter">Μετατροπέας Πίεσης</a></li>
+            <li><a href="/el/tool/torque-converter">Μετατροπέας Ροπής</a></li>
+            <li><a href="/el/tool/fuel-economy-converter">Μετατροπέας Κατανάλωσης Καυσίμου</a></li>
+            <li><a href="/el/tool/gear-ratio-calculator">Αριθμομηχανή Σχέσης Ταχυτήτων Ποδηλάτου</a></li>
+            <li><a href="/el/tool/tire-size-calculator">Αριθμομηχανή Σύγκρισης Μεγέθους Ελαστικών</a></li>
+            <li><a href="/el/tool/weather-comfort-calculator">Αριθμομηχανή Σημείου Δρόσου, Δείκτη Θερμότητας και Αίσθησης Ψύχους</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4h6M12 4v16M9 20h6"/></svg></span>
+          <h2><a href="/el/category/text">Κείμενο και Ψηφιακά</a></h2>
+          <span class="count">21 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/el/tool/color-difference-checker">Ελεγκτής Διαφοράς Χρώματος</a></li>
+            <li><a href="/el/tool/list-shuffler">Ανακατευτής Λίστας</a></li>
+            <li><a href="/el/tool/weighted-random-picker">Επιλογέας Σταθμισμένης Τυχαιότητας</a></li>
+            <li><a href="/el/tool/word-counter">Μετρητής Λέξεων και Χαρακτήρων</a></li>
+            <li><a href="/el/tool/password-generator">Γεννήτρια Κωδικού Πρόσβασης</a></li>
+            <li><a href="/el/tool/uuid-generator">Γεννήτρια UUID</a></li>
+            <li><a href="/el/tool/random-number-generator">Γεννήτρια Τυχαίων Αριθμών</a></li>
+            <li><a href="/el/tool/coin-flipper">Ρίψη Νομίσματος</a></li>
+            <li><a href="/el/tool/dice-roller">Ριξιά Ζαριών</a></li>
+            <li><a href="/el/tool/card-deck-shuffler">Ανακατεμένη Τράπουλα</a></li>
+            <li><a href="/el/tool/color-mixer">Αναμίκτης Χρωμάτων</a></li>
+            <li><a href="/el/tool/case-converter">Μετατροπέας Κεφαλαίων/Πεζών</a></li>
+            <li><a href="/el/tool/lorem-ipsum-generator">Γεννήτρια Lorem Ipsum</a></li>
+            <li><a href="/el/tool/text-to-slug-generator">Γεννήτρια Slug από Κείμενο</a></li>
+            <li><a href="/el/tool/binary-to-text-converter">Μετατροπέας Δυαδικού σε Κείμενο</a></li>
+            <li><a href="/el/tool/word-frequency-counter">Μετρητής Συχνότητας Λέξεων</a></li>
+            <li><a href="/el/tool/url-encoder-decoder">Κωδικοποιητής / Αποκωδικοποιητής URL</a></li>
+            <li><a href="/el/tool/ip-subnet-calculator">Υπολογιστής Υποδικτύου IP</a></li>
+            <li><a href="/el/tool/json-compare">Σύγκριση JSON</a></li>
+            <li><a href="/el/tool/cidr-calculator">Υπολογιστής CIDR / Υποδικτύου</a></li>
+            <li><a href="/el/tool/group-randomizer">Τυχαιοποιητής Ομάδων</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="15.5" r="4"/><circle cx="5.5" cy="9" r="2"/><circle cx="10" cy="4.5" r="2"/><circle cx="14" cy="4.5" r="2"/><circle cx="18.5" cy="9" r="2"/></svg></span>
+          <h2><a href="/el/category/pets">Κατοικίδια και Τρόπος Ζωής</a></h2>
+          <span class="count">8 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/el/tool/dog-age-calculator">Αριθμομηχανή Ηλικίας Σκύλου</a></li>
+            <li><a href="/el/tool/dog-food-calculator">Αριθμομηχανή Τροφής Σκύλου</a></li>
+            <li><a href="/el/tool/cat-age-calculator">Αριθμομηχανή Ηλικίας Γάτας</a></li>
+            <li><a href="/el/tool/rabbit-age-calculator">Αριθμομηχανή Ηλικίας Κουνελιού</a></li>
+            <li><a href="/el/tool/dog-pregnancy-calculator">Αριθμομηχανή Εγκυμοσύνης Σκύλου</a></li>
+            <li><a href="/el/tool/horse-age-calculator">Αριθμομηχανή Ηλικίας Αλόγου</a></li>
+            <li><a href="/el/tool/ideal-dog-weight-calculator">Αριθμομηχανή Ιδανικού Βάρους Σκύλου</a></li>
+            <li><a href="/el/tool/cat-pregnancy-calculator">Αριθμομηχανή Εγκυμοσύνης Γάτας</a></li>
+        </ul>
+      </section>
+      </div>
     </div>
   </section>
 

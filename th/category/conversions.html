@@ -52,43 +52,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Thai:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="/css/styles.css" />
-  <script src="/js/calculators-data.js" defer></script>
   <script src="/js/theme.js" defer></script>
   <script src="/js/locale-switcher.js" defer></script>
-  <script defer>
-    document.addEventListener("DOMContentLoaded", () => {
-      const cat = getCategory("conversions");
-      document.getElementById("cat-code").innerHTML = `<svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${cat.icon}</svg>`;
-
-      // Card grid stays JS-rendered (interactive live-readout preview, same
-      // as the homepage) but is NOT the page's static SEO content — the h1,
-      // description, and breadcrumb above are baked directly into the HTML
-      // at build time (see build.js), not set here.
-      const tools = calculatorsInCategory(cat.id);
-      const translatedIds = {"percentage-calculator":true,"average-calculator":true,"mortgage-calculator":true,"loan-calculator":true,"compound-interest-calculator":true,"concrete-calculator":true,"flooring-calculator":true,"calorie-calculator":true,"bmi-calculator":true,"bmr-calculator":true,"age-calculator":true,"days-until-calculator":true,"unit-length-converter":true,"temperature-converter":true,"word-counter":true,"case-converter":true,"dog-age-calculator":true,"cat-age-calculator":true,"cat-pregnancy-calculator":true,"dog-pregnancy-calculator":true,"simple-interest-calculator":true,"sales-tax-calculator":true,"tip-calculator":true,"discount-calculator":true,"gpa-calculator":true,"body-fat-calculator":true,"amortization-schedule-calculator":true,"mortgage-payoff-calculator":true,"heloc-calculator":true,"home-affordability-calculator":true,"hourly-to-salary-calculator":true,"time-card-calculator":true,"savings-calculator":true,"tvm-solver":true,"irr-npv-calculator":true,"budget-calculator":true,"apr-to-apy-calculator":true,"price-calculator":true,"debt-payoff-calculator":true,"dti-ratio-calculator":true,"credit-card-payoff-calculator":true,"auto-loan-calculator":true,"investment-calculator":true,"retirement-401k-calculator":true,"bond-duration-calculator":true,"gas-trip-cost-calculator":true,"paint-calculator":true,"mulch-calculator":true,"gravel-calculator":true,"drywall-calculator":true,"tile-calculator":true,"roofing-calculator":true,"square-footage-calculator":true,"fence-calculator":true,"insulation-calculator":true,"ac-btu-calculator":true,"lumber-calculator":true,"paver-calculator":true,"mix-ratio-calculator":true,"height-percentile-calculator":true,"body-surface-area-calculator":true,"macro-calculator":true,"water-intake-calculator":true,"one-rep-max-calculator":true,"heart-rate-zone-calculator":true,"ideal-weight-calculator":true,"bra-size-calculator":true,"pace-calculator":true,"steps-to-miles-calculator":true,"pregnancy-due-date-calculator":true,"ovulation-calculator":true,"calories-burned-calculator":true,"dog-food-calculator":true,"rabbit-age-calculator":true,"horse-age-calculator":true,"ideal-dog-weight-calculator":true,"date-duration-calculator":true,"business-days-calculator":true,"time-duration-calculator":true,"time-add-calculator":true,"online-timer":true,"online-alarm-clock":true,"online-stopwatch":true,"current-time":true,"random-date-generator":true,"military-time-converter":true,"unix-timestamp-converter":true,"week-number-calculator":true,"time-zone-converter":true,"daylight-saving-time-calculator":true,"sunrise-sunset-calculator":true,"sun-position-calculator":true,"day-of-week-calculator":true,"leap-year-calculator":true,"birth-year-calculator":true,"time-zone-meeting-planner":true,"day-of-the-week-calculator":true,"screen-ppi-calculator":true,"print-dpi-calculator":true,"time-unit-converter":true,"oven-temperature-converter":true,"rainfall-volume-calculator":true,"water-density-calculator":true,"weight-converter":true,"volume-converter":true,"cooking-converter":true,"microwave-wattage-converter":true,"electricity-cost-calculator":true,"ppm-percent-converter":true,"speed-converter":true,"area-converter":true,"data-storage-converter":true,"pressure-converter":true,"torque-converter":true,"fuel-economy-converter":true,"gear-ratio-calculator":true,"tire-size-calculator":true,"weather-comfort-calculator":true,"color-difference-checker":true,"list-shuffler":true,"weighted-random-picker":true,"password-generator":true,"uuid-generator":true,"random-number-generator":true,"coin-flipper":true,"dice-roller":true,"card-deck-shuffler":true,"color-mixer":true,"lorem-ipsum-generator":true,"text-to-slug-generator":true,"binary-to-text-converter":true,"word-frequency-counter":true,"url-encoder-decoder":true,"ip-subnet-calculator":true,"json-compare":true,"cidr-calculator":true,"group-randomizer":true,"percentage-change-calculator":true,"fraction-calculator":true,"pi-digits-calculator":true,"long-division-calculator":true,"long-multiplication-calculator":true,"gcd-lcm-calculator":true,"factor-calculator":true,"standard-deviation-calculator":true,"t-test-calculator":true,"effect-size-calculator":true,"mann-whitney-u-calculator":true,"sequences-series-calculator":true,"coupon-collector-calculator":true,"similarity-ratio-calculator":true,"correlation-calculator":true,"z-score-calculator":true,"confusion-matrix-calculator":true,"odds-probability-converter":true,"normal-distribution-calculator":true,"lottery-odds-calculator":true,"poker-hand-probability-calculator":true,"square-root-calculator":true,"ratio-calculator":true,"aspect-ratio-calculator":true,"exponent-calculator":true,"logarithm-calculator":true,"vector-calculator":true,"haversine-distance-calculator":true,"quadratic-formula-calculator":true,"cone-volume-calculator":true,"cylinder-volume-calculator":true,"pythagorean-theorem-calculator":true,"distance-formula-calculator":true,"triangle-solver":true,"hypergeometric-calculator":true,"trapezoid-area-calculator":true,"rectangular-prism-volume-calculator":true,"slope-calculator":true,"sector-calculator":true,"grade-gradient-calculator":true,"molecular-weight-calculator":true,"empirical-formula-calculator":true,"system-of-equations-solver":true,"linear-equation-solver":true,"eigenvalue-calculator":true,"inequality-solver":true,"chemical-equation-balancer":true,"solubility-product-calculator":true,"titration-ph-calculator":true,"limiting-reagent-calculator":true,"half-life-calculator":true,"hardy-weinberg-calculator":true,"grade-calculator":true,"weighted-grade-calculator":true,"speed-distance-time-calculator":true,"projectile-motion-calculator":true,"collision-calculator":true,"ohms-law-calculator":true,"right-triangle-calculator":true,"absolute-risk-reduction-calculator":true,"sample-size-calculator":true,"confidence-interval-calculator":true,"mean-median-mode-calculator":true,"roman-numeral-converter":true,"distance-modulus-calculator":true,"earthquake-magnitude-calculator":true,"pressure-altitude-calculator":true,"circle-calculator":true,"repeating-decimal-to-fraction-calculator":true,"permutations-combinations-calculator":true};
-      const grid = document.getElementById("cat-tool-grid");
-      tools.forEach((calc, i) => {
-        const sampleResult = calc.compute(
-          Object.fromEntries(calc.fields.map((f) => [f.id, f.type === "checkbox-group" ? (f.default || []) : f.default]))
-        );
-        const a = document.createElement("a");
-        // Locale pages only have a localized tool page for the wave-one
-        // batch — link straight through to it when it exists, otherwise
-        // fall back to the English canonical rather than a 404.
-        a.href = translatedIds[calc.id] ? `/th/tool/${calc.id}` : `https://calquary.com/tool/${calc.id}`;
-        a.className = "tool-card";
-        a.innerHTML = `
-          <div class="cat-label">${calc.keyword}</div>
-          <h3>${calc.title}</h3>
-          <div class="readout">
-            <span class="rlabel">${sampleResult.primary.label}</span>
-            <span class="rvalue" style="--delay:${0.05 * i}s">${sampleResult.primary.value}</span>
-          </div>
-        `;
-        grid.appendChild(a);
-      });
-    });
-  </script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -140,7 +105,7 @@
   <section class="category-hero">
     <div class="wrap">
       <div class="breadcrumb"><a href="/th/">Calquary</a> / หมวดหมู่</div>
-      <span class="code-badge" id="cat-code"></span>
+      <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16,3 20,7 16,11"/><line x1="20" y1="7" x2="4" y2="7"/><polyline points="8,13 4,17 8,21"/><line x1="4" y1="17" x2="20" y2="17"/></svg></span>
       <h1>การแปลงหน่วยในชีวิตประจำวัน เครื่องคำนวณ</h1>
       <p style="max-width:56ch;">หน่วยวัด การวัด และการแปลงหน่วยในการทำอาหาร</p>
     </div>
@@ -154,7 +119,215 @@
 
   <section class="section">
     <div class="wrap">
-      <div class="tool-grid" id="cat-tool-grid"></div>
+      <div class="tool-grid" id="cat-tool-grid">
+        <a href="/th/tool/screen-ppi-calculator" class="tool-card">
+          <div class="cat-label">screen ppi calculator</div>
+          <h3>เครื่องคำนวณ PPI ของหน้าจอ</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">คำนวณความหนาแน่นของพิกเซล (PPI) ของหน้าจอจากความละเอียดและขนาดเส้นทแยงมุม</p>
+          <div class="readout">
+            <span class="rlabel">Pixel density</span>
+            <span class="rvalue settle-in" style="--delay:0s">91.79 PPI</span>
+          </div>
+        </a>
+        <a href="/th/tool/print-dpi-calculator" class="tool-card">
+          <div class="cat-label">print dpi calculator</div>
+          <h3>เครื่องคำนวณ DPI สำหรับการพิมพ์</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">คำนวณความละเอียดการพิมพ์ที่แท้จริง (DPI) สำหรับภาพถ่ายที่ขนาดการพิมพ์ที่กำหนด</p>
+          <div class="readout">
+            <span class="rlabel">Effective DPI</span>
+            <span class="rvalue settle-in" style="--delay:0.05s">299.9</span>
+          </div>
+        </a>
+        <a href="/th/tool/unit-length-converter" class="tool-card">
+          <div class="cat-label">cm to inches converter</div>
+          <h3>ตัวแปลง ซม.-นิ้ว</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">แปลงระหว่างเซนติเมตร นิ้ว ฟุต และเมตร</p>
+          <div class="readout">
+            <span class="rlabel">In centimeters</span>
+            <span class="rvalue settle-in" style="--delay:0.1s">100 cm</span>
+          </div>
+        </a>
+        <a href="/th/tool/time-unit-converter" class="tool-card">
+          <div class="cat-label">time unit converter</div>
+          <h3>ตัวแปลงหน่วยเวลา</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">แปลงระหว่างวินาที นาที ชั่วโมง วัน สัปดาห์ และปี</p>
+          <div class="readout">
+            <span class="rlabel">In seconds</span>
+            <span class="rvalue settle-in" style="--delay:0.15000000000000002s">3,600</span>
+          </div>
+        </a>
+        <a href="/th/tool/temperature-converter" class="tool-card">
+          <div class="cat-label">temperature converter</div>
+          <h3>ตัวแปลงอุณหภูมิ</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">แปลงระหว่างฟาเรนไฮต์ เซลเซียส และเคลวิน</p>
+          <div class="readout">
+            <span class="rlabel">In Celsius</span>
+            <span class="rvalue settle-in" style="--delay:0.2s">37°C</span>
+          </div>
+        </a>
+        <a href="/th/tool/oven-temperature-converter" class="tool-card">
+          <div class="cat-label">oven temperature converter</div>
+          <h3>ตัวแปลงอุณหภูมิเตาอบ</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">แปลงอุณหภูมิเตาอบระหว่างเซลเซียส ฟาเรนไฮต์ และ Gas Mark ของสหราชอาณาจักร</p>
+          <div class="readout">
+            <span class="rlabel">Celsius</span>
+            <span class="rvalue settle-in" style="--delay:0.25s">180°C</span>
+          </div>
+        </a>
+        <a href="/th/tool/rainfall-volume-calculator" class="tool-card">
+          <div class="cat-label">rainfall to volume calculator</div>
+          <h3>เครื่องคำนวณปริมาณน้ำฝนเป็นปริมาตร</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">แปลงความลึกของฝนบนพื้นที่หนึ่งเป็นปริมาตรน้ำรวม</p>
+          <div class="readout">
+            <span class="rlabel">Volume collected</span>
+            <span class="rvalue settle-in" style="--delay:0.30000000000000004s">1000 L</span>
+          </div>
+        </a>
+        <a href="/th/tool/water-density-calculator" class="tool-card">
+          <div class="cat-label">water density calculator</div>
+          <h3>เครื่องคำนวณความหนาแน่นของน้ำ</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">คำนวณความหนาแน่นของน้ำที่อุณหภูมิที่กำหนด</p>
+          <div class="readout">
+            <span class="rlabel">Density</span>
+            <span class="rvalue settle-in" style="--delay:0.35000000000000003s">998.2 kg/m³</span>
+          </div>
+        </a>
+        <a href="/th/tool/weight-converter" class="tool-card">
+          <div class="cat-label">weight converter</div>
+          <h3>ตัวแปลงน้ำหนัก</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">แปลงระหว่างกิโลกรัม ปอนด์ ออนซ์ และกรัม</p>
+          <div class="readout">
+            <span class="rlabel">In kilograms</span>
+            <span class="rvalue settle-in" style="--delay:0.4s">68.04 kg</span>
+          </div>
+        </a>
+        <a href="/th/tool/volume-converter" class="tool-card">
+          <div class="cat-label">volume converter</div>
+          <h3>ตัวแปลงปริมาตร</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">แปลงระหว่างลิตร แกลลอน ควอร์ต ออนซ์ของเหลว ถ้วย มิลลิลิตร ช้อนชา และช้อนโต๊ะ</p>
+          <div class="readout">
+            <span class="rlabel">In liters</span>
+            <span class="rvalue settle-in" style="--delay:0.45s">3.785 L</span>
+          </div>
+        </a>
+        <a href="/th/tool/cooking-converter" class="tool-card">
+          <div class="cat-label">grams to cups</div>
+          <h3>ตัวแปลงกรัมเป็นถ้วย</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">แปลงส่วนผสมทำขนมทั่วไประหว่างถ้วยและกรัม</p>
+          <div class="readout">
+            <span class="rlabel">Grams</span>
+            <span class="rvalue settle-in" style="--delay:0.5s">120</span>
+          </div>
+        </a>
+        <a href="/th/tool/microwave-wattage-converter" class="tool-card">
+          <div class="cat-label">microwave wattage converter</div>
+          <h3>ตัวแปลงกำลังไฟไมโครเวฟ</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">ปรับเวลาปรุงอาหารของสูตรเมื่อกำลังไฟของไมโครเวฟของคุณแตกต่างจากสูตร</p>
+          <div class="readout">
+            <span class="rlabel">Adjusted cook time</span>
+            <span class="rvalue settle-in" style="--delay:0.55s">7.14 min</span>
+          </div>
+        </a>
+        <a href="/th/tool/electricity-cost-calculator" class="tool-card">
+          <div class="cat-label">electricity cost calculator</div>
+          <h3>เครื่องคำนวณค่าไฟฟ้า</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">คำนวณค่าไฟฟ้าจากการใช้เครื่องใช้ไฟฟ้า จากกำลังไฟฟ้า เวลาใช้งาน และอัตราค่าไฟของคุณ</p>
+          <div class="readout">
+            <span class="rlabel">Total cost</span>
+            <span class="rvalue settle-in" style="--delay:0.6000000000000001s">$2.25</span>
+          </div>
+        </a>
+        <a href="/th/tool/ppm-percent-converter" class="tool-card">
+          <div class="cat-label">ppm to percent converter</div>
+          <h3>ตัวแปลง PPM เป็นเปอร์เซ็นต์</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">แปลงระหว่างส่วนในล้านส่วน (ppm) และเปอร์เซ็นต์</p>
+          <div class="readout">
+            <span class="rlabel">In PPM</span>
+            <span class="rvalue settle-in" style="--delay:0.65s">500</span>
+          </div>
+        </a>
+        <a href="/th/tool/speed-converter" class="tool-card">
+          <div class="cat-label">speed converter</div>
+          <h3>ตัวแปลงความเร็ว</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">แปลงระหว่างไมล์ต่อชั่วโมง กม./ชม. เมตร/วินาที และนอต</p>
+          <div class="readout">
+            <span class="rlabel">In mph</span>
+            <span class="rvalue settle-in" style="--delay:0.7000000000000001s">60 mph</span>
+          </div>
+        </a>
+        <a href="/th/tool/area-converter" class="tool-card">
+          <div class="cat-label">area converter</div>
+          <h3>ตัวแปลงพื้นที่</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">แปลงระหว่างตารางฟุต ตารางเมตร เอเคอร์ และตารางหลา</p>
+          <div class="readout">
+            <span class="rlabel">In square feet</span>
+            <span class="rvalue settle-in" style="--delay:0.75s">1000 sq ft</span>
+          </div>
+        </a>
+        <a href="/th/tool/data-storage-converter" class="tool-card">
+          <div class="cat-label">data storage converter</div>
+          <h3>ตัวแปลงพื้นที่จัดเก็บข้อมูล</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">แปลงระหว่างไบต์ KB MB GB และ TB</p>
+          <div class="readout">
+            <span class="rlabel">In megabytes</span>
+            <span class="rvalue settle-in" style="--delay:0.8s">8192 MB</span>
+          </div>
+        </a>
+        <a href="/th/tool/pressure-converter" class="tool-card">
+          <div class="cat-label">pressure converter</div>
+          <h3>ตัวแปลงความดัน</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">แปลงระหว่าง PSI บาร์ kPa และบรรยากาศ</p>
+          <div class="readout">
+            <span class="rlabel">In PSI</span>
+            <span class="rvalue settle-in" style="--delay:0.8500000000000001s">32 psi</span>
+          </div>
+        </a>
+        <a href="/th/tool/torque-converter" class="tool-card">
+          <div class="cat-label">torque converter</div>
+          <h3>ตัวแปลงแรงบิด</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">ยังใช้เป็นตัวแปลง nm เป็น ft lb ได้ด้วย - แปลงระหว่างนิวตันเมตร (Nm) ฟุตปอนด์ (ft-lb) และนิ้วปอนด์ (in-lb)</p>
+          <div class="readout">
+            <span class="rlabel">In newton-meters</span>
+            <span class="rvalue settle-in" style="--delay:0.9s">100 Nm</span>
+          </div>
+        </a>
+        <a href="/th/tool/fuel-economy-converter" class="tool-card">
+          <div class="cat-label">fuel economy converter</div>
+          <h3>ตัวแปลงอัตราสิ้นเปลืองเชื้อเพลิง</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">แปลงระหว่างอัตราสิ้นเปลืองเชื้อเพลิง MPG และ L/100km</p>
+          <div class="readout">
+            <span class="rlabel">MPG (US)</span>
+            <span class="rvalue settle-in" style="--delay:0.9500000000000001s">25</span>
+          </div>
+        </a>
+        <a href="/th/tool/gear-ratio-calculator" class="tool-card">
+          <div class="cat-label">gear ratio calculator</div>
+          <h3>เครื่องคำนวณอัตราทดเกียร์จักรยาน</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">คำนวณเกียร์นิ้วและความเร็วจากขนาดล้อ จานหน้า เฟืองหลัง และรอบขาปั่น</p>
+          <div class="readout">
+            <span class="rlabel">Gear inches</span>
+            <span class="rvalue settle-in" style="--delay:1s">96.43</span>
+          </div>
+        </a>
+        <a href="/th/tool/tire-size-calculator" class="tool-card">
+          <div class="cat-label">tire size calculator</div>
+          <h3>เครื่องคำนวณเปรียบเทียบขนาดยาง</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">เปรียบเทียบขนาดยางสองแบบและดูความแตกต่างที่เกิดขึ้นในเส้นผ่านศูนย์กลาง เส้นรอบวง…</p>
+          <div class="readout">
+            <span class="rlabel">Diameter difference</span>
+            <span class="rvalue settle-in" style="--delay:1.05s">1.72%</span>
+          </div>
+        </a>
+        <a href="/th/tool/weather-comfort-calculator" class="tool-card">
+          <div class="cat-label">heat index calculator</div>
+          <h3>เครื่องคำนวณจุดน้ำค้าง ดัชนีความร้อน และดัชนีความหนาวเย็นจากลม</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">คำนวณจุดน้ำค้าง ดัชนีความร้อน และดัชนีความหนาวเย็นจากลมจากอุณหภูมิ ความชื้น และความเร็วลม</p>
+          <div class="readout">
+            <span class="rlabel">Dew point</span>
+            <span class="rvalue settle-in" style="--delay:1.1s">78.9°F</span>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
 

@@ -52,43 +52,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="/css/styles.css" />
-  <script src="/js/calculators-data.js" defer></script>
   <script src="/js/theme.js" defer></script>
   <script src="/js/locale-switcher.js" defer></script>
-  <script defer>
-    document.addEventListener("DOMContentLoaded", () => {
-      const cat = getCategory("finance");
-      document.getElementById("cat-code").innerHTML = `<svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${cat.icon}</svg>`;
-
-      // Card grid stays JS-rendered (interactive live-readout preview, same
-      // as the homepage) but is NOT the page's static SEO content — the h1,
-      // description, and breadcrumb above are baked directly into the HTML
-      // at build time (see build.js), not set here.
-      const tools = calculatorsInCategory(cat.id);
-      const translatedIds = {"percentage-calculator":true,"average-calculator":true,"mortgage-calculator":true,"loan-calculator":true,"compound-interest-calculator":true,"concrete-calculator":true,"flooring-calculator":true,"calorie-calculator":true,"bmi-calculator":true,"bmr-calculator":true,"age-calculator":true,"days-until-calculator":true,"unit-length-converter":true,"temperature-converter":true,"word-counter":true,"case-converter":true,"dog-age-calculator":true,"cat-age-calculator":true,"cat-pregnancy-calculator":true,"dog-pregnancy-calculator":true,"simple-interest-calculator":true,"sales-tax-calculator":true,"tip-calculator":true,"discount-calculator":true,"gpa-calculator":true,"body-fat-calculator":true,"amortization-schedule-calculator":true,"mortgage-payoff-calculator":true,"heloc-calculator":true,"home-affordability-calculator":true,"hourly-to-salary-calculator":true,"time-card-calculator":true,"savings-calculator":true,"tvm-solver":true,"irr-npv-calculator":true,"budget-calculator":true,"apr-to-apy-calculator":true,"price-calculator":true,"debt-payoff-calculator":true,"dti-ratio-calculator":true,"credit-card-payoff-calculator":true,"auto-loan-calculator":true,"investment-calculator":true,"retirement-401k-calculator":true,"bond-duration-calculator":true,"gas-trip-cost-calculator":true,"paint-calculator":true,"mulch-calculator":true,"gravel-calculator":true,"drywall-calculator":true,"tile-calculator":true,"roofing-calculator":true,"square-footage-calculator":true,"fence-calculator":true,"insulation-calculator":true,"ac-btu-calculator":true,"lumber-calculator":true,"paver-calculator":true,"mix-ratio-calculator":true,"height-percentile-calculator":true,"body-surface-area-calculator":true,"macro-calculator":true,"water-intake-calculator":true,"one-rep-max-calculator":true,"heart-rate-zone-calculator":true,"ideal-weight-calculator":true,"bra-size-calculator":true,"pace-calculator":true,"steps-to-miles-calculator":true,"pregnancy-due-date-calculator":true,"ovulation-calculator":true,"calories-burned-calculator":true,"dog-food-calculator":true,"rabbit-age-calculator":true,"horse-age-calculator":true,"ideal-dog-weight-calculator":true,"date-duration-calculator":true,"business-days-calculator":true,"time-duration-calculator":true,"time-add-calculator":true,"online-timer":true,"online-alarm-clock":true,"online-stopwatch":true,"current-time":true,"random-date-generator":true,"military-time-converter":true,"unix-timestamp-converter":true,"week-number-calculator":true,"time-zone-converter":true,"daylight-saving-time-calculator":true,"sunrise-sunset-calculator":true,"sun-position-calculator":true,"day-of-week-calculator":true,"leap-year-calculator":true,"birth-year-calculator":true,"time-zone-meeting-planner":true,"day-of-the-week-calculator":true,"screen-ppi-calculator":true,"print-dpi-calculator":true,"time-unit-converter":true,"oven-temperature-converter":true,"rainfall-volume-calculator":true,"water-density-calculator":true,"weight-converter":true,"volume-converter":true,"cooking-converter":true,"microwave-wattage-converter":true,"electricity-cost-calculator":true,"ppm-percent-converter":true,"speed-converter":true,"area-converter":true,"data-storage-converter":true,"pressure-converter":true,"torque-converter":true,"fuel-economy-converter":true,"gear-ratio-calculator":true,"tire-size-calculator":true,"weather-comfort-calculator":true,"color-difference-checker":true,"list-shuffler":true,"weighted-random-picker":true,"password-generator":true,"uuid-generator":true,"random-number-generator":true,"coin-flipper":true,"dice-roller":true,"card-deck-shuffler":true,"color-mixer":true,"lorem-ipsum-generator":true,"text-to-slug-generator":true,"binary-to-text-converter":true,"word-frequency-counter":true,"url-encoder-decoder":true,"ip-subnet-calculator":true,"json-compare":true,"cidr-calculator":true,"group-randomizer":true,"percentage-change-calculator":true,"fraction-calculator":true,"pi-digits-calculator":true,"long-division-calculator":true,"long-multiplication-calculator":true,"gcd-lcm-calculator":true,"factor-calculator":true,"standard-deviation-calculator":true,"t-test-calculator":true,"effect-size-calculator":true,"mann-whitney-u-calculator":true,"sequences-series-calculator":true,"coupon-collector-calculator":true,"similarity-ratio-calculator":true,"correlation-calculator":true,"z-score-calculator":true,"confusion-matrix-calculator":true,"odds-probability-converter":true,"normal-distribution-calculator":true,"lottery-odds-calculator":true,"poker-hand-probability-calculator":true,"square-root-calculator":true,"ratio-calculator":true,"aspect-ratio-calculator":true,"exponent-calculator":true,"logarithm-calculator":true,"vector-calculator":true,"haversine-distance-calculator":true,"quadratic-formula-calculator":true,"cone-volume-calculator":true,"cylinder-volume-calculator":true,"pythagorean-theorem-calculator":true,"distance-formula-calculator":true,"triangle-solver":true,"hypergeometric-calculator":true,"trapezoid-area-calculator":true,"rectangular-prism-volume-calculator":true,"slope-calculator":true,"sector-calculator":true,"grade-gradient-calculator":true,"molecular-weight-calculator":true,"empirical-formula-calculator":true,"system-of-equations-solver":true,"linear-equation-solver":true,"eigenvalue-calculator":true,"inequality-solver":true,"chemical-equation-balancer":true,"solubility-product-calculator":true,"titration-ph-calculator":true,"limiting-reagent-calculator":true,"half-life-calculator":true,"hardy-weinberg-calculator":true,"grade-calculator":true,"weighted-grade-calculator":true,"speed-distance-time-calculator":true,"projectile-motion-calculator":true,"collision-calculator":true,"ohms-law-calculator":true,"right-triangle-calculator":true,"absolute-risk-reduction-calculator":true,"sample-size-calculator":true,"confidence-interval-calculator":true,"mean-median-mode-calculator":true,"roman-numeral-converter":true,"distance-modulus-calculator":true,"earthquake-magnitude-calculator":true,"pressure-altitude-calculator":true,"circle-calculator":true,"repeating-decimal-to-fraction-calculator":true,"permutations-combinations-calculator":true};
-      const grid = document.getElementById("cat-tool-grid");
-      tools.forEach((calc, i) => {
-        const sampleResult = calc.compute(
-          Object.fromEntries(calc.fields.map((f) => [f.id, f.type === "checkbox-group" ? (f.default || []) : f.default]))
-        );
-        const a = document.createElement("a");
-        // Locale pages only have a localized tool page for the wave-one
-        // batch — link straight through to it when it exists, otherwise
-        // fall back to the English canonical rather than a 404.
-        a.href = translatedIds[calc.id] ? `/es/tool/${calc.id}` : `https://calquary.com/tool/${calc.id}`;
-        a.className = "tool-card";
-        a.innerHTML = `
-          <div class="cat-label">${calc.keyword}</div>
-          <h3>${calc.title}</h3>
-          <div class="readout">
-            <span class="rlabel">${sampleResult.primary.label}</span>
-            <span class="rvalue" style="--delay:${0.05 * i}s">${sampleResult.primary.value}</span>
-          </div>
-        `;
-        grid.appendChild(a);
-      });
-    });
-  </script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -140,7 +105,7 @@
   <section class="category-hero">
     <div class="wrap">
       <div class="breadcrumb"><a href="/es/">Calquary</a> / Categorías</div>
-      <span class="code-badge" id="cat-code"></span>
+      <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="19" x2="5" y2="13"/><line x1="12" y1="19" x2="12" y2="9"/><line x1="19" y1="19" x2="19" y2="5"/></svg></span>
       <h1>Calculadoras de Finanzas</h1>
       <p style="max-width:56ch;">Préstamos, propinas y matemáticas del dinero cotidianas.</p>
     </div>
@@ -154,7 +119,251 @@
 
   <section class="section">
     <div class="wrap">
-      <div class="tool-grid" id="cat-tool-grid"></div>
+      <div class="tool-grid" id="cat-tool-grid">
+        <a href="/es/tool/loan-calculator" class="tool-card">
+          <div class="cat-label">loan calculator</div>
+          <h3>Calculadora de Pago de Préstamo</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Estima tu pago mensual en un préstamo de tasa fija.</p>
+          <div class="readout">
+            <span class="rlabel">Estimated monthly payment</span>
+            <span class="rvalue settle-in" style="--delay:0s">$391.32</span>
+          </div>
+        </a>
+        <a href="/es/tool/amortization-schedule-calculator" class="tool-card">
+          <div class="cat-label">amortization schedule calculator</div>
+          <h3>Calculadora de Tabla de Amortización</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Consulta un desglose completo mes a mes del pago - capital, interés y saldo restante - para un préstamo a…</p>
+          <div class="readout">
+            <span class="rlabel">Monthly payment</span>
+            <span class="rvalue settle-in" style="--delay:0.05s">$391.32</span>
+          </div>
+        </a>
+        <a href="/es/tool/mortgage-payoff-calculator" class="tool-card">
+          <div class="cat-label">mortgage payoff calculator</div>
+          <h3>Calculadora de Liquidación de Hipoteca</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calcula cuánto tiempo e interés ahorrarías al añadir pagos adicionales a tu hipoteca.</p>
+          <div class="readout">
+            <span class="rlabel">Interest saved</span>
+            <span class="rvalue settle-in" style="--delay:0.1s">$103,449</span>
+          </div>
+        </a>
+        <a href="/es/tool/heloc-calculator" class="tool-card">
+          <div class="cat-label">heloc calculator</div>
+          <h3>Calculadora de Pago HELOC</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calcula los pagos de solo interés durante el período de disposición y los pagos amortizables durante el…</p>
+          <div class="readout">
+            <span class="rlabel">Draw period payment (interest-only)</span>
+            <span class="rvalue settle-in" style="--delay:0.15000000000000002s">$200/mo</span>
+          </div>
+        </a>
+        <a href="/es/tool/mortgage-calculator" class="tool-card">
+          <div class="cat-label">mortgage calculator</div>
+          <h3>Calculadora de Hipoteca</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Estima tu pago hipotecario mensual total, incluidos impuestos y seguro.</p>
+          <div class="readout">
+            <span class="rlabel">Estimated monthly payment</span>
+            <span class="rvalue settle-in" style="--delay:0.2s">$2,207.29</span>
+          </div>
+        </a>
+        <a href="/es/tool/home-affordability-calculator" class="tool-card">
+          <div class="cat-label">how much house can i afford</div>
+          <h3>Calculadora de Cuánta Casa Puedo Pagar</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Estima el precio de la vivienda que puedes pagar, según tus ingresos, deudas y un pago inicial.</p>
+          <div class="readout">
+            <span class="rlabel">Estimated affordable home price</span>
+            <span class="rvalue settle-in" style="--delay:0.25s">$324,779</span>
+          </div>
+        </a>
+        <a href="/es/tool/hourly-to-salary-calculator" class="tool-card">
+          <div class="cat-label">hourly to salary calculator</div>
+          <h3>Calculadora de Salario por Hora a Anual</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Convierte un salario por hora en un salario anual estimado, y viceversa.</p>
+          <div class="readout">
+            <span class="rlabel">Annual salary</span>
+            <span class="rvalue settle-in" style="--delay:0.30000000000000004s">$39,520</span>
+          </div>
+        </a>
+        <a href="/es/tool/time-card-calculator" class="tool-card">
+          <div class="cat-label">time card calculator</div>
+          <h3>Calculadora de Tarjeta de Tiempo</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Suma las horas trabajadas durante la semana y calcula el salario bruto.</p>
+          <div class="readout">
+            <span class="rlabel">Total hours</span>
+            <span class="rvalue settle-in" style="--delay:0.35000000000000003s">40 hrs</span>
+          </div>
+        </a>
+        <a href="/es/tool/tip-calculator" class="tool-card">
+          <div class="cat-label">tip calculator</div>
+          <h3>Calculadora de Propina</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Divide una cuenta y calcula la propina en segundos.</p>
+          <div class="readout">
+            <span class="rlabel">Tip amount</span>
+            <span class="rvalue settle-in" style="--delay:0.4s">$11.61</span>
+          </div>
+        </a>
+        <a href="/es/tool/savings-calculator" class="tool-card">
+          <div class="cat-label">savings calculator</div>
+          <h3>Calculadora de Ahorros</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Estima el valor futuro de tus ahorros con aportes regulares.</p>
+          <div class="readout">
+            <span class="rlabel">Estimated future value</span>
+            <span class="rvalue settle-in" style="--delay:0.45s">$31,806.61</span>
+          </div>
+        </a>
+        <a href="/es/tool/tvm-solver" class="tool-card">
+          <div class="cat-label">tvm solver</div>
+          <h3>Solucionador TVM (VP, VF, PMT)</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Resuelve el valor presente, valor futuro o pago en un problema de valor del dinero en el tiempo.</p>
+          <div class="readout">
+            <span class="rlabel">Future value (FV)</span>
+            <span class="rvalue settle-in" style="--delay:0.5s">$12,605.16</span>
+          </div>
+        </a>
+        <a href="/es/tool/irr-npv-calculator" class="tool-card">
+          <div class="cat-label">irr calculator</div>
+          <h3>Calculadora de TIR y VAN</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calcula el valor actual neto (VAN) y la tasa interna de retorno (TIR) a partir de una serie de flujos de…</p>
+          <div class="readout">
+            <span class="rlabel">NPV</span>
+            <span class="rvalue settle-in" style="--delay:0.55s">$164.64</span>
+          </div>
+        </a>
+        <a href="/es/tool/budget-calculator" class="tool-card">
+          <div class="cat-label">budget calculator</div>
+          <h3>Calculadora de Presupuesto</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Consulta a dónde va tu ingreso mensual y cómo se compara con la regla 50/30/20.</p>
+          <div class="readout">
+            <span class="rlabel">Left over each month</span>
+            <span class="rvalue settle-in" style="--delay:0.6000000000000001s">$1,250</span>
+          </div>
+        </a>
+        <a href="/es/tool/compound-interest-calculator" class="tool-card">
+          <div class="cat-label">compound interest calculator</div>
+          <h3>Calculadora de Interés Compuesto</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calcula cómo crece una suma de dinero con el tiempo mediante interés compuesto.</p>
+          <div class="readout">
+            <span class="rlabel">Future value</span>
+            <span class="rvalue settle-in" style="--delay:0.65s">$8,235.05</span>
+          </div>
+        </a>
+        <a href="/es/tool/apr-to-apy-calculator" class="tool-card">
+          <div class="cat-label">apr to apy calculator</div>
+          <h3>Calculadora de TAE a Rendimiento Anual Efectivo (APY/TAE)</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Convierte una tasa de interés nominal (APR) en su tasa anual efectiva (APY/TAE), teniendo en cuenta la…</p>
+          <div class="readout">
+            <span class="rlabel">Effective annual rate (APY/EAR)</span>
+            <span class="rvalue settle-in" style="--delay:0.7000000000000001s">6.1678%</span>
+          </div>
+        </a>
+        <a href="/es/tool/sales-tax-calculator" class="tool-card">
+          <div class="cat-label">sales tax calculator</div>
+          <h3>Calculadora de Impuesto sobre Ventas</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calcula el impuesto sobre ventas y el precio total de una compra.</p>
+          <div class="readout">
+            <span class="rlabel">Total with tax</span>
+            <span class="rvalue settle-in" style="--delay:0.75s">$53.61</span>
+          </div>
+        </a>
+        <a href="/es/tool/discount-calculator" class="tool-card">
+          <div class="cat-label">discount calculator</div>
+          <h3>Calculadora de Descuentos</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calcula el precio de venta y el ahorro en un artículo con descuento.</p>
+          <div class="readout">
+            <span class="rlabel">Sale price</span>
+            <span class="rvalue settle-in" style="--delay:0.8s">$60</span>
+          </div>
+        </a>
+        <a href="/es/tool/price-calculator" class="tool-card">
+          <div class="cat-label">price calculator</div>
+          <h3>Calculadora de Precios</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calcula un precio de venta a partir de tu costo y margen de beneficio objetivo.</p>
+          <div class="readout">
+            <span class="rlabel">Selling price</span>
+            <span class="rvalue settle-in" style="--delay:0.8500000000000001s">$71.43</span>
+          </div>
+        </a>
+        <a href="/es/tool/debt-payoff-calculator" class="tool-card">
+          <div class="cat-label">debt payoff calculator</div>
+          <h3>Calculadora de Pago de Deudas</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calcula cuánto tiempo tomará pagar una deuda con pagos mensuales fijos.</p>
+          <div class="readout">
+            <span class="rlabel">Months to pay off</span>
+            <span class="rvalue settle-in" style="--delay:0.9s">47</span>
+          </div>
+        </a>
+        <a href="/es/tool/dti-ratio-calculator" class="tool-card">
+          <div class="cat-label">dti ratio calculator</div>
+          <h3>Calculadora de Relación Deuda-Ingreso (DTI)</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calcula tu relación deuda-ingreso a partir de los pagos mensuales de deuda y el ingreso bruto mensual.</p>
+          <div class="readout">
+            <span class="rlabel">DTI ratio</span>
+            <span class="rvalue settle-in" style="--delay:0.9500000000000001s">30%</span>
+          </div>
+        </a>
+        <a href="/es/tool/credit-card-payoff-calculator" class="tool-card">
+          <div class="cat-label">credit card payoff calculator</div>
+          <h3>Calculadora de Pago de Tarjeta de Crédito</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Ve cuánto tiempo tarda en pagarse el saldo de una tarjeta de crédito con un pago mínimo decreciente.</p>
+          <div class="readout">
+            <span class="rlabel">Months to pay off (minimum payments only)</span>
+            <span class="rvalue settle-in" style="--delay:1s">232</span>
+          </div>
+        </a>
+        <a href="/es/tool/auto-loan-calculator" class="tool-card">
+          <div class="cat-label">auto loan calculator</div>
+          <h3>Calculadora de Préstamo de Auto</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">También funciona como calculadora de préstamo de coche, préstamo automotriz o estimador de pago de auto -…</p>
+          <div class="readout">
+            <span class="rlabel">Estimated monthly payment</span>
+            <span class="rvalue settle-in" style="--delay:1.05s">$536.12</span>
+          </div>
+        </a>
+        <a href="/es/tool/investment-calculator" class="tool-card">
+          <div class="cat-label">investment calculator</div>
+          <h3>Calculadora de Inversión</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Estima el valor futuro de una inversión, ajustado por inflación.</p>
+          <div class="readout">
+            <span class="rlabel">Future value (nominal)</span>
+            <span class="rvalue settle-in" style="--delay:1.1s">$196,665.39</span>
+          </div>
+        </a>
+        <a href="/es/tool/retirement-401k-calculator" class="tool-card">
+          <div class="cat-label">401k calculator</div>
+          <h3>Calculadora de Jubilación 401(k)</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Proyecta tu saldo de 401(k) al jubilarte, incluyendo la igualación del empleador y el crecimiento de la…</p>
+          <div class="readout">
+            <span class="rlabel">Projected balance at retirement</span>
+            <span class="rvalue settle-in" style="--delay:1.1500000000000001s">$563,942</span>
+          </div>
+        </a>
+        <a href="/es/tool/bond-duration-calculator" class="tool-card">
+          <div class="cat-label">bond duration calculator</div>
+          <h3>Calculadora de Duración de Bonos</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calcula el precio de un bono, la duración de Macaulay, la duración modificada, el DV01 y la convexidad.</p>
+          <div class="readout">
+            <span class="rlabel">Bond price</span>
+            <span class="rvalue settle-in" style="--delay:1.2000000000000002s">$957.35</span>
+          </div>
+        </a>
+        <a href="/es/tool/gas-trip-cost-calculator" class="tool-card">
+          <div class="cat-label">cost of gas calculator</div>
+          <h3>Calculadora de Costo de Gasolina para Viaje</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calcula cuánto costará la gasolina para un viaje según la distancia, el rendimiento de combustible y el…</p>
+          <div class="readout">
+            <span class="rlabel">Total gas cost</span>
+            <span class="rvalue settle-in" style="--delay:1.25s">$37.5</span>
+          </div>
+        </a>
+        <a href="/es/tool/simple-interest-calculator" class="tool-card">
+          <div class="cat-label">simple interest calculator</div>
+          <h3>Calculadora de Interés Simple</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calcula el interés simple y el pago total a partir del capital, la tasa y el tiempo.</p>
+          <div class="readout">
+            <span class="rlabel">Simple interest</span>
+            <span class="rvalue settle-in" style="--delay:1.3s">$150</span>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
 

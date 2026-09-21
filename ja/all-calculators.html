@@ -52,62 +52,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="/css/styles.css" />
-  <script src="/js/calculators-data.js" defer></script>
-  <script src="/js/i18n-titles.js" defer></script>
   <script src="/js/theme.js" defer></script>
   <script src="/js/locale-switcher.js" defer></script>
-  <script>window.CALQ_LOCALE = "ja"; window.CALQ_LOCALE_PATH = "ja/";</script>
-  <script defer>
-    document.addEventListener("DOMContentLoaded", () => {
-      const LOC = window.CALQ_LOCALE;
-      const LPATH = window.CALQ_LOCALE_PATH;
-      function catName(cat) {
-        return (LOC !== "en" && window.I18N_CATEGORIES && window.I18N_CATEGORIES[cat.id] && window.I18N_CATEGORIES[cat.id][LOC])
-          ? window.I18N_CATEGORIES[cat.id][LOC].name : cat.name;
-      }
-      function toolTitle(calc) {
-        return (LOC !== "en" && window.I18N_TITLES && window.I18N_TITLES[calc.id] && window.I18N_TITLES[calc.id][LOC])
-          ? window.I18N_TITLES[calc.id][LOC] : calc.title;
-      }
-      function isTranslated(calcId) {
-        return LOC !== "en" && window.I18N_TITLES && window.I18N_TITLES[calcId] && window.I18N_TITLES[calcId][LOC];
-      }
-      function toolHref(calcId) {
-        return isTranslated(calcId) ? `/${LPATH}tool/${calcId}` : `https://calquary.com/tool/${calcId}`;
-      }
-      function catHref(catId) {
-        return `/${LPATH}category/${catId}`;
-      }
-
-      const wrap = document.getElementById("index-categories");
-      CATEGORIES.forEach((cat) => {
-        const tools = calculatorsInCategory(cat.id);
-
-        const section = document.createElement("section");
-        section.className = "index-category";
-
-        const head = document.createElement("div");
-        head.className = "index-category-head";
-        head.innerHTML = `
-          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${cat.icon}</svg></span>
-          <h2><a href="${catHref(cat.id)}">${catName(cat)}</a></h2>
-          <span class="count">${tools.length} tool${tools.length === 1 ? "" : "s"}</span>
-        `;
-        section.appendChild(head);
-
-        const list = document.createElement("ul");
-        list.className = "related-list index-columns";
-        tools.forEach((calc) => {
-          const li = document.createElement("li");
-          li.innerHTML = `<a href="${toolHref(calc.id)}">${toolTitle(calc)}</a>`;
-          list.appendChild(li);
-        });
-        section.appendChild(list);
-
-        wrap.appendChild(section);
-      });
-    });
-  </script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -166,7 +112,287 @@
 
   <section class="section">
     <div class="wrap">
-      <div id="index-categories"></div>
+      <div id="index-categories">
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/><line x1="18" y1="6" x2="6" y2="18"/></svg></span>
+          <h2><a href="/ja/category/math">数学</a></h2>
+          <span class="count">73 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/ja/tool/percentage-calculator">パーセント計算機</a></li>
+            <li><a href="/ja/tool/percentage-change-calculator">変化率計算機</a></li>
+            <li><a href="/ja/tool/average-calculator">平均計算機</a></li>
+            <li><a href="/ja/tool/fraction-calculator">分数計算機</a></li>
+            <li><a href="/ja/tool/pi-digits-calculator">円周率桁数計算機</a></li>
+            <li><a href="/ja/tool/long-division-calculator">筆算割り算計算機</a></li>
+            <li><a href="/ja/tool/long-multiplication-calculator">筆算掛け算計算機</a></li>
+            <li><a href="/ja/tool/gcd-lcm-calculator">最大公約数・最小公倍数計算機</a></li>
+            <li><a href="/ja/tool/factor-calculator">因数計算機</a></li>
+            <li><a href="/ja/tool/standard-deviation-calculator">標準偏差計算機</a></li>
+            <li><a href="/ja/tool/t-test-calculator">t検定計算機</a></li>
+            <li><a href="/ja/tool/effect-size-calculator">効果量計算機（コーエンのd）</a></li>
+            <li><a href="/ja/tool/mann-whitney-u-calculator">マン・ホイットニーのU検定計算機</a></li>
+            <li><a href="/ja/tool/sequences-series-calculator">数列と級数計算機</a></li>
+            <li><a href="/ja/tool/coupon-collector-calculator">クーポンコレクター問題計算機</a></li>
+            <li><a href="/ja/tool/similarity-ratio-calculator">相似比計算機</a></li>
+            <li><a href="/ja/tool/correlation-calculator">相関係数計算機</a></li>
+            <li><a href="/ja/tool/z-score-calculator">Zスコア（標準化スコア）計算機</a></li>
+            <li><a href="/ja/tool/confusion-matrix-calculator">混同行列計算機</a></li>
+            <li><a href="/ja/tool/odds-probability-converter">オッズから確率への変換機</a></li>
+            <li><a href="/ja/tool/normal-distribution-calculator">正規分布計算機</a></li>
+            <li><a href="/ja/tool/lottery-odds-calculator">宝くじ当選確率計算機</a></li>
+            <li><a href="/ja/tool/poker-hand-probability-calculator">ポーカーハンド確率計算機</a></li>
+            <li><a href="/ja/tool/square-root-calculator">平方根計算機</a></li>
+            <li><a href="/ja/tool/ratio-calculator">比率計算機</a></li>
+            <li><a href="/ja/tool/aspect-ratio-calculator">アスペクト比計算機</a></li>
+            <li><a href="/ja/tool/exponent-calculator">指数計算機</a></li>
+            <li><a href="/ja/tool/logarithm-calculator">対数計算機</a></li>
+            <li><a href="/ja/tool/vector-calculator">ベクトル計算機</a></li>
+            <li><a href="/ja/tool/haversine-distance-calculator">距離と方位計算機（緯度/経度）</a></li>
+            <li><a href="/ja/tool/quadratic-formula-calculator">二次方程式計算機</a></li>
+            <li><a href="/ja/tool/cone-volume-calculator">円錐体積計算機</a></li>
+            <li><a href="/ja/tool/cylinder-volume-calculator">円柱体積計算機</a></li>
+            <li><a href="/ja/tool/pythagorean-theorem-calculator">ピタゴラスの定理計算機</a></li>
+            <li><a href="/ja/tool/distance-formula-calculator">距離公式計算機</a></li>
+            <li><a href="/ja/tool/triangle-solver">三角形ソルバー（SSS）</a></li>
+            <li><a href="/ja/tool/hypergeometric-calculator">超幾何分布計算機</a></li>
+            <li><a href="/ja/tool/trapezoid-area-calculator">台形面積計算機</a></li>
+            <li><a href="/ja/tool/rectangular-prism-volume-calculator">直方体体積計算機</a></li>
+            <li><a href="/ja/tool/slope-calculator">傾き計算機</a></li>
+            <li><a href="/ja/tool/sector-calculator">円セクター計算機</a></li>
+            <li><a href="/ja/tool/grade-gradient-calculator">勾配計算機</a></li>
+            <li><a href="/ja/tool/molecular-weight-calculator">分子量計算機</a></li>
+            <li><a href="/ja/tool/empirical-formula-calculator">実験式計算機</a></li>
+            <li><a href="/ja/tool/system-of-equations-solver">連立方程式ソルバー</a></li>
+            <li><a href="/ja/tool/linear-equation-solver">一次方程式ソルバー</a></li>
+            <li><a href="/ja/tool/eigenvalue-calculator">固有値・固有ベクトル計算機（2x2）</a></li>
+            <li><a href="/ja/tool/inequality-solver">線形不等式ソルバー</a></li>
+            <li><a href="/ja/tool/chemical-equation-balancer">化学反応式バランサー</a></li>
+            <li><a href="/ja/tool/solubility-product-calculator">溶解度積（Ksp）計算機</a></li>
+            <li><a href="/ja/tool/titration-ph-calculator">滴定pH計算機</a></li>
+            <li><a href="/ja/tool/limiting-reagent-calculator">限定反応剤計算機</a></li>
+            <li><a href="/ja/tool/half-life-calculator">半減期計算機</a></li>
+            <li><a href="/ja/tool/hardy-weinberg-calculator">ハーディ・ワインベルグ平衡計算機</a></li>
+            <li><a href="/ja/tool/grade-calculator">成績計算機</a></li>
+            <li><a href="/ja/tool/weighted-grade-calculator">加重成績計算機</a></li>
+            <li><a href="/ja/tool/gpa-calculator">加重GPA計算機</a></li>
+            <li><a href="/ja/tool/speed-distance-time-calculator">速度・距離・時間計算機</a></li>
+            <li><a href="/ja/tool/projectile-motion-calculator">放物運動計算機</a></li>
+            <li><a href="/ja/tool/collision-calculator">運動量・衝突計算機</a></li>
+            <li><a href="/ja/tool/ohms-law-calculator">オームの法則計算機</a></li>
+            <li><a href="/ja/tool/right-triangle-calculator">直角三角形計算機</a></li>
+            <li><a href="/ja/tool/absolute-risk-reduction-calculator">絶対リスク減少計算機</a></li>
+            <li><a href="/ja/tool/sample-size-calculator">サンプルサイズ計算機</a></li>
+            <li><a href="/ja/tool/confidence-interval-calculator">信頼区間計算機</a></li>
+            <li><a href="/ja/tool/mean-median-mode-calculator">平均値・中央値・最頻値・範囲計算機</a></li>
+            <li><a href="/ja/tool/roman-numeral-converter">ローマ数字変換機</a></li>
+            <li><a href="/ja/tool/distance-modulus-calculator">距離指数計算機</a></li>
+            <li><a href="/ja/tool/earthquake-magnitude-calculator">地震マグニチュードエネルギー計算機</a></li>
+            <li><a href="/ja/tool/pressure-altitude-calculator">気圧高度計算機</a></li>
+            <li><a href="/ja/tool/circle-calculator">円計算機</a></li>
+            <li><a href="/ja/tool/repeating-decimal-to-fraction-calculator">循環小数から分数への計算機</a></li>
+            <li><a href="/ja/tool/permutations-combinations-calculator">順列と組み合わせ計算機</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="19" x2="5" y2="13"/><line x1="12" y1="19" x2="12" y2="9"/><line x1="19" y1="19" x2="19" y2="5"/></svg></span>
+          <h2><a href="/ja/category/finance">お金・金融</a></h2>
+          <span class="count">27 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/ja/tool/loan-calculator">ローン返済額計算機</a></li>
+            <li><a href="/ja/tool/amortization-schedule-calculator">返済スケジュール計算機</a></li>
+            <li><a href="/ja/tool/mortgage-payoff-calculator">住宅ローン早期返済計算機</a></li>
+            <li><a href="/ja/tool/heloc-calculator">HELOC返済計算機</a></li>
+            <li><a href="/ja/tool/mortgage-calculator">住宅ローン計算機</a></li>
+            <li><a href="/ja/tool/home-affordability-calculator">住宅購入予算計算機</a></li>
+            <li><a href="/ja/tool/hourly-to-salary-calculator">時給から年収への計算機</a></li>
+            <li><a href="/ja/tool/time-card-calculator">タイムカード計算機</a></li>
+            <li><a href="/ja/tool/tip-calculator">チップ計算機</a></li>
+            <li><a href="/ja/tool/savings-calculator">貯蓄計算機</a></li>
+            <li><a href="/ja/tool/tvm-solver">TVMソルバー（現在価値・将来価値・支払額）</a></li>
+            <li><a href="/ja/tool/irr-npv-calculator">IRR・NPV計算機</a></li>
+            <li><a href="/ja/tool/budget-calculator">予算計算機</a></li>
+            <li><a href="/ja/tool/compound-interest-calculator">複利計算機</a></li>
+            <li><a href="/ja/tool/apr-to-apy-calculator">APRからAPY（実効年利）への計算機</a></li>
+            <li><a href="/ja/tool/sales-tax-calculator">売上税計算機</a></li>
+            <li><a href="/ja/tool/discount-calculator">割引計算機</a></li>
+            <li><a href="/ja/tool/price-calculator">価格計算機</a></li>
+            <li><a href="/ja/tool/debt-payoff-calculator">借金返済計算機</a></li>
+            <li><a href="/ja/tool/dti-ratio-calculator">負債対収入比率（DTI）計算機</a></li>
+            <li><a href="/ja/tool/credit-card-payoff-calculator">クレジットカード返済計算機</a></li>
+            <li><a href="/ja/tool/auto-loan-calculator">自動車ローン計算機</a></li>
+            <li><a href="/ja/tool/investment-calculator">投資計算機</a></li>
+            <li><a href="/ja/tool/retirement-401k-calculator">401(k)退職金計算機</a></li>
+            <li><a href="/ja/tool/bond-duration-calculator">債券デュレーション計算機</a></li>
+            <li><a href="/ja/tool/gas-trip-cost-calculator">旅行のガソリン代計算機</a></li>
+            <li><a href="/ja/tool/simple-interest-calculator">単利計算機</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.5 12 5l8 6.5"/><path d="M6 10v9h12v-9"/></svg></span>
+          <h2><a href="/ja/category/construction">建築・住まい</a></h2>
+          <span class="count">15 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/ja/tool/concrete-calculator">コンクリート計算機</a></li>
+            <li><a href="/ja/tool/paint-calculator">ペイント計算機</a></li>
+            <li><a href="/ja/tool/mulch-calculator">マルチング材計算機</a></li>
+            <li><a href="/ja/tool/gravel-calculator">砂利計算機</a></li>
+            <li><a href="/ja/tool/flooring-calculator">床材計算機</a></li>
+            <li><a href="/ja/tool/drywall-calculator">石膏ボード計算機</a></li>
+            <li><a href="/ja/tool/tile-calculator">タイル計算機</a></li>
+            <li><a href="/ja/tool/roofing-calculator">屋根材計算機</a></li>
+            <li><a href="/ja/tool/square-footage-calculator">平方フィート計算機</a></li>
+            <li><a href="/ja/tool/fence-calculator">フェンス計算機</a></li>
+            <li><a href="/ja/tool/insulation-calculator">断熱材計算機</a></li>
+            <li><a href="/ja/tool/ac-btu-calculator">エアコンサイズ計算機（BTU）</a></li>
+            <li><a href="/ja/tool/lumber-calculator">木材計算機</a></li>
+            <li><a href="/ja/tool/paver-calculator">ペイバー（敷石）計算機</a></li>
+            <li><a href="/ja/tool/mix-ratio-calculator">混合比計算機</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3,12 8,12 10,6 14,18 16,12 21,12"/></svg></span>
+          <h2><a href="/ja/category/health">健康・フィットネス</a></h2>
+          <span class="count">17 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/ja/tool/bmi-calculator">BMI計算機</a></li>
+            <li><a href="/ja/tool/height-percentile-calculator">身長パーセンタイル計算機</a></li>
+            <li><a href="/ja/tool/bmr-calculator">基礎代謝量計算機</a></li>
+            <li><a href="/ja/tool/body-surface-area-calculator">体表面積計算機</a></li>
+            <li><a href="/ja/tool/calorie-calculator">カロリー計算機</a></li>
+            <li><a href="/ja/tool/body-fat-calculator">体脂肪率計算機</a></li>
+            <li><a href="/ja/tool/macro-calculator">マクロ栄養素計算機</a></li>
+            <li><a href="/ja/tool/water-intake-calculator">水分摂取量計算機</a></li>
+            <li><a href="/ja/tool/one-rep-max-calculator">最大挙上重量計算機（1RM）</a></li>
+            <li><a href="/ja/tool/heart-rate-zone-calculator">心拍数ゾーン計算機</a></li>
+            <li><a href="/ja/tool/ideal-weight-calculator">理想体重計算機</a></li>
+            <li><a href="/ja/tool/bra-size-calculator">ブラサイズ計算機</a></li>
+            <li><a href="/ja/tool/pace-calculator">ランニングペース計算機</a></li>
+            <li><a href="/ja/tool/steps-to-miles-calculator">歩数からマイルへの計算機</a></li>
+            <li><a href="/ja/tool/pregnancy-due-date-calculator">出産予定日計算機</a></li>
+            <li><a href="/ja/tool/ovulation-calculator">排卵日計算機</a></li>
+            <li><a href="/ja/tool/calories-burned-calculator">消費カロリー計算機</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><line x1="12" y1="12" x2="12" y2="7"/><line x1="12" y1="12" x2="16" y2="14"/></svg></span>
+          <h2><a href="/ja/category/datetime">日付・時間</a></h2>
+          <span class="count">23 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/ja/tool/days-until-calculator">残り日数計算機</a></li>
+            <li><a href="/ja/tool/date-duration-calculator">日付間隔計算機</a></li>
+            <li><a href="/ja/tool/business-days-calculator">営業日計算機</a></li>
+            <li><a href="/ja/tool/time-duration-calculator">時間の長さ計算機</a></li>
+            <li><a href="/ja/tool/time-add-calculator">時間の加算・減算計算機</a></li>
+            <li><a href="/ja/tool/online-timer">オンラインタイマー</a></li>
+            <li><a href="/ja/tool/online-alarm-clock">オンラインアラーム時計</a></li>
+            <li><a href="/ja/tool/online-stopwatch">オンラインストップウォッチ</a></li>
+            <li><a href="/ja/tool/current-time">現在時刻</a></li>
+            <li><a href="/ja/tool/random-date-generator">ランダム日付ジェネレーター</a></li>
+            <li><a href="/ja/tool/military-time-converter">軍事時間変換ツール</a></li>
+            <li><a href="/ja/tool/unix-timestamp-converter">Unixタイムスタンプ変換ツール</a></li>
+            <li><a href="/ja/tool/week-number-calculator">週番号計算機</a></li>
+            <li><a href="/ja/tool/time-zone-converter">タイムゾーン変換ツール</a></li>
+            <li><a href="/ja/tool/daylight-saving-time-calculator">サマータイム計算機</a></li>
+            <li><a href="/ja/tool/sunrise-sunset-calculator">日の出・日の入り計算機</a></li>
+            <li><a href="/ja/tool/sun-position-calculator">太陽位置計算機</a></li>
+            <li><a href="/ja/tool/day-of-week-calculator">曜日計算機</a></li>
+            <li><a href="/ja/tool/leap-year-calculator">うるう年計算機</a></li>
+            <li><a href="/ja/tool/age-calculator">年齢計算機</a></li>
+            <li><a href="/ja/tool/birth-year-calculator">生まれ年計算機</a></li>
+            <li><a href="/ja/tool/time-zone-meeting-planner">タイムゾーン会議プランナー</a></li>
+            <li><a href="/ja/tool/day-of-the-week-calculator">曜日計算機</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16,3 20,7 16,11"/><line x1="20" y1="7" x2="4" y2="7"/><polyline points="8,13 4,17 8,21"/><line x1="4" y1="17" x2="20" y2="17"/></svg></span>
+          <h2><a href="/ja/category/conversions">日常の単位換算</a></h2>
+          <span class="count">23 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/ja/tool/screen-ppi-calculator">画面PPI計算機</a></li>
+            <li><a href="/ja/tool/print-dpi-calculator">印刷DPI計算機</a></li>
+            <li><a href="/ja/tool/unit-length-converter">cm・インチ変換ツール</a></li>
+            <li><a href="/ja/tool/time-unit-converter">時間単位変換ツール</a></li>
+            <li><a href="/ja/tool/temperature-converter">温度変換ツール</a></li>
+            <li><a href="/ja/tool/oven-temperature-converter">オーブン温度変換ツール</a></li>
+            <li><a href="/ja/tool/rainfall-volume-calculator">雨量から体積への計算機</a></li>
+            <li><a href="/ja/tool/water-density-calculator">水の密度計算機</a></li>
+            <li><a href="/ja/tool/weight-converter">重量変換ツール</a></li>
+            <li><a href="/ja/tool/volume-converter">体積変換ツール</a></li>
+            <li><a href="/ja/tool/cooking-converter">グラムからカップへの変換ツール</a></li>
+            <li><a href="/ja/tool/microwave-wattage-converter">電子レンジワット数変換ツール</a></li>
+            <li><a href="/ja/tool/electricity-cost-calculator">電気代計算機</a></li>
+            <li><a href="/ja/tool/ppm-percent-converter">PPMからパーセントへの変換ツール</a></li>
+            <li><a href="/ja/tool/speed-converter">速度変換ツール</a></li>
+            <li><a href="/ja/tool/area-converter">面積変換ツール</a></li>
+            <li><a href="/ja/tool/data-storage-converter">データストレージ変換ツール</a></li>
+            <li><a href="/ja/tool/pressure-converter">圧力変換ツール</a></li>
+            <li><a href="/ja/tool/torque-converter">トルク変換ツール</a></li>
+            <li><a href="/ja/tool/fuel-economy-converter">燃費変換ツール</a></li>
+            <li><a href="/ja/tool/gear-ratio-calculator">自転車ギア比計算機</a></li>
+            <li><a href="/ja/tool/tire-size-calculator">タイヤサイズ比較計算機</a></li>
+            <li><a href="/ja/tool/weather-comfort-calculator">露点・暑さ指数・体感温度計算機</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4h6M12 4v16M9 20h6"/></svg></span>
+          <h2><a href="/ja/category/text">テキスト・デジタル</a></h2>
+          <span class="count">21 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/ja/tool/color-difference-checker">色差チェッカー</a></li>
+            <li><a href="/ja/tool/list-shuffler">リストシャッフラー</a></li>
+            <li><a href="/ja/tool/weighted-random-picker">重み付きランダムピッカー</a></li>
+            <li><a href="/ja/tool/word-counter">文字数・単語数カウンター</a></li>
+            <li><a href="/ja/tool/password-generator">パスワード生成機</a></li>
+            <li><a href="/ja/tool/uuid-generator">UUID生成機</a></li>
+            <li><a href="/ja/tool/random-number-generator">乱数生成機</a></li>
+            <li><a href="/ja/tool/coin-flipper">コイントス</a></li>
+            <li><a href="/ja/tool/dice-roller">サイコロ振り</a></li>
+            <li><a href="/ja/tool/card-deck-shuffler">シャッフルされたトランプ</a></li>
+            <li><a href="/ja/tool/color-mixer">カラーミキサー</a></li>
+            <li><a href="/ja/tool/case-converter">大文字・小文字変換ツール</a></li>
+            <li><a href="/ja/tool/lorem-ipsum-generator">ロレムイプサム生成機</a></li>
+            <li><a href="/ja/tool/text-to-slug-generator">テキストからスラッグ生成機</a></li>
+            <li><a href="/ja/tool/binary-to-text-converter">バイナリからテキストへの変換機</a></li>
+            <li><a href="/ja/tool/word-frequency-counter">単語頻度カウンター</a></li>
+            <li><a href="/ja/tool/url-encoder-decoder">URLエンコーダー / デコーダー</a></li>
+            <li><a href="/ja/tool/ip-subnet-calculator">IPサブネット計算機</a></li>
+            <li><a href="/ja/tool/json-compare">JSON比較</a></li>
+            <li><a href="/ja/tool/cidr-calculator">CIDR / サブネット計算機</a></li>
+            <li><a href="/ja/tool/group-randomizer">グループランダマイザー</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="15.5" r="4"/><circle cx="5.5" cy="9" r="2"/><circle cx="10" cy="4.5" r="2"/><circle cx="14" cy="4.5" r="2"/><circle cx="18.5" cy="9" r="2"/></svg></span>
+          <h2><a href="/ja/category/pets">ペット・ライフスタイル</a></h2>
+          <span class="count">8 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/ja/tool/dog-age-calculator">犬の年齢計算機</a></li>
+            <li><a href="/ja/tool/dog-food-calculator">ドッグフード計算機</a></li>
+            <li><a href="/ja/tool/cat-age-calculator">猫の年齢計算機</a></li>
+            <li><a href="/ja/tool/rabbit-age-calculator">ウサギ年齢計算機</a></li>
+            <li><a href="/ja/tool/dog-pregnancy-calculator">犬の妊娠計算機</a></li>
+            <li><a href="/ja/tool/horse-age-calculator">馬の年齢計算機</a></li>
+            <li><a href="/ja/tool/ideal-dog-weight-calculator">犬の理想体重計算機</a></li>
+            <li><a href="/ja/tool/cat-pregnancy-calculator">猫の妊娠計算機</a></li>
+        </ul>
+      </section>
+      </div>
     </div>
   </section>
 

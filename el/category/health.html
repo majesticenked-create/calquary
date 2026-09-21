@@ -52,43 +52,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="/css/styles.css" />
-  <script src="/js/calculators-data.js" defer></script>
   <script src="/js/theme.js" defer></script>
   <script src="/js/locale-switcher.js" defer></script>
-  <script defer>
-    document.addEventListener("DOMContentLoaded", () => {
-      const cat = getCategory("health");
-      document.getElementById("cat-code").innerHTML = `<svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${cat.icon}</svg>`;
-
-      // Card grid stays JS-rendered (interactive live-readout preview, same
-      // as the homepage) but is NOT the page's static SEO content — the h1,
-      // description, and breadcrumb above are baked directly into the HTML
-      // at build time (see build.js), not set here.
-      const tools = calculatorsInCategory(cat.id);
-      const translatedIds = {"percentage-calculator":true,"average-calculator":true,"mortgage-calculator":true,"loan-calculator":true,"compound-interest-calculator":true,"concrete-calculator":true,"flooring-calculator":true,"calorie-calculator":true,"bmi-calculator":true,"bmr-calculator":true,"age-calculator":true,"days-until-calculator":true,"unit-length-converter":true,"temperature-converter":true,"word-counter":true,"case-converter":true,"dog-age-calculator":true,"cat-age-calculator":true,"cat-pregnancy-calculator":true,"dog-pregnancy-calculator":true,"simple-interest-calculator":true,"sales-tax-calculator":true,"tip-calculator":true,"discount-calculator":true,"gpa-calculator":true,"body-fat-calculator":true,"amortization-schedule-calculator":true,"mortgage-payoff-calculator":true,"heloc-calculator":true,"home-affordability-calculator":true,"hourly-to-salary-calculator":true,"time-card-calculator":true,"savings-calculator":true,"tvm-solver":true,"irr-npv-calculator":true,"budget-calculator":true,"apr-to-apy-calculator":true,"price-calculator":true,"debt-payoff-calculator":true,"dti-ratio-calculator":true,"credit-card-payoff-calculator":true,"auto-loan-calculator":true,"investment-calculator":true,"retirement-401k-calculator":true,"bond-duration-calculator":true,"gas-trip-cost-calculator":true,"paint-calculator":true,"mulch-calculator":true,"gravel-calculator":true,"drywall-calculator":true,"tile-calculator":true,"roofing-calculator":true,"square-footage-calculator":true,"fence-calculator":true,"insulation-calculator":true,"ac-btu-calculator":true,"lumber-calculator":true,"paver-calculator":true,"mix-ratio-calculator":true,"height-percentile-calculator":true,"body-surface-area-calculator":true,"macro-calculator":true,"water-intake-calculator":true,"one-rep-max-calculator":true,"heart-rate-zone-calculator":true,"ideal-weight-calculator":true,"bra-size-calculator":true,"pace-calculator":true,"steps-to-miles-calculator":true,"pregnancy-due-date-calculator":true,"ovulation-calculator":true,"calories-burned-calculator":true,"dog-food-calculator":true,"rabbit-age-calculator":true,"horse-age-calculator":true,"ideal-dog-weight-calculator":true,"date-duration-calculator":true,"business-days-calculator":true,"time-duration-calculator":true,"time-add-calculator":true,"online-timer":true,"online-alarm-clock":true,"online-stopwatch":true,"current-time":true,"random-date-generator":true,"military-time-converter":true,"unix-timestamp-converter":true,"week-number-calculator":true,"time-zone-converter":true,"daylight-saving-time-calculator":true,"sunrise-sunset-calculator":true,"sun-position-calculator":true,"day-of-week-calculator":true,"leap-year-calculator":true,"birth-year-calculator":true,"time-zone-meeting-planner":true,"day-of-the-week-calculator":true,"screen-ppi-calculator":true,"print-dpi-calculator":true,"time-unit-converter":true,"oven-temperature-converter":true,"rainfall-volume-calculator":true,"water-density-calculator":true,"weight-converter":true,"volume-converter":true,"cooking-converter":true,"microwave-wattage-converter":true,"electricity-cost-calculator":true,"ppm-percent-converter":true,"speed-converter":true,"area-converter":true,"data-storage-converter":true,"pressure-converter":true,"torque-converter":true,"fuel-economy-converter":true,"gear-ratio-calculator":true,"tire-size-calculator":true,"weather-comfort-calculator":true,"color-difference-checker":true,"list-shuffler":true,"weighted-random-picker":true,"password-generator":true,"uuid-generator":true,"random-number-generator":true,"coin-flipper":true,"dice-roller":true,"card-deck-shuffler":true,"color-mixer":true,"lorem-ipsum-generator":true,"text-to-slug-generator":true,"binary-to-text-converter":true,"word-frequency-counter":true,"url-encoder-decoder":true,"ip-subnet-calculator":true,"json-compare":true,"cidr-calculator":true,"group-randomizer":true,"percentage-change-calculator":true,"fraction-calculator":true,"pi-digits-calculator":true,"long-division-calculator":true,"long-multiplication-calculator":true,"gcd-lcm-calculator":true,"factor-calculator":true,"standard-deviation-calculator":true,"t-test-calculator":true,"effect-size-calculator":true,"mann-whitney-u-calculator":true,"sequences-series-calculator":true,"coupon-collector-calculator":true,"similarity-ratio-calculator":true,"correlation-calculator":true,"z-score-calculator":true,"confusion-matrix-calculator":true,"odds-probability-converter":true,"normal-distribution-calculator":true,"lottery-odds-calculator":true,"poker-hand-probability-calculator":true,"square-root-calculator":true,"ratio-calculator":true,"aspect-ratio-calculator":true,"exponent-calculator":true,"logarithm-calculator":true,"vector-calculator":true,"haversine-distance-calculator":true,"quadratic-formula-calculator":true,"cone-volume-calculator":true,"cylinder-volume-calculator":true,"pythagorean-theorem-calculator":true,"distance-formula-calculator":true,"triangle-solver":true,"hypergeometric-calculator":true,"trapezoid-area-calculator":true,"rectangular-prism-volume-calculator":true,"slope-calculator":true,"sector-calculator":true,"grade-gradient-calculator":true,"molecular-weight-calculator":true,"empirical-formula-calculator":true,"system-of-equations-solver":true,"linear-equation-solver":true,"eigenvalue-calculator":true,"inequality-solver":true,"chemical-equation-balancer":true,"solubility-product-calculator":true,"titration-ph-calculator":true,"limiting-reagent-calculator":true,"half-life-calculator":true,"hardy-weinberg-calculator":true,"grade-calculator":true,"weighted-grade-calculator":true,"speed-distance-time-calculator":true,"projectile-motion-calculator":true,"collision-calculator":true,"ohms-law-calculator":true,"right-triangle-calculator":true,"absolute-risk-reduction-calculator":true,"sample-size-calculator":true,"confidence-interval-calculator":true,"mean-median-mode-calculator":true,"roman-numeral-converter":true,"distance-modulus-calculator":true,"earthquake-magnitude-calculator":true,"pressure-altitude-calculator":true,"circle-calculator":true,"repeating-decimal-to-fraction-calculator":true,"permutations-combinations-calculator":true};
-      const grid = document.getElementById("cat-tool-grid");
-      tools.forEach((calc, i) => {
-        const sampleResult = calc.compute(
-          Object.fromEntries(calc.fields.map((f) => [f.id, f.type === "checkbox-group" ? (f.default || []) : f.default]))
-        );
-        const a = document.createElement("a");
-        // Locale pages only have a localized tool page for the wave-one
-        // batch — link straight through to it when it exists, otherwise
-        // fall back to the English canonical rather than a 404.
-        a.href = translatedIds[calc.id] ? `/el/tool/${calc.id}` : `https://calquary.com/tool/${calc.id}`;
-        a.className = "tool-card";
-        a.innerHTML = `
-          <div class="cat-label">${calc.keyword}</div>
-          <h3>${calc.title}</h3>
-          <div class="readout">
-            <span class="rlabel">${sampleResult.primary.label}</span>
-            <span class="rvalue" style="--delay:${0.05 * i}s">${sampleResult.primary.value}</span>
-          </div>
-        `;
-        grid.appendChild(a);
-      });
-    });
-  </script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -140,7 +105,7 @@
   <section class="category-hero">
     <div class="wrap">
       <div class="breadcrumb"><a href="/el/">Calquary</a> / Κατηγορίες</div>
-      <span class="code-badge" id="cat-code"></span>
+      <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3,12 8,12 10,6 14,18 16,12 21,12"/></svg></span>
       <h1>Υγεία και Φυσική Κατάσταση Αριθμομηχανές</h1>
       <p style="max-width:56ch;">Δείκτες σώματος, ρυθμός και δεδομένα προπόνησης.</p>
     </div>
@@ -154,7 +119,161 @@
 
   <section class="section">
     <div class="wrap">
-      <div class="tool-grid" id="cat-tool-grid"></div>
+      <div class="tool-grid" id="cat-tool-grid">
+        <a href="/el/tool/bmi-calculator" class="tool-card">
+          <div class="cat-label">bmi calculator</div>
+          <h3>Αριθμομηχανή ΔΜΣ</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Υπολόγισε τον Δείκτη Μάζας Σώματος (ΔΜΣ) από το ύψος και το βάρος.</p>
+          <div class="readout">
+            <span class="rlabel">BMI</span>
+            <span class="rvalue settle-in" style="--delay:0s">23.5</span>
+          </div>
+        </a>
+        <a href="/el/tool/height-percentile-calculator" class="tool-card">
+          <div class="cat-label">height percentile calculator</div>
+          <h3>Αριθμομηχανή Εκατοστημορίου Ύψους</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Εκτίμησε σε ποιο εκατοστημόριο εμπίπτει ένα ύψος μεταξύ ενηλίκων των ΗΠΑ του ίδιου φύλου.</p>
+          <div class="readout">
+            <span class="rlabel">Percentile</span>
+            <span class="rvalue settle-in" style="--delay:0.05s">48.7th</span>
+          </div>
+        </a>
+        <a href="/el/tool/bmr-calculator" class="tool-card">
+          <div class="cat-label">bmr calculator</div>
+          <h3>Αριθμομηχανή Βασικού Μεταβολικού Ρυθμού</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Υπολόγισε τον βασικό μεταβολικό ρυθμό - τις θερμίδες που καίει το σώμα σε ηρεμία.</p>
+          <div class="readout">
+            <span class="rlabel">BMR (calories/day at rest)</span>
+            <span class="rvalue settle-in" style="--delay:0.1s">1783</span>
+          </div>
+        </a>
+        <a href="/el/tool/body-surface-area-calculator" class="tool-card">
+          <div class="cat-label">body surface area calculator</div>
+          <h3>Αριθμομηχανή Επιφάνειας Σώματος</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Υπολόγισε την επιφάνεια σώματος (BSA) από ύψος και βάρος χρησιμοποιώντας τον τύπο Mosteller.</p>
+          <div class="readout">
+            <span class="rlabel">Body surface area</span>
+            <span class="rvalue settle-in" style="--delay:0.15000000000000002s">1.8181 m²</span>
+          </div>
+        </a>
+        <a href="/el/tool/calorie-calculator" class="tool-card">
+          <div class="cat-label">calorie calculator</div>
+          <h3>Αριθμομηχανή Θερμίδων</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Υπολόγισε τις ημερήσιες θερμίδες που χρειάζεσαι για διατήρηση, απώλεια ή αύξηση βάρους.</p>
+          <div class="readout">
+            <span class="rlabel">Maintenance calories/day</span>
+            <span class="rvalue settle-in" style="--delay:0.2s">2763</span>
+          </div>
+        </a>
+        <a href="/el/tool/body-fat-calculator" class="tool-card">
+          <div class="cat-label">body fat calculator</div>
+          <h3>Αριθμομηχανή Σωματικού Λίπους</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Εκτίμησε το ποσοστό σωματικού λίπους σου χρησιμοποιώντας τη μέθοδο περιμέτρων του Πολεμικού Ναυτικού των ΗΠΑ.</p>
+          <div class="readout">
+            <span class="rlabel">Estimated body fat</span>
+            <span class="rvalue settle-in" style="--delay:0.25s">17.5%</span>
+          </div>
+        </a>
+        <a href="/el/tool/macro-calculator" class="tool-card">
+          <div class="cat-label">macro calculator</div>
+          <h3>Αριθμομηχανή Μακροθρεπτικών Συστατικών</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Χωρίστε τον ημερήσιο στόχο θερμίδων σας σε γραμμάρια πρωτεΐνης, λίπους και υδατανθράκων.</p>
+          <div class="readout">
+            <span class="rlabel">Protein</span>
+            <span class="rvalue settle-in" style="--delay:0.30000000000000004s">188g</span>
+          </div>
+        </a>
+        <a href="/el/tool/water-intake-calculator" class="tool-card">
+          <div class="cat-label">water intake calculator</div>
+          <h3>Αριθμομηχανή Πρόσληψης Νερού</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Εκτίμησε τον στόχο ημερήσιας πρόσληψης νερού σου με βάση το σωματικό βάρος και τη δραστηριότητα.</p>
+          <div class="readout">
+            <span class="rlabel">Daily water target</span>
+            <span class="rvalue settle-in" style="--delay:0.35000000000000003s">102 oz</span>
+          </div>
+        </a>
+        <a href="/el/tool/one-rep-max-calculator" class="tool-card">
+          <div class="cat-label">one rep max calculator</div>
+          <h3>Αριθμομηχανή Μέγιστης Επανάληψης (1RM)</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Εκτίμησε τη μέγιστη επανάληψή σου από ένα βάρος και έναν αριθμό επαναλήψεων χρησιμοποιώντας τον τύπο Epley.</p>
+          <div class="readout">
+            <span class="rlabel">Estimated one-rep max</span>
+            <span class="rvalue settle-in" style="--delay:0.4s">215.8 lb</span>
+          </div>
+        </a>
+        <a href="/el/tool/heart-rate-zone-calculator" class="tool-card">
+          <div class="cat-label">heart rate zone calculator</div>
+          <h3>Αριθμομηχανή Ζωνών Καρδιακού Ρυθμού</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Υπολόγισε τον μέγιστο καρδιακό ρυθμό σου και τις στοχευόμενες ζώνες προπόνησης ανά ηλικία.</p>
+          <div class="readout">
+            <span class="rlabel">Estimated max heart rate</span>
+            <span class="rvalue settle-in" style="--delay:0.45s">190 bpm</span>
+          </div>
+        </a>
+        <a href="/el/tool/ideal-weight-calculator" class="tool-card">
+          <div class="cat-label">ideal weight calculator</div>
+          <h3>Αριθμομηχανή Ιδανικού Βάρους</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Εκτίμησε έναν υγιή στόχο βάρους με βάση το ύψος και το φύλο.</p>
+          <div class="readout">
+            <span class="rlabel">Estimated ideal weight</span>
+            <span class="rvalue settle-in" style="--delay:0.5s">160.9 lb</span>
+          </div>
+        </a>
+        <a href="/el/tool/bra-size-calculator" class="tool-card">
+          <div class="cat-label">bra size calculator</div>
+          <h3>Αριθμομηχανή Μεγέθους Σουτιέν</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Υπολόγισε το μέγεθος ζώνης και κούπας του σουτιέν σου από τις μετρήσεις κάτω από το στήθος και στήθους.</p>
+          <div class="readout">
+            <span class="rlabel">Estimated size</span>
+            <span class="rvalue settle-in" style="--delay:0.55s">36D</span>
+          </div>
+        </a>
+        <a href="/el/tool/pace-calculator" class="tool-card">
+          <div class="cat-label">pace calculator</div>
+          <h3>Αριθμομηχανή Ρυθμού Τρεξίματος</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Υπολόγισε τον ρυθμό τρεξίματός σου ανά μίλι ή χιλιόμετρο.</p>
+          <div class="readout">
+            <span class="rlabel">Pace per mile</span>
+            <span class="rvalue settle-in" style="--delay:0.6000000000000001s">9:02 /mi</span>
+          </div>
+        </a>
+        <a href="/el/tool/steps-to-miles-calculator" class="tool-card">
+          <div class="cat-label">steps to miles calculator</div>
+          <h3>Αριθμομηχανή Βημάτων σε Μίλια</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Μετέτρεψε έναν αριθμό βημάτων σε απόσταση που περπατήθηκε, με βάση το μήκος του βήματός σου.</p>
+          <div class="readout">
+            <span class="rlabel">Distance</span>
+            <span class="rvalue settle-in" style="--delay:0.65s">4.73 miles</span>
+          </div>
+        </a>
+        <a href="/el/tool/pregnancy-due-date-calculator" class="tool-card">
+          <div class="cat-label">pregnancy due date calculator</div>
+          <h3>Αριθμομηχανή Αναμενόμενης Ημερομηνίας Τοκετού</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Εκτίμησε μια αναμενόμενη ημερομηνία τοκετού από την τελευταία σας περίοδο, ημερομηνία σύλληψης, ή ημερομηνία…</p>
+          <div class="readout">
+            <span class="rlabel">Estimated due date</span>
+            <span class="rvalue settle-in" style="--delay:0.7000000000000001s">May 29, 2027</span>
+          </div>
+        </a>
+        <a href="/el/tool/ovulation-calculator" class="tool-card">
+          <div class="cat-label">ovulation calculator</div>
+          <h3>Αριθμομηχανή Ωορρηξίας</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Εκτίμησε την ημερομηνία ωορρηξίας σου και το γόνιμο παράθυρο από την τελευταία σου περίοδο και τη διάρκεια…</p>
+          <div class="readout">
+            <span class="rlabel">Estimated ovulation date</span>
+            <span class="rvalue settle-in" style="--delay:0.75s">September 21, 2026</span>
+          </div>
+        </a>
+        <a href="/el/tool/calories-burned-calculator" class="tool-card">
+          <div class="cat-label">calories burned calculator</div>
+          <h3>Αριθμομηχανή Θερμίδων που Καίγονται</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Εκτίμησε τις θερμίδες που καίγονται κατά τη διάρκεια μιας δραστηριότητας χρησιμοποιώντας την τιμή MET της.</p>
+          <div class="readout">
+            <span class="rlabel">Calories burned</span>
+            <span class="rvalue settle-in" style="--delay:0.8s">356</span>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
 

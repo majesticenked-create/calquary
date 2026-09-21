@@ -52,43 +52,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="/css/styles.css" />
-  <script src="/js/calculators-data.js" defer></script>
   <script src="/js/theme.js" defer></script>
   <script src="/js/locale-switcher.js" defer></script>
-  <script defer>
-    document.addEventListener("DOMContentLoaded", () => {
-      const cat = getCategory("math");
-      document.getElementById("cat-code").innerHTML = `<svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${cat.icon}</svg>`;
-
-      // Card grid stays JS-rendered (interactive live-readout preview, same
-      // as the homepage) but is NOT the page's static SEO content — the h1,
-      // description, and breadcrumb above are baked directly into the HTML
-      // at build time (see build.js), not set here.
-      const tools = calculatorsInCategory(cat.id);
-      const translatedIds = {"percentage-calculator":true,"average-calculator":true,"mortgage-calculator":true,"loan-calculator":true,"compound-interest-calculator":true,"concrete-calculator":true,"flooring-calculator":true,"calorie-calculator":true,"bmi-calculator":true,"bmr-calculator":true,"age-calculator":true,"days-until-calculator":true,"unit-length-converter":true,"temperature-converter":true,"word-counter":true,"case-converter":true,"dog-age-calculator":true,"cat-age-calculator":true,"cat-pregnancy-calculator":true,"dog-pregnancy-calculator":true,"simple-interest-calculator":true,"sales-tax-calculator":true,"tip-calculator":true,"discount-calculator":true,"gpa-calculator":true,"body-fat-calculator":true,"amortization-schedule-calculator":true,"mortgage-payoff-calculator":true,"heloc-calculator":true,"home-affordability-calculator":true,"hourly-to-salary-calculator":true,"time-card-calculator":true,"savings-calculator":true,"tvm-solver":true,"irr-npv-calculator":true,"budget-calculator":true,"apr-to-apy-calculator":true,"price-calculator":true,"debt-payoff-calculator":true,"dti-ratio-calculator":true,"credit-card-payoff-calculator":true,"auto-loan-calculator":true,"investment-calculator":true,"retirement-401k-calculator":true,"bond-duration-calculator":true,"gas-trip-cost-calculator":true,"paint-calculator":true,"mulch-calculator":true,"gravel-calculator":true,"drywall-calculator":true,"tile-calculator":true,"roofing-calculator":true,"square-footage-calculator":true,"fence-calculator":true,"insulation-calculator":true,"ac-btu-calculator":true,"lumber-calculator":true,"paver-calculator":true,"mix-ratio-calculator":true,"height-percentile-calculator":true,"body-surface-area-calculator":true,"macro-calculator":true,"water-intake-calculator":true,"one-rep-max-calculator":true,"heart-rate-zone-calculator":true,"ideal-weight-calculator":true,"bra-size-calculator":true,"pace-calculator":true,"steps-to-miles-calculator":true,"pregnancy-due-date-calculator":true,"ovulation-calculator":true,"calories-burned-calculator":true,"dog-food-calculator":true,"rabbit-age-calculator":true,"horse-age-calculator":true,"ideal-dog-weight-calculator":true,"date-duration-calculator":true,"business-days-calculator":true,"time-duration-calculator":true,"time-add-calculator":true,"online-timer":true,"online-alarm-clock":true,"online-stopwatch":true,"current-time":true,"random-date-generator":true,"military-time-converter":true,"unix-timestamp-converter":true,"week-number-calculator":true,"time-zone-converter":true,"daylight-saving-time-calculator":true,"sunrise-sunset-calculator":true,"sun-position-calculator":true,"day-of-week-calculator":true,"leap-year-calculator":true,"birth-year-calculator":true,"time-zone-meeting-planner":true,"day-of-the-week-calculator":true,"screen-ppi-calculator":true,"print-dpi-calculator":true,"time-unit-converter":true,"oven-temperature-converter":true,"rainfall-volume-calculator":true,"water-density-calculator":true,"weight-converter":true,"volume-converter":true,"cooking-converter":true,"microwave-wattage-converter":true,"electricity-cost-calculator":true,"ppm-percent-converter":true,"speed-converter":true,"area-converter":true,"data-storage-converter":true,"pressure-converter":true,"torque-converter":true,"fuel-economy-converter":true,"gear-ratio-calculator":true,"tire-size-calculator":true,"weather-comfort-calculator":true,"color-difference-checker":true,"list-shuffler":true,"weighted-random-picker":true,"password-generator":true,"uuid-generator":true,"random-number-generator":true,"coin-flipper":true,"dice-roller":true,"card-deck-shuffler":true,"color-mixer":true,"lorem-ipsum-generator":true,"text-to-slug-generator":true,"binary-to-text-converter":true,"word-frequency-counter":true,"url-encoder-decoder":true,"ip-subnet-calculator":true,"json-compare":true,"cidr-calculator":true,"group-randomizer":true,"percentage-change-calculator":true,"fraction-calculator":true,"pi-digits-calculator":true,"long-division-calculator":true,"long-multiplication-calculator":true,"gcd-lcm-calculator":true,"factor-calculator":true,"standard-deviation-calculator":true,"t-test-calculator":true,"effect-size-calculator":true,"mann-whitney-u-calculator":true,"sequences-series-calculator":true,"coupon-collector-calculator":true,"similarity-ratio-calculator":true,"correlation-calculator":true,"z-score-calculator":true,"confusion-matrix-calculator":true,"odds-probability-converter":true,"normal-distribution-calculator":true,"lottery-odds-calculator":true,"poker-hand-probability-calculator":true,"square-root-calculator":true,"ratio-calculator":true,"aspect-ratio-calculator":true,"exponent-calculator":true,"logarithm-calculator":true,"vector-calculator":true,"haversine-distance-calculator":true,"quadratic-formula-calculator":true,"cone-volume-calculator":true,"cylinder-volume-calculator":true,"pythagorean-theorem-calculator":true,"distance-formula-calculator":true,"triangle-solver":true,"hypergeometric-calculator":true,"trapezoid-area-calculator":true,"rectangular-prism-volume-calculator":true,"slope-calculator":true,"sector-calculator":true,"grade-gradient-calculator":true,"molecular-weight-calculator":true,"empirical-formula-calculator":true,"system-of-equations-solver":true,"linear-equation-solver":true,"eigenvalue-calculator":true,"inequality-solver":true,"chemical-equation-balancer":true,"solubility-product-calculator":true,"titration-ph-calculator":true,"limiting-reagent-calculator":true,"half-life-calculator":true,"hardy-weinberg-calculator":true,"grade-calculator":true,"weighted-grade-calculator":true,"speed-distance-time-calculator":true,"projectile-motion-calculator":true,"collision-calculator":true,"ohms-law-calculator":true,"right-triangle-calculator":true,"absolute-risk-reduction-calculator":true,"sample-size-calculator":true,"confidence-interval-calculator":true,"mean-median-mode-calculator":true,"roman-numeral-converter":true,"distance-modulus-calculator":true,"earthquake-magnitude-calculator":true,"pressure-altitude-calculator":true,"circle-calculator":true,"repeating-decimal-to-fraction-calculator":true,"permutations-combinations-calculator":true};
-      const grid = document.getElementById("cat-tool-grid");
-      tools.forEach((calc, i) => {
-        const sampleResult = calc.compute(
-          Object.fromEntries(calc.fields.map((f) => [f.id, f.type === "checkbox-group" ? (f.default || []) : f.default]))
-        );
-        const a = document.createElement("a");
-        // Locale pages only have a localized tool page for the wave-one
-        // batch — link straight through to it when it exists, otherwise
-        // fall back to the English canonical rather than a 404.
-        a.href = translatedIds[calc.id] ? `/zh/tool/${calc.id}` : `https://calquary.com/tool/${calc.id}`;
-        a.className = "tool-card";
-        a.innerHTML = `
-          <div class="cat-label">${calc.keyword}</div>
-          <h3>${calc.title}</h3>
-          <div class="readout">
-            <span class="rlabel">${sampleResult.primary.label}</span>
-            <span class="rvalue" style="--delay:${0.05 * i}s">${sampleResult.primary.value}</span>
-          </div>
-        `;
-        grid.appendChild(a);
-      });
-    });
-  </script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -140,7 +105,7 @@
   <section class="category-hero">
     <div class="wrap">
       <div class="breadcrumb"><a href="/zh/">Calquary</a> / 分类</div>
-      <span class="code-badge" id="cat-code"></span>
+      <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/><line x1="18" y1="6" x2="6" y2="18"/></svg></span>
       <h1>数学 计算器</h1>
       <p style="max-width:56ch;">百分比、比例和日常算术。</p>
     </div>
@@ -154,7 +119,665 @@
 
   <section class="section">
     <div class="wrap">
-      <div class="tool-grid" id="cat-tool-grid"></div>
+      <div class="tool-grid" id="cat-tool-grid">
+        <a href="/zh/tool/percentage-calculator" class="tool-card">
+          <div class="cat-label">percentage calculator</div>
+          <h3>百分比计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">一步算出一个数的百分之X是多少。</p>
+          <div class="readout">
+            <span class="rlabel">20% of 150</span>
+            <span class="rvalue settle-in" style="--delay:0s">30</span>
+          </div>
+        </a>
+        <a href="/zh/tool/percentage-change-calculator" class="tool-card">
+          <div class="cat-label">percentage change calculator</div>
+          <h3>百分比变化计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">计算两个数值之间的百分比增加或减少。</p>
+          <div class="readout">
+            <span class="rlabel">Percentage increase</span>
+            <span class="rvalue settle-in" style="--delay:0.05s">25%</span>
+          </div>
+        </a>
+        <a href="/zh/tool/average-calculator" class="tool-card">
+          <div class="cat-label">average calculator</div>
+          <h3>平均值计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">计算一组数字的平均值、中位数和总和。</p>
+          <div class="readout">
+            <span class="rlabel">Average (mean)</span>
+            <span class="rvalue settle-in" style="--delay:0.1s">18</span>
+          </div>
+        </a>
+        <a href="/zh/tool/fraction-calculator" class="tool-card">
+          <div class="cat-label">fraction calculator</div>
+          <h3>分数计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">对两个分数进行加、减、乘或除运算。</p>
+          <div class="readout">
+            <span class="rlabel">Result</span>
+            <span class="rvalue settle-in" style="--delay:0.15000000000000002s">5/6</span>
+          </div>
+        </a>
+        <a href="/zh/tool/pi-digits-calculator" class="tool-card">
+          <div class="cat-label">pi digits calculator</div>
+          <h3>圆周率位数计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">显示圆周率（π）到指定的小数位数，最多100位。</p>
+          <div class="readout">
+            <span class="rlabel">π to 20 decimal digits</span>
+            <span class="rvalue settle-in" style="--delay:0.2s">3.14159265358979323846</span>
+          </div>
+        </a>
+        <a href="/zh/tool/long-division-calculator" class="tool-card">
+          <div class="cat-label">long division calculator</div>
+          <h3>长除法计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">对两个整数进行除法运算，查看完整的分步长除法运算过程。</p>
+          <div class="readout">
+            <span class="rlabel">Quotient</span>
+            <span class="rvalue settle-in" style="--delay:0.25s">141</span>
+          </div>
+        </a>
+        <a href="/zh/tool/long-multiplication-calculator" class="tool-card">
+          <div class="cat-label">multiplication long</div>
+          <h3>长乘法计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">对两个整数进行乘法运算，查看完整的分步长乘法运算过程。</p>
+          <div class="readout">
+            <span class="rlabel">Product</span>
+            <span class="rvalue settle-in" style="--delay:0.30000000000000004s">13,104</span>
+          </div>
+        </a>
+        <a href="/zh/tool/gcd-lcm-calculator" class="tool-card">
+          <div class="cat-label">gcd calculator</div>
+          <h3>最大公约数与最小公倍数计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">找出两个数的最大公约数和最小公倍数。</p>
+          <div class="readout">
+            <span class="rlabel">Greatest common divisor</span>
+            <span class="rvalue settle-in" style="--delay:0.35000000000000003s">12</span>
+          </div>
+        </a>
+        <a href="/zh/tool/factor-calculator" class="tool-card">
+          <div class="cat-label">factor calculator</div>
+          <h3>因数计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">找出一个整数的所有因数以及质因数分解式。</p>
+          <div class="readout">
+            <span class="rlabel">Number of factors</span>
+            <span class="rvalue settle-in" style="--delay:0.4s">24</span>
+          </div>
+        </a>
+        <a href="/zh/tool/standard-deviation-calculator" class="tool-card">
+          <div class="cat-label">standard deviation calculator</div>
+          <h3>标准差计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">计算一组数字的标准差和方差。</p>
+          <div class="readout">
+            <span class="rlabel">Sample standard deviation</span>
+            <span class="rvalue settle-in" style="--delay:0.45s">13.49</span>
+          </div>
+        </a>
+        <a href="/zh/tool/t-test-calculator" class="tool-card">
+          <div class="cat-label">t test calculator</div>
+          <h3>t检验计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">计算独立双样本t检验的t统计量。</p>
+          <div class="readout">
+            <span class="rlabel">t-statistic</span>
+            <span class="rvalue settle-in" style="--delay:0.5s">1.3347</span>
+          </div>
+        </a>
+        <a href="/zh/tool/effect-size-calculator" class="tool-card">
+          <div class="cat-label">effect size calculator</div>
+          <h3>效应量计算器（科恩d值）</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">计算科恩d值，衡量两组均值之间的标准化差异。</p>
+          <div class="readout">
+            <span class="rlabel">Cohen's d</span>
+            <span class="rvalue settle-in" style="--delay:0.55s">0.3446</span>
+          </div>
+        </a>
+        <a href="/zh/tool/mann-whitney-u-calculator" class="tool-card">
+          <div class="cat-label">mann whitney u test calculator</div>
+          <h3>曼-惠特尼U检验计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">计算两个独立组的曼-惠特尼U统计量，这是t检验的非参数替代方法。</p>
+          <div class="readout">
+            <span class="rlabel">U statistic</span>
+            <span class="rvalue settle-in" style="--delay:0.6000000000000001s">10</span>
+          </div>
+        </a>
+        <a href="/zh/tool/sequences-series-calculator" class="tool-card">
+          <div class="cat-label">sequences and series calculator</div>
+          <h3>数列与级数计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">计算等差数列或等比数列的第n项和总和。</p>
+          <div class="readout">
+            <span class="rlabel">Term 10 (aₙ)</span>
+            <span class="rvalue settle-in" style="--delay:0.65s">48</span>
+          </div>
+        </a>
+        <a href="/zh/tool/coupon-collector-calculator" class="tool-card">
+          <div class="cat-label">coupon collector calculator</div>
+          <h3>优惠券收集者问题计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">计算收集所有n种不同物品所需的期望抽取次数。</p>
+          <div class="readout">
+            <span class="rlabel">Expected draws to collect all</span>
+            <span class="rvalue settle-in" style="--delay:0.7000000000000001s">14.7</span>
+          </div>
+        </a>
+        <a href="/zh/tool/similarity-ratio-calculator" class="tool-card">
+          <div class="cat-label">similarity ratio calculator</div>
+          <h3>相似比计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">根据两个相似图形的边长比，计算它们的面积比和体积比。</p>
+          <div class="readout">
+            <span class="rlabel">Area ratio (k²)</span>
+            <span class="rvalue settle-in" style="--delay:0.75s">9</span>
+          </div>
+        </a>
+        <a href="/zh/tool/correlation-calculator" class="tool-card">
+          <div class="cat-label">correlation test calculator</div>
+          <h3>相关系数计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">计算两组配对数字之间的皮尔逊相关系数（r）。</p>
+          <div class="readout">
+            <span class="rlabel">Correlation (r)</span>
+            <span class="rvalue settle-in" style="--delay:0.8s">0.8528</span>
+          </div>
+        </a>
+        <a href="/zh/tool/z-score-calculator" class="tool-card">
+          <div class="cat-label">how to calculate standardized score</div>
+          <h3>Z分数（标准化分数）计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">根据数值、均值和标准差计算Z分数（标准化分数）和百分位数。</p>
+          <div class="readout">
+            <span class="rlabel">Z-score</span>
+            <span class="rvalue settle-in" style="--delay:0.8500000000000001s">1</span>
+          </div>
+        </a>
+        <a href="/zh/tool/confusion-matrix-calculator" class="tool-card">
+          <div class="cat-label">confusion matrix calculator</div>
+          <h3>混淆矩阵计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">根据混淆矩阵计算精确率、召回率、F1、特异度、准确率和其他诊断测试指标。</p>
+          <div class="readout">
+            <span class="rlabel">Precision (PPV)</span>
+            <span class="rvalue settle-in" style="--delay:0.9s">88.89%</span>
+          </div>
+        </a>
+        <a href="/zh/tool/odds-probability-converter" class="tool-card">
+          <div class="cat-label">odds probability converter</div>
+          <h3>赔率转概率转换器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">在概率和赔率之间进行双向转换。</p>
+          <div class="readout">
+            <span class="rlabel">Probability</span>
+            <span class="rvalue settle-in" style="--delay:0.9500000000000001s">0.25</span>
+          </div>
+        </a>
+        <a href="/zh/tool/normal-distribution-calculator" class="tool-card">
+          <div class="cat-label">normal distribution calculator</div>
+          <h3>正态分布计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">根据均值和标准差，计算正态分布值落在两个数值之间的概率。</p>
+          <div class="readout">
+            <span class="rlabel">Probability</span>
+            <span class="rvalue settle-in" style="--delay:1s">68.27%</span>
+          </div>
+        </a>
+        <a href="/zh/tool/lottery-odds-calculator" class="tool-card">
+          <div class="cat-label">lottery odds calculator</div>
+          <h3>彩票中奖概率计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">根据号码池大小和抽取的号码数量，计算中彩票头奖的概率。</p>
+          <div class="readout">
+            <span class="rlabel">Odds of winning the jackpot</span>
+            <span class="rvalue settle-in" style="--delay:1.05s">1 in 292,201,338</span>
+          </div>
+        </a>
+        <a href="/zh/tool/poker-hand-probability-calculator" class="tool-card">
+          <div class="cat-label">poker hand percentages calculator</div>
+          <h3>扑克牌型概率计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">查看标准52张扑克牌中每种5张牌型排名的确切概率和赔率。</p>
+          <div class="readout">
+            <span class="rlabel">Total 5-card hands</span>
+            <span class="rvalue settle-in" style="--delay:1.1s">2,598,960</span>
+          </div>
+        </a>
+        <a href="/zh/tool/square-root-calculator" class="tool-card">
+          <div class="cat-label">square root calculator</div>
+          <h3>平方根计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">计算一个数字的平方根、平方和立方根。</p>
+          <div class="readout">
+            <span class="rlabel">Square root</span>
+            <span class="rvalue settle-in" style="--delay:1.1500000000000001s">12</span>
+          </div>
+        </a>
+        <a href="/zh/tool/ratio-calculator" class="tool-card">
+          <div class="cat-label">ratio calculator</div>
+          <h3>比例计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">将比例化简为最简形式。</p>
+          <div class="readout">
+            <span class="rlabel">Simplified ratio</span>
+            <span class="rvalue settle-in" style="--delay:1.2000000000000002s">2:3</span>
+          </div>
+        </a>
+        <a href="/zh/tool/aspect-ratio-calculator" class="tool-card">
+          <div class="cat-label">aspect ratio calculator</div>
+          <h3>宽高比计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">计算照片或视频的宽高比，并求出新尺寸对应的高度或宽度。</p>
+          <div class="readout">
+            <span class="rlabel">Aspect ratio</span>
+            <span class="rvalue settle-in" style="--delay:1.25s">16:9</span>
+          </div>
+        </a>
+        <a href="/zh/tool/exponent-calculator" class="tool-card">
+          <div class="cat-label">exponent calculator</div>
+          <h3>指数计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">计算底数的幂运算结果。</p>
+          <div class="readout">
+            <span class="rlabel">2^10</span>
+            <span class="rvalue settle-in" style="--delay:1.3s">1024</span>
+          </div>
+        </a>
+        <a href="/zh/tool/logarithm-calculator" class="tool-card">
+          <div class="cat-label">logarithm calculator</div>
+          <h3>对数计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">计算任意底数下一个数字的对数，包括自然对数和以10为底的对数。</p>
+          <div class="readout">
+            <span class="rlabel">log_2(8)</span>
+            <span class="rvalue settle-in" style="--delay:1.35s">3</span>
+          </div>
+        </a>
+        <a href="/zh/tool/vector-calculator" class="tool-card">
+          <div class="cat-label">vector calculator</div>
+          <h3>向量计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">计算两个三维向量之间的点积、叉积、模长和夹角。</p>
+          <div class="readout">
+            <span class="rlabel">Dot product (A·B)</span>
+            <span class="rvalue settle-in" style="--delay:1.4000000000000001s">32</span>
+          </div>
+        </a>
+        <a href="/zh/tool/haversine-distance-calculator" class="tool-card">
+          <div class="cat-label">haversine distance calculator</div>
+          <h3>距离与方位计算器（经纬度）</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">根据两个GPS坐标计算大圆距离和罗盘方位。</p>
+          <div class="readout">
+            <span class="rlabel">Distance</span>
+            <span class="rvalue settle-in" style="--delay:1.4500000000000002s">5570.22 km</span>
+          </div>
+        </a>
+        <a href="/zh/tool/quadratic-formula-calculator" class="tool-card">
+          <div class="cat-label">quadratic formula calculator</div>
+          <h3>二次方程求根公式计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">使用二次方程求根公式求解ax² + bx + c = 0中的x。</p>
+          <div class="readout">
+            <span class="rlabel">x =</span>
+            <span class="rvalue settle-in" style="--delay:1.5s">2 or 1</span>
+          </div>
+        </a>
+        <a href="/zh/tool/cone-volume-calculator" class="tool-card">
+          <div class="cat-label">cone volume calculator</div>
+          <h3>圆锥体积计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">也可用作圆锥体积公式查询工具——根据半径和高度计算圆锥的体积、表面积和斜高。</p>
+          <div class="readout">
+            <span class="rlabel">Volume</span>
+            <span class="rvalue settle-in" style="--delay:1.55s">75.3982</span>
+          </div>
+        </a>
+        <a href="/zh/tool/cylinder-volume-calculator" class="tool-card">
+          <div class="cat-label">cylinder volume calculator</div>
+          <h3>圆柱体积计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">也可用作圆柱体积公式查询工具——根据半径和高度计算圆柱的体积和表面积。</p>
+          <div class="readout">
+            <span class="rlabel">Volume</span>
+            <span class="rvalue settle-in" style="--delay:1.6s">502.6548</span>
+          </div>
+        </a>
+        <a href="/zh/tool/pythagorean-theorem-calculator" class="tool-card">
+          <div class="cat-label">pythagorean theorem calculator</div>
+          <h3>勾股定理计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">使用勾股定理计算直角三角形的斜边（或缺失的一条直角边）。</p>
+          <div class="readout">
+            <span class="rlabel">Hypotenuse (c)</span>
+            <span class="rvalue settle-in" style="--delay:1.6500000000000001s">5</span>
+          </div>
+        </a>
+        <a href="/zh/tool/distance-formula-calculator" class="tool-card">
+          <div class="cat-label">distance formula calculator</div>
+          <h3>距离公式计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">计算坐标平面上两点之间的距离。</p>
+          <div class="readout">
+            <span class="rlabel">Distance</span>
+            <span class="rvalue settle-in" style="--delay:1.7000000000000002s">5</span>
+          </div>
+        </a>
+        <a href="/zh/tool/triangle-solver" class="tool-card">
+          <div class="cat-label">triangle solver</div>
+          <h3>三角形求解器（SSS）</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">根据三角形三边的长度，计算所有三个角度和面积。</p>
+          <div class="readout">
+            <span class="rlabel">Angle A (opposite side a)</span>
+            <span class="rvalue settle-in" style="--delay:1.75s">36.87°</span>
+          </div>
+        </a>
+        <a href="/zh/tool/hypergeometric-calculator" class="tool-card">
+          <div class="cat-label">hypergeometric calculator</div>
+          <h3>超几何分布计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">计算从总体中不放回抽取恰好k个成功的概率。</p>
+          <div class="readout">
+            <span class="rlabel">P(X = 2)</span>
+            <span class="rvalue settle-in" style="--delay:1.8s">27.428%</span>
+          </div>
+        </a>
+        <a href="/zh/tool/trapezoid-area-calculator" class="tool-card">
+          <div class="cat-label">trapezoid area calculator</div>
+          <h3>梯形面积计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">计算梯形的面积和周长。</p>
+          <div class="readout">
+            <span class="rlabel">Area</span>
+            <span class="rvalue settle-in" style="--delay:1.85s">32</span>
+          </div>
+        </a>
+        <a href="/zh/tool/rectangular-prism-volume-calculator" class="tool-card">
+          <div class="cat-label">rectangular prism volume calculator</div>
+          <h3>长方体体积计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">根据长度、宽度和高度计算长方体（盒子）的体积和表面积。</p>
+          <div class="readout">
+            <span class="rlabel">Volume</span>
+            <span class="rvalue settle-in" style="--delay:1.9000000000000001s">60</span>
+          </div>
+        </a>
+        <a href="/zh/tool/slope-calculator" class="tool-card">
+          <div class="cat-label">slope calculator</div>
+          <h3>斜率计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">计算两点之间的斜率，以及直线的方程和倾角。</p>
+          <div class="readout">
+            <span class="rlabel">Slope (m)</span>
+            <span class="rvalue settle-in" style="--delay:1.9500000000000002s">2</span>
+          </div>
+        </a>
+        <a href="/zh/tool/sector-calculator" class="tool-card">
+          <div class="cat-label">sector calculator</div>
+          <h3>圆扇形计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">根据半径和角度计算圆扇形（扇形切片）的弧长和面积。</p>
+          <div class="readout">
+            <span class="rlabel">Arc length</span>
+            <span class="rvalue settle-in" style="--delay:2s">15.708</span>
+          </div>
+        </a>
+        <a href="/zh/tool/grade-gradient-calculator" class="tool-card">
+          <div class="cat-label">average gradient calculator</div>
+          <h3>坡度/坡率计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">根据上升高度和水平距离，计算道路、坡道和屋顶的坡度百分比、角度和比率。</p>
+          <div class="readout">
+            <span class="rlabel">Grade</span>
+            <span class="rvalue settle-in" style="--delay:2.0500000000000003s">6%</span>
+          </div>
+        </a>
+        <a href="/zh/tool/molecular-weight-calculator" class="tool-card">
+          <div class="cat-label">molecular weight calculator</div>
+          <h3>分子量计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">计算化学式（如H2O或C6H12O6）的分子量（摩尔质量）。</p>
+          <div class="readout">
+            <span class="rlabel">Molecular weight</span>
+            <span class="rvalue settle-in" style="--delay:2.1s">18.015 g/mol</span>
+          </div>
+        </a>
+        <a href="/zh/tool/empirical-formula-calculator" class="tool-card">
+          <div class="cat-label">empirical formula calculator</div>
+          <h3>实验式计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">根据每种元素的质量百分比计算化合物的实验式。</p>
+          <div class="readout">
+            <span class="rlabel">Empirical formula</span>
+            <span class="rvalue settle-in" style="--delay:2.15s">CH2O</span>
+          </div>
+        </a>
+        <a href="/zh/tool/system-of-equations-solver" class="tool-card">
+          <div class="cat-label">system of equations solver</div>
+          <h3>方程组求解器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">求解由两个线性方程（ax + by = e，cx + dy = f）组成的方程组，得到x和y。</p>
+          <div class="readout">
+            <span class="rlabel">Solution</span>
+            <span class="rvalue settle-in" style="--delay:2.2s">x = 4.4, y = 2.4</span>
+          </div>
+        </a>
+        <a href="/zh/tool/linear-equation-solver" class="tool-card">
+          <div class="cat-label">linear equation solver</div>
+          <h3>一元一次方程求解器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">求解形如ax + b = c的一元一次方程，得到x。</p>
+          <div class="readout">
+            <span class="rlabel">x =</span>
+            <span class="rvalue settle-in" style="--delay:2.25s">5</span>
+          </div>
+        </a>
+        <a href="/zh/tool/eigenvalue-calculator" class="tool-card">
+          <div class="cat-label">eigenvalues and eigenvectors calculator</div>
+          <h3>特征值与特征向量计算器（2x2）</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">计算2x2矩阵的特征值和特征向量。</p>
+          <div class="readout">
+            <span class="rlabel">Eigenvalues</span>
+            <span class="rvalue settle-in" style="--delay:2.3000000000000003s">λ₁ = 3, λ₂ = 1</span>
+          </div>
+        </a>
+        <a href="/zh/tool/inequality-solver" class="tool-card">
+          <div class="cat-label">solution inequality calculator</div>
+          <h3>线性不等式求解器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">求解形如ax + b [&lt;, &gt;, ≤, ≥] c的线性不等式，得到x。</p>
+          <div class="readout">
+            <span class="rlabel">Solution</span>
+            <span class="rvalue settle-in" style="--delay:2.35s">x &gt; 2</span>
+          </div>
+        </a>
+        <a href="/zh/tool/chemical-equation-balancer" class="tool-card">
+          <div class="cat-label">chemical equation balancer</div>
+          <h3>化学方程式配平器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">通过找出正确的整数系数来配平化学方程式。</p>
+          <div class="readout">
+            <span class="rlabel">Balanced equation</span>
+            <span class="rvalue settle-in" style="--delay:2.4000000000000004s">4Fe + 3O2 → 2Fe2O3</span>
+          </div>
+        </a>
+        <a href="/zh/tool/solubility-product-calculator" class="tool-card">
+          <div class="cat-label">solubility product calculator</div>
+          <h3>溶度积计算器（Ksp）</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">根据摩尔溶解度和离子化学计量比计算溶度积常数（Ksp）。</p>
+          <div class="readout">
+            <span class="rlabel">Ksp</span>
+            <span class="rvalue settle-in" style="--delay:2.45s">3.7044e-11</span>
+          </div>
+        </a>
+        <a href="/zh/tool/titration-ph-calculator" class="tool-card">
+          <div class="cat-label">titration ph calculator</div>
+          <h3>滴定pH计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">计算强酸/强碱滴定过程中任意一点的pH值。</p>
+          <div class="readout">
+            <span class="rlabel">pH</span>
+            <span class="rvalue settle-in" style="--delay:2.5s">1.9542</span>
+          </div>
+        </a>
+        <a href="/zh/tool/limiting-reagent-calculator" class="tool-card">
+          <div class="cat-label">how to do limiting reagent</div>
+          <h3>限量试剂计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">根据质量、化学式和化学计量系数，找出两种反应物中哪一种是限量试剂。</p>
+          <div class="readout">
+            <span class="rlabel">Limiting reagent</span>
+            <span class="rvalue settle-in" style="--delay:2.5500000000000003s">O2</span>
+          </div>
+        </a>
+        <a href="/zh/tool/half-life-calculator" class="tool-card">
+          <div class="cat-label">half life calculator</div>
+          <h3>半衰期计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">计算一级衰变（放射性衰变或一级反应动力学）的半衰期、剩余量或经过的时间。</p>
+          <div class="readout">
+            <span class="rlabel">Remaining amount</span>
+            <span class="rvalue settle-in" style="--delay:2.6s">17.67767</span>
+          </div>
+        </a>
+        <a href="/zh/tool/hardy-weinberg-calculator" class="tool-card">
+          <div class="cat-label">hardy weinberg calculator</div>
+          <h3>哈迪-温伯格平衡计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">使用哈迪-温伯格平衡方程计算基因型和等位基因频率。</p>
+          <div class="readout">
+            <span class="rlabel">Homozygous dominant (p²)</span>
+            <span class="rvalue settle-in" style="--delay:2.6500000000000004s">49%</span>
+          </div>
+        </a>
+        <a href="/zh/tool/grade-calculator" class="tool-card">
+          <div class="cat-label">grade calculator</div>
+          <h3>成绩计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">根据获得的分数和总分数，计算测验或考试的百分比成绩和等级分数。</p>
+          <div class="readout">
+            <span class="rlabel">Grade</span>
+            <span class="rvalue settle-in" style="--delay:2.7s">85%</span>
+          </div>
+        </a>
+        <a href="/zh/tool/weighted-grade-calculator" class="tool-card">
+          <div class="cat-label">weighted grade calculator</div>
+          <h3>加权成绩计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">根据各类别分数和权重（如作业、测验和期末考试）计算课程的总体成绩。</p>
+          <div class="readout">
+            <span class="rlabel">Overall grade</span>
+            <span class="rvalue settle-in" style="--delay:2.75s">87%</span>
+          </div>
+        </a>
+        <a href="/zh/tool/gpa-calculator" class="tool-card">
+          <div class="cat-label">weighted calculator gpa</div>
+          <h3>加权 GPA 计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">根据最多5门课程的字母等级和学分，按4.0制计算你的GPA。</p>
+          <div class="readout">
+            <span class="rlabel">Weighted GPA</span>
+            <span class="rvalue settle-in" style="--delay:2.8000000000000003s">3.667</span>
+          </div>
+        </a>
+        <a href="/zh/tool/speed-distance-time-calculator" class="tool-card">
+          <div class="cat-label">speed distance time calculator</div>
+          <h3>速度、距离和时间计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">使用速度 = 距离 / 时间求解速度、距离或时间——输入任意两个值即可求出第三个。</p>
+          <div class="readout">
+            <span class="rlabel">Speed</span>
+            <span class="rvalue settle-in" style="--delay:2.85s">60</span>
+          </div>
+        </a>
+        <a href="/zh/tool/projectile-motion-calculator" class="tool-card">
+          <div class="cat-label">projectile motion calculator</div>
+          <h3>抛体运动计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">计算以某个角度发射的抛体的飞行时间、最大高度和射程。</p>
+          <div class="readout">
+            <span class="rlabel">Range</span>
+            <span class="rvalue settle-in" style="--delay:2.9000000000000004s">40.775 m</span>
+          </div>
+        </a>
+        <a href="/zh/tool/collision-calculator" class="tool-card">
+          <div class="cat-label">collision calculator</div>
+          <h3>动量与碰撞计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">计算两个物体之间弹性碰撞或完全非弹性碰撞的最终速度。</p>
+          <div class="readout">
+            <span class="rlabel">Velocity 1 (after)</span>
+            <span class="rvalue settle-in" style="--delay:2.95s">-3.4 m/s</span>
+          </div>
+        </a>
+        <a href="/zh/tool/ohms-law-calculator" class="tool-card">
+          <div class="cat-label">ohms law calculator</div>
+          <h3>欧姆定律计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">计算电压、电流、电阻或功率——输入任意两个值即可求出另外两个。</p>
+          <div class="readout">
+            <span class="rlabel">Voltage</span>
+            <span class="rvalue settle-in" style="--delay:3s">20 V</span>
+          </div>
+        </a>
+        <a href="/zh/tool/right-triangle-calculator" class="tool-card">
+          <div class="cat-label">right triangle calculator</div>
+          <h3>直角三角形计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">根据任意两条已知边，求解直角三角形缺失的边、角和面积。</p>
+          <div class="readout">
+            <span class="rlabel">Hypotenuse (c)</span>
+            <span class="rvalue settle-in" style="--delay:3.0500000000000003s">5</span>
+          </div>
+        </a>
+        <a href="/zh/tool/absolute-risk-reduction-calculator" class="tool-card">
+          <div class="cat-label">absolute risk reduction calculator</div>
+          <h3>绝对风险降低计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">根据两个事件发生率计算绝对风险降低（ARR）、相对风险降低（RRR）和需治疗人数（NNT）。</p>
+          <div class="readout">
+            <span class="rlabel">Absolute risk reduction (ARR)</span>
+            <span class="rvalue settle-in" style="--delay:3.1s">8 percentage points</span>
+          </div>
+        </a>
+        <a href="/zh/tool/sample-size-calculator" class="tool-card">
+          <div class="cat-label">calculating sample size calculator</div>
+          <h3>样本量计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">计算在选定置信水平和误差范围下调查或研究所需的样本量。</p>
+          <div class="readout">
+            <span class="rlabel">Required sample size</span>
+            <span class="rvalue settle-in" style="--delay:3.1500000000000004s">385</span>
+          </div>
+        </a>
+        <a href="/zh/tool/confidence-interval-calculator" class="tool-card">
+          <div class="cat-label">confidence interval calculator</div>
+          <h3>置信区间计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">计算样本均值的置信区间。</p>
+          <div class="readout">
+            <span class="rlabel">95% confidence interval</span>
+            <span class="rvalue settle-in" style="--delay:3.2s">94.6323 to 105.3677</span>
+          </div>
+        </a>
+        <a href="/zh/tool/mean-median-mode-calculator" class="tool-card">
+          <div class="cat-label">mean median mode calculator</div>
+          <h3>均值、中位数、众数和极差计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">计算数据集的均值、中位数、众数和极差。</p>
+          <div class="readout">
+            <span class="rlabel">Mean</span>
+            <span class="rvalue settle-in" style="--delay:3.25s">5</span>
+          </div>
+        </a>
+        <a href="/zh/tool/roman-numeral-converter" class="tool-card">
+          <div class="cat-label">roman numeral converter</div>
+          <h3>罗马数字转换器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">在数字和罗马数字之间进行双向转换。</p>
+          <div class="readout">
+            <span class="rlabel">Roman numeral</span>
+            <span class="rvalue settle-in" style="--delay:3.3000000000000003s">MCMXCIV</span>
+          </div>
+        </a>
+        <a href="/zh/tool/distance-modulus-calculator" class="tool-card">
+          <div class="cat-label">distance modulus calculator</div>
+          <h3>距离模数计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">根据视星等和绝对星等计算天文距离，反之亦然。</p>
+          <div class="readout">
+            <span class="rlabel">Distance</span>
+            <span class="rvalue settle-in" style="--delay:3.35s">100 pc</span>
+          </div>
+        </a>
+        <a href="/zh/tool/earthquake-magnitude-calculator" class="tool-card">
+          <div class="cat-label">earthquake magnitude calculator</div>
+          <h3>地震震级能量计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">比较两个地震震级所释放的能量。</p>
+          <div class="readout">
+            <span class="rlabel">Energy ratio (M2 ÷ M1)</span>
+            <span class="rvalue settle-in" style="--delay:3.4000000000000004s">31.62×</span>
+          </div>
+        </a>
+        <a href="/zh/tool/pressure-altitude-calculator" class="tool-card">
+          <div class="cat-label">pressure altitude calculator</div>
+          <h3>气压高度计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">根据场地海拔高度和高度表设置计算气压高度。</p>
+          <div class="readout">
+            <span class="rlabel">Pressure altitude</span>
+            <span class="rvalue settle-in" style="--delay:3.45s">1500 ft</span>
+          </div>
+        </a>
+        <a href="/zh/tool/circle-calculator" class="tool-card">
+          <div class="cat-label">circle calculator</div>
+          <h3>圆形计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">根据任意一个已知值计算圆的半径、直径、周长和面积。</p>
+          <div class="readout">
+            <span class="rlabel">Radius</span>
+            <span class="rvalue settle-in" style="--delay:3.5s">5</span>
+          </div>
+        </a>
+        <a href="/zh/tool/repeating-decimal-to-fraction-calculator" class="tool-card">
+          <div class="cat-label">repeating decimal to fraction calculator</div>
+          <h3>循环小数转分数计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">将循环小数转换为精确的分数，并显示计算步骤。</p>
+          <div class="readout">
+            <span class="rlabel">Fraction</span>
+            <span class="rvalue settle-in" style="--delay:3.5500000000000003s">1/6</span>
+          </div>
+        </a>
+        <a href="/zh/tool/permutations-combinations-calculator" class="tool-card">
+          <div class="cat-label">permutations and combinations calculator</div>
+          <h3>排列组合计算器</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">计算从n个项目中每次选取r个的排列数（nPr）和组合数（nCr）。</p>
+          <div class="readout">
+            <span class="rlabel">Permutations (nPr)</span>
+            <span class="rvalue settle-in" style="--delay:3.6s">720</span>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
 

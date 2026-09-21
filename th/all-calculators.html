@@ -52,62 +52,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Thai:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="/css/styles.css" />
-  <script src="/js/calculators-data.js" defer></script>
-  <script src="/js/i18n-titles.js" defer></script>
   <script src="/js/theme.js" defer></script>
   <script src="/js/locale-switcher.js" defer></script>
-  <script>window.CALQ_LOCALE = "th"; window.CALQ_LOCALE_PATH = "th/";</script>
-  <script defer>
-    document.addEventListener("DOMContentLoaded", () => {
-      const LOC = window.CALQ_LOCALE;
-      const LPATH = window.CALQ_LOCALE_PATH;
-      function catName(cat) {
-        return (LOC !== "en" && window.I18N_CATEGORIES && window.I18N_CATEGORIES[cat.id] && window.I18N_CATEGORIES[cat.id][LOC])
-          ? window.I18N_CATEGORIES[cat.id][LOC].name : cat.name;
-      }
-      function toolTitle(calc) {
-        return (LOC !== "en" && window.I18N_TITLES && window.I18N_TITLES[calc.id] && window.I18N_TITLES[calc.id][LOC])
-          ? window.I18N_TITLES[calc.id][LOC] : calc.title;
-      }
-      function isTranslated(calcId) {
-        return LOC !== "en" && window.I18N_TITLES && window.I18N_TITLES[calcId] && window.I18N_TITLES[calcId][LOC];
-      }
-      function toolHref(calcId) {
-        return isTranslated(calcId) ? `/${LPATH}tool/${calcId}` : `https://calquary.com/tool/${calcId}`;
-      }
-      function catHref(catId) {
-        return `/${LPATH}category/${catId}`;
-      }
-
-      const wrap = document.getElementById("index-categories");
-      CATEGORIES.forEach((cat) => {
-        const tools = calculatorsInCategory(cat.id);
-
-        const section = document.createElement("section");
-        section.className = "index-category";
-
-        const head = document.createElement("div");
-        head.className = "index-category-head";
-        head.innerHTML = `
-          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${cat.icon}</svg></span>
-          <h2><a href="${catHref(cat.id)}">${catName(cat)}</a></h2>
-          <span class="count">${tools.length} tool${tools.length === 1 ? "" : "s"}</span>
-        `;
-        section.appendChild(head);
-
-        const list = document.createElement("ul");
-        list.className = "related-list index-columns";
-        tools.forEach((calc) => {
-          const li = document.createElement("li");
-          li.innerHTML = `<a href="${toolHref(calc.id)}">${toolTitle(calc)}</a>`;
-          list.appendChild(li);
-        });
-        section.appendChild(list);
-
-        wrap.appendChild(section);
-      });
-    });
-  </script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -166,7 +112,287 @@
 
   <section class="section">
     <div class="wrap">
-      <div id="index-categories"></div>
+      <div id="index-categories">
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/><line x1="18" y1="6" x2="6" y2="18"/></svg></span>
+          <h2><a href="/th/category/math">คณิตศาสตร์</a></h2>
+          <span class="count">73 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/th/tool/percentage-calculator">เครื่องคำนวณเปอร์เซ็นต์</a></li>
+            <li><a href="/th/tool/percentage-change-calculator">เครื่องคำนวณการเปลี่ยนแปลงเปอร์เซ็นต์</a></li>
+            <li><a href="/th/tool/average-calculator">เครื่องคำนวณค่าเฉลี่ย</a></li>
+            <li><a href="/th/tool/fraction-calculator">เครื่องคำนวณเศษส่วน</a></li>
+            <li><a href="/th/tool/pi-digits-calculator">เครื่องคำนวณหลักของพาย</a></li>
+            <li><a href="/th/tool/long-division-calculator">เครื่องคำนวณการหารยาว</a></li>
+            <li><a href="/th/tool/long-multiplication-calculator">เครื่องคำนวณการคูณยาว</a></li>
+            <li><a href="/th/tool/gcd-lcm-calculator">เครื่องคำนวณ ห.ร.ม. และ ค.ร.น.</a></li>
+            <li><a href="/th/tool/factor-calculator">เครื่องคำนวณตัวประกอบ</a></li>
+            <li><a href="/th/tool/standard-deviation-calculator">เครื่องคำนวณส่วนเบี่ยงเบนมาตรฐาน</a></li>
+            <li><a href="/th/tool/t-test-calculator">เครื่องคำนวณการทดสอบ T</a></li>
+            <li><a href="/th/tool/effect-size-calculator">เครื่องคำนวณขนาดอิทธิพล (d ของโคเฮน)</a></li>
+            <li><a href="/th/tool/mann-whitney-u-calculator">เครื่องคำนวณการทดสอบ Mann-Whitney U</a></li>
+            <li><a href="/th/tool/sequences-series-calculator">เครื่องคำนวณลำดับและอนุกรม</a></li>
+            <li><a href="/th/tool/coupon-collector-calculator">เครื่องคำนวณปัญหานักสะสมคูปอง</a></li>
+            <li><a href="/th/tool/similarity-ratio-calculator">เครื่องคำนวณอัตราส่วนความคล้าย</a></li>
+            <li><a href="/th/tool/correlation-calculator">เครื่องคำนวณสัมประสิทธิ์สหสัมพันธ์</a></li>
+            <li><a href="/th/tool/z-score-calculator">เครื่องคำนวณคะแนน Z (คะแนนมาตรฐาน)</a></li>
+            <li><a href="/th/tool/confusion-matrix-calculator">เครื่องคำนวณเมทริกซ์ความสับสน</a></li>
+            <li><a href="/th/tool/odds-probability-converter">ตัวแปลงอัตราต่อรองเป็นความน่าจะเป็น</a></li>
+            <li><a href="/th/tool/normal-distribution-calculator">เครื่องคำนวณการแจกแจงปกติ</a></li>
+            <li><a href="/th/tool/lottery-odds-calculator">เครื่องคำนวณโอกาสถูกลอตเตอรี</a></li>
+            <li><a href="/th/tool/poker-hand-probability-calculator">เครื่องคำนวณความน่าจะเป็นของมือโป๊กเกอร์</a></li>
+            <li><a href="/th/tool/square-root-calculator">เครื่องคำนวณรากที่สอง</a></li>
+            <li><a href="/th/tool/ratio-calculator">เครื่องคำนวณอัตราส่วน</a></li>
+            <li><a href="/th/tool/aspect-ratio-calculator">เครื่องคำนวณอัตราส่วนภาพ</a></li>
+            <li><a href="/th/tool/exponent-calculator">เครื่องคำนวณเลขยกกำลัง</a></li>
+            <li><a href="/th/tool/logarithm-calculator">เครื่องคำนวณลอการิทึม</a></li>
+            <li><a href="/th/tool/vector-calculator">เครื่องคำนวณเวกเตอร์</a></li>
+            <li><a href="/th/tool/haversine-distance-calculator">เครื่องคำนวณระยะทางและทิศทาง (ละติจูด/ลองจิจูด)</a></li>
+            <li><a href="/th/tool/quadratic-formula-calculator">เครื่องคำนวณสูตรกำลังสอง</a></li>
+            <li><a href="/th/tool/cone-volume-calculator">เครื่องคำนวณปริมาตรกรวย</a></li>
+            <li><a href="/th/tool/cylinder-volume-calculator">เครื่องคำนวณปริมาตรทรงกระบอก</a></li>
+            <li><a href="/th/tool/pythagorean-theorem-calculator">เครื่องคำนวณทฤษฎีบทพีทาโกรัส</a></li>
+            <li><a href="/th/tool/distance-formula-calculator">เครื่องคำนวณสูตรระยะทาง</a></li>
+            <li><a href="/th/tool/triangle-solver">ตัวแก้สามเหลี่ยม (SSS)</a></li>
+            <li><a href="/th/tool/hypergeometric-calculator">เครื่องคำนวณการแจกแจงไฮเปอร์จีโอเมตริก</a></li>
+            <li><a href="/th/tool/trapezoid-area-calculator">เครื่องคำนวณพื้นที่สี่เหลี่ยมคางหมู</a></li>
+            <li><a href="/th/tool/rectangular-prism-volume-calculator">เครื่องคำนวณปริมาตรทรงสี่เหลี่ยมมุมฉาก</a></li>
+            <li><a href="/th/tool/slope-calculator">เครื่องคำนวณความชัน</a></li>
+            <li><a href="/th/tool/sector-calculator">เครื่องคำนวณเซกเตอร์วงกลม</a></li>
+            <li><a href="/th/tool/grade-gradient-calculator">เครื่องคำนวณระดับ / ความชัน</a></li>
+            <li><a href="/th/tool/molecular-weight-calculator">เครื่องคำนวณน้ำหนักโมเลกุล</a></li>
+            <li><a href="/th/tool/empirical-formula-calculator">เครื่องคำนวณสูตรเอมพิริคัล</a></li>
+            <li><a href="/th/tool/system-of-equations-solver">ตัวแก้ระบบสมการ</a></li>
+            <li><a href="/th/tool/linear-equation-solver">ตัวแก้สมการเชิงเส้น</a></li>
+            <li><a href="/th/tool/eigenvalue-calculator">เครื่องคำนวณค่าไอเกนและเวกเตอร์ไอเกน (2x2)</a></li>
+            <li><a href="/th/tool/inequality-solver">ตัวแก้อสมการเชิงเส้น</a></li>
+            <li><a href="/th/tool/chemical-equation-balancer">เครื่องดุลสมการเคมี</a></li>
+            <li><a href="/th/tool/solubility-product-calculator">เครื่องคำนวณผลคูณความสามารถในการละลาย (Ksp)</a></li>
+            <li><a href="/th/tool/titration-ph-calculator">เครื่องคำนวณ pH การไทเทรต</a></li>
+            <li><a href="/th/tool/limiting-reagent-calculator">เครื่องคำนวณสารกำหนดปริมาณ</a></li>
+            <li><a href="/th/tool/half-life-calculator">เครื่องคำนวณครึ่งชีวิต</a></li>
+            <li><a href="/th/tool/hardy-weinberg-calculator">เครื่องคำนวณสมดุลฮาร์ดี-ไวน์เบิร์ก</a></li>
+            <li><a href="/th/tool/grade-calculator">เครื่องคำนวณเกรด</a></li>
+            <li><a href="/th/tool/weighted-grade-calculator">เครื่องคำนวณเกรดถ่วงน้ำหนัก</a></li>
+            <li><a href="/th/tool/gpa-calculator">เครื่องคำนวณเกรดเฉลี่ยถ่วงน้ำหนัก (GPA)</a></li>
+            <li><a href="/th/tool/speed-distance-time-calculator">เครื่องคำนวณความเร็ว ระยะทาง และเวลา</a></li>
+            <li><a href="/th/tool/projectile-motion-calculator">เครื่องคำนวณการเคลื่อนที่แบบวิถีโค้ง</a></li>
+            <li><a href="/th/tool/collision-calculator">เครื่องคำนวณโมเมนตัมและการชน</a></li>
+            <li><a href="/th/tool/ohms-law-calculator">เครื่องคำนวณกฎของโอห์ม</a></li>
+            <li><a href="/th/tool/right-triangle-calculator">เครื่องคำนวณสามเหลี่ยมมุมฉาก</a></li>
+            <li><a href="/th/tool/absolute-risk-reduction-calculator">เครื่องคำนวณการลดความเสี่ยงสัมบูรณ์</a></li>
+            <li><a href="/th/tool/sample-size-calculator">เครื่องคำนวณขนาดตัวอย่าง</a></li>
+            <li><a href="/th/tool/confidence-interval-calculator">เครื่องคำนวณช่วงความเชื่อมั่น</a></li>
+            <li><a href="/th/tool/mean-median-mode-calculator">เครื่องคำนวณค่าเฉลี่ย มัธยฐาน ฐานนิยม และพิสัย</a></li>
+            <li><a href="/th/tool/roman-numeral-converter">ตัวแปลงเลขโรมัน</a></li>
+            <li><a href="/th/tool/distance-modulus-calculator">เครื่องคำนวณโมดูลัสระยะทาง</a></li>
+            <li><a href="/th/tool/earthquake-magnitude-calculator">เครื่องคำนวณพลังงานขนาดแผ่นดินไหว</a></li>
+            <li><a href="/th/tool/pressure-altitude-calculator">เครื่องคำนวณระดับความสูงความกดอากาศ</a></li>
+            <li><a href="/th/tool/circle-calculator">เครื่องคำนวณวงกลม</a></li>
+            <li><a href="/th/tool/repeating-decimal-to-fraction-calculator">เครื่องคำนวณทศนิยมซ้ำเป็นเศษส่วน</a></li>
+            <li><a href="/th/tool/permutations-combinations-calculator">เครื่องคำนวณการเรียงสับเปลี่ยนและการจัดหมู่</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="19" x2="5" y2="13"/><line x1="12" y1="19" x2="12" y2="9"/><line x1="19" y1="19" x2="19" y2="5"/></svg></span>
+          <h2><a href="/th/category/finance">การเงิน</a></h2>
+          <span class="count">27 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/th/tool/loan-calculator">เครื่องคำนวณค่างวดสินเชื่อ</a></li>
+            <li><a href="/th/tool/amortization-schedule-calculator">เครื่องคำนวณตารางการผ่อนชำระ</a></li>
+            <li><a href="/th/tool/mortgage-payoff-calculator">เครื่องคำนวณการปิดสินเชื่อบ้านก่อนกำหนด</a></li>
+            <li><a href="/th/tool/heloc-calculator">เครื่องคำนวณการชำระเงิน HELOC</a></li>
+            <li><a href="/th/tool/mortgage-calculator">เครื่องคำนวณสินเชื่อบ้าน</a></li>
+            <li><a href="/th/tool/home-affordability-calculator">เครื่องคำนวณบ้านที่ฉันสามารถซื้อได้</a></li>
+            <li><a href="/th/tool/hourly-to-salary-calculator">เครื่องคำนวณค่าจ้างรายชั่วโมงเป็นเงินเดือน</a></li>
+            <li><a href="/th/tool/time-card-calculator">เครื่องคำนวณบัตรลงเวลา</a></li>
+            <li><a href="/th/tool/tip-calculator">เครื่องคำนวณทิป</a></li>
+            <li><a href="/th/tool/savings-calculator">เครื่องคำนวณเงินออม</a></li>
+            <li><a href="/th/tool/tvm-solver">เครื่องแก้สมการมูลค่าเงินตามเวลา (PV, FV, PMT)</a></li>
+            <li><a href="/th/tool/irr-npv-calculator">เครื่องคำนวณ IRR และ NPV</a></li>
+            <li><a href="/th/tool/budget-calculator">เครื่องคำนวณงบประมาณ</a></li>
+            <li><a href="/th/tool/compound-interest-calculator">เครื่องคำนวณดอกเบี้ยทบต้น</a></li>
+            <li><a href="/th/tool/apr-to-apy-calculator">เครื่องคำนวณจาก APR เป็นอัตราผลตอบแทนที่แท้จริงต่อปี (APY/EAR)</a></li>
+            <li><a href="/th/tool/sales-tax-calculator">เครื่องคำนวณภาษีการขาย</a></li>
+            <li><a href="/th/tool/discount-calculator">เครื่องคำนวณส่วนลด</a></li>
+            <li><a href="/th/tool/price-calculator">เครื่องคำนวณราคา</a></li>
+            <li><a href="/th/tool/debt-payoff-calculator">เครื่องคำนวณการชำระหนี้</a></li>
+            <li><a href="/th/tool/dti-ratio-calculator">เครื่องคำนวณอัตราส่วนหนี้สินต่อรายได้ (DTI)</a></li>
+            <li><a href="/th/tool/credit-card-payoff-calculator">เครื่องคำนวณการชำระหนี้บัตรเครดิต</a></li>
+            <li><a href="/th/tool/auto-loan-calculator">เครื่องคำนวณสินเชื่อรถยนต์</a></li>
+            <li><a href="/th/tool/investment-calculator">เครื่องคำนวณการลงทุน</a></li>
+            <li><a href="/th/tool/retirement-401k-calculator">เครื่องคำนวณเกษียณอายุ 401(k)</a></li>
+            <li><a href="/th/tool/bond-duration-calculator">เครื่องคำนวณระยะเวลาเฉลี่ยของพันธบัตร (Duration)</a></li>
+            <li><a href="/th/tool/gas-trip-cost-calculator">เครื่องคำนวณค่าน้ำมันสำหรับการเดินทาง</a></li>
+            <li><a href="/th/tool/simple-interest-calculator">เครื่องคำนวณดอกเบี้ยแบบธรรมดา</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.5 12 5l8 6.5"/><path d="M6 10v9h12v-9"/></svg></span>
+          <h2><a href="/th/category/construction">การก่อสร้างและบ้าน</a></h2>
+          <span class="count">15 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/th/tool/concrete-calculator">เครื่องคำนวณคอนกรีต</a></li>
+            <li><a href="/th/tool/paint-calculator">เครื่องคำนวณสี</a></li>
+            <li><a href="/th/tool/mulch-calculator">เครื่องคำนวณวัสดุคลุมดิน (Mulch)</a></li>
+            <li><a href="/th/tool/gravel-calculator">เครื่องคำนวณกรวด</a></li>
+            <li><a href="/th/tool/flooring-calculator">เครื่องคำนวณพื้น</a></li>
+            <li><a href="/th/tool/drywall-calculator">เครื่องคำนวณแผ่นยิปซัม (Drywall)</a></li>
+            <li><a href="/th/tool/tile-calculator">เครื่องคำนวณกระเบื้อง</a></li>
+            <li><a href="/th/tool/roofing-calculator">เครื่องคำนวณหลังคา</a></li>
+            <li><a href="/th/tool/square-footage-calculator">เครื่องคำนวณตารางฟุต</a></li>
+            <li><a href="/th/tool/fence-calculator">เครื่องคำนวณรั้ว</a></li>
+            <li><a href="/th/tool/insulation-calculator">เครื่องคำนวณฉนวนกันความร้อน</a></li>
+            <li><a href="/th/tool/ac-btu-calculator">เครื่องคำนวณขนาดเครื่องปรับอากาศ (BTU)</a></li>
+            <li><a href="/th/tool/lumber-calculator">เครื่องคำนวณไม้แปรรูป</a></li>
+            <li><a href="/th/tool/paver-calculator">เครื่องคำนวณอิฐปูพื้น (Paver)</a></li>
+            <li><a href="/th/tool/mix-ratio-calculator">เครื่องคำนวณอัตราส่วนผสม</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3,12 8,12 10,6 14,18 16,12 21,12"/></svg></span>
+          <h2><a href="/th/category/health">สุขภาพและฟิตเนส</a></h2>
+          <span class="count">17 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/th/tool/bmi-calculator">เครื่องคำนวณ BMI</a></li>
+            <li><a href="/th/tool/height-percentile-calculator">เครื่องคำนวณเปอร์เซ็นไทล์ส่วนสูง</a></li>
+            <li><a href="/th/tool/bmr-calculator">เครื่องคำนวณอัตราการเผาผลาญพื้นฐาน</a></li>
+            <li><a href="/th/tool/body-surface-area-calculator">เครื่องคำนวณพื้นที่ผิวร่างกาย</a></li>
+            <li><a href="/th/tool/calorie-calculator">เครื่องคำนวณแคลอรี่</a></li>
+            <li><a href="/th/tool/body-fat-calculator">เครื่องคำนวณไขมันในร่างกาย</a></li>
+            <li><a href="/th/tool/macro-calculator">เครื่องคำนวณสารอาหารหลัก (Macro)</a></li>
+            <li><a href="/th/tool/water-intake-calculator">เครื่องคำนวณการดื่มน้ำ</a></li>
+            <li><a href="/th/tool/one-rep-max-calculator">เครื่องคำนวณน้ำหนักยกสูงสุดครั้งเดียว (1RM)</a></li>
+            <li><a href="/th/tool/heart-rate-zone-calculator">เครื่องคำนวณโซนอัตราการเต้นของหัวใจ</a></li>
+            <li><a href="/th/tool/ideal-weight-calculator">เครื่องคำนวณน้ำหนักในอุดมคติ</a></li>
+            <li><a href="/th/tool/bra-size-calculator">เครื่องคำนวณขนาดชุดชั้นใน</a></li>
+            <li><a href="/th/tool/pace-calculator">เครื่องคำนวณความเร็วในการวิ่ง</a></li>
+            <li><a href="/th/tool/steps-to-miles-calculator">เครื่องคำนวณก้าวเป็นไมล์</a></li>
+            <li><a href="/th/tool/pregnancy-due-date-calculator">เครื่องคำนวณกำหนดคลอด</a></li>
+            <li><a href="/th/tool/ovulation-calculator">เครื่องคำนวณการตกไข่</a></li>
+            <li><a href="/th/tool/calories-burned-calculator">เครื่องคำนวณแคลอรี่ที่เผาผลาญ</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><line x1="12" y1="12" x2="12" y2="7"/><line x1="12" y1="12" x2="16" y2="14"/></svg></span>
+          <h2><a href="/th/category/datetime">วันที่และเวลา</a></h2>
+          <span class="count">23 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/th/tool/days-until-calculator">เครื่องคำนวณวันที่เหลือ</a></li>
+            <li><a href="/th/tool/date-duration-calculator">เครื่องคำนวณระยะเวลาระหว่างวันที่</a></li>
+            <li><a href="/th/tool/business-days-calculator">เครื่องคำนวณวันทำการ</a></li>
+            <li><a href="/th/tool/time-duration-calculator">เครื่องคำนวณระยะเวลา</a></li>
+            <li><a href="/th/tool/time-add-calculator">เครื่องคำนวณบวก/ลบเวลา</a></li>
+            <li><a href="/th/tool/online-timer">ตัวจับเวลาออนไลน์</a></li>
+            <li><a href="/th/tool/online-alarm-clock">นาฬิกาปลุกออนไลน์</a></li>
+            <li><a href="/th/tool/online-stopwatch">นาฬิกาจับเวลาออนไลน์</a></li>
+            <li><a href="/th/tool/current-time">เวลาปัจจุบัน</a></li>
+            <li><a href="/th/tool/random-date-generator">เครื่องสร้างวันที่สุ่ม</a></li>
+            <li><a href="/th/tool/military-time-converter">ตัวแปลงเวลาแบบทหาร</a></li>
+            <li><a href="/th/tool/unix-timestamp-converter">ตัวแปลง Unix Timestamp</a></li>
+            <li><a href="/th/tool/week-number-calculator">เครื่องคำนวณหมายเลขสัปดาห์</a></li>
+            <li><a href="/th/tool/time-zone-converter">ตัวแปลงเขตเวลา</a></li>
+            <li><a href="/th/tool/daylight-saving-time-calculator">เครื่องคำนวณเวลาออมแสง</a></li>
+            <li><a href="/th/tool/sunrise-sunset-calculator">เครื่องคำนวณพระอาทิตย์ขึ้นและตก</a></li>
+            <li><a href="/th/tool/sun-position-calculator">เครื่องคำนวณตำแหน่งดวงอาทิตย์</a></li>
+            <li><a href="/th/tool/day-of-week-calculator">เครื่องคำนวณวันในสัปดาห์</a></li>
+            <li><a href="/th/tool/leap-year-calculator">เครื่องคำนวณปีอธิกสุรทิน</a></li>
+            <li><a href="/th/tool/age-calculator">เครื่องคำนวณอายุ</a></li>
+            <li><a href="/th/tool/birth-year-calculator">เครื่องคำนวณปีเกิด</a></li>
+            <li><a href="/th/tool/time-zone-meeting-planner">เครื่องมือวางแผนการประชุมข้ามเขตเวลา</a></li>
+            <li><a href="/th/tool/day-of-the-week-calculator">เครื่องคำนวณวันในสัปดาห์</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16,3 20,7 16,11"/><line x1="20" y1="7" x2="4" y2="7"/><polyline points="8,13 4,17 8,21"/><line x1="4" y1="17" x2="20" y2="17"/></svg></span>
+          <h2><a href="/th/category/conversions">การแปลงหน่วยในชีวิตประจำวัน</a></h2>
+          <span class="count">23 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/th/tool/screen-ppi-calculator">เครื่องคำนวณ PPI ของหน้าจอ</a></li>
+            <li><a href="/th/tool/print-dpi-calculator">เครื่องคำนวณ DPI สำหรับการพิมพ์</a></li>
+            <li><a href="/th/tool/unit-length-converter">ตัวแปลง ซม.-นิ้ว</a></li>
+            <li><a href="/th/tool/time-unit-converter">ตัวแปลงหน่วยเวลา</a></li>
+            <li><a href="/th/tool/temperature-converter">ตัวแปลงอุณหภูมิ</a></li>
+            <li><a href="/th/tool/oven-temperature-converter">ตัวแปลงอุณหภูมิเตาอบ</a></li>
+            <li><a href="/th/tool/rainfall-volume-calculator">เครื่องคำนวณปริมาณน้ำฝนเป็นปริมาตร</a></li>
+            <li><a href="/th/tool/water-density-calculator">เครื่องคำนวณความหนาแน่นของน้ำ</a></li>
+            <li><a href="/th/tool/weight-converter">ตัวแปลงน้ำหนัก</a></li>
+            <li><a href="/th/tool/volume-converter">ตัวแปลงปริมาตร</a></li>
+            <li><a href="/th/tool/cooking-converter">ตัวแปลงกรัมเป็นถ้วย</a></li>
+            <li><a href="/th/tool/microwave-wattage-converter">ตัวแปลงกำลังไฟไมโครเวฟ</a></li>
+            <li><a href="/th/tool/electricity-cost-calculator">เครื่องคำนวณค่าไฟฟ้า</a></li>
+            <li><a href="/th/tool/ppm-percent-converter">ตัวแปลง PPM เป็นเปอร์เซ็นต์</a></li>
+            <li><a href="/th/tool/speed-converter">ตัวแปลงความเร็ว</a></li>
+            <li><a href="/th/tool/area-converter">ตัวแปลงพื้นที่</a></li>
+            <li><a href="/th/tool/data-storage-converter">ตัวแปลงพื้นที่จัดเก็บข้อมูล</a></li>
+            <li><a href="/th/tool/pressure-converter">ตัวแปลงความดัน</a></li>
+            <li><a href="/th/tool/torque-converter">ตัวแปลงแรงบิด</a></li>
+            <li><a href="/th/tool/fuel-economy-converter">ตัวแปลงอัตราสิ้นเปลืองเชื้อเพลิง</a></li>
+            <li><a href="/th/tool/gear-ratio-calculator">เครื่องคำนวณอัตราทดเกียร์จักรยาน</a></li>
+            <li><a href="/th/tool/tire-size-calculator">เครื่องคำนวณเปรียบเทียบขนาดยาง</a></li>
+            <li><a href="/th/tool/weather-comfort-calculator">เครื่องคำนวณจุดน้ำค้าง ดัชนีความร้อน และดัชนีความหนาวเย็นจากลม</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4h6M12 4v16M9 20h6"/></svg></span>
+          <h2><a href="/th/category/text">ข้อความและดิจิทัล</a></h2>
+          <span class="count">21 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/th/tool/color-difference-checker">เครื่องตรวจสอบความแตกต่างของสี</a></li>
+            <li><a href="/th/tool/list-shuffler">เครื่องสับรายการแบบสุ่ม</a></li>
+            <li><a href="/th/tool/weighted-random-picker">เครื่องสุ่มเลือกแบบถ่วงน้ำหนัก</a></li>
+            <li><a href="/th/tool/word-counter">เครื่องมือนับคำและตัวอักษร</a></li>
+            <li><a href="/th/tool/password-generator">เครื่องสร้างรหัสผ่าน</a></li>
+            <li><a href="/th/tool/uuid-generator">เครื่องสร้าง UUID</a></li>
+            <li><a href="/th/tool/random-number-generator">เครื่องสร้างตัวเลขสุ่ม</a></li>
+            <li><a href="/th/tool/coin-flipper">โยนเหรียญ</a></li>
+            <li><a href="/th/tool/dice-roller">ทอยลูกเต๋า</a></li>
+            <li><a href="/th/tool/card-deck-shuffler">สับไพ่</a></li>
+            <li><a href="/th/tool/color-mixer">เครื่องผสมสี</a></li>
+            <li><a href="/th/tool/case-converter">เครื่องมือแปลงตัวพิมพ์ใหญ่-เล็ก</a></li>
+            <li><a href="/th/tool/lorem-ipsum-generator">เครื่องสร้างข้อความ Lorem Ipsum</a></li>
+            <li><a href="/th/tool/text-to-slug-generator">เครื่องสร้าง Slug จากข้อความ</a></li>
+            <li><a href="/th/tool/binary-to-text-converter">เครื่องแปลงไบนารีเป็นข้อความ</a></li>
+            <li><a href="/th/tool/word-frequency-counter">เครื่องนับความถี่คำ</a></li>
+            <li><a href="/th/tool/url-encoder-decoder">ตัวเข้ารหัส / ถอดรหัส URL</a></li>
+            <li><a href="/th/tool/ip-subnet-calculator">เครื่องคำนวณซับเน็ต IP</a></li>
+            <li><a href="/th/tool/json-compare">เปรียบเทียบ JSON</a></li>
+            <li><a href="/th/tool/cidr-calculator">เครื่องคำนวณ CIDR / ซับเน็ต</a></li>
+            <li><a href="/th/tool/group-randomizer">เครื่องสุ่มกลุ่ม</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="15.5" r="4"/><circle cx="5.5" cy="9" r="2"/><circle cx="10" cy="4.5" r="2"/><circle cx="14" cy="4.5" r="2"/><circle cx="18.5" cy="9" r="2"/></svg></span>
+          <h2><a href="/th/category/pets">สัตว์เลี้ยงและไลฟ์สไตล์</a></h2>
+          <span class="count">8 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/th/tool/dog-age-calculator">เครื่องคำนวณอายุสุนัข</a></li>
+            <li><a href="/th/tool/dog-food-calculator">เครื่องคำนวณอาหารสุนัข</a></li>
+            <li><a href="/th/tool/cat-age-calculator">เครื่องคำนวณอายุแมว</a></li>
+            <li><a href="/th/tool/rabbit-age-calculator">เครื่องคำนวณอายุกระต่าย</a></li>
+            <li><a href="/th/tool/dog-pregnancy-calculator">เครื่องคำนวณการตั้งท้องของสุนัข</a></li>
+            <li><a href="/th/tool/horse-age-calculator">เครื่องคำนวณอายุม้า</a></li>
+            <li><a href="/th/tool/ideal-dog-weight-calculator">เครื่องคำนวณน้ำหนักในอุดมคติของสุนัข</a></li>
+            <li><a href="/th/tool/cat-pregnancy-calculator">เครื่องคำนวณการตั้งท้องของแมว</a></li>
+        </ul>
+      </section>
+      </div>
     </div>
   </section>
 

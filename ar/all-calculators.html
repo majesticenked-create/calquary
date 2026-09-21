@@ -52,62 +52,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="/css/styles.css" />
-  <script src="/js/calculators-data.js" defer></script>
-  <script src="/js/i18n-titles.js" defer></script>
   <script src="/js/theme.js" defer></script>
   <script src="/js/locale-switcher.js" defer></script>
-  <script>window.CALQ_LOCALE = "ar"; window.CALQ_LOCALE_PATH = "ar/";</script>
-  <script defer>
-    document.addEventListener("DOMContentLoaded", () => {
-      const LOC = window.CALQ_LOCALE;
-      const LPATH = window.CALQ_LOCALE_PATH;
-      function catName(cat) {
-        return (LOC !== "en" && window.I18N_CATEGORIES && window.I18N_CATEGORIES[cat.id] && window.I18N_CATEGORIES[cat.id][LOC])
-          ? window.I18N_CATEGORIES[cat.id][LOC].name : cat.name;
-      }
-      function toolTitle(calc) {
-        return (LOC !== "en" && window.I18N_TITLES && window.I18N_TITLES[calc.id] && window.I18N_TITLES[calc.id][LOC])
-          ? window.I18N_TITLES[calc.id][LOC] : calc.title;
-      }
-      function isTranslated(calcId) {
-        return LOC !== "en" && window.I18N_TITLES && window.I18N_TITLES[calcId] && window.I18N_TITLES[calcId][LOC];
-      }
-      function toolHref(calcId) {
-        return isTranslated(calcId) ? `/${LPATH}tool/${calcId}` : `https://calquary.com/tool/${calcId}`;
-      }
-      function catHref(catId) {
-        return `/${LPATH}category/${catId}`;
-      }
-
-      const wrap = document.getElementById("index-categories");
-      CATEGORIES.forEach((cat) => {
-        const tools = calculatorsInCategory(cat.id);
-
-        const section = document.createElement("section");
-        section.className = "index-category";
-
-        const head = document.createElement("div");
-        head.className = "index-category-head";
-        head.innerHTML = `
-          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${cat.icon}</svg></span>
-          <h2><a href="${catHref(cat.id)}">${catName(cat)}</a></h2>
-          <span class="count">${tools.length} tool${tools.length === 1 ? "" : "s"}</span>
-        `;
-        section.appendChild(head);
-
-        const list = document.createElement("ul");
-        list.className = "related-list index-columns";
-        tools.forEach((calc) => {
-          const li = document.createElement("li");
-          li.innerHTML = `<a href="${toolHref(calc.id)}">${toolTitle(calc)}</a>`;
-          list.appendChild(li);
-        });
-        section.appendChild(list);
-
-        wrap.appendChild(section);
-      });
-    });
-  </script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -166,7 +112,287 @@
 
   <section class="section">
     <div class="wrap">
-      <div id="index-categories"></div>
+      <div id="index-categories">
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/><line x1="18" y1="6" x2="6" y2="18"/></svg></span>
+          <h2><a href="/ar/category/math">الرياضيات</a></h2>
+          <span class="count">73 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/ar/tool/percentage-calculator">حاسبة النسبة المئوية</a></li>
+            <li><a href="/ar/tool/percentage-change-calculator">حاسبة التغير النسبي المئوي</a></li>
+            <li><a href="/ar/tool/average-calculator">حاسبة المتوسط</a></li>
+            <li><a href="/ar/tool/fraction-calculator">حاسبة الكسور</a></li>
+            <li><a href="/ar/tool/pi-digits-calculator">حاسبة أرقام باي</a></li>
+            <li><a href="/ar/tool/long-division-calculator">حاسبة القسمة المطولة</a></li>
+            <li><a href="/ar/tool/long-multiplication-calculator">حاسبة الضرب المطول</a></li>
+            <li><a href="/ar/tool/gcd-lcm-calculator">حاسبة القاسم المشترك الأكبر والمضاعف المشترك الأصغر</a></li>
+            <li><a href="/ar/tool/factor-calculator">حاسبة العوامل</a></li>
+            <li><a href="/ar/tool/standard-deviation-calculator">حاسبة الانحراف المعياري</a></li>
+            <li><a href="/ar/tool/t-test-calculator">حاسبة اختبار T</a></li>
+            <li><a href="/ar/tool/effect-size-calculator">حاسبة حجم التأثير (d كوهين)</a></li>
+            <li><a href="/ar/tool/mann-whitney-u-calculator">حاسبة اختبار مان-ويتني U</a></li>
+            <li><a href="/ar/tool/sequences-series-calculator">حاسبة المتتاليات والمتسلسلات</a></li>
+            <li><a href="/ar/tool/coupon-collector-calculator">حاسبة مشكلة جامع القسائم</a></li>
+            <li><a href="/ar/tool/similarity-ratio-calculator">حاسبة نسبة التشابه</a></li>
+            <li><a href="/ar/tool/correlation-calculator">حاسبة معامل الارتباط</a></li>
+            <li><a href="/ar/tool/z-score-calculator">حاسبة الدرجة المعيارية Z</a></li>
+            <li><a href="/ar/tool/confusion-matrix-calculator">حاسبة مصفوفة الالتباس</a></li>
+            <li><a href="/ar/tool/odds-probability-converter">محول الاحتمالات إلى احتمالية</a></li>
+            <li><a href="/ar/tool/normal-distribution-calculator">حاسبة التوزيع الطبيعي</a></li>
+            <li><a href="/ar/tool/lottery-odds-calculator">حاسبة احتمالات اليانصيب</a></li>
+            <li><a href="/ar/tool/poker-hand-probability-calculator">حاسبة احتمالات أيدي البوكر</a></li>
+            <li><a href="/ar/tool/square-root-calculator">حاسبة الجذر التربيعي</a></li>
+            <li><a href="/ar/tool/ratio-calculator">حاسبة النسبة</a></li>
+            <li><a href="/ar/tool/aspect-ratio-calculator">حاسبة نسبة العرض إلى الارتفاع</a></li>
+            <li><a href="/ar/tool/exponent-calculator">حاسبة الأسس</a></li>
+            <li><a href="/ar/tool/logarithm-calculator">حاسبة اللوغاريتم</a></li>
+            <li><a href="/ar/tool/vector-calculator">حاسبة المتجهات</a></li>
+            <li><a href="/ar/tool/haversine-distance-calculator">حاسبة المسافة والاتجاه (خط العرض/الطول)</a></li>
+            <li><a href="/ar/tool/quadratic-formula-calculator">حاسبة الصيغة التربيعية</a></li>
+            <li><a href="/ar/tool/cone-volume-calculator">حاسبة حجم المخروط</a></li>
+            <li><a href="/ar/tool/cylinder-volume-calculator">حاسبة حجم الأسطوانة</a></li>
+            <li><a href="/ar/tool/pythagorean-theorem-calculator">حاسبة نظرية فيثاغورس</a></li>
+            <li><a href="/ar/tool/distance-formula-calculator">حاسبة صيغة المسافة</a></li>
+            <li><a href="/ar/tool/triangle-solver">حلّال المثلثات (ضلع-ضلع-ضلع)</a></li>
+            <li><a href="/ar/tool/hypergeometric-calculator">حاسبة التوزيع فوق الهندسي</a></li>
+            <li><a href="/ar/tool/trapezoid-area-calculator">حاسبة مساحة شبه المنحرف</a></li>
+            <li><a href="/ar/tool/rectangular-prism-volume-calculator">حاسبة حجم المنشور المستطيل</a></li>
+            <li><a href="/ar/tool/slope-calculator">حاسبة الميل</a></li>
+            <li><a href="/ar/tool/sector-calculator">حاسبة قطاع دائري</a></li>
+            <li><a href="/ar/tool/grade-gradient-calculator">حاسبة الدرجة / الانحدار</a></li>
+            <li><a href="/ar/tool/molecular-weight-calculator">حاسبة الوزن الجزيئي</a></li>
+            <li><a href="/ar/tool/empirical-formula-calculator">حاسبة الصيغة التجريبية</a></li>
+            <li><a href="/ar/tool/system-of-equations-solver">حلّال نظام المعادلات</a></li>
+            <li><a href="/ar/tool/linear-equation-solver">حلّال المعادلات الخطية</a></li>
+            <li><a href="/ar/tool/eigenvalue-calculator">حاسبة القيم الذاتية والمتجهات الذاتية (2x2)</a></li>
+            <li><a href="/ar/tool/inequality-solver">حلّال المتباينات الخطية</a></li>
+            <li><a href="/ar/tool/chemical-equation-balancer">موازن المعادلات الكيميائية</a></li>
+            <li><a href="/ar/tool/solubility-product-calculator">حاسبة ناتج الذوبان (Ksp)</a></li>
+            <li><a href="/ar/tool/titration-ph-calculator">حاسبة درجة الحموضة للمعايرة</a></li>
+            <li><a href="/ar/tool/limiting-reagent-calculator">حاسبة الكاشف المحدد</a></li>
+            <li><a href="/ar/tool/half-life-calculator">حاسبة عمر النصف</a></li>
+            <li><a href="/ar/tool/hardy-weinberg-calculator">حاسبة توازن هاردي-واينبرغ</a></li>
+            <li><a href="/ar/tool/grade-calculator">حاسبة الدرجات</a></li>
+            <li><a href="/ar/tool/weighted-grade-calculator">حاسبة الدرجة المرجحة</a></li>
+            <li><a href="/ar/tool/gpa-calculator">حاسبة المعدل التراكمي الموزون (GPA)</a></li>
+            <li><a href="/ar/tool/speed-distance-time-calculator">حاسبة السرعة والمسافة والزمن</a></li>
+            <li><a href="/ar/tool/projectile-motion-calculator">حاسبة الحركة القذفية</a></li>
+            <li><a href="/ar/tool/collision-calculator">حاسبة الزخم والتصادم</a></li>
+            <li><a href="/ar/tool/ohms-law-calculator">حاسبة قانون أوم</a></li>
+            <li><a href="/ar/tool/right-triangle-calculator">حاسبة المثلث القائم الزاوية</a></li>
+            <li><a href="/ar/tool/absolute-risk-reduction-calculator">حاسبة الحد المطلق من الخطر</a></li>
+            <li><a href="/ar/tool/sample-size-calculator">حاسبة حجم العينة</a></li>
+            <li><a href="/ar/tool/confidence-interval-calculator">حاسبة فترة الثقة</a></li>
+            <li><a href="/ar/tool/mean-median-mode-calculator">حاسبة المتوسط والوسيط والمنوال والمدى</a></li>
+            <li><a href="/ar/tool/roman-numeral-converter">محول الأرقام الرومانية</a></li>
+            <li><a href="/ar/tool/distance-modulus-calculator">حاسبة معامل المسافة</a></li>
+            <li><a href="/ar/tool/earthquake-magnitude-calculator">حاسبة طاقة قوة الزلزال</a></li>
+            <li><a href="/ar/tool/pressure-altitude-calculator">حاسبة ارتفاع الضغط</a></li>
+            <li><a href="/ar/tool/circle-calculator">حاسبة الدائرة</a></li>
+            <li><a href="/ar/tool/repeating-decimal-to-fraction-calculator">حاسبة تحويل الكسر العشري الدوري إلى كسر</a></li>
+            <li><a href="/ar/tool/permutations-combinations-calculator">حاسبة التباديل والتوافيق</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="19" x2="5" y2="13"/><line x1="12" y1="19" x2="12" y2="9"/><line x1="19" y1="19" x2="19" y2="5"/></svg></span>
+          <h2><a href="/ar/category/finance">المالية</a></h2>
+          <span class="count">27 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/ar/tool/loan-calculator">حاسبة قسط القرض</a></li>
+            <li><a href="/ar/tool/amortization-schedule-calculator">حاسبة جدول الإطفاء</a></li>
+            <li><a href="/ar/tool/mortgage-payoff-calculator">حاسبة سداد القرض العقاري المبكر</a></li>
+            <li><a href="/ar/tool/heloc-calculator">حاسبة دفعات خط ائتمان الرهن العقاري (HELOC)</a></li>
+            <li><a href="/ar/tool/mortgage-calculator">حاسبة القرض العقاري</a></li>
+            <li><a href="/ar/tool/home-affordability-calculator">حاسبة كم يمكنني تحمل تكلفة المنزل</a></li>
+            <li><a href="/ar/tool/hourly-to-salary-calculator">حاسبة تحويل الأجر بالساعة إلى راتب سنوي</a></li>
+            <li><a href="/ar/tool/time-card-calculator">حاسبة بطاقة الوقت</a></li>
+            <li><a href="/ar/tool/tip-calculator">حاسبة الإكرامية</a></li>
+            <li><a href="/ar/tool/savings-calculator">حاسبة الادخار</a></li>
+            <li><a href="/ar/tool/tvm-solver">حلّال القيمة الزمنية للنقود (PV، FV، PMT)</a></li>
+            <li><a href="/ar/tool/irr-npv-calculator">حاسبة معدل العائد الداخلي (IRR) وصافي القيمة الحالية (NPV)</a></li>
+            <li><a href="/ar/tool/budget-calculator">حاسبة الميزانية</a></li>
+            <li><a href="/ar/tool/compound-interest-calculator">حاسبة الفائدة المركبة</a></li>
+            <li><a href="/ar/tool/apr-to-apy-calculator">حاسبة تحويل معدل الفائدة السنوي إلى معدل فعلي (APY/EAR)</a></li>
+            <li><a href="/ar/tool/sales-tax-calculator">حاسبة ضريبة المبيعات</a></li>
+            <li><a href="/ar/tool/discount-calculator">حاسبة الخصم</a></li>
+            <li><a href="/ar/tool/price-calculator">حاسبة التسعير</a></li>
+            <li><a href="/ar/tool/debt-payoff-calculator">حاسبة سداد الديون</a></li>
+            <li><a href="/ar/tool/dti-ratio-calculator">حاسبة نسبة الدين إلى الدخل (DTI)</a></li>
+            <li><a href="/ar/tool/credit-card-payoff-calculator">حاسبة سداد بطاقة الائتمان</a></li>
+            <li><a href="/ar/tool/auto-loan-calculator">حاسبة قرض السيارة</a></li>
+            <li><a href="/ar/tool/investment-calculator">حاسبة الاستثمار</a></li>
+            <li><a href="/ar/tool/retirement-401k-calculator">حاسبة تقاعد 401(k)</a></li>
+            <li><a href="/ar/tool/bond-duration-calculator">حاسبة مدة السند</a></li>
+            <li><a href="/ar/tool/gas-trip-cost-calculator">حاسبة تكلفة البنزين للرحلة</a></li>
+            <li><a href="/ar/tool/simple-interest-calculator">حاسبة الفائدة البسيطة</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.5 12 5l8 6.5"/><path d="M6 10v9h12v-9"/></svg></span>
+          <h2><a href="/ar/category/construction">البناء والمنزل</a></h2>
+          <span class="count">15 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/ar/tool/concrete-calculator">حاسبة الخرسانة</a></li>
+            <li><a href="/ar/tool/paint-calculator">حاسبة الطلاء</a></li>
+            <li><a href="/ar/tool/mulch-calculator">حاسبة نشارة الحديقة (Mulch)</a></li>
+            <li><a href="/ar/tool/gravel-calculator">حاسبة الحصى</a></li>
+            <li><a href="/ar/tool/flooring-calculator">حاسبة الأرضيات</a></li>
+            <li><a href="/ar/tool/drywall-calculator">حاسبة ألواح الجبس (Drywall)</a></li>
+            <li><a href="/ar/tool/tile-calculator">حاسبة البلاط</a></li>
+            <li><a href="/ar/tool/roofing-calculator">حاسبة سقف المنزل</a></li>
+            <li><a href="/ar/tool/square-footage-calculator">حاسبة المساحة بالقدم المربع</a></li>
+            <li><a href="/ar/tool/fence-calculator">حاسبة السياج</a></li>
+            <li><a href="/ar/tool/insulation-calculator">حاسبة العزل الحراري</a></li>
+            <li><a href="/ar/tool/ac-btu-calculator">حاسبة حجم مكيف الهواء (BTU)</a></li>
+            <li><a href="/ar/tool/lumber-calculator">حاسبة الأخشاب</a></li>
+            <li><a href="/ar/tool/paver-calculator">حاسبة بلاط الأرضيات الخارجية (Pavers)</a></li>
+            <li><a href="/ar/tool/mix-ratio-calculator">حاسبة نسبة الخلط</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3,12 8,12 10,6 14,18 16,12 21,12"/></svg></span>
+          <h2><a href="/ar/category/health">الصحة واللياقة</a></h2>
+          <span class="count">17 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/ar/tool/bmi-calculator">حاسبة مؤشر كتلة الجسم</a></li>
+            <li><a href="/ar/tool/height-percentile-calculator">حاسبة النسبة المئوية للطول</a></li>
+            <li><a href="/ar/tool/bmr-calculator">حاسبة معدل الأيض الأساسي</a></li>
+            <li><a href="/ar/tool/body-surface-area-calculator">حاسبة مساحة سطح الجسم</a></li>
+            <li><a href="/ar/tool/calorie-calculator">حاسبة السعرات الحرارية</a></li>
+            <li><a href="/ar/tool/body-fat-calculator">حاسبة نسبة الدهون في الجسم</a></li>
+            <li><a href="/ar/tool/macro-calculator">حاسبة المغذيات الكبرى</a></li>
+            <li><a href="/ar/tool/water-intake-calculator">حاسبة تناول الماء</a></li>
+            <li><a href="/ar/tool/one-rep-max-calculator">حاسبة التكرار الواحد الأقصى (1RM)</a></li>
+            <li><a href="/ar/tool/heart-rate-zone-calculator">حاسبة مناطق معدل ضربات القلب</a></li>
+            <li><a href="/ar/tool/ideal-weight-calculator">حاسبة الوزن المثالي</a></li>
+            <li><a href="/ar/tool/bra-size-calculator">حاسبة مقاس حمالة الصدر</a></li>
+            <li><a href="/ar/tool/pace-calculator">حاسبة سرعة الجري</a></li>
+            <li><a href="/ar/tool/steps-to-miles-calculator">حاسبة الخطوات إلى الأميال</a></li>
+            <li><a href="/ar/tool/pregnancy-due-date-calculator">حاسبة موعد الولادة</a></li>
+            <li><a href="/ar/tool/ovulation-calculator">حاسبة الإباضة</a></li>
+            <li><a href="/ar/tool/calories-burned-calculator">حاسبة السعرات الحرارية المحروقة</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><line x1="12" y1="12" x2="12" y2="7"/><line x1="12" y1="12" x2="16" y2="14"/></svg></span>
+          <h2><a href="/ar/category/datetime">التاريخ والوقت</a></h2>
+          <span class="count">23 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/ar/tool/days-until-calculator">حاسبة الأيام المتبقية</a></li>
+            <li><a href="/ar/tool/date-duration-calculator">حاسبة مدة التاريخ</a></li>
+            <li><a href="/ar/tool/business-days-calculator">حاسبة أيام العمل</a></li>
+            <li><a href="/ar/tool/time-duration-calculator">حاسبة مدة الوقت</a></li>
+            <li><a href="/ar/tool/time-add-calculator">حاسبة إضافة/طرح الوقت</a></li>
+            <li><a href="/ar/tool/online-timer">مؤقت عبر الإنترنت</a></li>
+            <li><a href="/ar/tool/online-alarm-clock">منبه عبر الإنترنت</a></li>
+            <li><a href="/ar/tool/online-stopwatch">ساعة توقيت عبر الإنترنت</a></li>
+            <li><a href="/ar/tool/current-time">الوقت الحالي</a></li>
+            <li><a href="/ar/tool/random-date-generator">مولد التواريخ العشوائية</a></li>
+            <li><a href="/ar/tool/military-time-converter">محول الوقت العسكري</a></li>
+            <li><a href="/ar/tool/unix-timestamp-converter">محول الطابع الزمني لـ Unix</a></li>
+            <li><a href="/ar/tool/week-number-calculator">حاسبة رقم الأسبوع</a></li>
+            <li><a href="/ar/tool/time-zone-converter">محول المنطقة الزمنية</a></li>
+            <li><a href="/ar/tool/daylight-saving-time-calculator">حاسبة التوقيت الصيفي</a></li>
+            <li><a href="/ar/tool/sunrise-sunset-calculator">حاسبة شروق وغروب الشمس</a></li>
+            <li><a href="/ar/tool/sun-position-calculator">حاسبة موقع الشمس</a></li>
+            <li><a href="/ar/tool/day-of-week-calculator">حاسبة يوم الأسبوع</a></li>
+            <li><a href="/ar/tool/leap-year-calculator">حاسبة السنة الكبيسة</a></li>
+            <li><a href="/ar/tool/age-calculator">حاسبة العمر</a></li>
+            <li><a href="/ar/tool/birth-year-calculator">حاسبة سنة الميلاد</a></li>
+            <li><a href="/ar/tool/time-zone-meeting-planner">مخطط الاجتماعات عبر المناطق الزمنية</a></li>
+            <li><a href="/ar/tool/day-of-the-week-calculator">حاسبة يوم الأسبوع</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16,3 20,7 16,11"/><line x1="20" y1="7" x2="4" y2="7"/><polyline points="8,13 4,17 8,21"/><line x1="4" y1="17" x2="20" y2="17"/></svg></span>
+          <h2><a href="/ar/category/conversions">تحويلات يومية</a></h2>
+          <span class="count">23 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/ar/tool/screen-ppi-calculator">حاسبة كثافة البكسل للشاشة (PPI)</a></li>
+            <li><a href="/ar/tool/print-dpi-calculator">حاسبة DPI للطباعة</a></li>
+            <li><a href="/ar/tool/unit-length-converter">محوّل سم-إنش</a></li>
+            <li><a href="/ar/tool/time-unit-converter">محول وحدات الوقت</a></li>
+            <li><a href="/ar/tool/temperature-converter">محوّل درجة الحرارة</a></li>
+            <li><a href="/ar/tool/oven-temperature-converter">محول درجة حرارة الفرن</a></li>
+            <li><a href="/ar/tool/rainfall-volume-calculator">حاسبة تحويل الأمطار إلى حجم</a></li>
+            <li><a href="/ar/tool/water-density-calculator">حاسبة كثافة الماء</a></li>
+            <li><a href="/ar/tool/weight-converter">محول الوزن</a></li>
+            <li><a href="/ar/tool/volume-converter">محول الحجم</a></li>
+            <li><a href="/ar/tool/cooking-converter">محول الجرامات إلى أكواب</a></li>
+            <li><a href="/ar/tool/microwave-wattage-converter">محول قدرة الميكروويف</a></li>
+            <li><a href="/ar/tool/electricity-cost-calculator">حاسبة تكلفة الكهرباء</a></li>
+            <li><a href="/ar/tool/ppm-percent-converter">محول جزء في المليون إلى نسبة مئوية</a></li>
+            <li><a href="/ar/tool/speed-converter">محول السرعة</a></li>
+            <li><a href="/ar/tool/area-converter">محول المساحة</a></li>
+            <li><a href="/ar/tool/data-storage-converter">محول سعة التخزين</a></li>
+            <li><a href="/ar/tool/pressure-converter">محول الضغط</a></li>
+            <li><a href="/ar/tool/torque-converter">محول عزم الدوران</a></li>
+            <li><a href="/ar/tool/fuel-economy-converter">محول اقتصاد الوقود</a></li>
+            <li><a href="/ar/tool/gear-ratio-calculator">حاسبة نسبة تروس الدراجة</a></li>
+            <li><a href="/ar/tool/tire-size-calculator">حاسبة مقارنة حجم الإطارات</a></li>
+            <li><a href="/ar/tool/weather-comfort-calculator">حاسبة نقطة الندى ومؤشر الحرارة وعامل الرياح البارد</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4h6M12 4v16M9 20h6"/></svg></span>
+          <h2><a href="/ar/category/text">النصوص والرقمي</a></h2>
+          <span class="count">21 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/ar/tool/color-difference-checker">أداة فحص فرق الألوان</a></li>
+            <li><a href="/ar/tool/list-shuffler">خالط القوائم</a></li>
+            <li><a href="/ar/tool/weighted-random-picker">أداة الاختيار العشوائي الموزون</a></li>
+            <li><a href="/ar/tool/word-counter">أداة عد الكلمات والأحرف</a></li>
+            <li><a href="/ar/tool/password-generator">مولد كلمات المرور</a></li>
+            <li><a href="/ar/tool/uuid-generator">مولد UUID</a></li>
+            <li><a href="/ar/tool/random-number-generator">مولد الأرقام العشوائية</a></li>
+            <li><a href="/ar/tool/coin-flipper">قذف العملة</a></li>
+            <li><a href="/ar/tool/dice-roller">رمي النرد</a></li>
+            <li><a href="/ar/tool/card-deck-shuffler">أوراق لعب مخلوطة</a></li>
+            <li><a href="/ar/tool/color-mixer">خالط الألوان</a></li>
+            <li><a href="/ar/tool/case-converter">أداة تحويل حالة الأحرف</a></li>
+            <li><a href="/ar/tool/lorem-ipsum-generator">مولد لوريم إبسوم</a></li>
+            <li><a href="/ar/tool/text-to-slug-generator">مولد Slug من النص</a></li>
+            <li><a href="/ar/tool/binary-to-text-converter">محول من ثنائي إلى نص</a></li>
+            <li><a href="/ar/tool/word-frequency-counter">عداد تكرار الكلمات</a></li>
+            <li><a href="/ar/tool/url-encoder-decoder">مُرمِّز / فاك تشفير URL</a></li>
+            <li><a href="/ar/tool/ip-subnet-calculator">حاسبة الشبكة الفرعية IP</a></li>
+            <li><a href="/ar/tool/json-compare">مقارنة JSON</a></li>
+            <li><a href="/ar/tool/cidr-calculator">حاسبة CIDR / الشبكة الفرعية</a></li>
+            <li><a href="/ar/tool/group-randomizer">عشوائي المجموعات</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="15.5" r="4"/><circle cx="5.5" cy="9" r="2"/><circle cx="10" cy="4.5" r="2"/><circle cx="14" cy="4.5" r="2"/><circle cx="18.5" cy="9" r="2"/></svg></span>
+          <h2><a href="/ar/category/pets">الحيوانات الأليفة ونمط الحياة</a></h2>
+          <span class="count">8 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/ar/tool/dog-age-calculator">حاسبة عمر الكلاب</a></li>
+            <li><a href="/ar/tool/dog-food-calculator">حاسبة طعام الكلاب</a></li>
+            <li><a href="/ar/tool/cat-age-calculator">حاسبة عمر القطط</a></li>
+            <li><a href="/ar/tool/rabbit-age-calculator">حاسبة عمر الأرنب</a></li>
+            <li><a href="/ar/tool/dog-pregnancy-calculator">حاسبة حمل الكلاب</a></li>
+            <li><a href="/ar/tool/horse-age-calculator">حاسبة عمر الحصان</a></li>
+            <li><a href="/ar/tool/ideal-dog-weight-calculator">حاسبة الوزن المثالي للكلاب</a></li>
+            <li><a href="/ar/tool/cat-pregnancy-calculator">حاسبة حمل القطط</a></li>
+        </ul>
+      </section>
+      </div>
     </div>
   </section>
 

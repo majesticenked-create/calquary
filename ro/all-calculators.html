@@ -52,62 +52,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="/css/styles.css" />
-  <script src="/js/calculators-data.js" defer></script>
-  <script src="/js/i18n-titles.js" defer></script>
   <script src="/js/theme.js" defer></script>
   <script src="/js/locale-switcher.js" defer></script>
-  <script>window.CALQ_LOCALE = "ro"; window.CALQ_LOCALE_PATH = "ro/";</script>
-  <script defer>
-    document.addEventListener("DOMContentLoaded", () => {
-      const LOC = window.CALQ_LOCALE;
-      const LPATH = window.CALQ_LOCALE_PATH;
-      function catName(cat) {
-        return (LOC !== "en" && window.I18N_CATEGORIES && window.I18N_CATEGORIES[cat.id] && window.I18N_CATEGORIES[cat.id][LOC])
-          ? window.I18N_CATEGORIES[cat.id][LOC].name : cat.name;
-      }
-      function toolTitle(calc) {
-        return (LOC !== "en" && window.I18N_TITLES && window.I18N_TITLES[calc.id] && window.I18N_TITLES[calc.id][LOC])
-          ? window.I18N_TITLES[calc.id][LOC] : calc.title;
-      }
-      function isTranslated(calcId) {
-        return LOC !== "en" && window.I18N_TITLES && window.I18N_TITLES[calcId] && window.I18N_TITLES[calcId][LOC];
-      }
-      function toolHref(calcId) {
-        return isTranslated(calcId) ? `/${LPATH}tool/${calcId}` : `https://calquary.com/tool/${calcId}`;
-      }
-      function catHref(catId) {
-        return `/${LPATH}category/${catId}`;
-      }
-
-      const wrap = document.getElementById("index-categories");
-      CATEGORIES.forEach((cat) => {
-        const tools = calculatorsInCategory(cat.id);
-
-        const section = document.createElement("section");
-        section.className = "index-category";
-
-        const head = document.createElement("div");
-        head.className = "index-category-head";
-        head.innerHTML = `
-          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${cat.icon}</svg></span>
-          <h2><a href="${catHref(cat.id)}">${catName(cat)}</a></h2>
-          <span class="count">${tools.length} tool${tools.length === 1 ? "" : "s"}</span>
-        `;
-        section.appendChild(head);
-
-        const list = document.createElement("ul");
-        list.className = "related-list index-columns";
-        tools.forEach((calc) => {
-          const li = document.createElement("li");
-          li.innerHTML = `<a href="${toolHref(calc.id)}">${toolTitle(calc)}</a>`;
-          list.appendChild(li);
-        });
-        section.appendChild(list);
-
-        wrap.appendChild(section);
-      });
-    });
-  </script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -166,7 +112,287 @@
 
   <section class="section">
     <div class="wrap">
-      <div id="index-categories"></div>
+      <div id="index-categories">
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/><line x1="18" y1="6" x2="6" y2="18"/></svg></span>
+          <h2><a href="/ro/category/math">Matematică</a></h2>
+          <span class="count">73 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/ro/tool/percentage-calculator">Calculator de Procente</a></li>
+            <li><a href="/ro/tool/percentage-change-calculator">Calculator de Variație Procentuală</a></li>
+            <li><a href="/ro/tool/average-calculator">Calculator de Medie</a></li>
+            <li><a href="/ro/tool/fraction-calculator">Calculator de Fracții</a></li>
+            <li><a href="/ro/tool/pi-digits-calculator">Calculator de Cifre ale lui Pi</a></li>
+            <li><a href="/ro/tool/long-division-calculator">Calculator de Împărțire cu Rest</a></li>
+            <li><a href="/ro/tool/long-multiplication-calculator">Calculator de Înmulțire în Coloană</a></li>
+            <li><a href="/ro/tool/gcd-lcm-calculator">Calculator CMMDC și CMMMC</a></li>
+            <li><a href="/ro/tool/factor-calculator">Calculator de Factori</a></li>
+            <li><a href="/ro/tool/standard-deviation-calculator">Calculator de Deviație Standard</a></li>
+            <li><a href="/ro/tool/t-test-calculator">Calculator Test T</a></li>
+            <li><a href="/ro/tool/effect-size-calculator">Calculator de Mărime a Efectului (d Cohen)</a></li>
+            <li><a href="/ro/tool/mann-whitney-u-calculator">Calculator Test U Mann-Whitney</a></li>
+            <li><a href="/ro/tool/sequences-series-calculator">Calculator de Șiruri și Serii</a></li>
+            <li><a href="/ro/tool/coupon-collector-calculator">Calculator Problema Colecționarului de Cupoane</a></li>
+            <li><a href="/ro/tool/similarity-ratio-calculator">Calculator de Raport de Similitudine</a></li>
+            <li><a href="/ro/tool/correlation-calculator">Calculator de Coeficient de Corelație</a></li>
+            <li><a href="/ro/tool/z-score-calculator">Calculator Scor Z (Scor Standardizat)</a></li>
+            <li><a href="/ro/tool/confusion-matrix-calculator">Calculator de Matrice de Confuzie</a></li>
+            <li><a href="/ro/tool/odds-probability-converter">Convertor Șanse în Probabilitate</a></li>
+            <li><a href="/ro/tool/normal-distribution-calculator">Calculator de Distribuție Normală</a></li>
+            <li><a href="/ro/tool/lottery-odds-calculator">Calculator de Șanse la Loterie</a></li>
+            <li><a href="/ro/tool/poker-hand-probability-calculator">Calculator de Probabilitate a Mâinilor de Poker</a></li>
+            <li><a href="/ro/tool/square-root-calculator">Calculator de Radical</a></li>
+            <li><a href="/ro/tool/ratio-calculator">Calculator de Raport</a></li>
+            <li><a href="/ro/tool/aspect-ratio-calculator">Calculator de Raport de Aspect</a></li>
+            <li><a href="/ro/tool/exponent-calculator">Calculator de Exponenți</a></li>
+            <li><a href="/ro/tool/logarithm-calculator">Calculator de Logaritmi</a></li>
+            <li><a href="/ro/tool/vector-calculator">Calculator de Vectori</a></li>
+            <li><a href="/ro/tool/haversine-distance-calculator">Calculator de Distanță și Direcție (Lat/Long)</a></li>
+            <li><a href="/ro/tool/quadratic-formula-calculator">Calculator de Formulă Cuadratică</a></li>
+            <li><a href="/ro/tool/cone-volume-calculator">Calculator de Volum al Conului</a></li>
+            <li><a href="/ro/tool/cylinder-volume-calculator">Calculator de Volum al Cilindrului</a></li>
+            <li><a href="/ro/tool/pythagorean-theorem-calculator">Calculator de Teorema lui Pitagora</a></li>
+            <li><a href="/ro/tool/distance-formula-calculator">Calculator de Formulă a Distanței</a></li>
+            <li><a href="/ro/tool/triangle-solver">Rezolvator de Triunghi (LLL)</a></li>
+            <li><a href="/ro/tool/hypergeometric-calculator">Calculator de Distribuție Hipergeometrică</a></li>
+            <li><a href="/ro/tool/trapezoid-area-calculator">Calculator de Arie a Trapezului</a></li>
+            <li><a href="/ro/tool/rectangular-prism-volume-calculator">Calculator de Volum al Prismei Dreptunghiulare</a></li>
+            <li><a href="/ro/tool/slope-calculator">Calculator de Pantă</a></li>
+            <li><a href="/ro/tool/sector-calculator">Calculator de Sector Circular</a></li>
+            <li><a href="/ro/tool/grade-gradient-calculator">Calculator de Grad / Pantă</a></li>
+            <li><a href="/ro/tool/molecular-weight-calculator">Calculator de Masă Moleculară</a></li>
+            <li><a href="/ro/tool/empirical-formula-calculator">Calculator de Formulă Empirică</a></li>
+            <li><a href="/ro/tool/system-of-equations-solver">Rezolvator de Sistem de Ecuații</a></li>
+            <li><a href="/ro/tool/linear-equation-solver">Rezolvator de Ecuație Liniară</a></li>
+            <li><a href="/ro/tool/eigenvalue-calculator">Calculator de Valori și Vectori Proprii (2x2)</a></li>
+            <li><a href="/ro/tool/inequality-solver">Rezolvator de Inegalitate Liniară</a></li>
+            <li><a href="/ro/tool/chemical-equation-balancer">Echilibrator de Ecuații Chimice</a></li>
+            <li><a href="/ro/tool/solubility-product-calculator">Calculator de Produs de Solubilitate (Ksp)</a></li>
+            <li><a href="/ro/tool/titration-ph-calculator">Calculator de pH de Titrare</a></li>
+            <li><a href="/ro/tool/limiting-reagent-calculator">Calculator de Reactant Limitativ</a></li>
+            <li><a href="/ro/tool/half-life-calculator">Calculator de Timp de Înjumătățire</a></li>
+            <li><a href="/ro/tool/hardy-weinberg-calculator">Calculator de Echilibru Hardy-Weinberg</a></li>
+            <li><a href="/ro/tool/grade-calculator">Calculator de Notă</a></li>
+            <li><a href="/ro/tool/weighted-grade-calculator">Calculator de Notă Ponderată</a></li>
+            <li><a href="/ro/tool/gpa-calculator">Calculator de Medie Ponderată (GPA)</a></li>
+            <li><a href="/ro/tool/speed-distance-time-calculator">Calculator de Viteză, Distanță și Timp</a></li>
+            <li><a href="/ro/tool/projectile-motion-calculator">Calculator de Mișcare a Proiectilului</a></li>
+            <li><a href="/ro/tool/collision-calculator">Calculator de Impuls și Coliziune</a></li>
+            <li><a href="/ro/tool/ohms-law-calculator">Calculator de Legea lui Ohm</a></li>
+            <li><a href="/ro/tool/right-triangle-calculator">Calculator de Triunghi Dreptunghic</a></li>
+            <li><a href="/ro/tool/absolute-risk-reduction-calculator">Calculator de Reducere Absolută a Riscului</a></li>
+            <li><a href="/ro/tool/sample-size-calculator">Calculator de Dimensiune a Eșantionului</a></li>
+            <li><a href="/ro/tool/confidence-interval-calculator">Calculator de Interval de Încredere</a></li>
+            <li><a href="/ro/tool/mean-median-mode-calculator">Calculator de Medie, Mediană, Mod și Amplitudine</a></li>
+            <li><a href="/ro/tool/roman-numeral-converter">Convertor de Numere Romane</a></li>
+            <li><a href="/ro/tool/distance-modulus-calculator">Calculator de Modul de Distanță</a></li>
+            <li><a href="/ro/tool/earthquake-magnitude-calculator">Calculator de Energie a Magnitudinii Cutremurului</a></li>
+            <li><a href="/ro/tool/pressure-altitude-calculator">Calculator de Altitudine de Presiune</a></li>
+            <li><a href="/ro/tool/circle-calculator">Calculator de Cerc</a></li>
+            <li><a href="/ro/tool/repeating-decimal-to-fraction-calculator">Calculator de Zecimală Periodică în Fracție</a></li>
+            <li><a href="/ro/tool/permutations-combinations-calculator">Calculator de Permutări și Combinări</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="19" x2="5" y2="13"/><line x1="12" y1="19" x2="12" y2="9"/><line x1="19" y1="19" x2="19" y2="5"/></svg></span>
+          <h2><a href="/ro/category/finance">Finanțe</a></h2>
+          <span class="count">27 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/ro/tool/loan-calculator">Calculator de Rată la Împrumut</a></li>
+            <li><a href="/ro/tool/amortization-schedule-calculator">Calculator Grafic de Amortizare</a></li>
+            <li><a href="/ro/tool/mortgage-payoff-calculator">Calculator de Achitare Anticipată a Creditului Ipotecar</a></li>
+            <li><a href="/ro/tool/heloc-calculator">Calculator de Plată HELOC</a></li>
+            <li><a href="/ro/tool/mortgage-calculator">Calculator de Credit Ipotecar</a></li>
+            <li><a href="/ro/tool/home-affordability-calculator">Calculator Cât de Multă Casă Îmi Pot Permite</a></li>
+            <li><a href="/ro/tool/hourly-to-salary-calculator">Calculator din Salariu pe Oră în Salariu Anual</a></li>
+            <li><a href="/ro/tool/time-card-calculator">Calculator Pontaj</a></li>
+            <li><a href="/ro/tool/tip-calculator">Calculator de Bacșiș</a></li>
+            <li><a href="/ro/tool/savings-calculator">Calculator de Economii</a></li>
+            <li><a href="/ro/tool/tvm-solver">Rezolvator TVM (VP, VF, PMT)</a></li>
+            <li><a href="/ro/tool/irr-npv-calculator">Calculator RIR și VAN</a></li>
+            <li><a href="/ro/tool/budget-calculator">Calculator de Buget</a></li>
+            <li><a href="/ro/tool/compound-interest-calculator">Calculator de Dobândă Compusă</a></li>
+            <li><a href="/ro/tool/apr-to-apy-calculator">Calculator din DAE în Rată Anuală Efectivă (APY/EAR)</a></li>
+            <li><a href="/ro/tool/sales-tax-calculator">Calculator de Taxă pe Vânzări</a></li>
+            <li><a href="/ro/tool/discount-calculator">Calculator de Reducere</a></li>
+            <li><a href="/ro/tool/price-calculator">Calculator de Preț</a></li>
+            <li><a href="/ro/tool/debt-payoff-calculator">Calculator de Achitare a Datoriilor</a></li>
+            <li><a href="/ro/tool/dti-ratio-calculator">Calculator al Ratei Datorie-Venit (DTI)</a></li>
+            <li><a href="/ro/tool/credit-card-payoff-calculator">Calculator de Achitare a Cardului de Credit</a></li>
+            <li><a href="/ro/tool/auto-loan-calculator">Calculator de Împrumut Auto</a></li>
+            <li><a href="/ro/tool/investment-calculator">Calculator de Investiții</a></li>
+            <li><a href="/ro/tool/retirement-401k-calculator">Calculator de Pensie 401(k)</a></li>
+            <li><a href="/ro/tool/bond-duration-calculator">Calculator al Duratei Obligațiunii</a></li>
+            <li><a href="/ro/tool/gas-trip-cost-calculator">Calculator al Costului de Benzină pentru Călătorie</a></li>
+            <li><a href="/ro/tool/simple-interest-calculator">Calculator de Dobândă Simplă</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.5 12 5l8 6.5"/><path d="M6 10v9h12v-9"/></svg></span>
+          <h2><a href="/ro/category/construction">Construcții și Casă</a></h2>
+          <span class="count">15 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/ro/tool/concrete-calculator">Calculator de Beton</a></li>
+            <li><a href="/ro/tool/paint-calculator">Calculator de Vopsea</a></li>
+            <li><a href="/ro/tool/mulch-calculator">Calculator de Mulci</a></li>
+            <li><a href="/ro/tool/gravel-calculator">Calculator de Pietriș</a></li>
+            <li><a href="/ro/tool/flooring-calculator">Calculator de Pardoseală</a></li>
+            <li><a href="/ro/tool/drywall-calculator">Calculator de Rigips</a></li>
+            <li><a href="/ro/tool/tile-calculator">Calculator de Gresie/Faianță</a></li>
+            <li><a href="/ro/tool/roofing-calculator">Calculator de Acoperiș</a></li>
+            <li><a href="/ro/tool/square-footage-calculator">Calculator de Suprafață în Picioare Pătrate</a></li>
+            <li><a href="/ro/tool/fence-calculator">Calculator de Gard</a></li>
+            <li><a href="/ro/tool/insulation-calculator">Calculator de Izolație</a></li>
+            <li><a href="/ro/tool/ac-btu-calculator">Calculator al Dimensiunii Aparatului de Aer Condiționat (BTU)</a></li>
+            <li><a href="/ro/tool/lumber-calculator">Calculator de Cherestea</a></li>
+            <li><a href="/ro/tool/paver-calculator">Calculator de Pavele</a></li>
+            <li><a href="/ro/tool/mix-ratio-calculator">Calculator de Raport de Amestec</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3,12 8,12 10,6 14,18 16,12 21,12"/></svg></span>
+          <h2><a href="/ro/category/health">Sănătate și Fitness</a></h2>
+          <span class="count">17 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/ro/tool/bmi-calculator">Calculator IMC</a></li>
+            <li><a href="/ro/tool/height-percentile-calculator">Calculator de Percentilă a Înălțimii</a></li>
+            <li><a href="/ro/tool/bmr-calculator">Calculator Rată Metabolică Bazală</a></li>
+            <li><a href="/ro/tool/body-surface-area-calculator">Calculator al Suprafeței Corporale</a></li>
+            <li><a href="/ro/tool/calorie-calculator">Calculator de Calorii</a></li>
+            <li><a href="/ro/tool/body-fat-calculator">Calculator de Grăsime Corporală</a></li>
+            <li><a href="/ro/tool/macro-calculator">Calculator de Macronutrienți</a></li>
+            <li><a href="/ro/tool/water-intake-calculator">Calculator de Consum de Apă</a></li>
+            <li><a href="/ro/tool/one-rep-max-calculator">Calculator de Repetiție Maximă (1RM)</a></li>
+            <li><a href="/ro/tool/heart-rate-zone-calculator">Calculator de Zone de Ritm Cardiac</a></li>
+            <li><a href="/ro/tool/ideal-weight-calculator">Calculator de Greutate Ideală</a></li>
+            <li><a href="/ro/tool/bra-size-calculator">Calculator de Mărime a Sutienului</a></li>
+            <li><a href="/ro/tool/pace-calculator">Calculator de Ritm de Alergare</a></li>
+            <li><a href="/ro/tool/steps-to-miles-calculator">Calculator din Pași în Mile</a></li>
+            <li><a href="/ro/tool/pregnancy-due-date-calculator">Calculator al Datei Nașterii</a></li>
+            <li><a href="/ro/tool/ovulation-calculator">Calculator de Ovulație</a></li>
+            <li><a href="/ro/tool/calories-burned-calculator">Calculator de Calorii Arse</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><line x1="12" y1="12" x2="12" y2="7"/><line x1="12" y1="12" x2="16" y2="14"/></svg></span>
+          <h2><a href="/ro/category/datetime">Dată și Oră</a></h2>
+          <span class="count">23 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/ro/tool/days-until-calculator">Calculator Zile Rămase</a></li>
+            <li><a href="/ro/tool/date-duration-calculator">Calculator al Duratei între Date</a></li>
+            <li><a href="/ro/tool/business-days-calculator">Calculator de Zile Lucrătoare</a></li>
+            <li><a href="/ro/tool/time-duration-calculator">Calculator al Duratei de Timp</a></li>
+            <li><a href="/ro/tool/time-add-calculator">Calculator de Adunare/Scădere Timp</a></li>
+            <li><a href="/ro/tool/online-timer">Cronometru Online</a></li>
+            <li><a href="/ro/tool/online-alarm-clock">Ceas Deșteptător Online</a></li>
+            <li><a href="/ro/tool/online-stopwatch">Cronometru Online</a></li>
+            <li><a href="/ro/tool/current-time">Ora Curentă</a></li>
+            <li><a href="/ro/tool/random-date-generator">Generator de Date Aleatorii</a></li>
+            <li><a href="/ro/tool/military-time-converter">Convertor de Timp Militar</a></li>
+            <li><a href="/ro/tool/unix-timestamp-converter">Convertor de Marcaj Temporal Unix</a></li>
+            <li><a href="/ro/tool/week-number-calculator">Calculator al Numărului Săptămânii</a></li>
+            <li><a href="/ro/tool/time-zone-converter">Convertor de Fus Orar</a></li>
+            <li><a href="/ro/tool/daylight-saving-time-calculator">Calculator al Orei de Vară</a></li>
+            <li><a href="/ro/tool/sunrise-sunset-calculator">Calculator al Răsăritului și Apusului</a></li>
+            <li><a href="/ro/tool/sun-position-calculator">Calculator al Poziției Soarelui</a></li>
+            <li><a href="/ro/tool/day-of-week-calculator">Calculator al Zilei Săptămânii</a></li>
+            <li><a href="/ro/tool/leap-year-calculator">Calculator al Anului Bisect</a></li>
+            <li><a href="/ro/tool/age-calculator">Calculator de Vârstă</a></li>
+            <li><a href="/ro/tool/birth-year-calculator">Calculator al Anului Nașterii</a></li>
+            <li><a href="/ro/tool/time-zone-meeting-planner">Planificator de Întâlniri pe Fusuri Orare</a></li>
+            <li><a href="/ro/tool/day-of-the-week-calculator">Calculator al Zilei Săptămânii</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16,3 20,7 16,11"/><line x1="20" y1="7" x2="4" y2="7"/><polyline points="8,13 4,17 8,21"/><line x1="4" y1="17" x2="20" y2="17"/></svg></span>
+          <h2><a href="/ro/category/conversions">Conversii Zilnice</a></h2>
+          <span class="count">23 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/ro/tool/screen-ppi-calculator">Calculator PPI al Ecranului</a></li>
+            <li><a href="/ro/tool/print-dpi-calculator">Calculator al DPI-ului de Tipar</a></li>
+            <li><a href="/ro/tool/unit-length-converter">Convertor cm-inch</a></li>
+            <li><a href="/ro/tool/time-unit-converter">Convertor de Unități de Timp</a></li>
+            <li><a href="/ro/tool/temperature-converter">Convertor de Temperatură</a></li>
+            <li><a href="/ro/tool/oven-temperature-converter">Convertor de Temperatură a Cuptorului</a></li>
+            <li><a href="/ro/tool/rainfall-volume-calculator">Calculator al Volumului de Ploaie</a></li>
+            <li><a href="/ro/tool/water-density-calculator">Calculator al Densității Apei</a></li>
+            <li><a href="/ro/tool/weight-converter">Convertor de Greutate</a></li>
+            <li><a href="/ro/tool/volume-converter">Convertor de Volum</a></li>
+            <li><a href="/ro/tool/cooking-converter">Convertor din Grame în Căni</a></li>
+            <li><a href="/ro/tool/microwave-wattage-converter">Convertor de Putere Cuptor cu Microunde</a></li>
+            <li><a href="/ro/tool/electricity-cost-calculator">Calculator al Costului cu Electricitatea</a></li>
+            <li><a href="/ro/tool/ppm-percent-converter">Convertor din PPM în Procent</a></li>
+            <li><a href="/ro/tool/speed-converter">Convertor de Viteză</a></li>
+            <li><a href="/ro/tool/area-converter">Convertor de Suprafață</a></li>
+            <li><a href="/ro/tool/data-storage-converter">Convertor de Stocare de Date</a></li>
+            <li><a href="/ro/tool/pressure-converter">Convertor de Presiune</a></li>
+            <li><a href="/ro/tool/torque-converter">Convertor de Cuplu</a></li>
+            <li><a href="/ro/tool/fuel-economy-converter">Convertor de Consum de Combustibil</a></li>
+            <li><a href="/ro/tool/gear-ratio-calculator">Calculator al Raportului de Transmisie al Bicicletei</a></li>
+            <li><a href="/ro/tool/tire-size-calculator">Calculator de Comparare a Dimensiunilor Anvelopelor</a></li>
+            <li><a href="/ro/tool/weather-comfort-calculator">Calculator al Punctului de Rouă, Indicelui de Căldură și Senzației Termice</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4h6M12 4v16M9 20h6"/></svg></span>
+          <h2><a href="/ro/category/text">Text și Digital</a></h2>
+          <span class="count">21 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/ro/tool/color-difference-checker">Verificator de Diferență de Culoare</a></li>
+            <li><a href="/ro/tool/list-shuffler">Amestecător de Liste</a></li>
+            <li><a href="/ro/tool/weighted-random-picker">Selector Aleatoriu Ponderat</a></li>
+            <li><a href="/ro/tool/word-counter">Numărător de Cuvinte și Caractere</a></li>
+            <li><a href="/ro/tool/password-generator">Generator de Parole</a></li>
+            <li><a href="/ro/tool/uuid-generator">Generator de UUID</a></li>
+            <li><a href="/ro/tool/random-number-generator">Generator de Numere Aleatorii</a></li>
+            <li><a href="/ro/tool/coin-flipper">Aruncarea Monedei</a></li>
+            <li><a href="/ro/tool/dice-roller">Aruncător de Zaruri</a></li>
+            <li><a href="/ro/tool/card-deck-shuffler">Pachet de Cărți Amestecat</a></li>
+            <li><a href="/ro/tool/color-mixer">Amestecător de Culori</a></li>
+            <li><a href="/ro/tool/case-converter">Convertor Majuscule/Minuscule</a></li>
+            <li><a href="/ro/tool/lorem-ipsum-generator">Generator de Lorem Ipsum</a></li>
+            <li><a href="/ro/tool/text-to-slug-generator">Generator de Slug din Text</a></li>
+            <li><a href="/ro/tool/binary-to-text-converter">Convertor din Binar în Text</a></li>
+            <li><a href="/ro/tool/word-frequency-counter">Contor de Frecvență a Cuvintelor</a></li>
+            <li><a href="/ro/tool/url-encoder-decoder">Codificator / Decodificator URL</a></li>
+            <li><a href="/ro/tool/ip-subnet-calculator">Calculator de Subrețea IP</a></li>
+            <li><a href="/ro/tool/json-compare">Comparație JSON</a></li>
+            <li><a href="/ro/tool/cidr-calculator">Calculator CIDR / Subrețea</a></li>
+            <li><a href="/ro/tool/group-randomizer">Randomizator de Grupuri</a></li>
+        </ul>
+      </section>
+      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="15.5" r="4"/><circle cx="5.5" cy="9" r="2"/><circle cx="10" cy="4.5" r="2"/><circle cx="14" cy="4.5" r="2"/><circle cx="18.5" cy="9" r="2"/></svg></span>
+          <h2><a href="/ro/category/pets">Animale de Companie și Stil de Viață</a></h2>
+          <span class="count">8 tools</span>
+        </div>
+        <ul class="related-list index-columns">
+            <li><a href="/ro/tool/dog-age-calculator">Calculator de Vârstă pentru Câini</a></li>
+            <li><a href="/ro/tool/dog-food-calculator">Calculator de Hrană pentru Câini</a></li>
+            <li><a href="/ro/tool/cat-age-calculator">Calculator de Vârstă pentru Pisici</a></li>
+            <li><a href="/ro/tool/rabbit-age-calculator">Calculator al Vârstei Iepurelui</a></li>
+            <li><a href="/ro/tool/dog-pregnancy-calculator">Calculator de Sarcină pentru Căței</a></li>
+            <li><a href="/ro/tool/horse-age-calculator">Calculator al Vârstei Calului</a></li>
+            <li><a href="/ro/tool/ideal-dog-weight-calculator">Calculator de Greutate Ideală pentru Câini</a></li>
+            <li><a href="/ro/tool/cat-pregnancy-calculator">Calculator de Sarcină pentru Pisici</a></li>
+        </ul>
+      </section>
+      </div>
     </div>
   </section>
 

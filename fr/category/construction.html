@@ -52,43 +52,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="/css/styles.css" />
-  <script src="/js/calculators-data.js" defer></script>
   <script src="/js/theme.js" defer></script>
   <script src="/js/locale-switcher.js" defer></script>
-  <script defer>
-    document.addEventListener("DOMContentLoaded", () => {
-      const cat = getCategory("construction");
-      document.getElementById("cat-code").innerHTML = `<svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${cat.icon}</svg>`;
-
-      // Card grid stays JS-rendered (interactive live-readout preview, same
-      // as the homepage) but is NOT the page's static SEO content — the h1,
-      // description, and breadcrumb above are baked directly into the HTML
-      // at build time (see build.js), not set here.
-      const tools = calculatorsInCategory(cat.id);
-      const translatedIds = {"percentage-calculator":true,"average-calculator":true,"mortgage-calculator":true,"loan-calculator":true,"compound-interest-calculator":true,"concrete-calculator":true,"flooring-calculator":true,"calorie-calculator":true,"bmi-calculator":true,"bmr-calculator":true,"age-calculator":true,"days-until-calculator":true,"unit-length-converter":true,"temperature-converter":true,"word-counter":true,"case-converter":true,"dog-age-calculator":true,"cat-age-calculator":true,"cat-pregnancy-calculator":true,"dog-pregnancy-calculator":true,"simple-interest-calculator":true,"sales-tax-calculator":true,"tip-calculator":true,"discount-calculator":true,"gpa-calculator":true,"body-fat-calculator":true,"amortization-schedule-calculator":true,"mortgage-payoff-calculator":true,"heloc-calculator":true,"home-affordability-calculator":true,"hourly-to-salary-calculator":true,"time-card-calculator":true,"savings-calculator":true,"tvm-solver":true,"irr-npv-calculator":true,"budget-calculator":true,"apr-to-apy-calculator":true,"price-calculator":true,"debt-payoff-calculator":true,"dti-ratio-calculator":true,"credit-card-payoff-calculator":true,"auto-loan-calculator":true,"investment-calculator":true,"retirement-401k-calculator":true,"bond-duration-calculator":true,"gas-trip-cost-calculator":true,"paint-calculator":true,"mulch-calculator":true,"gravel-calculator":true,"drywall-calculator":true,"tile-calculator":true,"roofing-calculator":true,"square-footage-calculator":true,"fence-calculator":true,"insulation-calculator":true,"ac-btu-calculator":true,"lumber-calculator":true,"paver-calculator":true,"mix-ratio-calculator":true,"height-percentile-calculator":true,"body-surface-area-calculator":true,"macro-calculator":true,"water-intake-calculator":true,"one-rep-max-calculator":true,"heart-rate-zone-calculator":true,"ideal-weight-calculator":true,"bra-size-calculator":true,"pace-calculator":true,"steps-to-miles-calculator":true,"pregnancy-due-date-calculator":true,"ovulation-calculator":true,"calories-burned-calculator":true,"dog-food-calculator":true,"rabbit-age-calculator":true,"horse-age-calculator":true,"ideal-dog-weight-calculator":true,"date-duration-calculator":true,"business-days-calculator":true,"time-duration-calculator":true,"time-add-calculator":true,"online-timer":true,"online-alarm-clock":true,"online-stopwatch":true,"current-time":true,"random-date-generator":true,"military-time-converter":true,"unix-timestamp-converter":true,"week-number-calculator":true,"time-zone-converter":true,"daylight-saving-time-calculator":true,"sunrise-sunset-calculator":true,"sun-position-calculator":true,"day-of-week-calculator":true,"leap-year-calculator":true,"birth-year-calculator":true,"time-zone-meeting-planner":true,"day-of-the-week-calculator":true,"screen-ppi-calculator":true,"print-dpi-calculator":true,"time-unit-converter":true,"oven-temperature-converter":true,"rainfall-volume-calculator":true,"water-density-calculator":true,"weight-converter":true,"volume-converter":true,"cooking-converter":true,"microwave-wattage-converter":true,"electricity-cost-calculator":true,"ppm-percent-converter":true,"speed-converter":true,"area-converter":true,"data-storage-converter":true,"pressure-converter":true,"torque-converter":true,"fuel-economy-converter":true,"gear-ratio-calculator":true,"tire-size-calculator":true,"weather-comfort-calculator":true,"color-difference-checker":true,"list-shuffler":true,"weighted-random-picker":true,"password-generator":true,"uuid-generator":true,"random-number-generator":true,"coin-flipper":true,"dice-roller":true,"card-deck-shuffler":true,"color-mixer":true,"lorem-ipsum-generator":true,"text-to-slug-generator":true,"binary-to-text-converter":true,"word-frequency-counter":true,"url-encoder-decoder":true,"ip-subnet-calculator":true,"json-compare":true,"cidr-calculator":true,"group-randomizer":true,"percentage-change-calculator":true,"fraction-calculator":true,"pi-digits-calculator":true,"long-division-calculator":true,"long-multiplication-calculator":true,"gcd-lcm-calculator":true,"factor-calculator":true,"standard-deviation-calculator":true,"t-test-calculator":true,"effect-size-calculator":true,"mann-whitney-u-calculator":true,"sequences-series-calculator":true,"coupon-collector-calculator":true,"similarity-ratio-calculator":true,"correlation-calculator":true,"z-score-calculator":true,"confusion-matrix-calculator":true,"odds-probability-converter":true,"normal-distribution-calculator":true,"lottery-odds-calculator":true,"poker-hand-probability-calculator":true,"square-root-calculator":true,"ratio-calculator":true,"aspect-ratio-calculator":true,"exponent-calculator":true,"logarithm-calculator":true,"vector-calculator":true,"haversine-distance-calculator":true,"quadratic-formula-calculator":true,"cone-volume-calculator":true,"cylinder-volume-calculator":true,"pythagorean-theorem-calculator":true,"distance-formula-calculator":true,"triangle-solver":true,"hypergeometric-calculator":true,"trapezoid-area-calculator":true,"rectangular-prism-volume-calculator":true,"slope-calculator":true,"sector-calculator":true,"grade-gradient-calculator":true,"molecular-weight-calculator":true,"empirical-formula-calculator":true,"system-of-equations-solver":true,"linear-equation-solver":true,"eigenvalue-calculator":true,"inequality-solver":true,"chemical-equation-balancer":true,"solubility-product-calculator":true,"titration-ph-calculator":true,"limiting-reagent-calculator":true,"half-life-calculator":true,"hardy-weinberg-calculator":true,"grade-calculator":true,"weighted-grade-calculator":true,"speed-distance-time-calculator":true,"projectile-motion-calculator":true,"collision-calculator":true,"ohms-law-calculator":true,"right-triangle-calculator":true,"absolute-risk-reduction-calculator":true,"sample-size-calculator":true,"confidence-interval-calculator":true,"mean-median-mode-calculator":true,"roman-numeral-converter":true,"distance-modulus-calculator":true,"earthquake-magnitude-calculator":true,"pressure-altitude-calculator":true,"circle-calculator":true,"repeating-decimal-to-fraction-calculator":true,"permutations-combinations-calculator":true};
-      const grid = document.getElementById("cat-tool-grid");
-      tools.forEach((calc, i) => {
-        const sampleResult = calc.compute(
-          Object.fromEntries(calc.fields.map((f) => [f.id, f.type === "checkbox-group" ? (f.default || []) : f.default]))
-        );
-        const a = document.createElement("a");
-        // Locale pages only have a localized tool page for the wave-one
-        // batch — link straight through to it when it exists, otherwise
-        // fall back to the English canonical rather than a 404.
-        a.href = translatedIds[calc.id] ? `/fr/tool/${calc.id}` : `https://calquary.com/tool/${calc.id}`;
-        a.className = "tool-card";
-        a.innerHTML = `
-          <div class="cat-label">${calc.keyword}</div>
-          <h3>${calc.title}</h3>
-          <div class="readout">
-            <span class="rlabel">${sampleResult.primary.label}</span>
-            <span class="rvalue" style="--delay:${0.05 * i}s">${sampleResult.primary.value}</span>
-          </div>
-        `;
-        grid.appendChild(a);
-      });
-    });
-  </script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -140,7 +105,7 @@
   <section class="category-hero">
     <div class="wrap">
       <div class="breadcrumb"><a href="/fr/">Calquary</a> / Catégories</div>
-      <span class="code-badge" id="cat-code"></span>
+      <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.5 12 5l8 6.5"/><path d="M6 10v9h12v-9"/></svg></span>
       <h1>Calculatrices de Construction et Maison</h1>
       <p style="max-width:56ch;">Matériaux, couverture et estimations de projets.</p>
     </div>
@@ -154,7 +119,143 @@
 
   <section class="section">
     <div class="wrap">
-      <div class="tool-grid" id="cat-tool-grid"></div>
+      <div class="tool-grid" id="cat-tool-grid">
+        <a href="/fr/tool/concrete-calculator" class="tool-card">
+          <div class="cat-label">concrete calculator</div>
+          <h3>Calculatrice de Béton</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Estimez le volume en mètres cubes et le nombre de sacs pour une dalle de béton.</p>
+          <div class="readout">
+            <span class="rlabel">Concrete needed</span>
+            <span class="rvalue settle-in" style="--delay:0s">1.36 cu yd</span>
+          </div>
+        </a>
+        <a href="/fr/tool/paint-calculator" class="tool-card">
+          <div class="cat-label">paint calculator</div>
+          <h3>Calculatrice de Peinture</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Estimez combien de gallons de peinture vous avez besoin pour une pièce.</p>
+          <div class="readout">
+            <span class="rlabel">Paint needed</span>
+            <span class="rvalue settle-in" style="--delay:0.05s">2.3 gal</span>
+          </div>
+        </a>
+        <a href="/fr/tool/mulch-calculator" class="tool-card">
+          <div class="cat-label">mulch calculator</div>
+          <h3>Calculatrice de Paillis</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Estimez les yards cubes et les sacs de paillis nécessaires pour un massif.</p>
+          <div class="readout">
+            <span class="rlabel">Mulch needed</span>
+            <span class="rvalue settle-in" style="--delay:0.1s">2.04 cu yd</span>
+          </div>
+        </a>
+        <a href="/fr/tool/gravel-calculator" class="tool-card">
+          <div class="cat-label">gravel calculator</div>
+          <h3>Calculatrice de Gravier</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Estimez les yards cubes et tonnes de gravier nécessaires pour un projet.</p>
+          <div class="readout">
+            <span class="rlabel">Gravel needed</span>
+            <span class="rvalue settle-in" style="--delay:0.15000000000000002s">2.72 cu yd</span>
+          </div>
+        </a>
+        <a href="/fr/tool/flooring-calculator" class="tool-card">
+          <div class="cat-label">flooring calculator</div>
+          <h3>Calculatrice de Revêtement de Sol</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Estimez le nombre de boîtes de revêtement de sol nécessaires pour une pièce.</p>
+          <div class="readout">
+            <span class="rlabel">Boxes needed</span>
+            <span class="rvalue settle-in" style="--delay:0.2s">13</span>
+          </div>
+        </a>
+        <a href="/fr/tool/drywall-calculator" class="tool-card">
+          <div class="cat-label">drywall calculator</div>
+          <h3>Calculatrice de Placoplâtre</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Estimez combien de panneaux de placoplâtre vous avez besoin pour une surface murale.</p>
+          <div class="readout">
+            <span class="rlabel">Sheets needed</span>
+            <span class="rvalue settle-in" style="--delay:0.25s">14</span>
+          </div>
+        </a>
+        <a href="/fr/tool/tile-calculator" class="tool-card">
+          <div class="cat-label">tile calculator</div>
+          <h3>Calculatrice de Carrelage</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Estimez combien de carreaux vous avez besoin pour une pièce, y compris les joints de coulis.</p>
+          <div class="readout">
+            <span class="rlabel">Tiles needed</span>
+            <span class="rvalue settle-in" style="--delay:0.30000000000000004s">108</span>
+          </div>
+        </a>
+        <a href="/fr/tool/roofing-calculator" class="tool-card">
+          <div class="cat-label">roofing calculator</div>
+          <h3>Calculatrice de Toiture</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Estimez les carrés de toiture nécessaires à partir de la surface au sol et de la pente du toit.</p>
+          <div class="readout">
+            <span class="rlabel">Roofing squares needed</span>
+            <span class="rvalue settle-in" style="--delay:0.35000000000000003s">19</span>
+          </div>
+        </a>
+        <a href="/fr/tool/square-footage-calculator" class="tool-card">
+          <div class="cat-label">square footage calculator</div>
+          <h3>Calculatrice de Superficie</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculez la superficie d'une pièce à partir de sa longueur et largeur, dans n'importe quelle unité.</p>
+          <div class="readout">
+            <span class="rlabel">Square footage</span>
+            <span class="rvalue settle-in" style="--delay:0.4s">180 sq ft</span>
+          </div>
+        </a>
+        <a href="/fr/tool/fence-calculator" class="tool-card">
+          <div class="cat-label">fence calculator</div>
+          <h3>Calculatrice de Clôture</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Estimez combien de poteaux et de panneaux vous avez besoin pour une ligne de clôture.</p>
+          <div class="readout">
+            <span class="rlabel">Panels needed</span>
+            <span class="rvalue settle-in" style="--delay:0.45s">13</span>
+          </div>
+        </a>
+        <a href="/fr/tool/insulation-calculator" class="tool-card">
+          <div class="cat-label">insulation calculator</div>
+          <h3>Calculatrice d'Isolation</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Estimez les sacs d'isolant soufflé nécessaires pour atteindre une valeur R cible.</p>
+          <div class="readout">
+            <span class="rlabel">Bags needed</span>
+            <span class="rvalue settle-in" style="--delay:0.5s">46</span>
+          </div>
+        </a>
+        <a href="/fr/tool/ac-btu-calculator" class="tool-card">
+          <div class="cat-label">air conditioner size calculator</div>
+          <h3>Calculatrice de Taille de Climatiseur (BTU)</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Estimez la capacité de refroidissement en BTU/h nécessaire pour une pièce, selon sa taille et ses conditions.</p>
+          <div class="readout">
+            <span class="rlabel">Recommended capacity</span>
+            <span class="rvalue settle-in" style="--delay:0.55s">6,000 BTU/h</span>
+          </div>
+        </a>
+        <a href="/fr/tool/lumber-calculator" class="tool-card">
+          <div class="cat-label">lumber calculator</div>
+          <h3>Calculatrice de Bois d'Œuvre</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculez le total de pieds-planche nécessaires pour une commande de bois.</p>
+          <div class="readout">
+            <span class="rlabel">Total board feet</span>
+            <span class="rvalue settle-in" style="--delay:0.6000000000000001s">110</span>
+          </div>
+        </a>
+        <a href="/fr/tool/paver-calculator" class="tool-card">
+          <div class="cat-label">paver calculator</div>
+          <h3>Calculatrice de Pavés</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Estimez combien de pavés vous avez besoin pour une terrasse ou une allée.</p>
+          <div class="readout">
+            <span class="rlabel">Pavers needed</span>
+            <span class="rvalue settle-in" style="--delay:0.65s">220</span>
+          </div>
+        </a>
+        <a href="/fr/tool/mix-ratio-calculator" class="tool-card">
+          <div class="cat-label">epoxy mix ratio calculator</div>
+          <h3>Calculatrice de Ratio de Mélange</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculez les quantités de deux composants nécessaires pour un ratio de mélange donné, comme de l'époxy ou de…</p>
+          <div class="readout">
+            <span class="rlabel">Part A amount</span>
+            <span class="rvalue settle-in" style="--delay:0.7000000000000001s">200</span>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
 

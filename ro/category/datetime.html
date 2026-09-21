@@ -52,43 +52,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="/css/styles.css" />
-  <script src="/js/calculators-data.js" defer></script>
   <script src="/js/theme.js" defer></script>
   <script src="/js/locale-switcher.js" defer></script>
-  <script defer>
-    document.addEventListener("DOMContentLoaded", () => {
-      const cat = getCategory("datetime");
-      document.getElementById("cat-code").innerHTML = `<svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${cat.icon}</svg>`;
-
-      // Card grid stays JS-rendered (interactive live-readout preview, same
-      // as the homepage) but is NOT the page's static SEO content — the h1,
-      // description, and breadcrumb above are baked directly into the HTML
-      // at build time (see build.js), not set here.
-      const tools = calculatorsInCategory(cat.id);
-      const translatedIds = {"percentage-calculator":true,"average-calculator":true,"mortgage-calculator":true,"loan-calculator":true,"compound-interest-calculator":true,"concrete-calculator":true,"flooring-calculator":true,"calorie-calculator":true,"bmi-calculator":true,"bmr-calculator":true,"age-calculator":true,"days-until-calculator":true,"unit-length-converter":true,"temperature-converter":true,"word-counter":true,"case-converter":true,"dog-age-calculator":true,"cat-age-calculator":true,"cat-pregnancy-calculator":true,"dog-pregnancy-calculator":true,"simple-interest-calculator":true,"sales-tax-calculator":true,"tip-calculator":true,"discount-calculator":true,"gpa-calculator":true,"body-fat-calculator":true,"amortization-schedule-calculator":true,"mortgage-payoff-calculator":true,"heloc-calculator":true,"home-affordability-calculator":true,"hourly-to-salary-calculator":true,"time-card-calculator":true,"savings-calculator":true,"tvm-solver":true,"irr-npv-calculator":true,"budget-calculator":true,"apr-to-apy-calculator":true,"price-calculator":true,"debt-payoff-calculator":true,"dti-ratio-calculator":true,"credit-card-payoff-calculator":true,"auto-loan-calculator":true,"investment-calculator":true,"retirement-401k-calculator":true,"bond-duration-calculator":true,"gas-trip-cost-calculator":true,"paint-calculator":true,"mulch-calculator":true,"gravel-calculator":true,"drywall-calculator":true,"tile-calculator":true,"roofing-calculator":true,"square-footage-calculator":true,"fence-calculator":true,"insulation-calculator":true,"ac-btu-calculator":true,"lumber-calculator":true,"paver-calculator":true,"mix-ratio-calculator":true,"height-percentile-calculator":true,"body-surface-area-calculator":true,"macro-calculator":true,"water-intake-calculator":true,"one-rep-max-calculator":true,"heart-rate-zone-calculator":true,"ideal-weight-calculator":true,"bra-size-calculator":true,"pace-calculator":true,"steps-to-miles-calculator":true,"pregnancy-due-date-calculator":true,"ovulation-calculator":true,"calories-burned-calculator":true,"dog-food-calculator":true,"rabbit-age-calculator":true,"horse-age-calculator":true,"ideal-dog-weight-calculator":true,"date-duration-calculator":true,"business-days-calculator":true,"time-duration-calculator":true,"time-add-calculator":true,"online-timer":true,"online-alarm-clock":true,"online-stopwatch":true,"current-time":true,"random-date-generator":true,"military-time-converter":true,"unix-timestamp-converter":true,"week-number-calculator":true,"time-zone-converter":true,"daylight-saving-time-calculator":true,"sunrise-sunset-calculator":true,"sun-position-calculator":true,"day-of-week-calculator":true,"leap-year-calculator":true,"birth-year-calculator":true,"time-zone-meeting-planner":true,"day-of-the-week-calculator":true,"screen-ppi-calculator":true,"print-dpi-calculator":true,"time-unit-converter":true,"oven-temperature-converter":true,"rainfall-volume-calculator":true,"water-density-calculator":true,"weight-converter":true,"volume-converter":true,"cooking-converter":true,"microwave-wattage-converter":true,"electricity-cost-calculator":true,"ppm-percent-converter":true,"speed-converter":true,"area-converter":true,"data-storage-converter":true,"pressure-converter":true,"torque-converter":true,"fuel-economy-converter":true,"gear-ratio-calculator":true,"tire-size-calculator":true,"weather-comfort-calculator":true,"color-difference-checker":true,"list-shuffler":true,"weighted-random-picker":true,"password-generator":true,"uuid-generator":true,"random-number-generator":true,"coin-flipper":true,"dice-roller":true,"card-deck-shuffler":true,"color-mixer":true,"lorem-ipsum-generator":true,"text-to-slug-generator":true,"binary-to-text-converter":true,"word-frequency-counter":true,"url-encoder-decoder":true,"ip-subnet-calculator":true,"json-compare":true,"cidr-calculator":true,"group-randomizer":true,"percentage-change-calculator":true,"fraction-calculator":true,"pi-digits-calculator":true,"long-division-calculator":true,"long-multiplication-calculator":true,"gcd-lcm-calculator":true,"factor-calculator":true,"standard-deviation-calculator":true,"t-test-calculator":true,"effect-size-calculator":true,"mann-whitney-u-calculator":true,"sequences-series-calculator":true,"coupon-collector-calculator":true,"similarity-ratio-calculator":true,"correlation-calculator":true,"z-score-calculator":true,"confusion-matrix-calculator":true,"odds-probability-converter":true,"normal-distribution-calculator":true,"lottery-odds-calculator":true,"poker-hand-probability-calculator":true,"square-root-calculator":true,"ratio-calculator":true,"aspect-ratio-calculator":true,"exponent-calculator":true,"logarithm-calculator":true,"vector-calculator":true,"haversine-distance-calculator":true,"quadratic-formula-calculator":true,"cone-volume-calculator":true,"cylinder-volume-calculator":true,"pythagorean-theorem-calculator":true,"distance-formula-calculator":true,"triangle-solver":true,"hypergeometric-calculator":true,"trapezoid-area-calculator":true,"rectangular-prism-volume-calculator":true,"slope-calculator":true,"sector-calculator":true,"grade-gradient-calculator":true,"molecular-weight-calculator":true,"empirical-formula-calculator":true,"system-of-equations-solver":true,"linear-equation-solver":true,"eigenvalue-calculator":true,"inequality-solver":true,"chemical-equation-balancer":true,"solubility-product-calculator":true,"titration-ph-calculator":true,"limiting-reagent-calculator":true,"half-life-calculator":true,"hardy-weinberg-calculator":true,"grade-calculator":true,"weighted-grade-calculator":true,"speed-distance-time-calculator":true,"projectile-motion-calculator":true,"collision-calculator":true,"ohms-law-calculator":true,"right-triangle-calculator":true,"absolute-risk-reduction-calculator":true,"sample-size-calculator":true,"confidence-interval-calculator":true,"mean-median-mode-calculator":true,"roman-numeral-converter":true,"distance-modulus-calculator":true,"earthquake-magnitude-calculator":true,"pressure-altitude-calculator":true,"circle-calculator":true,"repeating-decimal-to-fraction-calculator":true,"permutations-combinations-calculator":true};
-      const grid = document.getElementById("cat-tool-grid");
-      tools.forEach((calc, i) => {
-        const sampleResult = calc.compute(
-          Object.fromEntries(calc.fields.map((f) => [f.id, f.type === "checkbox-group" ? (f.default || []) : f.default]))
-        );
-        const a = document.createElement("a");
-        // Locale pages only have a localized tool page for the wave-one
-        // batch — link straight through to it when it exists, otherwise
-        // fall back to the English canonical rather than a 404.
-        a.href = translatedIds[calc.id] ? `/ro/tool/${calc.id}` : `https://calquary.com/tool/${calc.id}`;
-        a.className = "tool-card";
-        a.innerHTML = `
-          <div class="cat-label">${calc.keyword}</div>
-          <h3>${calc.title}</h3>
-          <div class="readout">
-            <span class="rlabel">${sampleResult.primary.label}</span>
-            <span class="rvalue" style="--delay:${0.05 * i}s">${sampleResult.primary.value}</span>
-          </div>
-        `;
-        grid.appendChild(a);
-      });
-    });
-  </script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -140,7 +105,7 @@
   <section class="category-hero">
     <div class="wrap">
       <div class="breadcrumb"><a href="/ro/">Calquary</a> / Categorii</div>
-      <span class="code-badge" id="cat-code"></span>
+      <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><line x1="12" y1="12" x2="12" y2="7"/><line x1="12" y1="12" x2="16" y2="14"/></svg></span>
       <h1>Dată și Oră Calculatoare</h1>
       <p style="max-width:56ch;">Numărători inverse, durate și vârstă în zile.</p>
     </div>
@@ -154,7 +119,215 @@
 
   <section class="section">
     <div class="wrap">
-      <div class="tool-grid" id="cat-tool-grid"></div>
+      <div class="tool-grid" id="cat-tool-grid">
+        <a href="/ro/tool/days-until-calculator" class="tool-card">
+          <div class="cat-label">how many days until</div>
+          <h3>Calculator Zile Rămase</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Află câte zile mai sunt până la orice dată viitoare.</p>
+          <div class="readout">
+            <span class="rlabel">Days remaining</span>
+            <span class="rvalue settle-in" style="--delay:0s">60</span>
+          </div>
+        </a>
+        <a href="/ro/tool/date-duration-calculator" class="tool-card">
+          <div class="cat-label">date calculator</div>
+          <h3>Calculator al Duratei între Date</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculează numărul de zile, săptămâni, luni și ani între două date.</p>
+          <div class="readout">
+            <span class="rlabel">Days between</span>
+            <span class="rvalue settle-in" style="--delay:0.05s">365</span>
+          </div>
+        </a>
+        <a href="/ro/tool/business-days-calculator" class="tool-card">
+          <div class="cat-label">business days calculator</div>
+          <h3>Calculator de Zile Lucrătoare</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Numără numărul de zile din săptămână dintre două date.</p>
+          <div class="readout">
+            <span class="rlabel">Business days</span>
+            <span class="rvalue settle-in" style="--delay:0.1s">23</span>
+          </div>
+        </a>
+        <a href="/ro/tool/time-duration-calculator" class="tool-card">
+          <div class="cat-label">time duration calculator</div>
+          <h3>Calculator al Duratei de Timp</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculează durata dintre două momente ale zilei, inclusiv intervalele peste noapte.</p>
+          <div class="readout">
+            <span class="rlabel">Duration</span>
+            <span class="rvalue settle-in" style="--delay:0.15000000000000002s">8h 30m</span>
+          </div>
+        </a>
+        <a href="/ro/tool/time-add-calculator" class="tool-card">
+          <div class="cat-label">time add calculator</div>
+          <h3>Calculator de Adunare/Scădere Timp</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Adaugă sau scade ore și minute la sau dintr-o oră de start.</p>
+          <div class="readout">
+            <span class="rlabel">Resulting time</span>
+            <span class="rvalue settle-in" style="--delay:0.2s">14:45 (2:45 PM)</span>
+          </div>
+        </a>
+        <a href="/ro/tool/online-timer" class="tool-card">
+          <div class="cat-label">online timer</div>
+          <h3>Cronometru Online</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Un cronometru de numărătoare inversă gratuit care rulează în browserul tău - setează minute și secunde, apoi…</p>
+          <div class="readout">
+            <span class="rlabel">Default duration</span>
+            <span class="rvalue settle-in" style="--delay:0.25s">5:00</span>
+          </div>
+        </a>
+        <a href="/ro/tool/online-alarm-clock" class="tool-card">
+          <div class="cat-label">online alarm clock</div>
+          <h3>Ceas Deșteptător Online</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Un ceas deșteptător gratuit care rulează în browserul tău - setează o oră și te alertează când ceasul tău o…</p>
+          <div class="readout">
+            <span class="rlabel">Alarm status</span>
+            <span class="rvalue settle-in" style="--delay:0.30000000000000004s">Not set</span>
+          </div>
+        </a>
+        <a href="/ro/tool/online-stopwatch" class="tool-card">
+          <div class="cat-label">online stopwatch</div>
+          <h3>Cronometru Online</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Un cronometru gratuit care rulează în browserul tău - pornește, marchează tururi și resetează cu precizie de…</p>
+          <div class="readout">
+            <span class="rlabel">Elapsed time</span>
+            <span class="rvalue settle-in" style="--delay:0.35000000000000003s">00:00.0</span>
+          </div>
+        </a>
+        <a href="/ro/tool/current-time" class="tool-card">
+          <div class="cat-label">current time</div>
+          <h3>Ora Curentă</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Vezi ora și data curentă exactă, actualizându-se live în browserul tău.</p>
+          <div class="readout">
+            <span class="rlabel">Current time</span>
+            <span class="rvalue settle-in" style="--delay:0.4s">Live</span>
+          </div>
+        </a>
+        <a href="/ro/tool/random-date-generator" class="tool-card">
+          <div class="cat-label">generate random date</div>
+          <h3>Generator de Date Aleatorii</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Generează una sau mai multe date aleatorii într-un interval de date ales.</p>
+          <div class="readout">
+            <span class="rlabel">Random date</span>
+            <span class="rvalue settle-in" style="--delay:0.45s">2024-11-12</span>
+          </div>
+        </a>
+        <a href="/ro/tool/military-time-converter" class="tool-card">
+          <div class="cat-label">military time converter</div>
+          <h3>Convertor de Timp Militar</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Convertește ora de ceas de 12 ore în ora militară (armată) de 24 de ore, și invers.</p>
+          <div class="readout">
+            <span class="rlabel">Military time</span>
+            <span class="rvalue settle-in" style="--delay:0.5s">14:30</span>
+          </div>
+        </a>
+        <a href="/ro/tool/unix-timestamp-converter" class="tool-card">
+          <div class="cat-label">unix timestamp converter</div>
+          <h3>Convertor de Marcaj Temporal Unix</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Convertește un marcaj temporal Unix (timp epoch) într-o dată lizibilă de om, sau o dată într-un marcaj…</p>
+          <div class="readout">
+            <span class="rlabel">Date from timestamp</span>
+            <span class="rvalue settle-in" style="--delay:0.55s">2025-01-01 00:00:00 UTC</span>
+          </div>
+        </a>
+        <a href="/ro/tool/week-number-calculator" class="tool-card">
+          <div class="cat-label">week number calculator</div>
+          <h3>Calculator al Numărului Săptămânii</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Găsește numărul săptămânii ISO pentru orice dată.</p>
+          <div class="readout">
+            <span class="rlabel">ISO week number</span>
+            <span class="rvalue settle-in" style="--delay:0.6000000000000001s">24</span>
+          </div>
+        </a>
+        <a href="/ro/tool/time-zone-converter" class="tool-card">
+          <div class="cat-label">time zone converter</div>
+          <h3>Convertor de Fus Orar</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Convertește o oră dintr-un fus orar în altul, inclusiv ora curentă în orice fus.</p>
+          <div class="readout">
+            <span class="rlabel">Time in destination zone</span>
+            <span class="rvalue settle-in" style="--delay:0.65s">Mon, Sep 21, 2026, 08:58 PM</span>
+          </div>
+        </a>
+        <a href="/ro/tool/daylight-saving-time-calculator" class="tool-card">
+          <div class="cat-label">daylight saving time calculator</div>
+          <h3>Calculator al Orei de Vară</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Găsește când se schimbă ceasurile pentru ora de vară în orice fus orar.</p>
+          <div class="readout">
+            <span class="rlabel">Daylight saving time</span>
+            <span class="rvalue settle-in" style="--delay:0.7000000000000001s">Not observed</span>
+          </div>
+        </a>
+        <a href="/ro/tool/sunrise-sunset-calculator" class="tool-card">
+          <div class="cat-label">sunrise sunset calculator</div>
+          <h3>Calculator al Răsăritului și Apusului</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Găsește orele de răsărit și apus pentru orice dată și oraș major.</p>
+          <div class="readout">
+            <span class="rlabel">Sunrise</span>
+            <span class="rvalue settle-in" style="--delay:0.75s">06:43 AM</span>
+          </div>
+        </a>
+        <a href="/ro/tool/sun-position-calculator" class="tool-card">
+          <div class="cat-label">sun position calculator</div>
+          <h3>Calculator al Poziției Soarelui</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Găsește altitudinea și azimutul soarelui (amiaza solară, direcția și înălțimea pe cer) pentru orice dată, oră…</p>
+          <div class="readout">
+            <span class="rlabel">Sun altitude</span>
+            <span class="rvalue settle-in" style="--delay:0.8s">-23.4° (below horizon)</span>
+          </div>
+        </a>
+        <a href="/ro/tool/day-of-week-calculator" class="tool-card">
+          <div class="cat-label">day of the week calculator</div>
+          <h3>Calculator al Zilei Săptămânii</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Află în ce zi a săptămânii cade orice dată.</p>
+          <div class="readout">
+            <span class="rlabel">Day of the week</span>
+            <span class="rvalue settle-in" style="--delay:0.8500000000000001s">Saturday</span>
+          </div>
+        </a>
+        <a href="/ro/tool/leap-year-calculator" class="tool-card">
+          <div class="cat-label">leap year calculator</div>
+          <h3>Calculator al Anului Bisect</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Verifică dacă un an este bisect și găsește următorul.</p>
+          <div class="readout">
+            <span class="rlabel">Is it a leap year?</span>
+            <span class="rvalue settle-in" style="--delay:0.9s">Yes</span>
+          </div>
+        </a>
+        <a href="/ro/tool/age-calculator" class="tool-card">
+          <div class="cat-label">age calculator</div>
+          <h3>Calculator de Vârstă</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calculează vârsta exactă în ani, luni și zile.</p>
+          <div class="readout">
+            <span class="rlabel">Age</span>
+            <span class="rvalue settle-in" style="--delay:0.9500000000000001s">31 yrs, 3 mo, 6 days</span>
+          </div>
+        </a>
+        <a href="/ro/tool/birth-year-calculator" class="tool-card">
+          <div class="cat-label">birth year calculator</div>
+          <h3>Calculator al Anului Nașterii</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Estimează anul nașterii (sau intervalul de ani) al cuiva din vârsta actuală.</p>
+          <div class="readout">
+            <span class="rlabel">Possible birth year</span>
+            <span class="rvalue settle-in" style="--delay:1s">1995 or 1996</span>
+          </div>
+        </a>
+        <a href="/ro/tool/time-zone-meeting-planner" class="tool-card">
+          <div class="cat-label">time zone meeting planner</div>
+          <h3>Planificator de Întâlniri pe Fusuri Orare</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Vezi o oră de întâlnire în mai multe fusuri orare simultan.</p>
+          <div class="readout">
+            <span class="rlabel">Your time</span>
+            <span class="rvalue settle-in" style="--delay:1.05s">Mon 08:58 PM</span>
+          </div>
+        </a>
+        <a href="/ro/tool/day-of-the-week-calculator" class="tool-card">
+          <div class="cat-label">day of the week calculator</div>
+          <h3>Calculator al Zilei Săptămânii</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Află în ce zi a săptămânii cade orice dată, trecută sau viitoare.</p>
+          <div class="readout">
+            <span class="rlabel">Day of the week</span>
+            <span class="rvalue settle-in" style="--delay:1.1s">Monday</span>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
 

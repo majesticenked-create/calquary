@@ -52,43 +52,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="/css/styles.css" />
-  <script src="/js/calculators-data.js" defer></script>
   <script src="/js/theme.js" defer></script>
   <script src="/js/locale-switcher.js" defer></script>
-  <script defer>
-    document.addEventListener("DOMContentLoaded", () => {
-      const cat = getCategory("text");
-      document.getElementById("cat-code").innerHTML = `<svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${cat.icon}</svg>`;
-
-      // Card grid stays JS-rendered (interactive live-readout preview, same
-      // as the homepage) but is NOT the page's static SEO content — the h1,
-      // description, and breadcrumb above are baked directly into the HTML
-      // at build time (see build.js), not set here.
-      const tools = calculatorsInCategory(cat.id);
-      const translatedIds = {"percentage-calculator":true,"average-calculator":true,"mortgage-calculator":true,"loan-calculator":true,"compound-interest-calculator":true,"concrete-calculator":true,"flooring-calculator":true,"calorie-calculator":true,"bmi-calculator":true,"bmr-calculator":true,"age-calculator":true,"days-until-calculator":true,"unit-length-converter":true,"temperature-converter":true,"word-counter":true,"case-converter":true,"dog-age-calculator":true,"cat-age-calculator":true,"cat-pregnancy-calculator":true,"dog-pregnancy-calculator":true,"simple-interest-calculator":true,"sales-tax-calculator":true,"tip-calculator":true,"discount-calculator":true,"gpa-calculator":true,"body-fat-calculator":true,"amortization-schedule-calculator":true,"mortgage-payoff-calculator":true,"heloc-calculator":true,"home-affordability-calculator":true,"hourly-to-salary-calculator":true,"time-card-calculator":true,"savings-calculator":true,"tvm-solver":true,"irr-npv-calculator":true,"budget-calculator":true,"apr-to-apy-calculator":true,"price-calculator":true,"debt-payoff-calculator":true,"dti-ratio-calculator":true,"credit-card-payoff-calculator":true,"auto-loan-calculator":true,"investment-calculator":true,"retirement-401k-calculator":true,"bond-duration-calculator":true,"gas-trip-cost-calculator":true,"paint-calculator":true,"mulch-calculator":true,"gravel-calculator":true,"drywall-calculator":true,"tile-calculator":true,"roofing-calculator":true,"square-footage-calculator":true,"fence-calculator":true,"insulation-calculator":true,"ac-btu-calculator":true,"lumber-calculator":true,"paver-calculator":true,"mix-ratio-calculator":true,"height-percentile-calculator":true,"body-surface-area-calculator":true,"macro-calculator":true,"water-intake-calculator":true,"one-rep-max-calculator":true,"heart-rate-zone-calculator":true,"ideal-weight-calculator":true,"bra-size-calculator":true,"pace-calculator":true,"steps-to-miles-calculator":true,"pregnancy-due-date-calculator":true,"ovulation-calculator":true,"calories-burned-calculator":true,"dog-food-calculator":true,"rabbit-age-calculator":true,"horse-age-calculator":true,"ideal-dog-weight-calculator":true,"date-duration-calculator":true,"business-days-calculator":true,"time-duration-calculator":true,"time-add-calculator":true,"online-timer":true,"online-alarm-clock":true,"online-stopwatch":true,"current-time":true,"random-date-generator":true,"military-time-converter":true,"unix-timestamp-converter":true,"week-number-calculator":true,"time-zone-converter":true,"daylight-saving-time-calculator":true,"sunrise-sunset-calculator":true,"sun-position-calculator":true,"day-of-week-calculator":true,"leap-year-calculator":true,"birth-year-calculator":true,"time-zone-meeting-planner":true,"day-of-the-week-calculator":true,"screen-ppi-calculator":true,"print-dpi-calculator":true,"time-unit-converter":true,"oven-temperature-converter":true,"rainfall-volume-calculator":true,"water-density-calculator":true,"weight-converter":true,"volume-converter":true,"cooking-converter":true,"microwave-wattage-converter":true,"electricity-cost-calculator":true,"ppm-percent-converter":true,"speed-converter":true,"area-converter":true,"data-storage-converter":true,"pressure-converter":true,"torque-converter":true,"fuel-economy-converter":true,"gear-ratio-calculator":true,"tire-size-calculator":true,"weather-comfort-calculator":true,"color-difference-checker":true,"list-shuffler":true,"weighted-random-picker":true,"password-generator":true,"uuid-generator":true,"random-number-generator":true,"coin-flipper":true,"dice-roller":true,"card-deck-shuffler":true,"color-mixer":true,"lorem-ipsum-generator":true,"text-to-slug-generator":true,"binary-to-text-converter":true,"word-frequency-counter":true,"url-encoder-decoder":true,"ip-subnet-calculator":true,"json-compare":true,"cidr-calculator":true,"group-randomizer":true,"percentage-change-calculator":true,"fraction-calculator":true,"pi-digits-calculator":true,"long-division-calculator":true,"long-multiplication-calculator":true,"gcd-lcm-calculator":true,"factor-calculator":true,"standard-deviation-calculator":true,"t-test-calculator":true,"effect-size-calculator":true,"mann-whitney-u-calculator":true,"sequences-series-calculator":true,"coupon-collector-calculator":true,"similarity-ratio-calculator":true,"correlation-calculator":true,"z-score-calculator":true,"confusion-matrix-calculator":true,"odds-probability-converter":true,"normal-distribution-calculator":true,"lottery-odds-calculator":true,"poker-hand-probability-calculator":true,"square-root-calculator":true,"ratio-calculator":true,"aspect-ratio-calculator":true,"exponent-calculator":true,"logarithm-calculator":true,"vector-calculator":true,"haversine-distance-calculator":true,"quadratic-formula-calculator":true,"cone-volume-calculator":true,"cylinder-volume-calculator":true,"pythagorean-theorem-calculator":true,"distance-formula-calculator":true,"triangle-solver":true,"hypergeometric-calculator":true,"trapezoid-area-calculator":true,"rectangular-prism-volume-calculator":true,"slope-calculator":true,"sector-calculator":true,"grade-gradient-calculator":true,"molecular-weight-calculator":true,"empirical-formula-calculator":true,"system-of-equations-solver":true,"linear-equation-solver":true,"eigenvalue-calculator":true,"inequality-solver":true,"chemical-equation-balancer":true,"solubility-product-calculator":true,"titration-ph-calculator":true,"limiting-reagent-calculator":true,"half-life-calculator":true,"hardy-weinberg-calculator":true,"grade-calculator":true,"weighted-grade-calculator":true,"speed-distance-time-calculator":true,"projectile-motion-calculator":true,"collision-calculator":true,"ohms-law-calculator":true,"right-triangle-calculator":true,"absolute-risk-reduction-calculator":true,"sample-size-calculator":true,"confidence-interval-calculator":true,"mean-median-mode-calculator":true,"roman-numeral-converter":true,"distance-modulus-calculator":true,"earthquake-magnitude-calculator":true,"pressure-altitude-calculator":true,"circle-calculator":true,"repeating-decimal-to-fraction-calculator":true,"permutations-combinations-calculator":true};
-      const grid = document.getElementById("cat-tool-grid");
-      tools.forEach((calc, i) => {
-        const sampleResult = calc.compute(
-          Object.fromEntries(calc.fields.map((f) => [f.id, f.type === "checkbox-group" ? (f.default || []) : f.default]))
-        );
-        const a = document.createElement("a");
-        // Locale pages only have a localized tool page for the wave-one
-        // batch — link straight through to it when it exists, otherwise
-        // fall back to the English canonical rather than a 404.
-        a.href = translatedIds[calc.id] ? `/pt/tool/${calc.id}` : `https://calquary.com/tool/${calc.id}`;
-        a.className = "tool-card";
-        a.innerHTML = `
-          <div class="cat-label">${calc.keyword}</div>
-          <h3>${calc.title}</h3>
-          <div class="readout">
-            <span class="rlabel">${sampleResult.primary.label}</span>
-            <span class="rvalue" style="--delay:${0.05 * i}s">${sampleResult.primary.value}</span>
-          </div>
-        `;
-        grid.appendChild(a);
-      });
-    });
-  </script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -140,7 +105,7 @@
   <section class="category-hero">
     <div class="wrap">
       <div class="breadcrumb"><a href="/pt/">Calquary</a> / Categorias</div>
-      <span class="code-badge" id="cat-code"></span>
+      <span class="code-badge"><svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4h6M12 4v16M9 20h6"/></svg></span>
       <h1>Calculadoras de Texto e Digital</h1>
       <p style="max-width:56ch;">Contagem de palavras e geradores para tarefas do dia a dia.</p>
     </div>
@@ -154,7 +119,201 @@
 
   <section class="section">
     <div class="wrap">
-      <div class="tool-grid" id="cat-tool-grid"></div>
+      <div class="tool-grid" id="cat-tool-grid">
+        <a href="/pt/tool/color-difference-checker" class="tool-card">
+          <div class="cat-label">color difference checker</div>
+          <h3>Verificador de Diferença de Cor</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Compare duas cores e meça o quão diferentes elas são.</p>
+          <div class="readout">
+            <span class="rlabel">Difference</span>
+            <span class="rvalue settle-in" style="--delay:0s">Quite different</span>
+          </div>
+        </a>
+        <a href="/pt/tool/list-shuffler" class="tool-card">
+          <div class="cat-label">list shuffler</div>
+          <h3>Embaralhador de Listas</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Embaralhe uma lista de itens em ordem aleatória.</p>
+          <div class="readout">
+            <span class="rlabel">Shuffled order</span>
+            <span class="rvalue settle-in" style="--delay:0.05s">Alex, Taylor, Casey, Morgan, Jordan</span>
+          </div>
+        </a>
+        <a href="/pt/tool/weighted-random-picker" class="tool-card">
+          <div class="cat-label">weighted random picker</div>
+          <h3>Seletor Aleatório Ponderado</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Escolha um item aleatório de uma lista onde alguns itens são mais prováveis que outros.</p>
+          <div class="readout">
+            <span class="rlabel">Winner</span>
+            <span class="rvalue settle-in" style="--delay:0.1s">Silver</span>
+          </div>
+        </a>
+        <a href="/pt/tool/word-counter" class="tool-card">
+          <div class="cat-label">word counter</div>
+          <h3>Contador de Palavras</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Conte palavras, caracteres e frases no seu texto.</p>
+          <div class="readout">
+            <span class="rlabel">Words</span>
+            <span class="rvalue settle-in" style="--delay:0.15000000000000002s">8</span>
+          </div>
+        </a>
+        <a href="/pt/tool/password-generator" class="tool-card">
+          <div class="cat-label">password generator</div>
+          <h3>Gerador de Senhas</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Gere uma senha forte e aleatória instantaneamente.</p>
+          <div class="readout">
+            <span class="rlabel">Generated password</span>
+            <span class="rvalue settle-in" style="--delay:0.2s">=HbeX4bx--SjjjVP</span>
+          </div>
+        </a>
+        <a href="/pt/tool/uuid-generator" class="tool-card">
+          <div class="cat-label">uuid generator</div>
+          <h3>Gerador de UUID</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Gere um ou mais UUIDs aleatórios (versão 4), o formato padrão para identificadores únicos.</p>
+          <div class="readout">
+            <span class="rlabel">UUID</span>
+            <span class="rvalue settle-in" style="--delay:0.25s">55f3bf54-eca5-40ec-b3c9-233678815f32</span>
+          </div>
+        </a>
+        <a href="/pt/tool/random-number-generator" class="tool-card">
+          <div class="cat-label">random number generator</div>
+          <h3>Gerador de Números Aleatórios</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Gere um ou mais números aleatórios dentro de um intervalo.</p>
+          <div class="readout">
+            <span class="rlabel">Random number(s)</span>
+            <span class="rvalue settle-in" style="--delay:0.30000000000000004s">17</span>
+          </div>
+        </a>
+        <a href="/pt/tool/coin-flipper" class="tool-card">
+          <div class="cat-label">flip a coin</div>
+          <h3>Cara ou Coroa</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Jogue uma ou mais moedas virtuais instantaneamente.</p>
+          <div class="readout">
+            <span class="rlabel">Result</span>
+            <span class="rvalue settle-in" style="--delay:0.35000000000000003s">Tails</span>
+          </div>
+        </a>
+        <a href="/pt/tool/dice-roller" class="tool-card">
+          <div class="cat-label">dice roller</div>
+          <h3>Lançador de Dados</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Lance um ou mais dados virtuais, com qualquer número de faces.</p>
+          <div class="readout">
+            <span class="rlabel">Roll result</span>
+            <span class="rvalue settle-in" style="--delay:0.4s">4 + 4</span>
+          </div>
+        </a>
+        <a href="/pt/tool/card-deck-shuffler" class="tool-card">
+          <div class="cat-label">shuffled deck of cards</div>
+          <h3>Baralho Embaralhado</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Embaralhe um baralho padrão de 52 cartas em ordem aleatória, ou saque um número definido de cartas aleatórias.</p>
+          <div class="readout">
+            <span class="rlabel">Cards drawn</span>
+            <span class="rvalue settle-in" style="--delay:0.45s">52</span>
+          </div>
+        </a>
+        <a href="/pt/tool/color-mixer" class="tool-card">
+          <div class="cat-label">color mixer</div>
+          <h3>Misturador de Cores</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Misture duas cores em qualquer proporção para ver a cor hexadecimal e RGB resultante.</p>
+          <div class="readout">
+            <span class="rlabel">Mixed color</span>
+            <span class="rvalue settle-in" style="--delay:0.5s">#800080</span>
+          </div>
+        </a>
+        <a href="/pt/tool/case-converter" class="tool-card">
+          <div class="cat-label">case converter</div>
+          <h3>Conversor de Maiúsculas e Minúsculas</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Converta texto entre maiúsculas, minúsculas, formato de título e formato de frase.</p>
+          <div class="readout">
+            <span class="rlabel">Converted text</span>
+            <span class="rvalue settle-in" style="--delay:0.55s">HELLO WORLD EXAMPLE TEXT</span>
+          </div>
+        </a>
+        <a href="/pt/tool/lorem-ipsum-generator" class="tool-card">
+          <div class="cat-label">lorem ipsum generator</div>
+          <h3>Gerador de Lorem Ipsum</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Gere texto de preenchimento Lorem Ipsum para maquetes e designs.</p>
+          <div class="readout">
+            <span class="rlabel">Generated text</span>
+            <span class="rvalue settle-in" style="--delay:0.6000000000000001s">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat lorem ipsum dolor sit.
+
+Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat lorem ipsum dolor sit.
+
+Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat lorem ipsum dolor sit.</span>
+          </div>
+        </a>
+        <a href="/pt/tool/text-to-slug-generator" class="tool-card">
+          <div class="cat-label">text to slug generator</div>
+          <h3>Gerador de Slug a partir de Texto</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Converta texto em um slug limpo e amigável para URL.</p>
+          <div class="readout">
+            <span class="rlabel">Slug</span>
+            <span class="rvalue settle-in" style="--delay:0.65s">hello-world-this-is-a-test-title</span>
+          </div>
+        </a>
+        <a href="/pt/tool/binary-to-text-converter" class="tool-card">
+          <div class="cat-label">binary to text converter</div>
+          <h3>Conversor de Binário para Texto</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Converta texto para binário ou binário de volta para texto.</p>
+          <div class="readout">
+            <span class="rlabel">Result</span>
+            <span class="rvalue settle-in" style="--delay:0.7000000000000001s">01001000 01101001</span>
+          </div>
+        </a>
+        <a href="/pt/tool/word-frequency-counter" class="tool-card">
+          <div class="cat-label">word frequency counter</div>
+          <h3>Contador de Frequência de Palavras</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Encontre as palavras mais frequentemente usadas em um bloco de texto.</p>
+          <div class="readout">
+            <span class="rlabel">Most frequent word</span>
+            <span class="rvalue settle-in" style="--delay:0.75s">"the" (3×)</span>
+          </div>
+        </a>
+        <a href="/pt/tool/url-encoder-decoder" class="tool-card">
+          <div class="cat-label">url encoder decoder</div>
+          <h3>Codificador / Decodificador de URL</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Codifique ou decodifique texto para uso seguro em URLs.</p>
+          <div class="readout">
+            <span class="rlabel">Encoded</span>
+            <span class="rvalue settle-in" style="--delay:0.8s">https%3A%2F%2Fexample.com%2Fsearch%3Fq%3Dhello%20world%26lang%3Den</span>
+          </div>
+        </a>
+        <a href="/pt/tool/ip-subnet-calculator" class="tool-card">
+          <div class="cat-label">ip subnet calculator</div>
+          <h3>Calculadora de Sub-rede IP</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calcule o endereço de rede, endereço de broadcast, e faixa de hosts utilizáveis a partir de um endereço IPv4…</p>
+          <div class="readout">
+            <span class="rlabel">Network address</span>
+            <span class="rvalue settle-in" style="--delay:0.8500000000000001s">192.168.1.0/24</span>
+          </div>
+        </a>
+        <a href="/pt/tool/json-compare" class="tool-card">
+          <div class="cat-label">json compare</div>
+          <h3>Comparação de JSON</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Compare dois objetos JSON e veja exatamente o que foi adicionado, removido, ou alterado entre eles.</p>
+          <div class="readout">
+            <span class="rlabel">Differences found</span>
+            <span class="rvalue settle-in" style="--delay:0.9s">3</span>
+          </div>
+        </a>
+        <a href="/pt/tool/cidr-calculator" class="tool-card">
+          <div class="cat-label">cidr calculation</div>
+          <h3>Calculadora CIDR / Sub-rede</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Calcule o endereço de rede, endereço de broadcast, máscara de sub-rede, e faixa de hosts utilizáveis a partir…</p>
+          <div class="readout">
+            <span class="rlabel">Network address</span>
+            <span class="rvalue settle-in" style="--delay:0.9500000000000001s">192.168.1.0/24</span>
+          </div>
+        </a>
+        <a href="/pt/tool/group-randomizer" class="tool-card">
+          <div class="cat-label">group randomizer generator</div>
+          <h3>Randomizador de Grupos</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">Divida aleatoriamente uma lista de nomes em um número definido de grupos ou equipes equilibradas.</p>
+          <div class="readout">
+            <span class="rlabel">People assigned</span>
+            <span class="rvalue settle-in" style="--delay:1s">8</span>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
 

@@ -512,6 +512,16 @@ function escapeHtml(s) {
   return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
+// Short card-blurb helper: cuts at the last whole word inside maxLen rather
+// than mid-word, since these render as visible SEO body copy, not truncated
+// UI chrome where a hard cut wouldn't matter.
+function truncate(text, maxLen) {
+  if (!text || text.length <= maxLen) return text || "";
+  const cut = text.slice(0, maxLen);
+  const lastSpace = cut.lastIndexOf(" ");
+  return `${cut.slice(0, lastSpace > 0 ? lastSpace : maxLen)}…`;
+}
+
 function ogMetaTags({ title, description, url, image, locale }) {
   return [
     `<meta property="og:title" content="${escapeAttr(title)}">`,
@@ -681,15 +691,42 @@ function buildCategoryPage(template, locale, cat, calculators, I18N) {
   const translatedIds = {};
   WAVE_ONE_TOOL_IDS.forEach((id) => { translatedIds[id] = true; });
 
+  // Server-render the actual tool-card grid (title, keyword label, short
+  // description, sample readout, link) instead of leaving it to client-side
+  // JS to fill after load — an SEO crawl found these pages at 44-126 words
+  // because the grid, which lists every tool in the category, was invisible
+  // to anything that doesn't execute JS. The inline script below now only
+  // enhances this markup (icon badge), it doesn't generate the listing.
+  const catTools = calculators.filter((c) => c.category === cat.id);
+  const catIconSvg = `<svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${cat.icon || ""}</svg>`;
+  const toolGridHtml = catTools.map((calc, i) => {
+    const isTranslated = !!translatedIds[calc.id];
+    const t = (locale === "en" || !isTranslated)
+      ? { title: calc.title, description: calc.description }
+      : I18N.tools[calc.id][locale];
+    const href = isTranslated ? `/${localePath(locale)}tool/${calc.id}` : `${SITE_URL}/tool/${calc.id}`;
+    const sample = computeSampleResult(calc);
+    return `        <a href="${href}" class="tool-card">
+          <div class="cat-label">${escapeHtml(calc.keyword)}</div>
+          <h3>${escapeHtml(t.title)}</h3>
+          <p style="font-size:0.8rem;color:var(--muted);margin:0 0 var(--space-3);">${escapeHtml(truncate(t.description, 110))}</p>
+          <div class="readout">
+            <span class="rlabel">${escapeHtml(sample.primary.label)}</span>
+            <span class="rvalue settle-in" style="--delay:${0.05 * i}s">${escapeHtml(String(sample.primary.value))}</span>
+          </div>
+        </a>`;
+  }).join("\n");
+
   return template
     .split("{{LANG}}").join(locale)
     .split("{{DIR}}").join(htmlDirAttr(locale))
     .split("{{FONTS_LINK}}").join(fontsLink(locale))
     .split("{{CAT_ID}}").join(cat.id)
+    .split("{{CAT_ICON_SVG}}").join(catIconSvg)
+    .split("{{CAT_TOOL_GRID_HTML}}").join(toolGridHtml)
     .split("{{CAT_NAME_FULL}}").join(nameFull)
     .split("{{CAT_DESCRIPTION}}").join(description)
     .split("{{CAT_LONG_DESCRIPTION}}").join(longDescription)
-    .split("{{TRANSLATED_TOOL_IDS_JSON}}").join(JSON.stringify(translatedIds))
     .split("{{LOCALE_PATH}}").join(localePath(locale))
     .split("{{BREADCRUMB_HOME}}").join(ui.labels.breadcrumbHome)
     .split("{{BREADCRUMB_CATEGORIES}}").join(ui.nav.categories)
@@ -857,6 +894,38 @@ function buildAllCalculatorsPage(template, locale, categories, calculators, I18N
   const title = ui.footer.allCalculators;
   const lede = `Every calculator in the catalog, grouped by category - ${calculators.length} tools in total.`;
 
+  const translatedIds = {};
+  WAVE_ONE_TOOL_IDS.forEach((id) => { translatedIds[id] = true; });
+
+  // Server-render the full category-grouped tool listing — previously an
+  // empty #index-categories container filled by client-side JS, which is
+  // exactly why this page scored 44-126 words on an SEO crawl despite
+  // listing all 207 tools once JS ran. Same fix as buildCategoryPage.
+  const categoriesHtml = categories.map((cat) => {
+    const catName = locale === "en" ? cat.name : (I18N.categories[cat.id][locale] || {}).name || cat.name;
+    const catHref = `/${localePath(locale)}category/${cat.id}`;
+    const catIconSvg = `<svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${cat.icon || ""}</svg>`;
+    const catTools = calculators.filter((c) => c.category === cat.id);
+
+    const listHtml = catTools.map((calc) => {
+      const isTranslated = !!translatedIds[calc.id];
+      const toolTitle = (locale !== "en" && isTranslated) ? I18N.tools[calc.id][locale].title : calc.title;
+      const href = isTranslated ? `/${localePath(locale)}tool/${calc.id}` : `${SITE_URL}/tool/${calc.id}`;
+      return `<li><a href="${href}">${escapeHtml(toolTitle)}</a></li>`;
+    }).join("\n            ");
+
+    return `      <section class="index-category">
+        <div class="index-category-head">
+          <span class="code-badge">${catIconSvg}</span>
+          <h2><a href="${catHref}">${escapeHtml(catName)}</a></h2>
+          <span class="count">${catTools.length} tool${catTools.length === 1 ? "" : "s"}</span>
+        </div>
+        <ul class="related-list index-columns">
+            ${listHtml}
+        </ul>
+      </section>`;
+  }).join("\n");
+
   return template
     .split("{{LANG}}").join(locale)
     .split("{{DIR}}").join(htmlDirAttr(locale))
@@ -867,6 +936,7 @@ function buildAllCalculatorsPage(template, locale, categories, calculators, I18N
     .split("{{DESCRIPTION}}").join(lede)
     .split("{{ALL_CALC_TITLE}}").join(title)
     .split("{{ALL_CALC_LEDE}}").join(lede)
+    .split("{{ALL_CALC_CATEGORIES_HTML}}").join(categoriesHtml)
     .split("{{BREADCRUMB_HOME}}").join(ui.labels.breadcrumbHome)
     .split("{{NAV_CATEGORIES}}").join(ui.nav.categories)
     .split("{{NAV_ALL_TOOLS}}").join(ui.nav.allTools)
