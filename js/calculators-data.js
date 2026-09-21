@@ -2974,7 +2974,7 @@ const CALCULATORS = [
       { q: "Does it matter when I start making extra payments?", a: "Yes - extra payments made earlier in the loan save more interest, since more of the loan's remaining life is affected by the reduced balance. The same extra payment made in year 25 of a 30-year mortgage saves much less than starting in year 1." },
       { q: "Is paying off my mortgage early always the best financial move?", a: "Not necessarily - it depends on your mortgage rate versus what you could earn investing that money elsewhere, whether you have higher-interest debt to pay off first, and how much you value the psychological benefit of being debt-free. There's no universal right answer." },
       { q: "Do extra payments automatically apply to principal?", a: "Not always - many lenders apply extra payments to future interest or fees by default unless you specifically designate them as \"principal only.\" Check with your servicer to make sure your extra payments are actually reducing principal as this calculator assumes." },
-      { q: "What's the difference between this and a regular mortgage calculator?", a: "A standard mortgage calculator shows your normal payment schedule as originated. This tool specifically models the effect of adding extra monthly payments on top of that schedule, showing the reduced payoff time and interest saved versus the original plan." },
+      { q: "What's the difference between this and a regular mortgage calculator?", a: "A <a href=\"/tool/mortgage-calculator\">standard mortgage calculator</a> shows your normal payment schedule as originated. This tool specifically models the effect of adding extra monthly payments on top of that schedule, showing the reduced payoff time and interest saved versus the original plan." },
       { q: "If I pay off my mortgage 7 years early, do I stop paying interest immediately?", a: "Yes - once the balance hits zero, no further interest accrues, since interest is charged only on the outstanding balance each period. Every extra dollar of principal paid early removes all the future interest that would have been charged on that dollar for the rest of the loan." },
       { q: "Is 'extra principal payment calculator' the same tool as this one?", a: "Yes - this calculator answers that exact question: enter your remaining balance, rate, term, and a monthly extra amount, and it shows the reduced term and interest saved from those extra principal payments." },
     ],
@@ -3026,46 +3026,79 @@ const CALCULATORS = [
     category: "finance",
     title: "Mortgage Calculator",
     keyword: "mortgage calculator",
-    description: "Free mtg (mortgage) calculator - estimate your total monthly mortgage payment, including taxes and insurance.",
-    intro: "Also known as a home loan calculator: enter your home price, down payment, rate, and term to estimate your full monthly payment - principal, interest, property tax, and insurance.",
+    description: "Free mtg (mortgage) calculator - estimate your total monthly mortgage payment, including taxes, insurance, and PMI.",
+    intro: "Also known as a home loan calculator: enter your home price, down payment, rate, and term to estimate your full monthly payment - principal, interest, property tax, insurance, and PMI.",
     fields: [
-      { id: "homePrice", label: "Home price", type: "number", unit: "$", default: 350000, step: 1000 },
-      { id: "downPaymentPercent", label: "Down payment", type: "number", unit: "%", default: 20, step: 1 },
+      { id: "homePrice", label: "Home price", type: "number", unit: "$", default: 350000, step: 1000, min: 0 },
+      { id: "downPaymentMode", label: "Down payment as", type: "select", default: "percent", options: [
+        { v: "percent", l: "Percent (%)" }, { v: "dollar", l: "Dollar amount ($)" },
+      ] },
+      { id: "downPaymentAmount", label: "Down payment", type: "number", default: 20, step: 1, min: 0 },
       { id: "rate", label: "Annual interest rate", type: "number", unit: "%", default: 6.5, step: 0.01 },
-      { id: "years", label: "Loan term", type: "number", unit: "years", default: 30, step: 1 },
+      { id: "years", label: "Loan term", type: "select", default: "30", options: [
+        { v: "15", l: "15 years" }, { v: "30", l: "30 years" },
+      ] },
       { id: "propertyTaxRate", label: "Annual property tax rate", type: "number", unit: "%", default: 1.1, step: 0.05 },
       { id: "annualInsurance", label: "Annual home insurance", type: "number", unit: "$", default: 1400, step: 50 },
+      { id: "pmiMode", label: "PMI", type: "select", default: "auto", options: [
+        { v: "auto", l: "Auto-estimate if down payment < 20%" }, { v: "manual", l: "Enter my own rate" }, { v: "none", l: "None / already removed" },
+      ] },
+      { id: "pmiRate", label: "PMI rate (if manual)", type: "number", unit: "%", default: 0.55, step: 0.05, min: 0 },
     ],
     compute: (v) => {
-      const loanAmount = v.homePrice * (1 - v.downPaymentPercent / 100);
+      const downPaymentDollar = v.downPaymentMode === "dollar" ? v.downPaymentAmount : v.homePrice * (v.downPaymentAmount / 100);
+      const downPaymentPercent = v.homePrice > 0 ? (downPaymentDollar / v.homePrice) * 100 : 0;
+      const loanAmount = Math.max(v.homePrice - downPaymentDollar, 0);
+      const years = Number(v.years);
       const monthlyRate = v.rate / 100 / 12;
-      const n = v.years * 12;
+      const n = years * 12;
       const principalInterest = monthlyRate === 0
         ? loanAmount / n
         : (loanAmount * monthlyRate * Math.pow(1 + monthlyRate, n)) / (Math.pow(1 + monthlyRate, n) - 1);
       const monthlyTax = (v.homePrice * (v.propertyTaxRate / 100)) / 12;
       const monthlyInsurance = v.annualInsurance / 12;
-      const totalMonthly = principalInterest + monthlyTax + monthlyInsurance;
+
+      // 0.55%/year is a typical mid-range PMI rate; actual PMI varies by
+      // lender, credit score, and loan program (roughly 0.3%-1.5%/year).
+      const DEFAULT_PMI_RATE = 0.55;
+      let monthlyPMI = 0;
+      if (v.pmiMode === "manual") {
+        monthlyPMI = (loanAmount * (v.pmiRate / 100)) / 12;
+      } else if (v.pmiMode === "auto" && downPaymentPercent < 20) {
+        monthlyPMI = (loanAmount * (DEFAULT_PMI_RATE / 100)) / 12;
+      }
+
+      const totalMonthly = principalInterest + monthlyTax + monthlyInsurance + monthlyPMI;
+      const totalInterest = principalInterest * n - loanAmount;
+      const payoffDate = new Date();
+      payoffDate.setMonth(payoffDate.getMonth() + n);
+      const payoffStr = payoffDate.toLocaleDateString(undefined, { year: "numeric", month: "long" });
+
       return {
         primary: { label: "Estimated monthly payment", value: `$${round(totalMonthly, 2).toLocaleString()}` },
         secondary: [
           { l: "Principal & interest", v: `$${round(principalInterest, 2).toLocaleString()}` },
-          { l: "Taxes + insurance", v: `$${round(monthlyTax + monthlyInsurance, 2).toLocaleString()}` },
+          { l: "Property tax", v: `$${round(monthlyTax, 2).toLocaleString()}` },
+          { l: "Homeowners insurance", v: `$${round(monthlyInsurance, 2).toLocaleString()}` },
+          { l: "PMI", v: `$${round(monthlyPMI, 2).toLocaleString()}` },
           { l: "Loan amount", v: `$${round(loanAmount, 0).toLocaleString()}` },
+          { l: "Total interest over loan term", v: `$${round(totalInterest, 0).toLocaleString()}` },
+          { l: "Estimated payoff date", v: payoffStr },
         ],
-        note: "This estimate covers principal, interest, taxes, and insurance (PITI). It doesn't include PMI, HOA fees, or other lender-specific costs.",
+        note: "Covers principal, interest, property tax, homeowners insurance, and PMI when it applies - together sometimes called PITI+PMI. PMI auto-estimates at a typical 0.55%/year of the loan amount when your down payment is under 20%; switch to \"Enter my own rate\" once you know your lender's actual PMI rate, or \"None\" once it's been removed. Excludes HOA fees and other lender-specific costs.",
       };
     },
     faq: [
-      { q: "What's included in a mortgage payment estimate?", a: "This calculator estimates PITI - principal, interest, property taxes, and homeowners insurance. It doesn't include PMI (if your down payment is under 20%) or HOA fees, which vary by lender and property." },
-      { q: "How does down payment affect my monthly payment?", a: "A larger down payment reduces your loan amount, which lowers both the principal & interest portion of your payment and your total interest paid over the loan term." },
-      { q: "What happens to my payment if I refinance to a lower rate later?", a: "Refinancing recalculates your loan from the new balance, rate, and remaining term - even a 1% rate drop meaningfully lowers the interest portion of each payment, though closing costs on the new loan need to be weighed against the savings." },
+      { q: "What's included in a mortgage payment estimate?", a: "This calculator estimates your full monthly payment: principal, interest, property taxes, homeowners insurance, and PMI when your down payment is under 20%. It doesn't include HOA fees or other lender-specific costs, which vary by property and loan program." },
+      { q: "How does down payment affect my monthly payment?", a: "A larger down payment reduces your loan amount, which lowers both the principal & interest portion of your payment and your total interest paid over the loan term. Down payments of 20% or more also typically avoid PMI, cutting the payment further." },
+      { q: "What is PMI and when does it go away?", a: "Private mortgage insurance (PMI) is an extra monthly cost lenders typically require when your down payment is under 20%, protecting the lender if you default. It's not a fixed rate - actual PMI varies by lender, credit score, and loan program, generally landing between about 0.3% and 1.5% of the loan amount per year. This calculator estimates it at 0.55% under \"Auto\" mode. Once your loan balance drops to 80% of the original home value (through payments or appreciation), you can typically request PMI be removed, and it usually cancels automatically at 78%." },
+      { q: "How accurate are the property tax and insurance estimates?", a: "Only as accurate as the rates you enter. Property tax rates vary enormously by state and even by county or school district - some areas are under 0.5% annually, others exceed 2%. Homeowners insurance depends on your home's value, location, construction, and coverage level. Check your county assessor's site or a recent tax bill for the actual property tax rate, and get a real insurance quote rather than relying on the default - both figures meaningfully change your total monthly payment." },
       { q: "How does the loan term affect total interest paid?", a: "A shorter term (like 15 years vs. 30) means higher monthly payments but far less total interest, since you're paying down principal faster and it has less time to accrue interest. A 30-year loan lowers the monthly payment but often costs more than double the total interest of the same loan at 15 years." },
+      { q: "What's the difference between this and the mortgage payoff calculator?", a: "This calculator estimates your regular monthly payment as originated - principal, interest, taxes, insurance, and PMI. The <a href=\"/tool/mortgage-payoff-calculator\">mortgage payoff calculator</a> instead models what happens if you add extra payments on top of that schedule: how much interest you'd save and how much sooner you'd be debt-free. Use this tool to plan a new loan or check your current payment; use the payoff calculator once you're already in a mortgage and want to see the effect of paying extra." },
       { q: "What does 'mtg' mean in mtg calculator or mtg payment?", a: "'Mtg' is a common shorthand for 'mortgage' used in real estate listings, loan documents, and search queries - an mtg calculator is the same thing as a mortgage calculator. This tool covers both: enter your home price, down payment, rate, and term to estimate your monthly mtg payment." },
-      { q: "Is a home loan calculator the same as a mortgage calculator?", a: "Yes - \"home loan\" and \"mortgage\" refer to the same type of loan used to buy a house, so a home loan calculator and a mortgage calculator do the same job. This tool estimates your full monthly payment (principal, interest, taxes, and insurance) whichever term you search for." },
-      { q: "What's the difference between a mortgage calculator and a house loan estimator?", a: "None - a house loan estimator, home loan calculator, and mortgage calculator all describe the same tool: something that estimates your monthly payment on a loan used to buy a house. This calculator covers that estimate, including principal, interest, property taxes, and insurance." },
+      { q: "Is a home loan calculator the same as a mortgage calculator?", a: "Yes - \"home loan\" and \"mortgage\" refer to the same type of loan used to buy a house, so a home loan calculator and a mortgage calculator do the same job. This tool estimates your full monthly payment (principal, interest, taxes, insurance, and PMI) whichever term you search for." },
     ],
-    related: ["loan-calculator", "savings-calculator", "compound-interest-calculator"],
+    related: ["mortgage-payoff-calculator", "loan-calculator", "savings-calculator"],
   },
   {
     id: "home-affordability-calculator",

@@ -15,9 +15,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mortgage Calculator | Calquary</title>
-  <meta name="description" content="Free mtg (mortgage) calculator - estimate your total monthly mortgage payment, including taxes and insurance." />
+  <meta name="description" content="Free mtg (mortgage) calculator - estimate your total monthly mortgage payment, including taxes, insurance, and PMI." />
   <meta property="og:title" content="Mortgage Calculator | Calquary">
-  <meta property="og:description" content="Free mtg (mortgage) calculator - estimate your total monthly mortgage payment, including taxes and insurance.">
+  <meta property="og:description" content="Free mtg (mortgage) calculator - estimate your total monthly mortgage payment, including taxes, insurance, and PMI.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/tool/mortgage-calculator">
   <meta property="og:locale" content="en_US">
@@ -27,7 +27,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Mortgage Calculator | Calquary">
-  <meta name="twitter:description" content="Free mtg (mortgage) calculator - estimate your total monthly mortgage payment, including taxes and insurance.">
+  <meta name="twitter:description" content="Free mtg (mortgage) calculator - estimate your total monthly mortgage payment, including taxes, insurance, and PMI.">
   <meta name="twitter:image" content="https://calquary.com/og-images/mortgage-calculator.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/mortgage-calculator">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/mortgage-calculator">
@@ -89,7 +89,7 @@
     {
       "@type": "SoftwareApplication",
       "name": "Mortgage Calculator",
-      "description": "Free mtg (mortgage) calculator - estimate your total monthly mortgage payment, including taxes and insurance.",
+      "description": "Free mtg (mortgage) calculator - estimate your total monthly mortgage payment, including taxes, insurance, and PMI.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/tool/mortgage-calculator",
@@ -99,7 +99,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-09-21",
       "inLanguage": "en"
     },
     {
@@ -133,7 +133,7 @@
           "name": "What's included in a mortgage payment estimate?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "This calculator estimates PITI - principal, interest, property taxes, and homeowners insurance. It doesn't include PMI (if your down payment is under 20%) or HOA fees, which vary by lender and property."
+            "text": "This calculator estimates your full monthly payment: principal, interest, property taxes, homeowners insurance, and PMI when your down payment is under 20%. It doesn't include HOA fees or other lender-specific costs, which vary by property and loan program."
           }
         },
         {
@@ -141,15 +141,23 @@
           "name": "How does down payment affect my monthly payment?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A larger down payment reduces your loan amount, which lowers both the principal & interest portion of your payment and your total interest paid over the loan term."
+            "text": "A larger down payment reduces your loan amount, which lowers both the principal & interest portion of your payment and your total interest paid over the loan term. Down payments of 20% or more also typically avoid PMI, cutting the payment further."
           }
         },
         {
           "@type": "Question",
-          "name": "What happens to my payment if I refinance to a lower rate later?",
+          "name": "What is PMI and when does it go away?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Refinancing recalculates your loan from the new balance, rate, and remaining term - even a 1% rate drop meaningfully lowers the interest portion of each payment, though closing costs on the new loan need to be weighed against the savings."
+            "text": "Private mortgage insurance (PMI) is an extra monthly cost lenders typically require when your down payment is under 20%, protecting the lender if you default. It's not a fixed rate - actual PMI varies by lender, credit score, and loan program, generally landing between about 0.3% and 1.5% of the loan amount per year. This calculator estimates it at 0.55% under \"Auto\" mode. Once your loan balance drops to 80% of the original home value (through payments or appreciation), you can typically request PMI be removed, and it usually cancels automatically at 78%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How accurate are the property tax and insurance estimates?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only as accurate as the rates you enter. Property tax rates vary enormously by state and even by county or school district - some areas are under 0.5% annually, others exceed 2%. Homeowners insurance depends on your home's value, location, construction, and coverage level. Check your county assessor's site or a recent tax bill for the actual property tax rate, and get a real insurance quote rather than relying on the default - both figures meaningfully change your total monthly payment."
           }
         },
         {
@@ -158,6 +166,14 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "A shorter term (like 15 years vs. 30) means higher monthly payments but far less total interest, since you're paying down principal faster and it has less time to accrue interest. A 30-year loan lowers the monthly payment but often costs more than double the total interest of the same loan at 15 years."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between this and the mortgage payoff calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This calculator estimates your regular monthly payment as originated - principal, interest, taxes, insurance, and PMI. The <a href=\"/tool/mortgage-payoff-calculator\">mortgage payoff calculator<\/a> instead models what happens if you add extra payments on top of that schedule: how much interest you'd save and how much sooner you'd be debt-free. Use this tool to plan a new loan or check your current payment; use the payoff calculator once you're already in a mortgage and want to see the effect of paying extra."
           }
         },
         {
@@ -173,15 +189,7 @@
           "name": "Is a home loan calculator the same as a mortgage calculator?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes - \"home loan\" and \"mortgage\" refer to the same type of loan used to buy a house, so a home loan calculator and a mortgage calculator do the same job. This tool estimates your full monthly payment (principal, interest, taxes, and insurance) whichever term you search for."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What's the difference between a mortgage calculator and a house loan estimator?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "None - a house loan estimator, home loan calculator, and mortgage calculator all describe the same tool: something that estimates your monthly payment on a loan used to buy a house. This calculator covers that estimate, including principal, interest, property taxes, and insurance."
+            "text": "Yes - \"home loan\" and \"mortgage\" refer to the same type of loan used to buy a house, so a home loan calculator and a mortgage calculator do the same job. This tool estimates your full monthly payment (principal, interest, taxes, insurance, and PMI) whichever term you search for."
           }
         }
       ]
@@ -223,8 +231,8 @@
     <div class="tool-layout">
       <main>
         <h1>Mortgage Calculator</h1>
-        <p style="max-width:60ch;">Also known as a home loan calculator: enter your home price, down payment, rate, and term to estimate your full monthly payment - principal, interest, property tax, and insurance.</p>
-        <p class="last-updated">Last updated: August 30, 2026</p>
+        <p style="max-width:60ch;">Also known as a home loan calculator: enter your home price, down payment, rate, and term to estimate your full monthly payment - principal, interest, property tax, insurance, and PMI.</p>
+        <p class="last-updated">Last updated: September 21, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel">
@@ -252,19 +260,27 @@
           <h2>Frequently asked questions</h2>
           <div id="faq-list"><div class="faq-item">
 <h3>What's included in a mortgage payment estimate?</h3>
-<p>This calculator estimates PITI - principal, interest, property taxes, and homeowners insurance. It doesn't include PMI (if your down payment is under 20%) or HOA fees, which vary by lender and property.</p>
+<p>This calculator estimates your full monthly payment: principal, interest, property taxes, homeowners insurance, and PMI when your down payment is under 20%. It doesn't include HOA fees or other lender-specific costs, which vary by property and loan program.</p>
 </div>
 <div class="faq-item">
 <h3>How does down payment affect my monthly payment?</h3>
-<p>A larger down payment reduces your loan amount, which lowers both the principal & interest portion of your payment and your total interest paid over the loan term.</p>
+<p>A larger down payment reduces your loan amount, which lowers both the principal & interest portion of your payment and your total interest paid over the loan term. Down payments of 20% or more also typically avoid PMI, cutting the payment further.</p>
 </div>
 <div class="faq-item">
-<h3>What happens to my payment if I refinance to a lower rate later?</h3>
-<p>Refinancing recalculates your loan from the new balance, rate, and remaining term - even a 1% rate drop meaningfully lowers the interest portion of each payment, though closing costs on the new loan need to be weighed against the savings.</p>
+<h3>What is PMI and when does it go away?</h3>
+<p>Private mortgage insurance (PMI) is an extra monthly cost lenders typically require when your down payment is under 20%, protecting the lender if you default. It's not a fixed rate - actual PMI varies by lender, credit score, and loan program, generally landing between about 0.3% and 1.5% of the loan amount per year. This calculator estimates it at 0.55% under "Auto" mode. Once your loan balance drops to 80% of the original home value (through payments or appreciation), you can typically request PMI be removed, and it usually cancels automatically at 78%.</p>
+</div>
+<div class="faq-item">
+<h3>How accurate are the property tax and insurance estimates?</h3>
+<p>Only as accurate as the rates you enter. Property tax rates vary enormously by state and even by county or school district - some areas are under 0.5% annually, others exceed 2%. Homeowners insurance depends on your home's value, location, construction, and coverage level. Check your county assessor's site or a recent tax bill for the actual property tax rate, and get a real insurance quote rather than relying on the default - both figures meaningfully change your total monthly payment.</p>
 </div>
 <div class="faq-item">
 <h3>How does the loan term affect total interest paid?</h3>
 <p>A shorter term (like 15 years vs. 30) means higher monthly payments but far less total interest, since you're paying down principal faster and it has less time to accrue interest. A 30-year loan lowers the monthly payment but often costs more than double the total interest of the same loan at 15 years.</p>
+</div>
+<div class="faq-item">
+<h3>What's the difference between this and the mortgage payoff calculator?</h3>
+<p>This calculator estimates your regular monthly payment as originated - principal, interest, taxes, insurance, and PMI. The <a href="/tool/mortgage-payoff-calculator">mortgage payoff calculator</a> instead models what happens if you add extra payments on top of that schedule: how much interest you'd save and how much sooner you'd be debt-free. Use this tool to plan a new loan or check your current payment; use the payoff calculator once you're already in a mortgage and want to see the effect of paying extra.</p>
 </div>
 <div class="faq-item">
 <h3>What does 'mtg' mean in mtg calculator or mtg payment?</h3>
@@ -272,11 +288,7 @@
 </div>
 <div class="faq-item">
 <h3>Is a home loan calculator the same as a mortgage calculator?</h3>
-<p>Yes - "home loan" and "mortgage" refer to the same type of loan used to buy a house, so a home loan calculator and a mortgage calculator do the same job. This tool estimates your full monthly payment (principal, interest, taxes, and insurance) whichever term you search for.</p>
-</div>
-<div class="faq-item">
-<h3>What's the difference between a mortgage calculator and a house loan estimator?</h3>
-<p>None - a house loan estimator, home loan calculator, and mortgage calculator all describe the same tool: something that estimates your monthly payment on a loan used to buy a house. This calculator covers that estimate, including principal, interest, property taxes, and insurance.</p>
+<p>Yes - "home loan" and "mortgage" refer to the same type of loan used to buy a house, so a home loan calculator and a mortgage calculator do the same job. This tool estimates your full monthly payment (principal, interest, taxes, insurance, and PMI) whichever term you search for.</p>
 </div></div>
         </div>
       </main>
