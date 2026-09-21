@@ -13391,13 +13391,13 @@ const I18N_TOOLS = {
       ],
     },
     pt: {
-      title: "Cronômetro Online",
-      intro: "Defina um tempo de contagem regressiva, depois clique em iniciar - este cronômetro conta regressivamente e alerta você quando o tempo acabar.",
-      description: "Um cronômetro de contagem regressiva gratuito que funciona no seu navegador - defina minutos e segundos, depois inicie, pause ou reinicie.",
+      title: "Timer Online",
+      intro: "Defina um tempo de contagem regressiva, depois clique em iniciar - este timer conta regressivamente e alerta você quando o tempo acabar.",
+      description: "Um timer de contagem regressiva gratuito que funciona no seu navegador - defina minutos e segundos, depois inicie, pause ou reinicie.",
       faq: [
-        { q: "Este cronômetro online continua funcionando se eu mudar de aba do navegador?", a: "Sim - a contagem regressiva continua em segundo plano enquanto esta aba do navegador permanecer aberta, mesmo que não seja a aba ativa. Fechar a aba ou o navegador para o cronômetro." },
-        { q: "Este cronômetro fará um som quando terminar?", a: "Sim - um bipe curto toca quando a contagem regressiva chega a zero, junto com a mudança da tela para \"Tempo esgotado!\" para que você note mesmo que não esteja olhando diretamente para a tela." },
-        { q: "Posso definir um cronômetro para mais de uma hora?", a: "Sim - insira qualquer número de minutos (não há limite superior), então você pode definir um cronômetro de 90 minutos ou de várias horas tão facilmente quanto um curto." },
+        { q: "Este timer online continua funcionando se eu mudar de aba do navegador?", a: "Sim - a contagem regressiva continua em segundo plano enquanto esta aba do navegador permanecer aberta, mesmo que não seja a aba ativa. Fechar a aba ou o navegador para o timer." },
+        { q: "Este timer fará um som quando terminar?", a: "Sim - um bipe curto toca quando a contagem regressiva chega a zero, junto com a mudança da tela para \"Tempo esgotado!\" para que você note mesmo que não esteja olhando diretamente para a tela." },
+        { q: "Posso definir um timer para mais de uma hora?", a: "Sim - insira qualquer número de minutos (não há limite superior), então você pode definir um timer de 90 minutos ou de várias horas tão facilmente quanto um curto." },
         { q: "O timer continua contando se meu computador entrar em modo de suspensão?", a: "Não - se o dispositivo entrar em suspensão ou o navegador for suspenso, a contagem regressiva pausa junto com ele e retoma (um pouco atrasada) quando o dispositivo acorda, já que ele depende de a aba do navegador estar ativamente em execução." },
         { q: "Posso configurar um timer para um número exato de segundos apenas, como 90 segundos?", a: "Sim - insira 0 minutos e 90 segundos, ou 1 minuto e 30 segundos; ambos produzem a mesma contagem regressiva de 90 segundos, já que minutos e segundos são combinados no tempo total." },
         { q: "Isso é o mesmo que um 'relógio de contagem regressiva' para uma data de evento específica?", a: "Não - este timer conta uma duração fixa que você define em minutos e segundos, como um timer de cozinha. Para contar regressivamente até uma data futura específica, você precisaria de uma ferramenta de contagem regressiva baseada em data." },
@@ -13430,16 +13430,16 @@ const I18N_TOOLS = {
       ],
     },
     ro: {
-      title: "Cronometru Online",
-      intro: "Setează un timp de numărătoare inversă, apoi apasă start - acest cronometru numără invers și te alertează când timpul s-a scurs.",
-      description: "Un cronometru de numărătoare inversă gratuit care rulează în browserul tău - setează minute și secunde, apoi pornește, pune pe pauză sau resetează.",
+      title: "Temporizator Online",
+      intro: "Setează un timp de numărătoare inversă, apoi apasă start - acest temporizator numără invers și te alertează când timpul s-a scurs.",
+      description: "Un temporizator de numărătoare inversă gratuit care rulează în browserul tău - setează minute și secunde, apoi pornește, pune pe pauză sau resetează.",
       faq: [
-        { q: "Acest cronometru online continuă să funcționeze dacă schimb tab-urile browserului?", a: "Da - numărătoarea inversă continuă în fundal atât timp cât acest tab de browser rămâne deschis, chiar dacă nu este tab-ul activ. Închiderea tab-ului sau a browserului oprește cronometrul." },
-        { q: "Va scoate acest cronometru un sunet când termină?", a: "Da - se aude un semnal sonor scurt când numărătoarea inversă ajunge la zero, împreună cu schimbarea afișajului în \"Timpul s-a scurs!\" astfel încât să observi chiar dacă nu privești direct ecranul." },
-        { q: "Pot seta un cronometru pentru mai mult de o oră?", a: "Da - introdu orice număr de minute (nu există limită superioară), deci poți seta un cronometru de 90 de minute sau de mai multe ore la fel de ușor ca unul scurt." },
-        { q: "Cronometrul continuă numărătoarea inversă dacă computerul meu intră în repaus?", a: "Nu - dacă dispozitivul intră în repaus sau browserul este suspendat, numărătoarea inversă se oprește odată cu el și reia (ușor în urmă) când dispozitivul se trezește, deoarece se bazează pe tab-ul de browser care rulează activ." },
-        { q: "Pot seta un cronometru pentru un număr exact de secunde, precum 90 de secunde?", a: "Da - introdu 0 minute și 90 de secunde, sau 1 minut și 30 de secunde; ambele produc aceeași numărătoare inversă de 90 de secunde, deoarece minutele și secundele sunt combinate în timpul total." },
-        { q: "Este acesta același lucru cu un \"ceas de numărătoare inversă\" pentru o dată specifică a unui eveniment?", a: "Nu - acest cronometru numără invers o durată fixă pe care o setezi în minute și secunde, ca un cronometru de bucătărie. Pentru a număra invers până la o dată viitoare specifică, ai avea nevoie în schimb de un instrument de numărătoare inversă bazat pe dată." },
+        { q: "Acest temporizator online continuă să funcționeze dacă schimb tab-urile browserului?", a: "Da - numărătoarea inversă continuă în fundal atât timp cât acest tab de browser rămâne deschis, chiar dacă nu este tab-ul activ. Închiderea tab-ului sau a browserului oprește temporizatorul." },
+        { q: "Va scoate acest temporizator un sunet când termină?", a: "Da - se aude un semnal sonor scurt când numărătoarea inversă ajunge la zero, împreună cu schimbarea afișajului în \"Timpul s-a scurs!\" astfel încât să observi chiar dacă nu privești direct ecranul." },
+        { q: "Pot seta un temporizator pentru mai mult de o oră?", a: "Da - introdu orice număr de minute (nu există limită superioară), deci poți seta un temporizator de 90 de minute sau de mai multe ore la fel de ușor ca unul scurt." },
+        { q: "Temporizatorul continuă numărătoarea inversă dacă computerul meu intră în repaus?", a: "Nu - dacă dispozitivul intră în repaus sau browserul este suspendat, numărătoarea inversă se oprește odată cu el și reia (ușor în urmă) când dispozitivul se trezește, deoarece se bazează pe tab-ul de browser care rulează activ." },
+        { q: "Pot seta un temporizator pentru un număr exact de secunde, precum 90 de secunde?", a: "Da - introdu 0 minute și 90 de secunde, sau 1 minut și 30 de secunde; ambele produc aceeași numărătoare inversă de 90 de secunde, deoarece minutele și secundele sunt combinate în timpul total." },
+        { q: "Este acesta același lucru cu un \"ceas de numărătoare inversă\" pentru o dată specifică a unui eveniment?", a: "Nu - acest temporizator numără invers o durată fixă pe care o setezi în minute și secunde, ca un temporizator de bucătărie. Pentru a număra invers până la o dată viitoare specifică, ai avea nevoie în schimb de un instrument de numărătoare inversă bazat pe dată." },
       ],
     },
     el: {
@@ -32843,6 +32843,26 @@ const I18N_TOOLS = {
 // but machine-assisted legal translation still needs a human sign-off pass
 // before it should be relied on the way the English original can be.
 const I18N_STATIC = {
+  // /all-calculators meta description, per locale. Previously the page
+  // reused one hardcoded English string for {{DESCRIPTION}} regardless of
+  // locale (identical meta description on all 12 built pages) - "{count}"
+  // is substituted with the live calculator count at build time in
+  // buildAllCalculatorsPage() so this never goes stale as the catalog grows.
+  allCalculators: {
+    en: { description: "Browse the full Calquary catalog - {count} free calculators for math, finance, health, home, dates, and more, organized by category." },
+    es: { description: "Explora el catálogo completo de Calquary - {count} calculadoras gratuitas de matemáticas, finanzas, salud, hogar, fechas y más, organizadas por categoría." },
+    fr: { description: "Parcourez le catalogue complet de Calquary - {count} calculatrices gratuites pour les maths, la finance, la santé, la maison, les dates et plus, organisées par catégorie." },
+    de: { description: "Durchsuchen Sie den vollständigen Calquary-Katalog - {count} kostenlose Rechner für Mathematik, Finanzen, Gesundheit, Haus, Termine und mehr, nach Kategorie geordnet." },
+    pt: { description: "Explore o catálogo completo da Calquary - {count} calculadoras gratuitas de matemática, finanças, saúde, casa, datas e muito mais, organizadas por categoria." },
+    it: { description: "Esplora il catalogo completo di Calquary - {count} calcolatrici gratuite per matematica, finanza, salute, casa, date e altro, organizzate per categoria." },
+    ja: { description: "Calquaryの全カタログを掲載 - 数学、金融、健康、住まい、日付など{count}個の無料計算ツールをカテゴリー別に紹介しています。" },
+    ro: { description: "Răsfoiește catalogul complet Calquary - {count} calculatoare gratuite pentru matematică, finanțe, sănătate, casă, date și multe altele, organizate pe categorii." },
+    el: { description: "Περιηγηθείτε στον πλήρη κατάλογο του Calquary - {count} δωρεάν αριθμομηχανές για μαθηματικά, οικονομικά, υγεία, σπίτι, ημερομηνίες και άλλα, οργανωμένες ανά κατηγορία." },
+    zh: { description: "浏览 Calquary 完整目录——{count} 款涵盖数学、理财、健康、家居、日期等分类的免费计算器。" },
+    ar: { description: "تصفح كتالوج Calquary الكامل - {count} حاسبة مجانية للرياضيات والمالية والصحة والمنزل والتواريخ والمزيد، منظمة حسب الفئة." },
+    th: { description: "เรียกดูแคตตาล็อกทั้งหมดของ Calquary - เครื่องคำนวณฟรี {count} รายการสำหรับคณิตศาสตร์ การเงิน สุขภาพ บ้าน วันที่ และอื่นๆ จัดหมวดหมู่ตามประเภท" },
+  },
+
   about: {
     en: {
       title: "About Calquary - Free Calculators & Conversion Tools",

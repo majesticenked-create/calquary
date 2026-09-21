@@ -918,6 +918,7 @@ function buildAllCalculatorsPage(template, locale, categories, calculators, I18N
   const image = `${SITE_URL}/og-images/site.png`;
   const title = ui.footer.allCalculators;
   const lede = `Every calculator in the catalog, grouped by category - ${calculators.length} tools in total.`;
+  const metaDescription = I18N.static.allCalculators[locale].description.replace("{count}", calculators.length);
 
   const translatedIds = {};
   WAVE_ONE_TOOL_IDS.forEach((id) => { translatedIds[id] = true; });
@@ -958,7 +959,7 @@ function buildAllCalculatorsPage(template, locale, categories, calculators, I18N
     .split("{{LOCALE_PATH}}").join(localePath(locale))
     .split("{{LOCALE_CODE}}").join(locale)
     .split("{{TITLE}}").join(`${title} | Calquary`)
-    .split("{{DESCRIPTION}}").join(lede)
+    .split("{{DESCRIPTION}}").join(metaDescription)
     .split("{{ALL_CALC_TITLE}}").join(title)
     .split("{{ALL_CALC_LEDE}}").join(lede)
     .split("{{ALL_CALC_CATEGORIES_HTML}}").join(categoriesHtml)
@@ -973,7 +974,7 @@ function buildAllCalculatorsPage(template, locale, categories, calculators, I18N
     .split("{{BTN_BACK_TO_ALL}}").join(ui.buttons.backToAll)
     .split("{{GA_TAG}}").join(GA_TAG)
     .split("{{ADSENSE_TAG}}").join(ADSENSE_TAG)
-    .split("{{OG_META}}").join(ogMetaTags({ title: `${title} | Calquary`, description: lede, url, image, locale }))
+    .split("{{OG_META}}").join(ogMetaTags({ title: `${title} | Calquary`, description: metaDescription, url, image, locale }))
     .split("{{HREFLANG_LINKS}}").join(hreflangLinks((loc) => staticUrl(loc, "all-calculators.html"), LOCALES))
     .split("{{CANONICAL_LINK}}").join(canonicalTag(url))
     .split("{{LOCALE_SWITCHER}}").join(localeSwitcherHtml(locale, (loc) => staticUrl(loc, "all-calculators.html"), LOCALES))
