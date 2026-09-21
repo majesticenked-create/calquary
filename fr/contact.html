@@ -54,6 +54,19 @@
   <link rel="stylesheet" href="/css/styles.css" />
   <script src="/js/theme.js" defer></script>
   <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Client-side email de-obfuscation: the address is split into a
+      // user/domain pair in the HTML (never written as a literal
+      // "user@domain" string) and assembled here, so we don't depend on
+      // any host's server-side email-obfuscation edge feature.
+      document.querySelectorAll("[data-email-user]").forEach((el) => {
+        const addr = `${el.getAttribute("data-email-user")}@${el.getAttribute("data-email-domain")}`;
+        el.textContent = addr;
+        if (el.tagName === "A") el.href = `mailto:${addr}`;
+      });
+    });
+  </script>
 </head>
 <body>
 
@@ -82,7 +95,7 @@
     <div class="wrap">
       <div class="breadcrumb"><a href="/fr/">Calquary</a> / Contact</div>
       <h1>Contactez-nous - Écrivez à Calquary</h1>
-      <p style="max-width:56ch;">Vous avez trouvé un bug, une idée de calculatrice, ou une question sur la gestion de vos données ? Écrivez-nous à hello@calquary.com - nous lisons chaque message, même si les réponses peuvent prendre quelques jours. Si vous signalez un bug, il est utile d'indiquer le nom de la calculatrice, les chiffres saisis et le résultat attendu par rapport à celui obtenu. Les suggestions de calculatrices sont particulièrement bienvenues - la plupart des outils déjà présents sur Calquary sont nés d'une demande de lecteur, et nous suivons la fréquence des demandes avant de décider quoi développer ensuite.</p>
+      <p style="max-width:56ch;">Vous avez trouvé un bug, une idée de calculatrice, ou une question sur la gestion de vos données ? Écrivez-nous à <a href="#" data-email-user="hello" data-email-domain="calquary.com">hello@calquary.com</a> - nous lisons chaque message, même si les réponses peuvent prendre quelques jours. Si vous signalez un bug, il est utile d'indiquer le nom de la calculatrice, les chiffres saisis et le résultat attendu par rapport à celui obtenu. Les suggestions de calculatrices sont particulièrement bienvenues - la plupart des outils déjà présents sur Calquary sont nés d'une demande de lecteur, et nous suivons la fréquence des demandes avant de décider quoi développer ensuite.</p>
     </div>
   </section>
 

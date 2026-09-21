@@ -54,6 +54,19 @@
   <link rel="stylesheet" href="/css/styles.css" />
   <script src="/js/theme.js" defer></script>
   <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Client-side email de-obfuscation: the address is split into a
+      // user/domain pair in the HTML (never written as a literal
+      // "user@domain" string) and assembled here, so we don't depend on
+      // any host's server-side email-obfuscation edge feature.
+      document.querySelectorAll("[data-email-user]").forEach((el) => {
+        const addr = `${el.getAttribute("data-email-user")}@${el.getAttribute("data-email-domain")}`;
+        el.textContent = addr;
+        if (el.tagName === "A") el.href = `mailto:${addr}`;
+      });
+    });
+  </script>
 </head>
 <body>
 
@@ -82,7 +95,7 @@
     <div class="wrap">
       <div class="breadcrumb"><a href="/el/">Calquary</a> / Επικοινωνία</div>
       <h1>Επικοινωνήστε με το Calquary - Σφάλματα, Ιδέες και Ερωτήσεις</h1>
-      <p style="max-width:56ch;">Βρήκατε ένα σφάλμα, έχετε μια ιδέα για αριθμομηχανή ή μια ερώτηση για το πώς διαχειριζόμαστε τα δεδομένα; Στείλτε μας email στο hello@calquary.com - διαβάζουμε κάθε μήνυμα, αν και οι απαντήσεις μπορεί να καθυστερήσουν μερικές ημέρες. Αν αναφέρετε ένα σφάλμα, βοηθάει να συμπεριλάβετε το όνομα της αριθμομηχανής, τους αριθμούς που εισάγατε, και το αποτέλεσμα που περιμένατε σε σύγκριση με αυτό που είδατε. Οι προτάσεις για αριθμομηχανές είναι ιδιαίτερα ευπρόσδεκτες - τα περισσότερα εργαλεία που ήδη υπάρχουν στο Calquary ξεκίνησαν ως αίτημα αναγνώστη, και παρακολουθούμε τη συχνότητα των αιτημάτων πριν αποφασίσουμε τι θα φτιάξουμε στη συνέχεια.</p>
+      <p style="max-width:56ch;">Βρήκατε ένα σφάλμα, έχετε μια ιδέα για αριθμομηχανή ή μια ερώτηση για το πώς διαχειριζόμαστε τα δεδομένα; Στείλτε μας email στο <a href="#" data-email-user="hello" data-email-domain="calquary.com">hello@calquary.com</a> - διαβάζουμε κάθε μήνυμα, αν και οι απαντήσεις μπορεί να καθυστερήσουν μερικές ημέρες. Αν αναφέρετε ένα σφάλμα, βοηθάει να συμπεριλάβετε το όνομα της αριθμομηχανής, τους αριθμούς που εισάγατε, και το αποτέλεσμα που περιμένατε σε σύγκριση με αυτό που είδατε. Οι προτάσεις για αριθμομηχανές είναι ιδιαίτερα ευπρόσδεκτες - τα περισσότερα εργαλεία που ήδη υπάρχουν στο Calquary ξεκίνησαν ως αίτημα αναγνώστη, και παρακολουθούμε τη συχνότητα των αιτημάτων πριν αποφασίσουμε τι θα φτιάξουμε στη συνέχεια.</p>
     </div>
   </section>
 

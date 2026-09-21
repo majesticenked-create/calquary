@@ -899,6 +899,15 @@ function buildContactPage(template, locale, I18N) {
   const url = staticUrl(locale, "contact.html");
   const image = `${SITE_URL}/og-images/site.png`;
 
+  // The translated body text contains the literal address "hello@calquary.com".
+  // Swap it for an obfuscated <a> (user/domain split across data attributes,
+  // assembled by JS in contact.template.html) instead of leaving it as
+  // plain text — a bare "user@domain" string is exactly the pattern that
+  // triggered the broken server-side email-obfuscation rewrite this fix
+  // replaces. Applied once here, so it covers every locale's translation.
+  const obfuscatedEmail = '<a href="#" data-email-user="hello" data-email-domain="calquary.com">hello@calquary.com</a>';
+  const contactBody = s.body.split("hello@calquary.com").join(obfuscatedEmail);
+
   return template
     .split("{{LANG}}").join(locale)
     .split("{{DIR}}").join(htmlDirAttr(locale))
@@ -907,7 +916,7 @@ function buildContactPage(template, locale, I18N) {
     .split("{{TITLE}}").join(`${s.title} | Calquary`)
     .split("{{DESCRIPTION}}").join(s.body)
     .split("{{CONTACT_TITLE}}").join(s.title)
-    .split("{{CONTACT_BODY}}").join(s.body)
+    .split("{{CONTACT_BODY}}").join(contactBody)
     .split("{{BREADCRUMB_HOME}}").join(ui.labels.breadcrumbHome)
     .split("{{NAV_CATEGORIES}}").join(ui.nav.categories)
     .split("{{NAV_ALL_TOOLS}}").join(ui.nav.allTools)

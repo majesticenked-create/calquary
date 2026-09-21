@@ -54,6 +54,19 @@
   <link rel="stylesheet" href="/css/styles.css" />
   <script src="/js/theme.js" defer></script>
   <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Client-side email de-obfuscation: the address is split into a
+      // user/domain pair in the HTML (never written as a literal
+      // "user@domain" string) and assembled here, so we don't depend on
+      // any host's server-side email-obfuscation edge feature.
+      document.querySelectorAll("[data-email-user]").forEach((el) => {
+        const addr = `${el.getAttribute("data-email-user")}@${el.getAttribute("data-email-domain")}`;
+        el.textContent = addr;
+        if (el.tagName === "A") el.href = `mailto:${addr}`;
+      });
+    });
+  </script>
 </head>
 <body>
 
@@ -82,7 +95,7 @@
     <div class="wrap">
       <div class="breadcrumb"><a href="/de/">Calquary</a> / Kontakt</div>
       <h1>Kontaktieren Sie uns - Schreiben Sie Calquary</h1>
-      <p style="max-width:56ch;">Einen Fehler gefunden, eine Idee für einen Rechner, oder eine Frage zu unserem Umgang mit Daten? Schreiben Sie uns an hello@calquary.com - wir lesen jede Nachricht, auch wenn Antworten ein paar Tage dauern können. Bei einer Fehlermeldung hilft es, den Namen des Rechners, die eingegebenen Zahlen sowie das erwartete gegenüber dem tatsächlichen Ergebnis anzugeben. Vorschläge für neue Rechner sind besonders willkommen - die meisten Tools auf Calquary begannen als Leseranfrage, und wir verfolgen, wie oft ein Rechner gewünscht wird, bevor wir entscheiden, was als Nächstes entwickelt wird.</p>
+      <p style="max-width:56ch;">Einen Fehler gefunden, eine Idee für einen Rechner, oder eine Frage zu unserem Umgang mit Daten? Schreiben Sie uns an <a href="#" data-email-user="hello" data-email-domain="calquary.com">hello@calquary.com</a> - wir lesen jede Nachricht, auch wenn Antworten ein paar Tage dauern können. Bei einer Fehlermeldung hilft es, den Namen des Rechners, die eingegebenen Zahlen sowie das erwartete gegenüber dem tatsächlichen Ergebnis anzugeben. Vorschläge für neue Rechner sind besonders willkommen - die meisten Tools auf Calquary begannen als Leseranfrage, und wir verfolgen, wie oft ein Rechner gewünscht wird, bevor wir entscheiden, was als Nächstes entwickelt wird.</p>
     </div>
   </section>
 

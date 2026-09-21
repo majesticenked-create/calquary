@@ -54,6 +54,19 @@
   <link rel="stylesheet" href="/css/styles.css" />
   <script src="/js/theme.js" defer></script>
   <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Client-side email de-obfuscation: the address is split into a
+      // user/domain pair in the HTML (never written as a literal
+      // "user@domain" string) and assembled here, so we don't depend on
+      // any host's server-side email-obfuscation edge feature.
+      document.querySelectorAll("[data-email-user]").forEach((el) => {
+        const addr = `${el.getAttribute("data-email-user")}@${el.getAttribute("data-email-domain")}`;
+        el.textContent = addr;
+        if (el.tagName === "A") el.href = `mailto:${addr}`;
+      });
+    });
+  </script>
 </head>
 <body>
 
@@ -82,7 +95,7 @@
     <div class="wrap">
       <div class="breadcrumb"><a href="/">Calquary</a> / Contact</div>
       <h1>Contact Calquary - Bugs, Ideas & Questions</h1>
-      <p style="max-width:56ch;">Found a bug, have a calculator idea, or have a question about how we handle data? Email us at hello@calquary.com - we read every message, though replies may take a few days. If you're reporting a bug, it helps to include the calculator name, the numbers you entered, and what result you expected versus what you saw. Calculator suggestions are especially welcome - most of the tools already on Calquary started as a reader request, and we track requested calculators against how often they come up before deciding what to build next.</p>
+      <p style="max-width:56ch;">Found a bug, have a calculator idea, or have a question about how we handle data? Email us at <a href="#" data-email-user="hello" data-email-domain="calquary.com">hello@calquary.com</a> - we read every message, though replies may take a few days. If you're reporting a bug, it helps to include the calculator name, the numbers you entered, and what result you expected versus what you saw. Calculator suggestions are especially welcome - most of the tools already on Calquary started as a reader request, and we track requested calculators against how often they come up before deciding what to build next.</p>
     </div>
   </section>
 

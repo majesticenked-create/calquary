@@ -54,6 +54,19 @@
   <link rel="stylesheet" href="/css/styles.css" />
   <script src="/js/theme.js" defer></script>
   <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Client-side email de-obfuscation: the address is split into a
+      // user/domain pair in the HTML (never written as a literal
+      // "user@domain" string) and assembled here, so we don't depend on
+      // any host's server-side email-obfuscation edge feature.
+      document.querySelectorAll("[data-email-user]").forEach((el) => {
+        const addr = `${el.getAttribute("data-email-user")}@${el.getAttribute("data-email-domain")}`;
+        el.textContent = addr;
+        if (el.tagName === "A") el.href = `mailto:${addr}`;
+      });
+    });
+  </script>
 </head>
 <body>
 
@@ -82,7 +95,7 @@
     <div class="wrap">
       <div class="breadcrumb"><a href="/it/">Calquary</a> / Contatti</div>
       <h1>Contattaci - Scrivi a Calquary</h1>
-      <p style="max-width:56ch;">Hai trovato un bug, hai un'idea per una calcolatrice o una domanda su come gestiamo i dati? Scrivici a hello@calquary.com - leggiamo ogni messaggio, anche se le risposte potrebbero richiedere alcuni giorni. Se stai segnalando un bug, è utile includere il nome della calcolatrice, i numeri inseriti e il risultato atteso rispetto a quello ottenuto. I suggerimenti per nuove calcolatrici sono particolarmente graditi - la maggior parte degli strumenti già presenti su Calquary è nata da una richiesta dei lettori, e teniamo traccia della frequenza delle richieste prima di decidere cosa sviluppare in seguito.</p>
+      <p style="max-width:56ch;">Hai trovato un bug, hai un'idea per una calcolatrice o una domanda su come gestiamo i dati? Scrivici a <a href="#" data-email-user="hello" data-email-domain="calquary.com">hello@calquary.com</a> - leggiamo ogni messaggio, anche se le risposte potrebbero richiedere alcuni giorni. Se stai segnalando un bug, è utile includere il nome della calcolatrice, i numeri inseriti e il risultato atteso rispetto a quello ottenuto. I suggerimenti per nuove calcolatrici sono particolarmente graditi - la maggior parte degli strumenti già presenti su Calquary è nata da una richiesta dei lettori, e teniamo traccia della frequenza delle richieste prima di decidere cosa sviluppare in seguito.</p>
     </div>
   </section>
 

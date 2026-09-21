@@ -54,6 +54,19 @@
   <link rel="stylesheet" href="/css/styles.css" />
   <script src="/js/theme.js" defer></script>
   <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Client-side email de-obfuscation: the address is split into a
+      // user/domain pair in the HTML (never written as a literal
+      // "user@domain" string) and assembled here, so we don't depend on
+      // any host's server-side email-obfuscation edge feature.
+      document.querySelectorAll("[data-email-user]").forEach((el) => {
+        const addr = `${el.getAttribute("data-email-user")}@${el.getAttribute("data-email-domain")}`;
+        el.textContent = addr;
+        if (el.tagName === "A") el.href = `mailto:${addr}`;
+      });
+    });
+  </script>
 </head>
 <body>
 
@@ -82,7 +95,7 @@
     <div class="wrap">
       <div class="breadcrumb"><a href="/zh/">Calquary</a> / 联系我们</div>
       <h1>联系 Calquary - 错误反馈、想法与问题</h1>
-      <p style="max-width:56ch;">发现了一个错误、有计算器的新想法，或者对我们如何处理数据有疑问？欢迎发送邮件至 hello@calquary.com——我们会阅读每一条消息，不过回复可能需要几天时间。如果你在反馈错误，附上计算器的名称、你输入的数字，以及你期望得到的结果和实际看到的结果会很有帮助。我们也特别欢迎计算器方面的建议——Calquary 上现有的大多数工具最初都是来自读者的请求，我们会关注请求出现的频率，再决定接下来要开发什么。</p>
+      <p style="max-width:56ch;">发现了一个错误、有计算器的新想法，或者对我们如何处理数据有疑问？欢迎发送邮件至 <a href="#" data-email-user="hello" data-email-domain="calquary.com">hello@calquary.com</a>——我们会阅读每一条消息，不过回复可能需要几天时间。如果你在反馈错误，附上计算器的名称、你输入的数字，以及你期望得到的结果和实际看到的结果会很有帮助。我们也特别欢迎计算器方面的建议——Calquary 上现有的大多数工具最初都是来自读者的请求，我们会关注请求出现的频率，再决定接下来要开发什么。</p>
     </div>
   </section>
 

@@ -54,6 +54,19 @@
   <link rel="stylesheet" href="/css/styles.css" />
   <script src="/js/theme.js" defer></script>
   <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Client-side email de-obfuscation: the address is split into a
+      // user/domain pair in the HTML (never written as a literal
+      // "user@domain" string) and assembled here, so we don't depend on
+      // any host's server-side email-obfuscation edge feature.
+      document.querySelectorAll("[data-email-user]").forEach((el) => {
+        const addr = `${el.getAttribute("data-email-user")}@${el.getAttribute("data-email-domain")}`;
+        el.textContent = addr;
+        if (el.tagName === "A") el.href = `mailto:${addr}`;
+      });
+    });
+  </script>
 </head>
 <body>
 
@@ -82,7 +95,7 @@
     <div class="wrap">
       <div class="breadcrumb"><a href="/ar/">Calquary</a> / تواصل معنا</div>
       <h1>تواصل مع Calquary - أخطاء وأفكار وأسئلة</h1>
-      <p style="max-width:56ch;">هل وجدت خطأ، أو لديك فكرة لحاسبة، أو سؤال حول كيفية تعاملنا مع البيانات؟ راسلنا على hello@calquary.com - نقرأ كل رسالة، رغم أن الرد قد يستغرق بضعة أيام. إذا كنت تبلّغ عن خطأ، يساعد إرفاق اسم الحاسبة والأرقام التي أدخلتها والنتيجة التي توقعتها مقارنة بما رأيته فعليًا. اقتراحات الحاسبات مرحّب بها بشكل خاص - بدأت معظم الأدوات الموجودة بالفعل على Calquary كطلب من أحد القراء، ونتابع مدى تكرار الطلبات قبل أن نقرر ما سنطوّره لاحقًا.</p>
+      <p style="max-width:56ch;">هل وجدت خطأ، أو لديك فكرة لحاسبة، أو سؤال حول كيفية تعاملنا مع البيانات؟ راسلنا على <a href="#" data-email-user="hello" data-email-domain="calquary.com">hello@calquary.com</a> - نقرأ كل رسالة، رغم أن الرد قد يستغرق بضعة أيام. إذا كنت تبلّغ عن خطأ، يساعد إرفاق اسم الحاسبة والأرقام التي أدخلتها والنتيجة التي توقعتها مقارنة بما رأيته فعليًا. اقتراحات الحاسبات مرحّب بها بشكل خاص - بدأت معظم الأدوات الموجودة بالفعل على Calquary كطلب من أحد القراء، ونتابع مدى تكرار الطلبات قبل أن نقرر ما سنطوّره لاحقًا.</p>
     </div>
   </section>
 

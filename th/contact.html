@@ -54,6 +54,19 @@
   <link rel="stylesheet" href="/css/styles.css" />
   <script src="/js/theme.js" defer></script>
   <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Client-side email de-obfuscation: the address is split into a
+      // user/domain pair in the HTML (never written as a literal
+      // "user@domain" string) and assembled here, so we don't depend on
+      // any host's server-side email-obfuscation edge feature.
+      document.querySelectorAll("[data-email-user]").forEach((el) => {
+        const addr = `${el.getAttribute("data-email-user")}@${el.getAttribute("data-email-domain")}`;
+        el.textContent = addr;
+        if (el.tagName === "A") el.href = `mailto:${addr}`;
+      });
+    });
+  </script>
 </head>
 <body>
 
@@ -82,7 +95,7 @@
     <div class="wrap">
       <div class="breadcrumb"><a href="/th/">Calquary</a> / ติดต่อเรา</div>
       <h1>ติดต่อ Calquary - ข้อผิดพลาด ไอเดีย และคำถาม</h1>
-      <p style="max-width:56ch;">พบข้อผิดพลาด มีไอเดียสำหรับเครื่องคำนวณ หรือมีคำถามเกี่ยวกับวิธีที่เราจัดการข้อมูลหรือไม่? ส่งอีเมลถึงเราที่ hello@calquary.com - เราอ่านทุกข้อความ แม้ว่าการตอบกลับอาจใช้เวลาสองสามวัน หากคุณกำลังรายงานข้อผิดพลาด การแนบชื่อเครื่องคำนวณ ตัวเลขที่คุณป้อน และผลลัพธ์ที่คุณคาดหวังเทียบกับสิ่งที่คุณเห็นจะช่วยได้มาก ข้อเสนอแนะสำหรับเครื่องคำนวณเป็นที่ยินดีอย่างยิ่ง - เครื่องมือส่วนใหญ่ที่มีอยู่แล้วบน Calquary เริ่มต้นจากคำขอของผู้อ่าน และเราติดตามความถี่ของคำขอก่อนตัดสินใจว่าจะพัฒนาอะไรต่อไป</p>
+      <p style="max-width:56ch;">พบข้อผิดพลาด มีไอเดียสำหรับเครื่องคำนวณ หรือมีคำถามเกี่ยวกับวิธีที่เราจัดการข้อมูลหรือไม่? ส่งอีเมลถึงเราที่ <a href="#" data-email-user="hello" data-email-domain="calquary.com">hello@calquary.com</a> - เราอ่านทุกข้อความ แม้ว่าการตอบกลับอาจใช้เวลาสองสามวัน หากคุณกำลังรายงานข้อผิดพลาด การแนบชื่อเครื่องคำนวณ ตัวเลขที่คุณป้อน และผลลัพธ์ที่คุณคาดหวังเทียบกับสิ่งที่คุณเห็นจะช่วยได้มาก ข้อเสนอแนะสำหรับเครื่องคำนวณเป็นที่ยินดีอย่างยิ่ง - เครื่องมือส่วนใหญ่ที่มีอยู่แล้วบน Calquary เริ่มต้นจากคำขอของผู้อ่าน และเราติดตามความถี่ของคำขอก่อนตัดสินใจว่าจะพัฒนาอะไรต่อไป</p>
     </div>
   </section>
 

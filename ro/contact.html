@@ -54,6 +54,19 @@
   <link rel="stylesheet" href="/css/styles.css" />
   <script src="/js/theme.js" defer></script>
   <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Client-side email de-obfuscation: the address is split into a
+      // user/domain pair in the HTML (never written as a literal
+      // "user@domain" string) and assembled here, so we don't depend on
+      // any host's server-side email-obfuscation edge feature.
+      document.querySelectorAll("[data-email-user]").forEach((el) => {
+        const addr = `${el.getAttribute("data-email-user")}@${el.getAttribute("data-email-domain")}`;
+        el.textContent = addr;
+        if (el.tagName === "A") el.href = `mailto:${addr}`;
+      });
+    });
+  </script>
 </head>
 <body>
 
@@ -82,7 +95,7 @@
     <div class="wrap">
       <div class="breadcrumb"><a href="/ro/">Calquary</a> / Contact</div>
       <h1>Contactează Calquary - Erori, Idei și Întrebări</h1>
-      <p style="max-width:56ch;">Ai găsit o eroare, ai o idee pentru un calculator sau o întrebare despre cum gestionăm datele? Scrie-ne la hello@calquary.com - citim fiecare mesaj, deși răspunsul poate dura câteva zile. Dacă raportezi o eroare, ajută să incluzi numele calculatorului, numerele introduse și rezultatul așteptat comparat cu cel obținut. Sugestiile de calculatoare sunt binevenite - majoritatea instrumentelor deja prezente pe Calquary au pornit ca solicitări ale cititorilor, iar noi urmărim frecvența cererilor înainte de a decide ce construim în continuare.</p>
+      <p style="max-width:56ch;">Ai găsit o eroare, ai o idee pentru un calculator sau o întrebare despre cum gestionăm datele? Scrie-ne la <a href="#" data-email-user="hello" data-email-domain="calquary.com">hello@calquary.com</a> - citim fiecare mesaj, deși răspunsul poate dura câteva zile. Dacă raportezi o eroare, ajută să incluzi numele calculatorului, numerele introduse și rezultatul așteptat comparat cu cel obținut. Sugestiile de calculatoare sunt binevenite - majoritatea instrumentelor deja prezente pe Calquary au pornit ca solicitări ale cititorilor, iar noi urmărim frecvența cererilor înainte de a decide ce construim în continuare.</p>
     </div>
   </section>
 

@@ -54,6 +54,19 @@
   <link rel="stylesheet" href="/css/styles.css" />
   <script src="/js/theme.js" defer></script>
   <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Client-side email de-obfuscation: the address is split into a
+      // user/domain pair in the HTML (never written as a literal
+      // "user@domain" string) and assembled here, so we don't depend on
+      // any host's server-side email-obfuscation edge feature.
+      document.querySelectorAll("[data-email-user]").forEach((el) => {
+        const addr = `${el.getAttribute("data-email-user")}@${el.getAttribute("data-email-domain")}`;
+        el.textContent = addr;
+        if (el.tagName === "A") el.href = `mailto:${addr}`;
+      });
+    });
+  </script>
 </head>
 <body>
 
@@ -82,7 +95,7 @@
     <div class="wrap">
       <div class="breadcrumb"><a href="/es/">Calquary</a> / Contacto</div>
       <h1>Contacto - Escríbenos a Calquary</h1>
-      <p style="max-width:56ch;">¿Encontraste un error, tienes una idea para una calculadora o una pregunta sobre cómo manejamos los datos? Escríbenos a hello@calquary.com - leemos todos los mensajes, aunque las respuestas pueden tardar unos días. Si reportas un error, ayuda incluir el nombre de la calculadora, los números que introdujiste y qué resultado esperabas frente al que obtuviste. Las sugerencias de calculadoras son especialmente bienvenidas - la mayoría de las herramientas de Calquary comenzaron como una petición de un lector, y llevamos seguimiento de las calculadoras solicitadas según su frecuencia antes de decidir qué construir a continuación.</p>
+      <p style="max-width:56ch;">¿Encontraste un error, tienes una idea para una calculadora o una pregunta sobre cómo manejamos los datos? Escríbenos a <a href="#" data-email-user="hello" data-email-domain="calquary.com">hello@calquary.com</a> - leemos todos los mensajes, aunque las respuestas pueden tardar unos días. Si reportas un error, ayuda incluir el nombre de la calculadora, los números que introdujiste y qué resultado esperabas frente al que obtuviste. Las sugerencias de calculadoras son especialmente bienvenidas - la mayoría de las herramientas de Calquary comenzaron como una petición de un lector, y llevamos seguimiento de las calculadoras solicitadas según su frecuencia antes de decidir qué construir a continuación.</p>
     </div>
   </section>
 

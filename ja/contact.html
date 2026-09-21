@@ -54,6 +54,19 @@
   <link rel="stylesheet" href="/css/styles.css" />
   <script src="/js/theme.js" defer></script>
   <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Client-side email de-obfuscation: the address is split into a
+      // user/domain pair in the HTML (never written as a literal
+      // "user@domain" string) and assembled here, so we don't depend on
+      // any host's server-side email-obfuscation edge feature.
+      document.querySelectorAll("[data-email-user]").forEach((el) => {
+        const addr = `${el.getAttribute("data-email-user")}@${el.getAttribute("data-email-domain")}`;
+        el.textContent = addr;
+        if (el.tagName === "A") el.href = `mailto:${addr}`;
+      });
+    });
+  </script>
 </head>
 <body>
 
@@ -82,7 +95,7 @@
     <div class="wrap">
       <div class="breadcrumb"><a href="/ja/">Calquary</a> / お問い合わせ</div>
       <h1>お問い合わせ - Calquaryへのご連絡</h1>
-      <p style="max-width:56ch;">不具合の報告、計算ツールのアイデア、データの取り扱いについてのご質問などがございましたら、hello@calquary.com までご連絡ください。すべてのメッセージに目を通しておりますが、返信までに数日かかる場合があります。不具合を報告される際は、対象の計算ツール名、入力した数値、そして期待していた結果と実際の結果を書き添えていただけると助かります。新しい計算ツールのご提案も特に歓迎しています。Calquaryに掲載されているツールの多くは読者からのリクエストがきっかけで生まれており、リクエストの頻度を確認しながら次に開発するツールを決めています。</p>
+      <p style="max-width:56ch;">不具合の報告、計算ツールのアイデア、データの取り扱いについてのご質問などがございましたら、<a href="#" data-email-user="hello" data-email-domain="calquary.com">hello@calquary.com</a> までご連絡ください。すべてのメッセージに目を通しておりますが、返信までに数日かかる場合があります。不具合を報告される際は、対象の計算ツール名、入力した数値、そして期待していた結果と実際の結果を書き添えていただけると助かります。新しい計算ツールのご提案も特に歓迎しています。Calquaryに掲載されているツールの多くは読者からのリクエストがきっかけで生まれており、リクエストの頻度を確認しながら次に開発するツールを決めています。</p>
     </div>
   </section>
 
