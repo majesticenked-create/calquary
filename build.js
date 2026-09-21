@@ -522,6 +522,28 @@ function truncate(text, maxLen) {
   return `${cut.slice(0, lastSpace > 0 ? lastSpace : maxLen)}…`;
 }
 
+// Locale-aware <title> length guard. Translated tool titles run longer
+// than their English source (romance-language locales especially - fr,
+// it, pt, es, el, ro, de, th, ar all averaged well over the ~60-char
+// guideline once " - {titleSuffix} | Calquary" is appended on top of an
+// already-longer translated title), while English titles built from the
+// same template fit fine. Rather than truncate the tool name itself (the
+// part someone actually searched for), drop the " | Calquary" brand
+// suffix first - it's the one part of the title that's safe to lose.
+const TITLE_MAX_LEN = 60;
+function fitTitle(fullTitleWithBrand, titleWithoutBrand) {
+  return fullTitleWithBrand.length > TITLE_MAX_LEN ? titleWithoutBrand : fullTitleWithBrand;
+}
+
+// Meta descriptions run long in the same locale cluster for the same
+// reason (translated sentences are longer than their English source) -
+// truncate at a word boundary rather than let the SERP snippet get cut
+// off mid-word. 160 chars matches the standard meta-description guideline.
+const META_DESCRIPTION_MAX_LEN = 160;
+function fitDescription(text) {
+  return truncate(text, META_DESCRIPTION_MAX_LEN);
+}
+
 function ogMetaTags({ title, description, url, image, locale }) {
   return [
     `<meta property="og:title" content="${escapeAttr(title)}">`,
@@ -616,9 +638,12 @@ function buildToolPage(template, locale, calc, cat, I18N) {
   // titles that are actually short get the suffix, so already-adequate
   // ones stay untouched.
   const baseEnTitle = `${t.title} | Calquary`;
+  const nonEnTitleWithoutBrand = `${t.title} - ${ui.labels.titleSuffix}`;
   const pageTitle = locale === "en"
     ? (baseEnTitle.length < 30 ? `${t.title} - Free Online Calculator | Calquary` : baseEnTitle)
-    : `${t.title} - ${ui.labels.titleSuffix} | Calquary`;
+    : fitTitle(`${nonEnTitleWithoutBrand} | Calquary`, nonEnTitleWithoutBrand);
+
+  const metaDescription = locale === "en" ? t.description : fitDescription(t.description);
 
   return template
     .split("{{LANG}}").join(locale)
@@ -628,7 +653,7 @@ function buildToolPage(template, locale, calc, cat, I18N) {
     .split("{{TITLE}}").join(t.title)
     .split("{{PAGE_TITLE}}").join(pageTitle)
     .split("{{INTRO}}").join(t.intro)
-    .split("{{DESCRIPTION}}").join(t.description)
+    .split("{{DESCRIPTION}}").join(metaDescription)
     .split("{{FAQ_HTML}}").join(faqHtml)
     .split("{{FAQ_TITLE}}").join(ui.labels.faqTitle)
     .split("{{LAST_UPDATED_LABEL}}").join(ui.labels.lastUpdated)
