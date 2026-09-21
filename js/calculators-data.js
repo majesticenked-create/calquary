@@ -3026,7 +3026,7 @@ const CALCULATORS = [
     category: "finance",
     title: "Mortgage Calculator",
     keyword: "mortgage calculator",
-    description: "Free mtg (mortgage) calculator - estimate your total monthly mortgage payment, including taxes, insurance, and PMI.",
+    description: "Mortgage calculator: estimate your monthly payment - principal, interest, taxes, insurance, and PMI - with a 15 vs. 30-year comparison.",
     intro: "Also known as a home loan calculator: enter your home price, down payment, rate, and term to estimate your full monthly payment - principal, interest, property tax, insurance, and PMI.",
     fields: [
       { id: "homePrice", label: "Home price", type: "number", unit: "$", default: 350000, step: 1000, min: 0 },

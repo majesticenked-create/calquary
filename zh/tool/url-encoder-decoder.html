@@ -227,7 +227,7 @@
         <p class="last-updated">最后更新： September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
-        <div class="calc-panel">
+        <div class="calc-panel" id="calc-panel">
           <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
           <form id="calc-form">
             <div id="calc-fields"></div>
@@ -278,6 +278,7 @@
 <h3>我可以解码同时包含%20和+表示空格的URL吗？</h3>
 <p>这个工具的解码模式会把%XX格式的百分号序列转换回原始字符，但查询字符串中字面的+号是另一种代表空格的旧式惯例，单靠百分号解码无法处理它——如果你的输入混合了这两种惯例，可能需要在解码前后手动把+替换成空格。</p>
 </div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">计算</a>
         </div>
       </main>
 

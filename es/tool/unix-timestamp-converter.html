@@ -219,7 +219,7 @@
         <p class="last-updated">Última actualización: August 30, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
-        <div class="calc-panel">
+        <div class="calc-panel" id="calc-panel">
           <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
           <form id="calc-form">
             <div id="calc-fields"></div>
@@ -266,6 +266,7 @@
 <h3>¿Por qué mi marca de tiempo se ve 3 o 10 dígitos diferente de lo esperado?</h3>
 <p>Algunos sistemas usan milisegundos desde el epoch en lugar de segundos - una marca de tiempo en milisegundos tiene 3 dígitos extra (13 dígitos vs. 10 para una marca de tiempo del día actual en segundos). Divide una marca de tiempo en milisegundos entre 1,000 antes de introducirla aquí.</p>
 </div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calcular</a>
         </div>
       </main>
 

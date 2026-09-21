@@ -227,7 +227,7 @@
         <p class="last-updated">Last updated: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
-        <div class="calc-panel">
+        <div class="calc-panel" id="calc-panel">
           <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
           <form id="calc-form">
             <div id="calc-fields"></div>
@@ -278,6 +278,7 @@
 <h3>Can I decode a URL that has both %20 and + representing spaces?</h3>
 <p>This tool's decode mode converts %XX percent-sequences back to their original characters, but a literal + in a query string is a separate legacy convention for spaces that percent-decoding alone won't touch - if your input mixes both conventions, you may need to replace + with a space manually before or after decoding.</p>
 </div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculate</a>
         </div>
       </main>
 

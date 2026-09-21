@@ -219,7 +219,7 @@
         <p class="last-updated">Last updated: August 30, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
-        <div class="calc-panel">
+        <div class="calc-panel" id="calc-panel">
           <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
           <form id="calc-form">
             <div id="calc-fields"></div>
@@ -266,6 +266,7 @@
 <h3>Why does my timestamp look 3 or 10 digits different from what I expected?</h3>
 <p>Some systems use milliseconds since the epoch instead of seconds - a timestamp in milliseconds has 3 extra digits (13 digits vs. 10 for a current-day timestamp in seconds). Divide a millisecond timestamp by 1,000 before entering it here.</p>
 </div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculate</a>
         </div>
       </main>
 

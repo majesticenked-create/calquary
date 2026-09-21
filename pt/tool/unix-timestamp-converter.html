@@ -219,7 +219,7 @@
         <p class="last-updated">Última atualização: August 30, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
-        <div class="calc-panel">
+        <div class="calc-panel" id="calc-panel">
           <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
           <form id="calc-form">
             <div id="calc-fields"></div>
@@ -266,6 +266,7 @@
 <h3>Por que meu timestamp parece 3 ou 10 dígitos diferente do esperado?</h3>
 <p>Alguns sistemas usam milissegundos desde o epoch em vez de segundos - um timestamp em milissegundos tem 3 dígitos extras (13 dígitos vs. 10 para um timestamp do dia atual em segundos). Divida um timestamp em milissegundos por 1.000 antes de inseri-lo aqui.</p>
 </div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calcular</a>
         </div>
       </main>
 

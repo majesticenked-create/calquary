@@ -219,7 +219,7 @@
         <p class="last-updated">最終更新日： September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
-        <div class="calc-panel">
+        <div class="calc-panel" id="calc-panel">
           <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
           <form id="calc-form">
             <div id="calc-fields"></div>
@@ -266,6 +266,7 @@
 <h3>/29ネットワークに対応するサブネットマスクは何ですか？</h3>
 <p>255.255.255.248です。/29プレフィックスは32ビットのうち29ビットをネットワーク用に使い、ホスト用には3ビットしか残りません（合計8アドレス、使用可能は6個）。これをマスクとして表すと255.255.255の後に248（2進数で11111000）が続きます。</p>
 </div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">計算する</a>
         </div>
       </main>
 

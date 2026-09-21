@@ -219,7 +219,7 @@
         <p class="last-updated">Dernière mise à jour : August 30, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
-        <div class="calc-panel">
+        <div class="calc-panel" id="calc-panel">
           <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
           <form id="calc-form">
             <div id="calc-fields"></div>
@@ -266,6 +266,7 @@
 <h3>Pourquoi mon horodatage semble-t-il avoir 3 ou 10 chiffres différents de ce que j'attendais ?</h3>
 <p>Certains systèmes utilisent les millisecondes depuis l'epoch au lieu des secondes - un horodatage en millisecondes a 3 chiffres supplémentaires (13 chiffres contre 10 pour un horodatage du jour actuel en secondes). Divisez un horodatage en millisecondes par 1 000 avant de l'indiquer ici.</p>
 </div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculer</a>
         </div>
       </main>
 

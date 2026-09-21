@@ -227,7 +227,7 @@
         <p class="last-updated">Última actualización: September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
-        <div class="calc-panel">
+        <div class="calc-panel" id="calc-panel">
           <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
           <form id="calc-form">
             <div id="calc-fields"></div>
@@ -278,6 +278,7 @@
 <h3>¿Puedo decodificar una URL que tiene tanto %20 como + representando espacios?</h3>
 <p>El modo de decodificación de esta herramienta convierte las secuencias de porcentaje %XX de vuelta a sus caracteres originales, pero un + literal en una cadena de consulta es una convención heredada separada para espacios que la decodificación de porcentaje por sí sola no tocará - si tu entrada mezcla ambas convenciones, quizás necesites reemplazar + con un espacio manualmente antes o después de decodificar.</p>
 </div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calcular</a>
         </div>
       </main>
 

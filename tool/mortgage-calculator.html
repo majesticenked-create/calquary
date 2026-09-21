@@ -15,9 +15,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mortgage Calculator | Calquary</title>
-  <meta name="description" content="Free mtg (mortgage) calculator - estimate your total monthly mortgage payment, including taxes, insurance, and PMI." />
+  <meta name="description" content="Mortgage calculator: estimate your monthly payment - principal, interest, taxes, insurance, and PMI - with a 15 vs. 30-year comparison." />
   <meta property="og:title" content="Mortgage Calculator | Calquary">
-  <meta property="og:description" content="Free mtg (mortgage) calculator - estimate your total monthly mortgage payment, including taxes, insurance, and PMI.">
+  <meta property="og:description" content="Mortgage calculator: estimate your monthly payment - principal, interest, taxes, insurance, and PMI - with a 15 vs. 30-year comparison.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/tool/mortgage-calculator">
   <meta property="og:locale" content="en_US">
@@ -27,7 +27,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Mortgage Calculator | Calquary">
-  <meta name="twitter:description" content="Free mtg (mortgage) calculator - estimate your total monthly mortgage payment, including taxes, insurance, and PMI.">
+  <meta name="twitter:description" content="Mortgage calculator: estimate your monthly payment - principal, interest, taxes, insurance, and PMI - with a 15 vs. 30-year comparison.">
   <meta name="twitter:image" content="https://calquary.com/og-images/mortgage-calculator.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/mortgage-calculator">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/mortgage-calculator">
@@ -89,7 +89,7 @@
     {
       "@type": "SoftwareApplication",
       "name": "Mortgage Calculator",
-      "description": "Free mtg (mortgage) calculator - estimate your total monthly mortgage payment, including taxes, insurance, and PMI.",
+      "description": "Mortgage calculator: estimate your monthly payment - principal, interest, taxes, insurance, and PMI - with a 15 vs. 30-year comparison.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/tool/mortgage-calculator",
@@ -235,7 +235,7 @@
         <p class="last-updated">Last updated: September 21, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
-        <div class="calc-panel">
+        <div class="calc-panel" id="calc-panel">
           <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
           <form id="calc-form">
             <div id="calc-fields"></div>
@@ -290,6 +290,7 @@
 <h3>Is a home loan calculator the same as a mortgage calculator?</h3>
 <p>Yes - "home loan" and "mortgage" refer to the same type of loan used to buy a house, so a home loan calculator and a mortgage calculator do the same job. This tool estimates your full monthly payment (principal, interest, taxes, insurance, and PMI) whichever term you search for.</p>
 </div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculate</a>
         </div>
       </main>
 

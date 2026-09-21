@@ -227,7 +227,7 @@
         <p class="last-updated">最終更新日： September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
-        <div class="calc-panel">
+        <div class="calc-panel" id="calc-panel">
           <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
           <form id="calc-form">
             <div id="calc-fields"></div>
@@ -278,6 +278,7 @@
 <h3>なぜフェンスの長さをパネル幅で割るだけでは支柱の本数が求められないのですか？</h3>
 <p>長さをパネル幅で割るとパネル数は求まりますが、直線区間では隣接するパネルが支柱を共有します（ライン両端の開いた部分を除く）。そのため支柱の本数が1本少なく数えられてしまいます。これが、この計算機が支柱数をパネル数プラス1として報告する理由です。</p>
 </div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">計算する</a>
         </div>
       </main>
 

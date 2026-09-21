@@ -227,7 +227,7 @@
         <p class="last-updated">Dernière mise à jour : September 5, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
-        <div class="calc-panel">
+        <div class="calc-panel" id="calc-panel">
           <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
           <form id="calc-form">
             <div id="calc-fields"></div>
@@ -278,6 +278,7 @@
 <h3>Puis-je décoder une URL qui contient à la fois %20 et + pour représenter des espaces ?</h3>
 <p>Le mode de décodage de cet outil convertit les séquences pourcentage %XX en leurs caractères d'origine, mais un + littéral dans une chaîne de requête est une convention héritée distincte pour les espaces que le décodage pourcentage seul ne touchera pas - si votre entrée mélange les deux conventions, vous devrez peut-être remplacer manuellement + par un espace avant ou après le décodage.</p>
 </div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculer</a>
         </div>
       </main>
 
