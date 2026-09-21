@@ -81,7 +81,7 @@ const WAVE_ONE_TOOL_IDS = [
   "current-time", "random-date-generator", "military-time-converter", "unix-timestamp-converter",
   "week-number-calculator", "time-zone-converter", "daylight-saving-time-calculator",
   "sunrise-sunset-calculator", "sun-position-calculator", "day-of-week-calculator",
-  "leap-year-calculator", "birth-year-calculator", "time-zone-meeting-planner", "day-of-the-week-calculator",
+  "leap-year-calculator", "birth-year-calculator", "time-zone-meeting-planner",
   "screen-ppi-calculator", "print-dpi-calculator", "time-unit-converter", "oven-temperature-converter",
   "rainfall-volume-calculator", "water-density-calculator", "weight-converter",
   "volume-converter", "cooking-converter", "microwave-wattage-converter",
@@ -1143,10 +1143,31 @@ function build() {
   });
 
   buildSitemap(categories, calculators);
+  buildRedirects();
 
   console.log(`Built ${toolPageCount} tool pages (${calculators.length} EN + ${WAVE_ONE_TOOL_IDS.length} × ${LOCALES.length - 1} locales) and ${categoryPageCount} category pages (${categories.length} × ${LOCALES.length} locales)`);
   console.log(`Built ${LOCALES.length} homepage / about / contact / privacy / terms page sets (${LOCALES.join(", ")})`);
   console.log(`Generated ${calculators.length + categories.length + 1} OG images in ${ogMs}ms`);
+}
+
+// Legacy tool-slug renames/merges: old slug -> canonical slug, redirected
+// with a 301 across every locale so old links/bookmarks/indexed pages land
+// on the surviving page instead of 404ing. Cloudflare Pages reads a
+// `_redirects` file at the site root; add a line here whenever a
+// calculator's id changes or a duplicate entry gets merged away.
+const LEGACY_TOOL_SLUGS = {
+  "day-of-the-week-calculator": "day-of-week-calculator",
+};
+
+function buildRedirects() {
+  const lines = [];
+  Object.entries(LEGACY_TOOL_SLUGS).forEach(([oldId, newId]) => {
+    LOCALES.forEach((locale) => {
+      const prefix = localePath(locale);
+      lines.push(`/${prefix}tool/${oldId} /${prefix}tool/${newId} 301`);
+    });
+  });
+  fs.writeFileSync(path.join(ROOT, "_redirects"), lines.join("\n") + "\n");
 }
 
 function buildSitemap(categories, calculators) {

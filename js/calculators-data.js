@@ -6368,28 +6368,35 @@ const CALCULATORS = [
     category: "datetime",
     title: "Day of the Week Calculator",
     keyword: "day of the week calculator",
-    description: "Find what day of the week any date falls on.",
-    intro: "Enter a date to find out what day of the week it falls on - past, present, or future.",
+    description: "Find what day of the week any date falls on, past or future.",
+    intro: "Enter any date to find out what day of the week it falls on.",
     fields: [
-      { id: "date", label: "Date", type: "date", default: "2000-01-01" },
+      { id: "date", label: "Date", type: "date", default: todayDateString() },
     ],
     compute: (v) => {
-      const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
       const [y, m, d] = v.date.split("-").map(Number);
-      const dateObj = new Date(y, m - 1, d);
+      const date = new Date(Date.UTC(y, m - 1, d));
+      const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      const dayName = days[date.getUTCDay()];
+      const dayOfYear = Math.round((date - new Date(Date.UTC(y, 0, 1))) / 86400000) + 1;
+      const weekNum = Math.ceil((dayOfYear + new Date(Date.UTC(y, 0, 1)).getUTCDay()) / 7);
       return {
-        primary: { label: "Day of the week", value: dayNames[dateObj.getDay()] },
-        secondary: [],
+        primary: { label: "Day of the week", value: dayName },
+        secondary: [
+          { l: "Day of the year", v: dayOfYear },
+          { l: "Approximate week number", v: weekNum },
+        ],
+        note: "Uses the proleptic Gregorian calendar, which works correctly for any date, past or future - including dates before the Gregorian calendar's 1582 adoption (calculated as if it had always been in use).",
       };
     },
     faq: [
-      { q: "What day of the week was January 1, 2000?", a: "Saturday. The new millennium began on a Saturday." },
-      { q: "How is the day of the week calculated for any date?", a: "It follows the standard Gregorian calendar's repeating 7-day cycle, accounting for leap years - the same logic your phone or computer's calendar app uses internally." },
-      { q: "Can this calculate the day of the week for historical dates, like the 1800s?", a: "Yes - the underlying calculation works directly from the Gregorian calendar's date rules, so it correctly returns the day of the week for any valid date, whether decades in the past or far in the future." },
-      { q: "Does this work for dates before the Gregorian calendar was adopted?", a: "This calculator uses the proleptic Gregorian calendar, which extends today's calendar rules backward in time - accurate for most modern historical purposes, but note that many countries didn't switch from the Julian calendar until the 1500s-1700s, so real historical records from that period may use a different day count." },
-      { q: "What day of the week is my birthday this year?", a: "Enter your birth month and day with the current year to see which weekday it falls on this year - the result cycles because a fixed date's weekday shifts by one (or two, across a leap year) each year." },
-      { q: "Why does the same date fall on a different weekday each year?", a: "A common (365-day) year is 52 weeks plus 1 day, so a fixed date's weekday advances by one each year; a leap year adds an extra day, pushing it forward by two instead - this is why a birthday cycles through all 7 weekdays roughly every 5-6 years." },
-      { q: "Is 'what day was I born' the same question this calculator answers?", a: "Yes - enter your exact birth date above and the result shows the weekday you were born on, using the same Gregorian calendar logic applied to any other date." },
+      { q: "What day of the week was January 1, 2000?", a: "Saturday - a widely known reference date, useful for verifying day-of-week calculations." },
+      { q: "How do you calculate the day of the week for any date?", a: "The most common method is Zeller's congruence, a formula that uses the day, month, and year (with January and February treated as months 13 and 14 of the previous year) to directly compute the day of the week without needing a calendar lookup." },
+      { q: "Does this work for dates far in the past or future?", a: "Yes - it uses the proleptic Gregorian calendar, meaning it applies today's calendar rules consistently to any date, even before the Gregorian calendar was actually adopted in 1582. Historical dates recorded under the Julian calendar may differ from this calculation." },
+      { q: "Why does knowing the day of the week matter for old or future dates?", a: "It's useful for genealogy research, verifying historical records, planning far-future events, or just satisfying curiosity about what day a birthday, anniversary, or historical event actually fell on." },
+      { q: "What day of the week will January 1, 2050 fall on?", a: "Enter that date above - the calculator applies the proleptic Gregorian calendar to compute it directly, working just as reliably for future dates decades out as it does for the present or the past." },
+      { q: "Does the day-of-week calculation change depending on my time zone?", a: "No - the result depends only on the calendar date you enter, not on time zone, since a given calendar date corresponds to exactly one weekday regardless of where you are." },
+      { q: "Is this the same as asking 'what day of the week does Christmas fall on'?", a: "Yes - enter December 25 with any year and this tool returns exactly that: the weekday a specific recurring date falls on for that particular year." },
     ],
     related: ["week-number-calculator", "date-duration-calculator", "leap-year-calculator"],
   },
@@ -7235,43 +7242,6 @@ const CALCULATORS = [
       { q: "Is 'kWh cost calculator' the same thing as this electricity cost calculator?", a: "Yes - both describe converting an appliance's power draw and usage time into a dollar cost based on your electricity rate, which is exactly what this tool calculates." },
     ],
     related: ["ohms-law-calculator", "gas-trip-cost-calculator", "microwave-wattage-converter"],
-  },
-  {
-    id: "day-of-the-week-calculator",
-    category: "datetime",
-    title: "Day of the Week Calculator",
-    keyword: "day of the week calculator",
-    description: "Find what day of the week any date falls on, past or future.",
-    intro: "Enter any date to find out what day of the week it falls on.",
-    fields: [
-      { id: "date", label: "Date", type: "date", default: todayDateString() },
-    ],
-    compute: (v) => {
-      const [y, m, d] = v.date.split("-").map(Number);
-      const date = new Date(Date.UTC(y, m - 1, d));
-      const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-      const dayName = days[date.getUTCDay()];
-      const dayOfYear = Math.round((date - new Date(Date.UTC(y, 0, 1))) / 86400000) + 1;
-      const weekNum = Math.ceil((dayOfYear + new Date(Date.UTC(y, 0, 1)).getUTCDay()) / 7);
-      return {
-        primary: { label: "Day of the week", value: dayName },
-        secondary: [
-          { l: "Day of the year", v: dayOfYear },
-          { l: "Approximate week number", v: weekNum },
-        ],
-        note: "Uses the proleptic Gregorian calendar, which works correctly for any date, past or future - including dates before the Gregorian calendar's 1582 adoption (calculated as if it had always been in use).",
-      };
-    },
-    faq: [
-      { q: "What day of the week was January 1, 2000?", a: "Saturday - a widely known reference date, useful for verifying day-of-week calculations." },
-      { q: "How do you calculate the day of the week for any date?", a: "The most common method is Zeller's congruence, a formula that uses the day, month, and year (with January and February treated as months 13 and 14 of the previous year) to directly compute the day of the week without needing a calendar lookup." },
-      { q: "Does this work for dates far in the past or future?", a: "Yes - it uses the proleptic Gregorian calendar, meaning it applies today's calendar rules consistently to any date, even before the Gregorian calendar was actually adopted in 1582. Historical dates recorded under the Julian calendar may differ from this calculation." },
-      { q: "Why does knowing the day of the week matter for old or future dates?", a: "It's useful for genealogy research, verifying historical records, planning far-future events, or just satisfying curiosity about what day a birthday, anniversary, or historical event actually fell on." },
-      { q: "What day of the week will January 1, 2050 fall on?", a: "Enter that date above - the calculator applies the proleptic Gregorian calendar to compute it directly, working just as reliably for future dates decades out as it does for the present or the past." },
-      { q: "Does the day-of-week calculation change depending on my time zone?", a: "No - the result depends only on the calendar date you enter, not on time zone, since a given calendar date corresponds to exactly one weekday regardless of where you are." },
-      { q: "Is this the same as asking 'what day of the week does Christmas fall on'?", a: "Yes - enter December 25 with any year and this tool returns exactly that: the weekday a specific recurring date falls on for that particular year." },
-    ],
-    related: ["days-until-calculator", "date-duration-calculator", "time-add-calculator"],
   },
   {
     id: "simple-interest-calculator",
