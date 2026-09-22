@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calcolatore dell'Area Basimetrica</title>
+  <meta name="description" content="Calcola l'area basimetrica forestale per albero e l'area basimetrica totale dal diametro a petto d'uomo (DBH)." />
+  <meta property="og:title" content="Calcolatore dell'Area Basimetrica | Calquary">
+  <meta property="og:description" content="Calcola l'area basimetrica forestale per albero e l'area basimetrica totale dal diametro a petto d'uomo (DBH).">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/it/tool/basal-area-calculator">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/basal-area-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calcolatore dell'Area Basimetrica | Calquary">
+  <meta name="twitter:description" content="Calcola l'area basimetrica forestale per albero e l'area basimetrica totale dal diametro a petto d'uomo (DBH).">
+  <meta name="twitter:image" content="https://calquary.com/og-images/basal-area-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/basal-area-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/basal-area-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/basal-area-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/basal-area-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/basal-area-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/basal-area-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/basal-area-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/basal-area-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/basal-area-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/basal-area-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/basal-area-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/basal-area-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/basal-area-calculator">
+    <link rel="canonical" href="https://calquary.com/it/tool/basal-area-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("basal-area-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("basal-area-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calcolatore dell'Area Basimetrica",
+      "description": "Calcola l'area basimetrica forestale per albero e l'area basimetrica totale dal diametro a petto d'uomo (DBH).",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/it/tool/basal-area-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "it"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/it/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/it/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calcolatore dell'Area Basimetrica",
+          "item": "https://calquary.com/it/tool/basal-area-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Cos'è il DBH e perché viene misurato specificamente a petto d'uomo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Il DBH (diametro a petto d'uomo) è il diametro del tronco di un albero misurato a un'altezza standardizzata di 4,5 piedi (1,37 m) da terra. Misurare a un'altezza fissa rende il DBH coerente e confrontabile tra alberi e rilievi, evitando l'allargamento e l'irregolarità comuni vicino alla base del tronco."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "A cosa serve l'area basimetrica in selvicoltura?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L'area basimetrica (l'area della sezione trasversale del tronco di un albero al DBH) è una misura standard di quanto della superficie di un sito sia occupata da tronchi d'albero - i selvicoltori usano l'area basimetrica totale del popolamento per valutare la densità di popolamento, pianificare i diradamenti e stimare il volume legnoso insieme all'altezza e alla forma dell'albero."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Da dove viene la costante 0,005454?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "È derivata dalla formula standard dell'area del cerchio (π/4), convertita per funzionare direttamente con il DBH in pollici e l'area basimetrica in piedi quadrati: π/4 ÷ 144 (pollici quadrati per piede quadrato) = 0,005454. Questo permette di passare direttamente da una misurazione del DBH in pollici all'area basimetrica in piedi quadrati senza un passaggio separato di conversione delle unità."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Come calcolo l'area basimetrica totale per un popolamento con alberi di dimensioni diverse?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Calcola l'area basimetrica per albero individualmente per ogni classe dimensionale di DBH presente, moltiplica ciascuna per il suo conteggio di alberi, quindi somma i risultati - questo calcolatore gestisce un valore DBH (con un conteggio di alberi) alla volta, quindi un popolamento misto richiede un calcolo per classe dimensionale, sommati insieme."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "L'area basimetrica è la stessa cosa dell'area della chioma o della copertura arborea?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - l'area basimetrica è l'area della sezione trasversale del tronco a petto d'uomo, non l'area coperta dalla chioma dell'albero vista dall'alto. Le due non sono direttamente proporzionali, poiché l'estensione della chioma dipende da specie, spaziatura e condizioni di crescita in modi che il diametro del tronco da solo non cattura."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual è un'area basimetrica tipica per un popolamento forestale ben popolato?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Varia sostanzialmente in base al tipo di foresta, alla regione e agli obiettivi di gestione, ma molti popolamenti gestiti puntano a un intervallo di circa 80-120 ft² di area basimetrica per acro - consulta le linee guida forestali specifiche per specie e regione per un obiettivo di popolamento rilevante per il tuo popolamento."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/it/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/it/#categories">Categorie</a>
+          <a href="/it/#tools">Tutti gli strumenti</a>
+          <a href="/it/about">Chi siamo</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Italiano">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>IT</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/basal-area-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/basal-area-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/basal-area-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/basal-area-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/basal-area-calculator">Português</a><span class="locale-item current" role="menuitem" aria-current="true">Italiano</span><a class="locale-item" role="menuitem" href="/ja/tool/basal-area-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/basal-area-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/basal-area-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/basal-area-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/basal-area-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/basal-area-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/it/">Calquary</a> / <a href="/it/category/biology">Biologia</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calcolatore dell'Area Basimetrica</h1>
+        <p style="max-width:60ch;">Inserisci il diametro a petto d'uomo (DBH) di un albero e, facoltativamente, il numero di alberi, per calcolare l'area basimetrica per albero e l'area basimetrica totale del popolamento.</p>
+        <p class="last-updated">Ultimo aggiornamento: September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calcola</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reimposta</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Domande frequenti</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Cos'è il DBH e perché viene misurato specificamente a petto d'uomo?</h3>
+<p>Il DBH (diametro a petto d'uomo) è il diametro del tronco di un albero misurato a un'altezza standardizzata di 4,5 piedi (1,37 m) da terra. Misurare a un'altezza fissa rende il DBH coerente e confrontabile tra alberi e rilievi, evitando l'allargamento e l'irregolarità comuni vicino alla base del tronco.</p>
+</div>
+<div class="faq-item">
+<h3>A cosa serve l'area basimetrica in selvicoltura?</h3>
+<p>L'area basimetrica (l'area della sezione trasversale del tronco di un albero al DBH) è una misura standard di quanto della superficie di un sito sia occupata da tronchi d'albero - i selvicoltori usano l'area basimetrica totale del popolamento per valutare la densità di popolamento, pianificare i diradamenti e stimare il volume legnoso insieme all'altezza e alla forma dell'albero.</p>
+</div>
+<div class="faq-item">
+<h3>Da dove viene la costante 0,005454?</h3>
+<p>È derivata dalla formula standard dell'area del cerchio (π/4), convertita per funzionare direttamente con il DBH in pollici e l'area basimetrica in piedi quadrati: π/4 ÷ 144 (pollici quadrati per piede quadrato) = 0,005454. Questo permette di passare direttamente da una misurazione del DBH in pollici all'area basimetrica in piedi quadrati senza un passaggio separato di conversione delle unità.</p>
+</div>
+<div class="faq-item">
+<h3>Come calcolo l'area basimetrica totale per un popolamento con alberi di dimensioni diverse?</h3>
+<p>Calcola l'area basimetrica per albero individualmente per ogni classe dimensionale di DBH presente, moltiplica ciascuna per il suo conteggio di alberi, quindi somma i risultati - questo calcolatore gestisce un valore DBH (con un conteggio di alberi) alla volta, quindi un popolamento misto richiede un calcolo per classe dimensionale, sommati insieme.</p>
+</div>
+<div class="faq-item">
+<h3>L'area basimetrica è la stessa cosa dell'area della chioma o della copertura arborea?</h3>
+<p>No - l'area basimetrica è l'area della sezione trasversale del tronco a petto d'uomo, non l'area coperta dalla chioma dell'albero vista dall'alto. Le due non sono direttamente proporzionali, poiché l'estensione della chioma dipende da specie, spaziatura e condizioni di crescita in modi che il diametro del tronco da solo non cattura.</p>
+</div>
+<div class="faq-item">
+<h3>Qual è un'area basimetrica tipica per un popolamento forestale ben popolato?</h3>
+<p>Varia sostanzialmente in base al tipo di foresta, alla regione e agli obiettivi di gestione, ma molti popolamenti gestiti puntano a un intervallo di circa 80-120 ft² di area basimetrica per acro - consulta le linee guida forestali specifiche per specie e regione per un obiettivo di popolamento rilevante per il tuo popolamento.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calcola</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Strumenti correlati</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Nota sulla precisione</h4>
+          <p style="margin:0;font-size:0.85rem;">Le calcolatrici di Calquary sono pensate per stime rapide e affidabili. Per decisioni con reali implicazioni finanziarie, strutturali o mediche, consulta un professionista qualificato.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/it/">← Torna a tutte le calcolatrici</a> · <a href="/it/about">Chi siamo</a> · <a href="/it/contact">Contatti</a> · <a href="/it/privacy">Privacy</a> · <a href="/it/terms">Termini</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

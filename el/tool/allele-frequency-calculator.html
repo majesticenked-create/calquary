@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Υπολογιστής Συχνότητας Αλληλομόρφων</title>
+  <meta name="description" content="Υπολογίστε τις παρατηρούμενες συχνότητες αλληλομόρφων (p και q) από τις μετρήσεις γονοτύπων σε έναν δειγματικό πληθυσμό." />
+  <meta property="og:title" content="Υπολογιστής Συχνότητας Αλληλομόρφων | Calquary">
+  <meta property="og:description" content="Υπολογίστε τις παρατηρούμενες συχνότητες αλληλομόρφων (p και q) από τις μετρήσεις γονοτύπων σε έναν δειγματικό πληθυσμό.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/el/tool/allele-frequency-calculator">
+  <meta property="og:locale" content="el_GR">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/allele-frequency-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Υπολογιστής Συχνότητας Αλληλομόρφων | Calquary">
+  <meta name="twitter:description" content="Υπολογίστε τις παρατηρούμενες συχνότητες αλληλομόρφων (p και q) από τις μετρήσεις γονοτύπων σε έναν δειγματικό πληθυσμό.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/allele-frequency-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/allele-frequency-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/allele-frequency-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/allele-frequency-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/allele-frequency-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/allele-frequency-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/allele-frequency-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/allele-frequency-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/allele-frequency-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/allele-frequency-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/allele-frequency-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/allele-frequency-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/allele-frequency-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/allele-frequency-calculator">
+    <link rel="canonical" href="https://calquary.com/el/tool/allele-frequency-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("allele-frequency-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("allele-frequency-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Υπολογιστής Συχνότητας Αλληλομόρφων",
+      "description": "Υπολογίστε τις παρατηρούμενες συχνότητες αλληλομόρφων (p και q) από τις μετρήσεις γονοτύπων σε έναν δειγματικό πληθυσμό.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/el/tool/allele-frequency-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "el"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/el/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/el/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Υπολογιστής Συχνότητας Αλληλομόρφων",
+          "item": "https://calquary.com/el/tool/allele-frequency-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Γιατί το AA μετράει ως 2 στον τύπο, αλλά το Aa μετράει μόνο ως 1;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Κάθε άτομο φέρει 2 αλληλόμορφα στον γονιδιακό τόπο. Ένα άτομο AA έχει δύο αντίγραφα του αλληλομόρφου A, άρα συνεισφέρει 2 στη μέτρηση του A. Ένα άτομο Aa έχει ένα αντίγραφο από κάθε αλληλόμορφο, συνεισφέροντας 1 στη μέτρηση του A και 1 σε αυτή του a. Το άθροισμα αυτών των συνεισφορών διαιρεμένο με τον συνολικό αριθμό αλληλομόρφων (2N) δίνει τη συχνότητα κάθε αλληλομόρφου."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Γιατί το p + q θα πρέπει πάντα να ισούται με 1;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Επειδή κάθε αλληλόμορφο που μετριέται στο δείγμα ταξινομείται είτε ως A είτε ως a - δεν υπάρχει τρίτη επιλογή σε αυτό το μοντέλο δύο αλληλομόρφων, άρα οι συχνότητές τους πρέπει να αθροίζουν στο σύνολο (1, ή 100%). Αν το αποτέλεσμά σας αποκλίνει ελαφρώς από το ακριβές 1, πρόκειται για φυσιολογική στρογγυλοποίηση των εμφανιζόμενων δεκαδικών, όχι για σφάλμα υπολογισμού."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Είναι αυτό το ίδιο με έναν υπολογιστή Hardy-Weinberg;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Όχι - αυτό το εργαλείο ξεκινά από πραγματικές, παρατηρούμενες μετρήσεις γονοτύπων για να καταλήξει στις παρατηρούμενες συχνότητες αλληλομόρφων (p και q). Ένας υπολογιστής Hardy-Weinberg αντίθετα ξεκινά από μια υποτιθέμενη συχνότητα αλληλομόρφου και προβλέπει ποιες θα ήταν οι συχνότητες γονοτύπων σε ισορροπία (χωρίς επιλογή, μετάλλαξη, μετανάστευση ή γενετική παρέκκλιση). Χρησιμοποιήστε πρώτα αυτόν τον υπολογιστή για να βρείτε τα πραγματικά p και q του δείγματός σας από πραγματικές μετρήσεις, και μετά έναν υπολογιστή Hardy-Weinberg για να δείτε αν οι παρατηρούμενες μετρήσεις γονοτύπων σας ταιριάζουν με αυτό που θα προέβλεπε η ισορροπία."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Μπορεί να χειριστεί ένα δείγμα με μόνο δύο γονότυπους παρόντες, όπως καθόλου άτομα aa;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ναι - εισαγάγετε 0 για οποιονδήποτε γονότυπο δεν παρατηρήθηκε στο δείγμα σας. Οι τύποι εξακολουθούν να λειτουργούν σωστά· μια μέτρηση γονοτύπου 0 απλώς δεν συνεισφέρει τίποτα σε εκείνη την καταμέτρηση αλληλομόρφου."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Τι γίνεται αν έχω μόνο συχνότητες γονοτύπων (ποσοστά) αντί για ακατέργαστες μετρήσεις;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Πολλαπλασιάστε κάθε συχνότητα με το συνολικό μέγεθος του δείγματός σας για να πάρετε μετρήσεις, ή απλώς εισαγάγετε συχνότητες κλιμακωμένες σε ένα βολικό σύνολο (όπως συχνότητες × 100, αντιμετωπίζοντάς τες ως μετρήσεις από 100) - ο τύπος παράγει το ίδιο p και q σε κάθε περίπτωση, καθώς λειτουργεί με σχετικές αναλογίες."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Υποθέτει αυτό ότι ο πληθυσμός βρίσκεται σε ισορροπία Hardy-Weinberg;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Όχι - ο υπολογισμός συχνοτήτων αλληλομόρφων από μετρήσεις γονοτύπων είναι μια άμεση καταμέτρηση και δεν κάνει καμία υπόθεση ισορροπίας. Λειτουργεί ανεξάρτητα από το αν ο πληθυσμός βρίσκεται πράγματι σε ισορροπία Hardy-Weinberg· αυτή η υπόθεση έρχεται στο προσκήνιο μόνο αν στη συνέχεια συγκρίνετε αυτές τις συχνότητες με τις αναλογίες γονοτύπων που προβλέπει το Hardy-Weinberg."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/el/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/el/#categories">Κατηγορίες</a>
+          <a href="/el/#tools">Όλα τα εργαλεία</a>
+          <a href="/el/about">Σχετικά</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Ελληνικά">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>undefined</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/allele-frequency-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/allele-frequency-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/allele-frequency-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/allele-frequency-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/allele-frequency-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/allele-frequency-calculator">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/allele-frequency-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/allele-frequency-calculator">Română</a><span class="locale-item current" role="menuitem" aria-current="true">Ελληνικά</span><a class="locale-item" role="menuitem" href="/zh/tool/allele-frequency-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/allele-frequency-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/allele-frequency-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/el/">Calquary</a> / <a href="/el/category/biology">Βιολογία</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Υπολογιστής Συχνότητας Αλληλομόρφων</h1>
+        <p style="max-width:60ch;">Εισαγάγετε τον αριθμό ατόμων με κάθε γονότυπο (AA, Aa, aa) στο δείγμα σας για να υπολογίσετε την παρατηρούμενη συχνότητα κάθε αλληλομόρφου.</p>
+        <p class="last-updated">Τελευταία ενημέρωση: September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Υπολογισμός</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Επαναφορά</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Συχνές ερωτήσεις</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Γιατί το AA μετράει ως 2 στον τύπο, αλλά το Aa μετράει μόνο ως 1;</h3>
+<p>Κάθε άτομο φέρει 2 αλληλόμορφα στον γονιδιακό τόπο. Ένα άτομο AA έχει δύο αντίγραφα του αλληλομόρφου A, άρα συνεισφέρει 2 στη μέτρηση του A. Ένα άτομο Aa έχει ένα αντίγραφο από κάθε αλληλόμορφο, συνεισφέροντας 1 στη μέτρηση του A και 1 σε αυτή του a. Το άθροισμα αυτών των συνεισφορών διαιρεμένο με τον συνολικό αριθμό αλληλομόρφων (2N) δίνει τη συχνότητα κάθε αλληλομόρφου.</p>
+</div>
+<div class="faq-item">
+<h3>Γιατί το p + q θα πρέπει πάντα να ισούται με 1;</h3>
+<p>Επειδή κάθε αλληλόμορφο που μετριέται στο δείγμα ταξινομείται είτε ως A είτε ως a - δεν υπάρχει τρίτη επιλογή σε αυτό το μοντέλο δύο αλληλομόρφων, άρα οι συχνότητές τους πρέπει να αθροίζουν στο σύνολο (1, ή 100%). Αν το αποτέλεσμά σας αποκλίνει ελαφρώς από το ακριβές 1, πρόκειται για φυσιολογική στρογγυλοποίηση των εμφανιζόμενων δεκαδικών, όχι για σφάλμα υπολογισμού.</p>
+</div>
+<div class="faq-item">
+<h3>Είναι αυτό το ίδιο με έναν υπολογιστή Hardy-Weinberg;</h3>
+<p>Όχι - αυτό το εργαλείο ξεκινά από πραγματικές, παρατηρούμενες μετρήσεις γονοτύπων για να καταλήξει στις παρατηρούμενες συχνότητες αλληλομόρφων (p και q). Ένας υπολογιστής Hardy-Weinberg αντίθετα ξεκινά από μια υποτιθέμενη συχνότητα αλληλομόρφου και προβλέπει ποιες θα ήταν οι συχνότητες γονοτύπων σε ισορροπία (χωρίς επιλογή, μετάλλαξη, μετανάστευση ή γενετική παρέκκλιση). Χρησιμοποιήστε πρώτα αυτόν τον υπολογιστή για να βρείτε τα πραγματικά p και q του δείγματός σας από πραγματικές μετρήσεις, και μετά έναν υπολογιστή Hardy-Weinberg για να δείτε αν οι παρατηρούμενες μετρήσεις γονοτύπων σας ταιριάζουν με αυτό που θα προέβλεπε η ισορροπία.</p>
+</div>
+<div class="faq-item">
+<h3>Μπορεί να χειριστεί ένα δείγμα με μόνο δύο γονότυπους παρόντες, όπως καθόλου άτομα aa;</h3>
+<p>Ναι - εισαγάγετε 0 για οποιονδήποτε γονότυπο δεν παρατηρήθηκε στο δείγμα σας. Οι τύποι εξακολουθούν να λειτουργούν σωστά· μια μέτρηση γονοτύπου 0 απλώς δεν συνεισφέρει τίποτα σε εκείνη την καταμέτρηση αλληλομόρφου.</p>
+</div>
+<div class="faq-item">
+<h3>Τι γίνεται αν έχω μόνο συχνότητες γονοτύπων (ποσοστά) αντί για ακατέργαστες μετρήσεις;</h3>
+<p>Πολλαπλασιάστε κάθε συχνότητα με το συνολικό μέγεθος του δείγματός σας για να πάρετε μετρήσεις, ή απλώς εισαγάγετε συχνότητες κλιμακωμένες σε ένα βολικό σύνολο (όπως συχνότητες × 100, αντιμετωπίζοντάς τες ως μετρήσεις από 100) - ο τύπος παράγει το ίδιο p και q σε κάθε περίπτωση, καθώς λειτουργεί με σχετικές αναλογίες.</p>
+</div>
+<div class="faq-item">
+<h3>Υποθέτει αυτό ότι ο πληθυσμός βρίσκεται σε ισορροπία Hardy-Weinberg;</h3>
+<p>Όχι - ο υπολογισμός συχνοτήτων αλληλομόρφων από μετρήσεις γονοτύπων είναι μια άμεση καταμέτρηση και δεν κάνει καμία υπόθεση ισορροπίας. Λειτουργεί ανεξάρτητα από το αν ο πληθυσμός βρίσκεται πράγματι σε ισορροπία Hardy-Weinberg· αυτή η υπόθεση έρχεται στο προσκήνιο μόνο αν στη συνέχεια συγκρίνετε αυτές τις συχνότητες με τις αναλογίες γονοτύπων που προβλέπει το Hardy-Weinberg.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Υπολογισμός</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Σχετικά εργαλεία</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Σημείωση ακρίβειας</h4>
+          <p style="margin:0;font-size:0.85rem;">Οι αριθμομηχανές του Calquary έχουν σχεδιαστεί για να παρέχουν γρήγορες και αξιόπιστες εκτιμήσεις. Για αποφάσεις με πραγματικές οικονομικές, δομικές ή ιατρικές επιπτώσεις, συμβουλευτείτε έναν ειδικευμένο επαγγελματία.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/el/">← Πίσω σε όλες τις αριθμομηχανές</a> · <a href="/el/about">Σχετικά</a> · <a href="/el/contact">Επικοινωνία</a> · <a href="/el/privacy">Απόρρητο</a> · <a href="/el/terms">Όροι</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

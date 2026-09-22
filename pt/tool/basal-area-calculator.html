@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Área Basal - Calculadora Gratuita Online</title>
+  <meta name="description" content="Calcule a área basal florestal por árvore e a área basal total a partir do diâmetro à altura do peito (DAP)." />
+  <meta property="og:title" content="Calculadora de Área Basal | Calquary">
+  <meta property="og:description" content="Calcule a área basal florestal por árvore e a área basal total a partir do diâmetro à altura do peito (DAP).">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/pt/tool/basal-area-calculator">
+  <meta property="og:locale" content="pt_PT">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/basal-area-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculadora de Área Basal | Calquary">
+  <meta name="twitter:description" content="Calcule a área basal florestal por árvore e a área basal total a partir do diâmetro à altura do peito (DAP).">
+  <meta name="twitter:image" content="https://calquary.com/og-images/basal-area-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/basal-area-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/basal-area-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/basal-area-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/basal-area-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/basal-area-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/basal-area-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/basal-area-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/basal-area-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/basal-area-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/basal-area-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/basal-area-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/basal-area-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/basal-area-calculator">
+    <link rel="canonical" href="https://calquary.com/pt/tool/basal-area-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("basal-area-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("basal-area-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calculadora de Área Basal",
+      "description": "Calcule a área basal florestal por árvore e a área basal total a partir do diâmetro à altura do peito (DAP).",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/pt/tool/basal-area-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "pt"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/pt/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/pt/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calculadora de Área Basal",
+          "item": "https://calquary.com/pt/tool/basal-area-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "O que é o DAP e por que é medido especificamente à altura do peito?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O DAP (diâmetro à altura do peito) é o diâmetro do tronco de uma árvore medido a uma altura padronizada de 4,5 pés (1,37 m) acima do solo. Medir a uma altura fixa torna o DAP consistente e comparável entre árvores e levantamentos, evitando o alargamento e a irregularidade comuns próximos à base do tronco."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Para que serve a área basal na silvicultura?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A área basal (a área da seção transversal do tronco de uma árvore no DAP) é uma medida padrão de quanto da área de um local é ocupada por troncos de árvores - os silvicultores usam a área basal total do povoamento para avaliar a densidade de estoque, planejar desbastes e estimar o volume de madeira junto com a altura e a forma da árvore."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "De onde vem a constante 0,005454?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ela é derivada da fórmula padrão da área do círculo (π/4), convertida para funcionar diretamente com o DAP em polegadas e a área basal em pés quadrados: π/4 ÷ 144 (polegadas quadradas por pé quadrado) = 0,005454. Isso permite ir diretamente de uma medição de DAP em polegadas para a área basal em pés quadrados sem uma etapa separada de conversão de unidades."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como calculo a área basal total para um povoamento com árvores de tamanhos diferentes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Calcule a área basal por árvore individualmente para cada classe de tamanho de DAP presente, multiplique cada uma pela sua contagem de árvores e some os resultados - esta calculadora trata um valor de DAP (com uma contagem de árvores) por vez, então um povoamento misto precisa de um cálculo por classe de tamanho, somados."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Área basal é o mesmo que área de dossel ou de copa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não - a área basal é a área da seção transversal do tronco à altura do peito, não a área coberta pelo dossel ou copa da árvore vista de cima. As duas não são diretamente proporcionais, já que a extensão da copa depende da espécie, do espaçamento e das condições de crescimento de formas que o diâmetro do tronco sozinho não capta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual é uma área basal típica para um povoamento florestal bem estocado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Varia substancialmente conforme o tipo de floresta, a região e os objetivos de manejo, mas muitos povoamentos manejados visam uma faixa de aproximadamente 80-120 ft² de área basal por acre - consulte diretrizes florestais específicas da espécie e da região para uma meta de estoque relevante para o seu povoamento."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/pt/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/pt/#categories">Categorias</a>
+          <a href="/pt/#tools">Todas as ferramentas</a>
+          <a href="/pt/about">Sobre</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Português">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>PT</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/basal-area-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/basal-area-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/basal-area-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/basal-area-calculator">Deutsch</a><span class="locale-item current" role="menuitem" aria-current="true">Português</span><a class="locale-item" role="menuitem" href="/it/tool/basal-area-calculator">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/basal-area-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/basal-area-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/basal-area-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/basal-area-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/basal-area-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/basal-area-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/pt/">Calquary</a> / <a href="/pt/category/biology">Biologia</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calculadora de Área Basal</h1>
+        <p style="max-width:60ch;">Insira o diâmetro à altura do peito (DAP) de uma árvore e, opcionalmente, o número de árvores, para calcular a área basal por árvore e a área basal total do povoamento.</p>
+        <p class="last-updated">Última atualização: September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calcular</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Redefinir</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Perguntas frequentes</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>O que é o DAP e por que é medido especificamente à altura do peito?</h3>
+<p>O DAP (diâmetro à altura do peito) é o diâmetro do tronco de uma árvore medido a uma altura padronizada de 4,5 pés (1,37 m) acima do solo. Medir a uma altura fixa torna o DAP consistente e comparável entre árvores e levantamentos, evitando o alargamento e a irregularidade comuns próximos à base do tronco.</p>
+</div>
+<div class="faq-item">
+<h3>Para que serve a área basal na silvicultura?</h3>
+<p>A área basal (a área da seção transversal do tronco de uma árvore no DAP) é uma medida padrão de quanto da área de um local é ocupada por troncos de árvores - os silvicultores usam a área basal total do povoamento para avaliar a densidade de estoque, planejar desbastes e estimar o volume de madeira junto com a altura e a forma da árvore.</p>
+</div>
+<div class="faq-item">
+<h3>De onde vem a constante 0,005454?</h3>
+<p>Ela é derivada da fórmula padrão da área do círculo (π/4), convertida para funcionar diretamente com o DAP em polegadas e a área basal em pés quadrados: π/4 ÷ 144 (polegadas quadradas por pé quadrado) = 0,005454. Isso permite ir diretamente de uma medição de DAP em polegadas para a área basal em pés quadrados sem uma etapa separada de conversão de unidades.</p>
+</div>
+<div class="faq-item">
+<h3>Como calculo a área basal total para um povoamento com árvores de tamanhos diferentes?</h3>
+<p>Calcule a área basal por árvore individualmente para cada classe de tamanho de DAP presente, multiplique cada uma pela sua contagem de árvores e some os resultados - esta calculadora trata um valor de DAP (com uma contagem de árvores) por vez, então um povoamento misto precisa de um cálculo por classe de tamanho, somados.</p>
+</div>
+<div class="faq-item">
+<h3>Área basal é o mesmo que área de dossel ou de copa?</h3>
+<p>Não - a área basal é a área da seção transversal do tronco à altura do peito, não a área coberta pelo dossel ou copa da árvore vista de cima. As duas não são diretamente proporcionais, já que a extensão da copa depende da espécie, do espaçamento e das condições de crescimento de formas que o diâmetro do tronco sozinho não capta.</p>
+</div>
+<div class="faq-item">
+<h3>Qual é uma área basal típica para um povoamento florestal bem estocado?</h3>
+<p>Varia substancialmente conforme o tipo de floresta, a região e os objetivos de manejo, mas muitos povoamentos manejados visam uma faixa de aproximadamente 80-120 ft² de área basal por acre - consulte diretrizes florestais específicas da espécie e da região para uma meta de estoque relevante para o seu povoamento.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calcular</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Ferramentas relacionadas</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Nota sobre precisão</h4>
+          <p style="margin:0;font-size:0.85rem;">As calculadoras da Calquary são feitas para estimativas rápidas e confiáveis. Para decisões com implicações financeiras, estruturais ou médicas reais, consulte um profissional qualificado.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/pt/">← Voltar a todas as calculadoras</a> · <a href="/pt/about">Sobre</a> · <a href="/pt/contact">Contato</a> · <a href="/pt/privacy">Privacidade</a> · <a href="/pt/terms">Termos</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>エーカー毎時計算機 - 無料オンライン計算ツール | Calquary</title>
+  <meta name="description" content="作業幅、走行速度、圃場効率から、1時間あたりの作業面積(エーカー)を計算します。" />
+  <meta property="og:title" content="エーカー毎時計算機 | Calquary">
+  <meta property="og:description" content="作業幅、走行速度、圃場効率から、1時間あたりの作業面積(エーカー)を計算します。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/ja/tool/acres-per-hour-calculator">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/acres-per-hour-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="エーカー毎時計算機 | Calquary">
+  <meta name="twitter:description" content="作業幅、走行速度、圃場効率から、1時間あたりの作業面積(エーカー)を計算します。">
+  <meta name="twitter:image" content="https://calquary.com/og-images/acres-per-hour-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/acres-per-hour-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/acres-per-hour-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/acres-per-hour-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/acres-per-hour-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/acres-per-hour-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/acres-per-hour-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/acres-per-hour-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/acres-per-hour-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/acres-per-hour-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/acres-per-hour-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/acres-per-hour-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/acres-per-hour-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/acres-per-hour-calculator">
+    <link rel="canonical" href="https://calquary.com/ja/tool/acres-per-hour-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("acres-per-hour-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("acres-per-hour-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "エーカー毎時計算機",
+      "description": "作業幅、走行速度、圃場効率から、1時間あたりの作業面積(エーカー)を計算します。",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/ja/tool/acres-per-hour-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "ja"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/ja/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/ja/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "エーカー毎時計算機",
+          "item": "https://calquary.com/ja/tool/acres-per-hour-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "圃場効率とは何ですか?なぜ100%にならないのですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "圃場効率は、畝の端での旋回、パス間の重なり、機械への補給・排出、その他の停止による時間や距離のロスを考慮したものです。実際のカバー率は、理論上の全幅・全速での作業率よりほぼ常に低くなります。多くの作業での典型的な圃場効率は、圃場の形状や機械によって65%から90%の範囲です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "計算式の定数8.25はどこから来ていますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "これは、作業幅×速度(スワス)をエーカー毎時に変換するためのものです。1マイルは5,280フィート、1エーカーは43,560平方フィートなので、5,280 ÷ 43,560 = 0.1212、1 ÷ 0.1212 = 8.25となります。幅(フィート)×速度(mph)を8.25で割ると、効率100%でのエーカー毎時が求められます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "実際の作業幅はどう見積もればよいですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "トラクターや牽引車両自体の幅ではなく、農機の有効幅(例:モアー、播種機、噴霧ブームの切断幅・作業幅)を使ってください。一定量の重なりを常に取っている場合は、その分を定格幅から差し引く必要もあります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "大型の農業機械にも小型の庭用機械にも使えますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。単位さえ揃っていれば、1時間に何エーカーもカバーする広幅の農業機械から、1時間にエーカーの一部しかカバーしない押し式芝刈り機まで、あらゆる作業幅と速度に対応できる計算式です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "なぜエーカー毎時とヘクタール毎時の両方が表示されるのですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "エーカーは米国での標準的な土地単位で、ヘクタールは他の多くの国での標準単位です。両方表示することで、どちらの単位で計画していても変換手順を省けます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "機械への補給や整備にかかる時間は考慮されていますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "直接的には考慮されていません。圃場効率(%)は、旋回や重なりといった圃場内での典型的なロスを表すためのものです。補給や故障、通常の旋回以外の停止で頻繁に大きな時間を失う場合は、実際に観察されるカバー率を反映するよう効率の見積もりを下げてください。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/ja/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/ja/#categories">カテゴリー</a>
+          <a href="/ja/#tools">すべてのツール</a>
+          <a href="/ja/about">このサイトについて</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: 日本語">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>JA</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/acres-per-hour-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/acres-per-hour-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/acres-per-hour-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/acres-per-hour-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/acres-per-hour-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/acres-per-hour-calculator">Italiano</a><span class="locale-item current" role="menuitem" aria-current="true">日本語</span><a class="locale-item" role="menuitem" href="/ro/tool/acres-per-hour-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/acres-per-hour-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/acres-per-hour-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/acres-per-hour-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/acres-per-hour-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/ja/">Calquary</a> / <a href="/ja/category/biology">生物学</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>エーカー毎時計算機</h1>
+        <p style="max-width:60ch;">農機の作業幅、走行速度、圃場効率(%)を入力すると、1時間あたりにカバーできる面積(エーカーまたはヘクタール)の目安が分かります。</p>
+        <p class="last-updated">最終更新日： September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">計算する</button>
+              <button type="button" id="calc-reset" class="btn-ghost">リセット</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>よくある質問</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>圃場効率とは何ですか?なぜ100%にならないのですか?</h3>
+<p>圃場効率は、畝の端での旋回、パス間の重なり、機械への補給・排出、その他の停止による時間や距離のロスを考慮したものです。実際のカバー率は、理論上の全幅・全速での作業率よりほぼ常に低くなります。多くの作業での典型的な圃場効率は、圃場の形状や機械によって65%から90%の範囲です。</p>
+</div>
+<div class="faq-item">
+<h3>計算式の定数8.25はどこから来ていますか?</h3>
+<p>これは、作業幅×速度(スワス)をエーカー毎時に変換するためのものです。1マイルは5,280フィート、1エーカーは43,560平方フィートなので、5,280 ÷ 43,560 = 0.1212、1 ÷ 0.1212 = 8.25となります。幅(フィート)×速度(mph)を8.25で割ると、効率100%でのエーカー毎時が求められます。</p>
+</div>
+<div class="faq-item">
+<h3>実際の作業幅はどう見積もればよいですか?</h3>
+<p>トラクターや牽引車両自体の幅ではなく、農機の有効幅(例:モアー、播種機、噴霧ブームの切断幅・作業幅)を使ってください。一定量の重なりを常に取っている場合は、その分を定格幅から差し引く必要もあります。</p>
+</div>
+<div class="faq-item">
+<h3>大型の農業機械にも小型の庭用機械にも使えますか?</h3>
+<p>はい。単位さえ揃っていれば、1時間に何エーカーもカバーする広幅の農業機械から、1時間にエーカーの一部しかカバーしない押し式芝刈り機まで、あらゆる作業幅と速度に対応できる計算式です。</p>
+</div>
+<div class="faq-item">
+<h3>なぜエーカー毎時とヘクタール毎時の両方が表示されるのですか?</h3>
+<p>エーカーは米国での標準的な土地単位で、ヘクタールは他の多くの国での標準単位です。両方表示することで、どちらの単位で計画していても変換手順を省けます。</p>
+</div>
+<div class="faq-item">
+<h3>機械への補給や整備にかかる時間は考慮されていますか?</h3>
+<p>直接的には考慮されていません。圃場効率(%)は、旋回や重なりといった圃場内での典型的なロスを表すためのものです。補給や故障、通常の旋回以外の停止で頻繁に大きな時間を失う場合は、実際に観察されるカバー率を反映するよう効率の見積もりを下げてください。</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">計算する</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>関連ツール</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>精度について</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquaryの計算ツールは、迅速で信頼できる概算を目的としています。実際の財務、構造、医療に関わる重要な決定を行う前には、必ず専門家にご確認ください。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/ja/">← すべての計算ツールに戻る</a> · <a href="/ja/about">このサイトについて</a> · <a href="/ja/contact">お問い合わせ</a> · <a href="/ja/privacy">プライバシー</a> · <a href="/ja/terms">利用規約</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

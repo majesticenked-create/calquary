@@ -142,6 +142,12 @@ const WAVE_ONE_TOOL_IDS = [
   "currency-converter", "graphing-calculator", "scientific-calculator",
   "rent-vs-buy-calculator", "refinance-break-even-calculator", "base-converter",
   "video-bitrate-calculator", "significant-figures-calculator", "roi-cagr-calculator",
+  // Batch 12: the 10 Biology/Pet & Lifestyle tools added in the Batch 001
+  // build, now translated into all 11 non-English locales.
+  "acres-per-hour-calculator", "allele-frequency-calculator", "animal-mortality-rate-calculator",
+  "annealing-temperature-calculator", "basal-area-calculator", "benadryl-dosage-for-dogs",
+  "cat-benadryl-dosage-calculator", "bird-age-calculator", "bulb-spacing-calculator",
+  "cat-bmi-calculator",
 ];
 
 function loadData() {
