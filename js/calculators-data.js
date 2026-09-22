@@ -1971,7 +1971,7 @@ const CALCULATORS = [
       { q: "Is 'molar weight calculator' or 'mol wt calculator' the same as molecular weight?", a: "Yes - \"molar weight,\" \"mol wt,\" \"molecular weight,\" and \"molar mass\" are all names for the same quantity: the mass of one mole of a substance, in grams per mole. This calculator computes it from any chemical formula you enter." },
       { q: "How do we calculate molar mass?", a: "Add up the atomic weight of each element in the formula, multiplied by how many atoms of that element appear - for H2O, that's 2 × 1.008 (hydrogen) + 1 × 15.999 (oxygen) = 18.015 g/mol. Enter any formula above and this calculator does that sum for you." },
     ],
-    related: ["percentage-calculator", "square-root-calculator", "exponent-calculator", "annealing-temperature-calculator"],
+    related: ["percentage-calculator", "square-root-calculator", "dna-copy-number-calculator", "annealing-temperature-calculator"],
   },
   {
     id: "empirical-formula-calculator",
@@ -2660,7 +2660,7 @@ const CALCULATORS = [
       { q: "If 9% of a population shows a recessive trait, what are p and q?", a: "q² = 0.09, so q = √0.09 = 0.3, and p = 1 − 0.3 = 0.7. That means 49% are homozygous dominant and 42% are heterozygous carriers of the recessive allele." },
       { q: "I have actual genotype counts from a sample, not an assumed allele frequency - is this the right tool?", a: "Not directly - this calculator starts from an assumed allele frequency (or one genotype frequency) and predicts expected genotype frequencies under equilibrium. If you have real counts of AA, Aa, and aa individuals and want their observed allele frequencies, use the Allele Frequency Calculator instead - then bring those p and q values back here to see whether your sample matches Hardy-Weinberg expectations." },
     ],
-    related: ["solubility-product-calculator", "standard-deviation-calculator", "allele-frequency-calculator"],
+    related: ["solubility-product-calculator", "dihybrid-cross-calculator", "allele-frequency-calculator"],
   },
   {
     id: "grade-calculator",
@@ -4307,7 +4307,7 @@ const CALCULATORS = [
       { q: "Does this calculate floor area or wall area?", a: "This calculates flat floor or ceiling area (length × width). For wall area, such as for paint or drywall, you need perimeter × height instead, which is a different formula this specific tool doesn't perform - use the drywall or paint calculator's own wall-area fields for that." },
       { q: "How does square footage relate to square yardage?", a: "One square yard equals 9 square feet, so divide your square footage result by 9 to get square yards - useful since carpet and sod are often priced per square yard rather than per square foot." },
     ],
-    related: ["area-converter", "concrete-calculator", "flooring-calculator"],
+    related: ["area-converter", "concrete-calculator", "co2-grow-room-calculator"],
   },
   {
     id: "fence-calculator",
@@ -4421,7 +4421,7 @@ const CALCULATORS = [
       { q: "Does ceiling height affect the BTU estimate this calculator gives?", a: "No - this calculator's 20 BTU/h per sq ft rule of thumb assumes a standard roughly 8 ft ceiling. Rooms with noticeably higher ceilings have more air volume to cool and typically need more capacity than this estimate, so increase the room area input or add a margin if your ceilings are unusually tall." },
       { q: "Is 'tonnage' the same thing as BTU/h for sizing an air conditioner?", a: "They describe the same capacity in different units - one ton of cooling equals 12,000 BTU/h, which is where this calculator's tonnage figure comes from (BTU/h ÷ 12,000). Central air systems are commonly sized in tons, while window and portable units are usually labeled in BTU/h." },
     ],
-    related: ["insulation-calculator", "drywall-calculator", "concrete-calculator"],
+    related: ["insulation-calculator", "drywall-calculator", "co2-grow-room-calculator"],
   },
   {
     id: "lumber-calculator",
@@ -5368,7 +5368,7 @@ const CALCULATORS = [
       { q: "Can I use this to count down to a recurring event like a birthday?", a: "Yes - enter next year's date for a birthday or anniversary that's already passed this year, and the calculator will show the exact number of days until that upcoming occurrence." },
       { q: "How many days until Christmas?", a: "Set the target date to December 25 of the current (or next) year and this calculator gives you the exact countdown, including the equivalent in weeks and months - handy for gift-shopping or travel planning deadlines." },
     ],
-    related: ["date-duration-calculator", "age-calculator", "pace-calculator"],
+    related: ["date-duration-calculator", "age-calculator", "cow-gestation-calculator"],
   },
   {
     id: "date-duration-calculator",
@@ -6694,7 +6694,7 @@ const CALCULATORS = [
       { q: "What is 106°F in Celsius?", a: "About 41.1°C - (106−32)×5/9 = 74×5/9 ≈ 41.11°C, a dangerously high fever temperature if referring to body temperature." },
       { q: "What is 36.7°C in Fahrenheit?", a: "98.06°F - multiply by 9/5 and add 32: 36.7×9/5+32 = 66.06+32 = 98.06°F, right around normal human body temperature." },
     ],
-    related: ["weight-converter", "volume-converter", "unit-length-converter"],
+    related: ["weight-converter", "volume-converter", "cricket-chirp-temperature-calculator"],
   },
   {
     id: "oven-temperature-converter",
@@ -8708,7 +8708,7 @@ const CALCULATORS = [
       { q: "How old is a 5-year-old giant breed dog in human years?", a: "A 5-year-old giant breed (like a Great Dane) works out to roughly 40 human years - notably older than a 5-year-old small breed, which lands closer to 36, because giant breeds age faster once past puppyhood." },
       { q: "Can I use this calculator for a mixed-breed dog?", a: "Yes - since the formula keys off size rather than breed identity, just select the size category (small, medium, large, or giant) that best matches your mixed-breed dog's adult weight for the most relevant estimate." },
     ],
-    related: ["cat-age-calculator", "dog-food-calculator", "benadryl-dosage-for-dogs", "ideal-dog-weight-calculator"],
+    related: ["cat-age-calculator", "dog-food-calculator", "cost-of-owning-a-dog-calculator", "ideal-dog-weight-calculator"],
   },
   {
     id: "dog-food-calculator",
@@ -8749,7 +8749,7 @@ const CALCULATORS = [
       { q: "Why does the calculator ask for a puppy activity level instead of just using weight?", a: "Growing puppies need substantially more calories per pound than adult dogs to support tissue development, so selecting 'puppy' applies a higher multiplier to the RER-based estimate rather than treating them like a sedentary adult of the same weight." },
       { q: "Is 'cups per day' the same across every brand of dog food?", a: "No - this calculator converts your calorie target into cups using the calories-per-cup value you enter, which varies by brand and formula. Always check your specific food's label for its calorie density rather than assuming a universal cup size." },
     ],
-    related: ["dog-age-calculator", "calorie-calculator", "cat-calorie-calculator", "bmr-calculator"],
+    related: ["dog-age-calculator", "calorie-calculator", "cat-calorie-calculator", "cost-of-owning-a-dog-calculator"],
   },
   {
     id: "cat-age-calculator",
@@ -8843,7 +8843,7 @@ const CALCULATORS = [
       { q: "If my dog mated on day 1, when is she due?", a: "Adding the default 63-day gestation length to the mating date gives the estimated due date - for example, a mating date of January 1 projects a due date around March 5." },
       { q: "Does litter size affect how long a dog's pregnancy lasts?", a: "Yes, somewhat - dogs carrying larger litters sometimes deliver a day or two earlier than average, while smaller litters can run slightly longer, which is part of why the estimated due date is a range-based guide rather than an exact date." },
     ],
-    related: ["days-until-calculator", "date-duration-calculator", "dog-age-calculator", "cat-pregnancy-calculator"],
+    related: ["days-until-calculator", "cow-gestation-calculator", "dog-age-calculator", "cat-pregnancy-calculator"],
   },
   {
     id: "horse-age-calculator",
@@ -9528,7 +9528,7 @@ const CALCULATORS = [
       { q: "What if I only have genotype frequencies (percentages) instead of raw counts?", a: "Multiply each frequency by your total sample size to get counts, or simply enter frequencies scaled to a convenient total (like frequencies × 100, treating them as counts out of 100) - the formula produces the same p and q either way since it works with relative proportions." },
       { q: "Does this assume the population is in Hardy-Weinberg equilibrium?", a: "No - calculating allele frequencies from genotype counts is a direct tally and makes no equilibrium assumption. It works whether or not the population is actually in Hardy-Weinberg equilibrium; that assumption only comes into play if you go on to compare these frequencies against Hardy-Weinberg-predicted genotype ratios." },
     ],
-    related: ["hardy-weinberg-calculator", "animal-mortality-rate-calculator", "percentage-calculator"],
+    related: ["hardy-weinberg-calculator", "dihybrid-cross-calculator", "percentage-calculator"],
   },
   {
     id: "animal-mortality-rate-calculator",
@@ -10158,7 +10158,7 @@ const CALCULATORS = [
       { q: "Why does the calculator give both 'acres per animal unit' and 'animal units per acre'?", a: "They're the same relationship expressed two common ways in agricultural planning - acres per animal unit is often used for land-purchase or lease planning ('how much land do I need per cow'), while animal units per acre is often used for herd-sizing planning ('how many cows can this pasture support'). Both numbers come from the same underlying calculation." },
       { q: "How much does seasonal variation affect this estimate?", a: "Significantly - forage growth is rarely constant across a full year, with most regions seeing a spring/early-summer growth flush and slower growth or dormancy in other seasons. This calculator spreads usable forage evenly across the grazing period you enter, so for highly seasonal pasture, consider running separate calculations for different seasons or grazing periods rather than one full-year average." },
     ],
-    related: ["acres-per-hour-calculator", "basal-area-calculator", "animal-mortality-rate-calculator"],
+    related: ["acres-per-hour-calculator", "basal-area-calculator", "corn-yield-calculator"],
   },
   {
     id: "cell-dilution-calculator",
@@ -10201,7 +10201,7 @@ const CALCULATORS = [
       { q: "Why did I get an error saying the target exceeds the stock concentration?", a: "A simple dilution with diluent can only decrease concentration, never increase it - if your target concentration (C2) is higher than your stock concentration (C1), you'd need a more concentrated stock, or you'd need to concentrate your existing sample through a method like centrifugation or evaporation rather than diluting it." },
       { q: "Do the concentration units matter for this calculation?", a: "The math itself is unit-agnostic as long as C1 and C2 use the same unit (both in cells/mL, both in molarity, both in mg/mL, etc.) - the equation cancels the units out. Just make sure you're consistent, since mixing units (like entering C1 in cells/mL and C2 in cells/L) will give an incorrect result." },
     ],
-    related: ["cell-doubling-time-calculator", "molecular-weight-calculator", "half-life-calculator"],
+    related: ["cell-doubling-time-calculator", "molecular-weight-calculator", "dna-concentration-calculator"],
   },
   {
     id: "cell-doubling-time-calculator",
@@ -10245,7 +10245,7 @@ const CALCULATORS = [
       { q: "Can I use cell density (cells/mL) instead of a raw cell count?", a: "Yes - since the calculation uses the ratio of final to initial counts, cell density works exactly the same way as a raw count, as long as both measurements use the same units and were taken from comparably sized samples (e.g., both from the same culture volume)." },
       { q: "Does this work for bacterial cultures as well as mammalian cell cultures?", a: "Yes - the exponential growth model and doubling time formula apply generally to any population growing exponentially, whether bacteria, yeast, or mammalian cells in culture. Typical doubling times differ enormously by organism and conditions (bacteria can double in 20-30 minutes under ideal conditions, while many mammalian cell lines double over roughly 18-24 hours), but the underlying math is the same." },
     ],
-    related: ["cell-dilution-calculator", "half-life-calculator", "compound-interest-calculator"],
+    related: ["cell-dilution-calculator", "half-life-calculator", "dna-copy-number-calculator"],
   },
   {
     id: "cephalexin-for-cats-dosage-calculator",
@@ -10361,6 +10361,445 @@ const CALCULATORS = [
       { q: "Does this calculator account for compost settling over time?", a: "Not directly - like most volume estimates, it calculates the freshly applied volume. Compost, especially less mature compost, can settle and decompose further after application, so some gardeners apply slightly more than the calculated minimum or plan to top up over time." },
     ],
     related: ["mulch-calculator", "gravel-calculator", "square-footage-calculator"],
+  },
+  {
+    id: "corn-yield-calculator",
+    category: "biology",
+    title: "Corn Yield Calculator",
+    keyword: "corn yield calculator",
+    description: "Estimate corn yield in bushels per acre from ears per acre, kernel counts, and an average kernel-weight factor.",
+    intro: "Enter ears per acre and kernel counts per ear, plus a kernels-per-bushel factor, to estimate corn yield. This is a pre-harvest field estimate, not a substitute for actual harvested yield.",
+    fields: [
+      { id: "earsPerAcre", label: "Ears per acre", type: "number", default: 28000, step: 500, min: 1 },
+      { id: "kernelRows", label: "Kernel rows per ear", type: "number", default: 16, step: 1, min: 1 },
+      { id: "kernelsPerRow", label: "Kernels per row", type: "number", default: 35, step: 1, min: 1 },
+      { id: "kernelsPerBushel", label: "Kernels per bushel (yield factor)", type: "number", default: 90000, step: 1000, min: 1000 },
+    ],
+    compute: (v) => {
+      if (!(v.earsPerAcre > 0) || !(v.kernelRows > 0) || !(v.kernelsPerRow > 0) || !(v.kernelsPerBushel > 0)) {
+        return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "All values must be greater than zero." };
+      }
+      const kernelsPerEar = v.kernelRows * v.kernelsPerRow;
+      const bushelsPerAcre = (v.earsPerAcre * kernelsPerEar) / v.kernelsPerBushel;
+      const tonnesPerHectare = bushelsPerAcre * 0.0628;
+      return {
+        primary: { label: "Estimated yield", value: `${round(bushelsPerAcre, 1)} bu/acre` },
+        secondary: [
+          { l: "Metric equivalent", v: `${round(tonnesPerHectare, 2)} tonnes/hectare` },
+          { l: "Kernels per ear", v: kernelsPerEar },
+        ],
+        note: "Uses the field yield-component method: bushels/acre = (ears/acre × kernels/ear) ÷ kernels-per-bushel factor. The kernels-per-bushel factor is a variable assumption (commonly 80,000-100,000+, defaulting to 90,000 here) representing average kernel size and weight - it is not a fixed constant. This is a pre-harvest estimate; actual harvested yield also depends on kernel fill, moisture content at harvest, field variability, and harvest losses, and can differ meaningfully from this projection.",
+      };
+    },
+    faq: [
+      { q: "How accurate is this yield estimate compared to actual harvest?", a: "It's a useful early projection, not a guarantee - actual harvested yield depends on factors this method can't fully capture, including final kernel fill and weight, grain moisture at harvest, in-field variability between sampled and unsampled areas, and mechanical harvest losses. Treat the result as a planning estimate that should be updated as the season progresses." },
+      { q: "What is the kernels-per-bushel factor and why does it matter so much?", a: "It represents the average number of kernels it takes to fill one bushel, which varies with kernel size and test weight - smaller or lighter kernels mean more kernels per bushel (a higher factor, lower yield estimate for the same ear count), while larger, well-filled kernels mean fewer kernels per bushel. Because this factor is uncertain until harvest, many practitioners run the calculation with a range of factors (e.g., 80,000 and 95,000) to bracket a plausible yield range rather than relying on a single number." },
+      { q: "How do I count ears per acre in the field?", a: "A common approach is to measure a row length that represents a known fraction of an acre based on your row spacing, count the ears in that length, then scale up to a full acre - repeating this in several representative locations in the field improves accuracy over a single sample." },
+      { q: "Should I count kernel rows and kernels per row on every ear, or just a sample?", a: "Sampling several representative ears (not just one) and averaging their kernel row count and kernels per row gives a more reliable estimate than measuring a single ear, since kernel counts vary noticeably even within the same field." },
+      { q: "Why does this calculator show a metric tonnes/hectare figure too?", a: "Bushels per acre is the standard US unit for corn yield, while tonnes per hectare is standard in most other countries - showing both avoids a separate conversion step regardless of which unit you're working in. The conversion used (1 bu/ac ≈ 0.0628 tonnes/ha) reflects corn's standard test weight and moisture reference." },
+      { q: "Does this account for harvest losses from the combine?", a: "No - this estimates the grain present in the field based on ear and kernel counts, before harvest. Mechanical harvest losses (shelling, header loss, etc.) reduce what's actually collected, so realized yield at the scale is typically somewhat lower than this pre-harvest field estimate." },
+    ],
+    related: ["cattle-per-acre-calculator", "acres-per-hour-calculator", "basal-area-calculator"],
+  },
+  {
+    id: "cost-of-owning-a-dog-calculator",
+    category: "pets",
+    title: "Cost of Owning a Dog Calculator",
+    keyword: "cost of owning a dog calculator",
+    description: "Estimate the first-year, ongoing annual, and lifetime cost of dog ownership from your own expense figures.",
+    intro: "Enter your own estimated costs for adoption, supplies, food, and care to project first-year, ongoing annual, and lifetime dog ownership costs. The default numbers are editable examples, not current market prices - replace them with your own research.",
+    fields: [
+      { id: "oneTimeCost", label: "Adoption/purchase + setup supplies", type: "number", unit: "$", default: 500, step: 10, min: 0 },
+      { id: "initialVetCost", label: "Initial veterinary costs (exams, vaccines, spay/neuter)", type: "number", unit: "$", default: 300, step: 10, min: 0 },
+      { id: "monthlyFood", label: "Monthly food cost", type: "number", unit: "$", default: 50, step: 5, min: 0 },
+      { id: "monthlyRoutineCare", label: "Monthly routine care (vet, grooming, insurance, meds)", type: "number", unit: "$", default: 60, step: 5, min: 0 },
+      { id: "monthlyOther", label: "Monthly other (toys, training, boarding, misc.)", type: "number", unit: "$", default: 30, step: 5, min: 0 },
+      { id: "ownershipYears", label: "Expected years of ownership", type: "number", unit: "years", default: 12, step: 1, min: 1 },
+    ],
+    compute: (v) => {
+      if (v.oneTimeCost < 0 || v.initialVetCost < 0 || v.monthlyFood < 0 || v.monthlyRoutineCare < 0 || v.monthlyOther < 0 || !(v.ownershipYears >= 1)) {
+        return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Costs can't be negative, and expected years of ownership must be at least 1." };
+      }
+      const monthlyTotal = v.monthlyFood + v.monthlyRoutineCare + v.monthlyOther;
+      const annualOngoing = monthlyTotal * 12;
+      const firstYearCost = v.oneTimeCost + v.initialVetCost + annualOngoing;
+      const lifetimeCost = firstYearCost + annualOngoing * (v.ownershipYears - 1);
+      return {
+        primary: { label: "First-year cost", value: `$${round(firstYearCost, 0)}` },
+        secondary: [
+          { l: "Ongoing annual cost (year 2+)", v: `$${round(annualOngoing, 0)}` },
+          { l: "Monthly average (ongoing)", v: `$${round(monthlyTotal, 0)}` },
+          { l: `Estimated lifetime cost (${v.ownershipYears} yrs)`, v: `$${round(lifetimeCost, 0)}` },
+        ],
+        note: "First-year cost = one-time costs + initial vet costs + one year of ongoing monthly costs. Lifetime cost = first-year cost + ongoing annual cost × (years − 1). All figures come directly from what you entered - the defaults are editable placeholder examples, not researched current market prices, so replace every field with your own local cost research for a meaningful estimate. Unplanned expenses (illness, injury, emergency care) aren't included and can add substantially to real-world costs.",
+      };
+    },
+    faq: [
+      { q: "Are the default costs in this calculator accurate for my area?", a: "No - the defaults are editable placeholder examples meant to show the calculator working, not researched current prices for your location, breed, or veterinary market. Replace every field with your own estimates (from local vets, pet stores, breeders, or shelters) for a result that actually reflects your situation." },
+      { q: "Why isn't there a single 'average cost of owning a dog' number?", a: "Because actual costs vary enormously by dog size, health, location, insurance choices, and lifestyle (boarding vs. no boarding, professional grooming vs. none, and so on) - a single universal number would be misleading. This calculator is built around your own inputs specifically so it reflects your actual expected costs rather than someone else's averages." },
+      { q: "Why does the first year cost more than later years?", a: "The first year includes one-time costs (adoption or purchase, initial supplies) plus a concentrated round of veterinary costs like initial exams, vaccinations, and spay/neuter surgery that don't repeat annually - later years typically only include the ongoing recurring costs (food, routine care, and other regular expenses)." },
+      { q: "Does this include emergency or unexpected veterinary costs?", a: "No - this calculator projects routine, predictable costs based on what you enter. Unexpected illness, injury, or chronic conditions can add significant unplanned expenses at any point in a dog's life, which is part of why many owners consider pet insurance or an emergency savings fund as a separate planning step." },
+      { q: "How should I estimate my monthly food cost?", a: "Check a specific food brand and bag size, its price, and your dog's expected daily feeding amount (which depends on weight and activity level) - the Dog Food Calculator on this site can help estimate cups per day, which you can then price out with your chosen food's cost per cup or bag." },
+      { q: "Does lifetime cost assume costs stay the same every year?", a: "Yes - this calculator projects a flat ongoing annual cost across all years after the first, for simplicity. In reality, costs often rise over a dog's lifetime, especially in senior years when veterinary care needs typically increase, so treat the lifetime figure as a conservative baseline rather than an upper bound." },
+    ],
+    related: ["dog-food-calculator", "dog-age-calculator", "ideal-dog-weight-calculator"],
+  },
+  {
+    id: "cow-gestation-calculator",
+    category: "biology",
+    title: "Cow Gestation Calculator",
+    keyword: "cow gestation calculator",
+    description: "Estimate a cow's calving date from the breeding date, using the typical cattle gestation period.",
+    intro: "Enter the breeding date to estimate the calving (due) date, based on the typical 283-day cattle gestation period.",
+    fields: [
+      { id: "breedingDate", label: "Breeding date", type: "date", default: "2024-01-01" },
+      { id: "gestationDays", label: "Gestation length", type: "number", unit: "days", default: 283, step: 1, min: 1 },
+    ],
+    compute: (v) => {
+      if (!v.breedingDate || !(v.gestationDays > 0)) {
+        return { primary: { label: "Enter a valid breeding date", value: "-" }, secondary: [], note: "Breeding date is required and gestation length must be greater than zero." };
+      }
+      const [y, m, d] = v.breedingDate.split("-").map(Number);
+      const dueDate = new Date(y, m - 1, d);
+      dueDate.setDate(dueDate.getDate() + v.gestationDays);
+      const dueDateStr = dueDate.toISOString().slice(0, 10);
+      return {
+        primary: { label: "Estimated calving date", value: dueDateStr },
+        secondary: [{ l: "Gestation length used", v: `${v.gestationDays} days` }],
+        note: "The typical cattle gestation period averages about 283 days, but individual pregnancies commonly range from roughly 279 to 287 days. Actual length varies with breed, the sex of the calf (bull calves are often carried slightly longer than heifer calves), the dam's own history, and individual variation - this is an estimate for planning, not a guaranteed date. A veterinarian can refine timing with a pregnancy check.",
+      };
+    },
+    faq: [
+      { q: "How long are cows pregnant?", a: "The average cattle gestation period is about 283 days (roughly 9.3 months) from breeding, though individual pregnancies commonly range from about 279 to 287 days depending on breed and other factors." },
+      { q: "Does gestation length vary by cattle breed?", a: "Yes, somewhat - different breeds have slightly different average gestation lengths, with some ranging a few days shorter or longer than the commonly cited 283-day average. If you know your breed's typical gestation length, adjust the gestation length field to match rather than relying on the general default." },
+      { q: "Does the sex of the calf affect gestation length?", a: "There's a commonly observed tendency for bull calves to be carried a few days longer on average than heifer calves, though this isn't something you'll know in advance for a due-date estimate - it's one of several reasons the actual calving date can fall a few days on either side of the projected date." },
+      { q: "How early can a veterinarian confirm pregnancy in cattle?", a: "Pregnancy can often be confirmed via rectal palpation starting around 35-45 days after breeding, or earlier with ultrasound (sometimes from around day 26-30) - both are more reliable for confirming an actual pregnancy than a due-date calculation alone, which only projects timing assuming breeding was successful." },
+      { q: "What signs indicate calving is approaching near the estimated date?", a: "Common signs in the days before calving include udder filling ('bagging up'), relaxation and swelling around the tailhead and vulva, restlessness, and separation from the herd - these physical signs, rather than the calculated date alone, are the more reliable indicator that calving is imminent." },
+      { q: "Why use 283 days as the default instead of a rounder number like 280 or 285?", a: "283 days is a widely cited average across general cattle gestation research and extension references, striking a middle point among commonly reported ranges - it's a reasonable default starting point precisely because it reflects an average rather than any single breed or individual animal." },
+    ],
+    related: ["cattle-per-acre-calculator", "dog-pregnancy-calculator", "days-until-calculator"],
+  },
+  {
+    id: "co2-grow-room-calculator",
+    category: "biology",
+    title: "CO2 Grow Room Calculator",
+    keyword: "co2 grow room calculator",
+    description: "Calculate grow room volume and the theoretical CO2 needed to raise concentration for plant growth - an educational estimate, not operating instructions.",
+    intro: "Enter your grow room dimensions and current and target CO2 concentrations to see room volume and a theoretical CO2 quantity estimate. This is an educational calculation, not a substitute for a calibrated CO2 controller, monitor, and proper ventilation.",
+    fields: [
+      { id: "length", label: "Room length", type: "number", unit: "ft", default: 10, step: 0.5, min: 0.1 },
+      { id: "width", label: "Room width", type: "number", unit: "ft", default: 10, step: 0.5, min: 0.1 },
+      { id: "height", label: "Room height", type: "number", unit: "ft", default: 8, step: 0.5, min: 0.1 },
+      { id: "currentPpm", label: "Current CO2 concentration", type: "number", unit: "ppm", default: 400, step: 10, min: 0 },
+      { id: "targetPpm", label: "Target CO2 concentration", type: "number", unit: "ppm", default: 1200, step: 10, min: 0, max: 1500 },
+    ],
+    compute: (v) => {
+      if (!(v.length > 0) || !(v.width > 0) || !(v.height > 0) || v.currentPpm < 0 || v.targetPpm < 0) {
+        return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Dimensions and concentrations must be zero or greater, and room dimensions must be greater than zero." };
+      }
+      if (v.targetPpm <= v.currentPpm) {
+        return { primary: { label: "Target must exceed current concentration", value: "-" }, secondary: [], note: "Target CO2 concentration must be higher than the current concentration to calculate an amount to add." };
+      }
+      const volumeFt3 = v.length * v.width * v.height;
+      const volumeM3 = volumeFt3 * 0.0283168;
+      const deltaPpm = v.targetPpm - v.currentPpm;
+      const co2LitersNeeded = volumeM3 * (deltaPpm / 1e6) * 1000;
+      const co2Moles = co2LitersNeeded / 24.45;
+      const co2Grams = co2Moles * 44.01;
+      return {
+        primary: { label: "Room volume", value: `${round(volumeFt3, 1)} ft³ (${round(volumeM3, 2)} m³)` },
+        secondary: [
+          { l: "Theoretical CO2 needed", v: `${round(co2LitersNeeded, 1)} L` },
+          { l: "Theoretical CO2 mass", v: `${round(co2Grams, 1)} g` },
+        ],
+        note: "SAFETY: This is an idealized theoretical estimate only, assuming perfectly even mixing and no air exchange - it is not operating instructions. Elevated CO2 is an asphyxiation hazard in enclosed or poorly ventilated spaces; never bypass, disable, or ignore ventilation, CO2 alarms, or safety controllers. Use a properly calibrated CO2 monitor/controller and appropriate regulators for any real system, follow the equipment manufacturer's instructions and local safety regulations, ensure adequate ventilation, and never remain in or enter a space with elevated CO2 without confirmed safe air quality. Target concentrations above roughly 1,200-1,500 ppm provide diminishing plant-growth benefit while increasing risk, and this calculator caps the target field accordingly.",
+      };
+    },
+    faq: [
+      { q: "Is it safe to raise CO2 concentration in a room I'm working in?", a: "Elevated CO2 is a genuine asphyxiation hazard in enclosed or poorly ventilated spaces, and safe practice depends on proper ventilation, calibrated monitoring equipment, and following manufacturer and local safety guidance - this calculator provides an idealized theoretical number only and is not a substitute for a real CO2 monitor, controller, and safe ventilation practices." },
+      { q: "Why does the target concentration field cap out around 1,500 ppm?", a: "Horticultural CO2 enrichment commonly targets roughly 800-1,500 ppm for many crops, since plant growth benefit from added CO2 diminishes well before reaching hazardous levels for humans - capping the field keeps the calculator's scope within a conservative, commonly referenced horticultural range rather than encouraging riskier concentrations." },
+      { q: "What does the 'theoretical CO2 needed' number actually represent?", a: "It's an idealized calculation of how much CO2 gas volume/mass would be needed to raise the entire room's concentration by the specified amount, assuming perfectly even distribution and no air exchange with the outside. Real rooms leak air, have uneven mixing, and lose CO2 through ventilation and plant uptake, so actual equipment (typically a regulated CO2 injection system with a controller) manages this dynamically rather than as a single one-time addition." },
+      { q: "Should I turn off ventilation to keep CO2 levels from dropping?", a: "No - disabling ventilation to trap CO2 removes a key safety control and can allow dangerous concentrations to build up, especially in occupied spaces. Real CO2 enrichment systems are designed to work alongside appropriate ventilation and monitoring, not by sealing a room and eliminating air exchange." },
+      { q: "Do I need a CO2 monitor even if I'm using a controller?", a: "Yes - a calibrated CO2 monitor/alarm is a standard safety practice for any enclosed space with elevated CO2, independent of whatever dosing controller manages the enrichment system itself, since it gives you an independent check that concentrations stay within the intended and safe range." },
+      { q: "Why does the calculator show both liters and grams of CO2?", a: "Liters describe gas volume at the reference conditions used here (about 24.45 L per mole at typical room temperature), while grams describe mass - different CO2 delivery systems and reference materials report dosing in different units, so showing both avoids a separate conversion step." },
+    ],
+    related: ["daily-light-integral-calculator", "square-footage-calculator", "ac-btu-calculator"],
+  },
+  {
+    id: "cricket-chirp-temperature-calculator",
+    category: "biology",
+    title: "Cricket Chirp Temperature Calculator",
+    keyword: "cricket chirp temperature calculator",
+    description: "Estimate ambient temperature from cricket chirp rate using a commonly cited empirical relationship.",
+    intro: "Count how many times a cricket chirps over a set time period and enter it below to estimate the outdoor temperature, based on the well-known relationship between cricket chirp rate and temperature.",
+    fields: [
+      { id: "chirpCount", label: "Chirps counted", type: "number", default: 34, step: 1, min: 0 },
+      { id: "observationSeconds", label: "Observation period", type: "number", unit: "seconds", default: 14, step: 1, min: 1 },
+      { id: "outputUnit", label: "Output unit", type: "select", default: "F", options: [
+        { v: "F", l: "Fahrenheit" }, { v: "C", l: "Celsius" },
+      ] },
+    ],
+    compute: (v) => {
+      if (v.chirpCount < 0 || !(v.observationSeconds > 0)) {
+        return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Chirp count can't be negative and observation period must be greater than zero." };
+      }
+      const chirpsPer14s = v.chirpCount * (14 / v.observationSeconds);
+      const tempF = chirpsPer14s + 40;
+      const tempC = (tempF - 32) * (5 / 9);
+      const primaryValue = v.outputUnit === "C" ? `${round(tempC, 1)}°C` : `${round(tempF, 1)}°F`;
+      return {
+        primary: { label: "Estimated temperature", value: primaryValue },
+        secondary: [
+          { l: "Chirps per 14 seconds (normalized)", v: round(chirpsPer14s, 1) },
+          { l: v.outputUnit === "C" ? "In Fahrenheit" : "In Celsius", v: v.outputUnit === "C" ? `${round(tempF, 1)}°F` : `${round(tempC, 1)}°C` },
+        ],
+        note: "Uses a widely cited approximation for snowy tree crickets: Fahrenheit temperature ≈ (chirps counted in 14 seconds) + 40. This is a rough estimate, not a precise measurement - it was developed for a specific cricket species (chirp-rate-to-temperature relationships vary by species), and factors like humidity, individual variation, and time since sunset can affect chirp rate independent of temperature. Use an actual thermometer when precision matters.",
+      };
+    },
+    faq: [
+      { q: "How accurate is estimating temperature from cricket chirps?", a: "It's a fun, generally-in-the-right-ballpark approximation, not a precise measurement - the relationship was characterized for a specific species (the snowy tree cricket) and can be off by several degrees for other cricket species, individual crickets, or unusual conditions. Treat it as an estimate, not a replacement for an actual thermometer." },
+      { q: "Why does the formula add 40 to the chirp count?", a: "It's part of a simplified empirical approximation relating chirp rate to temperature in Fahrenheit - counting chirps over a 14-second window and adding 40 gives a rough Fahrenheit estimate, a commonly cited simplification of the broader chirp-rate-to-temperature relationship (sometimes called Dolbear's Law) observed in certain cricket species." },
+      { q: "Does this work for any cricket species?", a: "Not with the same accuracy - the specific chirp-rate-to-temperature relationship this calculator uses was characterized for the snowy tree cricket. Other cricket (and some other insect) species show a similar general pattern of faster chirping in warmer temperatures, but with different specific rates, so results for other species should be treated as a looser approximation." },
+      { q: "Why does the calculator ask for an observation period instead of just chirps per minute?", a: "Counting for a shorter period (like 14 seconds) is much easier to do accurately in practice than counting for a full minute, since crickets chirp quickly and continuously - the calculator normalizes whatever period you count over to the standard 14-second basis the formula uses." },
+      { q: "What else besides temperature affects how fast crickets chirp?", a: "Chirp rate can also be influenced by humidity, the individual cricket, time since sunset, and general environmental conditions, not temperature alone - this is part of why the estimate should be treated as approximate rather than precise, especially outside typical outdoor evening conditions." },
+      { q: "Can I use this to check if my thermometer is accurate?", a: "It's better used the other way around - as a fun way to estimate temperature when you don't have a thermometer handy, not to calibrate or verify one you already trust. An actual thermometer will always be more precise than a chirp-based estimate." },
+    ],
+    related: ["daily-light-integral-calculator", "temperature-converter", "cow-gestation-calculator"],
+  },
+  {
+    id: "daily-light-integral-calculator",
+    category: "biology",
+    title: "Daily Light Integral Calculator",
+    keyword: "daily light integral calculator",
+    description: "Calculate Daily Light Integral (DLI) from PPFD and photoperiod, for plant lighting planning.",
+    intro: "Enter your light's PPFD (photosynthetic photon flux density) and the number of hours it runs per day to calculate Daily Light Integral (DLI).",
+    fields: [
+      { id: "ppfd", label: "PPFD", type: "number", unit: "µmol/m²/s", default: 400, step: 10, min: 0 },
+      { id: "hoursPerDay", label: "Light hours per day (photoperiod)", type: "number", unit: "hours", default: 12, step: 0.5, min: 0, max: 24 },
+    ],
+    compute: (v) => {
+      if (v.ppfd < 0 || v.hoursPerDay < 0 || v.hoursPerDay > 24) {
+        return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "PPFD can't be negative, and photoperiod must be between 0 and 24 hours." };
+      }
+      const dli = (v.ppfd * v.hoursPerDay * 3600) / 1e6;
+      return {
+        primary: { label: "Daily Light Integral (DLI)", value: `${round(dli, 2)} mol/m²/day` },
+        secondary: [{ l: "Photoperiod", v: `${v.hoursPerDay} hours` }],
+        note: "DLI = PPFD × photoperiod (seconds/day) ÷ 1,000,000, where PPFD (photosynthetic photon flux density) is the instantaneous rate of photosynthetically active light hitting a surface, and DLI is the total accumulated light delivered over a full day. Target DLI varies significantly by plant species, growth stage, and growing environment - there is no single universally optimal DLI, so compare your result against guidance specific to what you're growing rather than a general target.",
+      };
+    },
+    faq: [
+      { q: "What's the difference between PPFD and DLI?", a: "PPFD (photosynthetic photon flux density) is an instantaneous rate - how much photosynthetically active light is hitting a surface at a given moment, in µmol/m²/second. DLI (Daily Light Integral) is the total accumulated amount of that light delivered over a full day, factoring in both intensity and duration, in mol/m²/day." },
+      { q: "How do I find my light's PPFD?", a: "PPFD is typically measured directly with a quantum PAR meter at the plant canopy height and position you're planning to use, since it varies with distance and position under a light source - some grow light manufacturers also publish PPFD maps or tables for specific mounting heights, which can serve as an estimate if you don't have a meter." },
+      { q: "What DLI should I target for my plants?", a: "It depends heavily on species, growth stage, and growing environment - low-light houseplants may thrive around 4-6 mol/m²/day, many leafy greens and herbs do well around 12-17, and high-light fruiting crops or cannabis flowering stage often target considerably higher, sometimes 30-45+ mol/m²/day. This calculator doesn't recommend a target since the appropriate value depends entirely on what you're growing - check species- or crop-specific guidance." },
+      { q: "Can I use DLI to compare sunlight and grow lights?", a: "Yes - DLI is a useful common unit for comparing total daily light delivery from any source, whether natural sunlight (which varies by season, latitude, and weather) or artificial grow lights (which you control directly via PPFD and photoperiod), letting you plan supplemental lighting to reach a target total." },
+      { q: "If I lower my light's intensity, how should I adjust the photoperiod to keep the same DLI?", a: "Since DLI scales with the product of PPFD and hours, reducing PPFD requires proportionally increasing photoperiod to reach the same DLI, and vice versa - for example, halving PPFD while doubling the light hours delivers approximately the same total DLI, though very long or very short photoperiods can affect plants in other ways beyond total light delivered." },
+      { q: "Does higher DLI always mean better plant growth?", a: "Not necessarily - plants have species- and stage-specific ranges where more light improves growth, but beyond a certain point additional DLI provides diminishing returns or can even cause light stress or photoinhibition if not matched with adequate CO2, nutrients, and temperature. There's no single universally 'better' DLI - appropriate targets are specific to what's being grown." },
+    ],
+    related: ["co2-grow-room-calculator", "cricket-chirp-temperature-calculator", "square-footage-calculator"],
+  },
+  {
+    id: "dihybrid-cross-calculator",
+    category: "biology",
+    title: "Dihybrid Cross Calculator",
+    keyword: "dihybrid cross calculator",
+    description: "Calculate offspring genotype and phenotype ratios for a two-gene cross under simple Mendelian inheritance.",
+    intro: "Select each parent's genotype at two independent genes to calculate offspring genotype and phenotype probabilities, assuming independent assortment and complete dominance.",
+    fields: [
+      { id: "parent1Gene1", label: "Parent 1 - Gene 1 genotype", type: "select", default: "Aa", options: [
+        { v: "AA", l: "AA (homozygous dominant)" }, { v: "Aa", l: "Aa (heterozygous)" }, { v: "aa", l: "aa (homozygous recessive)" },
+      ] },
+      { id: "parent1Gene2", label: "Parent 1 - Gene 2 genotype", type: "select", default: "Bb", options: [
+        { v: "BB", l: "BB (homozygous dominant)" }, { v: "Bb", l: "Bb (heterozygous)" }, { v: "bb", l: "bb (homozygous recessive)" },
+      ] },
+      { id: "parent2Gene1", label: "Parent 2 - Gene 1 genotype", type: "select", default: "Aa", options: [
+        { v: "AA", l: "AA (homozygous dominant)" }, { v: "Aa", l: "Aa (heterozygous)" }, { v: "aa", l: "aa (homozygous recessive)" },
+      ] },
+      { id: "parent2Gene2", label: "Parent 2 - Gene 2 genotype", type: "select", default: "Bb", options: [
+        { v: "BB", l: "BB (homozygous dominant)" }, { v: "Bb", l: "Bb (heterozygous)" }, { v: "bb", l: "bb (homozygous recessive)" },
+      ] },
+    ],
+    compute: (v) => {
+      function gametesForLocus(genotype, dominantLetter, recessiveLetter) {
+        if (genotype[0] === genotype[1]) return [genotype[0]];
+        return [dominantLetter, recessiveLetter];
+      }
+      const p1A = gametesForLocus(v.parent1Gene1, "A", "a");
+      const p1B = gametesForLocus(v.parent1Gene2, "B", "b");
+      const p2A = gametesForLocus(v.parent2Gene1, "A", "a");
+      const p2B = gametesForLocus(v.parent2Gene2, "B", "b");
+      const p1Gametes = [];
+      for (const a of p1A) for (const b of p1B) p1Gametes.push(a + b);
+      const p2Gametes = [];
+      for (const a of p2A) for (const b of p2B) p2Gametes.push(a + b);
+      const genotypeCounts = {};
+      let total = 0;
+      for (const g1 of p1Gametes) {
+        for (const g2 of p2Gametes) {
+          const aAlleles = [g1[0], g2[0]].sort().join("");
+          const bAlleles = [g1[1], g2[1]].sort((x, y) => (x === x.toUpperCase() ? -1 : 1) - (y === y.toUpperCase() ? -1 : 1)).join("");
+          // Normalize allele order: uppercase (dominant) first for readability
+          const normA = [g1[0], g2[0]].sort((x, y) => (x.toUpperCase() === x ? -1 : 1) - (y.toUpperCase() === y ? -1 : 1)).join("");
+          const genotype = normA + bAlleles;
+          genotypeCounts[genotype] = (genotypeCounts[genotype] || 0) + 1;
+          total++;
+        }
+      }
+      const phenotypeCounts = {};
+      for (const [genotype, count] of Object.entries(genotypeCounts)) {
+        const hasDominantA = genotype.slice(0, 2).includes("A");
+        const hasDominantB = genotype.slice(2, 4).includes("B");
+        const phenotype = `${hasDominantA ? "Dominant A-trait" : "Recessive a-trait"}, ${hasDominantB ? "Dominant B-trait" : "Recessive b-trait"}`;
+        phenotypeCounts[phenotype] = (phenotypeCounts[phenotype] || 0) + count;
+      }
+      const genotypeList = Object.entries(genotypeCounts).sort((a, b) => b[1] - a[1]).map(([g, c]) => `${g}: ${c}/${total}`).join(", ");
+      const phenotypeList = Object.entries(phenotypeCounts).sort((a, b) => b[1] - a[1]).map(([p, c]) => `${p}: ${round((c / total) * 100, 1)}%`);
+      return {
+        primary: { label: "Possible offspring combinations", value: `${total} combinations` },
+        secondary: phenotypeList.map((p) => ({ l: "Phenotype ratio", v: p })),
+        note: `Genotype outcomes (out of ${total}): ${genotypeList}. Gametes from parent 1: ${[...new Set(p1Gametes)].join(", ")}. Gametes from parent 2: ${[...new Set(p2Gametes)].join(", ")}. This assumes independent assortment (the two genes are on different chromosomes or far apart, not linked), simple Mendelian inheritance, and complete dominance for the phenotype ratios shown. Real inheritance can differ due to genetic linkage, incomplete dominance, codominance, epistasis (gene interactions), incomplete penetrance, and environmental effects - this is an educational model, not a prediction for any specific real gene pair.`,
+      };
+    },
+    faq: [
+      { q: "What does 'independent assortment' mean and why does it matter here?", a: "Independent assortment is the Mendelian principle that alleles for different genes are inherited independently of each other, which holds true when the two genes are on different chromosomes (or far apart on the same one). This calculator assumes independent assortment - if the two genes were closely linked on the same chromosome, they'd tend to be inherited together more often than this model predicts, which is called genetic linkage." },
+      { q: "How is this different from the Allele Frequency Calculator?", a: "The Allele Frequency Calculator works backward from real observed genotype counts in a population sample to calculate allele frequencies (p and q) for a single gene. This Dihybrid Cross Calculator instead works forward from two known parent genotypes across two genes to predict possible offspring outcomes and their probabilities - they answer different questions using different inputs." },
+      { q: "How is this different from a Hardy-Weinberg calculation?", a: "Hardy-Weinberg calculations predict genotype frequencies in a large population at equilibrium, given allele frequencies, for a single gene. A dihybrid cross instead predicts individual offspring outcomes from two specific known parents across two genes - one is a population-level equilibrium model, the other is an individual-cross probability model, and they're used for different kinds of genetics questions." },
+      { q: "Why does the calculator show 4 possible gametes for a heterozygous parent at both genes?", a: "A parent heterozygous at both genes (like AaBb) can pass on any combination of one allele from each gene - AB, Ab, aB, or ab - assuming independent assortment, giving 4 equally likely gamete types. A parent homozygous at one or both genes produces fewer distinct gamete types, since a homozygous locus can only pass on one allele." },
+      { q: "What does 'complete dominance' mean for the phenotype ratios shown?", a: "Complete dominance means one allele fully masks the other in a heterozygote, so a genotype like Aa looks identical to AA for that trait - only the homozygous recessive genotype (aa) shows the recessive phenotype. This calculator's phenotype ratios assume complete dominance at both genes; traits with incomplete dominance or codominance would show additional intermediate or blended phenotypes not reflected here." },
+      { q: "Can I use this for real gene pairs, like predicting an actual pet's or plant's offspring traits?", a: "It can be a useful educational approximation if you're confident the two genes assort independently and show complete dominance, but real biology often includes complications like linkage, incomplete dominance, or gene interactions that this simplified model doesn't capture - for anything with real consequences (breeding decisions, genetic counseling, etc.), consult a qualified geneticist or relevant specialist rather than relying solely on this tool." },
+    ],
+    related: ["hardy-weinberg-calculator", "allele-frequency-calculator", "dna-to-mrna-converter"],
+  },
+  {
+    id: "dna-concentration-calculator",
+    category: "biology",
+    title: "DNA Concentration Calculator",
+    keyword: "dna concentration calculator",
+    description: "Calculate nucleic acid concentration from A260 absorbance, dilution factor, and nucleic acid type.",
+    intro: "Enter your A260 absorbance reading, dilution factor, and nucleic acid type to calculate concentration using standard spectrophotometric conversion factors.",
+    fields: [
+      { id: "a260", label: "A260 absorbance", type: "number", default: 0.5, step: 0.01, min: 0 },
+      { id: "dilutionFactor", label: "Dilution factor", type: "number", default: 1, step: 1, min: 1 },
+      { id: "nucleicAcidType", label: "Nucleic acid type", type: "select", default: "dsDNA", options: [
+        { v: "dsDNA", l: "Double-stranded DNA (dsDNA)" }, { v: "ssDNA", l: "Single-stranded DNA (ssDNA)" }, { v: "RNA", l: "RNA" },
+      ] },
+    ],
+    compute: (v) => {
+      if (v.a260 < 0 || !(v.dilutionFactor >= 1)) {
+        return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "A260 absorbance can't be negative and dilution factor must be 1 or greater." };
+      }
+      const factors = { dsDNA: 50, ssDNA: 33, RNA: 40 };
+      const factor = factors[v.nucleicAcidType];
+      const concentrationUgMl = v.a260 * factor * v.dilutionFactor;
+      const concentrationNgUl = concentrationUgMl;
+      return {
+        primary: { label: "Concentration", value: `${round(concentrationUgMl, 2)} µg/mL` },
+        secondary: [
+          { l: "Equivalent", v: `${round(concentrationNgUl, 2)} ng/µL` },
+          { l: "Conversion factor used", v: `${factor} µg/mL per A260 unit (${v.nucleicAcidType})` },
+        ],
+        note: "Concentration = A260 × conversion factor × dilution factor. Conversion factors differ by nucleic acid type because each absorbs light at 260 nm differently: 50 µg/mL per A260 unit for double-stranded DNA, 33 for single-stranded DNA, and 40 for RNA - using the wrong factor for your sample type will give an incorrect result. This calculation assumes a pure sample; contaminants like protein or phenol can inflate the A260 reading and should be checked separately (commonly via the A260/A280 ratio).",
+      };
+    },
+    faq: [
+      { q: "Why are there different conversion factors for dsDNA, ssDNA, and RNA?", a: "Each type of nucleic acid has a different characteristic absorbance per unit concentration at 260 nm due to differences in base stacking and structure - double-stranded DNA absorbs less per unit mass than single-stranded DNA or RNA because base stacking in the double helix reduces absorbance (hypochromicity). Using the correct factor for your actual sample type is essential for an accurate result." },
+      { q: "What if I don't dilute my sample before measuring?", a: "Enter a dilution factor of 1, meaning no dilution - the calculator will use your A260 reading directly. A dilution factor greater than 1 means you diluted the original sample before measuring, and the calculator scales the result back up to reflect the original, undiluted sample's concentration." },
+      { q: "How is this different from the Cell Dilution Calculator?", a: "This DNA Concentration Calculator determines the concentration of a nucleic acid sample from a spectrophotometer absorbance reading - it answers 'what concentration do I actually have?' The Cell Dilution Calculator instead answers a different question: given a known stock concentration and a target concentration, how much stock solution and diluent do you need to combine? Use this tool to measure what you have, and the Cell Dilution Calculator to plan how to dilute it to a target concentration." },
+      { q: "Does a high A260 reading always mean high DNA purity?", a: "No - A260 absorbance alone measures total absorbance at that wavelength, which can include contaminants like residual protein, phenol, or RNA contamination in a DNA prep, not just the nucleic acid of interest. Purity is typically assessed separately using the A260/A280 ratio (roughly 1.8 for pure DNA, roughly 2.0 for pure RNA) alongside the concentration calculated here." },
+      { q: "What's a typical A260 reading for a usable DNA sample?", a: "It varies enormously by application and extraction method - anywhere from very dilute (A260 well under 0.1) to fairly concentrated (A260 of 1 or more) samples can be usable depending on what you need the DNA for. There's no single 'normal' reading; check the concentration requirements for your specific downstream application." },
+      { q: "Why does the result show both µg/mL and ng/µL?", a: "µg/mL and ng/µL are numerically equivalent (1 µg/mL = 1 ng/µL), but different labs and protocols commonly report concentration in one or the other - showing both saves a manual conversion regardless of which unit your protocol or downstream application expects." },
+    ],
+    related: ["dna-copy-number-calculator", "cell-dilution-calculator", "molecular-weight-calculator"],
+  },
+  {
+    id: "dna-copy-number-calculator",
+    category: "biology",
+    title: "DNA Copy Number Calculator",
+    keyword: "dna copy number calculator",
+    description: "Estimate the number of DNA molecules (copies) from DNA mass and fragment or plasmid length in base pairs.",
+    intro: "Enter your DNA mass and fragment or plasmid length in base pairs to estimate the number of DNA molecules (copies) present, assuming double-stranded DNA.",
+    fields: [
+      { id: "mass", label: "DNA mass", type: "number", unit: "ng", default: 100, step: 1, min: 0 },
+      { id: "lengthBp", label: "DNA length", type: "number", unit: "bp", default: 3000, step: 1, min: 1 },
+    ],
+    compute: (v) => {
+      if (v.mass < 0 || !(v.lengthBp > 0)) {
+        return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "DNA mass can't be negative and length must be greater than zero base pairs." };
+      }
+      const AVOGADRO = 6.022e23;
+      const AVG_MW_PER_BP = 650; // g/mol, average molecular weight per base pair for dsDNA
+      const massGrams = v.mass * 1e-9;
+      const molecularWeight = v.lengthBp * AVG_MW_PER_BP;
+      const moles = massGrams / molecularWeight;
+      const copies = moles * AVOGADRO;
+      return {
+        primary: { label: "Estimated copy number", value: copies.toExponential(3) },
+        secondary: [
+          { l: "Molecular weight (estimated)", v: `${molecularWeight.toExponential(3)} g/mol` },
+          { l: "Moles of DNA", v: `${moles.toExponential(3)} mol` },
+        ],
+        note: "Copies = (DNA mass ÷ molecular weight) × Avogadro's constant (6.022 × 10²³), where molecular weight is estimated as length in base pairs × 650 g/mol (a commonly used average molecular weight per base pair for double-stranded DNA). This is an idealized estimate - actual average molecular weight per base pair varies slightly with GC content, and this calculation assumes a pure, double-stranded, linear or circular molecule with no significant contamination affecting the mass measurement.",
+      };
+    },
+    faq: [
+      { q: "Where does the 650 g/mol per base pair figure come from?", a: "It's a commonly used average molecular weight for one base pair of double-stranded DNA (accounting for both strands, including the sugar-phosphate backbone and paired bases), derived from the average molecular weights of the four possible base pairs. It's an average, not an exact figure for any specific sequence, since actual molecular weight varies slightly with the sequence's GC content." },
+      { q: "Does this work for RNA or single-stranded DNA too?", a: "This calculator's default assumption (650 g/mol per unit) is calibrated for double-stranded DNA specifically. Single-stranded nucleic acids and RNA have different average molecular weights per nucleotide, so applying the dsDNA figure to those sample types would give an inaccurate copy number estimate." },
+      { q: "Why does the result use scientific notation?", a: "DNA copy numbers are often extremely large (billions to trillions of molecules even in a small mass), so scientific notation (like 1.234 × 10¹²) keeps the result readable and precise without an unwieldy string of digits - it's the standard way this kind of large number is reported in molecular biology." },
+      { q: "How is this different from the DNA Concentration Calculator?", a: "The DNA Concentration Calculator determines how concentrated your sample is (mass per volume, like ng/µL) from an absorbance reading. This DNA Copy Number Calculator instead estimates how many individual DNA molecules are present in a given mass, based on the molecule's length - concentration and copy number are related but distinct measurements, and this tool answers the 'how many molecules' question specifically." },
+      { q: "Does plasmid size affect how many copies I get from the same mass?", a: "Yes, significantly - for the same total DNA mass, a shorter plasmid or fragment contains many more individual molecules (copies) than a longer one, since each individual molecule of a longer sequence weighs more. This is why copy number calculations always require the DNA length, not just the mass." },
+      { q: "Is this calculation exact enough for quantitative PCR (qPCR) standard curves?", a: "It provides a reasonable starting estimate for preparing standards, but actual qPCR quantification accuracy depends on many additional factors (pipetting precision, DNA purity, exact GC content, and more) beyond this idealized calculation - many labs also verify standard concentrations empirically rather than relying solely on a calculated estimate." },
+    ],
+    related: ["dna-concentration-calculator", "molecular-weight-calculator", "cell-doubling-time-calculator"],
+  },
+  {
+    id: "dna-to-mrna-converter",
+    category: "biology",
+    title: "DNA to mRNA Converter",
+    keyword: "dna to mrna converter",
+    description: "Convert a DNA sequence to its corresponding mRNA sequence, for either the coding strand or the template strand.",
+    intro: "Paste a DNA sequence (A, T, C, G only) and specify whether it's the coding (sense) strand or the template (antisense) strand to generate the corresponding mRNA sequence.",
+    fields: [
+      { id: "dnaSequence", label: "DNA sequence", type: "textarea", default: "ATGGCCATTGTAATGGGCCGCTGAAAGGGTGCCCGATAG" },
+      { id: "strandType", label: "Strand type provided", type: "select", default: "coding", options: [
+        { v: "coding", l: "Coding strand (sense strand)" }, { v: "template", l: "Template strand (antisense strand)" },
+      ] },
+    ],
+    compute: (v) => {
+      const raw = (v.dnaSequence || "").toUpperCase().replace(/\s+/g, "");
+      if (!raw.length) {
+        return { primary: { label: "Enter a DNA sequence", value: "-" }, secondary: [], note: "Paste a DNA sequence using only the letters A, T, C, and G." };
+      }
+      const invalidChars = [...new Set(raw.split("").filter((c) => !"ATCG".includes(c)))];
+      if (invalidChars.length) {
+        return { primary: { label: "Invalid character(s) found", value: invalidChars.join(", ") }, secondary: [], note: "Only A, T, C, and G are accepted (ambiguity codes are not supported). Remove or correct the invalid character(s) and try again." };
+      }
+      let mrna;
+      if (v.strandType === "coding") {
+        mrna = raw.replace(/T/g, "U");
+      } else {
+        const complementMap = { A: "U", T: "A", C: "G", G: "C" };
+        mrna = raw.split("").map((b) => complementMap[b]).join("");
+      }
+      return {
+        primary: { label: "mRNA sequence", value: mrna },
+        secondary: [
+          { l: "Normalized DNA input", v: raw },
+          { l: "Sequence length", v: `${raw.length} nt` },
+        ],
+        note: v.strandType === "coding"
+          ? "For a coding (sense) strand, the mRNA sequence matches the DNA sequence directly, with each T replaced by U - this is a direct sequence-transcription utility, not a full gene-expression predictor, and does not model promoters, splicing, or translation."
+          : "For a template (antisense) strand, the mRNA is generated as the base-complementary sequence (A↔U, C↔G), assuming the template strand is presented in the conventional 3'→5' orientation typically used when pairing it directly under the coding strand - this is a direct sequence-transcription utility, not a full gene-expression predictor, and does not model promoters, splicing, or translation.",
+      };
+    },
+    faq: [
+      { q: "What's the difference between the coding strand and the template strand?", a: "The coding (sense) strand has the same sequence as the mRNA that gets transcribed (except T instead of U), while the template (antisense) strand is the strand RNA polymerase actually reads to synthesize mRNA, and is complementary to both the coding strand and the resulting mRNA. This calculator requires you to specify which one you're providing, since the correct mRNA output depends entirely on that choice." },
+      { q: "What happens if I select the wrong strand type for my sequence?", a: "You'll get an mRNA sequence that's the complement of the correct answer rather than the correct one itself, since coding-strand and template-strand inputs are processed completely differently. If your result looks unexpected, double-check which strand your sequence actually represents before troubleshooting further." },
+      { q: "Why does the calculator reject certain characters?", a: "Only the four standard DNA bases - A, T, C, and G - are accepted, since the tool is built around a straightforward, defensible transcription rule for standard sequences. Ambiguity codes (like N, R, Y, etc.) and any other characters aren't supported and will be flagged as invalid so you can correct the input rather than getting a silently incorrect result." },
+      { q: "Does this tool predict the resulting protein?", a: "No - this is a DNA-to-mRNA sequence transcription utility only. It doesn't model translation, reading frames, start/stop codons, or resulting amino acid sequences, and it doesn't account for real biological processes like splicing, promoters, or post-transcriptional modification." },
+      { q: "Can I paste a sequence with line breaks or spaces?", a: "Yes - the calculator strips whitespace (spaces, tabs, line breaks) automatically before processing, so you can paste a sequence formatted across multiple lines and it will be normalized into one continuous sequence before conversion." },
+      { q: "Why does converting a coding strand just swap T for U?", a: "Because mRNA is synthesized as the complement of the template strand, which makes it identical in sequence to the coding strand (aside from using U instead of T) - so for a coding-strand input, generating the mRNA is as simple as that single substitution, without needing to compute a complement." },
+    ],
+    related: ["dihybrid-cross-calculator", "dna-concentration-calculator", "dna-copy-number-calculator"],
   },
 ];
 

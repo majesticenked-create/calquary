@@ -154,6 +154,12 @@ const WAVE_ONE_TOOL_IDS = [
   "cat-personality-quiz", "cattle-per-acre-calculator", "cell-dilution-calculator",
   "cell-doubling-time-calculator", "cephalexin-for-cats-dosage-calculator",
   "cephalexin-for-dogs-dosage-calculator", "compost-calculator",
+  // Batch 14: the 10 Biology/Pet & Lifestyle tools added in the Batch 003
+  // build, now translated into all 11 non-English locales.
+  "corn-yield-calculator", "cost-of-owning-a-dog-calculator", "cow-gestation-calculator",
+  "co2-grow-room-calculator", "cricket-chirp-temperature-calculator", "daily-light-integral-calculator",
+  "dihybrid-cross-calculator", "dna-concentration-calculator", "dna-copy-number-calculator",
+  "dna-to-mrna-converter",
 ];
 
 function loadData() {

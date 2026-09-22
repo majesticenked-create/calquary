@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DNAコピー数計算機 - 無料オンライン計算ツール | Calquary</title>
+  <meta name="description" content="DNA質量と塩基対単位でのフラグメントまたはプラスミド長から、DNA分子(コピー)数を推定します。" />
+  <meta property="og:title" content="DNAコピー数計算機 | Calquary">
+  <meta property="og:description" content="DNA質量と塩基対単位でのフラグメントまたはプラスミド長から、DNA分子(コピー)数を推定します。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/ja/tool/dna-copy-number-calculator">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/dna-copy-number-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DNAコピー数計算機 | Calquary">
+  <meta name="twitter:description" content="DNA質量と塩基対単位でのフラグメントまたはプラスミド長から、DNA分子(コピー)数を推定します。">
+  <meta name="twitter:image" content="https://calquary.com/og-images/dna-copy-number-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/dna-copy-number-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dna-copy-number-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/dna-copy-number-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/dna-copy-number-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/dna-copy-number-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/dna-copy-number-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/dna-copy-number-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/dna-copy-number-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/dna-copy-number-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/dna-copy-number-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/dna-copy-number-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/dna-copy-number-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/dna-copy-number-calculator">
+    <link rel="canonical" href="https://calquary.com/ja/tool/dna-copy-number-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("dna-copy-number-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("dna-copy-number-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "DNAコピー数計算機",
+      "description": "DNA質量と塩基対単位でのフラグメントまたはプラスミド長から、DNA分子(コピー)数を推定します。",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/ja/tool/dna-copy-number-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "ja"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/ja/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/ja/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "DNAコピー数計算機",
+          "item": "https://calquary.com/ja/tool/dna-copy-number-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "塩基対あたり650g/molという数値はどこから来ていますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "これは二本鎖DNAの塩基対1つあたりの一般的に使用される平均分子量であり(両方の鎖、糖-リン酸骨格および対になった塩基を考慮)、4種類の可能な塩基対の平均分子量から導かれています。これは平均値であり、特定の配列に対する正確な数値ではありません。実際の分子量は配列のGC含量によってわずかに変動するためです。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "これはRNAや一本鎖DNAにも使えますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "この計算機のデフォルトの仮定(単位あたり650g/mol)は、特に二本鎖DNA用に較正されています。一本鎖核酸とRNAはヌクレオチドあたりの平均分子量が異なるため、これらの試料タイプにdsDNAの数値を適用すると、不正確なコピー数の推定値になります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "なぜ結果は科学的記数法を使用するのですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "DNAのコピー数は、少量の質量であっても非常に大きくなることが多く(数十億から数兆分子)、科学的記数法(1.234×10¹²など)を使用することで、扱いにくい桁数の文字列にならずに結果を読みやすく正確に保てます。これは分子生物学でこの種の大きな数値を報告する標準的な方法です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "これはDNA濃度計算機とどう違いますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "DNA濃度計算機は、吸光度測定からサンプルの濃度(体積あたりの質量、ng/µLなど)を求めます。このDNAコピー数計算機は代わりに、分子の長さに基づいて、与えられた質量中にどれだけの個々のDNA分子が存在するかを推定します。濃度とコピー数は関連していますが異なる測定値であり、このツールは特に「分子の数」という問いに答えるものです。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "プラスミドのサイズは同じ質量から得られるコピー数に影響しますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい、大きく影響します。同じ総DNA質量に対して、短いプラスミドまたはフラグメントは、長いものよりもはるかに多くの個々の分子(コピー)を含みます。これは、より長い配列の各個別の分子がより重いためです。これが、コピー数の計算が常に質量だけでなくDNAの長さを必要とする理由です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "この計算は定量PCR(qPCR)の標準曲線に十分正確ですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "標準を準備するための妥当な出発点の見積もりを提供しますが、実際のqPCR定量精度は、この理想化された計算を超えた多くの追加要因(ピペッティングの精度、DNAの純度、正確なGC含量など)に依存します。多くの研究室では、計算された見積もりのみに頼るのではなく、標準濃度を経験的にも検証しています。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/ja/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/ja/#categories">カテゴリー</a>
+          <a href="/ja/#tools">すべてのツール</a>
+          <a href="/ja/about">このサイトについて</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: 日本語">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>JA</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/dna-copy-number-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/dna-copy-number-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/dna-copy-number-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/dna-copy-number-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/dna-copy-number-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/dna-copy-number-calculator">Italiano</a><span class="locale-item current" role="menuitem" aria-current="true">日本語</span><a class="locale-item" role="menuitem" href="/ro/tool/dna-copy-number-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/dna-copy-number-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/dna-copy-number-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/dna-copy-number-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/dna-copy-number-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/ja/">Calquary</a> / <a href="/ja/category/biology">生物学</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>DNAコピー数計算機</h1>
+        <p style="max-width:60ch;">DNA質量と塩基対単位でのフラグメントまたはプラスミド長を入力すると、二本鎖DNAを仮定して存在するDNA分子(コピー)数を推定します。</p>
+        <p class="last-updated">最終更新日： September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">計算する</button>
+              <button type="button" id="calc-reset" class="btn-ghost">リセット</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>よくある質問</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>塩基対あたり650g/molという数値はどこから来ていますか?</h3>
+<p>これは二本鎖DNAの塩基対1つあたりの一般的に使用される平均分子量であり(両方の鎖、糖-リン酸骨格および対になった塩基を考慮)、4種類の可能な塩基対の平均分子量から導かれています。これは平均値であり、特定の配列に対する正確な数値ではありません。実際の分子量は配列のGC含量によってわずかに変動するためです。</p>
+</div>
+<div class="faq-item">
+<h3>これはRNAや一本鎖DNAにも使えますか?</h3>
+<p>この計算機のデフォルトの仮定(単位あたり650g/mol)は、特に二本鎖DNA用に較正されています。一本鎖核酸とRNAはヌクレオチドあたりの平均分子量が異なるため、これらの試料タイプにdsDNAの数値を適用すると、不正確なコピー数の推定値になります。</p>
+</div>
+<div class="faq-item">
+<h3>なぜ結果は科学的記数法を使用するのですか?</h3>
+<p>DNAのコピー数は、少量の質量であっても非常に大きくなることが多く(数十億から数兆分子)、科学的記数法(1.234×10¹²など)を使用することで、扱いにくい桁数の文字列にならずに結果を読みやすく正確に保てます。これは分子生物学でこの種の大きな数値を報告する標準的な方法です。</p>
+</div>
+<div class="faq-item">
+<h3>これはDNA濃度計算機とどう違いますか?</h3>
+<p>DNA濃度計算機は、吸光度測定からサンプルの濃度(体積あたりの質量、ng/µLなど)を求めます。このDNAコピー数計算機は代わりに、分子の長さに基づいて、与えられた質量中にどれだけの個々のDNA分子が存在するかを推定します。濃度とコピー数は関連していますが異なる測定値であり、このツールは特に「分子の数」という問いに答えるものです。</p>
+</div>
+<div class="faq-item">
+<h3>プラスミドのサイズは同じ質量から得られるコピー数に影響しますか?</h3>
+<p>はい、大きく影響します。同じ総DNA質量に対して、短いプラスミドまたはフラグメントは、長いものよりもはるかに多くの個々の分子(コピー)を含みます。これは、より長い配列の各個別の分子がより重いためです。これが、コピー数の計算が常に質量だけでなくDNAの長さを必要とする理由です。</p>
+</div>
+<div class="faq-item">
+<h3>この計算は定量PCR(qPCR)の標準曲線に十分正確ですか?</h3>
+<p>標準を準備するための妥当な出発点の見積もりを提供しますが、実際のqPCR定量精度は、この理想化された計算を超えた多くの追加要因(ピペッティングの精度、DNAの純度、正確なGC含量など)に依存します。多くの研究室では、計算された見積もりのみに頼るのではなく、標準濃度を経験的にも検証しています。</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">計算する</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>関連ツール</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>精度について</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquaryの計算ツールは、迅速で信頼できる概算を目的としています。実際の財務、構造、医療に関わる重要な決定を行う前には、必ず専門家にご確認ください。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/ja/">← すべての計算ツールに戻る</a> · <a href="/ja/about">このサイトについて</a> · <a href="/ja/contact">お問い合わせ</a> · <a href="/ja/privacy">プライバシー</a> · <a href="/ja/terms">利用規約</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

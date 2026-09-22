@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>双因子杂交计算器 - 免费在线计算器 | Calquary</title>
+  <meta name="description" content="在简单孟德尔遗传规律下,计算双基因杂交后代的基因型和表现型比例。" />
+  <meta property="og:title" content="双因子杂交计算器 | Calquary">
+  <meta property="og:description" content="在简单孟德尔遗传规律下,计算双基因杂交后代的基因型和表现型比例。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/zh/tool/dihybrid-cross-calculator">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/dihybrid-cross-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="双因子杂交计算器 | Calquary">
+  <meta name="twitter:description" content="在简单孟德尔遗传规律下,计算双基因杂交后代的基因型和表现型比例。">
+  <meta name="twitter:image" content="https://calquary.com/og-images/dihybrid-cross-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/dihybrid-cross-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dihybrid-cross-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/dihybrid-cross-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/dihybrid-cross-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/dihybrid-cross-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/dihybrid-cross-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/dihybrid-cross-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/dihybrid-cross-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/dihybrid-cross-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/dihybrid-cross-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/dihybrid-cross-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/dihybrid-cross-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/dihybrid-cross-calculator">
+    <link rel="canonical" href="https://calquary.com/zh/tool/dihybrid-cross-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("dihybrid-cross-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("dihybrid-cross-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "双因子杂交计算器",
+      "description": "在简单孟德尔遗传规律下,计算双基因杂交后代的基因型和表现型比例。",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/zh/tool/dihybrid-cross-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "zh"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/zh/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "双因子杂交计算器",
+          "item": "https://calquary.com/zh/tool/dihybrid-cross-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "什么是\"自由组合\"?为什么它在这里很重要?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "自由组合是孟德尔的一项原理,即不同基因的等位基因彼此独立遗传,这在两个基因位于不同染色体(或同一染色体上相距很远)时成立。本计算器假设符合自由组合——如果两个基因在同一染色体上紧密连锁,它们被一起遗传的频率会高于该模型的预测,这种现象称为基因连锁。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "这与等位基因频率计算器有什么区别?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "等位基因频率计算器是从群体样本中实际观测到的基因型计数反推,计算单个基因的等位基因频率(p和q)。而本双因子杂交计算器则相反,是从两个已知亲本在两个基因上的基因型出发正向推算,预测可能的后代结果及其概率——两者使用不同的输入回答不同的问题。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "这与哈迪-温伯格计算有什么区别?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "哈迪-温伯格计算是在已知等位基因频率的情况下,预测处于平衡状态的大群体中单个基因的基因型频率。而双因子杂交则相反,是根据两个已知的特定亲本在两个基因上的情况,预测个体后代的结果——前者是群体层面的平衡模型,后者是个体杂交的概率模型,二者用于回答不同类型的遗传学问题。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "为什么计算器显示两个基因都是杂合子的亲本可以产生4种可能的配子?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "两个基因都是杂合子的亲本(如AaBb)在假设自由组合的情况下,可以传递每个基因中一个等位基因的任意组合——AB、Ab、aB或ab,产生4种概率相等的配子类型。在一个或两个基因上为纯合子的亲本产生的不同配子类型较少,因为纯合位点只能传递一种等位基因。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "所显示的表现型比例中\"完全显性\"是什么意思?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "完全显性意味着在杂合子中,一个等位基因完全掩盖另一个,因此像Aa这样的基因型在该性状上看起来与AA完全相同——只有纯合隐性基因型(aa)才表现出隐性表现型。本计算器的表现型比例假设两个基因都是完全显性;具有不完全显性或共显性的性状会显示出此处未反映的额外中间型或混合表现型。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "我可以用这个来预测真实基因对吗,比如预测真实宠物或植物后代的性状?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "如果你确信这两个基因是自由组合且表现为完全显性,这可以作为一个有用的教育性近似方法,但真实生物学中常常存在连锁、不完全显性或基因相互作用等复杂情况,这个简化模型无法捕捉——对于任何具有实际后果的事情(繁育决策、遗传咨询等),应咨询合格的遗传学家或相关专家,而不是仅仅依赖此工具。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/zh/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/zh/#categories">分类</a>
+          <a href="/zh/#tools">所有工具</a>
+          <a href="/zh/about">关于我们</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: 中文">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>undefined</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/dihybrid-cross-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/dihybrid-cross-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/dihybrid-cross-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/dihybrid-cross-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/dihybrid-cross-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/dihybrid-cross-calculator">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/dihybrid-cross-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/dihybrid-cross-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/dihybrid-cross-calculator">Ελληνικά</a><span class="locale-item current" role="menuitem" aria-current="true">中文</span><a class="locale-item" role="menuitem" href="/ar/tool/dihybrid-cross-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/dihybrid-cross-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/zh/">Calquary</a> / <a href="/zh/category/biology">生物学</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>双因子杂交计算器</h1>
+        <p style="max-width:60ch;">选择每个亲本在两个独立基因上的基因型,即可在假设自由组合和完全显性的前提下,计算后代的基因型和表现型概率。</p>
+        <p class="last-updated">最后更新： September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">计算</button>
+              <button type="button" id="calc-reset" class="btn-ghost">重置</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>常见问题</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>什么是"自由组合"?为什么它在这里很重要?</h3>
+<p>自由组合是孟德尔的一项原理,即不同基因的等位基因彼此独立遗传,这在两个基因位于不同染色体(或同一染色体上相距很远)时成立。本计算器假设符合自由组合——如果两个基因在同一染色体上紧密连锁,它们被一起遗传的频率会高于该模型的预测,这种现象称为基因连锁。</p>
+</div>
+<div class="faq-item">
+<h3>这与等位基因频率计算器有什么区别?</h3>
+<p>等位基因频率计算器是从群体样本中实际观测到的基因型计数反推,计算单个基因的等位基因频率(p和q)。而本双因子杂交计算器则相反,是从两个已知亲本在两个基因上的基因型出发正向推算,预测可能的后代结果及其概率——两者使用不同的输入回答不同的问题。</p>
+</div>
+<div class="faq-item">
+<h3>这与哈迪-温伯格计算有什么区别?</h3>
+<p>哈迪-温伯格计算是在已知等位基因频率的情况下,预测处于平衡状态的大群体中单个基因的基因型频率。而双因子杂交则相反,是根据两个已知的特定亲本在两个基因上的情况,预测个体后代的结果——前者是群体层面的平衡模型,后者是个体杂交的概率模型,二者用于回答不同类型的遗传学问题。</p>
+</div>
+<div class="faq-item">
+<h3>为什么计算器显示两个基因都是杂合子的亲本可以产生4种可能的配子?</h3>
+<p>两个基因都是杂合子的亲本(如AaBb)在假设自由组合的情况下,可以传递每个基因中一个等位基因的任意组合——AB、Ab、aB或ab,产生4种概率相等的配子类型。在一个或两个基因上为纯合子的亲本产生的不同配子类型较少,因为纯合位点只能传递一种等位基因。</p>
+</div>
+<div class="faq-item">
+<h3>所显示的表现型比例中"完全显性"是什么意思?</h3>
+<p>完全显性意味着在杂合子中,一个等位基因完全掩盖另一个,因此像Aa这样的基因型在该性状上看起来与AA完全相同——只有纯合隐性基因型(aa)才表现出隐性表现型。本计算器的表现型比例假设两个基因都是完全显性;具有不完全显性或共显性的性状会显示出此处未反映的额外中间型或混合表现型。</p>
+</div>
+<div class="faq-item">
+<h3>我可以用这个来预测真实基因对吗,比如预测真实宠物或植物后代的性状?</h3>
+<p>如果你确信这两个基因是自由组合且表现为完全显性,这可以作为一个有用的教育性近似方法,但真实生物学中常常存在连锁、不完全显性或基因相互作用等复杂情况,这个简化模型无法捕捉——对于任何具有实际后果的事情(繁育决策、遗传咨询等),应咨询合格的遗传学家或相关专家,而不是仅仅依赖此工具。</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">计算</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>相关工具</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>准确性说明</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquary 的计算器旨在提供快速、可靠的估算。对于涉及重大财务、结构或医疗后果的决定，请咨询合格的专业人士。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/zh/">← 返回所有计算器</a> · <a href="/zh/about">关于我们</a> · <a href="/zh/contact">联系我们</a> · <a href="/zh/privacy">隐私政策</a> · <a href="/zh/terms">使用条款</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CO2栽培室計算機 - 無料オンライン計算ツール | Calquary</title>
+  <meta name="description" content="植物栽培のために濃度を上げるのに必要な栽培室の容積と理論上のCO2量を計算します - 教育的な推定値であり、運用手順ではありません。" />
+  <meta property="og:title" content="CO2栽培室計算機 | Calquary">
+  <meta property="og:description" content="植物栽培のために濃度を上げるのに必要な栽培室の容積と理論上のCO2量を計算します - 教育的な推定値であり、運用手順ではありません。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/ja/tool/co2-grow-room-calculator">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/co2-grow-room-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CO2栽培室計算機 | Calquary">
+  <meta name="twitter:description" content="植物栽培のために濃度を上げるのに必要な栽培室の容積と理論上のCO2量を計算します - 教育的な推定値であり、運用手順ではありません。">
+  <meta name="twitter:image" content="https://calquary.com/og-images/co2-grow-room-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/co2-grow-room-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/co2-grow-room-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/co2-grow-room-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/co2-grow-room-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/co2-grow-room-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/co2-grow-room-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/co2-grow-room-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/co2-grow-room-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/co2-grow-room-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/co2-grow-room-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/co2-grow-room-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/co2-grow-room-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/co2-grow-room-calculator">
+    <link rel="canonical" href="https://calquary.com/ja/tool/co2-grow-room-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("co2-grow-room-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("co2-grow-room-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "CO2栽培室計算機",
+      "description": "植物栽培のために濃度を上げるのに必要な栽培室の容積と理論上のCO2量を計算します - 教育的な推定値であり、運用手順ではありません。",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/ja/tool/co2-grow-room-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "ja"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/ja/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/ja/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "CO2栽培室計算機",
+          "item": "https://calquary.com/ja/tool/co2-grow-room-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "自分が作業している部屋のCO2濃度を上げるのは安全ですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "密閉されたまたは換気の悪い空間での高濃度CO2は実際の窒息リスクであり、安全な運用は適切な換気、校正済みの監視機器、そしてメーカーおよび地域の安全ガイドラインの遵守に依存します。この計算機は理想化された理論上の数値のみを提供するものであり、実際のCO2モニター、コントローラー、安全な換気の実践の代わりにはなりません。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "なぜ目標濃度の入力欄は約1,500ppmで上限が設定されているのですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "園芸用のCO2強化は多くの作物で一般的に約800~1,500ppmを目標としています。追加されたCO2による成長上の利益は、人間にとって危険なレベルに達するかなり手前で頭打ちになるためです。この入力欄を上限設定することで、より危険な濃度を助長するのではなく、計算機の範囲を保守的で一般的に参照される園芸範囲内に保っています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "「理論上必要なCO2」の数値は実際には何を表していますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "これは、完全に均一な分布を仮定し、外部との空気交換がないと仮定した場合に、部屋全体の濃度を指定された量だけ上げるために必要なCO2ガスの体積・質量の理想化された計算です。実際の部屋には空気漏れ、不均一な混合があり、換気や植物の吸収によってCO2が失われるため、実際の機器(通常はコントローラー付きの調整されたCO2注入システム)は、一度きりの添加としてではなく、動的にこれを管理します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "CO2濃度が下がらないように換気を止めるべきですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "いいえ。CO2を閉じ込めるために換気を無効にすることは、重要な安全対策を排除することになり、特に人がいる空間では危険な濃度の蓄積を許してしまう可能性があります。実際のCO2強化システムは、部屋を密閉して空気交換をなくすのではなく、適切な換気と監視とともに機能するように設計されています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "コントローラーを使用していてもCO2モニターは必要ですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。校正されたCO2モニター・アラームは、強化システム自体を管理する投与コントローラーとは別に、高濃度CO2のある密閉空間における標準的な安全対策です。これにより、濃度が意図された安全な範囲内に留まっているかを独立して確認できます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "なぜ計算機はリットルとグラムの両方でCO2を表示するのですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "リットルはここで使用されている基準条件(典型的な室温で1モルあたり約24.45L)でのガス体積を表し、グラムは質量を表します。CO2供給システムや参考資料によって投与量の報告単位が異なるため、両方を表示することで別途の換算作業を省けます。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/ja/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/ja/#categories">カテゴリー</a>
+          <a href="/ja/#tools">すべてのツール</a>
+          <a href="/ja/about">このサイトについて</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: 日本語">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>JA</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/co2-grow-room-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/co2-grow-room-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/co2-grow-room-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/co2-grow-room-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/co2-grow-room-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/co2-grow-room-calculator">Italiano</a><span class="locale-item current" role="menuitem" aria-current="true">日本語</span><a class="locale-item" role="menuitem" href="/ro/tool/co2-grow-room-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/co2-grow-room-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/co2-grow-room-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/co2-grow-room-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/co2-grow-room-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/ja/">Calquary</a> / <a href="/ja/category/biology">生物学</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>CO2栽培室計算機</h1>
+        <p style="max-width:60ch;">栽培室の寸法と現在および目標のCO2濃度を入力すると、室内容積と理論上のCO2量の見積もりが表示されます。これは教育目的の計算であり、校正されたCO2コントローラー・モニターや適切な換気の代わりにはなりません。</p>
+        <p class="last-updated">最終更新日： September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">計算する</button>
+              <button type="button" id="calc-reset" class="btn-ghost">リセット</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>よくある質問</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>自分が作業している部屋のCO2濃度を上げるのは安全ですか?</h3>
+<p>密閉されたまたは換気の悪い空間での高濃度CO2は実際の窒息リスクであり、安全な運用は適切な換気、校正済みの監視機器、そしてメーカーおよび地域の安全ガイドラインの遵守に依存します。この計算機は理想化された理論上の数値のみを提供するものであり、実際のCO2モニター、コントローラー、安全な換気の実践の代わりにはなりません。</p>
+</div>
+<div class="faq-item">
+<h3>なぜ目標濃度の入力欄は約1,500ppmで上限が設定されているのですか?</h3>
+<p>園芸用のCO2強化は多くの作物で一般的に約800~1,500ppmを目標としています。追加されたCO2による成長上の利益は、人間にとって危険なレベルに達するかなり手前で頭打ちになるためです。この入力欄を上限設定することで、より危険な濃度を助長するのではなく、計算機の範囲を保守的で一般的に参照される園芸範囲内に保っています。</p>
+</div>
+<div class="faq-item">
+<h3>「理論上必要なCO2」の数値は実際には何を表していますか?</h3>
+<p>これは、完全に均一な分布を仮定し、外部との空気交換がないと仮定した場合に、部屋全体の濃度を指定された量だけ上げるために必要なCO2ガスの体積・質量の理想化された計算です。実際の部屋には空気漏れ、不均一な混合があり、換気や植物の吸収によってCO2が失われるため、実際の機器(通常はコントローラー付きの調整されたCO2注入システム)は、一度きりの添加としてではなく、動的にこれを管理します。</p>
+</div>
+<div class="faq-item">
+<h3>CO2濃度が下がらないように換気を止めるべきですか?</h3>
+<p>いいえ。CO2を閉じ込めるために換気を無効にすることは、重要な安全対策を排除することになり、特に人がいる空間では危険な濃度の蓄積を許してしまう可能性があります。実際のCO2強化システムは、部屋を密閉して空気交換をなくすのではなく、適切な換気と監視とともに機能するように設計されています。</p>
+</div>
+<div class="faq-item">
+<h3>コントローラーを使用していてもCO2モニターは必要ですか?</h3>
+<p>はい。校正されたCO2モニター・アラームは、強化システム自体を管理する投与コントローラーとは別に、高濃度CO2のある密閉空間における標準的な安全対策です。これにより、濃度が意図された安全な範囲内に留まっているかを独立して確認できます。</p>
+</div>
+<div class="faq-item">
+<h3>なぜ計算機はリットルとグラムの両方でCO2を表示するのですか?</h3>
+<p>リットルはここで使用されている基準条件(典型的な室温で1モルあたり約24.45L)でのガス体積を表し、グラムは質量を表します。CO2供給システムや参考資料によって投与量の報告単位が異なるため、両方を表示することで別途の換算作業を省けます。</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">計算する</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>関連ツール</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>精度について</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquaryの計算ツールは、迅速で信頼できる概算を目的としています。実際の財務、構造、医療に関わる重要な決定を行う前には、必ず専門家にご確認ください。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/ja/">← すべての計算ツールに戻る</a> · <a href="/ja/about">このサイトについて</a> · <a href="/ja/contact">お問い合わせ</a> · <a href="/ja/privacy">プライバシー</a> · <a href="/ja/terms">利用規約</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

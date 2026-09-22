@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Υπολογιστής Απόδοσης Καλαμποκιού</title>
+  <meta name="description" content="Υπολογίστε την απόδοση καλαμποκιού σε bushels ανά acre από στάχυα ανά acre, μετρήσεις κόκκων και έναν μέσο συντελεστή βάρους κόκκου." />
+  <meta property="og:title" content="Υπολογιστής Απόδοσης Καλαμποκιού | Calquary">
+  <meta property="og:description" content="Υπολογίστε την απόδοση καλαμποκιού σε bushels ανά acre από στάχυα ανά acre, μετρήσεις κόκκων και έναν μέσο συντελεστή βάρους κόκκου.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/el/tool/corn-yield-calculator">
+  <meta property="og:locale" content="el_GR">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/corn-yield-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Υπολογιστής Απόδοσης Καλαμποκιού | Calquary">
+  <meta name="twitter:description" content="Υπολογίστε την απόδοση καλαμποκιού σε bushels ανά acre από στάχυα ανά acre, μετρήσεις κόκκων και έναν μέσο συντελεστή βάρους κόκκου.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/corn-yield-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/corn-yield-calculator">
+    <link rel="canonical" href="https://calquary.com/el/tool/corn-yield-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("corn-yield-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("corn-yield-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Υπολογιστής Απόδοσης Καλαμποκιού",
+      "description": "Υπολογίστε την απόδοση καλαμποκιού σε bushels ανά acre από στάχυα ανά acre, μετρήσεις κόκκων και έναν μέσο συντελεστή βάρους κόκκου.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/el/tool/corn-yield-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "el"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/el/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/el/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Υπολογιστής Απόδοσης Καλαμποκιού",
+          "item": "https://calquary.com/el/tool/corn-yield-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Πόσο ακριβής είναι αυτή η εκτίμηση απόδοσης σε σύγκριση με την πραγματική συγκομιδή;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Είναι μια χρήσιμη πρώιμη πρόβλεψη, όχι εγγύηση - η πραγματικά συγκομισμένη απόδοση εξαρτάται από παράγοντες που αυτή η μέθοδος δεν μπορεί να συλλάβει πλήρως, συμπεριλαμβανομένης της τελικής πλήρωσης και βάρους των κόκκων, της περιεκτικότητας σε υγρασία κατά τη συγκομιδή, της μεταβλητότητας του αγρού μεταξύ δειγματοληπτημένων και μη περιοχών, και των μηχανικών απωλειών συγκομιδής. Αντιμετωπίστε το αποτέλεσμα ως εκτίμηση σχεδιασμού που θα πρέπει να ενημερώνεται καθώς προχωρά η σεζόν."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Τι είναι ο συντελεστής κόκκων ανά bushel και γιατί έχει τόση σημασία;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Αντιπροσωπεύει τον μέσο αριθμό κόκκων που χρειάζεται για να γεμίσει ένα bushel, ο οποίος ποικίλλει με το μέγεθος και το βάρος του κόκκου - μικρότεροι ή ελαφρύτεροι κόκκοι σημαίνουν περισσότερους κόκκους ανά bushel (υψηλότερος συντελεστής, χαμηλότερη εκτίμηση απόδοσης για τον ίδιο αριθμό σταχύων), ενώ μεγαλύτεροι, καλά γεμισμένοι κόκκοι σημαίνουν λιγότερους κόκκους ανά bushel. Επειδή αυτός ο συντελεστής είναι αβέβαιος μέχρι τη συγκομιδή, πολλοί παραγωγοί εκτελούν τον υπολογισμό με ένα εύρος συντελεστών (π.χ. 80.000 και 95.000) για να οριοθετήσουν ένα εύλογο εύρος απόδοσης αντί να βασίζονται σε έναν μόνο αριθμό."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Πώς μετράω τα στάχυα ανά acre στον αγρό;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Μια κοινή προσέγγιση είναι να μετρήσετε ένα μήκος σειράς που αντιπροσωπεύει ένα γνωστό κλάσμα ενός acre με βάση την απόσταση των σειρών σας, να μετρήσετε τα στάχυα σε αυτό το μήκος, και μετά να κλιμακώσετε σε ολόκληρο acre - η επανάληψη αυτού σε αρκετές αντιπροσωπευτικές τοποθεσίες στον αγρό βελτιώνει την ακρίβεια σε σχέση με ένα μόνο δείγμα."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Πρέπει να μετρήσω σειρές κόκκων και κόκκους ανά σειρά σε κάθε στάχυ, ή μόνο σε ένα δείγμα;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Η δειγματοληψία αρκετών αντιπροσωπευτικών σταχύων (όχι μόνο ενός) και ο μέσος όρος του αριθμού σειρών κόκκων και κόκκων ανά σειρά δίνει μια πιο αξιόπιστη εκτίμηση από τη μέτρηση ενός μόνο σταχύου, καθώς οι μετρήσεις κόκκων ποικίλλουν αισθητά ακόμη και εντός του ίδιου αγρού."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Γιατί αυτός ο υπολογιστής δείχνει επίσης έναν μετρικό αριθμό σε τόνους ανά εκτάριο;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Τα bushels ανά acre είναι η τυπική μονάδα στις ΗΠΑ για την απόδοση καλαμποκιού, ενώ οι τόνοι ανά εκτάριο είναι τυπικοί στις περισσότερες άλλες χώρες - η εμφάνιση και των δύο αποφεύγει ένα επιπλέον βήμα μετατροπής ανεξάρτητα από τη μονάδα στην οποία εργάζεστε. Η χρησιμοποιούμενη μετατροπή (1 bu/ac ≈ 0,0628 τόνοι/ha) αντικατοπτρίζει το τυπικό βάρος δοκιμής και την αναφορά υγρασίας του καλαμποκιού."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Αυτό λαμβάνει υπόψη τις απώλειες συγκομιδής από την αλωνιστική μηχανή;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Όχι - αυτό εκτιμά τον κόκκο που υπάρχει στον αγρό με βάση τις μετρήσεις σταχύων και κόκκων, πριν τη συγκομιδή. Οι μηχανικές απώλειες συγκομιδής (απώλειες αλωνισμού, απώλειες κεφαλής κ.λπ.) μειώνουν αυτό που πράγματι συλλέγεται, οπότε η αποδιδόμενη απόδοση στη ζυγαριά είναι συνήθως κάπως χαμηλότερη από αυτήν την εκτίμηση αγρού πριν τη συγκομιδή."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/el/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/el/#categories">Κατηγορίες</a>
+          <a href="/el/#tools">Όλα τα εργαλεία</a>
+          <a href="/el/about">Σχετικά</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Ελληνικά">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>undefined</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/corn-yield-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/corn-yield-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/corn-yield-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/corn-yield-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/corn-yield-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/corn-yield-calculator">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/corn-yield-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/corn-yield-calculator">Română</a><span class="locale-item current" role="menuitem" aria-current="true">Ελληνικά</span><a class="locale-item" role="menuitem" href="/zh/tool/corn-yield-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/corn-yield-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/corn-yield-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/el/">Calquary</a> / <a href="/el/category/biology">Βιολογία</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Υπολογιστής Απόδοσης Καλαμποκιού</h1>
+        <p style="max-width:60ch;">Εισαγάγετε στάχυα ανά acre και μετρήσεις κόκκων ανά στάχυ, συν έναν συντελεστή κόκκων ανά bushel, για να εκτιμήσετε την απόδοση καλαμποκιού. Αυτή είναι μια εκτίμηση αγρού πριν τη συγκομιδή, όχι υποκατάστατο της πραγματικά συγκομισμένης απόδοσης.</p>
+        <p class="last-updated">Τελευταία ενημέρωση: September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Υπολογισμός</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Επαναφορά</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Συχνές ερωτήσεις</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Πόσο ακριβής είναι αυτή η εκτίμηση απόδοσης σε σύγκριση με την πραγματική συγκομιδή;</h3>
+<p>Είναι μια χρήσιμη πρώιμη πρόβλεψη, όχι εγγύηση - η πραγματικά συγκομισμένη απόδοση εξαρτάται από παράγοντες που αυτή η μέθοδος δεν μπορεί να συλλάβει πλήρως, συμπεριλαμβανομένης της τελικής πλήρωσης και βάρους των κόκκων, της περιεκτικότητας σε υγρασία κατά τη συγκομιδή, της μεταβλητότητας του αγρού μεταξύ δειγματοληπτημένων και μη περιοχών, και των μηχανικών απωλειών συγκομιδής. Αντιμετωπίστε το αποτέλεσμα ως εκτίμηση σχεδιασμού που θα πρέπει να ενημερώνεται καθώς προχωρά η σεζόν.</p>
+</div>
+<div class="faq-item">
+<h3>Τι είναι ο συντελεστής κόκκων ανά bushel και γιατί έχει τόση σημασία;</h3>
+<p>Αντιπροσωπεύει τον μέσο αριθμό κόκκων που χρειάζεται για να γεμίσει ένα bushel, ο οποίος ποικίλλει με το μέγεθος και το βάρος του κόκκου - μικρότεροι ή ελαφρύτεροι κόκκοι σημαίνουν περισσότερους κόκκους ανά bushel (υψηλότερος συντελεστής, χαμηλότερη εκτίμηση απόδοσης για τον ίδιο αριθμό σταχύων), ενώ μεγαλύτεροι, καλά γεμισμένοι κόκκοι σημαίνουν λιγότερους κόκκους ανά bushel. Επειδή αυτός ο συντελεστής είναι αβέβαιος μέχρι τη συγκομιδή, πολλοί παραγωγοί εκτελούν τον υπολογισμό με ένα εύρος συντελεστών (π.χ. 80.000 και 95.000) για να οριοθετήσουν ένα εύλογο εύρος απόδοσης αντί να βασίζονται σε έναν μόνο αριθμό.</p>
+</div>
+<div class="faq-item">
+<h3>Πώς μετράω τα στάχυα ανά acre στον αγρό;</h3>
+<p>Μια κοινή προσέγγιση είναι να μετρήσετε ένα μήκος σειράς που αντιπροσωπεύει ένα γνωστό κλάσμα ενός acre με βάση την απόσταση των σειρών σας, να μετρήσετε τα στάχυα σε αυτό το μήκος, και μετά να κλιμακώσετε σε ολόκληρο acre - η επανάληψη αυτού σε αρκετές αντιπροσωπευτικές τοποθεσίες στον αγρό βελτιώνει την ακρίβεια σε σχέση με ένα μόνο δείγμα.</p>
+</div>
+<div class="faq-item">
+<h3>Πρέπει να μετρήσω σειρές κόκκων και κόκκους ανά σειρά σε κάθε στάχυ, ή μόνο σε ένα δείγμα;</h3>
+<p>Η δειγματοληψία αρκετών αντιπροσωπευτικών σταχύων (όχι μόνο ενός) και ο μέσος όρος του αριθμού σειρών κόκκων και κόκκων ανά σειρά δίνει μια πιο αξιόπιστη εκτίμηση από τη μέτρηση ενός μόνο σταχύου, καθώς οι μετρήσεις κόκκων ποικίλλουν αισθητά ακόμη και εντός του ίδιου αγρού.</p>
+</div>
+<div class="faq-item">
+<h3>Γιατί αυτός ο υπολογιστής δείχνει επίσης έναν μετρικό αριθμό σε τόνους ανά εκτάριο;</h3>
+<p>Τα bushels ανά acre είναι η τυπική μονάδα στις ΗΠΑ για την απόδοση καλαμποκιού, ενώ οι τόνοι ανά εκτάριο είναι τυπικοί στις περισσότερες άλλες χώρες - η εμφάνιση και των δύο αποφεύγει ένα επιπλέον βήμα μετατροπής ανεξάρτητα από τη μονάδα στην οποία εργάζεστε. Η χρησιμοποιούμενη μετατροπή (1 bu/ac ≈ 0,0628 τόνοι/ha) αντικατοπτρίζει το τυπικό βάρος δοκιμής και την αναφορά υγρασίας του καλαμποκιού.</p>
+</div>
+<div class="faq-item">
+<h3>Αυτό λαμβάνει υπόψη τις απώλειες συγκομιδής από την αλωνιστική μηχανή;</h3>
+<p>Όχι - αυτό εκτιμά τον κόκκο που υπάρχει στον αγρό με βάση τις μετρήσεις σταχύων και κόκκων, πριν τη συγκομιδή. Οι μηχανικές απώλειες συγκομιδής (απώλειες αλωνισμού, απώλειες κεφαλής κ.λπ.) μειώνουν αυτό που πράγματι συλλέγεται, οπότε η αποδιδόμενη απόδοση στη ζυγαριά είναι συνήθως κάπως χαμηλότερη από αυτήν την εκτίμηση αγρού πριν τη συγκομιδή.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Υπολογισμός</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Σχετικά εργαλεία</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Σημείωση ακρίβειας</h4>
+          <p style="margin:0;font-size:0.85rem;">Οι αριθμομηχανές του Calquary έχουν σχεδιαστεί για να παρέχουν γρήγορες και αξιόπιστες εκτιμήσεις. Για αποφάσεις με πραγματικές οικονομικές, δομικές ή ιατρικές επιπτώσεις, συμβουλευτείτε έναν ειδικευμένο επαγγελματία.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/el/">← Πίσω σε όλες τις αριθμομηχανές</a> · <a href="/el/about">Σχετικά</a> · <a href="/el/contact">Επικοινωνία</a> · <a href="/el/privacy">Απόρρητο</a> · <a href="/el/terms">Όροι</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

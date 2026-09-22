@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>トウモロコシ収量計算機 - 無料オンライン計算ツール | Calquary</title>
+  <meta name="description" content="1エーカーあたりの穂数、粒数、平均粒重係数から、1エーカーあたりのブッシェル単位でトウモロコシの収量を推定します。" />
+  <meta property="og:title" content="トウモロコシ収量計算機 | Calquary">
+  <meta property="og:description" content="1エーカーあたりの穂数、粒数、平均粒重係数から、1エーカーあたりのブッシェル単位でトウモロコシの収量を推定します。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/ja/tool/corn-yield-calculator">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/corn-yield-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="トウモロコシ収量計算機 | Calquary">
+  <meta name="twitter:description" content="1エーカーあたりの穂数、粒数、平均粒重係数から、1エーカーあたりのブッシェル単位でトウモロコシの収量を推定します。">
+  <meta name="twitter:image" content="https://calquary.com/og-images/corn-yield-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/corn-yield-calculator">
+    <link rel="canonical" href="https://calquary.com/ja/tool/corn-yield-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("corn-yield-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("corn-yield-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "トウモロコシ収量計算機",
+      "description": "1エーカーあたりの穂数、粒数、平均粒重係数から、1エーカーあたりのブッシェル単位でトウモロコシの収量を推定します。",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/ja/tool/corn-yield-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "ja"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/ja/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/ja/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "トウモロコシ収量計算機",
+          "item": "https://calquary.com/ja/tool/corn-yield-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "この収量推定は実際の収穫とどれくらい一致しますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "これは有用な早期予測であり、保証ではありません。実際に収穫される収量は、最終的な粒の充実度と重さ、収穫時の水分含量、サンプリングした区域とサンプリングしていない区域の間の圃場のばらつき、機械収穫による損失など、この方法では完全には捉えられない要因に左右されます。結果はシーズンの進行とともに更新すべき計画用の見積もりとして扱ってください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ブッシェルあたりの粒数係数とは何ですか、なぜそれほど重要なのですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "これは1ブッシェルを満たすのに必要な平均粒数を表し、粒のサイズと重さによって変わります。粒が小さい、または軽いほどブッシェルあたりの粒数は多くなり(係数が高くなり、同じ穂数に対する収量推定は低くなります)、大きくよく充実した粒ほどブッシェルあたりの粒数は少なくなります。この係数は収穫まで不確実なため、多くの生産者は単一の数値に頼るのではなく、一定の範囲の係数(例:80,000と95,000)で計算を行い、妥当な収量の範囲を把握します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "圃場で1エーカーあたりの穂数をどう数えればよいですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "一般的な方法は、畝の間隔に基づいて1エーカーの既知の割合を表す畝の長さを測定し、その長さの中の穂を数え、それを1エーカー分にスケールアップすることです。圃場内の複数の代表的な場所でこれを繰り返すことで、1回のサンプルよりも精度が向上します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "各穂の粒列数と1列あたりの粒数を数えるべきですか、それともサンプルだけでよいですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1本だけでなく複数の代表的な穂をサンプリングし、その粒列数と1列あたりの粒数を平均することで、1本の穂だけを測定するよりも信頼性の高い推定値が得られます。粒数は同じ圃場内でもかなりばらつくためです。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "なぜこの計算機はヘクタールあたりトン数のメートル法の数値も表示するのですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ブッシェル/エーカーは米国でのトウモロコシ収量の標準単位であり、トン/ヘクタールはその他多くの国での標準単位です。両方を表示することで、どちらの単位で作業していても追加の変換手順が不要になります。使用されている変換(1 bu/ac ≈ 0.0628トン/ha)は、トウモロコシの標準的な検定重量と水分基準を反映しています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "これはコンバインによる収穫損失を考慮していますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "いいえ。これは収穫前の穂数と粒数に基づいて圃場に存在する穀物を推定するものです。機械的な収穫損失(脱穀損失、ヘッダー損失など)は実際に回収される量を減らすため、計量スケールでの実現収量は、この収穫前の圃場推定値よりも通常やや低くなります。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/ja/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/ja/#categories">カテゴリー</a>
+          <a href="/ja/#tools">すべてのツール</a>
+          <a href="/ja/about">このサイトについて</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: 日本語">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>JA</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/corn-yield-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/corn-yield-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/corn-yield-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/corn-yield-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/corn-yield-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/corn-yield-calculator">Italiano</a><span class="locale-item current" role="menuitem" aria-current="true">日本語</span><a class="locale-item" role="menuitem" href="/ro/tool/corn-yield-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/corn-yield-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/corn-yield-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/corn-yield-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/corn-yield-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/ja/">Calquary</a> / <a href="/ja/category/biology">生物学</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>トウモロコシ収量計算機</h1>
+        <p style="max-width:60ch;">1エーカーあたりの穂数と1穂あたりの粒数、そしてブッシェルあたりの粒数係数を入力すると、トウモロコシの収量を推定します。これは収穫前の圃場推定値であり、実際の収穫収量の代わりにはなりません。</p>
+        <p class="last-updated">最終更新日： September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">計算する</button>
+              <button type="button" id="calc-reset" class="btn-ghost">リセット</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>よくある質問</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>この収量推定は実際の収穫とどれくらい一致しますか?</h3>
+<p>これは有用な早期予測であり、保証ではありません。実際に収穫される収量は、最終的な粒の充実度と重さ、収穫時の水分含量、サンプリングした区域とサンプリングしていない区域の間の圃場のばらつき、機械収穫による損失など、この方法では完全には捉えられない要因に左右されます。結果はシーズンの進行とともに更新すべき計画用の見積もりとして扱ってください。</p>
+</div>
+<div class="faq-item">
+<h3>ブッシェルあたりの粒数係数とは何ですか、なぜそれほど重要なのですか?</h3>
+<p>これは1ブッシェルを満たすのに必要な平均粒数を表し、粒のサイズと重さによって変わります。粒が小さい、または軽いほどブッシェルあたりの粒数は多くなり(係数が高くなり、同じ穂数に対する収量推定は低くなります)、大きくよく充実した粒ほどブッシェルあたりの粒数は少なくなります。この係数は収穫まで不確実なため、多くの生産者は単一の数値に頼るのではなく、一定の範囲の係数(例:80,000と95,000)で計算を行い、妥当な収量の範囲を把握します。</p>
+</div>
+<div class="faq-item">
+<h3>圃場で1エーカーあたりの穂数をどう数えればよいですか?</h3>
+<p>一般的な方法は、畝の間隔に基づいて1エーカーの既知の割合を表す畝の長さを測定し、その長さの中の穂を数え、それを1エーカー分にスケールアップすることです。圃場内の複数の代表的な場所でこれを繰り返すことで、1回のサンプルよりも精度が向上します。</p>
+</div>
+<div class="faq-item">
+<h3>各穂の粒列数と1列あたりの粒数を数えるべきですか、それともサンプルだけでよいですか?</h3>
+<p>1本だけでなく複数の代表的な穂をサンプリングし、その粒列数と1列あたりの粒数を平均することで、1本の穂だけを測定するよりも信頼性の高い推定値が得られます。粒数は同じ圃場内でもかなりばらつくためです。</p>
+</div>
+<div class="faq-item">
+<h3>なぜこの計算機はヘクタールあたりトン数のメートル法の数値も表示するのですか?</h3>
+<p>ブッシェル/エーカーは米国でのトウモロコシ収量の標準単位であり、トン/ヘクタールはその他多くの国での標準単位です。両方を表示することで、どちらの単位で作業していても追加の変換手順が不要になります。使用されている変換(1 bu/ac ≈ 0.0628トン/ha)は、トウモロコシの標準的な検定重量と水分基準を反映しています。</p>
+</div>
+<div class="faq-item">
+<h3>これはコンバインによる収穫損失を考慮していますか?</h3>
+<p>いいえ。これは収穫前の穂数と粒数に基づいて圃場に存在する穀物を推定するものです。機械的な収穫損失(脱穀損失、ヘッダー損失など)は実際に回収される量を減らすため、計量スケールでの実現収量は、この収穫前の圃場推定値よりも通常やや低くなります。</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">計算する</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>関連ツール</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>精度について</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquaryの計算ツールは、迅速で信頼できる概算を目的としています。実際の財務、構造、医療に関わる重要な決定を行う前には、必ず専門家にご確認ください。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/ja/">← すべての計算ツールに戻る</a> · <a href="/ja/about">このサイトについて</a> · <a href="/ja/contact">お問い合わせ</a> · <a href="/ja/privacy">プライバシー</a> · <a href="/ja/terms">利用規約</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

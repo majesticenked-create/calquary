@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Rendimento de Milho</title>
+  <meta name="description" content="Estime o rendimento do milho em bushels por acre a partir de espigas por acre, contagens de grãos e um fator de peso médio de grão." />
+  <meta property="og:title" content="Calculadora de Rendimento de Milho | Calquary">
+  <meta property="og:description" content="Estime o rendimento do milho em bushels por acre a partir de espigas por acre, contagens de grãos e um fator de peso médio de grão.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/pt/tool/corn-yield-calculator">
+  <meta property="og:locale" content="pt_PT">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/corn-yield-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculadora de Rendimento de Milho | Calquary">
+  <meta name="twitter:description" content="Estime o rendimento do milho em bushels por acre a partir de espigas por acre, contagens de grãos e um fator de peso médio de grão.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/corn-yield-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/corn-yield-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/corn-yield-calculator">
+    <link rel="canonical" href="https://calquary.com/pt/tool/corn-yield-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("corn-yield-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("corn-yield-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calculadora de Rendimento de Milho",
+      "description": "Estime o rendimento do milho em bushels por acre a partir de espigas por acre, contagens de grãos e um fator de peso médio de grão.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/pt/tool/corn-yield-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "pt"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/pt/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/pt/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calculadora de Rendimento de Milho",
+          "item": "https://calquary.com/pt/tool/corn-yield-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quão precisa é esta estimativa de rendimento comparada à colheita real?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "É uma projeção inicial útil, não uma garantia - o rendimento realmente colhido depende de fatores que este método não consegue capturar totalmente, incluindo o enchimento final do grão e seu peso, o teor de umidade na colheita, a variabilidade do campo entre áreas amostradas e não amostradas, e perdas mecânicas de colheita. Trate o resultado como uma estimativa de planejamento a ser atualizada conforme a temporada avança."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que é o fator de grãos por bushel e por que importa tanto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Representa o número médio de grãos necessário para encher um bushel, que varia com o tamanho e peso do grão - grãos menores ou mais leves significam mais grãos por bushel (um fator maior, uma estimativa de rendimento menor para a mesma contagem de espigas), enquanto grãos maiores e bem enchidos significam menos grãos por bushel. Como este fator é incerto até a colheita, muitos produtores executam o cálculo com uma faixa de fatores (por exemplo, 80.000 e 95.000) para delimitar uma faixa de rendimento plausível em vez de confiar em um único número."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como conto espigas por acre no campo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Uma abordagem comum é medir um comprimento de fileira que represente uma fração conhecida de um acre com base no espaçamento entre fileiras, contar as espigas nesse comprimento, e depois escalar para um acre completo - repetir isso em vários locais representativos do campo melhora a precisão em relação a uma única amostra."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Devo contar fileiras de grãos e grãos por fileira em cada espiga, ou apenas em uma amostra?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Amostrar várias espigas representativas (não apenas uma) e calcular a média de sua contagem de fileiras de grãos e grãos por fileira dá uma estimativa mais confiável do que medir uma única espiga, já que as contagens de grãos variam perceptivelmente mesmo dentro do mesmo campo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Por que esta calculadora também mostra uma cifra métrica em toneladas por hectare?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bushels por acre é a unidade padrão nos EUA para rendimento de milho, enquanto toneladas por hectare é padrão na maioria dos outros países - mostrar ambas evita uma etapa extra de conversão, independentemente da unidade em que você está trabalhando. A conversão usada (1 bu/ac ≈ 0,0628 toneladas/ha) reflete o peso de prova e a referência de umidade padrão do milho."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Isso considera as perdas de colheita da colheitadeira?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não - isso estima o grão presente no campo com base nas contagens de espigas e grãos, antes da colheita. Perdas mecânicas de colheita (debulha, perda no cabeçote, etc.) reduzem o que é realmente coletado, então o rendimento realizado na balança costuma ser um pouco menor do que esta estimativa de campo pré-colheita."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/pt/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/pt/#categories">Categorias</a>
+          <a href="/pt/#tools">Todas as ferramentas</a>
+          <a href="/pt/about">Sobre</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Português">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>PT</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/corn-yield-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/corn-yield-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/corn-yield-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/corn-yield-calculator">Deutsch</a><span class="locale-item current" role="menuitem" aria-current="true">Português</span><a class="locale-item" role="menuitem" href="/it/tool/corn-yield-calculator">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/corn-yield-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/corn-yield-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/corn-yield-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/corn-yield-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/corn-yield-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/corn-yield-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/pt/">Calquary</a> / <a href="/pt/category/biology">Biologia</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calculadora de Rendimento de Milho</h1>
+        <p style="max-width:60ch;">Insira espigas por acre e contagens de grãos por espiga, mais um fator de grãos por bushel, para estimar o rendimento do milho. Esta é uma estimativa de campo pré-colheita, não um substituto para o rendimento realmente colhido.</p>
+        <p class="last-updated">Última atualização: September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calcular</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Redefinir</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Perguntas frequentes</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Quão precisa é esta estimativa de rendimento comparada à colheita real?</h3>
+<p>É uma projeção inicial útil, não uma garantia - o rendimento realmente colhido depende de fatores que este método não consegue capturar totalmente, incluindo o enchimento final do grão e seu peso, o teor de umidade na colheita, a variabilidade do campo entre áreas amostradas e não amostradas, e perdas mecânicas de colheita. Trate o resultado como uma estimativa de planejamento a ser atualizada conforme a temporada avança.</p>
+</div>
+<div class="faq-item">
+<h3>O que é o fator de grãos por bushel e por que importa tanto?</h3>
+<p>Representa o número médio de grãos necessário para encher um bushel, que varia com o tamanho e peso do grão - grãos menores ou mais leves significam mais grãos por bushel (um fator maior, uma estimativa de rendimento menor para a mesma contagem de espigas), enquanto grãos maiores e bem enchidos significam menos grãos por bushel. Como este fator é incerto até a colheita, muitos produtores executam o cálculo com uma faixa de fatores (por exemplo, 80.000 e 95.000) para delimitar uma faixa de rendimento plausível em vez de confiar em um único número.</p>
+</div>
+<div class="faq-item">
+<h3>Como conto espigas por acre no campo?</h3>
+<p>Uma abordagem comum é medir um comprimento de fileira que represente uma fração conhecida de um acre com base no espaçamento entre fileiras, contar as espigas nesse comprimento, e depois escalar para um acre completo - repetir isso em vários locais representativos do campo melhora a precisão em relação a uma única amostra.</p>
+</div>
+<div class="faq-item">
+<h3>Devo contar fileiras de grãos e grãos por fileira em cada espiga, ou apenas em uma amostra?</h3>
+<p>Amostrar várias espigas representativas (não apenas uma) e calcular a média de sua contagem de fileiras de grãos e grãos por fileira dá uma estimativa mais confiável do que medir uma única espiga, já que as contagens de grãos variam perceptivelmente mesmo dentro do mesmo campo.</p>
+</div>
+<div class="faq-item">
+<h3>Por que esta calculadora também mostra uma cifra métrica em toneladas por hectare?</h3>
+<p>Bushels por acre é a unidade padrão nos EUA para rendimento de milho, enquanto toneladas por hectare é padrão na maioria dos outros países - mostrar ambas evita uma etapa extra de conversão, independentemente da unidade em que você está trabalhando. A conversão usada (1 bu/ac ≈ 0,0628 toneladas/ha) reflete o peso de prova e a referência de umidade padrão do milho.</p>
+</div>
+<div class="faq-item">
+<h3>Isso considera as perdas de colheita da colheitadeira?</h3>
+<p>Não - isso estima o grão presente no campo com base nas contagens de espigas e grãos, antes da colheita. Perdas mecânicas de colheita (debulha, perda no cabeçote, etc.) reduzem o que é realmente coletado, então o rendimento realizado na balança costuma ser um pouco menor do que esta estimativa de campo pré-colheita.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calcular</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Ferramentas relacionadas</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Nota sobre precisão</h4>
+          <p style="margin:0;font-size:0.85rem;">As calculadoras da Calquary são feitas para estimativas rápidas e confiáveis. Para decisões com implicações financeiras, estruturais ou médicas reais, consulte um profissional qualificado.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/pt/">← Voltar a todas as calculadoras</a> · <a href="/pt/about">Sobre</a> · <a href="/pt/contact">Contato</a> · <a href="/pt/privacy">Privacidade</a> · <a href="/pt/terms">Termos</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

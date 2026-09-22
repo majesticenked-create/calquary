@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CO2 Grow Room Calculator | Calquary</title>
+  <meta name="description" content="Calculate grow room volume and the theoretical CO2 needed to raise concentration for plant growth - an educational estimate, not operating instructions." />
+  <meta property="og:title" content="CO2 Grow Room Calculator | Calquary">
+  <meta property="og:description" content="Calculate grow room volume and the theoretical CO2 needed to raise concentration for plant growth - an educational estimate, not operating instructions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/tool/co2-grow-room-calculator">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/co2-grow-room-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CO2 Grow Room Calculator | Calquary">
+  <meta name="twitter:description" content="Calculate grow room volume and the theoretical CO2 needed to raise concentration for plant growth - an educational estimate, not operating instructions.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/co2-grow-room-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/co2-grow-room-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/co2-grow-room-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/co2-grow-room-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/co2-grow-room-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/co2-grow-room-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/co2-grow-room-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/co2-grow-room-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/co2-grow-room-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/co2-grow-room-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/co2-grow-room-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/co2-grow-room-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/co2-grow-room-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/co2-grow-room-calculator">
+    <link rel="canonical" href="https://calquary.com/tool/co2-grow-room-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("co2-grow-room-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("co2-grow-room-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "CO2 Grow Room Calculator",
+      "description": "Calculate grow room volume and the theoretical CO2 needed to raise concentration for plant growth - an educational estimate, not operating instructions.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/co2-grow-room-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "CO2 Grow Room Calculator",
+          "item": "https://calquary.com/tool/co2-grow-room-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is it safe to raise CO2 concentration in a room I'm working in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Elevated CO2 is a genuine asphyxiation hazard in enclosed or poorly ventilated spaces, and safe practice depends on proper ventilation, calibrated monitoring equipment, and following manufacturer and local safety guidance - this calculator provides an idealized theoretical number only and is not a substitute for a real CO2 monitor, controller, and safe ventilation practices."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does the target concentration field cap out around 1,500 ppm?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Horticultural CO2 enrichment commonly targets roughly 800-1,500 ppm for many crops, since plant growth benefit from added CO2 diminishes well before reaching hazardous levels for humans - capping the field keeps the calculator's scope within a conservative, commonly referenced horticultural range rather than encouraging riskier concentrations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does the 'theoretical CO2 needed' number actually represent?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It's an idealized calculation of how much CO2 gas volume/mass would be needed to raise the entire room's concentration by the specified amount, assuming perfectly even distribution and no air exchange with the outside. Real rooms leak air, have uneven mixing, and lose CO2 through ventilation and plant uptake, so actual equipment (typically a regulated CO2 injection system with a controller) manages this dynamically rather than as a single one-time addition."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I turn off ventilation to keep CO2 levels from dropping?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - disabling ventilation to trap CO2 removes a key safety control and can allow dangerous concentrations to build up, especially in occupied spaces. Real CO2 enrichment systems are designed to work alongside appropriate ventilation and monitoring, not by sealing a room and eliminating air exchange."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a CO2 monitor even if I'm using a controller?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - a calibrated CO2 monitor/alarm is a standard safety practice for any enclosed space with elevated CO2, independent of whatever dosing controller manages the enrichment system itself, since it gives you an independent check that concentrations stay within the intended and safe range."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does the calculator show both liters and grams of CO2?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Liters describe gas volume at the reference conditions used here (about 24.45 L per mole at typical room temperature), while grams describe mass - different CO2 delivery systems and reference materials report dosing in different units, so showing both avoids a separate conversion step."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/#categories">Categories</a>
+          <a href="/#tools">All tools</a>
+          <a href="/about">About</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: English">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>EN</span>
+          </button>
+          <div class="locale-menu" role="menu"><span class="locale-item current" role="menuitem" aria-current="true">English</span><a class="locale-item" role="menuitem" href="/es/tool/co2-grow-room-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/co2-grow-room-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/co2-grow-room-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/co2-grow-room-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/co2-grow-room-calculator">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/co2-grow-room-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/co2-grow-room-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/co2-grow-room-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/co2-grow-room-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/co2-grow-room-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/co2-grow-room-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/">Calquary</a> / <a href="/category/biology">Biology</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>CO2 Grow Room Calculator</h1>
+        <p style="max-width:60ch;">Enter your grow room dimensions and current and target CO2 concentrations to see room volume and a theoretical CO2 quantity estimate. This is an educational calculation, not a substitute for a calibrated CO2 controller, monitor, and proper ventilation.</p>
+        <p class="last-updated">Last updated: September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculate</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reset</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Frequently asked questions</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Is it safe to raise CO2 concentration in a room I'm working in?</h3>
+<p>Elevated CO2 is a genuine asphyxiation hazard in enclosed or poorly ventilated spaces, and safe practice depends on proper ventilation, calibrated monitoring equipment, and following manufacturer and local safety guidance - this calculator provides an idealized theoretical number only and is not a substitute for a real CO2 monitor, controller, and safe ventilation practices.</p>
+</div>
+<div class="faq-item">
+<h3>Why does the target concentration field cap out around 1,500 ppm?</h3>
+<p>Horticultural CO2 enrichment commonly targets roughly 800-1,500 ppm for many crops, since plant growth benefit from added CO2 diminishes well before reaching hazardous levels for humans - capping the field keeps the calculator's scope within a conservative, commonly referenced horticultural range rather than encouraging riskier concentrations.</p>
+</div>
+<div class="faq-item">
+<h3>What does the 'theoretical CO2 needed' number actually represent?</h3>
+<p>It's an idealized calculation of how much CO2 gas volume/mass would be needed to raise the entire room's concentration by the specified amount, assuming perfectly even distribution and no air exchange with the outside. Real rooms leak air, have uneven mixing, and lose CO2 through ventilation and plant uptake, so actual equipment (typically a regulated CO2 injection system with a controller) manages this dynamically rather than as a single one-time addition.</p>
+</div>
+<div class="faq-item">
+<h3>Should I turn off ventilation to keep CO2 levels from dropping?</h3>
+<p>No - disabling ventilation to trap CO2 removes a key safety control and can allow dangerous concentrations to build up, especially in occupied spaces. Real CO2 enrichment systems are designed to work alongside appropriate ventilation and monitoring, not by sealing a room and eliminating air exchange.</p>
+</div>
+<div class="faq-item">
+<h3>Do I need a CO2 monitor even if I'm using a controller?</h3>
+<p>Yes - a calibrated CO2 monitor/alarm is a standard safety practice for any enclosed space with elevated CO2, independent of whatever dosing controller manages the enrichment system itself, since it gives you an independent check that concentrations stay within the intended and safe range.</p>
+</div>
+<div class="faq-item">
+<h3>Why does the calculator show both liters and grams of CO2?</h3>
+<p>Liters describe gas volume at the reference conditions used here (about 24.45 L per mole at typical room temperature), while grams describe mass - different CO2 delivery systems and reference materials report dosing in different units, so showing both avoids a separate conversion step.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculate</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Related tools</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>A note on accuracy</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquary's calculators are built for quick, reliable estimates. For decisions with real financial, structural, or medical stakes, confirm with a qualified professional.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/">← Back to all calculators</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

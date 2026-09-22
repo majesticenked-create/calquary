@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>حاسبة التكامل الضوئي اليومي - حاسبة مجانية عبر الإنترنت</title>
+  <meta name="description" content="احسب التكامل الضوئي اليومي (DLI) من PPFD وفترة الإضاءة، لتخطيط إضاءة النباتات." />
+  <meta property="og:title" content="حاسبة التكامل الضوئي اليومي | Calquary">
+  <meta property="og:description" content="احسب التكامل الضوئي اليومي (DLI) من PPFD وفترة الإضاءة، لتخطيط إضاءة النباتات.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/ar/tool/daily-light-integral-calculator">
+  <meta property="og:locale" content="ar_AR">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/daily-light-integral-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="حاسبة التكامل الضوئي اليومي | Calquary">
+  <meta name="twitter:description" content="احسب التكامل الضوئي اليومي (DLI) من PPFD وفترة الإضاءة، لتخطيط إضاءة النباتات.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/daily-light-integral-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/daily-light-integral-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/daily-light-integral-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/daily-light-integral-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/daily-light-integral-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/daily-light-integral-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/daily-light-integral-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/daily-light-integral-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/daily-light-integral-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/daily-light-integral-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/daily-light-integral-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/daily-light-integral-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/daily-light-integral-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/daily-light-integral-calculator">
+    <link rel="canonical" href="https://calquary.com/ar/tool/daily-light-integral-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("daily-light-integral-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("daily-light-integral-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "حاسبة التكامل الضوئي اليومي",
+      "description": "احسب التكامل الضوئي اليومي (DLI) من PPFD وفترة الإضاءة، لتخطيط إضاءة النباتات.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/ar/tool/daily-light-integral-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "ar"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/ar/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/ar/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "حاسبة التكامل الضوئي اليومي",
+          "item": "https://calquary.com/ar/tool/daily-light-integral-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "ما الفرق بين PPFD وDLI؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "PPFD (كثافة تدفق الفوتونات الضوئية التركيبية) هو معدل لحظي - مقدار الضوء النشط ضوئيًا الذي يصطدم بسطح ما في لحظة معينة، بوحدة µmol/m²/ثانية. أما DLI (التكامل الضوئي اليومي) فهو الكمية التراكمية الإجمالية من ذلك الضوء المقدمة على مدار يوم كامل، مع مراعاة الشدة والمدة معًا، بوحدة mol/m²/يوم."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "كيف أجد قيمة PPFD لضوئي؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "عادةً ما يتم قياس PPFD مباشرة باستخدام مقياس كمي PAR عند ارتفاع وموقع مظلة النبات الذي تخطط لاستخدامه، حيث يختلف حسب المسافة والموقع تحت مصدر الضوء - كما ينشر بعض مصنعي إضاءة النمو خرائط أو جداول PPFD لارتفاعات تركيب محددة، والتي يمكن أن تكون بمثابة تقدير إذا لم يكن لديك مقياس."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ما هو DLI الذي يجب أن أستهدفه لنباتاتي؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "يعتمد ذلك بشكل كبير على النوع ومرحلة النمو وبيئة الزراعة - قد تزدهر نباتات المنزل ذات الإضاءة المنخفضة عند حوالي 4-6 مول/م²/يوم، وتنمو العديد من الخضروات الورقية والأعشاب بشكل جيد عند حوالي 12-17، أما المحاصيل الثمرية عالية الإضاءة أو مرحلة الإزهار للقنب فغالبًا ما تستهدف أكثر من ذلك بكثير، أحيانًا 30-45+ مول/م²/يوم. لا توصي هذه الحاسبة بهدف محدد لأن القيمة المناسبة تعتمد كليًا على ما تزرعه - راجع إرشادات خاصة بالنوع أو المحصول."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هل يمكنني استخدام DLI لمقارنة ضوء الشمس وأضواء النمو؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "نعم - DLI هي وحدة مشتركة مفيدة لمقارنة إجمالي توصيل الضوء اليومي من أي مصدر، سواء ضوء الشمس الطبيعي (الذي يختلف حسب الموسم وخط العرض والطقس) أو أضواء النمو الاصطناعية (التي تتحكم بها مباشرة عبر PPFD وفترة الإضاءة)، مما يتيح لك تخطيط الإضاءة التكميلية للوصول إلى إجمالي مستهدف."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "إذا خفضت شدة ضوئي، كيف يجب أن أعدّل فترة الإضاءة للحفاظ على نفس DLI؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "نظرًا لأن DLI يتدرج مع حاصل ضرب PPFD والساعات، فإن تقليل PPFD يتطلب زيادة فترة الإضاءة بشكل متناسب للوصول إلى نفس DLI، والعكس صحيح - على سبيل المثال، تقليل PPFD إلى النصف مع مضاعفة ساعات الإضاءة يوصل تقريبًا نفس إجمالي DLI، رغم أن فترات الإضاءة الطويلة جدًا أو القصيرة جدًا يمكن أن تؤثر على النباتات بطرق أخرى تتجاوز إجمالي الضوء الموصل."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هل يعني DLI الأعلى دائمًا نموًا أفضل للنباتات؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ليس بالضرورة - تمتلك النباتات نطاقات خاصة بالنوع والمرحلة حيث يحسّن المزيد من الضوء النمو، لكن بعد نقطة معينة يوفر DLI الإضافي عوائد متناقصة أو قد يسبب حتى إجهادًا ضوئيًا أو تثبيطًا ضوئيًا إذا لم يقترن بثاني أكسيد الكربون والمغذيات ودرجة الحرارة الكافية. لا يوجد DLI 'أفضل' عالميًا - الأهداف المناسبة خاصة بما يتم زراعته."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/ar/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/ar/#categories">التصنيفات</a>
+          <a href="/ar/#tools">جميع الأدوات</a>
+          <a href="/ar/about">من نحن</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: العربية">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>undefined</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/daily-light-integral-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/daily-light-integral-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/daily-light-integral-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/daily-light-integral-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/daily-light-integral-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/daily-light-integral-calculator">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/daily-light-integral-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/daily-light-integral-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/daily-light-integral-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/daily-light-integral-calculator">中文</a><span class="locale-item current" role="menuitem" aria-current="true">العربية</span><a class="locale-item" role="menuitem" href="/th/tool/daily-light-integral-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/ar/">Calquary</a> / <a href="/ar/category/biology">الأحياء</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>حاسبة التكامل الضوئي اليومي</h1>
+        <p style="max-width:60ch;">أدخل PPFD لضوئك (كثافة تدفق الفوتونات الضوئية التركيبية) وعدد الساعات التي يعمل بها يوميًا لحساب التكامل الضوئي اليومي (DLI).</p>
+        <p class="last-updated">آخر تحديث: September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">احسب</button>
+              <button type="button" id="calc-reset" class="btn-ghost">إعادة تعيين</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>الأسئلة الشائعة</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>ما الفرق بين PPFD وDLI؟</h3>
+<p>PPFD (كثافة تدفق الفوتونات الضوئية التركيبية) هو معدل لحظي - مقدار الضوء النشط ضوئيًا الذي يصطدم بسطح ما في لحظة معينة، بوحدة µmol/m²/ثانية. أما DLI (التكامل الضوئي اليومي) فهو الكمية التراكمية الإجمالية من ذلك الضوء المقدمة على مدار يوم كامل، مع مراعاة الشدة والمدة معًا، بوحدة mol/m²/يوم.</p>
+</div>
+<div class="faq-item">
+<h3>كيف أجد قيمة PPFD لضوئي؟</h3>
+<p>عادةً ما يتم قياس PPFD مباشرة باستخدام مقياس كمي PAR عند ارتفاع وموقع مظلة النبات الذي تخطط لاستخدامه، حيث يختلف حسب المسافة والموقع تحت مصدر الضوء - كما ينشر بعض مصنعي إضاءة النمو خرائط أو جداول PPFD لارتفاعات تركيب محددة، والتي يمكن أن تكون بمثابة تقدير إذا لم يكن لديك مقياس.</p>
+</div>
+<div class="faq-item">
+<h3>ما هو DLI الذي يجب أن أستهدفه لنباتاتي؟</h3>
+<p>يعتمد ذلك بشكل كبير على النوع ومرحلة النمو وبيئة الزراعة - قد تزدهر نباتات المنزل ذات الإضاءة المنخفضة عند حوالي 4-6 مول/م²/يوم، وتنمو العديد من الخضروات الورقية والأعشاب بشكل جيد عند حوالي 12-17، أما المحاصيل الثمرية عالية الإضاءة أو مرحلة الإزهار للقنب فغالبًا ما تستهدف أكثر من ذلك بكثير، أحيانًا 30-45+ مول/م²/يوم. لا توصي هذه الحاسبة بهدف محدد لأن القيمة المناسبة تعتمد كليًا على ما تزرعه - راجع إرشادات خاصة بالنوع أو المحصول.</p>
+</div>
+<div class="faq-item">
+<h3>هل يمكنني استخدام DLI لمقارنة ضوء الشمس وأضواء النمو؟</h3>
+<p>نعم - DLI هي وحدة مشتركة مفيدة لمقارنة إجمالي توصيل الضوء اليومي من أي مصدر، سواء ضوء الشمس الطبيعي (الذي يختلف حسب الموسم وخط العرض والطقس) أو أضواء النمو الاصطناعية (التي تتحكم بها مباشرة عبر PPFD وفترة الإضاءة)، مما يتيح لك تخطيط الإضاءة التكميلية للوصول إلى إجمالي مستهدف.</p>
+</div>
+<div class="faq-item">
+<h3>إذا خفضت شدة ضوئي، كيف يجب أن أعدّل فترة الإضاءة للحفاظ على نفس DLI؟</h3>
+<p>نظرًا لأن DLI يتدرج مع حاصل ضرب PPFD والساعات، فإن تقليل PPFD يتطلب زيادة فترة الإضاءة بشكل متناسب للوصول إلى نفس DLI، والعكس صحيح - على سبيل المثال، تقليل PPFD إلى النصف مع مضاعفة ساعات الإضاءة يوصل تقريبًا نفس إجمالي DLI، رغم أن فترات الإضاءة الطويلة جدًا أو القصيرة جدًا يمكن أن تؤثر على النباتات بطرق أخرى تتجاوز إجمالي الضوء الموصل.</p>
+</div>
+<div class="faq-item">
+<h3>هل يعني DLI الأعلى دائمًا نموًا أفضل للنباتات؟</h3>
+<p>ليس بالضرورة - تمتلك النباتات نطاقات خاصة بالنوع والمرحلة حيث يحسّن المزيد من الضوء النمو، لكن بعد نقطة معينة يوفر DLI الإضافي عوائد متناقصة أو قد يسبب حتى إجهادًا ضوئيًا أو تثبيطًا ضوئيًا إذا لم يقترن بثاني أكسيد الكربون والمغذيات ودرجة الحرارة الكافية. لا يوجد DLI 'أفضل' عالميًا - الأهداف المناسبة خاصة بما يتم زراعته.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">احسب</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>أدوات ذات صلة</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>ملاحظة حول الدقة</h4>
+          <p style="margin:0;font-size:0.85rem;">حاسبات Calquary مصممة لتقديم تقديرات سريعة وموثوقة. للقرارات ذات التبعات المالية أو الإنشائية أو الطبية الحقيقية، يُرجى استشارة مختص مؤهل.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/ar/">→ العودة إلى جميع الحاسبات</a> · <a href="/ar/about">من نحن</a> · <a href="/ar/contact">تواصل معنا</a> · <a href="/ar/privacy">سياسة الخصوصية</a> · <a href="/ar/terms">شروط الاستخدام</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

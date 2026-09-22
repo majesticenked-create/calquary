@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Cruzamento Di-híbrido</title>
+  <meta name="description" content="Calcule as proporções de genótipo e fenótipo da prole para um cruzamento de dois genes sob herança mendeliana simples." />
+  <meta property="og:title" content="Calculadora de Cruzamento Di-híbrido | Calquary">
+  <meta property="og:description" content="Calcule as proporções de genótipo e fenótipo da prole para um cruzamento de dois genes sob herança mendeliana simples.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/pt/tool/dihybrid-cross-calculator">
+  <meta property="og:locale" content="pt_PT">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/dihybrid-cross-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculadora de Cruzamento Di-híbrido | Calquary">
+  <meta name="twitter:description" content="Calcule as proporções de genótipo e fenótipo da prole para um cruzamento de dois genes sob herança mendeliana simples.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/dihybrid-cross-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/dihybrid-cross-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dihybrid-cross-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/dihybrid-cross-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/dihybrid-cross-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/dihybrid-cross-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/dihybrid-cross-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/dihybrid-cross-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/dihybrid-cross-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/dihybrid-cross-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/dihybrid-cross-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/dihybrid-cross-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/dihybrid-cross-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/dihybrid-cross-calculator">
+    <link rel="canonical" href="https://calquary.com/pt/tool/dihybrid-cross-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("dihybrid-cross-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("dihybrid-cross-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calculadora de Cruzamento Di-híbrido",
+      "description": "Calcule as proporções de genótipo e fenótipo da prole para um cruzamento de dois genes sob herança mendeliana simples.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/pt/tool/dihybrid-cross-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "pt"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/pt/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/pt/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calculadora de Cruzamento Di-híbrido",
+          "item": "https://calquary.com/pt/tool/dihybrid-cross-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "O que significa \"segregação independente\" e por que isso importa aqui?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Segregação independente é o princípio mendeliano de que alelos de genes diferentes são herdados independentemente uns dos outros, o que é verdadeiro quando os dois genes estão em cromossomos diferentes (ou muito distantes no mesmo). Esta calculadora assume segregação independente - se os dois genes estivessem intimamente ligados no mesmo cromossomo, eles tenderiam a ser herdados juntos com mais frequência do que este modelo prevê, o que é chamado de ligação gênica."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como isso difere da Calculadora de Frequência Alélica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Calculadora de Frequência Alélica trabalha de trás para frente a partir de contagens reais observadas de genótipos em uma amostra populacional para calcular frequências alélicas (p e q) para um único gene. Esta Calculadora de Cruzamento Di-híbrido, em vez disso, trabalha para frente a partir de dois genótipos parentais conhecidos em dois genes para prever possíveis resultados da prole e suas probabilidades - elas respondem perguntas diferentes usando entradas diferentes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como isso difere de um cálculo de Hardy-Weinberg?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cálculos de Hardy-Weinberg preveem frequências de genótipo em uma grande população em equilíbrio, dadas as frequências alélicas, para um único gene. Um cruzamento di-híbrido, em vez disso, prevê resultados individuais da prole a partir de dois progenitores específicos conhecidos em dois genes - um é um modelo de equilíbrio em nível populacional, o outro é um modelo de probabilidade de cruzamento individual, e são usados para diferentes tipos de perguntas genéticas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Por que a calculadora mostra 4 gametas possíveis para um progenitor heterozigoto em ambos os genes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Um progenitor heterozigoto em ambos os genes (como AaBb) pode transmitir qualquer combinação de um alelo de cada gene - AB, Ab, aB, ou ab - assumindo segregação independente, dando 4 tipos de gametas igualmente prováveis. Um progenitor homozigoto em um ou ambos os genes produz menos tipos distintos de gametas, já que um lócus homozigoto só pode transmitir um alelo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que significa \"dominância completa\" para as proporções de fenótipo mostradas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dominância completa significa que um alelo mascara completamente o outro em um heterozigoto, então um genótipo como Aa parece idêntico a AA para aquele traço - apenas o genótipo homozigoto recessivo (aa) mostra o fenótipo recessivo. As proporções de fenótipo desta calculadora assumem dominância completa em ambos os genes; traços com dominância incompleta ou codominância mostrariam fenótipos intermediários ou mesclados adicionais não refletidos aqui."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso usar isso para pares de genes reais, como prever traços da prole de um animal de estimação ou planta real?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pode ser uma aproximação educacional útil se você tem certeza de que os dois genes segregam independentemente e mostram dominância completa, mas a biologia real frequentemente inclui complicações como ligação, dominância incompleta, ou interações gênicas que este modelo simplificado não captura - para qualquer coisa com consequências reais (decisões de reprodução, aconselhamento genético, etc.), consulte um geneticista qualificado ou especialista relevante em vez de confiar apenas nesta ferramenta."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/pt/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/pt/#categories">Categorias</a>
+          <a href="/pt/#tools">Todas as ferramentas</a>
+          <a href="/pt/about">Sobre</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Português">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>PT</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/dihybrid-cross-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/dihybrid-cross-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/dihybrid-cross-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/dihybrid-cross-calculator">Deutsch</a><span class="locale-item current" role="menuitem" aria-current="true">Português</span><a class="locale-item" role="menuitem" href="/it/tool/dihybrid-cross-calculator">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/dihybrid-cross-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/dihybrid-cross-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/dihybrid-cross-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/dihybrid-cross-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/dihybrid-cross-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/dihybrid-cross-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/pt/">Calquary</a> / <a href="/pt/category/biology">Biologia</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calculadora de Cruzamento Di-híbrido</h1>
+        <p style="max-width:60ch;">Selecione o genótipo de cada progenitor em dois genes independentes para calcular as probabilidades de genótipo e fenótipo da prole, assumindo segregação independente e dominância completa.</p>
+        <p class="last-updated">Última atualização: September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calcular</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Redefinir</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Perguntas frequentes</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>O que significa "segregação independente" e por que isso importa aqui?</h3>
+<p>Segregação independente é o princípio mendeliano de que alelos de genes diferentes são herdados independentemente uns dos outros, o que é verdadeiro quando os dois genes estão em cromossomos diferentes (ou muito distantes no mesmo). Esta calculadora assume segregação independente - se os dois genes estivessem intimamente ligados no mesmo cromossomo, eles tenderiam a ser herdados juntos com mais frequência do que este modelo prevê, o que é chamado de ligação gênica.</p>
+</div>
+<div class="faq-item">
+<h3>Como isso difere da Calculadora de Frequência Alélica?</h3>
+<p>A Calculadora de Frequência Alélica trabalha de trás para frente a partir de contagens reais observadas de genótipos em uma amostra populacional para calcular frequências alélicas (p e q) para um único gene. Esta Calculadora de Cruzamento Di-híbrido, em vez disso, trabalha para frente a partir de dois genótipos parentais conhecidos em dois genes para prever possíveis resultados da prole e suas probabilidades - elas respondem perguntas diferentes usando entradas diferentes.</p>
+</div>
+<div class="faq-item">
+<h3>Como isso difere de um cálculo de Hardy-Weinberg?</h3>
+<p>Cálculos de Hardy-Weinberg preveem frequências de genótipo em uma grande população em equilíbrio, dadas as frequências alélicas, para um único gene. Um cruzamento di-híbrido, em vez disso, prevê resultados individuais da prole a partir de dois progenitores específicos conhecidos em dois genes - um é um modelo de equilíbrio em nível populacional, o outro é um modelo de probabilidade de cruzamento individual, e são usados para diferentes tipos de perguntas genéticas.</p>
+</div>
+<div class="faq-item">
+<h3>Por que a calculadora mostra 4 gametas possíveis para um progenitor heterozigoto em ambos os genes?</h3>
+<p>Um progenitor heterozigoto em ambos os genes (como AaBb) pode transmitir qualquer combinação de um alelo de cada gene - AB, Ab, aB, ou ab - assumindo segregação independente, dando 4 tipos de gametas igualmente prováveis. Um progenitor homozigoto em um ou ambos os genes produz menos tipos distintos de gametas, já que um lócus homozigoto só pode transmitir um alelo.</p>
+</div>
+<div class="faq-item">
+<h3>O que significa "dominância completa" para as proporções de fenótipo mostradas?</h3>
+<p>Dominância completa significa que um alelo mascara completamente o outro em um heterozigoto, então um genótipo como Aa parece idêntico a AA para aquele traço - apenas o genótipo homozigoto recessivo (aa) mostra o fenótipo recessivo. As proporções de fenótipo desta calculadora assumem dominância completa em ambos os genes; traços com dominância incompleta ou codominância mostrariam fenótipos intermediários ou mesclados adicionais não refletidos aqui.</p>
+</div>
+<div class="faq-item">
+<h3>Posso usar isso para pares de genes reais, como prever traços da prole de um animal de estimação ou planta real?</h3>
+<p>Pode ser uma aproximação educacional útil se você tem certeza de que os dois genes segregam independentemente e mostram dominância completa, mas a biologia real frequentemente inclui complicações como ligação, dominância incompleta, ou interações gênicas que este modelo simplificado não captura - para qualquer coisa com consequências reais (decisões de reprodução, aconselhamento genético, etc.), consulte um geneticista qualificado ou especialista relevante em vez de confiar apenas nesta ferramenta.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calcular</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Ferramentas relacionadas</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Nota sobre precisão</h4>
+          <p style="margin:0;font-size:0.85rem;">As calculadoras da Calquary são feitas para estimativas rápidas e confiáveis. Para decisões com implicações financeiras, estruturais ou médicas reais, consulte um profissional qualificado.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/pt/">← Voltar a todas as calculadoras</a> · <a href="/pt/about">Sobre</a> · <a href="/pt/contact">Contato</a> · <a href="/pt/privacy">Privacidade</a> · <a href="/pt/terms">Termos</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>
