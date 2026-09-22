@@ -257,6 +257,9 @@ function renderDiagram(calc) {
 // countdown), fundamentally different from every other tool's
 // compute-once-on-submit model — it gets its own init path rather than
 // being forced through renderFieldsInto/collectValues/compute.
+// Multiple independent, named countdowns running concurrently (e.g. "Pasta
+// 8:00" + "Sauce 15:00") — each entry gets its own interval/state, entries
+// can be added or removed freely, and the page always keeps at least one.
 function initOnlineTimer(fieldsId, resultId, formId) {
   const form = document.getElementById(formId);
   const fieldsContainer = document.getElementById(fieldsId);
@@ -266,40 +269,23 @@ function initOnlineTimer(fieldsId, resultId, formId) {
   resultPanel.classList.remove("visible");
 
   const widget = document.createElement("div");
-  widget.className = "timer-widget";
+  widget.className = "timer-widget timer-widget-multi";
   widget.innerHTML = `
-    <div class="timer-display" id="timer-display">05:00</div>
-    <div class="timer-inputs">
-      <label>Minutes <input type="number" id="timer-min" min="0" max="999" value="5" /></label>
-      <label>Seconds <input type="number" id="timer-sec" min="0" max="59" value="0" /></label>
-    </div>
-    <div class="timer-actions">
-      <button type="button" id="timer-start" class="btn-primary">Start</button>
-      <button type="button" id="timer-pause" class="btn-ghost" disabled>Pause</button>
-      <button type="button" id="timer-reset" class="btn-ghost">Reset</button>
+    <div class="timer-entries" id="timer-entries"></div>
+    <div class="timer-add-row">
+      <button type="button" id="timer-add" class="btn-ghost">+ Add another timer</button>
     </div>
   `;
   form.parentElement.insertBefore(widget, form);
 
-  const display = widget.querySelector("#timer-display");
-  const minInput = widget.querySelector("#timer-min");
-  const secInput = widget.querySelector("#timer-sec");
-  const startBtn = widget.querySelector("#timer-start");
-  const pauseBtn = widget.querySelector("#timer-pause");
-  const resetBtn = widget.querySelector("#timer-reset");
-
-  let remaining = 300;
-  let intervalId = null;
+  const entriesEl = widget.querySelector("#timer-entries");
+  const addBtn = widget.querySelector("#timer-add");
+  let nextId = 1;
 
   function format(totalSeconds) {
     const m = Math.floor(totalSeconds / 60);
     const s = totalSeconds % 60;
     return `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
-  }
-
-  function renderDisplay() {
-    display.textContent = format(Math.max(0, remaining));
-    display.classList.toggle("timer-done", remaining <= 0);
   }
 
   function beep() {
@@ -316,61 +302,112 @@ function initOnlineTimer(fieldsId, resultId, formId) {
     } catch (e) { /* Audio unsupported/blocked — silent countdown still works. */ }
   }
 
-  function tick() {
-    remaining -= 1;
-    renderDisplay();
-    if (remaining <= 0) {
+  function addTimer(defaultMinutes) {
+    const id = nextId++;
+    const row = document.createElement("div");
+    row.className = "timer-entry";
+    row.innerHTML = `
+      <div class="timer-entry-head">
+        <input type="text" class="timer-entry-name" placeholder="Timer ${id}" maxlength="40" />
+        <button type="button" class="timer-remove-btn" aria-label="Remove this timer">×</button>
+      </div>
+      <div class="timer-display" id="timer-display-${id}">${format((defaultMinutes || 5) * 60)}</div>
+      <div class="timer-inputs">
+        <label>Minutes <input type="number" class="timer-min" min="0" max="999" value="${defaultMinutes || 5}" /></label>
+        <label>Seconds <input type="number" class="timer-sec" min="0" max="59" value="0" /></label>
+      </div>
+      <div class="timer-actions">
+        <button type="button" class="timer-start btn-primary">Start</button>
+        <button type="button" class="timer-pause btn-ghost" disabled>Pause</button>
+        <button type="button" class="timer-reset btn-ghost">Reset</button>
+      </div>
+    `;
+    entriesEl.appendChild(row);
+
+    const display = row.querySelector(".timer-display");
+    const minInput = row.querySelector(".timer-min");
+    const secInput = row.querySelector(".timer-sec");
+    const startBtn = row.querySelector(".timer-start");
+    const pauseBtn = row.querySelector(".timer-pause");
+    const resetBtn = row.querySelector(".timer-reset");
+    const removeBtn = row.querySelector(".timer-remove-btn");
+
+    let remaining = (defaultMinutes || 5) * 60;
+    let intervalId = null;
+
+    function renderDisplay() {
+      display.textContent = format(Math.max(0, remaining));
+      display.classList.toggle("timer-done", remaining <= 0);
+    }
+
+    function tick() {
+      remaining -= 1;
+      renderDisplay();
+      if (remaining <= 0) {
+        clearInterval(intervalId);
+        intervalId = null;
+        startBtn.disabled = false;
+        pauseBtn.disabled = true;
+        display.textContent = "Time's up!";
+        display.classList.add("timer-done");
+        beep();
+      }
+    }
+
+    startBtn.addEventListener("click", () => {
+      if (intervalId) return;
+      if (remaining <= 0) {
+        remaining = (parseInt(minInput.value, 10) || 0) * 60 + (parseInt(secInput.value, 10) || 0);
+      }
+      if (remaining <= 0) return;
+      display.classList.remove("timer-done");
+      intervalId = setInterval(tick, 1000);
+      startBtn.disabled = true;
+      pauseBtn.disabled = false;
+      minInput.disabled = true;
+      secInput.disabled = true;
+    });
+
+    pauseBtn.addEventListener("click", () => {
       clearInterval(intervalId);
       intervalId = null;
       startBtn.disabled = false;
       pauseBtn.disabled = true;
-      display.textContent = "Time's up!";
-      display.classList.add("timer-done");
-      beep();
-    }
-  }
+    });
 
-  startBtn.addEventListener("click", () => {
-    if (intervalId) return;
-    if (remaining <= 0) {
+    resetBtn.addEventListener("click", () => {
+      clearInterval(intervalId);
+      intervalId = null;
+      minInput.disabled = false;
+      secInput.disabled = false;
+      startBtn.disabled = false;
+      pauseBtn.disabled = true;
       remaining = (parseInt(minInput.value, 10) || 0) * 60 + (parseInt(secInput.value, 10) || 0);
-    }
-    if (remaining <= 0) return;
-    display.classList.remove("timer-done");
-    intervalId = setInterval(tick, 1000);
-    startBtn.disabled = true;
-    pauseBtn.disabled = false;
-    minInput.disabled = true;
-    secInput.disabled = true;
-  });
-
-  pauseBtn.addEventListener("click", () => {
-    clearInterval(intervalId);
-    intervalId = null;
-    startBtn.disabled = false;
-    pauseBtn.disabled = true;
-  });
-
-  resetBtn.addEventListener("click", () => {
-    clearInterval(intervalId);
-    intervalId = null;
-    minInput.disabled = false;
-    secInput.disabled = false;
-    startBtn.disabled = false;
-    pauseBtn.disabled = true;
-    remaining = (parseInt(minInput.value, 10) || 0) * 60 + (parseInt(secInput.value, 10) || 0);
-    display.classList.remove("timer-done");
-    renderDisplay();
-  });
-
-  [minInput, secInput].forEach((input) => {
-    input.addEventListener("input", () => {
-      remaining = (parseInt(minInput.value, 10) || 0) * 60 + (parseInt(secInput.value, 10) || 0);
+      display.classList.remove("timer-done");
       renderDisplay();
     });
-  });
 
-  renderDisplay();
+    [minInput, secInput].forEach((input) => {
+      input.addEventListener("input", () => {
+        if (intervalId) return; // running timer's remaining time isn't editable mid-countdown
+        remaining = (parseInt(minInput.value, 10) || 0) * 60 + (parseInt(secInput.value, 10) || 0);
+        renderDisplay();
+      });
+    });
+
+    removeBtn.addEventListener("click", () => {
+      // Always keep at least one timer on the page rather than an empty widget.
+      if (entriesEl.children.length <= 1) return;
+      clearInterval(intervalId);
+      row.remove();
+    });
+
+    renderDisplay();
+  }
+
+  addBtn.addEventListener("click", () => addTimer(5));
+
+  addTimer(5);
 }
 
 // Same live-widget rationale as initOnlineTimer above, but checks the

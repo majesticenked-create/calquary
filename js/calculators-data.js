@@ -3781,16 +3781,36 @@ const CALCULATORS = [
     category: "finance",
     title: "Investment Calculator",
     keyword: "investment calculator",
-    description: "Estimate the future value of an investment, adjusted for inflation.",
-    intro: "Enter your starting investment, monthly contribution, expected return, and inflation rate to see both the nominal and inflation-adjusted future value.",
+    description: "Estimate the future value of an investment, adjusted for inflation, or convert a historical dollar amount to today's purchasing power using real CPI data.",
+    intro: "Choose Investment growth to project a portfolio forward, or Historical dollar value to see what a real amount from a past year is worth in another year using actual CPI data - enter your numbers below.",
     fields: [
-      { id: "initialInvestment", label: "Starting investment", type: "number", unit: "$", default: 10000, step: 500 },
-      { id: "monthlyContribution", label: "Monthly contribution", type: "number", unit: "$", default: 300, step: 25 },
-      { id: "annualReturn", label: "Expected annual return", type: "number", unit: "%", default: 7, step: 0.1 },
-      { id: "inflationRate", label: "Expected inflation rate", type: "number", unit: "%", default: 3, step: 0.1 },
-      { id: "years", label: "Time frame", type: "number", unit: "years", default: 20, step: 1 },
+      { id: "mode", label: "What do you want to calculate?", type: "select", default: "growth", options: [
+        { v: "growth", l: "Investment growth (project a portfolio forward)" }, { v: "historical", l: "Historical dollar value (CPI inflation calculator)" },
+      ] },
+      { id: "initialInvestment", label: "Starting investment (growth mode)", type: "number", unit: "$", default: 10000, step: 500 },
+      { id: "monthlyContribution", label: "Monthly contribution (growth mode)", type: "number", unit: "$", default: 300, step: 25 },
+      { id: "annualReturn", label: "Expected annual return (growth mode)", type: "number", unit: "%", default: 7, step: 0.1 },
+      { id: "inflationRate", label: "Expected inflation rate (growth mode)", type: "number", unit: "%", default: 3, step: 0.1 },
+      { id: "years", label: "Time frame (growth mode)", type: "number", unit: "years", default: 20, step: 1 },
+      { id: "historicalAmount", label: "Amount (historical dollar value mode)", type: "number", unit: "$", default: 100, step: 10, min: 0 },
+      { id: "fromYear", label: "From year (historical dollar value mode)", type: "number", default: 1990, step: 1, min: 1913, max: 2025 },
+      { id: "toYear", label: "To year (historical dollar value mode)", type: "number", default: 2025, step: 1, min: 1913, max: 2025 },
     ],
     compute: (v) => {
+      if (v.mode === "historical") {
+        const cpiFrom = cpiForYear(v.fromYear);
+        const cpiTo = cpiForYear(v.toYear);
+        const adjusted = v.historicalAmount * (cpiTo / cpiFrom);
+        const pctChange = ((cpiTo - cpiFrom) / cpiFrom) * 100;
+        return {
+          primary: { label: `Equivalent value in ${v.toYear}`, value: `$${round(adjusted, 2).toLocaleString()}` },
+          secondary: [
+            { l: "Cumulative inflation over the period", v: `${round(pctChange, 1)}%` },
+            { l: `Original amount (${v.fromYear})`, v: `$${round(v.historicalAmount, 2).toLocaleString()}` },
+          ],
+          note: "Based on the US CPI-U (Consumer Price Index for All Urban Consumers, US city average, annual average). This uses a sparse table of published annual figures at roughly 5-10 year intervals, not every single year - values for years not directly in that table are linearly interpolated between the two nearest known points, so treat results as a close estimate rather than the exact BLS figure for that specific year.",
+        };
+      }
       const monthlyReturn = v.annualReturn / 100 / 12;
       const n = v.years * 12;
       const growthFactor = Math.pow(1 + monthlyReturn, n);
@@ -3818,6 +3838,10 @@ const CALCULATORS = [
       { q: "What's the difference between the nominal and inflation-adjusted future value shown?", a: "The nominal value is the raw dollar total your investment grows to at the stated return rate. The inflation-adjusted (real) value discounts that nominal figure by the inflation rate over the same period, showing what that future amount is actually worth in today's purchasing power." },
       { q: "If I invest $10,000 with $300/month contributions at 7% for 20 years, roughly what's the nominal result?", a: "Growing the $10,000 lump sum plus $300 monthly contributions at 7% annually compounded monthly for 20 years lands around $195,000 nominal - the exact figure depends on the compounding assumptions, but contributions dominate lump-sum growth over a horizon that long at typical contribution levels." },
       { q: "Is this the same as a compound interest calculator?", a: "It builds on the same compounding math but adds two things a basic compound interest calculator doesn't: regular monthly contributions on top of the starting balance, and an inflation adjustment to show real (purchasing-power) value alongside the nominal total." },
+      { q: "What's the difference between 'growth mode' and 'historical dollar value mode'?", a: "Growth mode projects a hypothetical portfolio forward using an assumed return rate you choose. Historical dollar value mode instead uses real, published CPI-U inflation data to answer a different question: what a specific real amount of money from one actual year is worth in another year's dollars." },
+      { q: "How accurate is the historical dollar value mode?", a: "It's based on actual published CPI-U annual averages, not an assumed rate, but the underlying table only lists roughly every 5-10 years rather than every single year - values for years in between are linearly interpolated, so treat the result as a close estimate rather than the exact official figure for that year." },
+      { q: "What is CPI-U?", a: "The Consumer Price Index for All Urban Consumers, published by the US Bureau of Labor Statistics - it tracks the average change in prices paid by urban consumers for a broad basket of goods and services over time, and is the standard reference for measuring US inflation." },
+      { q: "What was $100 in 1990 worth in 2025?", a: "Using CPI-U data, about $245 in 2025 dollars - prices roughly two-and-a-half times over that 35-year span. Enter 100, 1990, and 2025 in Historical dollar value mode above to see the exact figure and the cumulative inflation percentage." },
     ],
     related: ["savings-calculator", "compound-interest-calculator", "mortgage-calculator"],
   },
@@ -5489,24 +5513,27 @@ const CALCULATORS = [
     category: "datetime",
     title: "Online Timer",
     keyword: "online timer",
-    description: "A free countdown timer that runs in your browser - set minutes and seconds, then start, pause, or reset.",
-    intro: "Set a countdown time, then hit start - this timer counts down and alerts you when time's up.",
+    description: "A free multi-timer that runs in your browser - run several named countdowns at once, each with its own start, pause, and reset.",
+    intro: "Set as many countdowns as you need, each with its own name, minutes, and seconds - they run independently, so you can time several things at once.",
     // No form fields — this tool is a live, running widget (see
-    // js/engine.js's initOnlineTimer), not a compute-on-submit
+    // js/engine.js's initOnlineTimer, which now supports multiple
+    // concurrent named timer entries), not a compute-on-submit
     // calculator. compute() only exists so the homepage/category card
     // preview (which calls it for a sample readout) doesn't crash.
     fields: [],
     compute: () => ({
       primary: { label: "Default duration", value: "5:00" },
-      secondary: [{ l: "Controls", v: "Start / Pause / Reset" }],
+      secondary: [{ l: "Controls", v: "Start / Pause / Reset · Add another timer" }],
     }),
     faq: [
-      { q: "Does this online timer keep running if I switch browser tabs?", a: "Yes - the countdown runs in the background as long as this browser tab stays open, even if it's not the active tab. Closing the tab or your browser stops the timer." },
-      { q: "Will this timer make a sound when it finishes?", a: "Yes - a short beep plays when the countdown reaches zero, along with the display changing to \"Time's up!\" so you notice even if you're not looking directly at the screen." },
-      { q: "Can I set a timer for longer than an hour?", a: "Yes - enter any number of minutes (there's no upper limit), so you can set a 90-minute or multi-hour timer just as easily as a short one." },
-      { q: "Does the timer keep counting down if my computer goes to sleep?", a: "No - if the device sleeps or the browser is suspended, the countdown pauses along with it and resumes (slightly behind) when the device wakes, since it relies on the browser tab actively running." },
-      { q: "Can I set a timer for an exact number of seconds only, like 90 seconds?", a: "Yes - enter 0 minutes and 90 seconds, or 1 minute and 30 seconds; both produce the same 90-second countdown since minutes and seconds are combined into total time." },
-      { q: "Is this the same as a 'countdown clock' for a specific event date?", a: "No - this timer counts down a fixed duration you set in minutes and seconds, like a kitchen timer. To count down to a specific future date, you'd want a date-based countdown tool instead." },
+      { q: "Can I run more than one timer at the same time?", a: "Yes - click \"Add another timer\" to add as many independent countdowns as you need, each with its own name, minutes/seconds, and start/pause/reset controls. They all run at the same time, so you can track several things at once, like a multi-course meal." },
+      { q: "Can I name each timer?", a: "Yes - each timer has a text field above its countdown where you can label it (e.g. \"Pasta\" or \"Laundry\") so it's clear which is which when you're running several at once." },
+      { q: "Does this online timer keep running if I switch browser tabs?", a: "Yes - every countdown runs in the background as long as this browser tab stays open, even if it's not the active tab. Closing the tab or your browser stops all of them." },
+      { q: "Will each timer make its own sound when it finishes?", a: "Yes - a short beep plays for each timer individually when its countdown reaches zero, along with that timer's display changing to \"Time's up!\", so you know exactly which one finished." },
+      { q: "Can I remove a timer I no longer need?", a: "Yes - click the × button on a timer's header to remove it. The page always keeps at least one timer, so the last remaining one can't be removed." },
+      { q: "Does the timer keep counting down if my computer goes to sleep?", a: "No - if the device sleeps or the browser is suspended, all running countdowns pause along with it and resume (slightly behind) when the device wakes, since each relies on the browser tab actively running." },
+      { q: "Can I set a timer for an exact number of seconds only, like 90 seconds?", a: "Yes - enter 0 minutes and 90 seconds, or 1 minute and 30 seconds, on any timer; both produce the same 90-second countdown since minutes and seconds are combined into total time." },
+      { q: "Is this the same as a 'countdown clock' for a specific event date?", a: "No - each timer here counts down a fixed duration you set in minutes and seconds, like a kitchen timer. To count down to a specific future date, use a date-based countdown tool instead." },
     ],
     related: ["time-duration-calculator", "time-add-calculator", "date-duration-calculator"],
   },
@@ -8915,6 +8942,40 @@ function todayDateString() {
   const d = new Date();
   d.setMinutes(d.getMinutes() - d.getTimezoneOffset());
   return d.toISOString().slice(0, 10);
+}
+
+// US CPI-U (Consumer Price Index for All Urban Consumers, US city average,
+// annual average, 1982-84=100), used by investment-calculator's "historical
+// dollar value" mode. This is a sparse anchor table (not a full year-by-year
+// series) at roughly 5-10 year intervals from published BLS figures -
+// cpiForYear() linearly interpolates between the two nearest anchors for any
+// year not listed exactly, which is stated explicitly in that mode's output
+// note and FAQ rather than presented as precise to the dollar. The last
+// entry (2025) is the most recent full-year average available at the time
+// this table was built and should be refreshed as new annual data is
+// published - it is not re-fetched live since these calculators run
+// entirely client-side with no server to pull updates from.
+const CPI_U_ANNUAL_INDEX = {
+  1913: 9.9, 1920: 20.0, 1930: 16.7, 1940: 14.0, 1950: 24.1,
+  1960: 29.6, 1970: 38.8, 1980: 82.4, 1990: 130.7, 2000: 172.2,
+  2005: 195.3, 2010: 218.1, 2015: 237.0, 2018: 251.1, 2019: 255.7,
+  2020: 258.8, 2021: 271.0, 2022: 292.7, 2023: 304.7, 2024: 313.7,
+  2025: 320.6,
+};
+function cpiForYear(year) {
+  const years = Object.keys(CPI_U_ANNUAL_INDEX).map(Number).sort((a, b) => a - b);
+  const minYear = years[0];
+  const maxYear = years[years.length - 1];
+  const y = Math.max(minYear, Math.min(maxYear, year));
+  if (CPI_U_ANNUAL_INDEX[y] !== undefined) return CPI_U_ANNUAL_INDEX[y];
+  let lower = minYear, upper = maxYear;
+  for (const yr of years) {
+    if (yr <= y) lower = yr;
+    if (yr >= y) { upper = yr; break; }
+  }
+  if (lower === upper) return CPI_U_ANNUAL_INDEX[lower];
+  const t = (y - lower) / (upper - lower);
+  return CPI_U_ANNUAL_INDEX[lower] + t * (CPI_U_ANNUAL_INDEX[upper] - CPI_U_ANNUAL_INDEX[lower]);
 }
 
 function nowTimeString() {

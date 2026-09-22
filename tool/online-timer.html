@@ -15,9 +15,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Online Timer - Free Online Calculator | Calquary</title>
-  <meta name="description" content="A free countdown timer that runs in your browser - set minutes and seconds, then start, pause, or reset." />
+  <meta name="description" content="A free multi-timer that runs in your browser - run several named countdowns at once, each with its own start, pause, and reset." />
   <meta property="og:title" content="Online Timer | Calquary">
-  <meta property="og:description" content="A free countdown timer that runs in your browser - set minutes and seconds, then start, pause, or reset.">
+  <meta property="og:description" content="A free multi-timer that runs in your browser - run several named countdowns at once, each with its own start, pause, and reset.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/tool/online-timer">
   <meta property="og:locale" content="en_US">
@@ -27,7 +27,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Online Timer | Calquary">
-  <meta name="twitter:description" content="A free countdown timer that runs in your browser - set minutes and seconds, then start, pause, or reset.">
+  <meta name="twitter:description" content="A free multi-timer that runs in your browser - run several named countdowns at once, each with its own start, pause, and reset.">
   <meta name="twitter:image" content="https://calquary.com/og-images/online-timer.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/online-timer">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/online-timer">
@@ -89,7 +89,7 @@
     {
       "@type": "SoftwareApplication",
       "name": "Online Timer",
-      "description": "A free countdown timer that runs in your browser - set minutes and seconds, then start, pause, or reset.",
+      "description": "A free multi-timer that runs in your browser - run several named countdowns at once, each with its own start, pause, and reset.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/tool/online-timer",
@@ -99,7 +99,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-22",
       "inLanguage": "en"
     },
     {
@@ -130,26 +130,42 @@
       "mainEntity": [
         {
           "@type": "Question",
+          "name": "Can I run more than one timer at the same time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - click \"Add another timer\" to add as many independent countdowns as you need, each with its own name, minutes/seconds, and start/pause/reset controls. They all run at the same time, so you can track several things at once, like a multi-course meal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I name each timer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - each timer has a text field above its countdown where you can label it (e.g. \"Pasta\" or \"Laundry\") so it's clear which is which when you're running several at once."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "Does this online timer keep running if I switch browser tabs?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes - the countdown runs in the background as long as this browser tab stays open, even if it's not the active tab. Closing the tab or your browser stops the timer."
+            "text": "Yes - every countdown runs in the background as long as this browser tab stays open, even if it's not the active tab. Closing the tab or your browser stops all of them."
           }
         },
         {
           "@type": "Question",
-          "name": "Will this timer make a sound when it finishes?",
+          "name": "Will each timer make its own sound when it finishes?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes - a short beep plays when the countdown reaches zero, along with the display changing to \"Time's up!\" so you notice even if you're not looking directly at the screen."
+            "text": "Yes - a short beep plays for each timer individually when its countdown reaches zero, along with that timer's display changing to \"Time's up!\", so you know exactly which one finished."
           }
         },
         {
           "@type": "Question",
-          "name": "Can I set a timer for longer than an hour?",
+          "name": "Can I remove a timer I no longer need?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes - enter any number of minutes (there's no upper limit), so you can set a 90-minute or multi-hour timer just as easily as a short one."
+            "text": "Yes - click the × button on a timer's header to remove it. The page always keeps at least one timer, so the last remaining one can't be removed."
           }
         },
         {
@@ -157,7 +173,7 @@
           "name": "Does the timer keep counting down if my computer goes to sleep?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No - if the device sleeps or the browser is suspended, the countdown pauses along with it and resumes (slightly behind) when the device wakes, since it relies on the browser tab actively running."
+            "text": "No - if the device sleeps or the browser is suspended, all running countdowns pause along with it and resume (slightly behind) when the device wakes, since each relies on the browser tab actively running."
           }
         },
         {
@@ -165,7 +181,7 @@
           "name": "Can I set a timer for an exact number of seconds only, like 90 seconds?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes - enter 0 minutes and 90 seconds, or 1 minute and 30 seconds; both produce the same 90-second countdown since minutes and seconds are combined into total time."
+            "text": "Yes - enter 0 minutes and 90 seconds, or 1 minute and 30 seconds, on any timer; both produce the same 90-second countdown since minutes and seconds are combined into total time."
           }
         },
         {
@@ -173,7 +189,7 @@
           "name": "Is this the same as a 'countdown clock' for a specific event date?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No - this timer counts down a fixed duration you set in minutes and seconds, like a kitchen timer. To count down to a specific future date, you'd want a date-based countdown tool instead."
+            "text": "No - each timer here counts down a fixed duration you set in minutes and seconds, like a kitchen timer. To count down to a specific future date, use a date-based countdown tool instead."
           }
         }
       ]
@@ -215,8 +231,8 @@
     <div class="tool-layout">
       <main>
         <h1>Online Timer</h1>
-        <p style="max-width:60ch;">Set a countdown time, then hit start - this timer counts down and alerts you when time's up.</p>
-        <p class="last-updated">Last updated: September 5, 2026</p>
+        <p style="max-width:60ch;">Set as many countdowns as you need, each with its own name, minutes, and seconds - they run independently, so you can time several things at once.</p>
+        <p class="last-updated">Last updated: September 22, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel" id="calc-panel">
@@ -243,28 +259,36 @@
         <div class="article-block">
           <h2>Frequently asked questions</h2>
           <div id="faq-list"><div class="faq-item">
+<h3>Can I run more than one timer at the same time?</h3>
+<p>Yes - click "Add another timer" to add as many independent countdowns as you need, each with its own name, minutes/seconds, and start/pause/reset controls. They all run at the same time, so you can track several things at once, like a multi-course meal.</p>
+</div>
+<div class="faq-item">
+<h3>Can I name each timer?</h3>
+<p>Yes - each timer has a text field above its countdown where you can label it (e.g. "Pasta" or "Laundry") so it's clear which is which when you're running several at once.</p>
+</div>
+<div class="faq-item">
 <h3>Does this online timer keep running if I switch browser tabs?</h3>
-<p>Yes - the countdown runs in the background as long as this browser tab stays open, even if it's not the active tab. Closing the tab or your browser stops the timer.</p>
+<p>Yes - every countdown runs in the background as long as this browser tab stays open, even if it's not the active tab. Closing the tab or your browser stops all of them.</p>
 </div>
 <div class="faq-item">
-<h3>Will this timer make a sound when it finishes?</h3>
-<p>Yes - a short beep plays when the countdown reaches zero, along with the display changing to "Time's up!" so you notice even if you're not looking directly at the screen.</p>
+<h3>Will each timer make its own sound when it finishes?</h3>
+<p>Yes - a short beep plays for each timer individually when its countdown reaches zero, along with that timer's display changing to "Time's up!", so you know exactly which one finished.</p>
 </div>
 <div class="faq-item">
-<h3>Can I set a timer for longer than an hour?</h3>
-<p>Yes - enter any number of minutes (there's no upper limit), so you can set a 90-minute or multi-hour timer just as easily as a short one.</p>
+<h3>Can I remove a timer I no longer need?</h3>
+<p>Yes - click the × button on a timer's header to remove it. The page always keeps at least one timer, so the last remaining one can't be removed.</p>
 </div>
 <div class="faq-item">
 <h3>Does the timer keep counting down if my computer goes to sleep?</h3>
-<p>No - if the device sleeps or the browser is suspended, the countdown pauses along with it and resumes (slightly behind) when the device wakes, since it relies on the browser tab actively running.</p>
+<p>No - if the device sleeps or the browser is suspended, all running countdowns pause along with it and resume (slightly behind) when the device wakes, since each relies on the browser tab actively running.</p>
 </div>
 <div class="faq-item">
 <h3>Can I set a timer for an exact number of seconds only, like 90 seconds?</h3>
-<p>Yes - enter 0 minutes and 90 seconds, or 1 minute and 30 seconds; both produce the same 90-second countdown since minutes and seconds are combined into total time.</p>
+<p>Yes - enter 0 minutes and 90 seconds, or 1 minute and 30 seconds, on any timer; both produce the same 90-second countdown since minutes and seconds are combined into total time.</p>
 </div>
 <div class="faq-item">
 <h3>Is this the same as a 'countdown clock' for a specific event date?</h3>
-<p>No - this timer counts down a fixed duration you set in minutes and seconds, like a kitchen timer. To count down to a specific future date, you'd want a date-based countdown tool instead.</p>
+<p>No - each timer here counts down a fixed duration you set in minutes and seconds, like a kitchen timer. To count down to a specific future date, use a date-based countdown tool instead.</p>
 </div></div>
           <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculate</a>
         </div>

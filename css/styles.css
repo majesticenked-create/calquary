@@ -1055,6 +1055,67 @@ a.locale-item:hover { color: var(--brand); background: var(--paper-mint); text-d
   gap: var(--space-3);
 }
 
+.timer-widget-multi {
+  padding: var(--space-4) 0;
+}
+
+.timer-entries {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.timer-entry {
+  background: var(--paper-raised);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+}
+
+.timer-entry .timer-display {
+  font-size: 2.75rem;
+  margin-bottom: var(--space-3);
+}
+
+.timer-entry-head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.timer-entry-name {
+  flex: 1;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-3);
+  font-size: 0.95rem;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.timer-remove-btn {
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--muted);
+  border-radius: var(--radius-sm);
+  width: 32px;
+  height: 32px;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.timer-remove-btn:hover {
+  color: var(--ink);
+  border-color: var(--brand);
+}
+
+.timer-add-row {
+  text-align: center;
+  margin-top: var(--space-4);
+}
+
 .stopwatch-laps {
   max-width: 320px;
   margin: var(--space-4) auto 0;

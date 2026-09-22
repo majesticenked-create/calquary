@@ -15,9 +15,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Investment Calculator | Calquary</title>
-  <meta name="description" content="Estimate the future value of an investment, adjusted for inflation." />
+  <meta name="description" content="Estimate the future value of an investment, adjusted for inflation, or convert a historical dollar amount to today's purchasing power using real CPI data." />
   <meta property="og:title" content="Investment Calculator | Calquary">
-  <meta property="og:description" content="Estimate the future value of an investment, adjusted for inflation.">
+  <meta property="og:description" content="Estimate the future value of an investment, adjusted for inflation, or convert a historical dollar amount to today's purchasing power using real CPI data.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/tool/investment-calculator">
   <meta property="og:locale" content="en_US">
@@ -27,7 +27,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Investment Calculator | Calquary">
-  <meta name="twitter:description" content="Estimate the future value of an investment, adjusted for inflation.">
+  <meta name="twitter:description" content="Estimate the future value of an investment, adjusted for inflation, or convert a historical dollar amount to today's purchasing power using real CPI data.">
   <meta name="twitter:image" content="https://calquary.com/og-images/investment-calculator.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/investment-calculator">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/investment-calculator">
@@ -89,7 +89,7 @@
     {
       "@type": "SoftwareApplication",
       "name": "Investment Calculator",
-      "description": "Estimate the future value of an investment, adjusted for inflation.",
+      "description": "Estimate the future value of an investment, adjusted for inflation, or convert a historical dollar amount to today's purchasing power using real CPI data.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/tool/investment-calculator",
@@ -99,7 +99,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-22",
       "inLanguage": "en"
     },
     {
@@ -183,6 +183,38 @@
             "@type": "Answer",
             "text": "It builds on the same compounding math but adds two things a basic compound interest calculator doesn't: regular monthly contributions on top of the starting balance, and an inflation adjustment to show real (purchasing-power) value alongside the nominal total."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between 'growth mode' and 'historical dollar value mode'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Growth mode projects a hypothetical portfolio forward using an assumed return rate you choose. Historical dollar value mode instead uses real, published CPI-U inflation data to answer a different question: what a specific real amount of money from one actual year is worth in another year's dollars."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How accurate is the historical dollar value mode?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It's based on actual published CPI-U annual averages, not an assumed rate, but the underlying table only lists roughly every 5-10 years rather than every single year - values for years in between are linearly interpolated, so treat the result as a close estimate rather than the exact official figure for that year."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is CPI-U?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Consumer Price Index for All Urban Consumers, published by the US Bureau of Labor Statistics - it tracks the average change in prices paid by urban consumers for a broad basket of goods and services over time, and is the standard reference for measuring US inflation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What was $100 in 1990 worth in 2025?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Using CPI-U data, about $245 in 2025 dollars - prices roughly two-and-a-half times over that 35-year span. Enter 100, 1990, and 2025 in Historical dollar value mode above to see the exact figure and the cumulative inflation percentage."
+          }
         }
       ]
     }
@@ -223,8 +255,8 @@
     <div class="tool-layout">
       <main>
         <h1>Investment Calculator</h1>
-        <p style="max-width:60ch;">Enter your starting investment, monthly contribution, expected return, and inflation rate to see both the nominal and inflation-adjusted future value.</p>
-        <p class="last-updated">Last updated: September 5, 2026</p>
+        <p style="max-width:60ch;">Choose Investment growth to project a portfolio forward, or Historical dollar value to see what a real amount from a past year is worth in another year using actual CPI data - enter your numbers below.</p>
+        <p class="last-updated">Last updated: September 22, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel" id="calc-panel">
@@ -277,6 +309,22 @@
 <div class="faq-item">
 <h3>Is this the same as a compound interest calculator?</h3>
 <p>It builds on the same compounding math but adds two things a basic compound interest calculator doesn't: regular monthly contributions on top of the starting balance, and an inflation adjustment to show real (purchasing-power) value alongside the nominal total.</p>
+</div>
+<div class="faq-item">
+<h3>What's the difference between 'growth mode' and 'historical dollar value mode'?</h3>
+<p>Growth mode projects a hypothetical portfolio forward using an assumed return rate you choose. Historical dollar value mode instead uses real, published CPI-U inflation data to answer a different question: what a specific real amount of money from one actual year is worth in another year's dollars.</p>
+</div>
+<div class="faq-item">
+<h3>How accurate is the historical dollar value mode?</h3>
+<p>It's based on actual published CPI-U annual averages, not an assumed rate, but the underlying table only lists roughly every 5-10 years rather than every single year - values for years in between are linearly interpolated, so treat the result as a close estimate rather than the exact official figure for that year.</p>
+</div>
+<div class="faq-item">
+<h3>What is CPI-U?</h3>
+<p>The Consumer Price Index for All Urban Consumers, published by the US Bureau of Labor Statistics - it tracks the average change in prices paid by urban consumers for a broad basket of goods and services over time, and is the standard reference for measuring US inflation.</p>
+</div>
+<div class="faq-item">
+<h3>What was $100 in 1990 worth in 2025?</h3>
+<p>Using CPI-U data, about $245 in 2025 dollars - prices roughly two-and-a-half times over that 35-year span. Enter 100, 1990, and 2025 in Historical dollar value mode above to see the exact figure and the cumulative inflation percentage.</p>
 </div></div>
           <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculate</a>
         </div>
