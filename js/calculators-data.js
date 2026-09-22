@@ -4080,7 +4080,7 @@ const CALCULATORS = [
       { q: "How much mulch do I need for a 15×30 ft bed at 2 inches deep?", a: "15×30 ft is 450 sq ft. At 2 inches deep that's 75 cubic feet, or about 2.78 cubic yards before waste. With a 10% waste allowance, order about 3.06 cubic yards, or roughly 42 bags of 2 cu ft mulch." },
       { q: "What's the difference between buying mulch in bulk (cubic yards) versus bags?", a: "Bulk mulch is delivered by the cubic yard (27 cubic feet) and is usually cheaper per unit for larger beds, while bagged mulch comes in standard 2 cubic foot bags, better suited to small beds or when you don't have room for a delivered pile. This calculator gives both figures so you can compare." },
     ],
-    related: ["gravel-calculator", "concrete-calculator", "unit-length-converter"],
+    related: ["gravel-calculator", "concrete-calculator", "compost-calculator"],
   },
   {
     id: "gravel-calculator",
@@ -4694,7 +4694,7 @@ const CALCULATORS = [
       { q: "What's an example TDEE calculation?", a: "A 25-year-old woman, 5'5\" (65 in), 150 lb, at light activity comes out to roughly 1,950 calories per day for maintenance - that's her estimated BMR multiplied by the activity factor for 'lightly active.'" },
       { q: "Is this the same as a 'TDEE calculator'?", a: "Yes - Total Daily Energy Expenditure (TDEE) is exactly what this tool's maintenance number represents. Some sites label the calculation 'TDEE calculator' and others 'calorie calculator,' but the underlying formula (BMR × activity multiplier) is the same." },
     ],
-    related: ["bmr-calculator", "body-fat-calculator", "bmi-calculator"],
+    related: ["bmr-calculator", "body-fat-calculator", "bmi-calculator", "cat-calorie-calculator"],
   },
   {
     id: "body-fat-calculator",
@@ -8749,7 +8749,7 @@ const CALCULATORS = [
       { q: "Why does the calculator ask for a puppy activity level instead of just using weight?", a: "Growing puppies need substantially more calories per pound than adult dogs to support tissue development, so selecting 'puppy' applies a higher multiplier to the RER-based estimate rather than treating them like a sedentary adult of the same weight." },
       { q: "Is 'cups per day' the same across every brand of dog food?", a: "No - this calculator converts your calorie target into cups using the calories-per-cup value you enter, which varies by brand and formula. Always check your specific food's label for its calorie density rather than assuming a universal cup size." },
     ],
-    related: ["dog-age-calculator", "calorie-calculator", "bmr-calculator"],
+    related: ["dog-age-calculator", "calorie-calculator", "cat-calorie-calculator", "bmr-calculator"],
   },
   {
     id: "cat-age-calculator",
@@ -8781,7 +8781,7 @@ const CALCULATORS = [
       { q: "Is the cat age formula the same as the old '1 cat year = 4 human years' rule?", a: "Not exactly - that flat rule only roughly applies after a cat's first two years. This calculator front-loads the first two years at a much faster rate (about 15 and then 24 human-year equivalents) before settling into the slower ~4-year-per-year pace." },
       { q: "Does neutering or spaying affect how a cat's age converts to human years?", a: "No - spay/neuter status doesn't change the age-equivalence math here, though altered cats often live longer on average, which affects lifespan rather than the conversion itself." },
     ],
-    related: ["dog-age-calculator", "rabbit-age-calculator", "bird-age-calculator", "horse-age-calculator"],
+    related: ["dog-age-calculator", "rabbit-age-calculator", "bird-age-calculator", "cat-quality-of-life-calculator"],
   },
   {
     id: "rabbit-age-calculator",
@@ -9489,7 +9489,7 @@ const CALCULATORS = [
       { q: "Why does the calculator show both an acres-per-hour and a hectares-per-hour result?", a: "Acres are the standard land unit in the US, while hectares are standard in most other countries - showing both avoids needing a separate conversion step regardless of which unit you're planning in." },
       { q: "Does this account for time spent refilling or servicing equipment?", a: "Not directly - the field efficiency percentage is meant to capture typical in-field losses like turning and overlap. If you regularly lose significant time to refilling, breakdowns, or other stops beyond normal turning, lower your efficiency estimate to reflect your actual observed coverage rate." },
     ],
-    related: ["basal-area-calculator", "area-converter", "unit-length-converter"],
+    related: ["basal-area-calculator", "area-converter", "cattle-per-acre-calculator"],
   },
   {
     id: "allele-frequency-calculator",
@@ -9679,7 +9679,7 @@ const CALCULATORS = [
       { q: "Why is diphenhydramine sometimes given to dogs at all?", a: "Veterinarians sometimes use diphenhydramine off-label for dogs to manage mild allergic reactions or as a mild sedative in specific situations - but because it's being used off-label, the appropriate product, dose, and situation should always be determined by a vet rather than a general online calculator." },
       { q: "Can I use this tool for any breed or age of dog?", a: "This tool provides the same general safety information regardless of breed or age, but breed sensitivities, age (puppies and senior dogs especially), and individual health status are exactly the kind of factors a veterinarian needs to weigh when determining whether and how much medication is appropriate - they're not something a generic calculator can safely account for." },
     ],
-    related: ["cat-benadryl-dosage-calculator", "dog-age-calculator", "ideal-dog-weight-calculator"],
+    related: ["cat-benadryl-dosage-calculator", "dog-age-calculator", "cephalexin-for-dogs-dosage-calculator"],
   },
   {
     id: "bird-age-calculator",
@@ -9806,7 +9806,7 @@ const CALCULATORS = [
       { q: "What should I do if I think my cat got too much diphenhydramine?", a: "Contact your veterinarian, an emergency animal hospital, or an animal poison control service immediately - don't wait to see if symptoms appear. Have the product packaging (including concentration and any other active ingredients) on hand when you call." },
       { q: "Why is diphenhydramine sometimes given to cats at all?", a: "Veterinarians sometimes use diphenhydramine off-label for cats to manage mild allergic reactions or as a mild sedative in specific situations - but because it's being used off-label, the appropriate product, dose, and situation should always be determined by a vet rather than a general online calculator." },
     ],
-    related: ["benadryl-dosage-for-dogs", "cat-age-calculator", "cat-bmi-calculator"],
+    related: ["benadryl-dosage-for-dogs", "cat-age-calculator", "cephalexin-for-cats-dosage-calculator"],
   },
   {
     id: "cat-bmi-calculator",
@@ -9846,7 +9846,521 @@ const CALCULATORS = [
       { q: "Can I use this index to track changes in my cat over time?", a: "It can be one data point to track alongside weight and a vet's body condition assessment, but changes in this index should be interpreted cautiously and ideally discussed with a veterinarian, since it isn't a validated diagnostic measure on its own." },
       { q: "Is a higher index always worse?", a: "Not necessarily, and this tool doesn't attempt to say - a higher index could reflect more body fat, more muscle mass, a shorter measured length, or normal breed variation, none of which this simple ratio can distinguish. A veterinary body condition exam is needed to interpret what's actually driving the number." },
     ],
-    related: ["cat-age-calculator", "bird-age-calculator", "cat-benadryl-dosage-calculator"],
+    related: ["cat-age-calculator", "bird-age-calculator", "cat-calorie-calculator"],
+  },
+  {
+    id: "cat-calorie-calculator",
+    category: "pets",
+    title: "Cat Calorie Calculator",
+    keyword: "cat calorie calculator",
+    description: "Estimate a cat's daily calorie needs using the resting energy requirement (RER) veterinary formula.",
+    intro: "Enter your cat's weight and life stage to estimate daily calorie needs using a standard veterinary energy formula. This is an educational starting point, not a prescribed feeding plan.",
+    fields: [
+      { id: "weight", label: "Weight", type: "number", default: 4.5, step: 0.1, min: 0.1 },
+      { id: "weightUnit", label: "Weight unit", type: "select", default: "kg", options: [
+        { v: "kg", l: "kg" }, { v: "lb", l: "lb" },
+      ] },
+      { id: "lifeStage", label: "Life stage / status", type: "select", default: "neutered", options: [
+        { v: "kitten1", l: "Kitten, under 4 months" },
+        { v: "kitten2", l: "Kitten, 4-12 months" },
+        { v: "intact", l: "Intact (unneutered/unspayed) adult" },
+        { v: "neutered", l: "Neutered/spayed adult" },
+        { v: "weightLoss", l: "Weight management (vet-supervised)" },
+        { v: "senior", l: "Senior (mature, less active)" },
+        { v: "lactating", l: "Pregnant or nursing" },
+      ] },
+    ],
+    compute: (v) => {
+      if (!(v.weight > 0)) {
+        return { primary: { label: "Enter a valid weight", value: "-" }, secondary: [], note: "Weight must be greater than zero." };
+      }
+      const weightKg = v.weightUnit === "lb" ? v.weight * 0.453592 : v.weight;
+      const rer = 70 * Math.pow(weightKg, 0.75);
+      const multipliers = {
+        kitten1: 3.0, kitten2: 2.5, intact: 1.4, neutered: 1.2,
+        weightLoss: 1.0, senior: 1.1, lactating: 2.0,
+      };
+      const labels = {
+        kitten1: "3.0 × RER (rapid growth)", kitten2: "2.5 × RER (growth)",
+        intact: "1.4 × RER (intact adult)", neutered: "1.2 × RER (neutered adult)",
+        weightLoss: "1.0 × RER (vet-supervised weight loss)", senior: "1.1 × RER (senior, typical activity)",
+        lactating: "2.0 × RER (varies widely - can be much higher during peak lactation)",
+      };
+      const mer = rer * multipliers[v.lifeStage];
+      return {
+        primary: { label: "Estimated daily calories (MER)", value: `${round(mer, 0)} kcal/day` },
+        secondary: [
+          { l: "Resting energy requirement (RER)", v: `${round(rer, 0)} kcal/day` },
+          { l: "Multiplier applied", v: labels[v.lifeStage] },
+        ],
+        note: "RER (resting energy requirement) is calculated as 70 × (weight in kg)^0.75, the calories a cat burns at complete rest. Maintenance energy requirement (MER) scales RER up by a multiplier reflecting life stage and activity. This is an educational estimate, not a feeding prescription - actual needs vary with age, activity, body condition, reproductive status, and health conditions. This tool does not recommend calorie restriction; discuss any weight-management plan with a veterinarian.",
+      };
+    },
+    faq: [
+      { q: "What is RER and why does the formula use weight to the power of 0.75?", a: "RER (resting energy requirement) is the energy a cat needs at complete rest to maintain basic body functions. The exponent 0.75 reflects that metabolic rate doesn't scale directly with body mass - smaller animals burn more calories per unit of body weight than larger ones, and this allometric scaling formula (70 × weight in kg^0.75) is the standard veterinary approach across cat and dog sizes." },
+      { q: "What does the life stage multiplier actually represent?", a: "It scales RER up to maintenance energy requirement (MER) based on how much energy a cat typically uses beyond resting metabolism for that life stage - a growing kitten needs several times its resting energy for tissue development, while a neutered, less active adult needs comparatively less than an intact, more active one. These are commonly cited veterinary starting multipliers, not exact values for every individual cat." },
+      { q: "Why is the neutered/spayed multiplier lower than the intact multiplier?", a: "Neutering and spaying are associated with a measurable drop in metabolic rate and activity in many cats, so veterinary references commonly recommend a lower maintenance multiplier for neutered cats to avoid gradual overfeeding - though individual metabolism still varies, and body condition should guide actual portions over time." },
+      { q: "Should I use this number to put my cat on a diet?", a: "This calculator gives an educational starting estimate, not a restrictive feeding plan - weight management in cats should be supervised by a veterinarian, since overly rapid weight loss in cats carries real health risks (including hepatic lipidosis). If weight is a concern, use this figure as a conversation starter with your vet rather than a number to enforce on your own." },
+      { q: "Why is the pregnant/nursing multiplier so much less precise than the others?", a: "Energy needs during pregnancy and especially peak lactation can rise dramatically and unpredictably - lactating queens can need several times their normal maintenance energy depending on litter size and stage of nursing. This tool shows a conservative starting multiplier, but pregnant or nursing cats should be monitored and fed under veterinary guidance rather than by a fixed formula." },
+      { q: "How is this different from the general Calorie Calculator on this site?", a: "The general Calorie Calculator uses human metabolic formulas (based on human age, sex, height, and activity) and isn't applicable to cats. This calculator uses the feline RER/MER framework instead, which is scaled and validated for cats rather than adapted from human equations." },
+    ],
+    related: ["dog-food-calculator", "calorie-calculator", "cat-bmi-calculator", "cat-age-calculator"],
+  },
+  {
+    id: "cat-chocolate-toxicity-calculator",
+    category: "pets",
+    title: "Cat Chocolate Toxicity Calculator",
+    keyword: "cat chocolate toxicity calculator",
+    description: "Estimate the theobromine exposure level from chocolate ingestion in cats - always confirm with a veterinarian or poison control.",
+    intro: "Enter your cat's weight, the type of chocolate, and the approximate amount eaten to estimate the theobromine exposure level. This is an educational estimate only - if your cat has eaten chocolate, contact a veterinarian or animal poison control promptly.",
+    fields: [
+      { id: "weight", label: "Cat's weight", type: "number", default: 4.5, step: 0.1, min: 0.1 },
+      { id: "weightUnit", label: "Weight unit", type: "select", default: "kg", options: [
+        { v: "kg", l: "kg" }, { v: "lb", l: "lb" },
+      ] },
+      { id: "chocolateType", label: "Chocolate type", type: "select", default: "milk", options: [
+        { v: "white", l: "White chocolate" },
+        { v: "milk", l: "Milk chocolate" },
+        { v: "semisweet", l: "Semi-sweet / dark chocolate" },
+        { v: "baking", l: "Baking / unsweetened chocolate" },
+        { v: "cocoaPowder", l: "Cocoa powder" },
+      ] },
+      { id: "amount", label: "Approximate amount eaten", type: "number", default: 10, step: 1, min: 0 },
+      { id: "amountUnit", label: "Amount unit", type: "select", default: "g", options: [
+        { v: "g", l: "grams" }, { v: "oz", l: "ounces" },
+      ] },
+    ],
+    compute: (v) => {
+      if (!(v.weight > 0) || v.amount < 0) {
+        return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Weight must be greater than zero and amount can't be negative." };
+      }
+      const weightKg = v.weightUnit === "lb" ? v.weight * 0.453592 : v.weight;
+      const amountG = v.amountUnit === "oz" ? v.amount * 28.3495 : v.amount;
+      // Approximate theobromine content in mg per gram, from commonly cited
+      // veterinary toxicology references. Actual content varies by brand
+      // and recipe, so treat this as an estimate range, not an exact figure.
+      const mgPerGram = {
+        white: 0.01, milk: 2.0, semisweet: 5.3, baking: 14.4, cocoaPowder: 26.5,
+      };
+      const theobromineMg = amountG * mgPerGram[v.chocolateType];
+      const mgPerKg = theobromineMg / weightKg;
+      let tier, tierNote;
+      if (v.amount === 0) {
+        tier = "No amount entered"; tierNote = "Enter the approximate amount eaten to see an estimate.";
+      } else if (mgPerKg < 20) {
+        tier = "Lower estimated exposure"; tierNote = "Mild signs (vomiting, restlessness) are still possible - this is not a 'safe' threshold. Cats are highly sensitive to theobromine and metabolize it slowly.";
+      } else if (mgPerKg < 40) {
+        tier = "Moderate estimated exposure"; tierNote = "This level has been associated with vomiting, diarrhea, and restlessness in some animals.";
+      } else if (mgPerKg < 60) {
+        tier = "Higher estimated exposure"; tierNote = "This level has been associated with more significant signs including elevated heart rate and tremors in some animals.";
+      } else {
+        tier = "High estimated exposure"; tierNote = "This level has been associated with serious signs including cardiac abnormalities and seizures in some animals.";
+      }
+      return {
+        primary: { label: "Estimated theobromine exposure", value: `${round(mgPerKg, 1)} mg/kg` },
+        secondary: [
+          { l: "Estimated exposure level", v: tier },
+          { l: "Total theobromine (estimate)", v: `${round(theobromineMg, 0)} mg` },
+        ],
+        note: `${tierNote} This is an estimate only - chocolate products vary significantly in cocoa and theobromine content, and cats are especially sensitive to theobromine and caffeine. Regardless of the estimated level, contact your veterinarian or an animal poison control service promptly after any chocolate ingestion in a cat. Do not wait to see if symptoms appear, and do not attempt any home treatment, including inducing vomiting, without professional guidance.`,
+      };
+    },
+    faq: [
+      { q: "Is any amount of chocolate safe for cats?", a: "There's no established 'safe' amount this tool can confirm - cats are unusually sensitive to theobromine and metabolize it much more slowly than humans, and product composition varies. Even a lower estimated exposure level shown here can still cause mild signs in some cats, so contact a veterinarian or poison control after any known ingestion rather than relying on a threshold." },
+      { q: "Why does dark or baking chocolate show a much higher exposure estimate than milk chocolate?", a: "Theobromine concentration rises sharply with cocoa content - baking chocolate and cocoa powder contain far more theobromine per gram than milk chocolate, which is diluted with milk solids and sugar. White chocolate contains only trace amounts of cocoa solids and therefore very little theobromine, though it can still cause digestive upset from fat and sugar content." },
+      { q: "What should I do right now if my cat ate chocolate?", a: "Contact your veterinarian, an emergency animal hospital, or an animal poison control service immediately - don't wait to see if symptoms develop. Have the chocolate's packaging on hand if possible so you can tell them the type and approximate amount, and don't attempt any home treatment, including inducing vomiting, unless a veterinary professional specifically instructs you to." },
+      { q: "Why won't this calculator just tell me if my cat needs to go to the vet?", a: "Because theobromine content varies between products even within the same category, a cat's individual sensitivity and health status aren't captured by a formula, and the consequences of underestimating risk are serious. This tool gives an estimate to help you describe the situation clearly to a veterinarian or poison control service, not a substitute for their assessment." },
+      { q: "Do cats actually eat chocolate often?", a: "Less often than dogs, since cats generally lack the ability to taste sweetness and are often put off by chocolate's bitterness - but ingestion still happens, particularly with items like chocolate-covered treats, baked goods, or cocoa powder, and when it does, cats' higher sensitivity to theobromine makes prompt veterinary contact just as important." },
+      { q: "Is theobromine the same thing as caffeine?", a: "They're related methylxanthine compounds found together in chocolate and cocoa products, and both can be harmful to cats, but theobromine is typically present in much larger amounts in chocolate and is the primary compound driving toxicity estimates like the one this calculator provides." },
+    ],
+    related: ["cat-bmi-calculator", "cat-benadryl-dosage-calculator", "animal-mortality-rate-calculator"],
+  },
+  {
+    id: "cat-quality-of-life-calculator",
+    category: "pets",
+    title: "Cat Quality of Life Calculator",
+    keyword: "cat quality of life calculator",
+    description: "An educational observation checklist across comfort, appetite, hygiene, mobility, and mood - not a diagnostic or end-of-life decision tool.",
+    intro: "Rate how your cat has been doing lately across a few everyday areas to organize your observations. This is a screening aid to support a conversation with your veterinarian, not a diagnosis or a decision about your cat's care.",
+    fields: [
+      { id: "comfort", label: "Comfort (freedom from pain/distress)", type: "select", default: "good", options: [
+        { v: "poor", l: "Struggling - signs of pain or distress" }, { v: "fair", l: "Some difficult days" }, { v: "good", l: "Generally comfortable" },
+      ] },
+      { id: "appetite", label: "Appetite", type: "select", default: "good", options: [
+        { v: "poor", l: "Eating little or not at all" }, { v: "fair", l: "Reduced or inconsistent" }, { v: "good", l: "Eating normally" },
+      ] },
+      { id: "hydration", label: "Hydration", type: "select", default: "good", options: [
+        { v: "poor", l: "Signs of dehydration" }, { v: "fair", l: "Drinking less than usual" }, { v: "good", l: "Drinking normally" },
+      ] },
+      { id: "hygiene", label: "Hygiene / grooming", type: "select", default: "good", options: [
+        { v: "poor", l: "Unable to groom, needs help" }, { v: "fair", l: "Grooming less than usual" }, { v: "good", l: "Grooming normally" },
+      ] },
+      { id: "mobility", label: "Mobility", type: "select", default: "good", options: [
+        { v: "poor", l: "Difficulty moving, getting up" }, { v: "fair", l: "Slower or more cautious" }, { v: "good", l: "Moving normally" },
+      ] },
+      { id: "interaction", label: "Social interaction & interest", type: "select", default: "good", options: [
+        { v: "poor", l: "Withdrawn, uninterested" }, { v: "fair", l: "Less engaged than usual" }, { v: "good", l: "Engaged and interested" },
+      ] },
+      { id: "goodDays", label: "Good days vs. difficult days lately", type: "select", default: "good", options: [
+        { v: "poor", l: "More difficult days than good ones" }, { v: "fair", l: "About even" }, { v: "good", l: "Mostly good days" },
+      ] },
+    ],
+    compute: (v) => {
+      const fields = [v.comfort, v.appetite, v.hydration, v.hygiene, v.mobility, v.interaction, v.goodDays];
+      const scoreMap = { poor: 0, fair: 1, good: 2 };
+      const total = fields.reduce((sum, f) => sum + scoreMap[f], 0);
+      const max = fields.length * 2;
+      let summary;
+      if (total >= 12) summary = "Mostly positive signs across these areas";
+      else if (total >= 8) summary = "A mix of positive signs and areas worth watching";
+      else summary = "Several areas that may be worth discussing with a veterinarian soon";
+      return {
+        primary: { label: "Observation score", value: `${total} / ${max}` },
+        secondary: [{ l: "Summary", v: summary }],
+        note: "This score organizes your observations across common quality-of-life areas - it is not a diagnosis and does not make any decision about your cat's care. A lower score doesn't mean a specific action is required, and a higher score doesn't rule out a problem a checklist can't capture. If any area concerns you, especially comfort, appetite, or mobility, discuss it with a veterinarian, who can assess your cat directly and help you weigh the full picture together.",
+      };
+    },
+    faq: [
+      { q: "Does a low score mean I should consider euthanasia?", a: "No - this tool does not make that determination and isn't designed to. It organizes your day-to-day observations into a simple summary so you can describe patterns clearly to a veterinarian, who is the appropriate person to help interpret what a pattern of difficult days might mean for your specific cat and situation." },
+      { q: "Is this based on an established veterinary framework?", a: "It draws on the general idea behind published veterinary quality-of-life screening concepts - checking comfort, appetite, hydration, hygiene, mobility, and engagement over time - adapted into a simple observational checklist. It's an aid for organizing what you're noticing, not a validated clinical scoring instrument." },
+      { q: "How often should I use this?", a: "There's no fixed schedule - some owners find it useful to check in periodically during a chronic illness or as a cat ages, to notice trends rather than relying on memory of how things have been 'lately.' Bring a record of scores over time to a vet visit if you're tracking a change." },
+      { q: "My cat scored well in most areas but poorly in one - what does that mean?", a: "A single low-scoring area, especially comfort or appetite, can matter even if the overall total looks reasonable - this tool intentionally shows each area's status rather than only a combined number, so a concerning single area shouldn't be dismissed just because the total looks fine." },
+      { q: "Can this replace a veterinary exam?", a: "No - this is a self-observation aid, not a substitute for a hands-on veterinary assessment. A vet can examine your cat directly, run diagnostics if needed, and help interpret findings that a checklist filled out at home can't capture." },
+      { q: "Why doesn't the calculator give me a specific recommendation?", a: "Because quality-of-life decisions for a specific animal depend on context this tool can't have - the underlying condition, prognosis, treatment options, and your own values and circumstances - all of which a veterinarian who knows your cat's case can weigh. This tool's role is to help you notice and describe patterns, not to decide for you." },
+    ],
+    related: ["cat-age-calculator", "cat-bmi-calculator", "cat-benadryl-dosage-calculator"],
+  },
+  {
+    id: "cat-personality-quiz",
+    category: "pets",
+    title: "Cat Personality Quiz",
+    keyword: "cat personality quiz",
+    description: "A fun, informal quiz that sketches your cat's personality style from everyday behaviors - not a scientific or diagnostic assessment.",
+    intro: "Answer a few questions about your cat's everyday behavior to get a fun, informal personality sketch. This is for entertainment - it's not a scientific, medical, or behavioral assessment.",
+    fields: [
+      { id: "q1", label: "When someone new visits your home, your cat usually...", type: "select", default: "social", options: [
+        { v: "social", l: "Comes right over to investigate them" },
+        { v: "independent", l: "Watches from a distance, unbothered" },
+        { v: "curious", l: "Sniffs their bag or shoes first" },
+        { v: "playful", l: "Tries to get them to play immediately" },
+      ] },
+      { id: "q2", label: "You bring home a new box or bag. Your cat...", type: "select", default: "curious", options: [
+        { v: "curious", l: "Is inside it within minutes" },
+        { v: "playful", l: "Pounces on it or bats it around" },
+        { v: "independent", l: "Ignores it entirely" },
+        { v: "social", l: "Waits for you to interact with it first" },
+      ] },
+      { id: "q3", label: "At mealtime, your cat...", type: "select", default: "social", options: [
+        { v: "social", l: "Follows you around asking for food" },
+        { v: "independent", l: "Shows up right on schedule, no fuss" },
+        { v: "playful", l: "Treats getting fed like a game" },
+        { v: "curious", l: "Wants to inspect whatever you're eating too" },
+      ] },
+      { id: "q4", label: "Your cat's favorite way to spend a quiet afternoon is...", type: "select", default: "independent", options: [
+        { v: "independent", l: "Napping alone somewhere private" },
+        { v: "social", l: "Curled up near you or on your lap" },
+        { v: "curious", l: "Exploring a room they don't usually go in" },
+        { v: "playful", l: "Chasing a toy or a stray bit of string" },
+      ] },
+      { id: "q5", label: "When you rearrange the furniture, your cat...", type: "select", default: "curious", options: [
+        { v: "curious", l: "Immediately explores every new spot" },
+        { v: "independent", l: "Barely seems to notice" },
+        { v: "social", l: "Watches you the whole time you're doing it" },
+        { v: "playful", l: "Turns it into an obstacle course" },
+      ] },
+      { id: "q6", label: "Your cat's go-to way of getting your attention is...", type: "select", default: "social", options: [
+        { v: "social", l: "Meowing or headbutting until you notice" },
+        { v: "playful", l: "Dropping a toy in front of you" },
+        { v: "curious", l: "Knocking something off a shelf" },
+        { v: "independent", l: "They rarely seek attention on their terms" },
+      ] },
+    ],
+    compute: (v) => {
+      const answers = [v.q1, v.q2, v.q3, v.q4, v.q5, v.q6];
+      const tally = { social: 0, curious: 0, independent: 0, playful: 0 };
+      answers.forEach((a) => { if (tally[a] !== undefined) tally[a]++; });
+      const max = Math.max(...Object.values(tally));
+      const topTraits = Object.keys(tally).filter((k) => tally[k] === max);
+      const profiles = {
+        social: { name: "The Social Butterfly", desc: "Your cat thrives on company and connection - people, other pets, and daily attention are all part of a good day. This cat likely follows you from room to room and isn't shy about asking for what it wants." },
+        curious: { name: "The Curious Explorer", desc: "New boxes, new rooms, new smells - your cat can't resist investigating. This cat likely gets into things (in the best way) and stays mentally engaged by checking out whatever's changed." },
+        independent: { name: "The Independent Thinker", desc: "Your cat is confident doing its own thing and doesn't need constant interaction to be content. This cat likely enjoys affection on its own schedule and handles change without much fuss." },
+        playful: { name: "The Playful Spirit", desc: "Toys, games, and a bit of chaos keep your cat entertained. This cat likely turns ordinary moments - mealtime, a new box, a dropped object - into an opportunity to play." },
+      };
+      let resultKey = topTraits[0];
+      let value, note;
+      if (topTraits.length > 1) {
+        const names = topTraits.map((k) => profiles[k].name).join(" / ");
+        value = `A mix: ${names}`;
+        note = `Your cat showed a fairly even mix of traits across the quiz, which many cats do - real personalities rarely fit one single box. ${topTraits.map((k) => profiles[k].desc).join(" ")} Remember, this is just for fun - it's not a scientific or behavioral assessment.`;
+      } else {
+        value = profiles[resultKey].name;
+        note = `${profiles[resultKey].desc} Remember, this is just for fun - it's not a scientific, medical, or behavioral assessment of your cat.`;
+      }
+      return {
+        primary: { label: "Your cat's personality style", value },
+        secondary: [
+          { l: "Social", v: tally.social }, { l: "Curious", v: tally.curious },
+          { l: "Independent", v: tally.independent }, { l: "Playful", v: tally.playful },
+        ],
+        note,
+      };
+    },
+    faq: [
+      { q: "Is this quiz based on real feline behavior science?", a: "It's inspired by common, easily observable cat behaviors, but it's an original, informal quiz built for fun rather than a validated psychological or behavioral assessment. Real feline temperament research is more nuanced and typically involves professional observation, not a six-question quiz." },
+      { q: "My cat's answers were split evenly between two traits - is that normal?", a: "Yes - most cats don't fit neatly into a single category, and a mixed result reflects that many cats show more than one dominant tendency depending on mood, context, or time of day. The quiz shows a combined result in that case rather than forcing a single label." },
+      { q: "Can I retake the quiz if my cat's behavior changes?", a: "Sure - cats' behavior can shift with age, environment, health, or routine changes, so retaking it occasionally is a fun way to notice how your cat's everyday habits have evolved. Just keep in mind it's for entertainment, not a tracked behavioral record." },
+      { q: "Does a 'playful' or 'social' result mean my cat needs more attention than it's getting?", a: "Not necessarily - the quiz reflects general tendencies based on how you answered, not a needs assessment. If you're genuinely concerned about your cat's behavior, engagement, or well-being, that's worth discussing with a veterinarian rather than inferring from a fun quiz result." },
+      { q: "Why only four personality styles?", a: "Four broad, easily recognizable styles keep the quiz simple and fun rather than trying to precisely categorize something as complex as feline temperament - real cats often blend traits, which is part of why a mixed result is common and expected." },
+      { q: "Is this quiz the same as a cat breed personality guide?", a: "No - this quiz is based entirely on your answers about your individual cat's observed behavior, not breed stereotypes. Any cat of any breed or mix can land in any of the four styles depending on its own habits." },
+    ],
+    related: ["cat-age-calculator", "cat-bmi-calculator", "cat-quality-of-life-calculator"],
+  },
+  {
+    id: "cattle-per-acre-calculator",
+    category: "biology",
+    title: "Cattle Per Acre Calculator",
+    keyword: "cattle per acre calculator",
+    description: "Estimate grazing stocking rate (cattle per acre or acres per animal) from forage production, utilization, and herd size.",
+    intro: "Enter your pasture acreage, estimated forage production, and typical intake to estimate a stocking rate for planning purposes. Actual carrying capacity varies by forage, soil, climate, and management.",
+    fields: [
+      { id: "acres", label: "Pasture acreage", type: "number", default: 100, step: 1, min: 0.1 },
+      { id: "forageProduction", label: "Forage production", type: "number", unit: "lb/acre/year", default: 4000, step: 100, min: 1 },
+      { id: "utilization", label: "Utilization rate (harvest efficiency)", type: "number", unit: "%", default: 50, step: 5, min: 1, max: 100 },
+      { id: "dailyIntake", label: "Daily intake per animal unit", type: "number", unit: "lb/day", default: 26, step: 1, min: 1 },
+      { id: "grazingDays", label: "Grazing period", type: "number", unit: "days", default: 365, step: 1, min: 1 },
+    ],
+    compute: (v) => {
+      if (!(v.acres > 0) || !(v.forageProduction > 0) || !(v.dailyIntake > 0) || !(v.grazingDays > 0) || v.utilization <= 0 || v.utilization > 100) {
+        return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "All values must be greater than zero, and utilization rate must be between 0% and 100%." };
+      }
+      const usableForagePerAcre = v.forageProduction * (v.utilization / 100);
+      const totalUsableForage = usableForagePerAcre * v.acres;
+      const animalUnitDays = totalUsableForage / v.dailyIntake;
+      const animalUnitsSupported = animalUnitDays / v.grazingDays;
+      const acresPerAnimalUnit = v.acres / animalUnitsSupported;
+      const animalUnitsPerAcre = animalUnitsSupported / v.acres;
+      return {
+        primary: { label: "Animal units supported", value: round(animalUnitsSupported, 2) },
+        secondary: [
+          { l: "Acres per animal unit", v: round(acresPerAnimalUnit, 2) },
+          { l: "Animal units per acre", v: round(animalUnitsPerAcre, 3) },
+          { l: "Usable forage (total)", v: `${round(totalUsableForage, 0)} lb` },
+        ],
+        note: "Animal unit days (AUD) = usable forage ÷ daily intake per animal unit; animal units supported = AUD ÷ grazing days. An 'animal unit' is typically a ~1,000 lb cow (with or without a calf) - scale up for larger cattle or mixed herds accordingly. Usable forage assumes only a portion of total forage production can be grazed without harming the pasture (the utilization/harvest efficiency rate). Actual carrying capacity varies significantly with forage species, soil fertility, rainfall, climate, pasture condition, grazing management (e.g., rotational vs. continuous grazing), and season - treat this as a planning estimate, not a fixed value for your land.",
+      };
+    },
+    faq: [
+      { q: "What is an 'animal unit' in this calculation?", a: "An animal unit (AU) is a standardized reference typically defined as roughly a 1,000 lb beef cow (with or without a nursing calf) consuming about 26 lb of forage dry matter per day. Larger cattle, dairy cows, or bulls represent more than one animal unit; smaller or younger cattle represent less - adjust the daily intake field to reflect your actual herd if it differs from the default." },
+      { q: "Why is there a utilization rate instead of using all the forage produced?", a: "Grazing all available forage down to the ground damages pasture health, root reserves, and regrowth capacity - a utilization or harvest efficiency rate (often 25-50% depending on grazing system) reflects the portion of total forage production that can sustainably be grazed while leaving enough residual growth for the pasture to recover." },
+      { q: "Where does the default forage production value of 4,000 lb/acre/year come from?", a: "It's a commonly cited middle-of-the-road figure for moderate-quality pasture, but actual forage production varies enormously by region, rainfall, soil fertility, and forage species - from under 1,000 lb/acre/year on poor rangeland to well over 8,000 lb/acre/year on productive, irrigated, or intensively managed pasture. Replace this default with a local estimate or extension-service figure for your land whenever possible." },
+      { q: "Does rotational grazing change the numbers here?", a: "Rotational grazing systems typically achieve a higher utilization rate than continuous grazing, since resting paddocks between grazing periods allows more even use of available forage - if you're using a rotational system, you may reasonably use a utilization rate toward the higher end of common ranges rather than a conservative continuous-grazing figure." },
+      { q: "Why does the calculator give both 'acres per animal unit' and 'animal units per acre'?", a: "They're the same relationship expressed two common ways in agricultural planning - acres per animal unit is often used for land-purchase or lease planning ('how much land do I need per cow'), while animal units per acre is often used for herd-sizing planning ('how many cows can this pasture support'). Both numbers come from the same underlying calculation." },
+      { q: "How much does seasonal variation affect this estimate?", a: "Significantly - forage growth is rarely constant across a full year, with most regions seeing a spring/early-summer growth flush and slower growth or dormancy in other seasons. This calculator spreads usable forage evenly across the grazing period you enter, so for highly seasonal pasture, consider running separate calculations for different seasons or grazing periods rather than one full-year average." },
+    ],
+    related: ["acres-per-hour-calculator", "basal-area-calculator", "animal-mortality-rate-calculator"],
+  },
+  {
+    id: "cell-dilution-calculator",
+    category: "biology",
+    title: "Cell Dilution Calculator",
+    keyword: "cell dilution calculator",
+    description: "Calculate the stock volume and diluent needed for a target concentration using the C1V1 = C2V2 dilution equation.",
+    intro: "Enter your stock concentration, target concentration, and desired final volume to calculate how much stock solution and diluent you need.",
+    fields: [
+      { id: "c1", label: "Stock concentration (C1)", type: "number", default: 1000000, step: 1000, min: 0.0001 },
+      { id: "c2", label: "Target concentration (C2)", type: "number", default: 100000, step: 1000, min: 0.0001 },
+      { id: "v2", label: "Final volume (V2)", type: "number", default: 10, step: 0.1, min: 0.0001 },
+      { id: "volUnit", label: "Volume unit", type: "select", default: "mL", options: [
+        { v: "mL", l: "mL" }, { v: "L", l: "L" }, { v: "uL", l: "µL" },
+      ] },
+    ],
+    compute: (v) => {
+      if (!(v.c1 > 0) || !(v.c2 > 0) || !(v.v2 > 0)) {
+        return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Concentrations and final volume must all be greater than zero." };
+      }
+      if (v.c2 > v.c1) {
+        return { primary: { label: "Target exceeds stock concentration", value: "-" }, secondary: [], note: "A simple dilution can only lower concentration, not raise it - target concentration (C2) must be less than or equal to stock concentration (C1). To increase concentration you'd need to concentrate the sample (e.g., evaporation or centrifugation), not dilute it." };
+      }
+      const v1 = (v.c2 * v.v2) / v.c1;
+      const diluent = v.v2 - v1;
+      return {
+        primary: { label: "Stock volume needed (V1)", value: `${round(v1, 4)} ${v.volUnit}` },
+        secondary: [
+          { l: "Diluent volume needed", v: `${round(diluent, 4)} ${v.volUnit}` },
+          { l: "Dilution factor", v: `1:${round(v.c1 / v.c2, 2)}` },
+        ],
+        note: "Uses the dilution equation C1V1 = C2V2, rearranged to V1 = C2V2 ÷ C1. Diluent volume = V2 - V1 (the final volume minus the stock volume already added). Concentration units (cells/mL, molarity, mg/mL, etc.) just need to be consistent between C1 and C2 - the calculation works with any matching unit pair.",
+      };
+    },
+    faq: [
+      { q: "What do C1, V1, C2, and V2 mean?", a: "C1 is the concentration of your stock (starting) solution, V1 is the volume of stock solution you need to use, C2 is the target (final) concentration you want, and V2 is the total final volume after dilution. The relationship C1 × V1 = C2 × V2 holds because the total amount of substance stays the same - only the concentration changes as you add diluent." },
+      { q: "How do I calculate diluent volume instead of stock volume?", a: "Diluent volume is simply the final volume minus the stock volume: diluent = V2 - V1. This calculator shows both automatically once it solves for V1, so you know exactly how much stock solution and how much diluent (buffer, media, or solvent) to combine." },
+      { q: "What if I need to solve for a different variable, like final volume instead of stock volume?", a: "The same equation rearranges for any of the four variables: V1 = C2V2/C1, V2 = C1V1/C2, C1 = C2V2/V1, or C2 = C1V1/V2. This calculator is set up for the most common lab scenario (starting from a known stock and target, solving for how much stock to use) - for other combinations, rearrange the equation with your known values." },
+      { q: "Can this be used for serial dilutions?", a: "This calculator handles a single dilution step. For a serial dilution (a series of sequential dilutions, each using the previous step's result as the new stock), run this calculation once per step, using each step's target concentration as the next step's stock concentration (C1)." },
+      { q: "Why did I get an error saying the target exceeds the stock concentration?", a: "A simple dilution with diluent can only decrease concentration, never increase it - if your target concentration (C2) is higher than your stock concentration (C1), you'd need a more concentrated stock, or you'd need to concentrate your existing sample through a method like centrifugation or evaporation rather than diluting it." },
+      { q: "Do the concentration units matter for this calculation?", a: "The math itself is unit-agnostic as long as C1 and C2 use the same unit (both in cells/mL, both in molarity, both in mg/mL, etc.) - the equation cancels the units out. Just make sure you're consistent, since mixing units (like entering C1 in cells/mL and C2 in cells/L) will give an incorrect result." },
+    ],
+    related: ["cell-doubling-time-calculator", "molecular-weight-calculator", "half-life-calculator"],
+  },
+  {
+    id: "cell-doubling-time-calculator",
+    category: "biology",
+    title: "Cell Doubling Time Calculator",
+    keyword: "cell doubling time calculator",
+    description: "Estimate population doubling time and growth rate from cell counts measured at two time points, assuming exponential growth.",
+    intro: "Enter an initial cell count, a final cell count, and the elapsed time between them to estimate the doubling time, assuming exponential growth over that interval.",
+    fields: [
+      { id: "nInitial", label: "Initial cell count", type: "number", default: 100000, step: 1000, min: 0.0001 },
+      { id: "nFinal", label: "Final cell count", type: "number", default: 800000, step: 1000, min: 0 },
+      { id: "elapsedTime", label: "Elapsed time", type: "number", default: 24, step: 0.5, min: 0.0001 },
+      { id: "timeUnit", label: "Time unit", type: "select", default: "hours", options: [
+        { v: "hours", l: "Hours" }, { v: "days", l: "Days" }, { v: "minutes", l: "Minutes" },
+      ] },
+    ],
+    compute: (v) => {
+      if (!(v.nInitial > 0) || v.nFinal < 0 || !(v.elapsedTime > 0)) {
+        return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Initial count and elapsed time must be greater than zero, and final count can't be negative." };
+      }
+      if (v.nFinal <= v.nInitial) {
+        return { primary: { label: "No doubling occurred", value: "-" }, secondary: [], note: "Doubling time is only defined for a growing population - the final count must be greater than the initial count. If your population declined or stayed flat, this calculator doesn't apply (that would be a decay or steady-state scenario, not doubling)." };
+      }
+      const growthRate = Math.log(v.nFinal / v.nInitial) / v.elapsedTime;
+      const doublingTime = (v.elapsedTime * Math.LN2) / Math.log(v.nFinal / v.nInitial);
+      const doublings = v.elapsedTime / doublingTime;
+      return {
+        primary: { label: "Doubling time", value: `${round(doublingTime, 2)} ${v.timeUnit}` },
+        secondary: [
+          { l: "Growth rate constant (k)", v: `${round(growthRate, 4)} per ${v.timeUnit.replace(/s$/, "")}` },
+          { l: "Number of doublings observed", v: round(doublings, 2) },
+        ],
+        note: "Doubling time = elapsed time × ln(2) ÷ ln(Nfinal ÷ Ninitial), derived from the exponential growth model N(t) = N0 × e^(kt). This assumes roughly constant exponential growth conditions (consistent nutrients, space, and measurement method) over the interval measured - real cultures often deviate from pure exponential growth as they approach carrying capacity (lag or stationary phase), so treat this as an estimate for the measured interval, not a permanent growth rate.",
+      };
+    },
+    faq: [
+      { q: "What does the doubling time formula actually calculate?", a: "It calculates how long it would take the population to double in size, given the exponential growth rate observed between your two measurements. It's derived by solving the exponential growth equation N(t) = N0 × e^(kt) for the time at which N(t) = 2 × N0." },
+      { q: "Why do I need to assume exponential growth?", a: "The formula is only valid during a culture's exponential (log) growth phase, when growth conditions are relatively constant and unrestricted. Cultures approaching a resource limit or high density often slow down (entering lag or stationary phase), so measurements taken across those phases will produce a misleading doubling time - ideally, measure two points both within a clearly exponential growth phase." },
+      { q: "What happens if my final count is lower than or equal to my initial count?", a: "The calculator won't compute a doubling time in that case, since doubling only applies to a growing population - a declining count would need a different calculation (like a decay or death rate), and an unchanged count means no net growth occurred over that interval." },
+      { q: "How is growth rate constant (k) related to doubling time?", a: "They're directly related: doubling time = ln(2) ÷ k, and k = ln(2) ÷ doubling time. A higher growth rate constant means faster growth and therefore a shorter doubling time - they describe the same exponential growth from two different angles." },
+      { q: "Can I use cell density (cells/mL) instead of a raw cell count?", a: "Yes - since the calculation uses the ratio of final to initial counts, cell density works exactly the same way as a raw count, as long as both measurements use the same units and were taken from comparably sized samples (e.g., both from the same culture volume)." },
+      { q: "Does this work for bacterial cultures as well as mammalian cell cultures?", a: "Yes - the exponential growth model and doubling time formula apply generally to any population growing exponentially, whether bacteria, yeast, or mammalian cells in culture. Typical doubling times differ enormously by organism and conditions (bacteria can double in 20-30 minutes under ideal conditions, while many mammalian cell lines double over roughly 18-24 hours), but the underlying math is the same." },
+    ],
+    related: ["cell-dilution-calculator", "half-life-calculator", "compound-interest-calculator"],
+  },
+  {
+    id: "cephalexin-for-cats-dosage-calculator",
+    category: "pets",
+    title: "Cephalexin for Cats Dosage Calculator",
+    keyword: "cephalexin for cats dosage",
+    description: "Get safety information about cephalexin use in cats - this tool does not provide a personalized dose, since it is a prescription antibiotic.",
+    intro: "This page provides safety information, not a personalized dose. Cephalexin is a prescription antibiotic - the correct dose, frequency, and treatment duration for your cat must come from a veterinarian.",
+    fields: [
+      { id: "weight", label: "Cat's weight", type: "number", default: 4.5, step: 0.1, min: 0.1 },
+      { id: "weightUnit", label: "Weight unit", type: "select", default: "kg", options: [
+        { v: "kg", l: "kg" }, { v: "lb", l: "lb" },
+      ] },
+    ],
+    compute: (v) => {
+      if (!(v.weight > 0)) {
+        return { primary: { label: "Enter your cat's weight", value: "-" }, secondary: [], note: "Weight must be greater than zero." };
+      }
+      return {
+        primary: { label: "Recommended next step", value: "Get a prescription from a veterinarian" },
+        secondary: [
+          { l: "Cat's weight entered", v: `${v.weight} ${v.weightUnit}` },
+          { l: "This tool provides", v: "Safety information, not a dose" },
+        ],
+        note: "This calculator intentionally does not output a milligram dose, tablet count, frequency, or treatment duration. Cephalexin is a prescription antibiotic - the appropriate dose depends on the infection being treated, your cat's medical history, kidney function, allergies, other medications, the specific formulation, and the prescribing veterinarian's chosen regimen. Only use cephalexin prescribed specifically for your cat, follow the veterinarian's or pharmacy's label exactly, never use leftover antibiotics from a previous prescription or another animal, and never change the dose, frequency, or treatment duration without veterinary guidance - stopping antibiotics early or altering the course can contribute to treatment failure or antibiotic resistance.",
+      };
+    },
+    faq: [
+      { q: "Why doesn't this calculator tell me how much cephalexin to give my cat?", a: "Because cephalexin is a prescription antibiotic, and a safe, effective dose depends on far more than body weight alone - the specific infection being treated, your cat's kidney function and medical history, allergies, other medications, the formulation prescribed, and the treatment duration all need to be determined by a veterinarian who has examined your cat, not a generic online calculator." },
+      { q: "Can I use cephalexin left over from a previous prescription?", a: "No - leftover antibiotics may be the wrong dose for your cat's current weight or condition, may have degraded, and using them without veterinary guidance for a new problem risks under- or over-treating an infection and can contribute to antibiotic resistance. Always get a fresh prescription and instructions for the current issue." },
+      { q: "Why is it important to complete the full course of cephalexin as prescribed?", a: "Stopping antibiotics early, even if your cat seems to be feeling better, can allow surviving bacteria to rebound and potentially become more resistant to treatment. Always follow the prescribed treatment duration exactly, and contact your veterinarian before stopping early or extending treatment on your own." },
+      { q: "What if my cat has kidney problems or another health condition?", a: "Certain health conditions, especially kidney disease, can affect how a cat processes cephalexin and may require dose or frequency adjustments - always disclose your cat's full medical history and current medications to your veterinarian before starting any new antibiotic." },
+      { q: "Is cephalexin safe for all cats?", a: "Not universally - cats with known allergies to cephalexin or related antibiotics (like penicillins) shouldn't receive it, and it may interact with certain other medications. Only a veterinarian who knows your cat's health history can determine whether cephalexin is an appropriate choice." },
+      { q: "What should I do if I think my cat had an adverse reaction to cephalexin?", a: "Contact your veterinarian or an emergency animal hospital promptly - don't wait to see if symptoms resolve on their own. Have the product packaging and prescription information on hand when you call." },
+    ],
+    related: ["cephalexin-for-dogs-dosage-calculator", "cat-benadryl-dosage-calculator", "cat-age-calculator"],
+  },
+  {
+    id: "cephalexin-for-dogs-dosage-calculator",
+    category: "pets",
+    title: "Cephalexin for Dogs Dosage Calculator",
+    keyword: "cephalexin for dogs dosage",
+    description: "Get safety information about cephalexin use in dogs - this tool does not provide a personalized dose, since it is a prescription antibiotic.",
+    intro: "This page provides safety information, not a personalized dose. Cephalexin is a prescription antibiotic - the correct dose, frequency, and treatment duration for your dog must come from a veterinarian.",
+    fields: [
+      { id: "weight", label: "Dog's weight", type: "number", default: 30, step: 0.5, min: 0.1 },
+      { id: "weightUnit", label: "Weight unit", type: "select", default: "lb", options: [
+        { v: "lb", l: "lb" }, { v: "kg", l: "kg" },
+      ] },
+    ],
+    compute: (v) => {
+      if (!(v.weight > 0)) {
+        return { primary: { label: "Enter your dog's weight", value: "-" }, secondary: [], note: "Weight must be greater than zero." };
+      }
+      return {
+        primary: { label: "Recommended next step", value: "Get a prescription from a veterinarian" },
+        secondary: [
+          { l: "Dog's weight entered", v: `${v.weight} ${v.weightUnit}` },
+          { l: "This tool provides", v: "Safety information, not a dose" },
+        ],
+        note: "This calculator intentionally does not output a milligram dose, tablet count, frequency, or treatment duration. Cephalexin is a prescription antibiotic - the appropriate dose depends on the infection being treated, your dog's medical history, kidney function, allergies, other medications, the specific formulation, and the prescribing veterinarian's chosen regimen. Only use cephalexin prescribed specifically for your dog, follow the veterinarian's or pharmacy's label exactly, never use leftover antibiotics from a previous prescription or another animal, and never change the dose, frequency, or treatment duration without veterinary guidance - stopping antibiotics early or altering the course can contribute to treatment failure or antibiotic resistance.",
+      };
+    },
+    faq: [
+      { q: "Why doesn't this calculator tell me how much cephalexin to give my dog?", a: "Because cephalexin is a prescription antibiotic, and a safe, effective dose depends on far more than body weight alone - the specific infection being treated, your dog's kidney function and medical history, allergies, other medications, the formulation prescribed, and the treatment duration all need to be determined by a veterinarian who has examined your dog, not a generic online calculator." },
+      { q: "Can I use cephalexin left over from a previous prescription?", a: "No - leftover antibiotics may be the wrong dose for your dog's current weight or condition, may have degraded, and using them without veterinary guidance for a new problem risks under- or over-treating an infection and can contribute to antibiotic resistance. Always get a fresh prescription and instructions for the current issue." },
+      { q: "Why is it important to complete the full course of cephalexin as prescribed?", a: "Stopping antibiotics early, even if your dog seems to be feeling better, can allow surviving bacteria to rebound and potentially become more resistant to treatment. Always follow the prescribed treatment duration exactly, and contact your veterinarian before stopping early or extending treatment on your own." },
+      { q: "What if my dog has kidney problems or another health condition?", a: "Certain health conditions, especially kidney disease, can affect how a dog processes cephalexin and may require dose or frequency adjustments - always disclose your dog's full medical history and current medications to your veterinarian before starting any new antibiotic." },
+      { q: "Is cephalexin safe for all dogs?", a: "Not universally - dogs with known allergies to cephalexin or related antibiotics (like penicillins) shouldn't receive it, and it may interact with certain other medications. Only a veterinarian who knows your dog's health history can determine whether cephalexin is an appropriate choice." },
+      { q: "How is the cephalexin dosage different between cats and dogs?", a: "This site provides separate cat and dog cephalexin safety pages because typical prescribing practices, formulations, and veterinary considerations differ somewhat by species - but neither page outputs a dose, since in both cases the correct amount must come from a veterinarian who has examined the specific animal." },
+    ],
+    related: ["cephalexin-for-cats-dosage-calculator", "benadryl-dosage-for-dogs", "dog-age-calculator"],
+  },
+  {
+    id: "compost-calculator",
+    category: "construction",
+    title: "Compost Calculator",
+    keyword: "compost calculator",
+    description: "Estimate how much compost you need for a garden bed or yard area based on length, width, and application depth.",
+    intro: "Enter the length, width, and desired depth of your garden bed or application area to estimate how much compost you'll need.",
+    diagram: { type: "slab", topLabels: ["Length", "Width"], depthLabel: "Depth" },
+    fields: [
+      { id: "length", label: "Length", type: "number", unit: "ft", default: 20, step: 1, min: 0.1 },
+      { id: "width", label: "Width", type: "number", unit: "ft", default: 10, step: 1, min: 0.1 },
+      { id: "depth", label: "Application depth", type: "number", unit: "in", default: 2, step: 0.5, min: 0.1 },
+      { id: "bagVolume", label: "Bag size (for bag estimate)", type: "number", unit: "cu ft", default: 1.5, step: 0.5, min: 0.1 },
+    ],
+    compute: (v) => {
+      if (!(v.length > 0) || !(v.width > 0) || !(v.depth > 0) || !(v.bagVolume > 0)) {
+        return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Length, width, depth, and bag size must all be greater than zero." };
+      }
+      const cubicFeet = v.length * v.width * (v.depth / 12);
+      const cubicYards = cubicFeet / 27;
+      const liters = cubicFeet * 28.3168;
+      const cubicMeters = cubicFeet * 0.0283168;
+      const bagsNeeded = Math.ceil(cubicFeet / v.bagVolume);
+      return {
+        primary: { label: "Compost needed", value: `${round(cubicYards, 2)} cu yd` },
+        secondary: [
+          { l: "Cubic feet", v: round(cubicFeet, 1) },
+          { l: "Liters", v: round(liters, 0) },
+          { l: "Bags needed (approx.)", v: bagsNeeded },
+        ],
+        note: "Volume = length × width × depth. A 1-3 inch layer is typical for amending existing garden soil, while a thicker 3-4 inch layer is more common for new beds or top-dressing. This is a planning estimate - order a little extra for uneven ground or settling, and always keep length, width, and depth units consistent before comparing to bag sizes listed by suppliers.",
+      };
+    },
+    faq: [
+      { q: "How much compost do I need for a 20×10 ft bed at 2 inches deep?", a: "20×10 ft is 200 sq ft. At 2 inches deep that's about 33.3 cubic feet, or roughly 1.23 cubic yards - about 22 bags of 1.5 cu ft compost." },
+      { q: "How deep should a compost layer be?", a: "It depends on the purpose - a 1-3 inch layer is typical for amending or top-dressing existing garden soil, while new beds or heavily depleted soil sometimes use a thicker 3-4 inch layer worked into the top several inches of native soil." },
+      { q: "What's the difference between this and the Mulch Calculator?", a: "Both estimate a volume from area and depth using the same underlying math, but they serve different materials and purposes - compost is a soil amendment worked into or laid over soil to add nutrients and organic matter, while mulch is typically a surface layer (bark, wood chips, etc.) used mainly for weed suppression and moisture retention. Use whichever calculator matches the material you're actually applying." },
+      { q: "Should I mix compost into the soil or just spread it on top?", a: "Both are common depending on the situation - working compost into the top several inches of soil is typical when preparing a new bed, while top-dressing (spreading a layer on the surface without digging it in) is common for established plantings and lawns, where compost breaks down gradually and works its way in over time." },
+      { q: "How many bags of compost equal a cubic yard?", a: "It depends on the bag size, which varies by brand and product - a common bag size is around 1-2 cubic feet, and since a cubic yard is 27 cubic feet, that works out to roughly 14-27 bags per cubic yard. Enter your specific bag's volume in the calculator for an accurate bag count." },
+      { q: "Does this calculator account for compost settling over time?", a: "Not directly - like most volume estimates, it calculates the freshly applied volume. Compost, especially less mature compost, can settle and decompose further after application, so some gardeners apply slightly more than the calculated minimum or plan to top up over time." },
+    ],
+    related: ["mulch-calculator", "gravel-calculator", "square-footage-calculator"],
   },
 ];
 

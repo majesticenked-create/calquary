@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Cabezas de Ganado por Acre</title>
+  <meta name="description" content="Estima la tasa de carga ganadera (cabezas de ganado por acre o acres por animal) a partir de la producción de forraje, la utilización y el tamaño del rebaño." />
+  <meta property="og:title" content="Calculadora de Cabezas de Ganado por Acre | Calquary">
+  <meta property="og:description" content="Estima la tasa de carga ganadera (cabezas de ganado por acre o acres por animal) a partir de la producción de forraje, la utilización y el tamaño del rebaño.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/es/tool/cattle-per-acre-calculator">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/cattle-per-acre-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculadora de Cabezas de Ganado por Acre | Calquary">
+  <meta name="twitter:description" content="Estima la tasa de carga ganadera (cabezas de ganado por acre o acres por animal) a partir de la producción de forraje, la utilización y el tamaño del rebaño.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/cattle-per-acre-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/cattle-per-acre-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/cattle-per-acre-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/cattle-per-acre-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/cattle-per-acre-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/cattle-per-acre-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/cattle-per-acre-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/cattle-per-acre-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/cattle-per-acre-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/cattle-per-acre-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/cattle-per-acre-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/cattle-per-acre-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/cattle-per-acre-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/cattle-per-acre-calculator">
+    <link rel="canonical" href="https://calquary.com/es/tool/cattle-per-acre-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("cattle-per-acre-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("cattle-per-acre-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calculadora de Cabezas de Ganado por Acre",
+      "description": "Estima la tasa de carga ganadera (cabezas de ganado por acre o acres por animal) a partir de la producción de forraje, la utilización y el tamaño del rebaño.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/es/tool/cattle-per-acre-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "es"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/es/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calculadora de Cabezas de Ganado por Acre",
+          "item": "https://calquary.com/es/tool/cattle-per-acre-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué es una \"unidad animal\" en este cálculo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Una unidad animal (UA) es una referencia estandarizada, típicamente definida como una vaca de carne de aproximadamente 1,000 lb (con o sin ternero lactante) que consume alrededor de 26 lb de forraje en materia seca al día. El ganado más grande, las vacas lecheras o los toros representan más de una unidad animal; el ganado más pequeño o joven representa menos: ajusta el campo de consumo diario para reflejar tu rebaño real si difiere del valor predeterminado."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué hay una tasa de utilización en lugar de usar todo el forraje producido?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pastar todo el forraje disponible hasta el suelo daña la salud del pastizal, las reservas de raíces y la capacidad de rebrote; una tasa de utilización o eficiencia de cosecha (a menudo 25-50% según el sistema de pastoreo) refleja la porción de la producción total de forraje que se puede pastar de forma sostenible dejando suficiente crecimiento residual para que el pastizal se recupere."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿De dónde viene el valor predeterminado de producción de forraje de 4,000 lb/acre/año?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es una cifra intermedia comúnmente citada para pastizales de calidad moderada, pero la producción real de forraje varía enormemente según la región, las precipitaciones, la fertilidad del suelo y las especies forrajeras, desde menos de 1,000 lb/acre/año en pastizales pobres hasta más de 8,000 lb/acre/año en pastizales productivos, irrigados o manejados intensivamente. Reemplaza este valor predeterminado con una estimación local o una cifra de servicio de extensión para tu terreno siempre que sea posible."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿El pastoreo rotacional cambia estos números?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los sistemas de pastoreo rotacional generalmente logran una tasa de utilización más alta que el pastoreo continuo, ya que descansar los potreros entre periodos de pastoreo permite un uso más uniforme del forraje disponible; si usas un sistema rotacional, puedes usar razonablemente una tasa de utilización hacia el extremo superior de los rangos comunes en lugar de una cifra conservadora de pastoreo continuo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué la calculadora da tanto \"acres por unidad animal\" como \"unidades animales por acre\"?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Son la misma relación expresada de dos formas comunes en la planificación agrícola: acres por unidad animal se usa a menudo para la planificación de compra o arrendamiento de tierras (\"cuánta tierra necesito por vaca\"), mientras que unidades animales por acre se usa a menudo para la planificación del tamaño del rebaño (\"cuántas vacas puede soportar este pastizal\"). Ambos números provienen del mismo cálculo subyacente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto afecta la variación estacional a esta estimación?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Significativamente: el crecimiento del forraje rara vez es constante durante todo el año, con la mayoría de las regiones viendo un pico de crecimiento en primavera/principios de verano y un crecimiento más lento o latencia en otras estaciones. Esta calculadora distribuye el forraje utilizable uniformemente a lo largo del periodo de pastoreo que introduces, así que para pastizales muy estacionales, considera ejecutar cálculos separados para diferentes temporadas o periodos de pastoreo en lugar de un promedio anual único."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/es/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/es/#categories">Categorías</a>
+          <a href="/es/#tools">Todas las herramientas</a>
+          <a href="/es/about">Acerca de</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Español">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>ES</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/cattle-per-acre-calculator">English</a><span class="locale-item current" role="menuitem" aria-current="true">Español</span><a class="locale-item" role="menuitem" href="/fr/tool/cattle-per-acre-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/cattle-per-acre-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/cattle-per-acre-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/cattle-per-acre-calculator">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/cattle-per-acre-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/cattle-per-acre-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/cattle-per-acre-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/cattle-per-acre-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/cattle-per-acre-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/cattle-per-acre-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/es/">Calquary</a> / <a href="/es/category/biology">Biología</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calculadora de Cabezas de Ganado por Acre</h1>
+        <p style="max-width:60ch;">Introduce tu superficie de pastizal, la producción de forraje estimada y el consumo típico para estimar una tasa de carga con fines de planificación. La capacidad de carga real varía según el forraje, el suelo, el clima y el manejo.</p>
+        <p class="last-updated">Última actualización: September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calcular</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reiniciar</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Preguntas frecuentes</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>¿Qué es una "unidad animal" en este cálculo?</h3>
+<p>Una unidad animal (UA) es una referencia estandarizada, típicamente definida como una vaca de carne de aproximadamente 1,000 lb (con o sin ternero lactante) que consume alrededor de 26 lb de forraje en materia seca al día. El ganado más grande, las vacas lecheras o los toros representan más de una unidad animal; el ganado más pequeño o joven representa menos: ajusta el campo de consumo diario para reflejar tu rebaño real si difiere del valor predeterminado.</p>
+</div>
+<div class="faq-item">
+<h3>¿Por qué hay una tasa de utilización en lugar de usar todo el forraje producido?</h3>
+<p>Pastar todo el forraje disponible hasta el suelo daña la salud del pastizal, las reservas de raíces y la capacidad de rebrote; una tasa de utilización o eficiencia de cosecha (a menudo 25-50% según el sistema de pastoreo) refleja la porción de la producción total de forraje que se puede pastar de forma sostenible dejando suficiente crecimiento residual para que el pastizal se recupere.</p>
+</div>
+<div class="faq-item">
+<h3>¿De dónde viene el valor predeterminado de producción de forraje de 4,000 lb/acre/año?</h3>
+<p>Es una cifra intermedia comúnmente citada para pastizales de calidad moderada, pero la producción real de forraje varía enormemente según la región, las precipitaciones, la fertilidad del suelo y las especies forrajeras, desde menos de 1,000 lb/acre/año en pastizales pobres hasta más de 8,000 lb/acre/año en pastizales productivos, irrigados o manejados intensivamente. Reemplaza este valor predeterminado con una estimación local o una cifra de servicio de extensión para tu terreno siempre que sea posible.</p>
+</div>
+<div class="faq-item">
+<h3>¿El pastoreo rotacional cambia estos números?</h3>
+<p>Los sistemas de pastoreo rotacional generalmente logran una tasa de utilización más alta que el pastoreo continuo, ya que descansar los potreros entre periodos de pastoreo permite un uso más uniforme del forraje disponible; si usas un sistema rotacional, puedes usar razonablemente una tasa de utilización hacia el extremo superior de los rangos comunes en lugar de una cifra conservadora de pastoreo continuo.</p>
+</div>
+<div class="faq-item">
+<h3>¿Por qué la calculadora da tanto "acres por unidad animal" como "unidades animales por acre"?</h3>
+<p>Son la misma relación expresada de dos formas comunes en la planificación agrícola: acres por unidad animal se usa a menudo para la planificación de compra o arrendamiento de tierras ("cuánta tierra necesito por vaca"), mientras que unidades animales por acre se usa a menudo para la planificación del tamaño del rebaño ("cuántas vacas puede soportar este pastizal"). Ambos números provienen del mismo cálculo subyacente.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cuánto afecta la variación estacional a esta estimación?</h3>
+<p>Significativamente: el crecimiento del forraje rara vez es constante durante todo el año, con la mayoría de las regiones viendo un pico de crecimiento en primavera/principios de verano y un crecimiento más lento o latencia en otras estaciones. Esta calculadora distribuye el forraje utilizable uniformemente a lo largo del periodo de pastoreo que introduces, así que para pastizales muy estacionales, considera ejecutar cálculos separados para diferentes temporadas o periodos de pastoreo en lugar de un promedio anual único.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calcular</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Herramientas relacionadas</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Nota sobre precisión</h4>
+          <p style="margin:0;font-size:0.85rem;">Las calculadoras de Calquary están diseñadas para ofrecer estimaciones rápidas y fiables. Para decisiones con implicaciones financieras, estructurales o médicas reales, consulta con un profesional cualificado.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/es/">← Volver a todas las calculadoras</a> · <a href="/es/about">Acerca de</a> · <a href="/es/contact">Contacto</a> · <a href="/es/privacy">Privacidad</a> · <a href="/es/terms">Términos</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

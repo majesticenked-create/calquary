@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Υπολογιστής Βοοειδών ανά Acre - Δωρεάν Online Αριθμομηχανή</title>
+  <meta name="description" content="Εκτιμήστε τον ρυθμό βόσκησης (βοοειδή ανά acre ή acres ανά ζώο) από την παραγωγή χορτονομής, τη χρήση και το μέγεθος του κοπαδιού." />
+  <meta property="og:title" content="Υπολογιστής Βοοειδών ανά Acre | Calquary">
+  <meta property="og:description" content="Εκτιμήστε τον ρυθμό βόσκησης (βοοειδή ανά acre ή acres ανά ζώο) από την παραγωγή χορτονομής, τη χρήση και το μέγεθος του κοπαδιού.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/el/tool/cattle-per-acre-calculator">
+  <meta property="og:locale" content="el_GR">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/cattle-per-acre-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Υπολογιστής Βοοειδών ανά Acre | Calquary">
+  <meta name="twitter:description" content="Εκτιμήστε τον ρυθμό βόσκησης (βοοειδή ανά acre ή acres ανά ζώο) από την παραγωγή χορτονομής, τη χρήση και το μέγεθος του κοπαδιού.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/cattle-per-acre-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/cattle-per-acre-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/cattle-per-acre-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/cattle-per-acre-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/cattle-per-acre-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/cattle-per-acre-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/cattle-per-acre-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/cattle-per-acre-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/cattle-per-acre-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/cattle-per-acre-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/cattle-per-acre-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/cattle-per-acre-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/cattle-per-acre-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/cattle-per-acre-calculator">
+    <link rel="canonical" href="https://calquary.com/el/tool/cattle-per-acre-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("cattle-per-acre-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("cattle-per-acre-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Υπολογιστής Βοοειδών ανά Acre",
+      "description": "Εκτιμήστε τον ρυθμό βόσκησης (βοοειδή ανά acre ή acres ανά ζώο) από την παραγωγή χορτονομής, τη χρήση και το μέγεθος του κοπαδιού.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/el/tool/cattle-per-acre-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "el"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/el/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/el/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Υπολογιστής Βοοειδών ανά Acre",
+          "item": "https://calquary.com/el/tool/cattle-per-acre-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Τι είναι μια \"ζωική μονάδα\" σε αυτόν τον υπολογισμό;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Μια ζωική μονάδα (AU) είναι μια τυποποιημένη αναφορά, συνήθως οριζόμενη ως μια αγελάδα κρεατοπαραγωγής περίπου 1.000 λιβρών (με ή χωρίς θηλάζον μοσχάρι) που καταναλώνει περίπου 26 λίβρες χορτονομής σε ξηρή ουσία ημερησίως. Μεγαλύτερα βοοειδή, γαλακτοπαραγωγές αγελάδες ή ταύροι αντιπροσωπεύουν περισσότερο από μία ζωική μονάδα· μικρότερα ή νεότερα βοοειδή αντιπροσωπεύουν λιγότερο - προσαρμόστε το πεδίο ημερήσιας κατανάλωσης για να αντικατοπτρίζει το πραγματικό σας κοπάδι αν διαφέρει από την προεπιλογή."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Γιατί υπάρχει ρυθμός χρήσης αντί να χρησιμοποιείται όλη η παραγόμενη χορτονομή;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Η βόσκηση όλης της διαθέσιμης χορτονομής μέχρι το έδαφος βλάπτει την υγεία του βοσκοτόπου, τα αποθέματα ριζών και την ικανότητα αναβλάστησης - ένας ρυθμός χρήσης ή απόδοσης συγκομιδής (συχνά 25-50% ανάλογα με το σύστημα βόσκησης) αντικατοπτρίζει το ποσοστό της συνολικής παραγωγής χορτονομής που μπορεί να βοσκηθεί βιώσιμα αφήνοντας αρκετή υπολειπόμενη ανάπτυξη για να ανακάμψει ο βοσκότοπος."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Από πού προέρχεται η προεπιλεγμένη τιμή παραγωγής χορτονομής 4.000 λίβρες/acre/έτος;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Είναι ένας συχνά αναφερόμενος μεσαίος αριθμός για βοσκότοπο μέτριας ποιότητας, αλλά η πραγματική παραγωγή χορτονομής ποικίλλει τεράστια ανάλογα με την περιοχή, τη βροχόπτωση, τη γονιμότητα του εδάφους και τα είδη χορτονομής - από λιγότερο από 1.000 λίβρες/acre/έτος σε φτωχό βοσκότοπο έως πάνω από 8.000 λίβρες/acre/έτος σε παραγωγικό, αρδευόμενο ή εντατικά διαχειριζόμενο βοσκότοπο. Αντικαταστήστε αυτήν την προεπιλογή με μια τοπική εκτίμηση ή αριθμό υπηρεσίας επέκτασης για τη γη σας όποτε είναι δυνατόν."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Η περιστροφική βόσκηση αλλάζει αυτούς τους αριθμούς;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Τα συστήματα περιστροφικής βόσκησης συνήθως επιτυγχάνουν υψηλότερο ρυθμό χρήσης από τη συνεχή βόσκηση, καθώς η ανάπαυση των τμημάτων μεταξύ περιόδων βόσκησης επιτρέπει πιο ομοιόμορφη χρήση της διαθέσιμης χορτονομής - αν χρησιμοποιείτε περιστροφικό σύστημα, μπορείτε εύλογα να χρησιμοποιήσετε ρυθμό χρήσης προς το ανώτερο άκρο των κοινών εύρων αντί για έναν συντηρητικό αριθμό συνεχούς βόσκησης."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Γιατί ο υπολογιστής δίνει τόσο \"acres ανά ζωική μονάδα\" όσο και \"ζωικές μονάδες ανά acre\";",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Είναι η ίδια σχέση εκφρασμένη με δύο κοινούς τρόπους στον γεωργικό σχεδιασμό - τα acres ανά ζωική μονάδα χρησιμοποιούνται συχνά για τον σχεδιασμό αγοράς ή μίσθωσης γης (\"πόση γη χρειάζομαι ανά αγελάδα\"), ενώ οι ζωικές μονάδες ανά acre χρησιμοποιούνται συχνά για τον σχεδιασμό μεγέθους κοπαδιού (\"πόσες αγελάδες μπορεί να υποστηρίξει αυτός ο βοσκότοπος\"). Και οι δύο αριθμοί προέρχονται από τον ίδιο υποκείμενο υπολογισμό."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Πόσο επηρεάζει η εποχιακή διακύμανση αυτήν την εκτίμηση;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Σημαντικά - η ανάπτυξη της χορτονομής σπάνια είναι σταθερή σε ολόκληρο το έτος, με τις περισσότερες περιοχές να βλέπουν μια έξαρση ανάπτυξης την άνοιξη/αρχές καλοκαιριού και πιο αργή ανάπτυξη ή λήθαργο σε άλλες εποχές. Αυτός ο υπολογιστής κατανέμει τη χρησιμοποιήσιμη χορτονομή ομοιόμορφα σε όλη την περίοδο βόσκησης που εισάγετε, οπότε για έντονα εποχιακό βοσκότοπο, σκεφτείτε να εκτελέσετε ξεχωριστούς υπολογισμούς για διαφορετικές εποχές ή περιόδους βόσκησης αντί για έναν ενιαίο ετήσιο μέσο όρο."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/el/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/el/#categories">Κατηγορίες</a>
+          <a href="/el/#tools">Όλα τα εργαλεία</a>
+          <a href="/el/about">Σχετικά</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Ελληνικά">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>undefined</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/cattle-per-acre-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/cattle-per-acre-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/cattle-per-acre-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/cattle-per-acre-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/cattle-per-acre-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/cattle-per-acre-calculator">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/cattle-per-acre-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/cattle-per-acre-calculator">Română</a><span class="locale-item current" role="menuitem" aria-current="true">Ελληνικά</span><a class="locale-item" role="menuitem" href="/zh/tool/cattle-per-acre-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/cattle-per-acre-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/cattle-per-acre-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/el/">Calquary</a> / <a href="/el/category/biology">Βιολογία</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Υπολογιστής Βοοειδών ανά Acre</h1>
+        <p style="max-width:60ch;">Εισαγάγετε την έκταση βοσκοτόπου σας, την εκτιμώμενη παραγωγή χορτονομής και την τυπική κατανάλωση για να εκτιμήσετε έναν ρυθμό βόσκησης για σκοπούς σχεδιασμού. Η πραγματική φέρουσα ικανότητα ποικίλλει ανάλογα με τη χορτονομή, το έδαφος, το κλίμα και τη διαχείριση.</p>
+        <p class="last-updated">Τελευταία ενημέρωση: September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Υπολογισμός</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Επαναφορά</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Συχνές ερωτήσεις</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Τι είναι μια "ζωική μονάδα" σε αυτόν τον υπολογισμό;</h3>
+<p>Μια ζωική μονάδα (AU) είναι μια τυποποιημένη αναφορά, συνήθως οριζόμενη ως μια αγελάδα κρεατοπαραγωγής περίπου 1.000 λιβρών (με ή χωρίς θηλάζον μοσχάρι) που καταναλώνει περίπου 26 λίβρες χορτονομής σε ξηρή ουσία ημερησίως. Μεγαλύτερα βοοειδή, γαλακτοπαραγωγές αγελάδες ή ταύροι αντιπροσωπεύουν περισσότερο από μία ζωική μονάδα· μικρότερα ή νεότερα βοοειδή αντιπροσωπεύουν λιγότερο - προσαρμόστε το πεδίο ημερήσιας κατανάλωσης για να αντικατοπτρίζει το πραγματικό σας κοπάδι αν διαφέρει από την προεπιλογή.</p>
+</div>
+<div class="faq-item">
+<h3>Γιατί υπάρχει ρυθμός χρήσης αντί να χρησιμοποιείται όλη η παραγόμενη χορτονομή;</h3>
+<p>Η βόσκηση όλης της διαθέσιμης χορτονομής μέχρι το έδαφος βλάπτει την υγεία του βοσκοτόπου, τα αποθέματα ριζών και την ικανότητα αναβλάστησης - ένας ρυθμός χρήσης ή απόδοσης συγκομιδής (συχνά 25-50% ανάλογα με το σύστημα βόσκησης) αντικατοπτρίζει το ποσοστό της συνολικής παραγωγής χορτονομής που μπορεί να βοσκηθεί βιώσιμα αφήνοντας αρκετή υπολειπόμενη ανάπτυξη για να ανακάμψει ο βοσκότοπος.</p>
+</div>
+<div class="faq-item">
+<h3>Από πού προέρχεται η προεπιλεγμένη τιμή παραγωγής χορτονομής 4.000 λίβρες/acre/έτος;</h3>
+<p>Είναι ένας συχνά αναφερόμενος μεσαίος αριθμός για βοσκότοπο μέτριας ποιότητας, αλλά η πραγματική παραγωγή χορτονομής ποικίλλει τεράστια ανάλογα με την περιοχή, τη βροχόπτωση, τη γονιμότητα του εδάφους και τα είδη χορτονομής - από λιγότερο από 1.000 λίβρες/acre/έτος σε φτωχό βοσκότοπο έως πάνω από 8.000 λίβρες/acre/έτος σε παραγωγικό, αρδευόμενο ή εντατικά διαχειριζόμενο βοσκότοπο. Αντικαταστήστε αυτήν την προεπιλογή με μια τοπική εκτίμηση ή αριθμό υπηρεσίας επέκτασης για τη γη σας όποτε είναι δυνατόν.</p>
+</div>
+<div class="faq-item">
+<h3>Η περιστροφική βόσκηση αλλάζει αυτούς τους αριθμούς;</h3>
+<p>Τα συστήματα περιστροφικής βόσκησης συνήθως επιτυγχάνουν υψηλότερο ρυθμό χρήσης από τη συνεχή βόσκηση, καθώς η ανάπαυση των τμημάτων μεταξύ περιόδων βόσκησης επιτρέπει πιο ομοιόμορφη χρήση της διαθέσιμης χορτονομής - αν χρησιμοποιείτε περιστροφικό σύστημα, μπορείτε εύλογα να χρησιμοποιήσετε ρυθμό χρήσης προς το ανώτερο άκρο των κοινών εύρων αντί για έναν συντηρητικό αριθμό συνεχούς βόσκησης.</p>
+</div>
+<div class="faq-item">
+<h3>Γιατί ο υπολογιστής δίνει τόσο "acres ανά ζωική μονάδα" όσο και "ζωικές μονάδες ανά acre";</h3>
+<p>Είναι η ίδια σχέση εκφρασμένη με δύο κοινούς τρόπους στον γεωργικό σχεδιασμό - τα acres ανά ζωική μονάδα χρησιμοποιούνται συχνά για τον σχεδιασμό αγοράς ή μίσθωσης γης ("πόση γη χρειάζομαι ανά αγελάδα"), ενώ οι ζωικές μονάδες ανά acre χρησιμοποιούνται συχνά για τον σχεδιασμό μεγέθους κοπαδιού ("πόσες αγελάδες μπορεί να υποστηρίξει αυτός ο βοσκότοπος"). Και οι δύο αριθμοί προέρχονται από τον ίδιο υποκείμενο υπολογισμό.</p>
+</div>
+<div class="faq-item">
+<h3>Πόσο επηρεάζει η εποχιακή διακύμανση αυτήν την εκτίμηση;</h3>
+<p>Σημαντικά - η ανάπτυξη της χορτονομής σπάνια είναι σταθερή σε ολόκληρο το έτος, με τις περισσότερες περιοχές να βλέπουν μια έξαρση ανάπτυξης την άνοιξη/αρχές καλοκαιριού και πιο αργή ανάπτυξη ή λήθαργο σε άλλες εποχές. Αυτός ο υπολογιστής κατανέμει τη χρησιμοποιήσιμη χορτονομή ομοιόμορφα σε όλη την περίοδο βόσκησης που εισάγετε, οπότε για έντονα εποχιακό βοσκότοπο, σκεφτείτε να εκτελέσετε ξεχωριστούς υπολογισμούς για διαφορετικές εποχές ή περιόδους βόσκησης αντί για έναν ενιαίο ετήσιο μέσο όρο.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Υπολογισμός</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Σχετικά εργαλεία</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Σημείωση ακρίβειας</h4>
+          <p style="margin:0;font-size:0.85rem;">Οι αριθμομηχανές του Calquary έχουν σχεδιαστεί για να παρέχουν γρήγορες και αξιόπιστες εκτιμήσεις. Για αποφάσεις με πραγματικές οικονομικές, δομικές ή ιατρικές επιπτώσεις, συμβουλευτείτε έναν ειδικευμένο επαγγελματία.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/el/">← Πίσω σε όλες τις αριθμομηχανές</a> · <a href="/el/about">Σχετικά</a> · <a href="/el/contact">Επικοινωνία</a> · <a href="/el/privacy">Απόρρητο</a> · <a href="/el/terms">Όροι</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calcolatore del Tempo di Raddoppiamento Cellulare</title>
+  <meta name="description" content="Stima il tempo di raddoppiamento della popolazione e il tasso di crescita da conteggi cellulari misurati in due momenti temporali, assumendo crescita…" />
+  <meta property="og:title" content="Calcolatore del Tempo di Raddoppiamento Cellulare | Calquary">
+  <meta property="og:description" content="Stima il tempo di raddoppiamento della popolazione e il tasso di crescita da conteggi cellulari misurati in due momenti temporali, assumendo crescita esponenziale.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/it/tool/cell-doubling-time-calculator">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/cell-doubling-time-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calcolatore del Tempo di Raddoppiamento Cellulare | Calquary">
+  <meta name="twitter:description" content="Stima il tempo di raddoppiamento della popolazione e il tasso di crescita da conteggi cellulari misurati in due momenti temporali, assumendo crescita esponenziale.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/cell-doubling-time-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/cell-doubling-time-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/cell-doubling-time-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/cell-doubling-time-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/cell-doubling-time-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/cell-doubling-time-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/cell-doubling-time-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/cell-doubling-time-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/cell-doubling-time-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/cell-doubling-time-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/cell-doubling-time-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/cell-doubling-time-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/cell-doubling-time-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/cell-doubling-time-calculator">
+    <link rel="canonical" href="https://calquary.com/it/tool/cell-doubling-time-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("cell-doubling-time-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("cell-doubling-time-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calcolatore del Tempo di Raddoppiamento Cellulare",
+      "description": "Stima il tempo di raddoppiamento della popolazione e il tasso di crescita da conteggi cellulari misurati in due momenti temporali, assumendo crescita esponenziale.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/it/tool/cell-doubling-time-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "it"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/it/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/it/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calcolatore del Tempo di Raddoppiamento Cellulare",
+          "item": "https://calquary.com/it/tool/cell-doubling-time-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Cosa calcola realmente la formula del tempo di raddoppiamento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Calcola quanto tempo impiegherebbe la popolazione a raddoppiare di dimensione, dato il tasso di crescita esponenziale osservato tra le due misurazioni. È derivata risolvendo l'equazione di crescita esponenziale N(t) = N0 × e^(kt) per il tempo in cui N(t) = 2 × N0."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Perché devo assumere una crescita esponenziale?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La formula è valida solo durante la fase di crescita esponenziale (log) di una coltura, quando le condizioni di crescita sono relativamente costanti e illimitate. Le colture che si avvicinano a un limite di risorse o ad alta densità spesso rallentano (entrando in fase lag o stazionaria), quindi misurazioni prese attraverso quelle fasi produrranno un tempo di raddoppiamento fuorviante - idealmente, misura due punti entrambi all'interno di una fase di crescita chiaramente esponenziale."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cosa succede se il mio conteggio finale è inferiore o uguale al mio conteggio iniziale?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Il calcolatore non calcolerà un tempo di raddoppiamento in quel caso, poiché il raddoppiamento si applica solo a una popolazione in crescita - un conteggio in declino richiederebbe un calcolo diverso (come un tasso di decadimento o mortalità), e un conteggio invariato significa che non si è verificata alcuna crescita netta in quell'intervallo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Come si relaziona la costante del tasso di crescita (k) con il tempo di raddoppiamento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sono direttamente correlati: tempo di raddoppiamento = ln(2) ÷ k, e k = ln(2) ÷ tempo di raddoppiamento. Una costante del tasso di crescita più alta significa crescita più veloce e quindi un tempo di raddoppiamento più breve - descrivono la stessa crescita esponenziale da due angolazioni diverse."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso usare la densità cellulare (cellule/mL) invece di un conteggio cellulare grezzo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì - poiché il calcolo usa il rapporto tra i conteggi finale e iniziale, la densità cellulare funziona esattamente come un conteggio grezzo, purché entrambe le misurazioni usino le stesse unità e siano state prese da campioni di dimensioni comparabili (ad esempio, entrambe dallo stesso volume di coltura)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Questo funziona sia per le colture batteriche che per le colture di cellule di mammifero?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì - il modello di crescita esponenziale e la formula del tempo di raddoppiamento si applicano generalmente a qualsiasi popolazione che cresce esponenzialmente, che siano batteri, lieviti o cellule di mammifero in coltura. I tempi di raddoppiamento tipici differiscono enormemente per organismo e condizioni (i batteri possono raddoppiare in 20-30 minuti in condizioni ideali, mentre molte linee cellulari di mammifero raddoppiano in circa 18-24 ore), ma la matematica sottostante è la stessa."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/it/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/it/#categories">Categorie</a>
+          <a href="/it/#tools">Tutti gli strumenti</a>
+          <a href="/it/about">Chi siamo</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Italiano">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>IT</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/cell-doubling-time-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/cell-doubling-time-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/cell-doubling-time-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/cell-doubling-time-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/cell-doubling-time-calculator">Português</a><span class="locale-item current" role="menuitem" aria-current="true">Italiano</span><a class="locale-item" role="menuitem" href="/ja/tool/cell-doubling-time-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/cell-doubling-time-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/cell-doubling-time-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/cell-doubling-time-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/cell-doubling-time-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/cell-doubling-time-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/it/">Calquary</a> / <a href="/it/category/biology">Biologia</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calcolatore del Tempo di Raddoppiamento Cellulare</h1>
+        <p style="max-width:60ch;">Inserisci un conteggio cellulare iniziale, un conteggio cellulare finale e il tempo trascorso tra loro per stimare il tempo di raddoppiamento, assumendo crescita esponenziale in quell'intervallo.</p>
+        <p class="last-updated">Ultimo aggiornamento: September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calcola</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reimposta</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Domande frequenti</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Cosa calcola realmente la formula del tempo di raddoppiamento?</h3>
+<p>Calcola quanto tempo impiegherebbe la popolazione a raddoppiare di dimensione, dato il tasso di crescita esponenziale osservato tra le due misurazioni. È derivata risolvendo l'equazione di crescita esponenziale N(t) = N0 × e^(kt) per il tempo in cui N(t) = 2 × N0.</p>
+</div>
+<div class="faq-item">
+<h3>Perché devo assumere una crescita esponenziale?</h3>
+<p>La formula è valida solo durante la fase di crescita esponenziale (log) di una coltura, quando le condizioni di crescita sono relativamente costanti e illimitate. Le colture che si avvicinano a un limite di risorse o ad alta densità spesso rallentano (entrando in fase lag o stazionaria), quindi misurazioni prese attraverso quelle fasi produrranno un tempo di raddoppiamento fuorviante - idealmente, misura due punti entrambi all'interno di una fase di crescita chiaramente esponenziale.</p>
+</div>
+<div class="faq-item">
+<h3>Cosa succede se il mio conteggio finale è inferiore o uguale al mio conteggio iniziale?</h3>
+<p>Il calcolatore non calcolerà un tempo di raddoppiamento in quel caso, poiché il raddoppiamento si applica solo a una popolazione in crescita - un conteggio in declino richiederebbe un calcolo diverso (come un tasso di decadimento o mortalità), e un conteggio invariato significa che non si è verificata alcuna crescita netta in quell'intervallo.</p>
+</div>
+<div class="faq-item">
+<h3>Come si relaziona la costante del tasso di crescita (k) con il tempo di raddoppiamento?</h3>
+<p>Sono direttamente correlati: tempo di raddoppiamento = ln(2) ÷ k, e k = ln(2) ÷ tempo di raddoppiamento. Una costante del tasso di crescita più alta significa crescita più veloce e quindi un tempo di raddoppiamento più breve - descrivono la stessa crescita esponenziale da due angolazioni diverse.</p>
+</div>
+<div class="faq-item">
+<h3>Posso usare la densità cellulare (cellule/mL) invece di un conteggio cellulare grezzo?</h3>
+<p>Sì - poiché il calcolo usa il rapporto tra i conteggi finale e iniziale, la densità cellulare funziona esattamente come un conteggio grezzo, purché entrambe le misurazioni usino le stesse unità e siano state prese da campioni di dimensioni comparabili (ad esempio, entrambe dallo stesso volume di coltura).</p>
+</div>
+<div class="faq-item">
+<h3>Questo funziona sia per le colture batteriche che per le colture di cellule di mammifero?</h3>
+<p>Sì - il modello di crescita esponenziale e la formula del tempo di raddoppiamento si applicano generalmente a qualsiasi popolazione che cresce esponenzialmente, che siano batteri, lieviti o cellule di mammifero in coltura. I tempi di raddoppiamento tipici differiscono enormemente per organismo e condizioni (i batteri possono raddoppiare in 20-30 minuti in condizioni ideali, mentre molte linee cellulari di mammifero raddoppiano in circa 18-24 ore), ma la matematica sottostante è la stessa.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calcola</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Strumenti correlati</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Nota sulla precisione</h4>
+          <p style="margin:0;font-size:0.85rem;">Le calcolatrici di Calquary sono pensate per stime rapide e affidabili. Per decisioni con reali implicazioni finanziarie, strutturali o mediche, consulta un professionista qualificato.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/it/">← Torna a tutte le calcolatrici</a> · <a href="/it/about">Chi siamo</a> · <a href="/it/contact">Contatti</a> · <a href="/it/privacy">Privacy</a> · <a href="/it/terms">Termini</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

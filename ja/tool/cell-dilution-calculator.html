@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>細胞希釈計算機 - 無料オンライン計算ツール | Calquary</title>
+  <meta name="description" content="希釈式C1V1 = C2V2を使用して、目標濃度に必要なストック溶液量と希釈液量を計算します。" />
+  <meta property="og:title" content="細胞希釈計算機 | Calquary">
+  <meta property="og:description" content="希釈式C1V1 = C2V2を使用して、目標濃度に必要なストック溶液量と希釈液量を計算します。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/ja/tool/cell-dilution-calculator">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/cell-dilution-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="細胞希釈計算機 | Calquary">
+  <meta name="twitter:description" content="希釈式C1V1 = C2V2を使用して、目標濃度に必要なストック溶液量と希釈液量を計算します。">
+  <meta name="twitter:image" content="https://calquary.com/og-images/cell-dilution-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/cell-dilution-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/cell-dilution-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/cell-dilution-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/cell-dilution-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/cell-dilution-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/cell-dilution-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/cell-dilution-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/cell-dilution-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/cell-dilution-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/cell-dilution-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/cell-dilution-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/cell-dilution-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/cell-dilution-calculator">
+    <link rel="canonical" href="https://calquary.com/ja/tool/cell-dilution-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("cell-dilution-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("cell-dilution-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "細胞希釈計算機",
+      "description": "希釈式C1V1 = C2V2を使用して、目標濃度に必要なストック溶液量と希釈液量を計算します。",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/ja/tool/cell-dilution-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "ja"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/ja/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/ja/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "細胞希釈計算機",
+          "item": "https://calquary.com/ja/tool/cell-dilution-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "C1、V1、C2、V2とは何を意味しますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "C1はストック(元の)溶液の濃度、V1は使用する必要のあるストック溶液の量、C2は目標とする(最終的な)濃度、V2は希釈後の最終的な総容量です。C1 × V1 = C2 × V2という関係が成り立つのは、物質の総量が変わらず、希釈液を加えるにつれて濃度だけが変化するためです。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ストック容量ではなく希釈液の容量はどう計算しますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "希釈液の容量は単に最終容量からストック容量を引いたものです:希釈液 = V2 - V1。この計算機はV1を求めた後、両方を自動的に表示するため、どれだけのストック溶液とどれだけの希釈液(緩衝液、培地、または溶媒)を組み合わせればよいかが正確にわかります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ストック容量ではなく最終容量など、別の変数を求めたい場合はどうすればよいですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "同じ方程式は4つの変数のいずれについても変形できます:V1 = C2V2/C1、V2 = C1V1/C2、C1 = C2V2/V1、またはC2 = C1V1/V2。この計算機は最も一般的な実験室のシナリオ(既知のストックと目標から出発し、使用するストック量を求める)向けに設定されています。他の組み合わせについては、既知の値を使って方程式を変形してください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "これは連続希釈に使用できますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "この計算機は単一の希釈ステップを扱います。連続希釈(前のステップの結果を新しいストックとして使う一連の逐次希釈)の場合、各ステップの目標濃度を次のステップのストック濃度(C1)として使い、ステップごとにこの計算を1回実行してください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "なぜ目標がストック濃度を超えているというエラーが表示されたのですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "希釈液を用いた単純な希釈は濃度を下げることしかできず、決して上げることはできません。目標濃度(C2)がストック濃度(C1)より高い場合、より濃縮されたストックが必要か、希釈するのではなく遠心分離や蒸発などの方法で既存のサンプルを濃縮する必要があります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "この計算に濃度の単位は重要ですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "C1とC2が同じ単位(どちらも細胞/mL、どちらもモル濃度、どちらもmg/mLなど)を使用している限り、計算自体は単位に依存しません。方程式で単位が相殺されるためです。ただし一貫性を保つよう注意してください。単位を混在させる(例えばC1を細胞/mLで、C2を細胞/Lで入力する)と誤った結果になります。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/ja/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/ja/#categories">カテゴリー</a>
+          <a href="/ja/#tools">すべてのツール</a>
+          <a href="/ja/about">このサイトについて</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: 日本語">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>JA</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/cell-dilution-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/cell-dilution-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/cell-dilution-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/cell-dilution-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/cell-dilution-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/cell-dilution-calculator">Italiano</a><span class="locale-item current" role="menuitem" aria-current="true">日本語</span><a class="locale-item" role="menuitem" href="/ro/tool/cell-dilution-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/cell-dilution-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/cell-dilution-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/cell-dilution-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/cell-dilution-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/ja/">Calquary</a> / <a href="/ja/category/biology">生物学</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>細胞希釈計算機</h1>
+        <p style="max-width:60ch;">ストック濃度、目標濃度、希望する最終容量を入力すると、必要なストック溶液量と希釈液量を計算します。</p>
+        <p class="last-updated">最終更新日： September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">計算する</button>
+              <button type="button" id="calc-reset" class="btn-ghost">リセット</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>よくある質問</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>C1、V1、C2、V2とは何を意味しますか?</h3>
+<p>C1はストック(元の)溶液の濃度、V1は使用する必要のあるストック溶液の量、C2は目標とする(最終的な)濃度、V2は希釈後の最終的な総容量です。C1 × V1 = C2 × V2という関係が成り立つのは、物質の総量が変わらず、希釈液を加えるにつれて濃度だけが変化するためです。</p>
+</div>
+<div class="faq-item">
+<h3>ストック容量ではなく希釈液の容量はどう計算しますか?</h3>
+<p>希釈液の容量は単に最終容量からストック容量を引いたものです:希釈液 = V2 - V1。この計算機はV1を求めた後、両方を自動的に表示するため、どれだけのストック溶液とどれだけの希釈液(緩衝液、培地、または溶媒)を組み合わせればよいかが正確にわかります。</p>
+</div>
+<div class="faq-item">
+<h3>ストック容量ではなく最終容量など、別の変数を求めたい場合はどうすればよいですか?</h3>
+<p>同じ方程式は4つの変数のいずれについても変形できます:V1 = C2V2/C1、V2 = C1V1/C2、C1 = C2V2/V1、またはC2 = C1V1/V2。この計算機は最も一般的な実験室のシナリオ(既知のストックと目標から出発し、使用するストック量を求める)向けに設定されています。他の組み合わせについては、既知の値を使って方程式を変形してください。</p>
+</div>
+<div class="faq-item">
+<h3>これは連続希釈に使用できますか?</h3>
+<p>この計算機は単一の希釈ステップを扱います。連続希釈(前のステップの結果を新しいストックとして使う一連の逐次希釈)の場合、各ステップの目標濃度を次のステップのストック濃度(C1)として使い、ステップごとにこの計算を1回実行してください。</p>
+</div>
+<div class="faq-item">
+<h3>なぜ目標がストック濃度を超えているというエラーが表示されたのですか?</h3>
+<p>希釈液を用いた単純な希釈は濃度を下げることしかできず、決して上げることはできません。目標濃度(C2)がストック濃度(C1)より高い場合、より濃縮されたストックが必要か、希釈するのではなく遠心分離や蒸発などの方法で既存のサンプルを濃縮する必要があります。</p>
+</div>
+<div class="faq-item">
+<h3>この計算に濃度の単位は重要ですか?</h3>
+<p>C1とC2が同じ単位(どちらも細胞/mL、どちらもモル濃度、どちらもmg/mLなど)を使用している限り、計算自体は単位に依存しません。方程式で単位が相殺されるためです。ただし一貫性を保つよう注意してください。単位を混在させる(例えばC1を細胞/mLで、C2を細胞/Lで入力する)と誤った結果になります。</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">計算する</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>関連ツール</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>精度について</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquaryの計算ツールは、迅速で信頼できる概算を目的としています。実際の財務、構造、医療に関わる重要な決定を行う前には、必ず専門家にご確認ください。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/ja/">← すべての計算ツールに戻る</a> · <a href="/ja/about">このサイトについて</a> · <a href="/ja/contact">お問い合わせ</a> · <a href="/ja/privacy">プライバシー</a> · <a href="/ja/terms">利用規約</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>堆肥計算機 - 無料オンライン計算ツール | Calquary</title>
+  <meta name="description" content="長さ、幅、施用深さから、庭の花壇や庭のエリアに必要な堆肥の量を見積もります。" />
+  <meta property="og:title" content="堆肥計算機 | Calquary">
+  <meta property="og:description" content="長さ、幅、施用深さから、庭の花壇や庭のエリアに必要な堆肥の量を見積もります。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/ja/tool/compost-calculator">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/compost-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="堆肥計算機 | Calquary">
+  <meta name="twitter:description" content="長さ、幅、施用深さから、庭の花壇や庭のエリアに必要な堆肥の量を見積もります。">
+  <meta name="twitter:image" content="https://calquary.com/og-images/compost-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/compost-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/compost-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/compost-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/compost-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/compost-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/compost-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/compost-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/compost-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/compost-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/compost-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/compost-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/compost-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/compost-calculator">
+    <link rel="canonical" href="https://calquary.com/ja/tool/compost-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("compost-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("compost-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "堆肥計算機",
+      "description": "長さ、幅、施用深さから、庭の花壇や庭のエリアに必要な堆肥の量を見積もります。",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/ja/tool/compost-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "ja"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/ja/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Construction & Home",
+          "item": "https://calquary.com/ja/category/construction"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "堆肥計算機",
+          "item": "https://calquary.com/ja/tool/compost-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "20×10フィートの花壇に深さ2インチで堆肥を敷くにはどれくらい必要ですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "20×10フィートは200平方フィートです。深さ2インチだと約33.3立方フィート、つまり約1.23立方ヤードになります - 1.5立方フィートの堆肥袋で約22袋分です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "堆肥層はどれくらいの深さにすべきですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "目的によります。既存の庭の土を改良したり上に敷いたりするには1〜3インチの層が一般的ですが、新しい花壇や非常に痩せた土壌には、在来の土の上部数インチにすき込む3〜4インチのより厚い層を使うこともあります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "これとマルチ計算機の違いは何ですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "どちらも面積と深さから同じ基礎計算で体積を見積もりますが、対象とする材料と目的が異なります。堆肥は土壌に養分や有機物を加えるためにすき込んだり上に置いたりする土壌改良材であるのに対し、マルチは主に雑草抑制と水分保持のために使われる表面層(樹皮、木材チップなど)であるのが一般的です。実際に施用する材料に合った計算機を使用してください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "堆肥は土に混ぜ込むべきですか、それとも上にまくだけでよいですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "状況によってどちらも一般的です。新しい花壇を準備する際には、土の上部数インチに堆肥をすき込むのが一般的ですが、すでに植栽されている場所や芝生には、すき込まずに表面に層を敷く「トップドレッシング」が一般的で、堆肥は時間をかけて徐々に分解され、土に取り込まれていきます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "堆肥の袋何個分が1立方ヤードに相当しますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "袋のサイズによります。これはブランドや製品によって異なりますが、一般的な袋のサイズは約1〜2立方フィートで、1立方ヤードは27立方フィートなので、1立方ヤードあたり約14〜27袋になります。正確な袋数を得るには、計算機にご自身の袋の具体的な容量を入力してください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "この計算機は時間経過による堆肥の沈下を考慮していますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "直接的には考慮していません。ほとんどの体積見積もりと同様に、新たに施用した時点の体積を計算します。堆肥、特に未成熟なものは、施用後にさらに沈下・分解する可能性があるため、一部のガーデナーは計算された最小量よりも少し多めに施用したり、時間の経過とともに補充する計画を立てたりします。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/ja/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/ja/#categories">カテゴリー</a>
+          <a href="/ja/#tools">すべてのツール</a>
+          <a href="/ja/about">このサイトについて</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: 日本語">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>JA</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/compost-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/compost-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/compost-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/compost-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/compost-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/compost-calculator">Italiano</a><span class="locale-item current" role="menuitem" aria-current="true">日本語</span><a class="locale-item" role="menuitem" href="/ro/tool/compost-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/compost-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/compost-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/compost-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/compost-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/ja/">Calquary</a> / <a href="/ja/category/construction">建築・住まい</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>堆肥計算機</h1>
+        <p style="max-width:60ch;">花壇または施用エリアの長さ、幅、希望する深さを入力すると、必要な堆肥のおおよその量を見積もります。</p>
+        <p class="last-updated">最終更新日： September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">計算する</button>
+              <button type="button" id="calc-reset" class="btn-ghost">リセット</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>よくある質問</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>20×10フィートの花壇に深さ2インチで堆肥を敷くにはどれくらい必要ですか?</h3>
+<p>20×10フィートは200平方フィートです。深さ2インチだと約33.3立方フィート、つまり約1.23立方ヤードになります - 1.5立方フィートの堆肥袋で約22袋分です。</p>
+</div>
+<div class="faq-item">
+<h3>堆肥層はどれくらいの深さにすべきですか?</h3>
+<p>目的によります。既存の庭の土を改良したり上に敷いたりするには1〜3インチの層が一般的ですが、新しい花壇や非常に痩せた土壌には、在来の土の上部数インチにすき込む3〜4インチのより厚い層を使うこともあります。</p>
+</div>
+<div class="faq-item">
+<h3>これとマルチ計算機の違いは何ですか?</h3>
+<p>どちらも面積と深さから同じ基礎計算で体積を見積もりますが、対象とする材料と目的が異なります。堆肥は土壌に養分や有機物を加えるためにすき込んだり上に置いたりする土壌改良材であるのに対し、マルチは主に雑草抑制と水分保持のために使われる表面層(樹皮、木材チップなど)であるのが一般的です。実際に施用する材料に合った計算機を使用してください。</p>
+</div>
+<div class="faq-item">
+<h3>堆肥は土に混ぜ込むべきですか、それとも上にまくだけでよいですか?</h3>
+<p>状況によってどちらも一般的です。新しい花壇を準備する際には、土の上部数インチに堆肥をすき込むのが一般的ですが、すでに植栽されている場所や芝生には、すき込まずに表面に層を敷く「トップドレッシング」が一般的で、堆肥は時間をかけて徐々に分解され、土に取り込まれていきます。</p>
+</div>
+<div class="faq-item">
+<h3>堆肥の袋何個分が1立方ヤードに相当しますか?</h3>
+<p>袋のサイズによります。これはブランドや製品によって異なりますが、一般的な袋のサイズは約1〜2立方フィートで、1立方ヤードは27立方フィートなので、1立方ヤードあたり約14〜27袋になります。正確な袋数を得るには、計算機にご自身の袋の具体的な容量を入力してください。</p>
+</div>
+<div class="faq-item">
+<h3>この計算機は時間経過による堆肥の沈下を考慮していますか?</h3>
+<p>直接的には考慮していません。ほとんどの体積見積もりと同様に、新たに施用した時点の体積を計算します。堆肥、特に未成熟なものは、施用後にさらに沈下・分解する可能性があるため、一部のガーデナーは計算された最小量よりも少し多めに施用したり、時間の経過とともに補充する計画を立てたりします。</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">計算する</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>関連ツール</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>精度について</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquaryの計算ツールは、迅速で信頼できる概算を目的としています。実際の財務、構造、医療に関わる重要な決定を行う前には、必ず専門家にご確認ください。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/ja/">← すべての計算ツールに戻る</a> · <a href="/ja/about">このサイトについて</a> · <a href="/ja/contact">お問い合わせ</a> · <a href="/ja/privacy">プライバシー</a> · <a href="/ja/terms">利用規約</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

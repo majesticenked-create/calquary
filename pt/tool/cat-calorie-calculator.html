@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Calorias para Gatos</title>
+  <meta name="description" content="Estime as necessidades calóricas diárias de um gato usando a fórmula veterinária de requisito de energia em repouso (RER)." />
+  <meta property="og:title" content="Calculadora de Calorias para Gatos | Calquary">
+  <meta property="og:description" content="Estime as necessidades calóricas diárias de um gato usando a fórmula veterinária de requisito de energia em repouso (RER).">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/pt/tool/cat-calorie-calculator">
+  <meta property="og:locale" content="pt_PT">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/cat-calorie-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculadora de Calorias para Gatos | Calquary">
+  <meta name="twitter:description" content="Estime as necessidades calóricas diárias de um gato usando a fórmula veterinária de requisito de energia em repouso (RER).">
+  <meta name="twitter:image" content="https://calquary.com/og-images/cat-calorie-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/cat-calorie-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/cat-calorie-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/cat-calorie-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/cat-calorie-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/cat-calorie-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/cat-calorie-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/cat-calorie-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/cat-calorie-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/cat-calorie-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/cat-calorie-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/cat-calorie-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/cat-calorie-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/cat-calorie-calculator">
+    <link rel="canonical" href="https://calquary.com/pt/tool/cat-calorie-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("cat-calorie-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("cat-calorie-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calculadora de Calorias para Gatos",
+      "description": "Estime as necessidades calóricas diárias de um gato usando a fórmula veterinária de requisito de energia em repouso (RER).",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/pt/tool/cat-calorie-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "pt"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/pt/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Pet & Lifestyle",
+          "item": "https://calquary.com/pt/category/pets"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calculadora de Calorias para Gatos",
+          "item": "https://calquary.com/pt/tool/cat-calorie-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "O que é RER e por que a fórmula usa o peso elevado a 0,75?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "RER (requisito de energia em repouso) é a energia que um gato precisa em repouso completo para manter as funções corporais básicas. O expoente 0,75 reflete que a taxa metabólica não escala diretamente com a massa corporal - animais menores queimam mais calorias por unidade de peso do que os maiores, e essa fórmula de escalonamento alométrico (70 × peso em kg^0,75) é a abordagem veterinária padrão para gatos e cães de todos os tamanhos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que o multiplicador de estágio de vida realmente representa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ele escala o RER até o requisito de energia de manutenção (MER) com base em quanta energia um gato tipicamente usa além do metabolismo em repouso naquele estágio de vida - um filhote em crescimento precisa de várias vezes sua energia em repouso para o desenvolvimento de tecidos, enquanto um adulto castrado e menos ativo precisa comparativamente de menos do que um adulto inteiro e mais ativo. Esses são multiplicadores de referência veterinária comumente citados, não valores exatos para cada gato individual."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Por que o multiplicador para castrados é menor que o de inteiros?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A castração está associada a uma queda mensurável na taxa metabólica e na atividade em muitos gatos, então referências veterinárias comumente recomendam um multiplicador de manutenção menor para gatos castrados para evitar ganho de peso gradual - embora o metabolismo individual ainda varie, e a condição corporal deva guiar as porções reais ao longo do tempo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Devo usar esse número para colocar meu gato em dieta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Esta calculadora fornece uma estimativa inicial educacional, não um plano alimentar restritivo - o controle de peso em gatos deve ser supervisionado por um veterinário, já que a perda de peso rápida demais em gatos carrega riscos reais à saúde (incluindo lipidose hepática). Se o peso for uma preocupação, use este número como ponto de partida para conversa com seu veterinário, não um número para impor por conta própria."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Por que o multiplicador de gestação/lactação é muito menos preciso que os outros?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "As necessidades energéticas durante a gestação e especialmente o pico de lactação podem aumentar dramática e imprevisivelmente - gatas lactantes podem precisar de várias vezes sua energia normal de manutenção dependendo do tamanho da ninhada e do estágio de amamentação. Esta ferramenta mostra um multiplicador inicial conservador, mas gatas prenhas ou lactantes devem ser monitoradas e alimentadas sob orientação veterinária em vez de por uma fórmula fixa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como isso difere da Calculadora de Calorias geral deste site?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Calculadora de Calorias geral usa fórmulas metabólicas humanas (baseadas em idade, sexo, altura e atividade humanos) e não se aplica a gatos. Esta calculadora usa em vez disso o modelo felino RER/MER, escalonado e validado para gatos, em vez de adaptado de equações humanas."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/pt/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/pt/#categories">Categorias</a>
+          <a href="/pt/#tools">Todas as ferramentas</a>
+          <a href="/pt/about">Sobre</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Português">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>PT</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/cat-calorie-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/cat-calorie-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/cat-calorie-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/cat-calorie-calculator">Deutsch</a><span class="locale-item current" role="menuitem" aria-current="true">Português</span><a class="locale-item" role="menuitem" href="/it/tool/cat-calorie-calculator">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/cat-calorie-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/cat-calorie-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/cat-calorie-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/cat-calorie-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/cat-calorie-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/cat-calorie-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/pt/">Calquary</a> / <a href="/pt/category/pets">Animais de Estimação e Estilo de Vida</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calculadora de Calorias para Gatos</h1>
+        <p style="max-width:60ch;">Insira o peso e o estágio de vida do seu gato para estimar as necessidades calóricas diárias usando uma fórmula veterinária padrão. Isso é um ponto de partida educacional, não um plano de alimentação prescrito.</p>
+        <p class="last-updated">Última atualização: September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calcular</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Redefinir</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Perguntas frequentes</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>O que é RER e por que a fórmula usa o peso elevado a 0,75?</h3>
+<p>RER (requisito de energia em repouso) é a energia que um gato precisa em repouso completo para manter as funções corporais básicas. O expoente 0,75 reflete que a taxa metabólica não escala diretamente com a massa corporal - animais menores queimam mais calorias por unidade de peso do que os maiores, e essa fórmula de escalonamento alométrico (70 × peso em kg^0,75) é a abordagem veterinária padrão para gatos e cães de todos os tamanhos.</p>
+</div>
+<div class="faq-item">
+<h3>O que o multiplicador de estágio de vida realmente representa?</h3>
+<p>Ele escala o RER até o requisito de energia de manutenção (MER) com base em quanta energia um gato tipicamente usa além do metabolismo em repouso naquele estágio de vida - um filhote em crescimento precisa de várias vezes sua energia em repouso para o desenvolvimento de tecidos, enquanto um adulto castrado e menos ativo precisa comparativamente de menos do que um adulto inteiro e mais ativo. Esses são multiplicadores de referência veterinária comumente citados, não valores exatos para cada gato individual.</p>
+</div>
+<div class="faq-item">
+<h3>Por que o multiplicador para castrados é menor que o de inteiros?</h3>
+<p>A castração está associada a uma queda mensurável na taxa metabólica e na atividade em muitos gatos, então referências veterinárias comumente recomendam um multiplicador de manutenção menor para gatos castrados para evitar ganho de peso gradual - embora o metabolismo individual ainda varie, e a condição corporal deva guiar as porções reais ao longo do tempo.</p>
+</div>
+<div class="faq-item">
+<h3>Devo usar esse número para colocar meu gato em dieta?</h3>
+<p>Esta calculadora fornece uma estimativa inicial educacional, não um plano alimentar restritivo - o controle de peso em gatos deve ser supervisionado por um veterinário, já que a perda de peso rápida demais em gatos carrega riscos reais à saúde (incluindo lipidose hepática). Se o peso for uma preocupação, use este número como ponto de partida para conversa com seu veterinário, não um número para impor por conta própria.</p>
+</div>
+<div class="faq-item">
+<h3>Por que o multiplicador de gestação/lactação é muito menos preciso que os outros?</h3>
+<p>As necessidades energéticas durante a gestação e especialmente o pico de lactação podem aumentar dramática e imprevisivelmente - gatas lactantes podem precisar de várias vezes sua energia normal de manutenção dependendo do tamanho da ninhada e do estágio de amamentação. Esta ferramenta mostra um multiplicador inicial conservador, mas gatas prenhas ou lactantes devem ser monitoradas e alimentadas sob orientação veterinária em vez de por uma fórmula fixa.</p>
+</div>
+<div class="faq-item">
+<h3>Como isso difere da Calculadora de Calorias geral deste site?</h3>
+<p>A Calculadora de Calorias geral usa fórmulas metabólicas humanas (baseadas em idade, sexo, altura e atividade humanos) e não se aplica a gatos. Esta calculadora usa em vez disso o modelo felino RER/MER, escalonado e validado para gatos, em vez de adaptado de equações humanas.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calcular</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Ferramentas relacionadas</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Nota sobre precisão</h4>
+          <p style="margin:0;font-size:0.85rem;">As calculadoras da Calquary são feitas para estimativas rápidas e confiáveis. Para decisões com implicações financeiras, estruturais ou médicas reais, consulte um profissional qualificado.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/pt/">← Voltar a todas as calculadoras</a> · <a href="/pt/about">Sobre</a> · <a href="/pt/contact">Contato</a> · <a href="/pt/privacy">Privacidade</a> · <a href="/pt/terms">Termos</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

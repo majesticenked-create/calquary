@@ -148,6 +148,12 @@ const WAVE_ONE_TOOL_IDS = [
   "annealing-temperature-calculator", "basal-area-calculator", "benadryl-dosage-for-dogs",
   "cat-benadryl-dosage-calculator", "bird-age-calculator", "bulb-spacing-calculator",
   "cat-bmi-calculator",
+  // Batch 13: the 10 Pet & Lifestyle/Biology/Construction tools added in the
+  // Batch 002 build, now translated into all 11 non-English locales.
+  "cat-calorie-calculator", "cat-chocolate-toxicity-calculator", "cat-quality-of-life-calculator",
+  "cat-personality-quiz", "cattle-per-acre-calculator", "cell-dilution-calculator",
+  "cell-doubling-time-calculator", "cephalexin-for-cats-dosage-calculator",
+  "cephalexin-for-dogs-dosage-calculator", "compost-calculator",
 ];
 
 function loadData() {

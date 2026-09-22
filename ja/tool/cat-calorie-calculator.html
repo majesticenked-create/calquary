@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>猫カロリー計算機 - 無料オンライン計算ツール | Calquary</title>
+  <meta name="description" content="獣医学的な安静時エネルギー要求量(RER)の計算式を使って、猫の1日のカロリー必要量を推定します。" />
+  <meta property="og:title" content="猫カロリー計算機 | Calquary">
+  <meta property="og:description" content="獣医学的な安静時エネルギー要求量(RER)の計算式を使って、猫の1日のカロリー必要量を推定します。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/ja/tool/cat-calorie-calculator">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/cat-calorie-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="猫カロリー計算機 | Calquary">
+  <meta name="twitter:description" content="獣医学的な安静時エネルギー要求量(RER)の計算式を使って、猫の1日のカロリー必要量を推定します。">
+  <meta name="twitter:image" content="https://calquary.com/og-images/cat-calorie-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/cat-calorie-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/cat-calorie-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/cat-calorie-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/cat-calorie-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/cat-calorie-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/cat-calorie-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/cat-calorie-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/cat-calorie-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/cat-calorie-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/cat-calorie-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/cat-calorie-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/cat-calorie-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/cat-calorie-calculator">
+    <link rel="canonical" href="https://calquary.com/ja/tool/cat-calorie-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("cat-calorie-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("cat-calorie-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "猫カロリー計算機",
+      "description": "獣医学的な安静時エネルギー要求量(RER)の計算式を使って、猫の1日のカロリー必要量を推定します。",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/ja/tool/cat-calorie-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "ja"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/ja/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Pet & Lifestyle",
+          "item": "https://calquary.com/ja/category/pets"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "猫カロリー計算機",
+          "item": "https://calquary.com/ja/tool/cat-calorie-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "RERとは何ですか?なぜ計算式は体重の0.75乗を使うのですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "RER(安静時エネルギー要求量)とは、猫が基本的な体の機能を維持するために完全な安静状態で必要とするエネルギーです。指数0.75は、代謝率が体重に直接比例してスケールしないことを反映しています。小さな動物は大きな動物よりも体重あたり多くのカロリーを消費します。このアロメトリックスケーリング式(70×体重(kg)^0.75)は、猫と犬のあらゆるサイズにわたる標準的な獣医学的アプローチです。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ライフステージの乗数は実際には何を表していますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "そのライフステージで猫が安静時代謝を超えて通常どれだけのエネルギーを使うかに基づいて、RERを維持エネルギー要求量(MER)までスケールアップします。成長期の子猫は組織発達のために安静時エネルギーの数倍を必要とする一方、去勢・避妊済みで活動量の少ない成猫は、未去勢でより活発な成猫より相対的に少なく必要とします。これらは一般的に引用される獣医学的な出発乗数であり、個々の猫すべてに対する正確な値ではありません。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "なぜ去勢・避妊済みの乗数は未去勢のものより低いのですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "去勢・避妊手術は多くの猫で測定可能な代謝率と活動量の低下と関連しているため、獣医学的な参考資料では、徐々に太りすぎになるのを避けるため、去勢・避妊済みの猫に対してより低い維持乗数を推奨することが一般的です。ただし個体ごとの代謝は依然として異なるため、実際の給餌量は時間の経過とともに体調(ボディコンディション)によって導かれるべきです。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "この数値を使って猫をダイエットさせるべきですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "この計算機は教育的な初期見積もりを提供するものであり、制限的な給餌プランではありません。猫の体重管理は獣医師の監督下で行うべきです。猫の急速すぎる体重減少は、肝リピドーシスを含む実際の健康リスクを伴うためです。体重が気になる場合は、この数値を自分で強制する基準としてではなく、獣医師との会話のきっかけとして使ってください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "なぜ妊娠中・授乳中の乗数は他のものよりずっと不正確なのですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "妊娠中、特に授乳のピーク時のエネルギー必要量は劇的かつ予測不可能に上昇することがあります。授乳中の母猫は、産んだ子猫の数と授乳段階に応じて、通常の維持エネルギーの数倍を必要とすることがあります。このツールは控えめな初期乗数を示していますが、妊娠中または授乳中の猫は、固定された計算式ではなく、獣医師の指導のもとで観察・給餌されるべきです。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "これはこのサイトの一般的なカロリー計算機とどう違いますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "一般的なカロリー計算機は人間の代謝式(人間の年齢、性別、身長、活動量に基づく)を使用しており、猫には適用できません。この計算機は代わりに、人間の方程式から適応させたものではなく、猫用にスケーリングされ検証された、猫のRER/MERの枠組みを使用しています。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/ja/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/ja/#categories">カテゴリー</a>
+          <a href="/ja/#tools">すべてのツール</a>
+          <a href="/ja/about">このサイトについて</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: 日本語">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>JA</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/cat-calorie-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/cat-calorie-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/cat-calorie-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/cat-calorie-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/cat-calorie-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/cat-calorie-calculator">Italiano</a><span class="locale-item current" role="menuitem" aria-current="true">日本語</span><a class="locale-item" role="menuitem" href="/ro/tool/cat-calorie-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/cat-calorie-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/cat-calorie-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/cat-calorie-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/cat-calorie-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/ja/">Calquary</a> / <a href="/ja/category/pets">ペット・ライフスタイル</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>猫カロリー計算機</h1>
+        <p style="max-width:60ch;">猫の体重とライフステージを入力すると、標準的な獣医学の計算式を使って1日のカロリー必要量を推定します。これは教育的な出発点であり、処方された給餌プランではありません。</p>
+        <p class="last-updated">最終更新日： September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">計算する</button>
+              <button type="button" id="calc-reset" class="btn-ghost">リセット</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>よくある質問</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>RERとは何ですか?なぜ計算式は体重の0.75乗を使うのですか?</h3>
+<p>RER(安静時エネルギー要求量)とは、猫が基本的な体の機能を維持するために完全な安静状態で必要とするエネルギーです。指数0.75は、代謝率が体重に直接比例してスケールしないことを反映しています。小さな動物は大きな動物よりも体重あたり多くのカロリーを消費します。このアロメトリックスケーリング式(70×体重(kg)^0.75)は、猫と犬のあらゆるサイズにわたる標準的な獣医学的アプローチです。</p>
+</div>
+<div class="faq-item">
+<h3>ライフステージの乗数は実際には何を表していますか?</h3>
+<p>そのライフステージで猫が安静時代謝を超えて通常どれだけのエネルギーを使うかに基づいて、RERを維持エネルギー要求量(MER)までスケールアップします。成長期の子猫は組織発達のために安静時エネルギーの数倍を必要とする一方、去勢・避妊済みで活動量の少ない成猫は、未去勢でより活発な成猫より相対的に少なく必要とします。これらは一般的に引用される獣医学的な出発乗数であり、個々の猫すべてに対する正確な値ではありません。</p>
+</div>
+<div class="faq-item">
+<h3>なぜ去勢・避妊済みの乗数は未去勢のものより低いのですか?</h3>
+<p>去勢・避妊手術は多くの猫で測定可能な代謝率と活動量の低下と関連しているため、獣医学的な参考資料では、徐々に太りすぎになるのを避けるため、去勢・避妊済みの猫に対してより低い維持乗数を推奨することが一般的です。ただし個体ごとの代謝は依然として異なるため、実際の給餌量は時間の経過とともに体調(ボディコンディション)によって導かれるべきです。</p>
+</div>
+<div class="faq-item">
+<h3>この数値を使って猫をダイエットさせるべきですか?</h3>
+<p>この計算機は教育的な初期見積もりを提供するものであり、制限的な給餌プランではありません。猫の体重管理は獣医師の監督下で行うべきです。猫の急速すぎる体重減少は、肝リピドーシスを含む実際の健康リスクを伴うためです。体重が気になる場合は、この数値を自分で強制する基準としてではなく、獣医師との会話のきっかけとして使ってください。</p>
+</div>
+<div class="faq-item">
+<h3>なぜ妊娠中・授乳中の乗数は他のものよりずっと不正確なのですか?</h3>
+<p>妊娠中、特に授乳のピーク時のエネルギー必要量は劇的かつ予測不可能に上昇することがあります。授乳中の母猫は、産んだ子猫の数と授乳段階に応じて、通常の維持エネルギーの数倍を必要とすることがあります。このツールは控えめな初期乗数を示していますが、妊娠中または授乳中の猫は、固定された計算式ではなく、獣医師の指導のもとで観察・給餌されるべきです。</p>
+</div>
+<div class="faq-item">
+<h3>これはこのサイトの一般的なカロリー計算機とどう違いますか?</h3>
+<p>一般的なカロリー計算機は人間の代謝式(人間の年齢、性別、身長、活動量に基づく)を使用しており、猫には適用できません。この計算機は代わりに、人間の方程式から適応させたものではなく、猫用にスケーリングされ検証された、猫のRER/MERの枠組みを使用しています。</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">計算する</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>関連ツール</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>精度について</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquaryの計算ツールは、迅速で信頼できる概算を目的としています。実際の財務、構造、医療に関わる重要な決定を行う前には、必ず専門家にご確認ください。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/ja/">← すべての計算ツールに戻る</a> · <a href="/ja/about">このサイトについて</a> · <a href="/ja/contact">お問い合わせ</a> · <a href="/ja/privacy">プライバシー</a> · <a href="/ja/terms">利用規約</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

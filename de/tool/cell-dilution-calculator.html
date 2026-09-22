@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zellverdünnungs-Rechner - Kostenloser Online-Rechner</title>
+  <meta name="description" content="Berechnen Sie das benötigte Stamm- und Verdünnungsvolumen für eine Zielkonzentration mit der Verdünnungsgleichung C1V1 = C2V2." />
+  <meta property="og:title" content="Zellverdünnungs-Rechner | Calquary">
+  <meta property="og:description" content="Berechnen Sie das benötigte Stamm- und Verdünnungsvolumen für eine Zielkonzentration mit der Verdünnungsgleichung C1V1 = C2V2.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/de/tool/cell-dilution-calculator">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/cell-dilution-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Zellverdünnungs-Rechner | Calquary">
+  <meta name="twitter:description" content="Berechnen Sie das benötigte Stamm- und Verdünnungsvolumen für eine Zielkonzentration mit der Verdünnungsgleichung C1V1 = C2V2.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/cell-dilution-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/cell-dilution-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/cell-dilution-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/cell-dilution-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/cell-dilution-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/cell-dilution-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/cell-dilution-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/cell-dilution-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/cell-dilution-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/cell-dilution-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/cell-dilution-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/cell-dilution-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/cell-dilution-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/cell-dilution-calculator">
+    <link rel="canonical" href="https://calquary.com/de/tool/cell-dilution-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("cell-dilution-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("cell-dilution-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Zellverdünnungs-Rechner",
+      "description": "Berechnen Sie das benötigte Stamm- und Verdünnungsvolumen für eine Zielkonzentration mit der Verdünnungsgleichung C1V1 = C2V2.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/de/tool/cell-dilution-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "de"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/de/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Zellverdünnungs-Rechner",
+          "item": "https://calquary.com/de/tool/cell-dilution-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Was bedeuten C1, V1, C2 und V2?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "C1 ist die Konzentration Ihrer Stammlösung (Ausgangslösung), V1 ist das Volumen der Stammlösung, das Sie verwenden müssen, C2 ist die gewünschte Zielkonzentration (Endkonzentration), und V2 ist das gesamte Endvolumen nach der Verdünnung. Die Beziehung C1 × V1 = C2 × V2 gilt, weil die Gesamtmenge der Substanz gleich bleibt - nur die Konzentration ändert sich beim Hinzufügen von Verdünnungsmittel."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie berechne ich das Verdünnungsmittelvolumen statt des Stammvolumens?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Das Verdünnungsmittelvolumen ist einfach das Endvolumen minus dem Stammvolumen: Verdünnungsmittel = V2 - V1. Dieser Rechner zeigt beides automatisch an, sobald er V1 löst, sodass Sie genau wissen, wie viel Stammlösung und wie viel Verdünnungsmittel (Puffer, Medium oder Lösungsmittel) zu kombinieren sind."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was, wenn ich eine andere Variable lösen muss, wie das Endvolumen statt des Stammvolumens?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die gleiche Gleichung wird für jede der vier Variablen umgestellt: V1 = C2V2/C1, V2 = C1V1/C2, C1 = C2V2/V1, oder C2 = C1V1/V2. Dieser Rechner ist für das häufigste Laborszenario eingerichtet (von bekanntem Stamm und Ziel ausgehend, lösen wie viel Stamm zu verwenden ist) - für andere Kombinationen stellen Sie die Gleichung mit Ihren bekannten Werten um."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann das für serielle Verdünnungen verwendet werden?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dieser Rechner behandelt einen einzelnen Verdünnungsschritt. Für eine serielle Verdünnung (eine Reihe sequenzieller Verdünnungen, wobei jede das Ergebnis des vorherigen Schritts als neuen Stamm verwendet), führen Sie diese Berechnung einmal pro Schritt durch und verwenden die Zielkonzentration jedes Schritts als Stammkonzentration (C1) des nächsten Schritts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Warum erhielt ich eine Fehlermeldung, dass das Ziel die Stammkonzentration übersteigt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Eine einfache Verdünnung mit Verdünnungsmittel kann die Konzentration nur verringern, niemals erhöhen - wenn Ihre Zielkonzentration (C2) höher ist als Ihre Stammkonzentration (C1), bräuchten Sie einen konzentrierteren Stamm, oder Sie müssten Ihre vorhandene Probe durch eine Methode wie Zentrifugation oder Verdampfung konzentrieren, statt sie zu verdünnen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Spielen die Konzentrationseinheiten für diese Berechnung eine Rolle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die Mathematik selbst ist einheitenunabhängig, solange C1 und C2 dieselbe Einheit verwenden (beide in Zellen/mL, beide in Molarität, beide in mg/mL usw.) - die Gleichung kürzt die Einheiten heraus. Achten Sie nur auf Konsistenz, da das Mischen von Einheiten (wie C1 in Zellen/mL und C2 in Zellen/L einzugeben) zu einem falschen Ergebnis führt."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/de/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/de/#categories">Kategorien</a>
+          <a href="/de/#tools">Alle Tools</a>
+          <a href="/de/about">Über uns</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Deutsch">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>DE</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/cell-dilution-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/cell-dilution-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/cell-dilution-calculator">Français</a><span class="locale-item current" role="menuitem" aria-current="true">Deutsch</span><a class="locale-item" role="menuitem" href="/pt/tool/cell-dilution-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/cell-dilution-calculator">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/cell-dilution-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/cell-dilution-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/cell-dilution-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/cell-dilution-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/cell-dilution-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/cell-dilution-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/de/">Calquary</a> / <a href="/de/category/biology">Biologie</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Zellverdünnungs-Rechner</h1>
+        <p style="max-width:60ch;">Geben Sie Ihre Stammkonzentration, Zielkonzentration und das gewünschte Endvolumen ein, um zu berechnen, wie viel Stammlösung und Verdünnungsmittel Sie benötigen.</p>
+        <p class="last-updated">Zuletzt aktualisiert: September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Berechnen</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Zurücksetzen</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Häufig gestellte Fragen</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Was bedeuten C1, V1, C2 und V2?</h3>
+<p>C1 ist die Konzentration Ihrer Stammlösung (Ausgangslösung), V1 ist das Volumen der Stammlösung, das Sie verwenden müssen, C2 ist die gewünschte Zielkonzentration (Endkonzentration), und V2 ist das gesamte Endvolumen nach der Verdünnung. Die Beziehung C1 × V1 = C2 × V2 gilt, weil die Gesamtmenge der Substanz gleich bleibt - nur die Konzentration ändert sich beim Hinzufügen von Verdünnungsmittel.</p>
+</div>
+<div class="faq-item">
+<h3>Wie berechne ich das Verdünnungsmittelvolumen statt des Stammvolumens?</h3>
+<p>Das Verdünnungsmittelvolumen ist einfach das Endvolumen minus dem Stammvolumen: Verdünnungsmittel = V2 - V1. Dieser Rechner zeigt beides automatisch an, sobald er V1 löst, sodass Sie genau wissen, wie viel Stammlösung und wie viel Verdünnungsmittel (Puffer, Medium oder Lösungsmittel) zu kombinieren sind.</p>
+</div>
+<div class="faq-item">
+<h3>Was, wenn ich eine andere Variable lösen muss, wie das Endvolumen statt des Stammvolumens?</h3>
+<p>Die gleiche Gleichung wird für jede der vier Variablen umgestellt: V1 = C2V2/C1, V2 = C1V1/C2, C1 = C2V2/V1, oder C2 = C1V1/V2. Dieser Rechner ist für das häufigste Laborszenario eingerichtet (von bekanntem Stamm und Ziel ausgehend, lösen wie viel Stamm zu verwenden ist) - für andere Kombinationen stellen Sie die Gleichung mit Ihren bekannten Werten um.</p>
+</div>
+<div class="faq-item">
+<h3>Kann das für serielle Verdünnungen verwendet werden?</h3>
+<p>Dieser Rechner behandelt einen einzelnen Verdünnungsschritt. Für eine serielle Verdünnung (eine Reihe sequenzieller Verdünnungen, wobei jede das Ergebnis des vorherigen Schritts als neuen Stamm verwendet), führen Sie diese Berechnung einmal pro Schritt durch und verwenden die Zielkonzentration jedes Schritts als Stammkonzentration (C1) des nächsten Schritts.</p>
+</div>
+<div class="faq-item">
+<h3>Warum erhielt ich eine Fehlermeldung, dass das Ziel die Stammkonzentration übersteigt?</h3>
+<p>Eine einfache Verdünnung mit Verdünnungsmittel kann die Konzentration nur verringern, niemals erhöhen - wenn Ihre Zielkonzentration (C2) höher ist als Ihre Stammkonzentration (C1), bräuchten Sie einen konzentrierteren Stamm, oder Sie müssten Ihre vorhandene Probe durch eine Methode wie Zentrifugation oder Verdampfung konzentrieren, statt sie zu verdünnen.</p>
+</div>
+<div class="faq-item">
+<h3>Spielen die Konzentrationseinheiten für diese Berechnung eine Rolle?</h3>
+<p>Die Mathematik selbst ist einheitenunabhängig, solange C1 und C2 dieselbe Einheit verwenden (beide in Zellen/mL, beide in Molarität, beide in mg/mL usw.) - die Gleichung kürzt die Einheiten heraus. Achten Sie nur auf Konsistenz, da das Mischen von Einheiten (wie C1 in Zellen/mL und C2 in Zellen/L einzugeben) zu einem falschen Ergebnis führt.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Berechnen</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Ähnliche Rechner</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Hinweis zur Genauigkeit</h4>
+          <p style="margin:0;font-size:0.85rem;">Die Rechner von Calquary sind für schnelle, zuverlässige Schätzungen ausgelegt. Bei Entscheidungen mit echten finanziellen, baulichen oder medizinischen Konsequenzen wenden Sie sich bitte an eine qualifizierte Fachperson.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/de/">← Zurück zu allen Rechnern</a> · <a href="/de/about">Über uns</a> · <a href="/de/contact">Kontakt</a> · <a href="/de/privacy">Datenschutz</a> · <a href="/de/terms">Nutzungsbedingungen</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>
