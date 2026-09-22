@@ -14,10 +14,10 @@
   <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sales Tax Calculator | Calquary</title>
-  <meta name="description" content="Calculate the sales tax and total price on a purchase." />
-  <meta property="og:title" content="Sales Tax Calculator | Calquary">
-  <meta property="og:description" content="Calculate the sales tax and total price on a purchase.">
+  <title>Sales Tax, VAT & GST Calculator | Calquary</title>
+  <meta name="description" content="Add sales tax, VAT, or GST to a price, or extract the tax already included in a tax-inclusive price." />
+  <meta property="og:title" content="Sales Tax, VAT &amp; GST Calculator | Calquary">
+  <meta property="og:description" content="Add sales tax, VAT, or GST to a price, or extract the tax already included in a tax-inclusive price.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/tool/sales-tax-calculator">
   <meta property="og:locale" content="en_US">
@@ -26,8 +26,8 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Sales Tax Calculator | Calquary">
-  <meta name="twitter:description" content="Calculate the sales tax and total price on a purchase.">
+  <meta name="twitter:title" content="Sales Tax, VAT &amp; GST Calculator | Calquary">
+  <meta name="twitter:description" content="Add sales tax, VAT, or GST to a price, or extract the tax already included in a tax-inclusive price.">
   <meta name="twitter:image" content="https://calquary.com/og-images/sales-tax-calculator.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/sales-tax-calculator">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/sales-tax-calculator">
@@ -88,8 +88,8 @@
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "Sales Tax Calculator",
-      "description": "Calculate the sales tax and total price on a purchase.",
+      "name": "Sales Tax, VAT & GST Calculator",
+      "description": "Add sales tax, VAT, or GST to a price, or extract the tax already included in a tax-inclusive price.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/tool/sales-tax-calculator",
@@ -99,7 +99,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-22",
       "inLanguage": "en"
     },
     {
@@ -120,7 +120,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Sales Tax Calculator",
+          "name": "Sales Tax, VAT & GST Calculator",
           "item": "https://calquary.com/tool/sales-tax-calculator"
         }
       ]
@@ -133,7 +133,23 @@
           "name": "How do I calculate sales tax on a purchase?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Multiply the price by the tax rate as a decimal, then add that to the original price. For $49.99 at 7.25% tax: $49.99 × 0.0725 = $3.62 tax, for a total of $53.61."
+            "text": "Multiply the price by the tax rate as a decimal, then add that to the original price. For $49.99 at 7.25% tax: $49.99 × 0.0725 = $3.62 tax, for a total of $53.61. Select \"Excludes tax\" above for this direction."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I extract VAT or GST from a price that already includes it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Select \"Already includes tax\" above, enter the tax-inclusive price and the rate, and the calculator divides by (1 + tax rate) to find the pre-tax base price - for example, a $110 price with 10% GST already included has a $100 base price and $10 of tax, not $11 of tax (which is what you'd get by mistakenly multiplying instead of dividing)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between sales tax and VAT/GST for this calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The math for adding tax is identical - both apply a percentage rate to a price. The practical difference is which direction you usually need: US sales tax is typically added on top of a displayed price at checkout (\"excludes tax\" mode), while VAT and GST prices are usually displayed already including the tax, so you more often need to extract it (\"already includes tax\" mode) to see the pre-tax amount, e.g. for expense reporting or accounting."
           }
         },
         {
@@ -141,7 +157,7 @@
           "name": "Does sales tax rate vary by location?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes - sales tax rates are set by state, county, and sometimes city, so the combined rate can vary significantly even within the same state. Check your local rate before relying on a default."
+            "text": "Yes - sales tax rates are set by state, county, and sometimes city, so the combined rate can vary significantly even within the same state. VAT and GST rates instead vary by country (and sometimes by product category within a country) rather than by sub-national jurisdiction. Check your specific local or national rate before relying on a default."
           }
         },
         {
@@ -162,26 +178,10 @@
         },
         {
           "@type": "Question",
-          "name": "How do I back into the pre-tax price if I only know the total I paid?",
+          "name": "I need this for an invoice - does \"extract tax\" work for that?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Divide the total by (1 + tax rate as a decimal). If you paid $107.50 total at an 7.5% tax rate, the pre-tax price was $107.50 ÷ 1.075 ≈ $100.00."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What's the difference between sales tax and use tax?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sales tax is collected by the seller at the point of purchase within a taxing jurisdiction. Use tax applies when you buy something without paying sales tax (often from an out-of-state seller) and are responsible for remitting an equivalent tax yourself - the calculation for the amount owed is the same math either way."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is a VAT calculator the same as a sales tax calculator?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The core math is similar - both apply a percentage rate to a price - but VAT (value-added tax) is typically included in a displayed price and collected at each stage of production, while US sales tax is usually added on top of the listed price at final sale, which is how this calculator is set up."
+            "text": "Yes - an invoice showing a tax-inclusive total (common outside the US) is exactly what \"Already includes tax\" mode is for: enter the gross (total, tax-inclusive) amount and rate, and the calculator returns the net (pre-tax) amount and the tax portion separately, which is what most invoicing and bookkeeping needs require."
           }
         }
       ]
@@ -222,9 +222,9 @@
   <div class="wrap" style="padding-bottom:64px;">
     <div class="tool-layout">
       <main>
-        <h1>Sales Tax Calculator</h1>
-        <p style="max-width:60ch;">Enter a price and your local sales tax rate to calculate the tax amount and total cost.</p>
-        <p class="last-updated">Last updated: September 5, 2026</p>
+        <h1>Sales Tax, VAT & GST Calculator</h1>
+        <p style="max-width:60ch;">Choose whether your price excludes tax (add it) or already includes tax (extract it) - works for US-style sales tax added at checkout or VAT/GST already built into a displayed price.</p>
+        <p class="last-updated">Last updated: September 22, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel" id="calc-panel">
@@ -252,11 +252,19 @@
           <h2>Frequently asked questions</h2>
           <div id="faq-list"><div class="faq-item">
 <h3>How do I calculate sales tax on a purchase?</h3>
-<p>Multiply the price by the tax rate as a decimal, then add that to the original price. For $49.99 at 7.25% tax: $49.99 × 0.0725 = $3.62 tax, for a total of $53.61.</p>
+<p>Multiply the price by the tax rate as a decimal, then add that to the original price. For $49.99 at 7.25% tax: $49.99 × 0.0725 = $3.62 tax, for a total of $53.61. Select "Excludes tax" above for this direction.</p>
+</div>
+<div class="faq-item">
+<h3>How do I extract VAT or GST from a price that already includes it?</h3>
+<p>Select "Already includes tax" above, enter the tax-inclusive price and the rate, and the calculator divides by (1 + tax rate) to find the pre-tax base price - for example, a $110 price with 10% GST already included has a $100 base price and $10 of tax, not $11 of tax (which is what you'd get by mistakenly multiplying instead of dividing).</p>
+</div>
+<div class="faq-item">
+<h3>What's the difference between sales tax and VAT/GST for this calculator?</h3>
+<p>The math for adding tax is identical - both apply a percentage rate to a price. The practical difference is which direction you usually need: US sales tax is typically added on top of a displayed price at checkout ("excludes tax" mode), while VAT and GST prices are usually displayed already including the tax, so you more often need to extract it ("already includes tax" mode) to see the pre-tax amount, e.g. for expense reporting or accounting.</p>
 </div>
 <div class="faq-item">
 <h3>Does sales tax rate vary by location?</h3>
-<p>Yes - sales tax rates are set by state, county, and sometimes city, so the combined rate can vary significantly even within the same state. Check your local rate before relying on a default.</p>
+<p>Yes - sales tax rates are set by state, county, and sometimes city, so the combined rate can vary significantly even within the same state. VAT and GST rates instead vary by country (and sometimes by product category within a country) rather than by sub-national jurisdiction. Check your specific local or national rate before relying on a default.</p>
 </div>
 <div class="faq-item">
 <h3>Is sales tax calculated on the price before or after other discounts?</h3>
@@ -267,16 +275,8 @@
 <p>No - many jurisdictions exempt or reduce the tax rate on groceries, prescription medication, and sometimes clothing, while taxing general merchandise at the standard rate. Check your local tax authority's rules if you're calculating tax for a specific exempt category rather than a general purchase.</p>
 </div>
 <div class="faq-item">
-<h3>How do I back into the pre-tax price if I only know the total I paid?</h3>
-<p>Divide the total by (1 + tax rate as a decimal). If you paid $107.50 total at an 7.5% tax rate, the pre-tax price was $107.50 ÷ 1.075 ≈ $100.00.</p>
-</div>
-<div class="faq-item">
-<h3>What's the difference between sales tax and use tax?</h3>
-<p>Sales tax is collected by the seller at the point of purchase within a taxing jurisdiction. Use tax applies when you buy something without paying sales tax (often from an out-of-state seller) and are responsible for remitting an equivalent tax yourself - the calculation for the amount owed is the same math either way.</p>
-</div>
-<div class="faq-item">
-<h3>Is a VAT calculator the same as a sales tax calculator?</h3>
-<p>The core math is similar - both apply a percentage rate to a price - but VAT (value-added tax) is typically included in a displayed price and collected at each stage of production, while US sales tax is usually added on top of the listed price at final sale, which is how this calculator is set up.</p>
+<h3>I need this for an invoice - does "extract tax" work for that?</h3>
+<p>Yes - an invoice showing a tax-inclusive total (common outside the US) is exactly what "Already includes tax" mode is for: enter the gross (total, tax-inclusive) amount and rate, and the calculator returns the net (pre-tax) amount and the tax portion separately, which is what most invoicing and bookkeeping needs require.</p>
 </div></div>
           <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculate</a>
         </div>

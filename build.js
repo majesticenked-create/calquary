@@ -756,7 +756,12 @@ function buildCategoryPage(template, locale, cat, calculators, I18N) {
     const t = (locale === "en" || !isTranslated)
       ? { title: calc.title, description: calc.description }
       : I18N.tools[calc.id][locale];
-    const href = isTranslated ? `/${localePath(locale)}tool/${calc.id}` : `${SITE_URL}/tool/${calc.id}`;
+    // Every calculator gets an English page regardless of WAVE_ONE_TOOL_IDS
+    // membership, so the English category page should always link relative
+    // to itself - only a non-English page linking to a tool that has no
+    // translation for its own locale needs to fall back to the absolute
+    // English canonical URL instead.
+    const href = (locale === "en" || isTranslated) ? `/${localePath(locale)}tool/${calc.id}` : `${SITE_URL}/tool/${calc.id}`;
     const sample = computeSampleResult(calc);
     return `        <a href="${href}" class="tool-card">
           <div class="cat-label">${escapeHtml(calc.keyword)}</div>
@@ -977,7 +982,7 @@ function buildAllCalculatorsPage(template, locale, categories, calculators, I18N
     const listHtml = catTools.map((calc) => {
       const isTranslated = !!translatedIds[calc.id];
       const toolTitle = (locale !== "en" && isTranslated) ? I18N.tools[calc.id][locale].title : calc.title;
-      const href = isTranslated ? `/${localePath(locale)}tool/${calc.id}` : `${SITE_URL}/tool/${calc.id}`;
+      const href = (locale === "en" || isTranslated) ? `/${localePath(locale)}tool/${calc.id}` : `${SITE_URL}/tool/${calc.id}`;
       return `<li><a href="${href}">${escapeHtml(toolTitle)}</a></li>`;
     }).join("\n            ");
 

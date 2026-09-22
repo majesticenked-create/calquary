@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ROI & CAGR Calculator | Calquary</title>
+  <meta name="description" content="Calculate total ROI (return on investment) and CAGR (compound annual growth rate) from a starting and ending value." />
+  <meta property="og:title" content="ROI &amp; CAGR Calculator | Calquary">
+  <meta property="og:description" content="Calculate total ROI (return on investment) and CAGR (compound annual growth rate) from a starting and ending value.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/tool/roi-cagr-calculator">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/roi-cagr-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ROI &amp; CAGR Calculator | Calquary">
+  <meta name="twitter:description" content="Calculate total ROI (return on investment) and CAGR (compound annual growth rate) from a starting and ending value.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/roi-cagr-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/roi-cagr-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/roi-cagr-calculator">
+    <link rel="canonical" href="https://calquary.com/tool/roi-cagr-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("roi-cagr-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("roi-cagr-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "ROI & CAGR Calculator",
+      "description": "Calculate total ROI (return on investment) and CAGR (compound annual growth rate) from a starting and ending value.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/roi-cagr-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Finance",
+          "item": "https://calquary.com/category/finance"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "ROI & CAGR Calculator",
+          "item": "https://calquary.com/tool/roi-cagr-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What's the difference between ROI and CAGR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ROI (return on investment) is your total percentage gain or loss over the whole period, with no regard for how long it took. CAGR (compound annual growth rate) is the constant annual growth rate that would produce the same result - it lets you fairly compare an investment held for 3 years against one held for 10 years, which raw ROI can't do since a bigger total return over a longer period isn't automatically \"better\" per year."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "If my investment grew from $10,000 to $25,000 over 5 years, what's my ROI and CAGR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ROI is 150% (a $15,000 gain on a $10,000 start). CAGR is about 20.1% per year - the constant annual rate that compounds $10,000 up to $25,000 over exactly 5 years."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is CAGR lower than dividing total ROI by the number of years?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because CAGR accounts for compounding - each year's growth builds on the previous year's already-grown value, not just the original starting amount. Simple division (total ROI ÷ years) ignores that compounding effect and overstates the true annual growth rate for any investment held more than one year."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can ROI or CAGR be negative?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - if your ending value is lower than your starting value, both ROI and CAGR come out negative, representing a loss. This calculator handles that the same way as a gain; just enter your actual ending value even if it's lower than the starting one."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this the same as the IRR/NPV calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - this calculator handles the simpler, more common case: one starting value and one ending value over a fixed period, with no cash flows in between. The IRR/NPV calculator is for a more complex scenario - a series of cash flows in and out at different times (like an investment with multiple contributions or withdrawals) - use that one if your situation involves more than a single start and end value."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does CAGR account for volatility along the way?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - CAGR only looks at the starting and ending values, smoothing out however bumpy the actual path was in between. Two investments can have the identical CAGR while one grew steadily and the other had wild swings up and down - CAGR alone doesn't tell you about that risk, only the net effect over the full period."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's a good CAGR to expect from a stock market investment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Historically, diversified US stock market index funds have averaged a CAGR of roughly 7-10% over multi-decade periods (before inflation), though any specific shorter period - including individual years - can vary widely above or below that range."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/#categories">Categories</a>
+          <a href="/#tools">All tools</a>
+          <a href="/about">About</a>
+        </nav>
+        
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/">Calquary</a> / <a href="/category/finance">Finance</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>ROI & CAGR Calculator</h1>
+        <p style="max-width:60ch;">Enter a starting value, an ending value, and the number of years between them to calculate both your total return and your annualized (compound annual) growth rate.</p>
+        <p class="last-updated">Last updated: September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculate</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reset</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Frequently asked questions</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>What's the difference between ROI and CAGR?</h3>
+<p>ROI (return on investment) is your total percentage gain or loss over the whole period, with no regard for how long it took. CAGR (compound annual growth rate) is the constant annual growth rate that would produce the same result - it lets you fairly compare an investment held for 3 years against one held for 10 years, which raw ROI can't do since a bigger total return over a longer period isn't automatically "better" per year.</p>
+</div>
+<div class="faq-item">
+<h3>If my investment grew from $10,000 to $25,000 over 5 years, what's my ROI and CAGR?</h3>
+<p>ROI is 150% (a $15,000 gain on a $10,000 start). CAGR is about 20.1% per year - the constant annual rate that compounds $10,000 up to $25,000 over exactly 5 years.</p>
+</div>
+<div class="faq-item">
+<h3>Why is CAGR lower than dividing total ROI by the number of years?</h3>
+<p>Because CAGR accounts for compounding - each year's growth builds on the previous year's already-grown value, not just the original starting amount. Simple division (total ROI ÷ years) ignores that compounding effect and overstates the true annual growth rate for any investment held more than one year.</p>
+</div>
+<div class="faq-item">
+<h3>Can ROI or CAGR be negative?</h3>
+<p>Yes - if your ending value is lower than your starting value, both ROI and CAGR come out negative, representing a loss. This calculator handles that the same way as a gain; just enter your actual ending value even if it's lower than the starting one.</p>
+</div>
+<div class="faq-item">
+<h3>Is this the same as the IRR/NPV calculator?</h3>
+<p>No - this calculator handles the simpler, more common case: one starting value and one ending value over a fixed period, with no cash flows in between. The IRR/NPV calculator is for a more complex scenario - a series of cash flows in and out at different times (like an investment with multiple contributions or withdrawals) - use that one if your situation involves more than a single start and end value.</p>
+</div>
+<div class="faq-item">
+<h3>Does CAGR account for volatility along the way?</h3>
+<p>No - CAGR only looks at the starting and ending values, smoothing out however bumpy the actual path was in between. Two investments can have the identical CAGR while one grew steadily and the other had wild swings up and down - CAGR alone doesn't tell you about that risk, only the net effect over the full period.</p>
+</div>
+<div class="faq-item">
+<h3>What's a good CAGR to expect from a stock market investment?</h3>
+<p>Historically, diversified US stock market index funds have averaged a CAGR of roughly 7-10% over multi-decade periods (before inflation), though any specific shorter period - including individual years - can vary widely above or below that range.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculate</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Related tools</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>A note on accuracy</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquary's calculators are built for quick, reliable estimates. For decisions with real financial, structural, or medical stakes, confirm with a qualified professional.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/">← Back to all calculators</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Bitrate Calculator | Calquary</title>
+  <meta name="description" content="Calculate video file size, duration, or target bitrate - enter any two to find the third." />
+  <meta property="og:title" content="Video Bitrate Calculator | Calquary">
+  <meta property="og:description" content="Calculate video file size, duration, or target bitrate - enter any two to find the third.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/tool/video-bitrate-calculator">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/video-bitrate-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Video Bitrate Calculator | Calquary">
+  <meta name="twitter:description" content="Calculate video file size, duration, or target bitrate - enter any two to find the third.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/video-bitrate-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/video-bitrate-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/video-bitrate-calculator">
+    <link rel="canonical" href="https://calquary.com/tool/video-bitrate-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("video-bitrate-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("video-bitrate-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Video Bitrate Calculator",
+      "description": "Calculate video file size, duration, or target bitrate - enter any two to find the third.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/video-bitrate-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Text & Digital",
+          "item": "https://calquary.com/category/text"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Video Bitrate Calculator",
+          "item": "https://calquary.com/tool/video-bitrate-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What bitrate should I target for a YouTube upload?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on resolution and frame rate - YouTube's own recommendations are roughly 8 Mbps for 1080p at 30fps and around 35-45 Mbps for 4K at 30fps (SDR), higher for 60fps or HDR content. Use this calculator with your target resolution's recommended bitrate to find the resulting file size for your video's duration."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is my file size bigger than expected for the bitrate I used?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The bitrate you set is usually video-only - most video files also include an audio track (commonly 128-320 kbps) added on top, plus container overhead, so the final file is somewhat larger than the video-bitrate-only calculation shown here."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between Mbps and MB in this calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mbps (megabits per second) measures bitrate - a rate over time. MB (megabytes) measures total file size - a fixed amount of data. There are 8 bits in a byte, which is why the formulas here multiply or divide by 8 when converting between the two."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this account for variable bitrate (VBR) encoding?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - this calculates an average, constant bitrate across the whole duration. VBR encoding varies the instantaneous bitrate (using more data for complex/high-motion scenes and less for static ones), but the average bitrate still determines the total file size the same way for a given duration."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate the combined bitrate for video plus audio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Calculate your video bitrate and audio bitrate separately (audio is typically a fixed 128-320 kbps, listed in your encoder settings), then add them together before estimating total file size, since this calculator's bitrate field represents one stream at a time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What bitrate keeps a 10-minute video under a specific file size limit, like 500MB?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Enter your file size limit and duration, and select \"Bitrate\" as what to find - for 500MB over 10 minutes (600 seconds), that works out to about 6.7 Mbps average bitrate."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/#categories">Categories</a>
+          <a href="/#tools">All tools</a>
+          <a href="/about">About</a>
+        </nav>
+        
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/">Calquary</a> / <a href="/category/text">Text & Digital</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Video Bitrate Calculator</h1>
+        <p style="max-width:60ch;">Choose what you want to calculate, then enter the other two values - file size, duration, and bitrate are all related, so any two determine the third.</p>
+        <p class="last-updated">Last updated: September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculate</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reset</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Frequently asked questions</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>What bitrate should I target for a YouTube upload?</h3>
+<p>It depends on resolution and frame rate - YouTube's own recommendations are roughly 8 Mbps for 1080p at 30fps and around 35-45 Mbps for 4K at 30fps (SDR), higher for 60fps or HDR content. Use this calculator with your target resolution's recommended bitrate to find the resulting file size for your video's duration.</p>
+</div>
+<div class="faq-item">
+<h3>Why is my file size bigger than expected for the bitrate I used?</h3>
+<p>The bitrate you set is usually video-only - most video files also include an audio track (commonly 128-320 kbps) added on top, plus container overhead, so the final file is somewhat larger than the video-bitrate-only calculation shown here.</p>
+</div>
+<div class="faq-item">
+<h3>What's the difference between Mbps and MB in this calculator?</h3>
+<p>Mbps (megabits per second) measures bitrate - a rate over time. MB (megabytes) measures total file size - a fixed amount of data. There are 8 bits in a byte, which is why the formulas here multiply or divide by 8 when converting between the two.</p>
+</div>
+<div class="faq-item">
+<h3>Does this account for variable bitrate (VBR) encoding?</h3>
+<p>No - this calculates an average, constant bitrate across the whole duration. VBR encoding varies the instantaneous bitrate (using more data for complex/high-motion scenes and less for static ones), but the average bitrate still determines the total file size the same way for a given duration.</p>
+</div>
+<div class="faq-item">
+<h3>How do I calculate the combined bitrate for video plus audio?</h3>
+<p>Calculate your video bitrate and audio bitrate separately (audio is typically a fixed 128-320 kbps, listed in your encoder settings), then add them together before estimating total file size, since this calculator's bitrate field represents one stream at a time.</p>
+</div>
+<div class="faq-item">
+<h3>What bitrate keeps a 10-minute video under a specific file size limit, like 500MB?</h3>
+<p>Enter your file size limit and duration, and select "Bitrate" as what to find - for 500MB over 10 minutes (600 seconds), that works out to about 6.7 Mbps average bitrate.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculate</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Related tools</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>A note on accuracy</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquary's calculators are built for quick, reliable estimates. For decisions with real financial, structural, or medical stakes, confirm with a qualified professional.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/">← Back to all calculators</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

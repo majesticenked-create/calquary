@@ -1116,6 +1116,129 @@ a.locale-item:hover { color: var(--brand); background: var(--paper-mint); text-d
   margin-top: var(--space-4);
 }
 
+.grapher-widget {
+  padding: var(--space-4) 0;
+}
+
+.grapher-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.grapher-controls label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.grapher-controls input {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-3);
+  font-size: 1rem;
+  width: 200px;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+#grapher-canvas {
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-md);
+  background: var(--paper);
+}
+
+.grapher-zoom {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.grapher-error {
+  text-align: center;
+  color: var(--brand);
+  font-size: 0.85rem;
+  margin-top: var(--space-3);
+}
+
+.sci-calc-widget {
+  padding: var(--space-4) 0;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.sci-calc-display {
+  background: var(--paper);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  font-family: var(--font-body);
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: right;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-bottom: var(--space-3);
+}
+
+.sci-calc-mode {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.sci-mode-active {
+  border-color: var(--brand) !important;
+  color: var(--brand) !important;
+}
+
+.sci-calc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-2);
+}
+
+.sci-key {
+  border: 1px solid var(--line);
+  background: var(--paper-raised);
+  color: var(--ink);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3) 0;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: border-color 0.15s var(--ease-smooth);
+}
+
+.sci-key:hover {
+  border-color: var(--brand);
+}
+
+.sci-key-equals {
+  background: var(--brand);
+  color: var(--paper);
+  border-color: var(--brand);
+  grid-column: span 1;
+}
+
+.sci-key-spacer {
+  border: none;
+  background: transparent;
+  cursor: default;
+}
+
 .stopwatch-laps {
   max-width: 320px;
   margin: var(--space-4) auto 0;

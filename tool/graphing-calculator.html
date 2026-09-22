@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Graphing Calculator | Calquary</title>
+  <meta name="description" content="Plot the graph of a function y = f(x) online, with zoom and pan controls." />
+  <meta property="og:title" content="Graphing Calculator | Calquary">
+  <meta property="og:description" content="Plot the graph of a function y = f(x) online, with zoom and pan controls.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/tool/graphing-calculator">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/graphing-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Graphing Calculator | Calquary">
+  <meta name="twitter:description" content="Plot the graph of a function y = f(x) online, with zoom and pan controls.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/graphing-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/graphing-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/graphing-calculator">
+    <link rel="canonical" href="https://calquary.com/tool/graphing-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("graphing-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("graphing-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Graphing Calculator",
+      "description": "Plot the graph of a function y = f(x) online, with zoom and pan controls.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/graphing-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Math",
+          "item": "https://calquary.com/category/math"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Graphing Calculator",
+          "item": "https://calquary.com/tool/graphing-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What functions can I type in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Standard math notation: +, -, *, /, ^ for exponents, parentheses for grouping, and the functions sin, cos, tan, asin, acos, atan, sqrt, abs, log (base 10), ln (natural log), and exp. Use x as the variable, e.g. \"x^2 - 3x + 1\" or \"sin(x) * exp(-x/10)\"."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to type a multiplication sign everywhere?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - the calculator understands implicit multiplication, so \"2x\", \"3sin(x)\", and \"2(x+1)\" all work the same as if you'd typed \"2*x\", \"3*sin(x)\", and \"2*(x+1)\"."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does my graph show a gap or a break, like with tan(x)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "That's expected at an asymptote - a value the function approaches but never reaches, like tan(x) at 90°/270°. The plotter detects the huge jump in value and breaks the line there instead of drawing a misleading near-vertical line across the whole graph."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are trig functions in this grapher in degrees or radians?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Radians - the standard convention for plotting trig functions mathematically, since a function like sin(x) has a natural period of 2π in radians. If you want degree-based trig calculations instead (not plotting), use the scientific calculator's degree/radian toggle."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I zoom in on a specific part of the curve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Click \"Zoom in\" to halve the visible x and y range around the current center, or use \"Pan\" left/right to shift the view horizontally first, then zoom in once you're centered on the area you want to see more closely."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I plot more than one function at once?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not currently - this calculator plots one function at a time. Change the function in the input box and click Plot again to see a different curve; the previous one is replaced rather than overlaid."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "My function isn't plotting - what's wrong?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Check for a typo in a function name (only sin, cos, tan, asin, acos, atan, sqrt, abs, log, ln, and exp are recognized) or an unmatched parenthesis - the calculator shows an error message describing what it couldn't parse rather than failing silently."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/#categories">Categories</a>
+          <a href="/#tools">All tools</a>
+          <a href="/about">About</a>
+        </nav>
+        
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/">Calquary</a> / <a href="/category/math">Math</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Graphing Calculator</h1>
+        <p style="max-width:60ch;">Type a function of x (like sin(x), x^2 - 3x + 1, or sqrt(x)) and click Plot to see its graph - use the zoom and pan buttons to explore the curve.</p>
+        <p class="last-updated">Last updated: September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculate</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reset</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Frequently asked questions</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>What functions can I type in?</h3>
+<p>Standard math notation: +, -, *, /, ^ for exponents, parentheses for grouping, and the functions sin, cos, tan, asin, acos, atan, sqrt, abs, log (base 10), ln (natural log), and exp. Use x as the variable, e.g. "x^2 - 3x + 1" or "sin(x) * exp(-x/10)".</p>
+</div>
+<div class="faq-item">
+<h3>Do I need to type a multiplication sign everywhere?</h3>
+<p>No - the calculator understands implicit multiplication, so "2x", "3sin(x)", and "2(x+1)" all work the same as if you'd typed "2*x", "3*sin(x)", and "2*(x+1)".</p>
+</div>
+<div class="faq-item">
+<h3>Why does my graph show a gap or a break, like with tan(x)?</h3>
+<p>That's expected at an asymptote - a value the function approaches but never reaches, like tan(x) at 90°/270°. The plotter detects the huge jump in value and breaks the line there instead of drawing a misleading near-vertical line across the whole graph.</p>
+</div>
+<div class="faq-item">
+<h3>Are trig functions in this grapher in degrees or radians?</h3>
+<p>Radians - the standard convention for plotting trig functions mathematically, since a function like sin(x) has a natural period of 2π in radians. If you want degree-based trig calculations instead (not plotting), use the scientific calculator's degree/radian toggle.</p>
+</div>
+<div class="faq-item">
+<h3>How do I zoom in on a specific part of the curve?</h3>
+<p>Click "Zoom in" to halve the visible x and y range around the current center, or use "Pan" left/right to shift the view horizontally first, then zoom in once you're centered on the area you want to see more closely.</p>
+</div>
+<div class="faq-item">
+<h3>Can I plot more than one function at once?</h3>
+<p>Not currently - this calculator plots one function at a time. Change the function in the input box and click Plot again to see a different curve; the previous one is replaced rather than overlaid.</p>
+</div>
+<div class="faq-item">
+<h3>My function isn't plotting - what's wrong?</h3>
+<p>Check for a typo in a function name (only sin, cos, tan, asin, acos, atan, sqrt, abs, log, ln, and exp are recognized) or an unmatched parenthesis - the calculator shows an error message describing what it couldn't parse rather than failing silently.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculate</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Related tools</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>A note on accuracy</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquary's calculators are built for quick, reliable estimates. For decisions with real financial, structural, or medical stakes, confirm with a qualified professional.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/">← Back to all calculators</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

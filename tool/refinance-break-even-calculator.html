@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Refinance Break-Even Calculator | Calquary</title>
+  <meta name="description" content="Find out how many months it takes to recoup mortgage refinance closing costs from your lower monthly payment." />
+  <meta property="og:title" content="Refinance Break-Even Calculator | Calquary">
+  <meta property="og:description" content="Find out how many months it takes to recoup mortgage refinance closing costs from your lower monthly payment.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/tool/refinance-break-even-calculator">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/refinance-break-even-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Refinance Break-Even Calculator | Calquary">
+  <meta name="twitter:description" content="Find out how many months it takes to recoup mortgage refinance closing costs from your lower monthly payment.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/refinance-break-even-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/refinance-break-even-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/refinance-break-even-calculator">
+    <link rel="canonical" href="https://calquary.com/tool/refinance-break-even-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("refinance-break-even-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("refinance-break-even-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Refinance Break-Even Calculator",
+      "description": "Find out how many months it takes to recoup mortgage refinance closing costs from your lower monthly payment.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/refinance-break-even-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Finance",
+          "item": "https://calquary.com/category/finance"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Refinance Break-Even Calculator",
+          "item": "https://calquary.com/tool/refinance-break-even-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How is the break-even point calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Closing costs divided by your monthly payment savings (current payment minus new payment). For example, $5,000 in closing costs with $150/month in savings breaks even in about 33.3 months, or just under 3 years."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I refinance if the break-even point is 5 years away?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends mainly on how long you plan to keep the loan (or stay in the home) - if you expect to move or refinance again before reaching break-even, you likely won't recoup the closing costs. If you're confident you'll hold the loan well past that point, the ongoing monthly savings make it worthwhile."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a lower monthly payment always mean refinancing saves money overall?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not necessarily - if the new loan resets your term back to 30 years (even from a shorter remaining term) or extends it, you can lower your monthly payment while paying more total interest over the life of the loan, since you're financing the balance over more months. This calculator focuses on payment-based break-even, not total lifetime interest - compare a mortgage or mortgage payoff calculator's total-interest figures too before deciding."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What counts as refinance closing costs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Typically lender origination fees, appraisal fees, title search and insurance, recording fees, and sometimes points paid to buy down the rate - your loan estimate from the lender will itemize these. Enter the total here, not just one line item."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does keeping the same remaining term versus resetting to 30 years matter here?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If you refinance into a new 30-year loan when you only had, say, 20 years left, your payment drops (spread over more months) but you may pay more interest overall - this calculator lets you set the new term independently so you can compare a same-length payoff against a reset term and see how each changes your break-even and payment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it worth refinancing for a rate drop of less than 1%?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It can be, especially on a large remaining balance or long remaining term, since even a small rate drop compounds meaningfully over time - but the closing costs matter more than the rate drop alone. Run the numbers here: a small rate improvement with low closing costs can break even quickly, while the same rate improvement with high closing costs might not be worth it if you won't hold the loan long enough."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/#categories">Categories</a>
+          <a href="/#tools">All tools</a>
+          <a href="/about">About</a>
+        </nav>
+        
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/">Calquary</a> / <a href="/category/finance">Finance</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Refinance Break-Even Calculator</h1>
+        <p style="max-width:60ch;">Enter your current loan details, the new rate you're offered, and the closing costs to refinance - this calculates your monthly savings and how long it takes to break even.</p>
+        <p class="last-updated">Last updated: September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculate</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reset</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Frequently asked questions</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>How is the break-even point calculated?</h3>
+<p>Closing costs divided by your monthly payment savings (current payment minus new payment). For example, $5,000 in closing costs with $150/month in savings breaks even in about 33.3 months, or just under 3 years.</p>
+</div>
+<div class="faq-item">
+<h3>Should I refinance if the break-even point is 5 years away?</h3>
+<p>It depends mainly on how long you plan to keep the loan (or stay in the home) - if you expect to move or refinance again before reaching break-even, you likely won't recoup the closing costs. If you're confident you'll hold the loan well past that point, the ongoing monthly savings make it worthwhile.</p>
+</div>
+<div class="faq-item">
+<h3>Does a lower monthly payment always mean refinancing saves money overall?</h3>
+<p>Not necessarily - if the new loan resets your term back to 30 years (even from a shorter remaining term) or extends it, you can lower your monthly payment while paying more total interest over the life of the loan, since you're financing the balance over more months. This calculator focuses on payment-based break-even, not total lifetime interest - compare a mortgage or mortgage payoff calculator's total-interest figures too before deciding.</p>
+</div>
+<div class="faq-item">
+<h3>What counts as refinance closing costs?</h3>
+<p>Typically lender origination fees, appraisal fees, title search and insurance, recording fees, and sometimes points paid to buy down the rate - your loan estimate from the lender will itemize these. Enter the total here, not just one line item.</p>
+</div>
+<div class="faq-item">
+<h3>Why does keeping the same remaining term versus resetting to 30 years matter here?</h3>
+<p>If you refinance into a new 30-year loan when you only had, say, 20 years left, your payment drops (spread over more months) but you may pay more interest overall - this calculator lets you set the new term independently so you can compare a same-length payoff against a reset term and see how each changes your break-even and payment.</p>
+</div>
+<div class="faq-item">
+<h3>Is it worth refinancing for a rate drop of less than 1%?</h3>
+<p>It can be, especially on a large remaining balance or long remaining term, since even a small rate drop compounds meaningfully over time - but the closing costs matter more than the rate drop alone. Run the numbers here: a small rate improvement with low closing costs can break even quickly, while the same rate improvement with high closing costs might not be worth it if you won't hold the loan long enough.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculate</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Related tools</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>A note on accuracy</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquary's calculators are built for quick, reliable estimates. For decisions with real financial, structural, or medical stakes, confirm with a qualified professional.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/">← Back to all calculators</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

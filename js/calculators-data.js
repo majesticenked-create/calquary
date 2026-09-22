@@ -1250,7 +1250,7 @@ const CALCULATORS = [
       { q: "What does a decimal exponent like 2^2.5 mean?", a: "It combines a whole-number power with a root - 2^2.5 = 2^2 × 2^0.5 = 4 × √2 ≈ 5.657, blending exponentiation and root-taking into a single fractional-power calculation." },
       { q: "Is 'exponent' the same as 'power'?", a: "Yes - in '2 to the power of 10' or '2 with an exponent of 10,' both phrasings describe the same operation, written as 2^10, and this calculator computes exactly that regardless of which term you use." },
     ],
-    related: ["square-root-calculator", "gcd-lcm-calculator", "quadratic-formula-calculator"],
+    related: ["square-root-calculator", "gcd-lcm-calculator", "scientific-calculator", "significant-figures-calculator"],
   },
   {
     id: "logarithm-calculator",
@@ -1288,7 +1288,7 @@ const CALCULATORS = [
       { q: "Can the base of a logarithm be 1 or negative?", a: "No - the base must be a positive number other than 1. A base of 1 always gives 1 raised to any power, which is always 1, so it can never equal your target number (except 1 itself), and negative bases produce inconsistent results for fractional exponents." },
       { q: "Is 'log' the same as 'antilog'?", a: "No, they're inverses. Log finds the exponent that produces a number (log₂8 = 3), while antilog does the reverse - it raises the base to a given exponent (antilog base 2 of 3 = 2³ = 8). This calculator computes the log direction only." },
     ],
-    related: ["exponent-calculator", "square-root-calculator", "gcd-lcm-calculator"],
+    related: ["exponent-calculator", "square-root-calculator", "gcd-lcm-calculator", "scientific-calculator", "graphing-calculator"],
   },
   {
     id: "vector-calculator",
@@ -2978,7 +2978,7 @@ const CALCULATORS = [
       { q: "If I pay off my mortgage 7 years early, do I stop paying interest immediately?", a: "Yes - once the balance hits zero, no further interest accrues, since interest is charged only on the outstanding balance each period. Every extra dollar of principal paid early removes all the future interest that would have been charged on that dollar for the rest of the loan." },
       { q: "Is 'extra principal payment calculator' the same tool as this one?", a: "Yes - this calculator answers that exact question: enter your remaining balance, rate, term, and a monthly extra amount, and it shows the reduced term and interest saved from those extra principal payments." },
     ],
-    related: ["mortgage-calculator", "amortization-schedule-calculator", "loan-calculator"],
+    related: ["mortgage-calculator", "amortization-schedule-calculator", "refinance-break-even-calculator"],
   },
   {
     id: "heloc-calculator",
@@ -3098,7 +3098,7 @@ const CALCULATORS = [
       { q: "What does 'mtg' mean in mtg calculator or mtg payment?", a: "'Mtg' is a common shorthand for 'mortgage' used in real estate listings, loan documents, and search queries - an mtg calculator is the same thing as a mortgage calculator. This tool covers both: enter your home price, down payment, rate, and term to estimate your monthly mtg payment." },
       { q: "Is a home loan calculator the same as a mortgage calculator?", a: "Yes - \"home loan\" and \"mortgage\" refer to the same type of loan used to buy a house, so a home loan calculator and a mortgage calculator do the same job. This tool estimates your full monthly payment (principal, interest, taxes, insurance, and PMI) whichever term you search for." },
     ],
-    related: ["mortgage-payoff-calculator", "loan-calculator", "savings-calculator"],
+    related: ["mortgage-payoff-calculator", "loan-calculator", "rent-vs-buy-calculator", "refinance-break-even-calculator"],
   },
   {
     id: "home-affordability-calculator",
@@ -3146,7 +3146,7 @@ const CALCULATORS = [
       { q: "On a $90,000 income with $500 in monthly debt, roughly what home price does the 28/36 rule suggest?", a: "28% of $7,500 gross monthly income is $2,100 for housing costs; the 36% back-end limit allows $2,700 total minus $500 existing debt, or $2,200 - the lower of the two, $2,100, is generally the binding limit, which the calculator converts into a loan amount using your rate and term, then adds your down payment for total home price." },
       { q: "Does taxInsurance affect how much I can spend on principal and interest?", a: "Yes - taxes and insurance count toward the 28% housing limit alongside your mortgage payment, so a higher estimated monthly tax and insurance amount leaves less room in that 28% cap for principal and interest, reducing the affordable loan amount." },
     ],
-    related: ["mortgage-calculator", "dti-ratio-calculator", "loan-calculator"],
+    related: ["mortgage-calculator", "dti-ratio-calculator", "loan-calculator", "rent-vs-buy-calculator"],
   },
   {
     id: "hourly-to-salary-calculator",
@@ -3189,38 +3189,49 @@ const CALCULATORS = [
     category: "finance",
     title: "Time Card Calculator",
     keyword: "time card calculator",
-    description: "Add up hours worked across the week and calculate gross pay.",
-    intro: "Enter hours worked each day and an hourly rate to total your weekly hours and gross pay.",
+    description: "Add up hours worked across the week and calculate gross pay, including overtime premium pay.",
+    intro: "Enter hours worked each day, an hourly rate, and your overtime threshold to total your weekly hours and gross pay - including overtime premium pay on hours over the threshold.",
     fields: [
       { id: "mon", label: "Monday", type: "number", unit: "hrs", default: 8, step: 0.25 },
       { id: "tue", label: "Tuesday", type: "number", unit: "hrs", default: 8, step: 0.25 },
       { id: "wed", label: "Wednesday", type: "number", unit: "hrs", default: 8, step: 0.25 },
       { id: "thu", label: "Thursday", type: "number", unit: "hrs", default: 8, step: 0.25 },
       { id: "fri", label: "Friday", type: "number", unit: "hrs", default: 8, step: 0.25 },
-      { id: "sat", label: "Saturday", type: "number", unit: "hrs", default: 0, step: 0.25 },
+      { id: "sat", label: "Saturday", type: "number", unit: "hrs", default: 6, step: 0.25 },
       { id: "sun", label: "Sunday", type: "number", unit: "hrs", default: 0, step: 0.25 },
       { id: "hourlyRate", label: "Hourly rate", type: "number", unit: "$", default: 20, step: 0.25 },
+      { id: "overtimeThreshold", label: "Overtime kicks in after", type: "number", unit: "hrs/week", default: 40, step: 1, min: 0 },
+      { id: "overtimeMultiplier", label: "Overtime rate multiplier", type: "select", default: "1.5", options: [
+        { v: "1", l: "None (straight time)" }, { v: "1.5", l: "1.5× (time and a half)" }, { v: "2", l: "2× (double time)" },
+      ] },
     ],
     compute: (v) => {
       const totalHours = v.mon + v.tue + v.wed + v.thu + v.fri + v.sat + v.sun;
-      const grossPay = totalHours * v.hourlyRate;
+      const regularHours = Math.min(totalHours, v.overtimeThreshold);
+      const overtimeHours = Math.max(0, totalHours - v.overtimeThreshold);
+      const overtimeRate = v.hourlyRate * Number(v.overtimeMultiplier);
+      const regularPay = regularHours * v.hourlyRate;
+      const overtimePay = overtimeHours * overtimeRate;
+      const grossPay = regularPay + overtimePay;
       return {
-        primary: { label: "Total hours", value: `${round(totalHours, 2)} hrs` },
+        primary: { label: "Gross pay", value: `$${round(grossPay, 2).toLocaleString()}` },
         secondary: [
-          { l: "Gross pay", v: `$${round(grossPay, 2).toLocaleString()}` },
-          { l: "Average hours/day worked", v: round(totalHours / 7, 2) },
+          { l: "Total hours", v: `${round(totalHours, 2)} hrs (${round(regularHours, 2)} regular + ${round(overtimeHours, 2)} overtime)` },
+          { l: "Regular pay + overtime pay", v: `$${round(regularPay, 2).toLocaleString()} + $${round(overtimePay, 2).toLocaleString()}` },
         ],
-        note: "This is gross (pre-tax) pay at a flat hourly rate - it doesn't account for overtime premiums, unpaid breaks already excluded from your entered hours, or tax withholding.",
+        note: overtimeHours > 0
+          ? `Overtime hours are paid at ${v.overtimeMultiplier}× your hourly rate ($${round(overtimeRate, 2)}/hr) for anything worked over ${v.overtimeThreshold} hours this week. This is gross (pre-tax) pay - it doesn't account for unpaid breaks already excluded from your entered hours or tax withholding.`
+          : "No overtime hours this week (total hours didn't exceed your overtime threshold). This is gross (pre-tax) pay - it doesn't account for unpaid breaks already excluded from your entered hours or tax withholding.",
       };
     },
     faq: [
-      { q: "How do I calculate total hours from a time card?", a: "Add up the hours worked each day of the pay period. This calculator sums seven daily entries (Monday through Sunday) into a weekly total, then multiplies by your hourly rate for gross pay." },
+      { q: "How do I calculate total hours from a time card?", a: "Add up the hours worked each day of the pay period. This calculator sums seven daily entries (Monday through Sunday) into a weekly total, then splits that into regular and overtime hours based on your threshold before calculating gross pay." },
       { q: "Does this handle clock-in and clock-out times?", a: "No - enter the total decimal hours already worked each day (e.g., 7.5 for 7 hours 30 minutes), not clock-in/clock-out times. If you only have clock times, subtract clock-in from clock-out (accounting for any unpaid break) to get the decimal hours first." },
-      { q: "Does this include overtime pay?", a: "No - it multiplies total hours by a single flat hourly rate. If any hours qualify for an overtime premium (commonly 1.5x for hours over 40/week in the US), calculate the regular and overtime portions separately and add them together." },
+      { q: "How does the overtime calculation work?", a: "Hours up to your overtime threshold (40/week by default, the standard US federal threshold) are paid at your regular hourly rate. Any hours beyond that are paid at your rate times the overtime multiplier (1.5× by default) - both portions are calculated separately, then added together for total gross pay." },
+      { q: "Can I change the overtime threshold or multiplier?", a: "Yes - both are editable fields. Some jurisdictions or union contracts use a different weekly threshold than 40 hours, or a daily overtime rule instead of weekly, and some use double time (2×) rather than time-and-a-half for certain hours - adjust the threshold and multiplier fields to match your actual situation." },
       { q: "How do I convert minutes to a decimal for a time card?", a: "Divide the minutes by 60. 30 minutes = 0.5 hours, 15 minutes = 0.25 hours, 45 minutes = 0.75 hours - add that decimal to the whole-hour count for each day." },
-      { q: "What if I worked overtime on just one day, not the whole week?", a: "This calculator sums all entered hours into one weekly total at a single flat rate, so it doesn't split out a single day's overtime automatically - calculate that day's regular and overtime portions separately, then add the result into your total pay outside the tool." },
-      { q: "How is gross pay calculated from a time card?", a: "Gross pay is total hours worked multiplied by the hourly rate. If your daily hours sum to 38.5 for the week at $18/hour, gross pay is 38.5 × $18 = $693, before any tax withholding or deductions." },
-      { q: "Is a time card calculator the same as a payroll calculator?", a: "No - a time card calculator like this one only converts hours worked into gross pay. A payroll calculator goes further, applying tax withholding, deductions, and benefits to arrive at net (take-home) pay." },
+      { q: "If I worked 45 hours at $20/hour with 1.5× overtime after 40, what's my gross pay?", a: "40 regular hours × $20 = $800, plus 5 overtime hours × $30 (time-and-a-half rate) = $150, for a total gross pay of $950 - enter your actual daily hours above to get this breakdown automatically." },
+      { q: "Is a time card calculator the same as a payroll calculator?", a: "No - a time card calculator like this one converts hours worked (including overtime) into gross pay. A payroll calculator goes further, applying tax withholding, deductions, and benefits to arrive at net (take-home) pay." },
     ],
     related: ["hourly-to-salary-calculator", "time-duration-calculator", "tip-calculator"],
   },
@@ -3397,7 +3408,7 @@ const CALCULATORS = [
       { q: "What does it mean if this calculator shows no IRR or multiple IRRs?", a: "IRR can fail to have a single solution when cash flows switch sign more than once (for example negative, positive, negative again) - in that case the equation that sets NPV to zero may have zero or multiple valid roots, and NPV at your actual discount rate is the more reliable figure to rely on." },
       { q: "For a $5,000 investment returning $1,500 a year for 5 years, what's the NPV at a 10% discount rate?", a: "Discounting each $1,500 inflow back at 10% and summing them gives about $5,685 in present value; subtracting the $5,000 initial outlay gives an NPV of roughly $685, meaning the investment clears its 10% hurdle rate." },
     ],
-    related: ["savings-calculator", "compound-interest-calculator", "tvm-solver"],
+    related: ["savings-calculator", "compound-interest-calculator", "tvm-solver", "roi-cagr-calculator"],
   },
   {
     id: "budget-calculator",
@@ -3516,15 +3527,30 @@ const CALCULATORS = [
   {
     id: "sales-tax-calculator",
     category: "finance",
-    title: "Sales Tax Calculator",
+    title: "Sales Tax, VAT & GST Calculator",
     keyword: "sales tax calculator",
-    description: "Calculate the sales tax and total price on a purchase.",
-    intro: "Enter a price and your local sales tax rate to calculate the tax amount and total cost.",
+    description: "Add sales tax, VAT, or GST to a price, or extract the tax already included in a tax-inclusive price.",
+    intro: "Choose whether your price excludes tax (add it) or already includes tax (extract it) - works for US-style sales tax added at checkout or VAT/GST already built into a displayed price.",
     fields: [
+      { id: "priceType", label: "This price", type: "select", default: "exclusive", options: [
+        { v: "exclusive", l: "Excludes tax (add sales tax / VAT / GST)" }, { v: "inclusive", l: "Already includes tax (extract VAT / GST / sales tax)" },
+      ] },
       { id: "price", label: "Price", type: "number", unit: "$", default: 49.99, step: 0.01 },
-      { id: "taxRate", label: "Sales tax rate", type: "number", unit: "%", default: 7.25, step: 0.01 },
+      { id: "taxRate", label: "Tax rate (sales tax, VAT, or GST)", type: "number", unit: "%", default: 7.25, step: 0.01 },
     ],
     compute: (v) => {
+      if (v.priceType === "inclusive") {
+        const basePrice = v.price / (1 + v.taxRate / 100);
+        const tax = v.price - basePrice;
+        return {
+          primary: { label: "Price before tax", value: `$${round(basePrice, 2)}` },
+          secondary: [
+            { l: "Tax amount (included)", v: `$${round(tax, 2)}` },
+            { l: "Total (unchanged, tax-inclusive)", v: `$${round(v.price, 2)}` },
+          ],
+          note: "Extracts the tax already built into a tax-inclusive price (the standard way VAT/GST is usually displayed) - the total you entered doesn't change, this just splits it into its pre-tax and tax components.",
+        };
+      }
       const tax = v.price * (v.taxRate / 100);
       const total = v.price + tax;
       return {
@@ -3533,16 +3559,17 @@ const CALCULATORS = [
           { l: "Tax amount", v: `$${round(tax, 2)}` },
           { l: "Pre-tax price", v: `$${round(v.price, 2)}` },
         ],
+        note: "Adds tax on top of a tax-exclusive price - the standard way US sales tax is applied at checkout.",
       };
     },
     faq: [
-      { q: "How do I calculate sales tax on a purchase?", a: "Multiply the price by the tax rate as a decimal, then add that to the original price. For $49.99 at 7.25% tax: $49.99 × 0.0725 = $3.62 tax, for a total of $53.61." },
-      { q: "Does sales tax rate vary by location?", a: "Yes - sales tax rates are set by state, county, and sometimes city, so the combined rate can vary significantly even within the same state. Check your local rate before relying on a default." },
+      { q: "How do I calculate sales tax on a purchase?", a: "Multiply the price by the tax rate as a decimal, then add that to the original price. For $49.99 at 7.25% tax: $49.99 × 0.0725 = $3.62 tax, for a total of $53.61. Select \"Excludes tax\" above for this direction." },
+      { q: "How do I extract VAT or GST from a price that already includes it?", a: "Select \"Already includes tax\" above, enter the tax-inclusive price and the rate, and the calculator divides by (1 + tax rate) to find the pre-tax base price - for example, a $110 price with 10% GST already included has a $100 base price and $10 of tax, not $11 of tax (which is what you'd get by mistakenly multiplying instead of dividing)." },
+      { q: "What's the difference between sales tax and VAT/GST for this calculator?", a: "The math for adding tax is identical - both apply a percentage rate to a price. The practical difference is which direction you usually need: US sales tax is typically added on top of a displayed price at checkout (\"excludes tax\" mode), while VAT and GST prices are usually displayed already including the tax, so you more often need to extract it (\"already includes tax\" mode) to see the pre-tax amount, e.g. for expense reporting or accounting." },
+      { q: "Does sales tax rate vary by location?", a: "Yes - sales tax rates are set by state, county, and sometimes city, so the combined rate can vary significantly even within the same state. VAT and GST rates instead vary by country (and sometimes by product category within a country) rather than by sub-national jurisdiction. Check your specific local or national rate before relying on a default." },
       { q: "Is sales tax calculated on the price before or after other discounts?", a: "Sales tax is almost always calculated on the final sale price after discounts are applied, not on the original list price - so apply any discount first, then calculate tax on the reduced amount." },
       { q: "Are groceries and clothing always taxed at the same rate as other purchases?", a: "No - many jurisdictions exempt or reduce the tax rate on groceries, prescription medication, and sometimes clothing, while taxing general merchandise at the standard rate. Check your local tax authority's rules if you're calculating tax for a specific exempt category rather than a general purchase." },
-      { q: "How do I back into the pre-tax price if I only know the total I paid?", a: "Divide the total by (1 + tax rate as a decimal). If you paid $107.50 total at an 7.5% tax rate, the pre-tax price was $107.50 ÷ 1.075 ≈ $100.00." },
-      { q: "What's the difference between sales tax and use tax?", a: "Sales tax is collected by the seller at the point of purchase within a taxing jurisdiction. Use tax applies when you buy something without paying sales tax (often from an out-of-state seller) and are responsible for remitting an equivalent tax yourself - the calculation for the amount owed is the same math either way." },
-      { q: "Is a VAT calculator the same as a sales tax calculator?", a: "The core math is similar - both apply a percentage rate to a price - but VAT (value-added tax) is typically included in a displayed price and collected at each stage of production, while US sales tax is usually added on top of the listed price at final sale, which is how this calculator is set up." },
+      { q: "I need this for an invoice - does \"extract tax\" work for that?", a: "Yes - an invoice showing a tax-inclusive total (common outside the US) is exactly what \"Already includes tax\" mode is for: enter the gross (total, tax-inclusive) amount and rate, and the calculator returns the net (pre-tax) amount and the tax portion separately, which is what most invoicing and bookkeeping needs require." },
     ],
     related: ["discount-calculator", "tip-calculator", "percentage-calculator"],
   },
@@ -3843,7 +3870,7 @@ const CALCULATORS = [
       { q: "What is CPI-U?", a: "The Consumer Price Index for All Urban Consumers, published by the US Bureau of Labor Statistics - it tracks the average change in prices paid by urban consumers for a broad basket of goods and services over time, and is the standard reference for measuring US inflation." },
       { q: "What was $100 in 1990 worth in 2025?", a: "Using CPI-U data, about $245 in 2025 dollars - prices roughly two-and-a-half times over that 35-year span. Enter 100, 1990, and 2025 in Historical dollar value mode above to see the exact figure and the cumulative inflation percentage." },
     ],
-    related: ["savings-calculator", "compound-interest-calculator", "mortgage-calculator"],
+    related: ["savings-calculator", "compound-interest-calculator", "mortgage-calculator", "roi-cagr-calculator"],
   },
   {
     id: "retirement-401k-calculator",
@@ -6574,7 +6601,7 @@ const CALCULATORS = [
       { q: "How many feet is 108 inches?", a: "Exactly 9 feet - divide 108 by 12. Enter 108 with \"Inches\" selected above to confirm." },
       { q: "How many inches is a millimeter?", a: "1 millimeter equals about 0.03937 inches - divide millimeters by 25.4, or select \"Millimeters\" above and enter your value to see the exact inch equivalent alongside every other supported unit." },
     ],
-    related: ["weight-converter", "cooking-converter", "concrete-calculator"],
+    related: ["weight-converter", "cooking-converter", "concrete-calculator", "currency-converter"],
   },
   {
     id: "time-unit-converter",
@@ -6612,7 +6639,7 @@ const CALCULATORS = [
       { q: "Why is a 'month' here an average rather than an exact value?", a: "Calendar months vary from 28 to 31 days, so there's no single fixed length - this converter uses an average of 30.44 days (365.25 days ÷ 12) for the 'months' unit, which is accurate for rough conversions but won't match any specific calendar month exactly." },
       { q: "How many hours are in a year?", a: "About 8,766 hours, using 365.25 days to account for leap years (365.25 × 24 = 8,766) - if you use a flat 365-day year instead, you'd get 8,760 hours, a small but sometimes meaningful difference for long-duration calculations." },
     ],
-    related: ["time-duration-calculator", "date-duration-calculator", "unit-length-converter"],
+    related: ["time-duration-calculator", "date-duration-calculator", "unit-length-converter", "video-bitrate-calculator"],
   },
   {
     id: "temperature-converter",
@@ -7611,7 +7638,7 @@ const CALCULATORS = [
       { q: "How many square feet are in a square meter?", a: "One square meter equals approximately 10.76 square feet. This conversion is commonly needed when comparing real estate listings or floor plans that mix metric and imperial units." },
       { q: "Is 'ac to ft2' the same as this converter?", a: "Yes - \"ac\" and \"ft2\" are just shorthand for acres and square feet, which this converter handles alongside square meters and square yards." },
     ],
-    related: ["unit-length-converter", "concrete-calculator", "flooring-calculator"],
+    related: ["unit-length-converter", "concrete-calculator", "flooring-calculator", "currency-converter"],
   },
   {
     id: "data-storage-converter",
@@ -7647,7 +7674,7 @@ const CALCULATORS = [
       { q: "How do I convert gigabytes to terabytes?", a: "Divide by 1,024. 2,048 GB ÷ 1,024 = 2 TB, using this calculator's binary convention." },
       { q: "Is 'GB to MB converter' the same tool as this data storage converter?", a: "Yes - GB-to-MB is just one of the many byte-unit conversions (bytes, KB, MB, GB, TB) this single converter handles." },
     ],
-    related: ["unit-length-converter", "word-counter", "password-generator"],
+    related: ["unit-length-converter", "word-counter", "password-generator", "video-bitrate-calculator"],
   },
   {
     id: "pressure-converter",
@@ -8360,8 +8387,9 @@ const CALCULATORS = [
       { q: "Do the binary groups need spaces between each 8-bit byte?", a: "Yes, when converting binary to text - each character's binary should be separated (like \"01001000 01101001\" for \"Hi\") so the converter knows where one character's 8 bits end and the next begins." },
       { q: "What's the binary for the letter 'A'?", a: "01000001 - 'A' has ASCII code 65, and 65 in binary is 1000001, padded to a full 8 bits by adding a leading zero." },
       { q: "Is this the same as an 'ASCII to binary converter' or 'text to binary translator'?", a: "Yes - all of those describe the same underlying process of mapping each character to its numeric character code and expressing that code in base-2, which is exactly what this tool's text-to-binary mode does." },
+      { q: "I need to convert a number (not text) between binary, decimal, and hex - is that this tool?", a: "No - this tool encodes text as binary (each letter becomes its 8-bit character code) and decodes it back, it doesn't do general numeric base conversion or bitwise math. For converting a number like 255 between binary/octal/decimal/hex, or for AND/OR/XOR/shift operations, use the Number Base Converter instead." },
     ],
-    related: ["case-converter", "word-counter", "text-to-slug-generator"],
+    related: ["case-converter", "word-counter", "text-to-slug-generator", "base-converter"],
   },
   {
     id: "word-frequency-counter",
@@ -8909,6 +8937,512 @@ const CALCULATORS = [
       { q: "Can a cat get pregnant again shortly after giving birth?", a: "Yes - cats can enter heat again within weeks of giving birth, even while still nursing, so an unspayed cat can become pregnant again almost immediately after her litter, which is worth knowing when timing future due-date estimates." },
     ],
     related: ["dog-pregnancy-calculator", "cat-age-calculator", "days-until-calculator"],
+  },
+  {
+    id: "currency-converter",
+    category: "conversions",
+    title: "Currency Converter",
+    keyword: "currency converter",
+    description: "Convert between currencies using static reference exchange rates, or enter your own rate for live accuracy.",
+    intro: "Enter an amount and choose two currencies to convert between them, using built-in reference rates - or switch to \"custom rate\" and enter today's actual rate for an exact result.",
+    fields: [
+      { id: "amount", label: "Amount", type: "number", default: 100, step: 1, min: 0 },
+      { id: "fromCurrency", label: "From", type: "select", default: "USD", options: [
+        { v: "USD", l: "US Dollar (USD)" }, { v: "EUR", l: "Euro (EUR)" }, { v: "GBP", l: "British Pound (GBP)" },
+        { v: "JPY", l: "Japanese Yen (JPY)" }, { v: "CAD", l: "Canadian Dollar (CAD)" }, { v: "AUD", l: "Australian Dollar (AUD)" },
+        { v: "CHF", l: "Swiss Franc (CHF)" }, { v: "CNY", l: "Chinese Yuan (CNY)" }, { v: "INR", l: "Indian Rupee (INR)" }, { v: "MXN", l: "Mexican Peso (MXN)" },
+      ] },
+      { id: "toCurrency", label: "To", type: "select", default: "EUR", options: [
+        { v: "USD", l: "US Dollar (USD)" }, { v: "EUR", l: "Euro (EUR)" }, { v: "GBP", l: "British Pound (GBP)" },
+        { v: "JPY", l: "Japanese Yen (JPY)" }, { v: "CAD", l: "Canadian Dollar (CAD)" }, { v: "AUD", l: "Australian Dollar (AUD)" },
+        { v: "CHF", l: "Swiss Franc (CHF)" }, { v: "CNY", l: "Chinese Yuan (CNY)" }, { v: "INR", l: "Indian Rupee (INR)" }, { v: "MXN", l: "Mexican Peso (MXN)" },
+      ] },
+      { id: "rateMode", label: "Rate source", type: "select", default: "static", options: [
+        { v: "static", l: "Built-in reference rate" }, { v: "custom", l: "Enter my own rate" },
+      ] },
+      { id: "customRate", label: "Custom rate (1 From = ? To, if custom)", type: "number", default: 1, step: 0.0001, min: 0 },
+    ],
+    compute: (v) => {
+      // Static reference rates (units per 1 USD) - illustrative, not live
+      // market data. Real exchange rates move constantly; this table is a
+      // fixed snapshot baked into the site at build time, not fetched from
+      // any API (these calculators all run client-side with no server).
+      // For anything beyond a rough estimate, use "custom rate" mode with
+      // a live rate from a bank or exchange, or check a live-rate source.
+      const RATES_PER_USD = {
+        USD: 1, EUR: 0.92, GBP: 0.79, JPY: 149.5, CAD: 1.36,
+        AUD: 1.52, CHF: 0.88, CNY: 7.24, INR: 83.3, MXN: 17.1,
+      };
+      let rate;
+      if (v.rateMode === "custom") {
+        rate = v.customRate;
+      } else {
+        rate = RATES_PER_USD[v.toCurrency] / RATES_PER_USD[v.fromCurrency];
+      }
+      const result = v.amount * rate;
+      return {
+        primary: { label: `${v.amount} ${v.fromCurrency} =`, value: `${round(result, 2).toLocaleString()} ${v.toCurrency}` },
+        secondary: [
+          { l: "Exchange rate used", v: `1 ${v.fromCurrency} = ${round(rate, 4)} ${v.toCurrency}` },
+        ],
+        note: v.rateMode === "custom"
+          ? "Using your own entered rate."
+          : "Using a static, built-in reference rate, not a live feed - exchange rates move constantly, so switch to \"custom rate\" and enter today's actual rate before making any real financial decision.",
+      };
+    },
+    faq: [
+      { q: "Are these live, real-time exchange rates?", a: "No - this calculator uses a static, built-in reference rate table, not a live market feed. Exchange rates fluctuate constantly, so for an exact, current conversion, switch the \"Rate source\" field to \"Enter my own rate\" and input today's actual rate from your bank, card issuer, or a live-rate source." },
+      { q: "Why would my bank or card give me a different rate than this calculator?", a: "Banks, card networks, and exchange services typically add their own margin or fee on top of the market (\"mid-market\") exchange rate, so the rate you're actually charged is usually somewhat worse than the reference rate shown here - this calculator shows an approximate market rate, not what any specific provider will charge you." },
+      { q: "Can I convert from any currency to any other currency listed?", a: "Yes - choose any two currencies from the From and To lists; the calculator computes the cross rate between them (via their rate relative to USD) automatically, so you're not limited to converting to or from US dollars specifically." },
+      { q: "How do I get an exact conversion instead of an estimate?", a: "Switch \"Rate source\" to \"Enter my own rate\" and type in the current rate you actually have (from your bank, a currency exchange, or a live financial rate source) - the calculator will use that exact rate instead of the built-in reference table." },
+      { q: "Why does the calculator show 4 decimal places for the exchange rate?", a: "Exchange rates are often quoted with several decimal places because the difference compounds significantly on larger amounts - a rate rounded to just 1-2 decimals can meaningfully misstate the converted total for a large transaction." },
+      { q: "Does this work for converting a large amount, like for a wire transfer or major purchase?", a: "The math works for any amount, but for anything with real financial stakes - a wire transfer, a large purchase, a currency-hedging decision - use \"custom rate\" mode with the exact rate your bank or provider is actually quoting you, not the built-in reference rate, since even a small rate difference matters a lot on a large amount." },
+    ],
+    related: ["area-converter", "unit-length-converter", "weight-converter"],
+  },
+  {
+    id: "graphing-calculator",
+    category: "math",
+    title: "Graphing Calculator",
+    keyword: "graphing calculator",
+    description: "Plot the graph of a function y = f(x) online, with zoom and pan controls.",
+    intro: "Type a function of x (like sin(x), x^2 - 3x + 1, or sqrt(x)) and click Plot to see its graph - use the zoom and pan buttons to explore the curve.",
+    // Live canvas widget (see js/engine.js's initGraphingCalculator) rather
+    // than a compute-on-submit calculator - there's no single numeric
+    // result, the "output" is the plotted curve itself. compute() only
+    // exists so the homepage/category card preview doesn't crash.
+    fields: [],
+    compute: () => ({
+      primary: { label: "Default function", value: "y = sin(x)" },
+      secondary: [{ l: "Controls", v: "Plot · Zoom in/out · Pan · Reset view" }],
+    }),
+    faq: [
+      { q: "What functions can I type in?", a: "Standard math notation: +, -, *, /, ^ for exponents, parentheses for grouping, and the functions sin, cos, tan, asin, acos, atan, sqrt, abs, log (base 10), ln (natural log), and exp. Use x as the variable, e.g. \"x^2 - 3x + 1\" or \"sin(x) * exp(-x/10)\"." },
+      { q: "Do I need to type a multiplication sign everywhere?", a: "No - the calculator understands implicit multiplication, so \"2x\", \"3sin(x)\", and \"2(x+1)\" all work the same as if you'd typed \"2*x\", \"3*sin(x)\", and \"2*(x+1)\"." },
+      { q: "Why does my graph show a gap or a break, like with tan(x)?", a: "That's expected at an asymptote - a value the function approaches but never reaches, like tan(x) at 90°/270°. The plotter detects the huge jump in value and breaks the line there instead of drawing a misleading near-vertical line across the whole graph." },
+      { q: "Are trig functions in this grapher in degrees or radians?", a: "Radians - the standard convention for plotting trig functions mathematically, since a function like sin(x) has a natural period of 2π in radians. If you want degree-based trig calculations instead (not plotting), use the scientific calculator's degree/radian toggle." },
+      { q: "How do I zoom in on a specific part of the curve?", a: "Click \"Zoom in\" to halve the visible x and y range around the current center, or use \"Pan\" left/right to shift the view horizontally first, then zoom in once you're centered on the area you want to see more closely." },
+      { q: "Can I plot more than one function at once?", a: "Not currently - this calculator plots one function at a time. Change the function in the input box and click Plot again to see a different curve; the previous one is replaced rather than overlaid." },
+      { q: "My function isn't plotting - what's wrong?", a: "Check for a typo in a function name (only sin, cos, tan, asin, acos, atan, sqrt, abs, log, ln, and exp are recognized) or an unmatched parenthesis - the calculator shows an error message describing what it couldn't parse rather than failing silently." },
+    ],
+    related: ["exponent-calculator", "logarithm-calculator", "scientific-calculator"],
+  },
+  {
+    id: "scientific-calculator",
+    category: "math",
+    title: "Scientific Calculator",
+    keyword: "scientific calculator",
+    description: "A free online scientific calculator with trig functions, logs, powers, and roots, with a degree/radian toggle.",
+    intro: "Use the keypad below for trig functions (sin, cos, tan and their inverses), logarithms, powers, and roots - toggle between degrees and radians for angle-based calculations.",
+    // Live keypad widget (see js/engine.js's initScientificCalculator),
+    // same live-widget pattern as the online timer/stopwatch - there's no
+    // fixed set of inputs, it's an expression you build up by tapping
+    // keys. compute() only exists for the homepage/category card preview.
+    fields: [],
+    compute: () => ({
+      primary: { label: "Example", value: "sin(30) = 0.5" },
+      secondary: [{ l: "Modes", v: "Degrees / Radians" }],
+    }),
+    faq: [
+      { q: "How do I switch between degrees and radians?", a: "Use the \"Degrees\" / \"Radians\" toggle above the keypad. It affects sin, cos, tan (which read their input in the selected unit) and asin, acos, atan (which return their result in the selected unit) - it has no effect on non-trig operations like powers or logs." },
+      { q: "What's the difference between log and ln?", a: "log is base-10 logarithm (log₁₀), and ln is the natural logarithm (base e, Euler's number ≈2.71828). Tap \"log(\" or \"ln(\" followed by your number and a closing parenthesis, then \"=\" to evaluate." },
+      { q: "How do I calculate a square root or a power?", a: "Tap \"sqrt(\" for a square root, entering the number and closing parenthesis, e.g. sqrt(49) = 7. For a power, use \"^\", e.g. 2^10 = 1024; for a general root like a cube root, use a fractional exponent, e.g. 27^(1/3) = 3." },
+      { q: "Is this the same as the graphing calculator?", a: "No - this is a single-answer keypad calculator for evaluating one expression at a time (like a physical scientific calculator). The graphing calculator instead plots a function's curve across a range of x values. Use this one for a specific numeric answer, the grapher for visualizing how a function behaves." },
+      { q: "Why does my calculation show \"Error\"?", a: "Usually a typo in the expression - an unmatched parenthesis, a missing operator, or an unrecognized function name. Tap \"C\" to clear and re-enter the expression, checking that every function call like sin( has a matching closing parenthesis." },
+      { q: "How is this different from the separate exponent and logarithm calculators?", a: "The exponent and logarithm calculators are single-purpose deep-dive tools - each with its own dedicated result and explanation for one specific operation. This scientific calculator is the consolidated keypad experience for combining several operations (trig, logs, powers, roots) into one expression, closer to a physical calculator - use whichever fits what you're doing." },
+      { q: "Can I use pi (π) or e in an expression?", a: "Yes - type \"pi\" for π (≈3.14159) or \"e\" for Euler's number (≈2.71828) anywhere a number is expected, e.g. \"2*pi\" or \"e^2\"." },
+    ],
+    related: ["exponent-calculator", "logarithm-calculator", "graphing-calculator", "significant-figures-calculator"],
+  },
+  {
+    id: "rent-vs-buy-calculator",
+    category: "finance",
+    title: "Rent vs. Buy Calculator",
+    keyword: "rent vs buy calculator",
+    description: "Compare renting vs. buying a home over time, accounting for mortgage costs, home appreciation, rent increases, and investment returns.",
+    intro: "Enter your home purchase details and your rent, and this calculator projects your net worth under each scenario over time - including investing what you'd otherwise put toward a down payment.",
+    fields: [
+      { id: "homePrice", label: "Home price (if buying)", type: "number", unit: "$", default: 350000, step: 1000, min: 0 },
+      { id: "downPaymentPercent", label: "Down payment", type: "number", unit: "%", default: 20, step: 1, min: 0, max: 100 },
+      { id: "mortgageRate", label: "Mortgage interest rate", type: "number", unit: "%", default: 6.5, step: 0.01 },
+      { id: "loanTermYears", label: "Loan term", type: "select", default: "30", options: [{ v: "15", l: "15 years" }, { v: "30", l: "30 years" }] },
+      { id: "propertyTaxRate", label: "Annual property tax rate", type: "number", unit: "%", default: 1.1, step: 0.05 },
+      { id: "annualInsurance", label: "Annual home insurance", type: "number", unit: "$", default: 1400, step: 50 },
+      { id: "monthlyHOA", label: "Monthly HOA fee", type: "number", unit: "$", default: 0, step: 25, min: 0 },
+      { id: "maintenanceRate", label: "Annual maintenance", type: "number", unit: "% of home value", default: 1, step: 0.1 },
+      { id: "homeAppreciationRate", label: "Home value appreciation", type: "number", unit: "%/year", default: 3, step: 0.1 },
+      { id: "monthlyRent", label: "Monthly rent (if renting)", type: "number", unit: "$", default: 1800, step: 50 },
+      { id: "rentIncreaseRate", label: "Annual rent increase", type: "number", unit: "%/year", default: 3, step: 0.1 },
+      { id: "investmentReturnRate", label: "Investment return rate (on money not spent buying)", type: "number", unit: "%/year", default: 6, step: 0.1 },
+      { id: "yearsToCompare", label: "Years to compare", type: "number", unit: "years", default: 10, step: 1, min: 1, max: 40 },
+    ],
+    compute: (v) => {
+      const downPayment = v.homePrice * (v.downPaymentPercent / 100);
+      const loanAmount = v.homePrice - downPayment;
+      const monthlyRate = v.mortgageRate / 100 / 12;
+      const n = Number(v.loanTermYears) * 12;
+      const monthlyPI = monthlyRate === 0
+        ? loanAmount / n
+        : (loanAmount * monthlyRate * Math.pow(1 + monthlyRate, n)) / (Math.pow(1 + monthlyRate, n) - 1);
+
+      let balance = loanAmount;
+      let homeValue = v.homePrice;
+      let rent = v.monthlyRent;
+      // The renter invests what the buyer instead puts down as a down
+      // payment, then keeps investing any month renting is cheaper than
+      // buying - this isolates the actual financial trade-off (what does
+      // your money do in each scenario) rather than just comparing raw
+      // monthly payments.
+      let investment = downPayment;
+      const compareMonths = Math.round(v.yearsToCompare * 12);
+      let breakEvenYear = null;
+
+      for (let m = 1; m <= compareMonths; m++) {
+        const interestPortion = balance * monthlyRate;
+        const principalPortion = monthlyPI - interestPortion;
+        balance = Math.max(0, balance - principalPortion);
+
+        const monthlyTax = (homeValue * (v.propertyTaxRate / 100)) / 12;
+        const monthlyMaint = (homeValue * (v.maintenanceRate / 100)) / 12;
+        const monthlyInsurance = v.annualInsurance / 12;
+        const buyMonthlyCost = monthlyPI + monthlyTax + monthlyMaint + monthlyInsurance + v.monthlyHOA;
+
+        investment *= 1 + v.investmentReturnRate / 100 / 12;
+        const diff = buyMonthlyCost - rent;
+        if (diff > 0) investment += diff;
+
+        homeValue *= 1 + v.homeAppreciationRate / 100 / 12;
+        if (m % 12 === 0) {
+          rent *= 1 + v.rentIncreaseRate / 100;
+          const buyNetWorthSoFar = homeValue - balance;
+          if (breakEvenYear === null && buyNetWorthSoFar >= investment) {
+            breakEvenYear = m / 12;
+          }
+        }
+      }
+
+      const buyNetWorth = homeValue - balance;
+      const rentNetWorth = investment;
+      const buyingWins = buyNetWorth > rentNetWorth;
+
+      return {
+        primary: {
+          label: `After ${v.yearsToCompare} years, buying leaves you`,
+          value: `${buyingWins ? "ahead" : "behind"} by $${round(Math.abs(buyNetWorth - rentNetWorth), 0).toLocaleString()}`,
+        },
+        secondary: [
+          { l: "Buying net worth (home equity)", v: `$${round(buyNetWorth, 0).toLocaleString()}` },
+          { l: "Renting net worth (investments)", v: `$${round(rentNetWorth, 0).toLocaleString()}` },
+          { l: "Break-even point", v: breakEvenYear ? `Year ${round(breakEvenYear, 1)}` : `Not within ${v.yearsToCompare} years` },
+        ],
+        note: "Net worth compares home equity (value minus remaining loan balance) against an investment account that starts with what would've been your down payment and grows by investing the monthly savings whenever buying costs more than renting. Doesn't account for selling costs, tax deductions, or closing costs - a simplification worth knowing about before treating the result as precise.",
+      };
+    },
+    faq: [
+      { q: "How does this calculator decide whether buying or renting is better?", a: "It tracks two running totals over your chosen time period: the buyer's home equity (home value minus remaining mortgage balance) versus the renter's investment account (starting with what would've been the down payment, then growing by investing whenever renting costs less than buying that month). Whichever total is higher at the end \"wins\" for that scenario." },
+      { q: "What does \"break-even point\" mean here?", a: "It's the year buying's net worth first catches up to and passes renting's net worth. Before that year, renting (and investing the difference) leaves you with more net worth; after it, buying does. If it shows \"Not within N years,\" one scenario stays ahead for the entire comparison period you chose." },
+      { q: "Why does the renter's side assume they invest money?", a: "To make a fair comparison - a renter who spends every dollar they save on buying isn't building any equivalent asset, so this calculator assumes they invest the down payment they didn't spend, plus any month-to-month savings, at the return rate you specify. If you wouldn't actually invest the difference, the real renting outcome would be worse than what's shown." },
+      { q: "Does this account for selling costs when the homeowner eventually sells?", a: "No - it compares net worth (equity vs. investments) at your chosen year, not a full sale. Selling a home typically costs 6-10% in agent commissions and closing costs, which would reduce the buying scenario's real cash-out value - factor that in separately if you're comparing an actual planned sale." },
+      { q: "What return rate should I use for the investment side?", a: "A conservative long-term diversified index fund average (roughly 6-7% before inflation) is a reasonable default; use a lower rate if you'd actually keep the money in cash or a savings account instead of investing it, since that changes what renting actually gets you." },
+      { q: "Why does property tax and maintenance grow over time in this calculator?", a: "Both are calculated as a percentage of the home's current value each year, and home value appreciates over the comparison period - so in dollar terms, tax and maintenance costs rise along with the home's value, which is a more realistic long-term projection than assuming a fixed dollar amount forever." },
+      { q: "Is renting always cheaper in the short term?", a: "Often, yes - buying involves upfront costs (the down payment, and typically closing costs not modeled here) that take time to be offset by equity growth, so a short comparison window (a few years) frequently favors renting even when buying wins out over a longer horizon like 10+ years, especially in a market with meaningful home appreciation." },
+    ],
+    related: ["mortgage-calculator", "home-affordability-calculator", "savings-calculator"],
+  },
+  {
+    id: "refinance-break-even-calculator",
+    category: "finance",
+    title: "Refinance Break-Even Calculator",
+    keyword: "refinance break even calculator",
+    description: "Find out how many months it takes to recoup mortgage refinance closing costs from your lower monthly payment.",
+    intro: "Enter your current loan details, the new rate you're offered, and the closing costs to refinance - this calculates your monthly savings and how long it takes to break even.",
+    fields: [
+      { id: "currentBalance", label: "Current loan balance", type: "number", unit: "$", default: 300000, step: 1000, min: 0 },
+      { id: "currentRate", label: "Current interest rate", type: "number", unit: "%", default: 7.0, step: 0.01 },
+      { id: "currentRemainingYears", label: "Years remaining on current loan", type: "number", unit: "years", default: 27, step: 1, min: 1 },
+      { id: "newRate", label: "New interest rate offered", type: "number", unit: "%", default: 6.0, step: 0.01 },
+      { id: "newTermYears", label: "New loan term", type: "select", default: "30", options: [{ v: "15", l: "15 years" }, { v: "30", l: "30 years" }] },
+      { id: "closingCosts", label: "Refinance closing costs", type: "number", unit: "$", default: 5000, step: 100, min: 0 },
+    ],
+    compute: (v) => {
+      function monthlyPI(principal, annualRatePct, years) {
+        const r = annualRatePct / 100 / 12;
+        const n = years * 12;
+        return r === 0 ? principal / n : (principal * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+      }
+      const currentPI = monthlyPI(v.currentBalance, v.currentRate, v.currentRemainingYears);
+      const newPI = monthlyPI(v.currentBalance, v.newRate, Number(v.newTermYears));
+      const monthlySavings = currentPI - newPI;
+
+      if (monthlySavings <= 0) {
+        return {
+          primary: { label: "This refinance doesn't lower your payment", value: `+$${round(Math.abs(monthlySavings), 2)}/mo` },
+          secondary: [
+            { l: "Current payment", v: `$${round(currentPI, 2).toLocaleString()}` },
+            { l: "New payment", v: `$${round(newPI, 2).toLocaleString()}` },
+          ],
+          note: "At these rates and terms, the new monthly payment is higher than (or equal to) your current one, so there's no break-even point on closing costs from payment savings alone - a longer new term or a lower rate would be needed to produce monthly savings.",
+        };
+      }
+
+      const breakEvenMonths = v.closingCosts / monthlySavings;
+      const breakEvenYears = Math.floor(breakEvenMonths / 12);
+      const breakEvenRemMonths = Math.round(breakEvenMonths - breakEvenYears * 12);
+
+      return {
+        primary: { label: "Time to break even", value: breakEvenYears > 0 ? `${breakEvenYears}y ${breakEvenRemMonths}mo` : `${round(breakEvenMonths, 1)} months` },
+        secondary: [
+          { l: "Monthly payment savings", v: `$${round(monthlySavings, 2).toLocaleString()}` },
+          { l: "Current payment → new payment", v: `$${round(currentPI, 2).toLocaleString()} → $${round(newPI, 2).toLocaleString()}` },
+        ],
+        note: "Break-even is closing costs divided by monthly payment savings - the point where your cumulative savings equal what you paid to refinance. If you plan to move or refinance again before this point, refinancing likely isn't worth the closing costs. This doesn't account for the total-interest difference from resetting or changing your loan term - a longer new term can lower your payment while increasing total interest paid overall.",
+      };
+    },
+    faq: [
+      { q: "How is the break-even point calculated?", a: "Closing costs divided by your monthly payment savings (current payment minus new payment). For example, $5,000 in closing costs with $150/month in savings breaks even in about 33.3 months, or just under 3 years." },
+      { q: "Should I refinance if the break-even point is 5 years away?", a: "It depends mainly on how long you plan to keep the loan (or stay in the home) - if you expect to move or refinance again before reaching break-even, you likely won't recoup the closing costs. If you're confident you'll hold the loan well past that point, the ongoing monthly savings make it worthwhile." },
+      { q: "Does a lower monthly payment always mean refinancing saves money overall?", a: "Not necessarily - if the new loan resets your term back to 30 years (even from a shorter remaining term) or extends it, you can lower your monthly payment while paying more total interest over the life of the loan, since you're financing the balance over more months. This calculator focuses on payment-based break-even, not total lifetime interest - compare a mortgage or mortgage payoff calculator's total-interest figures too before deciding." },
+      { q: "What counts as refinance closing costs?", a: "Typically lender origination fees, appraisal fees, title search and insurance, recording fees, and sometimes points paid to buy down the rate - your loan estimate from the lender will itemize these. Enter the total here, not just one line item." },
+      { q: "Why does keeping the same remaining term versus resetting to 30 years matter here?", a: "If you refinance into a new 30-year loan when you only had, say, 20 years left, your payment drops (spread over more months) but you may pay more interest overall - this calculator lets you set the new term independently so you can compare a same-length payoff against a reset term and see how each changes your break-even and payment." },
+      { q: "Is it worth refinancing for a rate drop of less than 1%?", a: "It can be, especially on a large remaining balance or long remaining term, since even a small rate drop compounds meaningfully over time - but the closing costs matter more than the rate drop alone. Run the numbers here: a small rate improvement with low closing costs can break even quickly, while the same rate improvement with high closing costs might not be worth it if you won't hold the loan long enough." },
+    ],
+    related: ["mortgage-calculator", "mortgage-payoff-calculator", "loan-calculator"],
+  },
+  {
+    id: "base-converter",
+    category: "text",
+    title: "Number Base Converter",
+    keyword: "base converter",
+    description: "Convert numbers between binary, octal, decimal, and hexadecimal, plus AND/OR/XOR/shift bitwise operations.",
+    intro: "Enter a number in any base to see it converted to binary, octal, decimal, and hexadecimal - or choose a bitwise operation to combine it with a second value.",
+    fields: [
+      { id: "inputValue", label: "Number", type: "text", default: "255" },
+      { id: "inputBase", label: "Number's base", type: "select", default: "dec", options: [
+        { v: "bin", l: "Binary (base 2)" }, { v: "oct", l: "Octal (base 8)" }, { v: "dec", l: "Decimal (base 10)" }, { v: "hex", l: "Hexadecimal (base 16)" },
+      ] },
+      { id: "bitwiseOp", label: "Bitwise operation", type: "select", default: "none", options: [
+        { v: "none", l: "None (just convert)" }, { v: "AND", l: "AND (&)" }, { v: "OR", l: "OR (|)" }, { v: "XOR", l: "XOR (^)" },
+        { v: "NOT", l: "NOT (~, ignores second value)" }, { v: "LSHIFT", l: "Left shift (<<, uses shift amount)" }, { v: "RSHIFT", l: "Right shift (>>, uses shift amount)" },
+      ] },
+      { id: "operand2", label: "Second value (same base as Number, for AND/OR/XOR)", type: "text", default: "15" },
+      { id: "shiftAmount", label: "Shift amount (for left/right shift)", type: "number", default: 1, step: 1, min: 0, max: 31 },
+    ],
+    compute: (v) => {
+      const base = { bin: 2, oct: 8, dec: 10, hex: 16 }[v.inputBase];
+      const cleaned = (v.inputValue || "0").replace(/^0[xXoObB]/, "");
+      const n1 = parseInt(cleaned, base) | 0;
+      let result = n1;
+      let opLabel = "Converted";
+      if (v.bitwiseOp === "NOT") {
+        result = ~n1;
+        opLabel = "NOT result";
+      } else if (v.bitwiseOp === "AND" || v.bitwiseOp === "OR" || v.bitwiseOp === "XOR") {
+        const n2 = parseInt((v.operand2 || "0").replace(/^0[xXoObB]/, ""), base) | 0;
+        if (v.bitwiseOp === "AND") result = n1 & n2;
+        if (v.bitwiseOp === "OR") result = n1 | n2;
+        if (v.bitwiseOp === "XOR") result = n1 ^ n2;
+        opLabel = `${v.bitwiseOp} result`;
+      } else if (v.bitwiseOp === "LSHIFT") {
+        result = n1 << v.shiftAmount;
+        opLabel = "Left-shift result";
+      } else if (v.bitwiseOp === "RSHIFT") {
+        result = n1 >> v.shiftAmount;
+        opLabel = "Right-shift result";
+      }
+      const toBin = (x) => (x < 0 ? (x >>> 0).toString(2) : x.toString(2));
+      return {
+        primary: { label: `${opLabel} (decimal)`, value: result },
+        secondary: [
+          { l: "Binary", v: toBin(result) },
+          { l: "Octal", v: (result >>> 0).toString(8) },
+          { l: "Hexadecimal", v: (result >>> 0).toString(16).toUpperCase() },
+        ],
+        note: "Bitwise operations here use standard 32-bit signed integers (JavaScript's native bitwise integer behavior), matching how bitwise math works in most programming languages - negative results display their 32-bit two's-complement representation in binary/octal/hex.",
+      };
+    },
+    faq: [
+      { q: "What's the difference between this and the Binary to Text Converter?", a: "This tool converts a number between numeric bases (binary/octal/decimal/hex) and does bitwise math (AND/OR/XOR/shifts) - it's for working with the number itself. The Binary to Text Converter instead converts between plain text and its 8-bit ASCII binary representation (like converting the word \"Hi\" to 01001000 01101001) - it's for encoding/decoding text, not numeric base math. Use this tool for numbers, that one for text." },
+      { q: "How do I convert a hex value to binary?", a: "Set \"Number's base\" to Hexadecimal, enter your value (e.g., FF), leave the bitwise operation as \"None,\" and the binary, octal, and decimal equivalents all show at once (FF = 11111111 in binary, 377 in octal, 255 in decimal)." },
+      { q: "What does AND, OR, and XOR actually do to the bits?", a: "AND returns 1 in each bit position only where both numbers have a 1 (useful for masking specific bits). OR returns 1 where either number has a 1. XOR returns 1 where exactly one of the two numbers has a 1 (0 where they match) - commonly used for toggling bits or simple checksums." },
+      { q: "Why do negative results look like a long string of 1s in binary?", a: "This uses 32-bit two's-complement representation, the standard way computers represent negative integers - a negative number's binary form has its leading bits set to 1. For example, -1 in 32-bit binary is 32 ones (11111111111111111111111111111111)." },
+      { q: "What's a practical use for the shift operations?", a: "A left shift by N is equivalent to multiplying by 2^N, and a right shift by N is equivalent to dividing by 2^N (rounding toward negative infinity) - these come up often in programming for fast power-of-2 math, packing multiple values into one integer, or working with flags and bitmasks." },
+      { q: "Can I enter a value with a 0x or 0b prefix, like 0xFF?", a: "Yes - a leading 0x, 0b, or 0o prefix is stripped automatically before parsing, so you can paste values directly from code without editing them first, as long as you've also selected the matching base in the dropdown." },
+    ],
+    related: ["binary-to-text-converter", "cidr-calculator", "roman-numeral-converter"],
+  },
+  {
+    id: "video-bitrate-calculator",
+    category: "text",
+    title: "Video Bitrate Calculator",
+    keyword: "video bitrate calculator",
+    description: "Calculate video file size, duration, or target bitrate - enter any two to find the third.",
+    intro: "Choose what you want to calculate, then enter the other two values - file size, duration, and bitrate are all related, so any two determine the third.",
+    fields: [
+      { id: "mode", label: "What do you want to find?", type: "select", default: "bitrate", options: [
+        { v: "bitrate", l: "Bitrate (from file size + duration)" },
+        { v: "fileSize", l: "File size (from bitrate + duration)" },
+        { v: "duration", l: "Duration (from file size + bitrate)" },
+      ] },
+      { id: "fileSizeMB", label: "File size", type: "number", unit: "MB", default: 500, step: 10, min: 0 },
+      { id: "durationMinutes", label: "Duration", type: "number", unit: "minutes", default: 10, step: 0.5, min: 0 },
+      { id: "bitrateMbps", label: "Bitrate", type: "number", unit: "Mbps", default: 6.5, step: 0.1, min: 0 },
+    ],
+    compute: (v) => {
+      const durationSeconds = v.durationMinutes * 60;
+      if (v.mode === "bitrate") {
+        const bitrate = durationSeconds > 0 ? (v.fileSizeMB * 8) / durationSeconds : 0;
+        return {
+          primary: { label: "Bitrate needed", value: `${round(bitrate, 2)} Mbps` },
+          secondary: [
+            { l: "File size", v: `${v.fileSizeMB} MB` },
+            { l: "Duration", v: `${v.durationMinutes} min` },
+          ],
+          note: "Bitrate = (file size in megabits) ÷ (duration in seconds). This is the average bitrate across the whole file - variable-bitrate (VBR) encoding means the instantaneous rate fluctuates, but the average determines the total file size for a given duration.",
+        };
+      }
+      if (v.mode === "fileSize") {
+        const fileSizeMB = (v.bitrateMbps * durationSeconds) / 8;
+        return {
+          primary: { label: "File size", value: `${round(fileSizeMB, 1)} MB` },
+          secondary: [
+            { l: "Bitrate", v: `${v.bitrateMbps} Mbps` },
+            { l: "Duration", v: `${v.durationMinutes} min` },
+          ],
+          note: "File size = (bitrate × duration in seconds) ÷ 8, converting from megabits to megabytes. This is video-only bitrate; add your audio track's bitrate separately if you need a total that includes audio.",
+        };
+      }
+      const durationSecondsResult = v.bitrateMbps > 0 ? (v.fileSizeMB * 8) / v.bitrateMbps : 0;
+      return {
+        primary: { label: "Duration", value: `${round(durationSecondsResult / 60, 2)} min` },
+        secondary: [
+          { l: "File size", v: `${v.fileSizeMB} MB` },
+          { l: "Bitrate", v: `${v.bitrateMbps} Mbps` },
+        ],
+        note: "Duration (seconds) = (file size in megabits) ÷ bitrate. Result shown converted to minutes.",
+      };
+    },
+    faq: [
+      { q: "What bitrate should I target for a YouTube upload?", a: "It depends on resolution and frame rate - YouTube's own recommendations are roughly 8 Mbps for 1080p at 30fps and around 35-45 Mbps for 4K at 30fps (SDR), higher for 60fps or HDR content. Use this calculator with your target resolution's recommended bitrate to find the resulting file size for your video's duration." },
+      { q: "Why is my file size bigger than expected for the bitrate I used?", a: "The bitrate you set is usually video-only - most video files also include an audio track (commonly 128-320 kbps) added on top, plus container overhead, so the final file is somewhat larger than the video-bitrate-only calculation shown here." },
+      { q: "What's the difference between Mbps and MB in this calculator?", a: "Mbps (megabits per second) measures bitrate - a rate over time. MB (megabytes) measures total file size - a fixed amount of data. There are 8 bits in a byte, which is why the formulas here multiply or divide by 8 when converting between the two." },
+      { q: "Does this account for variable bitrate (VBR) encoding?", a: "No - this calculates an average, constant bitrate across the whole duration. VBR encoding varies the instantaneous bitrate (using more data for complex/high-motion scenes and less for static ones), but the average bitrate still determines the total file size the same way for a given duration." },
+      { q: "How do I calculate the combined bitrate for video plus audio?", a: "Calculate your video bitrate and audio bitrate separately (audio is typically a fixed 128-320 kbps, listed in your encoder settings), then add them together before estimating total file size, since this calculator's bitrate field represents one stream at a time." },
+      { q: "What bitrate keeps a 10-minute video under a specific file size limit, like 500MB?", a: "Enter your file size limit and duration, and select \"Bitrate\" as what to find - for 500MB over 10 minutes (600 seconds), that works out to about 6.7 Mbps average bitrate." },
+    ],
+    related: ["data-storage-converter", "time-unit-converter", "base-converter"],
+  },
+  {
+    id: "significant-figures-calculator",
+    category: "math",
+    title: "Significant Figures Calculator",
+    keyword: "significant figures calculator",
+    description: "Round a number to N significant figures, count the significant figures in a number, or convert it to scientific notation.",
+    intro: "Choose whether to round a number to a specific number of significant figures, count how many significant figures a number already has, or convert it to scientific notation.",
+    fields: [
+      { id: "mode", label: "What do you want to do?", type: "select", default: "round", options: [
+        { v: "round", l: "Round to N significant figures" }, { v: "count", l: "Count significant figures in a number" }, { v: "notation", l: "Convert to scientific notation" },
+      ] },
+      { id: "numberInput", label: "Number", type: "text", default: "0.004520" },
+      { id: "sigFigsTarget", label: "Significant figures (for rounding or notation)", type: "number", default: 3, step: 1, min: 1, max: 15 },
+    ],
+    compute: (v) => {
+      const num = parseFloat(v.numberInput);
+      if (isNaN(num)) {
+        return { primary: { label: "Enter a valid number", value: "-" }, secondary: [], note: "Couldn't parse that as a number - check for stray characters." };
+      }
+
+      function countSigFigs(str) {
+        str = str.trim().replace(/^[+-]/, "");
+        const eMatch = str.match(/^([\d.]+)[eE][+-]?\d+$/);
+        if (eMatch) str = eMatch[1];
+        if (!/\./.test(str)) {
+          const stripped = str.replace(/^0+/, "") || "0";
+          const trimmed = stripped.replace(/0+$/, "");
+          return trimmed.length || (stripped === "0" ? 1 : 0);
+        }
+        const digitsOnly = str.replace(".", "");
+        const firstNonZero = digitsOnly.search(/[1-9]/);
+        if (firstNonZero === -1) return 1;
+        return digitsOnly.slice(firstNonZero).length;
+      }
+
+      if (v.mode === "count") {
+        const count = countSigFigs(v.numberInput);
+        return {
+          primary: { label: "Significant figures", value: count },
+          secondary: [{ l: "Number entered", v: v.numberInput }],
+          note: "Counting rules: all nonzero digits count, zeros between nonzero digits count, leading zeros never count, and trailing zeros only count if the number has a decimal point.",
+        };
+      }
+
+      if (v.mode === "notation") {
+        const sci = num.toExponential(Math.max(0, v.sigFigsTarget - 1));
+        return {
+          primary: { label: "Scientific notation", value: sci.replace("e+", " × 10^").replace("e-", " × 10^-") },
+          secondary: [{ l: "Raw exponential form", v: sci }],
+          note: `Rounded to ${v.sigFigsTarget} significant figure${v.sigFigsTarget === 1 ? "" : "s"} in the mantissa.`,
+        };
+      }
+
+      // Round mode
+      if (num === 0) {
+        return { primary: { label: `Rounded to ${v.sigFigsTarget} sig figs`, value: "0" }, secondary: [], note: "Zero has no meaningful significant figures to round to." };
+      }
+      const magnitude = Math.floor(Math.log10(Math.abs(num)));
+      const factor = Math.pow(10, v.sigFigsTarget - 1 - magnitude);
+      const rounded = Math.round(num * factor) / factor;
+      return {
+        primary: { label: `Rounded to ${v.sigFigsTarget} sig figs`, value: rounded },
+        secondary: [{ l: "Original number", v: v.numberInput }],
+        note: "Rounds using standard significant-figure rules, based on the number's order of magnitude, not just decimal places - so 12,345 rounded to 2 sig figs is 12,000, not 12.",
+      };
+    },
+    faq: [
+      { q: "What counts as a significant figure?", a: "All nonzero digits (1-9) always count. Zeros between two nonzero digits count (like the 0 in 105). Leading zeros (before the first nonzero digit, like in 0.0042) never count. Trailing zeros only count if the number has a decimal point (2.50 has 3 sig figs, but 250 alone is ambiguous and is treated as 2 sig figs unless written as 250. or 2.50×10²)." },
+      { q: "How many significant figures does 0.004520 have?", a: "4 - the leading zeros (0.00) don't count, but the 4, 5, 2, and the trailing 0 all count, since there's a decimal point (which makes that trailing zero deliberate, not just a placeholder)." },
+      { q: "Why is 12,000 ambiguous for significant figures?", a: "Without a decimal point, it's unclear whether the trailing zeros were measured precisely or are just placeholders for the number's magnitude - it could represent 2, 3, 4, or 5 sig figs depending on the actual precision of the measurement. Writing it in scientific notation (1.2 × 10⁴ for 2 sig figs, 1.200 × 10⁴ for 4) removes the ambiguity." },
+      { q: "How do I round a large number like 82,391 to 3 significant figures?", a: "Identify the first 3 significant digits (8, 2, 3) and round based on the next digit (9, which rounds up), giving 82,400 - the calculator handles this automatically based on the number's magnitude, not just its decimal places." },
+      { q: "What's the difference between significant figures and decimal places?", a: "Decimal places count digits after the decimal point regardless of magnitude. Significant figures count meaningful digits regardless of where the decimal point falls - 0.00123 has 3 significant figures but 5 decimal places, while 123,000 has as few as 3 significant figures (if the zeros are placeholders) despite having 0 decimal places." },
+      { q: "How is this different from the scientific notation shown on the exponent calculator?", a: "The exponent calculator's scientific notation is a secondary readout for a power calculation's result, shown at whatever precision the raw math produces. This calculator is a dedicated tool for the reverse and adjacent tasks: rounding any number to a specific number of significant figures, counting how many sig figs a number already has, or converting a number to scientific notation with an exact sig-fig count you choose." },
+      { q: "Why do significant figures matter in science and engineering?", a: "They communicate the precision of a measurement - reporting more digits than were actually measured overstates how precisely something is known, while reporting too few loses real information. Calculations built from measured values are conventionally rounded to match the least precise measurement's significant figures, so the result doesn't imply more precision than the inputs actually had." },
+    ],
+    related: ["exponent-calculator", "scientific-calculator", "square-root-calculator"],
+  },
+  {
+    id: "roi-cagr-calculator",
+    category: "finance",
+    title: "ROI & CAGR Calculator",
+    keyword: "roi calculator",
+    description: "Calculate total ROI (return on investment) and CAGR (compound annual growth rate) from a starting and ending value.",
+    intro: "Enter a starting value, an ending value, and the number of years between them to calculate both your total return and your annualized (compound annual) growth rate.",
+    fields: [
+      { id: "startValue", label: "Starting value", type: "number", unit: "$", default: 10000, step: 100, min: 0 },
+      { id: "endValue", label: "Ending value", type: "number", unit: "$", default: 25000, step: 100, min: 0 },
+      { id: "years", label: "Time period", type: "number", unit: "years", default: 5, step: 0.1, min: 0.01 },
+    ],
+    compute: (v) => {
+      const gain = v.endValue - v.startValue;
+      const roiPct = v.startValue > 0 ? (gain / v.startValue) * 100 : 0;
+      const cagrPct = v.startValue > 0 && v.years > 0 ? (Math.pow(v.endValue / v.startValue, 1 / v.years) - 1) * 100 : 0;
+      return {
+        primary: { label: "Total ROI", value: `${round(roiPct, 2)}%` },
+        secondary: [
+          { l: "CAGR (annualized)", v: `${round(cagrPct, 2)}%` },
+          { l: "Total gain", v: `$${round(gain, 2).toLocaleString()}` },
+        ],
+        note: "ROI is your total return over the whole period, regardless of how long it took. CAGR is the smoothed, constant annual growth rate that would take you from the starting value to the ending value over the number of years entered - use ROI to see overall performance, CAGR to compare investments held for different lengths of time.",
+      };
+    },
+    faq: [
+      { q: "What's the difference between ROI and CAGR?", a: "ROI (return on investment) is your total percentage gain or loss over the whole period, with no regard for how long it took. CAGR (compound annual growth rate) is the constant annual growth rate that would produce the same result - it lets you fairly compare an investment held for 3 years against one held for 10 years, which raw ROI can't do since a bigger total return over a longer period isn't automatically \"better\" per year." },
+      { q: "If my investment grew from $10,000 to $25,000 over 5 years, what's my ROI and CAGR?", a: "ROI is 150% (a $15,000 gain on a $10,000 start). CAGR is about 20.1% per year - the constant annual rate that compounds $10,000 up to $25,000 over exactly 5 years." },
+      { q: "Why is CAGR lower than dividing total ROI by the number of years?", a: "Because CAGR accounts for compounding - each year's growth builds on the previous year's already-grown value, not just the original starting amount. Simple division (total ROI ÷ years) ignores that compounding effect and overstates the true annual growth rate for any investment held more than one year." },
+      { q: "Can ROI or CAGR be negative?", a: "Yes - if your ending value is lower than your starting value, both ROI and CAGR come out negative, representing a loss. This calculator handles that the same way as a gain; just enter your actual ending value even if it's lower than the starting one." },
+      { q: "Is this the same as the IRR/NPV calculator?", a: "No - this calculator handles the simpler, more common case: one starting value and one ending value over a fixed period, with no cash flows in between. The IRR/NPV calculator is for a more complex scenario - a series of cash flows in and out at different times (like an investment with multiple contributions or withdrawals) - use that one if your situation involves more than a single start and end value." },
+      { q: "Does CAGR account for volatility along the way?", a: "No - CAGR only looks at the starting and ending values, smoothing out however bumpy the actual path was in between. Two investments can have the identical CAGR while one grew steadily and the other had wild swings up and down - CAGR alone doesn't tell you about that risk, only the net effect over the full period." },
+      { q: "What's a good CAGR to expect from a stock market investment?", a: "Historically, diversified US stock market index funds have averaged a CAGR of roughly 7-10% over multi-decade periods (before inflation), though any specific shorter period - including individual years - can vary widely above or below that range." },
+    ],
+    related: ["irr-npv-calculator", "investment-calculator", "compound-interest-calculator"],
   },
 ];
 

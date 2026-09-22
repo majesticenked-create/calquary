@@ -659,6 +659,14 @@ function initCalculator(calcId, opts = {}) {
     initOnlineClock(fieldsId, resultId, formId);
     return;
   }
+  if (calcId === "graphing-calculator") {
+    initGraphingCalculator(fieldsId, resultId, formId);
+    return;
+  }
+  if (calcId === "scientific-calculator") {
+    initScientificCalculator(fieldsId, resultId, formId);
+    return;
+  }
 
   const calc = getCalculator(calcId);
   if (!calc) return;
@@ -721,4 +729,395 @@ function initCalculator(calcId, opts = {}) {
       footerEl.textContent = `Calquary — calquary.com${window.location.pathname}`;
     }
   });
+}
+
+// ---- Shared math expression parser ----------------------------------
+//
+// Used by both the graphing calculator (evaluating f(x) at many sample
+// points) and the scientific calculator (evaluating a typed expression).
+// A small hand-written recursive-descent parser rather than eval()/
+// new Function() — this only ever runs client-side on the visitor's own
+// input, so there's no server-side injection risk either way, but a
+// constrained grammar (numbers, x, + - * / ^, parens, a fixed whitelist
+// of function names) also means a typo produces a clear "can't parse
+// this" instead of a cryptic JS error, which matters more here since
+// people are typing math notation, not JS.
+const MATH_FUNCTIONS = ["sin", "cos", "tan", "asin", "acos", "atan", "sqrt", "abs", "log", "ln", "exp"];
+
+function tokenizeMathExpr(input) {
+  const tokens = [];
+  let i = 0;
+  const s = input.replace(/\s+/g, "");
+  while (i < s.length) {
+    const c = s[i];
+    if (/[0-9.]/.test(c)) {
+      let j = i;
+      while (j < s.length && /[0-9.]/.test(s[j])) j++;
+      tokens.push({ t: "num", v: parseFloat(s.slice(i, j)) });
+      i = j;
+    } else if (/[a-zA-Z]/.test(c)) {
+      let j = i;
+      while (j < s.length && /[a-zA-Z]/.test(s[j])) j++;
+      const word = s.slice(i, j);
+      if (MATH_FUNCTIONS.includes(word)) {
+        tokens.push({ t: "func", v: word });
+      } else if (word === "pi") {
+        tokens.push({ t: "num", v: Math.PI });
+      } else if (word === "e") {
+        tokens.push({ t: "num", v: Math.E });
+      } else if (word === "x") {
+        tokens.push({ t: "x" });
+      } else {
+        throw new Error(`Unknown name "${word}"`);
+      }
+      i = j;
+    } else if ("+-*/^(),".includes(c)) {
+      tokens.push({ t: c });
+      i++;
+    } else {
+      throw new Error(`Unexpected character "${c}"`);
+    }
+  }
+  // Insert implicit multiplication: "2x", "2(", "x(", ")(", ")2", "2sin(" etc.
+  const withImplicitMult = [];
+  tokens.forEach((tok, idx) => {
+    if (idx > 0) {
+      const prev = tokens[idx - 1];
+      const prevCloses = prev.t === ")" || prev.t === "num" || prev.t === "x";
+      const curOpens = tok.t === "(" || tok.t === "x" || tok.t === "func" || tok.t === "num";
+      if (prevCloses && curOpens) withImplicitMult.push({ t: "*" });
+    }
+    withImplicitMult.push(tok);
+  });
+  return withImplicitMult;
+}
+
+// Builds an evaluator function eval(x) from a typed expression string.
+// angleMode is "deg" or "rad" and only affects sin/cos/tan/asin/acos/atan.
+function compileMathExpression(exprString, angleMode) {
+  const tokens = tokenizeMathExpr(exprString);
+  let pos = 0;
+  function peek() { return tokens[pos]; }
+  function next() { return tokens[pos++]; }
+
+  function parseExpression() {
+    let left = parseTerm();
+    while (peek() && (peek().t === "+" || peek().t === "-")) {
+      const op = next().t;
+      const right = parseTerm();
+      const l = left, r = right;
+      left = op === "+" ? (x) => l(x) + r(x) : (x) => l(x) - r(x);
+    }
+    return left;
+  }
+  function parseTerm() {
+    let left = parseUnary();
+    while (peek() && (peek().t === "*" || peek().t === "/")) {
+      const op = next().t;
+      const right = parseUnary();
+      const l = left, r = right;
+      left = op === "*" ? (x) => l(x) * r(x) : (x) => l(x) / r(x);
+    }
+    return left;
+  }
+  function parseUnary() {
+    if (peek() && peek().t === "-") { next(); const inner = parseUnary(); return (x) => -inner(x); }
+    if (peek() && peek().t === "+") { next(); return parseUnary(); }
+    return parsePower();
+  }
+  function parsePower() {
+    const base = parsePrimary();
+    if (peek() && peek().t === "^") {
+      next();
+      const exp = parseUnary(); // right-associative, allows "-" right after ^
+      const b = base;
+      return (x) => Math.pow(b(x), exp(x));
+    }
+    return base;
+  }
+  function toRad(v) { return angleMode === "deg" ? (v * Math.PI) / 180 : v; }
+  function fromRad(v) { return angleMode === "deg" ? (v * 180) / Math.PI : v; }
+  function parsePrimary() {
+    const tok = peek();
+    if (!tok) throw new Error("Unexpected end of expression");
+    if (tok.t === "num") { next(); return () => tok.v; }
+    if (tok.t === "x") { next(); return (x) => x; }
+    if (tok.t === "(") {
+      next();
+      const inner = parseExpression();
+      if (!peek() || peek().t !== ")") throw new Error("Missing closing parenthesis");
+      next();
+      return inner;
+    }
+    if (tok.t === "func") {
+      next();
+      if (!peek() || peek().t !== "(") throw new Error(`Expected "(" after ${tok.v}`);
+      next();
+      const arg = parseExpression();
+      if (!peek() || peek().t !== ")") throw new Error("Missing closing parenthesis");
+      next();
+      const fname = tok.v;
+      return (x) => {
+        const a = arg(x);
+        switch (fname) {
+          case "sin": return Math.sin(toRad(a));
+          case "cos": return Math.cos(toRad(a));
+          case "tan": return Math.tan(toRad(a));
+          case "asin": return fromRad(Math.asin(a));
+          case "acos": return fromRad(Math.acos(a));
+          case "atan": return fromRad(Math.atan(a));
+          case "sqrt": return Math.sqrt(a);
+          case "abs": return Math.abs(a);
+          case "log": return Math.log10(a);
+          case "ln": return Math.log(a);
+          case "exp": return Math.exp(a);
+          default: throw new Error(`Unknown function ${fname}`);
+        }
+      };
+    }
+    throw new Error(`Unexpected token "${tok.t}"`);
+  }
+
+  const fn = parseExpression();
+  if (pos < tokens.length) throw new Error(`Unexpected "${tokens[pos].t}" after end of expression`);
+  return fn;
+}
+
+// ---- Graphing calculator (live widget, plots y = f(x)) ---------------
+function initGraphingCalculator(fieldsId, resultId, formId) {
+  const form = document.getElementById(formId);
+  const fieldsContainer = document.getElementById(fieldsId);
+  const resultPanel = document.getElementById(resultId);
+  if (!form || !fieldsContainer || !resultPanel) return;
+  form.style.display = "none";
+  resultPanel.classList.remove("visible");
+
+  const widget = document.createElement("div");
+  widget.className = "grapher-widget";
+  widget.innerHTML = `
+    <div class="grapher-controls">
+      <label>y = <input type="text" id="grapher-fn" value="sin(x)" /></label>
+      <button type="button" id="grapher-plot" class="btn-primary">Plot</button>
+    </div>
+    <canvas id="grapher-canvas" width="640" height="420"></canvas>
+    <div class="grapher-zoom">
+      <button type="button" id="grapher-zoom-in" class="btn-ghost">Zoom in</button>
+      <button type="button" id="grapher-zoom-out" class="btn-ghost">Zoom out</button>
+      <button type="button" id="grapher-pan-left" class="btn-ghost">← Pan</button>
+      <button type="button" id="grapher-pan-right" class="btn-ghost">Pan →</button>
+      <button type="button" id="grapher-reset" class="btn-ghost">Reset view</button>
+    </div>
+    <div class="grapher-error" id="grapher-error" style="display:none;"></div>
+  `;
+  form.parentElement.insertBefore(widget, form);
+
+  const fnInput = widget.querySelector("#grapher-fn");
+  const plotBtn = widget.querySelector("#grapher-plot");
+  const canvas = widget.querySelector("#grapher-canvas");
+  const errorEl = widget.querySelector("#grapher-error");
+  const ctx = canvas.getContext("2d");
+
+  let view = { xMin: -10, xMax: 10, yMin: -10, yMax: 10 };
+  const DEFAULT_VIEW = { xMin: -10, xMax: 10, yMin: -10, yMax: 10 };
+
+  function toPx(x, y) {
+    const px = ((x - view.xMin) / (view.xMax - view.xMin)) * canvas.width;
+    const py = canvas.height - ((y - view.yMin) / (view.yMax - view.yMin)) * canvas.height;
+    return [px, py];
+  }
+
+  function draw() {
+    errorEl.style.display = "none";
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = getComputedStyle(document.body).getPropertyValue("--paper") || "#fff";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Gridlines + axes
+    ctx.strokeStyle = "#d8dad9";
+    ctx.lineWidth = 1;
+    const gridStepX = niceStep(view.xMax - view.xMin);
+    const gridStepY = niceStep(view.yMax - view.yMin);
+    for (let gx = Math.ceil(view.xMin / gridStepX) * gridStepX; gx <= view.xMax; gx += gridStepX) {
+      const [px] = toPx(gx, 0);
+      ctx.beginPath(); ctx.moveTo(px, 0); ctx.lineTo(px, canvas.height); ctx.stroke();
+    }
+    for (let gy = Math.ceil(view.yMin / gridStepY) * gridStepY; gy <= view.yMax; gy += gridStepY) {
+      const [, py] = toPx(0, gy);
+      ctx.beginPath(); ctx.moveTo(0, py); ctx.lineTo(canvas.width, py); ctx.stroke();
+    }
+    ctx.strokeStyle = "#8a8f8c";
+    ctx.lineWidth = 1.5;
+    const [ax] = toPx(0, 0);
+    ctx.beginPath(); ctx.moveTo(ax, 0); ctx.lineTo(ax, canvas.height); ctx.stroke();
+    const [, ay] = toPx(0, 0);
+    ctx.beginPath(); ctx.moveTo(0, ay); ctx.lineTo(canvas.width, ay); ctx.stroke();
+
+    let fn;
+    try {
+      fn = compileMathExpression(fnInput.value || "x", "rad");
+    } catch (e) {
+      errorEl.textContent = `Can't plot this: ${e.message}`;
+      errorEl.style.display = "block";
+      return;
+    }
+
+    ctx.strokeStyle = "#2f6b4f";
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    let started = false;
+    const samples = canvas.width;
+    let lastPy = null;
+    for (let i = 0; i <= samples; i++) {
+      const x = view.xMin + (i / samples) * (view.xMax - view.xMin);
+      let y;
+      try { y = fn(x); } catch (e) { started = false; continue; }
+      if (!isFinite(y)) { started = false; continue; }
+      const [px, py] = toPx(x, y);
+      // Break the line on huge jumps (asymptotes, e.g. tan(x)) rather than
+      // drawing a near-vertical line across the whole canvas.
+      if (started && lastPy !== null && Math.abs(py - lastPy) > canvas.height * 0.9) {
+        started = false;
+      }
+      if (!started) { ctx.moveTo(px, py); started = true; } else { ctx.lineTo(px, py); }
+      lastPy = py;
+    }
+    ctx.stroke();
+  }
+
+  function niceStep(range) {
+    const rough = range / 10;
+    const mag = Math.pow(10, Math.floor(Math.log10(rough)));
+    const norm = rough / mag;
+    const step = norm < 1.5 ? 1 : norm < 3.5 ? 2 : norm < 7.5 ? 5 : 10;
+    return step * mag;
+  }
+
+  plotBtn.addEventListener("click", draw);
+  fnInput.addEventListener("keydown", (e) => { if (e.key === "Enter") draw(); });
+
+  widget.querySelector("#grapher-zoom-in").addEventListener("click", () => {
+    const cx = (view.xMin + view.xMax) / 2, cy = (view.yMin + view.yMax) / 2;
+    const halfW = (view.xMax - view.xMin) / 4, halfH = (view.yMax - view.yMin) / 4;
+    view = { xMin: cx - halfW, xMax: cx + halfW, yMin: cy - halfH, yMax: cy + halfH };
+    draw();
+  });
+  widget.querySelector("#grapher-zoom-out").addEventListener("click", () => {
+    const cx = (view.xMin + view.xMax) / 2, cy = (view.yMin + view.yMax) / 2;
+    const halfW = (view.xMax - view.xMin), halfH = (view.yMax - view.yMin);
+    view = { xMin: cx - halfW, xMax: cx + halfW, yMin: cy - halfH, yMax: cy + halfH };
+    draw();
+  });
+  widget.querySelector("#grapher-pan-left").addEventListener("click", () => {
+    const shift = (view.xMax - view.xMin) * 0.3;
+    view = { ...view, xMin: view.xMin - shift, xMax: view.xMax - shift };
+    draw();
+  });
+  widget.querySelector("#grapher-pan-right").addEventListener("click", () => {
+    const shift = (view.xMax - view.xMin) * 0.3;
+    view = { ...view, xMin: view.xMin + shift, xMax: view.xMax + shift };
+    draw();
+  });
+  widget.querySelector("#grapher-reset").addEventListener("click", () => {
+    view = { ...DEFAULT_VIEW };
+    draw();
+  });
+
+  draw();
+}
+
+// ---- Scientific calculator (live widget, keypad + expression eval) ---
+function initScientificCalculator(fieldsId, resultId, formId) {
+  const form = document.getElementById(formId);
+  const fieldsContainer = document.getElementById(fieldsId);
+  const resultPanel = document.getElementById(resultId);
+  if (!form || !fieldsContainer || !resultPanel) return;
+  form.style.display = "none";
+  resultPanel.classList.remove("visible");
+
+  const widget = document.createElement("div");
+  widget.className = "sci-calc-widget";
+  widget.innerHTML = `
+    <div class="sci-calc-display" id="sci-display">0</div>
+    <div class="sci-calc-mode">
+      <button type="button" id="sci-deg" class="btn-ghost sci-mode-active">Degrees</button>
+      <button type="button" id="sci-rad" class="btn-ghost">Radians</button>
+    </div>
+    <div class="sci-calc-grid" id="sci-grid"></div>
+  `;
+  form.parentElement.insertBefore(widget, form);
+
+  const display = widget.querySelector("#sci-display");
+  const degBtn = widget.querySelector("#sci-deg");
+  const radBtn = widget.querySelector("#sci-rad");
+  const grid = widget.querySelector("#sci-grid");
+
+  let expr = "";
+  let angleMode = "deg";
+
+  const BUTTONS = [
+    "sin(", "cos(", "tan(", "deg-marker",
+    "asin(", "acos(", "atan(", "C",
+    "sqrt(", "^", "(", ")",
+    "7", "8", "9", "/",
+    "4", "5", "6", "*",
+    "1", "2", "3", "-",
+    "0", ".", "⌫", "+",
+    "log(", "ln(", "pi", "e",
+    "=",
+  ];
+
+  BUTTONS.forEach((label) => {
+    if (label === "deg-marker") {
+      const spacer = document.createElement("div");
+      spacer.className = "sci-key sci-key-spacer";
+      grid.appendChild(spacer);
+      return;
+    }
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "sci-key";
+    if (label === "=") btn.classList.add("sci-key-equals");
+    btn.textContent = label === "⌫" ? "⌫" : label;
+    btn.addEventListener("click", () => handleKey(label));
+    grid.appendChild(btn);
+  });
+
+  function handleKey(label) {
+    if (label === "C") { expr = ""; render(); return; }
+    if (label === "⌫") { expr = expr.slice(0, -1); render(); return; }
+    if (label === "=") { evaluate(); return; }
+    expr += label;
+    render();
+  }
+
+  function render() {
+    display.textContent = expr || "0";
+  }
+
+  function evaluate() {
+    try {
+      const fn = compileMathExpression(expr || "0", angleMode);
+      const result = fn(0);
+      if (!isFinite(result)) throw new Error("Result is not a finite number");
+      const rounded = Math.round(result * 1e10) / 1e10;
+      display.textContent = String(rounded);
+      expr = String(rounded);
+    } catch (e) {
+      display.textContent = "Error";
+      expr = "";
+    }
+  }
+
+  degBtn.addEventListener("click", () => {
+    angleMode = "deg";
+    degBtn.classList.add("sci-mode-active");
+    radBtn.classList.remove("sci-mode-active");
+  });
+  radBtn.addEventListener("click", () => {
+    angleMode = "rad";
+    radBtn.classList.add("sci-mode-active");
+    degBtn.classList.remove("sci-mode-active");
+  });
+
+  render();
 }

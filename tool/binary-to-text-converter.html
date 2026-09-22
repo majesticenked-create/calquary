@@ -99,7 +99,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-22",
       "inLanguage": "en"
     },
     {
@@ -183,6 +183,14 @@
             "@type": "Answer",
             "text": "Yes - all of those describe the same underlying process of mapping each character to its numeric character code and expressing that code in base-2, which is exactly what this tool's text-to-binary mode does."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "I need to convert a number (not text) between binary, decimal, and hex - is that this tool?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - this tool encodes text as binary (each letter becomes its 8-bit character code) and decodes it back, it doesn't do general numeric base conversion or bitwise math. For converting a number like 255 between binary/octal/decimal/hex, or for AND/OR/XOR/shift operations, use the Number Base Converter instead."
+          }
         }
       ]
     }
@@ -224,7 +232,7 @@
       <main>
         <h1>Binary to Text Converter</h1>
         <p style="max-width:60ch;">Enter text or binary and choose a direction to convert between plain text and 8-bit binary.</p>
-        <p class="last-updated">Last updated: September 5, 2026</p>
+        <p class="last-updated">Last updated: September 22, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel" id="calc-panel">
@@ -277,6 +285,10 @@
 <div class="faq-item">
 <h3>Is this the same as an 'ASCII to binary converter' or 'text to binary translator'?</h3>
 <p>Yes - all of those describe the same underlying process of mapping each character to its numeric character code and expressing that code in base-2, which is exactly what this tool's text-to-binary mode does.</p>
+</div>
+<div class="faq-item">
+<h3>I need to convert a number (not text) between binary, decimal, and hex - is that this tool?</h3>
+<p>No - this tool encodes text as binary (each letter becomes its 8-bit character code) and decodes it back, it doesn't do general numeric base conversion or bitwise math. For converting a number like 255 between binary/octal/decimal/hex, or for AND/OR/XOR/shift operations, use the Number Base Converter instead.</p>
 </div></div>
           <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculate</a>
         </div>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rent vs. Buy Calculator | Calquary</title>
+  <meta name="description" content="Compare renting vs. buying a home over time, accounting for mortgage costs, home appreciation, rent increases, and investment returns." />
+  <meta property="og:title" content="Rent vs. Buy Calculator | Calquary">
+  <meta property="og:description" content="Compare renting vs. buying a home over time, accounting for mortgage costs, home appreciation, rent increases, and investment returns.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/tool/rent-vs-buy-calculator">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/rent-vs-buy-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rent vs. Buy Calculator | Calquary">
+  <meta name="twitter:description" content="Compare renting vs. buying a home over time, accounting for mortgage costs, home appreciation, rent increases, and investment returns.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/rent-vs-buy-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/rent-vs-buy-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/rent-vs-buy-calculator">
+    <link rel="canonical" href="https://calquary.com/tool/rent-vs-buy-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("rent-vs-buy-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("rent-vs-buy-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Rent vs. Buy Calculator",
+      "description": "Compare renting vs. buying a home over time, accounting for mortgage costs, home appreciation, rent increases, and investment returns.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/rent-vs-buy-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Finance",
+          "item": "https://calquary.com/category/finance"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rent vs. Buy Calculator",
+          "item": "https://calquary.com/tool/rent-vs-buy-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does this calculator decide whether buying or renting is better?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It tracks two running totals over your chosen time period: the buyer's home equity (home value minus remaining mortgage balance) versus the renter's investment account (starting with what would've been the down payment, then growing by investing whenever renting costs less than buying that month). Whichever total is higher at the end \"wins\" for that scenario."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does \"break-even point\" mean here?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It's the year buying's net worth first catches up to and passes renting's net worth. Before that year, renting (and investing the difference) leaves you with more net worth; after it, buying does. If it shows \"Not within N years,\" one scenario stays ahead for the entire comparison period you chose."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does the renter's side assume they invest money?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To make a fair comparison - a renter who spends every dollar they save on buying isn't building any equivalent asset, so this calculator assumes they invest the down payment they didn't spend, plus any month-to-month savings, at the return rate you specify. If you wouldn't actually invest the difference, the real renting outcome would be worse than what's shown."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this account for selling costs when the homeowner eventually sells?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - it compares net worth (equity vs. investments) at your chosen year, not a full sale. Selling a home typically costs 6-10% in agent commissions and closing costs, which would reduce the buying scenario's real cash-out value - factor that in separately if you're comparing an actual planned sale."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What return rate should I use for the investment side?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A conservative long-term diversified index fund average (roughly 6-7% before inflation) is a reasonable default; use a lower rate if you'd actually keep the money in cash or a savings account instead of investing it, since that changes what renting actually gets you."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does property tax and maintenance grow over time in this calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both are calculated as a percentage of the home's current value each year, and home value appreciates over the comparison period - so in dollar terms, tax and maintenance costs rise along with the home's value, which is a more realistic long-term projection than assuming a fixed dollar amount forever."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is renting always cheaper in the short term?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Often, yes - buying involves upfront costs (the down payment, and typically closing costs not modeled here) that take time to be offset by equity growth, so a short comparison window (a few years) frequently favors renting even when buying wins out over a longer horizon like 10+ years, especially in a market with meaningful home appreciation."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/#categories">Categories</a>
+          <a href="/#tools">All tools</a>
+          <a href="/about">About</a>
+        </nav>
+        
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/">Calquary</a> / <a href="/category/finance">Finance</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Rent vs. Buy Calculator</h1>
+        <p style="max-width:60ch;">Enter your home purchase details and your rent, and this calculator projects your net worth under each scenario over time - including investing what you'd otherwise put toward a down payment.</p>
+        <p class="last-updated">Last updated: September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculate</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reset</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Frequently asked questions</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>How does this calculator decide whether buying or renting is better?</h3>
+<p>It tracks two running totals over your chosen time period: the buyer's home equity (home value minus remaining mortgage balance) versus the renter's investment account (starting with what would've been the down payment, then growing by investing whenever renting costs less than buying that month). Whichever total is higher at the end "wins" for that scenario.</p>
+</div>
+<div class="faq-item">
+<h3>What does "break-even point" mean here?</h3>
+<p>It's the year buying's net worth first catches up to and passes renting's net worth. Before that year, renting (and investing the difference) leaves you with more net worth; after it, buying does. If it shows "Not within N years," one scenario stays ahead for the entire comparison period you chose.</p>
+</div>
+<div class="faq-item">
+<h3>Why does the renter's side assume they invest money?</h3>
+<p>To make a fair comparison - a renter who spends every dollar they save on buying isn't building any equivalent asset, so this calculator assumes they invest the down payment they didn't spend, plus any month-to-month savings, at the return rate you specify. If you wouldn't actually invest the difference, the real renting outcome would be worse than what's shown.</p>
+</div>
+<div class="faq-item">
+<h3>Does this account for selling costs when the homeowner eventually sells?</h3>
+<p>No - it compares net worth (equity vs. investments) at your chosen year, not a full sale. Selling a home typically costs 6-10% in agent commissions and closing costs, which would reduce the buying scenario's real cash-out value - factor that in separately if you're comparing an actual planned sale.</p>
+</div>
+<div class="faq-item">
+<h3>What return rate should I use for the investment side?</h3>
+<p>A conservative long-term diversified index fund average (roughly 6-7% before inflation) is a reasonable default; use a lower rate if you'd actually keep the money in cash or a savings account instead of investing it, since that changes what renting actually gets you.</p>
+</div>
+<div class="faq-item">
+<h3>Why does property tax and maintenance grow over time in this calculator?</h3>
+<p>Both are calculated as a percentage of the home's current value each year, and home value appreciates over the comparison period - so in dollar terms, tax and maintenance costs rise along with the home's value, which is a more realistic long-term projection than assuming a fixed dollar amount forever.</p>
+</div>
+<div class="faq-item">
+<h3>Is renting always cheaper in the short term?</h3>
+<p>Often, yes - buying involves upfront costs (the down payment, and typically closing costs not modeled here) that take time to be offset by equity growth, so a short comparison window (a few years) frequently favors renting even when buying wins out over a longer horizon like 10+ years, especially in a market with meaningful home appreciation.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculate</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Related tools</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>A note on accuracy</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquary's calculators are built for quick, reliable estimates. For decisions with real financial, structural, or medical stakes, confirm with a qualified professional.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/">← Back to all calculators</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

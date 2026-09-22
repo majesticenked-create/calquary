@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Currency Converter - Free Online Calculator | Calquary</title>
+  <meta name="description" content="Convert between currencies using static reference exchange rates, or enter your own rate for live accuracy." />
+  <meta property="og:title" content="Currency Converter | Calquary">
+  <meta property="og:description" content="Convert between currencies using static reference exchange rates, or enter your own rate for live accuracy.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/tool/currency-converter">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/currency-converter.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Currency Converter | Calquary">
+  <meta name="twitter:description" content="Convert between currencies using static reference exchange rates, or enter your own rate for live accuracy.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/currency-converter.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/currency-converter">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/currency-converter">
+    <link rel="canonical" href="https://calquary.com/tool/currency-converter">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("currency-converter");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("currency-converter");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Currency Converter",
+      "description": "Convert between currencies using static reference exchange rates, or enter your own rate for live accuracy.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/currency-converter",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Everyday Conversions",
+          "item": "https://calquary.com/category/conversions"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Currency Converter",
+          "item": "https://calquary.com/tool/currency-converter"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Are these live, real-time exchange rates?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - this calculator uses a static, built-in reference rate table, not a live market feed. Exchange rates fluctuate constantly, so for an exact, current conversion, switch the \"Rate source\" field to \"Enter my own rate\" and input today's actual rate from your bank, card issuer, or a live-rate source."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why would my bank or card give me a different rate than this calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Banks, card networks, and exchange services typically add their own margin or fee on top of the market (\"mid-market\") exchange rate, so the rate you're actually charged is usually somewhat worse than the reference rate shown here - this calculator shows an approximate market rate, not what any specific provider will charge you."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I convert from any currency to any other currency listed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - choose any two currencies from the From and To lists; the calculator computes the cross rate between them (via their rate relative to USD) automatically, so you're not limited to converting to or from US dollars specifically."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get an exact conversion instead of an estimate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Switch \"Rate source\" to \"Enter my own rate\" and type in the current rate you actually have (from your bank, a currency exchange, or a live financial rate source) - the calculator will use that exact rate instead of the built-in reference table."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does the calculator show 4 decimal places for the exchange rate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Exchange rates are often quoted with several decimal places because the difference compounds significantly on larger amounts - a rate rounded to just 1-2 decimals can meaningfully misstate the converted total for a large transaction."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this work for converting a large amount, like for a wire transfer or major purchase?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The math works for any amount, but for anything with real financial stakes - a wire transfer, a large purchase, a currency-hedging decision - use \"custom rate\" mode with the exact rate your bank or provider is actually quoting you, not the built-in reference rate, since even a small rate difference matters a lot on a large amount."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/#categories">Categories</a>
+          <a href="/#tools">All tools</a>
+          <a href="/about">About</a>
+        </nav>
+        
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/">Calquary</a> / <a href="/category/conversions">Everyday Conversions</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Currency Converter</h1>
+        <p style="max-width:60ch;">Enter an amount and choose two currencies to convert between them, using built-in reference rates - or switch to "custom rate" and enter today's actual rate for an exact result.</p>
+        <p class="last-updated">Last updated: September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculate</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reset</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Frequently asked questions</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Are these live, real-time exchange rates?</h3>
+<p>No - this calculator uses a static, built-in reference rate table, not a live market feed. Exchange rates fluctuate constantly, so for an exact, current conversion, switch the "Rate source" field to "Enter my own rate" and input today's actual rate from your bank, card issuer, or a live-rate source.</p>
+</div>
+<div class="faq-item">
+<h3>Why would my bank or card give me a different rate than this calculator?</h3>
+<p>Banks, card networks, and exchange services typically add their own margin or fee on top of the market ("mid-market") exchange rate, so the rate you're actually charged is usually somewhat worse than the reference rate shown here - this calculator shows an approximate market rate, not what any specific provider will charge you.</p>
+</div>
+<div class="faq-item">
+<h3>Can I convert from any currency to any other currency listed?</h3>
+<p>Yes - choose any two currencies from the From and To lists; the calculator computes the cross rate between them (via their rate relative to USD) automatically, so you're not limited to converting to or from US dollars specifically.</p>
+</div>
+<div class="faq-item">
+<h3>How do I get an exact conversion instead of an estimate?</h3>
+<p>Switch "Rate source" to "Enter my own rate" and type in the current rate you actually have (from your bank, a currency exchange, or a live financial rate source) - the calculator will use that exact rate instead of the built-in reference table.</p>
+</div>
+<div class="faq-item">
+<h3>Why does the calculator show 4 decimal places for the exchange rate?</h3>
+<p>Exchange rates are often quoted with several decimal places because the difference compounds significantly on larger amounts - a rate rounded to just 1-2 decimals can meaningfully misstate the converted total for a large transaction.</p>
+</div>
+<div class="faq-item">
+<h3>Does this work for converting a large amount, like for a wire transfer or major purchase?</h3>
+<p>The math works for any amount, but for anything with real financial stakes - a wire transfer, a large purchase, a currency-hedging decision - use "custom rate" mode with the exact rate your bank or provider is actually quoting you, not the built-in reference rate, since even a small rate difference matters a lot on a large amount.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculate</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Related tools</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>A note on accuracy</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquary's calculators are built for quick, reliable estimates. For decisions with real financial, structural, or medical stakes, confirm with a qualified professional.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/">← Back to all calculators</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

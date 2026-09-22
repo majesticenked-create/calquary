@@ -15,9 +15,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Time Card Calculator | Calquary</title>
-  <meta name="description" content="Add up hours worked across the week and calculate gross pay." />
+  <meta name="description" content="Add up hours worked across the week and calculate gross pay, including overtime premium pay." />
   <meta property="og:title" content="Time Card Calculator | Calquary">
-  <meta property="og:description" content="Add up hours worked across the week and calculate gross pay.">
+  <meta property="og:description" content="Add up hours worked across the week and calculate gross pay, including overtime premium pay.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/tool/time-card-calculator">
   <meta property="og:locale" content="en_US">
@@ -27,7 +27,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Time Card Calculator | Calquary">
-  <meta name="twitter:description" content="Add up hours worked across the week and calculate gross pay.">
+  <meta name="twitter:description" content="Add up hours worked across the week and calculate gross pay, including overtime premium pay.">
   <meta name="twitter:image" content="https://calquary.com/og-images/time-card-calculator.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/time-card-calculator">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/time-card-calculator">
@@ -89,7 +89,7 @@
     {
       "@type": "SoftwareApplication",
       "name": "Time Card Calculator",
-      "description": "Add up hours worked across the week and calculate gross pay.",
+      "description": "Add up hours worked across the week and calculate gross pay, including overtime premium pay.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/tool/time-card-calculator",
@@ -99,7 +99,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-22",
       "inLanguage": "en"
     },
     {
@@ -133,7 +133,7 @@
           "name": "How do I calculate total hours from a time card?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Add up the hours worked each day of the pay period. This calculator sums seven daily entries (Monday through Sunday) into a weekly total, then multiplies by your hourly rate for gross pay."
+            "text": "Add up the hours worked each day of the pay period. This calculator sums seven daily entries (Monday through Sunday) into a weekly total, then splits that into regular and overtime hours based on your threshold before calculating gross pay."
           }
         },
         {
@@ -146,10 +146,18 @@
         },
         {
           "@type": "Question",
-          "name": "Does this include overtime pay?",
+          "name": "How does the overtime calculation work?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No - it multiplies total hours by a single flat hourly rate. If any hours qualify for an overtime premium (commonly 1.5x for hours over 40/week in the US), calculate the regular and overtime portions separately and add them together."
+            "text": "Hours up to your overtime threshold (40/week by default, the standard US federal threshold) are paid at your regular hourly rate. Any hours beyond that are paid at your rate times the overtime multiplier (1.5× by default) - both portions are calculated separately, then added together for total gross pay."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I change the overtime threshold or multiplier?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - both are editable fields. Some jurisdictions or union contracts use a different weekly threshold than 40 hours, or a daily overtime rule instead of weekly, and some use double time (2×) rather than time-and-a-half for certain hours - adjust the threshold and multiplier fields to match your actual situation."
           }
         },
         {
@@ -162,18 +170,10 @@
         },
         {
           "@type": "Question",
-          "name": "What if I worked overtime on just one day, not the whole week?",
+          "name": "If I worked 45 hours at $20/hour with 1.5× overtime after 40, what's my gross pay?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "This calculator sums all entered hours into one weekly total at a single flat rate, so it doesn't split out a single day's overtime automatically - calculate that day's regular and overtime portions separately, then add the result into your total pay outside the tool."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is gross pay calculated from a time card?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Gross pay is total hours worked multiplied by the hourly rate. If your daily hours sum to 38.5 for the week at $18/hour, gross pay is 38.5 × $18 = $693, before any tax withholding or deductions."
+            "text": "40 regular hours × $20 = $800, plus 5 overtime hours × $30 (time-and-a-half rate) = $150, for a total gross pay of $950 - enter your actual daily hours above to get this breakdown automatically."
           }
         },
         {
@@ -181,7 +181,7 @@
           "name": "Is a time card calculator the same as a payroll calculator?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No - a time card calculator like this one only converts hours worked into gross pay. A payroll calculator goes further, applying tax withholding, deductions, and benefits to arrive at net (take-home) pay."
+            "text": "No - a time card calculator like this one converts hours worked (including overtime) into gross pay. A payroll calculator goes further, applying tax withholding, deductions, and benefits to arrive at net (take-home) pay."
           }
         }
       ]
@@ -223,8 +223,8 @@
     <div class="tool-layout">
       <main>
         <h1>Time Card Calculator</h1>
-        <p style="max-width:60ch;">Enter hours worked each day and an hourly rate to total your weekly hours and gross pay.</p>
-        <p class="last-updated">Last updated: September 5, 2026</p>
+        <p style="max-width:60ch;">Enter hours worked each day, an hourly rate, and your overtime threshold to total your weekly hours and gross pay - including overtime premium pay on hours over the threshold.</p>
+        <p class="last-updated">Last updated: September 22, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel" id="calc-panel">
@@ -252,31 +252,31 @@
           <h2>Frequently asked questions</h2>
           <div id="faq-list"><div class="faq-item">
 <h3>How do I calculate total hours from a time card?</h3>
-<p>Add up the hours worked each day of the pay period. This calculator sums seven daily entries (Monday through Sunday) into a weekly total, then multiplies by your hourly rate for gross pay.</p>
+<p>Add up the hours worked each day of the pay period. This calculator sums seven daily entries (Monday through Sunday) into a weekly total, then splits that into regular and overtime hours based on your threshold before calculating gross pay.</p>
 </div>
 <div class="faq-item">
 <h3>Does this handle clock-in and clock-out times?</h3>
 <p>No - enter the total decimal hours already worked each day (e.g., 7.5 for 7 hours 30 minutes), not clock-in/clock-out times. If you only have clock times, subtract clock-in from clock-out (accounting for any unpaid break) to get the decimal hours first.</p>
 </div>
 <div class="faq-item">
-<h3>Does this include overtime pay?</h3>
-<p>No - it multiplies total hours by a single flat hourly rate. If any hours qualify for an overtime premium (commonly 1.5x for hours over 40/week in the US), calculate the regular and overtime portions separately and add them together.</p>
+<h3>How does the overtime calculation work?</h3>
+<p>Hours up to your overtime threshold (40/week by default, the standard US federal threshold) are paid at your regular hourly rate. Any hours beyond that are paid at your rate times the overtime multiplier (1.5× by default) - both portions are calculated separately, then added together for total gross pay.</p>
+</div>
+<div class="faq-item">
+<h3>Can I change the overtime threshold or multiplier?</h3>
+<p>Yes - both are editable fields. Some jurisdictions or union contracts use a different weekly threshold than 40 hours, or a daily overtime rule instead of weekly, and some use double time (2×) rather than time-and-a-half for certain hours - adjust the threshold and multiplier fields to match your actual situation.</p>
 </div>
 <div class="faq-item">
 <h3>How do I convert minutes to a decimal for a time card?</h3>
 <p>Divide the minutes by 60. 30 minutes = 0.5 hours, 15 minutes = 0.25 hours, 45 minutes = 0.75 hours - add that decimal to the whole-hour count for each day.</p>
 </div>
 <div class="faq-item">
-<h3>What if I worked overtime on just one day, not the whole week?</h3>
-<p>This calculator sums all entered hours into one weekly total at a single flat rate, so it doesn't split out a single day's overtime automatically - calculate that day's regular and overtime portions separately, then add the result into your total pay outside the tool.</p>
-</div>
-<div class="faq-item">
-<h3>How is gross pay calculated from a time card?</h3>
-<p>Gross pay is total hours worked multiplied by the hourly rate. If your daily hours sum to 38.5 for the week at $18/hour, gross pay is 38.5 × $18 = $693, before any tax withholding or deductions.</p>
+<h3>If I worked 45 hours at $20/hour with 1.5× overtime after 40, what's my gross pay?</h3>
+<p>40 regular hours × $20 = $800, plus 5 overtime hours × $30 (time-and-a-half rate) = $150, for a total gross pay of $950 - enter your actual daily hours above to get this breakdown automatically.</p>
 </div>
 <div class="faq-item">
 <h3>Is a time card calculator the same as a payroll calculator?</h3>
-<p>No - a time card calculator like this one only converts hours worked into gross pay. A payroll calculator goes further, applying tax withholding, deductions, and benefits to arrive at net (take-home) pay.</p>
+<p>No - a time card calculator like this one converts hours worked (including overtime) into gross pay. A payroll calculator goes further, applying tax withholding, deductions, and benefits to arrive at net (take-home) pay.</p>
 </div></div>
           <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculate</a>
         </div>
