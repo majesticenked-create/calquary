@@ -20,6 +20,7 @@ const CATEGORIES = [
   { id: "conversions", code: "V", name: "Everyday Conversions", description: "Units, measurements, and kitchen swaps.", longDescription: "Unit conversions come up constantly in cooking, home projects, and everyday life - converting between metric and imperial, or figuring out how many cups a recipe's grams translate to. These tools handle the conversion instantly, with the underlying factor shown so you can trust the number.", icon: '<polyline points="16,3 20,7 16,11"/><line x1="20" y1="7" x2="4" y2="7"/><polyline points="8,13 4,17 8,21"/><line x1="4" y1="17" x2="20" y2="17"/>' },
   { id: "text", code: "T", name: "Text & Digital", description: "Word counts and generators for everyday tasks.", longDescription: "Word counts, case conversion, and text generators handle the small text-processing tasks that come up while writing, coding, or formatting content - each one runs entirely in your browser, so nothing you type or paste is ever sent anywhere.", icon: '<path d="M9 4h6M12 4v16M9 20h6"/>' },
   { id: "pets", code: "P", name: "Pet & Lifestyle", description: "Age charts and everyday pet math.", longDescription: "A dog year isn't really seven human years, and pregnancy length varies by species - these calculators use the actual age curves and gestation data for dogs, cats, rabbits, and horses instead of the oversimplified rules of thumb most people know.", icon: '<circle cx="12" cy="15.5" r="4"/><circle cx="5.5" cy="9" r="2"/><circle cx="10" cy="4.5" r="2"/><circle cx="14" cy="4.5" r="2"/><circle cx="18.5" cy="9" r="2"/>' },
+  { id: "biology", code: "B", name: "Biology", description: "Genetics, field work, and life-science measurements.", longDescription: "Genetics problems, forestry measurements, and lab estimates all come down to a handful of published formulas that most calculators bury in a general science catch-all - these tools apply them directly to your own counts and measurements, from allele frequencies worked out from a real sample to acres covered per hour in the field.", icon: '<path d="M7 3c0 6 10 6 10 12"/><path d="M17 3c0 6-10 6-10 12"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="17" x2="16" y2="17"/>' },
 ];
 
 /* Each field: { id, label, type: number|select|date|text|textarea|checkbox-group,
@@ -57,7 +58,7 @@ const CALCULATORS = [
       { q: "What is 6/5 as a percentage?", a: "120% - divide the numerator by the denominator (6 ÷ 5 = 1.2), then multiply by 100. A fraction greater than 1 (like 6/5) always converts to a percentage greater than 100%." },
       { q: "Is a percentage finder the same as this percentage calculator?", a: "Yes - \"percentage finder\" just describes what this tool does: find what X percent of a number is, find what percent one number is of another, or find a percentage increase or decrease, all in one place." },
     ],
-    related: ["percentage-change-calculator", "tip-calculator", "ratio-calculator"],
+    related: ["percentage-change-calculator", "tip-calculator", "ratio-calculator", "animal-mortality-rate-calculator"],
   },
   {
     id: "percentage-change-calculator",
@@ -1970,7 +1971,7 @@ const CALCULATORS = [
       { q: "Is 'molar weight calculator' or 'mol wt calculator' the same as molecular weight?", a: "Yes - \"molar weight,\" \"mol wt,\" \"molecular weight,\" and \"molar mass\" are all names for the same quantity: the mass of one mole of a substance, in grams per mole. This calculator computes it from any chemical formula you enter." },
       { q: "How do we calculate molar mass?", a: "Add up the atomic weight of each element in the formula, multiplied by how many atoms of that element appear - for H2O, that's 2 × 1.008 (hydrogen) + 1 × 15.999 (oxygen) = 18.015 g/mol. Enter any formula above and this calculator does that sum for you." },
     ],
-    related: ["percentage-calculator", "square-root-calculator", "exponent-calculator"],
+    related: ["percentage-calculator", "square-root-calculator", "exponent-calculator", "annealing-temperature-calculator"],
   },
   {
     id: "empirical-formula-calculator",
@@ -2611,7 +2612,7 @@ const CALCULATORS = [
       { q: "How long until only 5% of a substance remains?", a: "About 4.32 half-lives - solve (1/2)^n = 0.05 for n, which gives n = ln(0.05) / ln(0.5) ≈ 4.32. Multiply that by the half-life to get the elapsed time." },
       { q: "Is half-life the same as the average lifetime of a particle?", a: "No - the mean lifetime (often called τ) is 1/k, which is longer than the half-life. Half-life = ln(2) × mean lifetime ≈ 0.693 × mean lifetime, since half-life measures when half the population has decayed, not the average time any single particle survives." },
     ],
-    related: ["molecular-weight-calculator", "compound-interest-calculator", "solubility-product-calculator"],
+    related: ["molecular-weight-calculator", "compound-interest-calculator", "solubility-product-calculator", "annealing-temperature-calculator"],
   },
   {
     id: "hardy-weinberg-calculator",
@@ -2657,8 +2658,9 @@ const CALCULATORS = [
       { q: "Can I calculate genotype frequencies starting from the heterozygous (2pq) frequency instead?", a: "It's harder because 2pq maps to two different p values (p and q are interchangeable in that term) - most calculators, including this one, expect you to start from p, q, or one of the homozygous frequencies (p² or q²), which each correspond to a single, unambiguous allele frequency." },
       { q: "What does it mean if my observed genotype frequencies don't match the Hardy-Weinberg prediction?", a: "It suggests the population isn't in equilibrium - one of the assumptions (random mating, no selection, no migration, no mutation, large population) is being violated, which is exactly why biologists use Hardy-Weinberg as a null hypothesis to detect evolutionary forces at work." },
       { q: "If 9% of a population shows a recessive trait, what are p and q?", a: "q² = 0.09, so q = √0.09 = 0.3, and p = 1 − 0.3 = 0.7. That means 49% are homozygous dominant and 42% are heterozygous carriers of the recessive allele." },
+      { q: "I have actual genotype counts from a sample, not an assumed allele frequency - is this the right tool?", a: "Not directly - this calculator starts from an assumed allele frequency (or one genotype frequency) and predicts expected genotype frequencies under equilibrium. If you have real counts of AA, Aa, and aa individuals and want their observed allele frequencies, use the Allele Frequency Calculator instead - then bring those p and q values back here to see whether your sample matches Hardy-Weinberg expectations." },
     ],
-    related: ["solubility-product-calculator", "standard-deviation-calculator", "z-score-calculator"],
+    related: ["solubility-product-calculator", "standard-deviation-calculator", "allele-frequency-calculator"],
   },
   {
     id: "grade-calculator",
@@ -4152,7 +4154,7 @@ const CALCULATORS = [
       { q: "Should I subtract closets and doorway openings from the room area before calculating?", a: "Usually not - most installers measure the full floor area including closets and door openings and let the waste allowance absorb the small amount of extra material, rather than subtracting minor cutouts and risking running short mid-job." },
       { q: "What's the difference between this flooring calculator and the square footage calculator?", a: "Use the square footage calculator first if you only have room dimensions, to get your exact area. Then enter that area here along with your box coverage and waste allowance to convert it into the number of boxes to buy." },
     ],
-    related: ["paint-calculator", "tile-calculator", "concrete-calculator", "unit-length-converter"],
+    related: ["paint-calculator", "tile-calculator", "concrete-calculator", "bulb-spacing-calculator"],
   },
   {
     id: "drywall-calculator",
@@ -6601,7 +6603,7 @@ const CALCULATORS = [
       { q: "How many feet is 108 inches?", a: "Exactly 9 feet - divide 108 by 12. Enter 108 with \"Inches\" selected above to confirm." },
       { q: "How many inches is a millimeter?", a: "1 millimeter equals about 0.03937 inches - divide millimeters by 25.4, or select \"Millimeters\" above and enter your value to see the exact inch equivalent alongside every other supported unit." },
     ],
-    related: ["weight-converter", "cooking-converter", "concrete-calculator", "currency-converter"],
+    related: ["weight-converter", "cooking-converter", "concrete-calculator", "acres-per-hour-calculator"],
   },
   {
     id: "time-unit-converter",
@@ -7638,7 +7640,7 @@ const CALCULATORS = [
       { q: "How many square feet are in a square meter?", a: "One square meter equals approximately 10.76 square feet. This conversion is commonly needed when comparing real estate listings or floor plans that mix metric and imperial units." },
       { q: "Is 'ac to ft2' the same as this converter?", a: "Yes - \"ac\" and \"ft2\" are just shorthand for acres and square feet, which this converter handles alongside square meters and square yards." },
     ],
-    related: ["unit-length-converter", "concrete-calculator", "flooring-calculator", "currency-converter"],
+    related: ["unit-length-converter", "concrete-calculator", "flooring-calculator", "bulb-spacing-calculator"],
   },
   {
     id: "data-storage-converter",
@@ -8706,7 +8708,7 @@ const CALCULATORS = [
       { q: "How old is a 5-year-old giant breed dog in human years?", a: "A 5-year-old giant breed (like a Great Dane) works out to roughly 40 human years - notably older than a 5-year-old small breed, which lands closer to 36, because giant breeds age faster once past puppyhood." },
       { q: "Can I use this calculator for a mixed-breed dog?", a: "Yes - since the formula keys off size rather than breed identity, just select the size category (small, medium, large, or giant) that best matches your mixed-breed dog's adult weight for the most relevant estimate." },
     ],
-    related: ["cat-age-calculator", "dog-food-calculator", "bmi-calculator", "ideal-dog-weight-calculator"],
+    related: ["cat-age-calculator", "dog-food-calculator", "benadryl-dosage-for-dogs", "ideal-dog-weight-calculator"],
   },
   {
     id: "dog-food-calculator",
@@ -8779,7 +8781,7 @@ const CALCULATORS = [
       { q: "Is the cat age formula the same as the old '1 cat year = 4 human years' rule?", a: "Not exactly - that flat rule only roughly applies after a cat's first two years. This calculator front-loads the first two years at a much faster rate (about 15 and then 24 human-year equivalents) before settling into the slower ~4-year-per-year pace." },
       { q: "Does neutering or spaying affect how a cat's age converts to human years?", a: "No - spay/neuter status doesn't change the age-equivalence math here, though altered cats often live longer on average, which affects lifespan rather than the conversion itself." },
     ],
-    related: ["dog-age-calculator", "rabbit-age-calculator", "age-calculator", "horse-age-calculator"],
+    related: ["dog-age-calculator", "rabbit-age-calculator", "bird-age-calculator", "horse-age-calculator"],
   },
   {
     id: "rabbit-age-calculator",
@@ -9443,6 +9445,408 @@ const CALCULATORS = [
       { q: "What's a good CAGR to expect from a stock market investment?", a: "Historically, diversified US stock market index funds have averaged a CAGR of roughly 7-10% over multi-decade periods (before inflation), though any specific shorter period - including individual years - can vary widely above or below that range." },
     ],
     related: ["irr-npv-calculator", "investment-calculator", "compound-interest-calculator"],
+  },
+  {
+    id: "acres-per-hour-calculator",
+    category: "biology",
+    title: "Acres Per Hour Calculator",
+    keyword: "acres per hour calculator",
+    description: "Calculate field work rate in acres per hour from working width, travel speed, and field efficiency.",
+    intro: "Enter your implement's working width, your travel speed, and a field efficiency percentage to estimate how many acres (or hectares) you can cover per hour.",
+    fields: [
+      { id: "width", label: "Working width", type: "number", default: 40, step: 1, min: 0.1 },
+      { id: "widthUnit", label: "Width unit", type: "select", default: "ft", options: [
+        { v: "ft", l: "Feet" }, { v: "m", l: "Meters" },
+      ] },
+      { id: "speed", label: "Travel speed", type: "number", default: 5, step: 0.1, min: 0.1 },
+      { id: "speedUnit", label: "Speed unit", type: "select", default: "mph", options: [
+        { v: "mph", l: "mph" }, { v: "kmh", l: "km/h" },
+      ] },
+      { id: "efficiency", label: "Field efficiency", type: "number", unit: "%", default: 85, step: 1, min: 0, max: 100 },
+    ],
+    compute: (v) => {
+      if (!(v.width > 0) || !(v.speed > 0) || v.efficiency < 0 || v.efficiency > 100) {
+        return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Width and speed must be greater than zero, and field efficiency must be between 0% and 100%." };
+      }
+      const widthFt = v.widthUnit === "m" ? v.width * 3.28084 : v.width;
+      const speedMph = v.speedUnit === "kmh" ? v.speed * 0.621371 : v.speed;
+      const acresPerHour = ((widthFt * speedMph) / 8.25) * (v.efficiency / 100);
+      const hectaresPerHour = acresPerHour * 0.404686;
+      return {
+        primary: { label: "Acres per hour", value: round(acresPerHour, 2) },
+        secondary: [
+          { l: "Hectares per hour", v: round(hectaresPerHour, 2) },
+          { l: "100%-efficiency rate", v: `${round((widthFt * speedMph) / 8.25, 2)} ac/hr` },
+        ],
+        note: "Uses the standard field-coverage formula: acres/hour = (width in feet × speed in mph) ÷ 8.25 × field efficiency. The 8.25 constant converts a width-times-speed swath into acres per hour (5,280 ft/mile ÷ 43,560 ft²/acre). Field efficiency accounts for turns, overlap, and stops - 100% coverage at rated speed is rarely achieved in practice.",
+      };
+    },
+    faq: [
+      { q: "What is field efficiency and why isn't it 100%?", a: "Field efficiency accounts for time and distance lost to turning at row ends, overlap between passes, filling/emptying equipment, and other stops - real-world coverage is almost always lower than the theoretical rate at full working width and speed. Typical field efficiency for many operations falls between 65% and 90% depending on field shape and equipment." },
+      { q: "Where does the 8.25 constant in the formula come from?", a: "It converts a swath (width × speed) into acres per hour: there are 5,280 feet in a mile and 43,560 square feet in an acre, so 5,280 ÷ 43,560 = 0.1212, and 1 ÷ 0.1212 = 8.25. Dividing width (ft) × speed (mph) by 8.25 gives acres covered per hour at 100% efficiency." },
+      { q: "How do I estimate my actual working width?", a: "Use the effective width of your implement (e.g., the cutting or working width of a mower, planter, or sprayer boom), not the width of the tractor or vehicle pulling it - overlap between passes should also be subtracted from the rated width if you consistently overlap by a set amount." },
+      { q: "Can I use this for both large field equipment and smaller yard equipment?", a: "Yes - the formula scales to any working width and speed, from a wide agricultural implement covering many acres per hour to a push mower covering a fraction of an acre per hour, as long as the units are consistent." },
+      { q: "Why does the calculator show both an acres-per-hour and a hectares-per-hour result?", a: "Acres are the standard land unit in the US, while hectares are standard in most other countries - showing both avoids needing a separate conversion step regardless of which unit you're planning in." },
+      { q: "Does this account for time spent refilling or servicing equipment?", a: "Not directly - the field efficiency percentage is meant to capture typical in-field losses like turning and overlap. If you regularly lose significant time to refilling, breakdowns, or other stops beyond normal turning, lower your efficiency estimate to reflect your actual observed coverage rate." },
+    ],
+    related: ["basal-area-calculator", "area-converter", "unit-length-converter"],
+  },
+  {
+    id: "allele-frequency-calculator",
+    category: "biology",
+    title: "Allele Frequency Calculator",
+    keyword: "allele frequency calculator",
+    description: "Calculate observed allele frequencies (p and q) from genotype counts in a sample population.",
+    intro: "Enter the number of individuals with each genotype (AA, Aa, aa) in your sample to calculate the observed frequency of each allele.",
+    fields: [
+      { id: "countAA", label: "AA individuals (homozygous dominant)", type: "number", default: 40, step: 1, min: 0 },
+      { id: "countAa", label: "Aa individuals (heterozygous)", type: "number", default: 40, step: 1, min: 0 },
+      { id: "countaa", label: "aa individuals (homozygous recessive)", type: "number", default: 20, step: 1, min: 0 },
+    ],
+    compute: (v) => {
+      const N = v.countAA + v.countAa + v.countaa;
+      if (N <= 0) {
+        return { primary: { label: "Enter at least one individual", value: "-" }, secondary: [], note: "Genotype counts can't all be zero." };
+      }
+      const p = (2 * v.countAA + v.countAa) / (2 * N);
+      const q = (2 * v.countaa + v.countAa) / (2 * N);
+      return {
+        primary: { label: "Frequency of allele A (p)", value: `${round(p, 4)} (${round(p * 100, 2)}%)` },
+        secondary: [
+          { l: "Frequency of allele a (q)", v: `${round(q, 4)} (${round(q * 100, 2)}%)` },
+          { l: "p + q", v: round(p + q, 4) },
+          { l: "Total individuals (N)", v: N },
+        ],
+        note: "p = (2×AA + Aa) ÷ 2N and q = (2×aa + Aa) ÷ 2N, counting each homozygote as contributing 2 copies of its allele and each heterozygote as contributing 1 copy of each. p + q should equal 1 (allowing for rounding) since every allele in the sample is either A or a.",
+      };
+    },
+    faq: [
+      { q: "Why does AA count for 2 in the formula but Aa only counts for 1?", a: "Each individual carries 2 alleles at the gene locus. An AA individual has two copies of allele A, so it contributes 2 to A's count. An Aa individual has one copy of each allele, contributing 1 to A's count and 1 to a's count. Summing these contributions and dividing by the total allele count (2N) gives each allele's frequency." },
+      { q: "Why should p + q always equal 1?", a: "Because every allele counted in the sample is classified as either A or a - there's no third option in this two-allele model, so their frequencies must sum to the whole (1, or 100%). If your result is slightly off from exactly 1, that's normal rounding in the displayed decimals, not a calculation error." },
+      { q: "Is this the same as a Hardy-Weinberg calculator?", a: "No - this tool goes from real, observed genotype counts to observed allele frequencies (p and q). A Hardy-Weinberg calculator instead starts from an assumed allele frequency and predicts what the genotype frequencies would be under equilibrium (no selection, mutation, migration, or drift). Use this calculator first to find your sample's actual p and q from real counts, then use a Hardy-Weinberg calculator to see whether your observed genotype counts match what equilibrium would predict." },
+      { q: "Can this handle a sample with only two genotypes present, like no aa individuals?", a: "Yes - enter 0 for any genotype not observed in your sample. The formulas still work correctly; a genotype count of 0 simply contributes nothing to that allele's tally." },
+      { q: "What if I only have genotype frequencies (percentages) instead of raw counts?", a: "Multiply each frequency by your total sample size to get counts, or simply enter frequencies scaled to a convenient total (like frequencies × 100, treating them as counts out of 100) - the formula produces the same p and q either way since it works with relative proportions." },
+      { q: "Does this assume the population is in Hardy-Weinberg equilibrium?", a: "No - calculating allele frequencies from genotype counts is a direct tally and makes no equilibrium assumption. It works whether or not the population is actually in Hardy-Weinberg equilibrium; that assumption only comes into play if you go on to compare these frequencies against Hardy-Weinberg-predicted genotype ratios." },
+    ],
+    related: ["hardy-weinberg-calculator", "animal-mortality-rate-calculator", "percentage-calculator"],
+  },
+  {
+    id: "animal-mortality-rate-calculator",
+    category: "biology",
+    title: "Animal Mortality Rate Calculator",
+    keyword: "animal mortality rate calculator",
+    description: "Calculate mortality rate and survival rate from a population at risk and number of deaths.",
+    intro: "Enter the population at risk and the number of deaths observed to calculate the mortality rate and survival rate for that group.",
+    fields: [
+      { id: "population", label: "Population at risk", type: "number", default: 500, step: 1, min: 1 },
+      { id: "deaths", label: "Number of deaths", type: "number", default: 25, step: 1, min: 0 },
+    ],
+    compute: (v) => {
+      if (v.deaths > v.population) {
+        return { primary: { label: "Deaths can't exceed the population", value: "-" }, secondary: [], note: "The number of deaths entered is larger than the population at risk - check that both figures use the same group and time period." };
+      }
+      const mortalityRate = (v.deaths / v.population) * 100;
+      const survivalRate = 100 - mortalityRate;
+      return {
+        primary: { label: "Mortality rate", value: `${round(mortalityRate, 2)}%` },
+        secondary: [
+          { l: "Survival rate", v: `${round(survivalRate, 2)}%` },
+          { l: "Deaths / population at risk", v: `${v.deaths} / ${v.population}` },
+        ],
+        note: "Mortality rate = deaths ÷ population at risk × 100. The \"population at risk\" is the denominator - it should be the group actually exposed to the risk being measured over the period in question (e.g., a herd at the start of a season), not a broader or unrelated total.",
+      };
+    },
+    faq: [
+      { q: "What exactly should I use as the \"population at risk\"?", a: "The group of animals actually exposed to whatever risk or time period you're measuring - for example, the number of animals present in a herd or flock at the start of the period being studied. Using a different or later population count as the denominator will give a misleading rate." },
+      { q: "How is mortality rate different from a death count alone?", a: "A raw death count doesn't tell you how large the underlying population was, so 10 deaths could be alarming in a herd of 20 or negligible in a herd of 10,000. Mortality rate expresses deaths as a proportion of the population at risk, making it comparable across groups of different sizes." },
+      { q: "Does this calculator account for a specific time period?", a: "No - it calculates a rate for whatever period your death count and population figure already represent (e.g., a season, a year, an outbreak). Make sure both numbers cover the same time window before calculating, since mixing a death count from one period with a population from another will distort the result." },
+      { q: "Why can't deaths exceed the population at risk?", a: "Because the population at risk represents the total group that could have died over that period - if deaths exceed it, the denominator is likely wrong (for example, using a population count from partway through the period rather than the start)." },
+      { q: "What's the difference between mortality rate and survival rate?", a: "They're complements of each other: survival rate = 100% − mortality rate. A 5% mortality rate means a 95% survival rate for the same population and period - they describe the same outcome from two directions." },
+      { q: "Can this be used for a single cause of death, like a specific disease?", a: "Yes - as long as both the death count and the population at risk are scoped to that specific cause and the group actually exposed to it, this calculates a cause-specific mortality rate rather than an all-cause rate." },
+    ],
+    related: ["allele-frequency-calculator", "percentage-calculator", "percentage-change-calculator"],
+  },
+  {
+    id: "annealing-temperature-calculator",
+    category: "biology",
+    title: "Annealing Temperature Calculator",
+    keyword: "annealing temperature calculator",
+    description: "Estimate a starting PCR primer annealing temperature from forward and reverse primer melting temperatures.",
+    intro: "Enter your forward and reverse primer melting temperatures (Tm) to estimate a starting annealing temperature for PCR optimization.",
+    fields: [
+      { id: "tmForward", label: "Forward primer Tm", type: "number", unit: "°C", default: 58, step: 0.1, min: 0, max: 100 },
+      { id: "tmReverse", label: "Reverse primer Tm", type: "number", unit: "°C", default: 60, step: 0.1, min: 0, max: 100 },
+    ],
+    compute: (v) => {
+      if (!(v.tmForward > 0) || !(v.tmReverse > 0)) {
+        return { primary: { label: "Enter both primer Tm values", value: "-" }, secondary: [], note: "Both melting temperatures must be greater than 0°C." };
+      }
+      const lowerTm = Math.min(v.tmForward, v.tmReverse);
+      const estimatedTa = lowerTm - 5;
+      const avgTm = (v.tmForward + v.tmReverse) / 2;
+      return {
+        primary: { label: "Estimated starting annealing temperature", value: `${round(estimatedTa, 1)}°C` },
+        secondary: [
+          { l: "Average primer Tm", v: `${round(avgTm, 1)}°C` },
+          { l: "Lower primer Tm used", v: `${round(lowerTm, 1)}°C` },
+        ],
+        note: "This is an estimate only, using a common rule-of-thumb approximation (lower primer Tm − 5°C) as a starting point - not a guaranteed optimal setting. Actual optimal annealing temperature depends on primer design, reaction chemistry, salt/buffer concentration, template complexity, and your specific PCR protocol. Gradient PCR or empirical optimization is the standard way to confirm the best annealing temperature for a given primer pair.",
+      };
+    },
+    faq: [
+      { q: "Is this the exact annealing temperature I should use for my PCR?", a: "No - treat this as a starting estimate, not a guaranteed setting. Optimal annealing temperature depends on primer sequence and design, reaction chemistry, salt concentration, template GC content, and your specific thermocycler protocol - factors this simple calculation doesn't account for." },
+      { q: "Why does the calculator use the lower of the two Tm values?", a: "In a two-primer reaction, annealing temperature is generally capped by whichever primer binds less efficiently, since a temperature too high for the lower-Tm primer would prevent it from annealing at all - using the lower Tm as the reference and subtracting a margin is a commonly used conservative starting point." },
+      { q: "Why subtract 5°C from the primer Tm?", a: "Setting the annealing temperature a few degrees below the primer's calculated melting temperature helps ensure efficient, stable primer binding despite the approximate nature of Tm calculations - 5°C below the lower primer Tm is a widely used rule-of-thumb starting point, not a fixed physical constant." },
+      { q: "What if my forward and reverse primer Tm values are very different?", a: "A large Tm mismatch between primers (more than a few degrees) can make it harder to find one annealing temperature that works well for both - consider redesigning the primer with the more extreme Tm to bring the pair closer together before running the reaction, if the mismatch is large." },
+      { q: "How should I actually confirm the best annealing temperature?", a: "Gradient PCR - running the same reaction across a range of annealing temperatures on a thermocycler with gradient capability - is the standard way to empirically determine the temperature that gives the cleanest, most specific amplification for your specific primers and template." },
+      { q: "Does salt or buffer concentration affect the annealing temperature I should use?", a: "Yes - Tm calculations and annealing temperature recommendations are sensitive to the salt (monovalent and divalent cation) concentration in your reaction buffer, since ionic strength affects DNA duplex stability. This calculator doesn't adjust for buffer chemistry, so treat its output as a generic starting point rather than a buffer-specific value." },
+    ],
+    related: ["allele-frequency-calculator", "molecular-weight-calculator", "half-life-calculator"],
+  },
+  {
+    id: "basal-area-calculator",
+    category: "biology",
+    title: "Basal Area Calculator",
+    keyword: "basal area calculator",
+    description: "Calculate forestry basal area per tree and total basal area from diameter at breast height (DBH).",
+    intro: "Enter a tree's diameter at breast height (DBH) and, optionally, the number of trees, to calculate basal area per tree and total stand basal area.",
+    fields: [
+      { id: "dbh", label: "DBH (diameter at breast height)", type: "number", default: 12, step: 0.1, min: 0.1 },
+      { id: "dbhUnit", label: "DBH unit", type: "select", default: "in", options: [
+        { v: "in", l: "Inches" }, { v: "cm", l: "Centimeters" },
+      ] },
+      { id: "treeCount", label: "Number of trees (with this DBH)", type: "number", default: 1, step: 1, min: 1 },
+    ],
+    compute: (v) => {
+      if (!(v.dbh > 0)) {
+        return { primary: { label: "Enter a valid DBH", value: "-" }, secondary: [], note: "DBH must be greater than zero." };
+      }
+      const dbhIn = v.dbhUnit === "cm" ? v.dbh / 2.54 : v.dbh;
+      const baPerTreeFt2 = 0.005454 * dbhIn * dbhIn;
+      const totalBaFt2 = baPerTreeFt2 * v.treeCount;
+      const baPerTreeM2 = baPerTreeFt2 * 0.092903;
+      const totalBaM2 = totalBaFt2 * 0.092903;
+      return {
+        primary: { label: "Basal area per tree", value: `${round(baPerTreeFt2, 3)} ft²` },
+        secondary: [
+          { l: "Total basal area", v: `${round(totalBaFt2, 3)} ft² (${v.treeCount} tree${v.treeCount === 1 ? "" : "s"})` },
+          { l: "In square meters", v: `${round(baPerTreeM2, 4)} m² per tree, ${round(totalBaM2, 4)} m² total` },
+        ],
+        note: "DBH (diameter at breast height) is a tree's trunk diameter measured at 4.5 feet (1.37 m) above ground, the standard forestry measurement point. Basal area (ft²) = 0.005454 × DBH² (with DBH in inches) - the constant converts a circular cross-sectional area from a diameter measurement into square feet.",
+      };
+    },
+    faq: [
+      { q: "What is DBH and why is it measured at breast height specifically?", a: "DBH (diameter at breast height) is a tree's trunk diameter measured at a standardized height of 4.5 feet (1.37 m) above ground. Measuring at a fixed height makes DBH consistent and comparable across trees and surveys, avoiding the flare and irregularity common near the base of a trunk." },
+      { q: "What is basal area used for in forestry?", a: "Basal area (the cross-sectional area of a tree's trunk at DBH) is a standard measure of how much of a site's area is occupied by tree stems - foresters use total stand basal area to assess stocking density, plan thinning, and estimate timber volume alongside tree height and form." },
+      { q: "Where does the 0.005454 constant come from?", a: "It's derived from the standard circle area formula (π/4), converted to work directly with DBH in inches and basal area in square feet: π/4 ÷ 144 (square inches per square foot) = 0.005454. This lets you go straight from a DBH measurement in inches to basal area in square feet without a separate unit conversion step." },
+      { q: "How do I calculate total basal area for a stand with trees of different sizes?", a: "Calculate basal area per tree individually for each DBH size class present, multiply each by its tree count, then sum the results - this calculator handles one DBH value (with a tree count) at a time, so a mixed stand needs one calculation per size class added together." },
+      { q: "Is basal area the same as canopy area or crown area?", a: "No - basal area is the cross-sectional area of the trunk at breast height, not the area covered by the tree's canopy or crown from above. The two aren't directly proportional, since crown spread depends on species, spacing, and growing conditions in ways trunk diameter alone doesn't capture." },
+      { q: "What's a typical basal area for a well-stocked forest stand?", a: "It varies substantially by forest type, region, and management goals, but many managed stands are targeted in the range of roughly 80-120 ft² of basal area per acre - consult species- and region-specific forestry guidelines for a stocking target relevant to your stand." },
+    ],
+    related: ["acres-per-hour-calculator", "circle-calculator", "area-converter"],
+  },
+  {
+    id: "benadryl-dosage-for-dogs",
+    category: "pets",
+    title: "Benadryl Dosage Calculator for Dogs",
+    keyword: "benadryl dosage for dogs",
+    description: "Get safety information about diphenhydramine (Benadryl) use in dogs - this tool does not provide a personalized dose.",
+    intro: "This page provides safety information, not a personalized dose. Diphenhydramine dosing for dogs depends on the specific product, concentration, and your dog's health - always confirm with a veterinarian before giving any medication.",
+    fields: [
+      { id: "weight", label: "Dog's weight", type: "number", default: 30, step: 0.5, min: 0.1 },
+      { id: "weightUnit", label: "Weight unit", type: "select", default: "lb", options: [
+        { v: "lb", l: "lb" }, { v: "kg", l: "kg" },
+      ] },
+    ],
+    compute: (v) => {
+      if (!(v.weight > 0)) {
+        return { primary: { label: "Enter your dog's weight", value: "-" }, secondary: [], note: "Weight must be greater than zero." };
+      }
+      return {
+        primary: { label: "Recommended next step", value: "Confirm with a veterinarian" },
+        secondary: [
+          { l: "Dog's weight entered", v: `${v.weight} ${v.weightUnit}` },
+          { l: "This tool provides", v: "Safety information, not a dose" },
+        ],
+        note: "This calculator intentionally does not output a milligram dose. Diphenhydramine (Benadryl) products vary in concentration and formulation, and many contain additional active ingredients (like decongestants) that are unsafe for dogs. Your dog's age, health conditions, and other medications can also affect whether and how much is appropriate. Confirm the product and dose with a veterinarian before giving any medication. For a suspected overdose or adverse reaction, contact your veterinarian, an emergency animal hospital, or an animal poison control service immediately.",
+      };
+    },
+    faq: [
+      { q: "Why doesn't this calculator just tell me how many milligrams to give?", a: "Because a safe dose depends on more than body weight alone - the specific product's concentration, whether it's a single-ingredient or combination formula, your dog's age and health conditions, and any other medications all affect whether and how much diphenhydramine is appropriate. A weight-only calculation can't account for any of that, so this tool points you to a veterinarian instead of guessing a number." },
+      { q: "Are all Benadryl products safe for dogs?", a: "Not necessarily - some Benadryl and generic diphenhydramine products are combination formulas that include additional active ingredients like decongestants (e.g., pseudoephedrine or phenylephrine), which can be dangerous for dogs even in small amounts. Only plain diphenhydramine, confirmed with a veterinarian, should be considered, and only in a form and concentration your vet has approved." },
+      { q: "What if my dog already has a health condition?", a: "Certain conditions (including glaucoma, some heart conditions, high blood pressure, and certain prostate or bladder issues) and certain medications can interact with diphenhydramine or make it inappropriate. Always disclose your dog's full health history and current medications to your veterinarian before giving any new medication." },
+      { q: "What should I do if I think my dog got too much diphenhydramine?", a: "Contact your veterinarian, an emergency animal hospital, or an animal poison control service immediately - don't wait to see if symptoms appear. Have the product packaging (including concentration and any other active ingredients) on hand when you call." },
+      { q: "Why is diphenhydramine sometimes given to dogs at all?", a: "Veterinarians sometimes use diphenhydramine off-label for dogs to manage mild allergic reactions or as a mild sedative in specific situations - but because it's being used off-label, the appropriate product, dose, and situation should always be determined by a vet rather than a general online calculator." },
+      { q: "Can I use this tool for any breed or age of dog?", a: "This tool provides the same general safety information regardless of breed or age, but breed sensitivities, age (puppies and senior dogs especially), and individual health status are exactly the kind of factors a veterinarian needs to weigh when determining whether and how much medication is appropriate - they're not something a generic calculator can safely account for." },
+    ],
+    related: ["cat-benadryl-dosage-calculator", "dog-age-calculator", "ideal-dog-weight-calculator"],
+  },
+  {
+    id: "bird-age-calculator",
+    category: "pets",
+    title: "Bird Age Calculator",
+    keyword: "bird age calculator",
+    description: "Estimate a pet bird's life stage from its species group and age - not a single universal bird-to-human-year conversion.",
+    intro: "Bird aging varies enormously by species - a budgie and a macaw age on completely different timelines. Choose the species group closest to your bird and enter its age to see a general life-stage estimate.",
+    fields: [
+      { id: "speciesGroup", label: "Species group", type: "select", default: "medium", options: [
+        { v: "small", l: "Small (budgies, finches, canaries)" },
+        { v: "medium", l: "Medium (cockatiels, small conures, lovebirds)" },
+        { v: "large", l: "Large parrots (African greys, Amazons, larger conures)" },
+        { v: "giant", l: "Giant parrots (macaws, cockatoos)" },
+        { v: "poultry", l: "Poultry (chickens)" },
+      ] },
+      { id: "ageYears", label: "Bird's age", type: "number", unit: "years", default: 2, step: 0.5, min: 0 },
+    ],
+    compute: (v) => {
+      if (v.ageYears < 0) {
+        return { primary: { label: "Enter a valid age", value: "-" }, secondary: [], note: "Age can't be negative." };
+      }
+      // Rough, defensible life-stage thresholds (years) by species group,
+      // based on typical maturity and longevity ranges published in general
+      // avicultural references - not a species-specific study for every
+      // bird, and not a bird-to-human-year multiplier.
+      const stages = {
+        small: [{ max: 0.5, s: "Juvenile" }, { max: 2, s: "Young adult" }, { max: 5, s: "Adult" }, { max: Infinity, s: "Senior" }],
+        medium: [{ max: 1, s: "Juvenile" }, { max: 3, s: "Young adult" }, { max: 10, s: "Adult" }, { max: Infinity, s: "Senior" }],
+        large: [{ max: 1.5, s: "Juvenile" }, { max: 5, s: "Young adult" }, { max: 25, s: "Adult" }, { max: Infinity, s: "Senior" }],
+        giant: [{ max: 2, s: "Juvenile" }, { max: 6, s: "Young adult" }, { max: 35, s: "Adult" }, { max: Infinity, s: "Senior" }],
+        poultry: [{ max: 0.5, s: "Juvenile" }, { max: 1, s: "Young adult" }, { max: 4, s: "Adult" }, { max: Infinity, s: "Senior" }],
+      };
+      const groupStages = stages[v.speciesGroup];
+      const stage = groupStages.find((s) => v.ageYears <= s.max).s;
+      return {
+        primary: { label: "Estimated life stage", value: stage },
+        secondary: [{ l: "Age entered", v: `${v.ageYears} years` }],
+        note: "This is a general estimate based on typical maturity and lifespan ranges for the selected species group, not a study of your bird's specific species or an exact biological measurement. Individual health, sex, diet, and species within a group can shift these ranges meaningfully - a vet or avian specialist can give a more precise assessment for your bird specifically.",
+      };
+    },
+    faq: [
+      { q: "Why doesn't this calculator give a single bird-to-human-year conversion?", a: "Because bird lifespans vary enormously by species - a budgie typically lives 5-10 years while a large macaw can live 50-80 years - so a single universal multiplier would be meaningless across that range. This tool instead groups birds by typical size/lifespan category and estimates a life stage, which is more honest than a fabricated precise conversion." },
+      { q: "How accurate are these life-stage age ranges?", a: "They're general estimates based on typical maturity and longevity patterns for each species group, not a scientific study of every species within that group. Individual birds, and specific species within a group, can mature and age at somewhat different rates - treat the result as a rough guide, not an exact classification." },
+      { q: "Why do giant parrots have such a long 'adult' stage compared to small birds?", a: "Larger parrot species generally have substantially longer lifespans than small birds - macaws and cockatoos can live 50 years or more in captivity, compared to 5-10 years for a budgie - so their maturity and aging timeline is stretched out proportionally longer." },
+      { q: "My bird's species isn't listed exactly - which group should I pick?", a: "Choose the group whose typical size and lifespan most closely matches your bird's species - for example, a Quaker parrot fits reasonably well in the medium group, while a Senegal parrot is closer to the large parrot group. When in doubt, research your specific species' typical lifespan and pick the closest match." },
+      { q: "Does sex affect a bird's aging or lifespan?", a: "It can, in some species, though the effect is generally smaller than the effect of species/size group. This calculator doesn't account for sex-based differences, since they vary by species and aren't consistent enough across groups to build into a simple estimate." },
+      { q: "Is a 'senior' bird automatically less healthy?", a: "Not necessarily - the senior life stage here just reflects a bird being in the later portion of its typical lifespan for its species group, not a health assessment. Many birds remain healthy well into their senior years with appropriate care; a vet visit is the right way to assess actual health status regardless of age." },
+    ],
+    related: ["dog-age-calculator", "cat-age-calculator", "cat-bmi-calculator"],
+  },
+  {
+    id: "bulb-spacing-calculator",
+    category: "biology",
+    title: "Bulb Spacing Calculator",
+    keyword: "bulb spacing calculator",
+    description: "Estimate how many bulbs you need for a planting area based on bulb spacing.",
+    intro: "Enter your planting area's length and width, plus your target bulb spacing, to estimate roughly how many bulbs you'll need.",
+    fields: [
+      { id: "length", label: "Area length", type: "number", unit: "ft", default: 10, step: 0.5, min: 0.1 },
+      { id: "width", label: "Area width", type: "number", unit: "ft", default: 5, step: 0.5, min: 0.1 },
+      { id: "spacing", label: "Bulb spacing", type: "number", unit: "in", default: 4, step: 0.5, min: 0.5 },
+    ],
+    compute: (v) => {
+      if (!(v.length > 0) || !(v.width > 0) || !(v.spacing > 0)) {
+        return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Length, width, and spacing must all be greater than zero." };
+      }
+      const spacingFt = v.spacing / 12;
+      const areaSqFt = v.length * v.width;
+      const bulbsPerRow = Math.floor(v.length / spacingFt);
+      const rows = Math.floor(v.width / spacingFt);
+      const gridEstimate = bulbsPerRow * rows;
+      const areaEstimate = Math.floor(areaSqFt / (spacingFt * spacingFt));
+      return {
+        primary: { label: "Approximate bulbs needed", value: gridEstimate },
+        secondary: [
+          { l: "Bulbs per row × rows", v: `${bulbsPerRow} × ${rows}` },
+          { l: "Area ÷ spacing² estimate", v: areaEstimate },
+        ],
+        note: "This is an estimate based on a simple grid layout (bulbs per row × number of rows, spaced evenly at your entered spacing). Real plantings - staggered rows, borders, irregular bed shapes, and edge effects - typically need somewhat more or fewer bulbs than this simplified grid math suggests, so treat this as a planning starting point rather than an exact count.",
+      };
+    },
+    faq: [
+      { q: "Why are there two slightly different bulb count numbers shown?", a: "The primary result (bulbs per row × rows) models an evenly spaced grid layout. The area-divided-by-spacing-squared figure is a simpler area-based approximation that can differ slightly, especially for areas that aren't a clean multiple of your spacing. Both are estimates - use the grid figure as the more layout-realistic of the two." },
+      { q: "Does this account for staggered or offset bulb planting patterns?", a: "No - this calculates a simple rectangular grid layout. Staggered (offset row) planting typically fits a modestly higher bulb count into the same area than a straight grid, since offset rows can nestle bulbs closer together within the same spacing rule - if you're staggering, expect to need somewhat more bulbs than this estimate." },
+      { q: "Should I subtract space for a border or edge margin?", a: "Yes, if your planting plan includes a margin around the bed's edge - reduce the length and width you enter here by that margin on each side first, since this calculator assumes bulbs are planted all the way to the edges of the area you enter." },
+      { q: "What spacing should I use for different bulb types?", a: "It varies by bulb type and size - larger bulbs like daffodils and tulips are commonly spaced around 4-6 inches apart, while smaller bulbs like crocuses are often spaced closer, around 2-3 inches. Check your specific bulb variety's planting guide for its recommended spacing." },
+      { q: "Why might I need more bulbs than this calculator suggests?", a: "Irregular bed shapes (not a clean rectangle), existing plants or obstacles within the bed, and a desire for denser visual coverage than strict even spacing can all mean buying more than the calculated estimate - many gardeners round up and buy a small surplus for exactly this reason." },
+      { q: "Can I use this for a circular or irregularly shaped bed?", a: "Not directly - this calculator assumes a rectangular area. For a circular or irregular bed, estimate its area separately (or approximate it with a rectangle close to its actual size) and use the area-based estimate as a rough guide rather than the row-by-row grid figure." },
+    ],
+    related: ["area-converter", "unit-length-converter", "basal-area-calculator"],
+  },
+  {
+    id: "cat-benadryl-dosage-calculator",
+    category: "pets",
+    title: "Cat Benadryl Dosage Calculator",
+    keyword: "cat benadryl dosage calculator",
+    description: "Get safety information about diphenhydramine (Benadryl) use in cats - this tool does not provide a personalized dose.",
+    intro: "This page provides safety information, not a personalized dose. Diphenhydramine dosing for cats depends on the specific product, concentration, and your cat's health - always confirm with a veterinarian before giving any medication.",
+    fields: [
+      { id: "weight", label: "Cat's weight", type: "number", default: 10, step: 0.25, min: 0.1 },
+      { id: "weightUnit", label: "Weight unit", type: "select", default: "lb", options: [
+        { v: "lb", l: "lb" }, { v: "kg", l: "kg" },
+      ] },
+    ],
+    compute: (v) => {
+      if (!(v.weight > 0)) {
+        return { primary: { label: "Enter your cat's weight", value: "-" }, secondary: [], note: "Weight must be greater than zero." };
+      }
+      return {
+        primary: { label: "Recommended next step", value: "Confirm with a veterinarian" },
+        secondary: [
+          { l: "Cat's weight entered", v: `${v.weight} ${v.weightUnit}` },
+          { l: "This tool provides", v: "Safety information, not a dose" },
+        ],
+        note: "This calculator intentionally does not output a milligram dose. Cats can be especially sensitive to medications, and diphenhydramine (Benadryl) products vary in concentration and formulation - many contain additional active ingredients (like decongestants) that are unsafe for cats. Your cat's age, health conditions, and other medications can also affect whether and how much is appropriate. Confirm the product and dose with a veterinarian before giving any medication. For a suspected overdose or adverse reaction, contact your veterinarian, an emergency animal hospital, or an animal poison control service immediately.",
+      };
+    },
+    faq: [
+      { q: "Why doesn't this calculator just tell me how many milligrams to give my cat?", a: "Because a safe dose depends on more than body weight alone - the specific product's concentration, whether it's single-ingredient or a combination formula, your cat's age and health conditions, and any other medications all affect whether and how much diphenhydramine is appropriate. Cats can also be more sensitive to certain medications than dogs or humans, which is another reason a weight-only calculation isn't a substitute for veterinary guidance." },
+      { q: "Are all Benadryl products safe for cats?", a: "Not necessarily - some Benadryl and generic diphenhydramine products are combination formulas that include additional active ingredients like decongestants, which can be dangerous for cats even in small amounts. Only plain diphenhydramine, confirmed with a veterinarian, should be considered, and only in a form and concentration your vet has approved." },
+      { q: "Are cats more sensitive to diphenhydramine than dogs?", a: "Cats can react differently to many medications than dogs do, and individual sensitivity varies - this is exactly why a veterinarian, who can weigh your specific cat's health history and the specific product involved, needs to be the one determining an appropriate dose rather than a generic weight-based calculation." },
+      { q: "What if my cat already has a health condition?", a: "Certain conditions and certain medications can interact with diphenhydramine or make it inappropriate for a given cat. Always disclose your cat's full health history and current medications to your veterinarian before giving any new medication." },
+      { q: "What should I do if I think my cat got too much diphenhydramine?", a: "Contact your veterinarian, an emergency animal hospital, or an animal poison control service immediately - don't wait to see if symptoms appear. Have the product packaging (including concentration and any other active ingredients) on hand when you call." },
+      { q: "Why is diphenhydramine sometimes given to cats at all?", a: "Veterinarians sometimes use diphenhydramine off-label for cats to manage mild allergic reactions or as a mild sedative in specific situations - but because it's being used off-label, the appropriate product, dose, and situation should always be determined by a vet rather than a general online calculator." },
+    ],
+    related: ["benadryl-dosage-for-dogs", "cat-age-calculator", "cat-bmi-calculator"],
+  },
+  {
+    id: "cat-bmi-calculator",
+    category: "pets",
+    title: "Cat BMI Calculator",
+    keyword: "cat bmi calculator",
+    description: "Calculate a feline weight-to-length size index - an educational estimate, not a diagnostic body-condition score.",
+    intro: "Enter your cat's weight and body length (nose to base of tail) to calculate a size index. This is not human BMI applied to cats, and it isn't a substitute for a veterinary body condition assessment.",
+    fields: [
+      { id: "weight", label: "Weight", type: "number", default: 4.5, step: 0.1, min: 0.1 },
+      { id: "weightUnit", label: "Weight unit", type: "select", default: "kg", options: [
+        { v: "kg", l: "kg" }, { v: "lb", l: "lb" },
+      ] },
+      { id: "length", label: "Body length (nose to base of tail)", type: "number", default: 45, step: 0.5, min: 1 },
+      { id: "lengthUnit", label: "Length unit", type: "select", default: "cm", options: [
+        { v: "cm", l: "cm" }, { v: "in", l: "inches" },
+      ] },
+    ],
+    compute: (v) => {
+      if (!(v.weight > 0) || !(v.length > 0)) {
+        return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Weight and length must both be greater than zero." };
+      }
+      const weightKg = v.weightUnit === "lb" ? v.weight * 0.453592 : v.weight;
+      const lengthM = (v.lengthUnit === "in" ? v.length * 2.54 : v.length) / 100;
+      const index = weightKg / (lengthM * lengthM);
+      return {
+        primary: { label: "Weight-to-length size index", value: round(index, 1) },
+        secondary: [{ l: "No healthy range shown", v: "See note below" }],
+        note: "There is no standardized, clinically validated \"cat BMI\" the way there is for adult humans, so no healthy/overweight/underweight range is shown for this number - showing one would imply a precision this simple ratio doesn't have. This index (weight ÷ length²) is provided for educational tracking only. Veterinarians assess feline body condition using a hands-on Body Condition Score (BCS), which involves feeling for rib coverage, waist, and abdominal fat - that's the clinically appropriate way to assess whether a cat is at a healthy weight.",
+      };
+    },
+    faq: [
+      { q: "Why doesn't this calculator tell me if my cat is overweight or underweight?", a: "Because there's no standardized, clinically validated \"cat BMI\" scale the way there is for adult humans - applying human BMI cutoffs to a cat's weight-to-length ratio would be scientifically unfounded. This tool shows the raw index for educational tracking only, without inventing a healthy-range classification that doesn't have solid backing." },
+      { q: "How do veterinarians actually assess a cat's body condition?", a: "Through a hands-on Body Condition Score (BCS), typically on a 9-point (or sometimes 5-point) scale, where the vet feels for rib coverage, checks for a visible waist from above, and assesses abdominal fat - a physical exam captures body composition in a way that a single weight-and-length ratio can't." },
+      { q: "Why measure body length instead of just tracking weight alone?", a: "Weight alone doesn't account for a cat's frame size - two cats of very different body sizes could have the same weight but very different body conditions. Including length is an attempt to normalize for frame size, similar in spirit to how human BMI incorporates height, though it isn't validated for cats the way BMI is for humans." },
+      { q: "How should I measure my cat's body length?", a: "Measure from the tip of the nose to the base of the tail (where the tail meets the body), with your cat standing naturally if possible - avoid stretching your cat out for the measurement, since that can distort the reading." },
+      { q: "Can I use this index to track changes in my cat over time?", a: "It can be one data point to track alongside weight and a vet's body condition assessment, but changes in this index should be interpreted cautiously and ideally discussed with a veterinarian, since it isn't a validated diagnostic measure on its own." },
+      { q: "Is a higher index always worse?", a: "Not necessarily, and this tool doesn't attempt to say - a higher index could reflect more body fat, more muscle mass, a shorter measured length, or normal breed variation, none of which this simple ratio can distinguish. A veterinary body condition exam is needed to interpret what's actually driving the number." },
+    ],
+    related: ["cat-age-calculator", "bird-age-calculator", "cat-benadryl-dosage-calculator"],
   },
 ];
 

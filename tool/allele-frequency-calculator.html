@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Allele Frequency Calculator | Calquary</title>
+  <meta name="description" content="Calculate observed allele frequencies (p and q) from genotype counts in a sample population." />
+  <meta property="og:title" content="Allele Frequency Calculator | Calquary">
+  <meta property="og:description" content="Calculate observed allele frequencies (p and q) from genotype counts in a sample population.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/tool/allele-frequency-calculator">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/allele-frequency-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Allele Frequency Calculator | Calquary">
+  <meta name="twitter:description" content="Calculate observed allele frequencies (p and q) from genotype counts in a sample population.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/allele-frequency-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/allele-frequency-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/allele-frequency-calculator">
+    <link rel="canonical" href="https://calquary.com/tool/allele-frequency-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("allele-frequency-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("allele-frequency-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Allele Frequency Calculator",
+      "description": "Calculate observed allele frequencies (p and q) from genotype counts in a sample population.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/allele-frequency-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Allele Frequency Calculator",
+          "item": "https://calquary.com/tool/allele-frequency-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why does AA count for 2 in the formula but Aa only counts for 1?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each individual carries 2 alleles at the gene locus. An AA individual has two copies of allele A, so it contributes 2 to A's count. An Aa individual has one copy of each allele, contributing 1 to A's count and 1 to a's count. Summing these contributions and dividing by the total allele count (2N) gives each allele's frequency."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why should p + q always equal 1?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because every allele counted in the sample is classified as either A or a - there's no third option in this two-allele model, so their frequencies must sum to the whole (1, or 100%). If your result is slightly off from exactly 1, that's normal rounding in the displayed decimals, not a calculation error."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this the same as a Hardy-Weinberg calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - this tool goes from real, observed genotype counts to observed allele frequencies (p and q). A Hardy-Weinberg calculator instead starts from an assumed allele frequency and predicts what the genotype frequencies would be under equilibrium (no selection, mutation, migration, or drift). Use this calculator first to find your sample's actual p and q from real counts, then use a Hardy-Weinberg calculator to see whether your observed genotype counts match what equilibrium would predict."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can this handle a sample with only two genotypes present, like no aa individuals?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - enter 0 for any genotype not observed in your sample. The formulas still work correctly; a genotype count of 0 simply contributes nothing to that allele's tally."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I only have genotype frequencies (percentages) instead of raw counts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Multiply each frequency by your total sample size to get counts, or simply enter frequencies scaled to a convenient total (like frequencies × 100, treating them as counts out of 100) - the formula produces the same p and q either way since it works with relative proportions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this assume the population is in Hardy-Weinberg equilibrium?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - calculating allele frequencies from genotype counts is a direct tally and makes no equilibrium assumption. It works whether or not the population is actually in Hardy-Weinberg equilibrium; that assumption only comes into play if you go on to compare these frequencies against Hardy-Weinberg-predicted genotype ratios."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/#categories">Categories</a>
+          <a href="/#tools">All tools</a>
+          <a href="/about">About</a>
+        </nav>
+        
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/">Calquary</a> / <a href="/category/biology">Biology</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Allele Frequency Calculator</h1>
+        <p style="max-width:60ch;">Enter the number of individuals with each genotype (AA, Aa, aa) in your sample to calculate the observed frequency of each allele.</p>
+        <p class="last-updated">Last updated: September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculate</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reset</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Frequently asked questions</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Why does AA count for 2 in the formula but Aa only counts for 1?</h3>
+<p>Each individual carries 2 alleles at the gene locus. An AA individual has two copies of allele A, so it contributes 2 to A's count. An Aa individual has one copy of each allele, contributing 1 to A's count and 1 to a's count. Summing these contributions and dividing by the total allele count (2N) gives each allele's frequency.</p>
+</div>
+<div class="faq-item">
+<h3>Why should p + q always equal 1?</h3>
+<p>Because every allele counted in the sample is classified as either A or a - there's no third option in this two-allele model, so their frequencies must sum to the whole (1, or 100%). If your result is slightly off from exactly 1, that's normal rounding in the displayed decimals, not a calculation error.</p>
+</div>
+<div class="faq-item">
+<h3>Is this the same as a Hardy-Weinberg calculator?</h3>
+<p>No - this tool goes from real, observed genotype counts to observed allele frequencies (p and q). A Hardy-Weinberg calculator instead starts from an assumed allele frequency and predicts what the genotype frequencies would be under equilibrium (no selection, mutation, migration, or drift). Use this calculator first to find your sample's actual p and q from real counts, then use a Hardy-Weinberg calculator to see whether your observed genotype counts match what equilibrium would predict.</p>
+</div>
+<div class="faq-item">
+<h3>Can this handle a sample with only two genotypes present, like no aa individuals?</h3>
+<p>Yes - enter 0 for any genotype not observed in your sample. The formulas still work correctly; a genotype count of 0 simply contributes nothing to that allele's tally.</p>
+</div>
+<div class="faq-item">
+<h3>What if I only have genotype frequencies (percentages) instead of raw counts?</h3>
+<p>Multiply each frequency by your total sample size to get counts, or simply enter frequencies scaled to a convenient total (like frequencies × 100, treating them as counts out of 100) - the formula produces the same p and q either way since it works with relative proportions.</p>
+</div>
+<div class="faq-item">
+<h3>Does this assume the population is in Hardy-Weinberg equilibrium?</h3>
+<p>No - calculating allele frequencies from genotype counts is a direct tally and makes no equilibrium assumption. It works whether or not the population is actually in Hardy-Weinberg equilibrium; that assumption only comes into play if you go on to compare these frequencies against Hardy-Weinberg-predicted genotype ratios.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculate</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Related tools</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>A note on accuracy</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquary's calculators are built for quick, reliable estimates. For decisions with real financial, structural, or medical stakes, confirm with a qualified professional.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/">← Back to all calculators</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

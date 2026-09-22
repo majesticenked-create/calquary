@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acres Per Hour Calculator | Calquary</title>
+  <meta name="description" content="Calculate field work rate in acres per hour from working width, travel speed, and field efficiency." />
+  <meta property="og:title" content="Acres Per Hour Calculator | Calquary">
+  <meta property="og:description" content="Calculate field work rate in acres per hour from working width, travel speed, and field efficiency.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/tool/acres-per-hour-calculator">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/acres-per-hour-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Acres Per Hour Calculator | Calquary">
+  <meta name="twitter:description" content="Calculate field work rate in acres per hour from working width, travel speed, and field efficiency.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/acres-per-hour-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/acres-per-hour-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/acres-per-hour-calculator">
+    <link rel="canonical" href="https://calquary.com/tool/acres-per-hour-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("acres-per-hour-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("acres-per-hour-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Acres Per Hour Calculator",
+      "description": "Calculate field work rate in acres per hour from working width, travel speed, and field efficiency.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/acres-per-hour-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Acres Per Hour Calculator",
+          "item": "https://calquary.com/tool/acres-per-hour-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is field efficiency and why isn't it 100%?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Field efficiency accounts for time and distance lost to turning at row ends, overlap between passes, filling/emptying equipment, and other stops - real-world coverage is almost always lower than the theoretical rate at full working width and speed. Typical field efficiency for many operations falls between 65% and 90% depending on field shape and equipment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where does the 8.25 constant in the formula come from?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It converts a swath (width × speed) into acres per hour: there are 5,280 feet in a mile and 43,560 square feet in an acre, so 5,280 ÷ 43,560 = 0.1212, and 1 ÷ 0.1212 = 8.25. Dividing width (ft) × speed (mph) by 8.25 gives acres covered per hour at 100% efficiency."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I estimate my actual working width?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the effective width of your implement (e.g., the cutting or working width of a mower, planter, or sprayer boom), not the width of the tractor or vehicle pulling it - overlap between passes should also be subtracted from the rated width if you consistently overlap by a set amount."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use this for both large field equipment and smaller yard equipment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - the formula scales to any working width and speed, from a wide agricultural implement covering many acres per hour to a push mower covering a fraction of an acre per hour, as long as the units are consistent."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does the calculator show both an acres-per-hour and a hectares-per-hour result?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Acres are the standard land unit in the US, while hectares are standard in most other countries - showing both avoids needing a separate conversion step regardless of which unit you're planning in."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this account for time spent refilling or servicing equipment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not directly - the field efficiency percentage is meant to capture typical in-field losses like turning and overlap. If you regularly lose significant time to refilling, breakdowns, or other stops beyond normal turning, lower your efficiency estimate to reflect your actual observed coverage rate."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/#categories">Categories</a>
+          <a href="/#tools">All tools</a>
+          <a href="/about">About</a>
+        </nav>
+        
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/">Calquary</a> / <a href="/category/biology">Biology</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Acres Per Hour Calculator</h1>
+        <p style="max-width:60ch;">Enter your implement's working width, your travel speed, and a field efficiency percentage to estimate how many acres (or hectares) you can cover per hour.</p>
+        <p class="last-updated">Last updated: September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculate</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reset</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Frequently asked questions</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>What is field efficiency and why isn't it 100%?</h3>
+<p>Field efficiency accounts for time and distance lost to turning at row ends, overlap between passes, filling/emptying equipment, and other stops - real-world coverage is almost always lower than the theoretical rate at full working width and speed. Typical field efficiency for many operations falls between 65% and 90% depending on field shape and equipment.</p>
+</div>
+<div class="faq-item">
+<h3>Where does the 8.25 constant in the formula come from?</h3>
+<p>It converts a swath (width × speed) into acres per hour: there are 5,280 feet in a mile and 43,560 square feet in an acre, so 5,280 ÷ 43,560 = 0.1212, and 1 ÷ 0.1212 = 8.25. Dividing width (ft) × speed (mph) by 8.25 gives acres covered per hour at 100% efficiency.</p>
+</div>
+<div class="faq-item">
+<h3>How do I estimate my actual working width?</h3>
+<p>Use the effective width of your implement (e.g., the cutting or working width of a mower, planter, or sprayer boom), not the width of the tractor or vehicle pulling it - overlap between passes should also be subtracted from the rated width if you consistently overlap by a set amount.</p>
+</div>
+<div class="faq-item">
+<h3>Can I use this for both large field equipment and smaller yard equipment?</h3>
+<p>Yes - the formula scales to any working width and speed, from a wide agricultural implement covering many acres per hour to a push mower covering a fraction of an acre per hour, as long as the units are consistent.</p>
+</div>
+<div class="faq-item">
+<h3>Why does the calculator show both an acres-per-hour and a hectares-per-hour result?</h3>
+<p>Acres are the standard land unit in the US, while hectares are standard in most other countries - showing both avoids needing a separate conversion step regardless of which unit you're planning in.</p>
+</div>
+<div class="faq-item">
+<h3>Does this account for time spent refilling or servicing equipment?</h3>
+<p>Not directly - the field efficiency percentage is meant to capture typical in-field losses like turning and overlap. If you regularly lose significant time to refilling, breakdowns, or other stops beyond normal turning, lower your efficiency estimate to reflect your actual observed coverage rate.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculate</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Related tools</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>A note on accuracy</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquary's calculators are built for quick, reliable estimates. For decisions with real financial, structural, or medical stakes, confirm with a qualified professional.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/">← Back to all calculators</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

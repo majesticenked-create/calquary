@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bird Age Calculator | Calquary</title>
+  <meta name="description" content="Estimate a pet bird's life stage from its species group and age - not a single universal bird-to-human-year conversion." />
+  <meta property="og:title" content="Bird Age Calculator | Calquary">
+  <meta property="og:description" content="Estimate a pet bird's life stage from its species group and age - not a single universal bird-to-human-year conversion.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/tool/bird-age-calculator">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/bird-age-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bird Age Calculator | Calquary">
+  <meta name="twitter:description" content="Estimate a pet bird's life stage from its species group and age - not a single universal bird-to-human-year conversion.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/bird-age-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/bird-age-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/bird-age-calculator">
+    <link rel="canonical" href="https://calquary.com/tool/bird-age-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("bird-age-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("bird-age-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Bird Age Calculator",
+      "description": "Estimate a pet bird's life stage from its species group and age - not a single universal bird-to-human-year conversion.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/bird-age-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Pet & Lifestyle",
+          "item": "https://calquary.com/category/pets"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Bird Age Calculator",
+          "item": "https://calquary.com/tool/bird-age-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why doesn't this calculator give a single bird-to-human-year conversion?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because bird lifespans vary enormously by species - a budgie typically lives 5-10 years while a large macaw can live 50-80 years - so a single universal multiplier would be meaningless across that range. This tool instead groups birds by typical size/lifespan category and estimates a life stage, which is more honest than a fabricated precise conversion."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How accurate are these life-stage age ranges?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They're general estimates based on typical maturity and longevity patterns for each species group, not a scientific study of every species within that group. Individual birds, and specific species within a group, can mature and age at somewhat different rates - treat the result as a rough guide, not an exact classification."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do giant parrots have such a long 'adult' stage compared to small birds?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Larger parrot species generally have substantially longer lifespans than small birds - macaws and cockatoos can live 50 years or more in captivity, compared to 5-10 years for a budgie - so their maturity and aging timeline is stretched out proportionally longer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "My bird's species isn't listed exactly - which group should I pick?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Choose the group whose typical size and lifespan most closely matches your bird's species - for example, a Quaker parrot fits reasonably well in the medium group, while a Senegal parrot is closer to the large parrot group. When in doubt, research your specific species' typical lifespan and pick the closest match."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does sex affect a bird's aging or lifespan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It can, in some species, though the effect is generally smaller than the effect of species/size group. This calculator doesn't account for sex-based differences, since they vary by species and aren't consistent enough across groups to build into a simple estimate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a 'senior' bird automatically less healthy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not necessarily - the senior life stage here just reflects a bird being in the later portion of its typical lifespan for its species group, not a health assessment. Many birds remain healthy well into their senior years with appropriate care; a vet visit is the right way to assess actual health status regardless of age."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/#categories">Categories</a>
+          <a href="/#tools">All tools</a>
+          <a href="/about">About</a>
+        </nav>
+        
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/">Calquary</a> / <a href="/category/pets">Pet & Lifestyle</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Bird Age Calculator</h1>
+        <p style="max-width:60ch;">Bird aging varies enormously by species - a budgie and a macaw age on completely different timelines. Choose the species group closest to your bird and enter its age to see a general life-stage estimate.</p>
+        <p class="last-updated">Last updated: September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculate</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reset</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Frequently asked questions</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Why doesn't this calculator give a single bird-to-human-year conversion?</h3>
+<p>Because bird lifespans vary enormously by species - a budgie typically lives 5-10 years while a large macaw can live 50-80 years - so a single universal multiplier would be meaningless across that range. This tool instead groups birds by typical size/lifespan category and estimates a life stage, which is more honest than a fabricated precise conversion.</p>
+</div>
+<div class="faq-item">
+<h3>How accurate are these life-stage age ranges?</h3>
+<p>They're general estimates based on typical maturity and longevity patterns for each species group, not a scientific study of every species within that group. Individual birds, and specific species within a group, can mature and age at somewhat different rates - treat the result as a rough guide, not an exact classification.</p>
+</div>
+<div class="faq-item">
+<h3>Why do giant parrots have such a long 'adult' stage compared to small birds?</h3>
+<p>Larger parrot species generally have substantially longer lifespans than small birds - macaws and cockatoos can live 50 years or more in captivity, compared to 5-10 years for a budgie - so their maturity and aging timeline is stretched out proportionally longer.</p>
+</div>
+<div class="faq-item">
+<h3>My bird's species isn't listed exactly - which group should I pick?</h3>
+<p>Choose the group whose typical size and lifespan most closely matches your bird's species - for example, a Quaker parrot fits reasonably well in the medium group, while a Senegal parrot is closer to the large parrot group. When in doubt, research your specific species' typical lifespan and pick the closest match.</p>
+</div>
+<div class="faq-item">
+<h3>Does sex affect a bird's aging or lifespan?</h3>
+<p>It can, in some species, though the effect is generally smaller than the effect of species/size group. This calculator doesn't account for sex-based differences, since they vary by species and aren't consistent enough across groups to build into a simple estimate.</p>
+</div>
+<div class="faq-item">
+<h3>Is a 'senior' bird automatically less healthy?</h3>
+<p>Not necessarily - the senior life stage here just reflects a bird being in the later portion of its typical lifespan for its species group, not a health assessment. Many birds remain healthy well into their senior years with appropriate care; a vet visit is the right way to assess actual health status regardless of age.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculate</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Related tools</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>A note on accuracy</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquary's calculators are built for quick, reliable estimates. For decisions with real financial, structural, or medical stakes, confirm with a qualified professional.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/">← Back to all calculators</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

@@ -99,7 +99,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-22",
       "inLanguage": "en"
     },
     {
@@ -183,6 +183,14 @@
             "@type": "Answer",
             "text": "q² = 0.09, so q = √0.09 = 0.3, and p = 1 − 0.3 = 0.7. That means 49% are homozygous dominant and 42% are heterozygous carriers of the recessive allele."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "I have actual genotype counts from a sample, not an assumed allele frequency - is this the right tool?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not directly - this calculator starts from an assumed allele frequency (or one genotype frequency) and predicts expected genotype frequencies under equilibrium. If you have real counts of AA, Aa, and aa individuals and want their observed allele frequencies, use the Allele Frequency Calculator instead - then bring those p and q values back here to see whether your sample matches Hardy-Weinberg expectations."
+          }
         }
       ]
     }
@@ -224,7 +232,7 @@
       <main>
         <h1>Hardy-Weinberg Equilibrium Calculator</h1>
         <p style="max-width:60ch;">Enter one allele frequency (or a genotype frequency) to calculate the expected genotype frequencies under Hardy-Weinberg equilibrium.</p>
-        <p class="last-updated">Last updated: September 5, 2026</p>
+        <p class="last-updated">Last updated: September 22, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel" id="calc-panel">
@@ -277,6 +285,10 @@
 <div class="faq-item">
 <h3>If 9% of a population shows a recessive trait, what are p and q?</h3>
 <p>q² = 0.09, so q = √0.09 = 0.3, and p = 1 − 0.3 = 0.7. That means 49% are homozygous dominant and 42% are heterozygous carriers of the recessive allele.</p>
+</div>
+<div class="faq-item">
+<h3>I have actual genotype counts from a sample, not an assumed allele frequency - is this the right tool?</h3>
+<p>Not directly - this calculator starts from an assumed allele frequency (or one genotype frequency) and predicts expected genotype frequencies under equilibrium. If you have real counts of AA, Aa, and aa individuals and want their observed allele frequencies, use the Allele Frequency Calculator instead - then bring those p and q values back here to see whether your sample matches Hardy-Weinberg expectations.</p>
 </div></div>
           <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculate</a>
         </div>

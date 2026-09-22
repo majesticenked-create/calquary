@@ -138,7 +138,7 @@
   </url>
   <url>
     <loc>https://calquary.com/category/construction</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/construction"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/construction"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/construction"/>
@@ -223,7 +223,7 @@
   </url>
   <url>
     <loc>https://calquary.com/category/pets</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/pets"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/pets"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/pets"/>
@@ -239,8 +239,25 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/category/pets"/>
   </url>
   <url>
+    <loc>https://calquary.com/category/biology</loc>
+    <lastmod>2026-09-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/category/biology"/>
+  </url>
+  <url>
     <loc>https://calquary.com/tool/percentage-calculator</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/percentage-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/percentage-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/percentage-calculator"/>
@@ -1005,7 +1022,7 @@
   </url>
   <url>
     <loc>https://calquary.com/tool/molecular-weight-calculator</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/molecular-weight-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/molecular-weight-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/molecular-weight-calculator"/>
@@ -1175,7 +1192,7 @@
   </url>
   <url>
     <loc>https://calquary.com/tool/half-life-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/half-life-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/half-life-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/half-life-calculator"/>
@@ -1192,7 +1209,7 @@
   </url>
   <url>
     <loc>https://calquary.com/tool/hardy-weinberg-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/hardy-weinberg-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/hardy-weinberg-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/hardy-weinberg-calculator"/>
@@ -1753,7 +1770,7 @@
   </url>
   <url>
     <loc>https://calquary.com/tool/flooring-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/flooring-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/flooring-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/flooring-calculator"/>
@@ -3606,7 +3623,7 @@
   </url>
   <url>
     <loc>https://calquary.com/tool/dog-age-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/dog-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dog-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/dog-age-calculator"/>
@@ -3640,7 +3657,7 @@
   </url>
   <url>
     <loc>https://calquary.com/tool/cat-age-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/cat-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/cat-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/cat-age-calculator"/>
@@ -3894,6 +3911,66 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/roi-cagr-calculator"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/acres-per-hour-calculator</loc>
+    <lastmod>2026-09-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/acres-per-hour-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/acres-per-hour-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/allele-frequency-calculator</loc>
+    <lastmod>2026-09-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/allele-frequency-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/allele-frequency-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/animal-mortality-rate-calculator</loc>
+    <lastmod>2026-09-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/animal-mortality-rate-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/animal-mortality-rate-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/annealing-temperature-calculator</loc>
+    <lastmod>2026-09-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/annealing-temperature-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/annealing-temperature-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/basal-area-calculator</loc>
+    <lastmod>2026-09-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/basal-area-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/basal-area-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/benadryl-dosage-for-dogs</loc>
+    <lastmod>2026-09-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/benadryl-dosage-for-dogs"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/benadryl-dosage-for-dogs"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/bird-age-calculator</loc>
+    <lastmod>2026-09-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/bird-age-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/bird-age-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/bulb-spacing-calculator</loc>
+    <lastmod>2026-09-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/bulb-spacing-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/bulb-spacing-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/cat-benadryl-dosage-calculator</loc>
+    <lastmod>2026-09-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/cat-benadryl-dosage-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/cat-benadryl-dosage-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/cat-bmi-calculator</loc>
+    <lastmod>2026-09-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/cat-bmi-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/cat-bmi-calculator"/>
+  </url>
+  <url>
     <loc>https://calquary.com/es/</loc>
     <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/"/>
@@ -4031,7 +4108,7 @@
   </url>
   <url>
     <loc>https://calquary.com/es/category/construction</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/construction"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/construction"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/construction"/>
@@ -4116,7 +4193,7 @@
   </url>
   <url>
     <loc>https://calquary.com/es/category/pets</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/pets"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/pets"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/pets"/>
@@ -4132,8 +4209,25 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/category/pets"/>
   </url>
   <url>
+    <loc>https://calquary.com/es/category/biology</loc>
+    <lastmod>2026-09-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/category/biology"/>
+  </url>
+  <url>
     <loc>https://calquary.com/es/tool/percentage-calculator</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/percentage-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/percentage-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/percentage-calculator"/>
@@ -4898,7 +4992,7 @@
   </url>
   <url>
     <loc>https://calquary.com/es/tool/molecular-weight-calculator</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/molecular-weight-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/molecular-weight-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/molecular-weight-calculator"/>
@@ -5068,7 +5162,7 @@
   </url>
   <url>
     <loc>https://calquary.com/es/tool/half-life-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/half-life-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/half-life-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/half-life-calculator"/>
@@ -5085,7 +5179,7 @@
   </url>
   <url>
     <loc>https://calquary.com/es/tool/hardy-weinberg-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/hardy-weinberg-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/hardy-weinberg-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/hardy-weinberg-calculator"/>
@@ -5646,7 +5740,7 @@
   </url>
   <url>
     <loc>https://calquary.com/es/tool/flooring-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/flooring-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/flooring-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/flooring-calculator"/>
@@ -7499,7 +7593,7 @@
   </url>
   <url>
     <loc>https://calquary.com/es/tool/dog-age-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/dog-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dog-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/dog-age-calculator"/>
@@ -7533,7 +7627,7 @@
   </url>
   <url>
     <loc>https://calquary.com/es/tool/cat-age-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/cat-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/cat-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/cat-age-calculator"/>
@@ -7924,7 +8018,7 @@
   </url>
   <url>
     <loc>https://calquary.com/fr/category/construction</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/construction"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/construction"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/construction"/>
@@ -8009,7 +8103,7 @@
   </url>
   <url>
     <loc>https://calquary.com/fr/category/pets</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/pets"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/pets"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/pets"/>
@@ -8025,8 +8119,25 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/category/pets"/>
   </url>
   <url>
+    <loc>https://calquary.com/fr/category/biology</loc>
+    <lastmod>2026-09-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/category/biology"/>
+  </url>
+  <url>
     <loc>https://calquary.com/fr/tool/percentage-calculator</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/percentage-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/percentage-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/percentage-calculator"/>
@@ -8791,7 +8902,7 @@
   </url>
   <url>
     <loc>https://calquary.com/fr/tool/molecular-weight-calculator</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/molecular-weight-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/molecular-weight-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/molecular-weight-calculator"/>
@@ -8961,7 +9072,7 @@
   </url>
   <url>
     <loc>https://calquary.com/fr/tool/half-life-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/half-life-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/half-life-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/half-life-calculator"/>
@@ -8978,7 +9089,7 @@
   </url>
   <url>
     <loc>https://calquary.com/fr/tool/hardy-weinberg-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/hardy-weinberg-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/hardy-weinberg-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/hardy-weinberg-calculator"/>
@@ -9539,7 +9650,7 @@
   </url>
   <url>
     <loc>https://calquary.com/fr/tool/flooring-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/flooring-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/flooring-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/flooring-calculator"/>
@@ -11392,7 +11503,7 @@
   </url>
   <url>
     <loc>https://calquary.com/fr/tool/dog-age-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/dog-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dog-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/dog-age-calculator"/>
@@ -11426,7 +11537,7 @@
   </url>
   <url>
     <loc>https://calquary.com/fr/tool/cat-age-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/cat-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/cat-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/cat-age-calculator"/>
@@ -11817,7 +11928,7 @@
   </url>
   <url>
     <loc>https://calquary.com/de/category/construction</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/construction"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/construction"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/construction"/>
@@ -11902,7 +12013,7 @@
   </url>
   <url>
     <loc>https://calquary.com/de/category/pets</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/pets"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/pets"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/pets"/>
@@ -11918,8 +12029,25 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/category/pets"/>
   </url>
   <url>
+    <loc>https://calquary.com/de/category/biology</loc>
+    <lastmod>2026-09-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/category/biology"/>
+  </url>
+  <url>
     <loc>https://calquary.com/de/tool/percentage-calculator</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/percentage-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/percentage-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/percentage-calculator"/>
@@ -12684,7 +12812,7 @@
   </url>
   <url>
     <loc>https://calquary.com/de/tool/molecular-weight-calculator</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/molecular-weight-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/molecular-weight-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/molecular-weight-calculator"/>
@@ -12854,7 +12982,7 @@
   </url>
   <url>
     <loc>https://calquary.com/de/tool/half-life-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/half-life-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/half-life-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/half-life-calculator"/>
@@ -12871,7 +12999,7 @@
   </url>
   <url>
     <loc>https://calquary.com/de/tool/hardy-weinberg-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/hardy-weinberg-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/hardy-weinberg-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/hardy-weinberg-calculator"/>
@@ -13432,7 +13560,7 @@
   </url>
   <url>
     <loc>https://calquary.com/de/tool/flooring-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/flooring-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/flooring-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/flooring-calculator"/>
@@ -15285,7 +15413,7 @@
   </url>
   <url>
     <loc>https://calquary.com/de/tool/dog-age-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/dog-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dog-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/dog-age-calculator"/>
@@ -15319,7 +15447,7 @@
   </url>
   <url>
     <loc>https://calquary.com/de/tool/cat-age-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/cat-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/cat-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/cat-age-calculator"/>
@@ -15710,7 +15838,7 @@
   </url>
   <url>
     <loc>https://calquary.com/pt/category/construction</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/construction"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/construction"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/construction"/>
@@ -15795,7 +15923,7 @@
   </url>
   <url>
     <loc>https://calquary.com/pt/category/pets</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/pets"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/pets"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/pets"/>
@@ -15811,8 +15939,25 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/category/pets"/>
   </url>
   <url>
+    <loc>https://calquary.com/pt/category/biology</loc>
+    <lastmod>2026-09-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/category/biology"/>
+  </url>
+  <url>
     <loc>https://calquary.com/pt/tool/percentage-calculator</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/percentage-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/percentage-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/percentage-calculator"/>
@@ -16577,7 +16722,7 @@
   </url>
   <url>
     <loc>https://calquary.com/pt/tool/molecular-weight-calculator</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/molecular-weight-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/molecular-weight-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/molecular-weight-calculator"/>
@@ -16747,7 +16892,7 @@
   </url>
   <url>
     <loc>https://calquary.com/pt/tool/half-life-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/half-life-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/half-life-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/half-life-calculator"/>
@@ -16764,7 +16909,7 @@
   </url>
   <url>
     <loc>https://calquary.com/pt/tool/hardy-weinberg-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/hardy-weinberg-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/hardy-weinberg-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/hardy-weinberg-calculator"/>
@@ -17325,7 +17470,7 @@
   </url>
   <url>
     <loc>https://calquary.com/pt/tool/flooring-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/flooring-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/flooring-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/flooring-calculator"/>
@@ -19178,7 +19323,7 @@
   </url>
   <url>
     <loc>https://calquary.com/pt/tool/dog-age-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/dog-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dog-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/dog-age-calculator"/>
@@ -19212,7 +19357,7 @@
   </url>
   <url>
     <loc>https://calquary.com/pt/tool/cat-age-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/cat-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/cat-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/cat-age-calculator"/>
@@ -19603,7 +19748,7 @@
   </url>
   <url>
     <loc>https://calquary.com/it/category/construction</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/construction"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/construction"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/construction"/>
@@ -19688,7 +19833,7 @@
   </url>
   <url>
     <loc>https://calquary.com/it/category/pets</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/pets"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/pets"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/pets"/>
@@ -19704,8 +19849,25 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/category/pets"/>
   </url>
   <url>
+    <loc>https://calquary.com/it/category/biology</loc>
+    <lastmod>2026-09-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/category/biology"/>
+  </url>
+  <url>
     <loc>https://calquary.com/it/tool/percentage-calculator</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/percentage-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/percentage-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/percentage-calculator"/>
@@ -20470,7 +20632,7 @@
   </url>
   <url>
     <loc>https://calquary.com/it/tool/molecular-weight-calculator</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/molecular-weight-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/molecular-weight-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/molecular-weight-calculator"/>
@@ -20640,7 +20802,7 @@
   </url>
   <url>
     <loc>https://calquary.com/it/tool/half-life-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/half-life-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/half-life-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/half-life-calculator"/>
@@ -20657,7 +20819,7 @@
   </url>
   <url>
     <loc>https://calquary.com/it/tool/hardy-weinberg-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/hardy-weinberg-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/hardy-weinberg-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/hardy-weinberg-calculator"/>
@@ -21218,7 +21380,7 @@
   </url>
   <url>
     <loc>https://calquary.com/it/tool/flooring-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/flooring-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/flooring-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/flooring-calculator"/>
@@ -23071,7 +23233,7 @@
   </url>
   <url>
     <loc>https://calquary.com/it/tool/dog-age-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/dog-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dog-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/dog-age-calculator"/>
@@ -23105,7 +23267,7 @@
   </url>
   <url>
     <loc>https://calquary.com/it/tool/cat-age-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/cat-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/cat-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/cat-age-calculator"/>
@@ -23496,7 +23658,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ja/category/construction</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/construction"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/construction"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/construction"/>
@@ -23581,7 +23743,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ja/category/pets</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/pets"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/pets"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/pets"/>
@@ -23597,8 +23759,25 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/category/pets"/>
   </url>
   <url>
+    <loc>https://calquary.com/ja/category/biology</loc>
+    <lastmod>2026-09-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/category/biology"/>
+  </url>
+  <url>
     <loc>https://calquary.com/ja/tool/percentage-calculator</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/percentage-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/percentage-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/percentage-calculator"/>
@@ -24363,7 +24542,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ja/tool/molecular-weight-calculator</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/molecular-weight-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/molecular-weight-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/molecular-weight-calculator"/>
@@ -24533,7 +24712,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ja/tool/half-life-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/half-life-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/half-life-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/half-life-calculator"/>
@@ -24550,7 +24729,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ja/tool/hardy-weinberg-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/hardy-weinberg-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/hardy-weinberg-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/hardy-weinberg-calculator"/>
@@ -25111,7 +25290,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ja/tool/flooring-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/flooring-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/flooring-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/flooring-calculator"/>
@@ -26964,7 +27143,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ja/tool/dog-age-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/dog-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dog-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/dog-age-calculator"/>
@@ -26998,7 +27177,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ja/tool/cat-age-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/cat-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/cat-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/cat-age-calculator"/>
@@ -27389,7 +27568,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ro/category/construction</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/construction"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/construction"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/construction"/>
@@ -27474,7 +27653,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ro/category/pets</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/pets"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/pets"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/pets"/>
@@ -27490,8 +27669,25 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/category/pets"/>
   </url>
   <url>
+    <loc>https://calquary.com/ro/category/biology</loc>
+    <lastmod>2026-09-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/category/biology"/>
+  </url>
+  <url>
     <loc>https://calquary.com/ro/tool/percentage-calculator</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/percentage-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/percentage-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/percentage-calculator"/>
@@ -28256,7 +28452,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ro/tool/molecular-weight-calculator</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/molecular-weight-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/molecular-weight-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/molecular-weight-calculator"/>
@@ -28426,7 +28622,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ro/tool/half-life-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/half-life-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/half-life-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/half-life-calculator"/>
@@ -28443,7 +28639,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ro/tool/hardy-weinberg-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/hardy-weinberg-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/hardy-weinberg-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/hardy-weinberg-calculator"/>
@@ -29004,7 +29200,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ro/tool/flooring-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/flooring-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/flooring-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/flooring-calculator"/>
@@ -30857,7 +31053,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ro/tool/dog-age-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/dog-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dog-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/dog-age-calculator"/>
@@ -30891,7 +31087,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ro/tool/cat-age-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/cat-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/cat-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/cat-age-calculator"/>
@@ -31282,7 +31478,7 @@
   </url>
   <url>
     <loc>https://calquary.com/el/category/construction</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/construction"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/construction"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/construction"/>
@@ -31367,7 +31563,7 @@
   </url>
   <url>
     <loc>https://calquary.com/el/category/pets</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/pets"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/pets"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/pets"/>
@@ -31383,8 +31579,25 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/category/pets"/>
   </url>
   <url>
+    <loc>https://calquary.com/el/category/biology</loc>
+    <lastmod>2026-09-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/category/biology"/>
+  </url>
+  <url>
     <loc>https://calquary.com/el/tool/percentage-calculator</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/percentage-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/percentage-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/percentage-calculator"/>
@@ -32149,7 +32362,7 @@
   </url>
   <url>
     <loc>https://calquary.com/el/tool/molecular-weight-calculator</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/molecular-weight-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/molecular-weight-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/molecular-weight-calculator"/>
@@ -32319,7 +32532,7 @@
   </url>
   <url>
     <loc>https://calquary.com/el/tool/half-life-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/half-life-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/half-life-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/half-life-calculator"/>
@@ -32336,7 +32549,7 @@
   </url>
   <url>
     <loc>https://calquary.com/el/tool/hardy-weinberg-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/hardy-weinberg-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/hardy-weinberg-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/hardy-weinberg-calculator"/>
@@ -32897,7 +33110,7 @@
   </url>
   <url>
     <loc>https://calquary.com/el/tool/flooring-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/flooring-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/flooring-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/flooring-calculator"/>
@@ -34750,7 +34963,7 @@
   </url>
   <url>
     <loc>https://calquary.com/el/tool/dog-age-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/dog-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dog-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/dog-age-calculator"/>
@@ -34784,7 +34997,7 @@
   </url>
   <url>
     <loc>https://calquary.com/el/tool/cat-age-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/cat-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/cat-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/cat-age-calculator"/>
@@ -35175,7 +35388,7 @@
   </url>
   <url>
     <loc>https://calquary.com/zh/category/construction</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/construction"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/construction"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/construction"/>
@@ -35260,7 +35473,7 @@
   </url>
   <url>
     <loc>https://calquary.com/zh/category/pets</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/pets"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/pets"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/pets"/>
@@ -35276,8 +35489,25 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/category/pets"/>
   </url>
   <url>
+    <loc>https://calquary.com/zh/category/biology</loc>
+    <lastmod>2026-09-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/category/biology"/>
+  </url>
+  <url>
     <loc>https://calquary.com/zh/tool/percentage-calculator</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/percentage-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/percentage-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/percentage-calculator"/>
@@ -36042,7 +36272,7 @@
   </url>
   <url>
     <loc>https://calquary.com/zh/tool/molecular-weight-calculator</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/molecular-weight-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/molecular-weight-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/molecular-weight-calculator"/>
@@ -36212,7 +36442,7 @@
   </url>
   <url>
     <loc>https://calquary.com/zh/tool/half-life-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/half-life-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/half-life-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/half-life-calculator"/>
@@ -36229,7 +36459,7 @@
   </url>
   <url>
     <loc>https://calquary.com/zh/tool/hardy-weinberg-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/hardy-weinberg-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/hardy-weinberg-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/hardy-weinberg-calculator"/>
@@ -36790,7 +37020,7 @@
   </url>
   <url>
     <loc>https://calquary.com/zh/tool/flooring-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/flooring-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/flooring-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/flooring-calculator"/>
@@ -38643,7 +38873,7 @@
   </url>
   <url>
     <loc>https://calquary.com/zh/tool/dog-age-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/dog-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dog-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/dog-age-calculator"/>
@@ -38677,7 +38907,7 @@
   </url>
   <url>
     <loc>https://calquary.com/zh/tool/cat-age-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/cat-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/cat-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/cat-age-calculator"/>
@@ -39068,7 +39298,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ar/category/construction</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/construction"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/construction"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/construction"/>
@@ -39153,7 +39383,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ar/category/pets</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/pets"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/pets"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/pets"/>
@@ -39169,8 +39399,25 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/category/pets"/>
   </url>
   <url>
+    <loc>https://calquary.com/ar/category/biology</loc>
+    <lastmod>2026-09-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/category/biology"/>
+  </url>
+  <url>
     <loc>https://calquary.com/ar/tool/percentage-calculator</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/percentage-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/percentage-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/percentage-calculator"/>
@@ -39935,7 +40182,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ar/tool/molecular-weight-calculator</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/molecular-weight-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/molecular-weight-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/molecular-weight-calculator"/>
@@ -40105,7 +40352,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ar/tool/half-life-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/half-life-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/half-life-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/half-life-calculator"/>
@@ -40122,7 +40369,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ar/tool/hardy-weinberg-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/hardy-weinberg-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/hardy-weinberg-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/hardy-weinberg-calculator"/>
@@ -40683,7 +40930,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ar/tool/flooring-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/flooring-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/flooring-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/flooring-calculator"/>
@@ -42536,7 +42783,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ar/tool/dog-age-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/dog-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dog-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/dog-age-calculator"/>
@@ -42570,7 +42817,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ar/tool/cat-age-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/cat-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/cat-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/cat-age-calculator"/>
@@ -42961,7 +43208,7 @@
   </url>
   <url>
     <loc>https://calquary.com/th/category/construction</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/construction"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/construction"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/construction"/>
@@ -43046,7 +43293,7 @@
   </url>
   <url>
     <loc>https://calquary.com/th/category/pets</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/pets"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/pets"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/pets"/>
@@ -43062,8 +43309,25 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/category/pets"/>
   </url>
   <url>
+    <loc>https://calquary.com/th/category/biology</loc>
+    <lastmod>2026-09-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/category/biology"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/category/biology"/>
+  </url>
+  <url>
     <loc>https://calquary.com/th/tool/percentage-calculator</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/percentage-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/percentage-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/percentage-calculator"/>
@@ -43828,7 +44092,7 @@
   </url>
   <url>
     <loc>https://calquary.com/th/tool/molecular-weight-calculator</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/molecular-weight-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/molecular-weight-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/molecular-weight-calculator"/>
@@ -43998,7 +44262,7 @@
   </url>
   <url>
     <loc>https://calquary.com/th/tool/half-life-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/half-life-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/half-life-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/half-life-calculator"/>
@@ -44015,7 +44279,7 @@
   </url>
   <url>
     <loc>https://calquary.com/th/tool/hardy-weinberg-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/hardy-weinberg-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/hardy-weinberg-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/hardy-weinberg-calculator"/>
@@ -44576,7 +44840,7 @@
   </url>
   <url>
     <loc>https://calquary.com/th/tool/flooring-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/flooring-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/flooring-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/flooring-calculator"/>
@@ -46429,7 +46693,7 @@
   </url>
   <url>
     <loc>https://calquary.com/th/tool/dog-age-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/dog-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dog-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/dog-age-calculator"/>
@@ -46463,7 +46727,7 @@
   </url>
   <url>
     <loc>https://calquary.com/th/tool/cat-age-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/cat-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/cat-age-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/cat-age-calculator"/>

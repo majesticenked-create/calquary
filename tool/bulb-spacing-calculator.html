@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bulb Spacing Calculator | Calquary</title>
+  <meta name="description" content="Estimate how many bulbs you need for a planting area based on bulb spacing." />
+  <meta property="og:title" content="Bulb Spacing Calculator | Calquary">
+  <meta property="og:description" content="Estimate how many bulbs you need for a planting area based on bulb spacing.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/tool/bulb-spacing-calculator">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/bulb-spacing-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bulb Spacing Calculator | Calquary">
+  <meta name="twitter:description" content="Estimate how many bulbs you need for a planting area based on bulb spacing.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/bulb-spacing-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/bulb-spacing-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/bulb-spacing-calculator">
+    <link rel="canonical" href="https://calquary.com/tool/bulb-spacing-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("bulb-spacing-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("bulb-spacing-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Bulb Spacing Calculator",
+      "description": "Estimate how many bulbs you need for a planting area based on bulb spacing.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/bulb-spacing-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Bulb Spacing Calculator",
+          "item": "https://calquary.com/tool/bulb-spacing-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why are there two slightly different bulb count numbers shown?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The primary result (bulbs per row × rows) models an evenly spaced grid layout. The area-divided-by-spacing-squared figure is a simpler area-based approximation that can differ slightly, especially for areas that aren't a clean multiple of your spacing. Both are estimates - use the grid figure as the more layout-realistic of the two."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this account for staggered or offset bulb planting patterns?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - this calculates a simple rectangular grid layout. Staggered (offset row) planting typically fits a modestly higher bulb count into the same area than a straight grid, since offset rows can nestle bulbs closer together within the same spacing rule - if you're staggering, expect to need somewhat more bulbs than this estimate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I subtract space for a border or edge margin?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, if your planting plan includes a margin around the bed's edge - reduce the length and width you enter here by that margin on each side first, since this calculator assumes bulbs are planted all the way to the edges of the area you enter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What spacing should I use for different bulb types?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It varies by bulb type and size - larger bulbs like daffodils and tulips are commonly spaced around 4-6 inches apart, while smaller bulbs like crocuses are often spaced closer, around 2-3 inches. Check your specific bulb variety's planting guide for its recommended spacing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why might I need more bulbs than this calculator suggests?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Irregular bed shapes (not a clean rectangle), existing plants or obstacles within the bed, and a desire for denser visual coverage than strict even spacing can all mean buying more than the calculated estimate - many gardeners round up and buy a small surplus for exactly this reason."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use this for a circular or irregularly shaped bed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not directly - this calculator assumes a rectangular area. For a circular or irregular bed, estimate its area separately (or approximate it with a rectangle close to its actual size) and use the area-based estimate as a rough guide rather than the row-by-row grid figure."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/#categories">Categories</a>
+          <a href="/#tools">All tools</a>
+          <a href="/about">About</a>
+        </nav>
+        
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/">Calquary</a> / <a href="/category/biology">Biology</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Bulb Spacing Calculator</h1>
+        <p style="max-width:60ch;">Enter your planting area's length and width, plus your target bulb spacing, to estimate roughly how many bulbs you'll need.</p>
+        <p class="last-updated">Last updated: September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculate</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reset</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Frequently asked questions</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Why are there two slightly different bulb count numbers shown?</h3>
+<p>The primary result (bulbs per row × rows) models an evenly spaced grid layout. The area-divided-by-spacing-squared figure is a simpler area-based approximation that can differ slightly, especially for areas that aren't a clean multiple of your spacing. Both are estimates - use the grid figure as the more layout-realistic of the two.</p>
+</div>
+<div class="faq-item">
+<h3>Does this account for staggered or offset bulb planting patterns?</h3>
+<p>No - this calculates a simple rectangular grid layout. Staggered (offset row) planting typically fits a modestly higher bulb count into the same area than a straight grid, since offset rows can nestle bulbs closer together within the same spacing rule - if you're staggering, expect to need somewhat more bulbs than this estimate.</p>
+</div>
+<div class="faq-item">
+<h3>Should I subtract space for a border or edge margin?</h3>
+<p>Yes, if your planting plan includes a margin around the bed's edge - reduce the length and width you enter here by that margin on each side first, since this calculator assumes bulbs are planted all the way to the edges of the area you enter.</p>
+</div>
+<div class="faq-item">
+<h3>What spacing should I use for different bulb types?</h3>
+<p>It varies by bulb type and size - larger bulbs like daffodils and tulips are commonly spaced around 4-6 inches apart, while smaller bulbs like crocuses are often spaced closer, around 2-3 inches. Check your specific bulb variety's planting guide for its recommended spacing.</p>
+</div>
+<div class="faq-item">
+<h3>Why might I need more bulbs than this calculator suggests?</h3>
+<p>Irregular bed shapes (not a clean rectangle), existing plants or obstacles within the bed, and a desire for denser visual coverage than strict even spacing can all mean buying more than the calculated estimate - many gardeners round up and buy a small surplus for exactly this reason.</p>
+</div>
+<div class="faq-item">
+<h3>Can I use this for a circular or irregularly shaped bed?</h3>
+<p>Not directly - this calculator assumes a rectangular area. For a circular or irregular bed, estimate its area separately (or approximate it with a rectangle close to its actual size) and use the area-based estimate as a rough guide rather than the row-by-row grid figure.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculate</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Related tools</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>A note on accuracy</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquary's calculators are built for quick, reliable estimates. For decisions with real financial, structural, or medical stakes, confirm with a qualified professional.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/">← Back to all calculators</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

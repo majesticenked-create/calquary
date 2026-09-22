@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Annealing Temperature Calculator | Calquary</title>
+  <meta name="description" content="Estimate a starting PCR primer annealing temperature from forward and reverse primer melting temperatures." />
+  <meta property="og:title" content="Annealing Temperature Calculator | Calquary">
+  <meta property="og:description" content="Estimate a starting PCR primer annealing temperature from forward and reverse primer melting temperatures.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/tool/annealing-temperature-calculator">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/annealing-temperature-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Annealing Temperature Calculator | Calquary">
+  <meta name="twitter:description" content="Estimate a starting PCR primer annealing temperature from forward and reverse primer melting temperatures.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/annealing-temperature-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/annealing-temperature-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/annealing-temperature-calculator">
+    <link rel="canonical" href="https://calquary.com/tool/annealing-temperature-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("annealing-temperature-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("annealing-temperature-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Annealing Temperature Calculator",
+      "description": "Estimate a starting PCR primer annealing temperature from forward and reverse primer melting temperatures.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/annealing-temperature-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Annealing Temperature Calculator",
+          "item": "https://calquary.com/tool/annealing-temperature-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is this the exact annealing temperature I should use for my PCR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No - treat this as a starting estimate, not a guaranteed setting. Optimal annealing temperature depends on primer sequence and design, reaction chemistry, salt concentration, template GC content, and your specific thermocycler protocol - factors this simple calculation doesn't account for."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does the calculator use the lower of the two Tm values?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In a two-primer reaction, annealing temperature is generally capped by whichever primer binds less efficiently, since a temperature too high for the lower-Tm primer would prevent it from annealing at all - using the lower Tm as the reference and subtracting a margin is a commonly used conservative starting point."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why subtract 5°C from the primer Tm?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Setting the annealing temperature a few degrees below the primer's calculated melting temperature helps ensure efficient, stable primer binding despite the approximate nature of Tm calculations - 5°C below the lower primer Tm is a widely used rule-of-thumb starting point, not a fixed physical constant."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if my forward and reverse primer Tm values are very different?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A large Tm mismatch between primers (more than a few degrees) can make it harder to find one annealing temperature that works well for both - consider redesigning the primer with the more extreme Tm to bring the pair closer together before running the reaction, if the mismatch is large."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How should I actually confirm the best annealing temperature?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gradient PCR - running the same reaction across a range of annealing temperatures on a thermocycler with gradient capability - is the standard way to empirically determine the temperature that gives the cleanest, most specific amplification for your specific primers and template."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does salt or buffer concentration affect the annealing temperature I should use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - Tm calculations and annealing temperature recommendations are sensitive to the salt (monovalent and divalent cation) concentration in your reaction buffer, since ionic strength affects DNA duplex stability. This calculator doesn't adjust for buffer chemistry, so treat its output as a generic starting point rather than a buffer-specific value."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/#categories">Categories</a>
+          <a href="/#tools">All tools</a>
+          <a href="/about">About</a>
+        </nav>
+        
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/">Calquary</a> / <a href="/category/biology">Biology</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Annealing Temperature Calculator</h1>
+        <p style="max-width:60ch;">Enter your forward and reverse primer melting temperatures (Tm) to estimate a starting annealing temperature for PCR optimization.</p>
+        <p class="last-updated">Last updated: September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculate</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reset</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Frequently asked questions</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Is this the exact annealing temperature I should use for my PCR?</h3>
+<p>No - treat this as a starting estimate, not a guaranteed setting. Optimal annealing temperature depends on primer sequence and design, reaction chemistry, salt concentration, template GC content, and your specific thermocycler protocol - factors this simple calculation doesn't account for.</p>
+</div>
+<div class="faq-item">
+<h3>Why does the calculator use the lower of the two Tm values?</h3>
+<p>In a two-primer reaction, annealing temperature is generally capped by whichever primer binds less efficiently, since a temperature too high for the lower-Tm primer would prevent it from annealing at all - using the lower Tm as the reference and subtracting a margin is a commonly used conservative starting point.</p>
+</div>
+<div class="faq-item">
+<h3>Why subtract 5°C from the primer Tm?</h3>
+<p>Setting the annealing temperature a few degrees below the primer's calculated melting temperature helps ensure efficient, stable primer binding despite the approximate nature of Tm calculations - 5°C below the lower primer Tm is a widely used rule-of-thumb starting point, not a fixed physical constant.</p>
+</div>
+<div class="faq-item">
+<h3>What if my forward and reverse primer Tm values are very different?</h3>
+<p>A large Tm mismatch between primers (more than a few degrees) can make it harder to find one annealing temperature that works well for both - consider redesigning the primer with the more extreme Tm to bring the pair closer together before running the reaction, if the mismatch is large.</p>
+</div>
+<div class="faq-item">
+<h3>How should I actually confirm the best annealing temperature?</h3>
+<p>Gradient PCR - running the same reaction across a range of annealing temperatures on a thermocycler with gradient capability - is the standard way to empirically determine the temperature that gives the cleanest, most specific amplification for your specific primers and template.</p>
+</div>
+<div class="faq-item">
+<h3>Does salt or buffer concentration affect the annealing temperature I should use?</h3>
+<p>Yes - Tm calculations and annealing temperature recommendations are sensitive to the salt (monovalent and divalent cation) concentration in your reaction buffer, since ionic strength affects DNA duplex stability. This calculator doesn't adjust for buffer chemistry, so treat its output as a generic starting point rather than a buffer-specific value.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculate</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Related tools</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>A note on accuracy</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquary's calculators are built for quick, reliable estimates. For decisions with real financial, structural, or medical stakes, confirm with a qualified professional.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/">← Back to all calculators</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>
