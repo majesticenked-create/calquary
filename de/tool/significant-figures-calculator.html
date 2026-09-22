@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rechner für Signifikante Stellen</title>
+  <meta name="description" content="Runden Sie eine Zahl auf N signifikante Stellen, zählen Sie die signifikanten Stellen einer Zahl, oder wandeln Sie sie in wissenschaftliche Notation um." />
+  <meta property="og:title" content="Rechner für Signifikante Stellen | Calquary">
+  <meta property="og:description" content="Runden Sie eine Zahl auf N signifikante Stellen, zählen Sie die signifikanten Stellen einer Zahl, oder wandeln Sie sie in wissenschaftliche Notation um.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/de/tool/significant-figures-calculator">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/significant-figures-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rechner für Signifikante Stellen | Calquary">
+  <meta name="twitter:description" content="Runden Sie eine Zahl auf N signifikante Stellen, zählen Sie die signifikanten Stellen einer Zahl, oder wandeln Sie sie in wissenschaftliche Notation um.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/significant-figures-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/significant-figures-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/significant-figures-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/significant-figures-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/significant-figures-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/significant-figures-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/significant-figures-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/significant-figures-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/significant-figures-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/significant-figures-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/significant-figures-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/significant-figures-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/significant-figures-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/significant-figures-calculator">
+    <link rel="canonical" href="https://calquary.com/de/tool/significant-figures-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("significant-figures-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("significant-figures-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Rechner für Signifikante Stellen",
+      "description": "Runden Sie eine Zahl auf N signifikante Stellen, zählen Sie die signifikanten Stellen einer Zahl, oder wandeln Sie sie in wissenschaftliche Notation um.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/de/tool/significant-figures-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "de"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Math",
+          "item": "https://calquary.com/de/category/math"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rechner für Signifikante Stellen",
+          "item": "https://calquary.com/de/tool/significant-figures-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Was zählt als signifikante Stelle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Alle Ziffern ungleich Null zählen immer. Nullen zwischen zwei Ziffern ungleich Null zählen. Führende Nullen zählen nie. Nachfolgende Nullen zählen nur, wenn die Zahl einen Dezimalpunkt hat."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie viele signifikante Stellen hat 0,004520?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "4 - die führenden Nullen (0,00) zählen nicht, aber die 4, 5, 2 und die abschließende 0 zählen, da ein Dezimalpunkt vorhanden ist."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Warum ist 12.000 bei signifikanten Stellen mehrdeutig?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ohne Dezimalpunkt ist unklar, ob die abschließenden Nullen präzise gemessen wurden oder nur Platzhalter für die Größenordnung sind."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie runde ich eine große Zahl wie 82.391 auf 3 signifikante Stellen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Identifizieren Sie die ersten 3 signifikanten Ziffern (8, 2, 3) und runden Sie anhand der nächsten Ziffer (9, die aufrundet), was 82.400 ergibt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was ist der Unterschied zwischen signifikanten Stellen und Dezimalstellen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dezimalstellen zählen Ziffern nach dem Dezimalpunkt unabhängig von der Größenordnung. Signifikante Stellen zählen bedeutungstragende Ziffern unabhängig davon, wo der Dezimalpunkt liegt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie unterscheidet sich das von der wissenschaftlichen Notation des Exponentenrechners?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die wissenschaftliche Notation des Exponentenrechners ist eine sekundäre Anzeige für eine Potenzberechnung. Dieser Rechner ist ein dediziertes Werkzeug zum Runden, Zählen oder Umwandeln in wissenschaftliche Notation mit der von Ihnen gewählten Genauigkeit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Warum sind signifikante Stellen in Wissenschaft und Technik wichtig?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sie vermitteln die Präzision einer Messung - mehr Ziffern als tatsächlich gemessen anzugeben übertreibt die Genauigkeit, während zu wenige echte Information verlieren."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/de/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/de/#categories">Kategorien</a>
+          <a href="/de/#tools">Alle Tools</a>
+          <a href="/de/about">Über uns</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Deutsch">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>DE</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/significant-figures-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/significant-figures-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/significant-figures-calculator">Français</a><span class="locale-item current" role="menuitem" aria-current="true">Deutsch</span><a class="locale-item" role="menuitem" href="/pt/tool/significant-figures-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/significant-figures-calculator">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/significant-figures-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/significant-figures-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/significant-figures-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/significant-figures-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/significant-figures-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/significant-figures-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/de/">Calquary</a> / <a href="/de/category/math">Mathematik</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Rechner für Signifikante Stellen</h1>
+        <p style="max-width:60ch;">Wählen Sie, ob Sie eine Zahl auf eine bestimmte Anzahl signifikanter Stellen runden, zählen möchten, wie viele signifikante Stellen eine Zahl bereits hat, oder sie in wissenschaftliche Notation umwandeln möchten.</p>
+        <p class="last-updated">Zuletzt aktualisiert: September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Berechnen</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Zurücksetzen</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Häufig gestellte Fragen</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Was zählt als signifikante Stelle?</h3>
+<p>Alle Ziffern ungleich Null zählen immer. Nullen zwischen zwei Ziffern ungleich Null zählen. Führende Nullen zählen nie. Nachfolgende Nullen zählen nur, wenn die Zahl einen Dezimalpunkt hat.</p>
+</div>
+<div class="faq-item">
+<h3>Wie viele signifikante Stellen hat 0,004520?</h3>
+<p>4 - die führenden Nullen (0,00) zählen nicht, aber die 4, 5, 2 und die abschließende 0 zählen, da ein Dezimalpunkt vorhanden ist.</p>
+</div>
+<div class="faq-item">
+<h3>Warum ist 12.000 bei signifikanten Stellen mehrdeutig?</h3>
+<p>Ohne Dezimalpunkt ist unklar, ob die abschließenden Nullen präzise gemessen wurden oder nur Platzhalter für die Größenordnung sind.</p>
+</div>
+<div class="faq-item">
+<h3>Wie runde ich eine große Zahl wie 82.391 auf 3 signifikante Stellen?</h3>
+<p>Identifizieren Sie die ersten 3 signifikanten Ziffern (8, 2, 3) und runden Sie anhand der nächsten Ziffer (9, die aufrundet), was 82.400 ergibt.</p>
+</div>
+<div class="faq-item">
+<h3>Was ist der Unterschied zwischen signifikanten Stellen und Dezimalstellen?</h3>
+<p>Dezimalstellen zählen Ziffern nach dem Dezimalpunkt unabhängig von der Größenordnung. Signifikante Stellen zählen bedeutungstragende Ziffern unabhängig davon, wo der Dezimalpunkt liegt.</p>
+</div>
+<div class="faq-item">
+<h3>Wie unterscheidet sich das von der wissenschaftlichen Notation des Exponentenrechners?</h3>
+<p>Die wissenschaftliche Notation des Exponentenrechners ist eine sekundäre Anzeige für eine Potenzberechnung. Dieser Rechner ist ein dediziertes Werkzeug zum Runden, Zählen oder Umwandeln in wissenschaftliche Notation mit der von Ihnen gewählten Genauigkeit.</p>
+</div>
+<div class="faq-item">
+<h3>Warum sind signifikante Stellen in Wissenschaft und Technik wichtig?</h3>
+<p>Sie vermitteln die Präzision einer Messung - mehr Ziffern als tatsächlich gemessen anzugeben übertreibt die Genauigkeit, während zu wenige echte Information verlieren.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Berechnen</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Ähnliche Rechner</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Hinweis zur Genauigkeit</h4>
+          <p style="margin:0;font-size:0.85rem;">Die Rechner von Calquary sind für schnelle, zuverlässige Schätzungen ausgelegt. Bei Entscheidungen mit echten finanziellen, baulichen oder medizinischen Konsequenzen wenden Sie sich bitte an eine qualifizierte Fachperson.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/de/">← Zurück zu allen Rechnern</a> · <a href="/de/about">Über uns</a> · <a href="/de/contact">Kontakt</a> · <a href="/de/privacy">Datenschutz</a> · <a href="/de/terms">Nutzungsbedingungen</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

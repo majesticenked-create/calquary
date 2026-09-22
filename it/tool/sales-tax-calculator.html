@@ -14,10 +14,10 @@
   <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Calcolatrice dell'Imposta sulle Vendite</title>
-  <meta name="description" content="Calcola l'imposta sulle vendite e il prezzo totale di un acquisto." />
-  <meta property="og:title" content="Calcolatrice dell'Imposta sulle Vendite | Calquary">
-  <meta property="og:description" content="Calcola l'imposta sulle vendite e il prezzo totale di un acquisto.">
+  <title>Calcolatrice di Imposta sulle Vendite, IVA e GST</title>
+  <meta name="description" content="Aggiungi imposta sulle vendite, IVA o GST a un prezzo, oppure estrai l'imposta già inclusa in un prezzo con imposta inclusa." />
+  <meta property="og:title" content="Calcolatrice di Imposta sulle Vendite, IVA e GST | Calquary">
+  <meta property="og:description" content="Aggiungi imposta sulle vendite, IVA o GST a un prezzo, oppure estrai l'imposta già inclusa in un prezzo con imposta inclusa.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/it/tool/sales-tax-calculator">
   <meta property="og:locale" content="it_IT">
@@ -26,8 +26,8 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Calcolatrice dell'Imposta sulle Vendite | Calquary">
-  <meta name="twitter:description" content="Calcola l'imposta sulle vendite e il prezzo totale di un acquisto.">
+  <meta name="twitter:title" content="Calcolatrice di Imposta sulle Vendite, IVA e GST | Calquary">
+  <meta name="twitter:description" content="Aggiungi imposta sulle vendite, IVA o GST a un prezzo, oppure estrai l'imposta già inclusa in un prezzo con imposta inclusa.">
   <meta name="twitter:image" content="https://calquary.com/og-images/sales-tax-calculator.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/sales-tax-calculator">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/sales-tax-calculator">
@@ -88,8 +88,8 @@
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "Calcolatrice dell'Imposta sulle Vendite",
-      "description": "Calcola l'imposta sulle vendite e il prezzo totale di un acquisto.",
+      "name": "Calcolatrice di Imposta sulle Vendite, IVA e GST",
+      "description": "Aggiungi imposta sulle vendite, IVA o GST a un prezzo, oppure estrai l'imposta già inclusa in un prezzo con imposta inclusa.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/it/tool/sales-tax-calculator",
@@ -120,7 +120,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Calcolatrice dell'Imposta sulle Vendite",
+          "name": "Calcolatrice di Imposta sulle Vendite, IVA e GST",
           "item": "https://calquary.com/it/tool/sales-tax-calculator"
         }
       ]
@@ -133,7 +133,23 @@
           "name": "Come calcolo l'imposta sulle vendite su un acquisto?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Moltiplica il prezzo per l'aliquota d'imposta in decimale, poi aggiungilo al prezzo originale. Per $49,99 con il 7,25% di imposta: $49,99 × 0,0725 = $3,62 di imposta, per un totale di $53,61."
+            "text": "Moltiplica il prezzo per l'aliquota d'imposta in decimale, poi aggiungilo al prezzo originale. Per $49,99 con il 7,25% di imposta: $49,99 × 0,0725 = $3,62 di imposta, per un totale di $53,61. Scegli \"Esclude imposta\" sopra per questa direzione."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Come estraggo l'IVA o la GST da un prezzo che la include già?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Scegli \"Include già imposta\" sopra, inserisci il prezzo con imposta inclusa e l'aliquota, e la calcolatrice divide per (1 + aliquota d'imposta) per trovare il prezzo base al netto dell'imposta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual è la differenza tra imposta sulle vendite e IVA/GST per questa calcolatrice?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Il calcolo per aggiungere l'imposta è identico. La differenza pratica è la direzione di cui hai più spesso bisogno: l'imposta sulle vendite USA viene solitamente aggiunta alla cassa (\"esclude imposta\"), mentre l'IVA/GST è di solito già inclusa nel prezzo mostrato, quindi spesso devi estrarla (\"include già imposta\")."
           }
         },
         {
@@ -141,7 +157,7 @@
           "name": "L'aliquota dell'imposta sulle vendite varia in base alla località?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sì - le aliquote dell'imposta sulle vendite sono fissate da stato, contea e talvolta città, quindi l'aliquota combinata può variare significativamente anche all'interno dello stesso stato. Controlla la tua aliquota locale prima di affidarti a un valore predefinito."
+            "text": "Sì - le aliquote dell'imposta sulle vendite sono fissate da stato, contea e talvolta città. Le aliquote IVA/GST invece variano per paese. Controlla la tua aliquota locale o nazionale specifica prima di affidarti a un valore predefinito."
           }
         },
         {
@@ -157,31 +173,15 @@
           "name": "Generi alimentari e abbigliamento sono sempre tassati alla stessa aliquota di altri acquisti?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No - molte giurisdizioni esentano o riducono l'aliquota d'imposta su generi alimentari, farmaci da prescrizione e talvolta abbigliamento, mentre tassano la merce generale all'aliquota standard. Controlla le regole della tua autorità fiscale locale se stai calcolando l'imposta per una categoria specifica esente anziché per un acquisto generale."
+            "text": "No - molte giurisdizioni esentano o riducono l'aliquota d'imposta su generi alimentari, farmaci da prescrizione e talvolta abbigliamento, mentre tassano la merce generale all'aliquota standard."
           }
         },
         {
           "@type": "Question",
-          "name": "Come risalgo al prezzo al netto delle imposte se conosco solo il totale che ho pagato?",
+          "name": "Mi serve per una fattura - \"estrai imposta\" funziona per questo?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Dividi il totale per (1 + aliquota d'imposta in decimale). Se hai pagato un totale di $107,50 con un'aliquota d'imposta del 7,5%, il prezzo al netto delle imposte era $107,50 ÷ 1,075 ≈ $100,00."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Qual è la differenza tra imposta sulle vendite e imposta sull'uso?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "L'imposta sulle vendite viene riscossa dal venditore al momento dell'acquisto all'interno di una giurisdizione fiscale. L'imposta sull'uso si applica quando acquisti qualcosa senza pagare l'imposta sulle vendite (spesso da un venditore fuori stato) e sei tu responsabile di versare un'imposta equivalente - il calcolo dell'importo dovuto è la stessa matematica in entrambi i casi."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Una calcolatrice IVA è la stessa cosa di una calcolatrice dell'imposta sulle vendite?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "La matematica di base è simile - entrambe applicano un'aliquota percentuale a un prezzo - ma l'IVA (imposta sul valore aggiunto) è tipicamente inclusa in un prezzo mostrato e riscossa in ogni fase della produzione, mentre l'imposta sulle vendite statunitense viene solitamente aggiunta sopra il prezzo indicato alla vendita finale, che è come questa calcolatrice è impostata."
+            "text": "Sì - una fattura che mostra un totale con imposta inclusa (comune fuori dagli USA) è esattamente ciò per cui serve la modalità \"Include già imposta\": inserisci l'importo lordo (totale, imposta inclusa) e l'aliquota, e la calcolatrice restituisce l'importo netto (al netto dell'imposta) e la quota d'imposta separatamente."
           }
         }
       ]
@@ -222,8 +222,8 @@
   <div class="wrap" style="padding-bottom:64px;">
     <div class="tool-layout">
       <main>
-        <h1>Calcolatrice dell'Imposta sulle Vendite</h1>
-        <p style="max-width:60ch;">Inserisci un prezzo e la tua aliquota locale dell'imposta sulle vendite per calcolare l'importo dell'imposta e il costo totale.</p>
+        <h1>Calcolatrice di Imposta sulle Vendite, IVA e GST</h1>
+        <p style="max-width:60ch;">Scegli se il tuo prezzo esclude l'imposta (aggiungila) o la include già (estraila) - funziona per l'imposta sulle vendite in stile USA aggiunta alla cassa o per IVA/GST già inclusa in un prezzo mostrato.</p>
         <p class="last-updated">Ultimo aggiornamento: September 22, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -252,11 +252,19 @@
           <h2>Domande frequenti</h2>
           <div id="faq-list"><div class="faq-item">
 <h3>Come calcolo l'imposta sulle vendite su un acquisto?</h3>
-<p>Moltiplica il prezzo per l'aliquota d'imposta in decimale, poi aggiungilo al prezzo originale. Per $49,99 con il 7,25% di imposta: $49,99 × 0,0725 = $3,62 di imposta, per un totale di $53,61.</p>
+<p>Moltiplica il prezzo per l'aliquota d'imposta in decimale, poi aggiungilo al prezzo originale. Per $49,99 con il 7,25% di imposta: $49,99 × 0,0725 = $3,62 di imposta, per un totale di $53,61. Scegli "Esclude imposta" sopra per questa direzione.</p>
+</div>
+<div class="faq-item">
+<h3>Come estraggo l'IVA o la GST da un prezzo che la include già?</h3>
+<p>Scegli "Include già imposta" sopra, inserisci il prezzo con imposta inclusa e l'aliquota, e la calcolatrice divide per (1 + aliquota d'imposta) per trovare il prezzo base al netto dell'imposta.</p>
+</div>
+<div class="faq-item">
+<h3>Qual è la differenza tra imposta sulle vendite e IVA/GST per questa calcolatrice?</h3>
+<p>Il calcolo per aggiungere l'imposta è identico. La differenza pratica è la direzione di cui hai più spesso bisogno: l'imposta sulle vendite USA viene solitamente aggiunta alla cassa ("esclude imposta"), mentre l'IVA/GST è di solito già inclusa nel prezzo mostrato, quindi spesso devi estrarla ("include già imposta").</p>
 </div>
 <div class="faq-item">
 <h3>L'aliquota dell'imposta sulle vendite varia in base alla località?</h3>
-<p>Sì - le aliquote dell'imposta sulle vendite sono fissate da stato, contea e talvolta città, quindi l'aliquota combinata può variare significativamente anche all'interno dello stesso stato. Controlla la tua aliquota locale prima di affidarti a un valore predefinito.</p>
+<p>Sì - le aliquote dell'imposta sulle vendite sono fissate da stato, contea e talvolta città. Le aliquote IVA/GST invece variano per paese. Controlla la tua aliquota locale o nazionale specifica prima di affidarti a un valore predefinito.</p>
 </div>
 <div class="faq-item">
 <h3>L'imposta sulle vendite viene calcolata prima o dopo altri sconti?</h3>
@@ -264,19 +272,11 @@
 </div>
 <div class="faq-item">
 <h3>Generi alimentari e abbigliamento sono sempre tassati alla stessa aliquota di altri acquisti?</h3>
-<p>No - molte giurisdizioni esentano o riducono l'aliquota d'imposta su generi alimentari, farmaci da prescrizione e talvolta abbigliamento, mentre tassano la merce generale all'aliquota standard. Controlla le regole della tua autorità fiscale locale se stai calcolando l'imposta per una categoria specifica esente anziché per un acquisto generale.</p>
+<p>No - molte giurisdizioni esentano o riducono l'aliquota d'imposta su generi alimentari, farmaci da prescrizione e talvolta abbigliamento, mentre tassano la merce generale all'aliquota standard.</p>
 </div>
 <div class="faq-item">
-<h3>Come risalgo al prezzo al netto delle imposte se conosco solo il totale che ho pagato?</h3>
-<p>Dividi il totale per (1 + aliquota d'imposta in decimale). Se hai pagato un totale di $107,50 con un'aliquota d'imposta del 7,5%, il prezzo al netto delle imposte era $107,50 ÷ 1,075 ≈ $100,00.</p>
-</div>
-<div class="faq-item">
-<h3>Qual è la differenza tra imposta sulle vendite e imposta sull'uso?</h3>
-<p>L'imposta sulle vendite viene riscossa dal venditore al momento dell'acquisto all'interno di una giurisdizione fiscale. L'imposta sull'uso si applica quando acquisti qualcosa senza pagare l'imposta sulle vendite (spesso da un venditore fuori stato) e sei tu responsabile di versare un'imposta equivalente - il calcolo dell'importo dovuto è la stessa matematica in entrambi i casi.</p>
-</div>
-<div class="faq-item">
-<h3>Una calcolatrice IVA è la stessa cosa di una calcolatrice dell'imposta sulle vendite?</h3>
-<p>La matematica di base è simile - entrambe applicano un'aliquota percentuale a un prezzo - ma l'IVA (imposta sul valore aggiunto) è tipicamente inclusa in un prezzo mostrato e riscossa in ogni fase della produzione, mentre l'imposta sulle vendite statunitense viene solitamente aggiunta sopra il prezzo indicato alla vendita finale, che è come questa calcolatrice è impostata.</p>
+<h3>Mi serve per una fattura - "estrai imposta" funziona per questo?</h3>
+<p>Sì - una fattura che mostra un totale con imposta inclusa (comune fuori dagli USA) è esattamente ciò per cui serve la modalità "Include già imposta": inserisci l'importo lordo (totale, imposta inclusa) e l'aliquota, e la calcolatrice restituisce l'importo netto (al netto dell'imposta) e la quota d'imposta separatamente.</p>
 </div></div>
           <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calcola</a>
         </div>

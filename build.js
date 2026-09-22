@@ -137,6 +137,11 @@ const WAVE_ONE_TOOL_IDS = [
   "roman-numeral-converter", "distance-modulus-calculator", "earthquake-magnitude-calculator",
   "pressure-altitude-calculator", "circle-calculator", "repeating-decimal-to-fraction-calculator",
   "permutations-combinations-calculator",
+  // Batch 11: the 9 new tools built this session, now translated into
+  // all 11 non-English locales (I18N_TOOLS entries in js/i18n.js).
+  "currency-converter", "graphing-calculator", "scientific-calculator",
+  "rent-vs-buy-calculator", "refinance-break-even-calculator", "base-converter",
+  "video-bitrate-calculator", "significant-figures-calculator", "roi-cagr-calculator",
 ];
 
 function loadData() {

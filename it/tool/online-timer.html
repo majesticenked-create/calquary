@@ -15,9 +15,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Timer Online - Calcolatrice Online Gratuita | Calquary</title>
-  <meta name="description" content="Un timer di conto alla rovescia gratuito che funziona nel tuo browser - imposta minuti e secondi, poi avvia, metti in pausa o resetta." />
+  <meta name="description" content="Un timer multiplo gratuito che funziona nel tuo browser - esegui più conti alla rovescia con nome contemporaneamente, ciascuno con avvio, pausa e reset propri." />
   <meta property="og:title" content="Timer Online | Calquary">
-  <meta property="og:description" content="Un timer di conto alla rovescia gratuito che funziona nel tuo browser - imposta minuti e secondi, poi avvia, metti in pausa o resetta.">
+  <meta property="og:description" content="Un timer multiplo gratuito che funziona nel tuo browser - esegui più conti alla rovescia con nome contemporaneamente, ciascuno con avvio, pausa e reset propri.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/it/tool/online-timer">
   <meta property="og:locale" content="it_IT">
@@ -27,7 +27,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Timer Online | Calquary">
-  <meta name="twitter:description" content="Un timer di conto alla rovescia gratuito che funziona nel tuo browser - imposta minuti e secondi, poi avvia, metti in pausa o resetta.">
+  <meta name="twitter:description" content="Un timer multiplo gratuito che funziona nel tuo browser - esegui più conti alla rovescia con nome contemporaneamente, ciascuno con avvio, pausa e reset propri.">
   <meta name="twitter:image" content="https://calquary.com/og-images/online-timer.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/online-timer">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/online-timer">
@@ -89,7 +89,7 @@
     {
       "@type": "SoftwareApplication",
       "name": "Timer Online",
-      "description": "Un timer di conto alla rovescia gratuito che funziona nel tuo browser - imposta minuti e secondi, poi avvia, metti in pausa o resetta.",
+      "description": "Un timer multiplo gratuito che funziona nel tuo browser - esegui più conti alla rovescia con nome contemporaneamente, ciascuno con avvio, pausa e reset propri.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/it/tool/online-timer",
@@ -130,26 +130,42 @@
       "mainEntity": [
         {
           "@type": "Question",
+          "name": "Posso eseguire più di un timer contemporaneamente?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì - clicca \"Aggiungi un altro timer\" per aggiungere tutti i conti alla rovescia indipendenti di cui hai bisogno, ciascuno con nome, minuti/secondi e controlli avvio/pausa/reset propri. Funzionano tutti contemporaneamente, così puoi seguire più cose alla volta, come un pasto a più portate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso dare un nome a ciascun timer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì - ogni timer ha un campo di testo sopra il suo conto alla rovescia dove puoi etichettarlo (ad esempio, \"Pasta\" o \"Bucato\") così sai quale è quale quando ne hai più di uno attivo."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "Questo timer online continua a funzionare se cambio scheda del browser?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sì - il conto alla rovescia continua in background finché questa scheda del browser rimane aperta, anche se non è la scheda attiva. Chiudere la scheda o il browser ferma il timer."
+            "text": "Sì - ogni conto alla rovescia continua in background finché questa scheda del browser rimane aperta, anche se non è la scheda attiva. Chiudere la scheda o il browser li ferma tutti."
           }
         },
         {
           "@type": "Question",
-          "name": "Questo timer emetterà un suono quando finisce?",
+          "name": "Ogni timer emetterà il proprio suono quando finisce?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sì - un breve segnale acustico suona quando il conto alla rovescia raggiunge lo zero, insieme al cambio del display in \"Tempo scaduto!\" così te ne accorgi anche se non stai guardando direttamente lo schermo."
+            "text": "Sì - un breve segnale acustico suona per ogni timer individualmente quando il suo conto alla rovescia raggiunge lo zero, insieme al cambio del display di quel timer in \"Tempo scaduto!\", così sai esattamente quale è finito."
           }
         },
         {
           "@type": "Question",
-          "name": "Posso impostare un timer per più di un'ora?",
+          "name": "Posso rimuovere un timer che non mi serve più?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sì - inserisci qualsiasi numero di minuti (non c'è limite superiore), quindi puoi impostare un timer di 90 minuti o di più ore altrettanto facilmente di uno breve."
+            "text": "Sì - clicca sul pulsante × nell'intestazione di un timer per rimuoverlo. La pagina mantiene sempre almeno un timer, quindi l'ultimo rimasto non può essere rimosso."
           }
         },
         {
@@ -157,7 +173,7 @@
           "name": "Il timer continua il conto alla rovescia se il mio computer va in stand-by?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No - se il dispositivo va in stand-by o il browser viene sospeso, il conto alla rovescia si ferma insieme e riprende (leggermente in ritardo) quando il dispositivo si riattiva, poiché si basa sulla scheda del browser attivamente in esecuzione."
+            "text": "No - se il dispositivo va in stand-by o il browser viene sospeso, tutti i conti alla rovescia in corso si fermano insieme e riprendono (leggermente in ritardo) quando il dispositivo si riattiva."
           }
         },
         {
@@ -165,7 +181,7 @@
           "name": "Posso impostare un timer per un numero esatto di secondi, ad esempio 90 secondi?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sì - inserisci 0 minuti e 90 secondi, oppure 1 minuto e 30 secondi; entrambi producono lo stesso conto alla rovescia di 90 secondi poiché minuti e secondi vengono combinati nel tempo totale."
+            "text": "Sì - inserisci 0 minuti e 90 secondi, oppure 1 minuto e 30 secondi, su qualsiasi timer; entrambi producono lo stesso conto alla rovescia di 90 secondi."
           }
         },
         {
@@ -173,7 +189,7 @@
           "name": "È la stessa cosa di un \"orologio con conto alla rovescia\" per una data specifica di un evento?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No - questo timer conta alla rovescia una durata fissa che imposti in minuti e secondi, come un timer da cucina. Per contare alla rovescia fino a una data futura specifica, ti servirebbe invece uno strumento di conto alla rovescia basato sulla data."
+            "text": "No - ogni timer qui conta alla rovescia una durata fissa che imposti in minuti e secondi, come un timer da cucina. Per contare alla rovescia fino a una data futura specifica, usa uno strumento di conto alla rovescia basato sulla data."
           }
         }
       ]
@@ -215,7 +231,7 @@
     <div class="tool-layout">
       <main>
         <h1>Timer Online</h1>
-        <p style="max-width:60ch;">Imposta un tempo di conto alla rovescia, poi premi avvia - questo timer effettua il conto alla rovescia e ti avvisa quando il tempo è scaduto.</p>
+        <p style="max-width:60ch;">Imposta tutti i conti alla rovescia di cui hai bisogno, ciascuno con il proprio nome, minuti e secondi - funzionano in modo indipendente, così puoi cronometrare più cose contemporaneamente.</p>
         <p class="last-updated">Ultimo aggiornamento: September 22, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -243,28 +259,36 @@
         <div class="article-block">
           <h2>Domande frequenti</h2>
           <div id="faq-list"><div class="faq-item">
+<h3>Posso eseguire più di un timer contemporaneamente?</h3>
+<p>Sì - clicca "Aggiungi un altro timer" per aggiungere tutti i conti alla rovescia indipendenti di cui hai bisogno, ciascuno con nome, minuti/secondi e controlli avvio/pausa/reset propri. Funzionano tutti contemporaneamente, così puoi seguire più cose alla volta, come un pasto a più portate.</p>
+</div>
+<div class="faq-item">
+<h3>Posso dare un nome a ciascun timer?</h3>
+<p>Sì - ogni timer ha un campo di testo sopra il suo conto alla rovescia dove puoi etichettarlo (ad esempio, "Pasta" o "Bucato") così sai quale è quale quando ne hai più di uno attivo.</p>
+</div>
+<div class="faq-item">
 <h3>Questo timer online continua a funzionare se cambio scheda del browser?</h3>
-<p>Sì - il conto alla rovescia continua in background finché questa scheda del browser rimane aperta, anche se non è la scheda attiva. Chiudere la scheda o il browser ferma il timer.</p>
+<p>Sì - ogni conto alla rovescia continua in background finché questa scheda del browser rimane aperta, anche se non è la scheda attiva. Chiudere la scheda o il browser li ferma tutti.</p>
 </div>
 <div class="faq-item">
-<h3>Questo timer emetterà un suono quando finisce?</h3>
-<p>Sì - un breve segnale acustico suona quando il conto alla rovescia raggiunge lo zero, insieme al cambio del display in "Tempo scaduto!" così te ne accorgi anche se non stai guardando direttamente lo schermo.</p>
+<h3>Ogni timer emetterà il proprio suono quando finisce?</h3>
+<p>Sì - un breve segnale acustico suona per ogni timer individualmente quando il suo conto alla rovescia raggiunge lo zero, insieme al cambio del display di quel timer in "Tempo scaduto!", così sai esattamente quale è finito.</p>
 </div>
 <div class="faq-item">
-<h3>Posso impostare un timer per più di un'ora?</h3>
-<p>Sì - inserisci qualsiasi numero di minuti (non c'è limite superiore), quindi puoi impostare un timer di 90 minuti o di più ore altrettanto facilmente di uno breve.</p>
+<h3>Posso rimuovere un timer che non mi serve più?</h3>
+<p>Sì - clicca sul pulsante × nell'intestazione di un timer per rimuoverlo. La pagina mantiene sempre almeno un timer, quindi l'ultimo rimasto non può essere rimosso.</p>
 </div>
 <div class="faq-item">
 <h3>Il timer continua il conto alla rovescia se il mio computer va in stand-by?</h3>
-<p>No - se il dispositivo va in stand-by o il browser viene sospeso, il conto alla rovescia si ferma insieme e riprende (leggermente in ritardo) quando il dispositivo si riattiva, poiché si basa sulla scheda del browser attivamente in esecuzione.</p>
+<p>No - se il dispositivo va in stand-by o il browser viene sospeso, tutti i conti alla rovescia in corso si fermano insieme e riprendono (leggermente in ritardo) quando il dispositivo si riattiva.</p>
 </div>
 <div class="faq-item">
 <h3>Posso impostare un timer per un numero esatto di secondi, ad esempio 90 secondi?</h3>
-<p>Sì - inserisci 0 minuti e 90 secondi, oppure 1 minuto e 30 secondi; entrambi producono lo stesso conto alla rovescia di 90 secondi poiché minuti e secondi vengono combinati nel tempo totale.</p>
+<p>Sì - inserisci 0 minuti e 90 secondi, oppure 1 minuto e 30 secondi, su qualsiasi timer; entrambi producono lo stesso conto alla rovescia di 90 secondi.</p>
 </div>
 <div class="faq-item">
 <h3>È la stessa cosa di un "orologio con conto alla rovescia" per una data specifica di un evento?</h3>
-<p>No - questo timer conta alla rovescia una durata fissa che imposti in minuti e secondi, come un timer da cucina. Per contare alla rovescia fino a una data futura specifica, ti servirebbe invece uno strumento di conto alla rovescia basato sulla data.</p>
+<p>No - ogni timer qui conta alla rovescia una durata fissa che imposti in minuti e secondi, come un timer da cucina. Per contare alla rovescia fino a una data futura specifica, usa uno strumento di conto alla rovescia basato sulla data.</p>
 </div></div>
           <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calcola</a>
         </div>

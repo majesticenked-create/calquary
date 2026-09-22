@@ -15,9 +15,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Temporizator Online - Calculator Gratuit Online | Calquary</title>
-  <meta name="description" content="Un temporizator de numărătoare inversă gratuit care rulează în browserul tău - setează minute și secunde, apoi pornește, pune pe pauză sau resetează." />
+  <meta name="description" content="Un temporizator multiplu gratuit care rulează în browserul tău - rulează mai multe numărători inverse cu nume simultan, fiecare cu propriul start, pauză și…" />
   <meta property="og:title" content="Temporizator Online | Calquary">
-  <meta property="og:description" content="Un temporizator de numărătoare inversă gratuit care rulează în browserul tău - setează minute și secunde, apoi pornește, pune pe pauză sau resetează.">
+  <meta property="og:description" content="Un temporizator multiplu gratuit care rulează în browserul tău - rulează mai multe numărători inverse cu nume simultan, fiecare cu propriul start, pauză și resetare.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/ro/tool/online-timer">
   <meta property="og:locale" content="ro_RO">
@@ -27,7 +27,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Temporizator Online | Calquary">
-  <meta name="twitter:description" content="Un temporizator de numărătoare inversă gratuit care rulează în browserul tău - setează minute și secunde, apoi pornește, pune pe pauză sau resetează.">
+  <meta name="twitter:description" content="Un temporizator multiplu gratuit care rulează în browserul tău - rulează mai multe numărători inverse cu nume simultan, fiecare cu propriul start, pauză și resetare.">
   <meta name="twitter:image" content="https://calquary.com/og-images/online-timer.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/online-timer">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/online-timer">
@@ -89,7 +89,7 @@
     {
       "@type": "SoftwareApplication",
       "name": "Temporizator Online",
-      "description": "Un temporizator de numărătoare inversă gratuit care rulează în browserul tău - setează minute și secunde, apoi pornește, pune pe pauză sau resetează.",
+      "description": "Un temporizator multiplu gratuit care rulează în browserul tău - rulează mai multe numărători inverse cu nume simultan, fiecare cu propriul start, pauză și resetare.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/ro/tool/online-timer",
@@ -130,26 +130,42 @@
       "mainEntity": [
         {
           "@type": "Question",
+          "name": "Pot rula mai mult de un temporizator în același timp?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da - dă clic pe \"Adaugă alt temporizator\" pentru a adăuga câte numărători inverse independente ai nevoie, fiecare cu propriul nume, minute/secunde și controale de start/pauză/resetare. Toate funcționează simultan, ca să poți urmări mai multe lucruri deodată, ca o masă cu mai multe feluri."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pot denumi fiecare temporizator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da - fiecare temporizator are un câmp de text deasupra numărătorii sale inverse unde îl poți eticheta (de exemplu, \"Paste\" sau \"Rufe\") ca să știi care e care atunci când rulezi mai multe."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "Acest temporizator online continuă să funcționeze dacă schimb tab-urile browserului?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Da - numărătoarea inversă continuă în fundal atât timp cât acest tab de browser rămâne deschis, chiar dacă nu este tab-ul activ. Închiderea tab-ului sau a browserului oprește temporizatorul."
+            "text": "Da - fiecare numărătoare inversă continuă în fundal atât timp cât acest tab de browser rămâne deschis, chiar dacă nu este tab-ul activ. Închiderea tab-ului sau a browserului le oprește pe toate."
           }
         },
         {
           "@type": "Question",
-          "name": "Va scoate acest temporizator un sunet când termină?",
+          "name": "Fiecare temporizator va scoate propriul sunet când termină?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Da - se aude un semnal sonor scurt când numărătoarea inversă ajunge la zero, împreună cu schimbarea afișajului în \"Timpul s-a scurs!\" astfel încât să observi chiar dacă nu privești direct ecranul."
+            "text": "Da - se aude un semnal sonor scurt pentru fiecare temporizator în parte când numărătoarea sa inversă ajunge la zero, împreună cu schimbarea afișajului acelui temporizator în \"Timpul s-a scurs!\", deci știi exact care a terminat."
           }
         },
         {
           "@type": "Question",
-          "name": "Pot seta un temporizator pentru mai mult de o oră?",
+          "name": "Pot elimina un temporizator de care nu mai am nevoie?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Da - introdu orice număr de minute (nu există limită superioară), deci poți seta un temporizator de 90 de minute sau de mai multe ore la fel de ușor ca unul scurt."
+            "text": "Da - dă clic pe butonul × din antetul unui temporizator pentru a-l elimina. Pagina păstrează întotdeauna cel puțin un temporizator, deci ultimul rămas nu poate fi eliminat."
           }
         },
         {
@@ -157,7 +173,7 @@
           "name": "Temporizatorul continuă numărătoarea inversă dacă computerul meu intră în repaus?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nu - dacă dispozitivul intră în repaus sau browserul este suspendat, numărătoarea inversă se oprește odată cu el și reia (ușor în urmă) când dispozitivul se trezește, deoarece se bazează pe tab-ul de browser care rulează activ."
+            "text": "Nu - dacă dispozitivul intră în repaus sau browserul este suspendat, toate numărătorile inverse active se opresc odată cu el și reiau (ușor în urmă) când dispozitivul se trezește."
           }
         },
         {
@@ -165,7 +181,7 @@
           "name": "Pot seta un temporizator pentru un număr exact de secunde, precum 90 de secunde?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Da - introdu 0 minute și 90 de secunde, sau 1 minut și 30 de secunde; ambele produc aceeași numărătoare inversă de 90 de secunde, deoarece minutele și secundele sunt combinate în timpul total."
+            "text": "Da - introdu 0 minute și 90 de secunde, sau 1 minut și 30 de secunde, la orice temporizator; ambele produc aceeași numărătoare inversă de 90 de secunde."
           }
         },
         {
@@ -173,7 +189,7 @@
           "name": "Este acesta același lucru cu un \"ceas de numărătoare inversă\" pentru o dată specifică a unui eveniment?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nu - acest temporizator numără invers o durată fixă pe care o setezi în minute și secunde, ca un temporizator de bucătărie. Pentru a număra invers până la o dată viitoare specifică, ai avea nevoie în schimb de un instrument de numărătoare inversă bazat pe dată."
+            "text": "Nu - fiecare temporizator de aici numără invers o durată fixă pe care o setezi în minute și secunde, ca un temporizator de bucătărie. Pentru a număra invers până la o dată viitoare specifică, folosește un instrument de numărătoare inversă bazat pe dată."
           }
         }
       ]
@@ -215,7 +231,7 @@
     <div class="tool-layout">
       <main>
         <h1>Temporizator Online</h1>
-        <p style="max-width:60ch;">Setează un timp de numărătoare inversă, apoi apasă start - acest temporizator numără invers și te alertează când timpul s-a scurs.</p>
+        <p style="max-width:60ch;">Setează câte numărători inverse ai nevoie, fiecare cu propriul nume, minute și secunde - funcționează independent, ca să poți cronometra mai multe lucruri deodată.</p>
         <p class="last-updated">Ultima actualizare: September 22, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -243,28 +259,36 @@
         <div class="article-block">
           <h2>Întrebări frecvente</h2>
           <div id="faq-list"><div class="faq-item">
+<h3>Pot rula mai mult de un temporizator în același timp?</h3>
+<p>Da - dă clic pe "Adaugă alt temporizator" pentru a adăuga câte numărători inverse independente ai nevoie, fiecare cu propriul nume, minute/secunde și controale de start/pauză/resetare. Toate funcționează simultan, ca să poți urmări mai multe lucruri deodată, ca o masă cu mai multe feluri.</p>
+</div>
+<div class="faq-item">
+<h3>Pot denumi fiecare temporizator?</h3>
+<p>Da - fiecare temporizator are un câmp de text deasupra numărătorii sale inverse unde îl poți eticheta (de exemplu, "Paste" sau "Rufe") ca să știi care e care atunci când rulezi mai multe.</p>
+</div>
+<div class="faq-item">
 <h3>Acest temporizator online continuă să funcționeze dacă schimb tab-urile browserului?</h3>
-<p>Da - numărătoarea inversă continuă în fundal atât timp cât acest tab de browser rămâne deschis, chiar dacă nu este tab-ul activ. Închiderea tab-ului sau a browserului oprește temporizatorul.</p>
+<p>Da - fiecare numărătoare inversă continuă în fundal atât timp cât acest tab de browser rămâne deschis, chiar dacă nu este tab-ul activ. Închiderea tab-ului sau a browserului le oprește pe toate.</p>
 </div>
 <div class="faq-item">
-<h3>Va scoate acest temporizator un sunet când termină?</h3>
-<p>Da - se aude un semnal sonor scurt când numărătoarea inversă ajunge la zero, împreună cu schimbarea afișajului în "Timpul s-a scurs!" astfel încât să observi chiar dacă nu privești direct ecranul.</p>
+<h3>Fiecare temporizator va scoate propriul sunet când termină?</h3>
+<p>Da - se aude un semnal sonor scurt pentru fiecare temporizator în parte când numărătoarea sa inversă ajunge la zero, împreună cu schimbarea afișajului acelui temporizator în "Timpul s-a scurs!", deci știi exact care a terminat.</p>
 </div>
 <div class="faq-item">
-<h3>Pot seta un temporizator pentru mai mult de o oră?</h3>
-<p>Da - introdu orice număr de minute (nu există limită superioară), deci poți seta un temporizator de 90 de minute sau de mai multe ore la fel de ușor ca unul scurt.</p>
+<h3>Pot elimina un temporizator de care nu mai am nevoie?</h3>
+<p>Da - dă clic pe butonul × din antetul unui temporizator pentru a-l elimina. Pagina păstrează întotdeauna cel puțin un temporizator, deci ultimul rămas nu poate fi eliminat.</p>
 </div>
 <div class="faq-item">
 <h3>Temporizatorul continuă numărătoarea inversă dacă computerul meu intră în repaus?</h3>
-<p>Nu - dacă dispozitivul intră în repaus sau browserul este suspendat, numărătoarea inversă se oprește odată cu el și reia (ușor în urmă) când dispozitivul se trezește, deoarece se bazează pe tab-ul de browser care rulează activ.</p>
+<p>Nu - dacă dispozitivul intră în repaus sau browserul este suspendat, toate numărătorile inverse active se opresc odată cu el și reiau (ușor în urmă) când dispozitivul se trezește.</p>
 </div>
 <div class="faq-item">
 <h3>Pot seta un temporizator pentru un număr exact de secunde, precum 90 de secunde?</h3>
-<p>Da - introdu 0 minute și 90 de secunde, sau 1 minut și 30 de secunde; ambele produc aceeași numărătoare inversă de 90 de secunde, deoarece minutele și secundele sunt combinate în timpul total.</p>
+<p>Da - introdu 0 minute și 90 de secunde, sau 1 minut și 30 de secunde, la orice temporizator; ambele produc aceeași numărătoare inversă de 90 de secunde.</p>
 </div>
 <div class="faq-item">
 <h3>Este acesta același lucru cu un "ceas de numărătoare inversă" pentru o dată specifică a unui eveniment?</h3>
-<p>Nu - acest temporizator numără invers o durată fixă pe care o setezi în minute și secunde, ca un temporizator de bucătărie. Pentru a număra invers până la o dată viitoare specifică, ai avea nevoie în schimb de un instrument de numărătoare inversă bazat pe dată.</p>
+<p>Nu - fiecare temporizator de aici numără invers o durată fixă pe care o setezi în minute și secunde, ca un temporizator de bucătărie. Pentru a număra invers până la o dată viitoare specifică, folosește un instrument de numărătoare inversă bazat pe dată.</p>
 </div></div>
           <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculează</a>
         </div>

@@ -15,9 +15,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Calcolatrice del Cartellino Orario</title>
-  <meta name="description" content="Somma le ore lavorate durante la settimana e calcola la paga lorda." />
+  <meta name="description" content="Somma le ore lavorate durante la settimana e calcola la paga lorda, inclusa la maggiorazione straordinari." />
   <meta property="og:title" content="Calcolatrice del Cartellino Orario | Calquary">
-  <meta property="og:description" content="Somma le ore lavorate durante la settimana e calcola la paga lorda.">
+  <meta property="og:description" content="Somma le ore lavorate durante la settimana e calcola la paga lorda, inclusa la maggiorazione straordinari.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/it/tool/time-card-calculator">
   <meta property="og:locale" content="it_IT">
@@ -27,7 +27,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Calcolatrice del Cartellino Orario | Calquary">
-  <meta name="twitter:description" content="Somma le ore lavorate durante la settimana e calcola la paga lorda.">
+  <meta name="twitter:description" content="Somma le ore lavorate durante la settimana e calcola la paga lorda, inclusa la maggiorazione straordinari.">
   <meta name="twitter:image" content="https://calquary.com/og-images/time-card-calculator.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/time-card-calculator">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/time-card-calculator">
@@ -89,7 +89,7 @@
     {
       "@type": "SoftwareApplication",
       "name": "Calcolatrice del Cartellino Orario",
-      "description": "Somma le ore lavorate durante la settimana e calcola la paga lorda.",
+      "description": "Somma le ore lavorate durante la settimana e calcola la paga lorda, inclusa la maggiorazione straordinari.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/it/tool/time-card-calculator",
@@ -133,7 +133,7 @@
           "name": "Come calcolo il totale delle ore da un cartellino orario?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Somma le ore lavorate ogni giorno del periodo di paga. Questa calcolatrice somma sette voci giornaliere (lunedì-domenica) in un totale settimanale, poi moltiplica per la tua tariffa oraria per la paga lorda."
+            "text": "Somma le ore lavorate ogni giorno del periodo di paga. Questa calcolatrice somma sette voci giornaliere (lunedì-domenica) in un totale settimanale, poi lo separa in ore ordinarie e straordinarie in base alla tua soglia prima di calcolare la paga lorda."
           }
         },
         {
@@ -141,15 +141,23 @@
           "name": "Questo gestisce gli orari di entrata e uscita?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No - inserisci il totale delle ore decimali già lavorate ogni giorno (ad esempio, 7,5 per 7 ore e 30 minuti), non gli orari di entrata/uscita. Se hai solo orari di timbratura, sottrai l'entrata dall'uscita (tenendo conto di eventuali pause non retribuite) per ottenere prima le ore decimali."
+            "text": "No - inserisci il totale delle ore decimali già lavorate ogni giorno (ad esempio, 7,5 per 7 ore e 30 minuti), non gli orari di entrata/uscita."
           }
         },
         {
           "@type": "Question",
-          "name": "Questo include il pagamento degli straordinari?",
+          "name": "Come funziona il calcolo degli straordinari?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No - moltiplica il totale delle ore per un'unica tariffa oraria fissa. Se alcune ore sono idonee per una maggiorazione straordinari (comunemente 1,5x per le ore oltre le 40/settimana negli USA), calcola separatamente le porzioni regolari e straordinarie e sommale."
+            "text": "Le ore fino alla tua soglia di straordinario (40/settimana di default, la soglia federale standard USA) sono pagate alla tua tariffa regolare. Qualsiasi ora oltre viene pagata alla tua tariffa moltiplicata per il moltiplicatore straordinario (1,5x di default)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso cambiare la soglia o il moltiplicatore degli straordinari?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì - entrambi sono campi modificabili. Alcune giurisdizioni o contratti sindacali usano una soglia settimanale diversa da 40 ore, o una regola di straordinario giornaliera anziché settimanale, e alcuni usano la doppia tariffa (2x) anziché una volta e mezza - adatta i campi alla tua situazione reale."
           }
         },
         {
@@ -162,18 +170,10 @@
         },
         {
           "@type": "Question",
-          "name": "E se ho fatto straordinari solo un giorno, non per l'intera settimana?",
+          "name": "Se ho lavorato 45 ore a $20/ora con 1,5x di straordinario dopo 40, qual è la mia paga lorda?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Questa calcolatrice somma tutte le ore inserite in un unico totale settimanale a una tariffa unica fissa, quindi non separa automaticamente lo straordinario di un singolo giorno - calcola separatamente le porzioni ordinarie e straordinarie di quel giorno, poi aggiungi il risultato alla tua paga totale al di fuori dello strumento."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Come viene calcolata la paga lorda da un cartellino orario?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "La paga lorda è il totale delle ore lavorate moltiplicato per la tariffa oraria. Se le tue ore giornaliere sommano a 38,5 per la settimana a $18/ora, la paga lorda è 38,5 × $18 = $693, prima di eventuali ritenute fiscali o detrazioni."
+            "text": "40 ore regolari × $20 = $800, più 5 ore di straordinario × $30 (tariffa una volta e mezza) = $150, per una paga lorda totale di $950 - inserisci le tue ore giornaliere reali sopra per ottenere automaticamente questa ripartizione."
           }
         },
         {
@@ -181,7 +181,7 @@
           "name": "Una calcolatrice di cartellino orario è la stessa cosa di una calcolatrice di busta paga?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No - una calcolatrice di cartellino orario come questa converte solo le ore lavorate in paga lorda. Una calcolatrice di busta paga va oltre, applicando ritenute fiscali, detrazioni e benefit per arrivare alla paga netta (a casa)."
+            "text": "No - una calcolatrice di cartellino orario come questa converte le ore lavorate (incluso lo straordinario) in paga lorda. Una calcolatrice di busta paga va oltre, applicando ritenute fiscali, detrazioni e benefit per arrivare alla paga netta."
           }
         }
       ]
@@ -223,7 +223,7 @@
     <div class="tool-layout">
       <main>
         <h1>Calcolatrice del Cartellino Orario</h1>
-        <p style="max-width:60ch;">Inserisci le ore lavorate ogni giorno e una tariffa oraria per totalizzare le ore settimanali e la paga lorda.</p>
+        <p style="max-width:60ch;">Inserisci le ore lavorate ogni giorno, una tariffa oraria e la tua soglia di straordinario per totalizzare le ore settimanali e la paga lorda - inclusa la maggiorazione straordinari oltre la soglia.</p>
         <p class="last-updated">Ultimo aggiornamento: September 22, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -252,31 +252,31 @@
           <h2>Domande frequenti</h2>
           <div id="faq-list"><div class="faq-item">
 <h3>Come calcolo il totale delle ore da un cartellino orario?</h3>
-<p>Somma le ore lavorate ogni giorno del periodo di paga. Questa calcolatrice somma sette voci giornaliere (lunedì-domenica) in un totale settimanale, poi moltiplica per la tua tariffa oraria per la paga lorda.</p>
+<p>Somma le ore lavorate ogni giorno del periodo di paga. Questa calcolatrice somma sette voci giornaliere (lunedì-domenica) in un totale settimanale, poi lo separa in ore ordinarie e straordinarie in base alla tua soglia prima di calcolare la paga lorda.</p>
 </div>
 <div class="faq-item">
 <h3>Questo gestisce gli orari di entrata e uscita?</h3>
-<p>No - inserisci il totale delle ore decimali già lavorate ogni giorno (ad esempio, 7,5 per 7 ore e 30 minuti), non gli orari di entrata/uscita. Se hai solo orari di timbratura, sottrai l'entrata dall'uscita (tenendo conto di eventuali pause non retribuite) per ottenere prima le ore decimali.</p>
+<p>No - inserisci il totale delle ore decimali già lavorate ogni giorno (ad esempio, 7,5 per 7 ore e 30 minuti), non gli orari di entrata/uscita.</p>
 </div>
 <div class="faq-item">
-<h3>Questo include il pagamento degli straordinari?</h3>
-<p>No - moltiplica il totale delle ore per un'unica tariffa oraria fissa. Se alcune ore sono idonee per una maggiorazione straordinari (comunemente 1,5x per le ore oltre le 40/settimana negli USA), calcola separatamente le porzioni regolari e straordinarie e sommale.</p>
+<h3>Come funziona il calcolo degli straordinari?</h3>
+<p>Le ore fino alla tua soglia di straordinario (40/settimana di default, la soglia federale standard USA) sono pagate alla tua tariffa regolare. Qualsiasi ora oltre viene pagata alla tua tariffa moltiplicata per il moltiplicatore straordinario (1,5x di default).</p>
+</div>
+<div class="faq-item">
+<h3>Posso cambiare la soglia o il moltiplicatore degli straordinari?</h3>
+<p>Sì - entrambi sono campi modificabili. Alcune giurisdizioni o contratti sindacali usano una soglia settimanale diversa da 40 ore, o una regola di straordinario giornaliera anziché settimanale, e alcuni usano la doppia tariffa (2x) anziché una volta e mezza - adatta i campi alla tua situazione reale.</p>
 </div>
 <div class="faq-item">
 <h3>Come converto i minuti in decimale per un cartellino orario?</h3>
 <p>Dividi i minuti per 60. 30 minuti = 0,5 ore, 15 minuti = 0,25 ore, 45 minuti = 0,75 ore - aggiungi quel decimale al conteggio delle ore intere di ogni giorno.</p>
 </div>
 <div class="faq-item">
-<h3>E se ho fatto straordinari solo un giorno, non per l'intera settimana?</h3>
-<p>Questa calcolatrice somma tutte le ore inserite in un unico totale settimanale a una tariffa unica fissa, quindi non separa automaticamente lo straordinario di un singolo giorno - calcola separatamente le porzioni ordinarie e straordinarie di quel giorno, poi aggiungi il risultato alla tua paga totale al di fuori dello strumento.</p>
-</div>
-<div class="faq-item">
-<h3>Come viene calcolata la paga lorda da un cartellino orario?</h3>
-<p>La paga lorda è il totale delle ore lavorate moltiplicato per la tariffa oraria. Se le tue ore giornaliere sommano a 38,5 per la settimana a $18/ora, la paga lorda è 38,5 × $18 = $693, prima di eventuali ritenute fiscali o detrazioni.</p>
+<h3>Se ho lavorato 45 ore a $20/ora con 1,5x di straordinario dopo 40, qual è la mia paga lorda?</h3>
+<p>40 ore regolari × $20 = $800, più 5 ore di straordinario × $30 (tariffa una volta e mezza) = $150, per una paga lorda totale di $950 - inserisci le tue ore giornaliere reali sopra per ottenere automaticamente questa ripartizione.</p>
 </div>
 <div class="faq-item">
 <h3>Una calcolatrice di cartellino orario è la stessa cosa di una calcolatrice di busta paga?</h3>
-<p>No - una calcolatrice di cartellino orario come questa converte solo le ore lavorate in paga lorda. Una calcolatrice di busta paga va oltre, applicando ritenute fiscali, detrazioni e benefit per arrivare alla paga netta (a casa).</p>
+<p>No - una calcolatrice di cartellino orario come questa converte le ore lavorate (incluso lo straordinario) in paga lorda. Una calcolatrice di busta paga va oltre, applicando ritenute fiscali, detrazioni e benefit per arrivare alla paga netta.</p>
 </div></div>
           <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calcola</a>
         </div>

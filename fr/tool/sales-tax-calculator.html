@@ -14,10 +14,10 @@
   <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Calculatrice de Taxe de Vente</title>
-  <meta name="description" content="Calculez la taxe de vente et le prix total d'un achat." />
-  <meta property="og:title" content="Calculatrice de Taxe de Vente | Calquary">
-  <meta property="og:description" content="Calculez la taxe de vente et le prix total d'un achat.">
+  <title>Calculatrice de Taxe de Vente, TVA et TPS</title>
+  <meta name="description" content="Ajoutez une taxe de vente, TVA ou TPS à un prix, ou extrayez la taxe déjà incluse dans un prix taxes incluses." />
+  <meta property="og:title" content="Calculatrice de Taxe de Vente, TVA et TPS | Calquary">
+  <meta property="og:description" content="Ajoutez une taxe de vente, TVA ou TPS à un prix, ou extrayez la taxe déjà incluse dans un prix taxes incluses.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/fr/tool/sales-tax-calculator">
   <meta property="og:locale" content="fr_FR">
@@ -26,8 +26,8 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Calculatrice de Taxe de Vente | Calquary">
-  <meta name="twitter:description" content="Calculez la taxe de vente et le prix total d'un achat.">
+  <meta name="twitter:title" content="Calculatrice de Taxe de Vente, TVA et TPS | Calquary">
+  <meta name="twitter:description" content="Ajoutez une taxe de vente, TVA ou TPS à un prix, ou extrayez la taxe déjà incluse dans un prix taxes incluses.">
   <meta name="twitter:image" content="https://calquary.com/og-images/sales-tax-calculator.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/sales-tax-calculator">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/sales-tax-calculator">
@@ -88,8 +88,8 @@
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "Calculatrice de Taxe de Vente",
-      "description": "Calculez la taxe de vente et le prix total d'un achat.",
+      "name": "Calculatrice de Taxe de Vente, TVA et TPS",
+      "description": "Ajoutez une taxe de vente, TVA ou TPS à un prix, ou extrayez la taxe déjà incluse dans un prix taxes incluses.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/fr/tool/sales-tax-calculator",
@@ -120,7 +120,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Calculatrice de Taxe de Vente",
+          "name": "Calculatrice de Taxe de Vente, TVA et TPS",
           "item": "https://calquary.com/fr/tool/sales-tax-calculator"
         }
       ]
@@ -133,7 +133,23 @@
           "name": "Comment calculer la taxe de vente sur un achat ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Multipliez le prix par le taux de taxe en décimal, puis ajoutez cela au prix initial. Pour 49,99 $ à 7,25 % de taxe : 49,99 $ × 0,0725 = 3,62 $ de taxe, pour un total de 53,61 $."
+            "text": "Multipliez le prix par le taux de taxe en décimal, puis ajoutez cela au prix initial. Pour 49,99 $ à 7,25 % de taxe : 49,99 $ × 0,0725 = 3,62 $ de taxe, pour un total de 53,61 $. Choisissez \"Exclut la taxe\" ci-dessus pour cette direction."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment extraire la TVA ou la TPS d'un prix qui l'inclut déjà ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Choisissez \"Inclut déjà la taxe\" ci-dessus, saisissez le prix taxes incluses et le taux, et la calculatrice divise par (1 + taux de taxe) pour trouver le prix de base avant taxe."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelle est la différence entre taxe de vente et TVA/TPS pour cette calculatrice ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le calcul pour ajouter la taxe est identique. La différence pratique est la direction dont vous avez le plus souvent besoin : la taxe de vente américaine est généralement ajoutée en caisse (\"exclut la taxe\"), tandis que la TVA/TPS est généralement déjà incluse dans le prix affiché, donc vous devez souvent l'extraire (\"inclut déjà la taxe\")."
           }
         },
         {
@@ -141,7 +157,7 @@
           "name": "Le taux de taxe de vente varie-t-il selon l'endroit ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Oui - les taux de taxe de vente sont fixés par l'État, le comté et parfois la ville, donc le taux combiné peut varier considérablement même au sein d'un même État. Vérifiez votre taux local avant de vous fier à une valeur par défaut."
+            "text": "Oui - les taux de taxe de vente sont fixés par l'État, le comté et parfois la ville. Les taux de TVA/TPS varient plutôt par pays. Vérifiez votre taux local ou national spécifique avant de vous fier à une valeur par défaut."
           }
         },
         {
@@ -157,31 +173,15 @@
           "name": "L'épicerie et les vêtements sont-ils toujours taxés au même taux que les autres achats ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Non - de nombreuses juridictions exonèrent ou réduisent le taux de taxe sur l'épicerie, les médicaments sur ordonnance et parfois les vêtements, tout en taxant la marchandise générale au taux standard. Vérifiez les règles de votre administration fiscale locale si vous calculez la taxe pour une catégorie spécifique exonérée plutôt que pour un achat général."
+            "text": "Non - de nombreuses juridictions exonèrent ou réduisent le taux de taxe sur l'épicerie, les médicaments sur ordonnance et parfois les vêtements, tout en taxant la marchandise générale au taux standard."
           }
         },
         {
           "@type": "Question",
-          "name": "Comment retrouver le prix avant taxe si je ne connais que le total payé ?",
+          "name": "J'ai besoin de ça pour une facture - est-ce que \"extraire la taxe\" fonctionne pour ça ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Divisez le total par (1 + taux de taxe en décimal). Si vous avez payé 107,50 $ au total à un taux de taxe de 7,5 %, le prix avant taxe était de 107,50 $ ÷ 1,075 ≈ 100,00 $."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Quelle est la différence entre la taxe de vente et la taxe d'usage ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "La taxe de vente est perçue par le vendeur au moment de l'achat dans une juridiction fiscale. La taxe d'usage s'applique lorsque vous achetez quelque chose sans payer de taxe de vente (souvent auprès d'un vendeur hors de l'État) et que vous êtes responsable de remettre vous-même une taxe équivalente - le calcul du montant dû est le même dans les deux cas."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Une calculatrice de TVA est-elle la même chose qu'une calculatrice de taxe de vente ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Le calcul de base est similaire - les deux appliquent un taux en pourcentage à un prix - mais la TVA (taxe sur la valeur ajoutée) est généralement incluse dans un prix affiché et perçue à chaque étape de production, tandis que la taxe de vente américaine est habituellement ajoutée au prix affiché lors de la vente finale, ce pour quoi cette calculatrice est configurée."
+            "text": "Oui - une facture affichant un total taxes incluses (courant hors des États-Unis) est exactement ce à quoi sert le mode \"Inclut déjà la taxe\" : saisissez le montant brut (total, taxes incluses) et le taux, et la calculatrice renvoie le montant net (avant taxe) et la portion de taxe séparément."
           }
         }
       ]
@@ -222,8 +222,8 @@
   <div class="wrap" style="padding-bottom:64px;">
     <div class="tool-layout">
       <main>
-        <h1>Calculatrice de Taxe de Vente</h1>
-        <p style="max-width:60ch;">Indiquez un prix et votre taux de taxe de vente local pour calculer le montant de la taxe et le coût total.</p>
+        <h1>Calculatrice de Taxe de Vente, TVA et TPS</h1>
+        <p style="max-width:60ch;">Choisissez si votre prix exclut la taxe (ajoutez-la) ou l'inclut déjà (extrayez-la) - fonctionne pour la taxe de vente à l'américaine ajoutée en caisse ou pour la TVA/TPS déjà incluse dans un prix affiché.</p>
         <p class="last-updated">Dernière mise à jour : September 22, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -252,11 +252,19 @@
           <h2>Questions fréquentes</h2>
           <div id="faq-list"><div class="faq-item">
 <h3>Comment calculer la taxe de vente sur un achat ?</h3>
-<p>Multipliez le prix par le taux de taxe en décimal, puis ajoutez cela au prix initial. Pour 49,99 $ à 7,25 % de taxe : 49,99 $ × 0,0725 = 3,62 $ de taxe, pour un total de 53,61 $.</p>
+<p>Multipliez le prix par le taux de taxe en décimal, puis ajoutez cela au prix initial. Pour 49,99 $ à 7,25 % de taxe : 49,99 $ × 0,0725 = 3,62 $ de taxe, pour un total de 53,61 $. Choisissez "Exclut la taxe" ci-dessus pour cette direction.</p>
+</div>
+<div class="faq-item">
+<h3>Comment extraire la TVA ou la TPS d'un prix qui l'inclut déjà ?</h3>
+<p>Choisissez "Inclut déjà la taxe" ci-dessus, saisissez le prix taxes incluses et le taux, et la calculatrice divise par (1 + taux de taxe) pour trouver le prix de base avant taxe.</p>
+</div>
+<div class="faq-item">
+<h3>Quelle est la différence entre taxe de vente et TVA/TPS pour cette calculatrice ?</h3>
+<p>Le calcul pour ajouter la taxe est identique. La différence pratique est la direction dont vous avez le plus souvent besoin : la taxe de vente américaine est généralement ajoutée en caisse ("exclut la taxe"), tandis que la TVA/TPS est généralement déjà incluse dans le prix affiché, donc vous devez souvent l'extraire ("inclut déjà la taxe").</p>
 </div>
 <div class="faq-item">
 <h3>Le taux de taxe de vente varie-t-il selon l'endroit ?</h3>
-<p>Oui - les taux de taxe de vente sont fixés par l'État, le comté et parfois la ville, donc le taux combiné peut varier considérablement même au sein d'un même État. Vérifiez votre taux local avant de vous fier à une valeur par défaut.</p>
+<p>Oui - les taux de taxe de vente sont fixés par l'État, le comté et parfois la ville. Les taux de TVA/TPS varient plutôt par pays. Vérifiez votre taux local ou national spécifique avant de vous fier à une valeur par défaut.</p>
 </div>
 <div class="faq-item">
 <h3>La taxe de vente est-elle calculée sur le prix avant ou après les autres remises ?</h3>
@@ -264,19 +272,11 @@
 </div>
 <div class="faq-item">
 <h3>L'épicerie et les vêtements sont-ils toujours taxés au même taux que les autres achats ?</h3>
-<p>Non - de nombreuses juridictions exonèrent ou réduisent le taux de taxe sur l'épicerie, les médicaments sur ordonnance et parfois les vêtements, tout en taxant la marchandise générale au taux standard. Vérifiez les règles de votre administration fiscale locale si vous calculez la taxe pour une catégorie spécifique exonérée plutôt que pour un achat général.</p>
+<p>Non - de nombreuses juridictions exonèrent ou réduisent le taux de taxe sur l'épicerie, les médicaments sur ordonnance et parfois les vêtements, tout en taxant la marchandise générale au taux standard.</p>
 </div>
 <div class="faq-item">
-<h3>Comment retrouver le prix avant taxe si je ne connais que le total payé ?</h3>
-<p>Divisez le total par (1 + taux de taxe en décimal). Si vous avez payé 107,50 $ au total à un taux de taxe de 7,5 %, le prix avant taxe était de 107,50 $ ÷ 1,075 ≈ 100,00 $.</p>
-</div>
-<div class="faq-item">
-<h3>Quelle est la différence entre la taxe de vente et la taxe d'usage ?</h3>
-<p>La taxe de vente est perçue par le vendeur au moment de l'achat dans une juridiction fiscale. La taxe d'usage s'applique lorsque vous achetez quelque chose sans payer de taxe de vente (souvent auprès d'un vendeur hors de l'État) et que vous êtes responsable de remettre vous-même une taxe équivalente - le calcul du montant dû est le même dans les deux cas.</p>
-</div>
-<div class="faq-item">
-<h3>Une calculatrice de TVA est-elle la même chose qu'une calculatrice de taxe de vente ?</h3>
-<p>Le calcul de base est similaire - les deux appliquent un taux en pourcentage à un prix - mais la TVA (taxe sur la valeur ajoutée) est généralement incluse dans un prix affiché et perçue à chaque étape de production, tandis que la taxe de vente américaine est habituellement ajoutée au prix affiché lors de la vente finale, ce pour quoi cette calculatrice est configurée.</p>
+<h3>J'ai besoin de ça pour une facture - est-ce que "extraire la taxe" fonctionne pour ça ?</h3>
+<p>Oui - une facture affichant un total taxes incluses (courant hors des États-Unis) est exactement ce à quoi sert le mode "Inclut déjà la taxe" : saisissez le montant brut (total, taxes incluses) et le taux, et la calculatrice renvoie le montant net (avant taxe) et la portion de taxe séparément.</p>
 </div></div>
           <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculer</a>
         </div>

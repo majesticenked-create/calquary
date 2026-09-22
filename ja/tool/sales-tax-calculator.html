@@ -14,10 +14,10 @@
   <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>売上税計算機 - 無料オンライン計算ツール | Calquary</title>
-  <meta name="description" content="購入時の売上税と合計金額を計算します。" />
-  <meta property="og:title" content="売上税計算機 | Calquary">
-  <meta property="og:description" content="購入時の売上税と合計金額を計算します。">
+  <title>売上税・VAT・GST計算機 - 無料オンライン計算ツール | Calquary</title>
+  <meta name="description" content="価格に売上税・VAT・GSTを追加するか、税込み価格からすでに含まれる税額を抽出します。" />
+  <meta property="og:title" content="売上税・VAT・GST計算機 | Calquary">
+  <meta property="og:description" content="価格に売上税・VAT・GSTを追加するか、税込み価格からすでに含まれる税額を抽出します。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/ja/tool/sales-tax-calculator">
   <meta property="og:locale" content="ja_JP">
@@ -26,8 +26,8 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="売上税計算機 | Calquary">
-  <meta name="twitter:description" content="購入時の売上税と合計金額を計算します。">
+  <meta name="twitter:title" content="売上税・VAT・GST計算機 | Calquary">
+  <meta name="twitter:description" content="価格に売上税・VAT・GSTを追加するか、税込み価格からすでに含まれる税額を抽出します。">
   <meta name="twitter:image" content="https://calquary.com/og-images/sales-tax-calculator.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/sales-tax-calculator">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/sales-tax-calculator">
@@ -88,8 +88,8 @@
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "売上税計算機",
-      "description": "購入時の売上税と合計金額を計算します。",
+      "name": "売上税・VAT・GST計算機",
+      "description": "価格に売上税・VAT・GSTを追加するか、税込み価格からすでに含まれる税額を抽出します。",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/ja/tool/sales-tax-calculator",
@@ -120,7 +120,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "売上税計算機",
+          "name": "売上税・VAT・GST計算機",
           "item": "https://calquary.com/ja/tool/sales-tax-calculator"
         }
       ]
@@ -133,7 +133,23 @@
           "name": "購入時の売上税はどう計算しますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "価格に税率（小数）を掛け、その金額を元の価格に加えます。49.99ドルで税率7.25%の場合：49.99ドル × 0.0725 = 3.62ドルの税額となり、合計53.61ドルになります。"
+            "text": "価格に税率（小数）を掛け、その金額を元の価格に加えます。49.99ドルで税率7.25%の場合：49.99ドル × 0.0725 = 3.62ドルの税額となり、合計53.61ドルになります。この方向には上記で「税抜き」を選択してください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "すでに税込みの価格からVATやGSTを抽出するには？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "上記で「税込み」を選択し、税込み価格と税率を入力すると、計算機は（1 + 税率）で割って税抜きの基本価格を求めます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "このツールにおいて売上税とVAT/GSTの違いは何ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "税を追加する計算式自体は同じです。実用上の違いは、必要になる方向です - 米国式売上税は通常レジで追加されます（「税抜き」）が、VAT/GSTは通常すでに表示価格に含まれているため、抽出する（「税込み」）必要が多いです。"
           }
         },
         {
@@ -141,7 +157,7 @@
           "name": "売上税率は地域によって異なりますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "はい。売上税率は州、郡、場合によっては市によって設定されるため、同じ州内でも合計税率が大きく異なることがあります。デフォルトの税率に頼る前に、お住まいの地域の税率を確認してください。"
+            "text": "はい。売上税率は州、郡、場合によっては市によって設定されます。VAT/GST率は国ごとに異なります。デフォルトの税率に頼る前に、該当する地域または国の税率を確認してください。"
           }
         },
         {
@@ -157,31 +173,15 @@
           "name": "食料品や衣料品は常に他の購入と同じ税率が課されますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "いいえ。多くの地域では、食料品、処方薬、場合によっては衣料品について税を免除または軽減し、一般的な商品には標準税率を課しています。一般的な購入ではなく、特定の免税カテゴリーの税額を計算する場合は、お住まいの地域の税務当局のルールを確認してください。"
+            "text": "いいえ。多くの地域では、食料品、処方薬、場合によっては衣料品について税を免除または軽減し、一般的な商品には標準税率を課しています。"
           }
         },
         {
           "@type": "Question",
-          "name": "支払った合計金額しかわからない場合、税抜き価格をどう逆算しますか？",
+          "name": "請求書のためにこれが必要です - 「税を抽出」はそれに使えますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "合計金額を（1 + 税率の小数）で割ります。税率7.5%で合計107.50ドルを支払った場合、税抜き価格は107.50ドル ÷ 1.075 ≈ 100.00ドルでした。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "売上税と使用税の違いは何ですか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "売上税は、課税管轄区域内での購入時に販売者が徴収します。使用税は、売上税を支払わずに何かを購入した場合（多くの場合、州外の販売者から）に適用され、自分で同等の税金を納付する責任があります。いずれの場合も、支払うべき金額の計算方法は同じです。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "VAT計算機は売上税計算機と同じですか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "基本的な計算方法は似ています。どちらも価格に割合を適用します。しかし、VAT（付加価値税）は通常、表示価格に含まれており生産の各段階で徴収されるのに対し、米国の売上税は通常、最終販売時に表示価格に上乗せされます。これがこの計算機の想定する方式です。"
+            "text": "はい - 税込み合計を表示する請求書（米国外で一般的）はまさに「税込み」モードの用途です：総額（税込み）と税率を入力すると、計算機は税抜き額と税額部分を別々に返します。"
           }
         }
       ]
@@ -222,8 +222,8 @@
   <div class="wrap" style="padding-bottom:64px;">
     <div class="tool-layout">
       <main>
-        <h1>売上税計算機</h1>
-        <p style="max-width:60ch;">価格とお住まいの地域の売上税率を入力すると、税額と合計金額を計算します。</p>
+        <h1>売上税・VAT・GST計算機</h1>
+        <p style="max-width:60ch;">価格が税抜きか（税を追加）、すでに税込みか（税を抽出）を選んでください - レジで加算される米国式売上税にも、表示価格にすでに含まれるVAT/GSTにも対応しています。</p>
         <p class="last-updated">最終更新日： September 22, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -252,11 +252,19 @@
           <h2>よくある質問</h2>
           <div id="faq-list"><div class="faq-item">
 <h3>購入時の売上税はどう計算しますか？</h3>
-<p>価格に税率（小数）を掛け、その金額を元の価格に加えます。49.99ドルで税率7.25%の場合：49.99ドル × 0.0725 = 3.62ドルの税額となり、合計53.61ドルになります。</p>
+<p>価格に税率（小数）を掛け、その金額を元の価格に加えます。49.99ドルで税率7.25%の場合：49.99ドル × 0.0725 = 3.62ドルの税額となり、合計53.61ドルになります。この方向には上記で「税抜き」を選択してください。</p>
+</div>
+<div class="faq-item">
+<h3>すでに税込みの価格からVATやGSTを抽出するには？</h3>
+<p>上記で「税込み」を選択し、税込み価格と税率を入力すると、計算機は（1 + 税率）で割って税抜きの基本価格を求めます。</p>
+</div>
+<div class="faq-item">
+<h3>このツールにおいて売上税とVAT/GSTの違いは何ですか？</h3>
+<p>税を追加する計算式自体は同じです。実用上の違いは、必要になる方向です - 米国式売上税は通常レジで追加されます（「税抜き」）が、VAT/GSTは通常すでに表示価格に含まれているため、抽出する（「税込み」）必要が多いです。</p>
 </div>
 <div class="faq-item">
 <h3>売上税率は地域によって異なりますか？</h3>
-<p>はい。売上税率は州、郡、場合によっては市によって設定されるため、同じ州内でも合計税率が大きく異なることがあります。デフォルトの税率に頼る前に、お住まいの地域の税率を確認してください。</p>
+<p>はい。売上税率は州、郡、場合によっては市によって設定されます。VAT/GST率は国ごとに異なります。デフォルトの税率に頼る前に、該当する地域または国の税率を確認してください。</p>
 </div>
 <div class="faq-item">
 <h3>売上税は他の割引の前と後、どちらの価格に対して計算されますか？</h3>
@@ -264,19 +272,11 @@
 </div>
 <div class="faq-item">
 <h3>食料品や衣料品は常に他の購入と同じ税率が課されますか？</h3>
-<p>いいえ。多くの地域では、食料品、処方薬、場合によっては衣料品について税を免除または軽減し、一般的な商品には標準税率を課しています。一般的な購入ではなく、特定の免税カテゴリーの税額を計算する場合は、お住まいの地域の税務当局のルールを確認してください。</p>
+<p>いいえ。多くの地域では、食料品、処方薬、場合によっては衣料品について税を免除または軽減し、一般的な商品には標準税率を課しています。</p>
 </div>
 <div class="faq-item">
-<h3>支払った合計金額しかわからない場合、税抜き価格をどう逆算しますか？</h3>
-<p>合計金額を（1 + 税率の小数）で割ります。税率7.5%で合計107.50ドルを支払った場合、税抜き価格は107.50ドル ÷ 1.075 ≈ 100.00ドルでした。</p>
-</div>
-<div class="faq-item">
-<h3>売上税と使用税の違いは何ですか？</h3>
-<p>売上税は、課税管轄区域内での購入時に販売者が徴収します。使用税は、売上税を支払わずに何かを購入した場合（多くの場合、州外の販売者から）に適用され、自分で同等の税金を納付する責任があります。いずれの場合も、支払うべき金額の計算方法は同じです。</p>
-</div>
-<div class="faq-item">
-<h3>VAT計算機は売上税計算機と同じですか？</h3>
-<p>基本的な計算方法は似ています。どちらも価格に割合を適用します。しかし、VAT（付加価値税）は通常、表示価格に含まれており生産の各段階で徴収されるのに対し、米国の売上税は通常、最終販売時に表示価格に上乗せされます。これがこの計算機の想定する方式です。</p>
+<h3>請求書のためにこれが必要です - 「税を抽出」はそれに使えますか？</h3>
+<p>はい - 税込み合計を表示する請求書（米国外で一般的）はまさに「税込み」モードの用途です：総額（税込み）と税率を入力すると、計算機は税抜き額と税額部分を別々に返します。</p>
 </div></div>
           <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">計算する</a>
         </div>

@@ -15,9 +15,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>在线计时器 - 免费在线计算器 | Calquary</title>
-  <meta name="description" content="一个在浏览器中运行的免费倒计时器——设置分钟和秒数，然后开始、暂停或重置。" />
+  <meta name="description" content="一个在浏览器中运行的免费多重计时器——可同时运行多个命名倒计时，每个都有各自的开始、暂停和重置。" />
   <meta property="og:title" content="在线计时器 | Calquary">
-  <meta property="og:description" content="一个在浏览器中运行的免费倒计时器——设置分钟和秒数，然后开始、暂停或重置。">
+  <meta property="og:description" content="一个在浏览器中运行的免费多重计时器——可同时运行多个命名倒计时，每个都有各自的开始、暂停和重置。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/zh/tool/online-timer">
   <meta property="og:locale" content="zh_CN">
@@ -27,7 +27,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="在线计时器 | Calquary">
-  <meta name="twitter:description" content="一个在浏览器中运行的免费倒计时器——设置分钟和秒数，然后开始、暂停或重置。">
+  <meta name="twitter:description" content="一个在浏览器中运行的免费多重计时器——可同时运行多个命名倒计时，每个都有各自的开始、暂停和重置。">
   <meta name="twitter:image" content="https://calquary.com/og-images/online-timer.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/online-timer">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/online-timer">
@@ -89,7 +89,7 @@
     {
       "@type": "SoftwareApplication",
       "name": "在线计时器",
-      "description": "一个在浏览器中运行的免费倒计时器——设置分钟和秒数，然后开始、暂停或重置。",
+      "description": "一个在浏览器中运行的免费多重计时器——可同时运行多个命名倒计时，每个都有各自的开始、暂停和重置。",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/zh/tool/online-timer",
@@ -130,26 +130,42 @@
       "mainEntity": [
         {
           "@type": "Question",
+          "name": "我可以同时运行多个计时器吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以——点击「添加另一个计时器」即可添加任意多个独立的倒计时，每个都有自己的名称、分/秒设置和开始/暂停/重置控件。它们同时运行，因此你可以同时追踪多件事，比如准备一顿多道菜的餐点。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "我可以给每个计时器命名吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以——每个计时器的倒计时上方都有一个文本框，你可以在其中标注名称（例如「意面」或「洗衣」），这样在同时运行多个计时器时就能清楚区分。"
+          }
+        },
+        {
+          "@type": "Question",
           "name": "如果我切换浏览器标签页，这个在线计时器还会继续运行吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "会的——只要这个浏览器标签页保持打开，倒计时就会在后台继续运行，即使它不是当前活动的标签页。关闭标签页或浏览器会停止计时器。"
+            "text": "会的——只要这个浏览器标签页保持打开，每个倒计时就会在后台继续运行，即使它不是当前活动的标签页。关闭标签页或浏览器会停止所有计时器。"
           }
         },
         {
           "@type": "Question",
-          "name": "计时结束时这个计时器会发出声音吗？",
+          "name": "每个计时器结束时都会单独发出声音吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "会的——倒计时到零时会发出短促的提示音，同时显示会变为「时间到！」，这样即使你没有直视屏幕也能注意到。"
+            "text": "会的——每个计时器倒计时到零时都会单独发出短促的提示音，同时该计时器的显示会变为「时间到！」，让你确切知道是哪一个结束了。"
           }
         },
         {
           "@type": "Question",
-          "name": "我可以设置超过一小时的计时器吗？",
+          "name": "我可以删除不再需要的计时器吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "可以——输入任意分钟数（没有上限），所以你可以像设置短计时一样轻松地设置90分钟或多个小时的计时器。"
+            "text": "可以——点击计时器标题栏上的×按钮即可删除。页面始终保留至少一个计时器，因此最后一个无法删除。"
           }
         },
         {
@@ -157,7 +173,7 @@
           "name": "如果我的电脑进入睡眠状态，计时器还会继续倒计时吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "不会——如果设备进入睡眠或浏览器被挂起，倒计时也会随之暂停，并在设备唤醒时恢复（会稍微滞后），因为它依赖浏览器标签页保持活跃运行。"
+            "text": "不会——如果设备进入睡眠或浏览器被挂起，所有正在运行的倒计时都会随之暂停，并在设备唤醒时恢复（会稍微滞后）。"
           }
         },
         {
@@ -165,7 +181,7 @@
           "name": "我可以只设置精确的秒数，比如90秒吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "可以——输入0分钟90秒，或者1分钟30秒；由于分钟和秒会合并成总时长，两种输入方式产生的都是相同的90秒倒计时。"
+            "text": "可以——在任意计时器上输入0分钟90秒，或者1分钟30秒；两种输入方式产生的都是相同的90秒倒计时。"
           }
         },
         {
@@ -173,7 +189,7 @@
           "name": "这和针对特定活动日期的「倒计时时钟」是一回事吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "不是——这个计时器倒计时的是你设置的固定分钟和秒数时长，就像厨房计时器一样。如果要倒计时到未来的某个特定日期，你需要使用基于日期的倒计时工具。"
+            "text": "不是——这里的每个计时器倒计时的都是你设置的固定分钟和秒数时长，就像厨房计时器一样。如果要倒计时到未来的某个特定日期，请使用基于日期的倒计时工具。"
           }
         }
       ]
@@ -215,7 +231,7 @@
     <div class="tool-layout">
       <main>
         <h1>在线计时器</h1>
-        <p style="max-width:60ch;">设置倒计时时间，然后点击开始——这个计时器会倒数计时，时间到时会提醒你。</p>
+        <p style="max-width:60ch;">设置任意多个倒计时，每个都有自己的名称、分钟和秒数——它们独立运行，因此你可以同时为多件事计时。</p>
         <p class="last-updated">最后更新： September 22, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -243,28 +259,36 @@
         <div class="article-block">
           <h2>常见问题</h2>
           <div id="faq-list"><div class="faq-item">
+<h3>我可以同时运行多个计时器吗？</h3>
+<p>可以——点击「添加另一个计时器」即可添加任意多个独立的倒计时，每个都有自己的名称、分/秒设置和开始/暂停/重置控件。它们同时运行，因此你可以同时追踪多件事，比如准备一顿多道菜的餐点。</p>
+</div>
+<div class="faq-item">
+<h3>我可以给每个计时器命名吗？</h3>
+<p>可以——每个计时器的倒计时上方都有一个文本框，你可以在其中标注名称（例如「意面」或「洗衣」），这样在同时运行多个计时器时就能清楚区分。</p>
+</div>
+<div class="faq-item">
 <h3>如果我切换浏览器标签页，这个在线计时器还会继续运行吗？</h3>
-<p>会的——只要这个浏览器标签页保持打开，倒计时就会在后台继续运行，即使它不是当前活动的标签页。关闭标签页或浏览器会停止计时器。</p>
+<p>会的——只要这个浏览器标签页保持打开，每个倒计时就会在后台继续运行，即使它不是当前活动的标签页。关闭标签页或浏览器会停止所有计时器。</p>
 </div>
 <div class="faq-item">
-<h3>计时结束时这个计时器会发出声音吗？</h3>
-<p>会的——倒计时到零时会发出短促的提示音，同时显示会变为「时间到！」，这样即使你没有直视屏幕也能注意到。</p>
+<h3>每个计时器结束时都会单独发出声音吗？</h3>
+<p>会的——每个计时器倒计时到零时都会单独发出短促的提示音，同时该计时器的显示会变为「时间到！」，让你确切知道是哪一个结束了。</p>
 </div>
 <div class="faq-item">
-<h3>我可以设置超过一小时的计时器吗？</h3>
-<p>可以——输入任意分钟数（没有上限），所以你可以像设置短计时一样轻松地设置90分钟或多个小时的计时器。</p>
+<h3>我可以删除不再需要的计时器吗？</h3>
+<p>可以——点击计时器标题栏上的×按钮即可删除。页面始终保留至少一个计时器，因此最后一个无法删除。</p>
 </div>
 <div class="faq-item">
 <h3>如果我的电脑进入睡眠状态，计时器还会继续倒计时吗？</h3>
-<p>不会——如果设备进入睡眠或浏览器被挂起，倒计时也会随之暂停，并在设备唤醒时恢复（会稍微滞后），因为它依赖浏览器标签页保持活跃运行。</p>
+<p>不会——如果设备进入睡眠或浏览器被挂起，所有正在运行的倒计时都会随之暂停，并在设备唤醒时恢复（会稍微滞后）。</p>
 </div>
 <div class="faq-item">
 <h3>我可以只设置精确的秒数，比如90秒吗？</h3>
-<p>可以——输入0分钟90秒，或者1分钟30秒；由于分钟和秒会合并成总时长，两种输入方式产生的都是相同的90秒倒计时。</p>
+<p>可以——在任意计时器上输入0分钟90秒，或者1分钟30秒；两种输入方式产生的都是相同的90秒倒计时。</p>
 </div>
 <div class="faq-item">
 <h3>这和针对特定活动日期的「倒计时时钟」是一回事吗？</h3>
-<p>不是——这个计时器倒计时的是你设置的固定分钟和秒数时长，就像厨房计时器一样。如果要倒计时到未来的某个特定日期，你需要使用基于日期的倒计时工具。</p>
+<p>不是——这里的每个计时器倒计时的都是你设置的固定分钟和秒数时长，就像厨房计时器一样。如果要倒计时到未来的某个特定日期，请使用基于日期的倒计时工具。</p>
 </div></div>
           <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">计算</a>
         </div>

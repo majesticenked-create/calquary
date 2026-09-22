@@ -14,10 +14,10 @@
   <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>销售税计算器 - 免费在线计算器 | Calquary</title>
-  <meta name="description" content="计算一笔购物的销售税和总价。" />
-  <meta property="og:title" content="销售税计算器 | Calquary">
-  <meta property="og:description" content="计算一笔购物的销售税和总价。">
+  <title>销售税、增值税与消费税计算器 - 免费在线计算器 | Calquary</title>
+  <meta name="description" content="为价格添加销售税、增值税或消费税，或从含税价格中提取已包含的税额。" />
+  <meta property="og:title" content="销售税、增值税与消费税计算器 | Calquary">
+  <meta property="og:description" content="为价格添加销售税、增值税或消费税，或从含税价格中提取已包含的税额。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/zh/tool/sales-tax-calculator">
   <meta property="og:locale" content="zh_CN">
@@ -26,8 +26,8 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="销售税计算器 | Calquary">
-  <meta name="twitter:description" content="计算一笔购物的销售税和总价。">
+  <meta name="twitter:title" content="销售税、增值税与消费税计算器 | Calquary">
+  <meta name="twitter:description" content="为价格添加销售税、增值税或消费税，或从含税价格中提取已包含的税额。">
   <meta name="twitter:image" content="https://calquary.com/og-images/sales-tax-calculator.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/sales-tax-calculator">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/sales-tax-calculator">
@@ -88,8 +88,8 @@
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "销售税计算器",
-      "description": "计算一笔购物的销售税和总价。",
+      "name": "销售税、增值税与消费税计算器",
+      "description": "为价格添加销售税、增值税或消费税，或从含税价格中提取已包含的税额。",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/zh/tool/sales-tax-calculator",
@@ -120,7 +120,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "销售税计算器",
+          "name": "销售税、增值税与消费税计算器",
           "item": "https://calquary.com/zh/tool/sales-tax-calculator"
         }
       ]
@@ -133,7 +133,23 @@
           "name": "如何计算购物的销售税？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "用价格乘以税率（小数形式），再把结果加到原价上。以49.99美元、税率7.25%为例：49.99 × 0.0725 = 3.62美元税款，总计53.61美元。"
+            "text": "用价格乘以税率（小数形式），再把结果加到原价上。以49.99美元、税率7.25%为例：49.99 × 0.0725 = 3.62美元税款，总计53.61美元。此方向请在上方选择\"不含税\"。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "如何从已含税的价格中提取增值税或消费税？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "在上方选择\"已含税\"，输入含税价格和税率，计算器会除以（1 + 税率）得出税前基础价格。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "在本工具中，销售税与增值税/消费税有什么区别？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "加税的计算方式是一样的。实际差异在于你通常需要的方向：美式销售税通常在结账时加收（\"不含税\"），而增值税/消费税通常已包含在标示价格中，因此你往往需要提取它（\"已含税\"）。"
           }
         },
         {
@@ -141,7 +157,7 @@
           "name": "销售税率会因地点不同而不同吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "会——销售税率由州、县、有时还有市来设定，因此即使在同一个州内，综合税率也可能差异很大。在使用默认税率之前，请先查一下你当地的实际税率。"
+            "text": "会——销售税率由州、县、有时还有市来设定。增值税/消费税率则因国家而异。请先查一下你当地或所在国家的具体税率。"
           }
         },
         {
@@ -149,7 +165,7 @@
           "name": "销售税是按其他折扣前的价格计算还是折扣后的价格计算？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "销售税几乎总是按照应用折扣后的最终销售价格计算，而不是按原始标价计算——所以应先应用任何折扣，再对折后金额计算税款。"
+            "text": "销售税几乎总是按照应用折扣后的最终销售价格计算，而不是按原始标价计算。"
           }
         },
         {
@@ -157,31 +173,15 @@
           "name": "食品杂货和服装总是按照与其他商品相同的税率征税吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "不一定——许多地区对食品杂货、处方药，有时还有服装，实行免税或降低税率，而对一般商品按标准税率征税。如果你要计算的是某个具体免税类别的税额而不是普通购物的税额，请查阅当地税务机关的规定。"
+            "text": "不一定——许多地区对食品杂货、处方药，有时还有服装，实行免税或降低税率，而对一般商品按标准税率征税。"
           }
         },
         {
           "@type": "Question",
-          "name": "如果我只知道实付总额，如何反推税前价格？",
+          "name": "我需要用于发票——\"提取税额\"适用于这种情况吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "用总额除以（1 + 税率的小数形式）。如果你以7.5%的税率共付了107.50美元，税前价格就是107.50 ÷ 1.075 ≈ 100.00美元。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "销售税和使用税有什么区别？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "销售税是卖方在征税辖区内购买时收取的。使用税适用于你购买商品时没有缴纳销售税的情况（通常是从外州卖家购买），你需要自行申报缴纳等额的税款——不管哪种情况，计算应缴金额的算法都是一样的。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "增值税计算器和销售税计算器是一回事吗？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "核心算法类似——两者都是对价格应用一个百分比税率——但增值税（VAT）通常已包含在标示价格中，并在生产的每个环节都被征收，而美国的销售税通常是在最终销售时加在标价之上，这也是这个计算器的设计方式。"
+            "text": "适用——显示含税总额的发票（美国以外常见）正是\"已含税\"模式的用途：输入总额（含税）和税率，计算器会分别返回税前净额和税额部分。"
           }
         }
       ]
@@ -222,8 +222,8 @@
   <div class="wrap" style="padding-bottom:64px;">
     <div class="tool-layout">
       <main>
-        <h1>销售税计算器</h1>
-        <p style="max-width:60ch;">输入价格和当地的销售税率，计算税额和总费用。</p>
+        <h1>销售税、增值税与消费税计算器</h1>
+        <p style="max-width:60ch;">选择你的价格是不含税（需要加税）还是已含税（需要提取税额）——既适用于结账时加收的美式销售税，也适用于标示价格中已包含的增值税/消费税。</p>
         <p class="last-updated">最后更新： September 22, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -252,31 +252,31 @@
           <h2>常见问题</h2>
           <div id="faq-list"><div class="faq-item">
 <h3>如何计算购物的销售税？</h3>
-<p>用价格乘以税率（小数形式），再把结果加到原价上。以49.99美元、税率7.25%为例：49.99 × 0.0725 = 3.62美元税款，总计53.61美元。</p>
+<p>用价格乘以税率（小数形式），再把结果加到原价上。以49.99美元、税率7.25%为例：49.99 × 0.0725 = 3.62美元税款，总计53.61美元。此方向请在上方选择"不含税"。</p>
+</div>
+<div class="faq-item">
+<h3>如何从已含税的价格中提取增值税或消费税？</h3>
+<p>在上方选择"已含税"，输入含税价格和税率，计算器会除以（1 + 税率）得出税前基础价格。</p>
+</div>
+<div class="faq-item">
+<h3>在本工具中，销售税与增值税/消费税有什么区别？</h3>
+<p>加税的计算方式是一样的。实际差异在于你通常需要的方向：美式销售税通常在结账时加收（"不含税"），而增值税/消费税通常已包含在标示价格中，因此你往往需要提取它（"已含税"）。</p>
 </div>
 <div class="faq-item">
 <h3>销售税率会因地点不同而不同吗？</h3>
-<p>会——销售税率由州、县、有时还有市来设定，因此即使在同一个州内，综合税率也可能差异很大。在使用默认税率之前，请先查一下你当地的实际税率。</p>
+<p>会——销售税率由州、县、有时还有市来设定。增值税/消费税率则因国家而异。请先查一下你当地或所在国家的具体税率。</p>
 </div>
 <div class="faq-item">
 <h3>销售税是按其他折扣前的价格计算还是折扣后的价格计算？</h3>
-<p>销售税几乎总是按照应用折扣后的最终销售价格计算，而不是按原始标价计算——所以应先应用任何折扣，再对折后金额计算税款。</p>
+<p>销售税几乎总是按照应用折扣后的最终销售价格计算，而不是按原始标价计算。</p>
 </div>
 <div class="faq-item">
 <h3>食品杂货和服装总是按照与其他商品相同的税率征税吗？</h3>
-<p>不一定——许多地区对食品杂货、处方药，有时还有服装，实行免税或降低税率，而对一般商品按标准税率征税。如果你要计算的是某个具体免税类别的税额而不是普通购物的税额，请查阅当地税务机关的规定。</p>
+<p>不一定——许多地区对食品杂货、处方药，有时还有服装，实行免税或降低税率，而对一般商品按标准税率征税。</p>
 </div>
 <div class="faq-item">
-<h3>如果我只知道实付总额，如何反推税前价格？</h3>
-<p>用总额除以（1 + 税率的小数形式）。如果你以7.5%的税率共付了107.50美元，税前价格就是107.50 ÷ 1.075 ≈ 100.00美元。</p>
-</div>
-<div class="faq-item">
-<h3>销售税和使用税有什么区别？</h3>
-<p>销售税是卖方在征税辖区内购买时收取的。使用税适用于你购买商品时没有缴纳销售税的情况（通常是从外州卖家购买），你需要自行申报缴纳等额的税款——不管哪种情况，计算应缴金额的算法都是一样的。</p>
-</div>
-<div class="faq-item">
-<h3>增值税计算器和销售税计算器是一回事吗？</h3>
-<p>核心算法类似——两者都是对价格应用一个百分比税率——但增值税（VAT）通常已包含在标示价格中，并在生产的每个环节都被征收，而美国的销售税通常是在最终销售时加在标价之上，这也是这个计算器的设计方式。</p>
+<h3>我需要用于发票——"提取税额"适用于这种情况吗？</h3>
+<p>适用——显示含税总额的发票（美国以外常见）正是"已含税"模式的用途：输入总额（含税）和税率，计算器会分别返回税前净额和税额部分。</p>
 </div></div>
           <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">计算</a>
         </div>

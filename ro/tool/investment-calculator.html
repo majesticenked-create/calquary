@@ -15,9 +15,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Calculator de Investiții - Calculator Gratuit Online</title>
-  <meta name="description" content="Estimează valoarea viitoare a unei investiții, ajustată la inflație." />
+  <meta name="description" content="Estimează valoarea viitoare a unei investiții ajustată la inflație, sau convertește o sumă istorică în dolari la puterea de cumpărare actuală folosind date…" />
   <meta property="og:title" content="Calculator de Investiții | Calquary">
-  <meta property="og:description" content="Estimează valoarea viitoare a unei investiții, ajustată la inflație.">
+  <meta property="og:description" content="Estimează valoarea viitoare a unei investiții ajustată la inflație, sau convertește o sumă istorică în dolari la puterea de cumpărare actuală folosind date reale de IPC.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/ro/tool/investment-calculator">
   <meta property="og:locale" content="ro_RO">
@@ -27,7 +27,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Calculator de Investiții | Calquary">
-  <meta name="twitter:description" content="Estimează valoarea viitoare a unei investiții, ajustată la inflație.">
+  <meta name="twitter:description" content="Estimează valoarea viitoare a unei investiții ajustată la inflație, sau convertește o sumă istorică în dolari la puterea de cumpărare actuală folosind date reale de IPC.">
   <meta name="twitter:image" content="https://calquary.com/og-images/investment-calculator.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/investment-calculator">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/investment-calculator">
@@ -89,7 +89,7 @@
     {
       "@type": "SoftwareApplication",
       "name": "Calculator de Investiții",
-      "description": "Estimează valoarea viitoare a unei investiții, ajustată la inflație.",
+      "description": "Estimează valoarea viitoare a unei investiții ajustată la inflație, sau convertește o sumă istorică în dolari la puterea de cumpărare actuală folosind date reale de IPC.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/ro/tool/investment-calculator",
@@ -133,7 +133,7 @@
           "name": "De ce contează inflația pentru proiecțiile de investiții?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Un dolar peste 20 de ani cumpără mai puțin decât un dolar astăzi - afișarea doar a valorii viitoare nominale exagerează cât de bine vei sta cu adevărat, deci ajustarea pentru inflație oferă o imagine mai onestă."
+            "text": "Un dolar peste 20 de ani cumpără mai puțin decât un dolar azi - arătând doar valoarea nominală viitoare exagerezi cât de bine vei sta de fapt, deci ajustarea la inflație oferă o imagine mai onestă."
           }
         },
         {
@@ -141,7 +141,7 @@
           "name": "Ce rată de rentabilitate ar trebui să folosesc pentru un calculator de investiții?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "7% este o medie pe termen lung folosită în mod obișnuit pentru un portofoliu diversificat de acțiuni după ce inflația este aproximativ luată în calcul în termeni nominali, dar randamentele reale variază semnificativ de la an la an - folosește o estimare conservatoare pentru planificare."
+            "text": "7% este o medie pe termen lung comun folosită pentru un portofoliu diversificat de acțiuni, dar randamentele reale variază semnificativ de la an la an - folosește o estimare conservatoare pentru planificare."
           }
         },
         {
@@ -149,39 +149,71 @@
           "name": "Cum afectează frecvența contribuțiilor creșterea pe termen lung?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Contribuțiile mai frecvente (lunar vs. anual) permit banilor tăi să înceapă să se composteze mai devreme în medie, ceea ce produce un sold final ușor mai mare pentru aceeași sumă totală contribuită în aceeași perioadă."
+            "text": "Contribuții mai frecvente (lunare vs. anuale) permit banilor tăi să înceapă să se capitalizeze mai devreme în medie, producând un sold final ușor mai mare pentru aceeași sumă totală contribuită."
           }
         },
         {
           "@type": "Question",
-          "name": "Care este un randament anual mediu realist de presupus pentru proiecții pe termen lung?",
+          "name": "Ce randament anual mediu realist ar trebui asumat pentru proiecții pe termen lung?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Din punct de vedere istoric, fondurile index diversificate de pe piața de acțiuni au avut o medie de aproximativ 7-10% randamente anuale înainte de inflație pe perioade de mai multe decenii, deși un singur an poate varia foarte mult. Folosirea unei estimări mai conservatoare (6-7%) în scopuri de planificare ține cont mai bine de volatilitate și comisioane decât presupunerea unei medii de cel mai bun caz în fiecare an."
+            "text": "Istoric, fondurile index diversificate de acțiuni au avut o medie de aproximativ 7-10% randamente anuale înainte de inflație pe perioade de mai multe decenii, deși orice an individual poate varia enorm."
           }
         },
         {
           "@type": "Question",
-          "name": "Care este diferența dintre valoarea viitoare nominală și cea ajustată la inflație afișată?",
+          "name": "Care e diferența dintre valoarea viitoare nominală și cea ajustată la inflație afișată?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Valoarea nominală este totalul brut în dolari la care crește investiția ta la rata de rentabilitate declarată. Valoarea ajustată la inflație (reală) actualizează această cifră nominală cu rata inflației pe aceeași perioadă, arătând ce valorează de fapt acea sumă viitoare în puterea de cumpărare de astăzi."
+            "text": "Valoarea nominală este totalul brut în dolari la care crește investiția ta cu rata de rentabilitate indicată. Valoarea ajustată la inflație (reală) reduce acea cifră nominală cu rata inflației pe aceeași perioadă."
           }
         },
         {
           "@type": "Question",
-          "name": "Dacă investesc 10.000$ cu contribuții lunare de 300$ la 7% timp de 20 de ani, care este aproximativ rezultatul nominal?",
+          "name": "Dacă investesc 10.000$ cu contribuții de 300$/lună la 7% timp de 20 de ani, care e rezultatul nominal aproximativ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Creșterea sumei inițiale de 10.000$ plus contribuții lunare de 300$ la 7% anual, compus lunar, timp de 20 de ani ajunge la aproximativ 195.000$ nominal - cifra exactă depinde de ipotezele de capitalizare, dar contribuțiile domină creșterea sumei inițiale pe un orizont atât de lung la niveluri tipice de contribuție."
+            "text": "Crescând suma inițială de 10.000$ plus contribuțiile lunare de 300$ la 7% anual compus lunar timp de 20 de ani, se ajunge la aproximativ 195.000$ nominal - contribuțiile domină creșterea sumei inițiale pe un asemenea orizont."
           }
         },
         {
           "@type": "Question",
-          "name": "Este acesta același lucru cu un calculator de dobândă compusă?",
+          "name": "Este la fel cu un calculator de dobândă compusă?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Se bazează pe aceeași matematică de capitalizare, dar adaugă două lucruri pe care un calculator de bază de dobândă compusă nu le are: contribuții lunare regulate peste soldul inițial și o ajustare pentru inflație pentru a arăta valoarea reală (în putere de cumpărare) pe lângă totalul nominal."
+            "text": "Se bazează pe aceeași matematică a capitalizării, dar adaugă două lucruri: contribuții lunare regulate pe lângă soldul inițial, și o ajustare la inflație pentru a arăta valoarea reală alături de totalul nominal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Care e diferența dintre \"modul creștere\" și \"modul valoare istorică a dolarului\"?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Modul creștere proiectează un portofoliu ipotetic în viitor folosind o rată de rentabilitate presupusă aleasă de tine. Modul valoare istorică a dolarului folosește în schimb date reale de inflație IPC-U pentru a răspunde la o întrebare diferită: cât valorează o sumă reală dintr-un an anume în dolarii altui an."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cât de precis este modul valoare istorică a dolarului?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Se bazează pe medii anuale reale publicate ale IPC-U, nu pe o rată presupusă, dar tabelul de bază listează doar aproximativ la fiecare 5-10 ani, nu în fiecare an - valorile intermediare sunt interpolate liniar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ce este IPC-U?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Indicele Prețurilor de Consum pentru Toți Consumatorii Urbani, publicat de Biroul de Statistică a Muncii din SUA - urmărește schimbarea medie a prețurilor plătite de consumatorii urbani pentru un coș larg de bunuri și servicii."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cât valorau 100$ din 1990 în 2025?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Folosind date IPC-U, aproximativ 245$ în dolari din 2025 - prețurile aproape s-au dublat și jumătate în acea perioadă de 35 de ani. Introdu 100, 1990 și 2025 în modul valoare istorică a dolarului de mai sus pentru cifra exactă."
           }
         }
       ]
@@ -223,7 +255,7 @@
     <div class="tool-layout">
       <main>
         <h1>Calculator de Investiții</h1>
-        <p style="max-width:60ch;">Introdu investiția inițială, contribuția lunară, randamentul așteptat și rata inflației pentru a vedea atât valoarea viitoare nominală, cât și cea ajustată la inflație.</p>
+        <p style="max-width:60ch;">Alege Creștere investiție pentru a proiecta un portofoliu în viitor, sau Valoare istorică a dolarului pentru a vedea cât valorează astăzi o sumă reală dintr-un an trecut folosind date reale de IPC.</p>
         <p class="last-updated">Ultima actualizare: September 22, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -252,31 +284,47 @@
           <h2>Întrebări frecvente</h2>
           <div id="faq-list"><div class="faq-item">
 <h3>De ce contează inflația pentru proiecțiile de investiții?</h3>
-<p>Un dolar peste 20 de ani cumpără mai puțin decât un dolar astăzi - afișarea doar a valorii viitoare nominale exagerează cât de bine vei sta cu adevărat, deci ajustarea pentru inflație oferă o imagine mai onestă.</p>
+<p>Un dolar peste 20 de ani cumpără mai puțin decât un dolar azi - arătând doar valoarea nominală viitoare exagerezi cât de bine vei sta de fapt, deci ajustarea la inflație oferă o imagine mai onestă.</p>
 </div>
 <div class="faq-item">
 <h3>Ce rată de rentabilitate ar trebui să folosesc pentru un calculator de investiții?</h3>
-<p>7% este o medie pe termen lung folosită în mod obișnuit pentru un portofoliu diversificat de acțiuni după ce inflația este aproximativ luată în calcul în termeni nominali, dar randamentele reale variază semnificativ de la an la an - folosește o estimare conservatoare pentru planificare.</p>
+<p>7% este o medie pe termen lung comun folosită pentru un portofoliu diversificat de acțiuni, dar randamentele reale variază semnificativ de la an la an - folosește o estimare conservatoare pentru planificare.</p>
 </div>
 <div class="faq-item">
 <h3>Cum afectează frecvența contribuțiilor creșterea pe termen lung?</h3>
-<p>Contribuțiile mai frecvente (lunar vs. anual) permit banilor tăi să înceapă să se composteze mai devreme în medie, ceea ce produce un sold final ușor mai mare pentru aceeași sumă totală contribuită în aceeași perioadă.</p>
+<p>Contribuții mai frecvente (lunare vs. anuale) permit banilor tăi să înceapă să se capitalizeze mai devreme în medie, producând un sold final ușor mai mare pentru aceeași sumă totală contribuită.</p>
 </div>
 <div class="faq-item">
-<h3>Care este un randament anual mediu realist de presupus pentru proiecții pe termen lung?</h3>
-<p>Din punct de vedere istoric, fondurile index diversificate de pe piața de acțiuni au avut o medie de aproximativ 7-10% randamente anuale înainte de inflație pe perioade de mai multe decenii, deși un singur an poate varia foarte mult. Folosirea unei estimări mai conservatoare (6-7%) în scopuri de planificare ține cont mai bine de volatilitate și comisioane decât presupunerea unei medii de cel mai bun caz în fiecare an.</p>
+<h3>Ce randament anual mediu realist ar trebui asumat pentru proiecții pe termen lung?</h3>
+<p>Istoric, fondurile index diversificate de acțiuni au avut o medie de aproximativ 7-10% randamente anuale înainte de inflație pe perioade de mai multe decenii, deși orice an individual poate varia enorm.</p>
 </div>
 <div class="faq-item">
-<h3>Care este diferența dintre valoarea viitoare nominală și cea ajustată la inflație afișată?</h3>
-<p>Valoarea nominală este totalul brut în dolari la care crește investiția ta la rata de rentabilitate declarată. Valoarea ajustată la inflație (reală) actualizează această cifră nominală cu rata inflației pe aceeași perioadă, arătând ce valorează de fapt acea sumă viitoare în puterea de cumpărare de astăzi.</p>
+<h3>Care e diferența dintre valoarea viitoare nominală și cea ajustată la inflație afișată?</h3>
+<p>Valoarea nominală este totalul brut în dolari la care crește investiția ta cu rata de rentabilitate indicată. Valoarea ajustată la inflație (reală) reduce acea cifră nominală cu rata inflației pe aceeași perioadă.</p>
 </div>
 <div class="faq-item">
-<h3>Dacă investesc 10.000$ cu contribuții lunare de 300$ la 7% timp de 20 de ani, care este aproximativ rezultatul nominal?</h3>
-<p>Creșterea sumei inițiale de 10.000$ plus contribuții lunare de 300$ la 7% anual, compus lunar, timp de 20 de ani ajunge la aproximativ 195.000$ nominal - cifra exactă depinde de ipotezele de capitalizare, dar contribuțiile domină creșterea sumei inițiale pe un orizont atât de lung la niveluri tipice de contribuție.</p>
+<h3>Dacă investesc 10.000$ cu contribuții de 300$/lună la 7% timp de 20 de ani, care e rezultatul nominal aproximativ?</h3>
+<p>Crescând suma inițială de 10.000$ plus contribuțiile lunare de 300$ la 7% anual compus lunar timp de 20 de ani, se ajunge la aproximativ 195.000$ nominal - contribuțiile domină creșterea sumei inițiale pe un asemenea orizont.</p>
 </div>
 <div class="faq-item">
-<h3>Este acesta același lucru cu un calculator de dobândă compusă?</h3>
-<p>Se bazează pe aceeași matematică de capitalizare, dar adaugă două lucruri pe care un calculator de bază de dobândă compusă nu le are: contribuții lunare regulate peste soldul inițial și o ajustare pentru inflație pentru a arăta valoarea reală (în putere de cumpărare) pe lângă totalul nominal.</p>
+<h3>Este la fel cu un calculator de dobândă compusă?</h3>
+<p>Se bazează pe aceeași matematică a capitalizării, dar adaugă două lucruri: contribuții lunare regulate pe lângă soldul inițial, și o ajustare la inflație pentru a arăta valoarea reală alături de totalul nominal.</p>
+</div>
+<div class="faq-item">
+<h3>Care e diferența dintre "modul creștere" și "modul valoare istorică a dolarului"?</h3>
+<p>Modul creștere proiectează un portofoliu ipotetic în viitor folosind o rată de rentabilitate presupusă aleasă de tine. Modul valoare istorică a dolarului folosește în schimb date reale de inflație IPC-U pentru a răspunde la o întrebare diferită: cât valorează o sumă reală dintr-un an anume în dolarii altui an.</p>
+</div>
+<div class="faq-item">
+<h3>Cât de precis este modul valoare istorică a dolarului?</h3>
+<p>Se bazează pe medii anuale reale publicate ale IPC-U, nu pe o rată presupusă, dar tabelul de bază listează doar aproximativ la fiecare 5-10 ani, nu în fiecare an - valorile intermediare sunt interpolate liniar.</p>
+</div>
+<div class="faq-item">
+<h3>Ce este IPC-U?</h3>
+<p>Indicele Prețurilor de Consum pentru Toți Consumatorii Urbani, publicat de Biroul de Statistică a Muncii din SUA - urmărește schimbarea medie a prețurilor plătite de consumatorii urbani pentru un coș larg de bunuri și servicii.</p>
+</div>
+<div class="faq-item">
+<h3>Cât valorau 100$ din 1990 în 2025?</h3>
+<p>Folosind date IPC-U, aproximativ 245$ în dolari din 2025 - prețurile aproape s-au dublat și jumătate în acea perioadă de 35 de ani. Introdu 100, 1990 și 2025 în modul valoare istorică a dolarului de mai sus pentru cifra exactă.</p>
 </div></div>
           <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculează</a>
         </div>

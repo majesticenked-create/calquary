@@ -14,10 +14,10 @@
   <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Calculadora de Impuesto sobre Ventas</title>
-  <meta name="description" content="Calcula el impuesto sobre ventas y el precio total de una compra." />
-  <meta property="og:title" content="Calculadora de Impuesto sobre Ventas | Calquary">
-  <meta property="og:description" content="Calcula el impuesto sobre ventas y el precio total de una compra.">
+  <title>Calculadora de Impuesto sobre Ventas, IVA y GST</title>
+  <meta name="description" content="Agrega impuesto sobre ventas, IVA o GST a un precio, o extrae el impuesto ya incluido en un precio con impuesto incluido." />
+  <meta property="og:title" content="Calculadora de Impuesto sobre Ventas, IVA y GST | Calquary">
+  <meta property="og:description" content="Agrega impuesto sobre ventas, IVA o GST a un precio, o extrae el impuesto ya incluido en un precio con impuesto incluido.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/es/tool/sales-tax-calculator">
   <meta property="og:locale" content="es_ES">
@@ -26,8 +26,8 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Calculadora de Impuesto sobre Ventas | Calquary">
-  <meta name="twitter:description" content="Calcula el impuesto sobre ventas y el precio total de una compra.">
+  <meta name="twitter:title" content="Calculadora de Impuesto sobre Ventas, IVA y GST | Calquary">
+  <meta name="twitter:description" content="Agrega impuesto sobre ventas, IVA o GST a un precio, o extrae el impuesto ya incluido en un precio con impuesto incluido.">
   <meta name="twitter:image" content="https://calquary.com/og-images/sales-tax-calculator.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/sales-tax-calculator">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/sales-tax-calculator">
@@ -88,8 +88,8 @@
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "Calculadora de Impuesto sobre Ventas",
-      "description": "Calcula el impuesto sobre ventas y el precio total de una compra.",
+      "name": "Calculadora de Impuesto sobre Ventas, IVA y GST",
+      "description": "Agrega impuesto sobre ventas, IVA o GST a un precio, o extrae el impuesto ya incluido en un precio con impuesto incluido.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/es/tool/sales-tax-calculator",
@@ -120,7 +120,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Calculadora de Impuesto sobre Ventas",
+          "name": "Calculadora de Impuesto sobre Ventas, IVA y GST",
           "item": "https://calquary.com/es/tool/sales-tax-calculator"
         }
       ]
@@ -133,7 +133,23 @@
           "name": "¿Cómo calculo el impuesto sobre ventas de una compra?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Multiplica el precio por la tasa de impuesto en decimal, luego suma eso al precio original. Para $49.99 con 7.25% de impuesto: $49.99 × 0.0725 = $3.62 de impuesto, para un total de $53.61."
+            "text": "Multiplica el precio por la tasa de impuesto en decimal, luego suma eso al precio original. Para $49.99 con 7.25% de impuesto: $49.99 × 0.0725 = $3.62 de impuesto, para un total de $53.61. Elige \"Excluye impuesto\" arriba para esta dirección."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo extraigo el IVA o GST de un precio que ya lo incluye?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Elige \"Ya incluye impuesto\" arriba, introduce el precio con impuesto incluido y la tasa, y la calculadora divide entre (1 + tasa de impuesto) para hallar el precio base antes de impuesto."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es la diferencia entre impuesto sobre ventas y IVA/GST para esta calculadora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El cálculo para agregar impuesto es idéntico. La diferencia práctica es la dirección que sueles necesitar: el impuesto sobre ventas de EE. UU. suele agregarse en caja (\"excluye impuesto\"), mientras que el IVA/GST suele mostrarse ya incluido, así que a menudo necesitas extraerlo (\"ya incluye impuesto\")."
           }
         },
         {
@@ -141,7 +157,7 @@
           "name": "¿La tasa de impuesto sobre ventas varía según la ubicación?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí - las tasas de impuesto sobre ventas las establecen el estado, el condado y a veces la ciudad, por lo que la tasa combinada puede variar significativamente incluso dentro del mismo estado. Verifica tu tasa local antes de usar un valor predeterminado."
+            "text": "Sí - las tasas de impuesto sobre ventas las establecen el estado, el condado y a veces la ciudad. Las tasas de IVA/GST en cambio varían por país. Verifica tu tasa local o nacional específica antes de usar un valor predeterminado."
           }
         },
         {
@@ -157,31 +173,15 @@
           "name": "¿Los alimentos y la ropa siempre se gravan a la misma tasa que otras compras?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No - muchas jurisdicciones eximen o reducen la tasa de impuesto sobre alimentos, medicamentos recetados y, a veces, ropa, mientras gravan la mercancía general a la tasa estándar. Consulta las normas de tu autoridad fiscal local si estás calculando el impuesto para una categoría específica exenta en lugar de una compra general."
+            "text": "No - muchas jurisdicciones eximen o reducen la tasa de impuesto sobre alimentos, medicamentos recetados y, a veces, ropa, mientras gravan la mercancía general a la tasa estándar."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Cómo obtengo el precio antes de impuestos si solo sé el total que pagué?",
+          "name": "Necesito esto para una factura - ¿funciona \"extraer impuesto\" para eso?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Divide el total entre (1 + la tasa de impuesto en decimal). Si pagaste $107.50 en total con una tasa de impuesto del 7.5%, el precio antes de impuestos era $107.50 ÷ 1.075 ≈ $100.00."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Cuál es la diferencia entre el impuesto sobre ventas y el impuesto de uso?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "El impuesto sobre ventas lo cobra el vendedor en el momento de la compra dentro de una jurisdicción fiscal. El impuesto de uso se aplica cuando compras algo sin pagar impuesto sobre ventas (a menudo de un vendedor de fuera del estado) y eres responsable de remitir un impuesto equivalente tú mismo - el cálculo del monto adeudado es la misma matemática en ambos casos."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Una calculadora de IVA es lo mismo que una calculadora de impuesto sobre ventas?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "El cálculo básico es similar - ambos aplican una tasa porcentual a un precio - pero el IVA (impuesto al valor agregado) normalmente está incluido en el precio mostrado y se cobra en cada etapa de producción, mientras que el impuesto sobre ventas de EE. UU. suele añadirse sobre el precio listado en la venta final, que es como está configurada esta calculadora."
+            "text": "Sí - una factura que muestra un total con impuesto incluido (común fuera de EE. UU.) es exactamente para lo que sirve el modo \"Ya incluye impuesto\": introduce el importe bruto (total, con impuesto incluido) y la tasa, y la calculadora devuelve el importe neto (antes de impuesto) y la porción de impuesto por separado."
           }
         }
       ]
@@ -222,8 +222,8 @@
   <div class="wrap" style="padding-bottom:64px;">
     <div class="tool-layout">
       <main>
-        <h1>Calculadora de Impuesto sobre Ventas</h1>
-        <p style="max-width:60ch;">Introduce un precio y tu tasa local de impuesto sobre ventas para calcular el monto del impuesto y el costo total.</p>
+        <h1>Calculadora de Impuesto sobre Ventas, IVA y GST</h1>
+        <p style="max-width:60ch;">Elige si tu precio excluye impuesto (agrégalo) o ya lo incluye (extráelo) - funciona para el impuesto sobre ventas estilo EE. UU. añadido en caja o para IVA/GST ya incluido en un precio mostrado.</p>
         <p class="last-updated">Última actualización: September 22, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -252,11 +252,19 @@
           <h2>Preguntas frecuentes</h2>
           <div id="faq-list"><div class="faq-item">
 <h3>¿Cómo calculo el impuesto sobre ventas de una compra?</h3>
-<p>Multiplica el precio por la tasa de impuesto en decimal, luego suma eso al precio original. Para $49.99 con 7.25% de impuesto: $49.99 × 0.0725 = $3.62 de impuesto, para un total de $53.61.</p>
+<p>Multiplica el precio por la tasa de impuesto en decimal, luego suma eso al precio original. Para $49.99 con 7.25% de impuesto: $49.99 × 0.0725 = $3.62 de impuesto, para un total de $53.61. Elige "Excluye impuesto" arriba para esta dirección.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cómo extraigo el IVA o GST de un precio que ya lo incluye?</h3>
+<p>Elige "Ya incluye impuesto" arriba, introduce el precio con impuesto incluido y la tasa, y la calculadora divide entre (1 + tasa de impuesto) para hallar el precio base antes de impuesto.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cuál es la diferencia entre impuesto sobre ventas y IVA/GST para esta calculadora?</h3>
+<p>El cálculo para agregar impuesto es idéntico. La diferencia práctica es la dirección que sueles necesitar: el impuesto sobre ventas de EE. UU. suele agregarse en caja ("excluye impuesto"), mientras que el IVA/GST suele mostrarse ya incluido, así que a menudo necesitas extraerlo ("ya incluye impuesto").</p>
 </div>
 <div class="faq-item">
 <h3>¿La tasa de impuesto sobre ventas varía según la ubicación?</h3>
-<p>Sí - las tasas de impuesto sobre ventas las establecen el estado, el condado y a veces la ciudad, por lo que la tasa combinada puede variar significativamente incluso dentro del mismo estado. Verifica tu tasa local antes de usar un valor predeterminado.</p>
+<p>Sí - las tasas de impuesto sobre ventas las establecen el estado, el condado y a veces la ciudad. Las tasas de IVA/GST en cambio varían por país. Verifica tu tasa local o nacional específica antes de usar un valor predeterminado.</p>
 </div>
 <div class="faq-item">
 <h3>¿El impuesto sobre ventas se calcula antes o después de otros descuentos?</h3>
@@ -264,19 +272,11 @@
 </div>
 <div class="faq-item">
 <h3>¿Los alimentos y la ropa siempre se gravan a la misma tasa que otras compras?</h3>
-<p>No - muchas jurisdicciones eximen o reducen la tasa de impuesto sobre alimentos, medicamentos recetados y, a veces, ropa, mientras gravan la mercancía general a la tasa estándar. Consulta las normas de tu autoridad fiscal local si estás calculando el impuesto para una categoría específica exenta en lugar de una compra general.</p>
+<p>No - muchas jurisdicciones eximen o reducen la tasa de impuesto sobre alimentos, medicamentos recetados y, a veces, ropa, mientras gravan la mercancía general a la tasa estándar.</p>
 </div>
 <div class="faq-item">
-<h3>¿Cómo obtengo el precio antes de impuestos si solo sé el total que pagué?</h3>
-<p>Divide el total entre (1 + la tasa de impuesto en decimal). Si pagaste $107.50 en total con una tasa de impuesto del 7.5%, el precio antes de impuestos era $107.50 ÷ 1.075 ≈ $100.00.</p>
-</div>
-<div class="faq-item">
-<h3>¿Cuál es la diferencia entre el impuesto sobre ventas y el impuesto de uso?</h3>
-<p>El impuesto sobre ventas lo cobra el vendedor en el momento de la compra dentro de una jurisdicción fiscal. El impuesto de uso se aplica cuando compras algo sin pagar impuesto sobre ventas (a menudo de un vendedor de fuera del estado) y eres responsable de remitir un impuesto equivalente tú mismo - el cálculo del monto adeudado es la misma matemática en ambos casos.</p>
-</div>
-<div class="faq-item">
-<h3>¿Una calculadora de IVA es lo mismo que una calculadora de impuesto sobre ventas?</h3>
-<p>El cálculo básico es similar - ambos aplican una tasa porcentual a un precio - pero el IVA (impuesto al valor agregado) normalmente está incluido en el precio mostrado y se cobra en cada etapa de producción, mientras que el impuesto sobre ventas de EE. UU. suele añadirse sobre el precio listado en la venta final, que es como está configurada esta calculadora.</p>
+<h3>Necesito esto para una factura - ¿funciona "extraer impuesto" para eso?</h3>
+<p>Sí - una factura que muestra un total con impuesto incluido (común fuera de EE. UU.) es exactamente para lo que sirve el modo "Ya incluye impuesto": introduce el importe bruto (total, con impuesto incluido) y la tasa, y la calculadora devuelve el importe neto (antes de impuesto) y la porción de impuesto por separado.</p>
 </div></div>
           <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calcular</a>
         </div>

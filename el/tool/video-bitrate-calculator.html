@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Αριθμομηχανή Bitrate Βίντεο - Δωρεάν Online Αριθμομηχανή</title>
+  <meta name="description" content="Υπολογίστε το μέγεθος αρχείου, τη διάρκεια ή το bitrate-στόχο ενός βίντεο - εισάγετε δύο οποιεσδήποτε για να βρείτε την τρίτη." />
+  <meta property="og:title" content="Αριθμομηχανή Bitrate Βίντεο | Calquary">
+  <meta property="og:description" content="Υπολογίστε το μέγεθος αρχείου, τη διάρκεια ή το bitrate-στόχο ενός βίντεο - εισάγετε δύο οποιεσδήποτε για να βρείτε την τρίτη.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/el/tool/video-bitrate-calculator">
+  <meta property="og:locale" content="el_GR">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/video-bitrate-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Αριθμομηχανή Bitrate Βίντεο | Calquary">
+  <meta name="twitter:description" content="Υπολογίστε το μέγεθος αρχείου, τη διάρκεια ή το bitrate-στόχο ενός βίντεο - εισάγετε δύο οποιεσδήποτε για να βρείτε την τρίτη.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/video-bitrate-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/video-bitrate-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/video-bitrate-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/video-bitrate-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/video-bitrate-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/video-bitrate-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/video-bitrate-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/video-bitrate-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/video-bitrate-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/video-bitrate-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/video-bitrate-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/video-bitrate-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/video-bitrate-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/video-bitrate-calculator">
+    <link rel="canonical" href="https://calquary.com/el/tool/video-bitrate-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("video-bitrate-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("video-bitrate-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Αριθμομηχανή Bitrate Βίντεο",
+      "description": "Υπολογίστε το μέγεθος αρχείου, τη διάρκεια ή το bitrate-στόχο ενός βίντεο - εισάγετε δύο οποιεσδήποτε για να βρείτε την τρίτη.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/el/tool/video-bitrate-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "el"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/el/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Text & Digital",
+          "item": "https://calquary.com/el/category/text"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Αριθμομηχανή Bitrate Βίντεο",
+          "item": "https://calquary.com/el/tool/video-bitrate-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Ποιο bitrate πρέπει να στοχεύσω για μεταφόρτωση στο YouTube;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Εξαρτάται από την ανάλυση και τα fps - οι συστάσεις του YouTube είναι περίπου 8 Mbps για 1080p στα 30fps και 35-45 Mbps για 4K στα 30fps (SDR)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Γιατί το αρχείο μου είναι μεγαλύτερο από το αναμενόμενο για το bitrate που χρησιμοποίησα;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Το bitrate που ορίζετε είναι συνήθως μόνο βίντεο - τα περισσότερα αρχεία περιλαμβάνουν επίσης ένα κομμάτι ήχου (συνήθως 128-320 kbps) που προστίθεται."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ποια είναι η διαφορά μεταξύ Mbps και MB σε αυτή την αριθμομηχανή;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Το Mbps (megabits ανά δευτερόλεπτο) μετρά το bitrate - έναν ρυθμό στον χρόνο. Το MB (megabytes) μετρά το συνολικό μέγεθος αρχείου - μια σταθερή ποσότητα δεδομένων."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Λαμβάνει υπόψη το μεταβλητό bitrate (VBR);",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Όχι - υπολογίζει έναν σταθερό μέσο όρο bitrate σε όλη τη διάρκεια. Η κωδικοποίηση VBR μεταβάλλει τον στιγμιαίο ρυθμό, αλλά ο μέσος όρος καθορίζει ούτως ή άλλως το συνολικό μέγεθος."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Πώς υπολογίζω το συνδυασμένο bitrate βίντεο συν ήχου;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Υπολογίστε το bitrate βίντεο και ήχου ξεχωριστά (ο ήχος είναι συνήθως σταθερός, 128-320 kbps) και προσθέστε τα πριν εκτιμήσετε το συνολικό μέγεθος αρχείου."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ποιο bitrate κρατά ένα βίντεο 10 λεπτών κάτω από 500MB;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Εισάγετε το όριο μεγέθους και τη διάρκεια, και επιλέξτε \"Bitrate\" ως αυτό που ψάχνετε - για 500MB σε 10 λεπτά (600 δευτερόλεπτα), αυτό είναι περίπου 6,7 Mbps μέσο bitrate."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/el/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/el/#categories">Κατηγορίες</a>
+          <a href="/el/#tools">Όλα τα εργαλεία</a>
+          <a href="/el/about">Σχετικά</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Ελληνικά">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>undefined</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/video-bitrate-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/video-bitrate-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/video-bitrate-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/video-bitrate-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/video-bitrate-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/video-bitrate-calculator">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/video-bitrate-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/video-bitrate-calculator">Română</a><span class="locale-item current" role="menuitem" aria-current="true">Ελληνικά</span><a class="locale-item" role="menuitem" href="/zh/tool/video-bitrate-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/video-bitrate-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/video-bitrate-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/el/">Calquary</a> / <a href="/el/category/text">Κείμενο και Ψηφιακά</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Αριθμομηχανή Bitrate Βίντεο</h1>
+        <p style="max-width:60ch;">Επιλέξτε τι θέλετε να υπολογίσετε, μετά εισάγετε τις άλλες δύο τιμές - μέγεθος αρχείου, διάρκεια και bitrate σχετίζονται, οπότε οποιεσδήποτε δύο καθορίζουν την τρίτη.</p>
+        <p class="last-updated">Τελευταία ενημέρωση: September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Υπολογισμός</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Επαναφορά</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Συχνές ερωτήσεις</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Ποιο bitrate πρέπει να στοχεύσω για μεταφόρτωση στο YouTube;</h3>
+<p>Εξαρτάται από την ανάλυση και τα fps - οι συστάσεις του YouTube είναι περίπου 8 Mbps για 1080p στα 30fps και 35-45 Mbps για 4K στα 30fps (SDR).</p>
+</div>
+<div class="faq-item">
+<h3>Γιατί το αρχείο μου είναι μεγαλύτερο από το αναμενόμενο για το bitrate που χρησιμοποίησα;</h3>
+<p>Το bitrate που ορίζετε είναι συνήθως μόνο βίντεο - τα περισσότερα αρχεία περιλαμβάνουν επίσης ένα κομμάτι ήχου (συνήθως 128-320 kbps) που προστίθεται.</p>
+</div>
+<div class="faq-item">
+<h3>Ποια είναι η διαφορά μεταξύ Mbps και MB σε αυτή την αριθμομηχανή;</h3>
+<p>Το Mbps (megabits ανά δευτερόλεπτο) μετρά το bitrate - έναν ρυθμό στον χρόνο. Το MB (megabytes) μετρά το συνολικό μέγεθος αρχείου - μια σταθερή ποσότητα δεδομένων.</p>
+</div>
+<div class="faq-item">
+<h3>Λαμβάνει υπόψη το μεταβλητό bitrate (VBR);</h3>
+<p>Όχι - υπολογίζει έναν σταθερό μέσο όρο bitrate σε όλη τη διάρκεια. Η κωδικοποίηση VBR μεταβάλλει τον στιγμιαίο ρυθμό, αλλά ο μέσος όρος καθορίζει ούτως ή άλλως το συνολικό μέγεθος.</p>
+</div>
+<div class="faq-item">
+<h3>Πώς υπολογίζω το συνδυασμένο bitrate βίντεο συν ήχου;</h3>
+<p>Υπολογίστε το bitrate βίντεο και ήχου ξεχωριστά (ο ήχος είναι συνήθως σταθερός, 128-320 kbps) και προσθέστε τα πριν εκτιμήσετε το συνολικό μέγεθος αρχείου.</p>
+</div>
+<div class="faq-item">
+<h3>Ποιο bitrate κρατά ένα βίντεο 10 λεπτών κάτω από 500MB;</h3>
+<p>Εισάγετε το όριο μεγέθους και τη διάρκεια, και επιλέξτε "Bitrate" ως αυτό που ψάχνετε - για 500MB σε 10 λεπτά (600 δευτερόλεπτα), αυτό είναι περίπου 6,7 Mbps μέσο bitrate.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Υπολογισμός</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Σχετικά εργαλεία</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Σημείωση ακρίβειας</h4>
+          <p style="margin:0;font-size:0.85rem;">Οι αριθμομηχανές του Calquary έχουν σχεδιαστεί για να παρέχουν γρήγορες και αξιόπιστες εκτιμήσεις. Για αποφάσεις με πραγματικές οικονομικές, δομικές ή ιατρικές επιπτώσεις, συμβουλευτείτε έναν ειδικευμένο επαγγελματία.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/el/">← Πίσω σε όλες τις αριθμομηχανές</a> · <a href="/el/about">Σχετικά</a> · <a href="/el/contact">Επικοινωνία</a> · <a href="/el/privacy">Απόρρητο</a> · <a href="/el/terms">Όροι</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

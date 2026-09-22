@@ -15,9 +15,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Online-Timer - Kostenloser Online-Rechner | Calquary</title>
-  <meta name="description" content="Ein kostenloser Countdown-Timer, der in Ihrem Browser läuft - stellen Sie Minuten und Sekunden ein, dann starten, pausieren oder zurücksetzen." />
+  <meta name="description" content="Ein kostenloser Multi-Timer, der in Ihrem Browser läuft - führen Sie mehrere benannte Countdowns gleichzeitig aus, jeder mit eigenem Start, Pause und…" />
   <meta property="og:title" content="Online-Timer | Calquary">
-  <meta property="og:description" content="Ein kostenloser Countdown-Timer, der in Ihrem Browser läuft - stellen Sie Minuten und Sekunden ein, dann starten, pausieren oder zurücksetzen.">
+  <meta property="og:description" content="Ein kostenloser Multi-Timer, der in Ihrem Browser läuft - führen Sie mehrere benannte Countdowns gleichzeitig aus, jeder mit eigenem Start, Pause und Zurücksetzen.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/de/tool/online-timer">
   <meta property="og:locale" content="de_DE">
@@ -27,7 +27,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Online-Timer | Calquary">
-  <meta name="twitter:description" content="Ein kostenloser Countdown-Timer, der in Ihrem Browser läuft - stellen Sie Minuten und Sekunden ein, dann starten, pausieren oder zurücksetzen.">
+  <meta name="twitter:description" content="Ein kostenloser Multi-Timer, der in Ihrem Browser läuft - führen Sie mehrere benannte Countdowns gleichzeitig aus, jeder mit eigenem Start, Pause und Zurücksetzen.">
   <meta name="twitter:image" content="https://calquary.com/og-images/online-timer.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/online-timer">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/online-timer">
@@ -89,7 +89,7 @@
     {
       "@type": "SoftwareApplication",
       "name": "Online-Timer",
-      "description": "Ein kostenloser Countdown-Timer, der in Ihrem Browser läuft - stellen Sie Minuten und Sekunden ein, dann starten, pausieren oder zurücksetzen.",
+      "description": "Ein kostenloser Multi-Timer, der in Ihrem Browser läuft - führen Sie mehrere benannte Countdowns gleichzeitig aus, jeder mit eigenem Start, Pause und Zurücksetzen.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/de/tool/online-timer",
@@ -130,26 +130,42 @@
       "mainEntity": [
         {
           "@type": "Question",
+          "name": "Kann ich mehr als einen Timer gleichzeitig laufen lassen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja - klicken Sie auf „Weiteren Timer hinzufügen“, um so viele unabhängige Countdowns hinzuzufügen, wie Sie brauchen, jeder mit eigenem Namen, Minuten/Sekunden und Start/Pause/Zurücksetzen-Steuerung. Sie laufen alle gleichzeitig, sodass Sie mehrere Dinge gleichzeitig verfolgen können, wie ein mehrgängiges Essen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann ich jeden Timer benennen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja - jeder Timer hat ein Textfeld über seinem Countdown, in dem Sie ihn beschriften können (z. B. „Nudeln“ oder „Wäsche“), damit klar ist, welcher welcher ist, wenn mehrere laufen."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "Läuft dieser Online-Timer weiter, wenn ich Browser-Tabs wechsle?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ja - der Countdown läuft im Hintergrund weiter, solange dieser Browser-Tab geöffnet bleibt, auch wenn er nicht der aktive Tab ist. Das Schließen des Tabs oder Browsers stoppt den Timer."
+            "text": "Ja - jeder Countdown läuft im Hintergrund weiter, solange dieser Browser-Tab geöffnet bleibt, auch wenn er nicht der aktive Tab ist. Das Schließen des Tabs oder Browsers stoppt alle."
           }
         },
         {
           "@type": "Question",
-          "name": "Gibt dieser Timer einen Ton ab, wenn er fertig ist?",
+          "name": "Gibt jeder Timer einen eigenen Ton ab, wenn er fertig ist?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ja - ein kurzer Piepton ertönt, wenn der Countdown null erreicht, zusammen mit einer Anzeigeänderung auf „Zeit ist um!“, damit Sie es auch bemerken, wenn Sie nicht direkt auf den Bildschirm schauen."
+            "text": "Ja - ein kurzer Piepton ertönt für jeden Timer einzeln, wenn dessen Countdown null erreicht, zusammen mit einer Anzeigeänderung dieses Timers auf „Zeit ist um!“, damit Sie genau wissen, welcher fertig ist."
           }
         },
         {
           "@type": "Question",
-          "name": "Kann ich einen Timer für länger als eine Stunde einstellen?",
+          "name": "Kann ich einen Timer entfernen, den ich nicht mehr brauche?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ja - geben Sie eine beliebige Anzahl von Minuten ein (es gibt keine Obergrenze), sodass Sie ebenso leicht einen 90-minütigen oder mehrstündigen Timer wie einen kurzen einstellen können."
+            "text": "Ja - klicken Sie auf die ×-Schaltfläche in der Kopfzeile eines Timers, um ihn zu entfernen. Die Seite behält immer mindestens einen Timer, sodass der letzte verbleibende nicht entfernt werden kann."
           }
         },
         {
@@ -157,7 +173,7 @@
           "name": "Läuft der Timer weiter herunter, wenn mein Computer in den Ruhezustand geht?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nein - wenn das Gerät in den Ruhezustand geht oder der Browser pausiert wird, pausiert der Countdown ebenfalls und läuft (leicht verzögert) weiter, wenn das Gerät aufwacht, da er darauf angewiesen ist, dass der Browser-Tab aktiv läuft."
+            "text": "Nein - wenn das Gerät in den Ruhezustand geht oder der Browser pausiert wird, pausieren alle laufenden Countdowns ebenfalls und laufen (leicht verzögert) weiter, wenn das Gerät aufwacht."
           }
         },
         {
@@ -165,7 +181,7 @@
           "name": "Kann ich einen Timer für eine exakte Anzahl Sekunden einstellen, zum Beispiel 90 Sekunden?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ja - geben Sie 0 Minuten und 90 Sekunden ein, oder 1 Minute und 30 Sekunden; beide ergeben denselben 90-Sekunden-Countdown, da Minuten und Sekunden zur Gesamtzeit zusammengerechnet werden."
+            "text": "Ja - geben Sie 0 Minuten und 90 Sekunden ein, oder 1 Minute und 30 Sekunden, bei jedem beliebigen Timer; beide ergeben denselben 90-Sekunden-Countdown."
           }
         },
         {
@@ -173,7 +189,7 @@
           "name": "Ist das dasselbe wie eine „Countdown-Uhr“ für ein bestimmtes Ereignisdatum?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nein - dieser Timer zählt eine feste, von Ihnen in Minuten und Sekunden festgelegte Dauer herunter, wie eine Küchenuhr. Um bis zu einem bestimmten zukünftigen Datum herunterzuzählen, bräuchten Sie stattdessen ein datumsbasiertes Countdown-Tool."
+            "text": "Nein - jeder Timer hier zählt eine feste, von Ihnen in Minuten und Sekunden festgelegte Dauer herunter, wie eine Küchenuhr. Um bis zu einem bestimmten zukünftigen Datum herunterzuzählen, nutzen Sie ein datumsbasiertes Countdown-Tool."
           }
         }
       ]
@@ -215,7 +231,7 @@
     <div class="tool-layout">
       <main>
         <h1>Online-Timer</h1>
-        <p style="max-width:60ch;">Stellen Sie eine Countdown-Zeit ein und drücken Sie dann Start - dieser Timer zählt herunter und benachrichtigt Sie, wenn die Zeit abgelaufen ist.</p>
+        <p style="max-width:60ch;">Stellen Sie so viele Countdowns ein, wie Sie brauchen, jeder mit eigenem Namen, Minuten und Sekunden - sie laufen unabhängig voneinander, sodass Sie mehrere Dinge gleichzeitig timen können.</p>
         <p class="last-updated">Zuletzt aktualisiert: September 22, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -243,28 +259,36 @@
         <div class="article-block">
           <h2>Häufig gestellte Fragen</h2>
           <div id="faq-list"><div class="faq-item">
+<h3>Kann ich mehr als einen Timer gleichzeitig laufen lassen?</h3>
+<p>Ja - klicken Sie auf „Weiteren Timer hinzufügen“, um so viele unabhängige Countdowns hinzuzufügen, wie Sie brauchen, jeder mit eigenem Namen, Minuten/Sekunden und Start/Pause/Zurücksetzen-Steuerung. Sie laufen alle gleichzeitig, sodass Sie mehrere Dinge gleichzeitig verfolgen können, wie ein mehrgängiges Essen.</p>
+</div>
+<div class="faq-item">
+<h3>Kann ich jeden Timer benennen?</h3>
+<p>Ja - jeder Timer hat ein Textfeld über seinem Countdown, in dem Sie ihn beschriften können (z. B. „Nudeln“ oder „Wäsche“), damit klar ist, welcher welcher ist, wenn mehrere laufen.</p>
+</div>
+<div class="faq-item">
 <h3>Läuft dieser Online-Timer weiter, wenn ich Browser-Tabs wechsle?</h3>
-<p>Ja - der Countdown läuft im Hintergrund weiter, solange dieser Browser-Tab geöffnet bleibt, auch wenn er nicht der aktive Tab ist. Das Schließen des Tabs oder Browsers stoppt den Timer.</p>
+<p>Ja - jeder Countdown läuft im Hintergrund weiter, solange dieser Browser-Tab geöffnet bleibt, auch wenn er nicht der aktive Tab ist. Das Schließen des Tabs oder Browsers stoppt alle.</p>
 </div>
 <div class="faq-item">
-<h3>Gibt dieser Timer einen Ton ab, wenn er fertig ist?</h3>
-<p>Ja - ein kurzer Piepton ertönt, wenn der Countdown null erreicht, zusammen mit einer Anzeigeänderung auf „Zeit ist um!“, damit Sie es auch bemerken, wenn Sie nicht direkt auf den Bildschirm schauen.</p>
+<h3>Gibt jeder Timer einen eigenen Ton ab, wenn er fertig ist?</h3>
+<p>Ja - ein kurzer Piepton ertönt für jeden Timer einzeln, wenn dessen Countdown null erreicht, zusammen mit einer Anzeigeänderung dieses Timers auf „Zeit ist um!“, damit Sie genau wissen, welcher fertig ist.</p>
 </div>
 <div class="faq-item">
-<h3>Kann ich einen Timer für länger als eine Stunde einstellen?</h3>
-<p>Ja - geben Sie eine beliebige Anzahl von Minuten ein (es gibt keine Obergrenze), sodass Sie ebenso leicht einen 90-minütigen oder mehrstündigen Timer wie einen kurzen einstellen können.</p>
+<h3>Kann ich einen Timer entfernen, den ich nicht mehr brauche?</h3>
+<p>Ja - klicken Sie auf die ×-Schaltfläche in der Kopfzeile eines Timers, um ihn zu entfernen. Die Seite behält immer mindestens einen Timer, sodass der letzte verbleibende nicht entfernt werden kann.</p>
 </div>
 <div class="faq-item">
 <h3>Läuft der Timer weiter herunter, wenn mein Computer in den Ruhezustand geht?</h3>
-<p>Nein - wenn das Gerät in den Ruhezustand geht oder der Browser pausiert wird, pausiert der Countdown ebenfalls und läuft (leicht verzögert) weiter, wenn das Gerät aufwacht, da er darauf angewiesen ist, dass der Browser-Tab aktiv läuft.</p>
+<p>Nein - wenn das Gerät in den Ruhezustand geht oder der Browser pausiert wird, pausieren alle laufenden Countdowns ebenfalls und laufen (leicht verzögert) weiter, wenn das Gerät aufwacht.</p>
 </div>
 <div class="faq-item">
 <h3>Kann ich einen Timer für eine exakte Anzahl Sekunden einstellen, zum Beispiel 90 Sekunden?</h3>
-<p>Ja - geben Sie 0 Minuten und 90 Sekunden ein, oder 1 Minute und 30 Sekunden; beide ergeben denselben 90-Sekunden-Countdown, da Minuten und Sekunden zur Gesamtzeit zusammengerechnet werden.</p>
+<p>Ja - geben Sie 0 Minuten und 90 Sekunden ein, oder 1 Minute und 30 Sekunden, bei jedem beliebigen Timer; beide ergeben denselben 90-Sekunden-Countdown.</p>
 </div>
 <div class="faq-item">
 <h3>Ist das dasselbe wie eine „Countdown-Uhr“ für ein bestimmtes Ereignisdatum?</h3>
-<p>Nein - dieser Timer zählt eine feste, von Ihnen in Minuten und Sekunden festgelegte Dauer herunter, wie eine Küchenuhr. Um bis zu einem bestimmten zukünftigen Datum herunterzuzählen, bräuchten Sie stattdessen ein datumsbasiertes Countdown-Tool.</p>
+<p>Nein - jeder Timer hier zählt eine feste, von Ihnen in Minuten und Sekunden festgelegte Dauer herunter, wie eine Küchenuhr. Um bis zu einem bestimmten zukünftigen Datum herunterzuzählen, nutzen Sie ein datumsbasiertes Countdown-Tool.</p>
 </div></div>
           <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Berechnen</a>
         </div>

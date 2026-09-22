@@ -15,9 +15,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>考勤卡计算器 - 免费在线计算器 | Calquary</title>
-  <meta name="description" content="汇总一周的工作时长并计算税前工资。" />
+  <meta name="description" content="汇总一周的工作时长并计算税前工资，包括加班加成工资。" />
   <meta property="og:title" content="考勤卡计算器 | Calquary">
-  <meta property="og:description" content="汇总一周的工作时长并计算税前工资。">
+  <meta property="og:description" content="汇总一周的工作时长并计算税前工资，包括加班加成工资。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/zh/tool/time-card-calculator">
   <meta property="og:locale" content="zh_CN">
@@ -27,7 +27,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="考勤卡计算器 | Calquary">
-  <meta name="twitter:description" content="汇总一周的工作时长并计算税前工资。">
+  <meta name="twitter:description" content="汇总一周的工作时长并计算税前工资，包括加班加成工资。">
   <meta name="twitter:image" content="https://calquary.com/og-images/time-card-calculator.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/time-card-calculator">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/time-card-calculator">
@@ -89,7 +89,7 @@
     {
       "@type": "SoftwareApplication",
       "name": "考勤卡计算器",
-      "description": "汇总一周的工作时长并计算税前工资。",
+      "description": "汇总一周的工作时长并计算税前工资，包括加班加成工资。",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/zh/tool/time-card-calculator",
@@ -133,7 +133,7 @@
           "name": "如何从考勤卡计算总工时？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "把发薪周期内每天的工作时长加起来。本计算器会把周一到周日的七个每日数值汇总为周总工时，再乘以你的时薪得出税前工资。"
+            "text": "把发薪周期内每天的工作时长加起来。本计算器会把周一到周日的七个每日数值汇总为周总工时，再根据你的门槛拆分为正常工时和加班工时，然后计算税前工资。"
           }
         },
         {
@@ -141,15 +141,23 @@
           "name": "这个计算器能处理上下班打卡时间吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "不能——请输入每天已经工作的总小时数（十进制形式，例如7小时30分钟输入为7.5），而不是上下班的打卡时间。如果你只有打卡时间，需要先用下班时间减去上班时间（并扣除任何无薪休息时间），得到十进制的工时数。"
+            "text": "不能——请输入每天已经工作的总小时数（十进制形式，例如7小时30分钟输入为7.5），而不是上下班的打卡时间。"
           }
         },
         {
           "@type": "Question",
-          "name": "这个计算包括加班费吗？",
+          "name": "加班计算是如何运作的？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "不包括——它只是用总工时乘以一个统一的固定时薪。如果部分工时符合加班费标准（在美国通常是每周超过40小时部分按1.5倍计算），请分别计算正常工时和加班工时的部分，再相加。"
+            "text": "达到你的加班门槛（默认每周40小时，即美国标准联邦门槛）之前的工时按正常时薪计算。超过门槛的工时则按时薪乘以加班倍数（默认1.5倍）计算。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "我可以更改加班门槛或倍数吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以——两者都是可编辑字段。某些地区或工会合同使用不同于40小时的每周门槛，或使用按日而非按周的加班规则，有些使用双倍工资（2倍）而非1.5倍——请根据你的实际情况调整这些字段。"
           }
         },
         {
@@ -162,18 +170,10 @@
         },
         {
           "@type": "Question",
-          "name": "如果我只是某一天加班，而不是整周都加班怎么办？",
+          "name": "如果我以20美元时薪工作了45小时，超过40小时按1.5倍加班计算，我的税前工资是多少？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "这个计算器会把所有输入的工时按统一的固定时薪汇总成一个周总额，所以不会自动拆分出某一天的加班部分——请单独计算那一天的正常工时和加班工时部分，再把结果加到工具外的总工资中。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "考勤卡的总工资是怎么计算的？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "总工资等于总工作时长乘以时薪。如果一周内每日工时合计为38.5小时，时薪为18美元，总工资就是38.5 × 18 = 693美元，这是在扣税和其他扣款之前的金额。"
+            "text": "正常工时40小时 × 20美元 = 800美元，加上加班5小时 × 30美元（1.5倍时薪）= 150美元，税前工资总计950美元——在上方输入你实际的每日工时即可自动得出这一明细。"
           }
         },
         {
@@ -181,7 +181,7 @@
           "name": "考勤卡计算器和薪资计算器是一回事吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "不是——像这个一样的考勤卡计算器只是把工作时长换算成税前工资。薪资计算器会更进一步，计算扣税、其他扣款和福利，得出实发（到手）工资。"
+            "text": "不是——像这个一样的考勤卡计算器只是把工作时长（包括加班）换算成税前工资。薪资计算器会更进一步，计算扣税、其他扣款和福利，得出实发工资。"
           }
         }
       ]
@@ -223,7 +223,7 @@
     <div class="tool-layout">
       <main>
         <h1>考勤卡计算器</h1>
-        <p style="max-width:60ch;">输入每天的工作小时数和时薪，计算每周总工时和税前工资。</p>
+        <p style="max-width:60ch;">输入每天的工作小时数、时薪和加班门槛，计算每周总工时和税前工资——包括超过门槛部分的加班加成工资。</p>
         <p class="last-updated">最后更新： September 22, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -252,31 +252,31 @@
           <h2>常见问题</h2>
           <div id="faq-list"><div class="faq-item">
 <h3>如何从考勤卡计算总工时？</h3>
-<p>把发薪周期内每天的工作时长加起来。本计算器会把周一到周日的七个每日数值汇总为周总工时，再乘以你的时薪得出税前工资。</p>
+<p>把发薪周期内每天的工作时长加起来。本计算器会把周一到周日的七个每日数值汇总为周总工时，再根据你的门槛拆分为正常工时和加班工时，然后计算税前工资。</p>
 </div>
 <div class="faq-item">
 <h3>这个计算器能处理上下班打卡时间吗？</h3>
-<p>不能——请输入每天已经工作的总小时数（十进制形式，例如7小时30分钟输入为7.5），而不是上下班的打卡时间。如果你只有打卡时间，需要先用下班时间减去上班时间（并扣除任何无薪休息时间），得到十进制的工时数。</p>
+<p>不能——请输入每天已经工作的总小时数（十进制形式，例如7小时30分钟输入为7.5），而不是上下班的打卡时间。</p>
 </div>
 <div class="faq-item">
-<h3>这个计算包括加班费吗？</h3>
-<p>不包括——它只是用总工时乘以一个统一的固定时薪。如果部分工时符合加班费标准（在美国通常是每周超过40小时部分按1.5倍计算），请分别计算正常工时和加班工时的部分，再相加。</p>
+<h3>加班计算是如何运作的？</h3>
+<p>达到你的加班门槛（默认每周40小时，即美国标准联邦门槛）之前的工时按正常时薪计算。超过门槛的工时则按时薪乘以加班倍数（默认1.5倍）计算。</p>
+</div>
+<div class="faq-item">
+<h3>我可以更改加班门槛或倍数吗？</h3>
+<p>可以——两者都是可编辑字段。某些地区或工会合同使用不同于40小时的每周门槛，或使用按日而非按周的加班规则，有些使用双倍工资（2倍）而非1.5倍——请根据你的实际情况调整这些字段。</p>
 </div>
 <div class="faq-item">
 <h3>考勤卡上的分钟数如何换算成十进制？</h3>
 <p>用分钟数除以60。30分钟=0.5小时，15分钟=0.25小时，45分钟=0.75小时——把这个小数加到当天的整数小时数上即可。</p>
 </div>
 <div class="faq-item">
-<h3>如果我只是某一天加班，而不是整周都加班怎么办？</h3>
-<p>这个计算器会把所有输入的工时按统一的固定时薪汇总成一个周总额，所以不会自动拆分出某一天的加班部分——请单独计算那一天的正常工时和加班工时部分，再把结果加到工具外的总工资中。</p>
-</div>
-<div class="faq-item">
-<h3>考勤卡的总工资是怎么计算的？</h3>
-<p>总工资等于总工作时长乘以时薪。如果一周内每日工时合计为38.5小时，时薪为18美元，总工资就是38.5 × 18 = 693美元，这是在扣税和其他扣款之前的金额。</p>
+<h3>如果我以20美元时薪工作了45小时，超过40小时按1.5倍加班计算，我的税前工资是多少？</h3>
+<p>正常工时40小时 × 20美元 = 800美元，加上加班5小时 × 30美元（1.5倍时薪）= 150美元，税前工资总计950美元——在上方输入你实际的每日工时即可自动得出这一明细。</p>
 </div>
 <div class="faq-item">
 <h3>考勤卡计算器和薪资计算器是一回事吗？</h3>
-<p>不是——像这个一样的考勤卡计算器只是把工作时长换算成税前工资。薪资计算器会更进一步，计算扣税、其他扣款和福利，得出实发（到手）工资。</p>
+<p>不是——像这个一样的考勤卡计算器只是把工作时长（包括加班）换算成税前工资。薪资计算器会更进一步，计算扣税、其他扣款和福利，得出实发工资。</p>
 </div></div>
           <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">计算</a>
         </div>

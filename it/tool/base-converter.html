@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Convertitore di Base Numerica - Calcolatrice Online Gratuita</title>
+  <meta name="description" content="Converti numeri tra binario, ottale, decimale ed esadecimale, più operazioni AND/OR/XOR/scorrimento." />
+  <meta property="og:title" content="Convertitore di Base Numerica | Calquary">
+  <meta property="og:description" content="Converti numeri tra binario, ottale, decimale ed esadecimale, più operazioni AND/OR/XOR/scorrimento.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/it/tool/base-converter">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/base-converter.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Convertitore di Base Numerica | Calquary">
+  <meta name="twitter:description" content="Converti numeri tra binario, ottale, decimale ed esadecimale, più operazioni AND/OR/XOR/scorrimento.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/base-converter.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/base-converter">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/base-converter">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/base-converter">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/base-converter">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/base-converter">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/base-converter">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/base-converter">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/base-converter">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/base-converter">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/base-converter">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/base-converter">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/base-converter">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/base-converter">
+    <link rel="canonical" href="https://calquary.com/it/tool/base-converter">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("base-converter");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("base-converter");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Convertitore di Base Numerica",
+      "description": "Converti numeri tra binario, ottale, decimale ed esadecimale, più operazioni AND/OR/XOR/scorrimento.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/it/tool/base-converter",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "it"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/it/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Text & Digital",
+          "item": "https://calquary.com/it/category/text"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Convertitore di Base Numerica",
+          "item": "https://calquary.com/it/tool/base-converter"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qual è la differenza con il Convertitore da Binario a Testo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Questo strumento converte un numero tra basi numeriche e fa matematica bit a bit. Il Convertitore da Binario a Testo converte tra testo semplice e la sua rappresentazione ASCII a 8 bit - è per codificare/decodificare testo, non numeri."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Come converto un valore esadecimale in binario?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Scegli Esadecimale come base, inserisci il tuo valore (es. FF), lascia l'operazione su \"Nessuna\", e vedrai gli equivalenti binario, ottale e decimale insieme."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cosa fanno realmente AND, OR e XOR ai bit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AND restituisce 1 solo dove entrambi i numeri hanno 1. OR restituisce 1 dove uno qualsiasi ha 1. XOR restituisce 1 dove esattamente uno dei due ha 1."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Perché i risultati negativi sembrano una lunga stringa di 1 in binario?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usa la rappresentazione in complemento a due a 32 bit, il modo standard in cui i computer rappresentano gli interi negativi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual è un uso pratico delle operazioni di scorrimento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Uno scorrimento a sinistra di N equivale a moltiplicare per 2^N, e uno a destra a dividere per 2^N - utile in programmazione per calcoli rapidi con potenze di 2."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso inserire un valore con prefisso 0x o 0b, come 0xFF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì - un prefisso 0x, 0b o 0o viene rimosso automaticamente prima dell'analisi, purché selezioni anche la base corrispondente."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/it/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/it/#categories">Categorie</a>
+          <a href="/it/#tools">Tutti gli strumenti</a>
+          <a href="/it/about">Chi siamo</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Italiano">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>IT</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/base-converter">English</a><a class="locale-item" role="menuitem" href="/es/tool/base-converter">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/base-converter">Français</a><a class="locale-item" role="menuitem" href="/de/tool/base-converter">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/base-converter">Português</a><span class="locale-item current" role="menuitem" aria-current="true">Italiano</span><a class="locale-item" role="menuitem" href="/ja/tool/base-converter">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/base-converter">Română</a><a class="locale-item" role="menuitem" href="/el/tool/base-converter">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/base-converter">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/base-converter">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/base-converter">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/it/">Calquary</a> / <a href="/it/category/text">Testo e Digitale</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Convertitore di Base Numerica</h1>
+        <p style="max-width:60ch;">Inserisci un numero in qualsiasi base per vederlo convertito in binario, ottale, decimale ed esadecimale - oppure scegli un'operazione bit a bit per combinarlo con un secondo valore.</p>
+        <p class="last-updated">Ultimo aggiornamento: September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calcola</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reimposta</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Domande frequenti</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Qual è la differenza con il Convertitore da Binario a Testo?</h3>
+<p>Questo strumento converte un numero tra basi numeriche e fa matematica bit a bit. Il Convertitore da Binario a Testo converte tra testo semplice e la sua rappresentazione ASCII a 8 bit - è per codificare/decodificare testo, non numeri.</p>
+</div>
+<div class="faq-item">
+<h3>Come converto un valore esadecimale in binario?</h3>
+<p>Scegli Esadecimale come base, inserisci il tuo valore (es. FF), lascia l'operazione su "Nessuna", e vedrai gli equivalenti binario, ottale e decimale insieme.</p>
+</div>
+<div class="faq-item">
+<h3>Cosa fanno realmente AND, OR e XOR ai bit?</h3>
+<p>AND restituisce 1 solo dove entrambi i numeri hanno 1. OR restituisce 1 dove uno qualsiasi ha 1. XOR restituisce 1 dove esattamente uno dei due ha 1.</p>
+</div>
+<div class="faq-item">
+<h3>Perché i risultati negativi sembrano una lunga stringa di 1 in binario?</h3>
+<p>Usa la rappresentazione in complemento a due a 32 bit, il modo standard in cui i computer rappresentano gli interi negativi.</p>
+</div>
+<div class="faq-item">
+<h3>Qual è un uso pratico delle operazioni di scorrimento?</h3>
+<p>Uno scorrimento a sinistra di N equivale a moltiplicare per 2^N, e uno a destra a dividere per 2^N - utile in programmazione per calcoli rapidi con potenze di 2.</p>
+</div>
+<div class="faq-item">
+<h3>Posso inserire un valore con prefisso 0x o 0b, come 0xFF?</h3>
+<p>Sì - un prefisso 0x, 0b o 0o viene rimosso automaticamente prima dell'analisi, purché selezioni anche la base corrispondente.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calcola</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Strumenti correlati</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Nota sulla precisione</h4>
+          <p style="margin:0;font-size:0.85rem;">Le calcolatrici di Calquary sono pensate per stime rapide e affidabili. Per decisioni con reali implicazioni finanziarie, strutturali o mediche, consulta un professionista qualificato.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/it/">← Torna a tutte le calcolatrici</a> · <a href="/it/about">Chi siamo</a> · <a href="/it/contact">Contatti</a> · <a href="/it/privacy">Privacy</a> · <a href="/it/terms">Termini</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

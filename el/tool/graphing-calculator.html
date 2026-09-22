@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Γραφική Αριθμομηχανή - Δωρεάν Online Αριθμομηχανή | Calquary</title>
+  <meta name="description" content="Σχεδιάστε το γράφημα της συνάρτησης y = f(x) online, με στοιχεία ελέγχου ζουμ και μετακίνησης." />
+  <meta property="og:title" content="Γραφική Αριθμομηχανή | Calquary">
+  <meta property="og:description" content="Σχεδιάστε το γράφημα της συνάρτησης y = f(x) online, με στοιχεία ελέγχου ζουμ και μετακίνησης.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/el/tool/graphing-calculator">
+  <meta property="og:locale" content="el_GR">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/graphing-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Γραφική Αριθμομηχανή | Calquary">
+  <meta name="twitter:description" content="Σχεδιάστε το γράφημα της συνάρτησης y = f(x) online, με στοιχεία ελέγχου ζουμ και μετακίνησης.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/graphing-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/graphing-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/graphing-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/graphing-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/graphing-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/graphing-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/graphing-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/graphing-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/graphing-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/graphing-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/graphing-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/graphing-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/graphing-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/graphing-calculator">
+    <link rel="canonical" href="https://calquary.com/el/tool/graphing-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("graphing-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("graphing-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Γραφική Αριθμομηχανή",
+      "description": "Σχεδιάστε το γράφημα της συνάρτησης y = f(x) online, με στοιχεία ελέγχου ζουμ και μετακίνησης.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/el/tool/graphing-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "el"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/el/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Math",
+          "item": "https://calquary.com/el/category/math"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Γραφική Αριθμομηχανή",
+          "item": "https://calquary.com/el/tool/graphing-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Ποιες συναρτήσεις μπορώ να πληκτρολογήσω;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Τυπικός μαθηματικός συμβολισμός: +, -, *, /, ^ για εκθέτες, παρενθέσεις, και sin, cos, tan, asin, acos, atan, sqrt, abs, log, ln και exp. Χρησιμοποιήστε x ως μεταβλητή."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Χρειάζεται να πληκτρολογώ πάντα το σύμβολο πολλαπλασιασμού;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Όχι - η αριθμομηχανή κατανοεί τον σιωπηρό πολλαπλασιασμό, οπότε \"2x\" ή \"2(x+1)\" λειτουργούν όπως \"2*x\" ή \"2*(x+1)\"."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Γιατί το γράφημά μου δείχνει ένα κενό, όπως με το tan(x);",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Αυτό είναι φυσιολογικό σε μια ασύμπτωτη - μια τιμή στην οποία η συνάρτηση πλησιάζει αλλά ποτέ δεν φτάνει. Ο σχεδιαστής εντοπίζει το τεράστιο άλμα και διακόπτει τη γραμμή αντί να τη σχεδιάσει λανθασμένα."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Οι τριγωνομετρικές συναρτήσεις είναι σε μοίρες ή ακτίνια;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Σε ακτίνια - η τυπική σύμβαση για τη σχεδίαση τριγωνομετρικών συναρτήσεων. Για τριγωνομετρικούς υπολογισμούς σε μοίρες, χρησιμοποιήστε την επιστημονική αριθμομηχανή."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Πώς κάνω ζουμ σε ένα συγκεκριμένο τμήμα της καμπύλης;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Πατήστε \"Μεγέθυνση\" για να μειώσετε στο μισό το ορατό εύρος γύρω από το τρέχον κέντρο, ή χρησιμοποιήστε πρώτα τα κουμπιά μετακίνησης για να κεντράρετε την περιοχή που θέλετε."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Μπορώ να σχεδιάσω περισσότερες από μία συναρτήσεις ταυτόχρονα;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Όχι προς το παρόν - αυτή η αριθμομηχανή σχεδιάζει μία συνάρτηση τη φορά. Αλλάξτε τη συνάρτηση και πατήστε ξανά Σχεδίαση για διαφορετική καμπύλη."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Η συνάρτησή μου δεν σχεδιάζεται - τι φταίει;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ελέγξτε για τυπογραφικό λάθος σε όνομα συνάρτησης ή παρένθεση που δεν έκλεισε - η αριθμομηχανή εμφανίζει μήνυμα σφάλματος που περιγράφει το πρόβλημα."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/el/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/el/#categories">Κατηγορίες</a>
+          <a href="/el/#tools">Όλα τα εργαλεία</a>
+          <a href="/el/about">Σχετικά</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Ελληνικά">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>undefined</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/graphing-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/graphing-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/graphing-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/graphing-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/graphing-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/graphing-calculator">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/graphing-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/graphing-calculator">Română</a><span class="locale-item current" role="menuitem" aria-current="true">Ελληνικά</span><a class="locale-item" role="menuitem" href="/zh/tool/graphing-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/graphing-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/graphing-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/el/">Calquary</a> / <a href="/el/category/math">Μαθηματικά</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Γραφική Αριθμομηχανή</h1>
+        <p style="max-width:60ch;">Πληκτρολογήστε μια συνάρτηση του x (όπως sin(x), x^2 - 3x + 1, ή sqrt(x)) και πατήστε Σχεδίαση για να δείτε το γράφημά της - χρησιμοποιήστε τα κουμπιά ζουμ και μετακίνησης για να εξερευνήσετε την καμπύλη.</p>
+        <p class="last-updated">Τελευταία ενημέρωση: September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Υπολογισμός</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Επαναφορά</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Συχνές ερωτήσεις</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Ποιες συναρτήσεις μπορώ να πληκτρολογήσω;</h3>
+<p>Τυπικός μαθηματικός συμβολισμός: +, -, *, /, ^ για εκθέτες, παρενθέσεις, και sin, cos, tan, asin, acos, atan, sqrt, abs, log, ln και exp. Χρησιμοποιήστε x ως μεταβλητή.</p>
+</div>
+<div class="faq-item">
+<h3>Χρειάζεται να πληκτρολογώ πάντα το σύμβολο πολλαπλασιασμού;</h3>
+<p>Όχι - η αριθμομηχανή κατανοεί τον σιωπηρό πολλαπλασιασμό, οπότε "2x" ή "2(x+1)" λειτουργούν όπως "2*x" ή "2*(x+1)".</p>
+</div>
+<div class="faq-item">
+<h3>Γιατί το γράφημά μου δείχνει ένα κενό, όπως με το tan(x);</h3>
+<p>Αυτό είναι φυσιολογικό σε μια ασύμπτωτη - μια τιμή στην οποία η συνάρτηση πλησιάζει αλλά ποτέ δεν φτάνει. Ο σχεδιαστής εντοπίζει το τεράστιο άλμα και διακόπτει τη γραμμή αντί να τη σχεδιάσει λανθασμένα.</p>
+</div>
+<div class="faq-item">
+<h3>Οι τριγωνομετρικές συναρτήσεις είναι σε μοίρες ή ακτίνια;</h3>
+<p>Σε ακτίνια - η τυπική σύμβαση για τη σχεδίαση τριγωνομετρικών συναρτήσεων. Για τριγωνομετρικούς υπολογισμούς σε μοίρες, χρησιμοποιήστε την επιστημονική αριθμομηχανή.</p>
+</div>
+<div class="faq-item">
+<h3>Πώς κάνω ζουμ σε ένα συγκεκριμένο τμήμα της καμπύλης;</h3>
+<p>Πατήστε "Μεγέθυνση" για να μειώσετε στο μισό το ορατό εύρος γύρω από το τρέχον κέντρο, ή χρησιμοποιήστε πρώτα τα κουμπιά μετακίνησης για να κεντράρετε την περιοχή που θέλετε.</p>
+</div>
+<div class="faq-item">
+<h3>Μπορώ να σχεδιάσω περισσότερες από μία συναρτήσεις ταυτόχρονα;</h3>
+<p>Όχι προς το παρόν - αυτή η αριθμομηχανή σχεδιάζει μία συνάρτηση τη φορά. Αλλάξτε τη συνάρτηση και πατήστε ξανά Σχεδίαση για διαφορετική καμπύλη.</p>
+</div>
+<div class="faq-item">
+<h3>Η συνάρτησή μου δεν σχεδιάζεται - τι φταίει;</h3>
+<p>Ελέγξτε για τυπογραφικό λάθος σε όνομα συνάρτησης ή παρένθεση που δεν έκλεισε - η αριθμομηχανή εμφανίζει μήνυμα σφάλματος που περιγράφει το πρόβλημα.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Υπολογισμός</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Σχετικά εργαλεία</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Σημείωση ακρίβειας</h4>
+          <p style="margin:0;font-size:0.85rem;">Οι αριθμομηχανές του Calquary έχουν σχεδιαστεί για να παρέχουν γρήγορες και αξιόπιστες εκτιμήσεις. Για αποφάσεις με πραγματικές οικονομικές, δομικές ή ιατρικές επιπτώσεις, συμβουλευτείτε έναν ειδικευμένο επαγγελματία.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/el/">← Πίσω σε όλες τις αριθμομηχανές</a> · <a href="/el/about">Σχετικά</a> · <a href="/el/contact">Επικοινωνία</a> · <a href="/el/privacy">Απόρρητο</a> · <a href="/el/terms">Όροι</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

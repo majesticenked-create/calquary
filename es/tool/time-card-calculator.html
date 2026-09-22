@@ -15,9 +15,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Calculadora de Tarjeta de Tiempo - Calculadora Gratis Online</title>
-  <meta name="description" content="Suma las horas trabajadas durante la semana y calcula el salario bruto." />
+  <meta name="description" content="Suma las horas trabajadas durante la semana y calcula el salario bruto, incluyendo el pago de prima por horas extra." />
   <meta property="og:title" content="Calculadora de Tarjeta de Tiempo | Calquary">
-  <meta property="og:description" content="Suma las horas trabajadas durante la semana y calcula el salario bruto.">
+  <meta property="og:description" content="Suma las horas trabajadas durante la semana y calcula el salario bruto, incluyendo el pago de prima por horas extra.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/es/tool/time-card-calculator">
   <meta property="og:locale" content="es_ES">
@@ -27,7 +27,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Calculadora de Tarjeta de Tiempo | Calquary">
-  <meta name="twitter:description" content="Suma las horas trabajadas durante la semana y calcula el salario bruto.">
+  <meta name="twitter:description" content="Suma las horas trabajadas durante la semana y calcula el salario bruto, incluyendo el pago de prima por horas extra.">
   <meta name="twitter:image" content="https://calquary.com/og-images/time-card-calculator.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/time-card-calculator">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/time-card-calculator">
@@ -89,7 +89,7 @@
     {
       "@type": "SoftwareApplication",
       "name": "Calculadora de Tarjeta de Tiempo",
-      "description": "Suma las horas trabajadas durante la semana y calcula el salario bruto.",
+      "description": "Suma las horas trabajadas durante la semana y calcula el salario bruto, incluyendo el pago de prima por horas extra.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/es/tool/time-card-calculator",
@@ -133,7 +133,7 @@
           "name": "¿Cómo calculo el total de horas de una tarjeta de tiempo?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Suma las horas trabajadas cada día del período de pago. Esta calculadora suma siete entradas diarias (lunes a domingo) en un total semanal, luego multiplica por tu tarifa por hora para obtener el salario bruto."
+            "text": "Suma las horas trabajadas cada día del período de pago. Esta calculadora suma siete entradas diarias (lunes a domingo) en un total semanal, luego separa en horas regulares y extra según tu umbral antes de calcular el salario bruto."
           }
         },
         {
@@ -141,15 +141,23 @@
           "name": "¿Esto maneja las horas de entrada y salida?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No - introduce el total de horas decimales ya trabajadas cada día (por ejemplo, 7.5 para 7 horas 30 minutos), no las horas de entrada/salida. Si solo tienes horas de reloj, resta la entrada de la salida (teniendo en cuenta cualquier descanso no pagado) para obtener primero las horas decimales."
+            "text": "No - introduce el total de horas decimales ya trabajadas cada día (por ejemplo, 7.5 para 7 horas 30 minutos), no las horas de entrada/salida."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Esto incluye el pago de horas extras?",
+          "name": "¿Cómo funciona el cálculo de horas extra?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No - multiplica el total de horas por una única tarifa fija por hora. Si algunas horas califican para una prima de horas extras (comúnmente 1.5x para horas superiores a 40/semana en EE. UU.), calcula las porciones regular y de horas extras por separado y súmalas."
+            "text": "Las horas hasta tu umbral de horas extra (40/semana por defecto, el umbral federal estándar en EE. UU.) se pagan a tu tarifa regular. Cualquier hora adicional se paga a tu tarifa multiplicada por el multiplicador de horas extra (1.5x por defecto)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo cambiar el umbral o el multiplicador de horas extra?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí - ambos son campos editables. Algunas jurisdicciones o contratos sindicales usan un umbral semanal distinto de 40 horas, o una regla de horas extra diaria en vez de semanal, y algunos usan doble tarifa (2x) en lugar de tiempo y medio - ajusta los campos para que coincidan con tu situación real."
           }
         },
         {
@@ -162,18 +170,10 @@
         },
         {
           "@type": "Question",
-          "name": "¿Qué pasa si trabajé horas extra solo un día, no toda la semana?",
+          "name": "Si trabajé 45 horas a $20/hora con 1.5x de horas extra después de 40, ¿cuál es mi salario bruto?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Esta calculadora suma todas las horas introducidas en un total semanal a una sola tarifa fija, así que no separa automáticamente las horas extra de un solo día - calcula por separado las horas regulares y extra de ese día, y luego suma el resultado a tu pago total fuera de la herramienta."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Cómo se calcula el salario bruto a partir de una tarjeta de tiempo?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "El salario bruto es el total de horas trabajadas multiplicado por la tarifa por hora. Si tus horas diarias suman 38.5 en la semana a $18/hora, el salario bruto es 38.5 × $18 = $693, antes de cualquier retención de impuestos o deducción."
+            "text": "40 horas regulares × $20 = $800, más 5 horas extra × $30 (tarifa de tiempo y medio) = $150, para un salario bruto total de $950 - introduce tus horas diarias reales arriba para obtener este desglose automáticamente."
           }
         },
         {
@@ -181,7 +181,7 @@
           "name": "¿Una calculadora de tarjeta de tiempo es lo mismo que una calculadora de nómina?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No - una calculadora de tarjeta de tiempo como esta solo convierte las horas trabajadas en salario bruto. Una calculadora de nómina va más allá, aplicando retenciones de impuestos, deducciones y beneficios para llegar al salario neto (a recibir)."
+            "text": "No - una calculadora de tarjeta de tiempo como esta convierte las horas trabajadas (incluyendo horas extra) en salario bruto. Una calculadora de nómina va más allá, aplicando retenciones de impuestos, deducciones y beneficios para llegar al salario neto."
           }
         }
       ]
@@ -223,7 +223,7 @@
     <div class="tool-layout">
       <main>
         <h1>Calculadora de Tarjeta de Tiempo</h1>
-        <p style="max-width:60ch;">Introduce las horas trabajadas cada día y una tarifa por hora para totalizar tus horas semanales y salario bruto.</p>
+        <p style="max-width:60ch;">Introduce las horas trabajadas cada día, una tarifa por hora y tu umbral de horas extra para totalizar tus horas semanales y salario bruto - incluyendo el pago de prima por horas extra sobre el umbral.</p>
         <p class="last-updated">Última actualización: September 22, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -252,31 +252,31 @@
           <h2>Preguntas frecuentes</h2>
           <div id="faq-list"><div class="faq-item">
 <h3>¿Cómo calculo el total de horas de una tarjeta de tiempo?</h3>
-<p>Suma las horas trabajadas cada día del período de pago. Esta calculadora suma siete entradas diarias (lunes a domingo) en un total semanal, luego multiplica por tu tarifa por hora para obtener el salario bruto.</p>
+<p>Suma las horas trabajadas cada día del período de pago. Esta calculadora suma siete entradas diarias (lunes a domingo) en un total semanal, luego separa en horas regulares y extra según tu umbral antes de calcular el salario bruto.</p>
 </div>
 <div class="faq-item">
 <h3>¿Esto maneja las horas de entrada y salida?</h3>
-<p>No - introduce el total de horas decimales ya trabajadas cada día (por ejemplo, 7.5 para 7 horas 30 minutos), no las horas de entrada/salida. Si solo tienes horas de reloj, resta la entrada de la salida (teniendo en cuenta cualquier descanso no pagado) para obtener primero las horas decimales.</p>
+<p>No - introduce el total de horas decimales ya trabajadas cada día (por ejemplo, 7.5 para 7 horas 30 minutos), no las horas de entrada/salida.</p>
 </div>
 <div class="faq-item">
-<h3>¿Esto incluye el pago de horas extras?</h3>
-<p>No - multiplica el total de horas por una única tarifa fija por hora. Si algunas horas califican para una prima de horas extras (comúnmente 1.5x para horas superiores a 40/semana en EE. UU.), calcula las porciones regular y de horas extras por separado y súmalas.</p>
+<h3>¿Cómo funciona el cálculo de horas extra?</h3>
+<p>Las horas hasta tu umbral de horas extra (40/semana por defecto, el umbral federal estándar en EE. UU.) se pagan a tu tarifa regular. Cualquier hora adicional se paga a tu tarifa multiplicada por el multiplicador de horas extra (1.5x por defecto).</p>
+</div>
+<div class="faq-item">
+<h3>¿Puedo cambiar el umbral o el multiplicador de horas extra?</h3>
+<p>Sí - ambos son campos editables. Algunas jurisdicciones o contratos sindicales usan un umbral semanal distinto de 40 horas, o una regla de horas extra diaria en vez de semanal, y algunos usan doble tarifa (2x) en lugar de tiempo y medio - ajusta los campos para que coincidan con tu situación real.</p>
 </div>
 <div class="faq-item">
 <h3>¿Cómo convierto minutos a decimal para una tarjeta de tiempo?</h3>
 <p>Divide los minutos entre 60. 30 minutos = 0.5 horas, 15 minutos = 0.25 horas, 45 minutos = 0.75 horas - suma ese decimal al conteo de horas completas de cada día.</p>
 </div>
 <div class="faq-item">
-<h3>¿Qué pasa si trabajé horas extra solo un día, no toda la semana?</h3>
-<p>Esta calculadora suma todas las horas introducidas en un total semanal a una sola tarifa fija, así que no separa automáticamente las horas extra de un solo día - calcula por separado las horas regulares y extra de ese día, y luego suma el resultado a tu pago total fuera de la herramienta.</p>
-</div>
-<div class="faq-item">
-<h3>¿Cómo se calcula el salario bruto a partir de una tarjeta de tiempo?</h3>
-<p>El salario bruto es el total de horas trabajadas multiplicado por la tarifa por hora. Si tus horas diarias suman 38.5 en la semana a $18/hora, el salario bruto es 38.5 × $18 = $693, antes de cualquier retención de impuestos o deducción.</p>
+<h3>Si trabajé 45 horas a $20/hora con 1.5x de horas extra después de 40, ¿cuál es mi salario bruto?</h3>
+<p>40 horas regulares × $20 = $800, más 5 horas extra × $30 (tarifa de tiempo y medio) = $150, para un salario bruto total de $950 - introduce tus horas diarias reales arriba para obtener este desglose automáticamente.</p>
 </div>
 <div class="faq-item">
 <h3>¿Una calculadora de tarjeta de tiempo es lo mismo que una calculadora de nómina?</h3>
-<p>No - una calculadora de tarjeta de tiempo como esta solo convierte las horas trabajadas en salario bruto. Una calculadora de nómina va más allá, aplicando retenciones de impuestos, deducciones y beneficios para llegar al salario neto (a recibir).</p>
+<p>No - una calculadora de tarjeta de tiempo como esta convierte las horas trabajadas (incluyendo horas extra) en salario bruto. Una calculadora de nómina va más allá, aplicando retenciones de impuestos, deducciones y beneficios para llegar al salario neto.</p>
 </div></div>
           <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calcular</a>
         </div>

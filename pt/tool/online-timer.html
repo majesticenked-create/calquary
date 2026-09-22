@@ -15,9 +15,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Timer Online - Calculadora Gratuita Online | Calquary</title>
-  <meta name="description" content="Um timer de contagem regressiva gratuito que funciona no seu navegador - defina minutos e segundos, depois inicie, pause ou reinicie." />
+  <meta name="description" content="Um timer múltiplo gratuito que funciona no seu navegador - execute várias contagens regressivas nomeadas ao mesmo tempo, cada uma com seu próprio iniciar,…" />
   <meta property="og:title" content="Timer Online | Calquary">
-  <meta property="og:description" content="Um timer de contagem regressiva gratuito que funciona no seu navegador - defina minutos e segundos, depois inicie, pause ou reinicie.">
+  <meta property="og:description" content="Um timer múltiplo gratuito que funciona no seu navegador - execute várias contagens regressivas nomeadas ao mesmo tempo, cada uma com seu próprio iniciar, pausar e reiniciar.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/pt/tool/online-timer">
   <meta property="og:locale" content="pt_PT">
@@ -27,7 +27,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Timer Online | Calquary">
-  <meta name="twitter:description" content="Um timer de contagem regressiva gratuito que funciona no seu navegador - defina minutos e segundos, depois inicie, pause ou reinicie.">
+  <meta name="twitter:description" content="Um timer múltiplo gratuito que funciona no seu navegador - execute várias contagens regressivas nomeadas ao mesmo tempo, cada uma com seu próprio iniciar, pausar e reiniciar.">
   <meta name="twitter:image" content="https://calquary.com/og-images/online-timer.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/online-timer">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/online-timer">
@@ -89,7 +89,7 @@
     {
       "@type": "SoftwareApplication",
       "name": "Timer Online",
-      "description": "Um timer de contagem regressiva gratuito que funciona no seu navegador - defina minutos e segundos, depois inicie, pause ou reinicie.",
+      "description": "Um timer múltiplo gratuito que funciona no seu navegador - execute várias contagens regressivas nomeadas ao mesmo tempo, cada uma com seu próprio iniciar, pausar e reiniciar.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/pt/tool/online-timer",
@@ -130,26 +130,42 @@
       "mainEntity": [
         {
           "@type": "Question",
+          "name": "Posso executar mais de um timer ao mesmo tempo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim - clique em \"Adicionar outro timer\" para adicionar quantas contagens regressivas independentes você precisar, cada uma com seu próprio nome, minutos/segundos e controles de iniciar/pausar/reiniciar. Todos funcionam ao mesmo tempo, para você acompanhar várias coisas de uma vez, como uma refeição de vários pratos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso nomear cada timer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim - cada timer tem um campo de texto acima de sua contagem regressiva onde você pode rotulá-lo (por exemplo, \"Macarrão\" ou \"Lavanderia\") para saber qual é qual quando vários estão rodando."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "Este timer online continua funcionando se eu mudar de aba do navegador?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sim - a contagem regressiva continua em segundo plano enquanto esta aba do navegador permanecer aberta, mesmo que não seja a aba ativa. Fechar a aba ou o navegador para o timer."
+            "text": "Sim - cada contagem regressiva continua em segundo plano enquanto esta aba do navegador permanecer aberta, mesmo que não seja a aba ativa. Fechar a aba ou o navegador para todos eles."
           }
         },
         {
           "@type": "Question",
-          "name": "Este timer fará um som quando terminar?",
+          "name": "Cada timer fará seu próprio som quando terminar?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sim - um bipe curto toca quando a contagem regressiva chega a zero, junto com a mudança da tela para \"Tempo esgotado!\" para que você note mesmo que não esteja olhando diretamente para a tela."
+            "text": "Sim - um bipe curto toca para cada timer individualmente quando sua contagem regressiva chega a zero, junto com a mudança da tela daquele timer para \"Tempo esgotado!\", então você sabe exatamente qual terminou."
           }
         },
         {
           "@type": "Question",
-          "name": "Posso definir um timer para mais de uma hora?",
+          "name": "Posso remover um timer que não preciso mais?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sim - insira qualquer número de minutos (não há limite superior), então você pode definir um timer de 90 minutos ou de várias horas tão facilmente quanto um curto."
+            "text": "Sim - clique no botão × no cabeçalho de um timer para removê-lo. A página sempre mantém pelo menos um timer, então o último restante não pode ser removido."
           }
         },
         {
@@ -157,7 +173,7 @@
           "name": "O timer continua contando se meu computador entrar em modo de suspensão?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Não - se o dispositivo entrar em suspensão ou o navegador for suspenso, a contagem regressiva pausa junto com ele e retoma (um pouco atrasada) quando o dispositivo acorda, já que ele depende de a aba do navegador estar ativamente em execução."
+            "text": "Não - se o dispositivo entrar em suspensão ou o navegador for suspenso, todas as contagens regressivas em execução pausam junto e retomam (um pouco atrasadas) quando o dispositivo acorda."
           }
         },
         {
@@ -165,7 +181,7 @@
           "name": "Posso configurar um timer para um número exato de segundos apenas, como 90 segundos?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sim - insira 0 minutos e 90 segundos, ou 1 minuto e 30 segundos; ambos produzem a mesma contagem regressiva de 90 segundos, já que minutos e segundos são combinados no tempo total."
+            "text": "Sim - insira 0 minutos e 90 segundos, ou 1 minuto e 30 segundos, em qualquer timer; ambos produzem a mesma contagem regressiva de 90 segundos."
           }
         },
         {
@@ -173,7 +189,7 @@
           "name": "Isso é o mesmo que um 'relógio de contagem regressiva' para uma data de evento específica?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Não - este timer conta uma duração fixa que você define em minutos e segundos, como um timer de cozinha. Para contar regressivamente até uma data futura específica, você precisaria de uma ferramenta de contagem regressiva baseada em data."
+            "text": "Não - cada timer aqui conta uma duração fixa que você define em minutos e segundos, como um timer de cozinha. Para contar regressivamente até uma data futura específica, use uma ferramenta de contagem regressiva baseada em data."
           }
         }
       ]
@@ -215,7 +231,7 @@
     <div class="tool-layout">
       <main>
         <h1>Timer Online</h1>
-        <p style="max-width:60ch;">Defina um tempo de contagem regressiva, depois clique em iniciar - este timer conta regressivamente e alerta você quando o tempo acabar.</p>
+        <p style="max-width:60ch;">Defina quantas contagens regressivas você precisar, cada uma com seu próprio nome, minutos e segundos - elas funcionam de forma independente, para você cronometrar várias coisas ao mesmo tempo.</p>
         <p class="last-updated">Última atualização: September 22, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -243,28 +259,36 @@
         <div class="article-block">
           <h2>Perguntas frequentes</h2>
           <div id="faq-list"><div class="faq-item">
+<h3>Posso executar mais de um timer ao mesmo tempo?</h3>
+<p>Sim - clique em "Adicionar outro timer" para adicionar quantas contagens regressivas independentes você precisar, cada uma com seu próprio nome, minutos/segundos e controles de iniciar/pausar/reiniciar. Todos funcionam ao mesmo tempo, para você acompanhar várias coisas de uma vez, como uma refeição de vários pratos.</p>
+</div>
+<div class="faq-item">
+<h3>Posso nomear cada timer?</h3>
+<p>Sim - cada timer tem um campo de texto acima de sua contagem regressiva onde você pode rotulá-lo (por exemplo, "Macarrão" ou "Lavanderia") para saber qual é qual quando vários estão rodando.</p>
+</div>
+<div class="faq-item">
 <h3>Este timer online continua funcionando se eu mudar de aba do navegador?</h3>
-<p>Sim - a contagem regressiva continua em segundo plano enquanto esta aba do navegador permanecer aberta, mesmo que não seja a aba ativa. Fechar a aba ou o navegador para o timer.</p>
+<p>Sim - cada contagem regressiva continua em segundo plano enquanto esta aba do navegador permanecer aberta, mesmo que não seja a aba ativa. Fechar a aba ou o navegador para todos eles.</p>
 </div>
 <div class="faq-item">
-<h3>Este timer fará um som quando terminar?</h3>
-<p>Sim - um bipe curto toca quando a contagem regressiva chega a zero, junto com a mudança da tela para "Tempo esgotado!" para que você note mesmo que não esteja olhando diretamente para a tela.</p>
+<h3>Cada timer fará seu próprio som quando terminar?</h3>
+<p>Sim - um bipe curto toca para cada timer individualmente quando sua contagem regressiva chega a zero, junto com a mudança da tela daquele timer para "Tempo esgotado!", então você sabe exatamente qual terminou.</p>
 </div>
 <div class="faq-item">
-<h3>Posso definir um timer para mais de uma hora?</h3>
-<p>Sim - insira qualquer número de minutos (não há limite superior), então você pode definir um timer de 90 minutos ou de várias horas tão facilmente quanto um curto.</p>
+<h3>Posso remover um timer que não preciso mais?</h3>
+<p>Sim - clique no botão × no cabeçalho de um timer para removê-lo. A página sempre mantém pelo menos um timer, então o último restante não pode ser removido.</p>
 </div>
 <div class="faq-item">
 <h3>O timer continua contando se meu computador entrar em modo de suspensão?</h3>
-<p>Não - se o dispositivo entrar em suspensão ou o navegador for suspenso, a contagem regressiva pausa junto com ele e retoma (um pouco atrasada) quando o dispositivo acorda, já que ele depende de a aba do navegador estar ativamente em execução.</p>
+<p>Não - se o dispositivo entrar em suspensão ou o navegador for suspenso, todas as contagens regressivas em execução pausam junto e retomam (um pouco atrasadas) quando o dispositivo acorda.</p>
 </div>
 <div class="faq-item">
 <h3>Posso configurar um timer para um número exato de segundos apenas, como 90 segundos?</h3>
-<p>Sim - insira 0 minutos e 90 segundos, ou 1 minuto e 30 segundos; ambos produzem a mesma contagem regressiva de 90 segundos, já que minutos e segundos são combinados no tempo total.</p>
+<p>Sim - insira 0 minutos e 90 segundos, ou 1 minuto e 30 segundos, em qualquer timer; ambos produzem a mesma contagem regressiva de 90 segundos.</p>
 </div>
 <div class="faq-item">
 <h3>Isso é o mesmo que um 'relógio de contagem regressiva' para uma data de evento específica?</h3>
-<p>Não - este timer conta uma duração fixa que você define em minutos e segundos, como um timer de cozinha. Para contar regressivamente até uma data futura específica, você precisaria de uma ferramenta de contagem regressiva baseada em data.</p>
+<p>Não - cada timer aqui conta uma duração fixa que você define em minutos e segundos, como um timer de cozinha. Para contar regressivamente até uma data futura específica, use uma ferramenta de contagem regressiva baseada em data.</p>
 </div></div>
           <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calcular</a>
         </div>

@@ -15,9 +15,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Calculadora de Investimento - Calculadora Gratuita Online</title>
-  <meta name="description" content="Estime o valor futuro de um investimento, ajustado pela inflação." />
+  <meta name="description" content="Estime o valor futuro de um investimento ajustado pela inflação, ou converta um valor histórico em dólares para o poder de compra atual usando dados reais do…" />
   <meta property="og:title" content="Calculadora de Investimento | Calquary">
-  <meta property="og:description" content="Estime o valor futuro de um investimento, ajustado pela inflação.">
+  <meta property="og:description" content="Estime o valor futuro de um investimento ajustado pela inflação, ou converta um valor histórico em dólares para o poder de compra atual usando dados reais do IPC.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/pt/tool/investment-calculator">
   <meta property="og:locale" content="pt_PT">
@@ -27,7 +27,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Calculadora de Investimento | Calquary">
-  <meta name="twitter:description" content="Estime o valor futuro de um investimento, ajustado pela inflação.">
+  <meta name="twitter:description" content="Estime o valor futuro de um investimento ajustado pela inflação, ou converta um valor histórico em dólares para o poder de compra atual usando dados reais do IPC.">
   <meta name="twitter:image" content="https://calquary.com/og-images/investment-calculator.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/investment-calculator">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/investment-calculator">
@@ -89,7 +89,7 @@
     {
       "@type": "SoftwareApplication",
       "name": "Calculadora de Investimento",
-      "description": "Estime o valor futuro de um investimento, ajustado pela inflação.",
+      "description": "Estime o valor futuro de um investimento ajustado pela inflação, ou converta um valor histórico em dólares para o poder de compra atual usando dados reais do IPC.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/pt/tool/investment-calculator",
@@ -141,7 +141,7 @@
           "name": "Que taxa de retorno devo usar para uma calculadora de investimento?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "7% é uma média de longo prazo comumente usada para uma carteira diversificada de ações após a inflação ser aproximadamente considerada em termos nominais, mas os retornos reais variam significativamente ano a ano - use uma estimativa conservadora para planejamento."
+            "text": "7% é uma média de longo prazo comumente usada para uma carteira diversificada de ações, mas os retornos reais variam significativamente ano a ano - use uma estimativa conservadora para o planejamento."
           }
         },
         {
@@ -149,7 +149,7 @@
           "name": "Como a frequência de contribuição afeta o crescimento de longo prazo?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Contribuições mais frequentes (mensal vs. anual) permitem que seu dinheiro comece a compor mais cedo em média, o que produz um saldo final modestamente mais alto para o mesmo valor total contribuído no mesmo período."
+            "text": "Contribuições mais frequentes (mensal vs. anual) permitem que seu dinheiro comece a capitalizar mais cedo em média, produzindo um saldo final modestamente maior pelo mesmo valor total contribuído."
           }
         },
         {
@@ -157,31 +157,63 @@
           "name": "Qual é um retorno anual médio realista para assumir em projeções de longo prazo?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Historicamente, fundos de índice diversificados do mercado de ações tiveram média de aproximadamente 7-10% de retornos anuais antes da inflação em períodos de várias décadas, embora qualquer ano isolado possa variar muito. Usar uma estimativa mais conservadora (6-7%) para fins de planejamento considera melhor a volatilidade e as taxas do que assumir uma média de melhor caso todo ano."
+            "text": "Historicamente, fundos indexados diversificados de ações tiveram uma média de cerca de 7-10% de retornos anuais antes da inflação ao longo de períodos de várias décadas, embora qualquer ano isolado possa variar muito."
           }
         },
         {
           "@type": "Question",
-          "name": "Qual a diferença entre o valor futuro nominal e o ajustado pela inflação mostrados?",
+          "name": "Qual a diferença entre o valor futuro nominal e o ajustado pela inflação mostrado?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "O valor nominal é o total bruto em dólares para o qual seu investimento cresce na taxa de retorno declarada. O valor ajustado pela inflação (real) desconta esse valor nominal pela taxa de inflação ao longo do mesmo período, mostrando o que esse valor futuro realmente vale em poder de compra atual."
+            "text": "O valor nominal é o total bruto em dólares que seu investimento atinge com a taxa de retorno indicada. O valor ajustado pela inflação (real) desconta essa cifra nominal pela taxa de inflação no mesmo período."
           }
         },
         {
           "@type": "Question",
-          "name": "Se eu investir $10.000 com contribuições de $300/mês a 7% por 20 anos, qual é aproximadamente o resultado nominal?",
+          "name": "Se eu investir $10.000 com aportes de $300/mês a 7% por 20 anos, qual é o resultado nominal aproximado?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Fazendo o montante inicial de $10.000 mais contribuições mensais de $300 crescerem a 7% ao ano com capitalização mensal por 20 anos, chega-se a cerca de $195.000 nominais - o valor exato depende das premissas de capitalização, mas as contribuições dominam o crescimento do valor inicial em um horizonte tão longo com níveis típicos de contribuição."
+            "text": "Fazendo crescer os $10.000 iniciais mais os aportes mensais de $300 a 7% anual composto mensalmente por 20 anos, chega-se a cerca de $195.000 nominais - os aportes dominam o crescimento do valor inicial em um horizonte tão longo."
           }
         },
         {
           "@type": "Question",
-          "name": "Isso é o mesmo que uma calculadora de juros compostos?",
+          "name": "Isso é a mesma coisa que uma calculadora de juros compostos?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ela se baseia na mesma matemática de capitalização, mas adiciona duas coisas que uma calculadora básica de juros compostos não tem: contribuições mensais regulares além do saldo inicial, e um ajuste de inflação para mostrar o valor real (poder de compra) junto com o total nominal."
+            "text": "Baseia-se na mesma matemática de capitalização, mas adiciona duas coisas: aportes mensais regulares além do saldo inicial, e um ajuste pela inflação para mostrar o valor real junto ao total nominal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual a diferença entre o 'modo de crescimento' e o 'modo de valor histórico do dólar'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O modo de crescimento projeta uma carteira hipotética no futuro usando uma taxa de retorno assumida que você escolhe. O modo de valor histórico do dólar, em vez disso, usa dados reais de inflação do IPC-U para responder a uma pergunta diferente: quanto vale um valor real de um ano específico em dólares de outro ano."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quão preciso é o modo de valor histórico do dólar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Baseia-se em médias anuais reais publicadas do IPC-U, não em uma taxa assumida, mas a tabela subjacente lista apenas aproximadamente a cada 5-10 anos, não todo ano - valores intermediários são interpolados linearmente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que é o IPC-U?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O Índice de Preços ao Consumidor para Todos os Consumidores Urbanos, publicado pelo Departamento de Estatísticas do Trabalho dos EUA - acompanha a mudança média nos preços pagos por consumidores urbanos por uma ampla cesta de bens e serviços."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto valiam $100 de 1990 em 2025?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usando dados do IPC-U, cerca de $245 em dólares de 2025 - os preços quase 2,5 vezes ao longo desse período de 35 anos. Insira 100, 1990 e 2025 no modo de valor histórico do dólar acima para ver o número exato."
           }
         }
       ]
@@ -223,7 +255,7 @@
     <div class="tool-layout">
       <main>
         <h1>Calculadora de Investimento</h1>
-        <p style="max-width:60ch;">Insira seu investimento inicial, contribuição mensal, retorno esperado e taxa de inflação para ver o valor futuro nominal e ajustado pela inflação.</p>
+        <p style="max-width:60ch;">Escolha Crescimento do investimento para projetar uma carteira no futuro, ou Valor histórico do dólar para ver quanto vale hoje um valor real de um ano passado usando dados reais do IPC.</p>
         <p class="last-updated">Última atualização: September 22, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -256,27 +288,43 @@
 </div>
 <div class="faq-item">
 <h3>Que taxa de retorno devo usar para uma calculadora de investimento?</h3>
-<p>7% é uma média de longo prazo comumente usada para uma carteira diversificada de ações após a inflação ser aproximadamente considerada em termos nominais, mas os retornos reais variam significativamente ano a ano - use uma estimativa conservadora para planejamento.</p>
+<p>7% é uma média de longo prazo comumente usada para uma carteira diversificada de ações, mas os retornos reais variam significativamente ano a ano - use uma estimativa conservadora para o planejamento.</p>
 </div>
 <div class="faq-item">
 <h3>Como a frequência de contribuição afeta o crescimento de longo prazo?</h3>
-<p>Contribuições mais frequentes (mensal vs. anual) permitem que seu dinheiro comece a compor mais cedo em média, o que produz um saldo final modestamente mais alto para o mesmo valor total contribuído no mesmo período.</p>
+<p>Contribuições mais frequentes (mensal vs. anual) permitem que seu dinheiro comece a capitalizar mais cedo em média, produzindo um saldo final modestamente maior pelo mesmo valor total contribuído.</p>
 </div>
 <div class="faq-item">
 <h3>Qual é um retorno anual médio realista para assumir em projeções de longo prazo?</h3>
-<p>Historicamente, fundos de índice diversificados do mercado de ações tiveram média de aproximadamente 7-10% de retornos anuais antes da inflação em períodos de várias décadas, embora qualquer ano isolado possa variar muito. Usar uma estimativa mais conservadora (6-7%) para fins de planejamento considera melhor a volatilidade e as taxas do que assumir uma média de melhor caso todo ano.</p>
+<p>Historicamente, fundos indexados diversificados de ações tiveram uma média de cerca de 7-10% de retornos anuais antes da inflação ao longo de períodos de várias décadas, embora qualquer ano isolado possa variar muito.</p>
 </div>
 <div class="faq-item">
-<h3>Qual a diferença entre o valor futuro nominal e o ajustado pela inflação mostrados?</h3>
-<p>O valor nominal é o total bruto em dólares para o qual seu investimento cresce na taxa de retorno declarada. O valor ajustado pela inflação (real) desconta esse valor nominal pela taxa de inflação ao longo do mesmo período, mostrando o que esse valor futuro realmente vale em poder de compra atual.</p>
+<h3>Qual a diferença entre o valor futuro nominal e o ajustado pela inflação mostrado?</h3>
+<p>O valor nominal é o total bruto em dólares que seu investimento atinge com a taxa de retorno indicada. O valor ajustado pela inflação (real) desconta essa cifra nominal pela taxa de inflação no mesmo período.</p>
 </div>
 <div class="faq-item">
-<h3>Se eu investir $10.000 com contribuições de $300/mês a 7% por 20 anos, qual é aproximadamente o resultado nominal?</h3>
-<p>Fazendo o montante inicial de $10.000 mais contribuições mensais de $300 crescerem a 7% ao ano com capitalização mensal por 20 anos, chega-se a cerca de $195.000 nominais - o valor exato depende das premissas de capitalização, mas as contribuições dominam o crescimento do valor inicial em um horizonte tão longo com níveis típicos de contribuição.</p>
+<h3>Se eu investir $10.000 com aportes de $300/mês a 7% por 20 anos, qual é o resultado nominal aproximado?</h3>
+<p>Fazendo crescer os $10.000 iniciais mais os aportes mensais de $300 a 7% anual composto mensalmente por 20 anos, chega-se a cerca de $195.000 nominais - os aportes dominam o crescimento do valor inicial em um horizonte tão longo.</p>
 </div>
 <div class="faq-item">
-<h3>Isso é o mesmo que uma calculadora de juros compostos?</h3>
-<p>Ela se baseia na mesma matemática de capitalização, mas adiciona duas coisas que uma calculadora básica de juros compostos não tem: contribuições mensais regulares além do saldo inicial, e um ajuste de inflação para mostrar o valor real (poder de compra) junto com o total nominal.</p>
+<h3>Isso é a mesma coisa que uma calculadora de juros compostos?</h3>
+<p>Baseia-se na mesma matemática de capitalização, mas adiciona duas coisas: aportes mensais regulares além do saldo inicial, e um ajuste pela inflação para mostrar o valor real junto ao total nominal.</p>
+</div>
+<div class="faq-item">
+<h3>Qual a diferença entre o 'modo de crescimento' e o 'modo de valor histórico do dólar'?</h3>
+<p>O modo de crescimento projeta uma carteira hipotética no futuro usando uma taxa de retorno assumida que você escolhe. O modo de valor histórico do dólar, em vez disso, usa dados reais de inflação do IPC-U para responder a uma pergunta diferente: quanto vale um valor real de um ano específico em dólares de outro ano.</p>
+</div>
+<div class="faq-item">
+<h3>Quão preciso é o modo de valor histórico do dólar?</h3>
+<p>Baseia-se em médias anuais reais publicadas do IPC-U, não em uma taxa assumida, mas a tabela subjacente lista apenas aproximadamente a cada 5-10 anos, não todo ano - valores intermediários são interpolados linearmente.</p>
+</div>
+<div class="faq-item">
+<h3>O que é o IPC-U?</h3>
+<p>O Índice de Preços ao Consumidor para Todos os Consumidores Urbanos, publicado pelo Departamento de Estatísticas do Trabalho dos EUA - acompanha a mudança média nos preços pagos por consumidores urbanos por uma ampla cesta de bens e serviços.</p>
+</div>
+<div class="faq-item">
+<h3>Quanto valiam $100 de 1990 em 2025?</h3>
+<p>Usando dados do IPC-U, cerca de $245 em dólares de 2025 - os preços quase 2,5 vezes ao longo desse período de 35 anos. Insira 100, 1990 e 2025 no modo de valor histórico do dólar acima para ver o número exato.</p>
 </div></div>
           <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calcular</a>
         </div>

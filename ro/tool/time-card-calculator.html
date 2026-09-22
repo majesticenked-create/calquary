@@ -15,9 +15,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Calculator Pontaj - Calculator Gratuit Online | Calquary</title>
-  <meta name="description" content="Adună orele lucrate pe parcursul săptămânii și calculează salariul brut." />
+  <meta name="description" content="Adună orele lucrate pe parcursul săptămânii și calculează salariul brut, inclusiv plata sporului pentru ore suplimentare." />
   <meta property="og:title" content="Calculator Pontaj | Calquary">
-  <meta property="og:description" content="Adună orele lucrate pe parcursul săptămânii și calculează salariul brut.">
+  <meta property="og:description" content="Adună orele lucrate pe parcursul săptămânii și calculează salariul brut, inclusiv plata sporului pentru ore suplimentare.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/ro/tool/time-card-calculator">
   <meta property="og:locale" content="ro_RO">
@@ -27,7 +27,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Calculator Pontaj | Calquary">
-  <meta name="twitter:description" content="Adună orele lucrate pe parcursul săptămânii și calculează salariul brut.">
+  <meta name="twitter:description" content="Adună orele lucrate pe parcursul săptămânii și calculează salariul brut, inclusiv plata sporului pentru ore suplimentare.">
   <meta name="twitter:image" content="https://calquary.com/og-images/time-card-calculator.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/time-card-calculator">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/time-card-calculator">
@@ -89,7 +89,7 @@
     {
       "@type": "SoftwareApplication",
       "name": "Calculator Pontaj",
-      "description": "Adună orele lucrate pe parcursul săptămânii și calculează salariul brut.",
+      "description": "Adună orele lucrate pe parcursul săptămânii și calculează salariul brut, inclusiv plata sporului pentru ore suplimentare.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/ro/tool/time-card-calculator",
@@ -133,7 +133,7 @@
           "name": "Cum calculez totalul orelor dintr-un pontaj?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Adună orele lucrate în fiecare zi a perioadei de plată. Acest calculator însumează șapte intrări zilnice (luni până duminică) într-un total săptămânal, apoi înmulțește cu rata ta orară pentru salariul brut."
+            "text": "Adună orele lucrate în fiecare zi a perioadei de plată. Acest calculator însumează șapte intrări zilnice (luni până duminică) într-un total săptămânal, apoi le separă în ore normale și suplimentare conform pragului tău înainte de a calcula salariul brut."
           }
         },
         {
@@ -141,15 +141,23 @@
           "name": "Aceasta gestionează orele de pontare la intrare și ieșire?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nu - introdu totalul orelor zecimale deja lucrate în fiecare zi (de exemplu, 7,5 pentru 7 ore și 30 de minute), nu orele de intrare/ieșire. Dacă ai doar ore de pontaj, scade ora de intrare din ora de ieșire (ținând cont de orice pauză neplătită) pentru a obține mai întâi orele zecimale."
+            "text": "Nu - introdu totalul orelor zecimale deja lucrate în fiecare zi (de exemplu, 7,5 pentru 7 ore și 30 de minute), nu orele de intrare/ieșire."
           }
         },
         {
           "@type": "Question",
-          "name": "Include aceasta plata orelor suplimentare?",
+          "name": "Cum funcționează calculul orelor suplimentare?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nu - înmulțește totalul orelor cu o singură rată orară fixă. Dacă unele ore se califică pentru un spor de ore suplimentare (de obicei 1,5x pentru orele peste 40/săptămână în SUA), calculează separat porțiunile normale și suplimentare și adună-le."
+            "text": "Orele până la pragul tău de ore suplimentare (40/săptămână implicit, pragul federal standard din SUA) sunt plătite la rata ta normală. Orice oră peste acest prag este plătită la rata ta înmulțită cu multiplicatorul de ore suplimentare (1,5x implicit)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pot schimba pragul sau multiplicatorul orelor suplimentare?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da - ambele sunt câmpuri editabile. Unele jurisdicții sau contracte colective folosesc un prag săptămânal diferit de 40 de ore, sau o regulă de ore suplimentare zilnică în loc de săptămânală, iar unele folosesc rată dublă (2x) în loc de una și jumătate - ajustează câmpurile pentru a se potrivi situației tale reale."
           }
         },
         {
@@ -162,18 +170,10 @@
         },
         {
           "@type": "Question",
-          "name": "Ce se întâmplă dacă am lucrat ore suplimentare doar într-o zi, nu în toată săptămâna?",
+          "name": "Dacă am lucrat 45 de ore la 20$/oră cu 1,5x ore suplimentare după 40, care e salariul meu brut?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Acest calculator însumează toate orele introduse într-un total săptămânal la o singură rată fixă, deci nu separă automat orele suplimentare dintr-o singură zi - calculează separat porțiunea normală și cea suplimentară pentru acea zi, apoi adaugă rezultatul la salariul tău total în afara instrumentului."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Cum se calculează salariul brut dintr-un pontaj?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Salariul brut este totalul orelor lucrate înmulțit cu rata orară. Dacă orele tale zilnice însumează 38,5 pentru săptămână la 18$/oră, salariul brut este 38,5 × 18$ = 693$, înainte de orice reținere fiscală sau deducere."
+            "text": "40 de ore normale × 20$ = 800$, plus 5 ore suplimentare × 30$ (rata unu și jumătate) = 150$, pentru un salariu brut total de 950$ - introdu orele tale zilnice reale mai sus pentru a obține automat această defalcare."
           }
         },
         {
@@ -181,7 +181,7 @@
           "name": "Un calculator de pontaj este același lucru cu un calculator de salarizare?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nu - un calculator de pontaj precum acesta doar convertește orele lucrate în salariu brut. Un calculator de salarizare merge mai departe, aplicând reținerea fiscală, deducerile și beneficiile pentru a ajunge la salariul net (de casă)."
+            "text": "Nu - un calculator de pontaj precum acesta convertește orele lucrate (inclusiv orele suplimentare) în salariu brut. Un calculator de salarizare merge mai departe, aplicând reținerea fiscală, deducerile și beneficiile pentru a ajunge la salariul net."
           }
         }
       ]
@@ -223,7 +223,7 @@
     <div class="tool-layout">
       <main>
         <h1>Calculator Pontaj</h1>
-        <p style="max-width:60ch;">Introdu orele lucrate în fiecare zi și o rată orară pentru a totaliza orele săptămânale și salariul brut.</p>
+        <p style="max-width:60ch;">Introdu orele lucrate în fiecare zi, o rată orară și pragul tău de ore suplimentare pentru a totaliza orele săptămânale și salariul brut - inclusiv plata sporului pentru orele suplimentare peste prag.</p>
         <p class="last-updated">Ultima actualizare: September 22, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -252,31 +252,31 @@
           <h2>Întrebări frecvente</h2>
           <div id="faq-list"><div class="faq-item">
 <h3>Cum calculez totalul orelor dintr-un pontaj?</h3>
-<p>Adună orele lucrate în fiecare zi a perioadei de plată. Acest calculator însumează șapte intrări zilnice (luni până duminică) într-un total săptămânal, apoi înmulțește cu rata ta orară pentru salariul brut.</p>
+<p>Adună orele lucrate în fiecare zi a perioadei de plată. Acest calculator însumează șapte intrări zilnice (luni până duminică) într-un total săptămânal, apoi le separă în ore normale și suplimentare conform pragului tău înainte de a calcula salariul brut.</p>
 </div>
 <div class="faq-item">
 <h3>Aceasta gestionează orele de pontare la intrare și ieșire?</h3>
-<p>Nu - introdu totalul orelor zecimale deja lucrate în fiecare zi (de exemplu, 7,5 pentru 7 ore și 30 de minute), nu orele de intrare/ieșire. Dacă ai doar ore de pontaj, scade ora de intrare din ora de ieșire (ținând cont de orice pauză neplătită) pentru a obține mai întâi orele zecimale.</p>
+<p>Nu - introdu totalul orelor zecimale deja lucrate în fiecare zi (de exemplu, 7,5 pentru 7 ore și 30 de minute), nu orele de intrare/ieșire.</p>
 </div>
 <div class="faq-item">
-<h3>Include aceasta plata orelor suplimentare?</h3>
-<p>Nu - înmulțește totalul orelor cu o singură rată orară fixă. Dacă unele ore se califică pentru un spor de ore suplimentare (de obicei 1,5x pentru orele peste 40/săptămână în SUA), calculează separat porțiunile normale și suplimentare și adună-le.</p>
+<h3>Cum funcționează calculul orelor suplimentare?</h3>
+<p>Orele până la pragul tău de ore suplimentare (40/săptămână implicit, pragul federal standard din SUA) sunt plătite la rata ta normală. Orice oră peste acest prag este plătită la rata ta înmulțită cu multiplicatorul de ore suplimentare (1,5x implicit).</p>
+</div>
+<div class="faq-item">
+<h3>Pot schimba pragul sau multiplicatorul orelor suplimentare?</h3>
+<p>Da - ambele sunt câmpuri editabile. Unele jurisdicții sau contracte colective folosesc un prag săptămânal diferit de 40 de ore, sau o regulă de ore suplimentare zilnică în loc de săptămânală, iar unele folosesc rată dublă (2x) în loc de una și jumătate - ajustează câmpurile pentru a se potrivi situației tale reale.</p>
 </div>
 <div class="faq-item">
 <h3>Cum convertesc minutele în zecimale pentru un pontaj?</h3>
 <p>Împarte minutele la 60. 30 de minute = 0,5 ore, 15 minute = 0,25 ore, 45 de minute = 0,75 ore - adaugă acea valoare zecimală la numărul de ore întregi din fiecare zi.</p>
 </div>
 <div class="faq-item">
-<h3>Ce se întâmplă dacă am lucrat ore suplimentare doar într-o zi, nu în toată săptămâna?</h3>
-<p>Acest calculator însumează toate orele introduse într-un total săptămânal la o singură rată fixă, deci nu separă automat orele suplimentare dintr-o singură zi - calculează separat porțiunea normală și cea suplimentară pentru acea zi, apoi adaugă rezultatul la salariul tău total în afara instrumentului.</p>
-</div>
-<div class="faq-item">
-<h3>Cum se calculează salariul brut dintr-un pontaj?</h3>
-<p>Salariul brut este totalul orelor lucrate înmulțit cu rata orară. Dacă orele tale zilnice însumează 38,5 pentru săptămână la 18$/oră, salariul brut este 38,5 × 18$ = 693$, înainte de orice reținere fiscală sau deducere.</p>
+<h3>Dacă am lucrat 45 de ore la 20$/oră cu 1,5x ore suplimentare după 40, care e salariul meu brut?</h3>
+<p>40 de ore normale × 20$ = 800$, plus 5 ore suplimentare × 30$ (rata unu și jumătate) = 150$, pentru un salariu brut total de 950$ - introdu orele tale zilnice reale mai sus pentru a obține automat această defalcare.</p>
 </div>
 <div class="faq-item">
 <h3>Un calculator de pontaj este același lucru cu un calculator de salarizare?</h3>
-<p>Nu - un calculator de pontaj precum acesta doar convertește orele lucrate în salariu brut. Un calculator de salarizare merge mai departe, aplicând reținerea fiscală, deducerile și beneficiile pentru a ajunge la salariul net (de casă).</p>
+<p>Nu - un calculator de pontaj precum acesta convertește orele lucrate (inclusiv orele suplimentare) în salariu brut. Un calculator de salarizare merge mai departe, aplicând reținerea fiscală, deducerile și beneficiile pentru a ajunge la salariul net.</p>
 </div></div>
           <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculează</a>
         </div>

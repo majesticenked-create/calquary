@@ -14,10 +14,10 @@
   <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Calculator de Taxă pe Vânzări - Calculator Gratuit Online</title>
-  <meta name="description" content="Calculează taxa pe vânzări și prețul total al unei achiziții." />
-  <meta property="og:title" content="Calculator de Taxă pe Vânzări | Calquary">
-  <meta property="og:description" content="Calculează taxa pe vânzări și prețul total al unei achiziții.">
+  <title>Calculator de Taxă pe Vânzări, TVA și GST</title>
+  <meta name="description" content="Adaugă taxă pe vânzări, TVA sau GST la un preț, sau extrage taxa deja inclusă într-un preț cu taxă inclusă." />
+  <meta property="og:title" content="Calculator de Taxă pe Vânzări, TVA și GST | Calquary">
+  <meta property="og:description" content="Adaugă taxă pe vânzări, TVA sau GST la un preț, sau extrage taxa deja inclusă într-un preț cu taxă inclusă.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/ro/tool/sales-tax-calculator">
   <meta property="og:locale" content="ro_RO">
@@ -26,8 +26,8 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Calculator de Taxă pe Vânzări | Calquary">
-  <meta name="twitter:description" content="Calculează taxa pe vânzări și prețul total al unei achiziții.">
+  <meta name="twitter:title" content="Calculator de Taxă pe Vânzări, TVA și GST | Calquary">
+  <meta name="twitter:description" content="Adaugă taxă pe vânzări, TVA sau GST la un preț, sau extrage taxa deja inclusă într-un preț cu taxă inclusă.">
   <meta name="twitter:image" content="https://calquary.com/og-images/sales-tax-calculator.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/sales-tax-calculator">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/sales-tax-calculator">
@@ -88,8 +88,8 @@
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "Calculator de Taxă pe Vânzări",
-      "description": "Calculează taxa pe vânzări și prețul total al unei achiziții.",
+      "name": "Calculator de Taxă pe Vânzări, TVA și GST",
+      "description": "Adaugă taxă pe vânzări, TVA sau GST la un preț, sau extrage taxa deja inclusă într-un preț cu taxă inclusă.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/ro/tool/sales-tax-calculator",
@@ -120,7 +120,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Calculator de Taxă pe Vânzări",
+          "name": "Calculator de Taxă pe Vânzări, TVA și GST",
           "item": "https://calquary.com/ro/tool/sales-tax-calculator"
         }
       ]
@@ -133,7 +133,23 @@
           "name": "Cum calculez taxa pe vânzări pentru o achiziție?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Înmulțește prețul cu rata taxei ca zecimală, apoi adaugă acel rezultat la prețul inițial. Pentru 49,99$ la o taxă de 7,25%: 49,99$ × 0,0725 = 3,62$ taxă, pentru un total de 53,61$."
+            "text": "Înmulțește prețul cu rata taxei ca zecimală, apoi adaugă acel rezultat la prețul inițial. Pentru 49,99$ la o taxă de 7,25%: 49,99$ × 0,0725 = 3,62$ taxă, pentru un total de 53,61$. Alege \"Exclude taxa\" mai sus pentru această direcție."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cum extrag TVA sau GST dintr-un preț care o include deja?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Alege \"Include deja taxa\" mai sus, introdu prețul cu taxă inclusă și rata, iar calculatorul împarte la (1 + rata taxei) pentru a găsi prețul de bază înainte de taxă."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Care e diferența dintre taxa pe vânzări și TVA/GST pentru acest calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Calculul pentru adăugarea taxei este identic. Diferența practică e direcția de care ai nevoie cel mai des: taxa pe vânzări din SUA e de obicei adăugată la casă (\"exclude taxa\"), în timp ce TVA/GST e de obicei deja inclusă în prețul afișat, deci trebuie adesea extrasă (\"include deja taxa\")."
           }
         },
         {
@@ -141,7 +157,7 @@
           "name": "Rata taxei pe vânzări variază în funcție de locație?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Da - ratele taxei pe vânzări sunt stabilite de stat, județ și uneori oraș, deci rata combinată poate varia semnificativ chiar și în cadrul aceluiași stat. Verifică rata locală înainte de a te baza pe o valoare implicită."
+            "text": "Da - ratele taxei pe vânzări sunt stabilite de stat, județ și uneori oraș. Ratele TVA/GST variază în schimb pe țară. Verifică rata locală sau națională specifică înainte de a te baza pe o valoare implicită."
           }
         },
         {
@@ -157,31 +173,15 @@
           "name": "Alimentele și îmbrăcămintea sunt întotdeauna taxate la aceeași rată ca alte achiziții?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nu - multe jurisdicții scutesc sau reduc rata taxei pentru alimente, medicamente pe bază de rețetă și uneori îmbrăcăminte, în timp ce taxează mărfurile generale la rata standard. Verifică regulile autorității fiscale locale dacă calculezi taxa pentru o categorie specifică scutită, nu pentru o achiziție generală."
+            "text": "Nu - multe jurisdicții scutesc sau reduc rata taxei pentru alimente, medicamente pe bază de rețetă și uneori îmbrăcăminte, în timp ce taxează mărfurile generale la rata standard."
           }
         },
         {
           "@type": "Question",
-          "name": "Cum ajung la prețul înainte de taxă dacă știu doar totalul pe care l-am plătit?",
+          "name": "Am nevoie de asta pentru o factură - funcționează \"extrage taxa\" pentru asta?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Împarte totalul la (1 + rata taxei ca zecimală). Dacă ai plătit un total de 107,50$ la o rată a taxei de 7,5%, prețul înainte de taxă a fost 107,50$ ÷ 1,075 ≈ 100,00$."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Care este diferența dintre taxa pe vânzări și taxa de utilizare?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Taxa pe vânzări este colectată de vânzător la punctul de achiziție într-o jurisdicție fiscală. Taxa de utilizare se aplică atunci când cumperi ceva fără să plătești taxa pe vânzări (adesea de la un vânzător din afara statului) și ești responsabil să remiți tu însuți o taxă echivalentă - calculul sumei datorate este aceeași matematică în ambele cazuri."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Un calculator de TVA este același lucru cu un calculator de taxă pe vânzări?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Matematica de bază este similară - ambele aplică o rată procentuală la un preț - dar TVA (taxa pe valoarea adăugată) este de obicei inclusă într-un preț afișat și colectată la fiecare etapă de producție, în timp ce taxa pe vânzări din SUA este de obicei adăugată peste prețul afișat la vânzarea finală, așa cum este configurat acest calculator."
+            "text": "Da - o factură care arată un total cu taxă inclusă (comun în afara SUA) este exact pentru ce e modul \"Include deja taxa\": introdu suma brută (total, cu taxă inclusă) și rata, iar calculatorul returnează suma netă (înainte de taxă) și porțiunea de taxă separat."
           }
         }
       ]
@@ -222,8 +222,8 @@
   <div class="wrap" style="padding-bottom:64px;">
     <div class="tool-layout">
       <main>
-        <h1>Calculator de Taxă pe Vânzări</h1>
-        <p style="max-width:60ch;">Introdu un preț și rata locală a taxei pe vânzări pentru a calcula valoarea taxei și costul total.</p>
+        <h1>Calculator de Taxă pe Vânzări, TVA și GST</h1>
+        <p style="max-width:60ch;">Alege dacă prețul tău exclude taxa (adaug-o) sau o include deja (extrage-o) - funcționează pentru taxa pe vânzări stil SUA adăugată la casă sau pentru TVA/GST deja inclusă într-un preț afișat.</p>
         <p class="last-updated">Ultima actualizare: September 22, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -252,11 +252,19 @@
           <h2>Întrebări frecvente</h2>
           <div id="faq-list"><div class="faq-item">
 <h3>Cum calculez taxa pe vânzări pentru o achiziție?</h3>
-<p>Înmulțește prețul cu rata taxei ca zecimală, apoi adaugă acel rezultat la prețul inițial. Pentru 49,99$ la o taxă de 7,25%: 49,99$ × 0,0725 = 3,62$ taxă, pentru un total de 53,61$.</p>
+<p>Înmulțește prețul cu rata taxei ca zecimală, apoi adaugă acel rezultat la prețul inițial. Pentru 49,99$ la o taxă de 7,25%: 49,99$ × 0,0725 = 3,62$ taxă, pentru un total de 53,61$. Alege "Exclude taxa" mai sus pentru această direcție.</p>
+</div>
+<div class="faq-item">
+<h3>Cum extrag TVA sau GST dintr-un preț care o include deja?</h3>
+<p>Alege "Include deja taxa" mai sus, introdu prețul cu taxă inclusă și rata, iar calculatorul împarte la (1 + rata taxei) pentru a găsi prețul de bază înainte de taxă.</p>
+</div>
+<div class="faq-item">
+<h3>Care e diferența dintre taxa pe vânzări și TVA/GST pentru acest calculator?</h3>
+<p>Calculul pentru adăugarea taxei este identic. Diferența practică e direcția de care ai nevoie cel mai des: taxa pe vânzări din SUA e de obicei adăugată la casă ("exclude taxa"), în timp ce TVA/GST e de obicei deja inclusă în prețul afișat, deci trebuie adesea extrasă ("include deja taxa").</p>
 </div>
 <div class="faq-item">
 <h3>Rata taxei pe vânzări variază în funcție de locație?</h3>
-<p>Da - ratele taxei pe vânzări sunt stabilite de stat, județ și uneori oraș, deci rata combinată poate varia semnificativ chiar și în cadrul aceluiași stat. Verifică rata locală înainte de a te baza pe o valoare implicită.</p>
+<p>Da - ratele taxei pe vânzări sunt stabilite de stat, județ și uneori oraș. Ratele TVA/GST variază în schimb pe țară. Verifică rata locală sau națională specifică înainte de a te baza pe o valoare implicită.</p>
 </div>
 <div class="faq-item">
 <h3>Taxa pe vânzări se calculează la prețul înainte sau după alte reduceri?</h3>
@@ -264,19 +272,11 @@
 </div>
 <div class="faq-item">
 <h3>Alimentele și îmbrăcămintea sunt întotdeauna taxate la aceeași rată ca alte achiziții?</h3>
-<p>Nu - multe jurisdicții scutesc sau reduc rata taxei pentru alimente, medicamente pe bază de rețetă și uneori îmbrăcăminte, în timp ce taxează mărfurile generale la rata standard. Verifică regulile autorității fiscale locale dacă calculezi taxa pentru o categorie specifică scutită, nu pentru o achiziție generală.</p>
+<p>Nu - multe jurisdicții scutesc sau reduc rata taxei pentru alimente, medicamente pe bază de rețetă și uneori îmbrăcăminte, în timp ce taxează mărfurile generale la rata standard.</p>
 </div>
 <div class="faq-item">
-<h3>Cum ajung la prețul înainte de taxă dacă știu doar totalul pe care l-am plătit?</h3>
-<p>Împarte totalul la (1 + rata taxei ca zecimală). Dacă ai plătit un total de 107,50$ la o rată a taxei de 7,5%, prețul înainte de taxă a fost 107,50$ ÷ 1,075 ≈ 100,00$.</p>
-</div>
-<div class="faq-item">
-<h3>Care este diferența dintre taxa pe vânzări și taxa de utilizare?</h3>
-<p>Taxa pe vânzări este colectată de vânzător la punctul de achiziție într-o jurisdicție fiscală. Taxa de utilizare se aplică atunci când cumperi ceva fără să plătești taxa pe vânzări (adesea de la un vânzător din afara statului) și ești responsabil să remiți tu însuți o taxă echivalentă - calculul sumei datorate este aceeași matematică în ambele cazuri.</p>
-</div>
-<div class="faq-item">
-<h3>Un calculator de TVA este același lucru cu un calculator de taxă pe vânzări?</h3>
-<p>Matematica de bază este similară - ambele aplică o rată procentuală la un preț - dar TVA (taxa pe valoarea adăugată) este de obicei inclusă într-un preț afișat și colectată la fiecare etapă de producție, în timp ce taxa pe vânzări din SUA este de obicei adăugată peste prețul afișat la vânzarea finală, așa cum este configurat acest calculator.</p>
+<h3>Am nevoie de asta pentru o factură - funcționează "extrage taxa" pentru asta?</h3>
+<p>Da - o factură care arată un total cu taxă inclusă (comun în afara SUA) este exact pentru ce e modul "Include deja taxa": introdu suma brută (total, cu taxă inclusă) și rata, iar calculatorul returnează suma netă (înainte de taxă) și porțiunea de taxă separat.</p>
 </div></div>
           <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculează</a>
         </div>

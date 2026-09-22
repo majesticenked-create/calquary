@@ -15,9 +15,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Stundenzettel-Rechner - Kostenloser Online-Rechner</title>
-  <meta name="description" content="Addieren Sie die über die Woche gearbeiteten Stunden und berechnen Sie den Bruttolohn." />
+  <meta name="description" content="Addieren Sie die über die Woche gearbeiteten Stunden und berechnen Sie den Bruttolohn, einschließlich Überstundenzuschlag." />
   <meta property="og:title" content="Stundenzettel-Rechner | Calquary">
-  <meta property="og:description" content="Addieren Sie die über die Woche gearbeiteten Stunden und berechnen Sie den Bruttolohn.">
+  <meta property="og:description" content="Addieren Sie die über die Woche gearbeiteten Stunden und berechnen Sie den Bruttolohn, einschließlich Überstundenzuschlag.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/de/tool/time-card-calculator">
   <meta property="og:locale" content="de_DE">
@@ -27,7 +27,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Stundenzettel-Rechner | Calquary">
-  <meta name="twitter:description" content="Addieren Sie die über die Woche gearbeiteten Stunden und berechnen Sie den Bruttolohn.">
+  <meta name="twitter:description" content="Addieren Sie die über die Woche gearbeiteten Stunden und berechnen Sie den Bruttolohn, einschließlich Überstundenzuschlag.">
   <meta name="twitter:image" content="https://calquary.com/og-images/time-card-calculator.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/time-card-calculator">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/time-card-calculator">
@@ -89,7 +89,7 @@
     {
       "@type": "SoftwareApplication",
       "name": "Stundenzettel-Rechner",
-      "description": "Addieren Sie die über die Woche gearbeiteten Stunden und berechnen Sie den Bruttolohn.",
+      "description": "Addieren Sie die über die Woche gearbeiteten Stunden und berechnen Sie den Bruttolohn, einschließlich Überstundenzuschlag.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/de/tool/time-card-calculator",
@@ -133,7 +133,7 @@
           "name": "Wie berechne ich die Gesamtstunden aus einem Stundenzettel?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Addieren Sie die an jedem Tag der Zahlungsperiode gearbeiteten Stunden. Dieser Rechner summiert sieben Tageseinträge (Montag bis Sonntag) zu einer Wochensumme und multipliziert diese dann mit Ihrem Stundensatz für den Bruttolohn."
+            "text": "Addieren Sie die an jedem Tag der Zahlungsperiode gearbeiteten Stunden. Dieser Rechner summiert sieben Tageseinträge (Montag bis Sonntag) zu einer Wochensumme und teilt sie dann anhand Ihrer Schwelle in reguläre und Überstunden auf, bevor der Bruttolohn berechnet wird."
           }
         },
         {
@@ -141,15 +141,23 @@
           "name": "Werden Ein- und Ausstempelzeiten berücksichtigt?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nein - geben Sie die bereits gearbeiteten Dezimalstunden pro Tag ein (z. B. 7,5 für 7 Stunden 30 Minuten), nicht Ein-/Ausstempelzeiten. Wenn Sie nur Stempelzeiten haben, ziehen Sie die Einstempelzeit von der Ausstempelzeit ab (unter Berücksichtigung unbezahlter Pausen), um zuerst die Dezimalstunden zu erhalten."
+            "text": "Nein - geben Sie die bereits gearbeiteten Dezimalstunden pro Tag ein (z. B. 7,5 für 7 Stunden 30 Minuten), nicht Ein-/Ausstempelzeiten."
           }
         },
         {
           "@type": "Question",
-          "name": "Ist Überstundenbezahlung enthalten?",
+          "name": "Wie funktioniert die Überstundenberechnung?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nein - er multipliziert die Gesamtstunden mit einem einzigen festen Stundensatz. Wenn einige Stunden für einen Überstundenzuschlag qualifizieren (in den USA üblicherweise 1,5x für Stunden über 40/Woche), berechnen Sie die regulären und Überstunden-Anteile separat und addieren Sie sie."
+            "text": "Stunden bis zu Ihrer Überstundenschwelle (standardmäßig 40/Woche, die US-Standardgrenze) werden zu Ihrem regulären Stundensatz bezahlt. Alle darüber hinausgehenden Stunden werden mit Ihrem Satz multipliziert mit dem Überstundenmultiplikator (standardmäßig 1,5x) bezahlt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann ich die Überstundenschwelle oder den Multiplikator ändern?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja - beide sind bearbeitbare Felder. Manche Rechtsordnungen oder Tarifverträge verwenden eine andere wöchentliche Schwelle als 40 Stunden oder eine tägliche statt wöchentliche Überstundenregel, und manche nutzen doppelten Lohn (2x) statt anderthalbfachem - passen Sie die Felder an Ihre tatsächliche Situation an."
           }
         },
         {
@@ -162,18 +170,10 @@
         },
         {
           "@type": "Question",
-          "name": "Was, wenn ich Überstunden nur an einem einzigen Tag geleistet habe, nicht die ganze Woche?",
+          "name": "Wenn ich 45 Stunden bei 20 $/Stunde mit 1,5x Überstunden nach 40 gearbeitet habe, wie hoch ist mein Bruttolohn?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Dieser Rechner summiert alle eingegebenen Stunden zu einer einzigen Wochensumme bei einem einheitlichen Satz, sodass er die Überstunden eines einzelnen Tages nicht automatisch heraustrennt - berechnen Sie die regulären und Überstunden-Anteile dieses Tages separat und addieren Sie das Ergebnis außerhalb des Tools zu Ihrer Gesamtvergütung."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Wie wird der Bruttolohn aus einem Stundenzettel berechnet?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Der Bruttolohn ist die Gesamtzahl der gearbeiteten Stunden multipliziert mit dem Stundenlohn. Wenn sich Ihre Tagesstunden für die Woche auf 38,5 bei 18 $/Stunde summieren, beträgt der Bruttolohn 38,5 × 18 $ = 693 $, vor Steuerabzügen oder anderen Abzügen."
+            "text": "40 reguläre Stunden × 20 $ = 800 $, plus 5 Überstunden × 30 $ (anderthalbfacher Satz) = 150 $, für einen Gesamtbruttolohn von 950 $ - geben Sie oben Ihre tatsächlichen Tagesstunden ein, um diese Aufschlüsselung automatisch zu erhalten."
           }
         },
         {
@@ -181,7 +181,7 @@
           "name": "Ist ein Stundenzettel-Rechner dasselbe wie ein Lohnabrechnungsrechner?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nein - ein Stundenzettel-Rechner wie dieser wandelt nur gearbeitete Stunden in Bruttolohn um. Ein Lohnabrechnungsrechner geht weiter und wendet Steuerabzüge, sonstige Abzüge und Leistungen an, um zum Nettolohn (Auszahlungsbetrag) zu gelangen."
+            "text": "Nein - ein Stundenzettel-Rechner wie dieser wandelt gearbeitete Stunden (einschließlich Überstunden) in Bruttolohn um. Ein Lohnabrechnungsrechner geht weiter und wendet Steuerabzüge, sonstige Abzüge und Leistungen an, um zum Nettolohn zu gelangen."
           }
         }
       ]
@@ -223,7 +223,7 @@
     <div class="tool-layout">
       <main>
         <h1>Stundenzettel-Rechner</h1>
-        <p style="max-width:60ch;">Geben Sie die täglich gearbeiteten Stunden und einen Stundensatz ein, um Ihre wöchentlichen Stunden und Ihren Bruttolohn zu berechnen.</p>
+        <p style="max-width:60ch;">Geben Sie die täglich gearbeiteten Stunden, einen Stundensatz und Ihre Überstundenschwelle ein, um Ihre wöchentlichen Stunden und Ihren Bruttolohn zu berechnen - einschließlich Überstundenzuschlag über der Schwelle.</p>
         <p class="last-updated">Zuletzt aktualisiert: September 22, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -252,31 +252,31 @@
           <h2>Häufig gestellte Fragen</h2>
           <div id="faq-list"><div class="faq-item">
 <h3>Wie berechne ich die Gesamtstunden aus einem Stundenzettel?</h3>
-<p>Addieren Sie die an jedem Tag der Zahlungsperiode gearbeiteten Stunden. Dieser Rechner summiert sieben Tageseinträge (Montag bis Sonntag) zu einer Wochensumme und multipliziert diese dann mit Ihrem Stundensatz für den Bruttolohn.</p>
+<p>Addieren Sie die an jedem Tag der Zahlungsperiode gearbeiteten Stunden. Dieser Rechner summiert sieben Tageseinträge (Montag bis Sonntag) zu einer Wochensumme und teilt sie dann anhand Ihrer Schwelle in reguläre und Überstunden auf, bevor der Bruttolohn berechnet wird.</p>
 </div>
 <div class="faq-item">
 <h3>Werden Ein- und Ausstempelzeiten berücksichtigt?</h3>
-<p>Nein - geben Sie die bereits gearbeiteten Dezimalstunden pro Tag ein (z. B. 7,5 für 7 Stunden 30 Minuten), nicht Ein-/Ausstempelzeiten. Wenn Sie nur Stempelzeiten haben, ziehen Sie die Einstempelzeit von der Ausstempelzeit ab (unter Berücksichtigung unbezahlter Pausen), um zuerst die Dezimalstunden zu erhalten.</p>
+<p>Nein - geben Sie die bereits gearbeiteten Dezimalstunden pro Tag ein (z. B. 7,5 für 7 Stunden 30 Minuten), nicht Ein-/Ausstempelzeiten.</p>
 </div>
 <div class="faq-item">
-<h3>Ist Überstundenbezahlung enthalten?</h3>
-<p>Nein - er multipliziert die Gesamtstunden mit einem einzigen festen Stundensatz. Wenn einige Stunden für einen Überstundenzuschlag qualifizieren (in den USA üblicherweise 1,5x für Stunden über 40/Woche), berechnen Sie die regulären und Überstunden-Anteile separat und addieren Sie sie.</p>
+<h3>Wie funktioniert die Überstundenberechnung?</h3>
+<p>Stunden bis zu Ihrer Überstundenschwelle (standardmäßig 40/Woche, die US-Standardgrenze) werden zu Ihrem regulären Stundensatz bezahlt. Alle darüber hinausgehenden Stunden werden mit Ihrem Satz multipliziert mit dem Überstundenmultiplikator (standardmäßig 1,5x) bezahlt.</p>
+</div>
+<div class="faq-item">
+<h3>Kann ich die Überstundenschwelle oder den Multiplikator ändern?</h3>
+<p>Ja - beide sind bearbeitbare Felder. Manche Rechtsordnungen oder Tarifverträge verwenden eine andere wöchentliche Schwelle als 40 Stunden oder eine tägliche statt wöchentliche Überstundenregel, und manche nutzen doppelten Lohn (2x) statt anderthalbfachem - passen Sie die Felder an Ihre tatsächliche Situation an.</p>
 </div>
 <div class="faq-item">
 <h3>Wie wandle ich Minuten in Dezimalzahlen für einen Stundenzettel um?</h3>
 <p>Teilen Sie die Minuten durch 60. 30 Minuten = 0,5 Stunden, 15 Minuten = 0,25 Stunden, 45 Minuten = 0,75 Stunden - addieren Sie diese Dezimalzahl zur vollen Stundenzahl jedes Tages.</p>
 </div>
 <div class="faq-item">
-<h3>Was, wenn ich Überstunden nur an einem einzigen Tag geleistet habe, nicht die ganze Woche?</h3>
-<p>Dieser Rechner summiert alle eingegebenen Stunden zu einer einzigen Wochensumme bei einem einheitlichen Satz, sodass er die Überstunden eines einzelnen Tages nicht automatisch heraustrennt - berechnen Sie die regulären und Überstunden-Anteile dieses Tages separat und addieren Sie das Ergebnis außerhalb des Tools zu Ihrer Gesamtvergütung.</p>
-</div>
-<div class="faq-item">
-<h3>Wie wird der Bruttolohn aus einem Stundenzettel berechnet?</h3>
-<p>Der Bruttolohn ist die Gesamtzahl der gearbeiteten Stunden multipliziert mit dem Stundenlohn. Wenn sich Ihre Tagesstunden für die Woche auf 38,5 bei 18 $/Stunde summieren, beträgt der Bruttolohn 38,5 × 18 $ = 693 $, vor Steuerabzügen oder anderen Abzügen.</p>
+<h3>Wenn ich 45 Stunden bei 20 $/Stunde mit 1,5x Überstunden nach 40 gearbeitet habe, wie hoch ist mein Bruttolohn?</h3>
+<p>40 reguläre Stunden × 20 $ = 800 $, plus 5 Überstunden × 30 $ (anderthalbfacher Satz) = 150 $, für einen Gesamtbruttolohn von 950 $ - geben Sie oben Ihre tatsächlichen Tagesstunden ein, um diese Aufschlüsselung automatisch zu erhalten.</p>
 </div>
 <div class="faq-item">
 <h3>Ist ein Stundenzettel-Rechner dasselbe wie ein Lohnabrechnungsrechner?</h3>
-<p>Nein - ein Stundenzettel-Rechner wie dieser wandelt nur gearbeitete Stunden in Bruttolohn um. Ein Lohnabrechnungsrechner geht weiter und wendet Steuerabzüge, sonstige Abzüge und Leistungen an, um zum Nettolohn (Auszahlungsbetrag) zu gelangen.</p>
+<p>Nein - ein Stundenzettel-Rechner wie dieser wandelt gearbeitete Stunden (einschließlich Überstunden) in Bruttolohn um. Ein Lohnabrechnungsrechner geht weiter und wendet Steuerabzüge, sonstige Abzüge und Leistungen an, um zum Nettolohn zu gelangen.</p>
 </div></div>
           <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Berechnen</a>
         </div>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Währungsrechner - Kostenloser Online-Rechner | Calquary</title>
+  <meta name="description" content="Rechnen Sie zwischen Währungen mit statischen Referenzwechselkursen um, oder geben Sie Ihren eigenen Kurs für höhere Genauigkeit ein." />
+  <meta property="og:title" content="Währungsrechner | Calquary">
+  <meta property="og:description" content="Rechnen Sie zwischen Währungen mit statischen Referenzwechselkursen um, oder geben Sie Ihren eigenen Kurs für höhere Genauigkeit ein.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/de/tool/currency-converter">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/currency-converter.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Währungsrechner | Calquary">
+  <meta name="twitter:description" content="Rechnen Sie zwischen Währungen mit statischen Referenzwechselkursen um, oder geben Sie Ihren eigenen Kurs für höhere Genauigkeit ein.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/currency-converter.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/currency-converter">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/currency-converter">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/currency-converter">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/currency-converter">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/currency-converter">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/currency-converter">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/currency-converter">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/currency-converter">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/currency-converter">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/currency-converter">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/currency-converter">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/currency-converter">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/currency-converter">
+    <link rel="canonical" href="https://calquary.com/de/tool/currency-converter">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("currency-converter");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("currency-converter");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Währungsrechner",
+      "description": "Rechnen Sie zwischen Währungen mit statischen Referenzwechselkursen um, oder geben Sie Ihren eigenen Kurs für höhere Genauigkeit ein.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/de/tool/currency-converter",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-22",
+      "inLanguage": "de"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Everyday Conversions",
+          "item": "https://calquary.com/de/category/conversions"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Währungsrechner",
+          "item": "https://calquary.com/de/tool/currency-converter"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Sind das Echtzeit-Wechselkurse?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein - dieser Rechner verwendet eine statische Referenztabelle, keinen Live-Feed. Wechseln Sie zu \"Eigenen Kurs eingeben\" für ein genaues Ergebnis mit dem aktuellen Kurs Ihrer Bank."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Warum bekomme ich bei meiner Bank einen anderen Kurs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Banken und Kartenanbieter schlagen üblicherweise eine eigene Marge auf den Marktkurs auf, sodass der tatsächlich berechnete Kurs oft etwas schlechter ist als der hier gezeigte Referenzkurs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann ich zwischen beliebigen zwei Währungen der Liste umrechnen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja - wählen Sie ein beliebiges Währungspaar; der Rechner berechnet den Kreuzkurs zwischen ihnen automatisch."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie erhalte ich eine exakte statt einer geschätzten Umrechnung?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wechseln Sie \"Kursquelle\" zu \"Eigenen Kurs eingeben\" und tragen Sie Ihren aktuellen Kurs ein - der Rechner verwendet dann genau diesen Wert."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Warum zeigt der Wechselkurs 4 Nachkommastellen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wechselkurse werden oft mit mehreren Nachkommastellen angegeben, da sich die Differenz bei größeren Beträgen deutlich summiert."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Eignet sich das für eine große Überweisung oder einen größeren Kauf?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die Rechnung funktioniert für jeden Betrag, aber bei echten finanziellen Auswirkungen nutzen Sie den Modus \"Eigener Kurs\" mit dem exakten Kurs Ihrer Bank."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/de/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/de/#categories">Kategorien</a>
+          <a href="/de/#tools">Alle Tools</a>
+          <a href="/de/about">Über uns</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Deutsch">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>DE</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/currency-converter">English</a><a class="locale-item" role="menuitem" href="/es/tool/currency-converter">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/currency-converter">Français</a><span class="locale-item current" role="menuitem" aria-current="true">Deutsch</span><a class="locale-item" role="menuitem" href="/pt/tool/currency-converter">Português</a><a class="locale-item" role="menuitem" href="/it/tool/currency-converter">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/currency-converter">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/currency-converter">Română</a><a class="locale-item" role="menuitem" href="/el/tool/currency-converter">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/currency-converter">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/currency-converter">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/currency-converter">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/de/">Calquary</a> / <a href="/de/category/conversions">Alltagsumrechnungen</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Währungsrechner</h1>
+        <p style="max-width:60ch;">Geben Sie einen Betrag ein und wählen Sie zwei Währungen, um zwischen ihnen mit eingebauten Referenzkursen umzurechnen - oder wechseln Sie zu "eigener Kurs" und geben Sie den heutigen tatsächlichen Kurs für ein genaues Ergebnis ein.</p>
+        <p class="last-updated">Zuletzt aktualisiert: September 22, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Berechnen</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Zurücksetzen</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Häufig gestellte Fragen</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Sind das Echtzeit-Wechselkurse?</h3>
+<p>Nein - dieser Rechner verwendet eine statische Referenztabelle, keinen Live-Feed. Wechseln Sie zu "Eigenen Kurs eingeben" für ein genaues Ergebnis mit dem aktuellen Kurs Ihrer Bank.</p>
+</div>
+<div class="faq-item">
+<h3>Warum bekomme ich bei meiner Bank einen anderen Kurs?</h3>
+<p>Banken und Kartenanbieter schlagen üblicherweise eine eigene Marge auf den Marktkurs auf, sodass der tatsächlich berechnete Kurs oft etwas schlechter ist als der hier gezeigte Referenzkurs.</p>
+</div>
+<div class="faq-item">
+<h3>Kann ich zwischen beliebigen zwei Währungen der Liste umrechnen?</h3>
+<p>Ja - wählen Sie ein beliebiges Währungspaar; der Rechner berechnet den Kreuzkurs zwischen ihnen automatisch.</p>
+</div>
+<div class="faq-item">
+<h3>Wie erhalte ich eine exakte statt einer geschätzten Umrechnung?</h3>
+<p>Wechseln Sie "Kursquelle" zu "Eigenen Kurs eingeben" und tragen Sie Ihren aktuellen Kurs ein - der Rechner verwendet dann genau diesen Wert.</p>
+</div>
+<div class="faq-item">
+<h3>Warum zeigt der Wechselkurs 4 Nachkommastellen?</h3>
+<p>Wechselkurse werden oft mit mehreren Nachkommastellen angegeben, da sich die Differenz bei größeren Beträgen deutlich summiert.</p>
+</div>
+<div class="faq-item">
+<h3>Eignet sich das für eine große Überweisung oder einen größeren Kauf?</h3>
+<p>Die Rechnung funktioniert für jeden Betrag, aber bei echten finanziellen Auswirkungen nutzen Sie den Modus "Eigener Kurs" mit dem exakten Kurs Ihrer Bank.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Berechnen</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Ähnliche Rechner</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Hinweis zur Genauigkeit</h4>
+          <p style="margin:0;font-size:0.85rem;">Die Rechner von Calquary sind für schnelle, zuverlässige Schätzungen ausgelegt. Bei Entscheidungen mit echten finanziellen, baulichen oder medizinischen Konsequenzen wenden Sie sich bitte an eine qualifizierte Fachperson.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/de/">← Zurück zu allen Rechnern</a> · <a href="/de/about">Über uns</a> · <a href="/de/contact">Kontakt</a> · <a href="/de/privacy">Datenschutz</a> · <a href="/de/terms">Nutzungsbedingungen</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

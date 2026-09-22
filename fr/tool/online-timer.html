@@ -15,9 +15,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Minuteur en Ligne - Calculatrice Gratuite en Ligne</title>
-  <meta name="description" content="Un minuteur de compte à rebours gratuit qui fonctionne dans votre navigateur - réglez minutes et secondes, puis démarrez, mettez en pause ou réinitialisez." />
+  <meta name="description" content="Un minuteur multiple gratuit qui fonctionne dans votre navigateur - exécutez plusieurs comptes à rebours nommés en même temps, chacun avec son propre…" />
   <meta property="og:title" content="Minuteur en Ligne | Calquary">
-  <meta property="og:description" content="Un minuteur de compte à rebours gratuit qui fonctionne dans votre navigateur - réglez minutes et secondes, puis démarrez, mettez en pause ou réinitialisez.">
+  <meta property="og:description" content="Un minuteur multiple gratuit qui fonctionne dans votre navigateur - exécutez plusieurs comptes à rebours nommés en même temps, chacun avec son propre démarrage, pause et réinitialisation.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/fr/tool/online-timer">
   <meta property="og:locale" content="fr_FR">
@@ -27,7 +27,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Minuteur en Ligne | Calquary">
-  <meta name="twitter:description" content="Un minuteur de compte à rebours gratuit qui fonctionne dans votre navigateur - réglez minutes et secondes, puis démarrez, mettez en pause ou réinitialisez.">
+  <meta name="twitter:description" content="Un minuteur multiple gratuit qui fonctionne dans votre navigateur - exécutez plusieurs comptes à rebours nommés en même temps, chacun avec son propre démarrage, pause et réinitialisation.">
   <meta name="twitter:image" content="https://calquary.com/og-images/online-timer.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/online-timer">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/online-timer">
@@ -89,7 +89,7 @@
     {
       "@type": "SoftwareApplication",
       "name": "Minuteur en Ligne",
-      "description": "Un minuteur de compte à rebours gratuit qui fonctionne dans votre navigateur - réglez minutes et secondes, puis démarrez, mettez en pause ou réinitialisez.",
+      "description": "Un minuteur multiple gratuit qui fonctionne dans votre navigateur - exécutez plusieurs comptes à rebours nommés en même temps, chacun avec son propre démarrage, pause et réinitialisation.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/fr/tool/online-timer",
@@ -130,26 +130,42 @@
       "mainEntity": [
         {
           "@type": "Question",
+          "name": "Puis-je exécuter plusieurs minuteurs en même temps ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui - cliquez sur « Ajouter un autre minuteur » pour ajouter autant de comptes à rebours indépendants que nécessaire, chacun avec son propre nom, minutes/secondes et contrôles démarrer/pause/réinitialiser. Ils fonctionnent tous en même temps, pour suivre plusieurs choses à la fois, comme un repas à plusieurs plats."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Puis-je nommer chaque minuteur ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui - chaque minuteur a un champ de texte au-dessus de son compte à rebours où vous pouvez l'étiqueter (par exemple, « Pâtes » ou « Lessive ») pour savoir lequel est lequel quand plusieurs sont en cours."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "Ce minuteur en ligne continue-t-il de fonctionner si je change d'onglet de navigateur ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Oui - le compte à rebours continue en arrière-plan tant que cet onglet de navigateur reste ouvert, même s'il n'est pas l'onglet actif. Fermer l'onglet ou votre navigateur arrête le minuteur."
+            "text": "Oui - chaque compte à rebours continue en arrière-plan tant que cet onglet de navigateur reste ouvert, même s'il n'est pas l'onglet actif. Fermer l'onglet ou votre navigateur les arrête tous."
           }
         },
         {
           "@type": "Question",
-          "name": "Ce minuteur émettra-t-il un son à la fin ?",
+          "name": "Chaque minuteur émettra-t-il son propre son à la fin ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Oui - un bref bip retentit lorsque le compte à rebours atteint zéro, avec l'affichage passant à « Temps écoulé ! » afin que vous le remarquiez même si vous ne regardez pas directement l'écran."
+            "text": "Oui - un bref bip retentit pour chaque minuteur individuellement lorsque son compte à rebours atteint zéro, avec l'affichage de ce minuteur passant à « Temps écoulé ! », pour savoir exactement lequel a terminé."
           }
         },
         {
           "@type": "Question",
-          "name": "Puis-je régler un minuteur pour plus d'une heure ?",
+          "name": "Puis-je supprimer un minuteur dont je n'ai plus besoin ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Oui - indiquez n'importe quel nombre de minutes (il n'y a pas de limite supérieure), donc vous pouvez régler un minuteur de 90 minutes ou de plusieurs heures aussi facilement qu'un court."
+            "text": "Oui - cliquez sur le bouton × sur l'en-tête d'un minuteur pour le supprimer. La page conserve toujours au moins un minuteur, donc le dernier restant ne peut pas être supprimé."
           }
         },
         {
@@ -157,7 +173,7 @@
           "name": "Le minuteur continue-t-il de décompter si mon ordinateur se met en veille ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Non - si l'appareil se met en veille ou si le navigateur est suspendu, le compte à rebours se met en pause en même temps et reprend (légèrement en retard) au réveil de l'appareil, puisqu'il dépend de l'onglet du navigateur actif en continu."
+            "text": "Non - si l'appareil se met en veille ou si le navigateur est suspendu, tous les comptes à rebours en cours se mettent en pause en même temps et reprennent (légèrement en retard) au réveil de l'appareil."
           }
         },
         {
@@ -165,7 +181,7 @@
           "name": "Puis-je régler un minuteur pour un nombre exact de secondes seulement, comme 90 secondes ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Oui - saisissez 0 minute et 90 secondes, ou 1 minute et 30 secondes ; les deux produisent le même compte à rebours de 90 secondes puisque minutes et secondes sont combinées en temps total."
+            "text": "Oui - saisissez 0 minute et 90 secondes, ou 1 minute et 30 secondes, sur n'importe quel minuteur ; les deux produisent le même compte à rebours de 90 secondes."
           }
         },
         {
@@ -173,7 +189,7 @@
           "name": "Est-ce la même chose qu'une « horloge de compte à rebours » pour une date d'événement précise ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Non - ce minuteur décompte une durée fixe que vous réglez en minutes et secondes, comme une minuterie de cuisine. Pour compter à rebours jusqu'à une date future précise, il vous faudrait plutôt un outil de compte à rebours basé sur une date."
+            "text": "Non - chaque minuteur ici décompte une durée fixe que vous réglez en minutes et secondes, comme une minuterie de cuisine. Pour compter à rebours jusqu'à une date future précise, utilisez un outil de compte à rebours basé sur une date."
           }
         }
       ]
@@ -215,7 +231,7 @@
     <div class="tool-layout">
       <main>
         <h1>Minuteur en Ligne</h1>
-        <p style="max-width:60ch;">Réglez un temps de compte à rebours, puis appuyez sur démarrer - ce minuteur décompte et vous alerte lorsque le temps est écoulé.</p>
+        <p style="max-width:60ch;">Réglez autant de comptes à rebours que nécessaire, chacun avec son propre nom, minutes et secondes - ils fonctionnent indépendamment, pour chronométrer plusieurs choses à la fois.</p>
         <p class="last-updated">Dernière mise à jour : September 22, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -243,28 +259,36 @@
         <div class="article-block">
           <h2>Questions fréquentes</h2>
           <div id="faq-list"><div class="faq-item">
+<h3>Puis-je exécuter plusieurs minuteurs en même temps ?</h3>
+<p>Oui - cliquez sur « Ajouter un autre minuteur » pour ajouter autant de comptes à rebours indépendants que nécessaire, chacun avec son propre nom, minutes/secondes et contrôles démarrer/pause/réinitialiser. Ils fonctionnent tous en même temps, pour suivre plusieurs choses à la fois, comme un repas à plusieurs plats.</p>
+</div>
+<div class="faq-item">
+<h3>Puis-je nommer chaque minuteur ?</h3>
+<p>Oui - chaque minuteur a un champ de texte au-dessus de son compte à rebours où vous pouvez l'étiqueter (par exemple, « Pâtes » ou « Lessive ») pour savoir lequel est lequel quand plusieurs sont en cours.</p>
+</div>
+<div class="faq-item">
 <h3>Ce minuteur en ligne continue-t-il de fonctionner si je change d'onglet de navigateur ?</h3>
-<p>Oui - le compte à rebours continue en arrière-plan tant que cet onglet de navigateur reste ouvert, même s'il n'est pas l'onglet actif. Fermer l'onglet ou votre navigateur arrête le minuteur.</p>
+<p>Oui - chaque compte à rebours continue en arrière-plan tant que cet onglet de navigateur reste ouvert, même s'il n'est pas l'onglet actif. Fermer l'onglet ou votre navigateur les arrête tous.</p>
 </div>
 <div class="faq-item">
-<h3>Ce minuteur émettra-t-il un son à la fin ?</h3>
-<p>Oui - un bref bip retentit lorsque le compte à rebours atteint zéro, avec l'affichage passant à « Temps écoulé ! » afin que vous le remarquiez même si vous ne regardez pas directement l'écran.</p>
+<h3>Chaque minuteur émettra-t-il son propre son à la fin ?</h3>
+<p>Oui - un bref bip retentit pour chaque minuteur individuellement lorsque son compte à rebours atteint zéro, avec l'affichage de ce minuteur passant à « Temps écoulé ! », pour savoir exactement lequel a terminé.</p>
 </div>
 <div class="faq-item">
-<h3>Puis-je régler un minuteur pour plus d'une heure ?</h3>
-<p>Oui - indiquez n'importe quel nombre de minutes (il n'y a pas de limite supérieure), donc vous pouvez régler un minuteur de 90 minutes ou de plusieurs heures aussi facilement qu'un court.</p>
+<h3>Puis-je supprimer un minuteur dont je n'ai plus besoin ?</h3>
+<p>Oui - cliquez sur le bouton × sur l'en-tête d'un minuteur pour le supprimer. La page conserve toujours au moins un minuteur, donc le dernier restant ne peut pas être supprimé.</p>
 </div>
 <div class="faq-item">
 <h3>Le minuteur continue-t-il de décompter si mon ordinateur se met en veille ?</h3>
-<p>Non - si l'appareil se met en veille ou si le navigateur est suspendu, le compte à rebours se met en pause en même temps et reprend (légèrement en retard) au réveil de l'appareil, puisqu'il dépend de l'onglet du navigateur actif en continu.</p>
+<p>Non - si l'appareil se met en veille ou si le navigateur est suspendu, tous les comptes à rebours en cours se mettent en pause en même temps et reprennent (légèrement en retard) au réveil de l'appareil.</p>
 </div>
 <div class="faq-item">
 <h3>Puis-je régler un minuteur pour un nombre exact de secondes seulement, comme 90 secondes ?</h3>
-<p>Oui - saisissez 0 minute et 90 secondes, ou 1 minute et 30 secondes ; les deux produisent le même compte à rebours de 90 secondes puisque minutes et secondes sont combinées en temps total.</p>
+<p>Oui - saisissez 0 minute et 90 secondes, ou 1 minute et 30 secondes, sur n'importe quel minuteur ; les deux produisent le même compte à rebours de 90 secondes.</p>
 </div>
 <div class="faq-item">
 <h3>Est-ce la même chose qu'une « horloge de compte à rebours » pour une date d'événement précise ?</h3>
-<p>Non - ce minuteur décompte une durée fixe que vous réglez en minutes et secondes, comme une minuterie de cuisine. Pour compter à rebours jusqu'à une date future précise, il vous faudrait plutôt un outil de compte à rebours basé sur une date.</p>
+<p>Non - chaque minuteur ici décompte une durée fixe que vous réglez en minutes et secondes, comme une minuterie de cuisine. Pour compter à rebours jusqu'à une date future précise, utilisez un outil de compte à rebours basé sur une date.</p>
 </div></div>
           <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculer</a>
         </div>

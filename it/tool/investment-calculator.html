@@ -15,9 +15,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Calcolatrice di Investimento - Calcolatrice Online Gratuita</title>
-  <meta name="description" content="Stima il valore futuro di un investimento, corretto per l'inflazione." />
+  <meta name="description" content="Stima il valore futuro di un investimento aggiustato per l'inflazione, oppure converti un importo storico in dollari al potere d'acquisto attuale usando dati…" />
   <meta property="og:title" content="Calcolatrice di Investimento | Calquary">
-  <meta property="og:description" content="Stima il valore futuro di un investimento, corretto per l'inflazione.">
+  <meta property="og:description" content="Stima il valore futuro di un investimento aggiustato per l'inflazione, oppure converti un importo storico in dollari al potere d'acquisto attuale usando dati reali dell'IPC.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/it/tool/investment-calculator">
   <meta property="og:locale" content="it_IT">
@@ -27,7 +27,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Calcolatrice di Investimento | Calquary">
-  <meta name="twitter:description" content="Stima il valore futuro di un investimento, corretto per l'inflazione.">
+  <meta name="twitter:description" content="Stima il valore futuro di un investimento aggiustato per l'inflazione, oppure converti un importo storico in dollari al potere d'acquisto attuale usando dati reali dell'IPC.">
   <meta name="twitter:image" content="https://calquary.com/og-images/investment-calculator.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/investment-calculator">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/investment-calculator">
@@ -89,7 +89,7 @@
     {
       "@type": "SoftwareApplication",
       "name": "Calcolatrice di Investimento",
-      "description": "Stima il valore futuro di un investimento, corretto per l'inflazione.",
+      "description": "Stima il valore futuro di un investimento aggiustato per l'inflazione, oppure converti un importo storico in dollari al potere d'acquisto attuale usando dati reali dell'IPC.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/it/tool/investment-calculator",
@@ -130,10 +130,10 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Perché l'inflazione è importante per le proiezioni di investimento?",
+          "name": "Perché l'inflazione conta per le proiezioni di investimento?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Un dollaro tra 20 anni compra meno di un dollaro oggi - mostrare solo il valore futuro nominale esagera quanto starai effettivamente meglio, quindi correggere per l'inflazione dà un quadro più onesto."
+            "text": "Un dollaro tra 20 anni compra meno di un dollaro oggi - mostrare solo il valore futuro nominale esagera quanto starai effettivamente meglio, quindi aggiustare per l'inflazione dà un quadro più onesto."
           }
         },
         {
@@ -141,47 +141,79 @@
           "name": "Quale tasso di rendimento dovrei usare per una calcolatrice di investimento?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Il 7% è una media a lungo termine comunemente usata per un portafoglio azionario diversificato dopo che l'inflazione è stata approssimativamente considerata in termini nominali, ma i rendimenti effettivi variano significativamente anno per anno - usa una stima prudente per la pianificazione."
+            "text": "Il 7% è una media a lungo termine comunemente usata per un portafoglio azionario diversificato, ma i rendimenti reali variano significativamente anno per anno - usa una stima prudente per la pianificazione."
           }
         },
         {
           "@type": "Question",
-          "name": "Come influisce la frequenza dei contributi sulla crescita a lungo termine?",
+          "name": "In che modo la frequenza dei contributi influisce sulla crescita a lungo termine?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Contributi più frequenti (mensili anziché annuali) permettono al tuo denaro di iniziare a comporsi prima in media, il che produce un saldo finale modestamente più alto per lo stesso importo totale contribuito nello stesso periodo."
+            "text": "Contributi più frequenti (mensili vs annuali) permettono al tuo denaro di iniziare a capitalizzare prima in media, producendo un saldo finale leggermente più alto per lo stesso importo totale contribuito."
           }
         },
         {
           "@type": "Question",
-          "name": "Qual è un rendimento medio annuo realistico da assumere per proiezioni a lungo termine?",
+          "name": "Qual è un rendimento annuo medio realistico da assumere per proiezioni a lungo termine?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Storicamente, i fondi indicizzati azionari diversificati hanno registrato in media circa il 7-10% di rendimenti annuali prima dell'inflazione su periodi di più decenni, sebbene un singolo anno possa variare notevolmente. Usare una stima più prudente (6-7%) per scopi di pianificazione tiene conto meglio della volatilità e delle commissioni rispetto a supporre una media del miglior caso ogni anno."
+            "text": "Storicamente, i fondi indicizzati azionari diversificati hanno avuto una media di circa il 7-10% di rendimenti annui al lordo dell'inflazione su periodi pluridecennali, sebbene un singolo anno possa variare enormemente."
           }
         },
         {
           "@type": "Question",
-          "name": "Qual è la differenza tra il valore futuro nominale e quello corretto per l'inflazione mostrati?",
+          "name": "Qual è la differenza tra il valore futuro nominale e quello aggiustato per l'inflazione mostrato?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Il valore nominale è il totale grezzo in dollari a cui cresce il tuo investimento al tasso di rendimento indicato. Il valore corretto per l'inflazione (reale) sconta quella cifra nominale in base al tasso di inflazione nello stesso periodo, mostrando quanto quell'importo futuro vale realmente in termini di potere d'acquisto odierno."
+            "text": "Il valore nominale è il totale lordo in dollari a cui cresce il tuo investimento al tasso di rendimento indicato. Il valore aggiustato per l'inflazione (reale) scontà quella cifra nominale per il tasso di inflazione nello stesso periodo."
           }
         },
         {
           "@type": "Question",
-          "name": "Se investo $10.000 con contributi di $300/mese al 7% per 20 anni, qual è approssimativamente il risultato nominale?",
+          "name": "Se investo $10.000 con contributi di $300/mese al 7% per 20 anni, qual è il risultato nominale approssimativo?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Facendo crescere la somma iniziale di $10.000 più i contributi mensili di $300 al 7% annuo composto mensilmente per 20 anni si arriva a circa $195.000 nominali - la cifra esatta dipende dalle ipotesi di capitalizzazione, ma i contributi dominano la crescita della somma iniziale su un orizzonte così lungo ai tipici livelli di contribuzione."
+            "text": "Facendo crescere i $10.000 iniziali più i contributi mensili di $300 al 7% annuo composto mensilmente per 20 anni, si arriva a circa $195.000 nominali - i contributi dominano la crescita dell'importo iniziale su un orizzonte così lungo."
           }
         },
         {
           "@type": "Question",
-          "name": "È la stessa cosa di una calcolatrice dell'interesse composto?",
+          "name": "È la stessa cosa di una calcolatrice di interesse composto?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Si basa sulla stessa matematica di capitalizzazione ma aggiunge due cose che una calcolatrice di base dell'interesse composto non ha: contributi mensili regolari oltre al saldo iniziale, e una correzione per l'inflazione per mostrare il valore reale (potere d'acquisto) accanto al totale nominale."
+            "text": "Si basa sulla stessa matematica di capitalizzazione, ma aggiunge due cose: contributi mensili regolari oltre al saldo iniziale, e un aggiustamento per l'inflazione per mostrare il valore reale insieme al totale nominale."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual è la differenza tra 'modalità crescita' e 'modalità valore storico del dollaro'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La modalità crescita proietta un portafoglio ipotetico nel futuro usando un tasso di rendimento assunto scelto da te. La modalità valore storico del dollaro invece usa dati reali di inflazione IPC-U per rispondere a una domanda diversa: quanto vale un importo reale di un anno specifico nei dollari di un altro anno."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto è accurata la modalità valore storico del dollaro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Si basa su medie annuali reali pubblicate dell'IPC-U, non su un tasso assunto, ma la tabella sottostante elenca solo circa ogni 5-10 anni anziché ogni singolo anno - i valori intermedi vengono interpolati linearmente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cos'è l'IPC-U?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L'Indice dei Prezzi al Consumo per Tutti i Consumatori Urbani, pubblicato dal Bureau of Labor Statistics statunitense - traccia la variazione media dei prezzi pagati dai consumatori urbani per un ampio paniere di beni e servizi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto valevano $100 del 1990 nel 2025?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Secondo i dati dell'IPC-U, circa $245 in dollari del 2025 - i prezzi sono quasi 2,5 volte aumentati in quei 35 anni. Inserisci 100, 1990 e 2025 in modalità valore storico del dollaro sopra per vedere la cifra esatta."
           }
         }
       ]
@@ -223,7 +255,7 @@
     <div class="tool-layout">
       <main>
         <h1>Calcolatrice di Investimento</h1>
-        <p style="max-width:60ch;">Inserisci il tuo investimento iniziale, contributo mensile, rendimento atteso e tasso di inflazione per vedere il valore futuro sia nominale che corretto per l'inflazione.</p>
+        <p style="max-width:60ch;">Scegli Crescita dell'investimento per proiettare un portafoglio nel futuro, oppure Valore storico del dollaro per vedere quanto vale oggi un importo reale di un anno passato usando dati reali dell'IPC.</p>
         <p class="last-updated">Ultimo aggiornamento: September 22, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -251,32 +283,48 @@
         <div class="article-block">
           <h2>Domande frequenti</h2>
           <div id="faq-list"><div class="faq-item">
-<h3>Perché l'inflazione è importante per le proiezioni di investimento?</h3>
-<p>Un dollaro tra 20 anni compra meno di un dollaro oggi - mostrare solo il valore futuro nominale esagera quanto starai effettivamente meglio, quindi correggere per l'inflazione dà un quadro più onesto.</p>
+<h3>Perché l'inflazione conta per le proiezioni di investimento?</h3>
+<p>Un dollaro tra 20 anni compra meno di un dollaro oggi - mostrare solo il valore futuro nominale esagera quanto starai effettivamente meglio, quindi aggiustare per l'inflazione dà un quadro più onesto.</p>
 </div>
 <div class="faq-item">
 <h3>Quale tasso di rendimento dovrei usare per una calcolatrice di investimento?</h3>
-<p>Il 7% è una media a lungo termine comunemente usata per un portafoglio azionario diversificato dopo che l'inflazione è stata approssimativamente considerata in termini nominali, ma i rendimenti effettivi variano significativamente anno per anno - usa una stima prudente per la pianificazione.</p>
+<p>Il 7% è una media a lungo termine comunemente usata per un portafoglio azionario diversificato, ma i rendimenti reali variano significativamente anno per anno - usa una stima prudente per la pianificazione.</p>
 </div>
 <div class="faq-item">
-<h3>Come influisce la frequenza dei contributi sulla crescita a lungo termine?</h3>
-<p>Contributi più frequenti (mensili anziché annuali) permettono al tuo denaro di iniziare a comporsi prima in media, il che produce un saldo finale modestamente più alto per lo stesso importo totale contribuito nello stesso periodo.</p>
+<h3>In che modo la frequenza dei contributi influisce sulla crescita a lungo termine?</h3>
+<p>Contributi più frequenti (mensili vs annuali) permettono al tuo denaro di iniziare a capitalizzare prima in media, producendo un saldo finale leggermente più alto per lo stesso importo totale contribuito.</p>
 </div>
 <div class="faq-item">
-<h3>Qual è un rendimento medio annuo realistico da assumere per proiezioni a lungo termine?</h3>
-<p>Storicamente, i fondi indicizzati azionari diversificati hanno registrato in media circa il 7-10% di rendimenti annuali prima dell'inflazione su periodi di più decenni, sebbene un singolo anno possa variare notevolmente. Usare una stima più prudente (6-7%) per scopi di pianificazione tiene conto meglio della volatilità e delle commissioni rispetto a supporre una media del miglior caso ogni anno.</p>
+<h3>Qual è un rendimento annuo medio realistico da assumere per proiezioni a lungo termine?</h3>
+<p>Storicamente, i fondi indicizzati azionari diversificati hanno avuto una media di circa il 7-10% di rendimenti annui al lordo dell'inflazione su periodi pluridecennali, sebbene un singolo anno possa variare enormemente.</p>
 </div>
 <div class="faq-item">
-<h3>Qual è la differenza tra il valore futuro nominale e quello corretto per l'inflazione mostrati?</h3>
-<p>Il valore nominale è il totale grezzo in dollari a cui cresce il tuo investimento al tasso di rendimento indicato. Il valore corretto per l'inflazione (reale) sconta quella cifra nominale in base al tasso di inflazione nello stesso periodo, mostrando quanto quell'importo futuro vale realmente in termini di potere d'acquisto odierno.</p>
+<h3>Qual è la differenza tra il valore futuro nominale e quello aggiustato per l'inflazione mostrato?</h3>
+<p>Il valore nominale è il totale lordo in dollari a cui cresce il tuo investimento al tasso di rendimento indicato. Il valore aggiustato per l'inflazione (reale) scontà quella cifra nominale per il tasso di inflazione nello stesso periodo.</p>
 </div>
 <div class="faq-item">
-<h3>Se investo $10.000 con contributi di $300/mese al 7% per 20 anni, qual è approssimativamente il risultato nominale?</h3>
-<p>Facendo crescere la somma iniziale di $10.000 più i contributi mensili di $300 al 7% annuo composto mensilmente per 20 anni si arriva a circa $195.000 nominali - la cifra esatta dipende dalle ipotesi di capitalizzazione, ma i contributi dominano la crescita della somma iniziale su un orizzonte così lungo ai tipici livelli di contribuzione.</p>
+<h3>Se investo $10.000 con contributi di $300/mese al 7% per 20 anni, qual è il risultato nominale approssimativo?</h3>
+<p>Facendo crescere i $10.000 iniziali più i contributi mensili di $300 al 7% annuo composto mensilmente per 20 anni, si arriva a circa $195.000 nominali - i contributi dominano la crescita dell'importo iniziale su un orizzonte così lungo.</p>
 </div>
 <div class="faq-item">
-<h3>È la stessa cosa di una calcolatrice dell'interesse composto?</h3>
-<p>Si basa sulla stessa matematica di capitalizzazione ma aggiunge due cose che una calcolatrice di base dell'interesse composto non ha: contributi mensili regolari oltre al saldo iniziale, e una correzione per l'inflazione per mostrare il valore reale (potere d'acquisto) accanto al totale nominale.</p>
+<h3>È la stessa cosa di una calcolatrice di interesse composto?</h3>
+<p>Si basa sulla stessa matematica di capitalizzazione, ma aggiunge due cose: contributi mensili regolari oltre al saldo iniziale, e un aggiustamento per l'inflazione per mostrare il valore reale insieme al totale nominale.</p>
+</div>
+<div class="faq-item">
+<h3>Qual è la differenza tra 'modalità crescita' e 'modalità valore storico del dollaro'?</h3>
+<p>La modalità crescita proietta un portafoglio ipotetico nel futuro usando un tasso di rendimento assunto scelto da te. La modalità valore storico del dollaro invece usa dati reali di inflazione IPC-U per rispondere a una domanda diversa: quanto vale un importo reale di un anno specifico nei dollari di un altro anno.</p>
+</div>
+<div class="faq-item">
+<h3>Quanto è accurata la modalità valore storico del dollaro?</h3>
+<p>Si basa su medie annuali reali pubblicate dell'IPC-U, non su un tasso assunto, ma la tabella sottostante elenca solo circa ogni 5-10 anni anziché ogni singolo anno - i valori intermedi vengono interpolati linearmente.</p>
+</div>
+<div class="faq-item">
+<h3>Cos'è l'IPC-U?</h3>
+<p>L'Indice dei Prezzi al Consumo per Tutti i Consumatori Urbani, pubblicato dal Bureau of Labor Statistics statunitense - traccia la variazione media dei prezzi pagati dai consumatori urbani per un ampio paniere di beni e servizi.</p>
+</div>
+<div class="faq-item">
+<h3>Quanto valevano $100 del 1990 nel 2025?</h3>
+<p>Secondo i dati dell'IPC-U, circa $245 in dollari del 2025 - i prezzi sono quasi 2,5 volte aumentati in quei 35 anni. Inserisci 100, 1990 e 2025 in modalità valore storico del dollaro sopra per vedere la cifra esatta.</p>
 </div></div>
           <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calcola</a>
         </div>

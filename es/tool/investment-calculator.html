@@ -15,9 +15,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Calculadora de Inversión - Calculadora Gratis Online</title>
-  <meta name="description" content="Estima el valor futuro de una inversión, ajustado por inflación." />
+  <meta name="description" content="Estima el valor futuro de una inversión ajustado por inflación, o convierte un importe histórico en dólares al poder adquisitivo actual usando datos reales del…" />
   <meta property="og:title" content="Calculadora de Inversión | Calquary">
-  <meta property="og:description" content="Estima el valor futuro de una inversión, ajustado por inflación.">
+  <meta property="og:description" content="Estima el valor futuro de una inversión ajustado por inflación, o convierte un importe histórico en dólares al poder adquisitivo actual usando datos reales del IPC.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/es/tool/investment-calculator">
   <meta property="og:locale" content="es_ES">
@@ -27,7 +27,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Calculadora de Inversión | Calquary">
-  <meta name="twitter:description" content="Estima el valor futuro de una inversión, ajustado por inflación.">
+  <meta name="twitter:description" content="Estima el valor futuro de una inversión ajustado por inflación, o convierte un importe histórico en dólares al poder adquisitivo actual usando datos reales del IPC.">
   <meta name="twitter:image" content="https://calquary.com/og-images/investment-calculator.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/investment-calculator">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/investment-calculator">
@@ -89,7 +89,7 @@
     {
       "@type": "SoftwareApplication",
       "name": "Calculadora de Inversión",
-      "description": "Estima el valor futuro de una inversión, ajustado por inflación.",
+      "description": "Estima el valor futuro de una inversión ajustado por inflación, o convierte un importe histórico en dólares al poder adquisitivo actual usando datos reales del IPC.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/es/tool/investment-calculator",
@@ -157,7 +157,7 @@
           "name": "¿Cuál es un retorno anual promedio realista para asumir en proyecciones a largo plazo?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Históricamente, los fondos indexados diversificados del mercado de valores han promediado aproximadamente 7-10% de retornos anuales antes de inflación durante períodos de varias décadas, aunque cualquier año individual puede variar enormemente. Usar una estimación más conservadora (6-7%) para propósitos de planificación considera mejor la volatilidad y las comisiones que asumir un promedio de mejor caso cada año."
+            "text": "Históricamente, los fondos indexados diversificados del mercado de valores han promediado aproximadamente 7-10% de retornos anuales antes de inflación durante períodos de varias décadas, aunque cualquier año individual puede variar enormemente."
           }
         },
         {
@@ -165,7 +165,7 @@
           "name": "¿Cuál es la diferencia entre el valor futuro nominal y el ajustado por inflación que se muestra?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "El valor nominal es el total en dólares brutos al que crece tu inversión con la tasa de retorno indicada. El valor ajustado por inflación (real) descuenta esa cifra nominal por la tasa de inflación durante el mismo período, mostrando cuánto vale realmente ese monto futuro en poder adquisitivo de hoy."
+            "text": "El valor nominal es el total en dólares brutos al que crece tu inversión con la tasa de retorno indicada. El valor ajustado por inflación (real) descuenta esa cifra nominal por la tasa de inflación durante el mismo período."
           }
         },
         {
@@ -173,7 +173,7 @@
           "name": "Si invierto $10,000 con aportes de $300/mes al 7% durante 20 años, ¿cuál es aproximadamente el resultado nominal?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Al hacer crecer el monto inicial de $10,000 más las contribuciones mensuales de $300 al 7% anual compuesto mensualmente durante 20 años, se llega a aproximadamente $195,000 nominales - la cifra exacta depende de las suposiciones de capitalización, pero las contribuciones dominan el crecimiento del monto inicial en un horizonte tan largo con niveles de aporte típicos."
+            "text": "Al hacer crecer el monto inicial de $10,000 más las contribuciones mensuales de $300 al 7% anual compuesto mensualmente durante 20 años, se llega a aproximadamente $195,000 nominales - las contribuciones dominan el crecimiento del monto inicial en un horizonte tan largo."
           }
         },
         {
@@ -181,7 +181,39 @@
           "name": "¿Es esto lo mismo que una calculadora de interés compuesto?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Se basa en la misma matemática de capitalización, pero añade dos cosas que una calculadora básica de interés compuesto no tiene: aportes mensuales regulares además del saldo inicial, y un ajuste por inflación para mostrar el valor real (en poder adquisitivo) junto con el total nominal."
+            "text": "Se basa en la misma matemática de capitalización, pero añade dos cosas: aportes mensuales regulares además del saldo inicial, y un ajuste por inflación para mostrar el valor real junto con el total nominal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es la diferencia entre el 'modo de crecimiento' y el 'modo de valor histórico del dólar'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El modo de crecimiento proyecta una cartera hipotética hacia el futuro usando una tasa de retorno asumida que tú eliges. El modo de valor histórico del dólar en cambio usa datos reales de inflación del IPC-U para responder una pregunta distinta: cuánto vale un importe real de un año concreto en dólares de otro año."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué tan preciso es el modo de valor histórico del dólar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Se basa en promedios anuales reales publicados del IPC-U, no en una tasa asumida, pero la tabla subyacente solo lista aproximadamente cada 5-10 años en lugar de cada año - los valores intermedios se interpolan linealmente, así que trata el resultado como una estimación cercana."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es el IPC-U?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El Índice de Precios al Consumidor para Todos los Consumidores Urbanos, publicado por la Oficina de Estadísticas Laborales de EE. UU. - rastrea el cambio promedio en los precios pagados por consumidores urbanos por una amplia canasta de bienes y servicios a lo largo del tiempo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto valían $100 de 1990 en 2025?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usando datos del IPC-U, aproximadamente $245 en dólares de 2025 - los precios se multiplicaron por casi 2.5 en ese período de 35 años. Introduce 100, 1990 y 2025 en el modo de valor histórico del dólar arriba para ver la cifra exacta."
           }
         }
       ]
@@ -223,7 +255,7 @@
     <div class="tool-layout">
       <main>
         <h1>Calculadora de Inversión</h1>
-        <p style="max-width:60ch;">Introduce tu inversión inicial, contribución mensual, retorno esperado y tasa de inflación para ver el valor futuro tanto nominal como ajustado por inflación.</p>
+        <p style="max-width:60ch;">Elige Crecimiento de inversión para proyectar una cartera hacia el futuro, o Valor histórico del dólar para ver cuánto vale hoy un importe real de un año pasado usando datos reales del IPC.</p>
         <p class="last-updated">Última actualización: September 22, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -264,19 +296,35 @@
 </div>
 <div class="faq-item">
 <h3>¿Cuál es un retorno anual promedio realista para asumir en proyecciones a largo plazo?</h3>
-<p>Históricamente, los fondos indexados diversificados del mercado de valores han promediado aproximadamente 7-10% de retornos anuales antes de inflación durante períodos de varias décadas, aunque cualquier año individual puede variar enormemente. Usar una estimación más conservadora (6-7%) para propósitos de planificación considera mejor la volatilidad y las comisiones que asumir un promedio de mejor caso cada año.</p>
+<p>Históricamente, los fondos indexados diversificados del mercado de valores han promediado aproximadamente 7-10% de retornos anuales antes de inflación durante períodos de varias décadas, aunque cualquier año individual puede variar enormemente.</p>
 </div>
 <div class="faq-item">
 <h3>¿Cuál es la diferencia entre el valor futuro nominal y el ajustado por inflación que se muestra?</h3>
-<p>El valor nominal es el total en dólares brutos al que crece tu inversión con la tasa de retorno indicada. El valor ajustado por inflación (real) descuenta esa cifra nominal por la tasa de inflación durante el mismo período, mostrando cuánto vale realmente ese monto futuro en poder adquisitivo de hoy.</p>
+<p>El valor nominal es el total en dólares brutos al que crece tu inversión con la tasa de retorno indicada. El valor ajustado por inflación (real) descuenta esa cifra nominal por la tasa de inflación durante el mismo período.</p>
 </div>
 <div class="faq-item">
 <h3>Si invierto $10,000 con aportes de $300/mes al 7% durante 20 años, ¿cuál es aproximadamente el resultado nominal?</h3>
-<p>Al hacer crecer el monto inicial de $10,000 más las contribuciones mensuales de $300 al 7% anual compuesto mensualmente durante 20 años, se llega a aproximadamente $195,000 nominales - la cifra exacta depende de las suposiciones de capitalización, pero las contribuciones dominan el crecimiento del monto inicial en un horizonte tan largo con niveles de aporte típicos.</p>
+<p>Al hacer crecer el monto inicial de $10,000 más las contribuciones mensuales de $300 al 7% anual compuesto mensualmente durante 20 años, se llega a aproximadamente $195,000 nominales - las contribuciones dominan el crecimiento del monto inicial en un horizonte tan largo.</p>
 </div>
 <div class="faq-item">
 <h3>¿Es esto lo mismo que una calculadora de interés compuesto?</h3>
-<p>Se basa en la misma matemática de capitalización, pero añade dos cosas que una calculadora básica de interés compuesto no tiene: aportes mensuales regulares además del saldo inicial, y un ajuste por inflación para mostrar el valor real (en poder adquisitivo) junto con el total nominal.</p>
+<p>Se basa en la misma matemática de capitalización, pero añade dos cosas: aportes mensuales regulares además del saldo inicial, y un ajuste por inflación para mostrar el valor real junto con el total nominal.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cuál es la diferencia entre el 'modo de crecimiento' y el 'modo de valor histórico del dólar'?</h3>
+<p>El modo de crecimiento proyecta una cartera hipotética hacia el futuro usando una tasa de retorno asumida que tú eliges. El modo de valor histórico del dólar en cambio usa datos reales de inflación del IPC-U para responder una pregunta distinta: cuánto vale un importe real de un año concreto en dólares de otro año.</p>
+</div>
+<div class="faq-item">
+<h3>¿Qué tan preciso es el modo de valor histórico del dólar?</h3>
+<p>Se basa en promedios anuales reales publicados del IPC-U, no en una tasa asumida, pero la tabla subyacente solo lista aproximadamente cada 5-10 años en lugar de cada año - los valores intermedios se interpolan linealmente, así que trata el resultado como una estimación cercana.</p>
+</div>
+<div class="faq-item">
+<h3>¿Qué es el IPC-U?</h3>
+<p>El Índice de Precios al Consumidor para Todos los Consumidores Urbanos, publicado por la Oficina de Estadísticas Laborales de EE. UU. - rastrea el cambio promedio en los precios pagados por consumidores urbanos por una amplia canasta de bienes y servicios a lo largo del tiempo.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cuánto valían $100 de 1990 en 2025?</h3>
+<p>Usando datos del IPC-U, aproximadamente $245 en dólares de 2025 - los precios se multiplicaron por casi 2.5 en ese período de 35 años. Introduce 100, 1990 y 2025 en el modo de valor histórico del dólar arriba para ver la cifra exacta.</p>
 </div></div>
           <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calcular</a>
         </div>

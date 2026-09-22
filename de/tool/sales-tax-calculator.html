@@ -14,10 +14,10 @@
   <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Umsatzsteuerrechner - Kostenloser Online-Rechner | Calquary</title>
-  <meta name="description" content="Berechnen Sie die Umsatzsteuer und den Gesamtpreis für einen Einkauf." />
-  <meta property="og:title" content="Umsatzsteuerrechner | Calquary">
-  <meta property="og:description" content="Berechnen Sie die Umsatzsteuer und den Gesamtpreis für einen Einkauf.">
+  <title>Umsatzsteuer-, MwSt- und GST-Rechner</title>
+  <meta name="description" content="Fügen Sie Umsatzsteuer, MwSt oder GST zu einem Preis hinzu, oder extrahieren Sie die bereits in einem steuerinklusiven Preis enthaltene Steuer." />
+  <meta property="og:title" content="Umsatzsteuer-, MwSt- und GST-Rechner | Calquary">
+  <meta property="og:description" content="Fügen Sie Umsatzsteuer, MwSt oder GST zu einem Preis hinzu, oder extrahieren Sie die bereits in einem steuerinklusiven Preis enthaltene Steuer.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/de/tool/sales-tax-calculator">
   <meta property="og:locale" content="de_DE">
@@ -26,8 +26,8 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Umsatzsteuerrechner | Calquary">
-  <meta name="twitter:description" content="Berechnen Sie die Umsatzsteuer und den Gesamtpreis für einen Einkauf.">
+  <meta name="twitter:title" content="Umsatzsteuer-, MwSt- und GST-Rechner | Calquary">
+  <meta name="twitter:description" content="Fügen Sie Umsatzsteuer, MwSt oder GST zu einem Preis hinzu, oder extrahieren Sie die bereits in einem steuerinklusiven Preis enthaltene Steuer.">
   <meta name="twitter:image" content="https://calquary.com/og-images/sales-tax-calculator.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/sales-tax-calculator">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/sales-tax-calculator">
@@ -88,8 +88,8 @@
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "Umsatzsteuerrechner",
-      "description": "Berechnen Sie die Umsatzsteuer und den Gesamtpreis für einen Einkauf.",
+      "name": "Umsatzsteuer-, MwSt- und GST-Rechner",
+      "description": "Fügen Sie Umsatzsteuer, MwSt oder GST zu einem Preis hinzu, oder extrahieren Sie die bereits in einem steuerinklusiven Preis enthaltene Steuer.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/de/tool/sales-tax-calculator",
@@ -120,7 +120,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Umsatzsteuerrechner",
+          "name": "Umsatzsteuer-, MwSt- und GST-Rechner",
           "item": "https://calquary.com/de/tool/sales-tax-calculator"
         }
       ]
@@ -133,7 +133,23 @@
           "name": "Wie berechne ich die Umsatzsteuer auf einen Einkauf?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Multiplizieren Sie den Preis mit dem Steuersatz als Dezimalzahl und addieren Sie dies zum ursprünglichen Preis. Für 49,99 $ bei 7,25 % Steuer: 49,99 $ × 0,0725 = 3,62 $ Steuer, für insgesamt 53,61 $."
+            "text": "Multiplizieren Sie den Preis mit dem Steuersatz als Dezimalzahl und addieren Sie dies zum ursprünglichen Preis. Für 49,99 $ bei 7,25 % Steuer: 49,99 $ × 0,0725 = 3,62 $ Steuer, für insgesamt 53,61 $. Wählen Sie oben \"Schließt Steuer aus\" für diese Richtung."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie extrahiere ich MwSt oder GST aus einem Preis, der sie bereits enthält?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wählen Sie oben \"Enthält bereits Steuer\", geben Sie den steuerinklusiven Preis und den Satz ein, und der Rechner teilt durch (1 + Steuersatz), um den Grundpreis vor Steuern zu finden."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was ist der Unterschied zwischen Umsatzsteuer und MwSt/GST für diesen Rechner?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die Berechnung zum Hinzufügen der Steuer ist identisch. Der praktische Unterschied ist die Richtung, die Sie meistens brauchen: US-Umsatzsteuer wird üblicherweise an der Kasse hinzugefügt (\"schließt Steuer aus\"), während MwSt/GST meist bereits im angezeigten Preis enthalten ist, sodass Sie sie oft extrahieren müssen (\"enthält bereits Steuer\")."
           }
         },
         {
@@ -141,7 +157,7 @@
           "name": "Variiert der Umsatzsteuersatz je nach Standort?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ja - Umsatzsteuersätze werden von Bundesstaat, Bezirk und manchmal Stadt festgelegt, sodass der kombinierte Satz selbst innerhalb desselben Bundesstaates erheblich variieren kann. Prüfen Sie Ihren lokalen Satz, bevor Sie sich auf einen Standardwert verlassen."
+            "text": "Ja - Umsatzsteuersätze werden von Bundesstaat, Bezirk und manchmal Stadt festgelegt. MwSt/GST-Sätze variieren stattdessen je nach Land. Prüfen Sie Ihren spezifischen lokalen oder nationalen Satz, bevor Sie sich auf einen Standardwert verlassen."
           }
         },
         {
@@ -157,31 +173,15 @@
           "name": "Werden Lebensmittel und Kleidung immer mit demselben Satz besteuert wie andere Einkäufe?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nein - viele Rechtsordnungen befreien Lebensmittel, verschreibungspflichtige Medikamente und manchmal Kleidung von der Steuer oder besteuern sie ermäßigt, während allgemeine Waren zum Standardsatz besteuert werden. Prüfen Sie die Regeln Ihrer örtlichen Steuerbehörde, wenn Sie die Steuer für eine bestimmte befreite Kategorie statt für einen allgemeinen Einkauf berechnen."
+            "text": "Nein - viele Rechtsordnungen befreien Lebensmittel, verschreibungspflichtige Medikamente und manchmal Kleidung von der Steuer oder besteuern sie ermäßigt, während allgemeine Waren zum Standardsatz besteuert werden."
           }
         },
         {
           "@type": "Question",
-          "name": "Wie ermittle ich den Preis vor Steuern, wenn ich nur die Gesamtsumme kenne, die ich bezahlt habe?",
+          "name": "Ich brauche das für eine Rechnung - funktioniert \"Steuer extrahieren\" dafür?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Teilen Sie die Gesamtsumme durch (1 + Steuersatz als Dezimalzahl). Wenn Sie insgesamt 107,50 $ bei einem Steuersatz von 7,5 % bezahlt haben, betrug der Preis vor Steuern 107,50 $ ÷ 1,075 ≈ 100,00 $."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Was ist der Unterschied zwischen Umsatzsteuer und Verbrauchsteuer (Use Tax)?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Die Umsatzsteuer wird vom Verkäufer zum Zeitpunkt des Kaufs innerhalb einer Steuerjurisdiktion erhoben. Die Verbrauchsteuer (Use Tax) gilt, wenn Sie etwas ohne Zahlung von Umsatzsteuer kaufen (oft von einem Verkäufer außerhalb des Bundesstaates) und selbst für die Abführung einer gleichwertigen Steuer verantwortlich sind - die Berechnung des geschuldeten Betrags ist in beiden Fällen dieselbe."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Ist ein MwSt-Rechner dasselbe wie ein Umsatzsteuerrechner?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Die grundlegende Rechnung ist ähnlich - beide wenden einen Prozentsatz auf einen Preis an - aber die Mehrwertsteuer (MwSt) ist normalerweise bereits im angezeigten Preis enthalten und wird auf jeder Produktionsstufe erhoben, während die US-Umsatzsteuer üblicherweise beim endgültigen Verkauf zum aufgelisteten Preis hinzugefügt wird, wofür dieser Rechner ausgelegt ist."
+            "text": "Ja - eine Rechnung mit einem steuerinklusiven Gesamtbetrag (außerhalb der USA üblich) ist genau das, wofür der Modus \"Enthält bereits Steuer\" gedacht ist: Geben Sie den Bruttobetrag (Gesamt, steuerinklusiv) und den Satz ein, und der Rechner gibt den Nettobetrag (vor Steuern) und den Steueranteil separat zurück."
           }
         }
       ]
@@ -222,8 +222,8 @@
   <div class="wrap" style="padding-bottom:64px;">
     <div class="tool-layout">
       <main>
-        <h1>Umsatzsteuerrechner</h1>
-        <p style="max-width:60ch;">Geben Sie einen Preis und Ihren lokalen Umsatzsteuersatz ein, um den Steuerbetrag und die Gesamtkosten zu berechnen.</p>
+        <h1>Umsatzsteuer-, MwSt- und GST-Rechner</h1>
+        <p style="max-width:60ch;">Wählen Sie, ob Ihr Preis die Steuer ausschließt (hinzufügen) oder bereits enthält (extrahieren) - funktioniert für US-Umsatzsteuer, die an der Kasse hinzugefügt wird, oder für MwSt/GST, die bereits in einem angezeigten Preis enthalten ist.</p>
         <p class="last-updated">Zuletzt aktualisiert: September 22, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -252,11 +252,19 @@
           <h2>Häufig gestellte Fragen</h2>
           <div id="faq-list"><div class="faq-item">
 <h3>Wie berechne ich die Umsatzsteuer auf einen Einkauf?</h3>
-<p>Multiplizieren Sie den Preis mit dem Steuersatz als Dezimalzahl und addieren Sie dies zum ursprünglichen Preis. Für 49,99 $ bei 7,25 % Steuer: 49,99 $ × 0,0725 = 3,62 $ Steuer, für insgesamt 53,61 $.</p>
+<p>Multiplizieren Sie den Preis mit dem Steuersatz als Dezimalzahl und addieren Sie dies zum ursprünglichen Preis. Für 49,99 $ bei 7,25 % Steuer: 49,99 $ × 0,0725 = 3,62 $ Steuer, für insgesamt 53,61 $. Wählen Sie oben "Schließt Steuer aus" für diese Richtung.</p>
+</div>
+<div class="faq-item">
+<h3>Wie extrahiere ich MwSt oder GST aus einem Preis, der sie bereits enthält?</h3>
+<p>Wählen Sie oben "Enthält bereits Steuer", geben Sie den steuerinklusiven Preis und den Satz ein, und der Rechner teilt durch (1 + Steuersatz), um den Grundpreis vor Steuern zu finden.</p>
+</div>
+<div class="faq-item">
+<h3>Was ist der Unterschied zwischen Umsatzsteuer und MwSt/GST für diesen Rechner?</h3>
+<p>Die Berechnung zum Hinzufügen der Steuer ist identisch. Der praktische Unterschied ist die Richtung, die Sie meistens brauchen: US-Umsatzsteuer wird üblicherweise an der Kasse hinzugefügt ("schließt Steuer aus"), während MwSt/GST meist bereits im angezeigten Preis enthalten ist, sodass Sie sie oft extrahieren müssen ("enthält bereits Steuer").</p>
 </div>
 <div class="faq-item">
 <h3>Variiert der Umsatzsteuersatz je nach Standort?</h3>
-<p>Ja - Umsatzsteuersätze werden von Bundesstaat, Bezirk und manchmal Stadt festgelegt, sodass der kombinierte Satz selbst innerhalb desselben Bundesstaates erheblich variieren kann. Prüfen Sie Ihren lokalen Satz, bevor Sie sich auf einen Standardwert verlassen.</p>
+<p>Ja - Umsatzsteuersätze werden von Bundesstaat, Bezirk und manchmal Stadt festgelegt. MwSt/GST-Sätze variieren stattdessen je nach Land. Prüfen Sie Ihren spezifischen lokalen oder nationalen Satz, bevor Sie sich auf einen Standardwert verlassen.</p>
 </div>
 <div class="faq-item">
 <h3>Wird die Umsatzsteuer vor oder nach anderen Rabatten berechnet?</h3>
@@ -264,19 +272,11 @@
 </div>
 <div class="faq-item">
 <h3>Werden Lebensmittel und Kleidung immer mit demselben Satz besteuert wie andere Einkäufe?</h3>
-<p>Nein - viele Rechtsordnungen befreien Lebensmittel, verschreibungspflichtige Medikamente und manchmal Kleidung von der Steuer oder besteuern sie ermäßigt, während allgemeine Waren zum Standardsatz besteuert werden. Prüfen Sie die Regeln Ihrer örtlichen Steuerbehörde, wenn Sie die Steuer für eine bestimmte befreite Kategorie statt für einen allgemeinen Einkauf berechnen.</p>
+<p>Nein - viele Rechtsordnungen befreien Lebensmittel, verschreibungspflichtige Medikamente und manchmal Kleidung von der Steuer oder besteuern sie ermäßigt, während allgemeine Waren zum Standardsatz besteuert werden.</p>
 </div>
 <div class="faq-item">
-<h3>Wie ermittle ich den Preis vor Steuern, wenn ich nur die Gesamtsumme kenne, die ich bezahlt habe?</h3>
-<p>Teilen Sie die Gesamtsumme durch (1 + Steuersatz als Dezimalzahl). Wenn Sie insgesamt 107,50 $ bei einem Steuersatz von 7,5 % bezahlt haben, betrug der Preis vor Steuern 107,50 $ ÷ 1,075 ≈ 100,00 $.</p>
-</div>
-<div class="faq-item">
-<h3>Was ist der Unterschied zwischen Umsatzsteuer und Verbrauchsteuer (Use Tax)?</h3>
-<p>Die Umsatzsteuer wird vom Verkäufer zum Zeitpunkt des Kaufs innerhalb einer Steuerjurisdiktion erhoben. Die Verbrauchsteuer (Use Tax) gilt, wenn Sie etwas ohne Zahlung von Umsatzsteuer kaufen (oft von einem Verkäufer außerhalb des Bundesstaates) und selbst für die Abführung einer gleichwertigen Steuer verantwortlich sind - die Berechnung des geschuldeten Betrags ist in beiden Fällen dieselbe.</p>
-</div>
-<div class="faq-item">
-<h3>Ist ein MwSt-Rechner dasselbe wie ein Umsatzsteuerrechner?</h3>
-<p>Die grundlegende Rechnung ist ähnlich - beide wenden einen Prozentsatz auf einen Preis an - aber die Mehrwertsteuer (MwSt) ist normalerweise bereits im angezeigten Preis enthalten und wird auf jeder Produktionsstufe erhoben, während die US-Umsatzsteuer üblicherweise beim endgültigen Verkauf zum aufgelisteten Preis hinzugefügt wird, wofür dieser Rechner ausgelegt ist.</p>
+<h3>Ich brauche das für eine Rechnung - funktioniert "Steuer extrahieren" dafür?</h3>
+<p>Ja - eine Rechnung mit einem steuerinklusiven Gesamtbetrag (außerhalb der USA üblich) ist genau das, wofür der Modus "Enthält bereits Steuer" gedacht ist: Geben Sie den Bruttobetrag (Gesamt, steuerinklusiv) und den Satz ein, und der Rechner gibt den Nettobetrag (vor Steuern) und den Steueranteil separat zurück.</p>
 </div></div>
           <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Berechnen</a>
         </div>

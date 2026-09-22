@@ -15,9 +15,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Calculatrice de Feuille de Temps</title>
-  <meta name="description" content="Additionnez les heures travaillées sur la semaine et calculez le salaire brut." />
+  <meta name="description" content="Additionnez les heures travaillées sur la semaine et calculez le salaire brut, y compris la majoration pour heures supplémentaires." />
   <meta property="og:title" content="Calculatrice de Feuille de Temps | Calquary">
-  <meta property="og:description" content="Additionnez les heures travaillées sur la semaine et calculez le salaire brut.">
+  <meta property="og:description" content="Additionnez les heures travaillées sur la semaine et calculez le salaire brut, y compris la majoration pour heures supplémentaires.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/fr/tool/time-card-calculator">
   <meta property="og:locale" content="fr_FR">
@@ -27,7 +27,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Calculatrice de Feuille de Temps | Calquary">
-  <meta name="twitter:description" content="Additionnez les heures travaillées sur la semaine et calculez le salaire brut.">
+  <meta name="twitter:description" content="Additionnez les heures travaillées sur la semaine et calculez le salaire brut, y compris la majoration pour heures supplémentaires.">
   <meta name="twitter:image" content="https://calquary.com/og-images/time-card-calculator.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/time-card-calculator">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/time-card-calculator">
@@ -89,7 +89,7 @@
     {
       "@type": "SoftwareApplication",
       "name": "Calculatrice de Feuille de Temps",
-      "description": "Additionnez les heures travaillées sur la semaine et calculez le salaire brut.",
+      "description": "Additionnez les heures travaillées sur la semaine et calculez le salaire brut, y compris la majoration pour heures supplémentaires.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/fr/tool/time-card-calculator",
@@ -133,7 +133,7 @@
           "name": "Comment calculer le total d'heures à partir d'une feuille de temps ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Additionnez les heures travaillées chaque jour de la période de paie. Cette calculatrice additionne sept entrées quotidiennes (lundi à dimanche) en un total hebdomadaire, puis multiplie par votre taux horaire pour le salaire brut."
+            "text": "Additionnez les heures travaillées chaque jour de la période de paie. Cette calculatrice additionne sept entrées quotidiennes (lundi à dimanche) en un total hebdomadaire, puis le sépare en heures régulières et supplémentaires selon votre seuil avant de calculer le salaire brut."
           }
         },
         {
@@ -141,15 +141,23 @@
           "name": "Cela gère-t-il les heures d'entrée et de sortie ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Non - saisissez le total des heures décimales déjà travaillées chaque jour (par exemple, 7,5 pour 7 heures 30 minutes), pas les heures d'entrée/sortie. Si vous n'avez que des heures de pointage, soustrayez l'heure d'entrée de l'heure de sortie (en tenant compte de toute pause non payée) pour obtenir d'abord les heures décimales."
+            "text": "Non - saisissez le total des heures décimales déjà travaillées chaque jour (par exemple, 7,5 pour 7 heures 30 minutes), pas les heures d'entrée/sortie."
           }
         },
         {
           "@type": "Question",
-          "name": "Cela inclut-il le paiement des heures supplémentaires ?",
+          "name": "Comment fonctionne le calcul des heures supplémentaires ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Non - il multiplie le total d'heures par un seul taux horaire fixe. Si certaines heures sont éligibles à une majoration pour heures supplémentaires (généralement 1,5x pour les heures au-delà de 40/semaine aux États-Unis), calculez séparément les portions régulières et supplémentaires puis additionnez-les."
+            "text": "Les heures jusqu'à votre seuil d'heures supplémentaires (40/semaine par défaut, le seuil fédéral standard aux États-Unis) sont payées à votre taux régulier. Toute heure au-delà est payée à votre taux multiplié par le multiplicateur d'heures supplémentaires (1,5x par défaut)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Puis-je modifier le seuil ou le multiplicateur des heures supplémentaires ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui - les deux sont des champs modifiables. Certaines juridictions ou conventions collectives utilisent un seuil hebdomadaire différent de 40 heures, ou une règle d'heures supplémentaires quotidienne plutôt qu'hebdomadaire, et certaines utilisent un double taux (2x) plutôt que le temps et demi - ajustez les champs pour correspondre à votre situation réelle."
           }
         },
         {
@@ -162,18 +170,10 @@
         },
         {
           "@type": "Question",
-          "name": "Et si j'ai fait des heures supplémentaires un seul jour, pas toute la semaine ?",
+          "name": "Si j'ai travaillé 45 heures à 20 $/heure avec 1,5x d'heures supplémentaires après 40, quel est mon salaire brut ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Cette calculatrice additionne toutes les heures saisies en un seul total hebdomadaire à un taux fixe unique, elle ne sépare donc pas automatiquement les heures supplémentaires d'une seule journée - calculez séparément les portions régulières et supplémentaires de ce jour-là, puis ajoutez le résultat à votre salaire total en dehors de l'outil."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Comment le salaire brut est-il calculé à partir d'une feuille de temps ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Le salaire brut est le total d'heures travaillées multiplié par le taux horaire. Si vos heures quotidiennes totalisent 38,5 pour la semaine à 18 $/heure, le salaire brut est 38,5 × 18 $ = 693 $, avant toute retenue d'impôt ou déduction."
+            "text": "40 heures régulières × 20 $ = 800 $, plus 5 heures supplémentaires × 30 $ (taux temps et demi) = 150 $, pour un salaire brut total de 950 $ - saisissez vos heures quotidiennes réelles ci-dessus pour obtenir cette répartition automatiquement."
           }
         },
         {
@@ -181,7 +181,7 @@
           "name": "Une calculatrice de feuille de temps est-elle la même chose qu'une calculatrice de paie ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Non - une calculatrice de feuille de temps comme celle-ci convertit uniquement les heures travaillées en salaire brut. Une calculatrice de paie va plus loin, en appliquant les retenues d'impôt, les déductions et les avantages pour arriver au salaire net (à emporter)."
+            "text": "Non - une calculatrice de feuille de temps comme celle-ci convertit les heures travaillées (y compris les heures supplémentaires) en salaire brut. Une calculatrice de paie va plus loin, en appliquant les retenues d'impôt, les déductions et les avantages pour arriver au salaire net."
           }
         }
       ]
@@ -223,7 +223,7 @@
     <div class="tool-layout">
       <main>
         <h1>Calculatrice de Feuille de Temps</h1>
-        <p style="max-width:60ch;">Indiquez les heures travaillées chaque jour et un taux horaire pour totaliser vos heures hebdomadaires et votre salaire brut.</p>
+        <p style="max-width:60ch;">Indiquez les heures travaillées chaque jour, un taux horaire et votre seuil d'heures supplémentaires pour totaliser vos heures hebdomadaires et votre salaire brut - y compris la majoration pour heures supplémentaires au-delà du seuil.</p>
         <p class="last-updated">Dernière mise à jour : September 22, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -252,31 +252,31 @@
           <h2>Questions fréquentes</h2>
           <div id="faq-list"><div class="faq-item">
 <h3>Comment calculer le total d'heures à partir d'une feuille de temps ?</h3>
-<p>Additionnez les heures travaillées chaque jour de la période de paie. Cette calculatrice additionne sept entrées quotidiennes (lundi à dimanche) en un total hebdomadaire, puis multiplie par votre taux horaire pour le salaire brut.</p>
+<p>Additionnez les heures travaillées chaque jour de la période de paie. Cette calculatrice additionne sept entrées quotidiennes (lundi à dimanche) en un total hebdomadaire, puis le sépare en heures régulières et supplémentaires selon votre seuil avant de calculer le salaire brut.</p>
 </div>
 <div class="faq-item">
 <h3>Cela gère-t-il les heures d'entrée et de sortie ?</h3>
-<p>Non - saisissez le total des heures décimales déjà travaillées chaque jour (par exemple, 7,5 pour 7 heures 30 minutes), pas les heures d'entrée/sortie. Si vous n'avez que des heures de pointage, soustrayez l'heure d'entrée de l'heure de sortie (en tenant compte de toute pause non payée) pour obtenir d'abord les heures décimales.</p>
+<p>Non - saisissez le total des heures décimales déjà travaillées chaque jour (par exemple, 7,5 pour 7 heures 30 minutes), pas les heures d'entrée/sortie.</p>
 </div>
 <div class="faq-item">
-<h3>Cela inclut-il le paiement des heures supplémentaires ?</h3>
-<p>Non - il multiplie le total d'heures par un seul taux horaire fixe. Si certaines heures sont éligibles à une majoration pour heures supplémentaires (généralement 1,5x pour les heures au-delà de 40/semaine aux États-Unis), calculez séparément les portions régulières et supplémentaires puis additionnez-les.</p>
+<h3>Comment fonctionne le calcul des heures supplémentaires ?</h3>
+<p>Les heures jusqu'à votre seuil d'heures supplémentaires (40/semaine par défaut, le seuil fédéral standard aux États-Unis) sont payées à votre taux régulier. Toute heure au-delà est payée à votre taux multiplié par le multiplicateur d'heures supplémentaires (1,5x par défaut).</p>
+</div>
+<div class="faq-item">
+<h3>Puis-je modifier le seuil ou le multiplicateur des heures supplémentaires ?</h3>
+<p>Oui - les deux sont des champs modifiables. Certaines juridictions ou conventions collectives utilisent un seuil hebdomadaire différent de 40 heures, ou une règle d'heures supplémentaires quotidienne plutôt qu'hebdomadaire, et certaines utilisent un double taux (2x) plutôt que le temps et demi - ajustez les champs pour correspondre à votre situation réelle.</p>
 </div>
 <div class="faq-item">
 <h3>Comment convertir des minutes en décimal pour une feuille de temps ?</h3>
 <p>Divisez les minutes par 60. 30 minutes = 0,5 heure, 15 minutes = 0,25 heure, 45 minutes = 0,75 heure - ajoutez ce décimal au nombre d'heures entières de chaque jour.</p>
 </div>
 <div class="faq-item">
-<h3>Et si j'ai fait des heures supplémentaires un seul jour, pas toute la semaine ?</h3>
-<p>Cette calculatrice additionne toutes les heures saisies en un seul total hebdomadaire à un taux fixe unique, elle ne sépare donc pas automatiquement les heures supplémentaires d'une seule journée - calculez séparément les portions régulières et supplémentaires de ce jour-là, puis ajoutez le résultat à votre salaire total en dehors de l'outil.</p>
-</div>
-<div class="faq-item">
-<h3>Comment le salaire brut est-il calculé à partir d'une feuille de temps ?</h3>
-<p>Le salaire brut est le total d'heures travaillées multiplié par le taux horaire. Si vos heures quotidiennes totalisent 38,5 pour la semaine à 18 $/heure, le salaire brut est 38,5 × 18 $ = 693 $, avant toute retenue d'impôt ou déduction.</p>
+<h3>Si j'ai travaillé 45 heures à 20 $/heure avec 1,5x d'heures supplémentaires après 40, quel est mon salaire brut ?</h3>
+<p>40 heures régulières × 20 $ = 800 $, plus 5 heures supplémentaires × 30 $ (taux temps et demi) = 150 $, pour un salaire brut total de 950 $ - saisissez vos heures quotidiennes réelles ci-dessus pour obtenir cette répartition automatiquement.</p>
 </div>
 <div class="faq-item">
 <h3>Une calculatrice de feuille de temps est-elle la même chose qu'une calculatrice de paie ?</h3>
-<p>Non - une calculatrice de feuille de temps comme celle-ci convertit uniquement les heures travaillées en salaire brut. Une calculatrice de paie va plus loin, en appliquant les retenues d'impôt, les déductions et les avantages pour arriver au salaire net (à emporter).</p>
+<p>Non - une calculatrice de feuille de temps comme celle-ci convertit les heures travaillées (y compris les heures supplémentaires) en salaire brut. Une calculatrice de paie va plus loin, en appliquant les retenues d'impôt, les déductions et les avantages pour arriver au salaire net.</p>
 </div></div>
           <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculer</a>
         </div>
