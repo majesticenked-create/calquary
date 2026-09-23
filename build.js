@@ -160,6 +160,12 @@ const WAVE_ONE_TOOL_IDS = [
   "co2-grow-room-calculator", "cricket-chirp-temperature-calculator", "daily-light-integral-calculator",
   "dihybrid-cross-calculator", "dna-concentration-calculator", "dna-copy-number-calculator",
   "dna-to-mrna-converter",
+  // Batch 15: the 9 Pet & Lifestyle tools added in the Batch 004 build, now
+  // translated into all 11 non-English locales. Dog Nutrition/Dog Calorie
+  // was skipped - dog-food-calculator already covers that calculation.
+  "dog-bmi-calculator", "dog-chocolate-toxicity-calculator", "dog-crate-size-calculator",
+  "dog-harness-size-calculator", "dog-heat-cycle-calculator", "dog-life-expectancy-calculator",
+  "dog-onion-toxicity-calculator", "dog-quality-of-life-calculator", "dog-raisin-toxicity-calculator",
 ];
 
 function loadData() {

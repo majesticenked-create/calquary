@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calcolatore di Aspettativa di Vita Canina</title>
+  <meta name="description" content="Ottieni un intervallo educativo di aspettativa di vita per un cane in base a taglia/peso e categoria generale di razza, non una previsione individuale." />
+  <meta property="og:title" content="Calcolatore di Aspettativa di Vita Canina | Calquary">
+  <meta property="og:description" content="Ottieni un intervallo educativo di aspettativa di vita per un cane in base a taglia/peso e categoria generale di razza, non una previsione individuale.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/it/tool/dog-life-expectancy-calculator">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/dog-life-expectancy-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calcolatore di Aspettativa di Vita Canina | Calquary">
+  <meta name="twitter:description" content="Ottieni un intervallo educativo di aspettativa di vita per un cane in base a taglia/peso e categoria generale di razza, non una previsione individuale.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/dog-life-expectancy-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/dog-life-expectancy-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dog-life-expectancy-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/dog-life-expectancy-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/dog-life-expectancy-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/dog-life-expectancy-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/dog-life-expectancy-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/dog-life-expectancy-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/dog-life-expectancy-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/dog-life-expectancy-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/dog-life-expectancy-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/dog-life-expectancy-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/dog-life-expectancy-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/dog-life-expectancy-calculator">
+    <link rel="canonical" href="https://calquary.com/it/tool/dog-life-expectancy-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("dog-life-expectancy-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("dog-life-expectancy-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calcolatore di Aspettativa di Vita Canina",
+      "description": "Ottieni un intervallo educativo di aspettativa di vita per un cane in base a taglia/peso e categoria generale di razza, non una previsione individuale.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/it/tool/dog-life-expectancy-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-23",
+      "inLanguage": "it"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/it/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Pet & Lifestyle",
+          "item": "https://calquary.com/it/category/pets"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calcolatore di Aspettativa di Vita Canina",
+          "item": "https://calquary.com/it/tool/dog-life-expectancy-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Questo calcolatore può prevedere quando morirà il mio cane?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, e non dovrebbe essere usato in questo modo. Mostra intervalli tipici di popolazione per taglia e razza; la longevità individuale di un cane dipende da genetica, cure veterinarie, nutrizione, ambiente e casualità - fattori che questo strumento non può misurare."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Perché i cani più piccoli tendono a vivere più a lungo di quelli grandi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Questo è uno schema ben documentato nella scienza veterinaria - le razze più piccole hanno tipicamente aspettative di vita più lunghe rispetto alle razze giganti, sebbene i ricercatori dibattano ancora sulle cause esatte (possibilmente legate ai tassi di crescita e alla predisposizione al cancro)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "In cosa differisce dal Calcolatore di Età Canina?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Il Calcolatore di Età Canina converte l'età attuale del tuo cane in un 'equivalente in anni umani'. Questo Calcolatore di Aspettativa di Vita Canina invece stima l'intervallo tipico di durata della vita per la taglia/razza del tuo cane - una domanda diversa sulla durata totale, non sulla conversione dell'età attuale."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "I cani di razza mista vivono più a lungo dei cani di razza pura?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Alcuni studi suggeriscono che i cani di razza mista possano avere in media una salute leggermente migliore grazie a una maggiore diversità genetica, ma la variazione all'interno di qualsiasi gruppo è ampia e la taglia rimane il predittore più forte disponibile nei dati su larga scala."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cosa posso fare per aiutare il mio cane a vivere una vita lunga e sana?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Controlli veterinari regolari, mantenimento di un peso corporeo sano, buona nutrizione, esercizio appropriato e cure dentali sono fattori supportati dalla scienza veterinaria - tuttavia, questo calcolatore non sostituisce il consiglio veterinario individualizzato per il tuo cane."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Questo strumento è una diagnosi medica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. È una guida educativa generale basata su medie di popolazione per taglia/razza, non una valutazione medica o una prognosi. Per preoccupazioni sulla salute o longevità del tuo cane specifico, consulta un veterinario."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/it/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/it/#categories">Categorie</a>
+          <a href="/it/#tools">Tutti gli strumenti</a>
+          <a href="/it/about">Chi siamo</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Italiano">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>IT</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/dog-life-expectancy-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/dog-life-expectancy-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/dog-life-expectancy-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/dog-life-expectancy-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/dog-life-expectancy-calculator">Português</a><span class="locale-item current" role="menuitem" aria-current="true">Italiano</span><a class="locale-item" role="menuitem" href="/ja/tool/dog-life-expectancy-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/dog-life-expectancy-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/dog-life-expectancy-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/dog-life-expectancy-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/dog-life-expectancy-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/dog-life-expectancy-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/it/">Calquary</a> / <a href="/it/category/pets">Animali Domestici e Stile di Vita</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calcolatore di Aspettativa di Vita Canina</h1>
+        <p style="max-width:60ch;">Seleziona la taglia (o il peso) e, se la conosci, la categoria di razza del tuo cane per vedere un intervallo tipico di aspettativa di vita. Questa è una guida generale basata su medie di popolazione, non una previsione di quanto vivrà il tuo cane individuale.</p>
+        <p class="last-updated">Ultimo aggiornamento: September 23, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calcola</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reimposta</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Domande frequenti</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Questo calcolatore può prevedere quando morirà il mio cane?</h3>
+<p>No, e non dovrebbe essere usato in questo modo. Mostra intervalli tipici di popolazione per taglia e razza; la longevità individuale di un cane dipende da genetica, cure veterinarie, nutrizione, ambiente e casualità - fattori che questo strumento non può misurare.</p>
+</div>
+<div class="faq-item">
+<h3>Perché i cani più piccoli tendono a vivere più a lungo di quelli grandi?</h3>
+<p>Questo è uno schema ben documentato nella scienza veterinaria - le razze più piccole hanno tipicamente aspettative di vita più lunghe rispetto alle razze giganti, sebbene i ricercatori dibattano ancora sulle cause esatte (possibilmente legate ai tassi di crescita e alla predisposizione al cancro).</p>
+</div>
+<div class="faq-item">
+<h3>In cosa differisce dal Calcolatore di Età Canina?</h3>
+<p>Il Calcolatore di Età Canina converte l'età attuale del tuo cane in un 'equivalente in anni umani'. Questo Calcolatore di Aspettativa di Vita Canina invece stima l'intervallo tipico di durata della vita per la taglia/razza del tuo cane - una domanda diversa sulla durata totale, non sulla conversione dell'età attuale.</p>
+</div>
+<div class="faq-item">
+<h3>I cani di razza mista vivono più a lungo dei cani di razza pura?</h3>
+<p>Alcuni studi suggeriscono che i cani di razza mista possano avere in media una salute leggermente migliore grazie a una maggiore diversità genetica, ma la variazione all'interno di qualsiasi gruppo è ampia e la taglia rimane il predittore più forte disponibile nei dati su larga scala.</p>
+</div>
+<div class="faq-item">
+<h3>Cosa posso fare per aiutare il mio cane a vivere una vita lunga e sana?</h3>
+<p>Controlli veterinari regolari, mantenimento di un peso corporeo sano, buona nutrizione, esercizio appropriato e cure dentali sono fattori supportati dalla scienza veterinaria - tuttavia, questo calcolatore non sostituisce il consiglio veterinario individualizzato per il tuo cane.</p>
+</div>
+<div class="faq-item">
+<h3>Questo strumento è una diagnosi medica?</h3>
+<p>No. È una guida educativa generale basata su medie di popolazione per taglia/razza, non una valutazione medica o una prognosi. Per preoccupazioni sulla salute o longevità del tuo cane specifico, consulta un veterinario.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calcola</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Strumenti correlati</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Nota sulla precisione</h4>
+          <p style="margin:0;font-size:0.85rem;">Le calcolatrici di Calquary sono pensate per stime rapide e affidabili. Per decisioni con reali implicazioni finanziarie, strutturali o mediche, consulta un professionista qualificato.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/it/">← Torna a tutte le calcolatrici</a> · <a href="/it/about">Chi siamo</a> · <a href="/it/contact">Contatti</a> · <a href="/it/privacy">Privacy</a> · <a href="/it/terms">Termini</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

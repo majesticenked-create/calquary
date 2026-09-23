@@ -8708,7 +8708,7 @@ const CALCULATORS = [
       { q: "How old is a 5-year-old giant breed dog in human years?", a: "A 5-year-old giant breed (like a Great Dane) works out to roughly 40 human years - notably older than a 5-year-old small breed, which lands closer to 36, because giant breeds age faster once past puppyhood." },
       { q: "Can I use this calculator for a mixed-breed dog?", a: "Yes - since the formula keys off size rather than breed identity, just select the size category (small, medium, large, or giant) that best matches your mixed-breed dog's adult weight for the most relevant estimate." },
     ],
-    related: ["cat-age-calculator", "dog-food-calculator", "cost-of-owning-a-dog-calculator", "ideal-dog-weight-calculator"],
+    related: ["dog-life-expectancy-calculator", "dog-food-calculator", "cost-of-owning-a-dog-calculator", "ideal-dog-weight-calculator"],
   },
   {
     id: "dog-food-calculator",
@@ -8843,7 +8843,7 @@ const CALCULATORS = [
       { q: "If my dog mated on day 1, when is she due?", a: "Adding the default 63-day gestation length to the mating date gives the estimated due date - for example, a mating date of January 1 projects a due date around March 5." },
       { q: "Does litter size affect how long a dog's pregnancy lasts?", a: "Yes, somewhat - dogs carrying larger litters sometimes deliver a day or two earlier than average, while smaller litters can run slightly longer, which is part of why the estimated due date is a range-based guide rather than an exact date." },
     ],
-    related: ["days-until-calculator", "cow-gestation-calculator", "dog-age-calculator", "cat-pregnancy-calculator"],
+    related: ["dog-heat-cycle-calculator", "cow-gestation-calculator", "dog-age-calculator", "cat-pregnancy-calculator"],
   },
   {
     id: "horse-age-calculator",
@@ -8905,7 +8905,7 @@ const CALCULATORS = [
       { q: "How much weight should a dog with a BCS of 9 lose?", a: "A BCS of 9 (severely overweight) implies roughly 40% excess body weight - a 60 lb dog at BCS 9 would have an estimated ideal weight around 36 lb, a reduction of about 24 lb, ideally pursued gradually under veterinary guidance." },
       { q: "Is 'ideal weight' from this calculator the same as a breed's average weight chart?", a: "No - breed weight charts give a population average, while this calculator estimates an individual dog's ideal weight from their current weight and body condition score, which better accounts for that specific dog's frame size and existing fat coverage." },
     ],
-    related: ["dog-food-calculator", "dog-age-calculator", "bmi-calculator"],
+    related: ["dog-food-calculator", "dog-age-calculator", "dog-bmi-calculator"],
   },
   {
     id: "cat-pregnancy-calculator",
@@ -9846,7 +9846,7 @@ const CALCULATORS = [
       { q: "Can I use this index to track changes in my cat over time?", a: "It can be one data point to track alongside weight and a vet's body condition assessment, but changes in this index should be interpreted cautiously and ideally discussed with a veterinarian, since it isn't a validated diagnostic measure on its own." },
       { q: "Is a higher index always worse?", a: "Not necessarily, and this tool doesn't attempt to say - a higher index could reflect more body fat, more muscle mass, a shorter measured length, or normal breed variation, none of which this simple ratio can distinguish. A veterinary body condition exam is needed to interpret what's actually driving the number." },
     ],
-    related: ["cat-age-calculator", "bird-age-calculator", "cat-calorie-calculator"],
+    related: ["cat-age-calculator", "bird-age-calculator", "cat-calorie-calculator", "dog-bmi-calculator"],
   },
   {
     id: "cat-calorie-calculator",
@@ -9973,7 +9973,7 @@ const CALCULATORS = [
       { q: "Do cats actually eat chocolate often?", a: "Less often than dogs, since cats generally lack the ability to taste sweetness and are often put off by chocolate's bitterness - but ingestion still happens, particularly with items like chocolate-covered treats, baked goods, or cocoa powder, and when it does, cats' higher sensitivity to theobromine makes prompt veterinary contact just as important." },
       { q: "Is theobromine the same thing as caffeine?", a: "They're related methylxanthine compounds found together in chocolate and cocoa products, and both can be harmful to cats, but theobromine is typically present in much larger amounts in chocolate and is the primary compound driving toxicity estimates like the one this calculator provides." },
     ],
-    related: ["cat-bmi-calculator", "cat-benadryl-dosage-calculator", "animal-mortality-rate-calculator"],
+    related: ["cat-bmi-calculator", "cat-benadryl-dosage-calculator", "dog-chocolate-toxicity-calculator"],
   },
   {
     id: "cat-quality-of-life-calculator",
@@ -10028,7 +10028,7 @@ const CALCULATORS = [
       { q: "Can this replace a veterinary exam?", a: "No - this is a self-observation aid, not a substitute for a hands-on veterinary assessment. A vet can examine your cat directly, run diagnostics if needed, and help interpret findings that a checklist filled out at home can't capture." },
       { q: "Why doesn't the calculator give me a specific recommendation?", a: "Because quality-of-life decisions for a specific animal depend on context this tool can't have - the underlying condition, prognosis, treatment options, and your own values and circumstances - all of which a veterinarian who knows your cat's case can weigh. This tool's role is to help you notice and describe patterns, not to decide for you." },
     ],
-    related: ["cat-age-calculator", "cat-bmi-calculator", "cat-benadryl-dosage-calculator"],
+    related: ["cat-age-calculator", "cat-bmi-calculator", "dog-quality-of-life-calculator"],
   },
   {
     id: "cat-personality-quiz",
@@ -10442,7 +10442,7 @@ const CALCULATORS = [
       { q: "How should I estimate my monthly food cost?", a: "Check a specific food brand and bag size, its price, and your dog's expected daily feeding amount (which depends on weight and activity level) - the Dog Food Calculator on this site can help estimate cups per day, which you can then price out with your chosen food's cost per cup or bag." },
       { q: "Does lifetime cost assume costs stay the same every year?", a: "Yes - this calculator projects a flat ongoing annual cost across all years after the first, for simplicity. In reality, costs often rise over a dog's lifetime, especially in senior years when veterinary care needs typically increase, so treat the lifetime figure as a conservative baseline rather than an upper bound." },
     ],
-    related: ["dog-food-calculator", "dog-age-calculator", "ideal-dog-weight-calculator"],
+    related: ["dog-food-calculator", "dog-age-calculator", "dog-life-expectancy-calculator"],
   },
   {
     id: "cow-gestation-calculator",
@@ -10800,6 +10800,450 @@ const CALCULATORS = [
       { q: "Why does converting a coding strand just swap T for U?", a: "Because mRNA is synthesized as the complement of the template strand, which makes it identical in sequence to the coding strand (aside from using U instead of T) - so for a coding-strand input, generating the mRNA is as simple as that single substitution, without needing to compute a complement." },
     ],
     related: ["dihybrid-cross-calculator", "dna-concentration-calculator", "dna-copy-number-calculator"],
+  },
+  {
+    id: "dog-bmi-calculator",
+    category: "pets",
+    title: "Dog BMI Calculator",
+    keyword: "dog bmi calculator",
+    description: "Calculate a canine weight-to-length size index - an educational estimate, not a diagnostic body-condition score.",
+    intro: "Enter your dog's weight and body length (nose to base of tail) to calculate a size index. This is not human BMI applied to dogs, and it isn't a substitute for a veterinary body condition assessment.",
+    fields: [
+      { id: "weight", label: "Weight", type: "number", default: 20, step: 0.5, min: 0.1 },
+      { id: "weightUnit", label: "Weight unit", type: "select", default: "kg", options: [
+        { v: "kg", l: "kg" }, { v: "lb", l: "lb" },
+      ] },
+      { id: "length", label: "Body length (nose to base of tail)", type: "number", default: 65, step: 1, min: 1 },
+      { id: "lengthUnit", label: "Length unit", type: "select", default: "cm", options: [
+        { v: "cm", l: "cm" }, { v: "in", l: "inches" },
+      ] },
+    ],
+    compute: (v) => {
+      if (!(v.weight > 0) || !(v.length > 0)) {
+        return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Weight and length must both be greater than zero." };
+      }
+      const weightKg = v.weightUnit === "lb" ? v.weight * 0.453592 : v.weight;
+      const lengthM = (v.lengthUnit === "in" ? v.length * 2.54 : v.length) / 100;
+      const index = weightKg / (lengthM * lengthM);
+      return {
+        primary: { label: "Weight-to-length size index", value: round(index, 1) },
+        secondary: [{ l: "No healthy range shown", v: "See note below" }],
+        note: "There is no standardized, clinically validated \"dog BMI\" the way there is for adult humans, so no healthy/overweight/underweight range is shown for this number - showing one would imply a precision this simple ratio doesn't have, and dog breeds vary in frame and proportion far more than cats do (compare a Greyhound to a Bulldog), which makes a single universal index even less reliable across dogs. This index (weight ÷ length²) is provided for educational tracking only. Veterinarians assess canine body condition using a hands-on Body Condition Score (BCS), which involves feeling for rib coverage, waist, and abdominal tuck - that's the clinically appropriate way to assess whether a dog is at a healthy weight.",
+      };
+    },
+    faq: [
+      { q: "Why doesn't this calculator tell me if my dog is overweight or underweight?", a: "Because there's no standardized, clinically validated \"dog BMI\" scale the way there is for adult humans - applying human BMI cutoffs to a dog's weight-to-length ratio would be scientifically unfounded, and would be especially misleading across the huge range of dog body types, from a lean Greyhound to a stocky Bulldog. This tool shows the raw index for educational tracking only, without inventing a healthy-range classification that doesn't have solid backing." },
+      { q: "How do veterinarians actually assess a dog's body condition?", a: "Through a hands-on Body Condition Score (BCS), typically on a 9-point (or sometimes 5-point) scale, where the vet feels for rib coverage, checks for a visible waist from above and an abdominal tuck from the side, and assesses fat covering - a physical exam captures body composition in a way that a single weight-and-length ratio can't." },
+      { q: "Why measure body length instead of just tracking weight alone?", a: "Weight alone doesn't account for a dog's frame size - two dogs of very different body sizes could have the same weight but very different body conditions. Including length is an attempt to normalize for frame size, similar in spirit to how human BMI incorporates height, though it isn't validated for dogs the way BMI is for humans." },
+      { q: "How should I measure my dog's body length?", a: "Measure from the tip of the nose to the base of the tail (where the tail meets the body), with your dog standing naturally if possible - avoid stretching your dog out for the measurement, since that can distort the reading." },
+      { q: "Why is this index less reliable for dogs than for cats?", a: "Dog breeds vary enormously in body proportions - long-backed breeds, deep-chested breeds, and compact breeds all have very different natural weight-to-length ratios even at a healthy weight, while domestic cats are comparatively uniform in body shape. That extra variation is exactly why this tool avoids assigning any healthy-range label to the index." },
+      { q: "Is this the same as the Ideal Dog Weight Calculator on this site?", a: "No - the Ideal Dog Weight Calculator starts from a body condition score you (or your vet) have already assessed and estimates a target weight from it. This Dog BMI Calculator instead calculates a raw weight-to-length index directly from measurements, without requiring a BCS input, and doesn't estimate a target weight - the two tools serve different starting points and purposes." },
+      { q: "Can I use this index to track changes in my dog over time?", a: "It can be one data point to track alongside weight and a vet's body condition assessment, but changes in this index should be interpreted cautiously and ideally discussed with a veterinarian, since it isn't a validated diagnostic measure on its own." },
+    ],
+    related: ["cat-bmi-calculator", "ideal-dog-weight-calculator", "dog-food-calculator", "dog-age-calculator"],
+  },
+  {
+    id: "dog-chocolate-toxicity-calculator",
+    category: "pets",
+    title: "Dog Chocolate Toxicity Calculator",
+    keyword: "dog chocolate toxicity calculator",
+    description: "Estimate the theobromine exposure level from chocolate ingestion in dogs - always confirm with a veterinarian or poison control.",
+    intro: "Enter your dog's weight, the type of chocolate, and the approximate amount eaten to estimate the theobromine exposure level. This is an educational estimate only - if your dog has eaten chocolate, contact a veterinarian or animal poison control promptly.",
+    fields: [
+      { id: "weight", label: "Dog's weight", type: "number", default: 20, step: 0.5, min: 0.1 },
+      { id: "weightUnit", label: "Weight unit", type: "select", default: "kg", options: [
+        { v: "kg", l: "kg" }, { v: "lb", l: "lb" },
+      ] },
+      { id: "chocolateType", label: "Chocolate type", type: "select", default: "milk", options: [
+        { v: "white", l: "White chocolate" },
+        { v: "milk", l: "Milk chocolate" },
+        { v: "semisweet", l: "Semi-sweet / dark chocolate" },
+        { v: "baking", l: "Baking / unsweetened chocolate" },
+        { v: "cocoaPowder", l: "Cocoa powder" },
+      ] },
+      { id: "amount", label: "Approximate amount eaten", type: "number", default: 30, step: 1, min: 0 },
+      { id: "amountUnit", label: "Amount unit", type: "select", default: "g", options: [
+        { v: "g", l: "grams" }, { v: "oz", l: "ounces" },
+      ] },
+    ],
+    compute: (v) => {
+      if (!(v.weight > 0) || v.amount < 0) {
+        return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Weight must be greater than zero and amount can't be negative." };
+      }
+      const weightKg = v.weightUnit === "lb" ? v.weight * 0.453592 : v.weight;
+      const amountG = v.amountUnit === "oz" ? v.amount * 28.3495 : v.amount;
+      // Approximate theobromine content in mg per gram, from commonly cited
+      // veterinary toxicology references. Actual content varies by brand
+      // and recipe, so treat this as an estimate, not an exact figure.
+      const mgPerGram = {
+        white: 0.01, milk: 2.0, semisweet: 5.3, baking: 14.4, cocoaPowder: 26.5,
+      };
+      const theobromineMg = amountG * mgPerGram[v.chocolateType];
+      const mgPerKg = theobromineMg / weightKg;
+      let tier, tierNote;
+      if (v.amount === 0) {
+        tier = "No amount entered"; tierNote = "Enter the approximate amount eaten to see an estimate.";
+      } else if (mgPerKg < 20) {
+        tier = "Lower estimated exposure"; tierNote = "Mild signs (vomiting, diarrhea, restlessness) are still possible - this is not a 'safe' threshold. Individual dogs vary in sensitivity.";
+      } else if (mgPerKg < 40) {
+        tier = "Moderate estimated exposure"; tierNote = "This level has been associated with vomiting, diarrhea, restlessness, and increased heart rate in some dogs.";
+      } else if (mgPerKg < 60) {
+        tier = "Higher estimated exposure"; tierNote = "This level has been associated with more significant signs including tremors and a notably elevated heart rate in some dogs.";
+      } else {
+        tier = "High estimated exposure"; tierNote = "This level has been associated with serious signs including seizures and cardiac abnormalities in some dogs.";
+      }
+      return {
+        primary: { label: "Estimated theobromine exposure", value: `${round(mgPerKg, 1)} mg/kg` },
+        secondary: [
+          { l: "Estimated exposure level", v: tier },
+          { l: "Total theobromine (estimate)", v: `${round(theobromineMg, 0)} mg` },
+        ],
+        note: `${tierNote} This is an estimate only - chocolate products vary significantly in cocoa and theobromine content. Regardless of the estimated level, contact your veterinarian or an animal poison control service promptly after any chocolate ingestion in a dog. Do not wait to see if symptoms appear, and do not attempt any home treatment, including inducing vomiting, without professional guidance.`,
+      };
+    },
+    faq: [
+      { q: "Is any amount of chocolate safe for dogs?", a: "There's no established 'safe' amount this tool can confirm - theobromine sensitivity, product composition, and individual dog factors all vary. Even a lower estimated exposure level shown here can still cause mild signs in some dogs, so contact a veterinarian or poison control after any known ingestion rather than relying on a threshold." },
+      { q: "Why does dark or baking chocolate show a much higher exposure estimate than milk chocolate?", a: "Theobromine concentration rises sharply with cocoa content - baking chocolate and cocoa powder contain far more theobromine per gram than milk chocolate, which is diluted with milk solids and sugar. White chocolate contains only trace amounts of cocoa solids and therefore very little theobromine, though it can still cause digestive upset from fat and sugar content." },
+      { q: "What should I do right now if my dog ate chocolate?", a: "Contact your veterinarian, an emergency animal hospital, or an animal poison control service immediately - don't wait to see if symptoms develop. Have the chocolate's packaging on hand if possible so you can tell them the type and approximate amount, and don't attempt any home treatment, including inducing vomiting, unless a veterinary professional specifically instructs you to." },
+      { q: "Why won't this calculator just tell me if my dog needs to go to the vet?", a: "Because theobromine content varies between products even within the same category, a dog's individual sensitivity and health status aren't captured by a formula, and the consequences of underestimating risk are serious. This tool gives an estimate to help you describe the situation clearly to a veterinarian or poison control service, not a substitute for their assessment." },
+      { q: "Why are dogs more commonly reported with chocolate poisoning than cats?", a: "Dogs are typically less selective eaters than cats and lack the aversion to sweetness that many cats have, so they're more likely to eat a large quantity of chocolate if given the chance - this makes accidental exposure more common in dogs, even though the underlying theobromine sensitivity is a concern for both species." },
+      { q: "Is theobromine the same thing as caffeine?", a: "They're related methylxanthine compounds found together in chocolate and cocoa products, and both can be harmful to dogs, but theobromine is typically present in much larger amounts in chocolate and is the primary compound driving toxicity estimates like the one this calculator provides." },
+    ],
+    related: ["cat-chocolate-toxicity-calculator", "dog-onion-toxicity-calculator", "dog-raisin-toxicity-calculator", "dog-age-calculator"],
+  },
+  {
+    id: "dog-crate-size-calculator",
+    category: "pets",
+    title: "Dog Crate Size Calculator",
+    keyword: "dog crate size calculator",
+    description: "Estimate the minimum crate dimensions your dog needs to stand, turn around, and lie down comfortably.",
+    intro: "Enter your dog's body length and standing height to estimate the minimum internal crate dimensions needed for comfort.",
+    fields: [
+      { id: "bodyLength", label: "Body length (nose to base of tail)", type: "number", default: 24, step: 1, min: 1 },
+      { id: "standingHeight", label: "Standing height (floor to top of head)", type: "number", default: 22, step: 1, min: 1 },
+      { id: "unit", label: "Unit", type: "select", default: "in", options: [
+        { v: "in", l: "inches" }, { v: "cm", l: "cm" },
+      ] },
+    ],
+    compute: (v) => {
+      if (!(v.bodyLength > 0) || !(v.standingHeight > 0)) {
+        return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Body length and standing height must both be greater than zero." };
+      }
+      const addIn = v.unit === "cm" ? 10 : 4; // ~4 in / ~10 cm allowance
+      const minLength = v.bodyLength + addIn;
+      const minHeight = v.standingHeight + addIn;
+      const standardSizesIn = [18, 22, 24, 30, 36, 42, 48];
+      let sizeClass = null;
+      if (v.unit === "in") {
+        sizeClass = standardSizesIn.find((s) => s >= minLength) || `${Math.ceil(minLength / 6) * 6}+`;
+      } else {
+        const minLengthIn = minLength / 2.54;
+        const match = standardSizesIn.find((s) => s >= minLengthIn);
+        sizeClass = match ? `~${round(match * 2.54, 0)} cm` : `${round(Math.ceil(minLengthIn / 6) * 6 * 2.54, 0)}+ cm`;
+      }
+      return {
+        primary: { label: "Minimum internal crate length", value: `${round(minLength, 1)} ${v.unit}` },
+        secondary: [
+          { l: "Minimum internal crate height", v: `${round(minHeight, 1)} ${v.unit}` },
+          { l: "Closest common crate size", v: typeof sizeClass === "number" ? `${sizeClass} in` : sizeClass },
+        ],
+        note: "This adds a comfort allowance (about 4 inches / 10 cm) to your dog's body length and standing height so they can stand naturally, turn around, and lie down stretched out without touching the sides. Manufacturer dimensions vary between brands - always check the specific crate's listed internal (not external) measurements before buying. Airline and other carrier travel crates often have their own separate size and construction requirements set by the airline - verify those directly with the carrier rather than assuming this home-use estimate satisfies them.",
+      };
+    },
+    faq: [
+      { q: "Why does the calculator add extra length and height instead of matching my dog's exact size?", a: "A crate sized to your dog's exact body dimensions would be too tight for them to stand up straight, turn around, or lie down fully stretched out - the added allowance (roughly 4 inches / 10 cm) gives enough room for natural movement and comfort inside the crate." },
+      { q: "How should I measure my dog's body length for this calculator?", a: "Measure from the tip of the nose to the base of the tail (where the tail meets the body), with your dog standing naturally - this captures their functional body length without the variability of tail length, which isn't part of what needs to fit inside the crate for the dog itself to move comfortably." },
+      { q: "Does crate size for travel differ from crate size for home use?", a: "Yes - home crates are primarily about comfort for standing, turning, and lying down, while travel crates (especially for air travel) often have additional requirements around ventilation, door and latch construction, and specific minimum/maximum dimensions set by the airline or carrier. This calculator estimates home-use comfort sizing only; always verify a travel or airline carrier's current specific requirements directly with them before relying on any general estimate." },
+      { q: "Should a puppy be crated in a crate sized for their adult size?", a: "Many owners use a divider panel to section off part of an adult-sized crate while the puppy is small, then remove the divider as the puppy grows - this avoids buying multiple crates while still giving a growing puppy an appropriately sized space at each stage rather than too much open room too soon." },
+      { q: "Why do manufacturer size labels (like 'Large' or '42-inch') vary so much between brands?", a: "There's no single industry-wide standard for what counts as 'Small,' 'Medium,' or 'Large,' so the same label can mean different internal dimensions from one brand to the next - that's why this calculator focuses on actual minimum internal dimensions in inches or centimeters rather than a brand-specific size label, and why checking the listed internal measurements of any specific crate before buying matters." },
+      { q: "Is bigger always better when choosing a crate?", a: "Not necessarily - a crate that's excessively oversized relative to your dog can undermine housetraining, since dogs may be more willing to soil an area of the crate that's far from where they rest if there's a lot of extra unused space. The comfort allowance here is meant to give room to move naturally without being dramatically larger than needed." },
+    ],
+    related: ["dog-harness-size-calculator", "dog-bmi-calculator", "unit-length-converter"],
+  },
+  {
+    id: "dog-harness-size-calculator",
+    category: "pets",
+    title: "Dog Harness Size Calculator",
+    keyword: "dog harness size calculator",
+    description: "Estimate an approximate dog harness size band from chest girth and neck measurements.",
+    intro: "Enter your dog's chest girth (and optionally neck circumference) to get an approximate harness size band. Always compare your measurements against the specific harness manufacturer's own size chart before buying.",
+    fields: [
+      { id: "chestGirth", label: "Chest girth (widest part behind front legs)", type: "number", default: 20, step: 0.5, min: 1 },
+      { id: "neckGirth", label: "Neck girth (optional)", type: "number", default: 14, step: 0.5, min: 0 },
+      { id: "unit", label: "Unit", type: "select", default: "in", options: [
+        { v: "in", l: "inches" }, { v: "cm", l: "cm" },
+      ] },
+    ],
+    compute: (v) => {
+      if (!(v.chestGirth > 0)) {
+        return { primary: { label: "Enter a valid chest girth", value: "-" }, secondary: [], note: "Chest girth must be greater than zero." };
+      }
+      const chestIn = v.unit === "cm" ? v.chestGirth / 2.54 : v.chestGirth;
+      const bands = [
+        { max: 14, l: "XS" }, { max: 18, l: "S" }, { max: 22, l: "M" },
+        { max: 28, l: "L" }, { max: 34, l: "XL" }, { max: Infinity, l: "XXL" },
+      ];
+      const band = bands.find((b) => chestIn <= b.max).l;
+      return {
+        primary: { label: "Approximate size band", value: band },
+        secondary: [{ l: "Chest girth entered", v: `${v.chestGirth} ${v.unit}` }],
+        note: "This size band is a rough approximation only - harness sizing varies significantly between manufacturers, and the same letter size (like 'M') can correspond to different actual chest girth ranges from one brand to another. Always compare your dog's measurements directly against the specific harness product's own size chart before buying, rather than relying on this general band alone.",
+      };
+    },
+    faq: [
+      { q: "Where exactly should I measure my dog's chest girth?", a: "Wrap a flexible tape measure around the widest part of your dog's rib cage, just behind the front legs, keeping the tape snug but not tight - this is the measurement most harness size charts are built around, since it's the widest point the harness strap needs to comfortably encircle." },
+      { q: "Why isn't weight alone a reliable way to pick a harness size?", a: "Two dogs of the same weight can have very different chest girths depending on their build - a deep-chested, narrow breed and a stocky, barrel-chested breed of similar weight can need quite different harness sizes, so a direct chest measurement is more reliable than weight alone." },
+      { q: "How do I know if a harness fits properly once it's on?", a: "A common check is the two-finger rule - you should be able to comfortably slide two fingers flat between the harness strap and your dog's body at the chest and around the legs. If you can't fit two fingers, it's likely too tight; if there's a lot of extra slack or the harness shifts significantly during movement, it may be too loose." },
+      { q: "Why does this calculator ask for neck girth if chest girth determines the size band?", a: "Neck girth isn't used in this calculator's size band result, but many harness manufacturers list both chest and neck measurements on their size charts, especially for styles where the harness also has an adjustable neck opening - having your neck measurement on hand makes it easier to double-check fit against a specific product's full chart." },
+      { q: "My dog measures right between two size bands - which should I choose?", a: "It depends on the harness style and your dog's build - a snugger-fitting style (like some step-in harnesses) may fit better sized down, while a style with less adjustability might fit better sized up; when in between, checking the specific manufacturer's chart and any sizing notes for that particular product is more reliable than defaulting to either size from this general band alone." },
+      { q: "Does this calculator account for growing puppies?", a: "Not directly - a puppy's chest girth will change as they grow, so measure again periodically rather than buying a harness based on a single early measurement. Many owners choose an adjustable harness with a wide fit range for a growing puppy rather than resizing frequently." },
+    ],
+    related: ["dog-crate-size-calculator", "dog-bmi-calculator", "unit-length-converter"],
+  },
+  {
+    id: "dog-heat-cycle-calculator",
+    category: "pets",
+    title: "Dog Heat Cycle Calculator",
+    keyword: "dog heat cycle calculator",
+    description: "Estimate the stages and approximate timeline of a dog's heat (estrous) cycle from the date signs began.",
+    intro: "Enter the date your dog's heat signs began to see an approximate timeline of the typical estrous cycle stages. Individual cycles vary significantly, so treat these as general ranges, not exact dates.",
+    fields: [
+      { id: "heatStartDate", label: "Date heat signs began", type: "date", default: "2024-01-01" },
+      { id: "cycleLengthDays", label: "Typical interval between heat cycles", type: "number", unit: "days", default: 180, step: 1, min: 30 },
+    ],
+    compute: (v) => {
+      if (!v.heatStartDate || !(v.cycleLengthDays >= 30)) {
+        return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "A start date is required and the interval between cycles must be at least 30 days." };
+      }
+      const [y, m, d] = v.heatStartDate.split("-").map(Number);
+      const start = new Date(y, m - 1, d);
+      function addDays(days) {
+        const dt = new Date(start);
+        dt.setDate(dt.getDate() + days);
+        return dt.toISOString().slice(0, 10);
+      }
+      const nextCycle = addDays(v.cycleLengthDays);
+      return {
+        primary: { label: "Estimated next heat cycle window", value: `around ${nextCycle}` },
+        secondary: [
+          { l: "Proestrus (approx.)", v: `${addDays(0)} to ${addDays(9)}` },
+          { l: "Estrus / fertile window (approx.)", v: `${addDays(9)} to ${addDays(14)}` },
+          { l: "Diestrus (approx.)", v: `${addDays(14)} to ${addDays(60)}` },
+        ],
+        note: "These stage lengths (proestrus ~9 days, estrus ~5 days, diestrus lasting into roughly day 60) are general averages - individual dogs vary meaningfully in cycle length and stage timing, and the interval between cycles commonly ranges from about 4 to 12 months depending on the dog. This calculator does not determine exact fertility windows or guarantee pregnancy timing; a veterinarian can assess cycle stage more precisely using vaginal cytology or progesterone testing if precise timing matters (such as for planned breeding).",
+      };
+    },
+    faq: [
+      { q: "What are the stages of a dog's heat cycle?", a: "The canine estrous cycle is commonly described in four stages: proestrus (swelling and bloody discharge begin, not yet receptive to mating), estrus (the fertile window when a female is typically receptive), diestrus (a longer post-heat phase whether or not pregnancy occurred), and anestrus (a resting phase between cycles)." },
+      { q: "How often do dogs go into heat?", a: "Most dogs cycle roughly every 6 months, but the interval varies widely - anywhere from about 4 to 12 months between cycles is considered within a normal range depending on the individual dog and breed, which is why this calculator lets you adjust the interval field rather than fixing it at 6 months." },
+      { q: "Can this calculator tell me exactly when my dog is fertile?", a: "No - it gives a general approximate window based on typical average stage lengths, not a precise fertility determination for your specific dog. If precise timing matters, such as for a planned breeding, a veterinarian can assess the actual cycle stage using vaginal cytology or progesterone testing, which is far more accurate than date estimates alone." },
+      { q: "How is this different from the Dog Pregnancy Calculator?", a: "This Dog Heat Cycle Calculator estimates the stages and timeline of the reproductive (estrous) cycle itself, before and around mating. The Dog Pregnancy Calculator instead estimates a due date after a mating has already occurred, working forward from the mating date using the typical canine gestation length - they cover different points in the reproductive timeline." },
+      { q: "What are common signs that a dog has entered heat?", a: "Common early signs include vulvar swelling and a bloody or blood-tinged discharge, along with behavioral changes like increased urination frequency and attracting more attention from male dogs - the appearance of these signs is typically what owners use as the starting reference point (proestrus onset) for tracking the cycle." },
+      { q: "Does spaying eliminate heat cycles?", a: "Yes - a spayed female dog (with ovaries removed) no longer cycles through heat, since the hormonal cycle depends on the ovaries. This calculator is intended for unspayed female dogs going through their natural reproductive cycle." },
+    ],
+    related: ["dog-pregnancy-calculator", "dog-age-calculator", "days-until-calculator"],
+  },
+  {
+    id: "dog-life-expectancy-calculator",
+    category: "pets",
+    title: "Dog Life Expectancy Calculator",
+    keyword: "dog life expectancy calculator",
+    description: "Estimate a typical canine lifespan range by size category - a broad estimate, not a prediction for any individual dog.",
+    intro: "Select your dog's size category, and optionally their current age, to see a typical lifespan range. This is a broad statistical estimate, not a prediction of how long your specific dog will live.",
+    fields: [
+      { id: "sizeCategory", label: "Size category", type: "select", default: "medium", options: [
+        { v: "toy", l: "Toy (under 10 lb / 4.5 kg)" },
+        { v: "small", l: "Small (10-25 lb / 4.5-11 kg)" },
+        { v: "medium", l: "Medium (25-50 lb / 11-23 kg)" },
+        { v: "large", l: "Large (50-90 lb / 23-41 kg)" },
+        { v: "giant", l: "Giant (90+ lb / 41+ kg)" },
+      ] },
+      { id: "currentAge", label: "Current age (optional)", type: "number", unit: "years", default: 0, step: 0.5, min: 0 },
+    ],
+    compute: (v) => {
+      if (v.currentAge < 0) {
+        return { primary: { label: "Enter a valid age", value: "-" }, secondary: [], note: "Current age can't be negative." };
+      }
+      const ranges = {
+        toy: [13, 17], small: [12, 16], medium: [10, 13], large: [9, 12], giant: [7, 10],
+      };
+      const [lo, hi] = ranges[v.sizeCategory];
+      const secondary = [];
+      if (v.currentAge > 0) {
+        const remLo = Math.max(0, round(lo - v.currentAge, 1));
+        const remHi = Math.max(0, round(hi - v.currentAge, 1));
+        secondary.push({ l: "Estimated remaining years (broad range)", v: `${remLo} to ${remHi} years` });
+      }
+      return {
+        primary: { label: "Typical lifespan range", value: `${lo} to ${hi} years` },
+        secondary,
+        note: "This range reflects commonly cited average lifespans for the selected size category - it is not a prediction for your individual dog. Actual lifespan varies substantially based on genetics, breed, preventive veterinary care, diet, environment, disease, and accidents, and many individual dogs live shorter or considerably longer than the typical range for their size category. Treat this as general context, not a forecast.",
+      };
+    },
+    faq: [
+      { q: "Why does the calculator give a range instead of a single number?", a: "A single precise figure (like 'your dog will live 12.47 years') would falsely imply a level of predictive certainty that doesn't exist for any individual animal - lifespan is influenced by many factors this calculator doesn't know about (genetics, specific breed, care, health history), so a broad range reflecting typical outcomes for the size category is more honest than manufacturing false precision." },
+      { q: "Why does size category affect the estimate so much?", a: "Dog size and lifespan have a well-documented inverse relationship - smaller breeds tend to live meaningfully longer on average than giant breeds, likely related to differences in growth rate, aging biology, and disease susceptibility between size classes. This is the opposite pattern from most other mammal species, where larger body size within a species is often associated with longer, not shorter, lifespan." },
+      { q: "How is this different from the Dog Age Calculator?", a: "The Dog Age Calculator converts a dog's current age into an equivalent human age using a size-adjusted aging curve - it answers 'how old is my dog in human terms right now?' This Dog Life Expectancy Calculator instead estimates a typical total lifespan range for the size category - it answers a different question about expected longevity, not current relative age." },
+      { q: "Can this calculator predict when my specific dog will die?", a: "No, and it deliberately avoids implying that. Lifespan for any individual dog depends on genetics, breed-specific health tendencies, quality of veterinary care, diet, environment, and simple individual variation and chance (including accidents and disease) - this tool provides general population-level context, not a forecast for your dog." },
+      { q: "Does breed matter beyond size category?", a: "Yes, to some degree - specific breeds within the same size category can have somewhat different typical lifespans due to breed-specific genetic health tendencies, which this calculator's size-based ranges don't capture individually. If you want breed-specific context, breed-specific health resources or your veterinarian can provide more targeted information than a general size-based range." },
+      { q: "Does neuter/spay status affect life expectancy?", a: "Some research suggests spayed/neutered dogs may have somewhat longer average lifespans than intact dogs in certain populations, though the picture is complex and can vary by factors like age at the procedure, breed, and sex. This calculator doesn't factor in neuter status, since the size-based ranges shown already reflect a broad mix of both intact and altered dogs." },
+    ],
+    related: ["dog-age-calculator", "dog-quality-of-life-calculator", "cost-of-owning-a-dog-calculator"],
+  },
+  {
+    id: "dog-onion-toxicity-calculator",
+    category: "pets",
+    title: "Dog Onion Toxicity Calculator",
+    keyword: "dog onion toxicity calculator",
+    description: "Estimate onion exposure relative to body weight in dogs - always confirm with a veterinarian or poison control.",
+    intro: "Enter your dog's weight and the approximate amount of onion (or related Allium food) eaten to see an exposure summary. This is an educational estimate only - if your dog has eaten onion, garlic, or a related food, contact a veterinarian or animal poison control promptly.",
+    fields: [
+      { id: "weight", label: "Dog's weight", type: "number", default: 20, step: 0.5, min: 0.1 },
+      { id: "weightUnit", label: "Weight unit", type: "select", default: "kg", options: [
+        { v: "kg", l: "kg" }, { v: "lb", l: "lb" },
+      ] },
+      { id: "amount", label: "Approximate amount eaten", type: "number", default: 30, step: 1, min: 0 },
+      { id: "amountUnit", label: "Amount unit", type: "select", default: "g", options: [
+        { v: "g", l: "grams" }, { v: "oz", l: "ounces" },
+      ] },
+    ],
+    compute: (v) => {
+      if (!(v.weight > 0) || v.amount < 0) {
+        return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Weight must be greater than zero and amount can't be negative." };
+      }
+      const weightKg = v.weightUnit === "lb" ? v.weight * 0.453592 : v.weight;
+      const amountG = v.amountUnit === "oz" ? v.amount * 28.3495 : v.amount;
+      const gPerKg = amountG / weightKg;
+      let tier, tierNote;
+      if (v.amount === 0) {
+        tier = "No amount entered"; tierNote = "Enter the approximate amount eaten to see an exposure summary.";
+      } else if (gPerKg < 5) {
+        tier = "Lower estimated exposure"; tierNote = "Even smaller amounts of onion or related Allium foods (garlic, leeks, chives) are not established as reliably safe - onion toxicity risk isn't a simple linear dose-response, and factors like preparation and repeated exposure over time matter.";
+      } else if (gPerKg < 15) {
+        tier = "Moderate estimated exposure"; tierNote = "This level of exposure is within a range where onion toxicity effects have been reported in dogs.";
+      } else {
+        tier = "Higher estimated exposure"; tierNote = "This level of exposure is within a range commonly associated with meaningful risk of onion toxicity in dogs.";
+      }
+      return {
+        primary: { label: "Estimated exposure", value: `${round(gPerKg, 1)} g per kg body weight` },
+        secondary: [
+          { l: "Estimated exposure level", v: tier },
+          { l: "Total amount eaten", v: `${round(amountG, 0)} g` },
+        ],
+        note: `${tierNote} This exposure figure is provided only to help describe the situation to a veterinarian - it does not define a safe threshold, since onion (and related Allium species like garlic, leeks, and chives) can affect individual dogs differently, and cooked, powdered, or concentrated forms can be more potent by weight than raw onion. Regardless of the estimated level, contact your veterinarian or an animal poison control service promptly after any known onion or Allium ingestion in a dog. Do not wait to see if symptoms appear, and do not attempt any home treatment without professional guidance.`,
+      };
+    },
+    faq: [
+      { q: "Is a small amount of onion definitely safe for dogs?", a: "This tool doesn't establish any amount as definitely safe - onion and related Allium foods (garlic, leeks, chives, scallions) contain compounds that can damage a dog's red blood cells, and individual sensitivity, preparation method, and repeated smaller exposures over time can all affect risk in ways a single exposure calculation can't fully capture. Contact a veterinarian or poison control after any known ingestion rather than relying on a threshold." },
+      { q: "Are cooked, powdered, or dehydrated onion more concentrated than raw onion?", a: "Yes, generally - cooking, powdering, or dehydrating onion removes water and concentrates the compounds of concern by weight, so a given weight of onion powder or dehydrated onion can represent significantly more concentrated exposure than the same weight of raw onion. This is part of why ingredients like onion powder in cooked foods, soups, or baby food are a common accidental exposure source." },
+      { q: "What should I do right now if my dog ate onion, garlic, or a related food?", a: "Contact your veterinarian, an emergency animal hospital, or an animal poison control service immediately - don't wait to see if symptoms develop. Signs of onion/Allium toxicity can be delayed by several days as red blood cell damage progresses, so absence of immediate symptoms doesn't mean the ingestion wasn't significant. Don't attempt any home treatment unless a veterinary professional specifically instructs you to." },
+      { q: "Does garlic carry the same risk as onion?", a: "Garlic is in the same plant family (Allium) as onion and is generally considered to carry a similar or potentially greater risk per unit weight in dogs, though exact relative potency is debated - both should be treated with the same level of caution and prompt veterinary contact after ingestion." },
+      { q: "Why doesn't this calculator give a specific 'toxic dose' number?", a: "Onion/Allium toxicity in dogs doesn't have a single precise, universally agreed toxic dose the way some other toxins do - susceptibility varies by individual, and factors like the specific Allium species, preparation, and whether exposure is a one-time event or repeated over days all affect risk. This tool provides an exposure summary to aid a conversation with a veterinarian, not a threshold to self-diagnose against." },
+      { q: "Can repeated small exposures to onion be a problem even if a single exposure seems minor?", a: "Yes - because the toxic effect involves cumulative damage to red blood cells, repeated smaller exposures over time (such as regularly feeding table scraps containing onion or garlic powder) can add up to a meaningful risk even if no single incident looks large on its own." },
+    ],
+    related: ["dog-chocolate-toxicity-calculator", "dog-raisin-toxicity-calculator", "dog-age-calculator"],
+  },
+  {
+    id: "dog-quality-of-life-calculator",
+    category: "pets",
+    title: "Dog Quality of Life Calculator",
+    keyword: "dog quality of life calculator",
+    description: "An educational observation checklist across comfort, appetite, hygiene, mobility, and mood - not a diagnostic or end-of-life decision tool.",
+    intro: "Rate how your dog has been doing lately across a few everyday areas to organize your observations. This is a screening aid to support a conversation with your veterinarian, not a diagnosis or a decision about your dog's care.",
+    fields: [
+      { id: "comfort", label: "Comfort (freedom from pain/distress)", type: "select", default: "good", options: [
+        { v: "poor", l: "Struggling - signs of pain or distress" }, { v: "fair", l: "Some difficult days" }, { v: "good", l: "Generally comfortable" },
+      ] },
+      { id: "appetite", label: "Appetite", type: "select", default: "good", options: [
+        { v: "poor", l: "Eating little or not at all" }, { v: "fair", l: "Reduced or inconsistent" }, { v: "good", l: "Eating normally" },
+      ] },
+      { id: "hydration", label: "Hydration", type: "select", default: "good", options: [
+        { v: "poor", l: "Signs of dehydration" }, { v: "fair", l: "Drinking less than usual" }, { v: "good", l: "Drinking normally" },
+      ] },
+      { id: "hygiene", label: "Hygiene / grooming", type: "select", default: "good", options: [
+        { v: "poor", l: "Soiling itself, needs frequent help" }, { v: "fair", l: "Needs more grooming help than usual" }, { v: "good", l: "Normal hygiene" },
+      ] },
+      { id: "mobility", label: "Mobility", type: "select", default: "good", options: [
+        { v: "poor", l: "Difficulty moving, getting up, or walking" }, { v: "fair", l: "Slower or more cautious" }, { v: "good", l: "Moving normally" },
+      ] },
+      { id: "interaction", label: "Social interaction & interest", type: "select", default: "good", options: [
+        { v: "poor", l: "Withdrawn, uninterested" }, { v: "fair", l: "Less engaged than usual" }, { v: "good", l: "Engaged and interested" },
+      ] },
+      { id: "goodDays", label: "Good days vs. difficult days lately", type: "select", default: "good", options: [
+        { v: "poor", l: "More difficult days than good ones" }, { v: "fair", l: "About even" }, { v: "good", l: "Mostly good days" },
+      ] },
+    ],
+    compute: (v) => {
+      const fields = [v.comfort, v.appetite, v.hydration, v.hygiene, v.mobility, v.interaction, v.goodDays];
+      const scoreMap = { poor: 0, fair: 1, good: 2 };
+      const total = fields.reduce((sum, f) => sum + scoreMap[f], 0);
+      const max = fields.length * 2;
+      let summary;
+      if (total >= 12) summary = "Mostly positive signs across these areas";
+      else if (total >= 8) summary = "A mix of positive signs and areas worth watching";
+      else summary = "Several areas that may be worth discussing with a veterinarian soon";
+      return {
+        primary: { label: "Observation score", value: `${total} / ${max}` },
+        secondary: [{ l: "Summary", v: summary }],
+        note: "This score organizes your observations across common quality-of-life areas - it is not a diagnosis and does not make any decision about your dog's care. A lower score doesn't mean a specific action is required, and a higher score doesn't rule out a problem a checklist can't capture. If any area concerns you, especially comfort, appetite, or mobility, discuss it with a veterinarian, who can assess your dog directly and help you weigh the full picture together.",
+      };
+    },
+    faq: [
+      { q: "Does a low score mean I should consider euthanasia?", a: "No - this tool does not make that determination and isn't designed to. It organizes your day-to-day observations into a simple summary so you can describe patterns clearly to a veterinarian, who is the appropriate person to help interpret what a pattern of difficult days might mean for your specific dog and situation." },
+      { q: "Is this based on an established veterinary framework?", a: "It draws on the general idea behind published veterinary quality-of-life screening concepts - checking comfort, appetite, hydration, hygiene, mobility, and engagement over time - adapted into a simple observational checklist. It's an aid for organizing what you're noticing, not a validated clinical scoring instrument." },
+      { q: "Is this the same as the Dog Age or Life Expectancy Calculator?", a: "No - the Dog Age Calculator converts current age into human-year terms, and the Dog Life Expectancy Calculator estimates a typical total lifespan range by size category. Neither of those tools looks at how your dog is actually doing day to day. This Quality of Life Calculator instead organizes current, real-world observations about comfort, appetite, and other wellbeing areas - a different kind of question from age conversion or statistical lifespan." },
+      { q: "How often should I use this?", a: "There's no fixed schedule - some owners find it useful to check in periodically during a chronic illness or as a dog ages, to notice trends rather than relying on memory of how things have been 'lately.' Bring a record of scores over time to a vet visit if you're tracking a change." },
+      { q: "My dog scored well in most areas but poorly in one - what does that mean?", a: "A single low-scoring area, especially comfort or appetite, can matter even if the overall total looks reasonable - this tool intentionally shows each area's status rather than only a combined number, so a concerning single area shouldn't be dismissed just because the total looks fine." },
+      { q: "Can this replace a veterinary exam?", a: "No - this is a self-observation aid, not a substitute for a hands-on veterinary assessment. A vet can examine your dog directly, run diagnostics if needed, and help interpret findings that a checklist filled out at home can't capture." },
+    ],
+    related: ["cat-quality-of-life-calculator", "dog-age-calculator", "dog-life-expectancy-calculator", "cost-of-owning-a-dog-calculator"],
+  },
+  {
+    id: "dog-raisin-toxicity-calculator",
+    category: "pets",
+    title: "Dog Raisin Toxicity Calculator",
+    keyword: "dog raisin toxicity calculator",
+    description: "Summarize grape or raisin exposure for a veterinary conversation - grape/raisin toxicity in dogs has no established safe amount.",
+    intro: "Enter your dog's weight and the approximate amount of grapes or raisins eaten to generate an exposure summary for a veterinarian. Grape and raisin toxicity in dogs is unpredictable, and there is no established safe amount - contact a veterinarian or animal poison control promptly after any known ingestion.",
+    fields: [
+      { id: "weight", label: "Dog's weight", type: "number", default: 20, step: 0.5, min: 0.1 },
+      { id: "weightUnit", label: "Weight unit", type: "select", default: "kg", options: [
+        { v: "kg", l: "kg" }, { v: "lb", l: "lb" },
+      ] },
+      { id: "foodType", label: "Type eaten", type: "select", default: "grapes", options: [
+        { v: "grapes", l: "Grapes" }, { v: "raisins", l: "Raisins" },
+      ] },
+      { id: "count", label: "Approximate number eaten", type: "number", default: 3, step: 1, min: 0 },
+      { id: "hoursSince", label: "Hours since ingestion", type: "number", unit: "hours", default: 1, step: 0.5, min: 0 },
+    ],
+    compute: (v) => {
+      if (!(v.weight > 0) || v.count < 0 || v.hoursSince < 0) {
+        return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Weight must be greater than zero, and count and hours since ingestion can't be negative." };
+      }
+      const weightKg = v.weightUnit === "lb" ? v.weight * 0.453592 : v.weight;
+      // Rough average mass per unit, used only to express exposure for
+      // describing the situation to a vet - not a toxicity threshold.
+      const gramsEach = v.foodType === "grapes" ? 5 : 1.5;
+      const totalG = v.count * gramsEach;
+      const gPerKg = weightKg > 0 ? totalG / weightKg : 0;
+      return {
+        primary: { label: "Estimated amount eaten", value: `${round(totalG, 0)} g (${v.count} ${v.foodType})` },
+        secondary: [
+          { l: "Approximate exposure", v: `${round(gPerKg, 2)} g per kg body weight` },
+          { l: "Time since ingestion", v: `${v.hoursSince} hours` },
+        ],
+        note: "This is an exposure summary only, meant to help you describe the situation clearly to a veterinarian - it is not a safe amount, a below-toxic-dose figure, or any kind of reassurance. Grape and raisin toxicity in dogs is unpredictable: reactions have been reported after small amounts in some dogs, and there is no scientifically established safe dose or count, even for a single grape or raisin. Contact your veterinarian, an emergency animal hospital, or an animal poison control service promptly regardless of the amount or how much time has passed - do not wait to see if symptoms appear, and do not attempt any home treatment, including inducing vomiting, without professional guidance.",
+      };
+    },
+    faq: [
+      { q: "How many grapes or raisins are safe for a dog to eat?", a: "There is no scientifically established safe number - unlike some other toxins with a clearer dose-response relationship, grape and raisin toxicity in dogs is unpredictable, with severe reactions reported in some dogs after relatively small amounts, while other dogs have eaten more without apparent harm. Because there's no reliable way to know in advance how a given dog will react, no amount should be treated as safe." },
+      { q: "Does dog size or weight determine whether a given amount is dangerous?", a: "Body weight affects the exposure-per-kilogram figure this calculator shows, but it does not reliably predict whether a given dog will react, since individual susceptibility appears to vary in ways not fully explained by size alone. A small amount that one dog tolerates could still cause a serious reaction in another dog of similar size." },
+      { q: "What should I do right now if my dog ate grapes or raisins?", a: "Contact your veterinarian, an emergency animal hospital, or an animal poison control service immediately, regardless of how many were eaten or how your dog is behaving right now. Don't wait to see if symptoms appear - signs of kidney injury can be delayed, and prompt treatment (often within a few hours of ingestion) tends to be more effective. Don't attempt any home treatment, including inducing vomiting, unless specifically instructed by a veterinary professional." },
+      { q: "Why won't this calculator just tell me if the amount my dog ate is dangerous?", a: "Because there's no reliable dose threshold to check the amount against - grape and raisin toxicity doesn't follow a predictable dose-response pattern the way some other toxins do, so any calculation implying a 'safe' or 'below-toxic' amount would be misleading and potentially dangerous. This tool instead summarizes the exposure to help you communicate clearly and quickly with a veterinarian." },
+      { q: "Are raisins more dangerous than grapes, gram for gram?", a: "Raisins are dehydrated grapes, so a given weight of raisins represents a more concentrated amount of grape material than the same weight of fresh grapes - but because there's no established safe threshold for either, both should be treated with the same urgency regardless of which was eaten." },
+      { q: "Does it matter how much time has passed since my dog ate grapes or raisins?", a: "Time since ingestion is useful information for your veterinarian, since it can affect treatment options (such as whether inducing vomiting under veterinary supervision is still likely to be effective), but it doesn't change the urgency of contacting them - reach out promptly regardless of how much time has already passed." },
+    ],
+    related: ["dog-chocolate-toxicity-calculator", "dog-onion-toxicity-calculator", "dog-age-calculator"],
   },
 ];
 
