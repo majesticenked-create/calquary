@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Frequência de Mutação</title>
+  <meta name="description" content="Calcule a frequência de mutação como a fração de mutantes observados em uma população, em decimal, porcentagem e notação científica." />
+  <meta property="og:title" content="Calculadora de Frequência de Mutação | Calquary">
+  <meta property="og:description" content="Calcule a frequência de mutação como a fração de mutantes observados em uma população, em decimal, porcentagem e notação científica.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/pt/tool/mutation-frequency-calculator">
+  <meta property="og:locale" content="pt_PT">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/mutation-frequency-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculadora de Frequência de Mutação | Calquary">
+  <meta name="twitter:description" content="Calcule a frequência de mutação como a fração de mutantes observados em uma população, em decimal, porcentagem e notação científica.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/mutation-frequency-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/mutation-frequency-calculator">
+    <link rel="canonical" href="https://calquary.com/pt/tool/mutation-frequency-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("mutation-frequency-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("mutation-frequency-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calculadora de Frequência de Mutação",
+      "description": "Calcule a frequência de mutação como a fração de mutantes observados em uma população, em decimal, porcentagem e notação científica.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/pt/tool/mutation-frequency-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-25",
+      "inLanguage": "pt"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/pt/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/pt/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calculadora de Frequência de Mutação",
+          "item": "https://calquary.com/pt/tool/mutation-frequency-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Frequência de mutação é o mesmo que taxa de mutação?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. A frequência de mutação é a proporção observada de mutantes em uma população em um momento (mutantes / total). A taxa de mutação descreve com que frequência surgem novas mutações, tipicamente por divisão celular, por geração ou por unidade de tempo, e requer informações adicionais além de um único instantâneo da população."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Frequência de mutação é o mesmo que frequência alélica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. A frequência alélica descreve quão comum é um alelo (variante genética) específico dentro do pool gênico de uma população, tipicamente a partir de contagens de genótipos. A frequência de mutação descreve a proporção de indivíduos ou células classificados como mutantes em uma amostra observada, o que é uma questão diferente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Por que a frequência de mutação pode diferir da taxa de mutação real?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A frequência de mutação reflete mutantes acumulados após seleção, crescimento e possivelmente múltiplas gerações, enquanto a taxa de mutação isola a probabilidade por geração ou replicação de uma nova mutação. As duas podem diferir substancialmente dependendo do histórico da população."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que conta como mutante neste cálculo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O que quer que seus critérios experimentais ou observacionais definam, como um fenótipo selecionável ou uma mudança genética detectada. Esta calculadora apenas faz a aritmética com as contagens que você fornece."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "A contagem de mutantes pode ser igual à população total?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, matematicamente isso dá uma frequência de 1 (100%), embora na maioria das populações reais a frequência de mutação seja uma fração pequena. A calculadora rejeita apenas contagens de mutantes que excedam o total."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como isto difere das calculadoras de Hardy-Weinberg ou de Cruzamento Di-híbrido?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Essas ferramentas modelam distribuições esperadas de genótipos e alelos sob suposições específicas de herança. Esta ferramenta apenas resume uma proporção observada de mutantes a partir dos seus próprios dados de contagem, sem assumir nenhum modelo de herança."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/pt/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/pt/#categories">Categorias</a>
+          <a href="/pt/#tools">Todas as ferramentas</a>
+          <a href="/pt/about">Sobre</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Português">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>PT</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/mutation-frequency-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/mutation-frequency-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/mutation-frequency-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/mutation-frequency-calculator">Deutsch</a><span class="locale-item current" role="menuitem" aria-current="true">Português</span><a class="locale-item" role="menuitem" href="/it/tool/mutation-frequency-calculator">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/mutation-frequency-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/mutation-frequency-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/mutation-frequency-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/mutation-frequency-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/mutation-frequency-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/mutation-frequency-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/pt/">Calquary</a> / <a href="/pt/category/biology">Biologia</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calculadora de Frequência de Mutação</h1>
+        <p style="max-width:60ch;">Insira o número de mutantes observados e o tamanho total da população para calcular a frequência de mutação. É a proporção observada de mutantes na sua amostra, o que não é o mesmo que taxa de mutação.</p>
+        <p class="last-updated">Última atualização: September 25, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calcular</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Redefinir</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Perguntas frequentes</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Frequência de mutação é o mesmo que taxa de mutação?</h3>
+<p>Não. A frequência de mutação é a proporção observada de mutantes em uma população em um momento (mutantes / total). A taxa de mutação descreve com que frequência surgem novas mutações, tipicamente por divisão celular, por geração ou por unidade de tempo, e requer informações adicionais além de um único instantâneo da população.</p>
+</div>
+<div class="faq-item">
+<h3>Frequência de mutação é o mesmo que frequência alélica?</h3>
+<p>Não. A frequência alélica descreve quão comum é um alelo (variante genética) específico dentro do pool gênico de uma população, tipicamente a partir de contagens de genótipos. A frequência de mutação descreve a proporção de indivíduos ou células classificados como mutantes em uma amostra observada, o que é uma questão diferente.</p>
+</div>
+<div class="faq-item">
+<h3>Por que a frequência de mutação pode diferir da taxa de mutação real?</h3>
+<p>A frequência de mutação reflete mutantes acumulados após seleção, crescimento e possivelmente múltiplas gerações, enquanto a taxa de mutação isola a probabilidade por geração ou replicação de uma nova mutação. As duas podem diferir substancialmente dependendo do histórico da população.</p>
+</div>
+<div class="faq-item">
+<h3>O que conta como mutante neste cálculo?</h3>
+<p>O que quer que seus critérios experimentais ou observacionais definam, como um fenótipo selecionável ou uma mudança genética detectada. Esta calculadora apenas faz a aritmética com as contagens que você fornece.</p>
+</div>
+<div class="faq-item">
+<h3>A contagem de mutantes pode ser igual à população total?</h3>
+<p>Sim, matematicamente isso dá uma frequência de 1 (100%), embora na maioria das populações reais a frequência de mutação seja uma fração pequena. A calculadora rejeita apenas contagens de mutantes que excedam o total.</p>
+</div>
+<div class="faq-item">
+<h3>Como isto difere das calculadoras de Hardy-Weinberg ou de Cruzamento Di-híbrido?</h3>
+<p>Essas ferramentas modelam distribuições esperadas de genótipos e alelos sob suposições específicas de herança. Esta ferramenta apenas resume uma proporção observada de mutantes a partir dos seus próprios dados de contagem, sem assumir nenhum modelo de herança.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calcular</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Ferramentas relacionadas</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Nota sobre precisão</h4>
+          <p style="margin:0;font-size:0.85rem;">As calculadoras da Calquary são feitas para estimativas rápidas e confiáveis. Para decisões com implicações financeiras, estruturais ou médicas reais, consulte um profissional qualificado.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/pt/">← Voltar a todas as calculadoras</a> · <a href="/pt/about">Sobre</a> · <a href="/pt/contact">Contato</a> · <a href="/pt/privacy">Privacidade</a> · <a href="/pt/terms">Termos</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

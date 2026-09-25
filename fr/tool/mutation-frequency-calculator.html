@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculateur de Fréquence de Mutation</title>
+  <meta name="description" content="Calculez la fréquence de mutation comme la fraction de mutants observés dans une population, en décimal, en pourcentage et en notation scientifique." />
+  <meta property="og:title" content="Calculateur de Fréquence de Mutation | Calquary">
+  <meta property="og:description" content="Calculez la fréquence de mutation comme la fraction de mutants observés dans une population, en décimal, en pourcentage et en notation scientifique.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/fr/tool/mutation-frequency-calculator">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/mutation-frequency-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculateur de Fréquence de Mutation | Calquary">
+  <meta name="twitter:description" content="Calculez la fréquence de mutation comme la fraction de mutants observés dans une population, en décimal, en pourcentage et en notation scientifique.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/mutation-frequency-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/mutation-frequency-calculator">
+    <link rel="canonical" href="https://calquary.com/fr/tool/mutation-frequency-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("mutation-frequency-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("mutation-frequency-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calculateur de Fréquence de Mutation",
+      "description": "Calculez la fréquence de mutation comme la fraction de mutants observés dans une population, en décimal, en pourcentage et en notation scientifique.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/fr/tool/mutation-frequency-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-25",
+      "inLanguage": "fr"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/fr/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calculateur de Fréquence de Mutation",
+          "item": "https://calquary.com/fr/tool/mutation-frequency-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "La fréquence de mutation est-elle la même chose que le taux de mutation ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non. La fréquence de mutation est la proportion observée de mutants dans une population à un moment donné (mutants / total). Le taux de mutation décrit la fréquence d'apparition de nouvelles mutations, typiquement par division cellulaire, par génération ou par unité de temps, et nécessite des informations supplémentaires au-delà d'un simple instantané de population."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "La fréquence de mutation est-elle la même chose que la fréquence allélique ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non. La fréquence allélique décrit la fréquence d'un allèle (variant génétique) spécifique dans le pool génique d'une population, typiquement à partir de décomptes de génotypes. La fréquence de mutation décrit la proportion d'individus ou de cellules classés comme mutants dans un échantillon observé, ce qui est une question différente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pourquoi la fréquence de mutation pourrait-elle différer du taux de mutation réel ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La fréquence de mutation reflète les mutants accumulés après sélection, croissance et éventuellement plusieurs générations, tandis que le taux de mutation isole la probabilité par génération ou par réplication d'une nouvelle mutation. Les deux peuvent différer substantiellement selon l'histoire de la population."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce qui compte comme mutant dans ce calcul ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ce que définissent vos critères expérimentaux ou d'observation, comme un phénotype sélectionnable ou un changement génétique détecté. Ce calculateur ne fait que l'arithmétique sur les décomptes que vous fournissez."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Le décompte de mutants peut-il être égal à la population totale ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, mathématiquement cela donne une fréquence de 1 (100 %), bien que dans la plupart des populations réelles la fréquence de mutation soit une petite fraction. Le calculateur rejette seulement les décomptes de mutants dépassant le total."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "En quoi est-ce différent des calculateurs de Hardy-Weinberg ou de Croisement Dihybride ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ces outils modélisent les distributions attendues de génotypes et d'allèles selon des hypothèses d'hérédité spécifiques. Cet outil résume simplement une proportion de mutants observée à partir de vos propres données de décompte, sans supposer aucun modèle d'hérédité."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/fr/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/fr/#categories">Catégories</a>
+          <a href="/fr/#tools">Tous les outils</a>
+          <a href="/fr/about">À propos</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Français">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>FR</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/mutation-frequency-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/mutation-frequency-calculator">Español</a><span class="locale-item current" role="menuitem" aria-current="true">Français</span><a class="locale-item" role="menuitem" href="/de/tool/mutation-frequency-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/mutation-frequency-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/mutation-frequency-calculator">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/mutation-frequency-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/mutation-frequency-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/mutation-frequency-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/mutation-frequency-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/mutation-frequency-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/mutation-frequency-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/fr/">Calquary</a> / <a href="/fr/category/biology">Biologie</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calculateur de Fréquence de Mutation</h1>
+        <p style="max-width:60ch;">Saisissez le nombre de mutants observés et la taille totale de la population pour calculer la fréquence de mutation. C'est la proportion observée de mutants dans votre échantillon, ce qui n'est pas la même chose que le taux de mutation.</p>
+        <p class="last-updated">Dernière mise à jour : September 25, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculer</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Réinitialiser</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Questions fréquentes</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>La fréquence de mutation est-elle la même chose que le taux de mutation ?</h3>
+<p>Non. La fréquence de mutation est la proportion observée de mutants dans une population à un moment donné (mutants / total). Le taux de mutation décrit la fréquence d'apparition de nouvelles mutations, typiquement par division cellulaire, par génération ou par unité de temps, et nécessite des informations supplémentaires au-delà d'un simple instantané de population.</p>
+</div>
+<div class="faq-item">
+<h3>La fréquence de mutation est-elle la même chose que la fréquence allélique ?</h3>
+<p>Non. La fréquence allélique décrit la fréquence d'un allèle (variant génétique) spécifique dans le pool génique d'une population, typiquement à partir de décomptes de génotypes. La fréquence de mutation décrit la proportion d'individus ou de cellules classés comme mutants dans un échantillon observé, ce qui est une question différente.</p>
+</div>
+<div class="faq-item">
+<h3>Pourquoi la fréquence de mutation pourrait-elle différer du taux de mutation réel ?</h3>
+<p>La fréquence de mutation reflète les mutants accumulés après sélection, croissance et éventuellement plusieurs générations, tandis que le taux de mutation isole la probabilité par génération ou par réplication d'une nouvelle mutation. Les deux peuvent différer substantiellement selon l'histoire de la population.</p>
+</div>
+<div class="faq-item">
+<h3>Qu'est-ce qui compte comme mutant dans ce calcul ?</h3>
+<p>Ce que définissent vos critères expérimentaux ou d'observation, comme un phénotype sélectionnable ou un changement génétique détecté. Ce calculateur ne fait que l'arithmétique sur les décomptes que vous fournissez.</p>
+</div>
+<div class="faq-item">
+<h3>Le décompte de mutants peut-il être égal à la population totale ?</h3>
+<p>Oui, mathématiquement cela donne une fréquence de 1 (100 %), bien que dans la plupart des populations réelles la fréquence de mutation soit une petite fraction. Le calculateur rejette seulement les décomptes de mutants dépassant le total.</p>
+</div>
+<div class="faq-item">
+<h3>En quoi est-ce différent des calculateurs de Hardy-Weinberg ou de Croisement Dihybride ?</h3>
+<p>Ces outils modélisent les distributions attendues de génotypes et d'allèles selon des hypothèses d'hérédité spécifiques. Cet outil résume simplement une proportion de mutants observée à partir de vos propres données de décompte, sans supposer aucun modèle d'hérédité.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculer</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Outils associés</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Remarque sur la précision</h4>
+          <p style="margin:0;font-size:0.85rem;">Les calculatrices de Calquary sont conçues pour fournir des estimations rapides et fiables. Pour toute décision ayant de réelles conséquences financières, structurelles ou médicales, consultez un professionnel qualifié.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/fr/">← Retour à toutes les calculatrices</a> · <a href="/fr/about">À propos</a> · <a href="/fr/contact">Contact</a> · <a href="/fr/privacy">Confidentialité</a> · <a href="/fr/terms">Conditions</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

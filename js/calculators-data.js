@@ -4080,7 +4080,7 @@ const CALCULATORS = [
       { q: "How much mulch do I need for a 15×30 ft bed at 2 inches deep?", a: "15×30 ft is 450 sq ft. At 2 inches deep that's 75 cubic feet, or about 2.78 cubic yards before waste. With a 10% waste allowance, order about 3.06 cubic yards, or roughly 42 bags of 2 cu ft mulch." },
       { q: "What's the difference between buying mulch in bulk (cubic yards) versus bags?", a: "Bulk mulch is delivered by the cubic yard (27 cubic feet) and is usually cheaper per unit for larger beds, while bagged mulch comes in standard 2 cubic foot bags, better suited to small beds or when you don't have room for a delivered pile. This calculator gives both figures so you can compare." },
     ],
-    related: ["gravel-calculator", "concrete-calculator", "compost-calculator", "fertilizer-calculator"],
+    related: ["pine-straw-calculator", "concrete-calculator", "compost-calculator", "fertilizer-calculator"],
   },
   {
     id: "gravel-calculator",
@@ -8749,7 +8749,7 @@ const CALCULATORS = [
       { q: "Why does the calculator ask for a puppy activity level instead of just using weight?", a: "Growing puppies need substantially more calories per pound than adult dogs to support tissue development, so selecting 'puppy' applies a higher multiplier to the RER-based estimate rather than treating them like a sedentary adult of the same weight." },
       { q: "Is 'cups per day' the same across every brand of dog food?", a: "No - this calculator converts your calorie target into cups using the calories-per-cup value you enter, which varies by brand and formula. Always check your specific food's label for its calorie density rather than assuming a universal cup size." },
     ],
-    related: ["dog-age-calculator", "calorie-calculator", "dog-water-intake-calculator", "cost-of-owning-a-dog-calculator"],
+    related: ["dog-age-calculator", "calorie-calculator", "dog-water-intake-calculator", "omega-3-for-dogs-calculator"],
   },
   {
     id: "cat-age-calculator",
@@ -9528,7 +9528,7 @@ const CALCULATORS = [
       { q: "What if I only have genotype frequencies (percentages) instead of raw counts?", a: "Multiply each frequency by your total sample size to get counts, or simply enter frequencies scaled to a convenient total (like frequencies × 100, treating them as counts out of 100) - the formula produces the same p and q either way since it works with relative proportions." },
       { q: "Does this assume the population is in Hardy-Weinberg equilibrium?", a: "No - calculating allele frequencies from genotype counts is a direct tally and makes no equilibrium assumption. It works whether or not the population is actually in Hardy-Weinberg equilibrium; that assumption only comes into play if you go on to compare these frequencies against Hardy-Weinberg-predicted genotype ratios." },
     ],
-    related: ["hardy-weinberg-calculator", "dihybrid-cross-calculator", "percentage-calculator"],
+    related: ["hardy-weinberg-calculator", "dihybrid-cross-calculator", "mutation-frequency-calculator"],
   },
   {
     id: "animal-mortality-rate-calculator",
@@ -10201,7 +10201,7 @@ const CALCULATORS = [
       { q: "Why did I get an error saying the target exceeds the stock concentration?", a: "A simple dilution with diluent can only decrease concentration, never increase it - if your target concentration (C2) is higher than your stock concentration (C1), you'd need a more concentrated stock, or you'd need to concentrate your existing sample through a method like centrifugation or evaporation rather than diluting it." },
       { q: "Do the concentration units matter for this calculation?", a: "The math itself is unit-agnostic as long as C1 and C2 use the same unit (both in cells/mL, both in molarity, both in mg/mL, etc.) - the equation cancels the units out. Just make sure you're consistent, since mixing units (like entering C1 in cells/mL and C2 in cells/L) will give an incorrect result." },
     ],
-    related: ["cell-doubling-time-calculator", "molecular-weight-calculator", "dna-concentration-calculator"],
+    related: ["cell-doubling-time-calculator", "molecular-weight-calculator", "log-reduction-calculator"],
   },
   {
     id: "cell-doubling-time-calculator",
@@ -10246,7 +10246,7 @@ const CALCULATORS = [
       { q: "Does this work for bacterial cultures as well as mammalian cell cultures?", a: "Yes - the exponential growth model and doubling time formula apply generally to any population growing exponentially, whether bacteria, yeast, or mammalian cells in culture. Typical doubling times differ enormously by organism and conditions (bacteria can double in 20-30 minutes under ideal conditions, while many mammalian cell lines double over roughly 18-24 hours), but the underlying math is the same." },
       { q: "Is generation time the same as doubling time?", a: "For a culture growing exponentially, yes: generation time (common in microbiology, especially for bacteria) is the time it takes the population to double. This calculator finds it from an initial count, a final count, and the elapsed time, and it also reports the number of generations (doublings) observed." },
     ],
-    related: ["cell-dilution-calculator", "half-life-calculator", "dna-copy-number-calculator"],
+    related: ["cell-dilution-calculator", "half-life-calculator", "dna-copy-number-calculator", "log-reduction-calculator"],
   },
   {
     id: "cephalexin-for-cats-dosage-calculator",
@@ -10282,7 +10282,7 @@ const CALCULATORS = [
       { q: "Is cephalexin safe for all cats?", a: "Not universally - cats with known allergies to cephalexin or related antibiotics (like penicillins) shouldn't receive it, and it may interact with certain other medications. Only a veterinarian who knows your cat's health history can determine whether cephalexin is an appropriate choice." },
       { q: "What should I do if I think my cat had an adverse reaction to cephalexin?", a: "Contact your veterinarian or an emergency animal hospital promptly - don't wait to see if symptoms resolve on their own. Have the product packaging and prescription information on hand when you call." },
     ],
-    related: ["cephalexin-for-dogs-dosage-calculator", "cat-benadryl-dosage-calculator", "cat-age-calculator"],
+    related: ["cephalexin-for-dogs-dosage-calculator", "cat-benadryl-dosage-calculator", "cat-age-calculator", "metacam-for-cats-calculator"],
   },
   {
     id: "cephalexin-for-dogs-dosage-calculator",
@@ -10318,7 +10318,7 @@ const CALCULATORS = [
       { q: "Is cephalexin safe for all dogs?", a: "Not universally - dogs with known allergies to cephalexin or related antibiotics (like penicillins) shouldn't receive it, and it may interact with certain other medications. Only a veterinarian who knows your dog's health history can determine whether cephalexin is an appropriate choice." },
       { q: "How is the cephalexin dosage different between cats and dogs?", a: "This site provides separate cat and dog cephalexin safety pages because typical prescribing practices, formulations, and veterinary considerations differ somewhat by species - but neither page outputs a dose, since in both cases the correct amount must come from a veterinarian who has examined the specific animal." },
     ],
-    related: ["cephalexin-for-cats-dosage-calculator", "benadryl-dosage-for-dogs", "dog-age-calculator"],
+    related: ["cephalexin-for-cats-dosage-calculator", "benadryl-dosage-for-dogs", "metacam-for-dogs-calculator"],
   },
   {
     id: "compost-calculator",
@@ -10443,7 +10443,7 @@ const CALCULATORS = [
       { q: "How should I estimate my monthly food cost?", a: "Check a specific food brand and bag size, its price, and your dog's expected daily feeding amount (which depends on weight and activity level) - the Dog Food Calculator on this site can help estimate cups per day, which you can then price out with your chosen food's cost per cup or bag." },
       { q: "Does lifetime cost assume costs stay the same every year?", a: "Yes - this calculator projects a flat ongoing annual cost across all years after the first, for simplicity. In reality, costs often rise over a dog's lifetime, especially in senior years when veterinary care needs typically increase, so treat the lifetime figure as a conservative baseline rather than an upper bound." },
     ],
-    related: ["dog-food-calculator", "dog-age-calculator", "dog-life-expectancy-calculator"],
+    related: ["dog-food-calculator", "dog-age-calculator", "dog-life-expectancy-calculator", "pet-sitter-rates-calculator"],
   },
   {
     id: "cow-gestation-calculator",
@@ -10478,7 +10478,7 @@ const CALCULATORS = [
       { q: "What signs indicate calving is approaching near the estimated date?", a: "Common signs in the days before calving include udder filling ('bagging up'), relaxation and swelling around the tailhead and vulva, restlessness, and separation from the herd - these physical signs, rather than the calculated date alone, are the more reliable indicator that calving is imminent." },
       { q: "Why use 283 days as the default instead of a rounder number like 280 or 285?", a: "283 days is a widely cited average across general cattle gestation research and extension references, striking a middle point among commonly reported ranges - it's a reasonable default starting point precisely because it reflects an average rather than any single breed or individual animal." },
     ],
-    related: ["cattle-per-acre-calculator", "dog-pregnancy-calculator", "days-until-calculator", "goat-gestation-calculator"],
+    related: ["cattle-per-acre-calculator", "mare-gestation-calculator", "days-until-calculator", "goat-gestation-calculator"],
   },
   {
     id: "co2-grow-room-calculator",
@@ -11600,7 +11600,7 @@ const CALCULATORS = [
       { q: "Should I use this to schedule veterinary care?", a: "It helps with planning, but a veterinarian is the best source for pregnancy confirmation, nutrition changes, and kidding preparation." },
       { q: "Can I change the gestation length?", a: "Yes. Adjust the number of days if your breed or herd history suggests a different average." },
     ],
-    related: ["cow-gestation-calculator", "dog-pregnancy-calculator", "cat-pregnancy-calculator", "days-until-calculator"],
+    related: ["cow-gestation-calculator", "llama-gestation-calculator", "cat-pregnancy-calculator", "days-until-calculator"],
   },
   {
     id: "grain-bin-calculator",
@@ -12113,6 +12113,395 @@ const CALCULATORS = [
       { q: "Will this fence keep my livestock in?", a: "Not necessarily. Containment depends on species, design, tension, electrification, and maintenance. Check manufacturer and local requirements." },
     ],
     related: ["fence-calculator", "cattle-per-acre-calculator", "square-footage-calculator", "unit-length-converter"],
+  },
+  {
+    id: "llama-gestation-calculator",
+    category: "biology",
+    title: "Llama Gestation Calculator",
+    keyword: "llama gestation calculator",
+    description: "Estimate a llama or alpaca's due date and expected window from the breeding date, using an average 342-day camelid gestation.",
+    intro: "Enter the breeding date to estimate when a llama or alpaca dam is due. The default uses an average camelid gestation of about 342 days and shows the commonly reported range. Treat this as a planning estimate, not a guarantee.",
+    fields: [
+      { id: "breedingDate", label: "Breeding date", type: "date", default: "2024-01-01" },
+      { id: "gestationDays", label: "Gestation length", type: "number", unit: "days", default: 342, step: 1, min: 1 },
+    ],
+    compute: (v) => {
+      if (!v.breedingDate || !(v.gestationDays >= 300) || v.gestationDays > 400) return { primary: { label: "Enter a valid breeding date", value: "-" }, secondary: [], note: "A breeding date is required, and gestation length should be between 300 and 400 days." };
+      const p = String(v.breedingDate).split("-").map(Number);
+      if (p.length !== 3 || p.some((n) => !Number.isFinite(n))) return { primary: { label: "Enter a valid breeding date", value: "-" }, secondary: [], note: "Please enter the date in a valid format." };
+      const base = Date.UTC(p[0], p[1] - 1, p[2]);
+      if (Number.isNaN(base) || new Date(base).getUTCDate() !== p[2]) return { primary: { label: "Enter a valid breeding date", value: "-" }, secondary: [], note: "That date is not valid." };
+      const fmt = (d) => new Date(base + d * 86400000).toISOString().slice(0, 10);
+      return {
+        primary: { label: "Estimated due date", value: fmt(v.gestationDays) },
+        secondary: [
+          { l: "Gestation length used", v: `${v.gestationDays} days` },
+          { l: "Commonly reported window (330-350 days)", v: `${fmt(330)} to ${fmt(350)}` },
+        ],
+        note: "Llamas and alpacas average around 342 days of gestation, but individual pregnancies commonly run from roughly 330 to 350 days, and some healthy pregnancies fall outside that window. Length can vary with the individual dam, species (llama vs. alpaca), season of breeding, and the specific pregnancy. Involve a veterinarian experienced with camelids to confirm pregnancy and prepare for birth, especially as the expected window approaches.",
+      };
+    },
+    faq: [
+      { q: "How long are llamas and alpacas pregnant?", a: "Around 342 days on average, or about 11.5 months. Individual pregnancies commonly range from roughly 330 to 350 days." },
+      { q: "Is gestation different for llamas versus alpacas?", a: "Their typical gestation lengths overlap closely enough that the same general estimate is commonly used for both, though individual variation exists within each." },
+      { q: "Why does breeding season affect the due date?", a: "Camelids bred later in the season can sometimes carry slightly longer, an effect some breeders attribute to seasonal daylight changes. This calculator does not model that separately; use the range as a guide." },
+      { q: "How early can a veterinarian confirm pregnancy?", a: "Ultrasound can often confirm pregnancy several weeks after breeding, well before physical signs appear. A veterinarian experienced with camelids is the best resource for timing and method." },
+      { q: "How is this different from the Goat or Cow Gestation Calculators?", a: "Camelid gestation, at roughly 342 days, is dramatically longer than a goat's (about 150 days) or a cow's (about 283 days), so this tool uses its own default and range." },
+      { q: "What signs indicate birth is approaching?", a: "Behavioral and physical changes near the expected window can signal approaching birth, but they vary between animals. Work with a veterinarian or experienced camelid breeder to prepare rather than relying on the calculated date alone." },
+    ],
+    related: ["goat-gestation-calculator", "cow-gestation-calculator", "mare-gestation-calculator", "days-until-calculator"],
+  },
+  {
+    id: "log-reduction-calculator",
+    category: "biology",
+    title: "Log Reduction Calculator",
+    keyword: "log reduction calculator",
+    description: "Calculate microbiological log reduction and percentage reduction from an initial and final viable count.",
+    intro: "Enter an initial and a final microbial count (such as CFU) to calculate the log10 reduction and percentage reduction between them. This is a mathematical calculation from the numbers you provide, not a validation of any specific process.",
+    fields: [
+      { id: "initial", label: "Initial count (e.g. CFU)", type: "number", default: 1000000, step: 1, min: 0 },
+      { id: "final", label: "Final count (e.g. CFU)", type: "number", default: 100000, step: 1, min: 0 },
+    ],
+    compute: (v) => {
+      if (!(v.initial > 0) || !(v.final >= 0)) return { primary: { label: "Enter valid counts", value: "-" }, secondary: [], note: "Initial count must be greater than zero, and final count cannot be negative." };
+      if (v.final === 0) return { primary: { label: "Log reduction is undefined at zero", value: "-" }, secondary: [{ l: "Percentage reduction", v: "100%" }], note: "A final count of exactly zero represents complete reduction (100%), but log10 reduction is mathematically undefined at zero (it would be infinite) since no viable organisms remain to take a ratio against. Report this as a complete reduction rather than a specific log value." };
+      if (v.final > v.initial) {
+        const pctIncrease = ((v.final - v.initial) / v.initial) * 100;
+        return { primary: { label: "Population increased, not reduced", value: `+${round(pctIncrease, 2)}%` }, secondary: [], note: "The final count is higher than the initial count, so these values do not represent a reduction. Check that you entered the counts in the correct order, or that growth (not reduction) occurred between measurements." };
+      }
+      const logReduction = Math.log10(v.initial / v.final);
+      const pctReduction = 100 * (v.initial - v.final) / v.initial;
+      const fractionRemaining = v.final / v.initial;
+      return {
+        primary: { label: "Log reduction", value: `${round(logReduction, 2)}-log` },
+        secondary: [
+          { l: "Percentage reduction", v: `${round(pctReduction, 4)}%` },
+          { l: "Fraction remaining", v: fractionRemaining.toExponential(3) },
+        ],
+        note: "Log reduction = log10(initial / final). Percentage reduction = 100 x (initial - final) / initial. A 1-log reduction means a 90% reduction (1/10th remaining), a 2-log reduction means 99% (1/100th remaining), and so on. This calculation only reflects the two counts entered; it does not validate a disinfectant, sterilization process, or any regulatory claim, which depend on standardized test protocols, conditions, and independent verification.",
+      };
+    },
+    faq: [
+      { q: "What does a 1-log reduction mean?", a: "It means the count dropped to one-tenth of its starting value, a 90% reduction. Each additional log represents another factor of 10: 2-log is 99%, 3-log is 99.9%, and so on." },
+      { q: "What if the final count is higher than the initial count?", a: "That means the population grew rather than shrank, so a reduction figure would be misleading. The calculator flags this instead of showing a negative or nonsensical log reduction." },
+      { q: "What if the final count is zero?", a: "Log10 reduction is mathematically undefined at exactly zero (dividing by zero), even though it represents a complete, 100% reduction. The calculator reports it as a complete reduction rather than an invalid log value." },
+      { q: "Does this validate a disinfectant or sterilization process?", a: "No. It only does the arithmetic on the two counts you enter. Validating a process for a regulatory or clinical claim requires standardized test protocols, controls, and independent verification that this calculator does not perform." },
+      { q: "How is this different from a generic percentage reduction calculator?", a: "A generic percentage tool only computes percent change. This one is built around the log10 relationship that microbiologists use to describe order-of-magnitude reductions, alongside the equivalent percentage." },
+      { q: "Can I use this for non-microbiological counts?", a: "The math works for any two positive counts, but the log-reduction framing and terminology are specifically drawn from microbiology, so it is most meaningful for viable-count data like CFU." },
+    ],
+    related: ["cell-doubling-time-calculator", "cell-dilution-calculator", "dna-copy-number-calculator", "absolute-risk-reduction-calculator"],
+  },
+  {
+    id: "mare-gestation-calculator",
+    category: "biology",
+    title: "Mare Gestation Calculator",
+    keyword: "mare gestation calculator",
+    description: "Estimate a mare's foaling date and expected window from the breeding date, using an average 340-day equine gestation.",
+    intro: "Enter the breeding date to estimate when a mare is due to foal. The default uses an average equine gestation of about 340 days and shows the wide range commonly reported for horses. Treat this as a planning estimate, not a guarantee.",
+    fields: [
+      { id: "breedingDate", label: "Breeding date", type: "date", default: "2024-01-01" },
+      { id: "gestationDays", label: "Gestation length", type: "number", unit: "days", default: 340, step: 1, min: 1 },
+    ],
+    compute: (v) => {
+      if (!v.breedingDate || !(v.gestationDays >= 300) || v.gestationDays > 400) return { primary: { label: "Enter a valid breeding date", value: "-" }, secondary: [], note: "A breeding date is required, and gestation length should be between 300 and 400 days." };
+      const p = String(v.breedingDate).split("-").map(Number);
+      if (p.length !== 3 || p.some((n) => !Number.isFinite(n))) return { primary: { label: "Enter a valid breeding date", value: "-" }, secondary: [], note: "Please enter the date in a valid format." };
+      const base = Date.UTC(p[0], p[1] - 1, p[2]);
+      if (Number.isNaN(base) || new Date(base).getUTCDate() !== p[2]) return { primary: { label: "Enter a valid breeding date", value: "-" }, secondary: [], note: "That date is not valid." };
+      const fmt = (d) => new Date(base + d * 86400000).toISOString().slice(0, 10);
+      return {
+        primary: { label: "Estimated foaling date", value: fmt(v.gestationDays) },
+        secondary: [
+          { l: "Gestation length used", v: `${v.gestationDays} days` },
+          { l: "Commonly reported window (320-362 days)", v: `${fmt(320)} to ${fmt(362)}` },
+        ],
+        note: "Horses average around 340 days of gestation, one of the widest normal ranges of any common livestock species, commonly reported from about 320 to 362 days or more. Length varies with the individual mare, breed, season of breeding, the sex of the foal, and the specific pregnancy. A veterinarian can confirm pregnancy and help monitor as the expected window approaches; foals born notably before or after the range may need extra veterinary attention.",
+      };
+    },
+    faq: [
+      { q: "How long are horses pregnant?", a: "About 340 days on average, roughly 11 months, but the normal range is unusually wide - commonly cited as about 320 to 362 days or more." },
+      { q: "Is mare gestation the same as horse gestation?", a: "Yes. A mare is an adult female horse, so mare gestation and horse gestation both refer to equine pregnancy length; this tool covers that single calculation." },
+      { q: "Why is the horse gestation range so wide?", a: "Compared to many other livestock species, horses show unusually large individual variation in gestation length, influenced by the mare, breeding season, and the specific pregnancy, without necessarily signaling a problem." },
+      { q: "Does the sex of the foal affect gestation length?", a: "Some studies suggest colts are carried marginally longer than fillies on average, though the effect is small relative to overall individual variation." },
+      { q: "How early can pregnancy be confirmed in a mare?", a: "Veterinarians can often detect pregnancy by ultrasound around 2 weeks after ovulation, well before any physical signs appear." },
+      { q: "How is this different from the Llama or Goat Gestation Calculators?", a: "Each uses a gestation length specific to that species - roughly 340 days for horses, versus about 342 days for llamas/alpacas and about 150 days for goats - and each tool's range reflects that species' typical variation." },
+    ],
+    related: ["llama-gestation-calculator", "goat-gestation-calculator", "cow-gestation-calculator", "days-until-calculator"],
+  },
+  {
+    id: "metacam-for-cats-calculator",
+    category: "pets",
+    title: "Metacam for Cats Calculator",
+    keyword: "metacam for cats calculator",
+    description: "Safety information for Metacam (meloxicam) in cats. This page does not calculate or recommend a dose.",
+    intro: "This page provides safety information, not a personalized dose. Metacam (meloxicam) is a prescription anti-inflammatory medication for cats, and the correct dose, formulation, frequency, and duration must come from a veterinarian who has examined your cat.",
+    fields: [
+      { id: "weight", label: "Cat's weight (for your notes only)", type: "number", default: 4.5, step: 0.1, min: 0 },
+      { id: "weightUnit", label: "Weight unit", type: "select", default: "kg", options: [{ v: "kg", l: "kg" }, { v: "lb", l: "lb" }] },
+    ],
+    compute: (v) => {
+      if (!(v.weight >= 0)) return { primary: { label: "Enter a valid weight", value: "-" }, secondary: [], note: "Weight cannot be negative." };
+      return {
+        primary: { label: "Recommended next step", value: "Follow your veterinarian's prescription exactly" },
+        secondary: [
+          { l: "Cat's weight (for your notes)", v: v.weight > 0 ? `${v.weight} ${v.weightUnit}` : "Not entered" },
+          { l: "This tool provides", v: "Safety information, not a dose" },
+        ],
+        note: "This calculator intentionally does not output a milligram amount, mL amount, tablet or drop count, dosing frequency, or treatment duration. Metacam (meloxicam) dosing for cats is highly formulation- and species-specific: cats are especially sensitive to NSAID dosing errors, and feline and canine Metacam products are not interchangeable. The appropriate dose depends on the reason for treatment, your cat's kidney function, hydration status, age, weight, other medications, and the veterinarian's chosen regimen. Only use Metacam prescribed specifically for your cat, follow the veterinarian's or pharmacy's label exactly, never use a dose intended for a dog or another cat, and contact your veterinarian before adjusting or continuing use beyond what was prescribed.",
+      };
+    },
+    faq: [
+      { q: "Why doesn't this calculator tell me how much Metacam to give my cat?", a: "Meloxicam dosing in cats requires close veterinary oversight because cats are particularly sensitive to NSAID-related side effects, especially with repeated or long-term use, and the safe amount depends on factors this page cannot assess." },
+      { q: "Can I use my dog's Metacam for my cat?", a: "No. Canine and feline Metacam formulations and concentrations differ, and using the wrong product or a dose intended for a dog can be dangerous for a cat." },
+      { q: "Is Metacam safe for all cats?", a: "No. Cats with kidney disease, dehydration, gastrointestinal issues, or those taking certain other medications may need a different medication or extra monitoring. Your veterinarian will consider your cat's full health history." },
+      { q: "What if my cat is due for another dose but I'm not sure of the amount?", a: "Contact your veterinarian or the prescribing clinic rather than guessing or estimating from a general source. They can confirm the exact prescribed amount and schedule." },
+      { q: "How is this different from the Fish Oil for Cats Calculator?", a: "Fish oil is a supplement with informational EPA/DHA summaries; Metacam is a prescription NSAID. Both pages avoid personalized dosing, but Metacam carries stricter veterinary oversight requirements because of its medication risk profile." },
+      { q: "How is this different from the Metacam for Dogs Calculator?", a: "They cover different species with different approved formulations, concentrations, and safety margins. Never substitute one for the other." },
+    ],
+    related: ["metacam-for-dogs-calculator", "cephalexin-for-cats-dosage-calculator", "cat-benadryl-dosage-calculator", "fish-oil-for-cats-calculator"],
+  },
+  {
+    id: "metacam-for-dogs-calculator",
+    category: "pets",
+    title: "Metacam for Dogs Calculator",
+    keyword: "metacam for dogs calculator",
+    description: "Safety information for Metacam (meloxicam) in dogs. This page does not calculate or recommend a dose.",
+    intro: "This page provides safety information, not a personalized dose. Metacam (meloxicam) is a prescription anti-inflammatory medication for dogs, and the correct dose, formulation, frequency, and duration must come from a veterinarian who has examined your dog.",
+    fields: [
+      { id: "weight", label: "Dog's weight (for your notes only)", type: "number", default: 20, step: 0.5, min: 0 },
+      { id: "weightUnit", label: "Weight unit", type: "select", default: "kg", options: [{ v: "kg", l: "kg" }, { v: "lb", l: "lb" }] },
+    ],
+    compute: (v) => {
+      if (!(v.weight >= 0)) return { primary: { label: "Enter a valid weight", value: "-" }, secondary: [], note: "Weight cannot be negative." };
+      return {
+        primary: { label: "Recommended next step", value: "Follow your veterinarian's prescription exactly" },
+        secondary: [
+          { l: "Dog's weight (for your notes)", v: v.weight > 0 ? `${v.weight} ${v.weightUnit}` : "Not entered" },
+          { l: "This tool provides", v: "Safety information, not a dose" },
+        ],
+        note: "This calculator intentionally does not output a milligram amount, mL amount, tablet or drop count, dosing frequency, or treatment duration. Metacam (meloxicam) dosing for dogs depends on the reason for treatment, your dog's kidney and liver function, hydration status, age, weight, other medications, and the veterinarian's chosen regimen, including whether a loading dose is used. Only use Metacam prescribed specifically for your dog, follow the veterinarian's or pharmacy's label exactly, never use leftover medication from a previous prescription or another animal, and contact your veterinarian before adjusting or continuing use beyond what was prescribed.",
+      };
+    },
+    faq: [
+      { q: "Why doesn't this calculator tell me how much Metacam to give my dog?", a: "Meloxicam dosing depends on factors specific to your dog and the condition being treated that only a veterinarian who has examined your dog can properly evaluate, including whether an initial higher dose is appropriate." },
+      { q: "Can I use leftover Metacam from a previous prescription?", a: "No. The dose, formulation, and duration prescribed previously may not be appropriate for a new condition or a different point in time. Contact your veterinarian for a current prescription." },
+      { q: "Is Metacam safe for all dogs?", a: "No. Dogs with kidney or liver disease, gastrointestinal issues, dehydration, or those taking certain other medications may need a different approach or closer monitoring. Your veterinarian will factor in your dog's full health history." },
+      { q: "Can Metacam be combined with other medications?", a: "Some combinations, particularly with other NSAIDs or certain steroids, can increase risk of side effects. Tell your veterinarian about every medication and supplement your dog is taking." },
+      { q: "How is this different from the Omega-3 for Dogs Calculator?", a: "Omega-3 fish oil is a supplement with informational EPA/DHA summaries; Metacam is a prescription NSAID requiring veterinary dosing. Neither page calculates a personalized amount." },
+      { q: "How is this different from the Metacam for Cats Calculator?", a: "They cover different species with different approved formulations, concentrations, and safety margins. Never substitute one for the other." },
+    ],
+    related: ["metacam-for-cats-calculator", "cephalexin-for-dogs-dosage-calculator", "benadryl-dosage-for-dogs", "omega-3-for-dogs-calculator"],
+  },
+  {
+    id: "mlvss-calculator",
+    category: "biology",
+    title: "MLVSS Calculator",
+    keyword: "mlvss calculator",
+    description: "Calculate Mixed Liquor Volatile Suspended Solids (MLVSS) from a measured MLSS concentration and volatile solids fraction.",
+    intro: "Enter your measured Mixed Liquor Suspended Solids (MLSS) concentration and the volatile solids percentage from your lab analysis to calculate MLVSS. This is a calculation aid based on the values you provide, not plant-operation guidance.",
+    fields: [
+      { id: "mlss", label: "MLSS concentration (mg/L)", type: "number", default: 3000, step: 10, min: 0 },
+      { id: "volatilePct", label: "Volatile solids fraction (%)", type: "number", default: 75, step: 0.1, min: 0, max: 100 },
+    ],
+    compute: (v) => {
+      if (!(v.mlss >= 0)) return { primary: { label: "Enter a valid MLSS value", value: "-" }, secondary: [], note: "MLSS concentration cannot be negative." };
+      if (!(v.volatilePct >= 0) || v.volatilePct > 100) return { primary: { label: "Enter a valid percentage", value: "-" }, secondary: [], note: "Volatile solids fraction must be between 0 and 100%." };
+      const mlvss = v.mlss * (v.volatilePct / 100);
+      const fixed = v.mlss - mlvss;
+      return {
+        primary: { label: "MLVSS", value: `${round(mlvss, 0).toLocaleString("en-US")} mg/L` },
+        secondary: [
+          { l: "Fixed (inorganic) suspended solids", v: `${round(fixed, 0).toLocaleString("en-US")} mg/L` },
+          { l: "MLSS entered", v: `${round(v.mlss, 0).toLocaleString("en-US")} mg/L` },
+          { l: "Volatile fraction used", v: `${round(v.volatilePct, 1)}%` },
+        ],
+        note: "MLVSS = MLSS x (volatile solids fraction / 100). MLVSS approximates the organic, largely microbial portion of the mixed liquor suspended solids and is commonly used as a proxy for active biomass, while MLSS includes both volatile (organic) and fixed (inorganic) solids. This result depends entirely on your sampling method and laboratory measurement; it is a calculation aid, not a substitute for standard laboratory procedure or professional engineering judgment about process or operational changes.",
+      };
+    },
+    faq: [
+      { q: "What is the difference between MLSS and MLVSS?", a: "MLSS (Mixed Liquor Suspended Solids) is the total suspended solids concentration in the aeration basin, including both organic and inorganic material. MLVSS is the organic (volatile) portion of that total, commonly used as an approximation of active biomass." },
+      { q: "How is the volatile solids fraction measured?", a: "Typically by drying a sample to get total suspended solids, then igniting (burning off) a filtered sample in a muffle furnace: the weight lost on ignition is the volatile fraction, and what remains is the fixed (inorganic) fraction." },
+      { q: "Why does MLVSS matter for activated sludge processes?", a: "It is widely used as an indicator of the biomass available to treat wastewater, feeding into calculations like food-to-microorganism ratio and sludge age, though those calculations are outside the scope of this simple tool." },
+      { q: "Can I use this for other volatile solids calculations?", a: "The underlying math (total x fraction) is general, but the terminology and typical mg/L units here are specific to mixed liquor in wastewater treatment." },
+      { q: "Does this tool tell me how to adjust my process?", a: "No. It only converts the numbers you enter. Operational decisions should follow your facility's protocols and the judgment of a qualified wastewater professional or engineer." },
+      { q: "Why do I need to enter a percentage instead of raw masses?", a: "This simple mode assumes you already have the volatile fraction from a standard total solids/volatile solids lab procedure. If you only have raw sample, crucible, and residue masses, calculate the percentage from those first using your lab's standard method." },
+    ],
+    related: ["percentage-calculator", "cell-dilution-calculator", "corn-yield-calculator"],
+  },
+  {
+    id: "mutation-frequency-calculator",
+    category: "biology",
+    title: "Mutation Frequency Calculator",
+    keyword: "mutation frequency calculator",
+    description: "Calculate mutation frequency as the fraction of observed mutants in a population, as a decimal, percentage, and scientific notation.",
+    intro: "Enter the number of observed mutants and the total population size to calculate mutation frequency. This is the observed proportion of mutants in your sample, not the same thing as mutation rate.",
+    fields: [
+      { id: "mutants", label: "Observed mutant count", type: "number", default: 10, step: 1, min: 0 },
+      { id: "total", label: "Total population count", type: "number", default: 1000, step: 1, min: 0 },
+    ],
+    compute: (v) => {
+      if (!(v.mutants >= 0) || !(v.total > 0)) return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Mutant count cannot be negative, and total population must be greater than zero." };
+      if (v.mutants > v.total) return { primary: { label: "Mutant count exceeds total", value: "-" }, secondary: [], note: "The number of observed mutants cannot be greater than the total population." };
+      const freq = v.mutants / v.total;
+      return {
+        primary: { label: "Mutation frequency", value: freq.toExponential(3) },
+        secondary: [
+          { l: "As a decimal", v: round(freq, 6) },
+          { l: "As a percentage", v: `${round(freq * 100, 4)}%` },
+        ],
+        note: "Mutation frequency = observed mutants / total population, expressed here as scientific notation, a decimal, and a percentage. Mutation frequency describes the proportion of mutants present in a population at the time of observation. It is not the same as mutation rate, which describes how often new mutations arise per generation, per replication, or per unit time, and depends on additional factors like generation number and selection.",
+      };
+    },
+    faq: [
+      { q: "Is mutation frequency the same as mutation rate?", a: "No. Mutation frequency is the observed proportion of mutants in a population at one point in time (mutants / total). Mutation rate describes how often new mutations arise, typically per cell division, per generation, or per unit time, and requires additional information beyond a single population snapshot." },
+      { q: "Is mutation frequency the same as allele frequency?", a: "No. Allele frequency describes how common a specific allele (gene variant) is within a population's gene pool, typically from genotype counts. Mutation frequency describes the proportion of individuals or cells classified as mutants in an observed sample, which is a different question." },
+      { q: "Why might mutation frequency differ from the true mutation rate?", a: "Mutation frequency reflects accumulated mutants after selection, growth, and possibly multiple generations, while mutation rate isolates the per-generation or per-replication probability of a new mutation. The two can differ substantially depending on population history." },
+      { q: "What counts as a mutant in this calculation?", a: "Whatever your experimental or observational criteria define as a mutant, such as a selectable phenotype or a detected genetic change. This calculator only performs the arithmetic on the counts you provide." },
+      { q: "Can the mutant count equal the total population?", a: "Yes, mathematically that gives a frequency of 1 (100%), though in most real populations mutation frequency is a small fraction. The calculator only rejects mutant counts that exceed the total." },
+      { q: "How is this different from the Hardy-Weinberg or Dihybrid Cross Calculators?", a: "Those tools model expected genotype and allele distributions under specific inheritance assumptions. This tool simply summarizes an observed mutant proportion from your own count data, without assuming any inheritance model." },
+    ],
+    related: ["allele-frequency-calculator", "hardy-weinberg-calculator", "dihybrid-cross-calculator", "log-reduction-calculator"],
+  },
+  {
+    id: "omega-3-for-dogs-calculator",
+    category: "pets",
+    title: "Omega-3 for Dogs Calculator",
+    keyword: "omega-3 for dogs calculator",
+    description: "Summarize a fish oil product's EPA and DHA per serving for a dog to discuss with your vet. It does not calculate a dose for your dog.",
+    intro: "Enter the EPA and DHA amounts printed on a fish oil product's label for one serving to see them added up and organized. This tool does not recommend or calculate an amount for your dog. Any use of fish oil should be confirmed with your veterinarian.",
+    fields: [
+      { id: "dogWeight", label: "Dog's weight (for your notes only)", type: "number", default: 20, step: 0.5, min: 0 },
+      { id: "weightUnit", label: "Weight unit", type: "select", default: "kg", options: [{ v: "kg", l: "kg" }, { v: "lb", l: "lb" }] },
+      { id: "epa", label: "EPA per listed serving (mg, from label)", type: "number", default: 300, step: 1, min: 0 },
+      { id: "dha", label: "DHA per listed serving (mg, from label)", type: "number", default: 200, step: 1, min: 0 },
+    ],
+    compute: (v) => {
+      if (!(v.epa >= 0) || !(v.dha >= 0) || !(v.dogWeight >= 0)) return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Values cannot be negative." };
+      const total = v.epa + v.dha;
+      if (total === 0) return { primary: { label: "Enter the EPA and DHA from the label", value: "-" }, secondary: [], note: "At least one of EPA or DHA must be greater than zero." };
+      if (total > 100000) return { primary: { label: "Values look unrealistic", value: "-" }, secondary: [], note: "Please check the label amounts you entered." };
+      const secondary = [
+        { l: "EPA per listed serving", v: `${round(v.epa, 1)} mg` },
+        { l: "DHA per listed serving", v: `${round(v.dha, 1)} mg` },
+      ];
+      if (v.epa > 0 && v.dha > 0) secondary.push({ l: "EPA : DHA ratio", v: `${round(v.epa / v.dha, 2)} : 1` });
+      if (v.dogWeight > 0) secondary.push({ l: "Dog's weight (for your notes)", v: `${round(v.dogWeight, 1)} ${v.weightUnit}` });
+      secondary.push({ l: "Next step", v: "Confirm any use and amount with your veterinarian" });
+      return {
+        primary: { label: "Combined EPA + DHA per listed serving", value: `${round(total, 1)} mg` },
+        secondary,
+        note: "This summary only restates the product information you entered. It is not a dosing calculation and does not suggest an amount for your dog. Whether fish oil is appropriate, and how much, depends on the reason for use, diet, existing omega-3 intake, health conditions, medications, and the specific product's concentration. Fish oil products are not interchangeable. Ask your veterinarian before starting or changing a supplement.",
+      };
+    },
+    faq: [
+      { q: "Does this tell me how much fish oil to give my dog?", a: "No. It intentionally does not calculate an amount. It only adds up the EPA and DHA listed for one serving of a product so you can share clear information with your veterinarian." },
+      { q: "Why not calculate a dose from my dog's weight?", a: "Appropriate supplementation depends on your dog's health, diet, medications, and the purpose of use, not weight alone. Only a veterinarian who knows your dog can decide that." },
+      { q: "What are EPA and DHA?", a: "They are the two main long-chain omega-3 fatty acids found in fish oil. Labels usually list them in milligrams per serving." },
+      { q: "Are all fish oil products interchangeable?", a: "No. Products differ in concentration, ingredients, and formulation, and some may contain additives that are not appropriate for every dog. Ask your veterinarian which product is appropriate." },
+      { q: "When should I talk to my vet about fish oil?", a: "Before starting any supplement, especially if your dog has a medical condition, takes medication, or is scheduled for surgery, since omega-3 supplementation can affect clotting and interact with some medications." },
+      { q: "How is this different from the Fish Oil for Cats Calculator?", a: "Both use the same conservative, informational approach. This one is scaled and worded for dogs; use the Fish Oil for Cats Calculator for feline products instead." },
+    ],
+    related: ["fish-oil-for-cats-calculator", "dog-food-calculator", "dog-bmi-calculator", "metacam-for-dogs-calculator"],
+  },
+  {
+    id: "pet-sitter-rates-calculator",
+    category: "pets",
+    title: "Pet Sitter Rates Calculator",
+    keyword: "pet sitter rates calculator",
+    description: "Estimate pet-sitting charges for a booking from your own per-visit or overnight rate, number of visits, and optional fees.",
+    intro: "Enter your own sitting rates and booking details to estimate the total cost. The default numbers are editable examples, not current local rates - replace them with your sitter's actual pricing or your own planned rates.",
+    fields: [
+      { id: "mode", label: "Rate type", type: "select", default: "visit", options: [{ v: "visit", l: "Per drop-in visit" }, { v: "overnight", l: "Per overnight stay" }] },
+      { id: "rate", label: "Rate per visit or overnight", type: "number", default: 25, step: 1, min: 0 },
+      { id: "visitsPerDay", label: "Visits per day (drop-in only)", type: "number", default: 2, step: 1, min: 1 },
+      { id: "days", label: "Number of days", type: "number", default: 5, step: 1, min: 1 },
+      { id: "extraPetFee", label: "Extra-pet fee per visit/night (0 to skip)", type: "number", default: 0, step: 1, min: 0 },
+      { id: "extraPets", label: "Number of extra pets", type: "number", default: 0, step: 1, min: 0 },
+      { id: "travelFee", label: "One-time travel/booking fee (0 to skip)", type: "number", default: 0, step: 1, min: 0 },
+      { id: "holidayFee", label: "Holiday surcharge, total (0 to skip)", type: "number", default: 0, step: 1, min: 0 },
+    ],
+    compute: (v) => {
+      if (!(v.rate >= 0) || !(v.extraPetFee >= 0) || !(v.travelFee >= 0) || !(v.holidayFee >= 0)) return { primary: { label: "Enter valid prices", value: "-" }, secondary: [], note: "Prices and fees cannot be negative." };
+      if (!(v.days >= 1) || v.days > 366) return { primary: { label: "Enter 1 to 366 days", value: "-" }, secondary: [], note: "Number of days must be between 1 and 366." };
+      if (!(v.extraPets >= 0) || v.extraPets > 50) return { primary: { label: "Enter a valid number of extra pets", value: "-" }, secondary: [], note: "Number of extra pets must be 0 or more." };
+      const visitsPerDay = v.mode === "visit" ? Math.max(1, Math.floor(v.visitsPerDay || 1)) : 1;
+      if (v.mode === "visit" && !(v.visitsPerDay >= 1)) return { primary: { label: "Enter at least 1 visit per day", value: "-" }, secondary: [], note: "Visits per day must be at least 1." };
+      const eventsPerDay = visitsPerDay;
+      const totalEvents = eventsPerDay * Math.floor(v.days);
+      const baseCost = totalEvents * v.rate;
+      const extraPetCost = totalEvents * v.extraPetFee * Math.floor(v.extraPets);
+      const total = baseCost + extraPetCost + v.travelFee + v.holidayFee;
+      const secondary = [
+        { l: v.mode === "visit" ? "Visits total" : "Overnights total", v: totalEvents },
+        { l: "Base cost", v: round(baseCost, 2).toFixed(2) },
+      ];
+      if (extraPetCost > 0) secondary.push({ l: "Extra-pet fees", v: round(extraPetCost, 2).toFixed(2) });
+      if (v.travelFee > 0) secondary.push({ l: "Travel/booking fee", v: round(v.travelFee, 2).toFixed(2) });
+      if (v.holidayFee > 0) secondary.push({ l: "Holiday surcharge", v: round(v.holidayFee, 2).toFixed(2) });
+      secondary.push({ l: "Cost per day", v: round(total / Math.floor(v.days), 2).toFixed(2) });
+      return {
+        primary: { label: "Total booking cost", value: round(total, 2).toFixed(2) },
+        secondary,
+        note: "Total = (visits or overnights x your rate) + extra-pet fees + travel/booking fee + holiday surcharge. All prices are your own inputs in any currency; the defaults are only editable examples and not current market rates for any location. Real sitter pricing also varies by experience, services included (walks, medication, updates), and local demand.",
+      };
+    },
+    faq: [
+      { q: "Are the default rates real market prices?", a: "No. They are placeholder examples. Replace them with your sitter's actual quote or your own planned pricing." },
+      { q: "What is the difference between drop-in and overnight pricing?", a: "Drop-in visits are typically charged per visit, with multiple visits possible per day. Overnight stays are usually a flat rate per night regardless of how many times the sitter checks in." },
+      { q: "How does the extra-pet fee work?", a: "It multiplies by the number of extra pets and by the total number of visits or overnights, matching how many sitters charge an add-on per additional animal per visit." },
+      { q: "Can I estimate a multi-week trip?", a: "Yes. Increase the number of days, and the tool multiplies your per-day cost accordingly. It does not assume a discount for longer bookings unless you build one into your rate." },
+      { q: "Does this include walking or medication administration separately?", a: "Not as separate line items. Build any such add-ons into your per-visit or per-overnight rate, or use the extra-pet fee field creatively if that fits your situation better." },
+      { q: "How is this different from the Cost of Owning a Dog Calculator?", a: "That tool estimates ongoing costs of owning a pet, like food and routine care. This one estimates a single sitting booking's cost from a sitter's rates." },
+    ],
+    related: ["cost-of-owning-a-dog-calculator", "dog-food-calculator", "tip-calculator"],
+  },
+  {
+    id: "pine-straw-calculator",
+    category: "construction",
+    title: "Pine Straw Calculator",
+    keyword: "pine straw calculator",
+    description: "Estimate how many bales of pine straw you need for a bed or yard from its area and the coverage per bale on your product.",
+    intro: "Enter the area to cover, or its length and width, plus the coverage per bale from your pine straw product or supplier. The calculator gives the number of bales needed. It does not assume a universal coverage rate.",
+    fields: [
+      { id: "mode", label: "Enter area as", type: "select", default: "area", options: [{ v: "area", l: "Total area" }, { v: "dims", l: "Length x width" }] },
+      { id: "area", label: "Area (if entering total area)", type: "number", default: 500, step: 10, min: 0 },
+      { id: "length", label: "Length (if entering length x width)", type: "number", default: 25, step: 1, min: 0 },
+      { id: "width", label: "Width (if entering length x width)", type: "number", default: 20, step: 1, min: 0 },
+      { id: "unit", label: "Unit", type: "select", default: "sqft", options: [{ v: "sqft", l: "sq ft (feet for length/width)" }, { v: "sqm", l: "sq m (meters for length/width)" }] },
+      { id: "coverage", label: "Coverage per bale (from your product label; sq ft if using sq ft, sq m if using sq m)", type: "number", default: 50, step: 1, min: 0 },
+    ],
+    compute: (v) => {
+      let area;
+      if (v.mode === "dims") {
+        if (!(v.length > 0) || !(v.width > 0)) return { primary: { label: "Enter valid dimensions", value: "-" }, secondary: [], note: "Length and width must both be greater than zero." };
+        area = v.length * v.width;
+      } else {
+        if (!(v.area > 0)) return { primary: { label: "Enter a valid area", value: "-" }, secondary: [], note: "Area must be greater than zero." };
+        area = v.area;
+      }
+      if (!(v.coverage > 0)) return { primary: { label: "Enter the coverage per bale", value: "-" }, secondary: [], note: "Use the coverage per bale from your product label. It must be greater than zero." };
+      if (area > 1e8) return { primary: { label: "Area looks unrealistic", value: "-" }, secondary: [], note: "Please check the size and units entered." };
+      const exact = area / v.coverage;
+      const bales = Math.ceil(exact - 1e-9);
+      return {
+        primary: { label: "Bales needed", value: `${bales.toLocaleString("en-US")} bales` },
+        secondary: [
+          { l: "Total area", v: `${round(area, 0).toLocaleString("en-US")} ${v.unit === "sqm" ? "sq m" : "sq ft"}` },
+          { l: "Exact bales (unrounded)", v: round(exact, 2) },
+          { l: "Coverage per bale used", v: `${round(v.coverage, 1)} ${v.unit === "sqm" ? "sq m" : "sq ft"}` },
+        ],
+        note: "Bales needed = area / coverage per bale, rounded up to a whole bale. Coverage per bale varies significantly by bale size, supplier, application thickness, and how much the straw settles after spreading, so use the figure printed on your product or given by your supplier rather than a generic assumption. Add extra for thicker coverage, irregular beds, or expected settling.",
+      };
+    },
+    faq: [
+      { q: "How much area does one bale of pine straw cover?", a: "It varies by bale size, brand, and how thickly you spread it, commonly somewhere in a wide range depending on the product. Check your specific product's label or ask your supplier rather than assuming a fixed number." },
+      { q: "How is this different from the Mulch Calculator?", a: "The Mulch Calculator computes volume from an area and a chosen depth, suited to bulk or bagged mulch measured by volume. Pine straw is typically sold and rated by bales covering a certain area, not by volume and depth, so this tool works directly from bale coverage instead." },
+      { q: "Should I add extra for uneven beds?", a: "Yes. Irregular shapes, obstacles, and settling over time typically mean buying a bit more than the exact calculated amount is a reasonable practice." },
+      { q: "Can I use metric measurements?", a: "Yes. Choose square meters, and enter your coverage per bale in square meters to match. Keep units consistent between area and coverage." },
+      { q: "Why does the tool show an unrounded exact number?", a: "So you can see how close you are to needing an extra bale, useful if you are deciding between ordering slightly less or rounding up further for a margin." },
+      { q: "Does thickness of application matter?", a: "Yes, thicker layers cover less area per bale. If your coverage figure assumes a specific depth, apply pine straw to roughly that same depth to get accurate coverage." },
+    ],
+    related: ["mulch-calculator", "compost-calculator", "square-footage-calculator", "grass-seed-calculator"],
   },
 ];
 

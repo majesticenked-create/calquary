@@ -177,6 +177,11 @@ const WAVE_ONE_TOOL_IDS = [
   "guinea-pig-age-calculator", "hamster-age-calculator", "horse-weight-calculator",
   "cat-size-calculator", "lawn-mowing-cost-calculator", "ligation-calculator",
   "livestock-fence-cost-calculator",
+  // Batch 18 (Batch 007 build): 10 new tools translated into all 11 non-English locales.
+  "llama-gestation-calculator", "log-reduction-calculator", "mare-gestation-calculator",
+  "metacam-for-cats-calculator", "metacam-for-dogs-calculator", "mlvss-calculator",
+  "mutation-frequency-calculator", "omega-3-for-dogs-calculator", "pet-sitter-rates-calculator",
+  "pine-straw-calculator",
 ];
 
 function loadData() {

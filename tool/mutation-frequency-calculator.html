@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mutation Frequency Calculator | Calquary</title>
+  <meta name="description" content="Calculate mutation frequency as the fraction of observed mutants in a population, as a decimal, percentage, and scientific notation." />
+  <meta property="og:title" content="Mutation Frequency Calculator | Calquary">
+  <meta property="og:description" content="Calculate mutation frequency as the fraction of observed mutants in a population, as a decimal, percentage, and scientific notation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/tool/mutation-frequency-calculator">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/mutation-frequency-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mutation Frequency Calculator | Calquary">
+  <meta name="twitter:description" content="Calculate mutation frequency as the fraction of observed mutants in a population, as a decimal, percentage, and scientific notation.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/mutation-frequency-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/mutation-frequency-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/mutation-frequency-calculator">
+    <link rel="canonical" href="https://calquary.com/tool/mutation-frequency-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("mutation-frequency-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("mutation-frequency-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Mutation Frequency Calculator",
+      "description": "Calculate mutation frequency as the fraction of observed mutants in a population, as a decimal, percentage, and scientific notation.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/mutation-frequency-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-25",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Mutation Frequency Calculator",
+          "item": "https://calquary.com/tool/mutation-frequency-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is mutation frequency the same as mutation rate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Mutation frequency is the observed proportion of mutants in a population at one point in time (mutants / total). Mutation rate describes how often new mutations arise, typically per cell division, per generation, or per unit time, and requires additional information beyond a single population snapshot."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is mutation frequency the same as allele frequency?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Allele frequency describes how common a specific allele (gene variant) is within a population's gene pool, typically from genotype counts. Mutation frequency describes the proportion of individuals or cells classified as mutants in an observed sample, which is a different question."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why might mutation frequency differ from the true mutation rate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mutation frequency reflects accumulated mutants after selection, growth, and possibly multiple generations, while mutation rate isolates the per-generation or per-replication probability of a new mutation. The two can differ substantially depending on population history."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What counts as a mutant in this calculation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Whatever your experimental or observational criteria define as a mutant, such as a selectable phenotype or a detected genetic change. This calculator only performs the arithmetic on the counts you provide."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can the mutant count equal the total population?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, mathematically that gives a frequency of 1 (100%), though in most real populations mutation frequency is a small fraction. The calculator only rejects mutant counts that exceed the total."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is this different from the Hardy-Weinberg or Dihybrid Cross Calculators?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Those tools model expected genotype and allele distributions under specific inheritance assumptions. This tool simply summarizes an observed mutant proportion from your own count data, without assuming any inheritance model."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/#categories">Categories</a>
+          <a href="/#tools">All tools</a>
+          <a href="/about">About</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: English">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>EN</span>
+          </button>
+          <div class="locale-menu" role="menu"><span class="locale-item current" role="menuitem" aria-current="true">English</span><a class="locale-item" role="menuitem" href="/es/tool/mutation-frequency-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/mutation-frequency-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/mutation-frequency-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/mutation-frequency-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/mutation-frequency-calculator">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/mutation-frequency-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/mutation-frequency-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/mutation-frequency-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/mutation-frequency-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/mutation-frequency-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/mutation-frequency-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/">Calquary</a> / <a href="/category/biology">Biology</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Mutation Frequency Calculator</h1>
+        <p style="max-width:60ch;">Enter the number of observed mutants and the total population size to calculate mutation frequency. This is the observed proportion of mutants in your sample, not the same thing as mutation rate.</p>
+        <p class="last-updated">Last updated: September 25, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculate</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reset</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Frequently asked questions</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Is mutation frequency the same as mutation rate?</h3>
+<p>No. Mutation frequency is the observed proportion of mutants in a population at one point in time (mutants / total). Mutation rate describes how often new mutations arise, typically per cell division, per generation, or per unit time, and requires additional information beyond a single population snapshot.</p>
+</div>
+<div class="faq-item">
+<h3>Is mutation frequency the same as allele frequency?</h3>
+<p>No. Allele frequency describes how common a specific allele (gene variant) is within a population's gene pool, typically from genotype counts. Mutation frequency describes the proportion of individuals or cells classified as mutants in an observed sample, which is a different question.</p>
+</div>
+<div class="faq-item">
+<h3>Why might mutation frequency differ from the true mutation rate?</h3>
+<p>Mutation frequency reflects accumulated mutants after selection, growth, and possibly multiple generations, while mutation rate isolates the per-generation or per-replication probability of a new mutation. The two can differ substantially depending on population history.</p>
+</div>
+<div class="faq-item">
+<h3>What counts as a mutant in this calculation?</h3>
+<p>Whatever your experimental or observational criteria define as a mutant, such as a selectable phenotype or a detected genetic change. This calculator only performs the arithmetic on the counts you provide.</p>
+</div>
+<div class="faq-item">
+<h3>Can the mutant count equal the total population?</h3>
+<p>Yes, mathematically that gives a frequency of 1 (100%), though in most real populations mutation frequency is a small fraction. The calculator only rejects mutant counts that exceed the total.</p>
+</div>
+<div class="faq-item">
+<h3>How is this different from the Hardy-Weinberg or Dihybrid Cross Calculators?</h3>
+<p>Those tools model expected genotype and allele distributions under specific inheritance assumptions. This tool simply summarizes an observed mutant proportion from your own count data, without assuming any inheritance model.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculate</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Related tools</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>A note on accuracy</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquary's calculators are built for quick, reliable estimates. For decisions with real financial, structural, or medical stakes, confirm with a qualified professional.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/">← Back to all calculators</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>
