@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>犬用生食計算機 - 無料オンライン計算ツール | Calquary</title>
+  <meta name="description" content="自分で入力した割合を使って、生食の総量を各成分の重量に分割します。食事の配分を推奨したり、栄養的に完全であると主張したりしません。" />
+  <meta property="og:title" content="犬用生食計算機 | Calquary">
+  <meta property="og:description" content="自分で入力した割合を使って、生食の総量を各成分の重量に分割します。食事の配分を推奨したり、栄養的に完全であると主張したりしません。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/ja/tool/raw-dog-food-calculator">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/raw-dog-food-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="犬用生食計算機 | Calquary">
+  <meta name="twitter:description" content="自分で入力した割合を使って、生食の総量を各成分の重量に分割します。食事の配分を推奨したり、栄養的に完全であると主張したりしません。">
+  <meta name="twitter:image" content="https://calquary.com/og-images/raw-dog-food-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/raw-dog-food-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/raw-dog-food-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/raw-dog-food-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/raw-dog-food-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/raw-dog-food-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/raw-dog-food-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/raw-dog-food-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/raw-dog-food-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/raw-dog-food-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/raw-dog-food-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/raw-dog-food-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/raw-dog-food-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/raw-dog-food-calculator">
+    <link rel="canonical" href="https://calquary.com/ja/tool/raw-dog-food-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("raw-dog-food-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("raw-dog-food-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "犬用生食計算機",
+      "description": "自分で入力した割合を使って、生食の総量を各成分の重量に分割します。食事の配分を推奨したり、栄養的に完全であると主張したりしません。",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/ja/tool/raw-dog-food-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-25",
+      "inLanguage": "ja"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/ja/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Pet & Lifestyle",
+          "item": "https://calquary.com/ja/category/pets"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "犬用生食計算機",
+          "item": "https://calquary.com/ja/tool/raw-dog-food-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "これは正しい給餌割合を教えてくれますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "いいえ。ご自身で入力した割合の計算をするだけです。Calquaryは特定の筋肉、骨、内臓の比率を提供または推奨しません。適切な割合は愛犬の個々のニーズによって決まり、あなたと獣医師または獣医栄養士が決めることです。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "このように計算された生食は栄養的に完全ですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "このツールではそれは分かりません。完全でバランスの取れた栄養は、肉、骨、内臓の単純な割合よりもはるかに多くの要素に左右されます。特定の栄養素レベル、ビタミンとミネラルのバランス、愛犬個々のニーズも関係します。完全な食事を設計するには獣医栄養の専門家と協力してください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "犬用フード計算機とどう違いますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "犬用フード計算機は、安静時エネルギー要求量に基づいて市販フードの1日のカロリー必要量とカップ数を推定します。このツールはカロリーを推定せず、いかなる食事も推奨しません。入力された総量を、同じく入力された割合で各部分に分割するだけです。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "生食は安全ですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "生の動物性食品には、サルモネラ、リステリア、大腸菌などの病原体が含まれる可能性があり、愛犬だけでなく食事を扱う人、特に子供、高齢者、妊娠中の方、免疫不全の方にもリスクをもたらします。生食を選ぶ場合は、慎重な食品衛生管理を行い、その方法について獣医師と相談してください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "合計が100%にならない割合で使えますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい、計算機は各成分の重量を計算しますが、割合の合計が100%でないことを表示するので、意図した数値かどうか確認できます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "なぜCalquaryは標準的な生食の割合を教えてくれないのですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "オンラインでよく引用される割合はさまざまで、すべての犬にとって栄養的に完全であると普遍的に検証されているわけではありません。一つを権威あるものとして提示する代わりに、このツールはその決定をあなたと獣医療チームに委ね、自分の数値を決めた後の計算のみをお手伝いします。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/ja/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/ja/#categories">カテゴリー</a>
+          <a href="/ja/#tools">すべてのツール</a>
+          <a href="/ja/about">このサイトについて</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: 日本語">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>JA</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/raw-dog-food-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/raw-dog-food-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/raw-dog-food-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/raw-dog-food-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/raw-dog-food-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/raw-dog-food-calculator">Italiano</a><span class="locale-item current" role="menuitem" aria-current="true">日本語</span><a class="locale-item" role="menuitem" href="/ro/tool/raw-dog-food-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/raw-dog-food-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/raw-dog-food-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/raw-dog-food-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/raw-dog-food-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/ja/">Calquary</a> / <a href="/ja/category/pets">ペット・ライフスタイル</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>犬用生食計算機</h1>
+        <p style="max-width:60ch;">生食の1日の総量と、各成分について自分で決めた割合を入力すると、各部分の重量が表示されます。このツールは入力された割合の計算をするだけです。肉、骨、内臓の割合を推奨するものではなく、食事が栄養的に完全かどうかも確認しません。</p>
+        <p class="last-updated">最終更新日： September 25, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">計算する</button>
+              <button type="button" id="calc-reset" class="btn-ghost">リセット</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>よくある質問</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>これは正しい給餌割合を教えてくれますか?</h3>
+<p>いいえ。ご自身で入力した割合の計算をするだけです。Calquaryは特定の筋肉、骨、内臓の比率を提供または推奨しません。適切な割合は愛犬の個々のニーズによって決まり、あなたと獣医師または獣医栄養士が決めることです。</p>
+</div>
+<div class="faq-item">
+<h3>このように計算された生食は栄養的に完全ですか?</h3>
+<p>このツールではそれは分かりません。完全でバランスの取れた栄養は、肉、骨、内臓の単純な割合よりもはるかに多くの要素に左右されます。特定の栄養素レベル、ビタミンとミネラルのバランス、愛犬個々のニーズも関係します。完全な食事を設計するには獣医栄養の専門家と協力してください。</p>
+</div>
+<div class="faq-item">
+<h3>犬用フード計算機とどう違いますか?</h3>
+<p>犬用フード計算機は、安静時エネルギー要求量に基づいて市販フードの1日のカロリー必要量とカップ数を推定します。このツールはカロリーを推定せず、いかなる食事も推奨しません。入力された総量を、同じく入力された割合で各部分に分割するだけです。</p>
+</div>
+<div class="faq-item">
+<h3>生食は安全ですか?</h3>
+<p>生の動物性食品には、サルモネラ、リステリア、大腸菌などの病原体が含まれる可能性があり、愛犬だけでなく食事を扱う人、特に子供、高齢者、妊娠中の方、免疫不全の方にもリスクをもたらします。生食を選ぶ場合は、慎重な食品衛生管理を行い、その方法について獣医師と相談してください。</p>
+</div>
+<div class="faq-item">
+<h3>合計が100%にならない割合で使えますか?</h3>
+<p>はい、計算機は各成分の重量を計算しますが、割合の合計が100%でないことを表示するので、意図した数値かどうか確認できます。</p>
+</div>
+<div class="faq-item">
+<h3>なぜCalquaryは標準的な生食の割合を教えてくれないのですか?</h3>
+<p>オンラインでよく引用される割合はさまざまで、すべての犬にとって栄養的に完全であると普遍的に検証されているわけではありません。一つを権威あるものとして提示する代わりに、このツールはその決定をあなたと獣医療チームに委ね、自分の数値を決めた後の計算のみをお手伝いします。</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">計算する</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>関連ツール</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>精度について</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquaryの計算ツールは、迅速で信頼できる概算を目的としています。実際の財務、構造、医療に関わる重要な決定を行う前には、必ず専門家にご確認ください。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/ja/">← すべての計算ツールに戻る</a> · <a href="/ja/about">このサイトについて</a> · <a href="/ja/contact">お問い合わせ</a> · <a href="/ja/privacy">プライバシー</a> · <a href="/ja/terms">利用規約</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

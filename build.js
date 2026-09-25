@@ -187,6 +187,11 @@ const WAVE_ONE_TOOL_IDS = [
   // by existing/combined tools). Dihybrid Cross Calculator was improved in place.
   "plant-population-calculator", "potting-soil-calculator", "protein-concentration-calculator",
   "protein-molecular-weight-calculator", "qpcr-efficiency-calculator", "rabbit-cage-size-calculator",
+  // Batch 20 (Batch 009 build): 9 new tools translated into all 11 non-English locales.
+  // Soil Calculator was skipped as covered by Potting Soil / Raised Bed Soil.
+  "rabbit-color-calculator", "rabbit-gestation-calculator", "raised-bed-soil-calculator",
+  "rat-cage-size-calculator", "raw-dog-food-calculator", "sheep-gestation-calculator",
+  "sod-calculator", "swine-gestation-calculator", "tramadol-for-dogs-calculator",
 ];
 
 function loadData() {

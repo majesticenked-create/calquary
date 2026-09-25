@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rohfütterungs-Rechner für Hunde - Kostenloser Online-Rechner</title>
+  <meta name="description" content="Teilen Sie eine gesamte Rohfuttermenge mit Ihren eigenen Prozentsätzen in Komponentengewichte auf. Empfiehlt keine Ernährungsverhältnisse und behauptet keine…" />
+  <meta property="og:title" content="Rohfütterungs-Rechner für Hunde | Calquary">
+  <meta property="og:description" content="Teilen Sie eine gesamte Rohfuttermenge mit Ihren eigenen Prozentsätzen in Komponentengewichte auf. Empfiehlt keine Ernährungsverhältnisse und behauptet keine ernährungsphysiologische Vollständigkeit.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/de/tool/raw-dog-food-calculator">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/raw-dog-food-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rohfütterungs-Rechner für Hunde | Calquary">
+  <meta name="twitter:description" content="Teilen Sie eine gesamte Rohfuttermenge mit Ihren eigenen Prozentsätzen in Komponentengewichte auf. Empfiehlt keine Ernährungsverhältnisse und behauptet keine ernährungsphysiologische Vollständigkeit.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/raw-dog-food-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/raw-dog-food-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/raw-dog-food-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/raw-dog-food-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/raw-dog-food-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/raw-dog-food-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/raw-dog-food-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/raw-dog-food-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/raw-dog-food-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/raw-dog-food-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/raw-dog-food-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/raw-dog-food-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/raw-dog-food-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/raw-dog-food-calculator">
+    <link rel="canonical" href="https://calquary.com/de/tool/raw-dog-food-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("raw-dog-food-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("raw-dog-food-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Rohfütterungs-Rechner für Hunde",
+      "description": "Teilen Sie eine gesamte Rohfuttermenge mit Ihren eigenen Prozentsätzen in Komponentengewichte auf. Empfiehlt keine Ernährungsverhältnisse und behauptet keine ernährungsphysiologische Vollständigkeit.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/de/tool/raw-dog-food-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-25",
+      "inLanguage": "de"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Pet & Lifestyle",
+          "item": "https://calquary.com/de/category/pets"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rohfütterungs-Rechner für Hunde",
+          "item": "https://calquary.com/de/tool/raw-dog-food-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Sagt mir das die richtigen Fütterungsprozentsätze?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein. Es führt nur Arithmetik mit den von Ihnen selbst eingegebenen Prozentsätzen durch. Calquary gibt kein spezifisches Fleisch-, Knochen- oder Organverhältnis vor oder empfiehlt eines - angemessene Verhältnisse hängen von den individuellen Bedürfnissen Ihres Hundes ab und sind eine Entscheidung für Sie und Ihren Tierarzt oder einen Tierernährungsberater."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ist eine so berechnete Rohfütterung ernährungsphysiologisch vollständig?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Das kann Ihnen dieses Tool nicht sagen. Vollständige und ausgewogene Ernährung hängt von weit mehr ab als einfachen Prozentsätzen von Fleisch, Knochen und Organen - es geht auch um spezifische Nährstoffgehalte, Vitamin- und Mineralstoffbalance und die individuellen Bedürfnisse Ihres Hundes. Arbeiten Sie mit einem Tierernährungsfachmann zusammen, um eine vollständige Ernährung zusammenzustellen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie unterscheidet sich das vom Hundefutter-Rechner?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Der Hundefutter-Rechner schätzt den täglichen Kalorienbedarf und die Tassen eines kommerziellen Futters basierend auf dem Ruheenergiebedarf. Dieses Tool schätzt keine Kalorien und empfiehlt keine Ernährung - es teilt nur eine von Ihnen angegebene Gesamtmenge in Teile auf, unter Verwendung von ebenfalls von Ihnen angegebenen Prozentsätzen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ist Rohfütterung sicher?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rohe tierische Produkte können Krankheitserreger wie Salmonellen, Listerien oder E. coli tragen, die Risiken für Ihren Hund und für Personen darstellen, die das Futter handhaben, besonders Kinder, ältere Menschen, Schwangere und immungeschwächte Personen. Wenn Sie sich für Rohfütterung entscheiden, wenden Sie sorgfältige Lebensmittelsicherheitspraktiken an und besprechen Sie den Ansatz mit Ihrem Tierarzt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann ich das mit Prozentsätzen verwenden, die sich nicht auf 100 % summieren?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, der Rechner berechnet trotzdem das Gewicht jeder Komponente, weist aber darauf hin, dass sich Ihre Prozentsätze nicht auf 100 % summieren, damit Sie prüfen können, ob Ihre eigenen Zahlen wie beabsichtigt sind."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Warum gibt mir Calquary nicht einfach ein Standard-Rohfütterungsverhältnis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Häufig online zitierte Verhältnisse variieren und sind nicht universell als ernährungsphysiologisch vollständig für jeden Hund validiert. Statt eines als maßgeblich darzustellen, überlässt dieses Tool diese Entscheidung Ihnen und Ihrem tierärztlichen Team und hilft nur bei der Arithmetik, sobald Sie sich für Ihre eigenen Zahlen entschieden haben."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/de/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/de/#categories">Kategorien</a>
+          <a href="/de/#tools">Alle Tools</a>
+          <a href="/de/about">Über uns</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Deutsch">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>DE</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/raw-dog-food-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/raw-dog-food-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/raw-dog-food-calculator">Français</a><span class="locale-item current" role="menuitem" aria-current="true">Deutsch</span><a class="locale-item" role="menuitem" href="/pt/tool/raw-dog-food-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/raw-dog-food-calculator">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/raw-dog-food-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/raw-dog-food-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/raw-dog-food-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/raw-dog-food-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/raw-dog-food-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/raw-dog-food-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/de/">Calquary</a> / <a href="/de/category/pets">Haustiere & Lifestyle</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Rohfütterungs-Rechner für Hunde</h1>
+        <p style="max-width:60ch;">Geben Sie eine tägliche Gesamtmenge Rohfutter und Ihre eigenen Prozentsätze für jede Komponente ein, um das Gewicht jedes Teils zu sehen. Dieses Tool führt nur die Arithmetik auf den von Ihnen angegebenen Prozentsätzen durch - es empfiehlt kein Fleisch-, Knochen- oder Organverhältnis und prüft nicht, ob eine Ernährung vollständig ist.</p>
+        <p class="last-updated">Zuletzt aktualisiert: September 25, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Berechnen</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Zurücksetzen</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Häufig gestellte Fragen</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Sagt mir das die richtigen Fütterungsprozentsätze?</h3>
+<p>Nein. Es führt nur Arithmetik mit den von Ihnen selbst eingegebenen Prozentsätzen durch. Calquary gibt kein spezifisches Fleisch-, Knochen- oder Organverhältnis vor oder empfiehlt eines - angemessene Verhältnisse hängen von den individuellen Bedürfnissen Ihres Hundes ab und sind eine Entscheidung für Sie und Ihren Tierarzt oder einen Tierernährungsberater.</p>
+</div>
+<div class="faq-item">
+<h3>Ist eine so berechnete Rohfütterung ernährungsphysiologisch vollständig?</h3>
+<p>Das kann Ihnen dieses Tool nicht sagen. Vollständige und ausgewogene Ernährung hängt von weit mehr ab als einfachen Prozentsätzen von Fleisch, Knochen und Organen - es geht auch um spezifische Nährstoffgehalte, Vitamin- und Mineralstoffbalance und die individuellen Bedürfnisse Ihres Hundes. Arbeiten Sie mit einem Tierernährungsfachmann zusammen, um eine vollständige Ernährung zusammenzustellen.</p>
+</div>
+<div class="faq-item">
+<h3>Wie unterscheidet sich das vom Hundefutter-Rechner?</h3>
+<p>Der Hundefutter-Rechner schätzt den täglichen Kalorienbedarf und die Tassen eines kommerziellen Futters basierend auf dem Ruheenergiebedarf. Dieses Tool schätzt keine Kalorien und empfiehlt keine Ernährung - es teilt nur eine von Ihnen angegebene Gesamtmenge in Teile auf, unter Verwendung von ebenfalls von Ihnen angegebenen Prozentsätzen.</p>
+</div>
+<div class="faq-item">
+<h3>Ist Rohfütterung sicher?</h3>
+<p>Rohe tierische Produkte können Krankheitserreger wie Salmonellen, Listerien oder E. coli tragen, die Risiken für Ihren Hund und für Personen darstellen, die das Futter handhaben, besonders Kinder, ältere Menschen, Schwangere und immungeschwächte Personen. Wenn Sie sich für Rohfütterung entscheiden, wenden Sie sorgfältige Lebensmittelsicherheitspraktiken an und besprechen Sie den Ansatz mit Ihrem Tierarzt.</p>
+</div>
+<div class="faq-item">
+<h3>Kann ich das mit Prozentsätzen verwenden, die sich nicht auf 100 % summieren?</h3>
+<p>Ja, der Rechner berechnet trotzdem das Gewicht jeder Komponente, weist aber darauf hin, dass sich Ihre Prozentsätze nicht auf 100 % summieren, damit Sie prüfen können, ob Ihre eigenen Zahlen wie beabsichtigt sind.</p>
+</div>
+<div class="faq-item">
+<h3>Warum gibt mir Calquary nicht einfach ein Standard-Rohfütterungsverhältnis?</h3>
+<p>Häufig online zitierte Verhältnisse variieren und sind nicht universell als ernährungsphysiologisch vollständig für jeden Hund validiert. Statt eines als maßgeblich darzustellen, überlässt dieses Tool diese Entscheidung Ihnen und Ihrem tierärztlichen Team und hilft nur bei der Arithmetik, sobald Sie sich für Ihre eigenen Zahlen entschieden haben.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Berechnen</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Ähnliche Rechner</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Hinweis zur Genauigkeit</h4>
+          <p style="margin:0;font-size:0.85rem;">Die Rechner von Calquary sind für schnelle, zuverlässige Schätzungen ausgelegt. Bei Entscheidungen mit echten finanziellen, baulichen oder medizinischen Konsequenzen wenden Sie sich bitte an eine qualifizierte Fachperson.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/de/">← Zurück zu allen Rechnern</a> · <a href="/de/about">Über uns</a> · <a href="/de/contact">Kontakt</a> · <a href="/de/privacy">Datenschutz</a> · <a href="/de/terms">Nutzungsbedingungen</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

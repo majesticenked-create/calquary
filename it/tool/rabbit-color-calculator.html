@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calcolatore del Colore del Coniglio</title>
+  <meta name="description" content="Stima risultati semplificati del colore del mantello del coniglio da due loci noti (agouti e nero/cioccolato) usando l'ereditarietà mendeliana di base." />
+  <meta property="og:title" content="Calcolatore del Colore del Coniglio | Calquary">
+  <meta property="og:description" content="Stima risultati semplificati del colore del mantello del coniglio da due loci noti (agouti e nero/cioccolato) usando l'ereditarietà mendeliana di base.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/it/tool/rabbit-color-calculator">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/rabbit-color-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calcolatore del Colore del Coniglio | Calquary">
+  <meta name="twitter:description" content="Stima risultati semplificati del colore del mantello del coniglio da due loci noti (agouti e nero/cioccolato) usando l'ereditarietà mendeliana di base.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/rabbit-color-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/rabbit-color-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/rabbit-color-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/rabbit-color-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/rabbit-color-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/rabbit-color-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/rabbit-color-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/rabbit-color-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/rabbit-color-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/rabbit-color-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/rabbit-color-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/rabbit-color-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/rabbit-color-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/rabbit-color-calculator">
+    <link rel="canonical" href="https://calquary.com/it/tool/rabbit-color-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("rabbit-color-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("rabbit-color-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calcolatore del Colore del Coniglio",
+      "description": "Stima risultati semplificati del colore del mantello del coniglio da due loci noti (agouti e nero/cioccolato) usando l'ereditarietà mendeliana di base.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/it/tool/rabbit-color-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-25",
+      "inLanguage": "it"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/it/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/it/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calcolatore del Colore del Coniglio",
+          "item": "https://calquary.com/it/tool/rabbit-color-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "In cosa differisce dal Calcolatore del Quadrato di Punnett / Incrocio Diibrido?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Il Calcolatore dell'Incrocio Diibrido lavora con coppie di geni generiche, senza nome (A/a, B/b) e riporta rapporti astratti di genotipo e fenotipo. Questo strumento applica quella stessa matematica mendeliana a due geni specificamente a due loci di colore del coniglio nominati, e traduce i risultati in nomi di categorie di colore semplificate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Questo predice i colori reali del mantello dei miei conigli?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Solo in senso limitato ed educativo. Il colore reale del mantello del coniglio dipende da diversi geni interagenti oltre i due modellati qui, inclusi diluizione, estensione e la serie C (che controlla l'intensità del colore fino all'albinismo). Questo strumento non può catturare quelle interazioni."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cosa significano agouti e self?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Agouti descrive il motivo del pelo a bande visto nella colorazione selvatica tipica, dove ogni pelo ha bande di colore diverso. Self (o solido) descrive un mantello di colore uniforme senza quella bandatura, causato dalla forma recessiva del gene agouti."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual è la differenza tra nero e cioccolato al locus B?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Questo locus influenza il tipo di pigmento scuro (eumelanina) prodotto. La forma dominante tipicamente produce pigmento nero, mentre la forma recessiva produce un marrone più chiaro, chiamato cioccolato."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Due genitori agouti possono produrre prole self (solida)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì, se entrambi i genitori portano un allele agouti recessivo (Aa), alcuni figli possono ereditare due copie recessive (aa) ed essere di colore solido, anche se entrambi i genitori mostrano il motivo agouti."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Devo usare questo per decisioni serie di allevamento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Questa è una semplificazione educativa di soli due loci. Per programmi di allevamento, specialmente con obiettivi di colore specifici o considerazioni di salute genetica, consulta risorse o allevatori specializzati in genetica del coniglio per la tua razza specifica."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/it/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/it/#categories">Categorie</a>
+          <a href="/it/#tools">Tutti gli strumenti</a>
+          <a href="/it/about">Chi siamo</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Italiano">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>IT</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/rabbit-color-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/rabbit-color-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/rabbit-color-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/rabbit-color-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/rabbit-color-calculator">Português</a><span class="locale-item current" role="menuitem" aria-current="true">Italiano</span><a class="locale-item" role="menuitem" href="/ja/tool/rabbit-color-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/rabbit-color-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/rabbit-color-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/rabbit-color-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/rabbit-color-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/rabbit-color-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/it/">Calquary</a> / <a href="/it/category/biology">Biologia</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calcolatore del Colore del Coniglio</h1>
+        <p style="max-width:60ch;">Seleziona il genotipo di ciascun genitore in due loci di colore del coniglio comunemente discussi - agouti (A) e nero/cioccolato (B) - per vedere probabilità semplificate di colore nella prole. Il colore reale del mantello del coniglio coinvolge diversi altri geni; questo copre solo questi due isolatamente.</p>
+        <p class="last-updated">Ultimo aggiornamento: September 25, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calcola</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reimposta</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Domande frequenti</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>In cosa differisce dal Calcolatore del Quadrato di Punnett / Incrocio Diibrido?</h3>
+<p>Il Calcolatore dell'Incrocio Diibrido lavora con coppie di geni generiche, senza nome (A/a, B/b) e riporta rapporti astratti di genotipo e fenotipo. Questo strumento applica quella stessa matematica mendeliana a due geni specificamente a due loci di colore del coniglio nominati, e traduce i risultati in nomi di categorie di colore semplificate.</p>
+</div>
+<div class="faq-item">
+<h3>Questo predice i colori reali del mantello dei miei conigli?</h3>
+<p>Solo in senso limitato ed educativo. Il colore reale del mantello del coniglio dipende da diversi geni interagenti oltre i due modellati qui, inclusi diluizione, estensione e la serie C (che controlla l'intensità del colore fino all'albinismo). Questo strumento non può catturare quelle interazioni.</p>
+</div>
+<div class="faq-item">
+<h3>Cosa significano agouti e self?</h3>
+<p>Agouti descrive il motivo del pelo a bande visto nella colorazione selvatica tipica, dove ogni pelo ha bande di colore diverso. Self (o solido) descrive un mantello di colore uniforme senza quella bandatura, causato dalla forma recessiva del gene agouti.</p>
+</div>
+<div class="faq-item">
+<h3>Qual è la differenza tra nero e cioccolato al locus B?</h3>
+<p>Questo locus influenza il tipo di pigmento scuro (eumelanina) prodotto. La forma dominante tipicamente produce pigmento nero, mentre la forma recessiva produce un marrone più chiaro, chiamato cioccolato.</p>
+</div>
+<div class="faq-item">
+<h3>Due genitori agouti possono produrre prole self (solida)?</h3>
+<p>Sì, se entrambi i genitori portano un allele agouti recessivo (Aa), alcuni figli possono ereditare due copie recessive (aa) ed essere di colore solido, anche se entrambi i genitori mostrano il motivo agouti.</p>
+</div>
+<div class="faq-item">
+<h3>Devo usare questo per decisioni serie di allevamento?</h3>
+<p>No. Questa è una semplificazione educativa di soli due loci. Per programmi di allevamento, specialmente con obiettivi di colore specifici o considerazioni di salute genetica, consulta risorse o allevatori specializzati in genetica del coniglio per la tua razza specifica.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calcola</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Strumenti correlati</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Nota sulla precisione</h4>
+          <p style="margin:0;font-size:0.85rem;">Le calcolatrici di Calquary sono pensate per stime rapide e affidabili. Per decisioni con reali implicazioni finanziarie, strutturali o mediche, consulta un professionista qualificato.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/it/">← Torna a tutte le calcolatrici</a> · <a href="/it/about">Chi siamo</a> · <a href="/it/contact">Contatti</a> · <a href="/it/privacy">Privacy</a> · <a href="/it/terms">Termini</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

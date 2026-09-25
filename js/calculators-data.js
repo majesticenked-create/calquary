@@ -8749,7 +8749,7 @@ const CALCULATORS = [
       { q: "Why does the calculator ask for a puppy activity level instead of just using weight?", a: "Growing puppies need substantially more calories per pound than adult dogs to support tissue development, so selecting 'puppy' applies a higher multiplier to the RER-based estimate rather than treating them like a sedentary adult of the same weight." },
       { q: "Is 'cups per day' the same across every brand of dog food?", a: "No - this calculator converts your calorie target into cups using the calories-per-cup value you enter, which varies by brand and formula. Always check your specific food's label for its calorie density rather than assuming a universal cup size." },
     ],
-    related: ["dog-age-calculator", "calorie-calculator", "dog-water-intake-calculator", "omega-3-for-dogs-calculator"],
+    related: ["dog-age-calculator", "raw-dog-food-calculator", "dog-water-intake-calculator", "omega-3-for-dogs-calculator"],
   },
   {
     id: "cat-age-calculator",
@@ -10478,7 +10478,7 @@ const CALCULATORS = [
       { q: "What signs indicate calving is approaching near the estimated date?", a: "Common signs in the days before calving include udder filling ('bagging up'), relaxation and swelling around the tailhead and vulva, restlessness, and separation from the herd - these physical signs, rather than the calculated date alone, are the more reliable indicator that calving is imminent." },
       { q: "Why use 283 days as the default instead of a rounder number like 280 or 285?", a: "283 days is a widely cited average across general cattle gestation research and extension references, striking a middle point among commonly reported ranges - it's a reasonable default starting point precisely because it reflects an average rather than any single breed or individual animal." },
     ],
-    related: ["cattle-per-acre-calculator", "mare-gestation-calculator", "days-until-calculator", "goat-gestation-calculator"],
+    related: ["swine-gestation-calculator", "mare-gestation-calculator", "days-until-calculator", "goat-gestation-calculator"],
   },
   {
     id: "co2-grow-room-calculator",
@@ -11627,7 +11627,7 @@ const CALCULATORS = [
       { q: "Should I use this to schedule veterinary care?", a: "It helps with planning, but a veterinarian is the best source for pregnancy confirmation, nutrition changes, and kidding preparation." },
       { q: "Can I change the gestation length?", a: "Yes. Adjust the number of days if your breed or herd history suggests a different average." },
     ],
-    related: ["cow-gestation-calculator", "llama-gestation-calculator", "cat-pregnancy-calculator", "days-until-calculator"],
+    related: ["cow-gestation-calculator", "llama-gestation-calculator", "sheep-gestation-calculator", "days-until-calculator"],
   },
   {
     id: "grain-bin-calculator",
@@ -11763,7 +11763,7 @@ const CALCULATORS = [
       { q: "How is this different from the Fertilizer Calculator?", a: "It uses the same area-times-rate idea, but for seed instead of fertilizer, and it works from a seeding rate rather than a nutrient application rate." },
       { q: "How accurate is the bag count?", a: "It rounds up to whole bags. Spreader settings and uneven coverage affect how far seed goes, so check your spreader's calibration." },
     ],
-    related: ["fertilizer-calculator", "lawn-mowing-cost-calculator", "square-footage-calculator", "compost-calculator"],
+    related: ["fertilizer-calculator", "lawn-mowing-cost-calculator", "square-footage-calculator", "sod-calculator"],
   },
   {
     id: "guinea-pig-pregnancy-calculator",
@@ -12317,7 +12317,7 @@ const CALCULATORS = [
       { q: "How is this different from the Omega-3 for Dogs Calculator?", a: "Omega-3 fish oil is a supplement with informational EPA/DHA summaries; Metacam is a prescription NSAID requiring veterinary dosing. Neither page calculates a personalized amount." },
       { q: "How is this different from the Metacam for Cats Calculator?", a: "They cover different species with different approved formulations, concentrations, and safety margins. Never substitute one for the other." },
     ],
-    related: ["metacam-for-cats-calculator", "cephalexin-for-dogs-dosage-calculator", "benadryl-dosage-for-dogs", "omega-3-for-dogs-calculator"],
+    related: ["metacam-for-cats-calculator", "cephalexin-for-dogs-dosage-calculator", "benadryl-dosage-for-dogs", "tramadol-for-dogs-calculator"],
   },
   {
     id: "mlvss-calculator",
@@ -12813,6 +12813,398 @@ const CALCULATORS = [
       { q: "What if I have giant or dwarf breed rabbits?", a: "Larger breeds generally need more space than the example allowance assumes, and smaller breeds may need less. Adjust the area-per-rabbit value to match your rabbit's actual size and current welfare guidance."},
     ],
     related: ["dog-crate-size-calculator", "guinea-pig-age-calculator", "hamster-age-calculator", "rabbit-age-calculator"],
+  },
+  {
+    id: "rabbit-color-calculator",
+    category: "biology",
+    title: "Rabbit Color Calculator",
+    keyword: "rabbit color calculator",
+    description: "Estimate simplified rabbit coat color outcomes from two well-known loci (agouti and black/chocolate) using basic Mendelian inheritance.",
+    intro: "Select each parent's genotype at two commonly discussed rabbit color loci - agouti (A) and black/chocolate (B) - to see simplified offspring color probabilities. Real rabbit coat color involves several more genes; this covers only these two in isolation.",
+    fields: [
+      { id: "parent1A", label: "Parent 1 - Agouti locus", type: "select", default: "Aa", options: [{ v: "AA", l: "AA (agouti)" }, { v: "Aa", l: "Aa (agouti carrier)" }, { v: "aa", l: "aa (self/solid)" }] },
+      { id: "parent1B", label: "Parent 1 - Black/chocolate locus", type: "select", default: "Bb", options: [{ v: "BB", l: "BB (black)" }, { v: "Bb", l: "Bb (black carrier)" }, { v: "bb", l: "bb (chocolate)" }] },
+      { id: "parent2A", label: "Parent 2 - Agouti locus", type: "select", default: "Aa", options: [{ v: "AA", l: "AA (agouti)" }, { v: "Aa", l: "Aa (agouti carrier)" }, { v: "aa", l: "aa (self/solid)" }] },
+      { id: "parent2B", label: "Parent 2 - Black/chocolate locus", type: "select", default: "Bb", options: [{ v: "BB", l: "BB (black)" }, { v: "Bb", l: "Bb (black carrier)" }, { v: "bb", l: "bb (chocolate)" }] },
+    ],
+    compute: (v) => {
+      function gametes(g, dom, rec) {
+        return g[0] === g[1] ? [g[0]] : [dom, rec];
+      }
+      const p1A = gametes(v.parent1A, "A", "a");
+      const p1B = gametes(v.parent1B, "B", "b");
+      const p2A = gametes(v.parent2A, "A", "a");
+      const p2B = gametes(v.parent2B, "B", "b");
+      const p1 = [];
+      for (const a of p1A) for (const b of p1B) p1.push(a + b);
+      const p2 = [];
+      for (const a of p2A) for (const b of p2B) p2.push(a + b);
+      const colorCounts = {};
+      let total = 0;
+      for (const g1 of p1) {
+        for (const g2 of p2) {
+          const aHasDom = g1[0] === "A" || g2[0] === "A";
+          const bHasDom = g1[1] === "B" || g2[1] === "B";
+          let color;
+          if (aHasDom && bHasDom) color = "Agouti (black-based)";
+          else if (aHasDom && !bHasDom) color = "Agouti (chocolate-based)";
+          else if (!aHasDom && bHasDom) color = "Self black";
+          else color = "Self chocolate";
+          colorCounts[color] = (colorCounts[color] || 0) + 1;
+          total++;
+        }
+      }
+      const list = Object.entries(colorCounts).sort((a, b) => b[1] - a[1]).map(([c, n]) => ({ l: c, v: `${round((n / total) * 100, 1)}%` }));
+      return {
+        primary: { label: "Possible offspring combinations", value: `${total} combinations` },
+        secondary: list,
+        note: "This models only two of the several genes known to influence rabbit coat color: the agouti locus (A, banded/agouti pattern vs. solid) and the black/chocolate locus (B, black vs. chocolate eumelanin). It assumes independent assortment and complete dominance at each locus. Real rabbit coat color also involves the dilution (D), extension (E), and C-series (color/albino) loci and others, which can change or mask these results entirely - this is an educational simplification, not a full coat-color prediction for any specific breed or pairing.",
+      };
+    },
+    faq: [
+      { q: "How is this different from the Punnett Square / Dihybrid Cross Calculator?", a: "The Dihybrid Cross Calculator works with generic, unnamed gene pairs (A/a, B/b) and reports abstract genotype and phenotype ratios. This tool applies that same two-gene Mendelian math specifically to two named rabbit coat-color loci and translates the results into simplified color category names." },
+      { q: "Does this predict my rabbits' actual coat colors?", a: "Only in a limited, educational sense. Real rabbit coat color depends on several interacting genes beyond the two modeled here, including dilution, extension, and the C-series (which controls color intensity down to albino). This tool cannot capture those interactions." },
+      { q: "What do agouti and self mean?", a: "Agouti describes the banded hair pattern seen in wild-type coloring, where each hair has bands of different color. Self (or solid) describes a coat that is one uniform color without that banding, caused by the recessive form of the agouti gene." },
+      { q: "What is the difference between black and chocolate at the B locus?", a: "This locus affects the type of dark pigment (eumelanin) produced. The dominant form typically produces black pigment, while the recessive form produces a lighter brown, called chocolate." },
+      { q: "Can two agouti parents produce a self (solid) offspring?", a: "Yes, if both parents carry a recessive agouti allele (Aa), some offspring can inherit two recessive copies (aa) and be self-colored, even though both parents show the agouti pattern." },
+      { q: "Should I use this for serious breeding decisions?", a: "No. This is an educational simplification of two loci only. For breeding programs, especially involving specific color goals or genetic health considerations, consult resources or breeders specializing in rabbit genetics for your specific breed." },
+    ],
+    related: ["dihybrid-cross-calculator", "allele-frequency-calculator", "rabbit-age-calculator", "rabbit-gestation-calculator"],
+  },
+  {
+    id: "rabbit-gestation-calculator",
+    category: "biology",
+    title: "Rabbit Gestation Calculator",
+    keyword: "rabbit gestation calculator",
+    description: "Estimate a rabbit doe's kindling date and expected window from the breeding date, using an average 31-day gestation.",
+    intro: "Enter the breeding date to estimate when a rabbit doe is due to kindle. The default uses an average gestation of about 31 days and shows the commonly reported range. Treat this as a planning estimate, not a guarantee.",
+    fields: [
+      { id: "breedingDate", label: "Breeding date", type: "date", default: "2024-01-01" },
+      { id: "gestationDays", label: "Gestation length", type: "number", unit: "days", default: 31, step: 1, min: 1 },
+    ],
+    compute: (v) => {
+      if (!v.breedingDate || !(v.gestationDays >= 25) || v.gestationDays > 40) return { primary: { label: "Enter a valid breeding date", value: "-" }, secondary: [], note: "A breeding date is required, and gestation length should be between 25 and 40 days." };
+      const p = String(v.breedingDate).split("-").map(Number);
+      if (p.length !== 3 || p.some((n) => !Number.isFinite(n))) return { primary: { label: "Enter a valid breeding date", value: "-" }, secondary: [], note: "Please enter the date in a valid format." };
+      const base = Date.UTC(p[0], p[1] - 1, p[2]);
+      if (Number.isNaN(base) || new Date(base).getUTCDate() !== p[2]) return { primary: { label: "Enter a valid breeding date", value: "-" }, secondary: [], note: "That date is not valid." };
+      const fmt = (d) => new Date(base + d * 86400000).toISOString().slice(0, 10);
+      return {
+        primary: { label: "Estimated kindling date", value: fmt(v.gestationDays) },
+        secondary: [
+          { l: "Gestation length used", v: `${v.gestationDays} days` },
+          { l: "Commonly reported window (28-35 days)", v: `${fmt(28)} to ${fmt(35)}` },
+        ],
+        note: "Rabbit gestation averages around 31 days, one of the shortest among common livestock and pet mammals, with kindling commonly reported between about 28 and 35 days after breeding. Litter size, breed, and the individual doe can affect timing, and does bred more than once in a short window make the exact date uncertain. Prepare a nest box a few days before the estimated date, and involve a veterinarian experienced with rabbits if you have concerns about the pregnancy or birth."
+      };
+    },
+    faq: [
+      { q: "How long are rabbits pregnant?", a: "Around 31 days on average, though kindling commonly happens anywhere from about 28 to 35 days after breeding." },
+      { q: "Why is rabbit gestation so much shorter than other pets?", a: "Different species have evolved very different reproductive strategies. Rabbits have an unusually short gestation compared to many other mammals, which is part of why they can reproduce quickly under favorable conditions." },
+      { q: "When should I prepare a nest box?", a: "Many breeders prepare a nest box around day 28 to be ready before the doe kindles, since exact timing within the normal range cannot be predicted precisely." },
+      { q: "What if the doe was with a buck for more than one day?", a: "Then the exact breeding date is uncertain. Use the earliest and latest possible dates to estimate a range of possible kindling dates." },
+      { q: "How is this different from the Guinea Pig Pregnancy Calculator?", a: "It uses a rabbit's much shorter gestation length (about 31 days) instead of a guinea pig's (about 59 to 72 days), which are very different reproductive timelines despite both being small pets." },
+      { q: "When should I contact a veterinarian?", a: "If you have any concerns about the pregnancy, if kindling does not occur within a reasonable window past the estimate, or if the doe shows signs of distress, contact a veterinarian experienced with rabbits promptly." },
+    ],
+    related: ["rabbit-age-calculator", "rabbit-color-calculator", "guinea-pig-pregnancy-calculator", "rabbit-cage-size-calculator"],
+  },
+  {
+    id: "raised-bed-soil-calculator",
+    category: "construction",
+    title: "Raised Bed Soil Calculator",
+    keyword: "raised bed soil calculator",
+    description: "Estimate soil volume needed for one or more raised garden beds, in cubic feet, cubic yards, liters, and cubic meters.",
+    intro: "Enter your raised bed's length, width, and fill depth, plus how many identical beds you have, to estimate the soil volume needed. Real soil quantity can differ due to settling, existing soil, and amendments like compost.",
+    fields: [
+      { id: "length", label: "Bed length", type: "number", default: 8, step: 0.5, min: 0 },
+      { id: "width", label: "Bed width", type: "number", default: 4, step: 0.5, min: 0 },
+      { id: "depth", label: "Fill depth", type: "number", default: 12, step: 1, min: 0 },
+      { id: "unit", label: "Dimension unit", type: "select", default: "ft-in", options: [{ v: "ft-in", l: "length/width in feet, depth in inches" }, { v: "m-cm", l: "length/width in meters, depth in centimeters" }] },
+      { id: "beds", label: "Number of identical beds", type: "number", default: 1, step: 1, min: 1 },
+      { id: "bagVolume", label: "Bag size in cubic feet (optional, 0 to skip)", type: "number", default: 0, step: 0.1, min: 0 },
+    ],
+    compute: (v) => {
+      if (!(v.length > 0) || !(v.width > 0) || !(v.depth > 0) || !(v.beds >= 1)) return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Length, width, and depth must all be greater than zero, and you need at least one bed." };
+      const isMetric = v.unit === "m-cm";
+      const lengthM = isMetric ? v.length : v.length * 0.3048;
+      const widthM = isMetric ? v.width : v.width * 0.3048;
+      const depthM = isMetric ? v.depth / 100 : (v.depth / 12) * 0.3048;
+      const oneCubicM = lengthM * widthM * depthM;
+      if (!Number.isFinite(oneCubicM) || oneCubicM > 1e7) return { primary: { label: "Dimensions look unrealistic", value: "-" }, secondary: [], note: "Please check the sizes and unit entered." };
+      const totalCubicM = oneCubicM * Math.floor(v.beds);
+      const cubicFt = totalCubicM / 0.028316846592;
+      const liters = totalCubicM * 1000;
+      const secondary = [
+        { l: "Cubic yards", v: round(cubicFt / 27, 2) },
+        { l: "Liters", v: round(liters, 0).toLocaleString("en-US") },
+        { l: "Cubic meters", v: round(totalCubicM, 3) },
+      ];
+      if (v.bagVolume > 0) secondary.push({ l: `Bags of ${v.bagVolume} cu ft`, v: `${Math.ceil(cubicFt / v.bagVolume - 1e-9)} (${round(cubicFt / v.bagVolume, 2)} exact)` });
+      return {
+        primary: { label: "Soil needed", value: `${round(cubicFt, 2)} cu ft` },
+        secondary,
+        note: "Volume = length x width x fill depth x number of beds. This is the geometric volume to your fill depth; actual soil purchased may be less if the bed already has some soil, or if you plan to blend in compost or other amendments, and soil typically settles somewhat after the first watering. Bag sizes vary by brand, so use the volume printed on your own product.",
+      };
+    },
+    faq: [
+      { q: "How is this different from the Potting Soil Calculator?", a: "The Potting Soil Calculator is built for containers and pots - rectangular planters or round pots, usually smaller and often multiplied by a handful of identical containers. This tool is sized for raised garden beds, which are typically larger rectangular structures, and lets you plan for several identical beds at once." },
+      { q: "Should I fill the raised bed completely to the top?", a: "That is a common approach, though some gardeners leave a small gap below the rim, or plan a layered fill (coarser material at the bottom, growing mix on top) rather than solid soil throughout. Adjust the fill depth to reflect the mix you're actually adding." },
+      { q: "Do I need to fill new raised beds with pure soil?", a: "Not necessarily. Many gardeners blend soil with compost or other amendments, or use a layered filling method. This calculator estimates total fill volume regardless of what mix you use; it doesn't recommend proportions." },
+      { q: "Why might I need less soil than calculated?", a: "If the bed already has existing garden soil at the bottom, or if you're filling around large amendment materials, you may need less purchased soil than the full calculated volume." },
+      { q: "Can I calculate multiple beds of different sizes?", a: "Calculate each different-sized bed separately using this tool and add the totals together. The number-of-beds field is for identical beds of the same dimensions." },
+      { q: "Does soil volume decrease over time?", a: "Yes, soil typically settles and compacts somewhat after watering and over a growing season, so many gardeners top off beds periodically rather than expecting the initial fill to stay exactly the same." },
+    ],
+    related: ["potting-soil-calculator", "compost-calculator", "mulch-calculator", "square-footage-calculator"],
+  },
+  {
+    id: "rat-cage-size-calculator",
+    category: "pets",
+    title: "Rat Cage Size Calculator",
+    keyword: "rat cage size calculator",
+    description: "Estimate the minimum enclosure floor area for pet rats from a space allowance per rat, and check a proposed cage against that target.",
+    intro: "Enter the number of rats and a floor-space allowance per rat to estimate a minimum enclosure floor area, then optionally check a specific cage's dimensions against that target. This does not represent one universal legal or welfare standard - check current guidance for your rats.",
+    fields: [
+      { id: "rats", label: "Number of rats", type: "number", default: 2, step: 1, min: 1 },
+      { id: "areaPerRat", label: "Floor area allowance per rat", type: "number", default: 2, step: 0.25, min: 0 },
+      { id: "unit", label: "Area unit", type: "select", default: "sqft", options: [{ v: "sqft", l: "sq ft" }, { v: "sqm", l: "sq m" }] },
+      { id: "cageLength", label: "Proposed cage length (optional, 0 to skip)", type: "number", default: 0, step: 1, min: 0 },
+      { id: "cageWidth", label: "Proposed cage width (optional, 0 to skip)", type: "number", default: 0, step: 1, min: 0 },
+      { id: "cageUnit", label: "Cage dimension unit", type: "select", default: "in", options: [{ v: "in", l: "inches" }, { v: "cm", l: "centimeters" }] },
+    ],
+    compute: (v) => {
+      if (!(v.rats >= 1) || v.rats > 30) return { primary: { label: "Enter 1 to 30 rats", value: "-" }, secondary: [], note: "Number of rats must be between 1 and 30." };
+      if (!(v.areaPerRat > 0)) return { primary: { label: "Enter a valid area allowance", value: "-" }, secondary: [], note: "Floor area allowance per rat must be greater than zero." };
+      const totalArea = v.rats * v.areaPerRat;
+      if (totalArea > 10000) return { primary: { label: "Values look unrealistic", value: "-" }, secondary: [], note: "Please check the numbers entered." };
+      const side = Math.sqrt(totalArea);
+      const u = v.unit === "sqm" ? "m" : "ft";
+      const secondary = [
+        { l: "Square footprint example", v: `${round(side, 2)} × ${round(side, 2)} ${u}` },
+        { l: "Allowance used", v: `${v.areaPerRat} ${v.unit === "sqm" ? "sq m" : "sq ft"} per rat` },
+      ];
+      if (v.cageLength > 0 && v.cageWidth > 0) {
+        const toM = v.cageUnit === "cm" ? 0.01 : 0.0254;
+        const cageAreaSqm = v.cageLength * toM * (v.cageWidth * toM);
+        const cageAreaOut = v.unit === "sqm" ? cageAreaSqm : cageAreaSqm / 0.09290304;
+        const meets = cageAreaOut >= totalArea - 1e-9;
+        secondary.push({ l: "Your proposed cage floor area", v: `${round(cageAreaOut, 2)} ${v.unit === "sqm" ? "sq m" : "sq ft"}` });
+        secondary.push({ l: "Meets your target area?", v: meets ? "Yes" : "No - below your target" });
+      }
+      return {
+        primary: { label: "Minimum floor area needed", value: `${round(totalArea, 2)} ${v.unit === "sqm" ? "sq m" : "sq ft"}` },
+        secondary,
+        note: "Minimum floor area = number of rats x your chosen area allowance per rat. The default allowance is only an editable example, not a universal legal or welfare standard - requirements vary by rat size, enclosure style (levels and shelves can add usable space beyond floor area), and the organization or jurisdiction you reference. Rats are highly social and active, and most welfare guidance recommends housing at least two together with room to run, climb, and explore well beyond a bare minimum footprint. Check current reputable welfare guidance for your specific rats.",
+      };
+    },
+    faq: [
+      { q: "Is the default area allowance a legal minimum?", a: "No. It is only an editable example. Space recommendations vary by source, rat size, and cage style, so replace the default with guidance appropriate to your rats." },
+      { q: "Does adding levels or shelves count toward this floor area?", a: "Not directly - this calculator estimates bare floor area only. Multi-level cages with shelves and ramps can provide additional usable space beyond the footprint, which many rat owners and welfare guides consider valuable, but this tool doesn't calculate that separately." },
+      { q: "How many rats should live together?", a: "Rats are highly social and most welfare guidance recommends keeping at least two together rather than housing a single rat alone, but compatibility and group size also depend on the individual rats. This calculator doesn't assess social compatibility, only floor area from your own inputs." },
+      { q: "How is this different from the Rabbit Cage Size Calculator?", a: "Both use a similar per-animal area allowance approach, but this tool is scaled and worded for rats, whose space needs and typical enclosure styles differ from rabbits. It also adds an optional check against a proposed cage's actual dimensions." },
+      { q: "What does the 'meets your target area' result mean?", a: "It simply compares the floor area of the cage dimensions you entered against the minimum area calculated from your allowance and number of rats. It only checks the floor space math, not overall cage suitability, quality, or safety features."},
+      { q: "Should I use this for a temporary carrier instead of a home cage?", a: "No, this is meant for a rat's regular home enclosure floor area, not a travel carrier, which is used for short periods and has different sizing considerations." },
+    ],
+    related: ["rabbit-cage-size-calculator", "guinea-pig-age-calculator", "hamster-age-calculator"],
+  },
+  {
+    id: "raw-dog-food-calculator",
+    category: "pets",
+    title: "Raw Dog Food Calculator",
+    keyword: "raw dog food calculator",
+    description: "Split a total raw food amount into component weights using your own percentages. Does not recommend diet proportions or claim nutritional completeness.",
+    intro: "Enter a total daily raw food amount and your own percentages for each component to see the weight of each part. This tool only does the arithmetic on percentages you provide - it does not recommend a meat, bone, or organ ratio, and does not check that a diet is nutritionally complete.",
+    fields: [
+      { id: "totalAmount", label: "Total daily food amount (grams)", type: "number", default: 500, step: 10, min: 0 },
+      { id: "muscleMeatPct", label: "Muscle meat (%, your own figure)", type: "number", default: 80, step: 1, min: 0, max: 100 },
+      { id: "bonePct", label: "Bone (%, your own figure)", type: "number", default: 10, step: 1, min: 0, max: 100 },
+      { id: "organPct", label: "Organ (%, your own figure)", type: "number", default: 10, step: 1, min: 0, max: 100 },
+    ],
+    compute: (v) => {
+      if (!(v.totalAmount > 0)) return { primary: { label: "Enter a valid total amount", value: "-" }, secondary: [], note: "Total daily food amount must be greater than zero." };
+      if (!(v.muscleMeatPct >= 0) || !(v.bonePct >= 0) || !(v.organPct >= 0)) return { primary: { label: "Enter valid percentages", value: "-" }, secondary: [], note: "Percentages cannot be negative." };
+      const sum = v.muscleMeatPct + v.bonePct + v.organPct;
+      if (sum <= 0) return { primary: { label: "Enter at least one percentage", value: "-" }, secondary: [], note: "At least one component percentage must be greater than zero." };
+      const muscleG = v.totalAmount * (v.muscleMeatPct / 100);
+      const boneG = v.totalAmount * (v.bonePct / 100);
+      const organG = v.totalAmount * (v.organPct / 100);
+      const secondary = [
+        { l: "Muscle meat", v: `${round(muscleG, 0)} g` },
+        { l: "Bone", v: `${round(boneG, 0)} g` },
+        { l: "Organ", v: `${round(organG, 0)} g` },
+      ];
+      if (Math.abs(sum - 100) > 0.5) secondary.push({ l: "Your percentages total", v: `${round(sum, 1)}% (not 100%)` });
+      return {
+        primary: { label: "Component breakdown", value: `${round(sum, 1)}% of ${v.totalAmount} g accounted for` },
+        secondary,
+        note: "This only multiplies the total amount by the percentages you entered (component = total x your percentage / 100). Calquary does not recommend a muscle meat, bone, or organ ratio, and this calculator does not verify that any resulting diet is nutritionally complete or balanced. Home-prepared and raw diets can be nutritionally incomplete if not carefully formulated, and typically should be planned with guidance from a veterinarian or a veterinary nutritionist, not from a fixed percentage rule. Raw animal products can carry pathogens (such as Salmonella or E. coli) that pose risks to both pets and the people handling their food - use safe food-handling practices (proper refrigeration, separate utensils and surfaces, thorough handwashing) throughout preparation.",
+      };
+    },
+    faq: [
+      { q: "Does this tell me the right percentages to feed?", a: "No. It only performs arithmetic on the percentages you enter yourself. Calquary does not provide or endorse a specific muscle meat, bone, or organ ratio - appropriate proportions depend on your dog's individual needs and are a decision for you and your veterinarian or a veterinary nutritionist." },
+      { q: "Is a raw diet calculated this way nutritionally complete?", a: "This tool cannot tell you that. Complete and balanced nutrition depends on far more than simple percentages of meat, bone, and organ - it also involves specific nutrient levels, vitamin and mineral balance, and your individual dog's needs. Work with a veterinary nutrition professional to formulate a complete diet." },
+      { q: "How is this different from the Dog Food Calculator?", a: "The Dog Food Calculator estimates daily calorie needs and cups of a commercial food based on resting energy requirements. This tool does not estimate calories or recommend any diet at all - it only splits a total amount you provide into parts using percentages you also provide." },
+      { q: "Is raw feeding safe?", a: "Raw animal products can carry pathogens such as Salmonella, Listeria, or E. coli that pose risks to your dog and to people handling the food, especially children, older adults, pregnant people, and those who are immunocompromised. If you choose to feed raw, use careful food-safety practices and discuss the approach with your veterinarian." },
+      { q: "Can I use this for percentages that don't add up to 100%?", a: "Yes, the calculator will still compute each component's weight, but it will flag that your percentages don't total 100% so you can check your own numbers are what you intended." },
+      { q: "Why doesn't Calquary just tell me a standard raw feeding ratio?", a: "Commonly cited ratios online vary and are not universally validated as nutritionally complete for every dog. Rather than presenting one as authoritative, this tool leaves that decision to you and your veterinary team, and only helps with the arithmetic once you've decided on your own figures." },
+    ],
+    related: ["dog-food-calculator", "dog-water-intake-calculator", "dog-bmi-calculator"],
+  },
+  {
+    id: "sheep-gestation-calculator",
+    category: "biology",
+    title: "Sheep Gestation Calculator",
+    keyword: "sheep gestation calculator",
+    description: "Estimate a ewe's lambing date and expected window from the breeding date, using an average 147-day sheep gestation.",
+    intro: "Enter the breeding date to estimate when a ewe is due to lamb. The default uses an average sheep gestation of about 147 days and shows the commonly reported range. Treat this as a planning estimate, not a guarantee.",
+    fields: [
+      { id: "breedingDate", label: "Breeding date", type: "date", default: "2024-01-01" },
+      { id: "gestationDays", label: "Gestation length", type: "number", unit: "days", default: 147, step: 1, min: 1 },
+    ],
+    compute: (v) => {
+      if (!v.breedingDate || !(v.gestationDays >= 130) || v.gestationDays > 160) return { primary: { label: "Enter a valid breeding date", value: "-" }, secondary: [], note: "A breeding date is required, and gestation length should be between 130 and 160 days." };
+      const p = String(v.breedingDate).split("-").map(Number);
+      if (p.length !== 3 || p.some((n) => !Number.isFinite(n))) return { primary: { label: "Enter a valid breeding date", value: "-" }, secondary: [], note: "Please enter the date in a valid format." };
+      const base = Date.UTC(p[0], p[1] - 1, p[2]);
+      if (Number.isNaN(base) || new Date(base).getUTCDate() !== p[2]) return { primary: { label: "Enter a valid breeding date", value: "-" }, secondary: [], note: "That date is not valid." };
+      const fmt = (d) => new Date(base + d * 86400000).toISOString().slice(0, 10);
+      return {
+        primary: { label: "Estimated lambing date", value: fmt(v.gestationDays) },
+        secondary: [
+          { l: "Gestation length used", v: `${v.gestationDays} days` },
+          { l: "Commonly reported window (144-151 days)", v: `${fmt(144)} to ${fmt(151)}` },
+        ],
+        note: "Sheep gestation averages around 147 days, or about 5 months, with lambing commonly reported between roughly 144 and 151 days after breeding. Breed, litter size (ewes carrying multiples often lamb slightly earlier), and the individual ewe all affect timing. A veterinarian or experienced shepherd can help confirm pregnancy and prepare for lambing as the estimated window approaches.",
+      };
+    },
+    faq: [
+      { q: "How long are sheep pregnant?", a: "About 147 days on average, roughly 5 months. Lambing is commonly reported between about 144 and 151 days after breeding." },
+      { q: "Does litter size affect lambing timing?", a: "Ewes carrying twins or triplets often lamb a little earlier than those carrying a single lamb, though individual variation still applies." },
+      { q: "How is this different from the Goat Gestation Calculator?", a: "Sheep and goats have similar but distinct gestation lengths - about 147 days for sheep versus about 150 days for goats - so each tool uses its own species-specific default and range." },
+      { q: "How is this different from the Cow Gestation Calculator?", a: "Cattle gestation, at about 283 days, is roughly twice as long as sheep gestation, so this tool uses a very different default and range appropriate to sheep."},
+      { q: "What if the ewe was exposed to a ram for an extended period?", a: "Then the exact breeding date is uncertain. Use the earliest and latest possible exposure dates to estimate a range of possible lambing dates."},
+      { q: "When should I prepare for lambing?", a: "Many shepherds start close observation and preparation a week or so before the estimated date, since actual timing varies within the normal range. Consult a veterinarian or experienced shepherd for guidance specific to your flock." },
+    ],
+    related: ["goat-gestation-calculator", "cow-gestation-calculator", "swine-gestation-calculator", "days-until-calculator"],
+  },
+  {
+    id: "sod-calculator",
+    category: "construction",
+    title: "Sod Calculator",
+    keyword: "sod calculator",
+    description: "Estimate how many pieces or rolls of sod you need for a lawn from its area and your sod product's coverage per piece, with optional waste allowance.",
+    intro: "Enter the lawn area to cover, or its length and width, plus the coverage per sod piece or roll from your supplier. The calculator gives the total pieces needed, with an optional waste percentage for cuts and odd edges. It does not assume one universal roll size.",
+    fields: [
+      { id: "mode", label: "Enter lawn size as", type: "select", default: "area", options: [{ v: "area", l: "Total area" }, { v: "dims", l: "Length x width" }] },
+      { id: "area", label: "Area (if entering total area)", type: "number", default: 2000, step: 10, min: 0 },
+      { id: "length", label: "Length (if entering length x width)", type: "number", default: 50, step: 1, min: 0 },
+      { id: "width", label: "Width (if entering length x width)", type: "number", default: 40, step: 1, min: 0 },
+      { id: "unit", label: "Unit", type: "select", default: "sqft", options: [{ v: "sqft", l: "sq ft (feet for length/width)" }, { v: "sqm", l: "sq m (meters for length/width)" }] },
+      { id: "coverage", label: "Coverage per piece/roll (from your supplier)", type: "number", default: 9, step: 0.5, min: 0 },
+      { id: "wastePct", label: "Waste allowance (%, for cuts and edges)", type: "number", default: 10, step: 1, min: 0, max: 100 },
+    ],
+    compute: (v) => {
+      let area;
+      if (v.mode === "dims") {
+        if (!(v.length > 0) || !(v.width > 0)) return { primary: { label: "Enter valid dimensions", value: "-" }, secondary: [], note: "Length and width must both be greater than zero." };
+        area = v.length * v.width;
+      } else {
+        if (!(v.area > 0)) return { primary: { label: "Enter a valid area", value: "-" }, secondary: [], note: "Area must be greater than zero." };
+        area = v.area;
+      }
+      if (!(v.coverage > 0)) return { primary: { label: "Enter the coverage per piece", value: "-" }, secondary: [], note: "Use the coverage per piece or roll from your supplier. It must be greater than zero." };
+      if (!(v.wastePct >= 0) || v.wastePct > 100) return { primary: { label: "Enter a valid waste percentage", value: "-" }, secondary: [], note: "Waste allowance must be between 0 and 100%." };
+      if (area > 1e8) return { primary: { label: "Area looks unrealistic", value: "-" }, secondary: [], note: "Please check the size and units entered." };
+      const areaWithWaste = area * (1 + v.wastePct / 100);
+      const exact = areaWithWaste / v.coverage;
+      const pieces = Math.ceil(exact - 1e-9);
+      return {
+        primary: { label: "Sod pieces/rolls needed", value: `${pieces.toLocaleString("en-US")}` },
+        secondary: [
+          { l: "Lawn area", v: `${round(area, 0).toLocaleString("en-US")} ${v.unit === "sqm" ? "sq m" : "sq ft"}` },
+          { l: "Area with waste allowance", v: `${round(areaWithWaste, 0).toLocaleString("en-US")} ${v.unit === "sqm" ? "sq m" : "sq ft"}` },
+          { l: "Exact pieces (unrounded)", v: round(exact, 2) },
+        ],
+        note: "Pieces needed = (lawn area x (1 + waste %)) / coverage per piece, rounded up to a whole piece. Sod roll and slab dimensions vary widely by grower and region, so use the coverage figure from your own supplier rather than a generic assumption. The waste allowance accounts for cutting around curves, borders, and obstacles, which typically uses more material than the bare area alone.",
+      };
+    },
+    faq: [
+      { q: "How is sod calculation different from grass seed calculation?", a: "Sod is a solid, pre-grown product purchased and measured in discrete pieces or rolls that each cover a fixed area, so the math is area divided by coverage per piece. Grass seed is measured by weight applied at a rate per area, so the Grass Seed Calculator instead multiplies area by a seeding rate. They solve related but structurally different material problems." },
+      { q: "What size is a standard sod roll or piece?", a: "There isn't one standard size - growers and suppliers cut sod in different dimensions and coverage amounts. Check your specific supplier's product listing for the coverage per piece or roll." },
+      { q: "Why include a waste allowance?", a: "Curved beds, borders, and obstacles like trees or walkways usually require cutting sod pieces, which wastes some material. A waste allowance adds a buffer so you don't run short partway through installation." },
+      { q: "Can I enter length and width instead of total area?", a: "Yes. Choose length x width, enter both, and the tool multiplies them and converts to the area it needs." },
+      { q: "Should I round down to save money?", a: "Rounding down risks running short mid-installation, when matching sod may be harder to source quickly. This calculator always rounds up to the next whole piece for that reason." },
+      { q: "Does this calculate cost?", a: "No, only quantity. Multiply the number of pieces by your supplier's price per piece if you want a cost estimate." },
+    ],
+    related: ["grass-seed-calculator", "square-footage-calculator", "lawn-mowing-cost-calculator", "fertilizer-calculator"],
+  },
+  {
+    id: "swine-gestation-calculator",
+    category: "biology",
+    title: "Swine Gestation Calculator",
+    keyword: "swine gestation calculator",
+    description: "Estimate a sow's farrowing date and expected window from the breeding date, using the common 114-day (3 months, 3 weeks, 3 days) swine gestation.",
+    intro: "Enter the breeding date to estimate when a sow is due to farrow. The default uses the commonly cited swine gestation of 114 days (the '3 months, 3 weeks, 3 days' rule of thumb) and shows the typical range. Treat this as a planning estimate, not a guarantee.",
+    fields: [
+      { id: "breedingDate", label: "Breeding date", type: "date", default: "2024-01-01" },
+      { id: "gestationDays", label: "Gestation length", type: "number", unit: "days", default: 114, step: 1, min: 1 },
+    ],
+    compute: (v) => {
+      if (!v.breedingDate || !(v.gestationDays >= 100) || v.gestationDays > 125) return { primary: { label: "Enter a valid breeding date", value: "-" }, secondary: [], note: "A breeding date is required, and gestation length should be between 100 and 125 days." };
+      const p = String(v.breedingDate).split("-").map(Number);
+      if (p.length !== 3 || p.some((n) => !Number.isFinite(n))) return { primary: { label: "Enter a valid breeding date", value: "-" }, secondary: [], note: "Please enter the date in a valid format." };
+      const base = Date.UTC(p[0], p[1] - 1, p[2]);
+      if (Number.isNaN(base) || new Date(base).getUTCDate() !== p[2]) return { primary: { label: "Enter a valid breeding date", value: "-" }, secondary: [], note: "That date is not valid." };
+      const fmt = (d) => new Date(base + d * 86400000).toISOString().slice(0, 10);
+      return {
+        primary: { label: "Estimated farrowing date", value: fmt(v.gestationDays) },
+        secondary: [
+          { l: "Gestation length used", v: `${v.gestationDays} days` },
+          { l: "Commonly reported window (110-118 days)", v: `${fmt(110)} to ${fmt(118)}` },
+        ],
+        note: "Swine gestation is commonly remembered as '3 months, 3 weeks, 3 days,' which works out to about 114 days, with farrowing typically reported between roughly 110 and 118 days after breeding. Breed, litter size, and the individual sow can affect timing. Prepare farrowing accommodations as the estimated date approaches, and involve a veterinarian experienced with swine if you have concerns about the pregnancy or farrowing.",
+      };
+    },
+    faq: [
+      { q: "How long are pigs pregnant?", a: "About 114 days on average, commonly remembered with the mnemonic '3 months, 3 weeks, 3 days.' Farrowing is typically reported between roughly 110 and 118 days after breeding." },
+      { q: "Is the '3 months, 3 weeks, 3 days' rule exact?", a: "It's a widely used memory aid that works out to about 114 days, close to the typical average, but actual farrowing still varies within the normal range for the reasons any biological process does." },
+      { q: "Does litter size affect farrowing timing?", a: "Some variation is associated with litter size and the individual sow, though the effect is generally smaller than the natural range of individual variation." },
+      { q: "How is this different from the Sheep or Goat Gestation Calculators?", a: "Swine gestation, at about 114 days, is notably shorter than sheep (about 147 days) or goats (about 150 days), so this tool uses its own species-appropriate default and range." },
+      { q: "When should farrowing accommodations be ready?", a: "Many pork producers prepare farrowing areas several days before the estimated date, since exact timing within the normal window cannot be predicted precisely." },
+      { q: "When should I involve a veterinarian?", a: "If you have concerns about the pregnancy, if farrowing doesn't occur within a reasonable window past the estimate, or if the sow shows signs of distress, contact a veterinarian experienced with swine." },
+    ],
+    related: ["sheep-gestation-calculator", "goat-gestation-calculator", "cow-gestation-calculator", "days-until-calculator"],
+  },
+  {
+    id: "tramadol-for-dogs-calculator",
+    category: "pets",
+    title: "Tramadol for Dogs Calculator",
+    keyword: "tramadol for dogs calculator",
+    description: "Safety information for tramadol in dogs. This page does not calculate or recommend a dose.",
+    intro: "This page provides safety information, not a personalized dose. Tramadol is a prescription pain medication for dogs, and the correct dose, formulation, frequency, and duration must come from a veterinarian who has examined your dog.",
+    fields: [
+      { id: "weight", label: "Dog's weight (for your notes only)", type: "number", default: 20, step: 0.5, min: 0 },
+      { id: "weightUnit", label: "Weight unit", type: "select", default: "kg", options: [{ v: "kg", l: "kg" }, { v: "lb", l: "lb" }] },
+    ],
+    compute: (v) => {
+      if (!(v.weight >= 0)) return { primary: { label: "Enter a valid weight", value: "-" }, secondary: [], note: "Weight cannot be negative." };
+      return {
+        primary: { label: "Recommended next step", value: "Follow your veterinarian's prescription exactly" },
+        secondary: [
+          { l: "Dog's weight (for your notes)", v: v.weight > 0 ? `${v.weight} ${v.weightUnit}` : "Not entered" },
+          { l: "This tool provides", v: "Safety information, not a dose" },
+        ],
+        note: "This calculator intentionally does not output a milligram amount, mL amount, tablet count, dosing frequency, maximum dose, or treatment duration. Tramadol dosing for dogs depends on the reason for treatment, your dog's kidney and liver function, age, other medications (tramadol can interact with several drug classes), and the veterinarian's chosen regimen. Only use tramadol prescribed specifically for your dog, follow the veterinarian's or pharmacy's label exactly, never use leftover medication from a previous prescription, another animal's prescription, or human tramadol without veterinary direction, and never change the dose, frequency, or duration without veterinary guidance. If you suspect an adverse reaction or accidental ingestion of extra medication, contact your veterinarian or an animal poison control service promptly.",
+      };
+    },
+    faq: [
+      { q: "Why doesn't this calculator tell me how much tramadol to give my dog?", a: "Tramadol dosing depends on factors specific to your dog and the condition being treated, including potential drug interactions, that only a veterinarian who has examined your dog can properly evaluate." },
+      { q: "Can I use leftover tramadol from a previous prescription?", a: "No. The dose, formulation, and duration prescribed previously may not be appropriate for a new situation or a different point in time. Contact your veterinarian for a current prescription." },
+      { q: "Can I give my dog human tramadol?", a: "Only under direct veterinary instruction. Never give any medication, including your own tramadol, to your dog without specific guidance from a veterinarian who knows your dog's health status and other medications." },
+      { q: "Does tramadol interact with other medications?", a: "Yes, tramadol can interact with several other medication classes, and combining it with certain drugs can increase risk of serious side effects. Tell your veterinarian about every medication and supplement your dog is taking before starting tramadol." },
+      { q: "What should I do if I think my dog got too much medication?", a: "Contact your veterinarian or an animal poison control service right away. Don't wait to see if symptoms develop, and don't attempt to treat a suspected overdose at home." },
+      { q: "How is this different from the Metacam for Dogs Calculator?", a: "Both are prescription pain-related medications for dogs and both pages avoid personalized dosing for the same safety reasons, but they are different drug classes (tramadol is an opioid-like analgesic, Metacam is an NSAID) with different risk profiles and prescribing considerations." },
+    ],
+    related: ["metacam-for-dogs-calculator", "cephalexin-for-dogs-dosage-calculator", "benadryl-dosage-for-dogs"],
   },
 ];
 

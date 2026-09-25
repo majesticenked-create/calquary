@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schaf-Trächtigkeitsrechner - Kostenloser Online-Rechner</title>
+  <meta name="description" content="Schätzen Sie den Ablammtermin eines Mutterschafs und das erwartete Zeitfenster ab dem Deckdatum mit einer durchschnittlichen Trächtigkeit von 147 Tagen." />
+  <meta property="og:title" content="Schaf-Trächtigkeitsrechner | Calquary">
+  <meta property="og:description" content="Schätzen Sie den Ablammtermin eines Mutterschafs und das erwartete Zeitfenster ab dem Deckdatum mit einer durchschnittlichen Trächtigkeit von 147 Tagen.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/de/tool/sheep-gestation-calculator">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/sheep-gestation-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Schaf-Trächtigkeitsrechner | Calquary">
+  <meta name="twitter:description" content="Schätzen Sie den Ablammtermin eines Mutterschafs und das erwartete Zeitfenster ab dem Deckdatum mit einer durchschnittlichen Trächtigkeit von 147 Tagen.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/sheep-gestation-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/sheep-gestation-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/sheep-gestation-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/sheep-gestation-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/sheep-gestation-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/sheep-gestation-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/sheep-gestation-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/sheep-gestation-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/sheep-gestation-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/sheep-gestation-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/sheep-gestation-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/sheep-gestation-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/sheep-gestation-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/sheep-gestation-calculator">
+    <link rel="canonical" href="https://calquary.com/de/tool/sheep-gestation-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("sheep-gestation-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("sheep-gestation-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Schaf-Trächtigkeitsrechner",
+      "description": "Schätzen Sie den Ablammtermin eines Mutterschafs und das erwartete Zeitfenster ab dem Deckdatum mit einer durchschnittlichen Trächtigkeit von 147 Tagen.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/de/tool/sheep-gestation-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-25",
+      "inLanguage": "de"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/de/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Schaf-Trächtigkeitsrechner",
+          "item": "https://calquary.com/de/tool/sheep-gestation-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Wie lange sind Schafe trächtig?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Im Durchschnitt etwa 147 Tage, also rund 5 Monate. Das Lammen wird häufig zwischen etwa 144 und 151 Tagen nach dem Decken berichtet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Beeinflusst die Wurfgröße den Ablammzeitpunkt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mutterschafe mit Zwillingen oder Drillingen lammen oft etwas früher als solche mit einem einzelnen Lamm, obwohl individuelle Variation weiterhin gilt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie unterscheidet sich das vom Ziegen-Trächtigkeitsrechner?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Schafe und Ziegen haben ähnliche, aber unterschiedliche Trächtigkeitsdauern - etwa 147 Tage bei Schafen gegenüber etwa 150 Tagen bei Ziegen, daher verwendet jedes Tool seinen eigenen artspezifischen Standardwert und Bereich."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie unterscheidet sich das vom Kuh-Trächtigkeitsrechner?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die Rindertrachtigkeit von etwa 283 Tagen ist etwa doppelt so lang wie die des Schafs, daher verwendet dieses Tool einen sehr unterschiedlichen, für Schafe geeigneten Standardwert und Bereich."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was, wenn das Mutterschaf über einen längeren Zeitraum einem Bock ausgesetzt war?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dann ist das genaue Deckdatum unsicher. Nutzen Sie das früheste und späteste mögliche Expositionsdatum, um eine Spanne möglicher Ablammtermine zu schätzen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wann sollte ich mich auf das Ablammen vorbereiten?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Viele Schäfer beginnen etwa eine Woche vor dem geschätzten Termin mit genauer Beobachtung und Vorbereitung, da der tatsächliche Zeitpunkt innerhalb des normalen Bereichs variiert. Konsultieren Sie einen Tierarzt oder erfahrenen Schäfer für herdenspezifische Beratung."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/de/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/de/#categories">Kategorien</a>
+          <a href="/de/#tools">Alle Tools</a>
+          <a href="/de/about">Über uns</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Deutsch">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>DE</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/sheep-gestation-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/sheep-gestation-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/sheep-gestation-calculator">Français</a><span class="locale-item current" role="menuitem" aria-current="true">Deutsch</span><a class="locale-item" role="menuitem" href="/pt/tool/sheep-gestation-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/sheep-gestation-calculator">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/sheep-gestation-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/sheep-gestation-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/sheep-gestation-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/sheep-gestation-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/sheep-gestation-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/sheep-gestation-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/de/">Calquary</a> / <a href="/de/category/biology">Biologie</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Schaf-Trächtigkeitsrechner</h1>
+        <p style="max-width:60ch;">Geben Sie das Deckdatum ein, um zu schätzen, wann ein Mutterschaf lammen soll. Der Standardwert verwendet eine durchschnittliche Trächtigkeit von etwa 147 Tagen und zeigt den üblicherweise berichteten Bereich. Betrachten Sie es als Planungsschätzung, nicht als Garantie.</p>
+        <p class="last-updated">Zuletzt aktualisiert: September 25, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Berechnen</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Zurücksetzen</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Häufig gestellte Fragen</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Wie lange sind Schafe trächtig?</h3>
+<p>Im Durchschnitt etwa 147 Tage, also rund 5 Monate. Das Lammen wird häufig zwischen etwa 144 und 151 Tagen nach dem Decken berichtet.</p>
+</div>
+<div class="faq-item">
+<h3>Beeinflusst die Wurfgröße den Ablammzeitpunkt?</h3>
+<p>Mutterschafe mit Zwillingen oder Drillingen lammen oft etwas früher als solche mit einem einzelnen Lamm, obwohl individuelle Variation weiterhin gilt.</p>
+</div>
+<div class="faq-item">
+<h3>Wie unterscheidet sich das vom Ziegen-Trächtigkeitsrechner?</h3>
+<p>Schafe und Ziegen haben ähnliche, aber unterschiedliche Trächtigkeitsdauern - etwa 147 Tage bei Schafen gegenüber etwa 150 Tagen bei Ziegen, daher verwendet jedes Tool seinen eigenen artspezifischen Standardwert und Bereich.</p>
+</div>
+<div class="faq-item">
+<h3>Wie unterscheidet sich das vom Kuh-Trächtigkeitsrechner?</h3>
+<p>Die Rindertrachtigkeit von etwa 283 Tagen ist etwa doppelt so lang wie die des Schafs, daher verwendet dieses Tool einen sehr unterschiedlichen, für Schafe geeigneten Standardwert und Bereich.</p>
+</div>
+<div class="faq-item">
+<h3>Was, wenn das Mutterschaf über einen längeren Zeitraum einem Bock ausgesetzt war?</h3>
+<p>Dann ist das genaue Deckdatum unsicher. Nutzen Sie das früheste und späteste mögliche Expositionsdatum, um eine Spanne möglicher Ablammtermine zu schätzen.</p>
+</div>
+<div class="faq-item">
+<h3>Wann sollte ich mich auf das Ablammen vorbereiten?</h3>
+<p>Viele Schäfer beginnen etwa eine Woche vor dem geschätzten Termin mit genauer Beobachtung und Vorbereitung, da der tatsächliche Zeitpunkt innerhalb des normalen Bereichs variiert. Konsultieren Sie einen Tierarzt oder erfahrenen Schäfer für herdenspezifische Beratung.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Berechnen</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Ähnliche Rechner</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Hinweis zur Genauigkeit</h4>
+          <p style="margin:0;font-size:0.85rem;">Die Rechner von Calquary sind für schnelle, zuverlässige Schätzungen ausgelegt. Bei Entscheidungen mit echten finanziellen, baulichen oder medizinischen Konsequenzen wenden Sie sich bitte an eine qualifizierte Fachperson.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/de/">← Zurück zu allen Rechnern</a> · <a href="/de/about">Über uns</a> · <a href="/de/contact">Kontakt</a> · <a href="/de/privacy">Datenschutz</a> · <a href="/de/terms">Nutzungsbedingungen</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>
