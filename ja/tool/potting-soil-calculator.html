@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>鉢植え用土計算機 - 無料オンライン計算ツール | Calquary</title>
+  <meta name="description" content="長方形プランターまたは丸い鉢に必要な鉢植え用土の量を立方フィート、立方ヤード、リットルで推定します。" />
+  <meta property="og:title" content="鉢植え用土計算機 | Calquary">
+  <meta property="og:description" content="長方形プランターまたは丸い鉢に必要な鉢植え用土の量を立方フィート、立方ヤード、リットルで推定します。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/ja/tool/potting-soil-calculator">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/potting-soil-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="鉢植え用土計算機 | Calquary">
+  <meta name="twitter:description" content="長方形プランターまたは丸い鉢に必要な鉢植え用土の量を立方フィート、立方ヤード、リットルで推定します。">
+  <meta name="twitter:image" content="https://calquary.com/og-images/potting-soil-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/potting-soil-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/potting-soil-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/potting-soil-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/potting-soil-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/potting-soil-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/potting-soil-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/potting-soil-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/potting-soil-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/potting-soil-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/potting-soil-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/potting-soil-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/potting-soil-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/potting-soil-calculator">
+    <link rel="canonical" href="https://calquary.com/ja/tool/potting-soil-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("potting-soil-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("potting-soil-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "鉢植え用土計算機",
+      "description": "長方形プランターまたは丸い鉢に必要な鉢植え用土の量を立方フィート、立方ヤード、リットルで推定します。",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/ja/tool/potting-soil-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-25",
+      "inLanguage": "ja"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/ja/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Construction & Home",
+          "item": "https://calquary.com/ja/category/construction"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "鉢植え用土計算機",
+          "item": "https://calquary.com/ja/tool/potting-soil-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "容器は縁まで満たすべきですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "通常は違います。ほとんどの園芸家は水やりのために縁の下に数センチの余裕を残すため、容器の全高ではなく、予定している充填深さを測ってください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "堆肥計算機やマルチ計算機とどう違いますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "それらは庭の面積に対する深さを使い、屋外花壇や庭向けに設計されています。このツールは長方形プランターや丸い鉢といった容器の形状と個数を基にしており、異なる形状の問題を扱います。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "なぜ実際に使う用土は計算された体積と異なるのですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "容器内にすでにある根鉢や植物がスペースを占め、一部の園芸家は底に砂利や割れた鉢のかけらの排水層を加え、用土は水やり後に沈下・圧縮します。これらすべてが実際に加える新しい用土の量を減らします。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "同じ鉢を複数まとめて計算できますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。1つの容器の寸法と容器数を入力すると、ツールが体積を掛け合わせます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "なぜ自分の袋のサイズを入力する必要があるのですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "袋詰めの鉢植え用土はブランドや地域によって異なる量で販売されているため、想定すべき単一の正しい袋サイズはありません。お使いの製品の袋に記載されている体積を入力してください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "水やり後に圧縮する用土は考慮されますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "いいえ、幾何学的な体積のみを計算します。最初のしっかりした水やりの後に用土の体積は通常やや減るため、少し多めに購入するのは妥当な方法です。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/ja/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/ja/#categories">カテゴリー</a>
+          <a href="/ja/#tools">すべてのツール</a>
+          <a href="/ja/about">このサイトについて</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: 日本語">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>JA</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/potting-soil-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/potting-soil-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/potting-soil-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/potting-soil-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/potting-soil-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/potting-soil-calculator">Italiano</a><span class="locale-item current" role="menuitem" aria-current="true">日本語</span><a class="locale-item" role="menuitem" href="/ro/tool/potting-soil-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/potting-soil-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/potting-soil-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/potting-soil-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/potting-soil-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/ja/">Calquary</a> / <a href="/ja/category/construction">建築・住まい</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>鉢植え用土計算機</h1>
+        <p style="max-width:60ch;">長方形プランターまたは丸い鉢を選び、寸法と個数を入力すると、必要な鉢植え用土の総量が計算されます。実際の充填量は根鉢、排水層、沈下によって異なることがあります。</p>
+        <p class="last-updated">最終更新日： September 25, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">計算する</button>
+              <button type="button" id="calc-reset" class="btn-ghost">リセット</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>よくある質問</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>容器は縁まで満たすべきですか?</h3>
+<p>通常は違います。ほとんどの園芸家は水やりのために縁の下に数センチの余裕を残すため、容器の全高ではなく、予定している充填深さを測ってください。</p>
+</div>
+<div class="faq-item">
+<h3>堆肥計算機やマルチ計算機とどう違いますか?</h3>
+<p>それらは庭の面積に対する深さを使い、屋外花壇や庭向けに設計されています。このツールは長方形プランターや丸い鉢といった容器の形状と個数を基にしており、異なる形状の問題を扱います。</p>
+</div>
+<div class="faq-item">
+<h3>なぜ実際に使う用土は計算された体積と異なるのですか?</h3>
+<p>容器内にすでにある根鉢や植物がスペースを占め、一部の園芸家は底に砂利や割れた鉢のかけらの排水層を加え、用土は水やり後に沈下・圧縮します。これらすべてが実際に加える新しい用土の量を減らします。</p>
+</div>
+<div class="faq-item">
+<h3>同じ鉢を複数まとめて計算できますか?</h3>
+<p>はい。1つの容器の寸法と容器数を入力すると、ツールが体積を掛け合わせます。</p>
+</div>
+<div class="faq-item">
+<h3>なぜ自分の袋のサイズを入力する必要があるのですか?</h3>
+<p>袋詰めの鉢植え用土はブランドや地域によって異なる量で販売されているため、想定すべき単一の正しい袋サイズはありません。お使いの製品の袋に記載されている体積を入力してください。</p>
+</div>
+<div class="faq-item">
+<h3>水やり後に圧縮する用土は考慮されますか?</h3>
+<p>いいえ、幾何学的な体積のみを計算します。最初のしっかりした水やりの後に用土の体積は通常やや減るため、少し多めに購入するのは妥当な方法です。</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">計算する</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>関連ツール</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>精度について</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquaryの計算ツールは、迅速で信頼できる概算を目的としています。実際の財務、構造、医療に関わる重要な決定を行う前には、必ず専門家にご確認ください。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/ja/">← すべての計算ツールに戻る</a> · <a href="/ja/about">このサイトについて</a> · <a href="/ja/contact">お問い合わせ</a> · <a href="/ja/privacy">プライバシー</a> · <a href="/ja/terms">利用規約</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

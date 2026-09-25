@@ -182,6 +182,11 @@ const WAVE_ONE_TOOL_IDS = [
   "metacam-for-cats-calculator", "metacam-for-dogs-calculator", "mlvss-calculator",
   "mutation-frequency-calculator", "omega-3-for-dogs-calculator", "pet-sitter-rates-calculator",
   "pine-straw-calculator",
+  // Batch 19 (Batch 008 build): 6 new tools translated into all 11 non-English locales.
+  // Plant Spacing / Punnett Square / Cat Age Quiz / Dog Size Quiz were skipped (covered
+  // by existing/combined tools). Dihybrid Cross Calculator was improved in place.
+  "plant-population-calculator", "potting-soil-calculator", "protein-concentration-calculator",
+  "protein-molecular-weight-calculator", "qpcr-efficiency-calculator", "rabbit-cage-size-calculator",
 ];
 
 function loadData() {

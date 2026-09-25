@@ -8810,7 +8810,7 @@ const CALCULATORS = [
       { q: "How old is a 5-year-old rabbit in human years?", a: "Using the formula's post-year-one rate of about 6 human years per rabbit year, a 5-year-old rabbit works out to roughly 45 human years - 21 for the first year plus 24 for the following four." },
       { q: "How does rabbit aging compare to cat or dog aging?", a: "Rabbits front-load their maturity even more sharply than cats or dogs, hitting a human-equivalent adulthood within about a year, then age at a comparatively brisk and steady rate afterward rather than slowing down as dramatically as senior cats or dogs do." },
     ],
-    related: ["cat-age-calculator", "dog-age-calculator", "age-calculator", "guinea-pig-age-calculator"],
+    related: ["cat-age-calculator", "dog-age-calculator", "rabbit-cage-size-calculator", "guinea-pig-age-calculator"],
   },
   {
     id: "dog-pregnancy-calculator",
@@ -10603,10 +10603,11 @@ const CALCULATORS = [
     id: "dihybrid-cross-calculator",
     category: "biology",
     title: "Dihybrid Cross Calculator",
-    keyword: "dihybrid cross calculator",
-    description: "Calculate offspring genotype and phenotype ratios for a two-gene cross under simple Mendelian inheritance.",
-    intro: "Select each parent's genotype at two independent genes to calculate offspring genotype and phenotype probabilities, assuming independent assortment and complete dominance.",
+    keyword: "dihybrid cross calculator, punnett square calculator",
+    description: "Calculate offspring genotype and phenotype ratios for a one-gene (Punnett square) or two-gene (dihybrid) cross under simple Mendelian inheritance.",
+    intro: "Choose a one-gene cross for a classic Punnett square, or a two-gene cross for a dihybrid cross, then select each parent's genotype to calculate offspring genotype and phenotype probabilities, assuming independent assortment and complete dominance.",
     fields: [
+      { id: "genes", label: "Number of genes", type: "select", default: "two", options: [{ v: "one", l: "One gene (Punnett square)" }, { v: "two", l: "Two genes (dihybrid cross)" }] },
       { id: "parent1Gene1", label: "Parent 1 - Gene 1 genotype", type: "select", default: "Aa", options: [
         { v: "AA", l: "AA (homozygous dominant)" }, { v: "Aa", l: "Aa (heterozygous)" }, { v: "aa", l: "aa (homozygous recessive)" },
       ] },
@@ -10624,6 +10625,31 @@ const CALCULATORS = [
       function gametesForLocus(genotype, dominantLetter, recessiveLetter) {
         if (genotype[0] === genotype[1]) return [genotype[0]];
         return [dominantLetter, recessiveLetter];
+      }
+      if (v.genes === "one") {
+        const p1A = gametesForLocus(v.parent1Gene1, "A", "a");
+        const p2A = gametesForLocus(v.parent2Gene1, "A", "a");
+        const genotypeCounts = {};
+        let total = 0;
+        for (const g1 of p1A) {
+          for (const g2 of p2A) {
+            const genotype = [g1, g2].sort((x, y) => (x.toUpperCase() === x ? -1 : 1) - (y.toUpperCase() === y ? -1 : 1)).join("");
+            genotypeCounts[genotype] = (genotypeCounts[genotype] || 0) + 1;
+            total++;
+          }
+        }
+        const phenotypeCounts = {};
+        for (const [genotype, count] of Object.entries(genotypeCounts)) {
+          const phenotype = genotype.includes("A") ? "Dominant trait" : "Recessive trait";
+          phenotypeCounts[phenotype] = (phenotypeCounts[phenotype] || 0) + count;
+        }
+        const genotypeList = Object.entries(genotypeCounts).sort((a, b) => b[1] - a[1]).map(([g, c]) => `${g}: ${c}/${total}`).join(", ");
+        const phenotypeList = Object.entries(phenotypeCounts).sort((a, b) => b[1] - a[1]).map(([p, c]) => `${p}: ${round((c / total) * 100, 1)}%`);
+        return {
+          primary: { label: "Possible offspring combinations", value: `${total} combinations` },
+          secondary: phenotypeList.map((p) => ({ l: "Phenotype ratio", v: p })),
+          note: `Genotype outcomes (out of ${total}): ${genotypeList}. Gametes from parent 1: ${[...new Set(p1A)].join(", ")}. Gametes from parent 2: ${[...new Set(p2A)].join(", ")}. This is a classic single-gene Punnett square, assuming simple Mendelian inheritance and complete dominance for the phenotype ratio shown. Real inheritance can differ due to incomplete dominance, codominance, multiple alleles, or environmental effects - this is an educational model, not a prediction for any specific real gene.`,
+        };
       }
       const p1A = gametesForLocus(v.parent1Gene1, "A", "a");
       const p1B = gametesForLocus(v.parent1Gene2, "B", "b");
@@ -10662,6 +10688,7 @@ const CALCULATORS = [
       };
     },
     faq: [
+      { q: "Is this the same as a Punnett Square Calculator?", a: "Yes. Choose \"One gene\" to get a classic single-gene Punnett square (a 2x2 grid of offspring combinations), or \"Two genes\" for a dihybrid cross (a 4x4 grid). Both modes live in this one calculator instead of separate pages." },
       { q: "What does 'independent assortment' mean and why does it matter here?", a: "Independent assortment is the Mendelian principle that alleles for different genes are inherited independently of each other, which holds true when the two genes are on different chromosomes (or far apart on the same one). This calculator assumes independent assortment - if the two genes were closely linked on the same chromosome, they'd tend to be inherited together more often than this model predicts, which is called genetic linkage." },
       { q: "How is this different from the Allele Frequency Calculator?", a: "The Allele Frequency Calculator works backward from real observed genotype counts in a population sample to calculate allele frequencies (p and q) for a single gene. This Dihybrid Cross Calculator instead works forward from two known parent genotypes across two genes to predict possible offspring outcomes and their probabilities - they answer different questions using different inputs." },
       { q: "How is this different from a Hardy-Weinberg calculation?", a: "Hardy-Weinberg calculations predict genotype frequencies in a large population at equilibrium, given allele frequencies, for a single gene. A dihybrid cross instead predicts individual offspring outcomes from two specific known parents across two genes - one is a population-level equilibrium model, the other is an individual-cross probability model, and they're used for different kinds of genetics questions." },
@@ -12502,6 +12529,290 @@ const CALCULATORS = [
       { q: "Does thickness of application matter?", a: "Yes, thicker layers cover less area per bale. If your coverage figure assumes a specific depth, apply pine straw to roughly that same depth to get accurate coverage." },
     ],
     related: ["mulch-calculator", "compost-calculator", "square-footage-calculator", "grass-seed-calculator"],
+  },
+  {
+    id: "plant-population-calculator",
+    category: "biology",
+    title: "Plant Population Calculator",
+    keyword: "plant population calculator",
+    description: "Estimate crop plant population per acre or hectare from row spacing and in-row spacing, or solve for the spacing a target population needs.",
+    intro: "Choose whether you want to estimate plant population from your row and in-row spacing, or find the spacing needed to hit a target population. This assumes uniform spacing across the field; actual emerged stands vary with germination and field conditions.",
+    fields: [
+      { id: "mode", label: "Calculate", type: "select", default: "population", options: [{ v: "population", l: "Population from spacing" }, { v: "spacing", l: "Spacing from target population" }] },
+      { id: "rowSpacing", label: "Row spacing", type: "number", default: 30, step: 0.5, min: 0 },
+      { id: "inRowSpacing", label: "In-row (within-row) spacing", type: "number", default: 6, step: 0.5, min: 0 },
+      { id: "spacingUnit", label: "Spacing unit", type: "select", default: "in", options: [{ v: "in", l: "inches" }, { v: "cm", l: "centimeters" }] },
+      { id: "targetPopulation", label: "Target population (spacing mode)", type: "number", default: 32000, step: 100, min: 0 },
+      { id: "populationUnit", label: "Population per", type: "select", default: "acre", options: [{ v: "acre", l: "acre" }, { v: "hectare", l: "hectare" }] },
+    ],
+    compute: (v) => {
+      const toM = v.spacingUnit === "cm" ? 0.01 : 0.0254;
+      const areaSqm = v.populationUnit === "hectare" ? 10000 : 4046.8564224;
+      const areaLabel = v.populationUnit === "hectare" ? "hectare" : "acre";
+      if (v.mode === "spacing") {
+        if (!(v.targetPopulation > 0)) return { primary: { label: "Enter a valid target population", value: "-" }, secondary: [], note: "Target population must be greater than zero." };
+        if (!(v.rowSpacing > 0)) return { primary: { label: "Enter a row spacing", value: "-" }, secondary: [], note: "Row spacing must be greater than zero to solve for in-row spacing." };
+        const rowM = v.rowSpacing * toM;
+        const areaPerPlant = areaSqm / v.targetPopulation;
+        const inRowM = areaPerPlant / rowM;
+        if (!Number.isFinite(inRowM) || inRowM <= 0) return { primary: { label: "Values look unrealistic", value: "-" }, secondary: [], note: "Please check the numbers entered." };
+        const inRowOut = v.spacingUnit === "cm" ? inRowM / 0.01 : inRowM / 0.0254;
+        return {
+          primary: { label: "Required in-row spacing", value: `${round(inRowOut, 2)} ${v.spacingUnit}` },
+          secondary: [
+            { l: "Row spacing used", v: `${v.rowSpacing} ${v.spacingUnit}` },
+            { l: "Target population", v: `${round(v.targetPopulation, 0).toLocaleString("en-US")} per ${areaLabel}` },
+          ],
+          note: "In-row spacing = area per plant / row spacing, where area per plant = field area / target population. This assumes a uniform grid with no skips or doubles; actual emergence typically falls below the theoretical planted population.",
+        };
+      }
+      if (!(v.rowSpacing > 0) || !(v.inRowSpacing > 0)) return { primary: { label: "Enter valid spacing values", value: "-" }, secondary: [], note: "Row spacing and in-row spacing must both be greater than zero." };
+      const rowM = v.rowSpacing * toM;
+      const inRowM = v.inRowSpacing * toM;
+      const areaPerPlant = rowM * inRowM;
+      if (!(areaPerPlant > 0) || areaPerPlant > areaSqm) return { primary: { label: "Values look unrealistic", value: "-" }, secondary: [], note: "Please check the spacing values and unit entered." };
+      const population = areaSqm / areaPerPlant;
+      return {
+        primary: { label: `Estimated population per ${areaLabel}`, value: round(population, 0).toLocaleString("en-US") },
+        secondary: [
+          { l: "Area occupied per plant", v: `${round(areaPerPlant, 4)} sq m` },
+          { l: "Row × in-row spacing", v: `${v.rowSpacing} × ${v.inRowSpacing} ${v.spacingUnit}` },
+        ],
+        note: "Population = field area / area per plant, where area per plant = row spacing x in-row spacing. This is a theoretical planted population assuming perfectly even, gap-free spacing. The emerged or harvested plant population is usually lower due to germination rate, seedling mortality, skips, and field conditions - it is not the same number as what this calculator estimates.",
+      };
+    },
+    faq: [
+      { q: "How is plant population different from plant spacing?", a: "They are two directions of the same relationship. Plant population estimates how many plants a given spacing produces over an area; solving for spacing instead answers how far apart to plant to hit a target population. This calculator supports both directions in one tool." },
+      { q: "Is this the same as my final stand count?", a: "No. This is a theoretical planted population from geometry alone. Actual emerged or harvested population is typically lower because of germination rate, seedling loss, skips, and field conditions." },
+      { q: "Why does row spacing matter separately from in-row spacing?", a: "Most row crops are planted in evenly spaced rows with a different (usually closer) spacing between plants within each row. Area per plant is the product of both spacings, not either one alone." },
+      { q: "Can I use this for garden beds instead of row crops?", a: "It works for any grid-style planting, but it is set up with acre/hectare units common to row-crop agriculture. For small garden beds, the Bulb Spacing Calculator uses bed-sized area and spacing units instead." },
+      { q: "What units does this support?", a: "Spacing in inches or centimeters, and population per acre or per hectare. Pick the unit pairing that matches how your seed or planting guidance is written." },
+      { q: "Does this account for triangular or staggered planting patterns?", a: "No, it assumes a simple rectangular grid (row spacing × in-row spacing). Staggered patterns fit more plants per area than this grid model estimates." },
+    ],
+    related: ["bulb-spacing-calculator", "corn-yield-calculator", "grass-seed-calculator", "square-footage-calculator"],
+  },
+  {
+    id: "potting-soil-calculator",
+    category: "construction",
+    title: "Potting Soil Calculator",
+    keyword: "potting soil calculator",
+    description: "Estimate how much potting soil you need for a rectangular planter or round pot, in cubic feet, cubic yards, and liters.",
+    intro: "Choose a rectangular planter or a round pot, enter its dimensions and how many you have, and get the total potting soil volume needed. Real fill volume can vary with root balls, drainage layers, and settling.",
+    fields: [
+      { id: "shape", label: "Container shape", type: "select", default: "rect", options: [{ v: "rect", l: "Rectangular planter" }, { v: "round", l: "Round pot" }] },
+      { id: "length", label: "Length (rectangular)", type: "number", default: 24, step: 1, min: 0 },
+      { id: "width", label: "Width (rectangular)", type: "number", default: 10, step: 1, min: 0 },
+      { id: "diameter", label: "Diameter (round)", type: "number", default: 14, step: 0.5, min: 0 },
+      { id: "depth", label: "Fill depth", type: "number", default: 8, step: 0.5, min: 0 },
+      { id: "unit", label: "Dimension unit", type: "select", default: "in", options: [{ v: "in", l: "inches" }, { v: "cm", l: "centimeters" }] },
+      { id: "quantity", label: "Number of containers", type: "number", default: 1, step: 1, min: 1 },
+      { id: "bagVolume", label: "Bag size in quarts (optional, 0 to skip)", type: "number", default: 0, step: 1, min: 0 },
+    ],
+    compute: (v) => {
+      if (!(v.depth > 0) || !(v.quantity >= 1)) return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Fill depth must be greater than zero, and you need at least one container." };
+      const toCm = v.unit === "cm" ? 1 : 2.54;
+      let areaSqCm;
+      if (v.shape === "round") {
+        if (!(v.diameter > 0)) return { primary: { label: "Enter a valid diameter", value: "-" }, secondary: [], note: "Diameter must be greater than zero." };
+        const rCm = (v.diameter * toCm) / 2;
+        areaSqCm = Math.PI * rCm * rCm;
+      } else {
+        if (!(v.length > 0) || !(v.width > 0)) return { primary: { label: "Enter valid dimensions", value: "-" }, secondary: [], note: "Length and width must both be greater than zero." };
+        areaSqCm = v.length * toCm * (v.width * toCm);
+      }
+      const depthCm = v.depth * toCm;
+      const oneCubicCm = areaSqCm * depthCm;
+      if (!Number.isFinite(oneCubicCm) || oneCubicCm > 1e10) return { primary: { label: "Dimensions look unrealistic", value: "-" }, secondary: [], note: "Please check the sizes and unit entered." };
+      const totalCubicCm = oneCubicCm * Math.floor(v.quantity);
+      const cubicFt = totalCubicCm / 28316.846592;
+      const liters = totalCubicCm / 1000;
+      const secondary = [
+        { l: "Cubic yards", v: round(cubicFt / 27, 3) },
+        { l: "Liters", v: round(liters, 1) },
+        { l: "Cubic meters", v: round(totalCubicCm / 1e6, 3) },
+      ];
+      if (v.bagVolume > 0) {
+        const quartsNeeded = liters / 0.946353;
+        secondary.push({ l: `Bags of ${v.bagVolume} qt`, v: `${Math.ceil(quartsNeeded / v.bagVolume - 1e-9)} (${round(quartsNeeded / v.bagVolume, 2)} exact)` });
+      }
+      return {
+        primary: { label: "Potting soil needed", value: `${round(cubicFt, 2)} cu ft` },
+        secondary,
+        note: "Volume = container footprint area x fill depth x number of containers. This is the geometric volume of the container to that depth; actual soil used is usually a bit less once you account for root balls, a drainage layer, or headspace left below the rim, and can settle over time. Bag sizes vary by brand, so use your own product's listed volume rather than an assumed standard.",
+      };
+    },
+    faq: [
+      { q: "Should I fill the container all the way to the rim?", a: "Usually not. Most growers leave an inch or two of headspace below the rim for watering, so measure your intended fill depth rather than the container's full height." },
+      { q: "How is this different from the Compost or Mulch Calculators?", a: "Those are sized for outdoor beds and yards, using depth over a garden area. This tool is built around container geometry - rectangular planters or round pots - and a number of containers, which is a different shape problem." },
+      { q: "Why does the actual soil used differ from the calculated volume?", a: "A root ball or plant already growing in the container takes up space, some growers add a drainage layer of gravel or broken pot pieces at the bottom, and soil settles and compacts after watering, all of which reduce how much fresh soil you actually add." },
+      { q: "Can I calculate several identical pots at once?", a: "Yes. Enter the dimensions for one container and the number of containers, and the tool multiplies the volume for you." },
+      { q: "Why do I need to enter my own bag size?", a: "Bagged potting soil is sold in different volumes by different brands and regions, so there is no single correct bag size to assume. Enter the volume printed on your product's bag." },
+      { q: "Does this account for soil that compacts after watering?", a: "No, it calculates geometric volume only. Buying a bit extra is a reasonable practice since soil volume typically decreases somewhat after the first thorough watering." },
+    ],
+    related: ["compost-calculator", "mulch-calculator", "square-footage-calculator"],
+  },
+  {
+    id: "protein-concentration-calculator",
+    category: "biology",
+    title: "Protein Concentration Calculator",
+    keyword: "protein concentration calculator",
+    description: "Calculate protein concentration from mass and volume, or from an A280 absorbance reading with your own extinction coefficient.",
+    intro: "Calculate protein concentration either directly from a measured mass and solution volume, or from an A280 absorbance reading using an extinction coefficient specific to your protein. There is no single universal A280-to-concentration conversion, so the absorbance mode requires your own coefficient.",
+    fields: [
+      { id: "mode", label: "Calculation method", type: "select", default: "massvol", options: [{ v: "massvol", l: "Mass and volume" }, { v: "a280", l: "A280 absorbance with extinction coefficient" }] },
+      { id: "mass", label: "Protein mass (mg, mass/volume mode)", type: "number", default: 5, step: 0.1, min: 0 },
+      { id: "volume", label: "Solution volume (mL)", type: "number", default: 1, step: 0.1, min: 0 },
+      { id: "a280", label: "A280 absorbance reading", type: "number", default: 1, step: 0.01, min: 0 },
+      { id: "extinctionCoeff", label: "Extinction coefficient (1%, 1 cm; i.e. absorbance of a 1 mg/mL solution)", type: "number", default: 1, step: 0.01, min: 0 },
+      { id: "pathLength", label: "Path length (cm)", type: "number", default: 1, step: 0.1, min: 0 },
+      { id: "dilutionFactor", label: "Dilution factor", type: "number", default: 1, step: 0.1, min: 1 },
+    ],
+    compute: (v) => {
+      if (v.mode === "a280") {
+        if (!(v.a280 >= 0) || !(v.extinctionCoeff > 0) || !(v.pathLength > 0) || !(v.dilutionFactor >= 1)) return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Absorbance can't be negative, and the extinction coefficient, path length, and dilution factor must be greater than zero (dilution factor at least 1)." };
+        const mgPerMl = (v.a280 / (v.extinctionCoeff * v.pathLength)) * v.dilutionFactor;
+        return {
+          primary: { label: "Concentration", value: `${round(mgPerMl, 3)} mg/mL` },
+          secondary: [
+            { l: "Equivalent", v: `${round(mgPerMl * 1000, 1)} µg/mL` },
+            { l: "Equivalent", v: `${round(mgPerMl, 3)} g/L` },
+          ],
+          note: "Concentration (mg/mL) = A280 / (extinction coefficient x path length) x dilution factor, a form of the Beer-Lambert law. This uses the extinction coefficient you provide - there is no single coefficient that applies to all proteins, since it depends on each protein's specific tryptophan, tyrosine, and cystine content. Use a coefficient determined or published for your specific protein, not a generic assumption.",
+        };
+      }
+      if (!(v.mass >= 0) || !(v.volume > 0)) return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Protein mass cannot be negative, and volume must be greater than zero." };
+      const mgPerMl = v.mass / v.volume;
+      return {
+        primary: { label: "Concentration", value: `${round(mgPerMl, 3)} mg/mL` },
+        secondary: [
+          { l: "Equivalent", v: `${round(mgPerMl * 1000, 1)} µg/mL` },
+          { l: "Equivalent", v: `${round(mgPerMl, 3)} g/L` },
+        ],
+        note: "Concentration = protein mass / solution volume. This is a direct mass-to-volume calculation and does not involve absorbance readings or assumptions about the protein's composition, so it works for any protein once you know its mass in solution.",
+      };
+    },
+    faq: [
+      { q: "Which mode should I use?", a: "Use mass and volume if you know the actual mass of protein dissolved in a known volume. Use the A280 mode only if you have a published or measured extinction coefficient for your specific protein - a generic assumption is not reliable." },
+      { q: "Why can't I just enter A280 without an extinction coefficient?", a: "Absorbance at 280 nm depends heavily on each protein's tryptophan, tyrosine, and cystine content, so there is no single conversion factor that works for every protein the way there is for nucleic acids. Using the wrong assumed coefficient can give a badly wrong concentration." },
+      { q: "Where do I find my protein's extinction coefficient?", a: "It is often published in the literature for known proteins, or can be calculated from the amino acid sequence using established methods, or measured directly. Check a reference specific to your protein rather than guessing." },
+      { q: "How is this different from the DNA Concentration Calculator?", a: "The DNA Concentration Calculator uses standard A260 conversion factors that are considered roughly universal for nucleic acid types. Protein absorbance conversion is protein-specific, which is why this tool requires your own coefficient instead of assuming one." },
+      { q: "What does dilution factor do in the A280 mode?", a: "If you diluted your sample before measuring absorbance, multiply the calculated concentration back up by the dilution factor to get the concentration of your original, undiluted sample." },
+      { q: "Can I use this for crude extracts or mixtures?", a: "A280 readings for mixtures reflect the combined absorbance of everything present, not just your protein of interest, so this mode is most reliable for purified or well-characterized protein solutions." },
+    ],
+    related: ["dna-concentration-calculator", "cell-dilution-calculator", "protein-molecular-weight-calculator"],
+  },
+  {
+    id: "protein-molecular-weight-calculator",
+    category: "biology",
+    title: "Protein Molecular Weight Calculator",
+    keyword: "protein molecular weight calculator",
+    description: "Estimate a protein or peptide's molecular weight in Da and kDa from its amino acid sequence using standard one-letter codes.",
+    intro: "Paste a protein or peptide sequence using standard one-letter amino acid codes to estimate its molecular weight. Whitespace and line breaks are ignored, and case does not matter.",
+    fields: [
+      { id: "sequence", label: "Amino acid sequence (one-letter codes)", type: "text", default: "MKWVTFISLLFLFSSAYS" },
+    ],
+    compute: (v) => {
+      const RESIDUE_MASS = { A: 71.0788, R: 156.1875, N: 114.1038, D: 115.0886, C: 103.1388, E: 129.1155, Q: 128.1307, G: 57.0519, H: 137.1411, I: 113.1594, L: 113.1594, K: 128.1741, M: 131.1926, F: 147.1766, P: 97.1167, S: 87.0782, T: 101.1051, W: 186.2132, Y: 163.1760, V: 99.1326 };
+      const WATER = 18.0153;
+      const raw = String(v.sequence || "").replace(/\s+/g, "").toUpperCase();
+      if (!raw) return { primary: { label: "Enter a sequence", value: "-" }, secondary: [], note: "Enter a protein or peptide sequence using one-letter amino acid codes." };
+      const bad = [...new Set([...raw].filter((c) => !RESIDUE_MASS[c]))];
+      if (bad.length) return { primary: { label: "Unsupported character(s) found", value: "-" }, secondary: [], note: `The sequence contains character(s) not recognized as standard one-letter amino acid codes: ${bad.join(", ")}. Ambiguity codes (B, J, X, Z), stop codons (*), and non-amino-acid characters are not supported. Remove or correct them and try again.` };
+      if (raw.length > 20000) return { primary: { label: "Sequence too long", value: "-" }, secondary: [], note: "This tool supports sequences up to 20,000 residues." };
+      const sumResidues = [...raw].reduce((sum, c) => sum + RESIDUE_MASS[c], 0);
+      const mw = sumResidues + WATER;
+      return {
+        primary: { label: "Estimated molecular weight", value: `${round(mw, 1)} Da` },
+        secondary: [
+          { l: "In kDa", v: round(mw / 1000, 2) },
+          { l: "Sequence length", v: `${raw.length} residues` },
+        ],
+        note: "Molecular weight is estimated as the sum of each residue's average mass (the amino acid's free mass minus one water molecule, since a peptide bond releases water) plus one water molecule for the complete chain's terminal ends. This is a sequence-derived estimate using average isotopic masses, not an exact measured mass. It does not account for post-translational modifications, glycosylation, disulfide bonds, bound cofactors, or multimer formation, all of which change a real protein's actual mass.",
+      };
+    },
+    faq: [
+      { q: "How is this different from the Molecular Weight Calculator?", a: "The Molecular Weight Calculator works from a chemical formula like H2O or NaCl. This tool works directly from a protein or peptide's amino acid sequence, summing residue masses rather than parsing element counts." },
+      { q: "Which amino acid codes are supported?", a: "The 20 standard one-letter codes (A, R, N, D, C, E, Q, G, H, I, L, K, M, F, P, S, T, W, Y, V). Ambiguity codes like X, B, J, and Z, and non-standard characters, are flagged rather than guessed at." },
+      { q: "Why isn't the molecular weight just the sum of the individual amino acids?", a: "Forming each peptide bond releases one water molecule, so residues in a chain weigh slightly less than the free amino acids. This calculator sums residue masses (already accounting for that) and adds back one water molecule for the two ends of the finished chain." },
+      { q: "Does this include modifications like glycosylation or disulfide bonds?", a: "No. It calculates an unmodified, sequence-only estimate. Post-translational modifications, glycosylation, disulfide bonds, bound cofactors, and multimer (multi-chain) assembly all change a real protein's mass and are not modeled here." },
+      { q: "Can I paste a sequence with line breaks or FASTA formatting?", a: "Line breaks and spaces are removed automatically. Remove any FASTA header line (starting with >) before pasting, since it is not a valid amino acid sequence." },
+      { q: "How accurate is this compared to mass spectrometry?", a: "It gives a useful estimate using average residue masses, but it is not a substitute for a measured mass. Real proteins can differ due to modifications this tool does not model, and mass spectrometry measures the actual molecule directly." },
+    ],
+    related: ["molecular-weight-calculator", "protein-concentration-calculator", "dna-to-mrna-converter"],
+  },
+  {
+    id: "qpcr-efficiency-calculator",
+    category: "biology",
+    title: "qPCR Efficiency Calculator",
+    keyword: "qpcr efficiency calculator",
+    description: "Calculate amplification efficiency from a qPCR standard curve slope, and see the amplification factor per cycle.",
+    intro: "Enter the slope of your qPCR standard curve (Ct or Cq plotted against log10 of starting quantity) to calculate the estimated amplification efficiency. This is a calculation from the slope you provide, not a validation of your assay.",
+    fields: [
+      { id: "slope", label: "Standard curve slope", type: "number", default: -3.32, step: 0.01 },
+    ],
+    compute: (v) => {
+      if (!Number.isFinite(v.slope) || v.slope === 0) return { primary: { label: "Enter a valid slope", value: "-" }, secondary: [], note: "Slope cannot be zero (the efficiency formula divides by the slope)." };
+      if (v.slope > 0) return { primary: { label: "Slope should typically be negative", value: "-" }, secondary: [], note: "In a standard qPCR curve (Ct/Cq vs. log10 starting quantity), the slope is normally negative because Ct decreases as starting quantity increases. A positive slope suggests a data or plotting issue rather than a usable efficiency estimate here." };
+      const efficiency = (Math.pow(10, -1 / v.slope) - 1) * 100;
+      const amplificationFactor = Math.pow(10, -1 / v.slope);
+      return {
+        primary: { label: "Amplification efficiency", value: `${round(efficiency, 1)}%` },
+        secondary: [
+          { l: "Amplification factor per cycle", v: round(amplificationFactor, 3) },
+          { l: "Slope entered", v: v.slope },
+        ],
+        note: "Efficiency (%) = (10^(-1/slope) - 1) x 100. A slope of exactly -3.32 corresponds to 100% efficiency (perfect doubling each cycle). Values noticeably above or below 100% can indicate pipetting error, inhibitors, poor primer design, or suboptimal reaction conditions, but interpreting what is acceptable depends on your assay design, replicate consistency, and laboratory standards - this calculator only performs the slope-to-efficiency conversion, not an assay validation.",
+      };
+    },
+    faq: [
+      { q: "What slope gives 100% efficiency?", a: "A slope of exactly -3.32 (more precisely, -1/log10(2)) corresponds to 100% efficiency, meaning the amount of product doubles every cycle." },
+      { q: "Why is a valid slope negative?", a: "In a standard qPCR curve, Ct (or Cq) values decrease as the starting template quantity increases, so slope is normally negative. This calculator flags a positive slope as unlikely to represent a valid standard curve." },
+      { q: "What efficiency range is considered acceptable?", a: "Different labs and assay types apply different acceptable ranges, and this varies with reaction chemistry and requirements. This calculator does not set a pass/fail threshold; interpret the result using your own assay's validation criteria."},
+      { q: "What can cause efficiency far from 100%?", a: "Common causes include pipetting or dilution errors in the standard curve, PCR inhibitors carried over in the template, suboptimal primer design or concentration, and amplicon secondary structure. Troubleshooting depends on your specific assay." },
+      { q: "How is this different from the Annealing Temperature Calculator?", a: "The Annealing Temperature Calculator estimates a PCR cycling parameter from primer melting temperatures, before you generate any data. This tool analyzes the slope from an already-completed standard curve run." },
+      { q: "Does this replace laboratory QC procedures?", a: "No. It performs one specific calculation from a slope you provide. Proper assay validation involves replicates, controls, and criteria specific to your laboratory and application." },
+    ],
+    related: ["annealing-temperature-calculator", "dna-concentration-calculator", "cell-doubling-time-calculator"],
+  },
+  {
+    id: "rabbit-cage-size-calculator",
+    category: "pets",
+    title: "Rabbit Cage Size Calculator",
+    keyword: "rabbit cage size calculator",
+    description: "Estimate the minimum enclosure floor area for your rabbits from a space allowance per rabbit, plus possible rectangular dimensions.",
+    intro: "Enter the number of rabbits and a floor-space allowance per rabbit to estimate a minimum enclosure floor area, plus example rectangular dimensions. This does not represent one universal legal or welfare standard - check current guidance for your rabbits and location.",
+    fields: [
+      { id: "rabbits", label: "Number of rabbits", type: "number", default: 1, step: 1, min: 1 },
+      { id: "areaPerRabbit", label: "Floor area allowance per rabbit", type: "number", default: 8, step: 0.5, min: 0 },
+      { id: "unit", label: "Area unit", type: "select", default: "sqft", options: [{ v: "sqft", l: "sq ft" }, { v: "sqm", l: "sq m" }] },
+    ],
+    compute: (v) => {
+      if (!(v.rabbits >= 1) || v.rabbits > 50) return { primary: { label: "Enter 1 to 50 rabbits", value: "-" }, secondary: [], note: "Number of rabbits must be between 1 and 50." };
+      if (!(v.areaPerRabbit > 0)) return { primary: { label: "Enter a valid area allowance", value: "-" }, secondary: [], note: "Floor area allowance per rabbit must be greater than zero." };
+      const totalArea = v.rabbits * v.areaPerRabbit;
+      if (totalArea > 100000) return { primary: { label: "Values look unrealistic", value: "-" }, secondary: [], note: "Please check the numbers entered." };
+      const side = Math.sqrt(totalArea);
+      const u = v.unit === "sqm" ? "m" : "ft";
+      const dim2x1 = Math.sqrt(totalArea / 2);
+      return {
+        primary: { label: "Minimum floor area needed", value: `${round(totalArea, 1)} ${v.unit === "sqm" ? "sq m" : "sq ft"}` },
+        secondary: [
+          { l: "Square footprint example", v: `${round(side, 1)} × ${round(side, 1)} ${u}` },
+          { l: "2:1 rectangle example", v: `${round(dim2x1 * 2, 1)} × ${round(dim2x1, 1)} ${u}` },
+          { l: "Allowance used", v: `${v.areaPerRabbit} ${v.unit === "sqm" ? "sq m" : "sq ft"} per rabbit` },
+        ],
+        note: "Minimum floor area = number of rabbits x your chosen area allowance per rabbit. The default allowance is only an editable example, not a universal legal or welfare standard - requirements vary by rabbit size and breed, number of rabbits housed together, the organization or jurisdiction, and whether the space is a permanent enclosure or a temporary carrier. Rabbits also need room to move, stretch out fully, and get exercise beyond a minimum footprint, and height for standing on hind legs where applicable. Check current welfare guidance for your specific rabbits before finalizing an enclosure.",
+      };
+    },
+    faq: [
+      { q: "Is the default area allowance a legal minimum?", a: "No. It is only an editable example. Space requirements and recommendations vary by rabbit size, welfare organization, and jurisdiction, so replace the default with guidance appropriate to your rabbits and location." },
+      { q: "Does this calculator account for exercise space?", a: "Not directly - it estimates enclosure floor area from your allowance. Most welfare guidance distinguishes between minimum housing space and separate daily exercise or free-roam time, so consider both rather than relying on floor area alone." },
+      { q: "How many rabbits can share one enclosure?", a: "That depends on whether the rabbits are bonded, their sizes, and the enclosure design. This calculator simply multiplies your per-rabbit allowance by the number of rabbits; it does not evaluate compatibility or bonding." },
+      { q: "How is this different from the Dog Crate Size Calculator?", a: "The Dog Crate Size Calculator sizes a crate to one dog's body measurements for a snug fit. This tool estimates rabbit enclosure floor area from a chosen space allowance per rabbit, which is a different approach suited to rabbit housing." },
+      { q: "Is this suitable for calculating an airline travel carrier?", a: "No. It is intended for home enclosure floor area, not travel carrier sizing, which follows separate airline- and carrier-specific rules." },
+      { q: "What if I have giant or dwarf breed rabbits?", a: "Larger breeds generally need more space than the example allowance assumes, and smaller breeds may need less. Adjust the area-per-rabbit value to match your rabbit's actual size and current welfare guidance."},
+    ],
+    related: ["dog-crate-size-calculator", "guinea-pig-age-calculator", "hamster-age-calculator", "rabbit-age-calculator"],
   },
 ];
 

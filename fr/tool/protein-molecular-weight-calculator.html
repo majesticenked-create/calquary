@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculateur de Poids Moléculaire des Protéines</title>
+  <meta name="description" content="Estimez le poids moléculaire d'une protéine ou d'un peptide en Da et kDa à partir de sa séquence d'acides aminés en utilisant des codes à une lettre standard." />
+  <meta property="og:title" content="Calculateur de Poids Moléculaire des Protéines | Calquary">
+  <meta property="og:description" content="Estimez le poids moléculaire d'une protéine ou d'un peptide en Da et kDa à partir de sa séquence d'acides aminés en utilisant des codes à une lettre standard.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/fr/tool/protein-molecular-weight-calculator">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/protein-molecular-weight-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculateur de Poids Moléculaire des Protéines | Calquary">
+  <meta name="twitter:description" content="Estimez le poids moléculaire d'une protéine ou d'un peptide en Da et kDa à partir de sa séquence d'acides aminés en utilisant des codes à une lettre standard.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/protein-molecular-weight-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/protein-molecular-weight-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/protein-molecular-weight-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/protein-molecular-weight-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/protein-molecular-weight-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/protein-molecular-weight-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/protein-molecular-weight-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/protein-molecular-weight-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/protein-molecular-weight-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/protein-molecular-weight-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/protein-molecular-weight-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/protein-molecular-weight-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/protein-molecular-weight-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/protein-molecular-weight-calculator">
+    <link rel="canonical" href="https://calquary.com/fr/tool/protein-molecular-weight-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("protein-molecular-weight-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("protein-molecular-weight-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calculateur de Poids Moléculaire des Protéines",
+      "description": "Estimez le poids moléculaire d'une protéine ou d'un peptide en Da et kDa à partir de sa séquence d'acides aminés en utilisant des codes à une lettre standard.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/fr/tool/protein-molecular-weight-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-25",
+      "inLanguage": "fr"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/fr/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calculateur de Poids Moléculaire des Protéines",
+          "item": "https://calquary.com/fr/tool/protein-molecular-weight-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "En quoi est-ce différent du Calculateur de Poids Moléculaire ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le Calculateur de Poids Moléculaire fonctionne à partir d'une formule chimique comme H2O ou NaCl. Cet outil travaille directement à partir de la séquence d'acides aminés d'une protéine ou d'un peptide, en additionnant les masses des résidus plutôt qu'en analysant le décompte des éléments."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quels codes d'acides aminés sont pris en charge ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Les 20 codes standard à une lettre (A, R, N, D, C, E, Q, G, H, I, L, K, M, F, P, S, T, W, Y, V). Les codes d'ambiguïté comme X, B, J et Z, et les caractères non standard, sont signalés plutôt que devinés."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pourquoi le poids moléculaire n'est-il pas simplement la somme des acides aminés individuels ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La formation de chaque liaison peptidique libère une molécule d'eau, donc les résidus dans une chaîne pèsent un peu moins que les acides aminés libres. Ce calculateur additionne les masses des résidus (en en tenant déjà compte) et rajoute une molécule d'eau pour les deux extrémités de la chaîne finie."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cela inclut-il des modifications comme la glycosylation ou les ponts disulfure ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non. Il calcule une estimation non modifiée, basée uniquement sur la séquence. Les modifications post-traductionnelles, la glycosylation, les ponts disulfure, les cofacteurs liés et l'assemblage en multimères (plusieurs chaînes) modifient la masse réelle d'une protéine et ne sont pas modélisés ici."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Puis-je coller une séquence avec des sauts de ligne ou un format FASTA ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Les sauts de ligne et les espaces sont supprimés automatiquement. Retirez toute ligne d'en-tête FASTA (commençant par >) avant de coller, car ce n'est pas une séquence d'acides aminés valide."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelle est la précision par rapport à la spectrométrie de masse ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cela donne une estimation utile en utilisant les masses moyennes des résidus, mais ne remplace pas une masse mesurée. Les protéines réelles peuvent différer en raison de modifications que cet outil ne modélise pas, et la spectrométrie de masse mesure directement la molécule réelle."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/fr/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/fr/#categories">Catégories</a>
+          <a href="/fr/#tools">Tous les outils</a>
+          <a href="/fr/about">À propos</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Français">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>FR</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/protein-molecular-weight-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/protein-molecular-weight-calculator">Español</a><span class="locale-item current" role="menuitem" aria-current="true">Français</span><a class="locale-item" role="menuitem" href="/de/tool/protein-molecular-weight-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/protein-molecular-weight-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/protein-molecular-weight-calculator">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/protein-molecular-weight-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/protein-molecular-weight-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/protein-molecular-weight-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/protein-molecular-weight-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/protein-molecular-weight-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/protein-molecular-weight-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/fr/">Calquary</a> / <a href="/fr/category/biology">Biologie</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calculateur de Poids Moléculaire des Protéines</h1>
+        <p style="max-width:60ch;">Collez une séquence de protéine ou de peptide en utilisant des codes standard à une lettre pour les acides aminés afin d'estimer son poids moléculaire. Les espaces et sauts de ligne sont ignorés, et la casse n'a pas d'importance.</p>
+        <p class="last-updated">Dernière mise à jour : September 25, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculer</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Réinitialiser</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Questions fréquentes</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>En quoi est-ce différent du Calculateur de Poids Moléculaire ?</h3>
+<p>Le Calculateur de Poids Moléculaire fonctionne à partir d'une formule chimique comme H2O ou NaCl. Cet outil travaille directement à partir de la séquence d'acides aminés d'une protéine ou d'un peptide, en additionnant les masses des résidus plutôt qu'en analysant le décompte des éléments.</p>
+</div>
+<div class="faq-item">
+<h3>Quels codes d'acides aminés sont pris en charge ?</h3>
+<p>Les 20 codes standard à une lettre (A, R, N, D, C, E, Q, G, H, I, L, K, M, F, P, S, T, W, Y, V). Les codes d'ambiguïté comme X, B, J et Z, et les caractères non standard, sont signalés plutôt que devinés.</p>
+</div>
+<div class="faq-item">
+<h3>Pourquoi le poids moléculaire n'est-il pas simplement la somme des acides aminés individuels ?</h3>
+<p>La formation de chaque liaison peptidique libère une molécule d'eau, donc les résidus dans une chaîne pèsent un peu moins que les acides aminés libres. Ce calculateur additionne les masses des résidus (en en tenant déjà compte) et rajoute une molécule d'eau pour les deux extrémités de la chaîne finie.</p>
+</div>
+<div class="faq-item">
+<h3>Cela inclut-il des modifications comme la glycosylation ou les ponts disulfure ?</h3>
+<p>Non. Il calcule une estimation non modifiée, basée uniquement sur la séquence. Les modifications post-traductionnelles, la glycosylation, les ponts disulfure, les cofacteurs liés et l'assemblage en multimères (plusieurs chaînes) modifient la masse réelle d'une protéine et ne sont pas modélisés ici.</p>
+</div>
+<div class="faq-item">
+<h3>Puis-je coller une séquence avec des sauts de ligne ou un format FASTA ?</h3>
+<p>Les sauts de ligne et les espaces sont supprimés automatiquement. Retirez toute ligne d'en-tête FASTA (commençant par >) avant de coller, car ce n'est pas une séquence d'acides aminés valide.</p>
+</div>
+<div class="faq-item">
+<h3>Quelle est la précision par rapport à la spectrométrie de masse ?</h3>
+<p>Cela donne une estimation utile en utilisant les masses moyennes des résidus, mais ne remplace pas une masse mesurée. Les protéines réelles peuvent différer en raison de modifications que cet outil ne modélise pas, et la spectrométrie de masse mesure directement la molécule réelle.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculer</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Outils associés</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Remarque sur la précision</h4>
+          <p style="margin:0;font-size:0.85rem;">Les calculatrices de Calquary sont conçues pour fournir des estimations rapides et fiables. Pour toute décision ayant de réelles conséquences financières, structurelles ou médicales, consultez un professionnel qualifié.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/fr/">← Retour à toutes les calculatrices</a> · <a href="/fr/about">À propos</a> · <a href="/fr/contact">Contact</a> · <a href="/fr/privacy">Confidentialité</a> · <a href="/fr/terms">Conditions</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

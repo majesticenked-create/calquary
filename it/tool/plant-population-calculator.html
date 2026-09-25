@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calcolatore di Densità di Semina</title>
+  <meta name="description" content="Stima la densità di semina per acro o ettaro dalla distanza tra file e sulla fila, o calcola la distanza necessaria per una densità target." />
+  <meta property="og:title" content="Calcolatore di Densità di Semina | Calquary">
+  <meta property="og:description" content="Stima la densità di semina per acro o ettaro dalla distanza tra file e sulla fila, o calcola la distanza necessaria per una densità target.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/it/tool/plant-population-calculator">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/plant-population-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calcolatore di Densità di Semina | Calquary">
+  <meta name="twitter:description" content="Stima la densità di semina per acro o ettaro dalla distanza tra file e sulla fila, o calcola la distanza necessaria per una densità target.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/plant-population-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/plant-population-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/plant-population-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/plant-population-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/plant-population-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/plant-population-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/plant-population-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/plant-population-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/plant-population-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/plant-population-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/plant-population-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/plant-population-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/plant-population-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/plant-population-calculator">
+    <link rel="canonical" href="https://calquary.com/it/tool/plant-population-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("plant-population-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("plant-population-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calcolatore di Densità di Semina",
+      "description": "Stima la densità di semina per acro o ettaro dalla distanza tra file e sulla fila, o calcola la distanza necessaria per una densità target.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/it/tool/plant-population-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-25",
+      "inLanguage": "it"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/it/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/it/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calcolatore di Densità di Semina",
+          "item": "https://calquary.com/it/tool/plant-population-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "In cosa differisce la densità di semina dalla spaziatura delle piante?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sono due direzioni della stessa relazione. La densità di semina stima quante piante produce una data distanza su un'area; risolvere per la distanza risponde invece a quanto distanziare per raggiungere una densità target. Questo calcolatore supporta entrambe le direzioni in un unico strumento."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "È lo stesso del mio conteggio finale della popolazione?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Questa è una densità teorica seminata basata solo sulla geometria. La popolazione realmente emersa o raccolta è di solito inferiore a causa del tasso di germinazione, della perdita di piantine, dei vuoti e delle condizioni del campo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Perché la distanza tra file conta separatamente dalla distanza sulla fila?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La maggior parte delle colture in fila viene seminata in file distanziate uniformemente con una distanza diversa (di solito più ravvicinata) tra le piante all'interno di ciascuna fila. L'area per pianta è il prodotto di entrambe le distanze, non di una sola."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso usarlo per aiuole da giardino invece che per colture in fila?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Funziona per qualsiasi semina a griglia, ma è impostato con unità acro/ettaro comuni nell'agricoltura di colture in fila. Per piccole aiuole, il Calcolatore di Spaziatura dei Bulbi usa unità di area e distanza della dimensione dell'aiuola."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quali unità sono supportate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Distanza in pollici o centimetri, e densità per acro o per ettaro. Scegli la combinazione di unità che corrisponde a come è scritta la tua guida per semi o semina."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Questo tiene conto di schemi di semina triangolari o sfalsati?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, presuppone una semplice griglia rettangolare (distanza tra file × distanza sulla fila). Gli schemi sfalsati fanno stare più piante per area di quanto stimi questo modello a griglia."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/it/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/it/#categories">Categorie</a>
+          <a href="/it/#tools">Tutti gli strumenti</a>
+          <a href="/it/about">Chi siamo</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Italiano">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>IT</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/plant-population-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/plant-population-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/plant-population-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/plant-population-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/plant-population-calculator">Português</a><span class="locale-item current" role="menuitem" aria-current="true">Italiano</span><a class="locale-item" role="menuitem" href="/ja/tool/plant-population-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/plant-population-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/plant-population-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/plant-population-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/plant-population-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/plant-population-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/it/">Calquary</a> / <a href="/it/category/biology">Biologia</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calcolatore di Densità di Semina</h1>
+        <p style="max-width:60ch;">Scegli se vuoi stimare la densità di semina dalla distanza tra file e sulla fila, oppure trovare la distanza necessaria per raggiungere una densità target. Questo presuppone una distanza uniforme in tutto il campo; le popolazioni realmente emerse variano con la germinazione e le condizioni del campo.</p>
+        <p class="last-updated">Ultimo aggiornamento: September 25, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calcola</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reimposta</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Domande frequenti</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>In cosa differisce la densità di semina dalla spaziatura delle piante?</h3>
+<p>Sono due direzioni della stessa relazione. La densità di semina stima quante piante produce una data distanza su un'area; risolvere per la distanza risponde invece a quanto distanziare per raggiungere una densità target. Questo calcolatore supporta entrambe le direzioni in un unico strumento.</p>
+</div>
+<div class="faq-item">
+<h3>È lo stesso del mio conteggio finale della popolazione?</h3>
+<p>No. Questa è una densità teorica seminata basata solo sulla geometria. La popolazione realmente emersa o raccolta è di solito inferiore a causa del tasso di germinazione, della perdita di piantine, dei vuoti e delle condizioni del campo.</p>
+</div>
+<div class="faq-item">
+<h3>Perché la distanza tra file conta separatamente dalla distanza sulla fila?</h3>
+<p>La maggior parte delle colture in fila viene seminata in file distanziate uniformemente con una distanza diversa (di solito più ravvicinata) tra le piante all'interno di ciascuna fila. L'area per pianta è il prodotto di entrambe le distanze, non di una sola.</p>
+</div>
+<div class="faq-item">
+<h3>Posso usarlo per aiuole da giardino invece che per colture in fila?</h3>
+<p>Funziona per qualsiasi semina a griglia, ma è impostato con unità acro/ettaro comuni nell'agricoltura di colture in fila. Per piccole aiuole, il Calcolatore di Spaziatura dei Bulbi usa unità di area e distanza della dimensione dell'aiuola.</p>
+</div>
+<div class="faq-item">
+<h3>Quali unità sono supportate?</h3>
+<p>Distanza in pollici o centimetri, e densità per acro o per ettaro. Scegli la combinazione di unità che corrisponde a come è scritta la tua guida per semi o semina.</p>
+</div>
+<div class="faq-item">
+<h3>Questo tiene conto di schemi di semina triangolari o sfalsati?</h3>
+<p>No, presuppone una semplice griglia rettangolare (distanza tra file × distanza sulla fila). Gli schemi sfalsati fanno stare più piante per area di quanto stimi questo modello a griglia.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calcola</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Strumenti correlati</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Nota sulla precisione</h4>
+          <p style="margin:0;font-size:0.85rem;">Le calcolatrici di Calquary sono pensate per stime rapide e affidabili. Per decisioni con reali implicazioni finanziarie, strutturali o mediche, consulta un professionista qualificato.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/it/">← Torna a tutte le calcolatrici</a> · <a href="/it/about">Chi siamo</a> · <a href="/it/contact">Contatti</a> · <a href="/it/privacy">Privacy</a> · <a href="/it/terms">Termini</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

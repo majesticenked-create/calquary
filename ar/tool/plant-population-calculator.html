@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>حاسبة كثافة النباتات - حاسبة مجانية عبر الإنترنت | Calquary</title>
+  <meta name="description" content="قدّر كثافة النباتات لكل فدان أو هكتار من المسافة بين الصفوف وداخل الصف، أو احسب المسافة اللازمة لكثافة مستهدفة." />
+  <meta property="og:title" content="حاسبة كثافة النباتات | Calquary">
+  <meta property="og:description" content="قدّر كثافة النباتات لكل فدان أو هكتار من المسافة بين الصفوف وداخل الصف، أو احسب المسافة اللازمة لكثافة مستهدفة.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/ar/tool/plant-population-calculator">
+  <meta property="og:locale" content="ar_AR">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/plant-population-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="حاسبة كثافة النباتات | Calquary">
+  <meta name="twitter:description" content="قدّر كثافة النباتات لكل فدان أو هكتار من المسافة بين الصفوف وداخل الصف، أو احسب المسافة اللازمة لكثافة مستهدفة.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/plant-population-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/plant-population-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/plant-population-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/plant-population-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/plant-population-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/plant-population-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/plant-population-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/plant-population-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/plant-population-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/plant-population-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/plant-population-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/plant-population-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/plant-population-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/plant-population-calculator">
+    <link rel="canonical" href="https://calquary.com/ar/tool/plant-population-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("plant-population-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("plant-population-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "حاسبة كثافة النباتات",
+      "description": "قدّر كثافة النباتات لكل فدان أو هكتار من المسافة بين الصفوف وداخل الصف، أو احسب المسافة اللازمة لكثافة مستهدفة.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/ar/tool/plant-population-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-25",
+      "inLanguage": "ar"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/ar/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/ar/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "حاسبة كثافة النباتات",
+          "item": "https://calquary.com/ar/tool/plant-population-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "كيف تختلف كثافة النباتات عن تباعد النباتات؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "هما اتجاهان لنفس العلاقة. تقدّر كثافة النباتات عدد النباتات التي ينتجها تباعد معين في مساحة ما؛ بينما يجيب حل المسافة، على العكس، عن المسافة اللازمة للزراعة للوصول إلى كثافة مستهدفة. تدعم هذه الحاسبة كلا الاتجاهين في أداة واحدة."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هل هذا هو نفسه عدّي النهائي للكثافة الفعلية؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "لا. هذه كثافة مزروعة نظرية تعتمد على الهندسة فقط. تكون الكثافة الناشئة أو المحصودة الفعلية عادة أقل بسبب معدل الإنبات وفقدان الشتلات والفجوات وظروف الحقل."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "لماذا تهم المسافة بين الصفوف بشكل منفصل عن المسافة داخل الصف؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "تُزرع معظم محاصيل الصفوف في صفوف متباعدة بانتظام بمسافة مختلفة (عادة أقرب) بين النباتات داخل كل صف. المساحة لكل نبات هي حاصل ضرب المسافتين، وليس إحداهما فقط."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هل يمكنني استخدام هذا لأحواض الحديقة بدلًا من محاصيل الصفوف؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "يعمل لأي زراعة شبكية، لكنه مُعدّ بوحدات الفدان/الهكتار الشائعة في زراعة محاصيل الصفوف. للأحواض الصغيرة، تستخدم حاسبة تباعد البصيلات وحدات مساحة ومسافة بحجم الحوض."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ما الوحدات المدعومة؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "المسافة بالبوصة أو السنتيمتر، والكثافة لكل فدان أو لكل هكتار. اختر مزيج الوحدات الذي يطابق كيفية كتابة دليل البذور أو الزراعة لديك."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هل يراعي هذا أنماط الزراعة المثلثية أو المتعرجة؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "لا، يفترض شبكة مستطيلة بسيطة (المسافة بين الصفوف × المسافة داخل الصف). تستوعب الأنماط المتعرجة نباتات أكثر لكل مساحة مما يقدّره نموذج الشبكة هذا."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/ar/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/ar/#categories">التصنيفات</a>
+          <a href="/ar/#tools">جميع الأدوات</a>
+          <a href="/ar/about">من نحن</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: العربية">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>AR</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/plant-population-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/plant-population-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/plant-population-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/plant-population-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/plant-population-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/plant-population-calculator">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/plant-population-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/plant-population-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/plant-population-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/plant-population-calculator">中文</a><span class="locale-item current" role="menuitem" aria-current="true">العربية</span><a class="locale-item" role="menuitem" href="/th/tool/plant-population-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/ar/">Calquary</a> / <a href="/ar/category/biology">الأحياء</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>حاسبة كثافة النباتات</h1>
+        <p style="max-width:60ch;">اختر ما إذا كنت تريد تقدير كثافة النباتات من المسافة بين الصفوف وداخل الصف، أو إيجاد المسافة اللازمة للوصول إلى كثافة مستهدفة. يفترض هذا تباعدًا منتظمًا عبر الحقل بأكمله؛ تختلف الكثافات الفعلية الناشئة حسب الإنبات وظروف الحقل.</p>
+        <p class="last-updated">آخر تحديث: September 25, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">احسب</button>
+              <button type="button" id="calc-reset" class="btn-ghost">إعادة تعيين</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>الأسئلة الشائعة</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>كيف تختلف كثافة النباتات عن تباعد النباتات؟</h3>
+<p>هما اتجاهان لنفس العلاقة. تقدّر كثافة النباتات عدد النباتات التي ينتجها تباعد معين في مساحة ما؛ بينما يجيب حل المسافة، على العكس، عن المسافة اللازمة للزراعة للوصول إلى كثافة مستهدفة. تدعم هذه الحاسبة كلا الاتجاهين في أداة واحدة.</p>
+</div>
+<div class="faq-item">
+<h3>هل هذا هو نفسه عدّي النهائي للكثافة الفعلية؟</h3>
+<p>لا. هذه كثافة مزروعة نظرية تعتمد على الهندسة فقط. تكون الكثافة الناشئة أو المحصودة الفعلية عادة أقل بسبب معدل الإنبات وفقدان الشتلات والفجوات وظروف الحقل.</p>
+</div>
+<div class="faq-item">
+<h3>لماذا تهم المسافة بين الصفوف بشكل منفصل عن المسافة داخل الصف؟</h3>
+<p>تُزرع معظم محاصيل الصفوف في صفوف متباعدة بانتظام بمسافة مختلفة (عادة أقرب) بين النباتات داخل كل صف. المساحة لكل نبات هي حاصل ضرب المسافتين، وليس إحداهما فقط.</p>
+</div>
+<div class="faq-item">
+<h3>هل يمكنني استخدام هذا لأحواض الحديقة بدلًا من محاصيل الصفوف؟</h3>
+<p>يعمل لأي زراعة شبكية، لكنه مُعدّ بوحدات الفدان/الهكتار الشائعة في زراعة محاصيل الصفوف. للأحواض الصغيرة، تستخدم حاسبة تباعد البصيلات وحدات مساحة ومسافة بحجم الحوض.</p>
+</div>
+<div class="faq-item">
+<h3>ما الوحدات المدعومة؟</h3>
+<p>المسافة بالبوصة أو السنتيمتر، والكثافة لكل فدان أو لكل هكتار. اختر مزيج الوحدات الذي يطابق كيفية كتابة دليل البذور أو الزراعة لديك.</p>
+</div>
+<div class="faq-item">
+<h3>هل يراعي هذا أنماط الزراعة المثلثية أو المتعرجة؟</h3>
+<p>لا، يفترض شبكة مستطيلة بسيطة (المسافة بين الصفوف × المسافة داخل الصف). تستوعب الأنماط المتعرجة نباتات أكثر لكل مساحة مما يقدّره نموذج الشبكة هذا.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">احسب</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>أدوات ذات صلة</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>ملاحظة حول الدقة</h4>
+          <p style="margin:0;font-size:0.85rem;">حاسبات Calquary مصممة لتقديم تقديرات سريعة وموثوقة. للقرارات ذات التبعات المالية أو الإنشائية أو الطبية الحقيقية، يُرجى استشارة مختص مؤهل.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/ar/">→ العودة إلى جميع الحاسبات</a> · <a href="/ar/about">من نحن</a> · <a href="/ar/contact">تواصل معنا</a> · <a href="/ar/privacy">سياسة الخصوصية</a> · <a href="/ar/terms">شروط الاستخدام</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

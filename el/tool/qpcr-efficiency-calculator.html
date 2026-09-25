@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Υπολογιστής Απόδοσης qPCR - Δωρεάν Online Αριθμομηχανή</title>
+  <meta name="description" content="Υπολογίστε την απόδοση ενίσχυσης από την κλίση μιας πρότυπης καμπύλης qPCR, και δείτε τον συντελεστή ενίσχυσης ανά κύκλο." />
+  <meta property="og:title" content="Υπολογιστής Απόδοσης qPCR | Calquary">
+  <meta property="og:description" content="Υπολογίστε την απόδοση ενίσχυσης από την κλίση μιας πρότυπης καμπύλης qPCR, και δείτε τον συντελεστή ενίσχυσης ανά κύκλο.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/el/tool/qpcr-efficiency-calculator">
+  <meta property="og:locale" content="el_GR">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/qpcr-efficiency-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Υπολογιστής Απόδοσης qPCR | Calquary">
+  <meta name="twitter:description" content="Υπολογίστε την απόδοση ενίσχυσης από την κλίση μιας πρότυπης καμπύλης qPCR, και δείτε τον συντελεστή ενίσχυσης ανά κύκλο.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/qpcr-efficiency-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/qpcr-efficiency-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/qpcr-efficiency-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/qpcr-efficiency-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/qpcr-efficiency-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/qpcr-efficiency-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/qpcr-efficiency-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/qpcr-efficiency-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/qpcr-efficiency-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/qpcr-efficiency-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/qpcr-efficiency-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/qpcr-efficiency-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/qpcr-efficiency-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/qpcr-efficiency-calculator">
+    <link rel="canonical" href="https://calquary.com/el/tool/qpcr-efficiency-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("qpcr-efficiency-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("qpcr-efficiency-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Υπολογιστής Απόδοσης qPCR",
+      "description": "Υπολογίστε την απόδοση ενίσχυσης από την κλίση μιας πρότυπης καμπύλης qPCR, και δείτε τον συντελεστή ενίσχυσης ανά κύκλο.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/el/tool/qpcr-efficiency-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-25",
+      "inLanguage": "el"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/el/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/el/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Υπολογιστής Απόδοσης qPCR",
+          "item": "https://calquary.com/el/tool/qpcr-efficiency-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Ποια κλίση δίνει 100% απόδοση;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Μια κλίση ακριβώς -3,32 (πιο ακριβώς, -1/log10(2)) αντιστοιχεί σε 100% απόδοση, δηλαδή η ποσότητα προϊόντος διπλασιάζεται σε κάθε κύκλο."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Γιατί μια έγκυρη κλίση είναι αρνητική;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Σε μια τυπική πρότυπη καμπύλη qPCR, οι τιμές Ct (ή Cq) μειώνονται καθώς αυξάνεται η αρχική ποσότητα εκμαγείου, οπότε η κλίση είναι κανονικά αρνητική. Αυτός ο υπολογιστής επισημαίνει μια θετική κλίση ως απίθανο να αντιπροσωπεύει έγκυρη πρότυπη καμπύλη."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ποιο εύρος απόδοσης θεωρείται αποδεκτό;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Διαφορετικά εργαστήρια και τύποι δοκιμασιών εφαρμόζουν διαφορετικά αποδεκτά εύρη, και αυτό ποικίλλει με τη χημεία αντίδρασης και τις απαιτήσεις. Αυτός ο υπολογιστής δεν ορίζει κατώφλι επιτυχίας/αποτυχίας· ερμηνεύστε το αποτέλεσμα χρησιμοποιώντας τα κριτήρια επικύρωσης της δικής σας δοκιμασίας."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Τι μπορεί να προκαλέσει απόδοση μακριά από το 100%;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Συνήθεις αιτίες περιλαμβάνουν σφάλματα πιπετάρισματος ή αραίωσης στην πρότυπη καμπύλη, αναστολείς PCR που μεταφέρθηκαν στο εκμαγείο, μη βέλτιστο σχεδιασμό ή συγκέντρωση εκκινητών, και δευτεροταγή δομή του αμπλικονίου. Η αντιμετώπιση προβλημάτων εξαρτάται από τη συγκεκριμένη δοκιμασία σας."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Πώς διαφέρει από τον Υπολογιστή Θερμοκρασίας Υβριδισμού;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ο Υπολογιστής Θερμοκρασίας Υβριδισμού εκτιμά μια παράμετρο κύκλου PCR από τις θερμοκρασίες τήξης των εκκινητών, πριν δημιουργήσετε δεδομένα. Αυτό το εργαλείο αναλύει την κλίση από μια ήδη ολοκληρωμένη εκτέλεση πρότυπης καμπύλης."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Αντικαθιστά αυτό τις διαδικασίες ελέγχου ποιότητας εργαστηρίου;",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Όχι. Εκτελεί έναν συγκεκριμένο υπολογισμό από μια κλίση που παρέχετε. Η κατάλληλη επικύρωση δοκιμασίας περιλαμβάνει επαναλήψεις, μάρτυρες και κριτήρια ειδικά για το εργαστήριο και την εφαρμογή σας."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/el/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/el/#categories">Κατηγορίες</a>
+          <a href="/el/#tools">Όλα τα εργαλεία</a>
+          <a href="/el/about">Σχετικά</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Ελληνικά">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>EL</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/qpcr-efficiency-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/qpcr-efficiency-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/qpcr-efficiency-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/qpcr-efficiency-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/qpcr-efficiency-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/qpcr-efficiency-calculator">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/qpcr-efficiency-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/qpcr-efficiency-calculator">Română</a><span class="locale-item current" role="menuitem" aria-current="true">Ελληνικά</span><a class="locale-item" role="menuitem" href="/zh/tool/qpcr-efficiency-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/qpcr-efficiency-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/qpcr-efficiency-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/el/">Calquary</a> / <a href="/el/category/biology">Βιολογία</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Υπολογιστής Απόδοσης qPCR</h1>
+        <p style="max-width:60ch;">Εισαγάγετε την κλίση της πρότυπης καμπύλης qPCR σας (Ct ή Cq σε γράφημα έναντι log10 της αρχικής ποσότητας) για να υπολογίσετε την εκτιμώμενη απόδοση ενίσχυσης. Είναι υπολογισμός από την κλίση που παρέχετε, όχι επικύρωση της δοκιμασίας σας.</p>
+        <p class="last-updated">Τελευταία ενημέρωση: September 25, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Υπολογισμός</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Επαναφορά</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Συχνές ερωτήσεις</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Ποια κλίση δίνει 100% απόδοση;</h3>
+<p>Μια κλίση ακριβώς -3,32 (πιο ακριβώς, -1/log10(2)) αντιστοιχεί σε 100% απόδοση, δηλαδή η ποσότητα προϊόντος διπλασιάζεται σε κάθε κύκλο.</p>
+</div>
+<div class="faq-item">
+<h3>Γιατί μια έγκυρη κλίση είναι αρνητική;</h3>
+<p>Σε μια τυπική πρότυπη καμπύλη qPCR, οι τιμές Ct (ή Cq) μειώνονται καθώς αυξάνεται η αρχική ποσότητα εκμαγείου, οπότε η κλίση είναι κανονικά αρνητική. Αυτός ο υπολογιστής επισημαίνει μια θετική κλίση ως απίθανο να αντιπροσωπεύει έγκυρη πρότυπη καμπύλη.</p>
+</div>
+<div class="faq-item">
+<h3>Ποιο εύρος απόδοσης θεωρείται αποδεκτό;</h3>
+<p>Διαφορετικά εργαστήρια και τύποι δοκιμασιών εφαρμόζουν διαφορετικά αποδεκτά εύρη, και αυτό ποικίλλει με τη χημεία αντίδρασης και τις απαιτήσεις. Αυτός ο υπολογιστής δεν ορίζει κατώφλι επιτυχίας/αποτυχίας· ερμηνεύστε το αποτέλεσμα χρησιμοποιώντας τα κριτήρια επικύρωσης της δικής σας δοκιμασίας.</p>
+</div>
+<div class="faq-item">
+<h3>Τι μπορεί να προκαλέσει απόδοση μακριά από το 100%;</h3>
+<p>Συνήθεις αιτίες περιλαμβάνουν σφάλματα πιπετάρισματος ή αραίωσης στην πρότυπη καμπύλη, αναστολείς PCR που μεταφέρθηκαν στο εκμαγείο, μη βέλτιστο σχεδιασμό ή συγκέντρωση εκκινητών, και δευτεροταγή δομή του αμπλικονίου. Η αντιμετώπιση προβλημάτων εξαρτάται από τη συγκεκριμένη δοκιμασία σας.</p>
+</div>
+<div class="faq-item">
+<h3>Πώς διαφέρει από τον Υπολογιστή Θερμοκρασίας Υβριδισμού;</h3>
+<p>Ο Υπολογιστής Θερμοκρασίας Υβριδισμού εκτιμά μια παράμετρο κύκλου PCR από τις θερμοκρασίες τήξης των εκκινητών, πριν δημιουργήσετε δεδομένα. Αυτό το εργαλείο αναλύει την κλίση από μια ήδη ολοκληρωμένη εκτέλεση πρότυπης καμπύλης.</p>
+</div>
+<div class="faq-item">
+<h3>Αντικαθιστά αυτό τις διαδικασίες ελέγχου ποιότητας εργαστηρίου;</h3>
+<p>Όχι. Εκτελεί έναν συγκεκριμένο υπολογισμό από μια κλίση που παρέχετε. Η κατάλληλη επικύρωση δοκιμασίας περιλαμβάνει επαναλήψεις, μάρτυρες και κριτήρια ειδικά για το εργαστήριο και την εφαρμογή σας.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Υπολογισμός</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Σχετικά εργαλεία</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Σημείωση ακρίβειας</h4>
+          <p style="margin:0;font-size:0.85rem;">Οι αριθμομηχανές του Calquary έχουν σχεδιαστεί για να παρέχουν γρήγορες και αξιόπιστες εκτιμήσεις. Για αποφάσεις με πραγματικές οικονομικές, δομικές ή ιατρικές επιπτώσεις, συμβουλευτείτε έναν ειδικευμένο επαγγελματία.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/el/">← Πίσω σε όλες τις αριθμομηχανές</a> · <a href="/el/about">Σχετικά</a> · <a href="/el/contact">Επικοινωνία</a> · <a href="/el/privacy">Απόρρητο</a> · <a href="/el/terms">Όροι</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>
