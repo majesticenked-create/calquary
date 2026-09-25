@@ -383,8 +383,12 @@ function canonicalTag(url) {
 // same tool/category/static page, not just that locale's homepage), and
 // only offers locales that actually exist for this page (an untranslated
 // tool page only ever built "en", so no dead links to a missing translation).
-const LOCALE_LABEL = { en: "EN", es: "ES", fr: "FR", de: "DE", pt: "PT", it: "IT", ja: "JA" };
+const LOCALE_LABEL = { en: "EN", es: "ES", fr: "FR", de: "DE", pt: "PT", it: "IT", ja: "JA", ro: "RO", el: "EL", zh: "ZH", ar: "AR", th: "TH" };
 const LOCALE_LABEL_FULL = { en: "English", es: "Español", fr: "Français", de: "Deutsch", pt: "Português", it: "Italiano", ja: "日本語", ro: "Română", el: "Ελληνικά", zh: "中文", ar: "العربية", th: "ไทย" };
+
+// Never render "undefined": fall back to the uppercase locale code if a label is missing.
+const labelShort = (loc) => LOCALE_LABEL[loc] || String(loc).toUpperCase();
+const labelFull = (loc) => LOCALE_LABEL_FULL[loc] || labelShort(loc);
 const GLOBE_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>';
 
 // One dropdown control, not an always-visible EN·ES·FR·DE link row — the
@@ -401,14 +405,14 @@ function localeSwitcherHtml(currentLocale, urlFor, builtLocales) {
   const items = builtLocales
     .map((loc) =>
       loc === currentLocale
-        ? `<span class="locale-item current" role="menuitem" aria-current="true">${LOCALE_LABEL_FULL[loc]}</span>`
-        : `<a class="locale-item" role="menuitem" href="${urlFor(loc).replace(SITE_URL, "")}">${LOCALE_LABEL_FULL[loc]}</a>`
+        ? `<span class="locale-item current" role="menuitem" aria-current="true">${labelFull(loc)}</span>`
+        : `<a class="locale-item" role="menuitem" href="${urlFor(loc).replace(SITE_URL, "")}">${labelFull(loc)}</a>`
     )
     .join("");
   return `<div class="locale-switcher">
-          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: ${LOCALE_LABEL_FULL[currentLocale]}">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: ${labelFull(currentLocale)}">
             ${GLOBE_ICON}
-            <span>${LOCALE_LABEL[currentLocale]}</span>
+            <span>${labelShort(currentLocale)}</span>
           </button>
           <div class="locale-menu" role="menu">${items}</div>
         </div>`;
