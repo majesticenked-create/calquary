@@ -4307,7 +4307,7 @@ const CALCULATORS = [
       { q: "Does this calculate floor area or wall area?", a: "This calculates flat floor or ceiling area (length × width). For wall area, such as for paint or drywall, you need perimeter × height instead, which is a different formula this specific tool doesn't perform - use the drywall or paint calculator's own wall-area fields for that." },
       { q: "How does square footage relate to square yardage?", a: "One square yard equals 9 square feet, so divide your square footage result by 9 to get square yards - useful since carpet and sod are often priced per square yard rather than per square foot." },
     ],
-    related: ["area-converter", "concrete-calculator", "co2-grow-room-calculator"],
+    related: ["area-converter", "concrete-calculator", "co2-grow-room-calculator", "lawn-mowing-cost-calculator"],
   },
   {
     id: "fence-calculator",
@@ -4342,7 +4342,7 @@ const CALCULATORS = [
       { q: "Does a fence line with corners need more posts than this calculator shows?", a: "Yes - this calculator assumes one continuous straight run. Each corner needs its own post regardless of panel spacing, so measure and calculate each straight segment separately, then add one extra post per corner rather than treating the whole perimeter as a single length." },
       { q: "Why can't I just divide fence length by panel width to get the post count?", a: "Dividing length by panel width gives you the panel count, but undercounts posts by one on a straight run, since adjacent panels share a post except at the two open ends of the line - that's why this calculator reports posts as panels plus one." },
     ],
-    related: ["lumber-calculator", "gravel-calculator", "unit-length-converter"],
+    related: ["lumber-calculator", "gravel-calculator", "unit-length-converter", "livestock-fence-cost-calculator"],
   },
   {
     id: "insulation-calculator",
@@ -8781,7 +8781,7 @@ const CALCULATORS = [
       { q: "Is the cat age formula the same as the old '1 cat year = 4 human years' rule?", a: "Not exactly - that flat rule only roughly applies after a cat's first two years. This calculator front-loads the first two years at a much faster rate (about 15 and then 24 human-year equivalents) before settling into the slower ~4-year-per-year pace." },
       { q: "Does neutering or spaying affect how a cat's age converts to human years?", a: "No - spay/neuter status doesn't change the age-equivalence math here, though altered cats often live longer on average, which affects lifespan rather than the conversion itself." },
     ],
-    related: ["dog-age-calculator", "rabbit-age-calculator", "bird-age-calculator", "cat-quality-of-life-calculator"],
+    related: ["dog-age-calculator", "rabbit-age-calculator", "cat-size-calculator", "cat-quality-of-life-calculator"],
   },
   {
     id: "rabbit-age-calculator",
@@ -8810,7 +8810,7 @@ const CALCULATORS = [
       { q: "How old is a 5-year-old rabbit in human years?", a: "Using the formula's post-year-one rate of about 6 human years per rabbit year, a 5-year-old rabbit works out to roughly 45 human years - 21 for the first year plus 24 for the following four." },
       { q: "How does rabbit aging compare to cat or dog aging?", a: "Rabbits front-load their maturity even more sharply than cats or dogs, hitting a human-equivalent adulthood within about a year, then age at a comparatively brisk and steady rate afterward rather than slowing down as dramatically as senior cats or dogs do." },
     ],
-    related: ["cat-age-calculator", "dog-age-calculator", "age-calculator"],
+    related: ["cat-age-calculator", "dog-age-calculator", "age-calculator", "guinea-pig-age-calculator"],
   },
   {
     id: "dog-pregnancy-calculator",
@@ -8875,7 +8875,7 @@ const CALCULATORS = [
       { q: "How old is a 20-year-old horse in human years?", a: "A 20-year-old horse works out to roughly the mid-to-upper 60s in human-year terms, reflecting the steady, gradual aging rate that follows the fast early growth of the first couple of years." },
       { q: "Does a horse's use (racing, breeding, pleasure riding) affect the age conversion?", a: "No - this calculator estimates human-year equivalence purely from chronological age. Workload and use can affect a horse's health and effective lifespan, but they don't change the underlying age-equivalence formula." },
     ],
-    related: ["dog-age-calculator", "cat-age-calculator", "rabbit-age-calculator"],
+    related: ["dog-age-calculator", "cat-age-calculator", "rabbit-age-calculator", "horse-weight-calculator"],
   },
   {
     id: "ideal-dog-weight-calculator",
@@ -8938,7 +8938,7 @@ const CALCULATORS = [
       { q: "If my cat mated on day 1, when is she due?", a: "Adding the default 64-day gestation length to the mating date gives the estimated due date - for example, a mating date of January 1 projects a due date around March 6." },
       { q: "Can a cat get pregnant again shortly after giving birth?", a: "Yes - cats can enter heat again within weeks of giving birth, even while still nursing, so an unspayed cat can become pregnant again almost immediately after her litter, which is worth knowing when timing future due-date estimates." },
     ],
-    related: ["dog-pregnancy-calculator", "cat-age-calculator", "days-until-calculator"],
+    related: ["dog-pregnancy-calculator", "cat-age-calculator", "days-until-calculator", "guinea-pig-pregnancy-calculator"],
   },
   {
     id: "currency-converter",
@@ -10158,7 +10158,7 @@ const CALCULATORS = [
       { q: "Why does the calculator give both 'acres per animal unit' and 'animal units per acre'?", a: "They're the same relationship expressed two common ways in agricultural planning - acres per animal unit is often used for land-purchase or lease planning ('how much land do I need per cow'), while animal units per acre is often used for herd-sizing planning ('how many cows can this pasture support'). Both numbers come from the same underlying calculation." },
       { q: "How much does seasonal variation affect this estimate?", a: "Significantly - forage growth is rarely constant across a full year, with most regions seeing a spring/early-summer growth flush and slower growth or dormancy in other seasons. This calculator spreads usable forage evenly across the grazing period you enter, so for highly seasonal pasture, consider running separate calculations for different seasons or grazing periods rather than one full-year average." },
     ],
-    related: ["acres-per-hour-calculator", "feed-conversion-ratio-calculator", "corn-yield-calculator"],
+    related: ["acres-per-hour-calculator", "feed-conversion-ratio-calculator", "corn-yield-calculator", "livestock-fence-cost-calculator"],
   },
   {
     id: "cell-dilution-calculator",
@@ -10750,7 +10750,7 @@ const CALCULATORS = [
       { q: "Does plasmid size affect how many copies I get from the same mass?", a: "Yes, significantly - for the same total DNA mass, a shorter plasmid or fragment contains many more individual molecules (copies) than a longer one, since each individual molecule of a longer sequence weighs more. This is why copy number calculations always require the DNA length, not just the mass." },
       { q: "Is this calculation exact enough for quantitative PCR (qPCR) standard curves?", a: "It provides a reasonable starting estimate for preparing standards, but actual qPCR quantification accuracy depends on many additional factors (pipetting precision, DNA purity, exact GC content, and more) beyond this idealized calculation - many labs also verify standard concentrations empirically rather than relying solely on a calculated estimate." },
     ],
-    related: ["dna-concentration-calculator", "molecular-weight-calculator", "cell-doubling-time-calculator"],
+    related: ["dna-concentration-calculator", "molecular-weight-calculator", "cell-doubling-time-calculator", "ligation-calculator"],
   },
   {
     id: "dna-to-mrna-converter",
@@ -11304,7 +11304,7 @@ const CALCULATORS = [
       { q: "Is this the same as the Dog Age Calculator or Dog BMI Calculator?", a: "No. The Dog Age Calculator converts a dog's age into human-year equivalents, and the Dog BMI Calculator computes a weight-to-length index from measurements. This tool projects likely adult weight for a growing puppy." },
       { q: "Should I feed my puppy differently based on this estimate?", a: "Do not change feeding amounts because of a size estimate. Puppy nutrition affects healthy bone growth, especially in larger breeds, so follow your veterinarian's advice and the food's puppy guidance." },
     ],
-    related: ["dog-age-calculator", "dog-bmi-calculator", "dog-food-calculator", "dog-life-expectancy-calculator"],
+    related: ["dog-age-calculator", "dog-bmi-calculator", "dog-food-calculator", "cat-size-calculator"],
   },
   {
     id: "dog-water-intake-calculator",
@@ -11467,7 +11467,7 @@ const CALCULATORS = [
       { q: "How does this differ from the Compost or Mulch Calculators?", a: "Those estimate volume for a given depth over an area. This estimates product weight for a given rate over an area." },
       { q: "How accurate is the bag count?", a: "It is rounded up to whole bags. Uneven spreading and spreader calibration can change how far a bag goes, so check your spreader's settings." },
     ],
-    related: ["compost-calculator", "mulch-calculator", "square-footage-calculator", "corn-yield-calculator"],
+    related: ["compost-calculator", "mulch-calculator", "square-footage-calculator", "grass-seed-calculator"],
   },
   {
     id: "fish-oil-for-cats-calculator",
@@ -11640,7 +11640,479 @@ const CALCULATORS = [
       { q: "How is this different from the Cylinder Volume Calculator?", a: "The Cylinder Volume Calculator gives geometric volume from radius and height. This one is set up for bins and converts the result to bushels directly." },
       { q: "Can I use metric dimensions?", a: "Yes. Choose meters and the tool converts to feet for the bushel calculation." },
     ],
-    related: ["cylinder-volume-calculator", "corn-yield-calculator", "volume-converter", "cattle-per-acre-calculator"],
+    related: ["cylinder-volume-calculator", "corn-yield-calculator", "volume-converter", "grain-conversion-calculator"],
+  },
+  {
+    id: "grain-conversion-calculator",
+    category: "biology",
+    title: "Grain Conversion Calculator",
+    keyword: "grain conversion calculator",
+    description: "Convert grain between bushels, pounds, kilograms, and tons using standard reference bushel weights for common crops.",
+    intro: "Pick a grain, enter a quantity in bushels, pounds, kilograms, or tons, and see it in every unit. The conversion uses a standard reference weight per bushel for each crop, so it is not the same as a plain weight or volume converter.",
+    fields: [
+      { id: "grain", label: "Grain", type: "select", default: "corn", options: [{ v: "wheat", l: "Wheat (60 lb/bu)" }, { v: "corn", l: "Shelled corn (56 lb/bu)" }, { v: "soybeans", l: "Soybeans (60 lb/bu)" }, { v: "barley", l: "Barley (48 lb/bu)" }, { v: "oats", l: "Oats (32 lb/bu)" }, { v: "rye", l: "Rye (56 lb/bu)" }, { v: "sorghum", l: "Grain sorghum (56 lb/bu)" }, { v: "rice", l: "Rough rice (45 lb/bu)" }, { v: "canola", l: "Canola (50 lb/bu)" }, { v: "flax", l: "Flaxseed (56 lb/bu)" }] },
+      { id: "quantity", label: "Quantity", type: "number", default: 1000, step: 1, min: 0 },
+      { id: "unit", label: "Quantity is in", type: "select", default: "bu", options: [{ v: "bu", l: "Bushels" }, { v: "lb", l: "Pounds" }, { v: "kg", l: "Kilograms" }, { v: "ton", l: "US short tons (2,000 lb)" }, { v: "tonne", l: "Metric tonnes" }] },
+    ],
+    compute: (v) => {
+      const lbPerBu = { wheat: 60, corn: 56, soybeans: 60, barley: 48, oats: 32, rye: 56, sorghum: 56, rice: 45, canola: 50, flax: 56 }[v.grain];
+      if (!lbPerBu || !(v.quantity >= 0)) return { primary: { label: "Enter a valid quantity", value: "-" }, secondary: [], note: "Quantity cannot be negative." };
+      if (v.quantity > 1e12) return { primary: { label: "Quantity looks unrealistic", value: "-" }, secondary: [], note: "Please check the quantity entered." };
+      const toLb = { bu: lbPerBu, lb: 1, kg: 2.20462262, ton: 2000, tonne: 2204.62262 }[v.unit];
+      const lb = v.quantity * toLb;
+      const fmt = (x, d) => round(x, d).toLocaleString("en-US");
+      return {
+        primary: { label: "Equivalent in bushels", value: `${fmt(lb / lbPerBu, 2)} bu` },
+        secondary: [
+          { l: "Pounds", v: fmt(lb, 1) },
+          { l: "Kilograms", v: fmt(lb / 2.20462262, 1) },
+          { l: "US short tons", v: fmt(lb / 2000, 3) },
+          { l: "Metric tonnes", v: fmt(lb / 2204.62262, 3) },
+          { l: "Reference weight used", v: `${lbPerBu} lb per bushel` },
+        ],
+        note: "Each grain is converted with a standard reference weight per bushel (commonly used market/legal test weights, for shelled or cleaned grain). These are conventions, not measured bulk density. Real grain weight changes with moisture, test weight, variety, and condition, and some jurisdictions or buyers use slightly different standards. A bushel is a volume measure, so a scale weight and a volume-based estimate will not always agree.",
+      };
+    },
+    faq: [
+      { q: "Why does each grain have a different weight per bushel?", a: "A bushel measures volume, and different grains pack differently. Standard weights per bushel, such as 60 lb for wheat and 32 lb for oats, let buyers and sellers convert between volume and weight consistently." },
+      { q: "Are these the actual weights of my grain?", a: "No. They are reference values. Moisture, test weight, variety, and grain condition all change real weight, so use a scale reading when precision matters." },
+      { q: "How is this different from the Grain Bin Calculator?", a: "The Grain Bin Calculator estimates how much space grain occupies in a round bin. This tool converts an amount of a specific grain between bushels and weight units." },
+      { q: "How is this different from a weight or volume converter?", a: "A generic converter cannot turn bushels into pounds because that depends on the crop. This tool applies a crop-specific reference weight." },
+      { q: "What about corn on the cob or other grain forms?", a: "The values here are for shelled or cleaned grain. Ear corn, high-moisture grain, and processed products use different conventions." },
+      { q: "Can I use this for pricing or contracts?", a: "Use it for quick estimates only. Contracts and settlements follow the standards and moisture adjustments specified by your buyer or local rules." },
+    ],
+    related: ["grain-bin-calculator", "weight-converter", "volume-converter", "corn-yield-calculator"],
+  },
+  {
+    id: "grass-seed-calculator",
+    category: "construction",
+    title: "Grass Seed Calculator",
+    keyword: "grass seed calculator",
+    description: "Estimate how much grass seed you need for a lawn from its area and the seeding rate on your seed label.",
+    intro: "Enter your lawn's area, or its length and width, plus the seeding rate printed on your seed bag or supplier's guidance. The calculator gives total seed needed and, if you enter a bag size, how many bags. It does not choose a rate for you.",
+    fields: [
+      { id: "mode", label: "Enter lawn size as", type: "select", default: "area", options: [{ v: "area", l: "Total area" }, { v: "dims", l: "Length x width" }] },
+      { id: "area", label: "Area (if entering total area)", type: "number", default: 3000, step: 10, min: 0 },
+      { id: "areaUnit", label: "Area unit", type: "select", default: "sqft", options: [{ v: "sqft", l: "sq ft" }, { v: "sqm", l: "sq m" }, { v: "acre", l: "acres" }, { v: "ha", l: "hectares" }] },
+      { id: "length", label: "Length (if entering length x width)", type: "number", default: 60, step: 1, min: 0 },
+      { id: "width", label: "Width (if entering length x width)", type: "number", default: 50, step: 1, min: 0 },
+      { id: "dimUnit", label: "Length/width unit", type: "select", default: "ft", options: [{ v: "ft", l: "feet" }, { v: "m", l: "meters" }] },
+      { id: "rate", label: "Seeding rate (from your seed label)", type: "number", default: 5, step: 0.1, min: 0 },
+      { id: "rateUnit", label: "Rate unit", type: "select", default: "lb1000", options: [{ v: "lb1000", l: "lb per 1,000 sq ft" }, { v: "lbacre", l: "lb per acre" }, { v: "kgha", l: "kg per hectare" }, { v: "gm2", l: "g per sq m" }] },
+      { id: "bagLb", label: "Bag size in lb (optional, 0 to skip)", type: "number", default: 0, step: 1, min: 0 },
+    ],
+    compute: (v) => {
+      let areaSqm;
+      if (v.mode === "dims") {
+        if (!(v.length > 0) || !(v.width > 0)) return { primary: { label: "Enter valid dimensions", value: "-" }, secondary: [], note: "Length and width must both be greater than zero." };
+        const f = v.dimUnit === "m" ? 1 : 0.3048;
+        areaSqm = v.length * f * v.width * f;
+      } else {
+        if (!(v.area > 0)) return { primary: { label: "Enter a valid area", value: "-" }, secondary: [], note: "Area must be greater than zero." };
+        areaSqm = v.area * { sqft: 0.09290304, sqm: 1, acre: 4046.8564224, ha: 10000 }[v.areaUnit];
+      }
+      if (!(v.rate > 0)) return { primary: { label: "Enter a seeding rate", value: "-" }, secondary: [], note: "Use the rate printed on your seed label. It must be greater than zero." };
+      if (!Number.isFinite(areaSqm) || areaSqm > 1e9) return { primary: { label: "Area looks unrealistic", value: "-" }, secondary: [], note: "Please check the size and units entered." };
+      const kgPerSqm = { lb1000: 0.45359237 / 92.90304, lbacre: 0.45359237 / 4046.8564224, kgha: 1 / 10000, gm2: 1 / 1000 }[v.rateUnit];
+      const kg = areaSqm * v.rate * kgPerSqm;
+      const lb = kg / 0.45359237;
+      const secondary = [
+        { l: "Area used", v: `${round(areaSqm / 0.09290304, 0).toLocaleString("en-US")} sq ft (${round(areaSqm, 1).toLocaleString("en-US")} sq m)` },
+        { l: "Seed in kg", v: round(kg, 2) },
+        { l: "Seed in lb", v: round(lb, 2) },
+      ];
+      if (v.bagLb > 0) secondary.push({ l: `Bags of ${v.bagLb} lb`, v: `${Math.ceil(lb / v.bagLb - 1e-9)} (${round(lb / v.bagLb, 2)} exact)` });
+      return {
+        primary: { label: "Grass seed needed", value: `${round(lb, 1)} lb` },
+        secondary,
+        note: "Seed needed = area x seeding rate. The right rate depends on the grass species, the product (coated or uncoated, blend or single variety), and whether you are seeding new ground or overseeding, so enter the rate from your seed label or supplier and treat the default as an editable example only. Add a small margin if the ground is uneven or you expect to reseed thin spots.",
+      };
+    },
+    faq: [
+      { q: "What seeding rate should I use?", a: "Use the rate on your seed label or from your supplier or local extension service. Rates differ by grass species and by whether you are starting a new lawn or overseeding." },
+      { q: "Why is the default rate only an example?", a: "There is no single correct rate for every grass. The default is a placeholder you should replace with the rate for your product." },
+      { q: "Can I enter length and width instead of area?", a: "Yes. Choose length x width, enter both, and the tool multiplies them and converts to the area it needs." },
+      { q: "Should I subtract the house, driveway, or beds?", a: "Yes. Enter only the area you plan to seed. Measure obstacles separately and subtract them before entering a total." },
+      { q: "How is this different from the Fertilizer Calculator?", a: "It uses the same area-times-rate idea, but for seed instead of fertilizer, and it works from a seeding rate rather than a nutrient application rate." },
+      { q: "How accurate is the bag count?", a: "It rounds up to whole bags. Spreader settings and uneven coverage affect how far seed goes, so check your spreader's calibration." },
+    ],
+    related: ["fertilizer-calculator", "lawn-mowing-cost-calculator", "square-footage-calculator", "compost-calculator"],
+  },
+  {
+    id: "guinea-pig-pregnancy-calculator",
+    category: "pets",
+    title: "Guinea Pig Pregnancy Calculator",
+    keyword: "guinea pig pregnancy calculator",
+    description: "Estimate a guinea pig's due date and likely delivery window from the mating date, using a typical 65-day gestation.",
+    intro: "Enter the mating date to estimate when a guinea pig sow may give birth. The default uses a typical gestation of about 65 days and shows the commonly reported range. Treat it as a planning estimate, not a guaranteed date.",
+    fields: [
+      { id: "matingDate", label: "Mating date", type: "date", default: "2024-01-01" },
+      { id: "gestationDays", label: "Gestation length", type: "number", unit: "days", default: 65, step: 1, min: 1 },
+    ],
+    compute: (v) => {
+      if (!v.matingDate || !(v.gestationDays >= 40) || v.gestationDays > 90) return { primary: { label: "Enter a valid mating date", value: "-" }, secondary: [], note: "A mating date is required, and gestation length should be between 40 and 90 days." };
+      const p = String(v.matingDate).split("-").map(Number);
+      if (p.length !== 3 || p.some((n) => !Number.isFinite(n))) return { primary: { label: "Enter a valid mating date", value: "-" }, secondary: [], note: "Please enter the date in a valid format." };
+      const base = Date.UTC(p[0], p[1] - 1, p[2]);
+      if (Number.isNaN(base) || new Date(base).getUTCDate() !== p[2]) return { primary: { label: "Enter a valid mating date", value: "-" }, secondary: [], note: "That date is not valid." };
+      const fmt = (d) => new Date(base + d * 86400000).toISOString().slice(0, 10);
+      return {
+        primary: { label: "Estimated due date", value: fmt(v.gestationDays) },
+        secondary: [
+          { l: "Gestation length used", v: `${v.gestationDays} days` },
+          { l: "Commonly reported window (59-72 days)", v: `${fmt(59)} to ${fmt(72)}` },
+        ],
+        note: "Guinea pig gestation is long for a small rodent, typically around 59 to 72 days with an average near 65, and larger litters often arrive a little earlier. If mating dates are uncertain, the true date is uncertain too. Pregnancy and birth in guinea pigs can involve serious complications, so involve a veterinarian experienced with small exotic pets for confirmation, diet advice, and any concern. Do not treat this date as a schedule for intervening.",
+      };
+    },
+    faq: [
+      { q: "How long are guinea pigs pregnant?", a: "Usually about 59 to 72 days, with an average around 65. That is much longer than most pet rodents." },
+      { q: "Why is the range so wide?", a: "Litter size, the individual sow, and uncertainty about the exact mating date all shift timing. Sows with larger litters may deliver earlier." },
+      { q: "What if I do not know the exact mating date?", a: "Use the earliest and latest possible dates to see the span of possible due dates." },
+      { q: "When should I involve a veterinarian?", a: "As soon as you suspect pregnancy. A vet experienced with small exotic pets can confirm it and advise on nutrition and risks, and should be contacted urgently if the sow seems distressed or the due window passes." },
+      { q: "How is this different from the Cat or Dog Pregnancy Calculators?", a: "It uses a guinea pig's gestation length, which is roughly a week longer than a dog's and more than a month longer than a cat's." },
+      { q: "Can I change the gestation length?", a: "Yes. Adjust the number of days if a veterinarian gives you a different estimate for your animal." },
+    ],
+    related: ["guinea-pig-age-calculator", "cat-pregnancy-calculator", "dog-pregnancy-calculator", "goat-gestation-calculator"],
+  },
+  {
+    id: "guinea-pig-age-calculator",
+    category: "pets",
+    title: "Guinea Pig Age Calculator",
+    keyword: "guinea pig age calculator",
+    description: "Find a guinea pig's life stage and an illustrative human-age range from its age, based on a typical 5-8 year lifespan.",
+    intro: "Enter your guinea pig's age in months to see its likely life stage and a rough human-age comparison. The comparison is illustrative, based on how much of a typical lifespan has passed, not a biological equivalence.",
+    fields: [
+      { id: "ageMonths", label: "Guinea pig's age (months)", type: "number", default: 24, step: 1, min: 0 },
+    ],
+    compute: (v) => {
+      if (!(v.ageMonths >= 0)) return { primary: { label: "Enter a valid age", value: "-" }, secondary: [], note: "Age cannot be negative." };
+      if (v.ageMonths > 144) return { primary: { label: "Age looks unrealistic", value: "-" }, secondary: [], note: "Guinea pigs rarely live past about 8 to 10 years." };
+      const yrs = v.ageMonths / 12;
+      const frac = yrs / 6.5;
+      let stage = "Senior";
+      if (frac < 0.06) stage = "Juvenile";
+      else if (frac < 0.45) stage = "Adult";
+      else if (frac < 0.75) stage = "Mature adult";
+      const lo = (yrs / 8) * 79;
+      const hi = (yrs / 5) * 79;
+      return {
+        primary: { label: "Life stage", value: stage },
+        secondary: [
+          { l: "Age", v: `${round(yrs, 1)} yr (${round(v.ageMonths, 0)} months)` },
+          { l: "Illustrative human-age comparison", v: `about ${round(lo, 0)} - ${round(hi, 0)} years` },
+          { l: "Typical lifespan assumed", v: "5 - 8 years" },
+        ],
+        note: "Life stage is based on the share of a typical 6.5-year lifespan that has passed. The human comparison spreads a 5 to 8 year guinea pig lifespan across a roughly 79-year human one, which is illustrative only: early development happens much faster than a straight line suggests, and individual lifespan depends on genetics, diet (including vitamin C), housing, and health care. Ask a veterinarian about your animal's actual needs.",
+      };
+    },
+    faq: [
+      { q: "How long do guinea pigs live?", a: "Commonly about 5 to 8 years with good care, though some live shorter or longer lives." },
+      { q: "Is there an exact guinea pig year to human year conversion?", a: "No. Any single multiplier is a simplification. This tool shows a life stage and a range instead of a precise equivalent." },
+      { q: "What are the guinea pig life stages?", a: "Juvenile (roughly the first several months), adult, mature adult, and senior. The boundaries here are approximate guides." },
+      { q: "Why is the human-age result a range?", a: "Because lifespans vary. Using both a shorter and a longer typical lifespan gives a more honest span than one number." },
+      { q: "How is this different from the Hamster Age Calculator?", a: "Hamsters live far shorter lives, so their stages and comparisons are calculated separately." },
+      { q: "Should I change care based on life stage?", a: "Older guinea pigs often need closer health monitoring, but care changes should come from a veterinarian rather than this estimate." },
+    ],
+    related: ["hamster-age-calculator", "rabbit-age-calculator", "cat-age-calculator", "guinea-pig-pregnancy-calculator"],
+  },
+  {
+    id: "hamster-age-calculator",
+    category: "pets",
+    title: "Hamster Age Calculator",
+    keyword: "hamster age calculator",
+    description: "Find a hamster's life stage and an illustrative human-age range from its age and species, based on typical hamster lifespans.",
+    intro: "Choose your hamster's species, enter its age in months, and see its likely life stage and a rough human-age comparison. Hamsters live briefly and differ by species, so treat the result as a broad estimate, not exact equivalence.",
+    fields: [
+      { id: "species", label: "Hamster type", type: "select", default: "syrian", options: [{ v: "syrian", l: "Syrian (about 2-3 years)" }, { v: "dwarf", l: "Dwarf - Campbell's / winter white (about 1.5-2.5 years)" }, { v: "robo", l: "Roborovski (about 3-3.5 years)" }] },
+      { id: "ageMonths", label: "Hamster's age (months)", type: "number", default: 12, step: 1, min: 0 },
+    ],
+    compute: (v) => {
+      if (!(v.ageMonths >= 0)) return { primary: { label: "Enter a valid age", value: "-" }, secondary: [], note: "Age cannot be negative." };
+      const span = { syrian: [2, 3], dwarf: [1.5, 2.5], robo: [3, 3.5] }[v.species];
+      if (!span) return { primary: { label: "Choose a hamster type", value: "-" }, secondary: [], note: "Unsupported selection." };
+      if (v.ageMonths > 60) return { primary: { label: "Age looks unrealistic", value: "-" }, secondary: [], note: "Hamsters rarely live beyond about 3 to 4 years." };
+      const yrs = v.ageMonths / 12;
+      const mid = (span[0] + span[1]) / 2;
+      const frac = yrs / mid;
+      let stage = "Senior";
+      if (frac < 0.06) stage = "Juvenile";
+      else if (frac < 0.45) stage = "Adult";
+      else if (frac < 0.75) stage = "Mature adult";
+      const lo = (yrs / span[1]) * 79;
+      const hi = (yrs / span[0]) * 79;
+      return {
+        primary: { label: "Life stage", value: stage },
+        secondary: [
+          { l: "Age", v: `${round(v.ageMonths, 0)} months (${round(yrs, 2)} yr)` },
+          { l: "Illustrative human-age comparison", v: `about ${round(lo, 0)} - ${round(hi, 0)} years` },
+          { l: "Typical lifespan assumed", v: `${span[0]} - ${span[1]} years` },
+        ],
+        note: "Life stage is based on the share of a typical lifespan for the type you chose, and the human comparison spreads that lifespan over roughly 79 human years. It is illustrative only: hamsters mature in weeks, and real lifespan varies with genetics, diet, housing, and health. This is not a veterinary assessment.",
+      };
+    },
+    faq: [
+      { q: "How long do hamsters live?", a: "It depends on the type. Syrian hamsters often live about 2 to 3 years, dwarf types a bit less, and Roborovski hamsters can reach about 3 years or more." },
+      { q: "Is there a hamster-year to human-year formula?", a: "There is no accepted exact formula. This tool gives a life stage and a range rather than a single number." },
+      { q: "Why do I have to choose a hamster type?", a: "Different types have different typical lifespans, which changes both the life stage and the human comparison." },
+      { q: "How is this different from the Age Calculator?", a: "The general Age Calculator works out a person's age from dates. This tool compares an animal's age to typical hamster lifespans." },
+      { q: "How is this different from the Guinea Pig Age Calculator?", a: "Guinea pigs live several years longer, so they use different lifespan assumptions and different age ranges." },
+      { q: "Does the result tell me my hamster's health?", a: "No. Health depends on the individual animal. Ask a veterinarian about any change in eating, movement, or behavior." },
+    ],
+    related: ["guinea-pig-age-calculator", "rabbit-age-calculator", "cat-age-calculator", "dog-age-calculator"],
+  },
+  {
+    id: "horse-weight-calculator",
+    category: "pets",
+    title: "Horse Weight Calculator",
+    keyword: "horse weight calculator",
+    description: "Estimate a horse's body weight from heart girth and body length measurements, in kg and lb, using a common tape-based formula.",
+    intro: "Measure your horse's heart girth and body length, choose the unit and horse type, and get an estimated body weight in kilograms and pounds. This formula is an estimate, and a scale is more accurate.",
+    fields: [
+      { id: "girth", label: "Heart girth", type: "number", default: 72, step: 0.5, min: 0 },
+      { id: "length", label: "Body length (point of shoulder to point of buttock)", type: "number", default: 68, step: 0.5, min: 0 },
+      { id: "unit", label: "Measurement unit (both)", type: "select", default: "in", options: [{ v: "in", l: "inches" }, { v: "cm", l: "centimeters" }] },
+      { id: "kind", label: "Horse type", type: "select", default: "adult", options: [{ v: "adult", l: "Adult horse" }, { v: "pony", l: "Pony" }, { v: "yearling", l: "Yearling" }, { v: "weanling", l: "Weanling" }] },
+    ],
+    compute: (v) => {
+      if (!(v.girth > 0) || !(v.length > 0)) return { primary: { label: "Enter valid measurements", value: "-" }, secondary: [], note: "Heart girth and body length must both be greater than zero." };
+      const gIn = v.unit === "cm" ? v.girth / 2.54 : v.girth;
+      const lIn = v.unit === "cm" ? v.length / 2.54 : v.length;
+      if (gIn < 20 || gIn > 120 || lIn < 20 || lIn > 100) return { primary: { label: "Measurements look unrealistic", value: "-" }, secondary: [], note: "Please check the numbers and the unit selected. Typical adult heart girth is roughly 60 to 90 inches (150 to 230 cm)." };
+      const divisor = { adult: 330, pony: 299, yearling: 301, weanling: 280 }[v.kind];
+      if (!divisor) return { primary: { label: "Choose a horse type", value: "-" }, secondary: [], note: "Unsupported selection." };
+      const lb = (gIn * gIn * lIn) / divisor;
+      const kg = lb * 0.45359237;
+      return {
+        primary: { label: "Estimated body weight", value: `${round(kg, 0)} kg` },
+        secondary: [
+          { l: "Pounds", v: `${round(lb, 0)} lb` },
+          { l: "Heart girth used", v: `${round(gIn, 1)} in (${round(gIn * 2.54, 1)} cm)` },
+          { l: "Body length used", v: `${round(lIn, 1)} in (${round(lIn * 2.54, 1)} cm)` },
+        ],
+        note: "Weight (lb) = heart girth (in)^2 x body length (in) / 330 for adult horses, with other divisors (299 pony, 301 yearling, 280 weanling) for younger or smaller animals. Both measurements are converted to inches first, so mixing units is avoided. This is an estimate that can miss by several percent depending on body shape, condition, pregnancy, and measuring technique. Use a scale, and follow your veterinarian's instructions, rather than this figure for anything involving medication dosing.",
+      };
+    },
+    faq: [
+      { q: "How do I measure heart girth?", a: "Run a soft tape around the barrel just behind the elbow and withers, snug but not tight, and read it as the horse breathes out." },
+      { q: "How do I measure body length?", a: "Measure in a straight line from the point of the shoulder to the point of the buttock, with the horse standing square." },
+      { q: "How accurate is this estimate?", a: "It is a useful approximation, often within a few percent for typical horses, but it can be further off for very thin, heavy, pregnant, or unusually shaped animals." },
+      { q: "Can I use this to calculate medication doses?", a: "No. Dosing decisions should be based on a scale weight and your veterinarian's instructions, not a tape estimate." },
+      { q: "Why is there a horse type option?", a: "Younger and smaller animals carry weight differently, so common versions of the formula use a different divisor for them." },
+      { q: "How is this different from a weight converter?", a: "A weight converter changes units, such as kilograms to pounds. This tool estimates a weight from body measurements." },
+    ],
+    related: ["horse-age-calculator", "weight-converter", "unit-length-converter"],
+  },
+  {
+    id: "cat-size-calculator",
+    category: "pets",
+    title: "Cat Size Calculator",
+    keyword: "cat size calculator",
+    description: "Estimate a kitten's likely adult weight range from its current weight and age. A rough guide, not a guarantee.",
+    intro: "Enter your kitten's current weight and age, and choose whether it is a typical or a large breed type. You'll get an approximate adult weight range. Cats grow individually, so use it as a ballpark only.",
+    fields: [
+      { id: "weight", label: "Current weight", type: "number", default: 2, step: 0.05, min: 0.05 },
+      { id: "weightUnit", label: "Weight unit", type: "select", default: "kg", options: [{ v: "kg", l: "kg" }, { v: "lb", l: "lb" }] },
+      { id: "ageWeeks", label: "Current age (weeks)", type: "number", default: 16, step: 1, min: 1 },
+      { id: "group", label: "Expected build", type: "select", default: "typical", options: [{ v: "typical", l: "Typical domestic cat" }, { v: "large", l: "Large breed type (for example Maine Coon-like)" }] },
+    ],
+    compute: (v) => {
+      if (!(v.weight > 0) || !(v.ageWeeks > 0)) return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Weight and age must both be greater than zero." };
+      if (v.ageWeeks < 8 || v.ageWeeks > 52) return { primary: { label: "Age outside supported range", value: "-" }, secondary: [], note: "This estimate covers kittens between 8 and 52 weeks old. Before 8 weeks weight changes too fast to project, and most cats are near adult size after a year (large breeds may keep filling out longer)." };
+      const kg = v.weightUnit === "lb" ? v.weight * 0.453592 : v.weight;
+      if (kg > 12) return { primary: { label: "Weight looks unrealistic", value: "-" }, secondary: [], note: "Please check the weight and unit entered." };
+      const ages = [8, 12, 16, 20, 26, 39, 52];
+      const curves = { typical: [0.2, 0.32, 0.45, 0.58, 0.72, 0.9, 0.98], large: [0.16, 0.26, 0.37, 0.48, 0.62, 0.8, 0.9] };
+      const curve = curves[v.group] || curves.typical;
+      let i = 0;
+      while (i < ages.length - 2 && v.ageWeeks > ages[i + 1]) i++;
+      const frac = curve[i] + (curve[i + 1] - curve[i]) * ((v.ageWeeks - ages[i]) / (ages[i + 1] - ages[i]));
+      const est = kg / frac;
+      const useLb = v.weightUnit === "lb";
+      const c = (x) => (useLb ? x / 0.453592 : x);
+      const u = useLb ? "lb" : "kg";
+      let cat = "Smaller than average";
+      if (est >= 5.5) cat = "Large";
+      else if (est >= 3.6) cat = "Average";
+      return {
+        primary: { label: "Approximate adult weight range", value: `${round(c(est * 0.85), 1)} - ${round(c(est * 1.15), 1)} ${u}` },
+        secondary: [
+          { l: "Central estimate", v: `${round(c(est), 1)} ${u}` },
+          { l: "Share of adult weight assumed reached", v: `${round(frac * 100, 0)}%` },
+          { l: "Broad size of estimate", v: cat },
+        ],
+        note: "This uses a rough typical feline growth curve and a +/-15% band. Final size depends on genetics, breed or mix, sex, nutrition, neutering, and health, and large breeds can take two to four years to fill out. If the build you choose is wrong, the estimate will be off. A veterinarian can track your kitten's growth against a healthy pattern.",
+      };
+    },
+    faq: [
+      { q: "How accurate is a kitten adult-size estimate?", a: "Only roughly. Cats vary a lot, and mixed-breed kittens are especially hard to predict, so the range is intentionally wide." },
+      { q: "How is this different from the Cat Age Calculator?", a: "The Cat Age Calculator converts a cat's age into a human-year equivalent. This tool projects how heavy a growing kitten may become." },
+      { q: "How is this different from the Cat BMI Calculator?", a: "The Cat BMI Calculator computes a weight-to-length index from body measurements. This one uses age and current weight to estimate adult weight." },
+      { q: "Can I use the dog size curve for cats?", a: "No. Kittens grow on a different pattern from puppies, so this tool uses its own feline curve." },
+      { q: "When do cats stop growing?", a: "Most reach close to full size around 12 months, but many large breeds continue to mature for several more years." },
+      { q: "Should I change my kitten's food because of the estimate?", a: "No. Feed a diet suitable for growth as advised by your veterinarian, and do not restrict or increase food because of a size estimate." },
+    ],
+    related: ["cat-age-calculator", "cat-bmi-calculator", "cat-calorie-calculator", "dog-size-calculator"],
+  },
+  {
+    id: "lawn-mowing-cost-calculator",
+    category: "construction",
+    title: "Lawn Mowing Cost Calculator",
+    keyword: "lawn mowing cost calculator",
+    description: "Estimate lawn mowing cost per visit and over a season from lawn size and your own price, or from hours and an hourly rate.",
+    intro: "Choose area-based or time-based pricing, enter your own rates, and see the cost per visit and for several visits. Prices vary by region and provider, so the figures here are editable examples and not current local rates.",
+    fields: [
+      { id: "mode", label: "Pricing method", type: "select", default: "area", options: [{ v: "area", l: "By lawn area" }, { v: "hourly", l: "By hours x hourly rate" }] },
+      { id: "area", label: "Lawn area (area method)", type: "number", default: 5000, step: 50, min: 0 },
+      { id: "areaUnit", label: "Area unit", type: "select", default: "sqft", options: [{ v: "sqft", l: "sq ft" }, { v: "sqm", l: "sq m" }, { v: "acre", l: "acres" }] },
+      { id: "price", label: "Your price per 1,000 sq ft / per sq m / per acre (matches the unit above)", type: "number", default: 6, step: 0.5, min: 0 },
+      { id: "hours", label: "Hours per visit (hourly method)", type: "number", default: 1, step: 0.25, min: 0 },
+      { id: "rate", label: "Hourly rate (hourly method)", type: "number", default: 40, step: 1, min: 0 },
+      { id: "minCharge", label: "Minimum charge per visit (0 to skip)", type: "number", default: 0, step: 1, min: 0 },
+      { id: "tripFee", label: "Extra fee per visit (trip, disposal; 0 to skip)", type: "number", default: 0, step: 1, min: 0 },
+      { id: "visits", label: "Number of visits", type: "number", default: 1, step: 1, min: 1 },
+    ],
+    compute: (v) => {
+      if (!(v.price >= 0) || !(v.rate >= 0) || !(v.minCharge >= 0) || !(v.tripFee >= 0)) return { primary: { label: "Enter valid prices", value: "-" }, secondary: [], note: "Prices and fees cannot be negative." };
+      if (!(v.visits >= 1) || v.visits > 366) return { primary: { label: "Enter 1 to 366 visits", value: "-" }, secondary: [], note: "Number of visits must be between 1 and 366." };
+      let base;
+      let detail;
+      if (v.mode === "hourly") {
+        if (!(v.hours > 0)) return { primary: { label: "Enter the hours per visit", value: "-" }, secondary: [], note: "Hours must be greater than zero." };
+        base = v.hours * v.rate;
+        detail = `${v.hours} h x ${round(v.rate, 2)}`;
+      } else {
+        if (!(v.area > 0)) return { primary: { label: "Enter the lawn area", value: "-" }, secondary: [], note: "Lawn area must be greater than zero." };
+        const units = v.areaUnit === "sqft" ? v.area / 1000 : v.area;
+        base = units * v.price;
+        detail = `${round(units, 2)} units x ${round(v.price, 2)}`;
+      }
+      if (!Number.isFinite(base) || base > 1e9) return { primary: { label: "Values look unrealistic", value: "-" }, secondary: [], note: "Please check the numbers entered." };
+      const charged = Math.max(base, v.minCharge);
+      const perVisit = charged + v.tripFee;
+      const n = Math.floor(v.visits);
+      const secondary = [
+        { l: "Calculated service cost", v: `${round(base, 2).toFixed(2)} (${detail})` },
+      ];
+      if (v.minCharge > base) secondary.push({ l: "Minimum charge applied", v: round(v.minCharge, 2).toFixed(2) });
+      if (v.tripFee > 0) secondary.push({ l: "Extra fee per visit", v: round(v.tripFee, 2).toFixed(2) });
+      secondary.push({ l: `Total for ${n} visit(s)`, v: round(perVisit * n, 2).toFixed(2) });
+      return {
+        primary: { label: "Cost per visit", value: round(perVisit, 2).toFixed(2) },
+        secondary,
+        note: "Area method: cost = area x your price per unit (per 1,000 sq ft, per sq m, or per acre, matching the unit selected). Hourly method: hours x hourly rate. A minimum charge replaces the calculated cost if it is higher, and an extra per-visit fee is added after. All prices are your own inputs in any currency; the defaults are only examples and are not market rates. Real quotes also depend on terrain, obstacles, grass height, and local demand.",
+      };
+    },
+    faq: [
+      { q: "How is lawn mowing cost usually calculated?", a: "Providers commonly charge by lawn size, by the hour, or a flat fee with a minimum. This tool supports area-based and hourly pricing with an optional minimum and extra fee." },
+      { q: "Are the default prices real local rates?", a: "No. They are placeholder examples. Replace them with a quote or rate from your own provider or region." },
+      { q: "Which price unit applies in the area method?", a: "The price is per 1,000 sq ft if you choose square feet, per sq m if you choose square meters, and per acre if you choose acres." },
+      { q: "What is the minimum charge for?", a: "Many services set a floor for small lawns. If your calculated cost is lower, the minimum is used instead." },
+      { q: "Can I estimate a season?", a: "Yes. Enter the number of visits you expect and the tool multiplies the per-visit cost. It does not guess how many visits a season needs." },
+      { q: "Does it include fertilizer or seeding?", a: "No. Use the Fertilizer and Grass Seed Calculators for those materials." },
+    ],
+    related: ["grass-seed-calculator", "square-footage-calculator", "fertilizer-calculator", "mulch-calculator"],
+  },
+  {
+    id: "ligation-calculator",
+    category: "biology",
+    title: "Ligation Calculator",
+    keyword: "ligation calculator",
+    description: "Calculate the insert DNA mass needed for a desired insert:vector molar ratio from vector mass and vector and insert lengths.",
+    intro: "Enter your vector mass, the vector and insert lengths in base pairs, and the molar ratio you want. The calculator gives the insert mass and picomole amounts. It is a calculation aid, not a protocol.",
+    fields: [
+      { id: "vectorMass", label: "Vector DNA mass (ng)", type: "number", default: 50, step: 1, min: 0 },
+      { id: "vectorLen", label: "Vector length (bp)", type: "number", default: 3000, step: 10, min: 0 },
+      { id: "insertLen", label: "Insert length (bp)", type: "number", default: 1000, step: 10, min: 0 },
+      { id: "ratio", label: "Desired molar ratio (insert : vector)", type: "number", default: 3, step: 0.5, min: 0 },
+    ],
+    compute: (v) => {
+      if (!(v.vectorMass > 0) || !(v.vectorLen > 0) || !(v.insertLen > 0) || !(v.ratio > 0)) return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Mass, both lengths, and the ratio must all be greater than zero." };
+      if (v.vectorLen > 1e7 || v.insertLen > 1e7 || v.vectorMass > 1e9 || v.ratio > 1000) return { primary: { label: "Values look unrealistic", value: "-" }, secondary: [], note: "Please check the numbers entered." };
+      const insertMass = v.vectorMass * (v.insertLen / v.vectorLen) * v.ratio;
+      const vectorPmol = (v.vectorMass * 1000) / (v.vectorLen * 650);
+      const insertPmol = vectorPmol * v.ratio;
+      return {
+        primary: { label: "Insert DNA mass needed", value: `${round(insertMass, 2)} ng` },
+        secondary: [
+          { l: "Vector amount", v: `${round(vectorPmol, 4)} pmol` },
+          { l: "Insert amount", v: `${round(insertPmol, 4)} pmol` },
+          { l: "Total DNA mass (vector + insert)", v: `${round(v.vectorMass + insertMass, 2)} ng` },
+        ],
+        note: "Insert mass = vector mass x (insert length / vector length) x molar ratio. Picomoles use pmol = mass in ng x 1000 / (length in bp x 650), where 650 g/mol per base pair is a common average for double-stranded DNA. Results assume accurate DNA concentration measurements and double-stranded DNA of the stated lengths. Actual ligation conditions depend on the cloning protocol, enzyme and buffer system, DNA quality, and laboratory conditions, so follow your own validated protocol.",
+      };
+    },
+    faq: [
+      { q: "What does the molar ratio mean?", a: "It is the number of insert molecules for every vector molecule. A ratio of 3 means three insert molecules per vector molecule." },
+      { q: "Why calculate by molar ratio instead of mass?", a: "Longer DNA weighs more per molecule, so equal masses of vector and insert contain different numbers of molecules. Ratios by molecule count are what matter for joining ends." },
+      { q: "What ratio should I use?", a: "That depends on your protocol and construct. Follow your kit or laboratory protocol; this tool just does the arithmetic for the ratio you enter." },
+      { q: "How is this different from the DNA Concentration Calculator?", a: "The DNA Concentration Calculator converts between concentration units. This tool works out how much insert to pair with a given vector amount." },
+      { q: "How is this related to the DNA Copy Number Calculator?", a: "Both use the same average 650 g/mol per base pair, but copy number converts mass to molecule count rather than planning an insert amount." },
+      { q: "Does this include reaction volumes or incubation steps?", a: "No. It calculates DNA amounts only. Reaction setup should come from your protocol." },
+    ],
+    related: ["dna-concentration-calculator", "dna-copy-number-calculator", "molecular-weight-calculator", "cell-dilution-calculator"],
+  },
+  {
+    id: "livestock-fence-cost-calculator",
+    category: "construction",
+    title: "Livestock Fence Cost Calculator",
+    keyword: "livestock fence cost calculator",
+    description: "Estimate fence length, posts, wire, and cost for a pasture from its size, strands, post spacing, and your own material prices.",
+    intro: "Describe a rectangular pasture or enter a total fence length, then set wire strands, post spacing, and your own prices. You'll get the perimeter, posts, wire length, and an estimated material cost. It does not decide what fence your animals need.",
+    fields: [
+      { id: "shape", label: "Fence layout", type: "select", default: "rect", options: [{ v: "rect", l: "Rectangular pasture (closed loop)" }, { v: "loop", l: "Closed loop of known total length" }, { v: "line", l: "Open run of known length" }] },
+      { id: "length", label: "Pasture length (rectangle)", type: "number", default: 400, step: 5, min: 0 },
+      { id: "width", label: "Pasture width (rectangle)", type: "number", default: 300, step: 5, min: 0 },
+      { id: "total", label: "Total fence length (loop or open run)", type: "number", default: 1000, step: 10, min: 0 },
+      { id: "unit", label: "Length unit", type: "select", default: "ft", options: [{ v: "ft", l: "feet" }, { v: "m", l: "meters" }] },
+      { id: "strands", label: "Wire strands", type: "number", default: 4, step: 1, min: 1, max: 12 },
+      { id: "spacing", label: "Line post spacing (same unit)", type: "number", default: 12, step: 0.5, min: 0 },
+      { id: "extraPosts", label: "Extra posts (gates, braces, corners; count)", type: "number", default: 0, step: 1, min: 0 },
+      { id: "wirePrice", label: "Wire price per length unit (per foot or per meter of wire, your price)", type: "number", default: 0.1, step: 0.01, min: 0 },
+      { id: "postPrice", label: "Price per post (your price)", type: "number", default: 8, step: 0.5, min: 0 },
+      { id: "otherCost", label: "Other costs (gates, insulators, labor; 0 to skip)", type: "number", default: 0, step: 10, min: 0 },
+    ],
+    compute: (v) => {
+      let perim;
+      if (v.shape === "rect") {
+        if (!(v.length > 0) || !(v.width > 0)) return { primary: { label: "Enter pasture size", value: "-" }, secondary: [], note: "Length and width must both be greater than zero." };
+        perim = 2 * (v.length + v.width);
+      } else {
+        if (!(v.total > 0)) return { primary: { label: "Enter the fence length", value: "-" }, secondary: [], note: "Total fence length must be greater than zero." };
+        perim = v.total;
+      }
+      if (!(v.strands >= 1) || v.strands > 12) return { primary: { label: "Strands must be 1 to 12", value: "-" }, secondary: [], note: "Please enter a whole number of wire strands from 1 to 12." };
+      if (!(v.spacing > 0)) return { primary: { label: "Enter post spacing", value: "-" }, secondary: [], note: "Post spacing must be greater than zero." };
+      if (!(v.extraPosts >= 0) || !(v.wirePrice >= 0) || !(v.postPrice >= 0) || !(v.otherCost >= 0)) return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Counts, prices, and costs cannot be negative." };
+      if (perim > 1e6 || v.spacing > perim * 10) return { primary: { label: "Values look unrealistic", value: "-" }, secondary: [], note: "Please check the sizes and units entered." };
+      const strands = Math.floor(v.strands);
+      const line = v.shape === "line" ? Math.ceil(perim / v.spacing) + 1 : Math.ceil(perim / v.spacing);
+      const posts = line + Math.floor(v.extraPosts);
+      const wire = perim * strands;
+      const u = v.unit === "m" ? "m" : "ft";
+      const cost = wire * v.wirePrice + posts * v.postPrice + v.otherCost;
+      return {
+        primary: { label: "Estimated material cost", value: round(cost, 2).toFixed(2) },
+        secondary: [
+          { l: "Total fence length", v: `${round(perim, 1).toLocaleString("en-US")} ${u}` },
+          { l: "Line posts", v: line },
+          { l: "Total posts (with extras)", v: posts },
+          { l: "Total wire length", v: `${round(wire, 0).toLocaleString("en-US")} ${u}` },
+          { l: "Wire cost", v: round(wire * v.wirePrice, 2).toFixed(2) },
+          { l: "Post cost", v: round(posts * v.postPrice, 2).toFixed(2) },
+        ],
+        note: "Perimeter = 2 x (length + width) for a rectangle. Line posts = fence length / post spacing, rounded up (one more for an open run). Wire = fence length x strands. Cost = wire x your wire price + posts x your post price + other costs. All prices are your own and any currency; nothing here is a market price. This is a quantity and budget aid only. It does not confirm that a design will contain your animals; requirements differ by species, electric versus non-electric systems, and local rules, so check manufacturer instructions and local requirements.",
+      };
+    },
+    faq: [
+      { q: "How is this different from the general Fence Calculator?", a: "The general Fence Calculator counts panels and posts from a length and panel width. This one plans wire fencing: perimeter, strands, post spacing, wire length, and a cost estimate from your own prices." },
+      { q: "Why enter my own prices?", a: "Material prices change by region and supplier. Using your own quotes keeps the estimate relevant." },
+      { q: "How many strands should I use?", a: "That depends on the animals, the fence type, and local guidance. This calculator does not decide it; it multiplies whatever number you choose." },
+      { q: "What post spacing should I use?", a: "Follow your wire or post manufacturer's guidance and local practice. The tool uses the spacing you enter." },
+      { q: "Does this cover gates and corner braces?", a: "Add them in the extra posts count and the other costs field. The tool does not design corners or gates." },
+      { q: "Will this fence keep my livestock in?", a: "Not necessarily. Containment depends on species, design, tension, electrification, and maintenance. Check manufacturer and local requirements." },
+    ],
+    related: ["fence-calculator", "cattle-per-acre-calculator", "square-footage-calculator", "unit-length-converter"],
   },
 ];
 

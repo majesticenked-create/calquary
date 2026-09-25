@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rasenmähen-Kostenrechner - Kostenloser Online-Rechner</title>
+  <meta name="description" content="Schätzen Sie die Kosten des Rasenmähens pro Einsatz und über eine Saison aus Rasengröße und Ihrem eigenen Preis oder aus Stunden und Stundensatz." />
+  <meta property="og:title" content="Rasenmähen-Kostenrechner | Calquary">
+  <meta property="og:description" content="Schätzen Sie die Kosten des Rasenmähens pro Einsatz und über eine Saison aus Rasengröße und Ihrem eigenen Preis oder aus Stunden und Stundensatz.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/de/tool/lawn-mowing-cost-calculator">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/lawn-mowing-cost-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rasenmähen-Kostenrechner | Calquary">
+  <meta name="twitter:description" content="Schätzen Sie die Kosten des Rasenmähens pro Einsatz und über eine Saison aus Rasengröße und Ihrem eigenen Preis oder aus Stunden und Stundensatz.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/lawn-mowing-cost-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/lawn-mowing-cost-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/lawn-mowing-cost-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/lawn-mowing-cost-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/lawn-mowing-cost-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/lawn-mowing-cost-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/lawn-mowing-cost-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/lawn-mowing-cost-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/lawn-mowing-cost-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/lawn-mowing-cost-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/lawn-mowing-cost-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/lawn-mowing-cost-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/lawn-mowing-cost-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/lawn-mowing-cost-calculator">
+    <link rel="canonical" href="https://calquary.com/de/tool/lawn-mowing-cost-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("lawn-mowing-cost-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("lawn-mowing-cost-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Rasenmähen-Kostenrechner",
+      "description": "Schätzen Sie die Kosten des Rasenmähens pro Einsatz und über eine Saison aus Rasengröße und Ihrem eigenen Preis oder aus Stunden und Stundensatz.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/de/tool/lawn-mowing-cost-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-25",
+      "inLanguage": "de"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Construction & Home",
+          "item": "https://calquary.com/de/category/construction"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rasenmähen-Kostenrechner",
+          "item": "https://calquary.com/de/tool/lawn-mowing-cost-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Wie werden die Kosten fürs Rasenmähen üblicherweise berechnet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Anbieter berechnen oft nach Rasengröße, nach Stunden oder pauschal mit Mindestbetrag. Dieses Tool unterstützt flächen- und stundenbasierte Preise mit optionalem Mindestbetrag und Zusatzgebühr."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Sind die voreingestellten Preise echte örtliche Preise?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein. Es sind Platzhalterbeispiele. Ersetzen Sie sie durch ein Angebot oder einen Satz Ihres Anbieters oder Ihrer Region."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Welche Preiseinheit gilt bei der Flächenmethode?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Der Preis gilt pro 1.000 Quadratfuß, wenn Sie Quadratfuß wählen, pro Quadratmeter bei Quadratmetern und pro Acre bei Acres."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wofür ist der Mindestbetrag?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Viele Dienste setzen für kleine Rasenflächen eine Untergrenze. Liegt Ihr berechneter Betrag darunter, wird der Mindestbetrag verwendet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann ich eine Saison schätzen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Geben Sie die erwartete Anzahl der Einsätze ein, und das Tool multipliziert die Kosten pro Einsatz. Es rät nicht, wie viele Einsätze eine Saison braucht."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Sind Dünger oder Aussaat enthalten?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein. Nutzen Sie dafür den Dünger-Rechner und den Rasensamen-Rechner."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/de/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/de/#categories">Kategorien</a>
+          <a href="/de/#tools">Alle Tools</a>
+          <a href="/de/about">Über uns</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Deutsch">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>DE</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/lawn-mowing-cost-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/lawn-mowing-cost-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/lawn-mowing-cost-calculator">Français</a><span class="locale-item current" role="menuitem" aria-current="true">Deutsch</span><a class="locale-item" role="menuitem" href="/pt/tool/lawn-mowing-cost-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/lawn-mowing-cost-calculator">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/lawn-mowing-cost-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/lawn-mowing-cost-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/lawn-mowing-cost-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/lawn-mowing-cost-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/lawn-mowing-cost-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/lawn-mowing-cost-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/de/">Calquary</a> / <a href="/de/category/construction">Bau & Heimwerken</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Rasenmähen-Kostenrechner</h1>
+        <p style="max-width:60ch;">Wählen Sie flächen- oder zeitbasierte Preisgestaltung, geben Sie Ihre eigenen Sätze ein und sehen Sie die Kosten pro Einsatz und für mehrere Einsätze. Preise unterscheiden sich je nach Region und Anbieter, die Zahlen hier sind daher bearbeitbare Beispiele und keine aktuellen örtlichen Preise.</p>
+        <p class="last-updated">Zuletzt aktualisiert: September 25, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Berechnen</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Zurücksetzen</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Häufig gestellte Fragen</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Wie werden die Kosten fürs Rasenmähen üblicherweise berechnet?</h3>
+<p>Anbieter berechnen oft nach Rasengröße, nach Stunden oder pauschal mit Mindestbetrag. Dieses Tool unterstützt flächen- und stundenbasierte Preise mit optionalem Mindestbetrag und Zusatzgebühr.</p>
+</div>
+<div class="faq-item">
+<h3>Sind die voreingestellten Preise echte örtliche Preise?</h3>
+<p>Nein. Es sind Platzhalterbeispiele. Ersetzen Sie sie durch ein Angebot oder einen Satz Ihres Anbieters oder Ihrer Region.</p>
+</div>
+<div class="faq-item">
+<h3>Welche Preiseinheit gilt bei der Flächenmethode?</h3>
+<p>Der Preis gilt pro 1.000 Quadratfuß, wenn Sie Quadratfuß wählen, pro Quadratmeter bei Quadratmetern und pro Acre bei Acres.</p>
+</div>
+<div class="faq-item">
+<h3>Wofür ist der Mindestbetrag?</h3>
+<p>Viele Dienste setzen für kleine Rasenflächen eine Untergrenze. Liegt Ihr berechneter Betrag darunter, wird der Mindestbetrag verwendet.</p>
+</div>
+<div class="faq-item">
+<h3>Kann ich eine Saison schätzen?</h3>
+<p>Ja. Geben Sie die erwartete Anzahl der Einsätze ein, und das Tool multipliziert die Kosten pro Einsatz. Es rät nicht, wie viele Einsätze eine Saison braucht.</p>
+</div>
+<div class="faq-item">
+<h3>Sind Dünger oder Aussaat enthalten?</h3>
+<p>Nein. Nutzen Sie dafür den Dünger-Rechner und den Rasensamen-Rechner.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Berechnen</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Ähnliche Rechner</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Hinweis zur Genauigkeit</h4>
+          <p style="margin:0;font-size:0.85rem;">Die Rechner von Calquary sind für schnelle, zuverlässige Schätzungen ausgelegt. Bei Entscheidungen mit echten finanziellen, baulichen oder medizinischen Konsequenzen wenden Sie sich bitte an eine qualifizierte Fachperson.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/de/">← Zurück zu allen Rechnern</a> · <a href="/de/about">Über uns</a> · <a href="/de/contact">Kontakt</a> · <a href="/de/privacy">Datenschutz</a> · <a href="/de/terms">Nutzungsbedingungen</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

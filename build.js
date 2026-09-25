@@ -172,6 +172,11 @@ const WAVE_ONE_TOOL_IDS = [
   "dog-size-calculator", "dog-water-intake-calculator", "dry-matter-calculator",
   "feed-conversion-ratio-calculator", "fertilizer-calculator", "fish-oil-for-cats-calculator",
   "growing-degree-units-calculator", "goat-gestation-calculator", "grain-bin-calculator",
+  // Batch 17 (Batch 006 build): 10 new tools translated into all 11 non-English locales.
+  "grain-conversion-calculator", "grass-seed-calculator", "guinea-pig-pregnancy-calculator",
+  "guinea-pig-age-calculator", "hamster-age-calculator", "horse-weight-calculator",
+  "cat-size-calculator", "lawn-mowing-cost-calculator", "ligation-calculator",
+  "livestock-fence-cost-calculator",
 ];
 
 function loadData() {
