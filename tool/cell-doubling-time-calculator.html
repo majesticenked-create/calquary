@@ -99,7 +99,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-22",
+      "dateModified": "2026-09-25",
       "inLanguage": "en"
     },
     {
@@ -175,6 +175,14 @@
             "@type": "Answer",
             "text": "Yes - the exponential growth model and doubling time formula apply generally to any population growing exponentially, whether bacteria, yeast, or mammalian cells in culture. Typical doubling times differ enormously by organism and conditions (bacteria can double in 20-30 minutes under ideal conditions, while many mammalian cell lines double over roughly 18-24 hours), but the underlying math is the same."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Is generation time the same as doubling time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For a culture growing exponentially, yes: generation time (common in microbiology, especially for bacteria) is the time it takes the population to double. This calculator finds it from an initial count, a final count, and the elapsed time, and it also reports the number of generations (doublings) observed."
+          }
         }
       ]
     }
@@ -216,7 +224,7 @@
       <main>
         <h1>Cell Doubling Time Calculator</h1>
         <p style="max-width:60ch;">Enter an initial cell count, a final cell count, and the elapsed time between them to estimate the doubling time, assuming exponential growth over that interval.</p>
-        <p class="last-updated">Last updated: September 22, 2026</p>
+        <p class="last-updated">Last updated: September 25, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel" id="calc-panel">
@@ -265,6 +273,10 @@
 <div class="faq-item">
 <h3>Does this work for bacterial cultures as well as mammalian cell cultures?</h3>
 <p>Yes - the exponential growth model and doubling time formula apply generally to any population growing exponentially, whether bacteria, yeast, or mammalian cells in culture. Typical doubling times differ enormously by organism and conditions (bacteria can double in 20-30 minutes under ideal conditions, while many mammalian cell lines double over roughly 18-24 hours), but the underlying math is the same.</p>
+</div>
+<div class="faq-item">
+<h3>Is generation time the same as doubling time?</h3>
+<p>For a culture growing exponentially, yes: generation time (common in microbiology, especially for bacteria) is the time it takes the population to double. This calculator finds it from an initial count, a final count, and the elapsed time, and it also reports the number of generations (doublings) observed.</p>
 </div></div>
           <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculate</a>
         </div>

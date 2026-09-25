@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Unidades de Grados de Crecimiento (GDU)</title>
+  <meta name="description" content="Calcula las unidades de grados de crecimiento (GDU) diarias y acumuladas a partir de temperaturas máxima y mínima y una temperatura base." />
+  <meta property="og:title" content="Calculadora de Unidades de Grados de Crecimiento (GDU) | Calquary">
+  <meta property="og:description" content="Calcula las unidades de grados de crecimiento (GDU) diarias y acumuladas a partir de temperaturas máxima y mínima y una temperatura base.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/es/tool/growing-degree-units-calculator">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/growing-degree-units-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculadora de Unidades de Grados de Crecimiento (GDU) | Calquary">
+  <meta name="twitter:description" content="Calcula las unidades de grados de crecimiento (GDU) diarias y acumuladas a partir de temperaturas máxima y mínima y una temperatura base.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/growing-degree-units-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/growing-degree-units-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/growing-degree-units-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/growing-degree-units-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/growing-degree-units-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/growing-degree-units-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/growing-degree-units-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/growing-degree-units-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/growing-degree-units-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/growing-degree-units-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/growing-degree-units-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/growing-degree-units-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/growing-degree-units-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/growing-degree-units-calculator">
+    <link rel="canonical" href="https://calquary.com/es/tool/growing-degree-units-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("growing-degree-units-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("growing-degree-units-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calculadora de Unidades de Grados de Crecimiento (GDU)",
+      "description": "Calcula las unidades de grados de crecimiento (GDU) diarias y acumuladas a partir de temperaturas máxima y mínima y una temperatura base.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/es/tool/growing-degree-units-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-25",
+      "inLanguage": "es"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/es/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calculadora de Unidades de Grados de Crecimiento (GDU)",
+          "item": "https://calquary.com/es/tool/growing-degree-units-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué son las unidades de grados de crecimiento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Miden cuánto calor se acumuló en un día por encima de la temperatura base de un cultivo. Sumarlas a lo largo de la temporada sigue el desarrollo del cultivo mejor que los días de calendario."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Son lo mismo las unidades de grados de crecimiento que los grados-día de crecimiento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En la mayoría de los usos se refieren a la misma idea de acumulación de calor, pero las convenciones exactas (temperatura base, límites, unidades) varían según la fuente. Esta herramienta muestra el método usado para que lo ajustes a tu referencia."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué temperatura base debo usar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende del cultivo y del modelo. Usa la base que indique tu proveedor de semillas, el servicio de extensión o el modelo. El valor por defecto de 50°F es solo un punto de partida común."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué hace el método modificado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Limita la temperatura máxima a 86°F (30°C) y sube la mínima hasta la temperatura base, porque el desarrollo de la planta se ralentiza con calor extremo y se detiene por debajo de la base."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué mi resultado es cero?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La temperatura media estuvo en o por debajo de la temperatura base, por lo que no se acumularon unidades de calor. Aquí las GDU diarias nunca son negativas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puede sumar una temporada completa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Esta herramienta multiplica el valor de un día por un número de días. Para una temporada real, suma el resultado de cada día con datos meteorológicos reales."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/es/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/es/#categories">Categorías</a>
+          <a href="/es/#tools">Todas las herramientas</a>
+          <a href="/es/about">Acerca de</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Español">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>ES</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/growing-degree-units-calculator">English</a><span class="locale-item current" role="menuitem" aria-current="true">Español</span><a class="locale-item" role="menuitem" href="/fr/tool/growing-degree-units-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/growing-degree-units-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/growing-degree-units-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/growing-degree-units-calculator">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/growing-degree-units-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/growing-degree-units-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/growing-degree-units-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/growing-degree-units-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/growing-degree-units-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/growing-degree-units-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/es/">Calquary</a> / <a href="/es/category/biology">Biología</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calculadora de Unidades de Grados de Crecimiento (GDU)</h1>
+        <p style="max-width:60ch;">Introduce la temperatura máxima y mínima de un día y la temperatura base de tu cultivo o modelo para obtener unidades de grados de crecimiento. Elige el método de promedio simple o uno modificado con techo y piso de temperatura, y multiplica opcionalmente por varios días.</p>
+        <p class="last-updated">Última actualización: September 25, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calcular</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reiniciar</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Preguntas frecuentes</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>¿Qué son las unidades de grados de crecimiento?</h3>
+<p>Miden cuánto calor se acumuló en un día por encima de la temperatura base de un cultivo. Sumarlas a lo largo de la temporada sigue el desarrollo del cultivo mejor que los días de calendario.</p>
+</div>
+<div class="faq-item">
+<h3>¿Son lo mismo las unidades de grados de crecimiento que los grados-día de crecimiento?</h3>
+<p>En la mayoría de los usos se refieren a la misma idea de acumulación de calor, pero las convenciones exactas (temperatura base, límites, unidades) varían según la fuente. Esta herramienta muestra el método usado para que lo ajustes a tu referencia.</p>
+</div>
+<div class="faq-item">
+<h3>¿Qué temperatura base debo usar?</h3>
+<p>Depende del cultivo y del modelo. Usa la base que indique tu proveedor de semillas, el servicio de extensión o el modelo. El valor por defecto de 50°F es solo un punto de partida común.</p>
+</div>
+<div class="faq-item">
+<h3>¿Qué hace el método modificado?</h3>
+<p>Limita la temperatura máxima a 86°F (30°C) y sube la mínima hasta la temperatura base, porque el desarrollo de la planta se ralentiza con calor extremo y se detiene por debajo de la base.</p>
+</div>
+<div class="faq-item">
+<h3>¿Por qué mi resultado es cero?</h3>
+<p>La temperatura media estuvo en o por debajo de la temperatura base, por lo que no se acumularon unidades de calor. Aquí las GDU diarias nunca son negativas.</p>
+</div>
+<div class="faq-item">
+<h3>¿Puede sumar una temporada completa?</h3>
+<p>Esta herramienta multiplica el valor de un día por un número de días. Para una temporada real, suma el resultado de cada día con datos meteorológicos reales.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calcular</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Herramientas relacionadas</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Nota sobre precisión</h4>
+          <p style="margin:0;font-size:0.85rem;">Las calculadoras de Calquary están diseñadas para ofrecer estimaciones rápidas y fiables. Para decisiones con implicaciones financieras, estructurales o médicas reales, consulta con un profesional cualificado.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/es/">← Volver a todas las calculadoras</a> · <a href="/es/about">Acerca de</a> · <a href="/es/contact">Contacto</a> · <a href="/es/privacy">Privacidad</a> · <a href="/es/terms">Términos</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

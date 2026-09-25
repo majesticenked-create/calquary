@@ -166,6 +166,12 @@ const WAVE_ONE_TOOL_IDS = [
   "dog-bmi-calculator", "dog-chocolate-toxicity-calculator", "dog-crate-size-calculator",
   "dog-harness-size-calculator", "dog-heat-cycle-calculator", "dog-life-expectancy-calculator",
   "dog-onion-toxicity-calculator", "dog-quality-of-life-calculator", "dog-raisin-toxicity-calculator",
+  // Batch 16 (Batch 005 build): 9 new tools translated into all 11 non-English
+  // locales. Generation Time was not created - cell-doubling-time-calculator
+  // already covers it (improved with a generation-time FAQ instead).
+  "dog-size-calculator", "dog-water-intake-calculator", "dry-matter-calculator",
+  "feed-conversion-ratio-calculator", "fertilizer-calculator", "fish-oil-for-cats-calculator",
+  "growing-degree-units-calculator", "goat-gestation-calculator", "grain-bin-calculator",
 ];
 
 function loadData() {

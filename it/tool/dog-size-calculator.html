@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calcolatore della Taglia del Cane</title>
+  <meta name="description" content="Stima l'intervallo probabile del peso adulto di un cucciolo da peso ed età attuali: una guida educativa, non una garanzia." />
+  <meta property="og:title" content="Calcolatore della Taglia del Cane | Calquary">
+  <meta property="og:description" content="Stima l'intervallo probabile del peso adulto di un cucciolo da peso ed età attuali: una guida educativa, non una garanzia.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/it/tool/dog-size-calculator">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/dog-size-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calcolatore della Taglia del Cane | Calquary">
+  <meta name="twitter:description" content="Stima l'intervallo probabile del peso adulto di un cucciolo da peso ed età attuali: una guida educativa, non una garanzia.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/dog-size-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/dog-size-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dog-size-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/dog-size-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/dog-size-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/dog-size-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/dog-size-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/dog-size-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/dog-size-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/dog-size-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/dog-size-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/dog-size-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/dog-size-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/dog-size-calculator">
+    <link rel="canonical" href="https://calquary.com/it/tool/dog-size-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("dog-size-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("dog-size-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calcolatore della Taglia del Cane",
+      "description": "Stima l'intervallo probabile del peso adulto di un cucciolo da peso ed età attuali: una guida educativa, non una garanzia.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/it/tool/dog-size-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-25",
+      "inLanguage": "it"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/it/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Pet & Lifestyle",
+          "item": "https://calquary.com/it/category/pets"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calcolatore della Taglia del Cane",
+          "item": "https://calquary.com/it/tool/dog-size-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quanto è accurata una stima della taglia adulta di un cucciolo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Solo in modo approssimativo. Presume che il cucciolo segua una curva di crescita tipica del gruppo di taglia scelto. I singoli cani variano e i cuccioli meticci possono essere particolarmente difficili da prevedere, perciò l'intervallo mostrato è volutamente ampio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Perché devo scegliere un gruppo di taglia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un cucciolo di 6 kg può diventare un cane piccolo o grande a seconda della razza. I cuccioli di gruppi diversi raggiungono il peso adulto a velocità diverse, quindi il gruppo scelto cambia la stima. Usa le migliori informazioni su razza o genitori."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quando smettono di crescere i cani?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le razze piccole spesso raggiungono la taglia adulta intorno ai 9-12 mesi, mentre le razze grandi e giganti possono continuare a svilupparsi fino a 18-24 mesi. Per questo lo strumento presume che le razze più grandi abbiano raggiunto una quota minore del peso adulto alla stessa età."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "La dimensione delle zampe o la lunghezza degli arti predicono la taglia adulta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sono al massimo indicatori popolari. Questo calcolatore non li usa perché poco affidabili; partire da peso ed età con un gruppo di taglia è un punto di partenza più trasparente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "È lo stesso del Calcolatore di Età Canina o di BMI Canino?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Il Calcolatore di Età Canina converte l'età del cane in anni umani equivalenti e quello di BMI Canino calcola un indice peso-lunghezza dalle misure. Questo strumento stima il probabile peso adulto di un cucciolo in crescita."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Devo alimentare il cucciolo in modo diverso in base a questa stima?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non cambiare le quantità di cibo a causa di una stima della taglia. La nutrizione del cucciolo influisce sulla crescita ossea sana, soprattutto nelle razze grandi; segui il consiglio del veterinario e le indicazioni dell'alimento per cuccioli."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/it/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/it/#categories">Categorie</a>
+          <a href="/it/#tools">Tutti gli strumenti</a>
+          <a href="/it/about">Chi siamo</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Italiano">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>IT</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/dog-size-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/dog-size-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/dog-size-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/dog-size-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/dog-size-calculator">Português</a><span class="locale-item current" role="menuitem" aria-current="true">Italiano</span><a class="locale-item" role="menuitem" href="/ja/tool/dog-size-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/dog-size-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/dog-size-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/dog-size-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/dog-size-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/dog-size-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/it/">Calquary</a> / <a href="/it/category/pets">Animali Domestici e Stile di Vita</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calcolatore della Taglia del Cane</h1>
+        <p style="max-width:60ch;">Inserisci il peso e l'età attuali del tuo cucciolo e scegli il gruppo di taglia che meglio corrisponde a razza o genitori. Otterrai un intervallo approssimativo del peso adulto. La crescita è individuale, quindi considera il risultato un riferimento generale, non una previsione.</p>
+        <p class="last-updated">Ultimo aggiornamento: September 25, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calcola</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reimposta</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Domande frequenti</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Quanto è accurata una stima della taglia adulta di un cucciolo?</h3>
+<p>Solo in modo approssimativo. Presume che il cucciolo segua una curva di crescita tipica del gruppo di taglia scelto. I singoli cani variano e i cuccioli meticci possono essere particolarmente difficili da prevedere, perciò l'intervallo mostrato è volutamente ampio.</p>
+</div>
+<div class="faq-item">
+<h3>Perché devo scegliere un gruppo di taglia?</h3>
+<p>Un cucciolo di 6 kg può diventare un cane piccolo o grande a seconda della razza. I cuccioli di gruppi diversi raggiungono il peso adulto a velocità diverse, quindi il gruppo scelto cambia la stima. Usa le migliori informazioni su razza o genitori.</p>
+</div>
+<div class="faq-item">
+<h3>Quando smettono di crescere i cani?</h3>
+<p>Le razze piccole spesso raggiungono la taglia adulta intorno ai 9-12 mesi, mentre le razze grandi e giganti possono continuare a svilupparsi fino a 18-24 mesi. Per questo lo strumento presume che le razze più grandi abbiano raggiunto una quota minore del peso adulto alla stessa età.</p>
+</div>
+<div class="faq-item">
+<h3>La dimensione delle zampe o la lunghezza degli arti predicono la taglia adulta?</h3>
+<p>Sono al massimo indicatori popolari. Questo calcolatore non li usa perché poco affidabili; partire da peso ed età con un gruppo di taglia è un punto di partenza più trasparente.</p>
+</div>
+<div class="faq-item">
+<h3>È lo stesso del Calcolatore di Età Canina o di BMI Canino?</h3>
+<p>No. Il Calcolatore di Età Canina converte l'età del cane in anni umani equivalenti e quello di BMI Canino calcola un indice peso-lunghezza dalle misure. Questo strumento stima il probabile peso adulto di un cucciolo in crescita.</p>
+</div>
+<div class="faq-item">
+<h3>Devo alimentare il cucciolo in modo diverso in base a questa stima?</h3>
+<p>Non cambiare le quantità di cibo a causa di una stima della taglia. La nutrizione del cucciolo influisce sulla crescita ossea sana, soprattutto nelle razze grandi; segui il consiglio del veterinario e le indicazioni dell'alimento per cuccioli.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calcola</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Strumenti correlati</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Nota sulla precisione</h4>
+          <p style="margin:0;font-size:0.85rem;">Le calcolatrici di Calquary sono pensate per stime rapide e affidabili. Per decisioni con reali implicazioni finanziarie, strutturali o mediche, consulta un professionista qualificato.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/it/">← Torna a tutte le calcolatrici</a> · <a href="/it/about">Chi siamo</a> · <a href="/it/contact">Contatti</a> · <a href="/it/privacy">Privacy</a> · <a href="/it/terms">Termini</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

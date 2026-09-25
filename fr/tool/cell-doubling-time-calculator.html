@@ -99,7 +99,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-22",
+      "dateModified": "2026-09-25",
       "inLanguage": "fr"
     },
     {
@@ -175,6 +175,14 @@
             "@type": "Answer",
             "text": "Oui - le modèle de croissance exponentielle et la formule du temps de doublement s'appliquent généralement à toute population croissant de façon exponentielle, qu'il s'agisse de bactéries, de levures ou de cellules de mammifères en culture. Les temps de doublement typiques diffèrent énormément selon l'organisme et les conditions (les bactéries peuvent doubler en 20-30 minutes dans des conditions idéales, tandis que de nombreuses lignées cellulaires de mammifères doublent sur environ 18-24 heures), mais les mathématiques sous-jacentes sont les mêmes."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Le temps de génération est-il identique au temps de doublement ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pour une culture en croissance exponentielle, oui : le temps de génération (courant en microbiologie, surtout pour les bactéries) est le temps que met la population à doubler. Ce calculateur le détermine à partir d'un comptage initial, d'un comptage final et du temps écoulé, et indique aussi le nombre de générations (doublements) observées."
+          }
         }
       ]
     }
@@ -216,7 +224,7 @@
       <main>
         <h1>Calculateur de Temps de Doublement Cellulaire</h1>
         <p style="max-width:60ch;">Saisissez un comptage cellulaire initial, un comptage cellulaire final et le temps écoulé entre eux pour estimer le temps de doublement, en supposant une croissance exponentielle sur cet intervalle.</p>
-        <p class="last-updated">Dernière mise à jour : September 22, 2026</p>
+        <p class="last-updated">Dernière mise à jour : September 25, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel" id="calc-panel">
@@ -265,6 +273,10 @@
 <div class="faq-item">
 <h3>Cela fonctionne-t-il aussi bien pour les cultures bactériennes que pour les cultures de cellules de mammifères?</h3>
 <p>Oui - le modèle de croissance exponentielle et la formule du temps de doublement s'appliquent généralement à toute population croissant de façon exponentielle, qu'il s'agisse de bactéries, de levures ou de cellules de mammifères en culture. Les temps de doublement typiques diffèrent énormément selon l'organisme et les conditions (les bactéries peuvent doubler en 20-30 minutes dans des conditions idéales, tandis que de nombreuses lignées cellulaires de mammifères doublent sur environ 18-24 heures), mais les mathématiques sous-jacentes sont les mêmes.</p>
+</div>
+<div class="faq-item">
+<h3>Le temps de génération est-il identique au temps de doublement ?</h3>
+<p>Pour une culture en croissance exponentielle, oui : le temps de génération (courant en microbiologie, surtout pour les bactéries) est le temps que met la population à doubler. Ce calculateur le détermine à partir d'un comptage initial, d'un comptage final et du temps écoulé, et indique aussi le nombre de générations (doublements) observées.</p>
 </div></div>
           <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculer</a>
         </div>

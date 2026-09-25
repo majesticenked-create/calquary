@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feed Conversion Ratio (FCR) Calculator | Calquary</title>
+  <meta name="description" content="Calculate feed conversion ratio (FCR) from feed consumed and weight gained, plus the inverse feed efficiency." />
+  <meta property="og:title" content="Feed Conversion Ratio (FCR) Calculator | Calquary">
+  <meta property="og:description" content="Calculate feed conversion ratio (FCR) from feed consumed and weight gained, plus the inverse feed efficiency.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/tool/feed-conversion-ratio-calculator">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/feed-conversion-ratio-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Feed Conversion Ratio (FCR) Calculator | Calquary">
+  <meta name="twitter:description" content="Calculate feed conversion ratio (FCR) from feed consumed and weight gained, plus the inverse feed efficiency.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/feed-conversion-ratio-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/feed-conversion-ratio-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/feed-conversion-ratio-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/feed-conversion-ratio-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/feed-conversion-ratio-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/feed-conversion-ratio-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/feed-conversion-ratio-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/feed-conversion-ratio-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/feed-conversion-ratio-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/feed-conversion-ratio-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/feed-conversion-ratio-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/feed-conversion-ratio-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/feed-conversion-ratio-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/feed-conversion-ratio-calculator">
+    <link rel="canonical" href="https://calquary.com/tool/feed-conversion-ratio-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("feed-conversion-ratio-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("feed-conversion-ratio-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Feed Conversion Ratio (FCR) Calculator",
+      "description": "Calculate feed conversion ratio (FCR) from feed consumed and weight gained, plus the inverse feed efficiency.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/feed-conversion-ratio-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-25",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Feed Conversion Ratio (FCR) Calculator",
+          "item": "https://calquary.com/tool/feed-conversion-ratio-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a feed conversion ratio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is the amount of feed an animal or group consumes for each unit of body weight it gains. A value of 2.0 means 2 units of feed per 1 unit of gain."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a lower FCR always better?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lower usually means more feed-efficient, but only when the comparison is fair. Different species, ages, diets, and measurement methods produce very different typical values."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is this different from the Ratio Calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Ratio Calculator simplifies or scales any two numbers. This tool is specific to agricultural feed and gain, reports the inverse feed efficiency, and explains the biological meaning."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should feed be as-fed or dry matter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Either can be used, but be consistent. Use the Dry Matter Calculator to convert if you need to compare rations with different moisture levels."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if weight gain is zero or negative?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FCR is undefined when there is no gain, and negative gain has no meaningful FCR. The tool shows a message rather than a number in those cases."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the period of measurement matter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Feed and gain must cover exactly the same period and group of animals, or the ratio will be misleading."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/#categories">Categories</a>
+          <a href="/#tools">All tools</a>
+          <a href="/about">About</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: English">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>EN</span>
+          </button>
+          <div class="locale-menu" role="menu"><span class="locale-item current" role="menuitem" aria-current="true">English</span><a class="locale-item" role="menuitem" href="/es/tool/feed-conversion-ratio-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/feed-conversion-ratio-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/feed-conversion-ratio-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/feed-conversion-ratio-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/feed-conversion-ratio-calculator">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/feed-conversion-ratio-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/feed-conversion-ratio-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/feed-conversion-ratio-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/feed-conversion-ratio-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/feed-conversion-ratio-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/feed-conversion-ratio-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/">Calquary</a> / <a href="/category/biology">Biology</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Feed Conversion Ratio (FCR) Calculator</h1>
+        <p style="max-width:60ch;">Enter the total feed consumed and the weight gained over the same period to calculate FCR. Both amounts use the same unit. FCR is only meaningful when compared within the same species, feed type, and production system.</p>
+        <p class="last-updated">Last updated: September 25, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculate</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reset</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Frequently asked questions</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>What is a feed conversion ratio?</h3>
+<p>It is the amount of feed an animal or group consumes for each unit of body weight it gains. A value of 2.0 means 2 units of feed per 1 unit of gain.</p>
+</div>
+<div class="faq-item">
+<h3>Is a lower FCR always better?</h3>
+<p>Lower usually means more feed-efficient, but only when the comparison is fair. Different species, ages, diets, and measurement methods produce very different typical values.</p>
+</div>
+<div class="faq-item">
+<h3>How is this different from the Ratio Calculator?</h3>
+<p>The Ratio Calculator simplifies or scales any two numbers. This tool is specific to agricultural feed and gain, reports the inverse feed efficiency, and explains the biological meaning.</p>
+</div>
+<div class="faq-item">
+<h3>Should feed be as-fed or dry matter?</h3>
+<p>Either can be used, but be consistent. Use the Dry Matter Calculator to convert if you need to compare rations with different moisture levels.</p>
+</div>
+<div class="faq-item">
+<h3>What if weight gain is zero or negative?</h3>
+<p>FCR is undefined when there is no gain, and negative gain has no meaningful FCR. The tool shows a message rather than a number in those cases.</p>
+</div>
+<div class="faq-item">
+<h3>Does the period of measurement matter?</h3>
+<p>Yes. Feed and gain must cover exactly the same period and group of animals, or the ratio will be misleading.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculate</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Related tools</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>A note on accuracy</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquary's calculators are built for quick, reliable estimates. For decisions with real financial, structural, or medical stakes, confirm with a qualified professional.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/">← Back to all calculators</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

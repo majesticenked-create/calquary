@@ -1522,7 +1522,7 @@ const CALCULATORS = [
       { q: "How do I find the volume of a cylinder if I only know the diameter?", a: "Divide the diameter by 2 to get the radius first, then use V = πr²h. For example, a cylinder with a 10 cm diameter and 20 cm height has a radius of 5 cm, giving a volume of π × 5² × 20 ≈ 1,570.8 cm³." },
       { q: "What's the difference between total surface area and lateral surface area?", a: "Lateral (side) surface area only counts the curved wall of the cylinder (2πrh); total surface area adds the two flat circular ends (2πr²) on top of that. Use lateral area alone for things like labeling a can's wraparound label, and total area for anything covering the whole object." },
     ],
-    related: ["cone-volume-calculator", "square-root-calculator", "area-converter"],
+    related: ["cone-volume-calculator", "square-root-calculator", "area-converter", "grain-bin-calculator"],
   },
   {
     id: "pythagorean-theorem-calculator",
@@ -4080,7 +4080,7 @@ const CALCULATORS = [
       { q: "How much mulch do I need for a 15×30 ft bed at 2 inches deep?", a: "15×30 ft is 450 sq ft. At 2 inches deep that's 75 cubic feet, or about 2.78 cubic yards before waste. With a 10% waste allowance, order about 3.06 cubic yards, or roughly 42 bags of 2 cu ft mulch." },
       { q: "What's the difference between buying mulch in bulk (cubic yards) versus bags?", a: "Bulk mulch is delivered by the cubic yard (27 cubic feet) and is usually cheaper per unit for larger beds, while bagged mulch comes in standard 2 cubic foot bags, better suited to small beds or when you don't have room for a delivered pile. This calculator gives both figures so you can compare." },
     ],
-    related: ["gravel-calculator", "concrete-calculator", "compost-calculator"],
+    related: ["gravel-calculator", "concrete-calculator", "compost-calculator", "fertilizer-calculator"],
   },
   {
     id: "gravel-calculator",
@@ -4800,7 +4800,7 @@ const CALCULATORS = [
       { q: "Does this account for water from food, not just drinks?", a: "No - this estimates fluid intake from drinking specifically; roughly 20% of daily water intake typically comes from food, so your actual total hydration needs are somewhat lower than the drinking-only figure this calculator returns." },
       { q: "Do coffee and tea count toward daily water intake?", a: "Yes, in moderation - while caffeine has a mild diuretic effect, research shows moderate coffee and tea consumption still contributes net hydration rather than causing dehydration. Water remains the most reliable source, but you don't need to exclude other beverages entirely from your daily total." },
     ],
-    related: ["calorie-calculator", "bmi-calculator", "bmr-calculator"],
+    related: ["calorie-calculator", "bmi-calculator", "bmr-calculator", "dog-water-intake-calculator"],
   },
   {
     id: "one-rep-max-calculator",
@@ -8708,7 +8708,7 @@ const CALCULATORS = [
       { q: "How old is a 5-year-old giant breed dog in human years?", a: "A 5-year-old giant breed (like a Great Dane) works out to roughly 40 human years - notably older than a 5-year-old small breed, which lands closer to 36, because giant breeds age faster once past puppyhood." },
       { q: "Can I use this calculator for a mixed-breed dog?", a: "Yes - since the formula keys off size rather than breed identity, just select the size category (small, medium, large, or giant) that best matches your mixed-breed dog's adult weight for the most relevant estimate." },
     ],
-    related: ["dog-life-expectancy-calculator", "dog-food-calculator", "cost-of-owning-a-dog-calculator", "ideal-dog-weight-calculator"],
+    related: ["dog-life-expectancy-calculator", "dog-food-calculator", "dog-size-calculator", "ideal-dog-weight-calculator"],
   },
   {
     id: "dog-food-calculator",
@@ -8749,7 +8749,7 @@ const CALCULATORS = [
       { q: "Why does the calculator ask for a puppy activity level instead of just using weight?", a: "Growing puppies need substantially more calories per pound than adult dogs to support tissue development, so selecting 'puppy' applies a higher multiplier to the RER-based estimate rather than treating them like a sedentary adult of the same weight." },
       { q: "Is 'cups per day' the same across every brand of dog food?", a: "No - this calculator converts your calorie target into cups using the calories-per-cup value you enter, which varies by brand and formula. Always check your specific food's label for its calorie density rather than assuming a universal cup size." },
     ],
-    related: ["dog-age-calculator", "calorie-calculator", "cat-calorie-calculator", "cost-of-owning-a-dog-calculator"],
+    related: ["dog-age-calculator", "calorie-calculator", "dog-water-intake-calculator", "cost-of-owning-a-dog-calculator"],
   },
   {
     id: "cat-age-calculator",
@@ -10158,7 +10158,7 @@ const CALCULATORS = [
       { q: "Why does the calculator give both 'acres per animal unit' and 'animal units per acre'?", a: "They're the same relationship expressed two common ways in agricultural planning - acres per animal unit is often used for land-purchase or lease planning ('how much land do I need per cow'), while animal units per acre is often used for herd-sizing planning ('how many cows can this pasture support'). Both numbers come from the same underlying calculation." },
       { q: "How much does seasonal variation affect this estimate?", a: "Significantly - forage growth is rarely constant across a full year, with most regions seeing a spring/early-summer growth flush and slower growth or dormancy in other seasons. This calculator spreads usable forage evenly across the grazing period you enter, so for highly seasonal pasture, consider running separate calculations for different seasons or grazing periods rather than one full-year average." },
     ],
-    related: ["acres-per-hour-calculator", "basal-area-calculator", "corn-yield-calculator"],
+    related: ["acres-per-hour-calculator", "feed-conversion-ratio-calculator", "corn-yield-calculator"],
   },
   {
     id: "cell-dilution-calculator",
@@ -10244,6 +10244,7 @@ const CALCULATORS = [
       { q: "How is growth rate constant (k) related to doubling time?", a: "They're directly related: doubling time = ln(2) ÷ k, and k = ln(2) ÷ doubling time. A higher growth rate constant means faster growth and therefore a shorter doubling time - they describe the same exponential growth from two different angles." },
       { q: "Can I use cell density (cells/mL) instead of a raw cell count?", a: "Yes - since the calculation uses the ratio of final to initial counts, cell density works exactly the same way as a raw count, as long as both measurements use the same units and were taken from comparably sized samples (e.g., both from the same culture volume)." },
       { q: "Does this work for bacterial cultures as well as mammalian cell cultures?", a: "Yes - the exponential growth model and doubling time formula apply generally to any population growing exponentially, whether bacteria, yeast, or mammalian cells in culture. Typical doubling times differ enormously by organism and conditions (bacteria can double in 20-30 minutes under ideal conditions, while many mammalian cell lines double over roughly 18-24 hours), but the underlying math is the same." },
+      { q: "Is generation time the same as doubling time?", a: "For a culture growing exponentially, yes: generation time (common in microbiology, especially for bacteria) is the time it takes the population to double. This calculator finds it from an initial count, a final count, and the elapsed time, and it also reports the number of generations (doublings) observed." },
     ],
     related: ["cell-dilution-calculator", "half-life-calculator", "dna-copy-number-calculator"],
   },
@@ -10360,7 +10361,7 @@ const CALCULATORS = [
       { q: "How many bags of compost equal a cubic yard?", a: "It depends on the bag size, which varies by brand and product - a common bag size is around 1-2 cubic feet, and since a cubic yard is 27 cubic feet, that works out to roughly 14-27 bags per cubic yard. Enter your specific bag's volume in the calculator for an accurate bag count." },
       { q: "Does this calculator account for compost settling over time?", a: "Not directly - like most volume estimates, it calculates the freshly applied volume. Compost, especially less mature compost, can settle and decompose further after application, so some gardeners apply slightly more than the calculated minimum or plan to top up over time." },
     ],
-    related: ["mulch-calculator", "gravel-calculator", "square-footage-calculator"],
+    related: ["mulch-calculator", "gravel-calculator", "square-footage-calculator", "fertilizer-calculator"],
   },
   {
     id: "corn-yield-calculator",
@@ -10399,7 +10400,7 @@ const CALCULATORS = [
       { q: "Why does this calculator show a metric tonnes/hectare figure too?", a: "Bushels per acre is the standard US unit for corn yield, while tonnes per hectare is standard in most other countries - showing both avoids a separate conversion step regardless of which unit you're working in. The conversion used (1 bu/ac ≈ 0.0628 tonnes/ha) reflects corn's standard test weight and moisture reference." },
       { q: "Does this account for harvest losses from the combine?", a: "No - this estimates the grain present in the field based on ear and kernel counts, before harvest. Mechanical harvest losses (shelling, header loss, etc.) reduce what's actually collected, so realized yield at the scale is typically somewhat lower than this pre-harvest field estimate." },
     ],
-    related: ["cattle-per-acre-calculator", "acres-per-hour-calculator", "basal-area-calculator"],
+    related: ["cattle-per-acre-calculator", "grain-bin-calculator", "growing-degree-units-calculator", "acres-per-hour-calculator"],
   },
   {
     id: "cost-of-owning-a-dog-calculator",
@@ -10477,7 +10478,7 @@ const CALCULATORS = [
       { q: "What signs indicate calving is approaching near the estimated date?", a: "Common signs in the days before calving include udder filling ('bagging up'), relaxation and swelling around the tailhead and vulva, restlessness, and separation from the herd - these physical signs, rather than the calculated date alone, are the more reliable indicator that calving is imminent." },
       { q: "Why use 283 days as the default instead of a rounder number like 280 or 285?", a: "283 days is a widely cited average across general cattle gestation research and extension references, striking a middle point among commonly reported ranges - it's a reasonable default starting point precisely because it reflects an average rather than any single breed or individual animal." },
     ],
-    related: ["cattle-per-acre-calculator", "dog-pregnancy-calculator", "days-until-calculator"],
+    related: ["cattle-per-acre-calculator", "dog-pregnancy-calculator", "days-until-calculator", "goat-gestation-calculator"],
   },
   {
     id: "co2-grow-room-calculator",
@@ -10596,7 +10597,7 @@ const CALCULATORS = [
       { q: "If I lower my light's intensity, how should I adjust the photoperiod to keep the same DLI?", a: "Since DLI scales with the product of PPFD and hours, reducing PPFD requires proportionally increasing photoperiod to reach the same DLI, and vice versa - for example, halving PPFD while doubling the light hours delivers approximately the same total DLI, though very long or very short photoperiods can affect plants in other ways beyond total light delivered." },
       { q: "Does higher DLI always mean better plant growth?", a: "Not necessarily - plants have species- and stage-specific ranges where more light improves growth, but beyond a certain point additional DLI provides diminishing returns or can even cause light stress or photoinhibition if not matched with adequate CO2, nutrients, and temperature. There's no single universally 'better' DLI - appropriate targets are specific to what's being grown." },
     ],
-    related: ["co2-grow-room-calculator", "cricket-chirp-temperature-calculator", "square-footage-calculator"],
+    related: ["co2-grow-room-calculator", "cricket-chirp-temperature-calculator", "square-footage-calculator", "growing-degree-units-calculator"],
   },
   {
     id: "dihybrid-cross-calculator",
@@ -11244,6 +11245,402 @@ const CALCULATORS = [
       { q: "Does it matter how much time has passed since my dog ate grapes or raisins?", a: "Time since ingestion is useful information for your veterinarian, since it can affect treatment options (such as whether inducing vomiting under veterinary supervision is still likely to be effective), but it doesn't change the urgency of contacting them - reach out promptly regardless of how much time has already passed." },
     ],
     related: ["dog-chocolate-toxicity-calculator", "dog-onion-toxicity-calculator", "dog-age-calculator"],
+  },
+  {
+    id: "dog-size-calculator",
+    category: "pets",
+    title: "Dog Size Calculator",
+    keyword: "dog size calculator",
+    description: "Estimate a puppy's likely adult weight range from its current weight and age - a rough educational guide, not a guarantee.",
+    intro: "Enter your puppy's current weight and age, and pick the size group that best matches its breed or parents. You'll get an approximate adult weight range. Growth is individual, so treat the result as a ballpark, not a prediction.",
+    fields: [
+      { id: "weight", label: "Current weight", type: "number", default: 6, step: 0.1, min: 0.1 },
+      { id: "weightUnit", label: "Weight unit", type: "select", default: "kg", options: [{ v: "kg", l: "kg" }, { v: "lb", l: "lb" }] },
+      { id: "ageWeeks", label: "Current age (weeks)", type: "number", default: 16, step: 1, min: 1 },
+      { id: "group", label: "Expected adult size group (best guess from breed or parents)", type: "select", default: "medium", options: [{ v: "small", l: "Toy / small (adult under ~10 kg / 22 lb)" }, { v: "medium", l: "Medium (~10-25 kg / 22-55 lb)" }, { v: "large", l: "Large (~25-45 kg / 55-100 lb)" }, { v: "giant", l: "Giant (over ~45 kg / 100 lb)" }] },
+    ],
+    compute: (v) => {
+      if (!(v.weight > 0) || !(v.ageWeeks > 0)) return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Weight and age must both be greater than zero." };
+      if (v.ageWeeks < 8 || v.ageWeeks > 52) return { primary: { label: "Age outside supported range", value: "-" }, secondary: [], note: "This estimate only covers puppies between 8 and 52 weeks old. Before 8 weeks weight changes too quickly to project, and after about a year most dogs are near adult size." };
+      const kg = v.weightUnit === "lb" ? v.weight * 0.453592 : v.weight;
+      if (kg > 90) return { primary: { label: "Weight looks unrealistic", value: "-" }, secondary: [], note: "Please check the weight and unit entered." };
+      const ages = [8, 12, 16, 20, 26, 39, 52];
+      const curves = {
+        small: [0.3, 0.45, 0.6, 0.72, 0.85, 0.95, 1.0],
+        medium: [0.2, 0.32, 0.45, 0.58, 0.75, 0.9, 0.98],
+        large: [0.15, 0.27, 0.4, 0.52, 0.7, 0.87, 0.96],
+        giant: [0.12, 0.22, 0.33, 0.45, 0.6, 0.8, 0.92],
+      };
+      const curve = curves[v.group] || curves.medium;
+      let i = 0;
+      while (i < ages.length - 2 && v.ageWeeks > ages[i + 1]) i++;
+      const t = (v.ageWeeks - ages[i]) / (ages[i + 1] - ages[i]);
+      const frac = curve[i] + (curve[i + 1] - curve[i]) * t;
+      const est = kg / frac;
+      const low = est * 0.85;
+      const high = est * 1.15;
+      const useLb = v.weightUnit === "lb";
+      const conv = (x) => (useLb ? x / 0.453592 : x);
+      const unit = useLb ? "lb" : "kg";
+      let cat = "Toy / small";
+      if (est >= 45) cat = "Giant";
+      else if (est >= 25) cat = "Large";
+      else if (est >= 10) cat = "Medium";
+      return {
+        primary: { label: "Approximate adult weight range", value: `${round(conv(low), 1)} - ${round(conv(high), 1)} ${unit}` },
+        secondary: [
+          { l: "Central estimate", v: `${round(conv(est), 1)} ${unit}` },
+          { l: "Share of adult weight reached (assumed)", v: `${round(frac * 100, 0)}%` },
+          { l: "Broad size category of estimate", v: cat },
+        ],
+        note: "This uses a rough, typical growth curve for the size group you chose and a +/-15% band. Real puppies can grow faster or slower because of genetics, mixed breeding, sex, nutrition, neutering timing, and health. If the size group you picked is wrong, the estimate will be off by a lot. Ask a veterinarian to check your puppy's growth against its breed.",
+      };
+    },
+    faq: [
+      { q: "How accurate is a puppy adult-size estimate?", a: "Only roughly. It assumes your puppy follows a typical growth curve for the size group you selected. Individual dogs vary, and mixed-breed puppies can be especially hard to predict, so the range shown is deliberately wide." },
+      { q: "Why do I have to choose a size group?", a: "A 6 kg puppy could grow into a small or a large dog depending on breed. Puppies of different size groups reach their adult weight at different speeds, so the group you pick changes the estimate. Use your best information about the breed or the parents." },
+      { q: "When do dogs stop growing?", a: "Small breeds often reach adult size by around 9 to 12 months, while large and giant breeds may keep filling out until 18 to 24 months. That is why this tool assumes larger breeds have reached a smaller share of their adult weight at the same age." },
+      { q: "Does paw size or leg length predict adult size?", a: "They are folk indicators at best. This calculator does not use them because they are unreliable, and using weight and age with a size group is a more transparent starting point." },
+      { q: "Is this the same as the Dog Age Calculator or Dog BMI Calculator?", a: "No. The Dog Age Calculator converts a dog's age into human-year equivalents, and the Dog BMI Calculator computes a weight-to-length index from measurements. This tool projects likely adult weight for a growing puppy." },
+      { q: "Should I feed my puppy differently based on this estimate?", a: "Do not change feeding amounts because of a size estimate. Puppy nutrition affects healthy bone growth, especially in larger breeds, so follow your veterinarian's advice and the food's puppy guidance." },
+    ],
+    related: ["dog-age-calculator", "dog-bmi-calculator", "dog-food-calculator", "dog-life-expectancy-calculator"],
+  },
+  {
+    id: "dog-water-intake-calculator",
+    category: "pets",
+    title: "Dog Water Intake Calculator",
+    keyword: "dog water intake calculator",
+    description: "Estimate a dog's typical daily water intake from body weight. A general reference range, not a target or a diagnostic tool.",
+    intro: "Enter your dog's weight to see a typical daily water intake range. This is built for dogs and is not the human Water Intake Calculator. Real intake varies with diet, activity, weather, and health.",
+    fields: [
+      { id: "weight", label: "Dog's weight", type: "number", default: 20, step: 0.5, min: 0.1 },
+      { id: "weightUnit", label: "Weight unit", type: "select", default: "kg", options: [{ v: "kg", l: "kg" }, { v: "lb", l: "lb" }] },
+    ],
+    compute: (v) => {
+      if (!(v.weight > 0)) return { primary: { label: "Enter a valid weight", value: "-" }, secondary: [], note: "Weight must be greater than zero." };
+      const kg = v.weightUnit === "lb" ? v.weight * 0.453592 : v.weight;
+      if (kg > 120) return { primary: { label: "Weight looks unrealistic", value: "-" }, secondary: [], note: "Please check the weight and unit entered." };
+      const lowMl = kg * 50;
+      const highMl = kg * 60;
+      return {
+        primary: { label: "Typical daily intake range", value: `${round(lowMl, 0)} - ${round(highMl, 0)} mL` },
+        secondary: [
+          { l: "Liters per day", v: `${round(lowMl / 1000, 2)} - ${round(highMl / 1000, 2)} L` },
+          { l: "Cups per day (240 mL)", v: `${round(lowMl / 240, 1)} - ${round(highMl / 240, 1)}` },
+          { l: "US fluid ounces per day", v: `${round(lowMl / 29.5735, 0)} - ${round(highMl / 29.5735, 0)}` },
+        ],
+        note: "This is a general reference range based on body weight, counting water from all sources including food. Many healthy dogs drink more or less depending on diet (wet food supplies water), exercise, heat, lactation, and medications. It is not a target to enforce and should never be used to limit your dog's access to fresh water. A large or lasting change in thirst is worth mentioning to a veterinarian.",
+      };
+    },
+    faq: [
+      { q: "How much water should a dog drink per day?", a: "A common reference is roughly 50 to 60 mL per kilogram of body weight per day from all sources. Individual healthy dogs can fall outside that range, so it works best as a general point of comparison." },
+      { q: "How is this different from the Water Intake Calculator?", a: "The Water Intake Calculator is designed for people and uses a human body-weight and exercise rule of thumb. Dogs have different needs, so this tool uses a canine reference instead." },
+      { q: "Should I limit my dog's water to this amount?", a: "No. Dogs should have constant access to clean water. The range is a reference for what is typical, not a cap." },
+      { q: "Why might my dog drink more than the range?", a: "Hot weather, exercise, a dry kibble diet, nursing puppies, and some medications can all increase drinking. Unexplained, sustained increases can also be linked to health problems, so check with a veterinarian." },
+      { q: "Does wet food count toward water intake?", a: "Yes. Moisture in wet or fresh food contributes to total water intake, which is why dogs on those diets often drink less from the bowl." },
+      { q: "Can this tell me if my dog is dehydrated?", a: "No. It is not a diagnostic tool. Signs such as lethargy, dry gums, or sunken eyes need prompt veterinary attention regardless of any calculation." },
+    ],
+    related: ["water-intake-calculator", "dog-food-calculator", "dog-size-calculator", "dog-age-calculator"],
+  },
+  {
+    id: "dry-matter-calculator",
+    category: "biology",
+    title: "Dry Matter Calculator",
+    keyword: "dry matter calculator",
+    description: "Find dry matter percentage and weight from moisture content, and convert a nutrient from an as-fed to a dry-matter basis.",
+    intro: "Enter the as-fed weight of a feed or sample and its moisture percentage to get dry matter percentage and weight. Add an as-fed nutrient percentage to see it expressed on a dry-matter basis so different feeds can be compared fairly.",
+    fields: [
+      { id: "asFedWeight", label: "As-fed weight (any unit, results use the same unit)", type: "number", default: 100, step: 1, min: 0 },
+      { id: "moisture", label: "Moisture (%)", type: "number", default: 12, step: 0.1, min: 0, max: 100 },
+      { id: "nutrient", label: "Nutrient as-fed (%) - optional, e.g. protein", type: "number", default: 18, step: 0.1, min: 0 },
+    ],
+    compute: (v) => {
+      if (!(v.asFedWeight >= 0) || !(v.moisture >= 0)) return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Weight and moisture cannot be negative." };
+      if (v.moisture > 100) return { primary: { label: "Moisture must be 100% or less", value: "-" }, secondary: [], note: "Moisture is a percentage of total weight, so it cannot exceed 100%." };
+      const dmPct = 100 - v.moisture;
+      const dmWeight = v.asFedWeight * (dmPct / 100);
+      const waterWeight = v.asFedWeight - dmWeight;
+      const secondary = [
+        { l: "Moisture weight", v: round(waterWeight, 3) },
+        { l: "Dry matter weight", v: round(dmWeight, 3) },
+      ];
+      if (v.nutrient > 0) {
+        if (dmPct <= 0) {
+          secondary.push({ l: "Nutrient on dry-matter basis", v: "Not defined (0% dry matter)" });
+        } else if (v.nutrient > dmPct) {
+          secondary.push({ l: "Nutrient on dry-matter basis", v: "Check inputs - nutrient exceeds dry matter" });
+        } else {
+          secondary.push({ l: "Nutrient on dry-matter basis", v: `${round((v.nutrient / dmPct) * 100, 2)}%` });
+        }
+      }
+      return {
+        primary: { label: "Dry matter", value: `${round(dmPct, 2)}%` },
+        secondary,
+        note: "Dry matter % = 100 - moisture %. Dry matter weight = as-fed weight x dry matter %. A nutrient on a dry-matter basis = as-fed nutrient % / dry matter % x 100. Comparing feeds on a dry-matter basis removes the effect of different water contents. Use a nutrient value that is measured on the same as-fed basis as the moisture.",
+      };
+    },
+    faq: [
+      { q: "What is dry matter?", a: "Dry matter is what remains of a feed or sample once all its water is removed. It is expressed as a percentage of the original, as-fed weight." },
+      { q: "Why convert nutrients to a dry-matter basis?", a: "Feeds hold different amounts of water, so as-fed percentages can be misleading. Putting each nutrient on a dry-matter basis lets you compare a wet feed with a dry one directly." },
+      { q: "Do I need to use a specific weight unit?", a: "No. Dry matter percentage does not depend on units, and weights come out in whatever unit you entered." },
+      { q: "What if the moisture is 100%?", a: "That means no dry matter at all, so a dry-matter-basis nutrient value cannot be calculated. The tool tells you when that happens instead of showing a meaningless number." },
+      { q: "Can I use this for pet food labels?", a: "Yes, for comparing guaranteed-analysis percentages between wet and dry foods, as long as you use the label's moisture value. It does not judge whether a food is appropriate for a particular pet." },
+      { q: "Does this replace laboratory analysis?", a: "No. Moisture readings can vary by sample and method. Use a lab result where accuracy matters for ration formulation." },
+    ],
+    related: ["feed-conversion-ratio-calculator", "dog-food-calculator", "percentage-calculator", "corn-yield-calculator"],
+  },
+  {
+    id: "feed-conversion-ratio-calculator",
+    category: "biology",
+    title: "Feed Conversion Ratio (FCR) Calculator",
+    keyword: "feed conversion ratio calculator",
+    description: "Calculate feed conversion ratio (FCR) from feed consumed and weight gained, plus the inverse feed efficiency.",
+    intro: "Enter the total feed consumed and the weight gained over the same period to calculate FCR. Both amounts use the same unit. FCR is only meaningful when compared within the same species, feed type, and production system.",
+    fields: [
+      { id: "feed", label: "Feed consumed", type: "number", default: 180, step: 1, min: 0 },
+      { id: "gain", label: "Weight gained", type: "number", default: 100, step: 1, min: 0 },
+      { id: "unit", label: "Unit for both", type: "select", default: "kg", options: [{ v: "kg", l: "kg" }, { v: "lb", l: "lb" }, { v: "g", l: "g" }] },
+    ],
+    compute: (v) => {
+      if (!(v.feed >= 0) || !(v.gain >= 0)) return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Feed consumed and weight gained cannot be negative. If animals lost weight, FCR does not apply." };
+      if (v.gain === 0) return { primary: { label: "Weight gain is zero", value: "-" }, secondary: [], note: "FCR divides feed by weight gained, so it cannot be calculated when there was no gain." };
+      if (v.feed === 0) return { primary: { label: "Enter the feed consumed", value: "-" }, secondary: [], note: "Feed consumed must be greater than zero." };
+      const fcr = v.feed / v.gain;
+      return {
+        primary: { label: "Feed conversion ratio (FCR)", value: `${round(fcr, 2)} : 1` },
+        secondary: [
+          { l: `Feed per 1 ${v.unit} of gain`, v: `${round(fcr, 2)} ${v.unit}` },
+          { l: "Feed efficiency (gain / feed)", v: round(v.gain / v.feed, 3) },
+          { l: "Gain per 100 units of feed", v: `${round((v.gain / v.feed) * 100, 1)} ${v.unit}` },
+        ],
+        note: "FCR = feed consumed / weight gained. A lower FCR means less feed was needed for each unit of gain, but there is no universal good or bad value: acceptable FCR differs across poultry, pigs, cattle, fish, and other systems, and depends on feed type, life stage, and whether feed is measured as-fed or on a dry-matter basis. Compare like with like.",
+      };
+    },
+    faq: [
+      { q: "What is a feed conversion ratio?", a: "It is the amount of feed an animal or group consumes for each unit of body weight it gains. A value of 2.0 means 2 units of feed per 1 unit of gain." },
+      { q: "Is a lower FCR always better?", a: "Lower usually means more feed-efficient, but only when the comparison is fair. Different species, ages, diets, and measurement methods produce very different typical values." },
+      { q: "How is this different from the Ratio Calculator?", a: "The Ratio Calculator simplifies or scales any two numbers. This tool is specific to agricultural feed and gain, reports the inverse feed efficiency, and explains the biological meaning." },
+      { q: "Should feed be as-fed or dry matter?", a: "Either can be used, but be consistent. Use the Dry Matter Calculator to convert if you need to compare rations with different moisture levels." },
+      { q: "What if weight gain is zero or negative?", a: "FCR is undefined when there is no gain, and negative gain has no meaningful FCR. The tool shows a message rather than a number in those cases." },
+      { q: "Does the period of measurement matter?", a: "Yes. Feed and gain must cover exactly the same period and group of animals, or the ratio will be misleading." },
+    ],
+    related: ["dry-matter-calculator", "cattle-per-acre-calculator", "ratio-calculator", "corn-yield-calculator"],
+  },
+  {
+    id: "fertilizer-calculator",
+    category: "construction",
+    title: "Fertilizer Calculator",
+    keyword: "fertilizer calculator",
+    description: "Work out how much fertilizer product you need for a lawn, garden, or field from its area and the application rate on your label.",
+    intro: "Enter the area to treat and the application rate from your product label or soil-test recommendation. The calculator gives the total product needed and, optionally, how many bags. It does not choose a rate for you.",
+    fields: [
+      { id: "area", label: "Area to treat", type: "number", default: 5000, step: 10, min: 0 },
+      { id: "areaUnit", label: "Area unit", type: "select", default: "sqft", options: [{ v: "sqft", l: "sq ft" }, { v: "sqm", l: "sq m" }, { v: "acre", l: "acres" }, { v: "ha", l: "hectares" }] },
+      { id: "rate", label: "Application rate (from your product label or soil test)", type: "number", default: 3, step: 0.1, min: 0 },
+      { id: "rateUnit", label: "Rate unit", type: "select", default: "lb1000", options: [{ v: "lb1000", l: "lb per 1,000 sq ft" }, { v: "lbacre", l: "lb per acre" }, { v: "kgha", l: "kg per hectare" }, { v: "gm2", l: "g per sq m" }] },
+      { id: "bagLb", label: "Bag size in lb (optional, 0 to skip)", type: "number", default: 0, step: 1, min: 0 },
+    ],
+    compute: (v) => {
+      if (!(v.area > 0) || !(v.rate > 0)) return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Area and application rate must both be greater than zero." };
+      const areaSqm = { sqft: 0.09290304, sqm: 1, acre: 4046.8564224, ha: 10000 }[v.areaUnit];
+      if (!areaSqm || areaSqm * v.area > 1e9) return { primary: { label: "Area looks unrealistic", value: "-" }, secondary: [], note: "Please check the area and unit entered." };
+      const kgPerSqm = { lb1000: 0.45359237 / 92.90304, lbacre: 0.45359237 / 4046.8564224, kgha: 1 / 10000, gm2: 1 / 1000 }[v.rateUnit];
+      const totalKg = v.area * areaSqm * v.rate * kgPerSqm;
+      const totalLb = totalKg / 0.45359237;
+      const secondary = [
+        { l: "Total product (kg)", v: round(totalKg, 2) },
+        { l: "Total product (lb)", v: round(totalLb, 2) },
+      ];
+      if (v.bagLb > 0) secondary.push({ l: `Bags of ${v.bagLb} lb needed`, v: `${Math.ceil(totalLb / v.bagLb - 1e-9)} (${round(totalLb / v.bagLb, 2)} exact)` });
+      return {
+        primary: { label: "Total fertilizer product needed", value: `${round(totalLb, 1)} lb` },
+        secondary,
+        note: "Total = area x application rate. Enter the rate exactly as the product label or a soil-test recommendation states it for the product you are using (rates are per unit of product, not per unit of nutrient, unless your label says so). Nutrient needs depend on the plant, soil, product formulation, and local conditions. Follow the label directions and never exceed the labeled rate.",
+      };
+    },
+    faq: [
+      { q: "Where do I find the right application rate?", a: "Use the rate on the product label, or the recommendation from a soil test or local agricultural extension service. This calculator only multiplies your area by the rate you enter." },
+      { q: "Why does the tool not suggest a rate?", a: "Correct rates depend on the crop or lawn, soil test results, the product's nutrient percentages, and local rules. A single suggested number could be wrong or harmful." },
+      { q: "Is the rate per unit of product or per unit of nutrient?", a: "Check your label. Most consumer labels give product per area. If a recommendation is in pounds of nitrogen, first divide by the nutrient fraction of the product to get product weight." },
+      { q: "Can I apply more than the label says to speed up results?", a: "No. Over-application can injure plants, harm water quality, and violate label directions. Follow the label." },
+      { q: "How does this differ from the Compost or Mulch Calculators?", a: "Those estimate volume for a given depth over an area. This estimates product weight for a given rate over an area." },
+      { q: "How accurate is the bag count?", a: "It is rounded up to whole bags. Uneven spreading and spreader calibration can change how far a bag goes, so check your spreader's settings." },
+    ],
+    related: ["compost-calculator", "mulch-calculator", "square-footage-calculator", "corn-yield-calculator"],
+  },
+  {
+    id: "fish-oil-for-cats-calculator",
+    category: "pets",
+    title: "Fish Oil for Cats Calculator",
+    keyword: "fish oil for cats calculator",
+    description: "Summarize a fish oil product's EPA and DHA per serving to discuss with your vet. It does not calculate a dose for your cat.",
+    intro: "Enter the EPA and DHA amounts printed on a fish oil product's label for one serving to see them added up and organized. This tool does not recommend or calculate an amount for your cat. Any use of fish oil should be confirmed with your veterinarian.",
+    fields: [
+      { id: "catWeight", label: "Cat's weight (for your notes only)", type: "number", default: 4.5, step: 0.1, min: 0 },
+      { id: "weightUnit", label: "Weight unit", type: "select", default: "kg", options: [{ v: "kg", l: "kg" }, { v: "lb", l: "lb" }] },
+      { id: "epa", label: "EPA per listed serving (mg, from label)", type: "number", default: 180, step: 1, min: 0 },
+      { id: "dha", label: "DHA per listed serving (mg, from label)", type: "number", default: 120, step: 1, min: 0 },
+    ],
+    compute: (v) => {
+      if (!(v.epa >= 0) || !(v.dha >= 0) || !(v.catWeight >= 0)) return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Values cannot be negative." };
+      const total = v.epa + v.dha;
+      if (total === 0) return { primary: { label: "Enter the EPA and DHA from the label", value: "-" }, secondary: [], note: "At least one of EPA or DHA must be greater than zero." };
+      if (total > 100000) return { primary: { label: "Values look unrealistic", value: "-" }, secondary: [], note: "Please check the label amounts you entered." };
+      const secondary = [
+        { l: "EPA per listed serving", v: `${round(v.epa, 1)} mg` },
+        { l: "DHA per listed serving", v: `${round(v.dha, 1)} mg` },
+      ];
+      if (v.epa > 0 && v.dha > 0) secondary.push({ l: "EPA : DHA ratio", v: `${round(v.epa / v.dha, 2)} : 1` });
+      if (v.catWeight > 0) secondary.push({ l: "Cat's weight (for your notes)", v: `${round(v.catWeight, 1)} ${v.weightUnit}` });
+      secondary.push({ l: "Next step", v: "Confirm any use and amount with your veterinarian" });
+      return {
+        primary: { label: "Combined EPA + DHA per listed serving", value: `${round(total, 1)} mg` },
+        secondary,
+        note: "This summary only restates the product information you entered. It is not a dosing calculation and does not suggest an amount for your cat. Whether fish oil is appropriate, and how much, depends on the reason for use, diet, existing omega-3 intake, health conditions, medications, and the specific product's concentration. Fish oil products are not interchangeable. Ask your veterinarian before starting or changing a supplement.",
+      };
+    },
+    faq: [
+      { q: "Does this tell me how much fish oil to give my cat?", a: "No. It intentionally does not calculate an amount. It only adds up the EPA and DHA listed for one serving of a product so you can share clear information with your veterinarian." },
+      { q: "Why not calculate a dose from my cat's weight?", a: "Appropriate supplementation depends on your cat's health, diet, medications, and the purpose of use, not weight alone. Only a veterinarian who knows your cat can decide that." },
+      { q: "What are EPA and DHA?", a: "They are the two main long-chain omega-3 fatty acids found in fish oil. Labels usually list them in milligrams per serving." },
+      { q: "Are all fish oil products interchangeable?", a: "No. Products differ in concentration, ingredients, and formulation, and some human products contain additives that may not suit cats. Ask your veterinarian which product is appropriate." },
+      { q: "When should I talk to my vet about fish oil?", a: "Before starting any supplement, especially if your cat has a medical condition, takes medication, or is scheduled for surgery." },
+      { q: "Is this related to the Cat Calorie Calculator?", a: "Only loosely. Fish oil adds calories and fat to the diet, so ask your veterinarian how it fits into your cat's overall nutrition." },
+    ],
+    related: ["cat-bmi-calculator", "cat-calorie-calculator", "cat-age-calculator"],
+  },
+  {
+    id: "growing-degree-units-calculator",
+    category: "biology",
+    title: "Growing Degree Units (GDU) Calculator",
+    keyword: "growing degree units calculator",
+    description: "Calculate daily and cumulative growing degree units (GDU) from high and low temperatures and a base temperature.",
+    intro: "Enter a day's high and low temperature and the base temperature for your crop or model to get growing degree units. Choose the simple average method or a modified method with a temperature ceiling and floor, and optionally multiply across days.",
+    fields: [
+      { id: "tmax", label: "Daily maximum temperature", type: "number", default: 86, step: 0.5 },
+      { id: "tmin", label: "Daily minimum temperature", type: "number", default: 60, step: 0.5 },
+      { id: "base", label: "Base temperature", type: "number", default: 50, step: 0.5 },
+      { id: "unit", label: "Temperature unit", type: "select", default: "F", options: [{ v: "F", l: "°F" }, { v: "C", l: "°C" }] },
+      { id: "method", label: "Method", type: "select", default: "simple", options: [{ v: "simple", l: "Simple average: (Tmax + Tmin) / 2 - base" }, { v: "modified", l: "Modified: Tmax capped at 86°F / 30°C, Tmin raised to base" }] },
+      { id: "days", label: "Number of days with these temperatures", type: "number", default: 1, step: 1, min: 1 },
+    ],
+    compute: (v) => {
+      if (!Number.isFinite(v.tmax) || !Number.isFinite(v.tmin) || !Number.isFinite(v.base)) return { primary: { label: "Enter valid temperatures", value: "-" }, secondary: [], note: "Maximum, minimum, and base temperature are all required." };
+      if (v.tmax < v.tmin) return { primary: { label: "Maximum is below minimum", value: "-" }, secondary: [], note: "The daily maximum temperature must be at least the daily minimum." };
+      if (!(v.days >= 1) || v.days > 366) return { primary: { label: "Enter 1 to 366 days", value: "-" }, secondary: [], note: "Number of days must be between 1 and 366." };
+      const lo = v.unit === "C" ? -60 : -76;
+      const hi = v.unit === "C" ? 60 : 140;
+      if (v.tmax > hi || v.tmin < lo || v.base > hi || v.base < lo) return { primary: { label: "Temperature looks unrealistic", value: "-" }, secondary: [], note: "Please check the temperatures and unit entered." };
+      let tmax = v.tmax;
+      let tmin = v.tmin;
+      if (v.method === "modified") {
+        const cap = v.unit === "C" ? 30 : 86;
+        if (tmax > cap) tmax = cap;
+        if (tmin < v.base) tmin = v.base;
+        if (tmax < tmin) tmax = tmin;
+      }
+      const raw = (tmax + tmin) / 2 - v.base;
+      const daily = Math.max(0, raw);
+      const unitLabel = v.unit === "C" ? "°C" : "°F";
+      return {
+        primary: { label: "Daily growing degree units", value: `${round(daily, 1)} GDU` },
+        secondary: [
+          { l: `Total over ${round(v.days, 0)} day(s)`, v: `${round(daily * Math.floor(v.days), 1)} GDU` },
+          { l: "Mean temperature used", v: `${round((tmax + tmin) / 2, 1)} ${unitLabel}` },
+          { l: "Method", v: v.method === "modified" ? "Modified (capped / floored)" : "Simple average" },
+        ],
+        note: "Daily GDU = ((Tmax + Tmin) / 2) - base, and a negative result is counted as zero. Base temperature depends on the crop or model (for example, many corn models use 50°F / 10°C). The modified option caps Tmax at 86°F / 30°C and raises Tmin to the base temperature, as some agricultural models do. GDU and growing degree day (GDD) conventions vary, so use the base and method your seed supplier or extension service specifies.",
+      };
+    },
+    faq: [
+      { q: "What are growing degree units?", a: "They measure how much heat accumulated in a day above a crop's base temperature. Adding them up across the season tracks crop development better than calendar days." },
+      { q: "Are growing degree units the same as growing degree days?", a: "In most uses they refer to the same heat-accumulation idea, but exact conventions (base temperature, caps, units) vary between sources. This tool shows the method used so you can match your reference." },
+      { q: "What base temperature should I use?", a: "It depends on the crop and model. Use the base your seed company, extension service, or model specifies. The default of 50°F is only a common starting point." },
+      { q: "What does the modified method do?", a: "It limits the maximum temperature at 86°F (30°C) and raises the minimum to the base temperature, because plant development slows in extreme heat and stops below base." },
+      { q: "Why is my result zero?", a: "The average temperature was at or below the base temperature, so no heat units accumulated. Daily GDU is never negative here." },
+      { q: "Can it add up a whole season?", a: "This tool multiplies one day's value by a number of days. For a real season, add up each day's own result from actual weather data." },
+    ],
+    related: ["corn-yield-calculator", "daily-light-integral-calculator", "co2-grow-room-calculator"],
+  },
+  {
+    id: "goat-gestation-calculator",
+    category: "biology",
+    title: "Goat Gestation Calculator",
+    keyword: "goat gestation calculator",
+    description: "Estimate a doe's kidding date and expected window from the breeding date, using an average 150-day goat gestation.",
+    intro: "Enter the breeding date to estimate when a doe is due to kid. The default uses an average goat gestation of about 150 days and also shows the usual range. Treat the date as a planning estimate, not a guarantee.",
+    fields: [
+      { id: "breedingDate", label: "Breeding date", type: "date", default: "2024-01-01" },
+      { id: "gestationDays", label: "Gestation length", type: "number", unit: "days", default: 150, step: 1, min: 1 },
+    ],
+    compute: (v) => {
+      if (!v.breedingDate || !(v.gestationDays >= 100) || v.gestationDays > 200) {
+        return { primary: { label: "Enter a valid breeding date", value: "-" }, secondary: [], note: "A breeding date is required, and gestation length should be between 100 and 200 days." };
+      }
+      const parts = String(v.breedingDate).split("-").map(Number);
+      if (parts.length !== 3 || parts.some((n) => !Number.isFinite(n))) return { primary: { label: "Enter a valid breeding date", value: "-" }, secondary: [], note: "Please enter the date in a valid format." };
+      const base = Date.UTC(parts[0], parts[1] - 1, parts[2]);
+      if (Number.isNaN(base) || new Date(base).getUTCDate() !== parts[2]) return { primary: { label: "Enter a valid breeding date", value: "-" }, secondary: [], note: "That date is not valid." };
+      const fmt = (days) => new Date(base + days * 86400000).toISOString().slice(0, 10);
+      return {
+        primary: { label: "Estimated kidding date", value: fmt(v.gestationDays) },
+        secondary: [
+          { l: "Gestation length used", v: `${v.gestationDays} days` },
+          { l: "Typical window (145-155 days)", v: `${fmt(145)} to ${fmt(155)}` },
+        ],
+        note: "Goat gestation averages about 150 days, and most does kid between roughly 145 and 155 days after breeding. Litter size, breed, and individual variation all affect timing, and if the doe was bred more than once the exact date is uncertain. Use this for planning and ask a veterinarian about pregnancy confirmation and kidding preparation.",
+      };
+    },
+    faq: [
+      { q: "How long are goats pregnant?", a: "About 150 days on average, or roughly five months. Individual pregnancies commonly run from about 145 to 155 days." },
+      { q: "Why is my doe kidding earlier or later than the estimate?", a: "Gestation length varies by breed, litter size, and the individual. Does carrying multiples sometimes kid a little earlier." },
+      { q: "What if the doe was exposed to the buck for several days?", a: "Then the true breeding date is uncertain. Use the earliest and latest possible dates to see the range of possible kidding dates." },
+      { q: "How is this different from the Cow Gestation Calculator?", a: "It uses the goat's shorter gestation of about 150 days instead of about 283 days for cattle." },
+      { q: "Should I use this to schedule veterinary care?", a: "It helps with planning, but a veterinarian is the best source for pregnancy confirmation, nutrition changes, and kidding preparation." },
+      { q: "Can I change the gestation length?", a: "Yes. Adjust the number of days if your breed or herd history suggests a different average." },
+    ],
+    related: ["cow-gestation-calculator", "dog-pregnancy-calculator", "cat-pregnancy-calculator", "days-until-calculator"],
+  },
+  {
+    id: "grain-bin-calculator",
+    category: "biology",
+    title: "Grain Bin Calculator",
+    keyword: "grain bin calculator",
+    description: "Estimate the volume and bushel capacity of a round grain bin from its diameter and grain depth.",
+    intro: "Enter a round bin's diameter and the depth of grain inside to estimate the volume and the number of bushels of space it fills. This measures geometric volume only, not the weight of any grain.",
+    fields: [
+      { id: "diameter", label: "Bin diameter", type: "number", default: 27, step: 0.5, min: 0 },
+      { id: "depth", label: "Grain depth (height of fill)", type: "number", default: 30, step: 0.5, min: 0 },
+      { id: "unit", label: "Unit for both", type: "select", default: "ft", options: [{ v: "ft", l: "feet" }, { v: "m", l: "meters" }] },
+    ],
+    compute: (v) => {
+      if (!(v.diameter > 0) || !(v.depth > 0)) return { primary: { label: "Enter valid dimensions", value: "-" }, secondary: [], note: "Diameter and depth must both be greater than zero." };
+      const ft = v.unit === "m" ? 3.280839895 : 1;
+      const dFt = v.diameter * ft;
+      const hFt = v.depth * ft;
+      if (dFt > 500 || hFt > 500) return { primary: { label: "Dimensions look unrealistic", value: "-" }, secondary: [], note: "Please check the sizes and unit entered." };
+      const cubicFt = Math.PI * Math.pow(dFt / 2, 2) * hFt;
+      const cubicM = cubicFt * 0.028316846592;
+      const bushels = cubicFt / 1.2445668;
+      return {
+        primary: { label: "Approximate capacity", value: `${round(bushels, 0).toLocaleString("en-US")} bushels` },
+        secondary: [
+          { l: "Volume (cubic feet)", v: round(cubicFt, 0).toLocaleString("en-US") },
+          { l: "Volume (cubic meters)", v: round(cubicM, 1) },
+        ],
+        note: "Volume = pi x (diameter / 2)^2 x grain depth, converted to US bushels at 1 bushel = 1.2445668 cubic feet (the standard volumetric bushel). This is space, not weight: the weight of stored grain depends on the crop, test weight, moisture, and packing. It also ignores a peaked grain surface, a hopper or cone bottom, and headspace, so real capacity will differ. Confirm with your bin's rated capacity.",
+      };
+    },
+    faq: [
+      { q: "How do I calculate the volume of a grain bin?", a: "For a round bin, multiply the area of the circle (pi x radius squared) by the depth of the grain. This tool then converts the result into cubic feet, cubic meters, and bushels." },
+      { q: "Does this tell me how many pounds of grain the bin holds?", a: "No. Grain weight depends on the crop, its test weight, moisture, and packing, so this tool reports volume-based bushels only." },
+      { q: "Why does my bin's rated capacity differ?", a: "Rated capacity may account for a peaked top, a cone or hopper bottom, and headspace, while this tool assumes a plain cylinder filled to a flat surface." },
+      { q: "What is a bushel in this calculator?", a: "A US volumetric bushel of about 1.2445668 cubic feet (2,150.42 cubic inches). It is a measure of space." },
+      { q: "How is this different from the Cylinder Volume Calculator?", a: "The Cylinder Volume Calculator gives geometric volume from radius and height. This one is set up for bins and converts the result to bushels directly." },
+      { q: "Can I use metric dimensions?", a: "Yes. Choose meters and the tool converts to feet for the bushel calculation." },
+    ],
+    related: ["cylinder-volume-calculator", "corn-yield-calculator", "volume-converter", "cattle-per-acre-calculator"],
   },
 ];
 

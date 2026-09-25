@@ -99,7 +99,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-22",
+      "dateModified": "2026-09-25",
       "inLanguage": "es"
     },
     {
@@ -175,6 +175,14 @@
             "@type": "Answer",
             "text": "Sí: el modelo de crecimiento exponencial y la fórmula de tiempo de duplicación se aplican en general a cualquier población que crezca exponencialmente, ya sean bacterias, levaduras o células de mamífero en cultivo. Los tiempos de duplicación típicos difieren enormemente según el organismo y las condiciones (las bacterias pueden duplicarse en 20-30 minutos en condiciones ideales, mientras que muchas líneas celulares de mamíferos se duplican en aproximadamente 18-24 horas), pero las matemáticas subyacentes son las mismas."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿El tiempo de generación es lo mismo que el tiempo de duplicación?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Para un cultivo en crecimiento exponencial, sí: el tiempo de generación (común en microbiología, sobre todo con bacterias) es el tiempo que tarda la población en duplicarse. Esta calculadora lo halla a partir de un recuento inicial, uno final y el tiempo transcurrido, y también informa el número de generaciones (duplicaciones) observadas."
+          }
         }
       ]
     }
@@ -216,7 +224,7 @@
       <main>
         <h1>Calculadora de Tiempo de Duplicación Celular</h1>
         <p style="max-width:60ch;">Introduce un recuento celular inicial, un recuento celular final y el tiempo transcurrido entre ambos para estimar el tiempo de duplicación, asumiendo crecimiento exponencial durante ese intervalo.</p>
-        <p class="last-updated">Última actualización: September 22, 2026</p>
+        <p class="last-updated">Última actualización: September 25, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel" id="calc-panel">
@@ -265,6 +273,10 @@
 <div class="faq-item">
 <h3>¿Esto funciona tanto para cultivos bacterianos como para cultivos de células de mamífero?</h3>
 <p>Sí: el modelo de crecimiento exponencial y la fórmula de tiempo de duplicación se aplican en general a cualquier población que crezca exponencialmente, ya sean bacterias, levaduras o células de mamífero en cultivo. Los tiempos de duplicación típicos difieren enormemente según el organismo y las condiciones (las bacterias pueden duplicarse en 20-30 minutos en condiciones ideales, mientras que muchas líneas celulares de mamíferos se duplican en aproximadamente 18-24 horas), pero las matemáticas subyacentes son las mismas.</p>
+</div>
+<div class="faq-item">
+<h3>¿El tiempo de generación es lo mismo que el tiempo de duplicación?</h3>
+<p>Para un cultivo en crecimiento exponencial, sí: el tiempo de generación (común en microbiología, sobre todo con bacterias) es el tiempo que tarda la población en duplicarse. Esta calculadora lo halla a partir de un recuento inicial, uno final y el tiempo transcurrido, y también informa el número de generaciones (duplicaciones) observadas.</p>
 </div></div>
           <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calcular</a>
         </div>
