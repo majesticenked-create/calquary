@@ -233,6 +233,16 @@ const WAVE_ONE_TOOL_IDS = [
   "electrolysis-calculator",
   "electron-configuration-calculator",
   "electronegativity-calculator",
+  // Batch 26 (Batch 015 build): 9 new tools translated into all 11 non-English locales.
+  "emf-calculator",
+  "entropy-calculator",
+  "enzyme-activity-calculator",
+  "equilibrium-constant-calculator",
+  "freezing-point-depression-calculator",
+  "gibbs-free-energy-calculator",
+  "gibbs-phase-rule-calculator",
+  "grams-to-moles-calculator",
+  "heat-of-combustion-calculator",
 ];
 
 function loadData() {

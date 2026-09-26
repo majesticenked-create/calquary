@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>凝固点降下計算機 - 無料オンライン計算ツール | Calquary</title>
+  <meta name="description" content="不揮発性溶質を含む希薄溶液の凝固点降下ΔTf = i·Kf·mと、溶液の推定凝固点を計算します。" />
+  <meta property="og:title" content="凝固点降下計算機 | Calquary">
+  <meta property="og:description" content="不揮発性溶質を含む希薄溶液の凝固点降下ΔTf = i·Kf·mと、溶液の推定凝固点を計算します。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/ja/tool/freezing-point-depression-calculator">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/freezing-point-depression-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="凝固点降下計算機 | Calquary">
+  <meta name="twitter:description" content="不揮発性溶質を含む希薄溶液の凝固点降下ΔTf = i·Kf·mと、溶液の推定凝固点を計算します。">
+  <meta name="twitter:image" content="https://calquary.com/og-images/freezing-point-depression-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/freezing-point-depression-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/freezing-point-depression-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/freezing-point-depression-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/freezing-point-depression-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/freezing-point-depression-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/freezing-point-depression-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/freezing-point-depression-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/freezing-point-depression-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/freezing-point-depression-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/freezing-point-depression-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/freezing-point-depression-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/freezing-point-depression-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/freezing-point-depression-calculator">
+    <link rel="canonical" href="https://calquary.com/ja/tool/freezing-point-depression-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("freezing-point-depression-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("freezing-point-depression-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "凝固点降下計算機",
+      "description": "不揮発性溶質を含む希薄溶液の凝固点降下ΔTf = i·Kf·mと、溶液の推定凝固点を計算します。",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/ja/tool/freezing-point-depression-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-26",
+      "inLanguage": "ja"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/ja/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Chemistry",
+          "item": "https://calquary.com/ja/category/chemistry"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "凝固点降下計算機",
+          "item": "https://calquary.com/ja/tool/freezing-point-depression-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "凝固点降下とは何ですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不揮発性の溶質を溶かしたとき、溶媒の凝固温度が下がることです。溶けた粒子が溶媒の秩序だった固体を作る能力を妨げるため、凍るにはより低い温度が必要になります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "式は何ですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ΔTf = i × Kf × mです。iはファントホッフ係数、Kfは溶媒のモル凝固点降下定数(K·kg/mol)、mは質量モル濃度(mol/kg)です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "沸点上昇とどう違いますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "どちらも同じ溶けた粒子の効果による束一的性質ですが、凝固点降下は凝固温度を下げ、沸点上昇は沸騰温度を上げます。各溶媒には別々のKfとKbの定数があり、一般に互いに異なります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "どのファントホッフ係数を使えばよいですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "砂糖のように解離しない分子では約1、NaClのように完全に解離する塩では2に近くなります。実際の溶液は、特に濃度が高いとき、これらの理想値からずれます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "なぜKfは溶媒ごとに違うのですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kfは溶媒のモル質量と融解エンタルピーに依存します。そのため、すべてに1つの定数を使うのではなく、溶媒のプリセットとカスタムの選択肢を用意しています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "この式はいつ信頼できなくなりますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "濃厚な溶液、相互作用の強い溶液、非理想性の強い溶液です。希薄溶液に最も適した理想化モデルです。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/ja/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/ja/#categories">カテゴリー</a>
+          <a href="/ja/#tools">すべてのツール</a>
+          <a href="/ja/about">このサイトについて</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: 日本語">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>JA</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/freezing-point-depression-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/freezing-point-depression-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/freezing-point-depression-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/freezing-point-depression-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/freezing-point-depression-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/freezing-point-depression-calculator">Italiano</a><span class="locale-item current" role="menuitem" aria-current="true">日本語</span><a class="locale-item" role="menuitem" href="/ro/tool/freezing-point-depression-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/freezing-point-depression-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/freezing-point-depression-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/freezing-point-depression-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/freezing-point-depression-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/ja/">Calquary</a> / <a href="/ja/category/chemistry">化学</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>凝固点降下計算機</h1>
+        <p style="max-width:60ch;">質量モル濃度、ファントホッフ係数、溶媒(またはカスタムのモル凝固点降下定数Kf)を入力すると、凝固点降下が分かります。任意で溶液の推定凝固点も得られます。これは理想化された希薄溶液のモデルです。</p>
+        <p class="last-updated">最終更新日： September 26, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">計算する</button>
+              <button type="button" id="calc-reset" class="btn-ghost">リセット</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>よくある質問</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>凝固点降下とは何ですか?</h3>
+<p>不揮発性の溶質を溶かしたとき、溶媒の凝固温度が下がることです。溶けた粒子が溶媒の秩序だった固体を作る能力を妨げるため、凍るにはより低い温度が必要になります。</p>
+</div>
+<div class="faq-item">
+<h3>式は何ですか?</h3>
+<p>ΔTf = i × Kf × mです。iはファントホッフ係数、Kfは溶媒のモル凝固点降下定数(K·kg/mol)、mは質量モル濃度(mol/kg)です。</p>
+</div>
+<div class="faq-item">
+<h3>沸点上昇とどう違いますか?</h3>
+<p>どちらも同じ溶けた粒子の効果による束一的性質ですが、凝固点降下は凝固温度を下げ、沸点上昇は沸騰温度を上げます。各溶媒には別々のKfとKbの定数があり、一般に互いに異なります。</p>
+</div>
+<div class="faq-item">
+<h3>どのファントホッフ係数を使えばよいですか?</h3>
+<p>砂糖のように解離しない分子では約1、NaClのように完全に解離する塩では2に近くなります。実際の溶液は、特に濃度が高いとき、これらの理想値からずれます。</p>
+</div>
+<div class="faq-item">
+<h3>なぜKfは溶媒ごとに違うのですか?</h3>
+<p>Kfは溶媒のモル質量と融解エンタルピーに依存します。そのため、すべてに1つの定数を使うのではなく、溶媒のプリセットとカスタムの選択肢を用意しています。</p>
+</div>
+<div class="faq-item">
+<h3>この式はいつ信頼できなくなりますか?</h3>
+<p>濃厚な溶液、相互作用の強い溶液、非理想性の強い溶液です。希薄溶液に最も適した理想化モデルです。</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">計算する</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>関連ツール</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>精度について</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquaryの計算ツールは、迅速で信頼できる概算を目的としています。実際の財務、構造、医療に関わる重要な決定を行う前には、必ず専門家にご確認ください。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/ja/">← すべての計算ツールに戻る</a> · <a href="/ja/about">このサイトについて</a> · <a href="/ja/contact">お問い合わせ</a> · <a href="/ja/privacy">プライバシー</a> · <a href="/ja/terms">利用規約</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

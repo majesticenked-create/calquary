@@ -1972,7 +1972,7 @@ const CALCULATORS = [
       { q: "Is 'molar weight calculator' or 'mol wt calculator' the same as molecular weight?", a: "Yes - \"molar weight,\" \"mol wt,\" \"molecular weight,\" and \"molar mass\" are all names for the same quantity: the mass of one mole of a substance, in grams per mole. This calculator computes it from any chemical formula you enter." },
       { q: "How do we calculate molar mass?", a: "Add up the atomic weight of each element in the formula, multiplied by how many atoms of that element appear - for H2O, that's 2 × 1.008 (hydrogen) + 1 × 15.999 (oxygen) = 18.015 g/mol. Enter any formula above and this calculator does that sum for you." },
     ],
-    related: ["percentage-calculator", "avogadros-number-calculator", "dna-copy-number-calculator", "annealing-temperature-calculator"],
+    related: ["grams-to-moles-calculator", "avogadros-number-calculator", "dna-copy-number-calculator", "annealing-temperature-calculator"],
   },
   {
     id: "empirical-formula-calculator",
@@ -2380,7 +2380,7 @@ const CALCULATORS = [
       { q: "What's the balanced equation for the combustion of methane (CH4 + O2 -> CO2 + H2O)?", a: "CH₄ + 2O₂ → CO₂ + 2H₂O - one methane molecule needs two oxygen molecules to fully convert its carbon to CO₂ and its four hydrogens to two water molecules, balancing 1 C, 4 H, and 4 O on each side." },
       { q: "Can this balance the combustion of any hydrocarbon, like propane or octane?", a: "Yes. Enter the hydrocarbon plus O2 on the left and CO2 + H2O on the right, for example C3H8 + O2 -> CO2 + H2O or C8H18 + O2 -> CO2 + H2O, and the calculator finds the whole-number coefficients for complete combustion. This is a symbolic, idealized combustion equation - it doesn't cover incomplete combustion, real fuel-air ratios, or how to carry out a combustion reaction." },
     ],
-    related: ["molecular-weight-calculator", "combustion-analysis-calculator", "actual-yield-calculator"],
+    related: ["molecular-weight-calculator", "combustion-analysis-calculator", "heat-of-combustion-calculator"],
   },
   {
     id: "solubility-product-calculator",
@@ -12770,7 +12770,7 @@ const CALCULATORS = [
       { q: "What does dilution factor do in the A280 mode?", a: "If you diluted your sample before measuring absorbance, multiply the calculated concentration back up by the dilution factor to get the concentration of your original, undiluted sample." },
       { q: "Can I use this for crude extracts or mixtures?", a: "A280 readings for mixtures reflect the combined absorbance of everything present, not just your protein of interest, so this mode is most reliable for purified or well-characterized protein solutions." },
     ],
-    related: ["dna-concentration-calculator", "cell-dilution-calculator", "protein-molecular-weight-calculator", "beer-lambert-law-calculator"],
+    related: ["dna-concentration-calculator", "enzyme-activity-calculator", "protein-molecular-weight-calculator", "beer-lambert-law-calculator"],
   },
   {
     id: "protein-molecular-weight-calculator",
@@ -13869,7 +13869,7 @@ const CALCULATORS = [
       { q: "Why does a higher charge lower γ so quickly?", a: "The charge enters as z², so a divalent ion is affected four times as strongly as a monovalent ion at the same ionic strength." },
       { q: "Is this the same as a correlation coefficient?", a: "No. The activity coefficient is a chemistry correction factor and has nothing to do with a statistical correlation coefficient." },
     ],
-    related: ["water-potential-calculator", "molecular-weight-calculator", "titration-ph-calculator"],
+    related: ["water-potential-calculator", "equilibrium-constant-calculator", "titration-ph-calculator"],
   },
   {
     id: "actual-yield-calculator",
@@ -14554,7 +14554,7 @@ const CALCULATORS = [
       { q: "Why is Kb different for each solvent?", a: "Kb depends on the solvent's properties. That is why the calculator offers solvent presets and a custom option instead of a single constant for everything." },
       { q: "When does the equation fail?", a: "For concentrated, strongly interacting, or volatile-solute solutions. It is an idealized dilute-solution model." },
     ],
-    related: ["boiling-point-calculator", "boiling-point-at-altitude-calculator", "water-potential-calculator", "temperature-converter"],
+    related: ["boiling-point-calculator", "freezing-point-depression-calculator", "water-potential-calculator", "temperature-converter"],
   },
   {
     id: "bond-order-calculator",
@@ -14673,6 +14673,7 @@ const CALCULATORS = [
       { q: "Does this equation work at any concentration?", a: "It is most accurate for dilute solutions. At high concentrations, ionic strength affects activity coefficients and the simple concentration-based equation becomes less accurate." },
       { q: "How is this different from Buffer Capacity?", a: "This calculator estimates pH from a buffer's composition. Buffer Capacity instead measures how much a buffer resists pH change when acid or base is added, from an observed pH shift." },
       { q: "Does this give a recipe for making a specific buffer?", a: "No. It estimates pH from concentrations you supply and does not provide preparation instructions." },
+      { q: "Is this the same as a Henderson-Hasselbalch Calculator?", a: "Yes. \"Buffer pH\" and \"Henderson-Hasselbalch\" refer to the same equation and the same calculation, so this single page covers both names rather than splitting them into separate pages." },
     ],
     related: ["buffer-capacity-calculator", "titration-ph-calculator", "activity-coefficient-calculator"],
   },
@@ -15274,7 +15275,7 @@ const CALCULATORS = [
       { q: "What's the difference between charge, current, and moles of electrons here?", a: "Charge (Q, in coulombs) is the total electrical quantity transferred. Current (I, in amperes) is charge per unit time. Moles of electrons (n) converts charge into a chemistry-relevant amount using the Faraday constant." },
       { q: "How does this relate to Avogadro's Number?", a: "The Faraday constant is Avogadro's number times the charge of a single electron. See the Avogadro's Number Calculator for conversions between moles and particle counts more generally." },
     ],
-    related: ["avogadros-number-calculator", "activity-coefficient-calculator", "atom-calculator"],
+    related: ["avogadros-number-calculator", "emf-calculator", "atom-calculator"],
   },
   {
     id: "electron-configuration-calculator",
@@ -15413,6 +15414,465 @@ const CALCULATORS = [
       { q: "How does this relate to Bond Order?", a: "Electronegativity difference is one factor influencing bond polarity, while bond order (from molecular orbital theory) is a separate measure related to bond strength and length. They describe different aspects of a chemical bond." },
     ],
     related: ["electron-configuration-calculator", "bond-order-calculator", "chemical-name-calculator"],
+  },
+  {
+    id: "emf-calculator",
+    category: "chemistry",
+    title: "EMF Calculator",
+    keyword: "emf calculator, electromotive force calculator, cell potential calculator, nernst equation calculator",
+    description: "Calculate the standard cell potential of a galvanic cell from reduction potentials, or its potential under nonstandard conditions with the Nernst equation.",
+    intro: "Choose standard conditions or the Nernst equation. For standard conditions, enter the standard reduction potentials of the cathode and anode half-reactions. For the Nernst equation, also enter temperature, moles of electrons transferred, and the reaction quotient Q.",
+    fields: [
+      { id: "mode", label: "Mode", type: "select", default: "standard", options: [{ v: "standard", l: "Standard cell potential (E°cell)" }, { v: "nernst", l: "Nernst equation (nonstandard conditions)" }] },
+      { id: "eCathode", label: "Cathode standard reduction potential E°(cathode)", type: "number", default: 0.34, step: "any" },
+      { id: "eAnode", label: "Anode standard reduction potential E°(anode)", type: "number", default: -0.76, step: "any" },
+      { id: "voltUnit", label: "Voltage unit", type: "select", default: "V", options: [{ v: "V", l: "V" }, { v: "mV", l: "mV" }] },
+      { id: "n", label: "Moles of electrons transferred, n (Nernst mode)", type: "number", default: 2, step: 1, min: 1 },
+      { id: "temperature", label: "Temperature (Nernst mode)", type: "number", default: 298.15, step: "any" },
+      { id: "tempUnit", label: "Temperature unit", type: "select", default: "K", options: [{ v: "K", l: "Kelvin (K)" }, { v: "C", l: "Celsius (°C)" }] },
+      { id: "q", label: "Reaction quotient Q (Nernst mode)", type: "number", default: 1, step: "any", min: 0 },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      if (!Number.isFinite(v.eCathode) || !Number.isFinite(v.eAnode)) return bad("Enter both standard reduction potentials.");
+      const toV = v.voltUnit === "mV" ? 0.001 : 1;
+      const eCathode = v.eCathode * toV;
+      const eAnode = v.eAnode * toV;
+      const eStd = eCathode - eAnode;
+      if (v.mode === "standard") {
+        return {
+          primary: { label: "Standard cell potential E°cell", value: `${round(eStd, 5)} V` },
+          secondary: [
+            { l: "Cathode potential used", v: `${round(eCathode, 5)} V` },
+            { l: "Anode potential used", v: `${round(eAnode, 5)} V` },
+            { l: "In mV", v: `${round(eStd * 1000, 2)} mV` },
+          ],
+          note: "E°cell = E°(cathode) − E°(anode), using standard reduction potentials for both half-reactions (do not convert the anode value to an oxidation potential first - this formula already accounts for that). A positive E°cell indicates a thermodynamically favorable reaction as written, under standard conditions.",
+        };
+      }
+      const T = v.tempUnit === "C" ? v.temperature + 273.15 : v.temperature;
+      if (!(T > 0)) return bad("Temperature must be above absolute zero.");
+      if (!Number.isInteger(v.n) || v.n < 1) return bad("Moles of electrons transferred (n) must be a positive whole number.");
+      if (!(v.q >= 0) || !Number.isFinite(v.q)) return bad("The reaction quotient Q must be zero or a positive number.");
+      const R = 8.314462618;
+      const F = 96485.33212;
+      let e;
+      if (v.q === 0) {
+        e = Infinity;
+      } else {
+        e = eStd - ((R * T) / (v.n * F)) * Math.log(v.q);
+      }
+      if (!Number.isFinite(e)) return bad("Q = 0 makes ln(Q) undefined (negative infinity); enter a positive reaction quotient.");
+      return {
+        primary: { label: "Cell potential E (Nernst)", value: `${round(e, 5)} V` },
+        secondary: [
+          { l: "Standard cell potential E°cell", v: `${round(eStd, 5)} V` },
+          { l: "Temperature used", v: `${round(T, 2)} K` },
+          { l: "n (electrons transferred)", v: `${v.n}` },
+        ],
+        note: "E = E° − (RT/nF) ln Q, with R = 8.314462618 J/(mol·K), F = 96,485.33212 C/mol, and T in kelvin. This describes an idealized electrochemical cell at the stated temperature and reaction quotient. It is an educational calculation, not instructions for constructing a battery or running an electrochemical experiment.",
+      };
+    },
+    faq: [
+      { q: "What does EMF mean here?", a: "Electromotive force (EMF) is the maximum theoretical voltage, or cell potential, that a galvanic cell can produce. Under standard conditions it's written E°cell." },
+      { q: "Why do I enter reduction potentials for both electrodes?", a: "By convention, standard electrode potential tables list reduction potentials. The formula E°cell = E°(cathode) − E°(anode) is built to use reduction potentials directly for both half-reactions - you should not flip the sign of the anode value first." },
+      { q: "What does a positive or negative E°cell mean?", a: "A positive E°cell means the reaction as written is thermodynamically favorable under standard conditions. A negative value means the reverse reaction is favorable instead." },
+      { q: "What is the Nernst equation used for?", a: "It adjusts the cell potential for conditions that aren't standard - specifically, a reaction quotient Q different from 1 and a temperature that may differ from 298.15 K (25 °C)." },
+      { q: "Why does Q = 0 give an error?", a: "The Nernst equation includes ln(Q), and the natural logarithm of zero is undefined (it approaches negative infinity), so the calculator can't return a finite potential in that case." },
+      { q: "Does this calculator help me build a battery?", a: "No. It's strictly an educational calculation of theoretical cell potential from the values you provide. It doesn't cover electrode materials, electrolyte preparation, or cell construction." },
+    ],
+    related: ["electrolysis-calculator", "gibbs-free-energy-calculator", "activity-coefficient-calculator"],
+  },
+  {
+    id: "entropy-calculator",
+    category: "chemistry",
+    title: "Entropy Calculator",
+    keyword: "entropy calculator, entropy change calculator, reversible heat calculator",
+    description: "Calculate the entropy change ΔS = qrev / T for a reversible, isothermal heat transfer from the heat transferred and the absolute temperature.",
+    intro: "Enter the reversible heat transferred and the absolute temperature at which it occurs. The calculator returns the entropy change using ΔS = qrev / T, the standard relationship for a reversible process at constant temperature.",
+    fields: [
+      { id: "q", label: "Reversible heat transfer qrev", type: "number", default: 100, step: "any" },
+      { id: "qUnit", label: "Heat unit", type: "select", default: "J", options: [{ v: "J", l: "J" }, { v: "kJ", l: "kJ" }, { v: "cal", l: "cal" }] },
+      { id: "temperature", label: "Temperature", type: "number", default: 300, step: "any" },
+      { id: "tempUnit", label: "Temperature unit", type: "select", default: "K", options: [{ v: "K", l: "Kelvin (K)" }, { v: "C", l: "Celsius (°C)" }] },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      if (!Number.isFinite(v.q)) return bad("Enter a heat transfer value.");
+      const T = v.tempUnit === "C" ? v.temperature + 273.15 : v.temperature;
+      if (!(T > 0)) return bad("Temperature must be above absolute zero.");
+      const qJ = v.q * { J: 1, kJ: 1000, cal: 4.184 }[v.qUnit];
+      const dS = qJ / T;
+      return {
+        primary: { label: "Entropy change ΔS", value: `${round(dS, 6)} J/K` },
+        secondary: [
+          { l: "Heat used", v: `${round(qJ, 3)} J` },
+          { l: "Temperature used", v: `${round(T, 2)} K` },
+          { l: "In cal/K", v: `${round(dS / 4.184, 6)} cal/K` },
+        ],
+        note: "ΔS = qrev / T, using the reversible heat transfer at constant absolute temperature T. This is the classical definition of entropy change for a reversible, isothermal process - it does not apply directly to irreversible processes or to processes where temperature changes during heat transfer, which need integration or other methods.",
+      };
+    },
+    faq: [
+      { q: "What is entropy change measuring here?", a: "It measures the change in a system's entropy, a thermodynamic quantity related to the dispersal of energy, from the heat transferred reversibly at a constant absolute temperature." },
+      { q: "Why must the process be reversible?", a: "The relationship ΔS = qrev / T specifically uses the heat that would be transferred in a reversible (idealized, infinitely slow) process. Using the heat from an actual irreversible process in this formula gives an incorrect entropy change." },
+      { q: "Why does the calculator require kelvin?", a: "Absolute temperature is required because entropy is fundamentally tied to the thermodynamic (kelvin) temperature scale; Celsius has an arbitrary zero point that would make the ratio meaningless." },
+      { q: "Does this work for processes where temperature changes?", a: "Not directly. This formula assumes T stays constant during the heat transfer. Processes with changing temperature need an integral of dqrev/T over the process, which this simple calculator does not compute." },
+      { q: "What does a positive or negative ΔS mean?", a: "A positive ΔS means the system's entropy increased; a negative ΔS means it decreased. The sign depends on the direction and nature of the heat transfer you entered." },
+      { q: "How does this relate to Gibbs Free Energy?", a: "Entropy change is one of the three quantities (along with enthalpy change and temperature) used in ΔG = ΔH − TΔS on the Gibbs Free Energy Calculator to assess thermodynamic favorability." },
+    ],
+    related: ["gibbs-free-energy-calculator", "freezing-point-depression-calculator", "boiling-point-elevation-calculator"],
+  },
+  {
+    id: "enzyme-activity-calculator",
+    category: "biology",
+    title: "Enzyme Activity Calculator",
+    keyword: "enzyme activity calculator, enzyme units calculator, specific activity calculator",
+    description: "Calculate enzyme activity in units (U), activity concentration (U/mL), and specific activity (U/mg protein) from substrate or product amount over time.",
+    intro: "Enter the amount of substrate converted or product formed and the elapsed assay time to get enzyme activity in units (1 U = 1 µmol/min). Optionally add sample volume for activity concentration, or protein mass for specific activity.",
+    fields: [
+      { id: "amount", label: "Substrate converted or product formed", type: "number", default: 30, step: "any", min: 0 },
+      { id: "amountUnit", label: "Amount unit", type: "select", default: "umol", options: [{ v: "umol", l: "µmol" }, { v: "nmol", l: "nmol" }, { v: "mmol", l: "mmol" }] },
+      { id: "time", label: "Elapsed time", type: "number", default: 10, step: "any", min: 0 },
+      { id: "timeUnit", label: "Time unit", type: "select", default: "min", options: [{ v: "min", l: "minutes" }, { v: "s", l: "seconds" }, { v: "h", l: "hours" }] },
+      { id: "volume", label: "Sample volume in mL (0 to skip)", type: "number", default: 1, step: "any", min: 0 },
+      { id: "protein", label: "Protein mass in mg (0 to skip specific activity)", type: "number", default: 0, step: "any", min: 0 },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      if (!(v.amount >= 0)) return bad("The amount converted cannot be negative.");
+      if (!(v.time > 0)) return bad("Elapsed time must be greater than zero.");
+      const umol = v.amount * { umol: 1, nmol: 0.001, mmol: 1000 }[v.amountUnit];
+      const minutes = v.time * { min: 1, s: 1 / 60, h: 60 }[v.timeUnit];
+      const units = umol / minutes;
+      const secondary = [
+        { l: "Amount used", v: `${round(umol, 5)} µmol` },
+        { l: "Time used", v: `${round(minutes, 5)} min` },
+      ];
+      if (v.volume > 0) {
+        secondary.push({ l: "Activity concentration", v: `${round(units / v.volume, 5)} U/mL` });
+      }
+      if (v.protein > 0) {
+        secondary.push({ l: "Specific activity", v: `${round(units / v.protein, 5)} U/mg protein` });
+      }
+      return {
+        primary: { label: "Enzyme activity", value: `${round(units, 5)} U` },
+        secondary,
+        note: "Activity (U) = amount converted (µmol) / time (min), using the common convention 1 U = 1 µmol of substrate converted or product formed per minute. Activity concentration divides by sample volume (U/mL), and specific activity divides by protein mass (U/mg protein). Measured activity depends on assay conditions - temperature, pH, substrate concentration, and method - so values are only comparable when measured under the same or standardized conditions.",
+      };
+    },
+    faq: [
+      { q: "What is a unit (U) of enzyme activity?", a: "By common convention, 1 U is the amount of enzyme that converts 1 micromole (µmol) of substrate, or forms 1 µmol of product, per minute under the stated assay conditions." },
+      { q: "What is the difference between activity, activity concentration, and specific activity?", a: "Activity (U) is a total amount of catalytic activity. Activity concentration (U/mL) divides that by the sample volume, describing concentration in the original sample. Specific activity (U/mg protein) divides total activity by protein mass, describing enzyme purity or how much activity comes from each milligram of protein." },
+      { q: "Why does measured activity depend on assay conditions?", a: "Enzyme reaction rates are sensitive to temperature, pH, substrate concentration, and the specific assay method. Activity values from different labs or conditions aren't directly comparable unless the conditions are standardized or stated." },
+      { q: "Is enzyme activity the same as protein concentration?", a: "No. Protein concentration measures how much protein is present, regardless of whether it's catalytically active. Enzyme activity measures the rate of a catalyzed reaction, which depends on how much active enzyme is present and how efficiently it works under the assay conditions." },
+      { q: "Does this calculator tell me how to run an enzyme assay?", a: "No. It only performs the arithmetic on the substrate/product amount and time you provide. It doesn't cover assay design, reagent preparation, or laboratory procedures." },
+      { q: "How is this related to the Calibration Curve Calculator?", a: "Many enzyme assays measure product formation indirectly, for example through absorbance. The Calibration Curve Calculator can convert a raw instrument response into the amount of product formed, which you would then enter here." },
+    ],
+    related: ["protein-concentration-calculator", "calibration-curve-calculator", "protein-molecular-weight-calculator"],
+  },
+  {
+    id: "equilibrium-constant-calculator",
+    category: "chemistry",
+    title: "Equilibrium Constant Calculator",
+    keyword: "equilibrium constant calculator, Kc calculator, reaction quotient calculator",
+    description: "Calculate an equilibrium constant K from equilibrium concentrations and stoichiometric coefficients, or from a standard Gibbs free-energy change.",
+    intro: "Choose to calculate K from equilibrium concentrations and stoichiometric coefficients, or from a standard Gibbs free-energy change ΔG° using ΔG° = −RT ln K.",
+    fields: [
+      { id: "mode", label: "Calculate K from", type: "select", default: "conc", options: [{ v: "conc", l: "Equilibrium concentrations" }, { v: "dg", l: "Standard Gibbs free-energy change (ΔG°)" }] },
+      { id: "p1", label: "Product 1 equilibrium value", type: "number", default: 0.2, step: "any", min: 0 },
+      { id: "p1exp", label: "Product 1 stoichiometric coefficient", type: "number", default: 2, step: 1, min: 0 },
+      { id: "p2", label: "Product 2 equilibrium value (1 and coefficient 0 to skip)", type: "number", default: 1, step: "any", min: 0 },
+      { id: "p2exp", label: "Product 2 stoichiometric coefficient", type: "number", default: 0, step: 1, min: 0 },
+      { id: "r1", label: "Reactant 1 equilibrium value", type: "number", default: 0.5, step: "any", min: 0 },
+      { id: "r1exp", label: "Reactant 1 stoichiometric coefficient", type: "number", default: 2, step: 1, min: 0 },
+      { id: "r2", label: "Reactant 2 equilibrium value (1 and coefficient 0 to skip)", type: "number", default: 1, step: "any", min: 0 },
+      { id: "r2exp", label: "Reactant 2 stoichiometric coefficient", type: "number", default: 0, step: 1, min: 0 },
+      { id: "dg", label: "Standard Gibbs free-energy change ΔG° (ΔG° mode)", type: "number", default: -5.7, step: "any" },
+      { id: "dgUnit", label: "ΔG° unit", type: "select", default: "kJ", options: [{ v: "kJ", l: "kJ/mol" }, { v: "J", l: "J/mol" }] },
+      { id: "temperature", label: "Temperature (ΔG° mode)", type: "number", default: 298.15, step: "any" },
+      { id: "tempUnit", label: "Temperature unit", type: "select", default: "K", options: [{ v: "K", l: "Kelvin (K)" }, { v: "C", l: "Celsius (°C)" }] },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      if (v.mode === "dg") {
+        const T = v.tempUnit === "C" ? v.temperature + 273.15 : v.temperature;
+        if (!(T > 0)) return bad("Temperature must be above absolute zero.");
+        if (!Number.isFinite(v.dg)) return bad("Enter a valid ΔG° value.");
+        const dgJ = v.dg * (v.dgUnit === "kJ" ? 1000 : 1);
+        const R = 8.314462618;
+        const K = Math.exp(-dgJ / (R * T));
+        if (!Number.isFinite(K)) return bad("The result is outside a numerically meaningful range.");
+        return {
+          primary: { label: "Equilibrium constant K", value: K < 1e-4 || K > 1e6 ? K.toExponential(4) : `${round(K, 6)}` },
+          secondary: [
+            { l: "ΔG° used", v: `${round(dgJ / 1000, 4)} kJ/mol` },
+            { l: "Temperature used", v: `${round(T, 2)} K` },
+          ],
+          note: "K = exp(−ΔG° / RT), from ΔG° = −RT ln K, with R = 8.314462618 J/(mol·K) and T in kelvin. K > 1 corresponds to ΔG° < 0 (products favored at equilibrium under standard conditions); K < 1 corresponds to ΔG° > 0. K is treated as dimensionless here, which strictly requires activities normalized to a standard state.",
+        };
+      }
+      const entries = [[v.p1, v.p1exp, "product"], [v.p2, v.p2exp, "product"], [v.r1, v.r1exp, "reactant"], [v.r2, v.r2exp, "reactant"]];
+      for (const [val, exp] of entries) {
+        if (!(val >= 0) || !Number.isFinite(val)) return bad("Equilibrium values must be zero or positive numbers.");
+        if (!Number.isInteger(exp) || exp < 0) return bad("Stoichiometric coefficients must be whole numbers of 0 or more.");
+      }
+      if (v.p1exp === 0) return bad("Product 1 must have a coefficient greater than 0.");
+      if (v.r1exp === 0) return bad("Reactant 1 must have a coefficient greater than 0.");
+      const numerator = Math.pow(v.p1, v.p1exp) * (v.p2exp > 0 ? Math.pow(v.p2, v.p2exp) : 1);
+      const denominator = Math.pow(v.r1, v.r1exp) * (v.r2exp > 0 ? Math.pow(v.r2, v.r2exp) : 1);
+      if (denominator === 0) return bad("The denominator (reactant terms) is zero, so K is undefined. Reactant equilibrium values must be greater than zero.");
+      const K = numerator / denominator;
+      if (!Number.isFinite(K)) return bad("The result is outside a numerically meaningful range.");
+      return {
+        primary: { label: "Equilibrium constant K", value: K < 1e-4 || K > 1e6 ? K.toExponential(4) : `${round(K, 6)}` },
+        secondary: [
+          { l: "Numerator (products)", v: `${round(numerator, 6)}` },
+          { l: "Denominator (reactants)", v: `${round(denominator, 6)}` },
+        ],
+        note: "K = ([products]^exponents) / ([reactants]^exponents), a mass-action expression using the equilibrium values and stoichiometric coefficients you entered. This treats the entered values as activities normalized to a standard state (often approximated by concentration for dilute solutions or partial pressure ratios for gases); it does not correct for nonideal behavior, which the Activity Coefficient Calculator addresses separately.",
+      };
+    },
+    faq: [
+      { q: "What is an equilibrium constant?", a: "It's a number, K, that describes the ratio of products to reactants (each raised to its stoichiometric coefficient) at chemical equilibrium for a given reaction and temperature." },
+      { q: "Why are K values sometimes labeled Kc or Kp?", a: "Kc traditionally denotes an equilibrium constant expressed with molar concentrations, and Kp with partial pressures for gas-phase reactions. This calculator works generically with whatever equilibrium values you enter." },
+      { q: "How do I calculate K from ΔG°?", a: "Use the relationship ΔG° = −RT ln K, rearranged to K = exp(−ΔG°/RT). This calculator's second mode does that conversion directly, with temperature in kelvin." },
+      { q: "Why does the calculator call the equilibrium constant dimensionless?", a: "Strictly, the thermodynamic equilibrium constant is dimensionless because it uses activities relative to a defined standard state. In practice, chemists often use raw concentrations or pressures as an approximation, which works well for dilute or ideal systems but less well for concentrated or nonideal ones." },
+      { q: "How is this different from the Gibbs Free Energy Calculator?", a: "The Gibbs Free Energy Calculator computes ΔG from ΔH, ΔS, and T. This calculator instead computes an equilibrium constant, either from equilibrium concentrations directly, or from a ΔG° value you already have." },
+      { q: "Does this account for nonideal solutions?", a: "Not directly. Real solutions deviate from ideal behavior at higher concentrations. The Activity Coefficient Calculator estimates a correction factor for that, using the Debye-Hückel limiting law for dilute ionic solutions." },
+    ],
+    related: ["gibbs-free-energy-calculator", "activity-coefficient-calculator", "arrhenius-equation-calculator"],
+  },
+  {
+    id: "freezing-point-depression-calculator",
+    category: "chemistry",
+    title: "Freezing Point Depression Calculator",
+    keyword: "freezing point depression calculator, cryoscopic constant calculator",
+    description: "Calculate freezing-point depression ΔTf = i·Kf·m for a dilute solution with a nonvolatile solute, and the solution's estimated freezing point.",
+    intro: "Enter the molality, the van 't Hoff factor, and the solvent (or a custom cryoscopic constant Kf) to find the freezing-point depression. Optionally get the estimated freezing point of the solution. This is an idealized dilute-solution model.",
+    fields: [
+      { id: "molality", label: "Molality m (mol solute per kg solvent)", type: "number", default: 1, step: "any", min: 0 },
+      { id: "i", label: "van 't Hoff factor i", type: "number", default: 1, step: "any", min: 0 },
+      { id: "solvent", label: "Solvent", type: "select", default: "water", options: [{ v: "water", l: "Water (Kf 1.86, fp 0.0 °C)" }, { v: "benzene", l: "Benzene (Kf 5.12, fp 5.5 °C)" }, { v: "acetic", l: "Acetic acid (Kf 3.90, fp 16.6 °C)" }, { v: "custom", l: "Custom (enter Kf below)" }] },
+      { id: "kf", label: "Kf in K·kg/mol (custom solvent only)", type: "number", default: 1.86, step: "any", min: 0 },
+      { id: "showFp", label: "Also show the solution's freezing point", type: "select", default: "yes", options: [{ v: "yes", l: "Yes" }, { v: "no", l: "No" }] },
+      { id: "pureFp", label: "Pure solvent freezing point in °C (custom solvent only)", type: "number", default: 0, step: "any" },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      const presets = { water: [1.86, 0.0], benzene: [5.12, 5.5], acetic: [3.90, 16.6] };
+      const p = presets[v.solvent];
+      const kf = p ? p[0] : v.kf;
+      const fp0 = p ? p[1] : v.pureFp;
+      if (!(v.molality >= 0) || !Number.isFinite(v.molality)) return bad("Molality must be zero or positive.");
+      if (!(v.i > 0) || !Number.isFinite(v.i)) return bad("The van 't Hoff factor must be greater than zero.");
+      if (!(kf > 0) || !Number.isFinite(kf)) return bad("The cryoscopic constant Kf must be greater than zero.");
+      const dT = v.i * kf * v.molality;
+      if (!Number.isFinite(dT)) return bad("The result is outside a numerically meaningful range.");
+      const secondary = [
+        { l: "Kf used", v: `${round(kf, 4)} K·kg/mol` },
+        { l: "Effective molality i × m", v: `${round(v.i * v.molality, 4)} mol/kg` },
+        { l: "In °F (temperature difference)", v: `${round((dT * 9) / 5, 3)} °F` },
+      ];
+      if (v.showFp === "yes") {
+        if (!Number.isFinite(fp0)) return bad("Enter the pure solvent freezing point.");
+        secondary.unshift({ l: "Solution freezing point", v: `${round(fp0 - dT, 3)} °C` });
+      }
+      const caution = v.molality > 1 ? " Your molality is above about 1 mol/kg, where the ideal equation becomes less reliable." : "";
+      return {
+        primary: { label: "Freezing-point depression ΔTf", value: `${round(dT, 4)} K (= °C)` },
+        secondary,
+        note: `ΔTf = i × Kf × m, with Kf in K·kg/mol and m in mol/kg. A temperature difference in K equals the same difference in °C. It assumes a dilute, ideal solution and a nonvolatile solute, and that i approximates the number of particles per formula unit. Kf is specific to the solvent, unlike a single universal constant. Molality (per kg of solvent) is not molarity (per liter of solution).${caution} This is related to, but distinct from, boiling-point elevation - the two colligative properties use different solvent constants and move the temperature in opposite directions.`,
+      };
+    },
+    faq: [
+      { q: "What is freezing-point depression?", a: "It's the decrease in a solvent's freezing temperature when a nonvolatile solute is dissolved in it. Dissolved particles interfere with the solvent's ability to form an ordered solid, so a lower temperature is needed to freeze." },
+      { q: "What is the formula?", a: "ΔTf = i × Kf × m, where i is the van 't Hoff factor, Kf is the solvent's cryoscopic constant in K·kg/mol, and m is the molality in mol/kg." },
+      { q: "How is this different from Boiling Point Elevation?", a: "Both are colligative properties from the same dissolved-particle effect, but freezing-point depression lowers the freezing temperature while boiling-point elevation raises the boiling temperature. Each solvent has its own separate Kf and Kb constants, which are generally different from each other." },
+      { q: "What van 't Hoff factor should I use?", a: "About 1 for molecules that don't dissociate, like sugar, and close to 2 for a fully dissociated salt like NaCl. Real solutions deviate from these ideal values, especially at higher concentrations." },
+      { q: "Why does Kf differ for each solvent?", a: "Kf depends on the solvent's molar mass and enthalpy of fusion. That's why the calculator offers solvent presets and a custom option instead of one constant for everything." },
+      { q: "When does the equation become unreliable?", a: "For concentrated, strongly interacting, or highly nonideal solutions. It's an idealized model best suited to dilute solutions." },
+    ],
+    related: ["boiling-point-elevation-calculator", "water-potential-calculator", "concentration-calculator"],
+  },
+  {
+    id: "gibbs-free-energy-calculator",
+    category: "chemistry",
+    title: "Gibbs Free Energy Calculator",
+    keyword: "gibbs free energy calculator, gibbs energy calculator",
+    description: "Calculate Gibbs free-energy change ΔG = ΔH − TΔS from enthalpy change, entropy change, and absolute temperature.",
+    intro: "Enter the enthalpy change (ΔH), entropy change (ΔS), and absolute temperature to calculate the Gibbs free-energy change (ΔG) for a process.",
+    fields: [
+      { id: "dh", label: "Enthalpy change ΔH", type: "number", default: -92.2, step: "any" },
+      { id: "dhUnit", label: "ΔH unit", type: "select", default: "kJ", options: [{ v: "kJ", l: "kJ/mol" }, { v: "J", l: "J/mol" }] },
+      { id: "ds", label: "Entropy change ΔS (J/(mol·K))", type: "number", default: -198.7, step: "any" },
+      { id: "temperature", label: "Temperature", type: "number", default: 298.15, step: "any" },
+      { id: "tempUnit", label: "Temperature unit", type: "select", default: "K", options: [{ v: "K", l: "Kelvin (K)" }, { v: "C", l: "Celsius (°C)" }] },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      if (!Number.isFinite(v.dh) || !Number.isFinite(v.ds)) return bad("Enter both ΔH and ΔS.");
+      const T = v.tempUnit === "C" ? v.temperature + 273.15 : v.temperature;
+      if (!(T > 0)) return bad("Temperature must be above absolute zero.");
+      const dhJmol = v.dh * (v.dhUnit === "kJ" ? 1000 : 1);
+      const tds = T * v.ds;
+      const dg = dhJmol - tds;
+      const spontaneity = dg < 0 ? "Thermodynamically favorable (ΔG < 0) under these conditions." : dg > 0 ? "Not thermodynamically favorable as written (ΔG > 0) under these conditions; the reverse process is favorable." : "At equilibrium (ΔG = 0) under these conditions.";
+      return {
+        primary: { label: "Gibbs free-energy change ΔG", value: `${round(dg / 1000, 4)} kJ/mol` },
+        secondary: [
+          { l: "In J/mol", v: `${round(dg, 2)} J/mol` },
+          { l: "ΔH used", v: `${round(dhJmol / 1000, 3)} kJ/mol` },
+          { l: "TΔS", v: `${round(tds / 1000, 4)} kJ/mol` },
+          { l: "Temperature used", v: `${round(T, 2)} K` },
+        ],
+        note: `ΔG = ΔH − TΔS, with T in kelvin and ΔS converted to the same energy unit as ΔH before subtracting. ${spontaneity} This describes thermodynamic favorability, not reaction speed - a favorable (negative ΔG) reaction can still be extremely slow without a catalyst or sufficient activation energy. Entering standard-state values gives ΔG°, but this calculator does not require standard conditions.`,
+      };
+    },
+    faq: [
+      { q: "What does Gibbs free energy tell you?", a: "The change in Gibbs free energy (ΔG) indicates whether a process is thermodynamically favorable at constant temperature and pressure. A negative ΔG means the process can occur spontaneously as written; a positive ΔG means it cannot, under the stated conditions." },
+      { q: "What is the formula?", a: "ΔG = ΔH − TΔS, where ΔH is the enthalpy change, T is the absolute temperature in kelvin, and ΔS is the entropy change. ΔS is typically given in J/(mol·K), so it must be converted to kJ if ΔH is in kJ/mol before subtracting." },
+      { q: "Does a negative ΔG mean the reaction will happen quickly?", a: "No. ΔG describes thermodynamic favorability, not reaction rate. A reaction with negative ΔG can still be very slow if it has a high activation energy or lacks a catalyst - kinetics and thermodynamics are separate questions." },
+      { q: "What's the difference between ΔG and ΔG°?", a: "ΔG° specifically refers to the free-energy change under standard-state conditions (usually 1 bar pressure, 1 M concentrations, 298.15 K). ΔG is the more general free-energy change under whatever conditions you specify, which this calculator computes directly from your ΔH, ΔS, and T." },
+      { q: "Why does temperature affect whether ΔG is positive or negative?", a: "Because ΔG = ΔH − TΔS, temperature scales the entropy term. A reaction with unfavorable ΔH but favorable ΔS (or vice versa) can switch from unfavorable to favorable, or the reverse, at some crossover temperature." },
+      { q: "How is this related to the Equilibrium Constant Calculator?", a: "The standard Gibbs free-energy change ΔG° relates directly to the equilibrium constant K through ΔG° = −RT ln K. The Equilibrium Constant Calculator can convert between the two." },
+    ],
+    related: ["entropy-calculator", "equilibrium-constant-calculator", "emf-calculator"],
+  },
+  {
+    id: "gibbs-phase-rule-calculator",
+    category: "chemistry",
+    title: "Gibbs' Phase Rule Calculator",
+    keyword: "gibbs phase rule calculator, degrees of freedom calculator",
+    description: "Calculate the thermodynamic degrees of freedom F = C − P + 2 for a nonreacting equilibrium system from its number of independent components and phases.",
+    intro: "Enter the number of independent components (C) and the number of phases (P) present at equilibrium. The calculator applies Gibbs' phase rule, F = C − P + 2, to find the degrees of freedom.",
+    fields: [
+      { id: "c", label: "Number of independent components (C)", type: "number", default: 1, step: 1, min: 1 },
+      { id: "p", label: "Number of phases (P)", type: "number", default: 1, step: 1, min: 1 },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      if (!Number.isInteger(v.c) || v.c < 1) return bad("The number of components (C) must be a whole number of 1 or more.");
+      if (!Number.isInteger(v.p) || v.p < 1) return bad("The number of phases (P) must be a whole number of 1 or more.");
+      const f = v.c - v.p + 2;
+      if (f < 0) {
+        return {
+          primary: { label: "Degrees of freedom F", value: `${f} (not physically meaningful)` },
+          secondary: [{ l: "C (components)", v: `${v.c}` }, { l: "P (phases)", v: `${v.p}` }],
+          note: "F = C − P + 2 gives a negative value here, which isn't physically meaningful for a system at ordinary equilibrium. This usually means the number of phases you entered is too high for the given number of components to coexist at equilibrium under this basic (nonreacting) form of the rule - double-check your component and phase counts.",
+        };
+      }
+      const meaning = f === 0 ? "Invariant system: no variables (like temperature or pressure) can change without changing the number of phases present." : f === 1 ? "Univariant system: one variable can be changed independently while all phases remain in equilibrium." : `${f} variables can be changed independently while all phases remain in equilibrium.`;
+      return {
+        primary: { label: "Degrees of freedom F", value: `${f}` },
+        secondary: [
+          { l: "Components (C)", v: `${v.c}` },
+          { l: "Phases (P)", v: `${v.p}` },
+        ],
+        note: `F = C − P + 2, the basic (nonreacting) form of Gibbs' phase rule for a system without additional external constraints. ${meaning} This form assumes no chemical reactions are occurring and no extra constraints (like a fixed volume) beyond temperature and pressure; reacting or externally constrained systems need a generalized version of the rule not covered here.`,
+      };
+    },
+    faq: [
+      { q: "What is Gibbs' phase rule?", a: "It relates the number of independent components (C), the number of phases present at equilibrium (P), and the degrees of freedom (F) - the number of intensive variables, like temperature and pressure, that can be changed independently without changing the number of phases." },
+      { q: "What counts as a component?", a: "A component is an independently variable chemical species needed to describe the system's composition. For a single pure substance like water, C = 1. Mixtures generally have more components." },
+      { q: "What counts as a phase?", a: "A phase is a physically distinct, homogeneous part of the system, such as solid, liquid, and vapor. Water at its triple point has three phases coexisting (P = 3)." },
+      { q: "What does F = 0 mean?", a: "It means the system is invariant: at a fixed set of conditions (like water's triple point), you can't change temperature or pressure at all without losing one of the coexisting phases." },
+      { q: "Why did I get a negative or impossible result?", a: "A negative F under this basic form of the rule usually means too many phases are claimed to coexist for the given number of components - check whether your phase and component counts are consistent with an equilibrium system." },
+      { q: "Is this the same as Gibbs Free Energy?", a: "No, despite sharing the name Gibbs. The phase rule is about how many phases can coexist and how many variables you can independently adjust. Gibbs free energy is about a system's thermodynamic favorability and spontaneity. They're related areas of thermodynamics but answer different questions." },
+    ],
+    related: ["gibbs-free-energy-calculator", "equilibrium-constant-calculator", "boiling-point-calculator"],
+  },
+  {
+    id: "grams-to-moles-calculator",
+    category: "chemistry",
+    title: "Grams to Moles Calculator",
+    keyword: "grams to moles calculator, moles to grams calculator, mass to moles calculator",
+    description: "Convert between mass in grams and amount of substance in moles using n = mass / molar mass, or moles to grams.",
+    intro: "Choose grams to moles or moles to grams, enter the mass or amount and the substance's molar mass, and get the conversion. Use the Molecular Weight Calculator first if you need to find the molar mass from a chemical formula.",
+    fields: [
+      { id: "mode", label: "Convert", type: "select", default: "toMoles", options: [{ v: "toMoles", l: "Grams → moles" }, { v: "toGrams", l: "Moles → grams" }] },
+      { id: "mass", label: "Mass (grams → moles mode)", type: "number", default: 18, step: "any", min: 0 },
+      { id: "moles", label: "Amount (moles → grams mode)", type: "number", default: 1, step: "any", min: 0 },
+      { id: "molesUnit", label: "Amount unit (moles → grams mode)", type: "select", default: "mol", options: [{ v: "mol", l: "mol" }, { v: "mmol", l: "mmol" }] },
+      { id: "molarMass", label: "Molar mass (g/mol)", type: "number", default: 18.015, step: "any", min: 0 },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      if (!(v.molarMass > 0) || !Number.isFinite(v.molarMass)) return bad("Molar mass must be greater than zero. Use the Molecular Weight Calculator to find it from a formula.");
+      if (v.mode === "toMoles") {
+        if (!(v.mass >= 0) || !Number.isFinite(v.mass)) return bad("Mass cannot be negative.");
+        const n = v.mass / v.molarMass;
+        return {
+          primary: { label: "Amount of substance", value: `${round(n, 6)} mol` },
+          secondary: [
+            { l: "In mmol", v: `${round(n * 1000, 4)} mmol` },
+            { l: "Molar mass used", v: `${round(v.molarMass, 4)} g/mol` },
+          ],
+          note: "n = mass / molar mass. Enter the molar mass in g/mol; if you only have a chemical formula, find its molar mass first with the Molecular Weight Calculator.",
+        };
+      }
+      const molInput = v.moles * (v.molesUnit === "mmol" ? 0.001 : 1);
+      if (!(molInput >= 0) || !Number.isFinite(molInput)) return bad("Amount cannot be negative.");
+      const mass = molInput * v.molarMass;
+      return {
+        primary: { label: "Mass", value: `${round(mass, 6)} g` },
+        secondary: [
+          { l: "In mg", v: `${round(mass * 1000, 3)} mg` },
+          { l: "Molar mass used", v: `${round(v.molarMass, 4)} g/mol` },
+        ],
+        note: "mass = moles × molar mass. Enter the molar mass in g/mol; find it from a formula with the Molecular Weight Calculator if needed.",
+      };
+    },
+    faq: [
+      { q: "What is the formula for grams to moles?", a: "n = mass / molar mass, where mass is in grams and molar mass is in g/mol. To go the other way, mass = moles × molar mass." },
+      { q: "How is this different from the Molecular Weight Calculator?", a: "The Molecular Weight Calculator computes a substance's molar mass directly from its chemical formula, like H2O or C6H12O6. This calculator instead converts between an actual sample's mass and its amount in moles, once you already know (or have looked up) the molar mass." },
+      { q: "How is this different from Avogadro's Number Calculator?", a: "This tool converts between mass and moles. Avogadro's Number Calculator converts between moles and the actual number of particles (atoms, molecules, or formula units), using the Avogadro constant. Use both together to go from mass all the way to particle count." },
+      { q: "Where do I find a substance's molar mass?", a: "For a known chemical formula, use the Molecular Weight Calculator. For elements, the Average Atomic Mass Calculator gives atomic mass in u, which is numerically the same as molar mass in g/mol." },
+      { q: "Can I convert millimoles or milligrams?", a: "Yes. The amount field accepts mol or mmol, and results are also shown in mmol or mg alongside the primary unit." },
+      { q: "Why does molar mass have to be greater than zero?", a: "Both conversions divide or multiply by molar mass, so a molar mass of zero would make the grams-to-moles conversion undefined." },
+    ],
+    related: ["molecular-weight-calculator", "avogadros-number-calculator", "average-atomic-mass-calculator"],
+  },
+  {
+    id: "heat-of-combustion-calculator",
+    category: "chemistry",
+    title: "Heat of Combustion Calculator",
+    keyword: "heat of combustion calculator, enthalpy of combustion calculator",
+    description: "Calculate total enthalpy of combustion from the amount of substance burned and a molar heat of combustion value you supply.",
+    intro: "Enter the amount of substance combusted and the molar heat of combustion (from a reference table or measurement) to calculate the total enthalpy change. A negative value means heat is released (exothermic), matching standard thermochemical sign convention.",
+    fields: [
+      { id: "amount", label: "Amount of substance combusted", type: "number", default: 2, step: "any", min: 0 },
+      { id: "amountUnit", label: "Amount unit", type: "select", default: "mol", options: [{ v: "mol", l: "mol" }, { v: "mmol", l: "mmol" }] },
+      { id: "molarEnthalpy", label: "Molar heat of combustion (negative for exothermic, by convention)", type: "number", default: -890.4, step: "any" },
+      { id: "enthalpyUnit", label: "Molar enthalpy unit", type: "select", default: "kJ", options: [{ v: "kJ", l: "kJ/mol" }, { v: "J", l: "J/mol" }] },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      if (!(v.amount >= 0) || !Number.isFinite(v.amount)) return bad("The amount combusted cannot be negative.");
+      if (!Number.isFinite(v.molarEnthalpy)) return bad("Enter a molar heat of combustion value.");
+      const mol = v.amount * (v.amountUnit === "mmol" ? 0.001 : 1);
+      const enthalpyKJ = v.molarEnthalpy * (v.enthalpyUnit === "J" ? 0.001 : 1);
+      const totalKJ = mol * enthalpyKJ;
+      const direction = totalKJ < 0 ? "exothermic (heat released)" : totalKJ > 0 ? "endothermic (heat absorbed) - unusual for combustion, double-check your sign" : "no net enthalpy change";
+      return {
+        primary: { label: "Total enthalpy change", value: `${round(totalKJ, 4)} kJ` },
+        secondary: [
+          { l: "Magnitude (heat released if exothermic)", v: `${round(Math.abs(totalKJ), 4)} kJ` },
+          { l: "Amount used", v: `${round(mol, 5)} mol` },
+          { l: "Molar enthalpy used", v: `${round(enthalpyKJ, 4)} kJ/mol` },
+        ],
+        note: `Total ΔH = amount (mol) × molar heat of combustion (kJ/mol). This calculation is ${direction}. By standard thermochemical convention, a negative enthalpy value means the reaction releases heat (exothermic), which is typical for combustion; the calculator does not treat a negative result as an error. It's an educational arithmetic calculation on values you supply, not a combustion experiment or fuel-performance guide - it provides no apparatus, ignition, or fuel-preparation guidance.`,
+      };
+    },
+    faq: [
+      { q: "What is heat of combustion?", a: "It's the enthalpy change when a specified amount of a substance is completely combusted, usually reported per mole (molar heat of combustion). It's typically negative, since combustion releases heat." },
+      { q: "Why is the value negative?", a: "By thermochemical convention, a negative enthalpy change means the system releases energy to its surroundings (exothermic). Combustion reactions are exothermic, so their heats of combustion are conventionally negative." },
+      { q: "Where do I get the molar heat of combustion?", a: "From a reference table (such as a chemistry handbook) or from calorimetry data. This calculator doesn't include built-in fuel values - you supply the number for the specific substance and conditions you're working with." },
+      { q: "How is this different from the Combustion Reaction Calculator?", a: "The Combustion Reaction Calculator (part of the Chemical Equation Balancer) balances the symbolic chemical equation for combustion. This calculator instead computes the total energy released or absorbed from an amount of substance and a known molar enthalpy value - it doesn't balance equations." },
+      { q: "How is this different from Combustion Analysis?", a: "Combustion Analysis works backward from measured CO2 and H2O masses to find a sample's elemental composition. This calculator instead uses a known molar heat of combustion to find total energy, and doesn't analyze elemental composition." },
+      { q: "Does this tell me how to safely burn something?", a: "No. It performs thermochemical arithmetic only, using values you already have. It includes no guidance on combustion apparatus, fuel handling, ignition, or safety procedures." },
+    ],
+    related: ["chemical-equation-balancer", "gibbs-free-energy-calculator", "combustion-analysis-calculator"],
   },
 ];
 
