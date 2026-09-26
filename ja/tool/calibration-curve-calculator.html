@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>検量線計算機 - 無料オンライン計算ツール | Calquary</title>
+  <meta name="description" content="標準濃度と機器応答からy = mx + bの線形検量線を求め、R²と未知試料の任意の推定値を出します。" />
+  <meta property="og:title" content="検量線計算機 | Calquary">
+  <meta property="og:description" content="標準濃度と機器応答からy = mx + bの線形検量線を求め、R²と未知試料の任意の推定値を出します。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/ja/tool/calibration-curve-calculator">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/calibration-curve-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="検量線計算機 | Calquary">
+  <meta name="twitter:description" content="標準濃度と機器応答からy = mx + bの線形検量線を求め、R²と未知試料の任意の推定値を出します。">
+  <meta name="twitter:image" content="https://calquary.com/og-images/calibration-curve-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/calibration-curve-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/calibration-curve-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/calibration-curve-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/calibration-curve-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/calibration-curve-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/calibration-curve-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/calibration-curve-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/calibration-curve-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/calibration-curve-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/calibration-curve-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/calibration-curve-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/calibration-curve-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/calibration-curve-calculator">
+    <link rel="canonical" href="https://calquary.com/ja/tool/calibration-curve-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("calibration-curve-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("calibration-curve-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "検量線計算機",
+      "description": "標準濃度と機器応答からy = mx + bの線形検量線を求め、R²と未知試料の任意の推定値を出します。",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/ja/tool/calibration-curve-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-26",
+      "inLanguage": "ja"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/ja/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Chemistry",
+          "item": "https://calquary.com/ja/category/chemistry"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "検量線計算機",
+          "item": "https://calquary.com/ja/tool/calibration-curve-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "検量線はどのように機能しますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "既知濃度(x)の複数の試料について機器応答(y)を測定し、直線y = mx + bを点に当てはめます。その直線を使って、新しい応答を推定濃度 x = (y − b) / m に変換します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "R²は何を教えてくれますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "R²は標準点が当てはめた直線にどれだけ近いかを示し、0(線形関係なし)から1(完全な当てはまり)までの値をとります。R²が高いだけでは、その方法が正確であること、干渉がないこと、試験範囲外でも有効であることは証明されません。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "標準を2点だけ使えますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい、2点で直線が定まりますが、標準が多いほど当てはめが信頼でき、関係が本当に線形かどうかも分かります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "xの値がすべて同じ場合はどうなりますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "検量線には、傾きを求めるために既知値のばらつきが必要です。すべての標準が同じxなら、計算機は直線を計算できません。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "なぜ外挿について警告するのですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "検量直線は標準の範囲内でしか検証されていません。その範囲外のy応答からx値を推定することは、試験していない範囲でも直線が有効であると仮定することになり、成り立たない場合があります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ランベルト・ベールの法則計算機とはどう関係しますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ランベルト・ベールの法則計算機は既知のモル吸光係数を使って吸光度と濃度を直接関連付けます。この計算機は逆に、その関係を自分の標準から経験的に構築します。文献の吸光係数がない場合や信頼できない場合に便利です。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/ja/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/ja/#categories">カテゴリー</a>
+          <a href="/ja/#tools">すべてのツール</a>
+          <a href="/ja/about">このサイトについて</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: 日本語">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>JA</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/calibration-curve-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/calibration-curve-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/calibration-curve-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/calibration-curve-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/calibration-curve-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/calibration-curve-calculator">Italiano</a><span class="locale-item current" role="menuitem" aria-current="true">日本語</span><a class="locale-item" role="menuitem" href="/ro/tool/calibration-curve-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/calibration-curve-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/calibration-curve-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/calibration-curve-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/calibration-curve-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/ja/">Calquary</a> / <a href="/ja/category/chemistry">化学</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>検量線計算機</h1>
+        <p style="max-width:60ch;">少なくとも2組、最大6組の既知の標準値(x)とその測定応答(y)を入力します。計算機は最小二乗直線を当てはめ、傾き、切片、R²を報告し、未知試料の応答からその濃度を推定できます。</p>
+        <p class="last-updated">最終更新日： September 26, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">計算する</button>
+              <button type="button" id="calc-reset" class="btn-ghost">リセット</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>よくある質問</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>検量線はどのように機能しますか?</h3>
+<p>既知濃度(x)の複数の試料について機器応答(y)を測定し、直線y = mx + bを点に当てはめます。その直線を使って、新しい応答を推定濃度 x = (y − b) / m に変換します。</p>
+</div>
+<div class="faq-item">
+<h3>R²は何を教えてくれますか?</h3>
+<p>R²は標準点が当てはめた直線にどれだけ近いかを示し、0(線形関係なし)から1(完全な当てはまり)までの値をとります。R²が高いだけでは、その方法が正確であること、干渉がないこと、試験範囲外でも有効であることは証明されません。</p>
+</div>
+<div class="faq-item">
+<h3>標準を2点だけ使えますか?</h3>
+<p>はい、2点で直線が定まりますが、標準が多いほど当てはめが信頼でき、関係が本当に線形かどうかも分かります。</p>
+</div>
+<div class="faq-item">
+<h3>xの値がすべて同じ場合はどうなりますか?</h3>
+<p>検量線には、傾きを求めるために既知値のばらつきが必要です。すべての標準が同じxなら、計算機は直線を計算できません。</p>
+</div>
+<div class="faq-item">
+<h3>なぜ外挿について警告するのですか?</h3>
+<p>検量直線は標準の範囲内でしか検証されていません。その範囲外のy応答からx値を推定することは、試験していない範囲でも直線が有効であると仮定することになり、成り立たない場合があります。</p>
+</div>
+<div class="faq-item">
+<h3>ランベルト・ベールの法則計算機とはどう関係しますか?</h3>
+<p>ランベルト・ベールの法則計算機は既知のモル吸光係数を使って吸光度と濃度を直接関連付けます。この計算機は逆に、その関係を自分の標準から経験的に構築します。文献の吸光係数がない場合や信頼できない場合に便利です。</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">計算する</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>関連ツール</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>精度について</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquaryの計算ツールは、迅速で信頼できる概算を目的としています。実際の財務、構造、医療に関わる重要な決定を行う前には、必ず専門家にご確認ください。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/ja/">← すべての計算ツールに戻る</a> · <a href="/ja/about">このサイトについて</a> · <a href="/ja/contact">お問い合わせ</a> · <a href="/ja/privacy">プライバシー</a> · <a href="/ja/terms">利用規約</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

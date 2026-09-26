@@ -2027,7 +2027,7 @@ const CALCULATORS = [
       { q: "What if I only know the mass percentages of two elements and they don't add up to 100%?", a: "The missing percentage is typically oxygen or another unmeasured element - subtract your known percentages from 100% to find it, then include that value as the third element for a more accurate formula." },
       { q: "Do I need to know the actual masses of my sample, or do percentages work fine?", a: "Percentages work fine, since ratios are all that matter - mass percentages behave exactly like grams in a 100 g sample, so the relative mole ratios come out the same whether you use percentages or actual measured masses." },
     ],
-    related: ["molecular-weight-calculator", "chemical-equation-balancer", "percentage-calculator"],
+    related: ["molecular-weight-calculator", "chemical-equation-balancer", "combustion-analysis-calculator"],
   },
   {
     id: "system-of-equations-solver",
@@ -2229,7 +2229,7 @@ const CALCULATORS = [
     id: "chemical-equation-balancer",
     category: "math",
     title: "Chemical Equation Balancer",
-    keyword: "chemical equation balancer",
+    keyword: "chemical equation balancer, combustion reaction calculator",
     description: "Balance a chemical equation by finding the correct whole-number coefficients.",
     intro: "Enter an unbalanced equation (like Fe + O2 -> Fe2O3) using + between compounds and -> between reactants and products.",
     fields: [
@@ -2378,8 +2378,9 @@ const CALCULATORS = [
       { q: "Why do balanced coefficients need to be the smallest possible whole numbers?", a: "Any multiple of a balanced set of coefficients (like doubling every coefficient) is technically still balanced, but chemists use the smallest whole-number ratio by convention since it represents the simplest, most standard way to express the reaction." },
       { q: "Can this balance equations that include ionic charges, like Fe³⁺ + e⁻ → Fe?", a: "This calculator is built for balancing atoms in molecular equations, not charge-balancing half-reactions - redox half-reactions with electrons and ionic charges need a separate charge-balancing step in addition to atom balancing." },
       { q: "What's the balanced equation for the combustion of methane (CH4 + O2 -> CO2 + H2O)?", a: "CH₄ + 2O₂ → CO₂ + 2H₂O - one methane molecule needs two oxygen molecules to fully convert its carbon to CO₂ and its four hydrogens to two water molecules, balancing 1 C, 4 H, and 4 O on each side." },
+      { q: "Can this balance the combustion of any hydrocarbon, like propane or octane?", a: "Yes. Enter the hydrocarbon plus O2 on the left and CO2 + H2O on the right, for example C3H8 + O2 -> CO2 + H2O or C8H18 + O2 -> CO2 + H2O, and the calculator finds the whole-number coefficients for complete combustion. This is a symbolic, idealized combustion equation - it doesn't cover incomplete combustion, real fuel-air ratios, or how to carry out a combustion reaction." },
     ],
-    related: ["molecular-weight-calculator", "percentage-calculator", "square-root-calculator"],
+    related: ["molecular-weight-calculator", "combustion-analysis-calculator", "actual-yield-calculator"],
   },
   {
     id: "solubility-product-calculator",
@@ -2470,7 +2471,7 @@ const CALCULATORS = [
       { q: "What's the pH after adding 40 mL of 0.1 mol/L base to 50 mL of 0.1 mol/L acid?", a: "About 1.95 - moles of acid = 0.050 L × 0.1 = 0.005 mol, moles of base = 0.040 L × 0.1 = 0.004 mol, excess H⁺ = 0.001 mol over a total volume of 0.090 L, giving [H⁺] ≈ 0.0111 mol/L, so pH = −log₁₀(0.0111) ≈ 1.95." },
       { q: "Why does the total volume matter in the pH calculation, not just the leftover moles?", a: "pH depends on concentration, not just the raw amount of excess ion - the same leftover 0.001 mol of H⁺ produces a different pH depending on whether it's diluted into 50 mL or 500 mL, so the calculator divides by the combined acid + base volume at each point." },
     ],
-    related: ["solubility-product-calculator", "molecular-weight-calculator", "chemical-equation-balancer"],
+    related: ["solubility-product-calculator", "molecular-weight-calculator", "chemical-equation-balancer", "buffer-ph-calculator"],
   },
   {
     id: "limiting-reagent-calculator",
@@ -11484,7 +11485,7 @@ const CALCULATORS = [
       { q: "Can I use this for pet food labels?", a: "Yes, for comparing guaranteed-analysis percentages between wet and dry foods, as long as you use the label's moisture value. It does not judge whether a food is appropriate for a particular pet." },
       { q: "Does this replace laboratory analysis?", a: "No. Moisture readings can vary by sample and method. Use a lab result where accuracy matters for ration formulation." },
     ],
-    related: ["feed-conversion-ratio-calculator", "dog-food-calculator", "percentage-calculator", "corn-yield-calculator"],
+    related: ["feed-conversion-ratio-calculator", "crude-protein-calculator", "percentage-calculator", "corn-yield-calculator"],
   },
   {
     id: "feed-conversion-ratio-calculator",
@@ -13646,14 +13647,15 @@ const CALCULATORS = [
     id: "wastewater-calculator",
     category: "biology",
     title: "Wastewater Calculator",
-    keyword: "wastewater calculator, bod loading calculator, f/m ratio calculator",
-    description: "Calculate BOD loading, food-to-microorganism (F/M) ratio, or hydraulic retention time from flow, concentration, and tank volume.",
-    intro: "Choose BOD loading, F/M ratio, or hydraulic retention time, enter the flow, concentrations, and tank volume with their units, and read the result with the units shown. These are calculation aids, not plant operating recommendations.",
+    keyword: "wastewater calculator, bod loading calculator, f/m ratio calculator, cod loading calculator",
+    description: "Calculate BOD or COD loading, food-to-microorganism (F/M) ratio, or hydraulic retention time from flow, concentration, and tank volume.",
+    intro: "Choose BOD loading, COD loading, F/M ratio, or hydraulic retention time, enter the flow, concentrations, and tank volume with their units, and read the result with the units shown. These are calculation aids, not plant operating recommendations.",
     fields: [
-      { id: "mode", label: "Calculation", type: "select", default: "bod", options: [{ v: "bod", l: "BOD loading (kg/day)" }, { v: "fm", l: "Food-to-microorganism ratio (F/M)" }, { v: "hrt", l: "Hydraulic retention time (HRT)" }] },
+      { id: "mode", label: "Calculation", type: "select", default: "bod", options: [{ v: "bod", l: "BOD loading (kg/day)" }, { v: "cod", l: "COD loading (kg/day)" }, { v: "fm", l: "Food-to-microorganism ratio (F/M)" }, { v: "hrt", l: "Hydraulic retention time (HRT)" }] },
       { id: "flow", label: "Flow", type: "number", default: 1000, step: "any", min: 0 },
       { id: "flowUnit", label: "Flow unit", type: "select", default: "m3d", options: [{ v: "m3d", l: "m³/day" }, { v: "m3h", l: "m³/hour" }, { v: "lpd", l: "L/day" }, { v: "mgd", l: "US million gallons/day (MGD)" }] },
       { id: "bod", label: "BOD concentration (mg/L) (BOD and F/M modes)", type: "number", default: 250, step: "any", min: 0 },
+      { id: "cod", label: "COD concentration (mg/L) (COD mode)", type: "number", default: 500, step: "any", min: 0 },
       { id: "mlvss", label: "MLVSS concentration (mg/L) (F/M mode)", type: "number", default: 2500, step: "any", min: 0 },
       { id: "volume", label: "Tank volume (F/M and HRT modes)", type: "number", default: 500, step: "any", min: 0 },
       { id: "volumeUnit", label: "Tank volume unit", type: "select", default: "m3", options: [{ v: "m3", l: "m³" }, { v: "l", l: "Liters" }, { v: "gal", l: "US gallons" }] },
@@ -13674,6 +13676,18 @@ const CALCULATORS = [
             { l: "Volume used", v: `${round(volM3, 2)} m³` },
           ],
           note: "HRT = tank volume / volumetric flow rate, with both converted to m³ and m³/day. It is the average time water spends in the tank, assuming a steady flow. It does not describe solids retention time.",
+        };
+      }
+      if (v.mode === "cod") {
+        if (!(v.cod >= 0)) return bad("COD concentration cannot be negative.");
+        const codKgD = (flowM3d * v.cod) / 1000;
+        return {
+          primary: { label: "COD loading", value: `${round(codKgD, 2)} kg/day` },
+          secondary: [
+            { l: "In pounds per day", v: `${round(codKgD * 2.20462262, 2)} lb/day` },
+            { l: "Flow used", v: `${round(flowM3d, 2)} m³/day` },
+          ],
+          note: "COD loading (kg/day) = flow (m³/day) × COD (mg/L) / 1000, using the same mg/L = g/m³ relationship as BOD loading. COD measures the oxygen equivalent of all oxidizable material, chemical and biological, so it is normally higher than BOD for the same sample and the two are not interchangeable. This is a mass-loading calculation on your measured COD value, not a substitute for validated laboratory testing or a chemical-digestion procedure.",
         };
       }
       if (!(v.bod >= 0)) return bad("BOD concentration cannot be negative.");
@@ -13707,6 +13721,7 @@ const CALCULATORS = [
       { q: "What is hydraulic retention time?", a: "It is the tank volume divided by the flow rate, the average time water spends in the tank. This tool converts everything to m³ and m³/day first and shows the result in hours and days." },
       { q: "Can I use these results to set treatment operations?", a: "No. The results are arithmetic on the numbers you enter. Operating decisions depend on site-specific data, permits, and qualified operator judgment." },
       { q: "Which units does it accept?", a: "Flow in m³/day, m³/hour, L/day, or US million gallons per day, and tank volume in m³, liters, or US gallons. Concentrations are in mg/L." },
+      { q: "What is the difference between COD and BOD loading?", a: "Both use the same flow × concentration / 1000 calculation, but COD measures the total oxygen demand from chemically oxidizable material (usually via a dichromate or similar test), while BOD measures oxygen consumed by microorganisms over an incubation period, typically 5 days. COD is normally the larger number for the same sample, and the ratio between them varies by wastewater source." },
     ],
     related: ["mlvss-calculator", "percentage-calculator", "cell-dilution-calculator"],
   },
@@ -14539,6 +14554,417 @@ const CALCULATORS = [
       { q: "When does the equation fail?", a: "For concentrated, strongly interacting, or volatile-solute solutions. It is an idealized dilute-solution model." },
     ],
     related: ["boiling-point-calculator", "boiling-point-at-altitude-calculator", "water-potential-calculator", "temperature-converter"],
+  },
+  {
+    id: "bond-order-calculator",
+    category: "chemistry",
+    title: "Bond Order Calculator",
+    keyword: "bond order calculator, molecular orbital bond order",
+    description: "Calculate bond order from the number of bonding and antibonding electrons using molecular orbital theory.",
+    intro: "Enter the number of electrons in bonding molecular orbitals and antibonding molecular orbitals to find the bond order. Bond order gives a simple picture of bond strength within this model.",
+    fields: [
+      { id: "bonding", label: "Bonding electrons (Nb)", type: "number", default: 8, step: 1, min: 0 },
+      { id: "antibonding", label: "Antibonding electrons (Na)", type: "number", default: 4, step: 1, min: 0 },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      if (!Number.isInteger(v.bonding) || v.bonding < 0) return bad("Bonding electrons must be a whole number of 0 or more.");
+      if (!Number.isInteger(v.antibonding) || v.antibonding < 0) return bad("Antibonding electrons must be a whole number of 0 or more.");
+      const order = (v.bonding - v.antibonding) / 2;
+      const desc = order <= 0 ? "A bond order of zero or less means the molecule or ion is not expected to be stable in this simple model." : order === 0.5 ? "A half-integer bond order is common in species with an odd number of electrons, like O₂⁻." : "";
+      return {
+        primary: { label: "Bond order", value: `${round(order, 3)}` },
+        secondary: [
+          { l: "Bonding electrons Nb", v: `${v.bonding}` },
+          { l: "Antibonding electrons Na", v: `${v.antibonding}` },
+          { l: "Total electrons", v: `${v.bonding + v.antibonding}` },
+        ],
+        note: `Bond order = (Nb − Na) / 2. Higher bond order generally corresponds to a shorter, stronger bond within this molecular-orbital picture. ${desc} This simple electron-count model does not capture every factor that determines real bond length, strength, or reactivity; more detailed molecular-orbital calculations account for orbital mixing and other effects.`,
+      };
+    },
+    faq: [
+      { q: "What is bond order?", a: "Bond order is a measure, from molecular orbital theory, of the number of chemical bonds between two atoms. It is calculated as (bonding electrons − antibonding electrons) / 2." },
+      { q: "What do bonding and antibonding electrons mean?", a: "Bonding electrons occupy molecular orbitals that are lower in energy and stabilize the bond between atoms. Antibonding electrons occupy higher-energy orbitals that weaken or oppose the bond." },
+      { q: "Is this the same as Bond Duration?", a: "No. Bond Duration on this site is a finance calculator for the interest-rate sensitivity of a bond investment. This calculator is about the chemistry concept of a bond between atoms." },
+      { q: "What does a bond order of zero mean?", a: "A bond order of zero means the bonding and antibonding electrons cancel out, and the species is not expected to form a stable bond in this simple model, like He₂." },
+      { q: "Can bond order be a fraction?", a: "Yes. Species with an odd number of electrons, such as O₂⁻ or O₂⁺, have half-integer bond orders." },
+      { q: "Does a higher bond order always mean a more reactive molecule?", a: "Not necessarily. Bond order relates to bond strength and length in this simplified model, but reactivity depends on many other factors, including orbital energies, sterics, and the rest of the molecule." },
+    ],
+    related: ["molecular-weight-calculator", "activity-coefficient-calculator", "arrhenius-equation-calculator"],
+  },
+  {
+    id: "buffer-capacity-calculator",
+    category: "chemistry",
+    title: "Buffer Capacity Calculator",
+    keyword: "buffer capacity calculator",
+    description: "Estimate the empirical buffer capacity β = |Δn / ΔpH| of a solution from a measured pH change after adding a strong acid or base.",
+    intro: "Enter the amount of strong acid or base added, the buffer's volume, and the pH before and after. The calculator returns the empirical buffer capacity, the amount of strong acid or base per liter needed to shift the pH by one unit.",
+    fields: [
+      { id: "amount", label: "Strong acid/base added", type: "number", default: 1, step: "any", min: 0 },
+      { id: "amountUnit", label: "Amount unit", type: "select", default: "mmol", options: [{ v: "mmol", l: "mmol" }, { v: "mol", l: "mol" }] },
+      { id: "volume", label: "Buffer volume", type: "number", default: 100, step: "any", min: 0 },
+      { id: "volumeUnit", label: "Volume unit", type: "select", default: "mL", options: [{ v: "mL", l: "mL" }, { v: "L", l: "L" }] },
+      { id: "phInitial", label: "Initial pH", type: "number", default: 4.74, step: "any" },
+      { id: "phFinal", label: "Final pH (after adding acid/base)", type: "number", default: 4.84, step: "any" },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      if (!(v.amount >= 0) || !Number.isFinite(v.amount)) return bad("The amount added cannot be negative.");
+      if (!(v.volume > 0) || !Number.isFinite(v.volume)) return bad("Buffer volume must be greater than zero.");
+      if (!Number.isFinite(v.phInitial) || !Number.isFinite(v.phFinal)) return bad("Enter both the initial and final pH.");
+      const dpH = v.phFinal - v.phInitial;
+      if (Math.abs(dpH) < 1e-9) return bad("The pH change cannot be zero, because buffer capacity divides by ΔpH.");
+      const molL = v.amountUnit === "mmol" ? v.amount / 1000 : v.amount;
+      const litres = v.volumeUnit === "mL" ? v.volume / 1000 : v.volume;
+      const dn = molL / litres;
+      const beta = Math.abs(dn / dpH);
+      return {
+        primary: { label: "Empirical buffer capacity β", value: `${round(beta, 5)} mol/(L·pH)` },
+        secondary: [
+          { l: "Added amount per liter (Δn)", v: `${round(dn, 5)} mol/L` },
+          { l: "pH change (ΔpH)", v: `${round(dpH, 4)}` },
+        ],
+        note: "β = |Δn / ΔpH|, where Δn is the amount of strong acid or base added per liter of buffer. This is an empirical capacity computed from your measured pH change, not a theoretical prediction from a single formula. Buffer capacity depends on the buffer's composition, total concentration, and starting pH relative to pKa, so one number does not describe every buffer system.",
+      };
+    },
+    faq: [
+      { q: "What is buffer capacity?", a: "Buffer capacity (β) measures how much strong acid or base a buffer can absorb before its pH changes significantly. A higher β means the buffer resists pH change more strongly." },
+      { q: "Is this a theoretical or measured value?", a: "This calculator computes an empirical (measured) capacity from the pH change you observed after adding a known amount of acid or base. It is not a prediction from concentration alone." },
+      { q: "Why can't ΔpH be zero?", a: "Buffer capacity is defined as the amount added divided by the resulting pH change. If the pH didn't change, the capacity would be undefined (infinite), so the calculator requires a nonzero change." },
+      { q: "Does one buffer capacity value apply everywhere?", a: "No. Capacity depends on the buffer's concentration, the ratio of acid to conjugate base, and how close the starting pH is to the buffer's pKa. Capacity is highest near pH = pKa." },
+      { q: "How is this related to the Buffer pH Calculator?", a: "The Buffer pH Calculator estimates a buffer's pH from its composition using the Henderson-Hasselbalch equation. This calculator instead measures how resistant an existing buffer is to a pH change." },
+      { q: "Does this tell me how to prepare a buffer?", a: "No. It only computes capacity from measurements you provide and gives no preparation or handling instructions." },
+    ],
+    related: ["buffer-ph-calculator", "titration-ph-calculator", "activity-coefficient-calculator"],
+  },
+  {
+    id: "buffer-ph-calculator",
+    category: "chemistry",
+    title: "Buffer pH Calculator",
+    keyword: "buffer ph calculator, henderson hasselbalch calculator",
+    description: "Estimate buffer pH from pKa and the concentrations of a weak acid and its conjugate base using the Henderson-Hasselbalch equation.",
+    intro: "Enter the pKa of the weak acid and the concentrations of the conjugate base and the weak acid to estimate the buffer's pH with the Henderson-Hasselbalch equation.",
+    fields: [
+      { id: "pka", label: "pKa of the weak acid", type: "number", default: 4.76, step: "any" },
+      { id: "baseConc", label: "Conjugate base concentration [A⁻]", type: "number", default: 0.1, step: "any", min: 0 },
+      { id: "acidConc", label: "Weak acid concentration [HA]", type: "number", default: 0.1, step: "any", min: 0 },
+      { id: "concUnit", label: "Concentration unit (same for both)", type: "select", default: "M", options: [{ v: "M", l: "mol/L" }, { v: "mM", l: "mmol/L" }] },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      if (!Number.isFinite(v.pka)) return bad("Enter a valid pKa.");
+      if (!(v.baseConc > 0) || !(v.acidConc > 0)) return bad("Both the conjugate base and weak acid concentrations must be greater than zero.");
+      const ratio = v.baseConc / v.acidConc;
+      const ph = v.pka + Math.log10(ratio);
+      return {
+        primary: { label: "Estimated buffer pH", value: `${round(ph, 3)}` },
+        secondary: [
+          { l: "Base/acid ratio [A⁻]/[HA]", v: `${round(ratio, 4)}` },
+          { l: "log₁₀(ratio)", v: `${round(Math.log10(ratio), 4)}` },
+        ],
+        note: "pH = pKa + log₁₀([A⁻] / [HA]). When the base and acid concentrations are equal, the ratio is 1 and pH = pKa. This equation assumes an appropriate weak-acid/conjugate-base pair, uses concentrations as an approximation for activities, and works best for dilute solutions near the buffer's effective range (roughly pKa ± 1). It does not account for ionic-strength effects or highly concentrated or nonideal solutions.",
+      };
+    },
+    faq: [
+      { q: "What is the Henderson-Hasselbalch equation?", a: "It is pH = pKa + log₁₀([A⁻] / [HA]), relating a buffer's pH to the pKa of its weak acid and the ratio of conjugate base to acid concentration." },
+      { q: "Why does equal acid and base give pH = pKa?", a: "When [A⁻] equals [HA], the ratio is 1, and log₁₀(1) = 0, so pH = pKa exactly." },
+      { q: "What is the effective buffering range?", a: "A buffer resists pH change best within about one pH unit of its pKa, where the acid and conjugate base concentrations are within a factor of 10 of each other." },
+      { q: "Does this equation work at any concentration?", a: "It is most accurate for dilute solutions. At high concentrations, ionic strength affects activity coefficients and the simple concentration-based equation becomes less accurate." },
+      { q: "How is this different from Buffer Capacity?", a: "This calculator estimates pH from a buffer's composition. Buffer Capacity instead measures how much a buffer resists pH change when acid or base is added, from an observed pH shift." },
+      { q: "Does this give a recipe for making a specific buffer?", a: "No. It estimates pH from concentrations you supply and does not provide preparation instructions." },
+    ],
+    related: ["buffer-capacity-calculator", "titration-ph-calculator", "activity-coefficient-calculator"],
+  },
+  {
+    id: "calibration-curve-calculator",
+    category: "chemistry",
+    title: "Calibration Curve Calculator",
+    keyword: "calibration curve calculator, linear regression standard curve",
+    description: "Fit a linear calibration curve y = mx + b from standard concentrations and instrument responses, with R² and an optional unknown-sample estimate.",
+    intro: "Enter at least two known standard values (x) and their measured responses (y), up to six pairs. The calculator fits a least-squares line, reports the slope, intercept, and R², and can estimate the concentration of an unknown sample from its response.",
+    fields: [
+      { id: "x1", label: "Standard 1: known x", type: "number", default: 0, step: "any" },
+      { id: "y1", label: "Standard 1: measured y", type: "number", default: 0.02, step: "any" },
+      { id: "x2", label: "Standard 2: known x", type: "number", default: 2, step: "any" },
+      { id: "y2", label: "Standard 2: measured y", type: "number", default: 0.41, step: "any" },
+      { id: "x3", label: "Standard 3: known x", type: "number", default: 4, step: "any" },
+      { id: "y3", label: "Standard 3: measured y", type: "number", default: 0.79, step: "any" },
+      { id: "x4", label: "Standard 4: known x (optional)", type: "number", default: 6, step: "any" },
+      { id: "y4", label: "Standard 4: measured y (optional)", type: "number", default: 1.22, step: "any" },
+      { id: "x5", label: "Standard 5: known x (optional)", type: "number", default: "", step: "any" },
+      { id: "y5", label: "Standard 5: measured y (optional)", type: "number", default: "", step: "any" },
+      { id: "x6", label: "Standard 6: known x (optional)", type: "number", default: "", step: "any" },
+      { id: "y6", label: "Standard 6: measured y (optional)", type: "number", default: "", step: "any" },
+      { id: "unknownY", label: "Unknown sample's measured y (optional, blank to skip)", type: "number", default: 0.6, step: "any" },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      const pairs = [];
+      for (let i = 1; i <= 6; i++) {
+        const x = v["x" + i];
+        const y = v["y" + i];
+        if (x === "" || y === "" || x == null || y == null) continue;
+        if (!Number.isFinite(x) || !Number.isFinite(y)) return bad(`Standard ${i} has a non-numeric value.`);
+        pairs.push([x, y]);
+      }
+      if (pairs.length < 2) return bad("Enter at least 2 standards with both x and y values.");
+      const distinctX = new Set(pairs.map((p) => p[0]));
+      if (distinctX.size < 2) return bad("At least two standards must have different x values; a calibration line needs variation in x.");
+      const n = pairs.length;
+      const sx = pairs.reduce((s, p) => s + p[0], 0);
+      const sy = pairs.reduce((s, p) => s + p[1], 0);
+      const sxy = pairs.reduce((s, p) => s + p[0] * p[1], 0);
+      const sxx = pairs.reduce((s, p) => s + p[0] * p[0], 0);
+      const syy = pairs.reduce((s, p) => s + p[1] * p[1], 0);
+      const denom = n * sxx - sx * sx;
+      if (Math.abs(denom) < 1e-15) return bad("Cannot fit a line: all x values are identical.");
+      const m = (n * sxy - sx * sy) / denom;
+      const b = (sy - m * sx) / n;
+      const yMean = sy / n;
+      const ssTot = pairs.reduce((s, p) => s + (p[1] - yMean) * (p[1] - yMean), 0);
+      const ssRes = pairs.reduce((s, p) => { const pred = m * p[0] + b; return s + (p[1] - pred) * (p[1] - pred); }, 0);
+      const r2 = ssTot < 1e-15 ? (ssRes < 1e-15 ? 1 : 0) : 1 - ssRes / ssTot;
+      const secondary = [
+        { l: "Slope (m)", v: `${round(m, 6)}` },
+        { l: "Intercept (b)", v: `${round(b, 6)}` },
+        { l: "Number of standards used", v: `${n}` },
+      ];
+      let primary = { label: "R²", value: `${round(r2, 5)}` };
+      const xs = pairs.map((p) => p[0]);
+      const xMin = Math.min(...xs);
+      const xMax = Math.max(...xs);
+      if (v.unknownY !== "" && v.unknownY != null && Number.isFinite(v.unknownY)) {
+        if (Math.abs(m) < 1e-15) return bad("The fitted slope is zero, so an unknown x cannot be calculated from y.");
+        const xUnknown = (v.unknownY - b) / m;
+        primary = { label: "Estimated unknown x", value: `${round(xUnknown, 5)}` };
+        const extrap = xUnknown < xMin || xUnknown > xMax ? ` This value is outside the standards' range (${round(xMin, 4)} to ${round(xMax, 4)}), so it is an extrapolation and less reliable.` : "";
+        secondary.unshift({ l: "R²", v: `${round(r2, 5)}` });
+        secondary.push({ l: "Extrapolation check", v: extrap ? "Outside calibration range" : "Within calibration range" });
+      }
+      return {
+        primary,
+        secondary,
+        note: `Least-squares fit: y = mx + b. R² close to 1 means the standards fall close to a straight line, but a high R² alone does not validate that the method is accurate or free of bias. Predictions for x outside the range of your standards (${round(xMin, 4)} to ${round(xMax, 4)}) are extrapolations beyond the tested calibration range and should be treated with caution.`,
+      };
+    },
+    faq: [
+      { q: "How does a calibration curve work?", a: "You measure the instrument response (y) for several samples of known concentration (x), fit a straight line y = mx + b through the points, and then use that line to convert a new response into an estimated concentration: x = (y − b) / m." },
+      { q: "What does R² tell me?", a: "R² describes how closely the standards fall on the fitted line, from 0 (no linear relationship) to 1 (perfect fit). It does not by itself prove the method is accurate, free of interference, or valid outside the tested range." },
+      { q: "Can I use just two standards?", a: "Yes, two points define a line, but more standards give a more reliable fit and let you see whether the relationship is really linear." },
+      { q: "What if all my x values are the same?", a: "A calibration curve needs variation in the known values to fit a slope. If every standard has the same x, the calculator cannot compute a line." },
+      { q: "Why does it warn about extrapolation?", a: "A calibration line is only tested across the range of your standards. Estimating an x value from a y response outside that range assumes the line stays valid beyond where you tested it, which may not hold." },
+      { q: "How is this related to the Beer-Lambert Law Calculator?", a: "The Beer-Lambert Law Calculator uses a known molar absorptivity to relate absorbance and concentration directly. This calculator instead builds that relationship empirically from your own standards, useful when you don't have or trust a literature absorptivity value." },
+    ],
+    related: ["beer-lambert-law-calculator", "protein-concentration-calculator", "dna-concentration-calculator"],
+  },
+  {
+    id: "chemical-name-calculator",
+    category: "chemistry",
+    title: "Chemical Name Calculator",
+    keyword: "chemical name calculator, compound naming calculator",
+    description: "Look up the common name of a limited set of simple ionic and molecular compounds from their chemical formula.",
+    intro: "Enter a chemical formula such as NaCl, MgO, or CO2. This tool only recognizes a curated list of simple, unambiguous binary ionic and molecular compounds; it does not attempt to name organic compounds or anything requiring structural information beyond the formula.",
+    fields: [
+      { id: "formula", label: "Chemical formula", type: "text", default: "CO2" },
+    ],
+    compute: (v) => {
+      const KNOWN = {
+        NaCl: "Sodium chloride", KCl: "Potassium chloride", MgO: "Magnesium oxide", CaO: "Calcium oxide",
+        CaCl2: "Calcium chloride", NaOH: "Sodium hydroxide", KOH: "Potassium hydroxide", NaF: "Sodium fluoride",
+        LiCl: "Lithium chloride", Li2O: "Lithium oxide", Na2O: "Sodium oxide", MgCl2: "Magnesium chloride",
+        AlCl3: "Aluminum chloride", Al2O3: "Aluminum oxide", ZnO: "Zinc oxide", ZnCl2: "Zinc chloride",
+        AgCl: "Silver chloride", CuO: "Copper(II) oxide", Cu2O: "Copper(I) oxide", FeO: "Iron(II) oxide",
+        Fe2O3: "Iron(III) oxide", FeCl2: "Iron(II) chloride", FeCl3: "Iron(III) chloride", CaCO3: "Calcium carbonate",
+        NaHCO3: "Sodium bicarbonate", Na2CO3: "Sodium carbonate", CaSO4: "Calcium sulfate", MgSO4: "Magnesium sulfate",
+        H2O: "Water (dihydrogen monoxide)", CO2: "Carbon dioxide", CO: "Carbon monoxide", NO: "Nitrogen monoxide",
+        NO2: "Nitrogen dioxide", N2O: "Dinitrogen monoxide", SO2: "Sulfur dioxide", SO3: "Sulfur trioxide",
+        NH3: "Ammonia", CH4: "Methane", HCl: "Hydrogen chloride (hydrochloric acid in solution)",
+        H2SO4: "Sulfuric acid", HNO3: "Nitric acid", H3PO4: "Phosphoric acid", H2CO3: "Carbonic acid",
+        N2: "Nitrogen gas", O2: "Oxygen gas", H2: "Hydrogen gas", O3: "Ozone", CCl4: "Carbon tetrachloride",
+        PCl3: "Phosphorus trichloride", PCl5: "Phosphorus pentachloride", SiO2: "Silicon dioxide", NaBr: "Sodium bromide",
+        KBr: "Potassium bromide", CaF2: "Calcium fluoride", BaCl2: "Barium chloride", BaO: "Barium oxide",
+        HF: "Hydrogen fluoride (hydrofluoric acid in solution)", H2S: "Hydrogen sulfide", ZnS: "Zinc sulfide",
+        AgNO3: "Silver nitrate", KNO3: "Potassium nitrate", NaNO3: "Sodium nitrate", NH4Cl: "Ammonium chloride",
+        NH4NO3: "Ammonium nitrate", CuSO4: "Copper(II) sulfate", CuCl2: "Copper(II) chloride",
+      };
+      const raw = (v.formula || "").trim();
+      if (!raw) return { primary: { label: "Enter a formula", value: "-" }, secondary: [], note: "Type a chemical formula such as NaCl or CO2." };
+      const normalized = raw.replace(/\s+/g, "");
+      const key = Object.keys(KNOWN).find((k) => k.toLowerCase() === normalized.toLowerCase());
+      if (!key) {
+        return {
+          primary: { label: "Not in the supported list", value: raw },
+          secondary: [],
+          note: `This calculator only recognizes a curated set of common simple compounds, not every possible formula. A molecular formula alone does not always identify a compound uniquely (isomers, for example, share a formula but differ in structure), and full systematic naming needs rules and structural information beyond what this tool implements. Try the Molecular Weight Calculator to get the molar mass of any valid formula, or the Chemical Equation Balancer to work with reactions.`,
+        };
+      }
+      return {
+        primary: { label: "Name", value: KNOWN[key] },
+        secondary: [{ l: "Formula", v: key }],
+        note: "This name comes from a curated list of common, unambiguous simple compounds. It is not a general-purpose nomenclature engine: many valid formulas, especially organic and complex inorganic compounds, are not covered and are not guessed at.",
+      };
+    },
+    faq: [
+      { q: "Can this name any chemical formula?", a: "No. It only recognizes a curated list of common, simple binary ionic and molecular compounds. Formulas outside that list return a clear message rather than a guessed name." },
+      { q: "Why can't every formula be named automatically?", a: "Systematic chemical nomenclature follows detailed rules that often require structural information a molecular formula alone doesn't provide. Isomers, for instance, share the same formula but have different structures and different names." },
+      { q: "Does this handle organic compounds?", a: "No. Organic nomenclature (IUPAC rules for carbon chains, rings, and functional groups) needs structural data this tool doesn't have, so organic compounds are outside its scope." },
+      { q: "What if my formula isn't recognized?", a: "The calculator tells you plainly that it isn't in the supported list rather than inventing a name. You can still get its molar mass from the Molecular Weight Calculator." },
+      { q: "How is this different from the Chemical Equation Balancer?", a: "The balancer works with whole reactions and finds coefficients; it doesn't name compounds. This tool looks up a single formula's common name from a fixed list." },
+      { q: "Are common names and systematic (IUPAC) names the same?", a: "Not always. This tool gives the common name where one is listed; a compound may also have a distinct systematic name that isn't shown here." },
+    ],
+    related: ["molecular-weight-calculator", "chemical-equation-balancer", "atom-calculator"],
+  },
+  {
+    id: "combustion-analysis-calculator",
+    category: "chemistry",
+    title: "Combustion Analysis Calculator",
+    keyword: "combustion analysis calculator, CHO elemental analysis",
+    description: "Estimate carbon, hydrogen, and oxygen mass in a sample from its mass and the measured CO2 and H2O produced by combustion.",
+    intro: "Enter the original sample mass and the masses of CO2 and H2O produced when it was fully combusted. Assuming the sample contains only carbon, hydrogen, and oxygen, the calculator estimates the mass and percentage of each element.",
+    fields: [
+      { id: "sampleMass", label: "Sample mass", type: "number", default: 1.5, step: "any", min: 0 },
+      { id: "co2Mass", label: "CO2 produced (mass)", type: "number", default: 2.2, step: "any", min: 0 },
+      { id: "h2oMass", label: "H2O produced (mass)", type: "number", default: 0.9, step: "any", min: 0 },
+      { id: "massUnit", label: "Mass unit (same for all)", type: "select", default: "g", options: [{ v: "g", l: "g" }, { v: "mg", l: "mg" }] },
+      { id: "assumeOxygen", label: "Sample composition", type: "select", default: "cho", options: [{ v: "cho", l: "Carbon, hydrogen, and oxygen only" }, { v: "ch", l: "Carbon and hydrogen only (no oxygen)" }] },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      if (!(v.sampleMass > 0)) return bad("Sample mass must be greater than zero.");
+      if (!(v.co2Mass >= 0) || !(v.h2oMass >= 0)) return bad("Measured CO2 and H2O masses cannot be negative.");
+      const M_CO2 = 44.009, M_C = 12.011, M_H2O = 18.015, M_H = 1.008;
+      const carbonMass = (v.co2Mass * M_C) / M_CO2;
+      const hydrogenMass = (v.h2oMass * 2 * M_H) / M_H2O;
+      if (carbonMass + hydrogenMass > v.sampleMass * (1 + 1e-6)) {
+        return bad("The carbon and hydrogen mass implied by your CO2 and H2O values is greater than the sample mass. Check your measurements and units.");
+      }
+      const secondary = [
+        { l: "Carbon percentage", v: `${round((carbonMass / v.sampleMass) * 100, 3)}%` },
+        { l: "Hydrogen percentage", v: `${round((hydrogenMass / v.sampleMass) * 100, 3)}%` },
+      ];
+      let primary = { label: "Carbon mass", value: `${round(carbonMass, 5)} ${v.massUnit}` };
+      let note;
+      if (v.assumeOxygen === "cho") {
+        const oxygenMass = v.sampleMass - carbonMass - hydrogenMass;
+        secondary.push({ l: "Hydrogen mass", v: `${round(hydrogenMass, 5)} ${v.massUnit}` });
+        secondary.push({ l: "Oxygen mass (by difference)", v: `${round(oxygenMass, 5)} ${v.massUnit}` });
+        secondary.push({ l: "Oxygen percentage", v: `${round((oxygenMass / v.sampleMass) * 100, 3)}%` });
+        note = `Carbon mass = CO2 mass × M(C)/M(CO2). Hydrogen mass = H2O mass × 2M(H)/M(H2O). Oxygen mass = sample mass − carbon mass − hydrogen mass. This "by difference" oxygen calculation is only valid if the sample truly contains no elements besides carbon, hydrogen, and oxygen; if other elements (such as nitrogen, sulfur, or halogens) are present, this method will misattribute their mass to oxygen. This is an educational calculation based on measurements you supply, not a substitute for independent elemental analysis.`;
+      } else {
+        secondary.push({ l: "Hydrogen mass", v: `${round(hydrogenMass, 5)} ${v.massUnit}` });
+        secondary.push({ l: "Mass accounted for", v: `${round(carbonMass + hydrogenMass, 5)} ${v.massUnit} of ${round(v.sampleMass, 5)} ${v.massUnit}` });
+        note = `Carbon mass = CO2 mass × M(C)/M(CO2). Hydrogen mass = H2O mass × 2M(H)/M(H2O). With a carbon-and-hydrogen-only assumption, any leftover mass beyond carbon and hydrogen indicates the assumption may not hold, or there is measurement error.`;
+      }
+      return { primary, secondary, note };
+    },
+    faq: [
+      { q: "How does combustion analysis work?", a: "A sample is fully combusted, converting its carbon to CO2 and its hydrogen to H2O. Measuring the masses of CO2 and H2O produced lets you calculate how much carbon and hydrogen were in the original sample." },
+      { q: "How is oxygen calculated?", a: "If the sample is assumed to contain only carbon, hydrogen, and oxygen, oxygen mass is found by subtracting the carbon and hydrogen mass from the total sample mass. This only works if no other elements are present." },
+      { q: "What if my sample contains nitrogen or sulfur?", a: "The carbon-hydrogen-oxygen-only assumption breaks down, and the 'oxygen by difference' number will actually include the mass of any other elements. Choose the carbon-and-hydrogen-only option instead, or use a different analytical method that can detect the other elements." },
+      { q: "Why might the calculator reject my numbers?", a: "If the carbon and hydrogen mass implied by your CO2 and H2O measurements is larger than the whole sample, something is inconsistent, such as a units mismatch or a data-entry error." },
+      { q: "Does this replace laboratory elemental analysis?", a: "No. It performs the arithmetic on measurements you already have. It doesn't tell you how to run a combustion experiment or interpret instrument-specific data." },
+      { q: "How is this different from the Empirical Formula Calculator?", a: "The Empirical Formula Calculator starts from element percentages you already know. This tool derives carbon and hydrogen content directly from combustion product masses, which is how those percentages are often first measured." },
+    ],
+    related: ["molecular-weight-calculator", "empirical-formula-calculator", "actual-yield-calculator"],
+  },
+  {
+    id: "concentration-calculator",
+    category: "chemistry",
+    title: "Concentration Calculator",
+    keyword: "concentration calculator, molarity calculator, mass concentration calculator",
+    description: "Calculate mass concentration (g/L) or molarity (mol/L) of a solution from solute mass or moles and solution volume.",
+    intro: "Choose mass concentration or molarity. For molarity, either enter the moles directly or enter mass together with the solute's molar mass and the calculator will find moles for you.",
+    fields: [
+      { id: "mode", label: "Calculate", type: "select", default: "mass", options: [{ v: "mass", l: "Mass concentration (g/L)" }, { v: "molarity", l: "Molarity (mol/L)" }] },
+      { id: "mass", label: "Solute mass", type: "number", default: 5, step: "any", min: 0 },
+      { id: "massUnit", label: "Mass unit", type: "select", default: "g", options: [{ v: "g", l: "g" }, { v: "mg", l: "mg" }, { v: "kg", l: "kg" }] },
+      { id: "molesInput", label: "Moles of solute (molarity mode; leave 0 to compute from mass and molar mass)", type: "number", default: 0, step: "any", min: 0 },
+      { id: "molarMass", label: "Molar mass (molarity mode, used if moles is 0)", type: "number", default: 58.44, step: "any", min: 0 },
+      { id: "volume", label: "Solution volume", type: "number", default: 500, step: "any", min: 0 },
+      { id: "volumeUnit", label: "Volume unit", type: "select", default: "mL", options: [{ v: "mL", l: "mL" }, { v: "L", l: "L" }] },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      if (!(v.volume > 0)) return bad("Solution volume must be greater than zero.");
+      const litres = v.volumeUnit === "L" ? v.volume : v.volume / 1000;
+      const grams = v.mass * { g: 1, mg: 0.001, kg: 1000 }[v.massUnit];
+      if (v.mode === "mass") {
+        if (!(v.mass >= 0)) return bad("Solute mass cannot be negative.");
+        const gPerL = grams / litres;
+        return {
+          primary: { label: "Mass concentration", value: `${round(gPerL, 5)} g/L` },
+          secondary: [
+            { l: "In mg/mL", v: `${round(gPerL, 5)} mg/mL` },
+            { l: "In mg/L", v: `${round(gPerL * 1000, 3)} mg/L` },
+          ],
+          note: "Mass concentration c = mass / volume. Note that g/L and mg/mL are numerically the same. This is mass per volume, not molarity (amount of substance per volume); the two are only interchangeable once you know the molar mass.",
+        };
+      }
+      let moles = v.molesInput;
+      let detail;
+      if (!(moles > 0)) {
+        if (!(v.molarMass > 0)) return bad("Enter either the moles of solute directly, or a positive molar mass so moles can be calculated from mass.");
+        if (!(v.mass >= 0)) return bad("Solute mass cannot be negative.");
+        moles = grams / v.molarMass;
+        detail = `Moles calculated as mass / molar mass = ${round(grams, 5)} g / ${round(v.molarMass, 4)} g/mol.`;
+      } else {
+        detail = "Moles entered directly.";
+      }
+      const molarity = moles / litres;
+      return {
+        primary: { label: "Molarity", value: `${round(molarity, 6)} mol/L` },
+        secondary: [
+          { l: "In mmol/L", v: `${round(molarity * 1000, 4)} mmol/L` },
+          { l: "Moles used", v: `${round(moles, 6)} mol` },
+        ],
+        note: `Molarity M = moles of solute / volume of solution in liters. ${detail} Molarity (amount of substance per volume) is a different quantity from mass concentration (mass per volume); do not use them interchangeably without converting through the molar mass.`,
+      };
+    },
+    faq: [
+      { q: "What is the difference between mass concentration and molarity?", a: "Mass concentration is mass of solute per volume of solution (g/L). Molarity is amount of substance (moles) per volume (mol/L). They both describe how much solute is present, but in different units, and converting between them requires the solute's molar mass." },
+      { q: "How do I find molarity if I only know mass?", a: "Enter the mass and the solute's molar mass (from the Molecular Weight Calculator if needed), and leave the moles field at 0; the calculator computes moles = mass / molar mass for you." },
+      { q: "How is this different from Cell Dilution?", a: "Cell Dilution solves the C1V1 = C2V2 relationship for how to dilute an existing stock to a target concentration. This calculator computes a concentration directly from mass or moles and volume, without a dilution step." },
+      { q: "How is this different from Alligation?", a: "Alligation finds the ratio needed to mix two different concentrations to hit a target in between. This calculator computes a single solution's concentration from its composition." },
+      { q: "Can I use this for very dilute solutions?", a: "Yes, the arithmetic is the same at any concentration, though at very high concentrations the assumption that volumes add ideally can break down." },
+      { q: "What is molality, and does this calculator use it?", a: "Molality is moles of solute per kilogram of solvent, not per volume of solution. This calculator computes molarity and mass concentration, both volume-based; for molality-based calculations see the Boiling Point Elevation Calculator." },
+    ],
+    related: ["cell-dilution-calculator", "alligation-calculator", "molecular-weight-calculator"],
+  },
+  {
+    id: "crude-protein-calculator",
+    category: "biology",
+    title: "Crude Protein Calculator",
+    keyword: "crude protein calculator, nitrogen to protein conversion",
+    description: "Estimate crude protein percentage from measured nitrogen percentage and a nitrogen-to-protein conversion factor.",
+    intro: "Enter the nitrogen percentage from a lab analysis and a nitrogen-to-protein conversion factor. The default factor of 6.25 is a common convention, not a universal constant, so use the factor appropriate to your sample type if you know it.",
+    fields: [
+      { id: "nitrogen", label: "Nitrogen (%)", type: "number", default: 10, step: "any", min: 0, max: 100 },
+      { id: "factor", label: "Nitrogen-to-protein conversion factor", type: "number", default: 6.25, step: "any", min: 0 },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      if (!(v.nitrogen >= 0) || v.nitrogen > 100) return bad("Nitrogen percentage must be between 0 and 100.");
+      if (!(v.factor > 0)) return bad("The conversion factor must be greater than zero.");
+      const cp = v.nitrogen * v.factor;
+      const warn = cp > 100 ? " This result is above 100%, which is not physically possible for a real sample; check the nitrogen percentage, the conversion factor, and whether the sample truly matches the assumptions behind that factor." : "";
+      return {
+        primary: { label: "Crude protein", value: `${round(cp, 3)}%` },
+        secondary: [
+          { l: "Nitrogen used", v: `${v.nitrogen}%` },
+          { l: "Conversion factor used", v: `${v.factor}` },
+        ],
+        note: `Crude protein (%) = nitrogen (%) × conversion factor. 6.25 assumes protein is about 16% nitrogen (1/0.16 = 6.25) and is a widely used default, but the appropriate factor varies by sample type and lab convention (for example, dairy and cereal analyses sometimes use different factors). Crude protein is an indirect, nitrogen-based estimate: nonprotein nitrogen (from compounds like urea, nitrates, or free amino acids) is counted the same as protein nitrogen, so the true protein content can differ from the crude protein value.${warn}`,
+      };
+    },
+    faq: [
+      { q: "What is crude protein?", a: "Crude protein is an estimate of protein content calculated from the total nitrogen measured in a sample, using a conversion factor, rather than measuring protein molecules directly." },
+      { q: "Why 6.25 as a default factor?", a: "Typical proteins are assumed to be about 16% nitrogen by mass, and 1 / 0.16 = 6.25. It's a widely used convention, not a measured constant for every material." },
+      { q: "Why might I need a different factor?", a: "Different foods and feeds have different average nitrogen content in their proteins. Some standards specify other factors for specific commodities. Use the factor that matches your material and analytical standard if you know it." },
+      { q: "Can crude protein be higher than the true protein content?", a: "Yes. Nonprotein nitrogen sources, such as urea, nitrates, or free amino acids, add to the measured nitrogen without being protein, so crude protein can overestimate actual protein." },
+      { q: "What if the result is above 100%?", a: "That is not physically possible for the sample as a whole, so the calculator flags it. Check whether the nitrogen percentage and conversion factor you entered actually apply to your sample." },
+      { q: "How is this different from Protein Concentration?", a: "Protein Concentration on this site calculates protein amount in a liquid solution, often from absorbance. This calculator estimates a solid or feed sample's protein percentage from its nitrogen content." },
+    ],
+    related: ["protein-concentration-calculator", "dry-matter-calculator", "feed-conversion-ratio-calculator"],
   },
 ];
 

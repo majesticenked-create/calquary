@@ -215,6 +215,15 @@ const WAVE_ONE_TOOL_IDS = [
   "boiling-point-calculator",
   "boiling-point-at-altitude-calculator",
   "boiling-point-elevation-calculator",
+  // Batch 24 (Batch 013 build): 8 new tools translated into all 11 non-English locales.
+  "bond-order-calculator",
+  "buffer-capacity-calculator",
+  "buffer-ph-calculator",
+  "calibration-curve-calculator",
+  "chemical-name-calculator",
+  "combustion-analysis-calculator",
+  "concentration-calculator",
+  "crude-protein-calculator",
 ];
 
 function loadData() {

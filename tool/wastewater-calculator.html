@@ -15,9 +15,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wastewater Calculator | Calquary</title>
-  <meta name="description" content="Calculate BOD loading, food-to-microorganism (F/M) ratio, or hydraulic retention time from flow, concentration, and tank volume." />
+  <meta name="description" content="Calculate BOD or COD loading, food-to-microorganism (F/M) ratio, or hydraulic retention time from flow, concentration, and tank volume." />
   <meta property="og:title" content="Wastewater Calculator | Calquary">
-  <meta property="og:description" content="Calculate BOD loading, food-to-microorganism (F/M) ratio, or hydraulic retention time from flow, concentration, and tank volume.">
+  <meta property="og:description" content="Calculate BOD or COD loading, food-to-microorganism (F/M) ratio, or hydraulic retention time from flow, concentration, and tank volume.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/tool/wastewater-calculator">
   <meta property="og:locale" content="en_US">
@@ -27,7 +27,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Wastewater Calculator | Calquary">
-  <meta name="twitter:description" content="Calculate BOD loading, food-to-microorganism (F/M) ratio, or hydraulic retention time from flow, concentration, and tank volume.">
+  <meta name="twitter:description" content="Calculate BOD or COD loading, food-to-microorganism (F/M) ratio, or hydraulic retention time from flow, concentration, and tank volume.">
   <meta name="twitter:image" content="https://calquary.com/og-images/wastewater-calculator.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/wastewater-calculator">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/wastewater-calculator">
@@ -89,7 +89,7 @@
     {
       "@type": "SoftwareApplication",
       "name": "Wastewater Calculator",
-      "description": "Calculate BOD loading, food-to-microorganism (F/M) ratio, or hydraulic retention time from flow, concentration, and tank volume.",
+      "description": "Calculate BOD or COD loading, food-to-microorganism (F/M) ratio, or hydraulic retention time from flow, concentration, and tank volume.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/tool/wastewater-calculator",
@@ -175,6 +175,14 @@
             "@type": "Answer",
             "text": "Flow in m³/day, m³/hour, L/day, or US million gallons per day, and tank volume in m³, liters, or US gallons. Concentrations are in mg/L."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between COD and BOD loading?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both use the same flow × concentration / 1000 calculation, but COD measures the total oxygen demand from chemically oxidizable material (usually via a dichromate or similar test), while BOD measures oxygen consumed by microorganisms over an incubation period, typically 5 days. COD is normally the larger number for the same sample, and the ratio between them varies by wastewater source."
+          }
         }
       ]
     }
@@ -215,7 +223,7 @@
     <div class="tool-layout">
       <main>
         <h1>Wastewater Calculator</h1>
-        <p style="max-width:60ch;">Choose BOD loading, F/M ratio, or hydraulic retention time, enter the flow, concentrations, and tank volume with their units, and read the result with the units shown. These are calculation aids, not plant operating recommendations.</p>
+        <p style="max-width:60ch;">Choose BOD loading, COD loading, F/M ratio, or hydraulic retention time, enter the flow, concentrations, and tank volume with their units, and read the result with the units shown. These are calculation aids, not plant operating recommendations.</p>
         <p class="last-updated">Last updated: September 26, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -265,6 +273,10 @@
 <div class="faq-item">
 <h3>Which units does it accept?</h3>
 <p>Flow in m³/day, m³/hour, L/day, or US million gallons per day, and tank volume in m³, liters, or US gallons. Concentrations are in mg/L.</p>
+</div>
+<div class="faq-item">
+<h3>What is the difference between COD and BOD loading?</h3>
+<p>Both use the same flow × concentration / 1000 calculation, but COD measures the total oxygen demand from chemically oxidizable material (usually via a dichromate or similar test), while BOD measures oxygen consumed by microorganisms over an incubation period, typically 5 days. COD is normally the larger number for the same sample, and the ratio between them varies by wastewater source.</p>
 </div></div>
           <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculate</a>
         </div>

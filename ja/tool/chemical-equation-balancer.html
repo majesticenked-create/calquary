@@ -99,7 +99,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-26",
       "inLanguage": "ja"
     },
     {
@@ -128,6 +128,14 @@
     {
       "@type": "FAQPage",
       "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "プロパンやオクタンなど、どんな炭化水素の燃焼でも釣り合わせられますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。左辺に炭化水素とO2、右辺にCO2とH2Oを入力してください。例えばC3H8 + O2 -> CO2 + H2OやC8H18 + O2 -> CO2 + H2Oのようにすると、完全燃焼のための整数係数を求めます。これは記号的で理想化された燃焼式であり、不完全燃焼や実際の空燃比、燃焼反応の実施方法は扱いません。"
+          }
+        },
         {
           "@type": "Question",
           "name": "化学反応式を「バランスさせる」とはどういう意味ですか？",
@@ -216,7 +224,7 @@
       <main>
         <h1>化学反応式バランサー</h1>
         <p style="max-width:60ch;">化合物間は+、反応物と生成物の間は->を使用して、不均衡な方程式（Fe + O2 -> Fe2O3など）を入力します。</p>
-        <p class="last-updated">最終更新日： September 5, 2026</p>
+        <p class="last-updated">最終更新日： September 26, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel" id="calc-panel">
@@ -243,6 +251,10 @@
         <div class="article-block">
           <h2>よくある質問</h2>
           <div id="faq-list"><div class="faq-item">
+<h3>プロパンやオクタンなど、どんな炭化水素の燃焼でも釣り合わせられますか?</h3>
+<p>はい。左辺に炭化水素とO2、右辺にCO2とH2Oを入力してください。例えばC3H8 + O2 -> CO2 + H2OやC8H18 + O2 -> CO2 + H2Oのようにすると、完全燃焼のための整数係数を求めます。これは記号的で理想化された燃焼式であり、不完全燃焼や実際の空燃比、燃焼反応の実施方法は扱いません。</p>
+</div>
+<div class="faq-item">
 <h3>化学反応式を「バランスさせる」とはどういう意味ですか？</h3>
 <p>各化合物の前に整数係数（乗数）を見つけて、方程式の両側に各元素の原子が同じ数だけ現れるようにすることです。化学反応では物質が生成も破壊もされないため、両側は正確にバランスが取れていなければなりません。</p>
 </div>

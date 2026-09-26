@@ -1056,7 +1056,7 @@
   </url>
   <url>
     <loc>https://calquary.com/tool/empirical-formula-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/empirical-formula-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/empirical-formula-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/empirical-formula-calculator"/>
@@ -1141,7 +1141,7 @@
   </url>
   <url>
     <loc>https://calquary.com/tool/chemical-equation-balancer</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/chemical-equation-balancer"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/chemical-equation-balancer"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/chemical-equation-balancer"/>
@@ -1175,7 +1175,7 @@
   </url>
   <url>
     <loc>https://calquary.com/tool/titration-ph-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/titration-ph-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/titration-ph-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/titration-ph-calculator"/>
@@ -4626,7 +4626,7 @@
   </url>
   <url>
     <loc>https://calquary.com/tool/dry-matter-calculator</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/dry-matter-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dry-matter-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/dry-matter-calculator"/>
@@ -5764,6 +5764,142 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/boiling-point-elevation-calculator"/>
   </url>
   <url>
+    <loc>https://calquary.com/tool/bond-order-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/bond-order-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/buffer-capacity-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/buffer-capacity-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/buffer-ph-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/buffer-ph-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/calibration-curve-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/calibration-curve-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/chemical-name-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/chemical-name-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/combustion-analysis-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/combustion-analysis-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/concentration-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/concentration-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/tool/crude-protein-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/crude-protein-calculator"/>
+  </url>
+  <url>
     <loc>https://calquary.com/es/</loc>
     <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/"/>
@@ -6819,7 +6955,7 @@
   </url>
   <url>
     <loc>https://calquary.com/es/tool/empirical-formula-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/empirical-formula-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/empirical-formula-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/empirical-formula-calculator"/>
@@ -6904,7 +7040,7 @@
   </url>
   <url>
     <loc>https://calquary.com/es/tool/chemical-equation-balancer</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/chemical-equation-balancer"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/chemical-equation-balancer"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/chemical-equation-balancer"/>
@@ -6938,7 +7074,7 @@
   </url>
   <url>
     <loc>https://calquary.com/es/tool/titration-ph-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/titration-ph-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/titration-ph-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/titration-ph-calculator"/>
@@ -10389,7 +10525,7 @@
   </url>
   <url>
     <loc>https://calquary.com/es/tool/dry-matter-calculator</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/dry-matter-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dry-matter-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/dry-matter-calculator"/>
@@ -11527,6 +11663,142 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/boiling-point-elevation-calculator"/>
   </url>
   <url>
+    <loc>https://calquary.com/es/tool/bond-order-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/bond-order-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/es/tool/buffer-capacity-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/buffer-capacity-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/es/tool/buffer-ph-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/buffer-ph-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/es/tool/calibration-curve-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/calibration-curve-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/es/tool/chemical-name-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/chemical-name-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/es/tool/combustion-analysis-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/combustion-analysis-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/es/tool/concentration-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/concentration-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/es/tool/crude-protein-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/crude-protein-calculator"/>
+  </url>
+  <url>
     <loc>https://calquary.com/fr/</loc>
     <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/"/>
@@ -12582,7 +12854,7 @@
   </url>
   <url>
     <loc>https://calquary.com/fr/tool/empirical-formula-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/empirical-formula-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/empirical-formula-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/empirical-formula-calculator"/>
@@ -12667,7 +12939,7 @@
   </url>
   <url>
     <loc>https://calquary.com/fr/tool/chemical-equation-balancer</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/chemical-equation-balancer"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/chemical-equation-balancer"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/chemical-equation-balancer"/>
@@ -12701,7 +12973,7 @@
   </url>
   <url>
     <loc>https://calquary.com/fr/tool/titration-ph-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/titration-ph-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/titration-ph-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/titration-ph-calculator"/>
@@ -16152,7 +16424,7 @@
   </url>
   <url>
     <loc>https://calquary.com/fr/tool/dry-matter-calculator</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/dry-matter-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dry-matter-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/dry-matter-calculator"/>
@@ -17290,6 +17562,142 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/boiling-point-elevation-calculator"/>
   </url>
   <url>
+    <loc>https://calquary.com/fr/tool/bond-order-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/bond-order-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/fr/tool/buffer-capacity-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/buffer-capacity-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/fr/tool/buffer-ph-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/buffer-ph-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/fr/tool/calibration-curve-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/calibration-curve-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/fr/tool/chemical-name-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/chemical-name-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/fr/tool/combustion-analysis-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/combustion-analysis-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/fr/tool/concentration-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/concentration-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/fr/tool/crude-protein-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/crude-protein-calculator"/>
+  </url>
+  <url>
     <loc>https://calquary.com/de/</loc>
     <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/"/>
@@ -18345,7 +18753,7 @@
   </url>
   <url>
     <loc>https://calquary.com/de/tool/empirical-formula-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/empirical-formula-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/empirical-formula-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/empirical-formula-calculator"/>
@@ -18430,7 +18838,7 @@
   </url>
   <url>
     <loc>https://calquary.com/de/tool/chemical-equation-balancer</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/chemical-equation-balancer"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/chemical-equation-balancer"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/chemical-equation-balancer"/>
@@ -18464,7 +18872,7 @@
   </url>
   <url>
     <loc>https://calquary.com/de/tool/titration-ph-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/titration-ph-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/titration-ph-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/titration-ph-calculator"/>
@@ -21915,7 +22323,7 @@
   </url>
   <url>
     <loc>https://calquary.com/de/tool/dry-matter-calculator</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/dry-matter-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dry-matter-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/dry-matter-calculator"/>
@@ -23053,6 +23461,142 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/boiling-point-elevation-calculator"/>
   </url>
   <url>
+    <loc>https://calquary.com/de/tool/bond-order-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/bond-order-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/de/tool/buffer-capacity-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/buffer-capacity-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/de/tool/buffer-ph-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/buffer-ph-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/de/tool/calibration-curve-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/calibration-curve-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/de/tool/chemical-name-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/chemical-name-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/de/tool/combustion-analysis-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/combustion-analysis-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/de/tool/concentration-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/concentration-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/de/tool/crude-protein-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/crude-protein-calculator"/>
+  </url>
+  <url>
     <loc>https://calquary.com/pt/</loc>
     <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/"/>
@@ -24108,7 +24652,7 @@
   </url>
   <url>
     <loc>https://calquary.com/pt/tool/empirical-formula-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/empirical-formula-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/empirical-formula-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/empirical-formula-calculator"/>
@@ -24193,7 +24737,7 @@
   </url>
   <url>
     <loc>https://calquary.com/pt/tool/chemical-equation-balancer</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/chemical-equation-balancer"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/chemical-equation-balancer"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/chemical-equation-balancer"/>
@@ -24227,7 +24771,7 @@
   </url>
   <url>
     <loc>https://calquary.com/pt/tool/titration-ph-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/titration-ph-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/titration-ph-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/titration-ph-calculator"/>
@@ -27678,7 +28222,7 @@
   </url>
   <url>
     <loc>https://calquary.com/pt/tool/dry-matter-calculator</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/dry-matter-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dry-matter-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/dry-matter-calculator"/>
@@ -28816,6 +29360,142 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/boiling-point-elevation-calculator"/>
   </url>
   <url>
+    <loc>https://calquary.com/pt/tool/bond-order-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/bond-order-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/pt/tool/buffer-capacity-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/buffer-capacity-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/pt/tool/buffer-ph-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/buffer-ph-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/pt/tool/calibration-curve-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/calibration-curve-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/pt/tool/chemical-name-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/chemical-name-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/pt/tool/combustion-analysis-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/combustion-analysis-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/pt/tool/concentration-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/concentration-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/pt/tool/crude-protein-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/crude-protein-calculator"/>
+  </url>
+  <url>
     <loc>https://calquary.com/it/</loc>
     <lastmod>2026-09-22</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/"/>
@@ -29871,7 +30551,7 @@
   </url>
   <url>
     <loc>https://calquary.com/it/tool/empirical-formula-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/empirical-formula-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/empirical-formula-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/empirical-formula-calculator"/>
@@ -29956,7 +30636,7 @@
   </url>
   <url>
     <loc>https://calquary.com/it/tool/chemical-equation-balancer</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/chemical-equation-balancer"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/chemical-equation-balancer"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/chemical-equation-balancer"/>
@@ -29990,7 +30670,7 @@
   </url>
   <url>
     <loc>https://calquary.com/it/tool/titration-ph-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/titration-ph-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/titration-ph-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/titration-ph-calculator"/>
@@ -33441,7 +34121,7 @@
   </url>
   <url>
     <loc>https://calquary.com/it/tool/dry-matter-calculator</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/dry-matter-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dry-matter-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/dry-matter-calculator"/>
@@ -34579,6 +35259,142 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/boiling-point-elevation-calculator"/>
   </url>
   <url>
+    <loc>https://calquary.com/it/tool/bond-order-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/bond-order-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/it/tool/buffer-capacity-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/buffer-capacity-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/it/tool/buffer-ph-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/buffer-ph-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/it/tool/calibration-curve-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/calibration-curve-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/it/tool/chemical-name-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/chemical-name-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/it/tool/combustion-analysis-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/combustion-analysis-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/it/tool/concentration-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/concentration-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/it/tool/crude-protein-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/crude-protein-calculator"/>
+  </url>
+  <url>
     <loc>https://calquary.com/ja/</loc>
     <lastmod>2026-09-21</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/"/>
@@ -35634,7 +36450,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ja/tool/empirical-formula-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/empirical-formula-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/empirical-formula-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/empirical-formula-calculator"/>
@@ -35719,7 +36535,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ja/tool/chemical-equation-balancer</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/chemical-equation-balancer"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/chemical-equation-balancer"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/chemical-equation-balancer"/>
@@ -35753,7 +36569,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ja/tool/titration-ph-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/titration-ph-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/titration-ph-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/titration-ph-calculator"/>
@@ -39204,7 +40020,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ja/tool/dry-matter-calculator</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/dry-matter-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dry-matter-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/dry-matter-calculator"/>
@@ -40342,6 +41158,142 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/boiling-point-elevation-calculator"/>
   </url>
   <url>
+    <loc>https://calquary.com/ja/tool/bond-order-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/bond-order-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ja/tool/buffer-capacity-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/buffer-capacity-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ja/tool/buffer-ph-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/buffer-ph-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ja/tool/calibration-curve-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/calibration-curve-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ja/tool/chemical-name-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/chemical-name-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ja/tool/combustion-analysis-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/combustion-analysis-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ja/tool/concentration-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/concentration-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ja/tool/crude-protein-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/crude-protein-calculator"/>
+  </url>
+  <url>
     <loc>https://calquary.com/ro/</loc>
     <lastmod>2026-09-25</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/"/>
@@ -41397,7 +42349,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ro/tool/empirical-formula-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/empirical-formula-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/empirical-formula-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/empirical-formula-calculator"/>
@@ -41482,7 +42434,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ro/tool/chemical-equation-balancer</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/chemical-equation-balancer"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/chemical-equation-balancer"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/chemical-equation-balancer"/>
@@ -41516,7 +42468,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ro/tool/titration-ph-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/titration-ph-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/titration-ph-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/titration-ph-calculator"/>
@@ -44967,7 +45919,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ro/tool/dry-matter-calculator</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/dry-matter-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dry-matter-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/dry-matter-calculator"/>
@@ -46105,6 +47057,142 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/boiling-point-elevation-calculator"/>
   </url>
   <url>
+    <loc>https://calquary.com/ro/tool/bond-order-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/bond-order-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ro/tool/buffer-capacity-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/buffer-capacity-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ro/tool/buffer-ph-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/buffer-ph-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ro/tool/calibration-curve-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/calibration-curve-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ro/tool/chemical-name-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/chemical-name-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ro/tool/combustion-analysis-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/combustion-analysis-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ro/tool/concentration-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/concentration-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ro/tool/crude-protein-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/crude-protein-calculator"/>
+  </url>
+  <url>
     <loc>https://calquary.com/el/</loc>
     <lastmod>2026-09-25</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/"/>
@@ -47160,7 +48248,7 @@
   </url>
   <url>
     <loc>https://calquary.com/el/tool/empirical-formula-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/empirical-formula-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/empirical-formula-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/empirical-formula-calculator"/>
@@ -47245,7 +48333,7 @@
   </url>
   <url>
     <loc>https://calquary.com/el/tool/chemical-equation-balancer</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/chemical-equation-balancer"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/chemical-equation-balancer"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/chemical-equation-balancer"/>
@@ -47279,7 +48367,7 @@
   </url>
   <url>
     <loc>https://calquary.com/el/tool/titration-ph-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/titration-ph-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/titration-ph-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/titration-ph-calculator"/>
@@ -50730,7 +51818,7 @@
   </url>
   <url>
     <loc>https://calquary.com/el/tool/dry-matter-calculator</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/dry-matter-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dry-matter-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/dry-matter-calculator"/>
@@ -51868,6 +52956,142 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/boiling-point-elevation-calculator"/>
   </url>
   <url>
+    <loc>https://calquary.com/el/tool/bond-order-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/bond-order-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/el/tool/buffer-capacity-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/buffer-capacity-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/el/tool/buffer-ph-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/buffer-ph-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/el/tool/calibration-curve-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/calibration-curve-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/el/tool/chemical-name-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/chemical-name-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/el/tool/combustion-analysis-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/combustion-analysis-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/el/tool/concentration-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/concentration-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/el/tool/crude-protein-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/crude-protein-calculator"/>
+  </url>
+  <url>
     <loc>https://calquary.com/zh/</loc>
     <lastmod>2026-09-25</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/"/>
@@ -52923,7 +54147,7 @@
   </url>
   <url>
     <loc>https://calquary.com/zh/tool/empirical-formula-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/empirical-formula-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/empirical-formula-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/empirical-formula-calculator"/>
@@ -53008,7 +54232,7 @@
   </url>
   <url>
     <loc>https://calquary.com/zh/tool/chemical-equation-balancer</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/chemical-equation-balancer"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/chemical-equation-balancer"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/chemical-equation-balancer"/>
@@ -53042,7 +54266,7 @@
   </url>
   <url>
     <loc>https://calquary.com/zh/tool/titration-ph-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/titration-ph-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/titration-ph-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/titration-ph-calculator"/>
@@ -56493,7 +57717,7 @@
   </url>
   <url>
     <loc>https://calquary.com/zh/tool/dry-matter-calculator</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/dry-matter-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dry-matter-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/dry-matter-calculator"/>
@@ -57631,6 +58855,142 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/boiling-point-elevation-calculator"/>
   </url>
   <url>
+    <loc>https://calquary.com/zh/tool/bond-order-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/bond-order-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/zh/tool/buffer-capacity-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/buffer-capacity-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/zh/tool/buffer-ph-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/buffer-ph-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/zh/tool/calibration-curve-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/calibration-curve-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/zh/tool/chemical-name-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/chemical-name-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/zh/tool/combustion-analysis-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/combustion-analysis-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/zh/tool/concentration-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/concentration-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/zh/tool/crude-protein-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/crude-protein-calculator"/>
+  </url>
+  <url>
     <loc>https://calquary.com/ar/</loc>
     <lastmod>2026-09-25</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/"/>
@@ -58686,7 +60046,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ar/tool/empirical-formula-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/empirical-formula-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/empirical-formula-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/empirical-formula-calculator"/>
@@ -58771,7 +60131,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ar/tool/chemical-equation-balancer</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/chemical-equation-balancer"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/chemical-equation-balancer"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/chemical-equation-balancer"/>
@@ -58805,7 +60165,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ar/tool/titration-ph-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/titration-ph-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/titration-ph-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/titration-ph-calculator"/>
@@ -62256,7 +63616,7 @@
   </url>
   <url>
     <loc>https://calquary.com/ar/tool/dry-matter-calculator</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/dry-matter-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dry-matter-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/dry-matter-calculator"/>
@@ -63394,6 +64754,142 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/boiling-point-elevation-calculator"/>
   </url>
   <url>
+    <loc>https://calquary.com/ar/tool/bond-order-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/bond-order-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ar/tool/buffer-capacity-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/buffer-capacity-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ar/tool/buffer-ph-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/buffer-ph-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ar/tool/calibration-curve-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/calibration-curve-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ar/tool/chemical-name-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/chemical-name-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ar/tool/combustion-analysis-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/combustion-analysis-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ar/tool/concentration-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/concentration-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/ar/tool/crude-protein-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/crude-protein-calculator"/>
+  </url>
+  <url>
     <loc>https://calquary.com/th/</loc>
     <lastmod>2026-09-25</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/"/>
@@ -64449,7 +65945,7 @@
   </url>
   <url>
     <loc>https://calquary.com/th/tool/empirical-formula-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/empirical-formula-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/empirical-formula-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/empirical-formula-calculator"/>
@@ -64534,7 +66030,7 @@
   </url>
   <url>
     <loc>https://calquary.com/th/tool/chemical-equation-balancer</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/chemical-equation-balancer"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/chemical-equation-balancer"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/chemical-equation-balancer"/>
@@ -64568,7 +66064,7 @@
   </url>
   <url>
     <loc>https://calquary.com/th/tool/titration-ph-calculator</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/titration-ph-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/titration-ph-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/titration-ph-calculator"/>
@@ -68019,7 +69515,7 @@
   </url>
   <url>
     <loc>https://calquary.com/th/tool/dry-matter-calculator</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/dry-matter-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dry-matter-calculator"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/dry-matter-calculator"/>
@@ -69155,5 +70651,141 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/boiling-point-elevation-calculator"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/boiling-point-elevation-calculator"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/boiling-point-elevation-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/th/tool/bond-order-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/bond-order-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/bond-order-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/th/tool/buffer-capacity-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/buffer-capacity-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/buffer-capacity-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/th/tool/buffer-ph-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/buffer-ph-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/buffer-ph-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/th/tool/calibration-curve-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/calibration-curve-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/calibration-curve-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/th/tool/chemical-name-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/chemical-name-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/chemical-name-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/th/tool/combustion-analysis-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/combustion-analysis-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/combustion-analysis-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/th/tool/concentration-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/concentration-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/concentration-calculator"/>
+  </url>
+  <url>
+    <loc>https://calquary.com/th/tool/crude-protein-calculator</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calquary.com/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/crude-protein-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/crude-protein-calculator"/>
   </url>
 </urlset>

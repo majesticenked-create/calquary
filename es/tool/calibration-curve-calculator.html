@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Curva de Calibración</title>
+  <meta name="description" content="Ajusta una curva de calibración lineal y = mx + b a partir de concentraciones estándar y respuestas del instrumento, con R² y una estimación opcional de…" />
+  <meta property="og:title" content="Calculadora de Curva de Calibración | Calquary">
+  <meta property="og:description" content="Ajusta una curva de calibración lineal y = mx + b a partir de concentraciones estándar y respuestas del instrumento, con R² y una estimación opcional de muestra desconocida.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/es/tool/calibration-curve-calculator">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/calibration-curve-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculadora de Curva de Calibración | Calquary">
+  <meta name="twitter:description" content="Ajusta una curva de calibración lineal y = mx + b a partir de concentraciones estándar y respuestas del instrumento, con R² y una estimación opcional de muestra desconocida.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/calibration-curve-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/calibration-curve-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/calibration-curve-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/calibration-curve-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/calibration-curve-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/calibration-curve-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/calibration-curve-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/calibration-curve-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/calibration-curve-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/calibration-curve-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/calibration-curve-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/calibration-curve-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/calibration-curve-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/calibration-curve-calculator">
+    <link rel="canonical" href="https://calquary.com/es/tool/calibration-curve-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("calibration-curve-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("calibration-curve-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calculadora de Curva de Calibración",
+      "description": "Ajusta una curva de calibración lineal y = mx + b a partir de concentraciones estándar y respuestas del instrumento, con R² y una estimación opcional de muestra desconocida.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/es/tool/calibration-curve-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-26",
+      "inLanguage": "es"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Chemistry",
+          "item": "https://calquary.com/es/category/chemistry"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calculadora de Curva de Calibración",
+          "item": "https://calquary.com/es/tool/calibration-curve-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cómo funciona una curva de calibración?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mides la respuesta del instrumento (y) para varias muestras de concentración conocida (x), ajustas una línea recta y = mx + b a los puntos, y luego usas esa línea para convertir una nueva respuesta en una concentración estimada: x = (y − b) / m."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué me dice R²?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "R² describe qué tan cerca caen los estándares de la línea ajustada, de 0 (sin relación lineal) a 1 (ajuste perfecto). Por sí solo no demuestra que el método sea exacto, libre de interferencias, ni válido fuera del rango probado."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo usar solo dos estándares?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, dos puntos definen una línea, pero más estándares dan un ajuste más fiable y permiten ver si la relación es realmente lineal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si todos mis valores de x son iguales?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Una curva de calibración necesita variación en los valores conocidos para ajustar una pendiente. Si todos los estándares tienen la misma x, la calculadora no puede calcular una línea."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué advierte sobre la extrapolación?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Una línea de calibración solo se ha probado en el rango de tus estándares. Estimar un valor de x a partir de una respuesta y fuera de ese rango supone que la línea sigue siendo válida más allá de donde se probó, lo cual puede no ser cierto."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo se relaciona con la Calculadora de la Ley de Beer-Lambert?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La Calculadora de la Ley de Beer-Lambert usa una absortividad molar conocida para relacionar directamente absorbancia y concentración. Esta calculadora, en cambio, construye esa relación empíricamente a partir de tus propios estándares, útil cuando no tienes o no confías en un valor de absortividad de la literatura."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/es/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/es/#categories">Categorías</a>
+          <a href="/es/#tools">Todas las herramientas</a>
+          <a href="/es/about">Acerca de</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Español">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>ES</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/calibration-curve-calculator">English</a><span class="locale-item current" role="menuitem" aria-current="true">Español</span><a class="locale-item" role="menuitem" href="/fr/tool/calibration-curve-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/calibration-curve-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/calibration-curve-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/calibration-curve-calculator">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/calibration-curve-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/calibration-curve-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/calibration-curve-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/calibration-curve-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/calibration-curve-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/calibration-curve-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/es/">Calquary</a> / <a href="/es/category/chemistry">Química</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calculadora de Curva de Calibración</h1>
+        <p style="max-width:60ch;">Introduce al menos dos valores estándar conocidos (x) y sus respuestas medidas (y), hasta seis pares. La calculadora ajusta una línea de mínimos cuadrados, informa la pendiente, la intersección y R², y puede estimar la concentración de una muestra desconocida a partir de su respuesta.</p>
+        <p class="last-updated">Última actualización: September 26, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calcular</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reiniciar</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Preguntas frecuentes</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>¿Cómo funciona una curva de calibración?</h3>
+<p>Mides la respuesta del instrumento (y) para varias muestras de concentración conocida (x), ajustas una línea recta y = mx + b a los puntos, y luego usas esa línea para convertir una nueva respuesta en una concentración estimada: x = (y − b) / m.</p>
+</div>
+<div class="faq-item">
+<h3>¿Qué me dice R²?</h3>
+<p>R² describe qué tan cerca caen los estándares de la línea ajustada, de 0 (sin relación lineal) a 1 (ajuste perfecto). Por sí solo no demuestra que el método sea exacto, libre de interferencias, ni válido fuera del rango probado.</p>
+</div>
+<div class="faq-item">
+<h3>¿Puedo usar solo dos estándares?</h3>
+<p>Sí, dos puntos definen una línea, pero más estándares dan un ajuste más fiable y permiten ver si la relación es realmente lineal.</p>
+</div>
+<div class="faq-item">
+<h3>¿Qué pasa si todos mis valores de x son iguales?</h3>
+<p>Una curva de calibración necesita variación en los valores conocidos para ajustar una pendiente. Si todos los estándares tienen la misma x, la calculadora no puede calcular una línea.</p>
+</div>
+<div class="faq-item">
+<h3>¿Por qué advierte sobre la extrapolación?</h3>
+<p>Una línea de calibración solo se ha probado en el rango de tus estándares. Estimar un valor de x a partir de una respuesta y fuera de ese rango supone que la línea sigue siendo válida más allá de donde se probó, lo cual puede no ser cierto.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cómo se relaciona con la Calculadora de la Ley de Beer-Lambert?</h3>
+<p>La Calculadora de la Ley de Beer-Lambert usa una absortividad molar conocida para relacionar directamente absorbancia y concentración. Esta calculadora, en cambio, construye esa relación empíricamente a partir de tus propios estándares, útil cuando no tienes o no confías en un valor de absortividad de la literatura.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calcular</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Herramientas relacionadas</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Nota sobre precisión</h4>
+          <p style="margin:0;font-size:0.85rem;">Las calculadoras de Calquary están diseñadas para ofrecer estimaciones rápidas y fiables. Para decisiones con implicaciones financieras, estructurales o médicas reales, consulta con un profesional cualificado.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/es/">← Volver a todas las calculadoras</a> · <a href="/es/about">Acerca de</a> · <a href="/es/contact">Contacto</a> · <a href="/es/privacy">Privacidad</a> · <a href="/es/terms">Términos</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

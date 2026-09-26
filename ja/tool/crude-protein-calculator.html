@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>粗タンパク質計算機 - 無料オンライン計算ツール | Calquary</title>
+  <meta name="description" content="測定した窒素の割合と窒素からタンパク質への換算係数から、粗タンパク質の割合を推定します。" />
+  <meta property="og:title" content="粗タンパク質計算機 | Calquary">
+  <meta property="og:description" content="測定した窒素の割合と窒素からタンパク質への換算係数から、粗タンパク質の割合を推定します。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/ja/tool/crude-protein-calculator">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/crude-protein-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="粗タンパク質計算機 | Calquary">
+  <meta name="twitter:description" content="測定した窒素の割合と窒素からタンパク質への換算係数から、粗タンパク質の割合を推定します。">
+  <meta name="twitter:image" content="https://calquary.com/og-images/crude-protein-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/crude-protein-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/crude-protein-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/crude-protein-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/crude-protein-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/crude-protein-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/crude-protein-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/crude-protein-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/crude-protein-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/crude-protein-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/crude-protein-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/crude-protein-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/crude-protein-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/crude-protein-calculator">
+    <link rel="canonical" href="https://calquary.com/ja/tool/crude-protein-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("crude-protein-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("crude-protein-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "粗タンパク質計算機",
+      "description": "測定した窒素の割合と窒素からタンパク質への換算係数から、粗タンパク質の割合を推定します。",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/ja/tool/crude-protein-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-26",
+      "inLanguage": "ja"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/ja/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/ja/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "粗タンパク質計算機",
+          "item": "https://calquary.com/ja/tool/crude-protein-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "粗タンパク質とは何ですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "粗タンパク質は、タンパク質分子を直接測定する代わりに、試料中で測定した全窒素量から換算係数を使って算出したタンパク質含有量の推定値です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "なぜ既定値は6.25なのですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "典型的なタンパク質は質量の約16%が窒素であると仮定され、1 / 0.16 = 6.25となります。これは広く使われている慣例であり、すべての物質について測定された定数ではありません。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "なぜ別の係数が必要な場合があるのですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "食品や飼料によってタンパク質中の平均窒素含有量が異なります。特定の品目には別の係数を指定する基準もあります。分かる場合は、対象物質と分析基準に合った係数を使ってください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "粗タンパク質は実際のタンパク質含有量より高くなり得ますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。尿素、硝酸塩、遊離アミノ酸などの非タンパク質性窒素はタンパク質ではないのに測定窒素に加わるため、粗タンパク質は実際のタンパク質を過大評価することがあります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "結果が100%を超えた場合はどうなりますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "試料全体としてそれは物理的にあり得ないため、計算機が警告します。入力した窒素の割合と換算係数が本当にその試料に当てはまるか確認してください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "タンパク質濃度計算機とはどう違いますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "このサイトのタンパク質濃度計算機は、多くの場合吸光度から液体溶液中のタンパク質量を計算します。この計算機は、窒素含有量から固体試料や飼料試料のタンパク質割合を推定します。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/ja/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/ja/#categories">カテゴリー</a>
+          <a href="/ja/#tools">すべてのツール</a>
+          <a href="/ja/about">このサイトについて</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: 日本語">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>JA</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/crude-protein-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/crude-protein-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/crude-protein-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/crude-protein-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/crude-protein-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/crude-protein-calculator">Italiano</a><span class="locale-item current" role="menuitem" aria-current="true">日本語</span><a class="locale-item" role="menuitem" href="/ro/tool/crude-protein-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/crude-protein-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/crude-protein-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/crude-protein-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/crude-protein-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/ja/">Calquary</a> / <a href="/ja/category/biology">生物学</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>粗タンパク質計算機</h1>
+        <p style="max-width:60ch;">実験室分析による窒素の割合と、窒素からタンパク質への換算係数を入力します。既定値の6.25は一般的な慣例であり普遍的な定数ではないため、分かる場合は試料の種類に応じた適切な係数を使ってください。</p>
+        <p class="last-updated">最終更新日： September 26, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">計算する</button>
+              <button type="button" id="calc-reset" class="btn-ghost">リセット</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>よくある質問</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>粗タンパク質とは何ですか?</h3>
+<p>粗タンパク質は、タンパク質分子を直接測定する代わりに、試料中で測定した全窒素量から換算係数を使って算出したタンパク質含有量の推定値です。</p>
+</div>
+<div class="faq-item">
+<h3>なぜ既定値は6.25なのですか?</h3>
+<p>典型的なタンパク質は質量の約16%が窒素であると仮定され、1 / 0.16 = 6.25となります。これは広く使われている慣例であり、すべての物質について測定された定数ではありません。</p>
+</div>
+<div class="faq-item">
+<h3>なぜ別の係数が必要な場合があるのですか?</h3>
+<p>食品や飼料によってタンパク質中の平均窒素含有量が異なります。特定の品目には別の係数を指定する基準もあります。分かる場合は、対象物質と分析基準に合った係数を使ってください。</p>
+</div>
+<div class="faq-item">
+<h3>粗タンパク質は実際のタンパク質含有量より高くなり得ますか?</h3>
+<p>はい。尿素、硝酸塩、遊離アミノ酸などの非タンパク質性窒素はタンパク質ではないのに測定窒素に加わるため、粗タンパク質は実際のタンパク質を過大評価することがあります。</p>
+</div>
+<div class="faq-item">
+<h3>結果が100%を超えた場合はどうなりますか?</h3>
+<p>試料全体としてそれは物理的にあり得ないため、計算機が警告します。入力した窒素の割合と換算係数が本当にその試料に当てはまるか確認してください。</p>
+</div>
+<div class="faq-item">
+<h3>タンパク質濃度計算機とはどう違いますか?</h3>
+<p>このサイトのタンパク質濃度計算機は、多くの場合吸光度から液体溶液中のタンパク質量を計算します。この計算機は、窒素含有量から固体試料や飼料試料のタンパク質割合を推定します。</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">計算する</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>関連ツール</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>精度について</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquaryの計算ツールは、迅速で信頼できる概算を目的としています。実際の財務、構造、医療に関わる重要な決定を行う前には、必ず専門家にご確認ください。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/ja/">← すべての計算ツールに戻る</a> · <a href="/ja/about">このサイトについて</a> · <a href="/ja/contact">お問い合わせ</a> · <a href="/ja/privacy">プライバシー</a> · <a href="/ja/terms">利用規約</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>
