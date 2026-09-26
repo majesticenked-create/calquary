@@ -13647,11 +13647,11 @@ const CALCULATORS = [
     id: "wastewater-calculator",
     category: "biology",
     title: "Wastewater Calculator",
-    keyword: "wastewater calculator, bod loading calculator, f/m ratio calculator, cod loading calculator",
+    keyword: "wastewater calculator, bod loading calculator, f/m ratio calculator, cod loading calculator, detention time calculator, hydraulic retention time",
     description: "Calculate BOD or COD loading, food-to-microorganism (F/M) ratio, or hydraulic retention time from flow, concentration, and tank volume.",
     intro: "Choose BOD loading, COD loading, F/M ratio, or hydraulic retention time, enter the flow, concentrations, and tank volume with their units, and read the result with the units shown. These are calculation aids, not plant operating recommendations.",
     fields: [
-      { id: "mode", label: "Calculation", type: "select", default: "bod", options: [{ v: "bod", l: "BOD loading (kg/day)" }, { v: "cod", l: "COD loading (kg/day)" }, { v: "fm", l: "Food-to-microorganism ratio (F/M)" }, { v: "hrt", l: "Hydraulic retention time (HRT)" }] },
+      { id: "mode", label: "Calculation", type: "select", default: "bod", options: [{ v: "bod", l: "BOD loading (kg/day)" }, { v: "cod", l: "COD loading (kg/day)" }, { v: "fm", l: "Food-to-microorganism ratio (F/M)" }, { v: "hrt", l: "Hydraulic retention time / detention time (HRT)" }] },
       { id: "flow", label: "Flow", type: "number", default: 1000, step: "any", min: 0 },
       { id: "flowUnit", label: "Flow unit", type: "select", default: "m3d", options: [{ v: "m3d", l: "m³/day" }, { v: "m3h", l: "m³/hour" }, { v: "lpd", l: "L/day" }, { v: "mgd", l: "US million gallons/day (MGD)" }] },
       { id: "bod", label: "BOD concentration (mg/L) (BOD and F/M modes)", type: "number", default: 250, step: "any", min: 0 },
@@ -13722,6 +13722,7 @@ const CALCULATORS = [
       { q: "Can I use these results to set treatment operations?", a: "No. The results are arithmetic on the numbers you enter. Operating decisions depend on site-specific data, permits, and qualified operator judgment." },
       { q: "Which units does it accept?", a: "Flow in m³/day, m³/hour, L/day, or US million gallons per day, and tank volume in m³, liters, or US gallons. Concentrations are in mg/L." },
       { q: "What is the difference between COD and BOD loading?", a: "Both use the same flow × concentration / 1000 calculation, but COD measures the total oxygen demand from chemically oxidizable material (usually via a dichromate or similar test), while BOD measures oxygen consumed by microorganisms over an incubation period, typically 5 days. COD is normally the larger number for the same sample, and the ratio between them varies by wastewater source." },
+      { q: "Is detention time the same as hydraulic retention time?", a: "Yes, on this page they're the same calculation: tank volume divided by flow rate, the nominal average time liquid spends in a tank. 'Detention time' and 'hydraulic retention time (HRT)' are two common names for that same idealized quantity. It assumes ideal plug flow and does not capture short-circuiting, dead zones, or the actual residence-time distribution of a real tank, so treat it as a nominal design figure rather than a guarantee of contact time for every parcel of liquid." },
     ],
     related: ["mlvss-calculator", "percentage-calculator", "cell-dilution-calculator"],
   },
@@ -14136,7 +14137,7 @@ const CALCULATORS = [
       { q: "Why does the calculator reject some charges?", a: "A charge larger than the atomic number would remove more electrons than the atom has. The number of electrons cannot be negative." },
       { q: "Where can I get the average atomic mass of an element?", a: "Use the Average Atomic Mass Calculator with isotope masses and abundances. To turn a formula into molar mass, use the Molecular Weight Calculator." },
     ],
-    related: ["average-atomic-mass-calculator", "molecular-weight-calculator", "avogadros-number-calculator"],
+    related: ["average-atomic-mass-calculator", "molecular-weight-calculator", "effective-nuclear-charge-calculator", "electron-configuration-calculator"],
   },
   {
     id: "atom-economy-calculator",
@@ -14310,7 +14311,7 @@ const CALCULATORS = [
       { q: "How do I type very large or small numbers?", a: "Use e-notation, such as 6.02e23 or 1.5e-3. Results are shown in scientific notation." },
       { q: "How is this related to atomic mass?", a: "Molar mass in g/mol is numerically equal to atomic or molecular mass in u. The Average Atomic Mass Calculator gives the mass of one atom in kg and g." },
     ],
-    related: ["molecular-weight-calculator", "average-atomic-mass-calculator", "dna-copy-number-calculator"],
+    related: ["molecular-weight-calculator", "average-atomic-mass-calculator", "electrolysis-calculator", "cubic-cell-calculator"],
   },
   {
     id: "beer-lambert-law-calculator",
@@ -14590,7 +14591,7 @@ const CALCULATORS = [
       { q: "Can bond order be a fraction?", a: "Yes. Species with an odd number of electrons, such as O₂⁻ or O₂⁺, have half-integer bond orders." },
       { q: "Does a higher bond order always mean a more reactive molecule?", a: "Not necessarily. Bond order relates to bond strength and length in this simplified model, but reactivity depends on many other factors, including orbital energies, sterics, and the rest of the molecule." },
     ],
-    related: ["molecular-weight-calculator", "activity-coefficient-calculator", "arrhenius-equation-calculator"],
+    related: ["molecular-weight-calculator", "electronegativity-calculator", "arrhenius-equation-calculator"],
   },
   {
     id: "buffer-capacity-calculator",
@@ -14812,7 +14813,7 @@ const CALCULATORS = [
       { q: "How is this different from the Chemical Equation Balancer?", a: "The balancer works with whole reactions and finds coefficients; it doesn't name compounds. This tool looks up a single formula's common name from a fixed list." },
       { q: "Are common names and systematic (IUPAC) names the same?", a: "Not always. This tool gives the common name where one is listed; a compound may also have a distinct systematic name that isn't shown here." },
     ],
-    related: ["molecular-weight-calculator", "chemical-equation-balancer", "atom-calculator"],
+    related: ["molecular-weight-calculator", "chemical-equation-balancer", "degree-of-unsaturation-calculator"],
   },
   {
     id: "combustion-analysis-calculator",
@@ -14965,6 +14966,453 @@ const CALCULATORS = [
       { q: "How is this different from Protein Concentration?", a: "Protein Concentration on this site calculates protein amount in a liquid solution, often from absorbance. This calculator estimates a solid or feed sample's protein percentage from its nitrogen content." },
     ],
     related: ["protein-concentration-calculator", "dry-matter-calculator", "feed-conversion-ratio-calculator"],
+  },
+  {
+    id: "cubic-cell-calculator",
+    category: "chemistry",
+    title: "Cubic Cell Calculator",
+    keyword: "cubic cell calculator, unit cell calculator, simple cubic bcc fcc",
+    description: "Calculate unit-cell volume, atoms per cell, atomic radius, and density for simple cubic, body-centered cubic, and face-centered cubic crystals.",
+    intro: "Choose a cubic crystal structure and enter the lattice parameter (edge length). The calculator returns the unit-cell volume, the number of atoms per conventional cell, the idealized hard-sphere atomic radius, and, if you supply a molar mass, the theoretical density.",
+    fields: [
+      { id: "structure", label: "Cubic structure", type: "select", default: "fcc", options: [{ v: "sc", l: "Simple cubic (SC)" }, { v: "bcc", l: "Body-centered cubic (BCC)" }, { v: "fcc", l: "Face-centered cubic (FCC)" }] },
+      { id: "a", label: "Lattice parameter a", type: "number", default: 0.3524, step: "any", min: 0 },
+      { id: "aUnit", label: "Lattice parameter unit", type: "select", default: "nm", options: [{ v: "nm", l: "nm" }, { v: "pm", l: "pm" }, { v: "angstrom", l: "Å" }, { v: "cm", l: "cm" }] },
+      { id: "molarMass", label: "Molar mass (g/mol) (0 to skip density)", type: "number", default: 58.69, step: "any", min: 0 },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      if (!(v.a > 0) || !Number.isFinite(v.a)) return bad("The lattice parameter must be greater than zero.");
+      const toCm = { nm: 1e-7, pm: 1e-10, angstrom: 1e-8, cm: 1 }[v.aUnit];
+      const aCm = v.a * toCm;
+      const n = { sc: 1, bcc: 2, fcc: 4 }[v.structure];
+      const rFactor = { sc: 0.5, bcc: (Math.sqrt(3) / 4), fcc: 1 / (2 * Math.sqrt(2)) }[v.structure];
+      const volCm3 = Math.pow(aCm, 3);
+      const rCm = aCm * rFactor;
+      const sci = (x) => x.toExponential(4);
+      const secondary = [
+        { l: "Atoms per conventional unit cell", v: `${n}` },
+        { l: "Idealized atomic radius", v: `${sci(rCm)} cm (${sci(rCm * 1e7)} nm)` },
+        { l: "Unit-cell volume (cm³)", v: sci(volCm3) },
+      ];
+      let note = "V = a³. Atoms per conventional cell: 1 (SC), 2 (BCC), 4 (FCC). Idealized hard-sphere radius: a/2 (SC), √3·a/4 (BCC), a/(2√2) (FCC). These relationships assume atoms are rigid touching spheres in an ideal, defect-free cubic lattice; real crystals deviate from this idealization.";
+      if (v.molarMass > 0) {
+        const NA = 6.02214076e23;
+        const density = (n * v.molarMass) / (NA * volCm3);
+        secondary.push({ l: "Theoretical density", v: `${round(density, 4)} g/cm³` });
+        note += " Density ρ = nM / (NA·a³), with a converted to cm so the result comes out in g/cm³.";
+      }
+      return {
+        primary: { label: "Unit-cell volume", value: `${sci(volCm3)} cm³ (${sci(volCm3 * 1e21)} nm³)` },
+        secondary,
+        note,
+      };
+    },
+    faq: [
+      { q: "What is a cubic unit cell?", a: "It's the smallest repeating cubic box that, stacked in three dimensions, builds up an idealized crystal lattice. Simple cubic, body-centered cubic, and face-centered cubic differ in how many atoms occupy that box." },
+      { q: "How many atoms are in each structure?", a: "Simple cubic has 1 atom per conventional cell (corner atoms shared among 8 cells), body-centered cubic has 2 (corners plus one center atom), and face-centered cubic has 4 (corners plus six face-centered atoms, each shared between 2 cells)." },
+      { q: "Is the lattice parameter the same as the atomic radius?", a: "No. The lattice parameter a is the edge length of the unit cell. The atomic radius is derived from it using a geometric relationship that depends on the structure, since atoms touch along different directions in each lattice type." },
+      { q: "How accurate is the density calculation?", a: "It assumes a perfect, defect-free lattice of identical hard spheres, using the theoretical relationship ρ = nM/(NA·a³). Real materials can have vacancies, impurities, or different actual packing, so measured density can differ slightly from this idealized value." },
+      { q: "Can I use this for any crystal structure?", a: "Only for the three cubic structures listed: simple cubic, body-centered cubic, and face-centered cubic. Hexagonal, tetragonal, and other non-cubic lattices need different geometric relationships not covered here." },
+      { q: "How does this relate to Avogadro's Number?", a: "The density formula uses the Avogadro constant to convert from atoms per cell and molar mass into a mass per unit volume. See the Avogadro's Number Calculator for mole-to-particle conversions on their own." },
+    ],
+    related: ["avogadros-number-calculator", "average-atomic-mass-calculator", "molecular-weight-calculator"],
+  },
+  {
+    id: "degree-of-unsaturation-calculator",
+    category: "chemistry",
+    title: "Degree of Unsaturation Calculator",
+    keyword: "degree of unsaturation calculator, double bond equivalent calculator, DBE calculator, index of hydrogen deficiency",
+    description: "Calculate the degree of unsaturation (also called double bond equivalent, DBE, or index of hydrogen deficiency) from a molecule's C, H, N, and halogen counts.",
+    intro: "Enter the number of carbon, hydrogen, nitrogen, and monovalent halogen atoms in a neutral, closed-shell organic formula. The calculator returns the degree of unsaturation, also known as the double bond equivalent (DBE) or index of hydrogen deficiency (IHD): the number of rings and pi bonds in the molecule.",
+    fields: [
+      { id: "c", label: "Carbon atoms (C)", type: "number", default: 6, step: 1, min: 0 },
+      { id: "h", label: "Hydrogen atoms (H)", type: "number", default: 6, step: 1, min: 0 },
+      { id: "n", label: "Nitrogen atoms (N)", type: "number", default: 0, step: 1, min: 0 },
+      { id: "x", label: "Monovalent halogen atoms (F, Cl, Br, I)", type: "number", default: 0, step: 1, min: 0 },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      for (const [k, label] of [[v.c, "carbon"], [v.h, "hydrogen"], [v.n, "nitrogen"], [v.x, "halogen"]]) {
+        if (!Number.isInteger(k) || k < 0) return bad(`The ${label} count must be a whole number of 0 or more.`);
+      }
+      if (v.c === 0 && v.h === 0) return bad("Enter at least a carbon or hydrogen count.");
+      const dbeRaw = (2 * v.c + 2 + v.n - v.h - v.x) / 2;
+      if (!Number.isInteger(dbeRaw)) {
+        return {
+          primary: { label: "Not a whole number", value: `${dbeRaw}` },
+          secondary: [],
+          note: "The formula (2C + 2 + N − H − X) / 2 gave a non-integer result, which means this atom combination doesn't correspond to a valid neutral, closed-shell organic molecule (or it involves elements, charges, or valences outside this simplified model, such as ions, radicals, or organometallics). Double-check the atom counts.",
+        };
+      }
+      if (dbeRaw < 0) return bad("This atom combination gives a negative degree of unsaturation, which isn't physically possible - check your atom counts.");
+      return {
+        primary: { label: "Degree of unsaturation (DBE)", value: `${dbeRaw}` },
+        secondary: [
+          { l: "Formula", v: "(2C + 2 + N − H − X) / 2" },
+          { l: "Values used", v: `C=${v.c}, H=${v.h}, N=${v.n}, X=${v.x}` },
+        ],
+        note: "Degree of unsaturation (also called double bond equivalent or index of hydrogen deficiency) counts the total rings plus pi bonds: each ring or double bond counts as 1, and each triple bond counts as 2. Oxygen and sulfur don't change this formula, since they're divalent like the two 'extra' hydrogens a fully saturated CnH(2n+2) chain would have. This simplified relationship applies to neutral, closed-shell organic molecules; it doesn't reliably describe ions, radicals, most organometallic compounds, or unusual valence states, and a single DBE value is consistent with many different structures, not just one.",
+      };
+    },
+    faq: [
+      { q: "What is degree of unsaturation?", a: "It's a count of the total number of rings and pi bonds (from double and triple bonds) in a molecule, calculated from its molecular formula alone, without needing to draw the structure." },
+      { q: "Is this the same as double bond equivalent (DBE) or index of hydrogen deficiency (IHD)?", a: "Yes. Degree of unsaturation, double bond equivalent, and index of hydrogen deficiency are three common names for the same calculation and the same result." },
+      { q: "How do rings and multiple bonds each count?", a: "A ring counts as 1. A double bond counts as 1. A triple bond counts as 2, since it represents two degrees of unsaturation compared with a single bond." },
+      { q: "Why don't oxygen or sulfur appear in the formula?", a: "Oxygen and sulfur are divalent, like the pair of extra hydrogens present in a fully saturated chain of the same carbon count, so adding them doesn't change the hydrogen deficiency. They can be present in the molecule; they just don't need their own term in this equation." },
+      { q: "Does one DBE value tell me the exact structure?", a: "No. A given degree of unsaturation is consistent with many different combinations of rings and multiple bonds, and even different molecules entirely. It narrows down possibilities but doesn't identify a unique structure by itself." },
+      { q: "Does this work for every type of molecule?", a: "It's built for neutral, closed-shell organic molecules with typical valences. It doesn't reliably apply to ions, radicals, most organometallic compounds, or elements with unusual valence states, and a non-integer result is a sign the formula doesn't fit this model." },
+    ],
+    related: ["molecular-weight-calculator", "chemical-name-calculator", "bond-order-calculator"],
+  },
+  {
+    id: "diffusion-coefficient-calculator",
+    category: "chemistry",
+    title: "Diffusion Coefficient Calculator",
+    keyword: "diffusion coefficient calculator, stokes-einstein equation calculator",
+    description: "Estimate the translational diffusion coefficient of a spherical particle in a fluid using the Stokes-Einstein equation.",
+    intro: "Enter the absolute temperature, the fluid's dynamic viscosity, and the particle's hydrodynamic radius. The calculator applies the Stokes-Einstein equation to estimate the diffusion coefficient, in m²/s.",
+    fields: [
+      { id: "temperature", label: "Temperature", type: "number", default: 298.15, step: "any" },
+      { id: "tempUnit", label: "Temperature unit", type: "select", default: "K", options: [{ v: "K", l: "Kelvin (K)" }, { v: "C", l: "Celsius (°C)" }] },
+      { id: "viscosity", label: "Dynamic viscosity", type: "number", default: 0.00089, step: "any", min: 0 },
+      { id: "viscosityUnit", label: "Viscosity unit", type: "select", default: "pas", options: [{ v: "pas", l: "Pa·s" }, { v: "cp", l: "cP (mPa·s)" }] },
+      { id: "radius", label: "Hydrodynamic radius", type: "number", default: 1, step: "any", min: 0 },
+      { id: "radiusUnit", label: "Radius unit", type: "select", default: "nm", options: [{ v: "nm", l: "nm" }, { v: "angstrom", l: "Å" }, { v: "um", l: "µm" }] },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      const T = v.tempUnit === "C" ? v.temperature + 273.15 : v.temperature;
+      if (!(T > 0) || !Number.isFinite(T)) return bad("Temperature must be above absolute zero.");
+      const mu = v.viscosity * (v.viscosityUnit === "cp" ? 0.001 : 1);
+      if (!(mu > 0) || !Number.isFinite(mu)) return bad("Viscosity must be greater than zero.");
+      const rM = v.radius * { nm: 1e-9, angstrom: 1e-10, um: 1e-6 }[v.radiusUnit];
+      if (!(rM > 0) || !Number.isFinite(rM)) return bad("The hydrodynamic radius must be greater than zero.");
+      const kB = 1.380649e-23;
+      const D = (kB * T) / (6 * Math.PI * mu * rM);
+      if (!Number.isFinite(D)) return bad("The result is outside a numerically meaningful range.");
+      return {
+        primary: { label: "Diffusion coefficient D", value: `${D.toExponential(4)} m²/s` },
+        secondary: [
+          { l: "In cm²/s", v: `${(D * 1e4).toExponential(4)} cm²/s` },
+          { l: "Temperature used", v: `${round(T, 2)} K` },
+          { l: "Viscosity used", v: `${mu.toExponential(4)} Pa·s` },
+        ],
+        note: "Stokes-Einstein equation: D = kB·T / (6πμr), with kB = 1.380649 × 10⁻²³ J/K, T in kelvin, μ in Pa·s, and r in meters. It assumes a large, rigid, spherical particle moving through a continuous (not molecular) fluid, and works best when the particle is much larger than the solvent molecules. It's a useful estimate for proteins, colloids, and similarly sized particles, but is less accurate for small molecules comparable in size to the solvent.",
+      };
+    },
+    faq: [
+      { q: "What is the Stokes-Einstein equation?", a: "It relates a spherical particle's diffusion coefficient to temperature, the fluid's viscosity, and the particle's radius: D = kB·T / (6πμr). It comes from combining Einstein's relation for Brownian motion with Stokes' drag law for a sphere." },
+      { q: "Why does the calculator convert Celsius to kelvin?", a: "The equation needs absolute temperature, since it reflects the average thermal energy of the particles (proportional to kBT). Using Celsius directly would give an incorrect result." },
+      { q: "What is the hydrodynamic radius?", a: "It's the effective radius of a sphere that would diffuse at the same rate as the actual particle, including any bound solvent or non-spherical shape effects folded into a single number. For a compact, roughly spherical molecule, it's close to its physical radius." },
+      { q: "When does this equation work well?", a: "Best for particles significantly larger than the surrounding solvent molecules, like proteins, viruses, or colloidal particles, in a fluid that behaves as a continuum around them." },
+      { q: "When is it less accurate?", a: "For small molecules comparable in size to the solvent, or in complex or non-Newtonian fluids, the continuum and spherical-particle assumptions break down and the equation becomes less reliable." },
+      { q: "What units does the result use?", a: "The diffusion coefficient comes out in m²/s using SI inputs (kelvin, Pa·s, meters). The calculator also shows the equivalent value in cm²/s, a unit you'll often see in the literature." },
+    ],
+    related: ["arrhenius-equation-calculator", "activity-coefficient-calculator", "cell-dilution-calculator"],
+  },
+  {
+    id: "dilution-factor-calculator",
+    category: "chemistry",
+    title: "Dilution Factor Calculator",
+    keyword: "dilution factor calculator, fold dilution calculator, serial dilution factor",
+    description: "Calculate a dilution factor from initial and final concentration, or from aliquot and final volume, plus the combined factor for a series of dilutions.",
+    intro: "Choose whether to calculate the dilution factor from concentrations or from volumes, or to combine several dilution steps into one overall factor. A dilution factor of 10 (often written 1:10) means the final concentration is 1/10 of the starting concentration.",
+    fields: [
+      { id: "mode", label: "Calculate", type: "select", default: "conc", options: [{ v: "conc", l: "From initial and final concentration" }, { v: "vol", l: "From aliquot and final volume" }, { v: "serial", l: "Combine a series of dilution factors" }] },
+      { id: "cInitial", label: "Initial concentration (concentration mode)", type: "number", default: 1, step: "any", min: 0 },
+      { id: "cFinal", label: "Final concentration, same unit (concentration mode)", type: "number", default: 0.1, step: "any", min: 0 },
+      { id: "aliquot", label: "Aliquot (sample) volume (volume mode)", type: "number", default: 1, step: "any", min: 0 },
+      { id: "finalVolume", label: "Final total volume, same unit (volume mode)", type: "number", default: 10, step: "any", min: 0 },
+      { id: "f1", label: "Step 1 dilution factor (serial mode)", type: "number", default: 10, step: "any", min: 0 },
+      { id: "f2", label: "Step 2 dilution factor (serial mode)", type: "number", default: 10, step: "any", min: 0 },
+      { id: "f3", label: "Step 3 dilution factor (serial mode, 0 to skip)", type: "number", default: 10, step: "any", min: 0 },
+      { id: "f4", label: "Step 4 dilution factor (serial mode, 0 to skip)", type: "number", default: 0, step: "any", min: 0 },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      if (v.mode === "conc") {
+        if (!(v.cInitial > 0) || !(v.cFinal > 0)) return bad("Both concentrations must be greater than zero.");
+        if (v.cFinal > v.cInitial) return bad("The final concentration is higher than the initial concentration - a simple dilution can only reduce concentration.");
+        const df = v.cInitial / v.cFinal;
+        return {
+          primary: { label: "Dilution factor", value: `${round(df, 4)}-fold (1:${round(df, 4)})` },
+          secondary: [
+            { l: "Fraction of original concentration remaining", v: `${round((1 / df) * 100, 4)}%` },
+          ],
+          note: "Dilution factor DF = Cinitial / Cfinal. A DF of 10 (written 1:10) means the sample is diluted to one-tenth of its original concentration - the final concentration is 1/10, not 10 times, the original.",
+        };
+      }
+      if (v.mode === "vol") {
+        if (!(v.aliquot > 0) || !(v.finalVolume > 0)) return bad("Both volumes must be greater than zero.");
+        if (v.aliquot > v.finalVolume) return bad("The aliquot volume can't be larger than the final total volume.");
+        const df = v.finalVolume / v.aliquot;
+        return {
+          primary: { label: "Dilution factor", value: `${round(df, 4)}-fold (1:${round(df, 4)})` },
+          secondary: [
+            { l: "Diluent volume needed", v: `${round(v.finalVolume - v.aliquot, 4)} (same unit as your volumes)` },
+          ],
+          note: "Dilution factor DF = Vfinal / Valiquot. For example, 1 mL of sample brought up to 10 mL total is a 10-fold (1:10) dilution: 1 part sample plus 9 parts diluent.",
+        };
+      }
+      const factors = [v.f1, v.f2, v.f3, v.f4].filter((f) => f > 0);
+      if (factors.length < 1) return bad("Enter at least one dilution factor greater than zero.");
+      if (!factors.every((f) => Number.isFinite(f))) return bad("All dilution factors must be finite numbers.");
+      const overall = factors.reduce((a, b) => a * b, 1);
+      return {
+        primary: { label: "Overall dilution factor", value: `${round(overall, 4)}-fold (1:${round(overall, 4)})` },
+        secondary: [
+          { l: "Steps used", v: factors.map((f) => `1:${f}`).join(" → ") },
+          { l: "Fraction of original concentration remaining", v: `${round((1 / overall) * 100, 6)}%` },
+        ],
+        note: "For a series of dilutions performed one after another, the overall dilution factor is the product of the individual factors: DF(overall) = DF1 × DF2 × DF3 × ... This is standard for serial dilutions used to build a dilution series.",
+      };
+    },
+    faq: [
+      { q: "What does a dilution factor of 10 mean?", a: "A dilution factor of 10, often written 1:10, means the final solution has one-tenth the concentration of the original - the sample was diluted 10-fold, not concentrated 10 times." },
+      { q: "How is dilution factor different from Cell Dilution?", a: "The Cell Dilution Calculator solves C1V1 = C2V2 for the actual stock and diluent volumes you need to prepare a target concentration. This calculator instead reports the ratio itself - the dilution factor - from concentrations, from volumes, or combined across several steps." },
+      { q: "How is dilution factor different from Alligation?", a: "Alligation finds the ratio needed to mix two different nonzero concentrations to land on a target in between. Dilution factor describes diluting one concentration down toward zero with a diluent, expressed as a simple ratio." },
+      { q: "How do I combine multiple dilution steps?", a: "Multiply the individual dilution factors together. Three consecutive 1:10 dilutions give an overall factor of 10 × 10 × 10 = 1,000, meaning the final concentration is 1/1,000 of the original." },
+      { q: "Does this calculator tell me how to prepare a specific solution?", a: "No. It computes the dilution-factor arithmetic from the numbers you provide. It isn't a recipe for preparing hazardous chemicals or medications, and doesn't recommend any particular concentration." },
+      { q: "Can the final concentration be higher than the initial concentration?", a: "Not with a simple dilution. Adding diluent can only lower concentration, so the calculator rejects a final concentration or aliquot larger than the starting value." },
+    ],
+    related: ["cell-dilution-calculator", "alligation-calculator", "concentration-calculator"],
+  },
+  {
+    id: "effective-nuclear-charge-calculator",
+    category: "chemistry",
+    title: "Effective Nuclear Charge Calculator",
+    keyword: "effective nuclear charge calculator, zeff calculator, shielding constant",
+    description: "Calculate effective nuclear charge Zeff = Z − S from an atomic number and a shielding constant you provide.",
+    intro: "Enter the atomic number Z and a shielding constant S (for example, one estimated using Slater's rules from a chemistry reference) to find the effective nuclear charge Zeff felt by an electron.",
+    fields: [
+      { id: "z", label: "Atomic number Z", type: "number", default: 11, step: 1, min: 1, max: 118 },
+      { id: "s", label: "Shielding constant S", type: "number", default: 8.8, step: "any", min: 0 },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      if (!Number.isInteger(v.z) || v.z < 1 || v.z > 118) return bad("The atomic number must be a whole number from 1 to 118.");
+      if (!(v.s >= 0) || !Number.isFinite(v.s)) return bad("The shielding constant must be zero or a positive number.");
+      if (v.s > v.z) return bad("The shielding constant can't exceed the atomic number, since that would make the effective nuclear charge negative.");
+      const zeff = v.z - v.s;
+      return {
+        primary: { label: "Effective nuclear charge Zeff", value: `${round(zeff, 3)}` },
+        secondary: [
+          { l: "Atomic number Z", v: `${v.z}` },
+          { l: "Shielding constant S", v: `${v.s}` },
+        ],
+        note: "Zeff = Z − S. This calculator applies the relationship directly to the Z and S you provide; it does not derive S for you. A common way to estimate S is Slater's rules, found in general chemistry references, which give different shielding values depending on which electron and subshell you're considering. Effective nuclear charge is a model-dependent approximation of how much positive charge an electron actually experiences, and it is not the same thing as the atom's overall ionic charge.",
+      };
+    },
+    faq: [
+      { q: "What is effective nuclear charge?", a: "It's the net positive charge an electron actually experiences from the nucleus, after accounting for the shielding (screening) effect of other electrons. It's always less than the full nuclear charge Z, except for a single electron with no other electrons to shield it." },
+      { q: "Does this calculator estimate the shielding constant for me?", a: "No. You supply Z and S directly; the calculator only computes Zeff = Z − S. A common method to estimate S, Slater's rules, requires knowing which specific electron and subshell you're evaluating, and different textbooks present slightly different rule sets." },
+      { q: "Is effective nuclear charge the same as ionic charge?", a: "No. Ionic charge describes the overall charge of an ion after gaining or losing electrons. Effective nuclear charge describes how strongly a specific electron in a specific atom or ion is attracted to the nucleus, accounting for shielding by other electrons." },
+      { q: "Why can't the shielding constant exceed the atomic number?", a: "If S were greater than Z, the effective nuclear charge would be negative, implying the electron is net repelled rather than attracted by the nucleus, which isn't a physically meaningful result in this model." },
+      { q: "Why does Zeff generally increase across a period?", a: "Moving across a period, protons are added to the nucleus faster than effective shielding increases (since added electrons go into the same outer shell and shield each other only partially), so Zeff on outer electrons tends to increase left to right." },
+      { q: "How does this relate to Electron Configuration?", a: "Electron configuration tells you which subshell an electron occupies, which is exactly the information you need to look up or estimate a shielding constant (for example with Slater's rules) before using this calculator." },
+    ],
+    related: ["atom-calculator", "electron-configuration-calculator", "average-atomic-mass-calculator"],
+  },
+  {
+    id: "electrolysis-calculator",
+    category: "chemistry",
+    title: "Electrolysis Calculator",
+    keyword: "electrolysis calculator, faraday's law calculator, moles of electrons",
+    description: "Calculate electric charge, current, time, or moles of electrons using Faraday's law, Q = nF and Q = It.",
+    intro: "Choose the quantity you want to find and enter the other values. This is an educational calculator for the electrical charge and mole relationships behind electrolysis; it gives no setup, electrode, or substance-production guidance.",
+    fields: [
+      { id: "solve", label: "Solve for", type: "select", default: "charge", options: [{ v: "charge", l: "Charge Q (from moles of electrons)" }, { v: "moles", l: "Moles of electrons n (from charge)" }, { v: "current", l: "Current I (from charge and time)" }, { v: "time", l: "Time t (from charge and current)" }] },
+      { id: "moles", label: "Moles of electrons n (charge mode)", type: "number", default: 1, step: "any", min: 0 },
+      { id: "charge", label: "Charge Q in coulombs (moles/current/time modes)", type: "number", default: 96485, step: "any", min: 0 },
+      { id: "current", label: "Current I in amperes (time mode)", type: "number", default: 5, step: "any", min: 0 },
+      { id: "time", label: "Time t in seconds (current mode)", type: "number", default: 3600, step: "any", min: 0 },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      const F = 96485.33212;
+      if (v.solve === "charge") {
+        if (!(v.moles >= 0) || !Number.isFinite(v.moles)) return bad("Moles of electrons must be zero or positive.");
+        const Q = v.moles * F;
+        return {
+          primary: { label: "Charge Q", value: `${round(Q, 2)} C` },
+          secondary: [{ l: "Faraday constant used", v: "96,485.33212 C/mol" }],
+          note: "Q = nF, with F = 96,485.33212 C/mol (the Faraday constant, the charge of one mole of electrons). This is an abstract electrical calculation, not a description of any specific electrolysis setup.",
+        };
+      }
+      if (v.solve === "moles") {
+        if (!(v.charge >= 0) || !Number.isFinite(v.charge)) return bad("Charge must be zero or positive.");
+        const n = v.charge / F;
+        return {
+          primary: { label: "Moles of electrons n", value: `${round(n, 6)} mol` },
+          secondary: [{ l: "Faraday constant used", v: "96,485.33212 C/mol" }],
+          note: "n = Q / F. One Faraday (96,485.33212 C) corresponds to exactly one mole of electrons' worth of charge.",
+        };
+      }
+      if (v.solve === "current") {
+        if (!(v.charge >= 0) || !(v.time > 0)) return bad("Charge must be zero or positive and time must be greater than zero.");
+        const I = v.charge / v.time;
+        return {
+          primary: { label: "Current I", value: `${round(I, 5)} A` },
+          secondary: [{ l: "Charge used", v: `${round(v.charge, 2)} C` }, { l: "Time used", v: `${round(v.time, 2)} s` }],
+          note: "I = Q / t. This is plain electrical arithmetic (charge equals current times time) and is not specific to any particular electrolysis process.",
+        };
+      }
+      if (!(v.charge >= 0) || !(v.current > 0)) return bad("Charge must be zero or positive and current must be greater than zero.");
+      const t = v.charge / v.current;
+      return {
+        primary: { label: "Time t", value: `${round(t, 3)} s` },
+        secondary: [{ l: "In minutes", v: `${round(t / 60, 3)} min` }, { l: "In hours", v: `${round(t / 3600, 4)} h` }],
+        note: "t = Q / I, from Q = It. Practical electrolysis also depends on cell efficiency, electrode reactions, and other factors this calculator does not model.",
+      };
+    },
+    faq: [
+      { q: "What is Faraday's law used here?", a: "Q = nF relates electric charge to the amount of electrons transferred, where F is the Faraday constant (about 96,485.33 coulombs per mole of electrons). Combined with Q = It, it links charge, current, and time." },
+      { q: "How much charge is one mole of electrons?", a: "Exactly one Faraday, 96,485.33212 coulombs. This is the charge of Avogadro's number of electrons." },
+      { q: "Does this tell me how much product an electrolysis cell will make?", a: "No. It only computes the electrical charge/mole-of-electrons relationship. Relating that to a specific product requires knowing the reaction's electron stoichiometry and cell efficiency, which this calculator does not model or provide guidance on." },
+      { q: "Does this calculator give setup or safety instructions for running electrolysis?", a: "No. It is strictly an educational calculator for the charge and electron-mole arithmetic behind Faraday's law. It does not describe electrodes, electrolytes, apparatus, or how to produce or collect any substance." },
+      { q: "What's the difference between charge, current, and moles of electrons here?", a: "Charge (Q, in coulombs) is the total electrical quantity transferred. Current (I, in amperes) is charge per unit time. Moles of electrons (n) converts charge into a chemistry-relevant amount using the Faraday constant." },
+      { q: "How does this relate to Avogadro's Number?", a: "The Faraday constant is Avogadro's number times the charge of a single electron. See the Avogadro's Number Calculator for conversions between moles and particle counts more generally." },
+    ],
+    related: ["avogadros-number-calculator", "activity-coefficient-calculator", "atom-calculator"],
+  },
+  {
+    id: "electron-configuration-calculator",
+    category: "chemistry",
+    title: "Electron Configuration Calculator",
+    keyword: "electron configuration calculator, aufbau principle calculator, noble gas configuration",
+    description: "Look up the ground-state electron configuration and noble-gas shorthand for a neutral atom by atomic number.",
+    intro: "Enter an atomic number from 1 to 118 to see that element's ground-state electron configuration, written both in full and using noble-gas shorthand.",
+    fields: [
+      { id: "z", label: "Atomic number Z", type: "number", default: 26, step: 1, min: 1, max: 118 },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      if (!Number.isInteger(v.z) || v.z < 1 || v.z > 118) return bad("The atomic number must be a whole number from 1 to 118.");
+      const order = ["1s", "2s", "2p", "3s", "3p", "4s", "3d", "4p", "5s", "4d", "5p", "6s", "4f", "5d", "6p", "7s", "5f", "6d", "7p"];
+      const cap = { s: 2, p: 6, d: 10, f: 14 };
+      const exceptions = {
+        24: "1s2 2s2 2p6 3s2 3p6 3d5 4s1", 29: "1s2 2s2 2p6 3s2 3p6 3d10 4s1",
+        41: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d4 5s1", 42: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d5 5s1",
+        44: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d7 5s1", 45: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d8 5s1",
+        46: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10", 47: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 5s1",
+        78: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 5s2 5p6 4f14 5d9 6s1",
+        79: "1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 5s2 5p6 4f14 5d10 6s1",
+      };
+      let filled;
+      if (exceptions[v.z]) {
+        filled = exceptions[v.z].split(" ");
+      } else {
+        let remaining = v.z;
+        filled = [];
+        for (const sub of order) {
+          if (remaining <= 0) break;
+          const l = sub[sub.length - 1];
+          const take = Math.min(cap[l], remaining);
+          filled.push(`${sub}${take}`);
+          remaining -= take;
+        }
+      }
+      const full = filled.join(" ");
+      const nobleGases = [[2, "He"], [10, "Ne"], [18, "Ar"], [36, "Kr"], [54, "Xe"], [86, "Rn"], [118, "Og"]];
+      let core = null;
+      let coreZ = 0;
+      for (const [zg, sym] of nobleGases) {
+        if (zg < v.z) { core = sym; coreZ = zg; } else break;
+      }
+      let shorthand = full;
+      if (core) {
+        let acc = 0;
+        let cut = 0;
+        for (let i = 0; i < filled.length; i++) {
+          const numPart = parseInt(filled[i].match(/\d+$/)[0], 10);
+          acc += numPart;
+          if (acc === coreZ) { cut = i + 1; break; }
+        }
+        shorthand = cut > 0 ? `[${core}] ${filled.slice(cut).join(" ")}`.trim() : full;
+      }
+      const exceptionNote = exceptions[v.z] ? ` Element ${v.z} is one of the known exceptions to simple Aufbau filling; the configuration above reflects its actual ground state, which has a fully or half-filled d subshell for extra stability rather than the order naive filling would predict.` : "";
+      return {
+        primary: { label: "Electron configuration", value: full },
+        secondary: [
+          { l: "Noble-gas shorthand", v: shorthand },
+          { l: "Total electrons (should equal Z)", v: `${v.z}` },
+        ],
+        note: `Built by filling subshells in the standard Aufbau order (1s, 2s, 2p, 3s, 3p, 4s, 3d, 4p, ...), following the Pauli exclusion principle (each orbital holds at most 2 electrons) and, within a subshell, Hund's rule (electrons spread across orbitals before pairing). This straightforward filling order predicts most elements correctly but has known exceptions, mainly among the transition metals and some heavier elements, where extra stability from filled or half-filled d or f subshells changes the real configuration.${exceptionNote}`,
+      };
+    },
+    faq: [
+      { q: "What is the Aufbau principle?", a: "It's the idea that electrons fill the lowest-energy orbitals first, building up an atom's configuration one electron at a time in a standard subshell order (1s, 2s, 2p, 3s, and so on)." },
+      { q: "What are the Pauli exclusion principle and Hund's rule?", a: "The Pauli exclusion principle says each orbital can hold at most two electrons, with opposite spins. Hund's rule says that within a subshell with multiple orbitals of equal energy, electrons occupy separate orbitals singly before any pairing up, which minimizes electron-electron repulsion." },
+      { q: "Does simple Aufbau filling always give the correct configuration?", a: "No. It's correct for most elements, but there are known exceptions, mostly among transition metals (like chromium and copper) and some heavier elements, where a filled or half-filled d or f subshell provides extra stability that changes the actual ground-state configuration." },
+      { q: "How is this different from the Atom Calculator?", a: "The Atom Calculator gives you the total number of protons, neutrons, and electrons from Z, A, and charge. This calculator instead shows how those electrons are distributed among subshells and orbitals." },
+      { q: "What does noble-gas shorthand mean?", a: "It abbreviates the inner, already-filled shells using the symbol of the preceding noble gas in brackets, then lists only the additional subshells filled beyond that noble gas, which is shorter and easier to read for heavier elements." },
+      { q: "Does this support ions?", a: "This calculator covers neutral atoms only. Ion configurations, especially for transition metals, don't always follow the reverse of the neutral-atom filling order (electrons aren't necessarily removed from the last subshell filled), so a robust ion mode needs separate, carefully verified rules not included here." },
+    ],
+    related: ["atom-calculator", "effective-nuclear-charge-calculator", "electronegativity-calculator"],
+  },
+  {
+    id: "electronegativity-calculator",
+    category: "chemistry",
+    title: "Electronegativity Calculator",
+    keyword: "electronegativity calculator, pauling scale electronegativity difference",
+    description: "Compare the Pauling-scale electronegativity of two elements and calculate the electronegativity difference between them.",
+    intro: "Select two elements to see their electronegativity values on the Pauling scale and the absolute difference between them, a rough indicator of bond polarity.",
+    fields: [
+      { id: "element1", label: "Element 1 (symbol, e.g. Na)", type: "text", default: "Na" },
+      { id: "element2", label: "Element 2 (symbol, e.g. Cl)", type: "text", default: "Cl" },
+    ],
+    compute: (v) => {
+      const EN = {
+        H: 2.2, Li: 0.98, Be: 1.57, B: 2.04, C: 2.55, N: 3.04, O: 3.44, F: 3.98,
+        Na: 0.93, Mg: 1.31, Al: 1.61, Si: 1.9, P: 2.19, S: 2.58, Cl: 3.16,
+        K: 0.82, Ca: 1, Sc: 1.36, Ti: 1.54, V: 1.63, Cr: 1.66, Mn: 1.55, Fe: 1.83, Co: 1.88, Ni: 1.91, Cu: 1.9, Zn: 1.65,
+        Ga: 1.81, Ge: 2.01, As: 2.18, Se: 2.55, Br: 2.96,
+        Rb: 0.82, Sr: 0.95, Y: 1.22, Zr: 1.33, Nb: 1.6, Mo: 2.16, Tc: 1.9, Ru: 2.2, Rh: 2.28, Pd: 2.2, Ag: 1.93, Cd: 1.69,
+        In: 1.78, Sn: 1.96, Sb: 2.05, Te: 2.1, I: 2.66,
+        Cs: 0.79, Ba: 0.89, La: 1.1, Hf: 1.3, Ta: 1.5, W: 2.36, Re: 1.9, Os: 2.2, Ir: 2.2, Pt: 2.28, Au: 2.54, Hg: 2, Tl: 1.62,
+        Pb: 2.33, Bi: 2.02, Po: 2, At: 2.2, Fr: 0.7, Ra: 0.9,
+        He: null, Ne: null, Ar: null, Kr: 3, Xe: 2.6,
+      };
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      const e1 = (v.element1 || "").trim();
+      const e2 = (v.element2 || "").trim();
+      if (!e1 || !e2) return bad("Enter two element symbols, such as Na and Cl.");
+      const key1 = Object.keys(EN).find((k) => k.toLowerCase() === e1.toLowerCase());
+      const key2 = Object.keys(EN).find((k) => k.toLowerCase() === e2.toLowerCase());
+      if (!key1 || !key2) {
+        const missing = [!key1 ? e1 : null, !key2 ? e2 : null].filter(Boolean).join(" and ");
+        return bad(`No Pauling electronegativity value is defined in this calculator's reference table for: ${missing}. Try a different element, or check the spelling of the symbol.`);
+      }
+      const chi1 = EN[key1];
+      const chi2 = EN[key2];
+      if (chi1 === null || chi2 === null) {
+        return bad(`${chi1 === null ? key1 : key2} has no well-established Pauling electronegativity value (this is typical for some noble gases that rarely form bonds), so a meaningful difference can't be calculated.`);
+      }
+      const diff = Math.abs(chi1 - chi2);
+      let character;
+      if (diff < 0.5) character = "Typically considered mostly nonpolar covalent";
+      else if (diff < 1.7) character = "Typically considered polar covalent";
+      else character = "Typically considered to have substantial ionic character";
+      return {
+        primary: { label: "Electronegativity difference (Δχ)", value: `${round(diff, 2)}` },
+        secondary: [
+          { l: `${key1} electronegativity (Pauling)`, v: `${chi1}` },
+          { l: `${key2} electronegativity (Pauling)`, v: `${chi2}` },
+          { l: "Rough bond-character guide", v: character },
+        ],
+        note: "Δχ = |χA − χB| on the Pauling scale. Electronegativity is a comparative, dimensionless index of an atom's tendency to attract shared electrons in a bond; it is not a directly measured physical quantity, and different reference sources can list slightly different values. The polarity ranges shown are commonly cited rules of thumb, not sharp physical boundaries - real bonding character is a continuum and depends on more than electronegativity difference alone.",
+      };
+    },
+    faq: [
+      { q: "What is electronegativity?", a: "It's a relative measure of how strongly an atom attracts the shared electrons in a chemical bond. It has no absolute units; the Pauling scale, used here, is defined comparatively based on bond energies." },
+      { q: "Why does the order of the two elements not matter?", a: "The calculator reports the absolute difference, Δχ = |χA − χB|, which is symmetric: comparing element A to B gives the same result as comparing B to A." },
+      { q: "What do the polarity categories mean?", a: "A difference below about 0.5 is often called mostly nonpolar covalent, between about 0.5 and 1.7 polar covalent, and above about 1.7 substantially ionic. These are commonly used rules of thumb, not precise physical cutoffs, and real bonds exist on a continuum." },
+      { q: "Why do some elements show no value?", a: "A few elements, mainly noble gases that rarely form conventional bonds, don't have a well-established Pauling electronegativity value in standard references, so this calculator reports that rather than inventing a number." },
+      { q: "Is the Pauling scale the only electronegativity scale?", a: "No, other scales exist (such as Mulliken or Allred-Rochow), and their numbers aren't directly interchangeable with Pauling values. This calculator uses Pauling-scale values throughout, consistently." },
+      { q: "How does this relate to Bond Order?", a: "Electronegativity difference is one factor influencing bond polarity, while bond order (from molecular orbital theory) is a separate measure related to bond strength and length. They describe different aspects of a chemical bond." },
+    ],
+    related: ["electron-configuration-calculator", "bond-order-calculator", "chemical-name-calculator"],
   },
 ];
 

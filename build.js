@@ -224,6 +224,15 @@ const WAVE_ONE_TOOL_IDS = [
   "combustion-analysis-calculator",
   "concentration-calculator",
   "crude-protein-calculator",
+  // Batch 25 (Batch 014 build): 8 new tools translated into all 11 non-English locales.
+  "cubic-cell-calculator",
+  "degree-of-unsaturation-calculator",
+  "diffusion-coefficient-calculator",
+  "dilution-factor-calculator",
+  "effective-nuclear-charge-calculator",
+  "electrolysis-calculator",
+  "electron-configuration-calculator",
+  "electronegativity-calculator",
 ];
 
 function loadData() {
