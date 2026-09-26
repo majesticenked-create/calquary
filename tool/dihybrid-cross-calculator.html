@@ -15,9 +15,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dihybrid Cross Calculator | Calquary</title>
-  <meta name="description" content="Calculate offspring genotype and phenotype ratios for a one-gene (Punnett square) or two-gene (dihybrid) cross under simple Mendelian inheritance." />
+  <meta name="description" content="Calculate offspring genotype and phenotype ratios for one-gene (Punnett), two-gene (dihybrid), or three-gene (trihybrid) crosses under Mendelian inheritance." />
   <meta property="og:title" content="Dihybrid Cross Calculator | Calquary">
-  <meta property="og:description" content="Calculate offspring genotype and phenotype ratios for a one-gene (Punnett square) or two-gene (dihybrid) cross under simple Mendelian inheritance.">
+  <meta property="og:description" content="Calculate offspring genotype and phenotype ratios for one-gene (Punnett), two-gene (dihybrid), or three-gene (trihybrid) crosses under Mendelian inheritance.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/tool/dihybrid-cross-calculator">
   <meta property="og:locale" content="en_US">
@@ -27,7 +27,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Dihybrid Cross Calculator | Calquary">
-  <meta name="twitter:description" content="Calculate offspring genotype and phenotype ratios for a one-gene (Punnett square) or two-gene (dihybrid) cross under simple Mendelian inheritance.">
+  <meta name="twitter:description" content="Calculate offspring genotype and phenotype ratios for one-gene (Punnett), two-gene (dihybrid), or three-gene (trihybrid) crosses under Mendelian inheritance.">
   <meta name="twitter:image" content="https://calquary.com/og-images/dihybrid-cross-calculator.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/dihybrid-cross-calculator">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dihybrid-cross-calculator">
@@ -89,7 +89,7 @@
     {
       "@type": "SoftwareApplication",
       "name": "Dihybrid Cross Calculator",
-      "description": "Calculate offspring genotype and phenotype ratios for a one-gene (Punnett square) or two-gene (dihybrid) cross under simple Mendelian inheritance.",
+      "description": "Calculate offspring genotype and phenotype ratios for one-gene (Punnett), two-gene (dihybrid), or three-gene (trihybrid) crosses under Mendelian inheritance.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/tool/dihybrid-cross-calculator",
@@ -128,6 +128,14 @@
     {
       "@type": "FAQPage",
       "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can this calculate a trihybrid cross like AaBbCc × AaBbCc?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Choose \"Three genes (trihybrid cross)\" and set each parent's genotype at genes 1, 2, and 3. For AaBbCc × AaBbCc each parent makes 8 different gametes, giving 8 × 8 = 64 offspring combinations and the classic 27:9:9:9:3:3:3:1 phenotype ratio. It is the same tool as the one- and two-gene modes, so there is no separate trihybrid page."
+          }
+        },
         {
           "@type": "Question",
           "name": "Is this the same as a Punnett Square Calculator?",
@@ -223,7 +231,7 @@
     <div class="tool-layout">
       <main>
         <h1>Dihybrid Cross Calculator</h1>
-        <p style="max-width:60ch;">Choose a one-gene cross for a classic Punnett square, or a two-gene cross for a dihybrid cross, then select each parent's genotype to calculate offspring genotype and phenotype probabilities, assuming independent assortment and complete dominance.</p>
+        <p style="max-width:60ch;">Choose a one-gene cross for a classic Punnett square, a two-gene cross for a dihybrid cross, or a three-gene cross for a trihybrid cross (such as AaBbCc × AaBbCc), then select each parent's genotype to calculate offspring genotype and phenotype probabilities, assuming independent assortment and complete dominance.</p>
         <p class="last-updated">Last updated: September 25, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -251,6 +259,10 @@
         <div class="article-block">
           <h2>Frequently asked questions</h2>
           <div id="faq-list"><div class="faq-item">
+<h3>Can this calculate a trihybrid cross like AaBbCc × AaBbCc?</h3>
+<p>Yes. Choose "Three genes (trihybrid cross)" and set each parent's genotype at genes 1, 2, and 3. For AaBbCc × AaBbCc each parent makes 8 different gametes, giving 8 × 8 = 64 offspring combinations and the classic 27:9:9:9:3:3:3:1 phenotype ratio. It is the same tool as the one- and two-gene modes, so there is no separate trihybrid page.</p>
+</div>
+<div class="faq-item">
 <h3>Is this the same as a Punnett Square Calculator?</h3>
 <p>Yes. Choose "One gene" to get a classic single-gene Punnett square (a 2x2 grid of offspring combinations), or "Two genes" for a dihybrid cross (a 4x4 grid). Both modes live in this one calculator instead of separate pages.</p>
 </div>

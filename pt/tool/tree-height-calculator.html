@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Altura de uma Árvore</title>
+  <meta name="description" content="Estime a altura de uma árvore a partir de uma distância e um ângulo, ou da sombra de uma vara de altura conhecida." />
+  <meta property="og:title" content="Calculadora de Altura de uma Árvore | Calquary">
+  <meta property="og:description" content="Estime a altura de uma árvore a partir de uma distância e um ângulo, ou da sombra de uma vara de altura conhecida.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/pt/tool/tree-height-calculator">
+  <meta property="og:locale" content="pt_PT">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/tree-height-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculadora de Altura de uma Árvore | Calquary">
+  <meta name="twitter:description" content="Estime a altura de uma árvore a partir de uma distância e um ângulo, ou da sombra de uma vara de altura conhecida.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/tree-height-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/tree-height-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/tree-height-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/tree-height-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/tree-height-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/tree-height-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/tree-height-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/tree-height-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/tree-height-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/tree-height-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/tree-height-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/tree-height-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/tree-height-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/tree-height-calculator">
+    <link rel="canonical" href="https://calquary.com/pt/tool/tree-height-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("tree-height-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("tree-height-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calculadora de Altura de uma Árvore",
+      "description": "Estime a altura de uma árvore a partir de uma distância e um ângulo, ou da sombra de uma vara de altura conhecida.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/pt/tool/tree-height-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-25",
+      "inLanguage": "pt"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/pt/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/pt/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calculadora de Altura de uma Árvore",
+          "item": "https://calquary.com/pt/tool/tree-height-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qual método é mais preciso?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ambos são estimativas. O método do ângulo depende de quão bem você lê o ângulo até o topo real; o da sombra exige terreno plano e a medição das duas sombras ao mesmo tempo. Repetir a medição de outro ponto é uma boa verificação."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como meço o ângulo até o topo da árvore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use um clinômetro, um aplicativo de inclinômetro no celular ou um transferidor caseiro com um fio com peso. Mire o ponto visível mais alto da copa e leia o ângulo acima da horizontal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Por que preciso somar a altura dos olhos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O ângulo é medido a partir dos seus olhos, não do chão, então a altura calculada acima dos olhos deve ser somada à altura dos olhos para obter a altura total."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O método da sombra funciona em dias nublados?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. É preciso ter sombras nítidas e medir as sombras da vara e da árvore ao mesmo tempo, pois o comprimento muda ao longo do dia."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "E se a árvore estiver em uma ladeira?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ladeiras distorcem os dois métodos. Se possível, posicione-se na altura da base da árvore."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual a relação com a Calculadora de Triângulo Retângulo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O método do ângulo é trigonometria de triângulo retângulo e o da sombra usa triângulos semelhantes. Esta página reúne ambos para árvores; a outra resolve triângulos em geral."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/pt/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/pt/#categories">Categorias</a>
+          <a href="/pt/#tools">Todas as ferramentas</a>
+          <a href="/pt/about">Sobre</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Português">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>PT</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/tree-height-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/tree-height-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/tree-height-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/tree-height-calculator">Deutsch</a><span class="locale-item current" role="menuitem" aria-current="true">Português</span><a class="locale-item" role="menuitem" href="/it/tool/tree-height-calculator">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/tree-height-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/tree-height-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/tree-height-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/tree-height-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/tree-height-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/tree-height-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/pt/">Calquary</a> / <a href="/pt/category/biology">Biologia</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calculadora de Altura de uma Árvore</h1>
+        <p style="max-width:60ch;">Escolha um método: posicione-se a uma distância medida da árvore e informe o ângulo até o topo, ou compare a sombra da árvore com a de uma vara de altura conhecida. A calculadora retorna a altura estimada.</p>
+        <p class="last-updated">Última atualização: September 25, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calcular</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Redefinir</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Perguntas frequentes</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Qual método é mais preciso?</h3>
+<p>Ambos são estimativas. O método do ângulo depende de quão bem você lê o ângulo até o topo real; o da sombra exige terreno plano e a medição das duas sombras ao mesmo tempo. Repetir a medição de outro ponto é uma boa verificação.</p>
+</div>
+<div class="faq-item">
+<h3>Como meço o ângulo até o topo da árvore?</h3>
+<p>Use um clinômetro, um aplicativo de inclinômetro no celular ou um transferidor caseiro com um fio com peso. Mire o ponto visível mais alto da copa e leia o ângulo acima da horizontal.</p>
+</div>
+<div class="faq-item">
+<h3>Por que preciso somar a altura dos olhos?</h3>
+<p>O ângulo é medido a partir dos seus olhos, não do chão, então a altura calculada acima dos olhos deve ser somada à altura dos olhos para obter a altura total.</p>
+</div>
+<div class="faq-item">
+<h3>O método da sombra funciona em dias nublados?</h3>
+<p>Não. É preciso ter sombras nítidas e medir as sombras da vara e da árvore ao mesmo tempo, pois o comprimento muda ao longo do dia.</p>
+</div>
+<div class="faq-item">
+<h3>E se a árvore estiver em uma ladeira?</h3>
+<p>Ladeiras distorcem os dois métodos. Se possível, posicione-se na altura da base da árvore.</p>
+</div>
+<div class="faq-item">
+<h3>Qual a relação com a Calculadora de Triângulo Retângulo?</h3>
+<p>O método do ângulo é trigonometria de triângulo retângulo e o da sombra usa triângulos semelhantes. Esta página reúne ambos para árvores; a outra resolve triângulos em geral.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calcular</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Ferramentas relacionadas</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Nota sobre precisão</h4>
+          <p style="margin:0;font-size:0.85rem;">As calculadoras da Calquary são feitas para estimativas rápidas e confiáveis. Para decisões com implicações financeiras, estruturais ou médicas reais, consulte um profissional qualificado.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/pt/">← Voltar a todas as calculadoras</a> · <a href="/pt/about">Sobre</a> · <a href="/pt/contact">Contato</a> · <a href="/pt/privacy">Privacidade</a> · <a href="/pt/terms">Termos</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

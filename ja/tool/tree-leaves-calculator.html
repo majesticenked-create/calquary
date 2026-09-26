@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>木の葉の数計算機 - 無料オンライン計算ツール | Calquary</title>
+  <meta name="description" content="見本の枝の葉を数え、それを拡大することで、木全体の葉の数をおおまかに推定します。" />
+  <meta property="og:title" content="木の葉の数計算機 | Calquary">
+  <meta property="og:description" content="見本の枝の葉を数え、それを拡大することで、木全体の葉の数をおおまかに推定します。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/ja/tool/tree-leaves-calculator">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/tree-leaves-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="木の葉の数計算機 | Calquary">
+  <meta name="twitter:description" content="見本の枝の葉を数え、それを拡大することで、木全体の葉の数をおおまかに推定します。">
+  <meta name="twitter:image" content="https://calquary.com/og-images/tree-leaves-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/tree-leaves-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/tree-leaves-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/tree-leaves-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/tree-leaves-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/tree-leaves-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/tree-leaves-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/tree-leaves-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/tree-leaves-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/tree-leaves-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/tree-leaves-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/tree-leaves-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/tree-leaves-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/tree-leaves-calculator">
+    <link rel="canonical" href="https://calquary.com/ja/tool/tree-leaves-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("tree-leaves-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("tree-leaves-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "木の葉の数計算機",
+      "description": "見本の枝の葉を数え、それを拡大することで、木全体の葉の数をおおまかに推定します。",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/ja/tool/tree-leaves-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-25",
+      "inLanguage": "ja"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/ja/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/ja/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "木の葉の数計算機",
+          "item": "https://calquary.com/ja/tool/tree-leaves-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "平均的な木にはいくつ葉がありますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "単一の数字はありません。葉の数は樹種、大きさ、樹齢、季節で大きく変わるため、このツールは典型値を示さず、ご自身の標本から推定します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "良い見本の枝はどう選べばよいですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "最も葉が多い枝や少ない枝ではなく、大きさも葉の付き方も典型的な枝を選びます。さらに、高さや向きの異なる3〜4本の枝を数えて平均するのが理想です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "枝の本数はどう数えますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "見本と似た大きさの枝を、離れた位置や写真から数えます。大きさが大きく異なる場合は、大きい枝と小さい枝を別々にまとめてください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "なぜ答えは丸められているのですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "標本による推定では正確な数字は裏付けられません。有効数字2桁に丸めることで、方法にない精度を示さないようにしています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "不確かさの割合は何をしますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "推定値を妥当な範囲に広げます。見本どうしが大きく違った場合や木が不規則な場合は大きくしてください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "針葉樹にも使えますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "針や針葉の束を数える単位にすれば使えますが、数は非常に大きく、精度はさらに低くなります。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/ja/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/ja/#categories">カテゴリー</a>
+          <a href="/ja/#tools">すべてのツール</a>
+          <a href="/ja/about">このサイトについて</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: 日本語">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>JA</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/tree-leaves-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/tree-leaves-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/tree-leaves-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/tree-leaves-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/tree-leaves-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/tree-leaves-calculator">Italiano</a><span class="locale-item current" role="menuitem" aria-current="true">日本語</span><a class="locale-item" role="menuitem" href="/ro/tool/tree-leaves-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/tree-leaves-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/tree-leaves-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/tree-leaves-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/tree-leaves-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/ja/">Calquary</a> / <a href="/ja/category/biology">生物学</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>木の葉の数計算機</h1>
+        <p style="max-width:60ch;">代表的な1本の枝の葉を数え、木にある同様の枝の本数を入力します。計算機は大まかな総数まで拡大し、標本推定は正確になり得ないため有効数字2桁に丸めます。</p>
+        <p class="last-updated">最終更新日： September 25, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">計算する</button>
+              <button type="button" id="calc-reset" class="btn-ghost">リセット</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>よくある質問</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>平均的な木にはいくつ葉がありますか?</h3>
+<p>単一の数字はありません。葉の数は樹種、大きさ、樹齢、季節で大きく変わるため、このツールは典型値を示さず、ご自身の標本から推定します。</p>
+</div>
+<div class="faq-item">
+<h3>良い見本の枝はどう選べばよいですか?</h3>
+<p>最も葉が多い枝や少ない枝ではなく、大きさも葉の付き方も典型的な枝を選びます。さらに、高さや向きの異なる3〜4本の枝を数えて平均するのが理想です。</p>
+</div>
+<div class="faq-item">
+<h3>枝の本数はどう数えますか?</h3>
+<p>見本と似た大きさの枝を、離れた位置や写真から数えます。大きさが大きく異なる場合は、大きい枝と小さい枝を別々にまとめてください。</p>
+</div>
+<div class="faq-item">
+<h3>なぜ答えは丸められているのですか?</h3>
+<p>標本による推定では正確な数字は裏付けられません。有効数字2桁に丸めることで、方法にない精度を示さないようにしています。</p>
+</div>
+<div class="faq-item">
+<h3>不確かさの割合は何をしますか?</h3>
+<p>推定値を妥当な範囲に広げます。見本どうしが大きく違った場合や木が不規則な場合は大きくしてください。</p>
+</div>
+<div class="faq-item">
+<h3>針葉樹にも使えますか?</h3>
+<p>針や針葉の束を数える単位にすれば使えますが、数は非常に大きく、精度はさらに低くなります。</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">計算する</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>関連ツール</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>精度について</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquaryの計算ツールは、迅速で信頼できる概算を目的としています。実際の財務、構造、医療に関わる重要な決定を行う前には、必ず専門家にご確認ください。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/ja/">← すべての計算ツールに戻る</a> · <a href="/ja/about">このサイトについて</a> · <a href="/ja/contact">お問い合わせ</a> · <a href="/ja/privacy">プライバシー</a> · <a href="/ja/terms">利用規約</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Semillas de Hortalizas</title>
+  <meta name="description" content="Calcula cuántas semillas y sobres de semillas de hortalizas necesitas según tus hileras, el espaciado y la tasa de germinación." />
+  <meta property="og:title" content="Calculadora de Semillas de Hortalizas | Calquary">
+  <meta property="og:description" content="Calcula cuántas semillas y sobres de semillas de hortalizas necesitas según tus hileras, el espaciado y la tasa de germinación.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/es/tool/vegetable-seed-calculator">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/vegetable-seed-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculadora de Semillas de Hortalizas | Calquary">
+  <meta name="twitter:description" content="Calcula cuántas semillas y sobres de semillas de hortalizas necesitas según tus hileras, el espaciado y la tasa de germinación.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/vegetable-seed-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/vegetable-seed-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/vegetable-seed-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/vegetable-seed-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/vegetable-seed-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/vegetable-seed-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/vegetable-seed-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/vegetable-seed-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/vegetable-seed-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/vegetable-seed-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/vegetable-seed-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/vegetable-seed-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/vegetable-seed-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/vegetable-seed-calculator">
+    <link rel="canonical" href="https://calquary.com/es/tool/vegetable-seed-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("vegetable-seed-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("vegetable-seed-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calculadora de Semillas de Hortalizas",
+      "description": "Calcula cuántas semillas y sobres de semillas de hortalizas necesitas según tus hileras, el espaciado y la tasa de germinación.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/es/tool/vegetable-seed-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-25",
+      "inLanguage": "es"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/es/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calculadora de Semillas de Hortalizas",
+          "item": "https://calquary.com/es/tool/vegetable-seed-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿En qué se diferencia de la Calculadora de Semillas de Césped?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La de césped estima el peso de semilla a granel para cubrir un área. Esta cuenta semillas individuales para hileras de hortalizas y redondea a sobres completos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿En qué se diferencia de la Calculadora de Población de Plantas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Esa calcula plantas por acre o hectárea a partir del espaciado entre hileras y plantas. Esta parte de tus hileras reales y da semillas y sobres para un huerto o parcela pequeña."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué sembrar más de una semilla por sitio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No todas las semillas germinan. Sembrar dos o tres por sitio y aclarar a la plántula más fuerte es una forma común de evitar huecos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Dónde encuentro la tasa de germinación?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La mayoría de los sobres la indican, normalmente con la fecha de prueba. Las semillas viejas germinan peor, así que usa un porcentaje menor para semillas guardadas de años anteriores."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué suma uno al número de sitios por hilera?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Una hilera tiene una planta en ambos extremos, así que una hilera de 20 pies con espaciado de 6 pulgadas tiene 41 sitios, no 40."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Sirve para cultivos en bancales en lugar de hileras?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, si tratas cada línea plantada como una hilera. Para siembra al voleo, usa la dosis indicada en el sobre."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/es/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/es/#categories">Categorías</a>
+          <a href="/es/#tools">Todas las herramientas</a>
+          <a href="/es/about">Acerca de</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Español">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>ES</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/vegetable-seed-calculator">English</a><span class="locale-item current" role="menuitem" aria-current="true">Español</span><a class="locale-item" role="menuitem" href="/fr/tool/vegetable-seed-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/vegetable-seed-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/vegetable-seed-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/vegetable-seed-calculator">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/vegetable-seed-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/vegetable-seed-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/vegetable-seed-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/vegetable-seed-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/vegetable-seed-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/vegetable-seed-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/es/">Calquary</a> / <a href="/es/category/biology">Biología</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calculadora de Semillas de Hortalizas</h1>
+        <p style="max-width:60ch;">Introduce la longitud de la hilera, el número de hileras, el espaciado entre plantas, las semillas por hoyo, la tasa de germinación y el tamaño del sobre. La calculadora devuelve las semillas necesarias, con un margen de seguridad, y el número de sobres a comprar.</p>
+        <p class="last-updated">Última actualización: September 25, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calcular</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reiniciar</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Preguntas frecuentes</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>¿En qué se diferencia de la Calculadora de Semillas de Césped?</h3>
+<p>La de césped estima el peso de semilla a granel para cubrir un área. Esta cuenta semillas individuales para hileras de hortalizas y redondea a sobres completos.</p>
+</div>
+<div class="faq-item">
+<h3>¿En qué se diferencia de la Calculadora de Población de Plantas?</h3>
+<p>Esa calcula plantas por acre o hectárea a partir del espaciado entre hileras y plantas. Esta parte de tus hileras reales y da semillas y sobres para un huerto o parcela pequeña.</p>
+</div>
+<div class="faq-item">
+<h3>¿Por qué sembrar más de una semilla por sitio?</h3>
+<p>No todas las semillas germinan. Sembrar dos o tres por sitio y aclarar a la plántula más fuerte es una forma común de evitar huecos.</p>
+</div>
+<div class="faq-item">
+<h3>¿Dónde encuentro la tasa de germinación?</h3>
+<p>La mayoría de los sobres la indican, normalmente con la fecha de prueba. Las semillas viejas germinan peor, así que usa un porcentaje menor para semillas guardadas de años anteriores.</p>
+</div>
+<div class="faq-item">
+<h3>¿Por qué suma uno al número de sitios por hilera?</h3>
+<p>Una hilera tiene una planta en ambos extremos, así que una hilera de 20 pies con espaciado de 6 pulgadas tiene 41 sitios, no 40.</p>
+</div>
+<div class="faq-item">
+<h3>¿Sirve para cultivos en bancales en lugar de hileras?</h3>
+<p>Sí, si tratas cada línea plantada como una hilera. Para siembra al voleo, usa la dosis indicada en el sobre.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calcular</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Herramientas relacionadas</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Nota sobre precisión</h4>
+          <p style="margin:0;font-size:0.85rem;">Las calculadoras de Calquary están diseñadas para ofrecer estimaciones rápidas y fiables. Para decisiones con implicaciones financieras, estructurales o médicas reales, consulta con un profesional cualificado.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/es/">← Volver a todas las calculadoras</a> · <a href="/es/about">Acerca de</a> · <a href="/es/contact">Contacto</a> · <a href="/es/privacy">Privacidad</a> · <a href="/es/terms">Términos</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

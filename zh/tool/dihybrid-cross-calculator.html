@@ -15,9 +15,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>双因子杂交计算器 - 免费在线计算器 | Calquary</title>
-  <meta name="description" content="在简单孟德尔遗传规律下,计算双基因杂交后代的基因型和表现型比例。" />
+  <meta name="description" content="在简单孟德尔遗传下,计算单基因(庞氏表)、双基因(双杂交)或三基因(三杂交)杂交的后代基因型和表型比例。" />
   <meta property="og:title" content="双因子杂交计算器 | Calquary">
-  <meta property="og:description" content="在简单孟德尔遗传规律下,计算双基因杂交后代的基因型和表现型比例。">
+  <meta property="og:description" content="在简单孟德尔遗传下,计算单基因(庞氏表)、双基因(双杂交)或三基因(三杂交)杂交的后代基因型和表型比例。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/zh/tool/dihybrid-cross-calculator">
   <meta property="og:locale" content="zh_CN">
@@ -27,7 +27,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="双因子杂交计算器 | Calquary">
-  <meta name="twitter:description" content="在简单孟德尔遗传规律下,计算双基因杂交后代的基因型和表现型比例。">
+  <meta name="twitter:description" content="在简单孟德尔遗传下,计算单基因(庞氏表)、双基因(双杂交)或三基因(三杂交)杂交的后代基因型和表型比例。">
   <meta name="twitter:image" content="https://calquary.com/og-images/dihybrid-cross-calculator.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/dihybrid-cross-calculator">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dihybrid-cross-calculator">
@@ -89,7 +89,7 @@
     {
       "@type": "SoftwareApplication",
       "name": "双因子杂交计算器",
-      "description": "在简单孟德尔遗传规律下,计算双基因杂交后代的基因型和表现型比例。",
+      "description": "在简单孟德尔遗传下,计算单基因(庞氏表)、双基因(双杂交)或三基因(三杂交)杂交的后代基因型和表型比例。",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/zh/tool/dihybrid-cross-calculator",
@@ -128,6 +128,14 @@
     {
       "@type": "FAQPage",
       "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "它可以计算像 AaBbCc × AaBbCc 这样的三杂交吗?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以。选择“三个基因(三杂交)”,并设置每个亲本在基因 1、2、3 上的基因型。对于 AaBbCc × AaBbCc,每个亲本产生 8 种不同的配子,得到 8 × 8 = 64 种组合以及经典的 27:9:9:9:3:3:3:1 表型比。它与单基因和双基因模式是同一个工具,因此没有单独的三杂交页面。"
+          }
+        },
         {
           "@type": "Question",
           "name": "什么是\"自由组合\"?为什么它在这里很重要?",
@@ -223,7 +231,7 @@
     <div class="tool-layout">
       <main>
         <h1>双因子杂交计算器</h1>
-        <p style="max-width:60ch;">选择每个亲本在两个独立基因上的基因型,即可在假设自由组合和完全显性的前提下,计算后代的基因型和表现型概率。</p>
+        <p style="max-width:60ch;">选择单基因杂交得到经典庞氏表,双基因杂交得到双杂交,或三基因杂交得到三杂交(如 AaBbCc × AaBbCc),然后选择每个亲本的基因型,在假设自由组合和完全显性的前提下计算后代的基因型和表型概率。</p>
         <p class="last-updated">最后更新： September 25, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -251,6 +259,10 @@
         <div class="article-block">
           <h2>常见问题</h2>
           <div id="faq-list"><div class="faq-item">
+<h3>它可以计算像 AaBbCc × AaBbCc 这样的三杂交吗?</h3>
+<p>可以。选择“三个基因(三杂交)”,并设置每个亲本在基因 1、2、3 上的基因型。对于 AaBbCc × AaBbCc,每个亲本产生 8 种不同的配子,得到 8 × 8 = 64 种组合以及经典的 27:9:9:9:3:3:3:1 表型比。它与单基因和双基因模式是同一个工具,因此没有单独的三杂交页面。</p>
+</div>
+<div class="faq-item">
 <h3>什么是"自由组合"?为什么它在这里很重要?</h3>
 <p>自由组合是孟德尔的一项原理,即不同基因的等位基因彼此独立遗传,这在两个基因位于不同染色体(或同一染色体上相距很远)时成立。本计算器假设符合自由组合——如果两个基因在同一染色体上紧密连锁,它们被一起遗传的频率会高于该模型的预测,这种现象称为基因连锁。</p>
 </div>

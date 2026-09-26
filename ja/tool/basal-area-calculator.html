@@ -99,7 +99,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-22",
+      "dateModified": "2026-09-25",
       "inLanguage": "ja"
     },
     {
@@ -128,6 +128,14 @@
     {
       "@type": "FAQPage",
       "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "DBHの代わりに幹の周囲長を入力できますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。周囲長のオプションを選び、胸高で幹を1周して測った長さを入力すると、断面積を計算する前にDBH = 周囲長 / πで変換します。断面がほぼ円形であることを前提としており、板根、傾き、不規則な幹では直径巻尺で測るより誤差が大きくなります。"
+          }
+        },
         {
           "@type": "Question",
           "name": "DBHとは何ですか?なぜ特に胸高で測定するのですか?",
@@ -216,7 +224,7 @@
       <main>
         <h1>胸高断面積計算機</h1>
         <p style="max-width:60ch;">樹木の胸高直径(DBH)と、任意で本数を入力すると、1本あたりの胸高断面積と林分全体の合計胸高断面積を計算します。</p>
-        <p class="last-updated">最終更新日： September 22, 2026</p>
+        <p class="last-updated">最終更新日： September 25, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel" id="calc-panel">
@@ -243,6 +251,10 @@
         <div class="article-block">
           <h2>よくある質問</h2>
           <div id="faq-list"><div class="faq-item">
+<h3>DBHの代わりに幹の周囲長を入力できますか?</h3>
+<p>はい。周囲長のオプションを選び、胸高で幹を1周して測った長さを入力すると、断面積を計算する前にDBH = 周囲長 / πで変換します。断面がほぼ円形であることを前提としており、板根、傾き、不規則な幹では直径巻尺で測るより誤差が大きくなります。</p>
+</div>
+<div class="faq-item">
 <h3>DBHとは何ですか?なぜ特に胸高で測定するのですか?</h3>
 <p>DBH(胸高直径)とは、地上から4.5フィート(1.37m)の標準化された高さで測定した樹木の幹の直径です。固定された高さで測定することで、DBHは樹木間・調査間で一貫性があり比較可能になり、幹の根元付近でよく見られる裾広がりや不規則性を避けられます。</p>
 </div>

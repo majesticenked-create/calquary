@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>樹木価値計算機 - 無料オンライン計算ツール | Calquary</title>
+  <meta name="description" content="数量、単価、ご自身で入力した費用から、木のシンプルな価値を計算します。専門的な鑑定ではなく算術です。" />
+  <meta property="og:title" content="樹木価値計算機 | Calquary">
+  <meta property="og:description" content="数量、単価、ご自身で入力した費用から、木のシンプルな価値を計算します。専門的な鑑定ではなく算術です。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/ja/tool/tree-value-calculator">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/tree-value-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="樹木価値計算機 | Calquary">
+  <meta name="twitter:description" content="数量、単価、ご自身で入力した費用から、木のシンプルな価値を計算します。専門的な鑑定ではなく算術です。">
+  <meta name="twitter:image" content="https://calquary.com/og-images/tree-value-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/tree-value-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/tree-value-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/tree-value-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/tree-value-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/tree-value-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/tree-value-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/tree-value-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/tree-value-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/tree-value-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/tree-value-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/tree-value-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/tree-value-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/tree-value-calculator">
+    <link rel="canonical" href="https://calquary.com/ja/tool/tree-value-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("tree-value-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("tree-value-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "樹木価値計算機",
+      "description": "数量、単価、ご自身で入力した費用から、木のシンプルな価値を計算します。専門的な鑑定ではなく算術です。",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/ja/tool/tree-value-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-25",
+      "inLanguage": "ja"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/ja/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/ja/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "樹木価値計算機",
+          "item": "https://calquary.com/ja/tool/tree-value-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "これは樹木の鑑定ですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "いいえ。入力した数量、価格、費用を掛け合わせるだけです。保険、法務、税務のための正式な評価は、資格のある樹木医や林業技術者に依頼してください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "単価はどこで分かりますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "地元の木材買取業者、製材所、薪の販売者に尋ねるか、林業関係の機関が公表する価格報告を確認してください。この計算機は価格を提供しません。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "1本あたりの数量には何を使えばよいですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "買い手が支払う単位を使います。製材用ならボードフィート、薪ならコード、パルプ材ならトンなどです。林業技術者はDBHと高さから材積を推定できます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "結果がマイナスになることはありますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "あります。伐採や加工の費用が総額を上回ると純価値はマイナスになり、小さい木や質の悪い木ではよくあります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "日陰、野生生物、不動産価値は含まれますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "いいえ。直接の販売価値から費用を引くだけです。生態系や景観の便益には別の方法が必要です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "先に木の大きさを知るにはどのツールが役立ちますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "断面積計算機はDBHから断面積を求め、樹高計算機は高さを推定します。どちらも林業技術者の材積推定に役立つ入力値です。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/ja/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/ja/#categories">カテゴリー</a>
+          <a href="/ja/#tools">すべてのツール</a>
+          <a href="/ja/about">このサイトについて</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: 日本語">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>JA</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/tree-value-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/tree-value-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/tree-value-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/tree-value-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/tree-value-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/tree-value-calculator">Italiano</a><span class="locale-item current" role="menuitem" aria-current="true">日本語</span><a class="locale-item" role="menuitem" href="/ro/tool/tree-value-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/tree-value-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/tree-value-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/tree-value-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/tree-value-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/ja/">Calquary</a> / <a href="/ja/category/biology">生物学</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>樹木価値計算機</h1>
+        <p style="max-width:60ch;">木の本数、1本あたりの数量、提示された単価、伐採や加工の費用を入力すると、計算機が掛け算します。価格の検索や樹木の鑑定は行いませんので、地元の買い手や認定鑑定士の数字を使ってください。</p>
+        <p class="last-updated">最終更新日： September 25, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">計算する</button>
+              <button type="button" id="calc-reset" class="btn-ghost">リセット</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>よくある質問</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>これは樹木の鑑定ですか?</h3>
+<p>いいえ。入力した数量、価格、費用を掛け合わせるだけです。保険、法務、税務のための正式な評価は、資格のある樹木医や林業技術者に依頼してください。</p>
+</div>
+<div class="faq-item">
+<h3>単価はどこで分かりますか?</h3>
+<p>地元の木材買取業者、製材所、薪の販売者に尋ねるか、林業関係の機関が公表する価格報告を確認してください。この計算機は価格を提供しません。</p>
+</div>
+<div class="faq-item">
+<h3>1本あたりの数量には何を使えばよいですか?</h3>
+<p>買い手が支払う単位を使います。製材用ならボードフィート、薪ならコード、パルプ材ならトンなどです。林業技術者はDBHと高さから材積を推定できます。</p>
+</div>
+<div class="faq-item">
+<h3>結果がマイナスになることはありますか?</h3>
+<p>あります。伐採や加工の費用が総額を上回ると純価値はマイナスになり、小さい木や質の悪い木ではよくあります。</p>
+</div>
+<div class="faq-item">
+<h3>日陰、野生生物、不動産価値は含まれますか?</h3>
+<p>いいえ。直接の販売価値から費用を引くだけです。生態系や景観の便益には別の方法が必要です。</p>
+</div>
+<div class="faq-item">
+<h3>先に木の大きさを知るにはどのツールが役立ちますか?</h3>
+<p>断面積計算機はDBHから断面積を求め、樹高計算機は高さを推定します。どちらも林業技術者の材積推定に役立つ入力値です。</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">計算する</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>関連ツール</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>精度について</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquaryの計算ツールは、迅速で信頼できる概算を目的としています。実際の財務、構造、医療に関わる重要な決定を行う前には、必ず専門家にご確認ください。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/ja/">← すべての計算ツールに戻る</a> · <a href="/ja/about">このサイトについて</a> · <a href="/ja/contact">お問い合わせ</a> · <a href="/ja/privacy">プライバシー</a> · <a href="/ja/terms">利用規約</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

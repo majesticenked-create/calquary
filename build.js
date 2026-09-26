@@ -192,6 +192,9 @@ const WAVE_ONE_TOOL_IDS = [
   "rabbit-color-calculator", "rabbit-gestation-calculator", "raised-bed-soil-calculator",
   "rat-cage-size-calculator", "raw-dog-food-calculator", "sheep-gestation-calculator",
   "sod-calculator", "swine-gestation-calculator", "tramadol-for-dogs-calculator",
+  // Batch 21 (Batch 010 build): 7 new tools translated into all 11 non-English locales.
+  "tree-age-calculator", "tree-height-calculator", "tree-leaves-calculator", "tree-value-calculator",
+  "turtle-tank-size-calculator", "vegetable-seed-calculator", "vegetable-yield-calculator",
 ];
 
 function loadData() {

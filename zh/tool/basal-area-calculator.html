@@ -99,7 +99,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "dateModified": "2026-09-22",
+      "dateModified": "2026-09-25",
       "inLanguage": "zh"
     },
     {
@@ -128,6 +128,14 @@
     {
       "@type": "FAQPage",
       "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "我可以输入树干周长而不是 DBH 吗?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以。选择周长选项,输入您在胸高处绕树干测得的周长,计算器会先用 DBH = 周长 / π 换算,再计算断面积。这假设树干横截面近似圆形;板根、倾斜和不规则的树干会使换算不如直径卷尺读数精确。"
+          }
+        },
         {
           "@type": "Question",
           "name": "什么是DBH?为什么specifically在胸高处测量?",
@@ -216,7 +224,7 @@
       <main>
         <h1>胸高断面积计算器</h1>
         <p style="max-width:60ch;">输入一棵树的胸高直径(DBH),并可选择输入树木数量,即可计算每株树的胸高断面积和林分总胸高断面积。</p>
-        <p class="last-updated">最后更新： September 22, 2026</p>
+        <p class="last-updated">最后更新： September 25, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
         <div class="calc-panel" id="calc-panel">
@@ -243,6 +251,10 @@
         <div class="article-block">
           <h2>常见问题</h2>
           <div id="faq-list"><div class="faq-item">
+<h3>我可以输入树干周长而不是 DBH 吗?</h3>
+<p>可以。选择周长选项,输入您在胸高处绕树干测得的周长,计算器会先用 DBH = 周长 / π 换算,再计算断面积。这假设树干横截面近似圆形;板根、倾斜和不规则的树干会使换算不如直径卷尺读数精确。</p>
+</div>
+<div class="faq-item">
 <h3>什么是DBH?为什么specifically在胸高处测量?</h3>
 <p>DBH(胸高直径)是在距地面4.5英尺(1.37米)的标准化高度处测量的树干直径。在固定高度测量使DBH在不同树木和调查之间保持一致且可比,避免了树干基部附近常见的膨大和不规则形状。</p>
 </div>

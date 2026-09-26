@@ -15,9 +15,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Calculadora de Cruce Dihíbrido - Calculadora Gratis Online</title>
-  <meta name="description" content="Calcula las proporciones de genotipo y fenotipo de la descendencia para un cruce de dos genes bajo herencia mendeliana simple." />
+  <meta name="description" content="Calcula las proporciones de genotipo y fenotipo de la descendencia para un cruce de uno (cuadro de Punnett), dos (dihíbrido) o tres genes (trihíbrido) bajo…" />
   <meta property="og:title" content="Calculadora de Cruce Dihíbrido | Calquary">
-  <meta property="og:description" content="Calcula las proporciones de genotipo y fenotipo de la descendencia para un cruce de dos genes bajo herencia mendeliana simple.">
+  <meta property="og:description" content="Calcula las proporciones de genotipo y fenotipo de la descendencia para un cruce de uno (cuadro de Punnett), dos (dihíbrido) o tres genes (trihíbrido) bajo herencia mendeliana simple.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/es/tool/dihybrid-cross-calculator">
   <meta property="og:locale" content="es_ES">
@@ -27,7 +27,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Calculadora de Cruce Dihíbrido | Calquary">
-  <meta name="twitter:description" content="Calcula las proporciones de genotipo y fenotipo de la descendencia para un cruce de dos genes bajo herencia mendeliana simple.">
+  <meta name="twitter:description" content="Calcula las proporciones de genotipo y fenotipo de la descendencia para un cruce de uno (cuadro de Punnett), dos (dihíbrido) o tres genes (trihíbrido) bajo herencia mendeliana simple.">
   <meta name="twitter:image" content="https://calquary.com/og-images/dihybrid-cross-calculator.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/dihybrid-cross-calculator">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dihybrid-cross-calculator">
@@ -89,7 +89,7 @@
     {
       "@type": "SoftwareApplication",
       "name": "Calculadora de Cruce Dihíbrido",
-      "description": "Calcula las proporciones de genotipo y fenotipo de la descendencia para un cruce de dos genes bajo herencia mendeliana simple.",
+      "description": "Calcula las proporciones de genotipo y fenotipo de la descendencia para un cruce de uno (cuadro de Punnett), dos (dihíbrido) o tres genes (trihíbrido) bajo herencia mendeliana simple.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/es/tool/dihybrid-cross-calculator",
@@ -128,6 +128,14 @@
     {
       "@type": "FAQPage",
       "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Puede calcular un cruce trihíbrido como AaBbCc × AaBbCc?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Elige \"Tres genes (cruce trihíbrido)\" e indica el genotipo de cada progenitor en los genes 1, 2 y 3. Para AaBbCc × AaBbCc cada progenitor produce 8 gametos distintos, lo que da 8 × 8 = 64 combinaciones y la clásica proporción fenotípica 27:9:9:9:3:3:3:1. Es la misma herramienta que los modos de uno y dos genes, por lo que no hay una página trihíbrida aparte."
+          }
+        },
         {
           "@type": "Question",
           "name": "¿Qué significa \"distribución independiente\" y por qué importa aquí?",
@@ -223,7 +231,7 @@
     <div class="tool-layout">
       <main>
         <h1>Calculadora de Cruce Dihíbrido</h1>
-        <p style="max-width:60ch;">Selecciona el genotipo de cada progenitor en dos genes independientes para calcular las probabilidades de genotipo y fenotipo de la descendencia, asumiendo distribución independiente y dominancia completa.</p>
+        <p style="max-width:60ch;">Elige un cruce de un gen para un cuadro de Punnett clásico, de dos genes para un cruce dihíbrido o de tres genes para un cruce trihíbrido (como AaBbCc × AaBbCc) y selecciona el genotipo de cada progenitor para calcular las probabilidades de genotipo y fenotipo de la descendencia, asumiendo distribución independiente y dominancia completa.</p>
         <p class="last-updated">Última actualización: September 25, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -251,6 +259,10 @@
         <div class="article-block">
           <h2>Preguntas frecuentes</h2>
           <div id="faq-list"><div class="faq-item">
+<h3>¿Puede calcular un cruce trihíbrido como AaBbCc × AaBbCc?</h3>
+<p>Sí. Elige "Tres genes (cruce trihíbrido)" e indica el genotipo de cada progenitor en los genes 1, 2 y 3. Para AaBbCc × AaBbCc cada progenitor produce 8 gametos distintos, lo que da 8 × 8 = 64 combinaciones y la clásica proporción fenotípica 27:9:9:9:3:3:3:1. Es la misma herramienta que los modos de uno y dos genes, por lo que no hay una página trihíbrida aparte.</p>
+</div>
+<div class="faq-item">
 <h3>¿Qué significa "distribución independiente" y por qué importa aquí?</h3>
 <p>La distribución independiente es el principio mendeliano de que los alelos de diferentes genes se heredan independientemente unos de otros, lo cual se cumple cuando los dos genes están en cromosomas diferentes (o muy separados en el mismo). Esta calculadora asume distribución independiente; si los dos genes estuvieran ligados estrechamente en el mismo cromosoma, tenderían a heredarse juntos con más frecuencia de lo que este modelo predice, lo que se llama ligamiento genético.</p>
 </div>

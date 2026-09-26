@@ -15,9 +15,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>حاسبة التهجين الثنائي - حاسبة مجانية عبر الإنترنت | Calquary</title>
-  <meta name="description" content="احسب نسب النمط الجيني والنمط الظاهري للنسل لتهجين جينين تحت الوراثة المندلية البسيطة." />
+  <meta name="description" content="احسب نسب التركيب الجيني والمظهري للنسل في تهجين جين واحد (مربع بانيت) أو جينين (ثنائي الهجين) أو ثلاثة جينات (ثلاثي الهجين) وفق الوراثة المندلية البسيطة." />
   <meta property="og:title" content="حاسبة التهجين الثنائي | Calquary">
-  <meta property="og:description" content="احسب نسب النمط الجيني والنمط الظاهري للنسل لتهجين جينين تحت الوراثة المندلية البسيطة.">
+  <meta property="og:description" content="احسب نسب التركيب الجيني والمظهري للنسل في تهجين جين واحد (مربع بانيت) أو جينين (ثنائي الهجين) أو ثلاثة جينات (ثلاثي الهجين) وفق الوراثة المندلية البسيطة.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/ar/tool/dihybrid-cross-calculator">
   <meta property="og:locale" content="ar_AR">
@@ -27,7 +27,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="حاسبة التهجين الثنائي | Calquary">
-  <meta name="twitter:description" content="احسب نسب النمط الجيني والنمط الظاهري للنسل لتهجين جينين تحت الوراثة المندلية البسيطة.">
+  <meta name="twitter:description" content="احسب نسب التركيب الجيني والمظهري للنسل في تهجين جين واحد (مربع بانيت) أو جينين (ثنائي الهجين) أو ثلاثة جينات (ثلاثي الهجين) وفق الوراثة المندلية البسيطة.">
   <meta name="twitter:image" content="https://calquary.com/og-images/dihybrid-cross-calculator.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/dihybrid-cross-calculator">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dihybrid-cross-calculator">
@@ -89,7 +89,7 @@
     {
       "@type": "SoftwareApplication",
       "name": "حاسبة التهجين الثنائي",
-      "description": "احسب نسب النمط الجيني والنمط الظاهري للنسل لتهجين جينين تحت الوراثة المندلية البسيطة.",
+      "description": "احسب نسب التركيب الجيني والمظهري للنسل في تهجين جين واحد (مربع بانيت) أو جينين (ثنائي الهجين) أو ثلاثة جينات (ثلاثي الهجين) وفق الوراثة المندلية البسيطة.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/ar/tool/dihybrid-cross-calculator",
@@ -128,6 +128,14 @@
     {
       "@type": "FAQPage",
       "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "هل يمكنها حساب تهجين ثلاثي مثل AaBbCc × AaBbCc؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "نعم. اختر \"ثلاثة جينات (تهجين ثلاثي)\" وحدد التركيب الجيني لكل أب عند الجينات 1 و2 و3. في AaBbCc × AaBbCc ينتج كل أب 8 أمشاج مختلفة، فتحصل على 8 × 8 = 64 توليفة والنسبة المظهرية الكلاسيكية 27:9:9:9:3:3:3:1. إنها الأداة نفسها لوضعي الجين الواحد والجينين، لذا لا توجد صفحة منفصلة للتهجين الثلاثي."
+          }
+        },
         {
           "@type": "Question",
           "name": "ماذا يعني \"التوزيع المستقل\" ولماذا يهم هنا؟",
@@ -223,7 +231,7 @@
     <div class="tool-layout">
       <main>
         <h1>حاسبة التهجين الثنائي</h1>
-        <p style="max-width:60ch;">اختر النمط الجيني لكل والد في جينين مستقلين لحساب احتمالات النمط الجيني والنمط الظاهري للنسل، بافتراض التوزيع المستقل والسيادة الكاملة.</p>
+        <p style="max-width:60ch;">اختر تهجين جين واحد لمربع بانيت كلاسيكي، أو جينين لتهجين ثنائي، أو ثلاثة جينات لتهجين ثلاثي (مثل AaBbCc × AaBbCc)، ثم اختر التركيب الجيني لكل أب لحساب احتمالات التركيب الجيني والمظهري للنسل بافتراض التوزيع المستقل والسيادة التامة.</p>
         <p class="last-updated">آخر تحديث: September 25, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -251,6 +259,10 @@
         <div class="article-block">
           <h2>الأسئلة الشائعة</h2>
           <div id="faq-list"><div class="faq-item">
+<h3>هل يمكنها حساب تهجين ثلاثي مثل AaBbCc × AaBbCc؟</h3>
+<p>نعم. اختر "ثلاثة جينات (تهجين ثلاثي)" وحدد التركيب الجيني لكل أب عند الجينات 1 و2 و3. في AaBbCc × AaBbCc ينتج كل أب 8 أمشاج مختلفة، فتحصل على 8 × 8 = 64 توليفة والنسبة المظهرية الكلاسيكية 27:9:9:9:3:3:3:1. إنها الأداة نفسها لوضعي الجين الواحد والجينين، لذا لا توجد صفحة منفصلة للتهجين الثلاثي.</p>
+</div>
+<div class="faq-item">
 <h3>ماذا يعني "التوزيع المستقل" ولماذا يهم هنا؟</h3>
 <p>التوزيع المستقل هو المبدأ المندلي القائل بأن أليلات الجينات المختلفة تُورَّث بشكل مستقل عن بعضها البعض، وهو ما يصح عندما يكون الجينان على كروموسومات مختلفة (أو بعيدين جدًا على نفس الكروموسوم). تفترض هذه الحاسبة التوزيع المستقل - إذا كان الجينان مرتبطين ارتباطًا وثيقًا على نفس الكروموسوم، فسيميلان إلى الوراثة معًا بتكرار أكبر مما يتنبأ به هذا النموذج، وهو ما يسمى الارتباط الجيني.</p>
 </div>

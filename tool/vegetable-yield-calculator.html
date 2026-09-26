@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vegetable Yield Calculator | Calquary</title>
+  <meta name="description" content="Estimate total vegetable harvest from plant count or growing area using the yield per plant or per area that you enter." />
+  <meta property="og:title" content="Vegetable Yield Calculator | Calquary">
+  <meta property="og:description" content="Estimate total vegetable harvest from plant count or growing area using the yield per plant or per area that you enter.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/tool/vegetable-yield-calculator">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/vegetable-yield-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vegetable Yield Calculator | Calquary">
+  <meta name="twitter:description" content="Estimate total vegetable harvest from plant count or growing area using the yield per plant or per area that you enter.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/vegetable-yield-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/vegetable-yield-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/vegetable-yield-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/vegetable-yield-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/vegetable-yield-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/vegetable-yield-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/vegetable-yield-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/vegetable-yield-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/vegetable-yield-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/vegetable-yield-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/vegetable-yield-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/vegetable-yield-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/vegetable-yield-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/vegetable-yield-calculator">
+    <link rel="canonical" href="https://calquary.com/tool/vegetable-yield-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("vegetable-yield-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("vegetable-yield-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Vegetable Yield Calculator",
+      "description": "Estimate total vegetable harvest from plant count or growing area using the yield per plant or per area that you enter.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/tool/vegetable-yield-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-25",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Vegetable Yield Calculator",
+          "item": "https://calquary.com/tool/vegetable-yield-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How is this different from the Corn Yield Calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Corn Yield Calculator estimates grain yield per acre from ear and kernel counts. This tool is a general per-plant or per-area estimator for garden and market vegetables, using rates you enter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where do I get the yield per plant?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use your own records from past seasons, seed catalog notes, or local extension guidance. Because yields vary widely, no default crop figures are built in."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I put for losses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Include what you expect to lose to pests, disease, weather, culls, and spoilage. Ten percent is only a placeholder, so adjust it to your experience."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use it for several crops?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Run each crop separately and add the totals. Each crop has its own yield rate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I estimate how many plants fit my bed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Plant Population Calculator turns row and plant spacing into a plant count, and the Vegetable Seed Calculator gives the seeds to buy for them."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it work in metric?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Enter kilograms and matching area units, such as square meters and kilograms per square meter, and results are shown in both pounds and kilograms."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/#categories">Categories</a>
+          <a href="/#tools">All tools</a>
+          <a href="/about">About</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: English">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>EN</span>
+          </button>
+          <div class="locale-menu" role="menu"><span class="locale-item current" role="menuitem" aria-current="true">English</span><a class="locale-item" role="menuitem" href="/es/tool/vegetable-yield-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/vegetable-yield-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/vegetable-yield-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/vegetable-yield-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/vegetable-yield-calculator">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/vegetable-yield-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/vegetable-yield-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/vegetable-yield-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/vegetable-yield-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/vegetable-yield-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/vegetable-yield-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/">Calquary</a> / <a href="/category/biology">Biology</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Vegetable Yield Calculator</h1>
+        <p style="max-width:60ch;">Choose whether to estimate from the number of plants or from bed area, enter the yield rate you expect, and optionally subtract losses. The calculator returns the harvest in pounds and kilograms.</p>
+        <p class="last-updated">Last updated: September 25, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculate</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reset</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Frequently asked questions</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>How is this different from the Corn Yield Calculator?</h3>
+<p>The Corn Yield Calculator estimates grain yield per acre from ear and kernel counts. This tool is a general per-plant or per-area estimator for garden and market vegetables, using rates you enter.</p>
+</div>
+<div class="faq-item">
+<h3>Where do I get the yield per plant?</h3>
+<p>Use your own records from past seasons, seed catalog notes, or local extension guidance. Because yields vary widely, no default crop figures are built in.</p>
+</div>
+<div class="faq-item">
+<h3>What should I put for losses?</h3>
+<p>Include what you expect to lose to pests, disease, weather, culls, and spoilage. Ten percent is only a placeholder, so adjust it to your experience.</p>
+</div>
+<div class="faq-item">
+<h3>Can I use it for several crops?</h3>
+<p>Run each crop separately and add the totals. Each crop has its own yield rate.</p>
+</div>
+<div class="faq-item">
+<h3>How can I estimate how many plants fit my bed?</h3>
+<p>The Plant Population Calculator turns row and plant spacing into a plant count, and the Vegetable Seed Calculator gives the seeds to buy for them.</p>
+</div>
+<div class="faq-item">
+<h3>Does it work in metric?</h3>
+<p>Yes. Enter kilograms and matching area units, such as square meters and kilograms per square meter, and results are shown in both pounds and kilograms.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculate</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Related tools</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>A note on accuracy</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquary's calculators are built for quick, reliable estimates. For decisions with real financial, structural, or medical stakes, confirm with a qualified professional.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/">← Back to all calculators</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

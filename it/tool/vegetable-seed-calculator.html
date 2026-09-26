@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calcolatore dei Semi di Ortaggi</title>
+  <meta name="description" content="Calcola quanti semi e bustine di semi di ortaggi ti servono per le tue file, la distanza e il tasso di germinazione." />
+  <meta property="og:title" content="Calcolatore dei Semi di Ortaggi | Calquary">
+  <meta property="og:description" content="Calcola quanti semi e bustine di semi di ortaggi ti servono per le tue file, la distanza e il tasso di germinazione.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/it/tool/vegetable-seed-calculator">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/vegetable-seed-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calcolatore dei Semi di Ortaggi | Calquary">
+  <meta name="twitter:description" content="Calcola quanti semi e bustine di semi di ortaggi ti servono per le tue file, la distanza e il tasso di germinazione.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/vegetable-seed-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/vegetable-seed-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/vegetable-seed-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/vegetable-seed-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/vegetable-seed-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/vegetable-seed-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/vegetable-seed-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/vegetable-seed-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/vegetable-seed-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/vegetable-seed-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/vegetable-seed-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/vegetable-seed-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/vegetable-seed-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/vegetable-seed-calculator">
+    <link rel="canonical" href="https://calquary.com/it/tool/vegetable-seed-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("vegetable-seed-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("vegetable-seed-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calcolatore dei Semi di Ortaggi",
+      "description": "Calcola quanti semi e bustine di semi di ortaggi ti servono per le tue file, la distanza e il tasso di germinazione.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/it/tool/vegetable-seed-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-25",
+      "inLanguage": "it"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/it/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/it/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calcolatore dei Semi di Ortaggi",
+          "item": "https://calquary.com/it/tool/vegetable-seed-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Che differenza c'è con il Calcolatore dei Semi per Prato?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Quello per il prato stima il peso di seme sfuso per coprire un'area. Questo conta semi singoli per file di ortaggi e arrotonda a bustine intere."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Che differenza c'è con il Calcolatore della Popolazione di Piante?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Quello calcola piante per acro o ettaro dalla distanza tra le file e sulla fila. Questo parte dalle tue file reali e dà semi e bustine per un orto o un piccolo appezzamento."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Perché seminare più di un seme per buca?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non tutti i semi germinano. Seminarne due o tre per buca e diradare alla piantina più forte è un modo comune per evitare vuoti."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dove trovo il tasso di germinazione?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La maggior parte delle bustine lo indica, di solito con la data del test. I semi vecchi germinano peggio, quindi usa una percentuale più bassa per semi conservati da anni precedenti."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Perché aggiunge uno al numero di buche per fila?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Una fila ha una pianta a entrambe le estremità: una fila di 20 piedi con distanza di 6 pollici ha 41 buche, non 40."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Funziona per colture in aiuole invece che in file?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì, se tratti ogni linea piantata come una fila. Per la semina a spaglio usa la dose indicata sulla bustina."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/it/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/it/#categories">Categorie</a>
+          <a href="/it/#tools">Tutti gli strumenti</a>
+          <a href="/it/about">Chi siamo</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Italiano">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>IT</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/vegetable-seed-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/vegetable-seed-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/vegetable-seed-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/vegetable-seed-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/vegetable-seed-calculator">Português</a><span class="locale-item current" role="menuitem" aria-current="true">Italiano</span><a class="locale-item" role="menuitem" href="/ja/tool/vegetable-seed-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/vegetable-seed-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/vegetable-seed-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/vegetable-seed-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/vegetable-seed-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/vegetable-seed-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/it/">Calquary</a> / <a href="/it/category/biology">Biologia</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calcolatore dei Semi di Ortaggi</h1>
+        <p style="max-width:60ch;">Inserisci lunghezza della fila, numero di file, distanza tra le piante, semi per buca, tasso di germinazione e dimensione della bustina. Il calcolatore restituisce i semi necessari, con un margine di sicurezza, e il numero di bustine da acquistare.</p>
+        <p class="last-updated">Ultimo aggiornamento: September 25, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calcola</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Reimposta</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Domande frequenti</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Che differenza c'è con il Calcolatore dei Semi per Prato?</h3>
+<p>Quello per il prato stima il peso di seme sfuso per coprire un'area. Questo conta semi singoli per file di ortaggi e arrotonda a bustine intere.</p>
+</div>
+<div class="faq-item">
+<h3>Che differenza c'è con il Calcolatore della Popolazione di Piante?</h3>
+<p>Quello calcola piante per acro o ettaro dalla distanza tra le file e sulla fila. Questo parte dalle tue file reali e dà semi e bustine per un orto o un piccolo appezzamento.</p>
+</div>
+<div class="faq-item">
+<h3>Perché seminare più di un seme per buca?</h3>
+<p>Non tutti i semi germinano. Seminarne due o tre per buca e diradare alla piantina più forte è un modo comune per evitare vuoti.</p>
+</div>
+<div class="faq-item">
+<h3>Dove trovo il tasso di germinazione?</h3>
+<p>La maggior parte delle bustine lo indica, di solito con la data del test. I semi vecchi germinano peggio, quindi usa una percentuale più bassa per semi conservati da anni precedenti.</p>
+</div>
+<div class="faq-item">
+<h3>Perché aggiunge uno al numero di buche per fila?</h3>
+<p>Una fila ha una pianta a entrambe le estremità: una fila di 20 piedi con distanza di 6 pollici ha 41 buche, non 40.</p>
+</div>
+<div class="faq-item">
+<h3>Funziona per colture in aiuole invece che in file?</h3>
+<p>Sì, se tratti ogni linea piantata come una fila. Per la semina a spaglio usa la dose indicata sulla bustina.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calcola</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Strumenti correlati</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Nota sulla precisione</h4>
+          <p style="margin:0;font-size:0.85rem;">Le calcolatrici di Calquary sono pensate per stime rapide e affidabili. Per decisioni con reali implicazioni finanziarie, strutturali o mediche, consulta un professionista qualificato.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/it/">← Torna a tutte le calcolatrici</a> · <a href="/it/about">Chi siamo</a> · <a href="/it/contact">Contatti</a> · <a href="/it/privacy">Privacy</a> · <a href="/it/terms">Termini</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

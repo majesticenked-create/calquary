@@ -15,9 +15,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Calculateur de Croisement Dihybride</title>
-  <meta name="description" content="Calculez les ratios de génotype et de phénotype de la descendance pour un croisement à deux gènes sous hérédité mendélienne simple." />
+  <meta name="description" content="Calculez les proportions de génotypes et de phénotypes de la descendance pour un croisement à un gène (carré de Punnett), deux gènes (dihybride) ou trois gènes…" />
   <meta property="og:title" content="Calculateur de Croisement Dihybride | Calquary">
-  <meta property="og:description" content="Calculez les ratios de génotype et de phénotype de la descendance pour un croisement à deux gènes sous hérédité mendélienne simple.">
+  <meta property="og:description" content="Calculez les proportions de génotypes et de phénotypes de la descendance pour un croisement à un gène (carré de Punnett), deux gènes (dihybride) ou trois gènes (trihybride) sous hérédité mendélienne simple.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/fr/tool/dihybrid-cross-calculator">
   <meta property="og:locale" content="fr_FR">
@@ -27,7 +27,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Calculateur de Croisement Dihybride | Calquary">
-  <meta name="twitter:description" content="Calculez les ratios de génotype et de phénotype de la descendance pour un croisement à deux gènes sous hérédité mendélienne simple.">
+  <meta name="twitter:description" content="Calculez les proportions de génotypes et de phénotypes de la descendance pour un croisement à un gène (carré de Punnett), deux gènes (dihybride) ou trois gènes (trihybride) sous hérédité mendélienne simple.">
   <meta name="twitter:image" content="https://calquary.com/og-images/dihybrid-cross-calculator.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/dihybrid-cross-calculator">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dihybrid-cross-calculator">
@@ -89,7 +89,7 @@
     {
       "@type": "SoftwareApplication",
       "name": "Calculateur de Croisement Dihybride",
-      "description": "Calculez les ratios de génotype et de phénotype de la descendance pour un croisement à deux gènes sous hérédité mendélienne simple.",
+      "description": "Calculez les proportions de génotypes et de phénotypes de la descendance pour un croisement à un gène (carré de Punnett), deux gènes (dihybride) ou trois gènes (trihybride) sous hérédité mendélienne simple.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/fr/tool/dihybrid-cross-calculator",
@@ -128,6 +128,14 @@
     {
       "@type": "FAQPage",
       "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Peut-il calculer un croisement trihybride comme AaBbCc × AaBbCc ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. Choisissez « Trois gènes (croisement trihybride) » et indiquez le génotype de chaque parent aux gènes 1, 2 et 3. Pour AaBbCc × AaBbCc, chaque parent produit 8 gamètes différents, soit 8 × 8 = 64 combinaisons et le rapport phénotypique classique 27:9:9:9:3:3:3:1. C'est le même outil que les modes à un et deux gènes, il n'y a donc pas de page trihybride distincte."
+          }
+        },
         {
           "@type": "Question",
           "name": "Que signifie \"ségrégation indépendante\" et pourquoi est-ce important ici?",
@@ -223,7 +231,7 @@
     <div class="tool-layout">
       <main>
         <h1>Calculateur de Croisement Dihybride</h1>
-        <p style="max-width:60ch;">Sélectionnez le génotype de chaque parent à deux gènes indépendants pour calculer les probabilités de génotype et de phénotype de la descendance, en supposant une ségrégation indépendante et une dominance complète.</p>
+        <p style="max-width:60ch;">Choisissez un croisement à un gène pour un carré de Punnett classique, à deux gènes pour un croisement dihybride ou à trois gènes pour un croisement trihybride (comme AaBbCc × AaBbCc), puis sélectionnez le génotype de chaque parent pour calculer les probabilités de génotype et de phénotype de la descendance, en supposant une répartition indépendante et une dominance complète.</p>
         <p class="last-updated">Dernière mise à jour : September 25, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -251,6 +259,10 @@
         <div class="article-block">
           <h2>Questions fréquentes</h2>
           <div id="faq-list"><div class="faq-item">
+<h3>Peut-il calculer un croisement trihybride comme AaBbCc × AaBbCc ?</h3>
+<p>Oui. Choisissez « Trois gènes (croisement trihybride) » et indiquez le génotype de chaque parent aux gènes 1, 2 et 3. Pour AaBbCc × AaBbCc, chaque parent produit 8 gamètes différents, soit 8 × 8 = 64 combinaisons et le rapport phénotypique classique 27:9:9:9:3:3:3:1. C'est le même outil que les modes à un et deux gènes, il n'y a donc pas de page trihybride distincte.</p>
+</div>
+<div class="faq-item">
 <h3>Que signifie "ségrégation indépendante" et pourquoi est-ce important ici?</h3>
 <p>La ségrégation indépendante est le principe mendélien selon lequel les allèles de différents gènes sont hérités indépendamment les uns des autres, ce qui est vrai lorsque les deux gènes sont sur des chromosomes différents (ou très éloignés sur le même). Ce calculateur suppose une ségrégation indépendante - si les deux gènes étaient étroitement liés sur le même chromosome, ils auraient tendance à être hérités ensemble plus souvent que ce modèle ne le prédit, ce qu'on appelle la liaison génétique.</p>
 </div>

@@ -15,9 +15,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dihybrider-Kreuzung-Rechner - Kostenloser Online-Rechner</title>
-  <meta name="description" content="Berechnen Sie Genotyp- und Phänotyp-Verhältnisse der Nachkommen für eine Zwei-Gen-Kreuzung unter einfacher mendelscher Vererbung." />
+  <meta name="description" content="Berechnen Sie die Genotyp- und Phänotypverhältnisse der Nachkommen bei einer Ein-Gen-Kreuzung (Punnett-Quadrat), Zwei-Gen-Kreuzung (dihybrid) oder…" />
   <meta property="og:title" content="Dihybrider-Kreuzung-Rechner | Calquary">
-  <meta property="og:description" content="Berechnen Sie Genotyp- und Phänotyp-Verhältnisse der Nachkommen für eine Zwei-Gen-Kreuzung unter einfacher mendelscher Vererbung.">
+  <meta property="og:description" content="Berechnen Sie die Genotyp- und Phänotypverhältnisse der Nachkommen bei einer Ein-Gen-Kreuzung (Punnett-Quadrat), Zwei-Gen-Kreuzung (dihybrid) oder Drei-Gen-Kreuzung (trihybrid) unter einfacher mendelscher Vererbung.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/de/tool/dihybrid-cross-calculator">
   <meta property="og:locale" content="de_DE">
@@ -27,7 +27,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Dihybrider-Kreuzung-Rechner | Calquary">
-  <meta name="twitter:description" content="Berechnen Sie Genotyp- und Phänotyp-Verhältnisse der Nachkommen für eine Zwei-Gen-Kreuzung unter einfacher mendelscher Vererbung.">
+  <meta name="twitter:description" content="Berechnen Sie die Genotyp- und Phänotypverhältnisse der Nachkommen bei einer Ein-Gen-Kreuzung (Punnett-Quadrat), Zwei-Gen-Kreuzung (dihybrid) oder Drei-Gen-Kreuzung (trihybrid) unter einfacher mendelscher Vererbung.">
   <meta name="twitter:image" content="https://calquary.com/og-images/dihybrid-cross-calculator.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/dihybrid-cross-calculator">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dihybrid-cross-calculator">
@@ -89,7 +89,7 @@
     {
       "@type": "SoftwareApplication",
       "name": "Dihybrider-Kreuzung-Rechner",
-      "description": "Berechnen Sie Genotyp- und Phänotyp-Verhältnisse der Nachkommen für eine Zwei-Gen-Kreuzung unter einfacher mendelscher Vererbung.",
+      "description": "Berechnen Sie die Genotyp- und Phänotypverhältnisse der Nachkommen bei einer Ein-Gen-Kreuzung (Punnett-Quadrat), Zwei-Gen-Kreuzung (dihybrid) oder Drei-Gen-Kreuzung (trihybrid) unter einfacher mendelscher Vererbung.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/de/tool/dihybrid-cross-calculator",
@@ -128,6 +128,14 @@
     {
       "@type": "FAQPage",
       "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Kann ich damit eine trihybride Kreuzung wie AaBbCc × AaBbCc berechnen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Wählen Sie „Drei Gene (trihybride Kreuzung)“ und legen Sie für jedes Elternteil den Genotyp bei Gen 1, 2 und 3 fest. Bei AaBbCc × AaBbCc bildet jedes Elternteil 8 verschiedene Gameten, das ergibt 8 × 8 = 64 Kombinationen und das klassische Phänotypverhältnis 27:9:9:9:3:3:3:1. Es ist dasselbe Werkzeug wie die Ein- und Zwei-Gen-Modi, daher gibt es keine separate Trihybrid-Seite."
+          }
+        },
         {
           "@type": "Question",
           "name": "Was bedeutet \"unabhängige Verteilung\" und warum ist das hier wichtig?",
@@ -223,7 +231,7 @@
     <div class="tool-layout">
       <main>
         <h1>Dihybrider-Kreuzung-Rechner</h1>
-        <p style="max-width:60ch;">Wählen Sie den Genotyp jedes Elternteils an zwei unabhängigen Genen, um Genotyp- und Phänotyp-Wahrscheinlichkeiten der Nachkommen zu berechnen, unter Annahme unabhängiger Verteilung und vollständiger Dominanz.</p>
+        <p style="max-width:60ch;">Wählen Sie eine Ein-Gen-Kreuzung für ein klassisches Punnett-Quadrat, eine Zwei-Gen-Kreuzung für eine dihybride Kreuzung oder eine Drei-Gen-Kreuzung für eine trihybride Kreuzung (etwa AaBbCc × AaBbCc) und wählen Sie dann den Genotyp jedes Elternteils, um die Genotyp- und Phänotypwahrscheinlichkeiten der Nachkommen zu berechnen, bei unabhängiger Verteilung und vollständiger Dominanz.</p>
         <p class="last-updated">Zuletzt aktualisiert: September 25, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -251,6 +259,10 @@
         <div class="article-block">
           <h2>Häufig gestellte Fragen</h2>
           <div id="faq-list"><div class="faq-item">
+<h3>Kann ich damit eine trihybride Kreuzung wie AaBbCc × AaBbCc berechnen?</h3>
+<p>Ja. Wählen Sie „Drei Gene (trihybride Kreuzung)“ und legen Sie für jedes Elternteil den Genotyp bei Gen 1, 2 und 3 fest. Bei AaBbCc × AaBbCc bildet jedes Elternteil 8 verschiedene Gameten, das ergibt 8 × 8 = 64 Kombinationen und das klassische Phänotypverhältnis 27:9:9:9:3:3:3:1. Es ist dasselbe Werkzeug wie die Ein- und Zwei-Gen-Modi, daher gibt es keine separate Trihybrid-Seite.</p>
+</div>
+<div class="faq-item">
 <h3>Was bedeutet "unabhängige Verteilung" und warum ist das hier wichtig?</h3>
 <p>Unabhängige Verteilung ist das mendelsche Prinzip, dass Allele verschiedener Gene unabhängig voneinander vererbt werden, was zutrifft, wenn die beiden Gene auf verschiedenen Chromosomen liegen (oder weit voneinander entfernt auf demselben). Dieser Rechner nimmt unabhängige Verteilung an - wären die beiden Gene eng auf demselben Chromosom gekoppelt, würden sie tendenziell häufiger zusammen vererbt werden, als dieses Modell vorhersagt, was als genetische Kopplung bezeichnet wird.</p>
 </div>

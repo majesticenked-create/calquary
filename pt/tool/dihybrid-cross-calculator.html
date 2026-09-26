@@ -15,9 +15,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Calculadora de Cruzamento Di-híbrido</title>
-  <meta name="description" content="Calcule as proporções de genótipo e fenótipo da prole para um cruzamento de dois genes sob herança mendeliana simples." />
+  <meta name="description" content="Calcule as proporções de genótipo e fenótipo da prole em um cruzamento de um gene (quadrado de Punnett), dois genes (di-híbrido) ou três genes (tri-híbrido)…" />
   <meta property="og:title" content="Calculadora de Cruzamento Di-híbrido | Calquary">
-  <meta property="og:description" content="Calcule as proporções de genótipo e fenótipo da prole para um cruzamento de dois genes sob herança mendeliana simples.">
+  <meta property="og:description" content="Calcule as proporções de genótipo e fenótipo da prole em um cruzamento de um gene (quadrado de Punnett), dois genes (di-híbrido) ou três genes (tri-híbrido) sob herança mendeliana simples.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/pt/tool/dihybrid-cross-calculator">
   <meta property="og:locale" content="pt_PT">
@@ -27,7 +27,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Calculadora de Cruzamento Di-híbrido | Calquary">
-  <meta name="twitter:description" content="Calcule as proporções de genótipo e fenótipo da prole para um cruzamento de dois genes sob herança mendeliana simples.">
+  <meta name="twitter:description" content="Calcule as proporções de genótipo e fenótipo da prole em um cruzamento de um gene (quadrado de Punnett), dois genes (di-híbrido) ou três genes (tri-híbrido) sob herança mendeliana simples.">
   <meta name="twitter:image" content="https://calquary.com/og-images/dihybrid-cross-calculator.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/dihybrid-cross-calculator">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dihybrid-cross-calculator">
@@ -89,7 +89,7 @@
     {
       "@type": "SoftwareApplication",
       "name": "Calculadora de Cruzamento Di-híbrido",
-      "description": "Calcule as proporções de genótipo e fenótipo da prole para um cruzamento de dois genes sob herança mendeliana simples.",
+      "description": "Calcule as proporções de genótipo e fenótipo da prole em um cruzamento de um gene (quadrado de Punnett), dois genes (di-híbrido) ou três genes (tri-híbrido) sob herança mendeliana simples.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/pt/tool/dihybrid-cross-calculator",
@@ -128,6 +128,14 @@
     {
       "@type": "FAQPage",
       "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Ele calcula um cruzamento tri-híbrido como AaBbCc × AaBbCc?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Escolha \"Três genes (cruzamento tri-híbrido)\" e defina o genótipo de cada progenitor nos genes 1, 2 e 3. Para AaBbCc × AaBbCc cada progenitor produz 8 gametas diferentes, dando 8 × 8 = 64 combinações e a clássica proporção fenotípica 27:9:9:9:3:3:3:1. É a mesma ferramenta dos modos de um e dois genes, então não há uma página tri-híbrida separada."
+          }
+        },
         {
           "@type": "Question",
           "name": "O que significa \"segregação independente\" e por que isso importa aqui?",
@@ -223,7 +231,7 @@
     <div class="tool-layout">
       <main>
         <h1>Calculadora de Cruzamento Di-híbrido</h1>
-        <p style="max-width:60ch;">Selecione o genótipo de cada progenitor em dois genes independentes para calcular as probabilidades de genótipo e fenótipo da prole, assumindo segregação independente e dominância completa.</p>
+        <p style="max-width:60ch;">Escolha um cruzamento de um gene para um quadrado de Punnett clássico, de dois genes para um cruzamento di-híbrido ou de três genes para um cruzamento tri-híbrido (como AaBbCc × AaBbCc) e selecione o genótipo de cada progenitor para calcular as probabilidades de genótipo e fenótipo da prole, assumindo distribuição independente e dominância completa.</p>
         <p class="last-updated">Última atualização: September 25, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -251,6 +259,10 @@
         <div class="article-block">
           <h2>Perguntas frequentes</h2>
           <div id="faq-list"><div class="faq-item">
+<h3>Ele calcula um cruzamento tri-híbrido como AaBbCc × AaBbCc?</h3>
+<p>Sim. Escolha "Três genes (cruzamento tri-híbrido)" e defina o genótipo de cada progenitor nos genes 1, 2 e 3. Para AaBbCc × AaBbCc cada progenitor produz 8 gametas diferentes, dando 8 × 8 = 64 combinações e a clássica proporção fenotípica 27:9:9:9:3:3:3:1. É a mesma ferramenta dos modos de um e dois genes, então não há uma página tri-híbrida separada.</p>
+</div>
+<div class="faq-item">
 <h3>O que significa "segregação independente" e por que isso importa aqui?</h3>
 <p>Segregação independente é o princípio mendeliano de que alelos de genes diferentes são herdados independentemente uns dos outros, o que é verdadeiro quando os dois genes estão em cromossomos diferentes (ou muito distantes no mesmo). Esta calculadora assume segregação independente - se os dois genes estivessem intimamente ligados no mesmo cromossomo, eles tenderiam a ser herdados juntos com mais frequência do que este modelo prevê, o que é chamado de ligação gênica.</p>
 </div>

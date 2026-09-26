@@ -9607,21 +9607,36 @@ const CALCULATORS = [
     id: "basal-area-calculator",
     category: "biology",
     title: "Basal Area Calculator",
-    keyword: "basal area calculator",
+    keyword: "basal area calculator, tree diameter calculator, dbh calculator",
     description: "Calculate forestry basal area per tree and total basal area from diameter at breast height (DBH).",
     intro: "Enter a tree's diameter at breast height (DBH) and, optionally, the number of trees, to calculate basal area per tree and total stand basal area.",
     fields: [
-      { id: "dbh", label: "DBH (diameter at breast height)", type: "number", default: 12, step: 0.1, min: 0.1 },
-      { id: "dbhUnit", label: "DBH unit", type: "select", default: "in", options: [
+      { id: "inputType", label: "I am entering", type: "select", default: "dbh", options: [
+        { v: "dbh", l: "DBH (diameter at breast height)" }, { v: "circ", l: "Trunk circumference at breast height (converted to DBH)" },
+      ] },
+      { id: "dbh", label: "DBH (if entering diameter)", type: "number", default: 12, step: 0.1, min: 0.1 },
+      { id: "circumference", label: "Trunk circumference (if entering circumference)", type: "number", default: 37.7, step: 0.1, min: 0 },
+      { id: "dbhUnit", label: "Measurement unit (for whichever you enter)", type: "select", default: "in", options: [
         { v: "in", l: "Inches" }, { v: "cm", l: "Centimeters" },
       ] },
       { id: "treeCount", label: "Number of trees (with this DBH)", type: "number", default: 1, step: 1, min: 1 },
     ],
     compute: (v) => {
-      if (!(v.dbh > 0)) {
-        return { primary: { label: "Enter a valid DBH", value: "-" }, secondary: [], note: "DBH must be greater than zero." };
+      let dbhVal = v.dbh;
+      if (v.inputType === "circ") {
+        if (!(v.circumference > 0)) {
+          return { primary: { label: "Enter a valid circumference", value: "-" }, secondary: [], note: "Trunk circumference must be greater than zero." };
+        }
+        dbhVal = v.circumference / Math.PI;
       }
-      const dbhIn = v.dbhUnit === "cm" ? v.dbh / 2.54 : v.dbh;
+      if (!(dbhVal > 0) || dbhVal > 1000) {
+        return { primary: { label: "Enter a valid DBH", value: "-" }, secondary: [], note: "DBH must be greater than zero and realistic for a tree." };
+      }
+      if (!(v.treeCount >= 1)) {
+        return { primary: { label: "Enter the number of trees", value: "-" }, secondary: [], note: "Number of trees must be at least 1." };
+      }
+      const unitLabel = v.dbhUnit === "cm" ? "cm" : "in";
+      const dbhIn = v.dbhUnit === "cm" ? dbhVal / 2.54 : dbhVal;
       const baPerTreeFt2 = 0.005454 * dbhIn * dbhIn;
       const totalBaFt2 = baPerTreeFt2 * v.treeCount;
       const baPerTreeM2 = baPerTreeFt2 * 0.092903;
@@ -9631,11 +9646,14 @@ const CALCULATORS = [
         secondary: [
           { l: "Total basal area", v: `${round(totalBaFt2, 3)} ft² (${v.treeCount} tree${v.treeCount === 1 ? "" : "s"})` },
           { l: "In square meters", v: `${round(baPerTreeM2, 4)} m² per tree, ${round(totalBaM2, 4)} m² total` },
+          { l: "DBH used", v: `${round(dbhVal, 2)} ${unitLabel}` },
+          { l: "Equivalent trunk circumference", v: `${round(dbhVal * Math.PI, 2)} ${unitLabel}` },
         ],
-        note: "DBH (diameter at breast height) is a tree's trunk diameter measured at 4.5 feet (1.37 m) above ground, the standard forestry measurement point. Basal area (ft²) = 0.005454 × DBH² (with DBH in inches) - the constant converts a circular cross-sectional area from a diameter measurement into square feet.",
+        note: "If you enter trunk circumference, DBH = circumference / π (assuming a roughly round trunk). DBH (diameter at breast height) is a tree's trunk diameter measured at 4.5 feet (1.37 m) above ground, the standard forestry measurement point. Basal area (ft²) = 0.005454 × DBH² (with DBH in inches) - the constant converts a circular cross-sectional area from a diameter measurement into square feet.",
       };
     },
     faq: [
+      { q: "Can I enter trunk circumference instead of DBH?", a: "Yes. Choose the circumference option, enter the girth you measured around the trunk at breast height, and the calculator converts it with DBH = circumference / π before computing basal area. This assumes the trunk cross-section is close to circular; buttresses, lean, and irregular trunks make circumference-based DBH less exact than a diameter-tape reading." },
       { q: "What is DBH and why is it measured at breast height specifically?", a: "DBH (diameter at breast height) is a tree's trunk diameter measured at a standardized height of 4.5 feet (1.37 m) above ground. Measuring at a fixed height makes DBH consistent and comparable across trees and surveys, avoiding the flare and irregularity common near the base of a trunk." },
       { q: "What is basal area used for in forestry?", a: "Basal area (the cross-sectional area of a tree's trunk at DBH) is a standard measure of how much of a site's area is occupied by tree stems - foresters use total stand basal area to assess stocking density, plan thinning, and estimate timber volume alongside tree height and form." },
       { q: "Where does the 0.005454 constant come from?", a: "It's derived from the standard circle area formula (π/4), converted to work directly with DBH in inches and basal area in square feet: π/4 ÷ 144 (square inches per square foot) = 0.005454. This lets you go straight from a DBH measurement in inches to basal area in square feet without a separate unit conversion step." },
@@ -9643,7 +9661,7 @@ const CALCULATORS = [
       { q: "Is basal area the same as canopy area or crown area?", a: "No - basal area is the cross-sectional area of the trunk at breast height, not the area covered by the tree's canopy or crown from above. The two aren't directly proportional, since crown spread depends on species, spacing, and growing conditions in ways trunk diameter alone doesn't capture." },
       { q: "What's a typical basal area for a well-stocked forest stand?", a: "It varies substantially by forest type, region, and management goals, but many managed stands are targeted in the range of roughly 80-120 ft² of basal area per acre - consult species- and region-specific forestry guidelines for a stocking target relevant to your stand." },
     ],
-    related: ["acres-per-hour-calculator", "circle-calculator", "area-converter"],
+    related: ["acres-per-hour-calculator", "circle-calculator", "area-converter", "tree-age-calculator"],
   },
   {
     id: "benadryl-dosage-for-dogs",
@@ -10400,7 +10418,7 @@ const CALCULATORS = [
       { q: "Why does this calculator show a metric tonnes/hectare figure too?", a: "Bushels per acre is the standard US unit for corn yield, while tonnes per hectare is standard in most other countries - showing both avoids a separate conversion step regardless of which unit you're working in. The conversion used (1 bu/ac ≈ 0.0628 tonnes/ha) reflects corn's standard test weight and moisture reference." },
       { q: "Does this account for harvest losses from the combine?", a: "No - this estimates the grain present in the field based on ear and kernel counts, before harvest. Mechanical harvest losses (shelling, header loss, etc.) reduce what's actually collected, so realized yield at the scale is typically somewhat lower than this pre-harvest field estimate." },
     ],
-    related: ["cattle-per-acre-calculator", "grain-bin-calculator", "growing-degree-units-calculator", "acres-per-hour-calculator"],
+    related: ["cattle-per-acre-calculator", "grain-bin-calculator", "growing-degree-units-calculator", "vegetable-yield-calculator"],
   },
   {
     id: "cost-of-owning-a-dog-calculator",
@@ -10603,11 +10621,11 @@ const CALCULATORS = [
     id: "dihybrid-cross-calculator",
     category: "biology",
     title: "Dihybrid Cross Calculator",
-    keyword: "dihybrid cross calculator, punnett square calculator",
-    description: "Calculate offspring genotype and phenotype ratios for a one-gene (Punnett square) or two-gene (dihybrid) cross under simple Mendelian inheritance.",
-    intro: "Choose a one-gene cross for a classic Punnett square, or a two-gene cross for a dihybrid cross, then select each parent's genotype to calculate offspring genotype and phenotype probabilities, assuming independent assortment and complete dominance.",
+    keyword: "dihybrid cross calculator, punnett square calculator, trihybrid cross calculator",
+    description: "Calculate offspring genotype and phenotype ratios for one-gene (Punnett), two-gene (dihybrid), or three-gene (trihybrid) crosses under Mendelian inheritance.",
+    intro: "Choose a one-gene cross for a classic Punnett square, a two-gene cross for a dihybrid cross, or a three-gene cross for a trihybrid cross (such as AaBbCc × AaBbCc), then select each parent's genotype to calculate offspring genotype and phenotype probabilities, assuming independent assortment and complete dominance.",
     fields: [
-      { id: "genes", label: "Number of genes", type: "select", default: "two", options: [{ v: "one", l: "One gene (Punnett square)" }, { v: "two", l: "Two genes (dihybrid cross)" }] },
+      { id: "genes", label: "Number of genes", type: "select", default: "two", options: [{ v: "one", l: "One gene (Punnett square)" }, { v: "two", l: "Two genes (dihybrid cross)" }, { v: "three", l: "Three genes (trihybrid cross)" }] },
       { id: "parent1Gene1", label: "Parent 1 - Gene 1 genotype", type: "select", default: "Aa", options: [
         { v: "AA", l: "AA (homozygous dominant)" }, { v: "Aa", l: "Aa (heterozygous)" }, { v: "aa", l: "aa (homozygous recessive)" },
       ] },
@@ -10619,6 +10637,12 @@ const CALCULATORS = [
       ] },
       { id: "parent2Gene2", label: "Parent 2 - Gene 2 genotype", type: "select", default: "Bb", options: [
         { v: "BB", l: "BB (homozygous dominant)" }, { v: "Bb", l: "Bb (heterozygous)" }, { v: "bb", l: "bb (homozygous recessive)" },
+      ] },
+      { id: "parent1Gene3", label: "Parent 1 - Gene 3 genotype (three-gene mode only)", type: "select", default: "Cc", options: [
+        { v: "CC", l: "CC (homozygous dominant)" }, { v: "Cc", l: "Cc (heterozygous)" }, { v: "cc", l: "cc (homozygous recessive)" },
+      ] },
+      { id: "parent2Gene3", label: "Parent 2 - Gene 3 genotype (three-gene mode only)", type: "select", default: "Cc", options: [
+        { v: "CC", l: "CC (homozygous dominant)" }, { v: "Cc", l: "Cc (heterozygous)" }, { v: "cc", l: "cc (homozygous recessive)" },
       ] },
     ],
     compute: (v) => {
@@ -10649,6 +10673,49 @@ const CALCULATORS = [
           primary: { label: "Possible offspring combinations", value: `${total} combinations` },
           secondary: phenotypeList.map((p) => ({ l: "Phenotype ratio", v: p })),
           note: `Genotype outcomes (out of ${total}): ${genotypeList}. Gametes from parent 1: ${[...new Set(p1A)].join(", ")}. Gametes from parent 2: ${[...new Set(p2A)].join(", ")}. This is a classic single-gene Punnett square, assuming simple Mendelian inheritance and complete dominance for the phenotype ratio shown. Real inheritance can differ due to incomplete dominance, codominance, multiple alleles, or environmental effects - this is an educational model, not a prediction for any specific real gene.`,
+        };
+      }
+      if (v.genes === "three") {
+        const letters = [["A", "a"], ["B", "b"], ["C", "c"]];
+        const build = (gs) => {
+          let out = [""];
+          gs.forEach((g, i) => {
+            const opts = gametesForLocus(g, letters[i][0], letters[i][1]);
+            const next = [];
+            for (const o of out) for (const a of opts) next.push(o + a);
+            out = next;
+          });
+          return out;
+        };
+        const p1Gametes = build([v.parent1Gene1, v.parent1Gene2, v.parent1Gene3]);
+        const p2Gametes = build([v.parent2Gene1, v.parent2Gene2, v.parent2Gene3]);
+        const genotypeCounts = {};
+        const phenotypeCounts = {};
+        let total = 0;
+        for (const g1 of p1Gametes) {
+          for (const g2 of p2Gametes) {
+            let genotype = "";
+            let phenotype = [];
+            for (let i = 0; i < 3; i++) {
+              const pair = [g1[i], g2[i]].sort((x, y) => (x === x.toUpperCase() ? -1 : 1) - (y === y.toUpperCase() ? -1 : 1)).join("");
+              genotype += pair;
+              phenotype.push(pair.includes(letters[i][0]) ? letters[i][0].toUpperCase() + "-dominant" : letters[i][1] + "-recessive");
+            }
+            const key = phenotype.join(", ");
+            genotypeCounts[genotype] = (genotypeCounts[genotype] || 0) + 1;
+            phenotypeCounts[key] = (phenotypeCounts[key] || 0) + 1;
+            total++;
+          }
+        }
+        const phenoEntries = Object.entries(phenotypeCounts).sort((a, b) => b[1] - a[1]);
+        const genotypeList = Object.entries(genotypeCounts).sort((a, b) => b[1] - a[1]).map(([g, c]) => `${g}: ${c}/${total}`).join(", ");
+        return {
+          primary: { label: "Possible offspring combinations", value: `${total} combinations (${new Set(p1Gametes).size} × ${new Set(p2Gametes).size} distinct gametes, ${Object.keys(genotypeCounts).length} genotypes, ${phenoEntries.length} phenotypes)` },
+          secondary: [
+            { l: "Phenotype ratio", v: phenoEntries.map((e) => e[1]).join(":") },
+            ...phenoEntries.map(([p, c]) => ({ l: "Phenotype", v: `${p}: ${c}/${total} (${round((c / total) * 100, 2)}%)` })),
+          ],
+          note: `Genotype outcomes (out of ${total}): ${genotypeList}. Gametes from parent 1: ${[...new Set(p1Gametes)].join(", ")}. Gametes from parent 2: ${[...new Set(p2Gametes)].join(", ")}. A trihybrid cross of two AaBbCc parents gives 8 gametes each, 64 combinations, and a 27:9:9:9:3:3:3:1 phenotype ratio. This assumes all three genes are on different chromosomes (independent assortment, no linkage) with complete dominance.`,
         };
       }
       const p1A = gametesForLocus(v.parent1Gene1, "A", "a");
@@ -10688,6 +10755,7 @@ const CALCULATORS = [
       };
     },
     faq: [
+      { q: "Can this calculate a trihybrid cross like AaBbCc × AaBbCc?", a: "Yes. Choose \"Three genes (trihybrid cross)\" and set each parent's genotype at genes 1, 2, and 3. For AaBbCc × AaBbCc each parent makes 8 different gametes, giving 8 × 8 = 64 offspring combinations and the classic 27:9:9:9:3:3:3:1 phenotype ratio. It is the same tool as the one- and two-gene modes, so there is no separate trihybrid page." },
       { q: "Is this the same as a Punnett Square Calculator?", a: "Yes. Choose \"One gene\" to get a classic single-gene Punnett square (a 2x2 grid of offspring combinations), or \"Two genes\" for a dihybrid cross (a 4x4 grid). Both modes live in this one calculator instead of separate pages." },
       { q: "What does 'independent assortment' mean and why does it matter here?", a: "Independent assortment is the Mendelian principle that alleles for different genes are inherited independently of each other, which holds true when the two genes are on different chromosomes (or far apart on the same one). This calculator assumes independent assortment - if the two genes were closely linked on the same chromosome, they'd tend to be inherited together more often than this model predicts, which is called genetic linkage." },
       { q: "How is this different from the Allele Frequency Calculator?", a: "The Allele Frequency Calculator works backward from real observed genotype counts in a population sample to calculate allele frequencies (p and q) for a single gene. This Dihybrid Cross Calculator instead works forward from two known parent genotypes across two genes to predict possible offspring outcomes and their probabilities - they answer different questions using different inputs." },
@@ -12534,19 +12602,19 @@ const CALCULATORS = [
     id: "plant-population-calculator",
     category: "biology",
     title: "Plant Population Calculator",
-    keyword: "plant population calculator",
+    keyword: "plant population calculator, tree spacing calculator",
     description: "Estimate crop plant population per acre or hectare from row spacing and in-row spacing, or solve for the spacing a target population needs.",
     intro: "Choose whether you want to estimate plant population from your row and in-row spacing, or find the spacing needed to hit a target population. This assumes uniform spacing across the field; actual emerged stands vary with germination and field conditions.",
     fields: [
       { id: "mode", label: "Calculate", type: "select", default: "population", options: [{ v: "population", l: "Population from spacing" }, { v: "spacing", l: "Spacing from target population" }] },
       { id: "rowSpacing", label: "Row spacing", type: "number", default: 30, step: 0.5, min: 0 },
       { id: "inRowSpacing", label: "In-row (within-row) spacing", type: "number", default: 6, step: 0.5, min: 0 },
-      { id: "spacingUnit", label: "Spacing unit", type: "select", default: "in", options: [{ v: "in", l: "inches" }, { v: "cm", l: "centimeters" }] },
+      { id: "spacingUnit", label: "Spacing unit", type: "select", default: "in", options: [{ v: "in", l: "inches" }, { v: "cm", l: "centimeters" }, { v: "ft", l: "feet (trees, orchards)" }, { v: "m", l: "meters (trees, orchards)" }] },
       { id: "targetPopulation", label: "Target population (spacing mode)", type: "number", default: 32000, step: 100, min: 0 },
       { id: "populationUnit", label: "Population per", type: "select", default: "acre", options: [{ v: "acre", l: "acre" }, { v: "hectare", l: "hectare" }] },
     ],
     compute: (v) => {
-      const toM = v.spacingUnit === "cm" ? 0.01 : 0.0254;
+      const toM = { in: 0.0254, cm: 0.01, ft: 0.3048, m: 1 }[v.spacingUnit] || 0.0254;
       const areaSqm = v.populationUnit === "hectare" ? 10000 : 4046.8564224;
       const areaLabel = v.populationUnit === "hectare" ? "hectare" : "acre";
       if (v.mode === "spacing") {
@@ -12556,7 +12624,7 @@ const CALCULATORS = [
         const areaPerPlant = areaSqm / v.targetPopulation;
         const inRowM = areaPerPlant / rowM;
         if (!Number.isFinite(inRowM) || inRowM <= 0) return { primary: { label: "Values look unrealistic", value: "-" }, secondary: [], note: "Please check the numbers entered." };
-        const inRowOut = v.spacingUnit === "cm" ? inRowM / 0.01 : inRowM / 0.0254;
+        const inRowOut = inRowM / toM;
         return {
           primary: { label: "Required in-row spacing", value: `${round(inRowOut, 2)} ${v.spacingUnit}` },
           secondary: [
@@ -12586,10 +12654,11 @@ const CALCULATORS = [
       { q: "Is this the same as my final stand count?", a: "No. This is a theoretical planted population from geometry alone. Actual emerged or harvested population is typically lower because of germination rate, seedling loss, skips, and field conditions." },
       { q: "Why does row spacing matter separately from in-row spacing?", a: "Most row crops are planted in evenly spaced rows with a different (usually closer) spacing between plants within each row. Area per plant is the product of both spacings, not either one alone." },
       { q: "Can I use this for garden beds instead of row crops?", a: "It works for any grid-style planting, but it is set up with acre/hectare units common to row-crop agriculture. For small garden beds, the Bulb Spacing Calculator uses bed-sized area and spacing units instead." },
-      { q: "What units does this support?", a: "Spacing in inches or centimeters, and population per acre or per hectare. Pick the unit pairing that matches how your seed or planting guidance is written." },
+      { q: "Can I use this as a tree spacing calculator for orchards or forestry plots?", a: "Yes. Pick feet or meters as the spacing unit, enter the distance between rows and between trees within a row, and read trees per acre or per hectare (or switch mode to find the spacing that gives a target tree count). It assumes a square or rectangular grid; staggered, contour, or irregular layouts and mature crown width are not modeled." },
+      { q: "What units does this support?", a: "Spacing in inches, centimeters, feet, or meters, and population per acre or per hectare. Pick the unit pairing that matches how your seed or planting guidance is written." },
       { q: "Does this account for triangular or staggered planting patterns?", a: "No, it assumes a simple rectangular grid (row spacing × in-row spacing). Staggered patterns fit more plants per area than this grid model estimates." },
     ],
-    related: ["bulb-spacing-calculator", "corn-yield-calculator", "grass-seed-calculator", "square-footage-calculator"],
+    related: ["bulb-spacing-calculator", "corn-yield-calculator", "grass-seed-calculator", "vegetable-seed-calculator"],
   },
   {
     id: "potting-soil-calculator",
@@ -13205,6 +13274,325 @@ const CALCULATORS = [
       { q: "How is this different from the Metacam for Dogs Calculator?", a: "Both are prescription pain-related medications for dogs and both pages avoid personalized dosing for the same safety reasons, but they are different drug classes (tramadol is an opioid-like analgesic, Metacam is an NSAID) with different risk profiles and prescribing considerations." },
     ],
     related: ["metacam-for-dogs-calculator", "cephalexin-for-dogs-dosage-calculator", "benadryl-dosage-for-dogs"],
+  },
+  {
+    id: "tree-age-calculator",
+    category: "biology",
+    title: "Tree Age Calculator",
+    keyword: "tree age calculator",
+    description: "Estimate a tree's age from its trunk diameter or circumference and a growth factor you supply for the species.",
+    intro: "Enter the trunk diameter (DBH) or circumference at breast height and the growth factor for your species, then read a rough age estimate. Growth factors vary widely by species and site, so you supply the number rather than relying on a built-in table.",
+    fields: [
+      { id: "inputType", label: "I am entering", type: "select", default: "dbh", options: [{ v: "dbh", l: "DBH (trunk diameter)" }, { v: "circ", l: "Trunk circumference" }] },
+      { id: "measure", label: "Measurement at breast height (4.5 ft / 1.37 m)", type: "number", default: 20, step: 0.1, min: 0 },
+      { id: "unit", label: "Unit", type: "select", default: "in", options: [{ v: "in", l: "Inches" }, { v: "cm", l: "Centimeters" }] },
+      { id: "factor", label: "Growth factor (years per inch of DBH, from a source for your species)", type: "number", default: 4, step: 0.1, min: 0 },
+    ],
+    compute: (v) => {
+      if (!(v.measure > 0) || !(v.factor > 0)) {
+        return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "The measurement and the growth factor must both be greater than zero." };
+      }
+      const raw = v.inputType === "circ" ? v.measure / Math.PI : v.measure;
+      const dbhIn = v.unit === "cm" ? raw / 2.54 : raw;
+      if (dbhIn > 1000) {
+        return { primary: { label: "Enter a realistic measurement", value: "-" }, secondary: [], note: "That trunk size is outside a realistic range." };
+      }
+      const age = dbhIn * v.factor;
+      return {
+        primary: { label: "Estimated age", value: `about ${Math.round(age)} years` },
+        secondary: [
+          { l: "DBH used", v: `${round(dbhIn, 2)} in (${round(dbhIn * 2.54, 1)} cm)` },
+          { l: "Trunk circumference", v: `${round(dbhIn * Math.PI, 2)} in (${round(dbhIn * Math.PI * 2.54, 1)} cm)` },
+          { l: "Growth factor used", v: `${v.factor} years per inch of DBH` },
+        ],
+        note: "Age ≈ DBH in inches × growth factor. If you enter circumference, DBH = circumference / π. This is a rough estimate only: growth rate depends on species, soil, water, light, and competition, so trees of the same size can differ greatly in age. Only an increment-borer core or a ring count gives a reliable age.",
+      };
+    },
+    faq: [
+      { q: "Where do I find the growth factor for my tree?", a: "Look for a growth factor for your species in a forestry extension service, arborist association, or university publication. The factor is expressed as years of age per inch of trunk diameter, and this calculator deliberately does not include a table of values because they vary by region and site." },
+      { q: "How accurate is a tree age estimate from diameter?", a: "It is a rough guide. Two trees of the same species and diameter can differ in age by decades because of soil, moisture, crowding, and pruning. Treat the result as an order-of-magnitude estimate, not a certified age." },
+      { q: "How do I measure DBH or circumference?", a: "Measure at breast height, 4.5 feet (1.37 m) above ground on the uphill side. Wrap a tape around the trunk for circumference, or use a diameter tape or calipers for DBH. The Basal Area Calculator explains DBH in more detail." },
+      { q: "Can I get an exact age without cutting the tree?", a: "An increment borer removes a thin core you can read ring by ring without felling the tree, and some trees have records such as planting dates. Ring counts on a stump or core are far more reliable than any diameter-based formula." },
+      { q: "Why is the result different from what I expected for an old or fast-growing tree?", a: "A single factor assumes steady growth. Open-grown trees tend to grow faster than forest trees, and very old trees slow down, so the factor should match the conditions your tree grew in." },
+      { q: "Does this work for shrubs or multi-stem trees?", a: "It is meant for single-stem trees. For multi-stem trees, measure the largest stem and treat the estimate with extra caution." },
+    ],
+    related: ["basal-area-calculator", "tree-height-calculator", "tree-value-calculator", "circle-calculator"],
+  },
+  {
+    id: "tree-height-calculator",
+    category: "biology",
+    title: "Tree Height Calculator",
+    keyword: "tree height calculator",
+    description: "Estimate tree height from a distance and angle measurement, or from the shadow of a stick of known height.",
+    intro: "Pick a method: stand a measured distance from the tree and enter the angle to its top, or compare the tree's shadow with the shadow of a stick of known height. The calculator returns the estimated height.",
+    fields: [
+      { id: "method", label: "Method", type: "select", default: "angle", options: [{ v: "angle", l: "Distance and angle to top" }, { v: "shadow", l: "Shadow comparison (stick)" }] },
+      { id: "unit", label: "Length unit", type: "select", default: "ft", options: [{ v: "ft", l: "Feet" }, { v: "m", l: "Meters" }] },
+      { id: "distance", label: "Distance from tree (angle method)", type: "number", default: 50, step: 0.1, min: 0 },
+      { id: "angle", label: "Angle up to treetop in degrees (angle method)", type: "number", default: 35, step: 0.1, min: 0, max: 89 },
+      { id: "eyeHeight", label: "Eye height above ground (angle method)", type: "number", default: 5, step: 0.1, min: 0 },
+      { id: "stickHeight", label: "Stick height (shadow method)", type: "number", default: 3, step: 0.01, min: 0 },
+      { id: "stickShadow", label: "Stick shadow length (shadow method)", type: "number", default: 2, step: 0.01, min: 0 },
+      { id: "treeShadow", label: "Tree shadow length (shadow method)", type: "number", default: 30, step: 0.1, min: 0 },
+    ],
+    compute: (v) => {
+      let height;
+      let detail;
+      if (v.method === "shadow") {
+        if (!(v.stickHeight > 0) || !(v.stickShadow > 0) || !(v.treeShadow > 0)) {
+          return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Stick height, stick shadow, and tree shadow must all be greater than zero." };
+        }
+        height = (v.stickHeight / v.stickShadow) * v.treeShadow;
+        detail = `Tree height / tree shadow = stick height / stick shadow (ratio ${round(v.stickHeight / v.stickShadow, 3)}).`;
+      } else {
+        if (!(v.distance > 0) || !(v.angle > 0 && v.angle < 90) || v.eyeHeight < 0) {
+          return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Distance must be greater than zero, the angle must be between 0 and 90 degrees, and eye height cannot be negative." };
+        }
+        height = v.distance * Math.tan((v.angle * Math.PI) / 180) + v.eyeHeight;
+        detail = "Height = distance × tan(angle) + eye height.";
+      }
+      const u = v.unit === "m" ? "m" : "ft";
+      const other = v.unit === "m" ? `${round(height * 3.28084, 1)} ft` : `${round(height * 0.3048, 2)} m`;
+      return {
+        primary: { label: "Estimated tree height", value: `${round(height, 1)} ${u}` },
+        secondary: [{ l: "In the other unit", v: other }],
+        note: `${detail} Use level ground and a straight-standing tree for best results. Leaning trees, slopes, and a hard-to-see treetop can introduce noticeable error, so treat the result as an estimate.`,
+      };
+    },
+    faq: [
+      { q: "Which method is more accurate?", a: "Both are estimates. The angle method depends on how well you can read the angle to the true top; the shadow method depends on flat ground and measuring both shadows at the same moment. Repeating the measurement from a second spot is a good check." },
+      { q: "How do I measure the angle to the treetop?", a: "Use a clinometer, a phone inclinometer app, or a homemade protractor with a weighted string. Sight the highest visible point of the crown and read the angle above horizontal." },
+      { q: "Why do I need to add eye height?", a: "The angle is measured from your eye level, not the ground, so the calculated rise above your eye must be added to your eye height to get the full height of the tree." },
+      { q: "Does the shadow method work on cloudy days?", a: "No. You need distinct shadows and you must measure the stick and tree shadows at the same time, since shadow length changes through the day." },
+      { q: "What if the tree is on a slope?", a: "Slopes distort both methods. Stand on ground level with the base of the tree if possible, or take measurements from a spot at the same elevation as the base." },
+      { q: "How is this related to the Right Triangle Calculator?", a: "The angle method is right-triangle trigonometry and the shadow method uses similar triangles. This page packages both for trees; the Right Triangle Calculator solves general triangles." },
+    ],
+    related: ["right-triangle-calculator", "tree-age-calculator", "basal-area-calculator", "tree-value-calculator"],
+  },
+  {
+    id: "tree-leaves-calculator",
+    category: "biology",
+    title: "Tree Leaves Calculator",
+    keyword: "how many leaves on a tree calculator",
+    description: "Roughly estimate the number of leaves on a tree by counting a sample branch and scaling up.",
+    intro: "Count the leaves on one representative branch, then enter how many similar branches the tree has. The calculator scales up to a rough total, rounded to two significant figures because a sampling estimate cannot be precise.",
+    fields: [
+      { id: "sampleLeaves", label: "Leaves counted on one sample branch", type: "number", default: 60, step: 1, min: 0 },
+      { id: "branches", label: "Number of similar branches on the tree", type: "number", default: 150, step: 1, min: 0 },
+      { id: "variation", label: "Uncertainty in your sample (percent)", type: "number", default: 30, step: 1, min: 0, max: 100 },
+    ],
+    compute: (v) => {
+      if (!(v.sampleLeaves > 0) || !(v.branches > 0) || !(v.variation >= 0 && v.variation <= 100)) {
+        return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "The sample leaf count and number of branches must both be greater than zero, and uncertainty must be between 0 and 100 percent." };
+      }
+      const raw = v.sampleLeaves * v.branches;
+      const round2 = (n) => {
+        if (n <= 0) return 0;
+        const mag = Math.pow(10, Math.max(0, Math.floor(Math.log10(n)) - 1));
+        return Math.round(n / mag) * mag;
+      };
+      const lowRaw = raw * (1 - v.variation / 100);
+      const highRaw = raw * (1 + v.variation / 100);
+      const fmt = (n) => Math.round(n).toLocaleString("en-US");
+      return {
+        primary: { label: "Estimated leaves (rough)", value: `about ${fmt(round2(raw))}` },
+        secondary: [
+          { l: "Plausible range", v: `${fmt(round2(lowRaw))} to ${fmt(round2(highRaw))}` },
+          { l: "Calculation", v: `${v.sampleLeaves} leaves × ${v.branches} branches` },
+        ],
+        note: "Total ≈ leaves on a sample branch × number of similar branches. This is a rough sampling estimate. Branches differ in size and leaf density, so counting several samples and averaging gives a better answer. No tree has a single 'true' figure, since leaf numbers change with season, health, and species.",
+      };
+    },
+    faq: [
+      { q: "How many leaves does an average tree have?", a: "There is no single number. Leaf counts vary enormously by species, size, age, and season, which is why this tool estimates from your own sample rather than quoting a typical figure." },
+      { q: "How do I choose a good sample branch?", a: "Pick a branch that looks typical in size and leafiness, not the fullest or sparsest one. Better still, count three or four branches from different heights and sides and use the average." },
+      { q: "How do I count the number of branches?", a: "Count the branches of similar size to your sample, from a distance or in photos, and group larger and smaller ones separately if the tree has very different branch sizes." },
+      { q: "Why is the answer rounded?", a: "A sample-based estimate cannot justify exact figures. Rounding to two significant figures avoids implying precision the method does not have." },
+      { q: "What does the uncertainty percentage do?", a: "It widens the estimate into a plausible range. Raise it if your samples differed a lot from each other or the tree is irregular." },
+      { q: "Does this work for conifers with needles?", a: "It can, using needles or needle clusters as the counted unit, but the number will be very large and even less precise." },
+    ],
+    related: ["tree-height-calculator", "tree-age-calculator", "basal-area-calculator"],
+  },
+  {
+    id: "tree-value-calculator",
+    category: "biology",
+    title: "Tree Value Calculator",
+    keyword: "tree value calculator",
+    description: "Calculate a simple tree value from quantity, price per unit, and costs that you enter. It is arithmetic, not a professional appraisal.",
+    intro: "Enter how many trees you have, the volume or quantity each yields, the price per unit you were quoted, and any removal or processing cost. The calculator multiplies it out. It does not look up prices or appraise trees, so use figures from local buyers or a certified appraiser.",
+    fields: [
+      { id: "trees", label: "Number of trees", type: "number", default: 1, step: 1, min: 1 },
+      { id: "unitsPerTree", label: "Quantity per tree (e.g. board feet, cords, tons, or 1 each)", type: "number", default: 200, step: 0.1, min: 0 },
+      { id: "pricePerUnit", label: "Price per unit (from your buyer or quote)", type: "number", default: 0.5, step: 0.01, min: 0 },
+      { id: "costPerTree", label: "Removal or processing cost per tree", type: "number", default: 0, step: 1, min: 0 },
+    ],
+    compute: (v) => {
+      if (!(v.trees >= 1) || !(v.unitsPerTree > 0) || !(v.pricePerUnit >= 0) || !(v.costPerTree >= 0)) {
+        return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Trees must be at least 1, quantity must be greater than zero, and price and cost cannot be negative." };
+      }
+      const gross = v.trees * v.unitsPerTree * v.pricePerUnit;
+      const costs = v.trees * v.costPerTree;
+      const net = gross - costs;
+      const money = (n) => `${n < 0 ? "-" : ""}${Math.abs(n).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+      return {
+        primary: { label: "Net value", value: money(net) },
+        secondary: [
+          { l: "Gross value", v: money(gross) },
+          { l: "Total costs", v: money(costs) },
+          { l: "Net value per tree", v: money(net / v.trees) },
+        ],
+        note: "Gross = trees × quantity per tree × price per unit. Net = gross − trees × cost per tree. This is arithmetic on your numbers, not an appraisal. Real tree values depend on species, quality, size, location, market, and law, so consult a certified arborist or forester for an appraisal.",
+      };
+    },
+    faq: [
+      { q: "Is this a tree appraisal?", a: "No. It multiplies the quantity, price, and cost you enter. A formal appraisal for insurance, legal, or tax purposes should come from a qualified arborist or forester." },
+      { q: "Where do I get the price per unit?", a: "Ask local timber buyers, sawmills, or firewood sellers, or check a state forestry agency's published price reports. This calculator does not supply prices." },
+      { q: "What quantity should I use per tree?", a: "Use the unit your buyer pays in, such as board feet for sawtimber, cords for firewood, or tons for pulpwood. A forester can estimate volume from DBH and height." },
+      { q: "Can the result be negative?", a: "Yes. If removal or processing costs exceed the gross value, the net value is negative, which is common for small or poor-quality trees." },
+      { q: "Does this include the value of shade, wildlife, or property value?", a: "No. It only counts direct sale value minus costs. Ecosystem and landscape benefits need a separate methodology." },
+      { q: "Which tools help me get tree size first?", a: "The Basal Area Calculator turns DBH into cross-sectional area and the Tree Height Calculator estimates height, both useful inputs for a forester's volume estimate." },
+    ],
+    related: ["tree-age-calculator", "basal-area-calculator", "tree-height-calculator"],
+  },
+  {
+    id: "turtle-tank-size-calculator",
+    category: "pets",
+    title: "Turtle Tank Size Calculator",
+    keyword: "turtle tank size calculator",
+    description: "Estimate a turtle tank volume from shell length using an adjustable gallons-per-inch rule of thumb.",
+    intro: "Enter your turtle's adult shell length, how many turtles you keep, and the gallons-per-inch guideline you want to use. The calculator returns a planning volume. There is no single universal minimum, so check species-specific advice from a reptile veterinarian.",
+    fields: [
+      { id: "shellLength", label: "Adult shell length (straight-line)", type: "number", default: 6, step: 0.1, min: 0 },
+      { id: "unit", label: "Shell length unit", type: "select", default: "in", options: [{ v: "in", l: "Inches" }, { v: "cm", l: "Centimeters" }] },
+      { id: "turtles", label: "Number of turtles", type: "number", default: 1, step: 1, min: 1 },
+      { id: "gallonsPerInch", label: "Guideline gallons per inch of shell", type: "number", default: 10, step: 0.5, min: 1 },
+      { id: "extraPct", label: "Extra volume for each additional turtle (percent)", type: "number", default: 50, step: 5, min: 0 },
+      { id: "currentTank", label: "Your current tank size in gallons (0 to skip)", type: "number", default: 0, step: 1, min: 0 },
+    ],
+    compute: (v) => {
+      if (!(v.shellLength > 0) || !(v.turtles >= 1) || !(v.gallonsPerInch > 0) || !(v.extraPct >= 0) || !(v.currentTank >= 0)) {
+        return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Shell length, number of turtles, and gallons per inch must be greater than zero, and other values cannot be negative." };
+      }
+      const inches = v.unit === "cm" ? v.shellLength / 2.54 : v.shellLength;
+      const first = inches * v.gallonsPerInch;
+      const total = first * (1 + (Math.floor(v.turtles) - 1) * (v.extraPct / 100));
+      const secondary = [
+        { l: "In liters", v: `${round(total * 3.78541, 0)} L` },
+        { l: "Shell length used", v: `${round(inches, 2)} in` },
+        { l: "One turtle at this guideline", v: `${round(first, 1)} gal` },
+      ];
+      if (v.currentTank > 0) {
+        const diff = v.currentTank - total;
+        secondary.push({ l: "Your current tank", v: diff >= 0 ? `${round(diff, 1)} gal above this guideline` : `${round(-diff, 1)} gal below this guideline` });
+      }
+      return {
+        primary: { label: "Guideline tank volume", value: `${round(total, 1)} gallons` },
+        secondary,
+        note: "Volume = shell length in inches × gallons per inch, plus the extra percentage for each additional turtle. The 10 gallons per inch figure is a common hobby rule of thumb, not a legal or welfare standard, and needs vary by species, activity level, and setup. Swimming room, basking area, filtration, and water quality matter as much as volume. Confirm with a reptile veterinarian.",
+      };
+    },
+    faq: [
+      { q: "Is 10 gallons per inch of shell a legal or scientific minimum?", a: "No. It is a widely repeated hobby guideline. This calculator lets you change it because there is no universal requirement, and some species need considerably more space than a simple rule suggests." },
+      { q: "Should I size the tank for my turtle's current size or adult size?", a: "Adult size. Hatchlings grow quickly, and planning for the adult avoids repeated upgrades. Use the adult shell length for your species." },
+      { q: "How do I measure shell length?", a: "Measure the straight-line carapace length from front to back, not over the curve of the shell. Enter it in inches or centimeters." },
+      { q: "Why add extra volume for each additional turtle?", a: "Turtles need room to swim, bask, and avoid each other. The extra percentage is adjustable, and some keepers prefer separate tanks for species that are aggressive." },
+      { q: "Does tank volume replace filtration and a basking area?", a: "No. Aquatic turtles also need a dry basking spot with proper heat and UVB lighting and strong filtration. Volume is only one part of the setup." },
+      { q: "Where can I compare with other pet housing tools?", a: "The Rabbit Cage Size, Rat Cage Size, and Dog Crate Size calculators cover other pets, though each species has different needs." },
+    ],
+    related: ["rabbit-cage-size-calculator", "rat-cage-size-calculator", "dog-crate-size-calculator"],
+  },
+  {
+    id: "vegetable-seed-calculator",
+    category: "biology",
+    title: "Vegetable Seed Calculator",
+    keyword: "vegetable seed calculator",
+    description: "Calculate how many vegetable seeds and seed packets you need for your rows, spacing, and germination rate.",
+    intro: "Enter row length, number of rows, plant spacing, seeds per hole, germination rate, and packet size. The calculator returns the seeds needed, including a safety margin, and the number of packets to buy.",
+    fields: [
+      { id: "rowLength", label: "Length of each row", type: "number", default: 20, step: 0.5, min: 0 },
+      { id: "lengthUnit", label: "Row length unit", type: "select", default: "ft", options: [{ v: "ft", l: "Feet" }, { v: "m", l: "Meters" }] },
+      { id: "rows", label: "Number of rows", type: "number", default: 4, step: 1, min: 1 },
+      { id: "spacing", label: "Spacing between plants in a row", type: "number", default: 6, step: 0.5, min: 0 },
+      { id: "spacingUnit", label: "Plant spacing unit", type: "select", default: "in", options: [{ v: "in", l: "Inches" }, { v: "cm", l: "Centimeters" }] },
+      { id: "seedsPerHole", label: "Seeds sown per planting spot", type: "number", default: 2, step: 1, min: 1 },
+      { id: "germination", label: "Germination rate (percent, from the packet)", type: "number", default: 85, step: 1, min: 1, max: 100 },
+      { id: "extraPct", label: "Extra seed margin (percent)", type: "number", default: 10, step: 1, min: 0 },
+      { id: "packetSize", label: "Seeds per packet", type: "number", default: 100, step: 1, min: 1 },
+    ],
+    compute: (v) => {
+      if (!(v.rowLength > 0) || !(v.rows >= 1) || !(v.spacing > 0) || !(v.seedsPerHole >= 1) || !(v.germination > 0 && v.germination <= 100) || !(v.extraPct >= 0) || !(v.packetSize >= 1)) {
+        return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "All values must be positive, the germination rate must be between 1 and 100, and the margin cannot be negative." };
+      }
+      const rowM = v.rowLength * (v.lengthUnit === "m" ? 1 : 0.3048);
+      const spacingM = v.spacing * (v.spacingUnit === "cm" ? 0.01 : 0.0254);
+      const spots = (Math.floor(rowM / spacingM + 1e-9) + 1) * Math.floor(v.rows);
+      const baseSeeds = spots * Math.floor(v.seedsPerHole);
+      const seeds = Math.ceil(baseSeeds * (1 + v.extraPct / 100));
+      const packets = Math.ceil(seeds / v.packetSize);
+      const expected = Math.floor(baseSeeds * (v.germination / 100));
+      return {
+        primary: { label: "Seeds needed", value: `${seeds.toLocaleString("en-US")} seeds` },
+        secondary: [
+          { l: "Seed packets to buy", v: `${packets} (${v.packetSize} seeds each)` },
+          { l: "Planting spots", v: `${spots.toLocaleString("en-US")}` },
+          { l: "Expected seedlings from base sowing", v: `about ${expected.toLocaleString("en-US")} at ${v.germination}% germination` },
+        ],
+        note: "Planting spots per row = floor(row length / spacing) + 1; seeds = spots × seeds per spot × (1 + margin). Sowing extra seeds per spot and thinning later offsets germination failures. Actual results depend on seed age, soil temperature, and moisture. Packet germination rates are labels, not guarantees.",
+      };
+    },
+    faq: [
+      { q: "How is this different from the Grass Seed Calculator?", a: "The Grass Seed Calculator estimates bulk seed weight to cover a lawn area. This one counts individual seeds for rows of vegetables and rounds up to whole packets." },
+      { q: "How is this different from the Plant Population Calculator?", a: "The Plant Population Calculator works out plants per acre or hectare from row and in-row spacing. This tool starts from your actual rows and gives seeds and packets for a garden or small plot." },
+      { q: "Why sow more than one seed per spot?", a: "Not every seed germinates. Sowing two or three per spot and thinning to the strongest seedling is a common way to avoid gaps." },
+      { q: "Where do I find the germination rate?", a: "Most seed packets print it, usually with a test date. Older seed germinates less well, so use a lower percentage for seed saved from previous years." },
+      { q: "Why does it add one to the number of spots per row?", a: "A row has a plant at both ends, so a 20-foot row at 6-inch spacing has 41 spots, not 40." },
+      { q: "Does this work for crops planted in beds rather than rows?", a: "Yes, if you treat each planted line as a row. For broadcast sowing, use the seed rate on the packet instead." },
+    ],
+    related: ["plant-population-calculator", "raised-bed-soil-calculator", "vegetable-yield-calculator", "grass-seed-calculator"],
+  },
+  {
+    id: "vegetable-yield-calculator",
+    category: "biology",
+    title: "Vegetable Yield Calculator",
+    keyword: "vegetable yield calculator",
+    description: "Estimate total vegetable harvest from plant count or growing area using the yield per plant or per area that you enter.",
+    intro: "Choose whether to estimate from the number of plants or from bed area, enter the yield rate you expect, and optionally subtract losses. The calculator returns the harvest in pounds and kilograms.",
+    fields: [
+      { id: "mode", label: "Estimate from", type: "select", default: "plants", options: [{ v: "plants", l: "Number of plants" }, { v: "area", l: "Growing area" }] },
+      { id: "plants", label: "Number of plants (plants mode)", type: "number", default: 12, step: 1, min: 0 },
+      { id: "yieldPerPlant", label: "Expected yield per plant (plants mode)", type: "number", default: 5, step: 0.1, min: 0 },
+      { id: "area", label: "Growing area (area mode)", type: "number", default: 100, step: 1, min: 0 },
+      { id: "yieldPerArea", label: "Expected yield per area unit (area mode)", type: "number", default: 0.5, step: 0.05, min: 0 },
+      { id: "yieldUnit", label: "Weight unit for your yield rates", type: "select", default: "lb", options: [{ v: "lb", l: "Pounds" }, { v: "kg", l: "Kilograms" }] },
+      { id: "lossPct", label: "Expected loss (percent, pests, culls, spoilage)", type: "number", default: 10, step: 1, min: 0, max: 100 },
+    ],
+    compute: (v) => {
+      const gross = v.mode === "area" ? v.area * v.yieldPerArea : v.plants * v.yieldPerPlant;
+      const bad = v.mode === "area" ? !(v.area > 0) || !(v.yieldPerArea > 0) : !(v.plants > 0) || !(v.yieldPerPlant > 0);
+      if (bad || !(v.lossPct >= 0 && v.lossPct <= 100)) {
+        return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Plants or area and the yield rate must be greater than zero, and loss must be between 0 and 100 percent." };
+      }
+      const net = gross * (1 - v.lossPct / 100);
+      const toLb = v.yieldUnit === "kg" ? 2.20462 : 1;
+      const both = (n) => `${round(n * toLb, 1)} lb (${round((n * toLb) / 2.20462, 1)} kg)`;
+      return {
+        primary: { label: "Estimated harvest after losses", value: both(net) },
+        secondary: [
+          { l: "Gross harvest before losses", v: both(gross) },
+          { l: "Losses", v: `${v.lossPct}% = ${both(gross - net)}` },
+        ],
+        note: "Harvest = plants × yield per plant (or area × yield per area) × (1 − loss). Enter area and yield per area in any one consistent unit (for example square feet and pounds per square foot). You supply the yield rate; the tool does not assume crop-specific values, which vary by variety, climate, soil, and care. Treat the result as a planning estimate.",
+      };
+    },
+    faq: [
+      { q: "How is this different from the Corn Yield Calculator?", a: "The Corn Yield Calculator estimates grain yield per acre from ear and kernel counts. This tool is a general per-plant or per-area estimator for garden and market vegetables, using rates you enter." },
+      { q: "Where do I get the yield per plant?", a: "Use your own records from past seasons, seed catalog notes, or local extension guidance. Because yields vary widely, no default crop figures are built in." },
+      { q: "What should I put for losses?", a: "Include what you expect to lose to pests, disease, weather, culls, and spoilage. Ten percent is only a placeholder, so adjust it to your experience." },
+      { q: "Can I use it for several crops?", a: "Run each crop separately and add the totals. Each crop has its own yield rate." },
+      { q: "How can I estimate how many plants fit my bed?", a: "The Plant Population Calculator turns row and plant spacing into a plant count, and the Vegetable Seed Calculator gives the seeds to buy for them." },
+      { q: "Does it work in metric?", a: "Yes. Enter kilograms and matching area units, such as square meters and kilograms per square meter, and results are shown in both pounds and kilograms." },
+    ],
+    related: ["plant-population-calculator", "corn-yield-calculator", "vegetable-seed-calculator", "raised-bed-soil-calculator"],
   },
 ];
 

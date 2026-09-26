@@ -15,9 +15,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Calculator Încrucișare Dihibridă - Calculator Gratuit Online</title>
-  <meta name="description" content="Calculează rapoartele genotipului și fenotipului descendenților pentru o încrucișare cu două gene sub ereditate mendeliană simplă." />
+  <meta name="description" content="Calculează proporțiile de genotip și fenotip ale descendenților pentru o încrucișare cu o genă (pătrat Punnett), două gene (dihibridă) sau trei gene…" />
   <meta property="og:title" content="Calculator Încrucișare Dihibridă | Calquary">
-  <meta property="og:description" content="Calculează rapoartele genotipului și fenotipului descendenților pentru o încrucișare cu două gene sub ereditate mendeliană simplă.">
+  <meta property="og:description" content="Calculează proporțiile de genotip și fenotip ale descendenților pentru o încrucișare cu o genă (pătrat Punnett), două gene (dihibridă) sau trei gene (trihibridă) sub ereditate mendeliană simplă.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calquary.com/ro/tool/dihybrid-cross-calculator">
   <meta property="og:locale" content="ro_RO">
@@ -27,7 +27,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Calculator Încrucișare Dihibridă | Calquary">
-  <meta name="twitter:description" content="Calculează rapoartele genotipului și fenotipului descendenților pentru o încrucișare cu două gene sub ereditate mendeliană simplă.">
+  <meta name="twitter:description" content="Calculează proporțiile de genotip și fenotip ale descendenților pentru o încrucișare cu o genă (pătrat Punnett), două gene (dihibridă) sau trei gene (trihibridă) sub ereditate mendeliană simplă.">
   <meta name="twitter:image" content="https://calquary.com/og-images/dihybrid-cross-calculator.png">
     <link rel="alternate" hreflang="en" href="https://calquary.com/tool/dihybrid-cross-calculator">
   <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/dihybrid-cross-calculator">
@@ -89,7 +89,7 @@
     {
       "@type": "SoftwareApplication",
       "name": "Calculator Încrucișare Dihibridă",
-      "description": "Calculează rapoartele genotipului și fenotipului descendenților pentru o încrucișare cu două gene sub ereditate mendeliană simplă.",
+      "description": "Calculează proporțiile de genotip și fenotip ale descendenților pentru o încrucișare cu o genă (pătrat Punnett), două gene (dihibridă) sau trei gene (trihibridă) sub ereditate mendeliană simplă.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "url": "https://calquary.com/ro/tool/dihybrid-cross-calculator",
@@ -128,6 +128,14 @@
     {
       "@type": "FAQPage",
       "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Poate calcula o încrucișare trihibridă precum AaBbCc × AaBbCc?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da. Alege „Trei gene (încrucișare trihibridă)” și stabilește genotipul fiecărui părinte la genele 1, 2 și 3. Pentru AaBbCc × AaBbCc fiecare părinte produce 8 gameți diferiți, rezultând 8 × 8 = 64 de combinații și raportul fenotipic clasic 27:9:9:9:3:3:3:1. Este același instrument ca modurile cu una și două gene, deci nu există o pagină trihibridă separată."
+          }
+        },
         {
           "@type": "Question",
           "name": "Ce înseamnă \"asortare independentă\" și de ce contează aici?",
@@ -223,7 +231,7 @@
     <div class="tool-layout">
       <main>
         <h1>Calculator Încrucișare Dihibridă</h1>
-        <p style="max-width:60ch;">Selectează genotipul fiecărui părinte la două gene independente pentru a calcula probabilitățile de genotip și fenotip ale descendenților, presupunând asortare independentă și dominanță completă.</p>
+        <p style="max-width:60ch;">Alege o încrucișare cu o genă pentru un pătrat Punnett clasic, cu două gene pentru o încrucișare dihibridă sau cu trei gene pentru o încrucișare trihibridă (precum AaBbCc × AaBbCc), apoi selectează genotipul fiecărui părinte pentru a calcula probabilitățile de genotip și fenotip ale descendenților, presupunând segregare independentă și dominanță completă.</p>
         <p class="last-updated">Ultima actualizare: September 25, 2026</p>
         <div id="print-summary" class="print-summary"></div>
 
@@ -251,6 +259,10 @@
         <div class="article-block">
           <h2>Întrebări frecvente</h2>
           <div id="faq-list"><div class="faq-item">
+<h3>Poate calcula o încrucișare trihibridă precum AaBbCc × AaBbCc?</h3>
+<p>Da. Alege „Trei gene (încrucișare trihibridă)” și stabilește genotipul fiecărui părinte la genele 1, 2 și 3. Pentru AaBbCc × AaBbCc fiecare părinte produce 8 gameți diferiți, rezultând 8 × 8 = 64 de combinații și raportul fenotipic clasic 27:9:9:9:3:3:3:1. Este același instrument ca modurile cu una și două gene, deci nu există o pagină trihibridă separată.</p>
+</div>
+<div class="faq-item">
 <h3>Ce înseamnă "asortare independentă" și de ce contează aici?</h3>
 <p>Asortarea independentă este principiul mendelian conform căruia alelele genelor diferite sunt moștenite independent una de alta, ceea ce este valabil atunci când cele două gene se află pe cromozomi diferiți (sau foarte distanțate pe același cromozom). Acest calculator presupune asortare independentă - dacă cele două gene ar fi strâns legate pe același cromozom, ar tinde să fie moștenite împreună mai des decât prezice acest model, ceea ce se numește legătură genetică.</p>
 </div>
