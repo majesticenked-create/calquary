@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>水溶性肥料計算機 - 無料オンライン計算ツール | Calquary</title>
+  <meta name="description" content="肥料の質量、最終容量、ラベルのN・P₂O₅・K₂O含有率から、理論上の養分濃度(mg/Lまたはppm)を計算します。" />
+  <meta property="og:title" content="水溶性肥料計算機 | Calquary">
+  <meta property="og:description" content="肥料の質量、最終容量、ラベルのN・P₂O₅・K₂O含有率から、理論上の養分濃度(mg/Lまたはppm)を計算します。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/ja/tool/water-soluble-fertilizer-calculator">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/water-soluble-fertilizer-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="水溶性肥料計算機 | Calquary">
+  <meta name="twitter:description" content="肥料の質量、最終容量、ラベルのN・P₂O₅・K₂O含有率から、理論上の養分濃度(mg/Lまたはppm)を計算します。">
+  <meta name="twitter:image" content="https://calquary.com/og-images/water-soluble-fertilizer-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/water-soluble-fertilizer-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/water-soluble-fertilizer-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/water-soluble-fertilizer-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/water-soluble-fertilizer-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/water-soluble-fertilizer-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/water-soluble-fertilizer-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/water-soluble-fertilizer-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/water-soluble-fertilizer-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/water-soluble-fertilizer-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/water-soluble-fertilizer-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/water-soluble-fertilizer-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/water-soluble-fertilizer-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/water-soluble-fertilizer-calculator">
+    <link rel="canonical" href="https://calquary.com/ja/tool/water-soluble-fertilizer-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("water-soluble-fertilizer-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("water-soluble-fertilizer-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "水溶性肥料計算機",
+      "description": "肥料の質量、最終容量、ラベルのN・P₂O₅・K₂O含有率から、理論上の養分濃度(mg/Lまたはppm)を計算します。",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/ja/tool/water-soluble-fertilizer-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-26",
+      "inLanguage": "ja"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/ja/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/ja/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "水溶性肥料計算機",
+          "item": "https://calquary.com/ja/tool/water-soluble-fertilizer-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "肥料計算機とはどう違いますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "肥料計算機は、施用量に対して一定面積を覆うのに必要な製品量を求めます。このツールは、最終容量に溶かした質量から出発して、溶液の理論上の養分濃度を報告します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "P₂O₅はリンと同じですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "いいえ。ラベルではリン酸をP₂O₅で表し、元素のリンをおよそ43.64%含みます。計算機はラベルの形態と元素換算の両方を表示します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "K₂Oはカリウムと同じですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "いいえ。カリはK₂Oで表され、元素のカリウムをおよそ83.01%含みます。計算機は両方の形態を表示します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "なぜmg/Lをppmとして扱うのですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "密度が1 kg/Lに近い希薄な水溶液では、1 mg/Lは質量比でおよそ1 ppmに相当します。濃い溶液ではこの近似は成り立ちません。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "どの濃度を使うべきですか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "植物、生育段階、水質、製品によって異なるため、この計算機は目標値を提案しません。製品ラベルと作物に対する農学的な指針に従ってください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "不純物や溶解度の限界は考慮されますか?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "いいえ。肥料が完全に溶け、ラベルの割合が正確であると仮定します。溶解度の限界や他の成分はモデル化していません。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/ja/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/ja/#categories">カテゴリー</a>
+          <a href="/ja/#tools">すべてのツール</a>
+          <a href="/ja/about">このサイトについて</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: 日本語">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>JA</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/water-soluble-fertilizer-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/water-soluble-fertilizer-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/water-soluble-fertilizer-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/water-soluble-fertilizer-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/water-soluble-fertilizer-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/water-soluble-fertilizer-calculator">Italiano</a><span class="locale-item current" role="menuitem" aria-current="true">日本語</span><a class="locale-item" role="menuitem" href="/ro/tool/water-soluble-fertilizer-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/water-soluble-fertilizer-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/water-soluble-fertilizer-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/water-soluble-fertilizer-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/water-soluble-fertilizer-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/ja/">Calquary</a> / <a href="/ja/category/biology">生物学</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>水溶性肥料計算機</h1>
+        <p style="max-width:60ch;">肥料の質量、溶液の最終容量、ラベルに記載された割合を入力すると、理論上の養分濃度が分かります。入力値に対する質量収支の算術であり、施肥の推奨ではありません。</p>
+        <p class="last-updated">最終更新日： September 26, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">計算する</button>
+              <button type="button" id="calc-reset" class="btn-ghost">リセット</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>よくある質問</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>肥料計算機とはどう違いますか?</h3>
+<p>肥料計算機は、施用量に対して一定面積を覆うのに必要な製品量を求めます。このツールは、最終容量に溶かした質量から出発して、溶液の理論上の養分濃度を報告します。</p>
+</div>
+<div class="faq-item">
+<h3>P₂O₅はリンと同じですか?</h3>
+<p>いいえ。ラベルではリン酸をP₂O₅で表し、元素のリンをおよそ43.64%含みます。計算機はラベルの形態と元素換算の両方を表示します。</p>
+</div>
+<div class="faq-item">
+<h3>K₂Oはカリウムと同じですか?</h3>
+<p>いいえ。カリはK₂Oで表され、元素のカリウムをおよそ83.01%含みます。計算機は両方の形態を表示します。</p>
+</div>
+<div class="faq-item">
+<h3>なぜmg/Lをppmとして扱うのですか?</h3>
+<p>密度が1 kg/Lに近い希薄な水溶液では、1 mg/Lは質量比でおよそ1 ppmに相当します。濃い溶液ではこの近似は成り立ちません。</p>
+</div>
+<div class="faq-item">
+<h3>どの濃度を使うべきですか?</h3>
+<p>植物、生育段階、水質、製品によって異なるため、この計算機は目標値を提案しません。製品ラベルと作物に対する農学的な指針に従ってください。</p>
+</div>
+<div class="faq-item">
+<h3>不純物や溶解度の限界は考慮されますか?</h3>
+<p>いいえ。肥料が完全に溶け、ラベルの割合が正確であると仮定します。溶解度の限界や他の成分はモデル化していません。</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">計算する</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>関連ツール</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>精度について</h4>
+          <p style="margin:0;font-size:0.85rem;">Calquaryの計算ツールは、迅速で信頼できる概算を目的としています。実際の財務、構造、医療に関わる重要な決定を行う前には、必ず専門家にご確認ください。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/ja/">← すべての計算ツールに戻る</a> · <a href="/ja/about">このサイトについて</a> · <a href="/ja/contact">お問い合わせ</a> · <a href="/ja/privacy">プライバシー</a> · <a href="/ja/terms">利用規約</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator de Deficit de Presiune a Vaporilor</title>
+  <meta name="description" content="Calculează deficitul de presiune a vaporilor (VPD) în kPa din temperatura aerului și umiditatea relativă, cu presiunea de saturație și cea reală a vaporilor." />
+  <meta property="og:title" content="Calculator de Deficit de Presiune a Vaporilor | Calquary">
+  <meta property="og:description" content="Calculează deficitul de presiune a vaporilor (VPD) în kPa din temperatura aerului și umiditatea relativă, cu presiunea de saturație și cea reală a vaporilor.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/ro/tool/vapor-pressure-deficit-calculator">
+  <meta property="og:locale" content="ro_RO">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/vapor-pressure-deficit-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculator de Deficit de Presiune a Vaporilor | Calquary">
+  <meta name="twitter:description" content="Calculează deficitul de presiune a vaporilor (VPD) în kPa din temperatura aerului și umiditatea relativă, cu presiunea de saturație și cea reală a vaporilor.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/vapor-pressure-deficit-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/vapor-pressure-deficit-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/vapor-pressure-deficit-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/vapor-pressure-deficit-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/vapor-pressure-deficit-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/vapor-pressure-deficit-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/vapor-pressure-deficit-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/vapor-pressure-deficit-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/vapor-pressure-deficit-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/vapor-pressure-deficit-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/vapor-pressure-deficit-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/vapor-pressure-deficit-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/vapor-pressure-deficit-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/vapor-pressure-deficit-calculator">
+    <link rel="canonical" href="https://calquary.com/ro/tool/vapor-pressure-deficit-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("vapor-pressure-deficit-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("vapor-pressure-deficit-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calculator de Deficit de Presiune a Vaporilor",
+      "description": "Calculează deficitul de presiune a vaporilor (VPD) în kPa din temperatura aerului și umiditatea relativă, cu presiunea de saturație și cea reală a vaporilor.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/ro/tool/vapor-pressure-deficit-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-26",
+      "inLanguage": "ro"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/ro/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biology",
+          "item": "https://calquary.com/ro/category/biology"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calculator de Deficit de Presiune a Vaporilor",
+          "item": "https://calquary.com/ro/tool/vapor-pressure-deficit-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Ce este deficitul de presiune a vaporilor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Deficitul de presiune a vaporilor (VPD) este diferența dintre cantitatea de vapori de apă pe care aerul ar putea-o conține saturat și cea pe care o conține de fapt. Se exprimă ca presiune, de obicei în kilopascali, și descrie cât de puternic extrage aerul apa de pe suprafețe."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ce formulă folosește acest calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Estimează presiunea de saturație a vaporilor cu SVP = 0,6108 × exp(17,27 T / (T + 237,3)), unde T este temperatura aerului în °C, apoi calculează VPD = SVP × (1 − RH/100). Intrarea în Fahrenheit este convertită mai întâi în Celsius."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "De ce este VPD aproape zero la 100% umiditate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La 100% umiditate relativă aerul este saturat, deci presiunea reală a vaporilor este egală cu cea de saturație, iar diferența este zero."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Este VPD al aerului sau al frunzei?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Este VPD al aerului, bazat doar pe temperatura și umiditatea aerului. VPD al frunzei necesită temperatura suprafeței frunzei, care poate diferi de cea a aerului, deci nu trata cele două valori ca fiind același număr."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ce VPD ar trebui să urmăresc?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nu există o țintă universală. Intervalele potrivite depind de specie, stadiul de creștere și condițiile de cultură, așa că consultă îndrumări specifice pentru plantele tale, nu un singur număr."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cum se leagă de Calculatorul de Potențial Hidric?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VPD descrie puterea de uscare a aerului, iar potențialul hidric descrie starea energetică a apei într-un țesut sau o soluție. Sunt mărimi diferite, dar ambele ajută la descrierea mișcării apei între plante și mediu."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/ro/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/ro/#categories">Categorii</a>
+          <a href="/ro/#tools">Toate instrumentele</a>
+          <a href="/ro/about">Despre noi</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Română">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>RO</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/vapor-pressure-deficit-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/vapor-pressure-deficit-calculator">Español</a><a class="locale-item" role="menuitem" href="/fr/tool/vapor-pressure-deficit-calculator">Français</a><a class="locale-item" role="menuitem" href="/de/tool/vapor-pressure-deficit-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/vapor-pressure-deficit-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/vapor-pressure-deficit-calculator">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/vapor-pressure-deficit-calculator">日本語</a><span class="locale-item current" role="menuitem" aria-current="true">Română</span><a class="locale-item" role="menuitem" href="/el/tool/vapor-pressure-deficit-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/vapor-pressure-deficit-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/vapor-pressure-deficit-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/vapor-pressure-deficit-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/ro/">Calquary</a> / <a href="/ro/category/biology">Biologie</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calculator de Deficit de Presiune a Vaporilor</h1>
+        <p style="max-width:60ch;">Introdu temperatura aerului și umiditatea relativă pentru a afla deficitul de presiune a vaporilor, diferența dintre vaporii de apă pe care îi conține aerul și cei pe care i-ar putea conține la acea temperatură. Rezultatul este o estimare bazată pe temperatura aerului, în kilopascali.</p>
+        <p class="last-updated">Ultima actualizare: September 26, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculează</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Resetează</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Întrebări frecvente</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Ce este deficitul de presiune a vaporilor?</h3>
+<p>Deficitul de presiune a vaporilor (VPD) este diferența dintre cantitatea de vapori de apă pe care aerul ar putea-o conține saturat și cea pe care o conține de fapt. Se exprimă ca presiune, de obicei în kilopascali, și descrie cât de puternic extrage aerul apa de pe suprafețe.</p>
+</div>
+<div class="faq-item">
+<h3>Ce formulă folosește acest calculator?</h3>
+<p>Estimează presiunea de saturație a vaporilor cu SVP = 0,6108 × exp(17,27 T / (T + 237,3)), unde T este temperatura aerului în °C, apoi calculează VPD = SVP × (1 − RH/100). Intrarea în Fahrenheit este convertită mai întâi în Celsius.</p>
+</div>
+<div class="faq-item">
+<h3>De ce este VPD aproape zero la 100% umiditate?</h3>
+<p>La 100% umiditate relativă aerul este saturat, deci presiunea reală a vaporilor este egală cu cea de saturație, iar diferența este zero.</p>
+</div>
+<div class="faq-item">
+<h3>Este VPD al aerului sau al frunzei?</h3>
+<p>Este VPD al aerului, bazat doar pe temperatura și umiditatea aerului. VPD al frunzei necesită temperatura suprafeței frunzei, care poate diferi de cea a aerului, deci nu trata cele două valori ca fiind același număr.</p>
+</div>
+<div class="faq-item">
+<h3>Ce VPD ar trebui să urmăresc?</h3>
+<p>Nu există o țintă universală. Intervalele potrivite depind de specie, stadiul de creștere și condițiile de cultură, așa că consultă îndrumări specifice pentru plantele tale, nu un singur număr.</p>
+</div>
+<div class="faq-item">
+<h3>Cum se leagă de Calculatorul de Potențial Hidric?</h3>
+<p>VPD descrie puterea de uscare a aerului, iar potențialul hidric descrie starea energetică a apei într-un țesut sau o soluție. Sunt mărimi diferite, dar ambele ajută la descrierea mișcării apei între plante și mediu.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculează</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Instrumente similare</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Notă privind precizia</h4>
+          <p style="margin:0;font-size:0.85rem;">Calculatoarele Calquary sunt concepute pentru a oferi estimări rapide și fiabile. Pentru decizii cu implicații financiare, structurale sau medicale reale, consultă un profesionist calificat.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/ro/">← Înapoi la toate calculatoarele</a> · <a href="/ro/about">Despre noi</a> · <a href="/ro/contact">Contact</a> · <a href="/ro/privacy">Confidențialitate</a> · <a href="/ro/terms">Termeni</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>

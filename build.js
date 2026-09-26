@@ -195,6 +195,16 @@ const WAVE_ONE_TOOL_IDS = [
   // Batch 21 (Batch 010 build): 7 new tools translated into all 11 non-English locales.
   "tree-age-calculator", "tree-height-calculator", "tree-leaves-calculator", "tree-value-calculator",
   "turtle-tank-size-calculator", "vegetable-seed-calculator", "vegetable-yield-calculator",
+  // Batch 22 (Batch 011 build): 9 new tools translated into all 11 non-English locales.
+  "vapor-pressure-deficit-calculator",
+  "wastewater-calculator",
+  "water-potential-calculator",
+  "water-soluble-fertilizer-calculator",
+  "activity-coefficient-calculator",
+  "actual-yield-calculator",
+  "air-fuel-ratio-calculator",
+  "alligation-calculator",
+  "arrhenius-equation-calculator",
 ];
 
 function loadData() {

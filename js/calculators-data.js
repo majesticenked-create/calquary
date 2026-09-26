@@ -21,6 +21,7 @@ const CATEGORIES = [
   { id: "text", code: "T", name: "Text & Digital", description: "Word counts and generators for everyday tasks.", longDescription: "Word counts, case conversion, and text generators handle the small text-processing tasks that come up while writing, coding, or formatting content - each one runs entirely in your browser, so nothing you type or paste is ever sent anywhere.", icon: '<path d="M9 4h6M12 4v16M9 20h6"/>' },
   { id: "pets", code: "P", name: "Pet & Lifestyle", description: "Age charts and everyday pet math.", longDescription: "A dog year isn't really seven human years, and pregnancy length varies by species - these calculators use the actual age curves and gestation data for dogs, cats, rabbits, and horses instead of the oversimplified rules of thumb most people know.", icon: '<circle cx="12" cy="15.5" r="4"/><circle cx="5.5" cy="9" r="2"/><circle cx="10" cy="4.5" r="2"/><circle cx="14" cy="4.5" r="2"/><circle cx="18.5" cy="9" r="2"/>' },
   { id: "biology", code: "B", name: "Biology", description: "Genetics, field work, and life-science measurements.", longDescription: "Genetics problems, forestry measurements, and lab estimates all come down to a handful of published formulas that most calculators bury in a general science catch-all - these tools apply them directly to your own counts and measurements, from allele frequencies worked out from a real sample to acres covered per hour in the field.", icon: '<path d="M7 3c0 6 10 6 10 12"/><path d="M17 3c0 6-10 6-10 12"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="17" x2="16" y2="17"/>' },
+  { id: "chemistry", code: "Y", name: "Chemistry", description: "Reaction kinetics, yields, and solution mixing.", longDescription: "Reaction rates, percent yields, and solution mixtures follow a small set of standard relationships - the Arrhenius equation, the percent-yield ratio, alligation, and the Debye-Hückel limiting law. These tools apply them to your own measurements, with units and assumptions spelled out, so you can check a result instead of guessing.", icon: '<path d="M9 3h6"/><path d="M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3"/><line x1="7.5" y1="14" x2="16.5" y2="14"/>' },
 ];
 
 /* Each field: { id, label, type: number|select|date|text|textarea|checkbox-group,
@@ -7918,7 +7919,7 @@ const CALCULATORS = [
       { q: "Can heat index and wind chill both apply at the same time?", a: "No - they're mutually exclusive by design, since heat index requires warm conditions (roughly 80°F+) and wind chill requires cold conditions (roughly 50°F or below). Outside either range, or in the gap between them, this calculator shows N/A for whichever doesn't apply." },
       { q: "Why does the calculator need wind speed for wind chill but not for heat index?", a: "Wind chill's formula is specifically built around how moving air strips heat from exposed skin, so wind speed is a required input - heat index instead models how humidity impairs sweat evaporation, a process wind speed doesn't factor into in the standard NWS heat index formula this calculator uses." },
     ],
-    related: ["temperature-converter", "sunrise-sunset-calculator", "pressure-altitude-calculator"],
+    related: ["temperature-converter", "sunrise-sunset-calculator", "pressure-altitude-calculator", "vapor-pressure-deficit-calculator"],
   },
 
   // ---------------- TEXT & DIGITAL ----------------
@@ -10219,7 +10220,7 @@ const CALCULATORS = [
       { q: "Why did I get an error saying the target exceeds the stock concentration?", a: "A simple dilution with diluent can only decrease concentration, never increase it - if your target concentration (C2) is higher than your stock concentration (C1), you'd need a more concentrated stock, or you'd need to concentrate your existing sample through a method like centrifugation or evaporation rather than diluting it." },
       { q: "Do the concentration units matter for this calculation?", a: "The math itself is unit-agnostic as long as C1 and C2 use the same unit (both in cells/mL, both in molarity, both in mg/mL, etc.) - the equation cancels the units out. Just make sure you're consistent, since mixing units (like entering C1 in cells/mL and C2 in cells/L) will give an incorrect result." },
     ],
-    related: ["cell-doubling-time-calculator", "molecular-weight-calculator", "log-reduction-calculator"],
+    related: ["cell-doubling-time-calculator", "molecular-weight-calculator", "log-reduction-calculator", "alligation-calculator"],
   },
   {
     id: "cell-doubling-time-calculator",
@@ -11562,7 +11563,7 @@ const CALCULATORS = [
       { q: "How does this differ from the Compost or Mulch Calculators?", a: "Those estimate volume for a given depth over an area. This estimates product weight for a given rate over an area." },
       { q: "How accurate is the bag count?", a: "It is rounded up to whole bags. Uneven spreading and spreader calibration can change how far a bag goes, so check your spreader's settings." },
     ],
-    related: ["compost-calculator", "mulch-calculator", "square-footage-calculator", "grass-seed-calculator"],
+    related: ["compost-calculator", "mulch-calculator", "square-footage-calculator", "water-soluble-fertilizer-calculator"],
   },
   {
     id: "fish-oil-for-cats-calculator",
@@ -12421,7 +12422,7 @@ const CALCULATORS = [
       { q: "Does this tool tell me how to adjust my process?", a: "No. It only converts the numbers you enter. Operational decisions should follow your facility's protocols and the judgment of a qualified wastewater professional or engineer." },
       { q: "Why do I need to enter a percentage instead of raw masses?", a: "This simple mode assumes you already have the volatile fraction from a standard total solids/volatile solids lab procedure. If you only have raw sample, crucible, and residue masses, calculate the percentage from those first using your lab's standard method." },
     ],
-    related: ["percentage-calculator", "cell-dilution-calculator", "corn-yield-calculator"],
+    related: ["percentage-calculator", "cell-dilution-calculator", "corn-yield-calculator", "wastewater-calculator"],
   },
   {
     id: "mutation-frequency-calculator",
@@ -13593,6 +13594,489 @@ const CALCULATORS = [
       { q: "Does it work in metric?", a: "Yes. Enter kilograms and matching area units, such as square meters and kilograms per square meter, and results are shown in both pounds and kilograms." },
     ],
     related: ["plant-population-calculator", "corn-yield-calculator", "vegetable-seed-calculator", "raised-bed-soil-calculator"],
+  },
+  {
+    id: "vapor-pressure-deficit-calculator",
+    category: "biology",
+    title: "Vapor Pressure Deficit Calculator",
+    keyword: "vapor pressure deficit calculator, vpd calculator",
+    description: "Calculate vapor pressure deficit (VPD) in kPa from air temperature and relative humidity, with saturation and actual vapor pressure.",
+    intro: "Enter the air temperature and relative humidity to find the vapor pressure deficit, the gap between how much water vapor the air holds and how much it could hold at that temperature. The result is an air-temperature estimate in kilopascals.",
+    fields: [
+      { id: "tempUnit", label: "Temperature unit", type: "select", default: "C", options: [{ v: "C", l: "Celsius (°C)" }, { v: "F", l: "Fahrenheit (°F)" }] },
+      { id: "temperature", label: "Air temperature", type: "number", default: 25, step: 0.1 },
+      { id: "rh", label: "Relative humidity (%)", type: "number", default: 60, step: 0.1, min: 0, max: 100 },
+    ],
+    compute: (v) => {
+      if (!Number.isFinite(v.temperature) || !Number.isFinite(v.rh)) {
+        return { primary: { label: "Enter valid values", value: "-" }, secondary: [], note: "Enter a temperature and a relative humidity." };
+      }
+      const tC = v.tempUnit === "F" ? ((v.temperature - 32) * 5) / 9 : v.temperature;
+      if (tC < -40 || tC > 60) {
+        return { primary: { label: "Temperature out of range", value: "-" }, secondary: [], note: "This approximation is intended for air temperatures between -40 °C and 60 °C (-40 °F to 140 °F)." };
+      }
+      if (v.rh < 0 || v.rh > 100) {
+        return { primary: { label: "Enter valid humidity", value: "-" }, secondary: [], note: "Relative humidity must be between 0 and 100 percent." };
+      }
+      const svp = 0.6108 * Math.exp((17.27 * tC) / (tC + 237.3));
+      const avp = svp * (v.rh / 100);
+      const vpd = svp - avp;
+      return {
+        primary: { label: "Vapor pressure deficit", value: `${round(vpd, 3)} kPa` },
+        secondary: [
+          { l: "Saturation vapor pressure", v: `${round(svp, 3)} kPa` },
+          { l: "Actual vapor pressure", v: `${round(avp, 3)} kPa` },
+          { l: "VPD in millibar (hPa)", v: `${round(vpd * 10, 2)} mbar` },
+          { l: "Air temperature used", v: `${round(tC, 2)} °C` },
+        ],
+        note: "SVP = 0.6108 × exp(17.27 T / (T + 237.3)) with T in °C, and VPD = SVP × (1 − RH/100). This is an air-temperature estimate. Leaf VPD uses the leaf temperature, which is often different from the air temperature, so the two values are not interchangeable. Suitable VPD values depend on the plant, its growth stage, and other conditions.",
+      };
+    },
+    faq: [
+      { q: "What is vapor pressure deficit?", a: "Vapor pressure deficit (VPD) is the difference between the amount of water vapor the air could hold when saturated and the amount it actually holds. It is expressed as a pressure, usually in kilopascals, and describes how strongly the air pulls water from surfaces." },
+      { q: "Which formula does this calculator use?", a: "It estimates saturation vapor pressure with SVP = 0.6108 × exp(17.27 T / (T + 237.3)), where T is the air temperature in °C, then computes VPD = SVP × (1 − RH/100). Fahrenheit input is converted to Celsius first." },
+      { q: "Why is VPD about zero at 100% humidity?", a: "At 100% relative humidity the air is saturated, so the actual vapor pressure equals the saturation vapor pressure and the difference is zero." },
+      { q: "Is this air VPD or leaf VPD?", a: "It is air VPD, based only on air temperature and humidity. Leaf VPD needs the leaf surface temperature, which can differ from the air temperature, so do not treat the two as the same number." },
+      { q: "What VPD should I aim for?", a: "There is no universal target. Suitable ranges depend on the species, growth stage, and growing conditions, so consult guidance specific to your plants rather than a single number." },
+      { q: "How does VPD relate to the Water Potential Calculator?", a: "VPD describes the drying power of the air, while water potential describes the energy state of water in plant tissue or solution. They are different quantities, but both help describe water movement between plants and their surroundings." },
+    ],
+    related: ["water-potential-calculator", "weather-comfort-calculator", "growing-degree-units-calculator"],
+  },
+  {
+    id: "wastewater-calculator",
+    category: "biology",
+    title: "Wastewater Calculator",
+    keyword: "wastewater calculator, bod loading calculator, f/m ratio calculator",
+    description: "Calculate BOD loading, food-to-microorganism (F/M) ratio, or hydraulic retention time from flow, concentration, and tank volume.",
+    intro: "Choose BOD loading, F/M ratio, or hydraulic retention time, enter the flow, concentrations, and tank volume with their units, and read the result with the units shown. These are calculation aids, not plant operating recommendations.",
+    fields: [
+      { id: "mode", label: "Calculation", type: "select", default: "bod", options: [{ v: "bod", l: "BOD loading (kg/day)" }, { v: "fm", l: "Food-to-microorganism ratio (F/M)" }, { v: "hrt", l: "Hydraulic retention time (HRT)" }] },
+      { id: "flow", label: "Flow", type: "number", default: 1000, step: "any", min: 0 },
+      { id: "flowUnit", label: "Flow unit", type: "select", default: "m3d", options: [{ v: "m3d", l: "m³/day" }, { v: "m3h", l: "m³/hour" }, { v: "lpd", l: "L/day" }, { v: "mgd", l: "US million gallons/day (MGD)" }] },
+      { id: "bod", label: "BOD concentration (mg/L) (BOD and F/M modes)", type: "number", default: 250, step: "any", min: 0 },
+      { id: "mlvss", label: "MLVSS concentration (mg/L) (F/M mode)", type: "number", default: 2500, step: "any", min: 0 },
+      { id: "volume", label: "Tank volume (F/M and HRT modes)", type: "number", default: 500, step: "any", min: 0 },
+      { id: "volumeUnit", label: "Tank volume unit", type: "select", default: "m3", options: [{ v: "m3", l: "m³" }, { v: "l", l: "Liters" }, { v: "gal", l: "US gallons" }] },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      if (!(v.flow > 0)) return bad("Flow must be greater than zero.");
+      const flowM3d = v.flow * { m3d: 1, m3h: 24, lpd: 0.001, mgd: 3785.411784 }[v.flowUnit];
+      const volM3 = v.volume * { m3: 1, l: 0.001, gal: 0.003785411784 }[v.volumeUnit];
+      if (v.mode === "hrt") {
+        if (!(volM3 > 0)) return bad("Tank volume must be greater than zero.");
+        const days = volM3 / flowM3d;
+        return {
+          primary: { label: "Hydraulic retention time", value: `${round(days * 24, 2)} hours` },
+          secondary: [
+            { l: "In days", v: `${round(days, 3)} days` },
+            { l: "Flow used", v: `${round(flowM3d, 2)} m³/day` },
+            { l: "Volume used", v: `${round(volM3, 2)} m³` },
+          ],
+          note: "HRT = tank volume / volumetric flow rate, with both converted to m³ and m³/day. It is the average time water spends in the tank, assuming a steady flow. It does not describe solids retention time.",
+        };
+      }
+      if (!(v.bod >= 0)) return bad("BOD concentration cannot be negative.");
+      const loadKgD = (flowM3d * v.bod) / 1000;
+      if (v.mode === "bod") {
+        return {
+          primary: { label: "BOD loading", value: `${round(loadKgD, 2)} kg/day` },
+          secondary: [
+            { l: "In pounds per day", v: `${round(loadKgD * 2.20462262, 2)} lb/day` },
+            { l: "Flow used", v: `${round(flowM3d, 2)} m³/day` },
+          ],
+          note: "BOD loading (kg/day) = flow (m³/day) × BOD (mg/L) / 1000, because 1 mg/L equals 1 g/m³. The concentration is treated as constant over the flow.",
+        };
+      }
+      if (!(v.mlvss > 0) || !(volM3 > 0)) return bad("MLVSS concentration and tank volume must be greater than zero.");
+      const solidsKg = (v.mlvss * volM3) / 1000;
+      const fm = loadKgD / solidsKg;
+      return {
+        primary: { label: "F/M ratio", value: `${round(fm, 3)} kg BOD / kg MLVSS / day` },
+        secondary: [
+          { l: "BOD loading", v: `${round(loadKgD, 2)} kg/day` },
+          { l: "Biological solids (MLVSS) in tank", v: `${round(solidsKg, 2)} kg` },
+        ],
+        note: "F/M = daily BOD mass loading / MLVSS mass in the aeration tank, where MLVSS mass = MLVSS (mg/L) × tank volume (m³) / 1000. The MLVSS Calculator can convert MLSS to MLVSS. The result is a calculated number, not a recommendation to change plant operation.",
+      };
+    },
+    faq: [
+      { q: "How is this different from the MLVSS Calculator?", a: "The MLVSS Calculator converts MLSS into volatile suspended solids. This calculator works with loadings, F/M ratio, and retention time, and the F/M mode uses an MLVSS value as an input, which you can get from that calculator." },
+      { q: "How are MLVSS and F/M related?", a: "F/M divides the daily BOD mass entering the tank by the mass of volatile biological solids (MLVSS) in it. A different MLVSS concentration or tank volume changes the denominator and therefore the ratio." },
+      { q: "Why divide by 1000 in the BOD loading formula?", a: "A concentration in mg/L is the same as g/m³. Multiplying by flow in m³/day gives grams per day, and dividing by 1000 converts it to kilograms per day." },
+      { q: "What is hydraulic retention time?", a: "It is the tank volume divided by the flow rate, the average time water spends in the tank. This tool converts everything to m³ and m³/day first and shows the result in hours and days." },
+      { q: "Can I use these results to set treatment operations?", a: "No. The results are arithmetic on the numbers you enter. Operating decisions depend on site-specific data, permits, and qualified operator judgment." },
+      { q: "Which units does it accept?", a: "Flow in m³/day, m³/hour, L/day, or US million gallons per day, and tank volume in m³, liters, or US gallons. Concentrations are in mg/L." },
+    ],
+    related: ["mlvss-calculator", "percentage-calculator", "cell-dilution-calculator"],
+  },
+  {
+    id: "water-potential-calculator",
+    category: "biology",
+    title: "Water Potential Calculator",
+    keyword: "water potential calculator",
+    description: "Calculate total water potential (Ψ) from solute and pressure potential, or estimate solute potential from concentration and temperature.",
+    intro: "Add solute potential and pressure potential to get total water potential, or let the calculator estimate solute potential from solution concentration, van 't Hoff factor, and temperature using the ideal-solution relationship. Results are in megapascals.",
+    fields: [
+      { id: "mode", label: "Solute potential (Ψs) source", type: "select", default: "direct", options: [{ v: "direct", l: "I know Ψs (MPa)" }, { v: "calc", l: "Calculate Ψs from concentration" }] },
+      { id: "soluteMpa", label: "Solute potential Ψs in MPa (direct mode, zero or negative)", type: "number", default: -0.5, step: 0.01, max: 0 },
+      { id: "concentration", label: "Molar concentration C in mol/L (concentration mode)", type: "number", default: 0.2, step: "any", min: 0 },
+      { id: "vantHoff", label: "van 't Hoff factor i (concentration mode)", type: "number", default: 1, step: 0.1, min: 0 },
+      { id: "temperature", label: "Temperature (concentration mode)", type: "number", default: 25, step: 0.1 },
+      { id: "tempUnit", label: "Temperature unit", type: "select", default: "C", options: [{ v: "C", l: "Celsius (°C)" }, { v: "K", l: "Kelvin (K)" }, { v: "F", l: "Fahrenheit (°F)" }] },
+      { id: "pressureMpa", label: "Pressure potential Ψp in MPa", type: "number", default: 0.3, step: 0.01 },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      if (!Number.isFinite(v.pressureMpa)) return bad("Enter a pressure potential (use 0 if none).");
+      let psiS;
+      let detail;
+      if (v.mode === "calc") {
+        if (!(v.concentration >= 0) || !(v.vantHoff > 0)) return bad("Concentration cannot be negative and the van 't Hoff factor must be greater than zero.");
+        const tK = v.tempUnit === "K" ? v.temperature : v.tempUnit === "F" ? ((v.temperature - 32) * 5) / 9 + 273.15 : v.temperature + 273.15;
+        if (!(tK > 0)) return bad("Temperature must be above absolute zero.");
+        psiS = -v.vantHoff * v.concentration * 0.008314462618 * tK;
+        detail = `Ψs = −i C R T with R = 0.008314 L·MPa/(mol·K) and T = ${round(tK, 2)} K.`;
+      } else {
+        if (!Number.isFinite(v.soluteMpa) || v.soluteMpa > 0) return bad("Solute potential is zero or negative. Enter a value of 0 or below.");
+        psiS = v.soluteMpa;
+        detail = "Ψs entered directly.";
+      }
+      const psi = psiS + v.pressureMpa;
+      return {
+        primary: { label: "Total water potential Ψ", value: `${round(psi, 4)} MPa` },
+        secondary: [
+          { l: "Solute potential Ψs", v: `${round(psiS, 4)} MPa` },
+          { l: "Pressure potential Ψp", v: `${round(v.pressureMpa, 4)} MPa` },
+          { l: "Total in bar", v: `${round(psi * 10, 3)} bar` },
+        ],
+        note: `Ψ = Ψs + Ψp. ${detail} Other components such as matric or gravitational potential are not included. The ideal-solution estimate works best for dilute solutions and overstates the effect for concentrated or strongly interacting solutes. Water potential is an energy state per unit volume, not the same as water pressure.`,
+      };
+    },
+    faq: [
+      { q: "What is water potential?", a: "Water potential (Ψ) describes the free energy of water and predicts the direction it moves: from higher (less negative) to lower (more negative) potential. It is expressed in pressure units, commonly megapascals." },
+      { q: "What is the formula used?", a: "Total water potential is Ψ = Ψs + Ψp. When you choose the concentration mode, solute potential is estimated as Ψs = −i C R T, with R = 0.008314 L·MPa/(mol·K) and T in kelvin." },
+      { q: "Why is solute potential negative?", a: "Dissolved solutes lower the free energy of water compared with pure water, which is defined as 0 MPa at standard conditions, so Ψs is zero or negative." },
+      { q: "What is the van 't Hoff factor?", a: "It is the number of particles a solute produces when dissolved, about 1 for sucrose and approaching 2 for a fully dissociated salt like NaCl. Real solutions deviate from these ideal values." },
+      { q: "What does this calculator leave out?", a: "Matric potential and gravitational potential are not included, and the concentration mode assumes an ideal dilute solution. It is an educational estimate." },
+      { q: "How does it relate to the Vapor Pressure Deficit Calculator?", a: "Both describe water movement. VPD is about the drying power of the air, and water potential is about the energy state of water in solutions or tissue. They are separate quantities." },
+    ],
+    related: ["vapor-pressure-deficit-calculator", "activity-coefficient-calculator", "cell-dilution-calculator"],
+  },
+  {
+    id: "water-soluble-fertilizer-calculator",
+    category: "biology",
+    title: "Water Soluble Fertilizer Calculator",
+    keyword: "water soluble fertilizer calculator, fertilizer ppm calculator",
+    description: "Calculate the theoretical nutrient concentration (mg/L or ppm) from fertilizer mass, final volume, and label N, P₂O₅, and K₂O percentages.",
+    intro: "Enter the fertilizer mass, the final solution volume, and the percentages printed on the label to see the theoretical nutrient concentrations. This is mass-balance arithmetic on the values you supply, not a feeding recommendation.",
+    fields: [
+      { id: "mass", label: "Fertilizer mass", type: "number", default: 1, step: "any", min: 0 },
+      { id: "massUnit", label: "Mass unit", type: "select", default: "g", options: [{ v: "g", l: "Grams" }, { v: "kg", l: "Kilograms" }, { v: "oz", l: "Ounces" }, { v: "lb", l: "Pounds" }] },
+      { id: "volume", label: "Final solution volume", type: "number", default: 4, step: "any", min: 0 },
+      { id: "volumeUnit", label: "Volume unit", type: "select", default: "l", options: [{ v: "l", l: "Liters" }, { v: "gal", l: "US gallons" }] },
+      { id: "nPct", label: "Label N, total nitrogen (%)", type: "number", default: 20, step: 0.1, min: 0, max: 100 },
+      { id: "p2o5Pct", label: "Label P₂O₅ (%)", type: "number", default: 20, step: 0.1, min: 0, max: 100 },
+      { id: "k2oPct", label: "Label K₂O (%)", type: "number", default: 20, step: 0.1, min: 0, max: 100 },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      if (!(v.mass > 0) || !(v.volume > 0)) return bad("Fertilizer mass and final volume must be greater than zero.");
+      if (!(v.nPct >= 0) || !(v.p2o5Pct >= 0) || !(v.k2oPct >= 0)) return bad("Label percentages cannot be negative.");
+      if (v.nPct + v.p2o5Pct + v.k2oPct > 100) return bad("The N, P₂O₅, and K₂O percentages together cannot exceed 100. Check the product label.");
+      const grams = v.mass * { g: 1, kg: 1000, oz: 28.349523125, lb: 453.59237 }[v.massUnit];
+      const liters = v.volume * (v.volumeUnit === "gal" ? 3.785411784 : 1);
+      const perL = (pct) => ((grams * pct) / 100 / liters) * 1000;
+      const n = perL(v.nPct);
+      const p2o5 = perL(v.p2o5Pct);
+      const k2o = perL(v.k2oPct);
+      const pElem = p2o5 * 0.4364;
+      const kElem = k2o * 0.8301;
+      const f = (x) => `${round(x, 1)} mg/L`;
+      return {
+        primary: { label: "Fertilizer concentration", value: `${round(grams / liters, 3)} g/L (${round((grams / liters) * 1000, 0)} mg/L)` },
+        secondary: [
+          { l: "Nitrogen (N)", v: f(n) },
+          { l: "Phosphate (P₂O₅)", v: f(p2o5) },
+          { l: "Potash (K₂O)", v: f(k2o) },
+          { l: "Elemental phosphorus (P)", v: f(pElem) },
+          { l: "Elemental potassium (K)", v: f(kElem) },
+        ],
+        note: "Nutrient mass = fertilizer mass × label percentage / 100, and concentration = nutrient mass / final volume. Label P₂O₅ and K₂O are oxide equivalents: elemental P = P₂O₅ × 0.4364 and elemental K = K₂O × 0.8301. Reading mg/L as ppm assumes a dilute solution with a density near 1 kg/L. Actual plant needs depend on the crop, water chemistry, and the product, so follow the product label and appropriate agronomic guidance.",
+      };
+    },
+    faq: [
+      { q: "How is this different from the Fertilizer Calculator?", a: "The Fertilizer Calculator works out how much product covers an area at an application rate. This tool starts from a mass dissolved in a final volume and reports the theoretical nutrient concentration in the solution." },
+      { q: "Is P₂O₅ the same as phosphorus?", a: "No. Labels state phosphate as P₂O₅, which contains about 43.64% elemental phosphorus. The calculator shows both the label form and the elemental equivalent." },
+      { q: "Is K₂O the same as potassium?", a: "No. Potash is stated as K₂O, which contains about 83.01% elemental potassium. The calculator shows both forms." },
+      { q: "Why is mg/L treated as ppm?", a: "For dilute aqueous solutions with a density close to 1 kg/L, 1 mg/L is approximately 1 ppm by mass. This breaks down for concentrated solutions." },
+      { q: "What concentration should I use?", a: "That depends on the plants, growth stage, water quality, and product, so this calculator does not suggest targets. Follow the product label and agronomic guidance for your crop." },
+      { q: "Does it account for impurities or solubility limits?", a: "No. It assumes the fertilizer dissolves completely and that the label percentages are accurate. Solubility limits and other ingredients are not modeled." },
+    ],
+    related: ["fertilizer-calculator", "cell-dilution-calculator", "ppm-percent-converter"],
+  },
+  {
+    id: "activity-coefficient-calculator",
+    category: "chemistry",
+    title: "Activity Coefficient Calculator",
+    keyword: "activity coefficient calculator, debye huckel calculator",
+    description: "Estimate an ionic activity coefficient from ion charge and ionic strength with the Debye-Hückel limiting law.",
+    intro: "Enter the ion's charge, the solution's ionic strength, and the Debye-Hückel constant to estimate the activity coefficient γ. The limiting law is a dilute-solution model, so treat results at higher ionic strength with caution.",
+    fields: [
+      { id: "charge", label: "Ion charge z (e.g. 1, 2, -1)", type: "number", default: 2, step: 1 },
+      { id: "ionicStrength", label: "Ionic strength I (mol/kg)", type: "number", default: 0.005, step: "any", min: 0 },
+      { id: "a", label: "Constant A ((mol/kg)^-1/2)", type: "number", default: 0.509, step: 0.001, min: 0 },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      if (!Number.isFinite(v.charge) || v.charge === 0) return bad("Enter a nonzero ion charge.");
+      if (!(v.ionicStrength >= 0)) return bad("Ionic strength cannot be negative.");
+      if (!(v.a >= 0)) return bad("Constant A cannot be negative.");
+      const logG = -v.a * v.charge * v.charge * Math.sqrt(v.ionicStrength);
+      const gamma = Math.pow(10, logG);
+      if (!Number.isFinite(gamma)) return bad("The result is outside a numerically meaningful range.");
+      const caution = v.ionicStrength > 0.01 ? " The ionic strength you entered is above about 0.01 mol/kg, where the limiting law becomes unreliable." : "";
+      return {
+        primary: { label: "Activity coefficient γ", value: `${round(gamma, 4)}` },
+        secondary: [
+          { l: "log₁₀(γ)", v: `${round(logG, 4)}` },
+          { l: "Charge squared z²", v: `${v.charge * v.charge}` },
+        ],
+        note: `log₁₀(γ) = −A z² √I, so γ = 10^(−A z² √I) (base-10 logarithm). A = 0.509 (mol/kg)^-1/2 is the commonly quoted value for water at 25 °C; use a value matched to your solvent and temperature.${caution} The limiting law applies only to dilute solutions. Activity coefficient is unrelated to a statistical correlation coefficient.`,
+      };
+    },
+    faq: [
+      { q: "What is an activity coefficient?", a: "An activity coefficient (γ) corrects a concentration for non-ideal behavior. Multiplying by it gives the effective concentration, or activity, that governs equilibrium in real solutions." },
+      { q: "Which equation does this use?", a: "The Debye-Hückel limiting law, log₁₀(γ) = −A z² √I, with a base-10 logarithm. The default A of 0.509 is the commonly quoted value for water at 25 °C." },
+      { q: "When is the limiting law accurate?", a: "Only for very dilute solutions, roughly ionic strength up to about 0.01 mol/kg. Beyond that, extended models such as Davies or extended Debye-Hückel equations are used, which this tool does not include." },
+      { q: "What is ionic strength?", a: "Ionic strength is I = ½ Σ cᵢ zᵢ², summing over all ions in solution. You supply it directly here." },
+      { q: "Why does a higher charge lower γ so quickly?", a: "The charge enters as z², so a divalent ion is affected four times as strongly as a monovalent ion at the same ionic strength." },
+      { q: "Is this the same as a correlation coefficient?", a: "No. The activity coefficient is a chemistry correction factor and has nothing to do with a statistical correlation coefficient." },
+    ],
+    related: ["water-potential-calculator", "molecular-weight-calculator", "titration-ph-calculator"],
+  },
+  {
+    id: "actual-yield-calculator",
+    category: "chemistry",
+    title: "Actual Yield Calculator",
+    keyword: "actual yield calculator, percent yield calculator",
+    description: "Calculate actual yield, percent yield, or theoretical yield for a chemical reaction from the other two values.",
+    intro: "Choose what you want to find: actual yield from theoretical yield and percent yield, percent yield from actual and theoretical yield, or theoretical yield from actual yield and percent yield. Values above 100% are shown as calculated.",
+    fields: [
+      { id: "mode", label: "Find", type: "select", default: "actual", options: [{ v: "actual", l: "Actual yield" }, { v: "percent", l: "Percent yield" }, { v: "theoretical", l: "Theoretical yield" }] },
+      { id: "theoretical", label: "Theoretical yield (actual and percent modes)", type: "number", default: 100, step: "any", min: 0 },
+      { id: "actual", label: "Actual yield (percent and theoretical modes)", type: "number", default: 80, step: "any", min: 0 },
+      { id: "percent", label: "Percent yield, % (actual and theoretical modes)", type: "number", default: 80, step: "any", min: 0 },
+      { id: "unit", label: "Unit (same for all yields)", type: "select", default: "g", options: [{ v: "g", l: "g" }, { v: "kg", l: "kg" }, { v: "mg", l: "mg" }, { v: "mol", l: "mol" }] },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      let th;
+      let ac;
+      let pc;
+      if (v.mode === "actual") {
+        if (!(v.theoretical > 0) || !(v.percent >= 0)) return bad("Theoretical yield must be greater than zero and percent yield cannot be negative.");
+        th = v.theoretical; pc = v.percent; ac = (th * pc) / 100;
+      } else if (v.mode === "percent") {
+        if (!(v.theoretical > 0) || !(v.actual >= 0)) return bad("Theoretical yield must be greater than zero and actual yield cannot be negative.");
+        th = v.theoretical; ac = v.actual; pc = (ac / th) * 100;
+      } else {
+        if (!(v.percent > 0) || !(v.actual >= 0)) return bad("Percent yield must be greater than zero and actual yield cannot be negative.");
+        ac = v.actual; pc = v.percent; th = (ac * 100) / pc;
+      }
+      const u = v.unit;
+      const over = pc > 100 ? " A percent yield above 100% means the measured amount exceeds the theoretical amount, which can point to impurities, residual solvent or moisture, measurement error, or an incorrect theoretical value." : "";
+      const main = v.mode === "actual" ? { label: "Actual yield", value: `${round(ac, 4)} ${u}` } : v.mode === "percent" ? { label: "Percent yield", value: `${round(pc, 3)}%` } : { label: "Theoretical yield", value: `${round(th, 4)} ${u}` };
+      return {
+        primary: main,
+        secondary: [
+          { l: "Theoretical yield", v: `${round(th, 4)} ${u}` },
+          { l: "Actual yield", v: `${round(ac, 4)} ${u}` },
+          { l: "Percent yield", v: `${round(pc, 3)}%` },
+        ],
+        note: `Percent yield = actual yield / theoretical yield × 100. Use the same unit for actual and theoretical yield.${over} The result is not capped at 100%.`,
+      };
+    },
+    faq: [
+      { q: "What is the formula for percent yield?", a: "Percent yield = actual yield / theoretical yield × 100. Rearranged, actual yield = theoretical yield × percent yield / 100." },
+      { q: "What is the difference between actual and theoretical yield?", a: "Theoretical yield is the maximum product predicted by stoichiometry, and actual yield is the amount you really obtain and measure." },
+      { q: "Can percent yield be above 100%?", a: "The calculator shows what the numbers give and does not cap the value. A measured yield above theoretical usually signals impurities, leftover solvent or water, weighing errors, or a mistake in the theoretical value." },
+      { q: "Do units matter?", a: "Yes. Enter actual and theoretical yield in the same unit. The percent yield itself is unitless." },
+      { q: "Why is theoretical yield required to be nonzero?", a: "Percent yield divides by theoretical yield, so a zero value makes the calculation undefined." },
+      { q: "How is this different from crop yield calculators?", a: "This is a chemistry calculator for the amount of product from a reaction. The Corn Yield and Vegetable Yield calculators estimate agricultural harvests and use unrelated inputs." },
+    ],
+    related: ["percentage-calculator", "molecular-weight-calculator", "titration-ph-calculator"],
+  },
+  {
+    id: "air-fuel-ratio-calculator",
+    category: "chemistry",
+    title: "Air-Fuel Ratio Calculator",
+    keyword: "air fuel ratio calculator, afr calculator",
+    description: "Calculate the air-to-fuel mass ratio (AFR) and inverse fuel-to-air ratio from the masses of air and fuel.",
+    intro: "Enter the mass of air and the mass of fuel, with their units, to get the air-to-fuel mass ratio and its inverse. This is an educational ratio calculator and does not give tuning or combustion guidance.",
+    fields: [
+      { id: "airMass", label: "Mass of air", type: "number", default: 14.7, step: "any", min: 0 },
+      { id: "airUnit", label: "Air mass unit", type: "select", default: "g", options: [{ v: "g", l: "g" }, { v: "kg", l: "kg" }, { v: "lb", l: "lb" }, { v: "oz", l: "oz" }] },
+      { id: "fuelMass", label: "Mass of fuel", type: "number", default: 1, step: "any", min: 0 },
+      { id: "fuelUnit", label: "Fuel mass unit", type: "select", default: "g", options: [{ v: "g", l: "g" }, { v: "kg", l: "kg" }, { v: "lb", l: "lb" }, { v: "oz", l: "oz" }] },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      if (!(v.fuelMass > 0)) return bad("Fuel mass must be greater than zero.");
+      if (!(v.airMass >= 0)) return bad("Air mass cannot be negative.");
+      const toG = { g: 1, kg: 1000, lb: 453.59237, oz: 28.349523125 };
+      const air = v.airMass * toG[v.airUnit];
+      const fuel = v.fuelMass * toG[v.fuelUnit];
+      const afr = air / fuel;
+      return {
+        primary: { label: "Air-fuel ratio (mass)", value: `${round(afr, 3)} : 1` },
+        secondary: [
+          { l: "Fuel-air ratio", v: afr > 0 ? `${round(1 / afr, 5)}` : "Not defined when the air mass is zero" },
+          { l: "Air mass used", v: `${round(air, 3)} g` },
+          { l: "Fuel mass used", v: `${round(fuel, 3)} g` },
+        ],
+        note: "AFR = mass of air / mass of fuel, after converting both to the same unit. This is a mass ratio, not a volume ratio, and it is not the same as the stoichiometric ratio, which depends on the fuel's chemical composition and the oxidizer. The calculator only divides the masses you enter.",
+      };
+    },
+    faq: [
+      { q: "What is the air-fuel ratio?", a: "The air-fuel ratio (AFR) is the mass of air divided by the mass of fuel in a mixture, written as a number to 1." },
+      { q: "Is AFR a mass ratio or a volume ratio?", a: "By definition here it is a mass ratio. A ratio by volume is a different quantity and cannot be swapped in without conversion." },
+      { q: "What is a stoichiometric ratio?", a: "It is the AFR at which the fuel would be completely oxidized with no excess air or fuel. It depends on the fuel's composition and the assumed oxidizer, so this tool does not assume any value." },
+      { q: "Can I use different units for air and fuel?", a: "Yes. Each has its own unit and the calculator converts both to grams before dividing." },
+      { q: "Why is a zero fuel mass rejected?", a: "The ratio divides by fuel mass, so zero would be undefined." },
+      { q: "Does this help tune an engine?", a: "No. It is an educational ratio calculator only. It does not provide fuel mixture targets or combustion guidance." },
+    ],
+    related: ["ratio-calculator", "molecular-weight-calculator", "percentage-calculator"],
+  },
+  {
+    id: "alligation-calculator",
+    category: "chemistry",
+    title: "Alligation Calculator",
+    keyword: "alligation calculator",
+    description: "Find the ratio of a higher- and lower-concentration solution needed to reach a target concentration by alligation.",
+    intro: "Enter the higher concentration, the lower concentration, and the target between them. The calculator returns the mixing ratio, and the amount of each when you give a total quantity. It assumes quantities add linearly on the same concentration basis.",
+    fields: [
+      { id: "high", label: "Higher concentration", type: "number", default: 20, step: "any", min: 0 },
+      { id: "low", label: "Lower concentration", type: "number", default: 5, step: "any", min: 0 },
+      { id: "target", label: "Target concentration", type: "number", default: 10, step: "any", min: 0 },
+      { id: "basis", label: "Concentration basis (same for all three)", type: "select", default: "%", options: [{ v: "%", l: "Percent (same basis for all)" }, { v: "mg/mL", l: "mg/mL" }, { v: "g/L", l: "g/L" }, { v: "mol/L", l: "mol/L" }] },
+      { id: "total", label: "Total mixture quantity (0 to skip)", type: "number", default: 0, step: "any", min: 0 },
+      { id: "totalUnit", label: "Quantity unit", type: "select", default: "mL", options: [{ v: "mL", l: "mL" }, { v: "L", l: "L" }, { v: "g", l: "g" }, { v: "kg", l: "kg" }] },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      if (![v.high, v.low, v.target].every(Number.isFinite) || v.high < 0 || v.low < 0 || v.target < 0) return bad("Concentrations must be zero or positive numbers.");
+      if (v.high === v.low) return bad("The higher and lower concentrations must be different.");
+      if (v.high < v.low) return bad("The higher concentration must be greater than the lower concentration.");
+      if (v.target < v.low || v.target > v.high) return bad("The target must lie between the lower and higher concentrations.");
+      if (!(v.total >= 0)) return bad("Total quantity cannot be negative.");
+      const hiParts = v.target - v.low;
+      const loParts = v.high - v.target;
+      const sum = hiParts + loParts;
+      const secondary = [
+        { l: "Parts of higher concentration", v: `${round(hiParts, 4)}` },
+        { l: "Parts of lower concentration", v: `${round(loParts, 4)}` },
+        { l: "Share of higher solution", v: `${round((hiParts / sum) * 100, 3)}%` },
+        { l: "Share of lower solution", v: `${round((loParts / sum) * 100, 3)}%` },
+      ];
+      if (v.total > 0) {
+        secondary.push({ l: `Higher solution needed`, v: `${round((hiParts / sum) * v.total, 4)} ${v.totalUnit}` });
+        secondary.push({ l: `Lower solution needed`, v: `${round((loParts / sum) * v.total, 4)} ${v.totalUnit}` });
+      }
+      const g = (a, b) => (b < 1e-9 ? a : g(b, a % b));
+      const scale = 10000;
+      const ai = Math.round(hiParts * scale);
+      const bi = Math.round(loParts * scale);
+      const d = ai === 0 && bi === 0 ? 1 : g(ai, bi);
+      const ratio = d > 0 ? `${round(ai / d, 4)} : ${round(bi / d, 4)}` : `${round(hiParts, 4)} : ${round(loParts, 4)}`;
+      return {
+        primary: { label: "Higher : lower mixing ratio", value: ratio },
+        secondary,
+        note: "Alligation: parts of higher = target − lower, parts of lower = higher − target. This assumes quantities are additive and that the chosen concentration basis mixes linearly (for example, percent by mass with masses, or volume-based concentrations with additive volumes). Do not mix different bases such as % w/w and % v/v. This is a math tool, not a compounding or dosing guide.",
+      };
+    },
+    faq: [
+      { q: "What is alligation?", a: "Alligation is a shortcut for finding the ratio in which two ingredients of different concentrations must be mixed to reach a concentration in between them." },
+      { q: "How is alligation different from dilution?", a: "Dilution typically starts from a single stock and adds a diluent of zero concentration. Alligation mixes two sources that both have nonzero concentrations and finds the proportions of each." },
+      { q: "How do the parts work?", a: "Higher parts = target − lower, and lower parts = higher − target. For 20% and 5% with a 10% target, that is 5 parts of 20% to 10 parts of 5%, a ratio of 1:2." },
+      { q: "Why must the target lie between the two concentrations?", a: "A mixture of two solutions can only land between their concentrations. A target outside that range is impossible by mixing alone." },
+      { q: "Can I mix percent by mass with percent by volume?", a: "No. All concentrations must use the same basis, and volume-based mixing assumes volumes are additive." },
+      { q: "Is this a dosing or compounding tool?", a: "No. It performs the alligation arithmetic only and is not intended for medication compounding or hazardous chemical mixing." },
+    ],
+    related: ["cell-dilution-calculator", "ratio-calculator", "percentage-calculator"],
+  },
+  {
+    id: "arrhenius-equation-calculator",
+    category: "chemistry",
+    title: "Arrhenius Equation Calculator",
+    keyword: "arrhenius equation calculator, activation energy calculator",
+    description: "Use the Arrhenius equation to find a rate constant, the activation energy from two temperatures, or a rate constant at a new temperature.",
+    intro: "One tool for the Arrhenius relationship. Choose whether to calculate a rate constant from the pre-exponential factor and activation energy, to find the activation energy from rate constants at two temperatures, or to predict the rate constant at a second temperature. Temperatures are converted to kelvin internally.",
+    fields: [
+      { id: "mode", label: "Calculate", type: "select", default: "rate", options: [{ v: "rate", l: "Rate constant k = A·exp(−Ea/RT)" }, { v: "activation", l: "Activation energy from k₁, k₂ at T₁, T₂" }, { v: "newrate", l: "Rate constant k₂ at T₂ from k₁ and Ea" }] },
+      { id: "tempUnit", label: "Temperature unit", type: "select", default: "K", options: [{ v: "K", l: "Kelvin (K)" }, { v: "C", l: "Celsius (°C)" }, { v: "F", l: "Fahrenheit (°F)" }] },
+      { id: "t1", label: "Temperature T₁", type: "number", default: 300, step: "any" },
+      { id: "t2", label: "Temperature T₂ (two-temperature modes)", type: "number", default: 310, step: "any" },
+      { id: "a", label: "Pre-exponential factor A (rate mode; same units as k)", type: "number", default: 1e13, step: "any", min: 0 },
+      { id: "eaValue", label: "Activation energy Ea (rate and new-rate modes)", type: "number", default: 75, step: "any", min: 0 },
+      { id: "eaUnit", label: "Activation energy unit", type: "select", default: "kJ", options: [{ v: "kJ", l: "kJ/mol" }, { v: "J", l: "J/mol" }, { v: "kcal", l: "kcal/mol" }] },
+      { id: "k1", label: "Rate constant k₁ (activation and new-rate modes)", type: "number", default: 0.001, step: "any", min: 0 },
+      { id: "k2", label: "Rate constant k₂ (activation mode)", type: "number", default: 0.003, step: "any", min: 0 },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      const R = 8.314462618;
+      const toK = (t) => (v.tempUnit === "C" ? t + 273.15 : v.tempUnit === "F" ? ((t - 32) * 5) / 9 + 273.15 : t);
+      const eaJ = (v.eaValue || 0) * { kJ: 1000, J: 1, kcal: 4184 }[v.eaUnit];
+      const T1 = toK(v.t1);
+      const T2 = toK(v.t2);
+      const fmt = (x) => (x !== 0 && (Math.abs(x) >= 1e6 || Math.abs(x) < 1e-3) ? x.toExponential(4) : `${round(x, 6)}`);
+      const done = (primary, secondary, extra) => ({
+        primary,
+        secondary,
+        note: `Arrhenius equation: k = A·exp(−Ea/RT), with R = 8.314 J/(mol·K) and T in kelvin. ${extra} The units of A and k depend on the reaction order. Real reactions may deviate from Arrhenius behavior, especially over wide temperature ranges.`,
+      });
+      if (v.mode === "rate") {
+        if (!(T1 > 0)) return bad("Temperature must be above absolute zero.");
+        if (!(v.a > 0) || !(v.eaValue >= 0)) return bad("The pre-exponential factor must be greater than zero and activation energy cannot be negative.");
+        const exponent = -eaJ / (R * T1);
+        const k = v.a * Math.exp(exponent);
+        if (!Number.isFinite(k)) return bad("The result is outside the numerically representable range.");
+        return done({ label: "Rate constant k", value: fmt(k) }, [
+          { l: "Temperature used", v: `${round(T1, 2)} K` },
+          { l: "Exponent −Ea/RT (dimensionless)", v: `${round(exponent, 4)}` },
+          { l: "Ea used", v: `${round(eaJ / 1000, 3)} kJ/mol` },
+        ], "Here k is calculated directly from A, Ea, and T.");
+      }
+      if (!(T1 > 0) || !(T2 > 0)) return bad("Temperatures must be above absolute zero.");
+      if (T1 === T2) return bad("The two temperatures must be different.");
+      if (v.mode === "activation") {
+        if (!(v.k1 > 0) || !(v.k2 > 0)) return bad("Both rate constants must be greater than zero.");
+        const ea = (R * Math.log(v.k2 / v.k1)) / (1 / T1 - 1 / T2);
+        if (!Number.isFinite(ea)) return bad("The result is outside the numerically representable range.");
+        return done({ label: "Activation energy", value: `${round(ea / 1000, 3)} kJ/mol` }, [
+          { l: "In J/mol", v: `${round(ea, 1)} J/mol` },
+          { l: "In kcal/mol", v: `${round(ea / 4184, 3)} kcal/mol` },
+          { l: "Temperatures used", v: `${round(T1, 2)} K and ${round(T2, 2)} K` },
+        ], "Two-point form: ln(k₂/k₁) = (Ea/R)(1/T₁ − 1/T₂), so Ea = R·ln(k₂/k₁) / (1/T₁ − 1/T₂). It assumes Arrhenius behavior between the two temperatures.");
+      }
+      if (!(v.k1 > 0) || !(v.eaValue >= 0)) return bad("The rate constant must be greater than zero and activation energy cannot be negative.");
+      const k2 = v.k1 * Math.exp((eaJ / R) * (1 / T1 - 1 / T2));
+      if (!Number.isFinite(k2)) return bad("The result is outside the numerically representable range.");
+      return done({ label: "Rate constant k₂", value: fmt(k2) }, [
+        { l: "Ratio k₂/k₁", v: fmt(k2 / v.k1) },
+        { l: "Temperatures used", v: `${round(T1, 2)} K and ${round(T2, 2)} K` },
+      ], "Here k₂ = k₁·exp[(Ea/R)(1/T₁ − 1/T₂)].");
+    },
+    faq: [
+      { q: "How is this different from an Activation Energy Calculator?", a: "It includes one. Choose the second mode to find the activation energy from two rate constants and two temperatures. Both use the same Arrhenius relationship, so they are in one tool rather than two pages that rearrange the same equation." },
+      { q: "What does the Arrhenius equation say?", a: "The rate constant grows exponentially with temperature: k = A·exp(−Ea/RT). A larger activation energy makes the reaction more sensitive to temperature." },
+      { q: "Why does the calculator use kelvin?", a: "The equation involves 1/T and an absolute temperature scale, so Celsius or Fahrenheit inputs are converted to kelvin first. Using °C directly gives wrong results." },
+      { q: "What units do A and k have?", a: "They share units that depend on the reaction order, for example s⁻¹ for first order. The exponent −Ea/RT is dimensionless." },
+      { q: "How accurate is the two-point activation energy?", a: "It assumes a constant activation energy and Arrhenius behavior between the two temperatures. Using more than two temperatures, in an Arrhenius plot, is more reliable in practice." },
+      { q: "Do all reactions follow the Arrhenius equation?", a: "No. Many do over limited ranges, but some do not, especially those with complex mechanisms, enzyme denaturation, or wide temperature spans." },
+    ],
+    related: ["activity-coefficient-calculator", "actual-yield-calculator", "molecular-weight-calculator"],
   },
 ];
 

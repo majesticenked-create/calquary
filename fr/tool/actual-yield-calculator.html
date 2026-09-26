@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F01ZNK7C3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F01ZNK7C3Q');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514537479999146"
+     crossorigin="anonymous"></script>
+  <script>(function(){try{var t=localStorage.getItem('calquary-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculateur de Rendement Réel</title>
+  <meta name="description" content="Calculez le rendement réel, le rendement en pourcentage ou le rendement théorique d'une réaction chimique à partir des deux autres valeurs." />
+  <meta property="og:title" content="Calculateur de Rendement Réel | Calquary">
+  <meta property="og:description" content="Calculez le rendement réel, le rendement en pourcentage ou le rendement théorique d'une réaction chimique à partir des deux autres valeurs.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calquary.com/fr/tool/actual-yield-calculator">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Calquary">
+  <meta property="og:image" content="https://calquary.com/og-images/actual-yield-calculator.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculateur de Rendement Réel | Calquary">
+  <meta name="twitter:description" content="Calculez le rendement réel, le rendement en pourcentage ou le rendement théorique d'une réaction chimique à partir des deux autres valeurs.">
+  <meta name="twitter:image" content="https://calquary.com/og-images/actual-yield-calculator.png">
+    <link rel="alternate" hreflang="en" href="https://calquary.com/tool/actual-yield-calculator">
+  <link rel="alternate" hreflang="es" href="https://calquary.com/es/tool/actual-yield-calculator">
+  <link rel="alternate" hreflang="fr" href="https://calquary.com/fr/tool/actual-yield-calculator">
+  <link rel="alternate" hreflang="de" href="https://calquary.com/de/tool/actual-yield-calculator">
+  <link rel="alternate" hreflang="pt" href="https://calquary.com/pt/tool/actual-yield-calculator">
+  <link rel="alternate" hreflang="it" href="https://calquary.com/it/tool/actual-yield-calculator">
+  <link rel="alternate" hreflang="ja" href="https://calquary.com/ja/tool/actual-yield-calculator">
+  <link rel="alternate" hreflang="ro" href="https://calquary.com/ro/tool/actual-yield-calculator">
+  <link rel="alternate" hreflang="el" href="https://calquary.com/el/tool/actual-yield-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://calquary.com/zh/tool/actual-yield-calculator">
+  <link rel="alternate" hreflang="ar" href="https://calquary.com/ar/tool/actual-yield-calculator">
+  <link rel="alternate" hreflang="th" href="https://calquary.com/th/tool/actual-yield-calculator">
+  <link rel="alternate" hreflang="x-default" href="https://calquary.com/tool/actual-yield-calculator">
+    <link rel="canonical" href="https://calquary.com/fr/tool/actual-yield-calculator">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/calculators-data.js" defer></script>
+  <script src="/js/engine.js" defer></script>
+  <script src="/js/theme.js" defer></script>
+  <script src="/js/locale-switcher.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Static SEO content (title/intro/FAQ/breadcrumb) is baked directly
+      // into this HTML at build time (see build.js) — NOT set here via JS.
+      // A prior version of this template set tool-title/tool-intro/faq-list
+      // via calc.title/calc.intro/calc.faq after DOMContentLoaded, which
+      // meant that content only existed in the DOM after JS ran — exactly
+      // the "Google only sees English" failure mode flagged from the
+      // textdedupe project's client-side-only i18n mistake. The only thing
+      // still JS-driven here is the interactive calculator widget itself
+      // (fields/compute/results) and the related-tools list, neither of
+      // which is static SEO prose.
+      const calc = getCalculator("actual-yield-calculator");
+
+      const relWrap = document.getElementById("related-list");
+      calc.related.forEach((relId) => {
+        const rel = getCalculator(relId);
+        if (!rel) return;
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="/tool/${rel.id}">${rel.title}</a>`;
+        relWrap.appendChild(li);
+      });
+
+      initCalculator("actual-yield-calculator");
+    });
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Calculateur de Rendement Réel",
+      "description": "Calculez le rendement réel, le rendement en pourcentage ou le rendement théorique d'une réaction chimique à partir des deux autres valeurs.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "url": "https://calquary.com/fr/tool/actual-yield-calculator",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "dateModified": "2026-09-26",
+      "inLanguage": "fr"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Calquary",
+          "item": "https://calquary.com/fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Chemistry",
+          "item": "https://calquary.com/fr/category/chemistry"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calculateur de Rendement Réel",
+          "item": "https://calquary.com/fr/tool/actual-yield-calculator"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quelle est la formule du rendement en pourcentage ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rendement en pourcentage = rendement réel / rendement théorique × 100. Réarrangée, rendement réel = rendement théorique × rendement en pourcentage / 100."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelle différence entre rendement réel et théorique ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le rendement théorique est le maximum de produit prédit par la stœchiométrie, et le rendement réel est la quantité que vous obtenez et mesurez effectivement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Le rendement en pourcentage peut-il dépasser 100 % ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le calculateur affiche ce que donnent les nombres et ne plafonne pas la valeur. Un rendement mesuré supérieur au théorique signale souvent des impuretés, des restes de solvant ou d'eau, des erreurs de pesée ou une erreur dans la valeur théorique."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Les unités comptent-elles ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. Saisissez le rendement réel et le théorique dans la même unité. Le rendement en pourcentage lui-même est sans unité."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pourquoi le rendement théorique doit-il être non nul ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le rendement en pourcentage divise par le rendement théorique : une valeur nulle rend le calcul indéfini."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "En quoi est-ce différent des calculateurs de rendement agricole ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Celui-ci est un calculateur de chimie pour la quantité de produit d'une réaction. Les calculateurs de Rendement du Maïs et de Rendement des Légumes estiment des récoltes agricoles et utilisent des données sans rapport."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="tool-page">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/fr/" class="brand-mark">Calquary<span class="dot">.</span></a>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="/fr/#categories">Catégories</a>
+          <a href="/fr/#tools">Tous les outils</a>
+          <a href="/fr/about">À propos</a>
+        </nav>
+        <div class="locale-switcher">
+          <button type="button" class="locale-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Change language, current: Français">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9z"/></svg>
+            <span>FR</span>
+          </button>
+          <div class="locale-menu" role="menu"><a class="locale-item" role="menuitem" href="/tool/actual-yield-calculator">English</a><a class="locale-item" role="menuitem" href="/es/tool/actual-yield-calculator">Español</a><span class="locale-item current" role="menuitem" aria-current="true">Français</span><a class="locale-item" role="menuitem" href="/de/tool/actual-yield-calculator">Deutsch</a><a class="locale-item" role="menuitem" href="/pt/tool/actual-yield-calculator">Português</a><a class="locale-item" role="menuitem" href="/it/tool/actual-yield-calculator">Italiano</a><a class="locale-item" role="menuitem" href="/ja/tool/actual-yield-calculator">日本語</a><a class="locale-item" role="menuitem" href="/ro/tool/actual-yield-calculator">Română</a><a class="locale-item" role="menuitem" href="/el/tool/actual-yield-calculator">Ελληνικά</a><a class="locale-item" role="menuitem" href="/zh/tool/actual-yield-calculator">中文</a><a class="locale-item" role="menuitem" href="/ar/tool/actual-yield-calculator">العربية</a><a class="locale-item" role="menuitem" href="/th/tool/actual-yield-calculator">ไทย</a></div>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">AUTO</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:32px;">
+    <div class="breadcrumb">
+      <a href="/fr/">Calquary</a> / <a href="/fr/category/chemistry">Chimie</a>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:64px;">
+    <div class="tool-layout">
+      <main>
+        <h1>Calculateur de Rendement Réel</h1>
+        <p style="max-width:60ch;">Choisissez ce que vous cherchez : le rendement réel à partir du rendement théorique et du pourcentage, le rendement en pourcentage à partir du réel et du théorique, ou le rendement théorique à partir du réel et du pourcentage. Les valeurs supérieures à 100 % sont affichées telles que calculées.</p>
+        <p class="last-updated">Dernière mise à jour : September 26, 2026</p>
+        <div id="print-summary" class="print-summary"></div>
+
+        <div class="calc-panel" id="calc-panel">
+          <div id="calc-diagram" class="calc-diagram" style="display:none;"></div>
+          <form id="calc-form">
+            <div id="calc-fields"></div>
+            <div class="calc-actions">
+              <button type="submit" class="btn-primary">Calculer</button>
+              <button type="button" id="calc-reset" class="btn-ghost">Réinitialiser</button>
+            </div>
+          </form>
+
+          <div id="calc-result" class="result-panel">
+            <div class="result-primary">
+              <span class="value"></span>
+              <span class="label"></span>
+            </div>
+            <div class="result-secondary"></div>
+            <div class="result-notes" style="display:none;"></div>
+            <div class="result-table-wrap" style="display:none;"><table class="result-table"><thead></thead><tbody></tbody></table></div>
+          </div>
+        </div>
+
+        <div class="article-block">
+          <h2>Questions fréquentes</h2>
+          <div id="faq-list"><div class="faq-item">
+<h3>Quelle est la formule du rendement en pourcentage ?</h3>
+<p>Rendement en pourcentage = rendement réel / rendement théorique × 100. Réarrangée, rendement réel = rendement théorique × rendement en pourcentage / 100.</p>
+</div>
+<div class="faq-item">
+<h3>Quelle différence entre rendement réel et théorique ?</h3>
+<p>Le rendement théorique est le maximum de produit prédit par la stœchiométrie, et le rendement réel est la quantité que vous obtenez et mesurez effectivement.</p>
+</div>
+<div class="faq-item">
+<h3>Le rendement en pourcentage peut-il dépasser 100 % ?</h3>
+<p>Le calculateur affiche ce que donnent les nombres et ne plafonne pas la valeur. Un rendement mesuré supérieur au théorique signale souvent des impuretés, des restes de solvant ou d'eau, des erreurs de pesée ou une erreur dans la valeur théorique.</p>
+</div>
+<div class="faq-item">
+<h3>Les unités comptent-elles ?</h3>
+<p>Oui. Saisissez le rendement réel et le théorique dans la même unité. Le rendement en pourcentage lui-même est sans unité.</p>
+</div>
+<div class="faq-item">
+<h3>Pourquoi le rendement théorique doit-il être non nul ?</h3>
+<p>Le rendement en pourcentage divise par le rendement théorique : une valeur nulle rend le calcul indéfini.</p>
+</div>
+<div class="faq-item">
+<h3>En quoi est-ce différent des calculateurs de rendement agricole ?</h3>
+<p>Celui-ci est un calculateur de chimie pour la quantité de produit d'une réaction. Les calculateurs de Rendement du Maïs et de Rendement des Légumes estiment des récoltes agricoles et utilisent des données sans rapport.</p>
+</div></div>
+          <a href="#calc-panel" class="btn-primary" style="display:inline-block;margin-top:24px;text-decoration:none;">Calculer</a>
+        </div>
+      </main>
+
+      <aside>
+        <div class="sidebar-block">
+          <h4>Outils associés</h4>
+          <ul class="related-list" id="related-list"></ul>
+        </div>
+        <div class="sidebar-block">
+          <h4>Remarque sur la précision</h4>
+          <p style="margin:0;font-size:0.85rem;">Les calculatrices de Calquary sont conçues pour fournir des estimations rapides et fiables. Pour toute décision ayant de réelles conséquences financières, structurelles ou médicales, consultez un professionnel qualifié.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-base">
+        <p style="margin:0;"><a href="/fr/">← Retour à toutes les calculatrices</a> · <a href="/fr/about">À propos</a> · <a href="/fr/contact">Contact</a> · <a href="/fr/privacy">Confidentialité</a> · <a href="/fr/terms">Conditions</a> · © 2026 Calquary</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="print-footer" class="print-footer"></div>
+
+</body>
+</html>
