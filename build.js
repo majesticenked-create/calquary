@@ -205,6 +205,16 @@ const WAVE_ONE_TOOL_IDS = [
   "air-fuel-ratio-calculator",
   "alligation-calculator",
   "arrhenius-equation-calculator",
+  // Batch 23 (Batch 012 build): 9 new tools translated into all 11 non-English locales.
+  "atom-calculator",
+  "atom-economy-calculator",
+  "average-atomic-mass-calculator",
+  "avogadros-number-calculator",
+  "beer-lambert-law-calculator",
+  "bleach-dilution-calculator",
+  "boiling-point-calculator",
+  "boiling-point-at-altitude-calculator",
+  "boiling-point-elevation-calculator",
 ];
 
 function loadData() {

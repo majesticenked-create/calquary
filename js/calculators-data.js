@@ -1972,7 +1972,7 @@ const CALCULATORS = [
       { q: "Is 'molar weight calculator' or 'mol wt calculator' the same as molecular weight?", a: "Yes - \"molar weight,\" \"mol wt,\" \"molecular weight,\" and \"molar mass\" are all names for the same quantity: the mass of one mole of a substance, in grams per mole. This calculator computes it from any chemical formula you enter." },
       { q: "How do we calculate molar mass?", a: "Add up the atomic weight of each element in the formula, multiplied by how many atoms of that element appear - for H2O, that's 2 × 1.008 (hydrogen) + 1 × 15.999 (oxygen) = 18.015 g/mol. Enter any formula above and this calculator does that sum for you." },
     ],
-    related: ["percentage-calculator", "square-root-calculator", "dna-copy-number-calculator", "annealing-temperature-calculator"],
+    related: ["percentage-calculator", "avogadros-number-calculator", "dna-copy-number-calculator", "annealing-temperature-calculator"],
   },
   {
     id: "empirical-formula-calculator",
@@ -7036,7 +7036,7 @@ const CALCULATORS = [
       { q: "Why do pilots need pressure altitude instead of just using field elevation?", a: "Aircraft performance charts (takeoff distance, climb rate, engine output) are calibrated to standard atmospheric conditions, so pressure altitude - which normalizes for the day's actual barometric pressure - gives a consistent baseline for those calculations regardless of local weather." },
       { q: "Is pressure altitude the same as flight level?", a: "They're closely related - flight levels (like FL350) are pressure altitudes above the transition altitude, expressed in hundreds of feet with the altimeter always set to the standard 29.92 inHg, exactly how this calculator computes pressure altitude." },
     ],
-    related: ["unit-length-converter", "pressure-converter", "sunrise-sunset-calculator"],
+    related: ["unit-length-converter", "pressure-converter", "sunrise-sunset-calculator", "boiling-point-at-altitude-calculator"],
   },
   {
     id: "time-zone-meeting-planner",
@@ -10806,7 +10806,7 @@ const CALCULATORS = [
       { q: "What's a typical A260 reading for a usable DNA sample?", a: "It varies enormously by application and extraction method - anywhere from very dilute (A260 well under 0.1) to fairly concentrated (A260 of 1 or more) samples can be usable depending on what you need the DNA for. There's no single 'normal' reading; check the concentration requirements for your specific downstream application." },
       { q: "Why does the result show both µg/mL and ng/µL?", a: "µg/mL and ng/µL are numerically equivalent (1 µg/mL = 1 ng/µL), but different labs and protocols commonly report concentration in one or the other - showing both saves a manual conversion regardless of which unit your protocol or downstream application expects." },
     ],
-    related: ["dna-copy-number-calculator", "cell-dilution-calculator", "molecular-weight-calculator"],
+    related: ["dna-copy-number-calculator", "cell-dilution-calculator", "molecular-weight-calculator", "beer-lambert-law-calculator"],
   },
   {
     id: "dna-copy-number-calculator",
@@ -12769,7 +12769,7 @@ const CALCULATORS = [
       { q: "What does dilution factor do in the A280 mode?", a: "If you diluted your sample before measuring absorbance, multiply the calculated concentration back up by the dilution factor to get the concentration of your original, undiluted sample." },
       { q: "Can I use this for crude extracts or mixtures?", a: "A280 readings for mixtures reflect the combined absorbance of everything present, not just your protein of interest, so this mode is most reliable for purified or well-characterized protein solutions." },
     ],
-    related: ["dna-concentration-calculator", "cell-dilution-calculator", "protein-molecular-weight-calculator"],
+    related: ["dna-concentration-calculator", "cell-dilution-calculator", "protein-molecular-weight-calculator", "beer-lambert-law-calculator"],
   },
   {
     id: "protein-molecular-weight-calculator",
@@ -13905,7 +13905,7 @@ const CALCULATORS = [
       { q: "Why is theoretical yield required to be nonzero?", a: "Percent yield divides by theoretical yield, so a zero value makes the calculation undefined." },
       { q: "How is this different from crop yield calculators?", a: "This is a chemistry calculator for the amount of product from a reaction. The Corn Yield and Vegetable Yield calculators estimate agricultural harvests and use unrelated inputs." },
     ],
-    related: ["percentage-calculator", "molecular-weight-calculator", "titration-ph-calculator"],
+    related: ["percentage-calculator", "molecular-weight-calculator", "titration-ph-calculator", "atom-economy-calculator"],
   },
   {
     id: "air-fuel-ratio-calculator",
@@ -14078,6 +14078,468 @@ const CALCULATORS = [
     ],
     related: ["activity-coefficient-calculator", "actual-yield-calculator", "molecular-weight-calculator"],
   },
+  {
+    id: "atom-calculator",
+    category: "chemistry",
+    title: "Atom Calculator",
+    keyword: "atom calculator, protons neutrons electrons calculator",
+    description: "Find the number of protons, neutrons, and electrons in an atom or ion from its atomic number, mass number, and charge.",
+    intro: "Enter the atomic number Z, the mass number A, and the ionic charge to see how many protons, neutrons, and electrons the atom or ion has. Use a positive charge for a cation (electrons removed) and a negative charge for an anion (electrons added).",
+    fields: [
+      { id: "z", label: "Atomic number Z (number of protons)", type: "number", default: 11, step: 1, min: 1, max: 118 },
+      { id: "a", label: "Mass number A (protons + neutrons)", type: "number", default: 23, step: 1, min: 1, max: 300 },
+      { id: "charge", label: "Ionic charge (0 for a neutral atom, +1, -2, ...)", type: "number", default: 1, step: 1 },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      if (!Number.isInteger(v.z) || v.z < 1 || v.z > 118) return bad("The atomic number must be a whole number from 1 to 118.");
+      if (!Number.isInteger(v.a) || v.a < v.z) return bad("The mass number must be a whole number that is not less than the atomic number.");
+      if (v.a > 300) return bad("Enter a realistic mass number (300 or less).");
+      if (!Number.isInteger(v.charge)) return bad("The ionic charge must be a whole number such as 0, +1, or -2.");
+      const electrons = v.z - v.charge;
+      if (electrons < 0) return bad("The charge cannot be greater than the atomic number, because that would leave a negative number of electrons.");
+      const symbols = "H He Li Be B C N O F Ne Na Mg Al Si P S Cl Ar K Ca Sc Ti V Cr Mn Fe Co Ni Cu Zn Ga Ge As Se Br Kr Rb Sr Y Zr Nb Mo Tc Ru Rh Pd Ag Cd In Sn Sb Te I Xe Cs Ba La Ce Pr Nd Pm Sm Eu Gd Tb Dy Ho Er Tm Yb Lu Hf Ta W Re Os Ir Pt Au Hg Tl Pb Bi Po At Rn Fr Ra Ac Th Pa U Np Pu Am Cm Bk Cf Es Fm Md No Lr Rf Db Sg Bh Hs Mt Ds Rg Cn Nh Fl Mc Lv Ts Og".split(" ");
+      const sym = symbols[v.z - 1];
+      const chargeText = v.charge === 0 ? "" : `${Math.abs(v.charge) === 1 ? "" : Math.abs(v.charge)}${v.charge > 0 ? "+" : "-"}`;
+      return {
+        primary: { label: "Protons / neutrons / electrons", value: `${v.z} / ${v.a - v.z} / ${electrons}` },
+        secondary: [
+          { l: "Element symbol", v: `${sym}` },
+          { l: "Notation", v: `${sym}-${v.a}${chargeText ? ` (${chargeText})` : ""}` },
+          { l: "Protons", v: `${v.z}` },
+          { l: "Neutrons", v: `${v.a - v.z}` },
+          { l: "Electrons", v: `${electrons}` },
+        ],
+        note: "Protons = Z, neutrons = A − Z, electrons = Z − charge (a positive charge means electrons were removed). The mass number A is a count of nucleons, not the exact isotopic mass in atomic mass units and not the average atomic mass listed in the periodic table.",
+      };
+    },
+    faq: [
+      { q: "How do I find protons, neutrons, and electrons?", a: "The number of protons equals the atomic number Z. The number of neutrons equals the mass number A minus Z. The number of electrons equals Z minus the ionic charge." },
+      { q: "How does the ionic charge work?", a: "A positive charge means electrons were removed, so a +1 ion has one fewer electron than protons. A negative charge means electrons were added. A neutral atom has a charge of 0." },
+      { q: "What is the difference between mass number and atomic mass?", a: "Mass number is a whole-number count of protons and neutrons. Atomic mass is a measured mass in unified atomic mass units and is not a whole number, and average atomic mass weights it over the natural isotopes of an element." },
+      { q: "Can the mass number be smaller than the atomic number?", a: "No. The mass number includes all protons, so it must be at least the atomic number. The calculator rejects smaller values." },
+      { q: "Why does the calculator reject some charges?", a: "A charge larger than the atomic number would remove more electrons than the atom has. The number of electrons cannot be negative." },
+      { q: "Where can I get the average atomic mass of an element?", a: "Use the Average Atomic Mass Calculator with isotope masses and abundances. To turn a formula into molar mass, use the Molecular Weight Calculator." },
+    ],
+    related: ["average-atomic-mass-calculator", "molecular-weight-calculator", "avogadros-number-calculator"],
+  },
+  {
+    id: "atom-economy-calculator",
+    category: "chemistry",
+    title: "Atom Economy Calculator",
+    keyword: "atom economy calculator",
+    description: "Calculate the atom economy of a balanced reaction from the molar mass and coefficient of the desired product and each reactant.",
+    intro: "Enter the molar mass and stoichiometric coefficient of the desired product, then the molar mass and coefficient of each reactant from your balanced equation. The calculator returns the atom economy, the theoretical share of reactant mass that ends up in the desired product.",
+    fields: [
+      { id: "productMass", label: "Desired product molar mass (g/mol)", type: "number", default: 56.08, step: "any", min: 0 },
+      { id: "productCoeff", label: "Desired product coefficient", type: "number", default: 1, step: "any", min: 0 },
+      { id: "m1", label: "Reactant 1 molar mass (g/mol)", type: "number", default: 100.09, step: "any", min: 0 },
+      { id: "c1", label: "Reactant 1 coefficient", type: "number", default: 1, step: "any", min: 0 },
+      { id: "m2", label: "Reactant 2 molar mass (g/mol) (optional)", type: "number", default: 0, step: "any", min: 0 },
+      { id: "c2", label: "Reactant 2 coefficient (0 to skip)", type: "number", default: 0, step: "any", min: 0 },
+      { id: "m3", label: "Reactant 3 molar mass (g/mol) (optional)", type: "number", default: 0, step: "any", min: 0 },
+      { id: "c3", label: "Reactant 3 coefficient (0 to skip)", type: "number", default: 0, step: "any", min: 0 },
+      { id: "m4", label: "Reactant 4 molar mass (g/mol) (optional)", type: "number", default: 0, step: "any", min: 0 },
+      { id: "c4", label: "Reactant 4 coefficient (0 to skip)", type: "number", default: 0, step: "any", min: 0 },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      const vals = [v.productMass, v.productCoeff, v.m1, v.c1, v.m2, v.c2, v.m3, v.c3, v.m4, v.c4];
+      if (!vals.every((x) => Number.isFinite(x) && x >= 0)) return bad("All molar masses and coefficients must be zero or positive numbers.");
+      if (!(v.productMass > 0) || !(v.productCoeff > 0)) return bad("The desired product needs a molar mass and a coefficient greater than zero.");
+      const reactants = [[v.m1, v.c1], [v.m2, v.c2], [v.m3, v.c3], [v.m4, v.c4]];
+      let total = 0;
+      let count = 0;
+      for (const [m, c] of reactants) {
+        if (c > 0) {
+          if (!(m > 0)) return bad("Every reactant with a coefficient needs a molar mass greater than zero.");
+          total += m * c;
+          count++;
+        }
+      }
+      if (count === 0) return bad("Enter at least one reactant with a coefficient greater than zero.");
+      const product = v.productMass * v.productCoeff;
+      if (product > total * (1 + 1e-9)) return bad("The desired product mass is larger than the total reactant mass. Check the balanced equation, the molar masses, and the coefficients.");
+      const ae = (product / total) * 100;
+      return {
+        primary: { label: "Atom economy", value: `${round(ae, 2)}%` },
+        secondary: [
+          { l: "Desired product mass (coefficient × molar mass)", v: `${round(product, 3)} g per reaction as written` },
+          { l: "Total reactant mass", v: `${round(total, 3)} g per reaction as written` },
+          { l: "Mass not in the desired product", v: `${round(total - product, 3)} g (${round(100 - ae, 2)}%)` },
+        ],
+        note: "Atom economy (%) = (coefficient × molar mass of the desired product) / (sum of coefficient × molar mass of all reactants) × 100. It uses the balanced equation and does not depend on how much product you actually obtain. It is a theoretical measure and is different from percent yield, so a high atom economy does not guarantee a high experimental yield.",
+      };
+    },
+    faq: [
+      { q: "What is atom economy?", a: "Atom economy is the percentage of the total mass of the reactants, as shown in the balanced equation, that ends up in the desired product. The rest becomes by-products." },
+      { q: "How is atom economy different from percent yield?", a: "Atom economy is a theoretical property of the balanced equation. Percent yield compares the amount you actually obtained with the theoretical amount. Use the Actual Yield Calculator for percent yield." },
+      { q: "Do the coefficients matter?", a: "Yes. Each molar mass is multiplied by its stoichiometric coefficient from the balanced equation, so an unbalanced equation gives a meaningless result." },
+      { q: "Can atom economy be above 100%?", a: "No. Mass is conserved, so the desired product cannot outweigh the reactants. The calculator flags that as an input error." },
+      { q: "Where do I get molar masses?", a: "Use the Molecular Weight Calculator to convert a chemical formula into molar mass in g/mol." },
+      { q: "Does this tell me how to run the reaction?", a: "No. It is an educational stoichiometry calculator only and gives no procedures or conditions." },
+    ],
+    related: ["actual-yield-calculator", "molecular-weight-calculator", "limiting-reagent-calculator"],
+  },
+  {
+    id: "average-atomic-mass-calculator",
+    category: "chemistry",
+    title: "Average Atomic Mass Calculator",
+    keyword: "average atomic mass calculator, atomic mass calculator",
+    description: "Calculate the weighted average atomic mass from isotope masses and abundances, with the mass of one average atom in kg and g.",
+    intro: "Enter the mass in atomic mass units and the percent abundance of each isotope, up to five. The calculator returns the abundance-weighted average atomic mass, the matching molar mass in g/mol, and the mass of one average atom. Abundances must total 100%.",
+    fields: [
+      { id: "m1", label: "Isotope 1 mass (u)", type: "number", default: 10, step: "any", min: 0 },
+      { id: "a1", label: "Isotope 1 abundance (%)", type: "number", default: 20, step: "any", min: 0 },
+      { id: "m2", label: "Isotope 2 mass (u)", type: "number", default: 11, step: "any", min: 0 },
+      { id: "a2", label: "Isotope 2 abundance (%)", type: "number", default: 80, step: "any", min: 0 },
+      { id: "m3", label: "Isotope 3 mass (u) (optional)", type: "number", default: 0, step: "any", min: 0 },
+      { id: "a3", label: "Isotope 3 abundance (%)", type: "number", default: 0, step: "any", min: 0 },
+      { id: "m4", label: "Isotope 4 mass (u) (optional)", type: "number", default: 0, step: "any", min: 0 },
+      { id: "a4", label: "Isotope 4 abundance (%)", type: "number", default: 0, step: "any", min: 0 },
+      { id: "m5", label: "Isotope 5 mass (u) (optional)", type: "number", default: 0, step: "any", min: 0 },
+      { id: "a5", label: "Isotope 5 abundance (%)", type: "number", default: 0, step: "any", min: 0 },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      const pairs = [[v.m1, v.a1], [v.m2, v.a2], [v.m3, v.a3], [v.m4, v.a4], [v.m5, v.a5]];
+      if (!pairs.every(([m, a]) => Number.isFinite(m) && Number.isFinite(a) && m >= 0 && a >= 0)) return bad("Isotope masses and abundances must be zero or positive numbers.");
+      let total = 0;
+      let weighted = 0;
+      let used = 0;
+      for (const [m, a] of pairs) {
+        if (a > 0) {
+          if (!(m > 0)) return bad("Every isotope with an abundance needs a mass greater than zero.");
+          used++;
+        }
+        total += a;
+        weighted += m * (a / 100);
+      }
+      if (used === 0) return bad("Enter at least one isotope with an abundance greater than zero.");
+      if (Math.abs(total - 100) > 0.01) return bad(`The abundances add up to ${round(total, 4)}%, not 100%. Check your values; this calculator does not normalize them for you.`);
+      const u = 1.66053906892e-27;
+      const kg = weighted * u;
+      return {
+        primary: { label: "Average atomic mass", value: `${round(weighted, 5)} u` },
+        secondary: [
+          { l: "Abundance total", v: `${round(total, 4)}%` },
+          { l: "Molar mass (numerically equal)", v: `${round(weighted, 5)} g/mol` },
+          { l: "Mass of one average atom", v: `${kg.toExponential(4)} kg` },
+          { l: "Mass of one average atom in grams", v: `${(kg * 1000).toExponential(4)} g` },
+        ],
+        note: "Average atomic mass = Σ (isotope mass × fractional abundance), using 1 u = 1.66053906892 × 10⁻²⁷ kg. Isotope masses are measured masses in u, not mass numbers. Entering a single isotope at 100% gives the mass of one atom of that isotope. A real atom of the element does not have the average mass; the average describes a natural mixture.",
+      };
+    },
+    faq: [
+      { q: "How do I calculate average atomic mass?", a: "Multiply each isotope's mass by its fractional abundance (percent divided by 100) and add the results. For 10 u at 20% and 11 u at 80% the average is 0.2 × 10 + 0.8 × 11 = 10.8 u." },
+      { q: "Is there a separate Atomic Mass Calculator?", a: "This tool covers it. Enter one isotope at 100% to get the mass of a single atom in u, kg, and g, or several isotopes for the weighted average. It uses measured isotope masses, not mass numbers." },
+      { q: "Why must abundances total 100%?", a: "They describe fractions of the same natural sample. If they do not sum to 100, the calculator reports the total instead of quietly rescaling the numbers." },
+      { q: "What is the difference between mass number and atomic mass?", a: "Mass number is a whole-number count of protons and neutrons. Atomic mass is a measured mass in u that is slightly different because of nuclear binding energy, so it cannot be found by simply adding proton and neutron masses." },
+      { q: "Why are g/mol and u numerically equal?", a: "By the definition of the mole and the atomic mass unit, an element with an average atomic mass of X u has a molar mass of about X g/mol." },
+      { q: "How does this relate to the Atom Calculator?", a: "The Atom Calculator counts protons, neutrons, and electrons from Z, A, and charge. This calculator deals with measured masses and abundances." },
+    ],
+    related: ["atom-calculator", "molecular-weight-calculator", "avogadros-number-calculator"],
+  },
+  {
+    id: "avogadros-number-calculator",
+    category: "chemistry",
+    title: "Avogadro's Number Calculator",
+    keyword: "avogadro's number calculator, mole to particles calculator",
+    description: "Convert between moles and the number of particles with Avogadro's constant, or from a sample mass and molar mass.",
+    intro: "Choose moles to particles, particles to moles, or sample mass to particles (with a molar mass you supply). The calculator uses the exact Avogadro constant, 6.02214076 × 10²³ per mole, and shows large numbers in scientific notation.",
+    fields: [
+      { id: "mode", label: "Convert", type: "select", default: "toParticles", options: [{ v: "toParticles", l: "Moles → particles" }, { v: "toMoles", l: "Particles → moles" }, { v: "massToParticles", l: "Sample mass + molar mass → particles" }] },
+      { id: "moles", label: "Amount in moles (moles → particles mode)", type: "number", default: 1, step: "any", min: 0 },
+      { id: "particles", label: "Number of particles (particles → moles mode; e.g. 1.2e24)", type: "number", default: 6.02214076e23, step: "any", min: 0 },
+      { id: "mass", label: "Sample mass in grams (mass mode)", type: "number", default: 18.015, step: "any", min: 0 },
+      { id: "molarMass", label: "Molar mass in g/mol (mass mode)", type: "number", default: 18.015, step: "any", min: 0 },
+      { id: "entity", label: "What are you counting?", type: "select", default: "entities", options: [{ v: "entities", l: "Elementary entities" }, { v: "atoms", l: "Atoms" }, { v: "molecules", l: "Molecules" }, { v: "formula units", l: "Formula units" }, { v: "ions", l: "Ions" }] },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      const NA = 6.02214076e23;
+      const e = v.entity === "entities" ? "particles" : v.entity;
+      const sci = (x) => x.toExponential(5);
+      let n;
+      let N;
+      if (v.mode === "toMoles") {
+        if (!(v.particles >= 0) || !Number.isFinite(v.particles)) return bad("The number of particles must be zero or positive.");
+        N = v.particles;
+        n = N / NA;
+      } else if (v.mode === "massToParticles") {
+        if (!(v.mass >= 0) || !(v.molarMass > 0)) return bad("Sample mass cannot be negative and the molar mass must be greater than zero.");
+        n = v.mass / v.molarMass;
+        N = n * NA;
+      } else {
+        if (!(v.moles >= 0) || !Number.isFinite(v.moles)) return bad("The amount in moles must be zero or positive.");
+        n = v.moles;
+        N = n * NA;
+      }
+      if (!Number.isFinite(N) || !Number.isFinite(n)) return bad("The result is outside a numerically meaningful range.");
+      const main = v.mode === "toMoles" ? { label: "Amount of substance", value: `${sci(n)} mol` } : { label: `Number of ${e}`, value: sci(N) };
+      return {
+        primary: main,
+        secondary: [
+          { l: "Amount in moles", v: `${sci(n)} mol` },
+          { l: `Number of ${e}`, v: sci(N) },
+          { l: "Avogadro constant used", v: "6.02214076 × 10²³ mol⁻¹" },
+        ],
+        note: "N = n × NA and n = N / NA, with NA = 6.02214076 × 10²³ mol⁻¹ (exact). In the mass mode, n = mass / molar mass. State what the entities are: atoms, molecules, formula units, or ions. Not every substance consists of discrete molecules, so the molar mass you use must match the entity you are counting.",
+      };
+    },
+    faq: [
+      { q: "What is Avogadro's number?", a: "The Avogadro constant, NA = 6.02214076 × 10²³ per mole, is the number of elementary entities in one mole of a substance. Its value is exact by the definition of the mole." },
+      { q: "How do I convert moles to particles?", a: "Multiply the amount in moles by NA. One mole of anything therefore contains 6.02214076 × 10²³ entities." },
+      { q: "How do I convert grams to particles?", a: "Divide the sample mass by the molar mass to get moles, then multiply by NA. Use the Molecular Weight Calculator if you need the molar mass of a formula." },
+      { q: "Are the particles atoms or molecules?", a: "It depends on what you choose to count. One mole of water contains NA molecules but 3 NA atoms. Ionic solids consist of formula units rather than molecules." },
+      { q: "How do I type very large or small numbers?", a: "Use e-notation, such as 6.02e23 or 1.5e-3. Results are shown in scientific notation." },
+      { q: "How is this related to atomic mass?", a: "Molar mass in g/mol is numerically equal to atomic or molecular mass in u. The Average Atomic Mass Calculator gives the mass of one atom in kg and g." },
+    ],
+    related: ["molecular-weight-calculator", "average-atomic-mass-calculator", "dna-copy-number-calculator"],
+  },
+  {
+    id: "beer-lambert-law-calculator",
+    category: "chemistry",
+    title: "Beer-Lambert Law Calculator",
+    keyword: "beer lambert law calculator, absorbance calculator",
+    description: "Solve the Beer-Lambert law A = ε·c·l for absorbance, concentration, molar absorptivity, or path length.",
+    intro: "Choose the quantity you want to find, enter the other three, and the calculator solves A = ε × c × l. Molar absorptivity is in L/(mol·cm), concentration in mol/L, and path length in cm, with unit selectors that convert for you.",
+    fields: [
+      { id: "solve", label: "Solve for", type: "select", default: "absorbance", options: [{ v: "absorbance", l: "Absorbance A" }, { v: "concentration", l: "Concentration c" }, { v: "absorptivity", l: "Molar absorptivity ε" }, { v: "path", l: "Path length l" }] },
+      { id: "absorbance", label: "Absorbance A (unitless)", type: "number", default: 0.5, step: "any", min: 0 },
+      { id: "epsilon", label: "Molar absorptivity ε (L/(mol·cm))", type: "number", default: 6220, step: "any", min: 0 },
+      { id: "conc", label: "Concentration c", type: "number", default: 0.00008, step: "any", min: 0 },
+      { id: "concUnit", label: "Concentration unit", type: "select", default: "M", options: [{ v: "M", l: "mol/L" }, { v: "mM", l: "mmol/L" }, { v: "uM", l: "µmol/L" }] },
+      { id: "path", label: "Path length l", type: "number", default: 1, step: "any", min: 0 },
+      { id: "pathUnit", label: "Path length unit", type: "select", default: "cm", options: [{ v: "cm", l: "cm" }, { v: "mm", l: "mm" }, { v: "m", l: "m" }] },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      const cf = { M: 1, mM: 1e-3, uM: 1e-6 }[v.concUnit];
+      const lf = { cm: 1, mm: 0.1, m: 100 }[v.pathUnit];
+      const c = v.conc * cf;
+      const l = v.path * lf;
+      const A = v.absorbance;
+      const eps = v.epsilon;
+      const sci = (x) => (x !== 0 && (Math.abs(x) >= 1e6 || Math.abs(x) < 1e-3) ? x.toExponential(4) : `${round(x, 6)}`);
+      let main;
+      let secondary;
+      if (v.solve === "absorbance") {
+        if (!(eps >= 0) || !(c >= 0) || !(l >= 0) || ![eps, c, l].every(Number.isFinite)) return bad("Absorptivity, concentration, and path length must be zero or positive.");
+        const r = eps * c * l;
+        main = { label: "Absorbance A", value: sci(r) };
+        secondary = [{ l: "Percent transmittance (10^(−A) × 100)", v: `${round(Math.pow(10, -r) * 100, 4)}%` }];
+      } else if (v.solve === "concentration") {
+        if (!(A >= 0) || !(eps > 0) || !(l > 0)) return bad("Absorbance cannot be negative, and absorptivity and path length must be greater than zero.");
+        const r = A / (eps * l);
+        main = { label: "Concentration c", value: `${sci(r)} mol/L` };
+        secondary = [{ l: "In mmol/L", v: sci(r * 1e3) }, { l: "In µmol/L", v: sci(r * 1e6) }];
+      } else if (v.solve === "absorptivity") {
+        if (!(A >= 0) || !(c > 0) || !(l > 0)) return bad("Absorbance cannot be negative, and concentration and path length must be greater than zero.");
+        const r = A / (c * l);
+        main = { label: "Molar absorptivity ε", value: `${sci(r)} L/(mol·cm)` };
+        secondary = [];
+      } else {
+        if (!(A >= 0) || !(eps > 0) || !(c > 0)) return bad("Absorbance cannot be negative, and absorptivity and concentration must be greater than zero.");
+        const r = A / (eps * c);
+        main = { label: "Path length l", value: `${sci(r)} cm` };
+        secondary = [{ l: "In mm", v: sci(r * 10) }, { l: "In m", v: sci(r / 100) }];
+      }
+      const high = (v.solve === "absorbance" ? Number(main.value) : A) > 2 ? " Absorbance above about 1 to 2 is often outside the linear range of a spectrophotometer, so the result may be unreliable." : "";
+      return {
+        primary: main,
+        secondary: [...secondary, { l: "Values used", v: `ε = ${sci(eps)} L/(mol·cm), c = ${sci(c)} mol/L, l = ${sci(l)} cm` }],
+        note: `Beer-Lambert law: A = ε × c × l, with ε in L/(mol·cm), c in mol/L, and l in cm, so A is dimensionless. It assumes a linear absorbance-concentration relationship at the chosen wavelength, a uniform sample, and a properly blanked background. A concentration found this way requires a known ε or a calibration for your substance and wavelength.${high}`,
+      };
+    },
+    faq: [
+      { q: "What is the Beer-Lambert law?", a: "It states that absorbance is proportional to the concentration of the absorbing species and the path length: A = ε × c × l, where ε is the molar absorptivity." },
+      { q: "What units should I use?", a: "Use ε in L/(mol·cm), concentration in mol/L, and path length in cm. Then absorbance is dimensionless. The unit selectors convert mmol/L, µmol/L, mm, and m for you." },
+      { q: "Why is my concentration not reliable?", a: "You need the correct molar absorptivity for your substance, solvent, and wavelength, or a calibration curve. High absorbance, scattering, stray light, and overlapping absorbers also break the linear relationship." },
+      { q: "What path length is typical?", a: "Many standard cuvettes have a 1 cm path length, but check your own cuvette or plate. Microplate readings depend on the liquid volume." },
+      { q: "How is this different from the Protein or DNA Concentration calculators?", a: "Those apply specific conversion factors for proteins or nucleic acids. This one solves the general A = ε·c·l relationship for any absorbing species when you know ε." },
+      { q: "What is percent transmittance?", a: "Transmittance is the fraction of light that passes through, T = 10^(−A). The calculator shows it as a percentage when solving for absorbance." },
+    ],
+    related: ["protein-concentration-calculator", "dna-concentration-calculator", "cell-dilution-calculator"],
+  },
+  {
+    id: "bleach-dilution-calculator",
+    category: "chemistry",
+    title: "Bleach Dilution Safety Guide",
+    keyword: "bleach dilution safety, bleach concentration percent ppm",
+    description: "A safety-focused guide to bleach product labels, percent versus ppm, storage, and why bleach must never be mixed with other cleaners.",
+    intro: "This page is an information guide, not a mixing tool. It does not calculate dilutions or give quantities. Choose a topic to read general safety information about chlorine bleach products, and always follow the manufacturer's label and instructions.",
+    fields: [
+      { id: "topic", label: "Topic", type: "select", default: "label", options: [{ v: "label", l: "Reading a product label" }, { v: "units", l: "Percent versus ppm" }, { v: "handling", l: "Storage and handling" }, { v: "mixing", l: "Why mixing products is dangerous" }] },
+    ],
+    compute: (v) => {
+      const topics = {
+        label: {
+          t: "Reading a product label",
+          n: "Bleach products differ in strength. The label states the concentration, usually as a percentage of sodium hypochlorite or available chlorine. Do not assume one product matches another. This page does not calculate dilutions or give mixing quantities: use only the directions printed by the manufacturer for that specific product, and if the label gives no directions for your purpose, do not improvise.",
+        },
+        units: {
+          t: "Percent versus ppm",
+          n: "A percentage and parts per million (ppm) describe concentration on different scales. By mass fraction, 1 percent equals 10,000 ppm, so ppm = percent × 10,000. Percent is convenient for concentrated products and ppm for very dilute ones. This is background on units only and is not a recipe or a target concentration. For plain unit conversion, see the Percent-PPM Converter.",
+        },
+        handling: {
+          t: "Storage and handling",
+          n: "Keep bleach in its original, labeled container in a cool, dark, well-ventilated place, closed tightly and out of reach of children and pets. Follow the label for gloves and eye protection, and use it in a ventilated space. Store it away from acids, ammonia products, and other chemicals. If someone swallows or is splashed with bleach, or breathes fumes and feels unwell, contact your local poison control center or emergency services.",
+        },
+        mixing: {
+          t: "Why mixing products is dangerous",
+          n: "Never mix bleach with ammonia, acids (including some toilet-bowl and descaling cleaners), or other cleaning products. These combinations can release toxic gases such as chlorine or chloramines that can seriously harm the lungs and eyes. Use one product at a time, rinse surfaces and ventilate between products, and if you are exposed, move to fresh air and seek medical help. This page gives no preparation instructions.",
+        },
+      };
+      const t = topics[v.topic] || topics.label;
+      return {
+        primary: { label: "Topic", value: t.t },
+        secondary: [],
+        note: t.n,
+      };
+    },
+    faq: [
+      { q: "Does this page tell me how to dilute bleach?", a: "No. It is a safety guide and provides no quantities, ratios, or preparation steps. Use only the manufacturer's directions for your specific product." },
+      { q: "Why doesn't this page have a dilution calculator?", a: "Bleach strength varies between products and using it incorrectly can be hazardous, so a general-purpose recipe tool could be misleading. For general concentration arithmetic, see the Cell Dilution or Alligation calculators, which are math tools and not cleaning guidance." },
+      { q: "What does the percentage on the label mean?", a: "It is the concentration of the active ingredient, commonly sodium hypochlorite or available chlorine, in that product. It differs between products, so read the label each time." },
+      { q: "What is the relationship between percent and ppm?", a: "For a mass fraction, 1 percent is 10,000 ppm. This is only a unit relationship and says nothing about how to prepare any solution." },
+      { q: "Can I mix bleach with other cleaners for a stronger effect?", a: "No. Mixing bleach with ammonia, acids, or other cleaning products can release toxic gases. Use one product at a time and ventilate." },
+      { q: "What should I do after an accidental exposure?", a: "Move to fresh air and contact your local poison control center or emergency services. Follow the first-aid instructions on the product label." },
+    ],
+    related: ["ppm-percent-converter", "percentage-calculator", "cell-dilution-calculator"],
+  },
+  {
+    id: "boiling-point-calculator",
+    category: "chemistry",
+    title: "Boiling Point Calculator",
+    keyword: "boiling point calculator, boiling point of water at pressure",
+    description: "Estimate the boiling point of pure water at a given pressure using the IAPWS-IF97 saturation relation.",
+    intro: "Enter the ambient pressure and choose a unit to find the temperature at which pure water boils. The calculator uses the IAPWS-IF97 saturation equation, valid from about 0.611 kPa to 22,064 kPa.",
+    fields: [
+      { id: "pressure", label: "Pressure", type: "number", default: 101.325, step: "any", min: 0 },
+      { id: "unit", label: "Pressure unit", type: "select", default: "kPa", options: [{ v: "kPa", l: "kPa" }, { v: "bar", l: "bar" }, { v: "atm", l: "atm" }, { v: "psi", l: "psi (absolute)" }, { v: "mmHg", l: "mmHg (Torr)" }, { v: "inHg", l: "inHg" }] },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      if (!Number.isFinite(v.pressure) || !(v.pressure > 0)) return bad("Pressure must be greater than zero.");
+      const f = { kPa: 1, bar: 100, atm: 101.325, psi: 6.894757293, mmHg: 0.1333223684, inHg: 3.386389 }[v.unit];
+      const kPa = v.pressure * f;
+      if (kPa < 0.611213 || kPa > 22064) return bad("This model is valid from about 0.611 kPa (the triple point) to 22,064 kPa (the critical point). Enter a pressure in that range, in absolute (not gauge) terms.");
+      const c = waterBoilingPointC(kPa);
+      return {
+        primary: { label: "Boiling point of water", value: `${round(c, 2)} °C` },
+        secondary: [
+          { l: "In °F", v: `${round((c * 9) / 5 + 32, 2)} °F` },
+          { l: "In K", v: `${round(c + 273.15, 2)} K` },
+          { l: "Pressure used", v: `${round(kPa, 4)} kPa` },
+        ],
+        note: "Boiling temperature is the saturation temperature at the given absolute pressure, from the IAPWS-IF97 backward equation for water (valid 0.611 kPa to 22,064 kPa). It applies to pure water only; dissolved solutes raise the boiling point slightly. At 101.325 kPa the result is about 99.97 °C on the current temperature scale, not exactly 100 °C.",
+      };
+    },
+    faq: [
+      { q: "How does pressure affect the boiling point?", a: "Water boils when its vapor pressure equals the surrounding pressure. Lower pressure means a lower boiling temperature, and higher pressure raises it." },
+      { q: "Is the boiling point of water at 1 atm exactly 100 °C?", a: "On the current temperature scale (ITS-90) it is about 99.97 °C at 101.325 kPa. The round 100 °C figure comes from the older definition of the Celsius scale." },
+      { q: "Should I enter absolute or gauge pressure?", a: "Absolute. A gauge reading is relative to atmospheric pressure, so add the ambient pressure to convert it before entering it here." },
+      { q: "Does this work for liquids other than water?", a: "No. It is a water-specific correlation. Other liquids have different vapor-pressure curves, and this calculator does not include them." },
+      { q: "How is this different from the altitude and elevation calculators?", a: "This one starts from pressure. The Boiling Point at Altitude calculator starts from elevation, and the Boiling Point Elevation calculator starts from a dissolved solute." },
+      { q: "What is the valid range?", a: "About 0.611 kPa to 22,064 kPa, that is, from the triple point to the critical point of water. Outside that range the calculator asks for another value." },
+    ],
+    related: ["boiling-point-at-altitude-calculator", "boiling-point-elevation-calculator", "pressure-converter", "temperature-converter"],
+  },
+  {
+    id: "boiling-point-at-altitude-calculator",
+    category: "chemistry",
+    title: "Boiling Point at Altitude Calculator",
+    keyword: "boiling point at altitude calculator, water boiling point by elevation",
+    description: "Estimate the boiling point of pure water at a given altitude from the standard atmosphere, with an optional weather pressure adjustment.",
+    intro: "Enter your altitude to estimate the atmospheric pressure there and the temperature at which pure water boils. The calculator uses the standard-atmosphere pressure model, and you can enter the current sea-level pressure to account for the weather.",
+    fields: [
+      { id: "altitude", label: "Altitude", type: "number", default: 1609, step: "any" },
+      { id: "unit", label: "Altitude unit", type: "select", default: "m", options: [{ v: "m", l: "Meters" }, { v: "ft", l: "Feet" }] },
+      { id: "seaLevel", label: "Sea-level pressure in kPa (101.325 = standard)", type: "number", default: 101.325, step: "any", min: 0 },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      if (!Number.isFinite(v.altitude)) return bad("Enter an altitude.");
+      const h = v.unit === "ft" ? v.altitude * 0.3048 : v.altitude;
+      if (h < -500 || h > 11000) return bad("This model covers altitudes from -500 m to 11,000 m (about -1,640 ft to 36,090 ft), the lower part of the standard atmosphere.");
+      if (!Number.isFinite(v.seaLevel) || v.seaLevel < 80 || v.seaLevel > 110) return bad("Sea-level pressure should be between 80 and 110 kPa (standard is 101.325 kPa).");
+      const p = v.seaLevel * Math.pow(1 - 2.25577e-5 * h, 5.25588);
+      const c = waterBoilingPointC(p);
+      const sea = waterBoilingPointC(v.seaLevel);
+      return {
+        primary: { label: "Boiling point of water", value: `${round(c, 1)} °C` },
+        secondary: [
+          { l: "In °F", v: `${round((c * 9) / 5 + 32, 1)} °F` },
+          { l: "Estimated air pressure", v: `${round(p, 2)} kPa (${round(p * 7.500617, 1)} mmHg)` },
+          { l: "Drop from the sea-level boiling point", v: `${round(sea - c, 1)} °C` },
+          { l: "Altitude used", v: `${round(h, 1)} m` },
+        ],
+        note: "Air pressure p = p₀ × (1 − 2.25577×10⁻⁵ h)^5.25588 (h in meters, standard atmosphere), then the boiling point is the saturation temperature of water at p from the IAPWS-IF97 relation. The result is approximate and applies to pure water in an open container. Weather can shift pressure, and a sealed vessel is governed by its own internal pressure, not the altitude.",
+      };
+    },
+    faq: [
+      { q: "Why does water boil at a lower temperature at altitude?", a: "Air pressure drops with height, and water boils when its vapor pressure equals the surrounding pressure, so the boiling temperature falls." },
+      { q: "How much does the boiling point drop per 1,000 m?", a: "Roughly 3 °C per 1,000 m near sea level, but the relationship is slightly curved, which is why this calculator uses a pressure model rather than a straight line." },
+      { q: "Why can I enter the sea-level pressure?", a: "Weather changes the local pressure by several kPa. Entering the current pressure reduced to sea level makes the estimate more realistic than the standard value." },
+      { q: "Is the result exact?", a: "No. It assumes the standard atmosphere and pure water in an open container. Local conditions and dissolved substances shift the boiling point." },
+      { q: "What about a pressure cooker?", a: "A sealed vessel has its own internal pressure, so altitude alone does not give its boiling temperature. Use the Boiling Point Calculator with the actual absolute pressure." },
+      { q: "What altitude range does it cover?", a: "From -500 m to 11,000 m, the lower part of the standard atmosphere. Outside this range the model is not used." },
+    ],
+    related: ["boiling-point-calculator", "temperature-converter", "pressure-altitude-calculator"],
+  },
+  {
+    id: "boiling-point-elevation-calculator",
+    category: "chemistry",
+    title: "Boiling Point Elevation Calculator",
+    keyword: "boiling point elevation calculator, ebullioscopic constant",
+    description: "Calculate boiling-point elevation ΔTb = i·Kb·m for a dilute solution with a nonvolatile solute, and the solution's boiling point.",
+    intro: "Enter the molality, the van 't Hoff factor, and the solvent (or a custom ebullioscopic constant Kb) to find the boiling-point elevation. Optionally get the estimated boiling point of the solution. The equation is an idealized dilute-solution model.",
+    fields: [
+      { id: "molality", label: "Molality m (mol solute per kg solvent)", type: "number", default: 1, step: "any", min: 0 },
+      { id: "i", label: "van 't Hoff factor i", type: "number", default: 1, step: "any", min: 0 },
+      { id: "solvent", label: "Solvent", type: "select", default: "water", options: [{ v: "water", l: "Water (Kb 0.512, bp 100.0 °C)" }, { v: "ethanol", l: "Ethanol (Kb 1.22, bp 78.4 °C)" }, { v: "benzene", l: "Benzene (Kb 2.53, bp 80.1 °C)" }, { v: "custom", l: "Custom (enter Kb below)" }] },
+      { id: "kb", label: "Kb in K·kg/mol (custom solvent only)", type: "number", default: 0.512, step: "any", min: 0 },
+      { id: "showBp", label: "Also show the solution's boiling point", type: "select", default: "yes", options: [{ v: "yes", l: "Yes" }, { v: "no", l: "No" }] },
+      { id: "pureBp", label: "Pure solvent boiling point in °C (custom solvent only)", type: "number", default: 100, step: "any" },
+    ],
+    compute: (v) => {
+      const bad = (msg) => ({ primary: { label: "Enter valid values", value: "-" }, secondary: [], note: msg });
+      const presets = { water: [0.512, 100.0], ethanol: [1.22, 78.37], benzene: [2.53, 80.1] };
+      const p = presets[v.solvent];
+      const kb = p ? p[0] : v.kb;
+      const bp0 = p ? p[1] : v.pureBp;
+      if (!(v.molality >= 0) || !Number.isFinite(v.molality)) return bad("Molality must be zero or positive.");
+      if (!(v.i > 0) || !Number.isFinite(v.i)) return bad("The van 't Hoff factor must be greater than zero.");
+      if (!(kb > 0) || !Number.isFinite(kb)) return bad("The ebullioscopic constant Kb must be greater than zero.");
+      const dT = v.i * kb * v.molality;
+      if (!Number.isFinite(dT)) return bad("The result is outside a numerically meaningful range.");
+      const secondary = [
+        { l: "Kb used", v: `${round(kb, 4)} K·kg/mol` },
+        { l: "Effective molality i × m", v: `${round(v.i * v.molality, 4)} mol/kg` },
+        { l: "In °F (temperature difference)", v: `${round((dT * 9) / 5, 3)} °F` },
+      ];
+      if (v.showBp === "yes") {
+        if (!Number.isFinite(bp0)) return bad("Enter the pure solvent boiling point.");
+        secondary.unshift({ l: "Solution boiling point", v: `${round(bp0 + dT, 3)} °C` });
+      }
+      const caution = v.molality > 1 ? " Your molality is above about 1 mol/kg, where the ideal equation becomes less reliable." : "";
+      return {
+        primary: { label: "Boiling-point elevation ΔTb", value: `${round(dT, 4)} K (= °C)` },
+        secondary,
+        note: `ΔTb = i × Kb × m, with Kb in K·kg/mol and m in mol/kg. A temperature difference in K equals the same difference in °C. It assumes a dilute, ideal solution and a nonvolatile solute, and that i approximates the number of particles per formula unit. Kb is specific to the solvent. Molality (per kg of solvent) is not molarity (per liter of solution).${caution} Preset boiling points are for 1 atm.`,
+      };
+    },
+    faq: [
+      { q: "What is boiling-point elevation?", a: "It is the increase in a solvent's boiling temperature when a nonvolatile solute is dissolved in it. Dissolved particles lower the solvent's vapor pressure, so a higher temperature is needed to boil." },
+      { q: "What is the formula?", a: "ΔTb = i × Kb × m, where i is the van 't Hoff factor, Kb is the solvent's ebullioscopic constant in K·kg/mol, and m is the molality in mol/kg." },
+      { q: "What is the difference between molality and molarity?", a: "Molality is moles of solute per kilogram of solvent. Molarity is moles per liter of solution. The equation uses molality." },
+      { q: "What van 't Hoff factor should I use?", a: "It is about 1 for molecules that do not dissociate, such as sugar, and close to 2 for a fully dissociated salt such as NaCl. Real solutions deviate from these ideal values." },
+      { q: "Why is Kb different for each solvent?", a: "Kb depends on the solvent's properties. That is why the calculator offers solvent presets and a custom option instead of a single constant for everything." },
+      { q: "When does the equation fail?", a: "For concentrated, strongly interacting, or volatile-solute solutions. It is an idealized dilute-solution model." },
+    ],
+    related: ["boiling-point-calculator", "boiling-point-at-altitude-calculator", "water-potential-calculator", "temperature-converter"],
+  },
 ];
 
 /* ---------- helpers ---------- */
@@ -14161,4 +14623,17 @@ function getCategory(id) {
 
 function calculatorsInCategory(catId) {
   return CALCULATORS.filter((c) => c.category === catId);
+}
+
+// IAPWS-IF97 backward equation: saturation temperature of water (deg C) from pressure in kPa.
+// Valid for 0.611213 kPa to 22064 kPa.
+function waterBoilingPointC(pKPa) {
+  const b = Math.pow(pKPa / 1000, 0.25);
+  const n = [0.11670521452767e4, -0.72421316703206e6, -0.17073846940092e2, 0.12020824702470e5, -0.32325550322333e7, 0.14915108613530e2, -0.48232657361591e4, 0.40511340542057e6, -0.23855557567849, 0.65017534844798e3];
+  const E = b * b + n[2] * b + n[5];
+  const F = n[0] * b * b + n[3] * b + n[6];
+  const G = n[1] * b * b + n[4] * b + n[7];
+  const D = (2 * G) / (-F - Math.sqrt(F * F - 4 * E * G));
+  const T = (n[9] + D - Math.sqrt((n[9] + D) * (n[9] + D) - 4 * (n[8] + n[9] * D))) / 2;
+  return T - 273.15;
 }
