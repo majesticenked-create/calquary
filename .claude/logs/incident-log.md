@@ -864,3 +864,27 @@ cp -R index.html about.html contact.html privacy.html terms.html all-calculators
 cp -R css js tool category og-images es fr de pt it ja /tmp/calquary-deploy/
 wrangler pages deploy /tmp/calquary-deploy --project-name calquary --commit-dirty=true 2>&1 | tail -20
 - `2026-08-30 14:23:52` | FAILURE | ERROR | OTHER | Bash | Exit code 1
+- `2026-10-05 16:28:49` | FAILURE | ERROR | OTHER | Bash | Exit code 1
+- `2026-10-05 16:30:07` | GUARD | LOW | WARNING: mv command allowed → S=/tmp/claude-0/-home-user-calquary/a58538d3-eaca-560d-9227-a4d26bd7e7d7/scratchpad; cd $S; mv oswald.woff2 oswald.ttf; cat > render.js <<'EOF'
+const { chromium } = require('/opt/node22/lib/node_modules/playwright');
+(async()=>{
+  const mode = process.argv[2]; // "preview" or "all"
+  const fps = 60;
+  const b = await chromium.launch();
+  const p = await b.newPage({ viewport:{width:1920,height:1080}, deviceScaleFactor:1 });
+  await p.goto('file://' + __dirname + '/scene.html');
+  await p.evaluate(()=>document.fonts.ready);
+  const dur = await p.evaluate(()=>DURATION);
+  const times = mode==='preview' ? [0.7,1.0,1.3,1.8,2.5,2.75,3.1,3.9,4.1,5.2,5.4,6.5,7.4,7.7,8.0]
+    : Array.from({length:Math.round(dur*fps)},(_,i)=>i/fps);
+  const dir = mode==='preview' ? 'prev' : 'frames';
+  require('fs').mkdirSync(__dirname+'/'+dir,{recursive:true});
+  for (let i=0;i<times.length;i++){
+    await p.evaluate(t=>render(t), times[i]);
+    await p.screenshot({ path: `${__dirname}/${dir}/${String(i).padStart(4,'0')}.png`, omitBackground:true });
+  }
+  await b.close(); console.log('done', times.length);
+})();
+EOF
+node render.js preview && ffmpeg -v error -y -f lavfi -i color=0x00b140:s=1920x1080 -pattern_type glob -i 'prev/*.png' -filter_complex "[0][1]overlay=shortest=1,scale=480:-1,tile=3x5" -frames:v 1 prev_sheet.png
+- `2026-10-05 16:30:26` | GUARD | MEDIUM | SOFT BLOCKED: recursive/force rm → S=/tmp/claude-0/-home-user-calquary/a58538d3-eaca-560d-9227-a4d26bd7e7d7/scratchpad; cd $S; sed -i 's/PW=760/PW=800/; s/LIKE_X=CX-272, BELL_X=CX+272, SUB_W=372/LIKE_X=CX-290, BELL_X=CX+290, SUB_W=404/' scene.html; sed -i 's/font-size="58" letter-spacing="3"/font-size="56" letter-spacing="2.5"/g' scene.html; grep -n "PW=\|SUB_W" scene.html | head -3; rm -rf frames; time node render.js all; ls frames | wc -l; df -h . | tail -1
