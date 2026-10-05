@@ -762,3 +762,9 @@
 - `2026-08-31 11:43:40` | Edit | js/calculators-data.js
 - `2026-08-31 11:44:01` | Edit | js/calculators-data.js
 - `2026-08-31 11:45:23` | Edit | js/calculators-data.js
+- `2026-10-05 16:22:45` | Write | /tmp/claude-0/-home-user-calquary/cd7444a9-2a38-57c8-8e0d-5018b7a35c04/scratchpad/ghost/art.js
+- `2026-10-05 16:24:06` | Write | /tmp/claude-0/-home-user-calquary/cd7444a9-2a38-57c8-8e0d-5018b7a35c04/scratchpad/ghost/process.js
+- `2026-10-05 16:24:32` | Write | /tmp/claude-0/-home-user-calquary/cd7444a9-2a38-57c8-8e0d-5018b7a35c04/scratchpad/ghost/build.js
+- `2026-10-05 16:27:09` | Write | /tmp/claude-0/-home-user-calquary/cd7444a9-2a38-57c8-8e0d-5018b7a35c04/scratchpad/ghost/listing.js
+- `2026-10-05 16:27:38` | Write | /tmp/claude-0/-home-user-calquary/cd7444a9-2a38-57c8-8e0d-5018b7a35c04/scratchpad/ghost/listing/ETSY-LISTING-COPY.md
+- `2026-10-05 16:27:57` | Write | /tmp/claude-0/-home-user-calquary/cd7444a9-2a38-57c8-8e0d-5018b7a35c04/scratchpad/ghost/package.py

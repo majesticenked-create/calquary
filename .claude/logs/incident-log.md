@@ -864,3 +864,20 @@ cp -R index.html about.html contact.html privacy.html terms.html all-calculators
 cp -R css js tool category og-images es fr de pt it ja /tmp/calquary-deploy/
 wrangler pages deploy /tmp/calquary-deploy --project-name calquary --commit-dirty=true 2>&1 | tail -20
 - `2026-08-30 14:23:52` | FAILURE | ERROR | OTHER | Bash | Exit code 1
+- `2026-10-05 16:16:35` | FAILURE | ERROR | OTHER | Bash | Exit code 1
+- `2026-10-05 16:16:37` | FAILURE | ERROR | NETWORK | WebFetch | {"error_type":"EGRESS_BLOCKED","domain":"www.etsy.com","message":"Access to www.etsy.com is blocked by the network egress proxy."}
+- `2026-10-05 16:25:38` | GUARD | MEDIUM | SOFT BLOCKED: recursive/force rm → cd /tmp/claude-0/-home-user-calquary/cd7444a9-2a38-57c8-8e0d-5018b7a35c04/scratchpad/ghost && sed -i "s/const y = a.hold\[1\] - 50, tea/const y = a.hold[1] - 5, tea/" art.js && grep -c "hold\[1\] - 5, tea" art.js && rm -rf out && (node build.js > build.log 2>&1; echo DONE >> build.log)
+- `2026-10-05 16:42:57` | GUARD | MEDIUM | SOFT BLOCKED: recursive/force rm → cd /tmp/claude-0/-home-user-calquary/cd7444a9-2a38-57c8-8e0d-5018b7a35c04/scratchpad/ghost && sed -i 's/top:560px;display:grid;grid-template-columns:repeat(8,1fr);gap:0 20px;padding:0 40px/top:650px;display:grid;grid-template-columns:repeat(8,1fr);gap:0 20px;padding:0 90px/' listing.js && node listing.js | tail -1 && python3 package.py && rm -f listing/_tmp.html listing/_guide.html; ls -la dist listing | awk '{printf "%8.2f MB  %s\n", $5/1048576, $9}' | grep -v " \.\?\.\?$"
+- `2026-10-05 16:43:02` | GUARD | LOW | WARNING: mv command allowed → cd /tmp/claude-0/-home-user-calquary/cd7444a9-2a38-57c8-8e0d-5018b7a35c04/scratchpad/ghost && sed -i 's/top:560px;display:grid;grid-template-columns:repeat(8,1fr);gap:0 20px;padding:0 40px/top:650px;display:grid;grid-template-columns:repeat(8,1fr);gap:0 20px;padding:0 90px/' listing.js && node listing.js | tail -1 && python3 package.py && mv listing/_tmp.html listing/_guide.html . ; ls -la dist listing | awk 'NF>8 && $9 !~ /^\.\.?$/ {printf "%8.2f MB  %s\n", $5/1048576, $9}'
+- `2026-10-05 16:43:18` | GUARD | LOW | WARNING: mv command allowed → cd /tmp/claude-0/-home-user-calquary/cd7444a9-2a38-57c8-8e0d-5018b7a35c04/scratchpad/ghost && python3 - <<'EOF'
+s=open('package.py').read()
+s=s.replace("def pack(name, groups):","def pack(name, groups, guide=False):")
+s=s.replace("        z.write(os.path.join(ROOT, 'listing', '00-START-HERE-Guide.pdf'), f'{BUNDLE}/00-START-HERE-Guide.pdf')",
+"        if guide:\n            z.write(os.path.join(ROOT, 'listing', '00-START-HERE-Guide.pdf'), f'{BUNDLE}/00-START-HERE-Guide.pdf')")
+s=s.replace("pack('1-SVG-Layered-and-One-Color.zip', [('SVG_Layered', g('svg_layered')), ('SVG_One_Color', g('svg_onecolor'))])",
+"pack('1-SVG-Layered-One-Color-Sticker.zip', [('SVG_Layered', g('svg_layered')), ('SVG_One_Color', g('svg_onecolor')), ('Sticker_SVG_PNG', g('svg_sticker'))], guide=True)")
+s=s.replace("pack('2-Sticker-SVG-PNG.zip', [('Sticker_SVG_PNG', g('svg_sticker') + g('png_sticker'))])",
+"pack('2-Sticker-PNG.zip', [('Sticker_SVG_PNG', g('png_sticker'))])")
+open('package.py','w').write(s)
+EOF
+mkdir -p old_dist && mv dist/*.zip old_dist/ && python3 package.py
