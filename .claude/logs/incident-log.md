@@ -864,3 +864,12 @@ cp -R index.html about.html contact.html privacy.html terms.html all-calculators
 cp -R css js tool category og-images es fr de pt it ja /tmp/calquary-deploy/
 wrangler pages deploy /tmp/calquary-deploy --project-name calquary --commit-dirty=true 2>&1 | tail -20
 - `2026-08-30 14:23:52` | FAILURE | ERROR | OTHER | Bash | Exit code 1
+- `2026-10-05 16:49:01` | FAILURE | ERROR | OTHER | Bash | Exit code 1
+- `2026-10-05 17:10:22` | GUARD | LOW | WARNING: mv command allowed → S=/tmp/claude-0/-home-user-calquary/256cf69a-6619-52ab-8466-0a490e239bf5/scratchpad/video && mkdir -p media/ai-chat-video && git mv -k ai-chat-1080p.mp4 media/ai-chat-video/ 2>/dev/null; mv ai-chat-1080p.mp4 media/ai-chat-video/ 2>/dev/null; cp $S/scene.html $S/render.js media/ai-chat-video/ && git add media .claude/logs && git commit -q -m "Add AI Chat 1080p60 promo video and its render source
+
+Procedurally rendered (canvas + Playwright + ffmpeg) recreation of a
+dark cinematic 'AI Chat' typing shot. Re-render with:
+  node media/ai-chat-video/render.js out.mp4 60
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01QwNJhGrnVz1mVLDC88DbW3" && git push -u origin claude/trusting-lovelace-7mrrdq 2>&1 | tail -2 && git status --short

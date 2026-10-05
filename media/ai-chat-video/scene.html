@@ -1,0 +1,310 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>html,body{margin:0;background:#000}canvas{display:block}</style>
+</head><body>
+<canvas id="c" width="1920" height="1080"></canvas>
+<script>
+const W = 1920, H = 1080;
+const c = document.getElementById('c');
+const ctx = c.getContext('2d');
+
+const PROMPT = 'How do I calculate compound interest on $10,000?';
+const T_TYPE0 = 1.6, CPS = 9.5;            // typing start + chars/sec
+const T_SEND = T_TYPE0 + PROMPT.length / CPS + 0.6;
+
+// deterministic rng
+function rng(seed){ return () => (seed = (seed * 16807) % 2147483647) / 2147483647; }
+const R = rng(42);
+
+// per-char typing jitter so it feels human
+const charTimes = [];
+{ let t = T_TYPE0; for (let i = 0; i < PROMPT.length; i++) {
+    t += (1 / CPS) * (0.55 + R() * 0.9) + (PROMPT[i] === ' ' ? 0.05 : 0);
+    charTimes.push(t);
+} }
+const typedCount = t => { let n = 0; while (n < charTimes.length && charTimes[n] <= t) n++; return n; };
+
+const ease = x => x < 0 ? 0 : x > 1 ? 1 : x * x * (3 - 2 * x);
+const lerp = (a, b, k) => a + (b - a) * k;
+
+// ---------- offscreen layers ----------
+function layer(w, h){ const o = document.createElement('canvas'); o.width = w; o.height = h; return [o, o.getContext('2d')]; }
+const [scr, sctx] = layer(1400, 1000);
+const [kb, kctx] = layer(W, 520);
+const [tmp, tctx] = layer(W, H);
+
+// film grain tiles
+const grain = [];
+for (let g = 0; g < 6; g++) {
+  const [o, x] = layer(512, 512);
+  const id = x.createImageData(512, 512);
+  for (let i = 0; i < id.data.length; i += 4) {
+    const v = 128 + (R() - 0.5) * 70;
+    id.data[i] = id.data[i+1] = id.data[i+2] = v; id.data[i+3] = 255;
+  }
+  x.putImageData(id, 0, 0); grain.push(o);
+}
+
+// keyboard layout (in keyboard-local units)
+const rows = [15, 15, 14, 13, 12, 9];
+const keys = [];
+rows.forEach((n, r) => { for (let i = 0; i < n; i++) keys.push({ r, i, n, seed: R() }); });
+const keyFor = ch => {  // pseudo-map a character to a key so presses light up consistently
+  const code = ch.toLowerCase().charCodeAt(0);
+  if (ch === ' ') return keys.find(k => k.r === 5 && k.i === 4);
+  return keys[(code * 7) % (keys.length - 9)];
+};
+
+// ---------- screen UI ----------
+function drawScreen(t){
+  const s = sctx, w = scr.width, h = scr.height;
+  const g = s.createLinearGradient(0, 0, w, h);
+  g.addColorStop(0, '#343a41'); g.addColorStop(0.6, '#24292f'); g.addColorStop(1, '#16191d');
+  s.fillStyle = g; s.fillRect(0, 0, w, h);
+
+  // subtle top nav
+  s.fillStyle = 'rgba(255,255,255,0.05)'; s.fillRect(0, 0, w, 54);
+  s.fillStyle = 'rgba(220,230,240,0.35)';
+  s.font = '500 20px Inter, "Helvetica Neue", Arial, sans-serif';
+  s.fillText('New chat', 40, 34);
+  ['History', 'Models', 'Settings'].forEach((l, i) => s.fillText(l, w - 360 + i * 110, 34));
+
+  const sent = t > T_SEND;
+  const up = ease((t - T_SEND) / 0.9);       // UI slides up after sending
+  const cx = 640, titleY = lerp(340, 190, up);
+
+  // title
+  s.save();
+  s.shadowColor = 'rgba(200,225,255,0.55)'; s.shadowBlur = 18;
+  s.fillStyle = '#e8eef5';
+  s.font = '700 112px Inter, "Helvetica Neue", Arial, sans-serif';
+  s.textAlign = 'center';
+  s.fillText('AI Chat', cx, titleY);
+  s.restore();
+
+  // input pill
+  const bx = 290, by = lerp(410, 610, up), bw = 700, bh = 66;
+  s.save();
+  s.beginPath(); s.roundRect(bx, by, bw, bh, 33);
+  s.fillStyle = '#323b47'; s.fill();
+  s.strokeStyle = 'rgba(255,255,255,0.14)'; s.lineWidth = 2; s.stroke();
+  s.restore();
+
+  const n = sent ? 0 : typedCount(t);
+  let text = PROMPT.slice(0, n);
+  s.font = '400 26px Inter, "Helvetica Neue", Arial, sans-serif';
+  s.fillStyle = n ? '#e6ecf2' : 'rgba(220,230,240,0.4)';
+  s.save(); s.beginPath(); s.rect(bx + 30, by, bw - 110, bh); s.clip();
+  let tw = s.measureText(text).width, ox = Math.min(0, (bw - 120) - tw);
+  s.fillText(n ? text : 'Ask anything…', bx + 34 + ox, by + 42);
+  s.restore();
+  // caret
+  if (!sent && Math.floor(t * 2.2) % 2 === 0 || (!sent && n > 0 && t - charTimes[n-1] < 0.3)) {
+    s.fillStyle = '#ff5a3c';
+    s.fillRect(bx + 36 + Math.min(tw, bw - 120) , by + 18, 3, 30);
+  }
+  // send button
+  const pulse = sent ? Math.max(0, 1 - (t - T_SEND) * 2) : 0;
+  s.beginPath(); s.arc(bx + bw - 36, by + bh / 2, 24 + pulse * 6, 0, Math.PI * 2);
+  s.fillStyle = n > 0 || sent ? `rgba(240,244,248,${0.9})` : 'rgba(240,244,248,0.35)'; s.fill();
+  s.strokeStyle = '#1d242d'; s.lineWidth = 3.5;
+  s.beginPath(); s.moveTo(bx + bw - 36, by + bh / 2 + 10); s.lineTo(bx + bw - 36, by + bh / 2 - 10);
+  s.moveTo(bx + bw - 44, by + bh / 2 - 2); s.lineTo(bx + bw - 36, by + bh / 2 - 10); s.lineTo(bx + bw - 28, by + bh / 2 - 2); s.stroke();
+
+  if (sent) {
+    // user bubble + streaming answer
+    const a = ease((t - T_SEND - 0.3) / 0.5);
+    s.globalAlpha = a;
+    s.font = '400 22px Inter, "Helvetica Neue", Arial, sans-serif';
+    const qw = s.measureText(PROMPT).width + 44;
+    s.fillStyle = '#3a4554'; s.beginPath(); s.roundRect(bx + bw - qw, 270, qw, 52, 26); s.fill();
+    s.fillStyle = '#e6ecf2'; s.fillText(PROMPT, bx + bw - qw + 22, 304);
+
+    const lines = [
+      'Use the formula  A = P (1 + r/n)^(n·t)',
+      'P = 10,000  ·  r = annual rate  ·  n = compounds per year',
+      'At 5% compounded monthly for 10 years:',
+      'A = 10,000 × (1 + 0.05/12)^120 ≈ $16,470.09',
+    ];
+    const chars = Math.max(0, (t - T_SEND - 0.9) * 42);
+    let used = 0;
+    s.fillStyle = '#d5dde6';
+    lines.forEach((l, i) => {
+      const k = Math.max(0, Math.min(l.length, chars - used)); used += l.length;
+      if (k > 0) {
+        s.font = (i === 3 ? '600 ' : '400 ') + '23px Inter, "Helvetica Neue", Arial, sans-serif';
+        s.fillStyle = i === 3 ? '#ffffff' : '#c9d3dd';
+        s.fillText(l.slice(0, Math.floor(k)), bx, 380 + i * 46);
+      }
+    });
+    // AI avatar dot
+    s.beginPath(); s.arc(bx - 40, 372, 14, 0, 7); s.fillStyle = '#ff5a3c'; s.fill();
+    s.globalAlpha = 1;
+  }
+
+  // scanline / subpixel texture (very faint)
+  s.fillStyle = 'rgba(0,0,0,0.06)';
+  for (let y = 0; y < h; y += 3) s.fillRect(0, y, w, 1);
+}
+
+// ---------- keyboard ----------
+function drawKeyboard(t){
+  const k = kctx; k.clearRect(0, 0, kb.width, kb.height);
+  const n = typedCount(t), sentAt = T_SEND;
+  const pressed = new Map();
+  for (let i = 0; i < n; i++) {
+    const age = t - charTimes[i];
+    if (age < 0.35) { const key = keyFor(PROMPT[i]); pressed.set(key, Math.max(pressed.get(key) || 0, 1 - age / 0.35)); }
+  }
+  if (t > sentAt - 0.05 && t < sentAt + 0.35) pressed.set(keys.find(q => q.r === 2 && q.i === 13), 1 - Math.abs(t - sentAt) / 0.35);
+
+  // perspective: rows nearer the camera are bigger & lower
+  rows.forEach((cnt, r) => {
+    const z = r / (rows.length - 1);                 // 0 far, 1 near
+    const y = 40 + Math.pow(z, 1.35) * 400;
+    const kh = 34 + z * 70, scale = 0.62 + z * 0.9;
+    const rowW = 1500 * scale, x0 = W * 0.42 - rowW / 2 - z * 260;
+    keys.filter(q => q.r === r).forEach(q => {
+      let kw = rowW / 15 - 8 * scale;
+      if (r === 5 && q.i === 4) kw *= 5.2;            // spacebar
+      const off = r === 5 ? (q.i > 4 ? kw * 0 + (rowW / 15) * 4.2 : 0) : (15 - cnt) * rowW / 30;
+      const x = x0 + off + q.i * rowW / 15;
+      const p = pressed.get(q) || 0;
+      const dy = p * 6 * scale;
+      // key cap
+      k.fillStyle = `rgb(${18 + p * 30},${16 + p * 10},${18})`;
+      k.beginPath(); k.roundRect(x, y + dy, kw, kh, 8 * scale); k.fill();
+      // backlight bleed around the cap
+      const base = 0.18 + q.seed * 0.25, glow = base + p * 0.9;
+      k.fillStyle = `rgba(255,${90 + q.seed * 50},40,${Math.min(1, glow * 0.8)})`;
+      k.fillRect(x + 2, y + kh + dy - 3 * scale, kw - 4, 4 * scale);
+      // a few hot red/orange LED glints like the reference
+      if (q.seed > 0.86 || p > 0.2) {
+        k.fillStyle = `rgba(255,${60 + q.seed * 60},30,${0.6 + p * 0.4})`;
+        k.beginPath(); k.roundRect(x + kw * 0.2, y + kh * 0.3 + dy, kw * 0.35, kh * 0.22, 3); k.fill();
+      }
+      // top highlight
+      k.fillStyle = 'rgba(255,255,255,0.05)'; k.fillRect(x + 3, y + dy + 2, kw - 6, 2);
+    });
+  });
+}
+
+// ---------- hands (soft silhouettes with warm rim light) ----------
+function hand(x, y, s, rot, phase, t){
+  const g = ctx;
+  g.save(); g.translate(x, y); g.rotate(rot); g.scale(s, s);
+  // forearm + sleeve
+  g.fillStyle = '#0d0f13';
+  g.beginPath(); g.ellipse(330, 60, 260, 120, -0.25, 0, 7); g.fill();
+  // palm/back of hand
+  g.fillStyle = '#2a190f';
+  g.beginPath(); g.ellipse(40, 40, 170, 70, -0.12, 0, 7); g.fill();
+  // fingers tapping
+  for (let f = 0; f < 4; f++) {
+    const tap = Math.max(0, Math.sin(t * 9 + phase + f * 1.7)) ** 6 * 14;
+    g.fillStyle = '#36200f';
+    g.beginPath(); g.ellipse(-120 - f * 10, -10 + f * 30 + tap, 78, 20, 0.15 + f * 0.05, 0, 7); g.fill();
+  }
+  // watch strap
+  g.fillStyle = '#060708';
+  g.beginPath(); g.roundRect(180, -40, 70, 160, 20); g.fill();
+  // warm rim from keyboard / lamp
+  g.globalCompositeOperation = 'lighter';
+  const rim = g.createLinearGradient(-200, -60, 200, 60);
+  rim.addColorStop(0, 'rgba(255,140,60,0.0)'); rim.addColorStop(0.5, 'rgba(255,150,70,0.8)'); rim.addColorStop(1, 'rgba(255,120,40,0)');
+  g.strokeStyle = rim; g.lineWidth = 16;
+  g.beginPath(); g.ellipse(40, 30, 170, 70, -0.12, Math.PI * 1.05, Math.PI * 1.9); g.stroke();
+  g.restore();
+}
+
+// ---------- compose ----------
+function render(t){
+  const push = ease(t / 15.5);                       // slow dolly-in
+  const camX = Math.sin(t * 0.35) * 14 - push * 30, camY = Math.cos(t * 0.27) * 8;
+  const zoom = 1 + push * 0.07;
+  // rack focus: starts on keyboard, pulls to screen as typing begins
+  const focus = ease((t - 0.6) / 1.8);
+  const screenBlur = lerp(7, 1.1, focus), fgBlur = lerp(9, 17, focus);
+
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.filter = 'none';
+  // room
+  const bg = ctx.createLinearGradient(0, 0, W, H);
+  bg.addColorStop(0, '#0b1018'); bg.addColorStop(1, '#05070a');
+  ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H);
+
+  ctx.setTransform(zoom, 0, 0, zoom, W / 2 * (1 - zoom) + camX * 0.4, H / 2 * (1 - zoom) + camY * 0.4);
+  // window light + bokeh on the right
+  ctx.filter = 'blur(40px)';
+  ctx.fillStyle = 'rgba(150,185,215,0.28)'; ctx.fillRect(1420, 60, 420, 820);
+  ctx.fillStyle = 'rgba(190,215,235,0.55)';
+  ctx.beginPath(); ctx.ellipse(1690, 270, 80, 40, -0.2, 0, 7); ctx.fill();
+  ctx.filter = 'blur(26px)';
+  ctx.fillStyle = 'rgba(235,244,252,0.95)';
+  ctx.beginPath(); ctx.ellipse(1790, 640, 210, 48, -0.35, 0, 7); ctx.fill();
+
+  // monitor
+  drawScreen(t);
+  ctx.setTransform(zoom, 0, 0, zoom, W / 2 * (1 - zoom) + camX, H / 2 * (1 - zoom) + camY);
+  ctx.filter = `blur(${screenBlur}px) brightness(1.0)`;
+  ctx.save();
+  // slight perspective (screen angled away to the right)
+  ctx.transform(1, -0.035, 0.02, 1, -60, 20);
+  ctx.drawImage(scr, 0, 0, 1400, 1000, -20, -40, 1400 * 0.95, 1000 * 0.95);
+  // bezel edge
+  ctx.fillStyle = '#07090c'; ctx.fillRect(1310, -60, 34, 1100);
+  ctx.restore();
+  // screen glow spill
+  ctx.filter = 'blur(60px)';
+  ctx.fillStyle = 'rgba(120,150,190,0.10)'; ctx.fillRect(0, 0, 1260, 820);
+
+  // desk / lower bezel falloff
+  ctx.filter = 'blur(30px)';
+  const dg = ctx.createLinearGradient(0, 760, 0, 1080);
+  dg.addColorStop(0, 'rgba(4,5,7,0)'); dg.addColorStop(0.45, 'rgba(4,5,7,0.92)'); dg.addColorStop(1, 'rgba(4,5,7,1)');
+  ctx.fillStyle = dg; ctx.fillRect(-200, 740, W + 400, 500);
+  // foreground keyboard + hands (out of focus, more parallax)
+  drawKeyboard(t);
+  ctx.setTransform(zoom, 0, 0, zoom, W / 2 * (1 - zoom) + camX * 1.8, H / 2 * (1 - zoom) + camY * 1.8);
+  ctx.filter = `blur(${fgBlur * 0.35}px) brightness(1.8)`;
+  ctx.globalAlpha = 0.95;
+  ctx.drawImage(kb, -80, 650, W * 1.08, 520);
+  ctx.globalAlpha = 1;
+  ctx.filter = `blur(${fgBlur}px)`;
+  const typing = t > T_TYPE0 && t < T_SEND;
+  hand(820, 830 + Math.sin(t * 1.3) * 6, 1.25, -0.08, 0, typing ? t : t * 0.15);
+  hand(1430, 720 + Math.sin(t * 1.1 + 1) * 6, 1.55, -0.35, 2.1, typing ? t : t * 0.15);
+
+  // ---- post ----
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.filter = 'none';
+  // bloom on highlights
+  tctx.clearRect(0, 0, W, H);
+  tctx.filter = 'blur(28px) brightness(1.4) contrast(1.6)';
+  tctx.drawImage(c, 0, 0);
+  ctx.globalCompositeOperation = 'screen'; ctx.globalAlpha = 0.35;
+  ctx.drawImage(tmp, 0, 0);
+  ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'source-over';
+  // teal/orange grade
+  ctx.globalCompositeOperation = 'soft-light';
+  ctx.fillStyle = 'rgba(25,45,65,0.25)'; ctx.fillRect(0, 0, W, H);
+  ctx.globalCompositeOperation = 'source-over';
+  // vignette
+  const v = ctx.createRadialGradient(W * 0.42, H * 0.45, H * 0.25, W / 2, H / 2, H * 1.05);
+  v.addColorStop(0, 'rgba(0,0,0,0)'); v.addColorStop(1, 'rgba(0,0,0,0.78)');
+  ctx.fillStyle = v; ctx.fillRect(0, 0, W, H);
+  // grain
+  ctx.globalCompositeOperation = 'overlay'; ctx.globalAlpha = 0.16;
+  const gt = grain[Math.floor(t * 24) % grain.length];
+  const gx = Math.floor((t * 977) % 512), gy = Math.floor((t * 613) % 512);
+  for (let y = -gy; y < H; y += 512) for (let x = -gx; x < W; x += 512) ctx.drawImage(gt, x, y);
+  ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'source-over';
+  // fade in / out
+  const fade = Math.min(ease(t / 0.8), ease((DURATION - t) / 0.8));
+  if (fade < 1) { ctx.fillStyle = `rgba(0,0,0,${1 - fade})`; ctx.fillRect(0, 0, W, H); }
+}
+const DURATION = 16;
+window.renderFrame = t => { render(t); return c.toDataURL('image/png'); };
+window.ready = document.fonts.ready.then(() => true);
+</script>
+</body></html>
