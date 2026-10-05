@@ -864,3 +864,21 @@ cp -R index.html about.html contact.html privacy.html terms.html all-calculators
 cp -R css js tool category og-images es fr de pt it ja /tmp/calquary-deploy/
 wrangler pages deploy /tmp/calquary-deploy --project-name calquary --commit-dirty=true 2>&1 | tail -20
 - `2026-08-30 14:23:52` | FAILURE | ERROR | OTHER | Bash | Exit code 1
+- `2026-10-05 15:20:57` | FAILURE | ERROR | NETWORK | WebFetch | {"error_type":"EGRESS_BLOCKED","domain":"www.etsy.com","message":"Access to www.etsy.com is blocked by the network egress proxy."}
+- `2026-10-05 15:27:21` | FAILURE | ERROR | BUILD | Bash | Exit code 1
+- `2026-10-05 15:29:28` | FAILURE | ERROR | OTHER | Bash | Exit code 1
+- `2026-10-05 15:37:51` | FAILURE | ERROR | OTHER | Bash | Exit code 1
+- `2026-10-05 15:37:58` | FAILURE | ERROR | OTHER | Bash | Exit code 144
+- `2026-10-05 15:40:01` | FAILURE | ERROR | OTHER | Bash | Exit code 1
+- `2026-10-05 15:40:08` | FAILURE | ERROR | OTHER | Bash | Exit code 2
+- `2026-10-05 15:41:28` | GUARD | MEDIUM | SOFT BLOCKED: recursive/force rm → cd /home/user/calquary/products/social-media-planner && python3 - <<'EOF'
+p='build_planner.py'; s=open(p).read()
+s=s.replace('db.freeze_panes = "A5"','''db.freeze_panes = "A5"
+db.page_setup.orientation = "landscape"
+db.page_setup.fitToWidth, db.page_setup.fitToHeight = 1, 0
+db.sheet_properties.pageSetUpPr.fitToPage = True
+db.print_area = "A1:AA62"''')
+open(p,'w').write(s)
+EOF
+python3 build_planner.py >/dev/null && python3 /root/.claude/skills/synced/8e53059f-4114-4965-9be5-ca35d2c53045_3f6962f0-ea22-4aa8-80b2-526e0222d504/xlsx/scripts/recalc.py Social-Media-Content-Planner.xlsx 300 | grep -E "status|total_errors"
+SP=/tmp/claude-0/-home-user-calquary/7a29fef3-a545-581b-857e-66e3487b37ea/scratchpad/render; cp Social-Media-Content-Planner.xlsx $SP/ && cd $SP && rm -f *.pdf *.png && timeout 200 soffice -env:UserInstallation=file://$SP/../prof2 --headless --convert-to pdf Social-Media-Content-Planner.xlsx >/dev/null 2>&1; for i in $(seq 85 100); do pdftotext -f $i -l $i Social-Media-Content-Planner.pdf - 2>/dev/null| head -1 | grep -q Dashboard && echo $i; done

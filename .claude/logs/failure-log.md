@@ -23,3 +23,11 @@
 - `2026-08-27 15:14:04` | ERROR | OTHER | Bash | Exit code 1
 - `2026-08-27 15:18:00` | WARN | FILESYSTEM | Bash | Exit code 1
 - `2026-08-30 14:23:52` | ERROR | OTHER | Bash | Exit code 1
+- `2026-10-05 15:20:57` | ERROR | NETWORK | WebFetch | {"error_type":"EGRESS_BLOCKED","domain":"www.etsy.com","message":"Access to www.etsy.com is blocked by the network egress proxy."}
+- `2026-10-05 15:27:21` | ERROR | BUILD | Bash | Exit code 1
+- `2026-10-05 15:29:28` | ERROR | OTHER | Bash | Exit code 1
+- `2026-10-05 15:37:51` | ERROR | OTHER | Bash | Exit code 1
+- `2026-10-05 15:37:58` | ERROR | OTHER | Bash | Exit code 144
+- `2026-10-05 15:40:01` | ERROR | OTHER | Bash | Exit code 1
+- `2026-10-05 15:40:08` | ERROR | OTHER | Bash | Exit code 2
+- `2026-10-05 15:40:14` | WARN | FILESYSTEM | Bash | Exit code 1
