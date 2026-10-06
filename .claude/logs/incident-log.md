@@ -864,3 +864,27 @@ cp -R index.html about.html contact.html privacy.html terms.html all-calculators
 cp -R css js tool category og-images es fr de pt it ja /tmp/calquary-deploy/
 wrangler pages deploy /tmp/calquary-deploy --project-name calquary --commit-dirty=true 2>&1 | tail -20
 - `2026-08-30 14:23:52` | FAILURE | ERROR | OTHER | Bash | Exit code 1
+- `2026-10-06 06:55:51` | FAILURE | ERROR | API | Bash | Exit code 56
+- `2026-10-06 07:01:42` | FAILURE | ERROR | OTHER | Bash | Exit code 1
+- `2026-10-06 07:01:55` | GUARD | MEDIUM | SOFT BLOCKED: recursive/force rm → S=/tmp/claude-0/-home-user-calquary/4ff59d44-711d-5499-9b00-5047afdc817e/scratchpad; cd $S/src && python3 - <<'EOF'
+p='render.py'; s=open(p).read()
+R=[
+('ys = np.where(xs < 0.45, -0.80 - 0.20 * (1 - xs / 0.45) ** 2, -0.80 - 0.08 * ((xs - 0.45) / 0.35) ** 2)',
+ 'ys = np.where(xs < 0.42, -0.86 - 0.11 * (1 - xs / 0.42) ** 2, -0.86 - 0.07 * ((xs - 0.42) / 0.38) ** 2)'),
+('np.array([0.83, 0.25]), np.array([0.45, 0.78])', 'np.array([0.84, 0.35]), np.array([0.58, 0.80])'),
+('self.sh_sx, self.sh_sy = self.H * 0.176, self.H * 0.280', 'self.sh_sx, self.sh_sy = self.H * 0.215, self.H * 0.272'),
+('"\\u26BF", "\\u2316", "\\u2318", "\\u25C9", "\\u29BF", "\\u2B22"', '"\\u2708", "\\u2318", "\\u25C9", "\\u2B22"'),
+('v = np.where(self.g_land, 0.55 + 0.9 * edge ** 3, 0.10 + 0.25 * edge ** 3)', 'v = np.where(self.g_land, 1.0 + 1.2 * edge ** 3, 0.16 + 0.35 * edge ** 3)'),
+('rain[ys0c:ys1c, xa:xa + self.col_w] = col * (0.18 + 0.95 * trail)[:, None]', 'rain[ys0c:ys1c, xa:xa + self.col_w] = col * (0.30 + 1.2 * trail)[:, None]'),
+('if rng.random() < 0.18:', 'if rng.random() < 0.08:'),
+('acc += (mask * 0.22 * shield_fill)[..., None] * DEEP', 'acc += (mask * (0.35 + 0.25 * np.clip((self.cy - self.dy * 0 - np.arange(H, dtype=np.float32)[:, None]) / H + 0.5, 0, 1)) * shield_fill)[..., None] * BLUE * 0.6'),
+('acc += core[..., None] * CYAN * (0.12 * globe_a + 1.6 * flash)', 'acc += core[..., None] * CYAN * (0.12 * globe_a + 0.55 * flash)'),
+('core = np.exp(-(self.r / (H * (0.22 + 0.25 * flash))) ** 2)', 'core = np.exp(-(self.r / (H * (0.22 + 0.12 * flash))) ** 2)'),
+]
+for a,b in R:
+    assert a in s, a
+    s=s.replace(a,b)
+open(p,'w').write(s)
+EOF
+rm -f $S/stills/*; time python3 -I render.py $S/stills/s --still 2.0 2.8 7 && cd $S/stills && for f in s_*.png; do python3 -c "from PIL import Image; Image.open('$f').resize((1600,900), Image.LANCZOS).save('sm_$f')"; done
+- `2026-10-06 07:01:56` | FAILURE | ERROR | OTHER | Read | File does not exist. Note: your current working directory is /home/user/calquary.
