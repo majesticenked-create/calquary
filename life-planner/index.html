@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script>try{var t=localStorage.getItem('lifeplanner:theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Life Planner</title>
+<meta name="description" content="A fast, private, all-in-one life planner: tasks, goals, habits, journal, budget, notes and weekly reviews — linked together, offline, no account.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1B7A4B">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="planner.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" aria-label="Main navigation">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">◐</span>
+      <span class="brand-name">Life Planner</span>
+    </div>
+    <button class="btn btn-primary capture-btn" type="button" data-action="quick-add">
+      <span aria-hidden="true">＋</span> Quick add <kbd>N</kbd>
+    </button>
+    <nav class="nav" id="nav"></nav>
+    <div class="sidebar-foot">
+      <button class="btn btn-ghost btn-sm" type="button" data-action="theme" id="theme-btn">Theme: Auto</button>
+    </div>
+  </aside>
+
+  <main class="main" id="main" tabindex="-1"></main>
+
+  <nav class="bottom-nav" id="bottom-nav" aria-label="Main navigation"></nav>
+  <button class="fab" type="button" data-action="quick-add" aria-label="Quick add">＋</button>
+</div>
+
+<dialog class="modal" id="modal">
+  <form method="dialog" class="modal-inner" id="modal-form"></form>
+</dialog>
+
+<div class="tooltip" id="tooltip" role="status" hidden></div>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="planner.js"></script>
+</body>
+</html>
