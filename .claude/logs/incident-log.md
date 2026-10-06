@@ -864,3 +864,5 @@ cp -R index.html about.html contact.html privacy.html terms.html all-calculators
 cp -R css js tool category og-images es fr de pt it ja /tmp/calquary-deploy/
 wrangler pages deploy /tmp/calquary-deploy --project-name calquary --commit-dirty=true 2>&1 | tail -20
 - `2026-08-30 14:23:52` | FAILURE | ERROR | OTHER | Bash | Exit code 1
+- `2026-10-06 06:29:59` | FAILURE | ERROR | OTHER | Bash | Exit code 1
+- `2026-10-06 06:44:50` | GUARD | LOW | WARNING: mv command allowed → S=/tmp/claude-0/-home-user-calquary/a051a85f-719b-593d-aa8f-1b0fd5c1ee2b/scratchpad && mv video/code_tunnel_1080p_master.mp4 video/code_tunnel_1080p_web.mp4 $S/ && mkdir -p video/source && cp $S/codefly/scene.html $S/codefly/render.mjs video/source/ && git status --short && git branch --show-current
