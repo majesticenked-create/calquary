@@ -864,3 +864,5 @@ cp -R index.html about.html contact.html privacy.html terms.html all-calculators
 cp -R css js tool category og-images es fr de pt it ja /tmp/calquary-deploy/
 wrangler pages deploy /tmp/calquary-deploy --project-name calquary --commit-dirty=true 2>&1 | tail -20
 - `2026-08-30 14:23:52` | FAILURE | ERROR | OTHER | Bash | Exit code 1
+- `2026-10-06 06:25:03` | GUARD | MEDIUM | SOFT BLOCKED: recursive/force rm → S=/tmp/claude-0/-home-user-calquary/8bad14f7-3e78-5f2f-964e-da0c7cb947ca/scratchpad; mkdir -p $S/prev && cd $S && rm -f prev/*; time python3 filmburn.py prev/p --preview 24 && ffmpeg -v error -pattern_type glob -i 'prev/p_*.ppm' -vf "scale=640:-1,tile=3x4" -frames:v 1 -y prev/sheet.png && ls prev | wc -l
+- `2026-10-06 06:25:41` | FAILURE | ERROR | OTHER | Bash | Exit code 1
