@@ -864,3 +864,4 @@ cp -R index.html about.html contact.html privacy.html terms.html all-calculators
 cp -R css js tool category og-images es fr de pt it ja /tmp/calquary-deploy/
 wrangler pages deploy /tmp/calquary-deploy --project-name calquary --commit-dirty=true 2>&1 | tail -20
 - `2026-08-30 14:23:52` | FAILURE | ERROR | OTHER | Bash | Exit code 1
+- `2026-10-06 06:59:21` | GUARD | MEDIUM | SOFT BLOCKED: recursive/force rm → cd /tmp/claude-0/-home-user-calquary/4fca9b29-68b8-5557-b9f1-6091c42ba0c3/scratchpad && rm -f prev_*.png && python3 render.py datacenter_4k60.mp4 --w 3840 --h 2160 --fps 60 --dur 14 --jobs 4 > render.log 2>&1
