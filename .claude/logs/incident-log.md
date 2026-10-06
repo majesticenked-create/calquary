@@ -864,3 +864,6 @@ cp -R index.html about.html contact.html privacy.html terms.html all-calculators
 cp -R css js tool category og-images es fr de pt it ja /tmp/calquary-deploy/
 wrangler pages deploy /tmp/calquary-deploy --project-name calquary --commit-dirty=true 2>&1 | tail -20
 - `2026-08-30 14:23:52` | FAILURE | ERROR | OTHER | Bash | Exit code 1
+- `2026-10-06 12:06:53` | FAILURE | ERROR | OTHER | Bash | Exit code 1
+- `2026-10-06 12:10:11` | FAILURE | ERROR | OTHER | Read | File does not exist. Note: your current working directory is /home/user/calquary/media/fintech-hero.
+- `2026-10-06 12:10:11` | FAILURE | ERROR | OTHER | Read | File does not exist. Note: your current working directory is /home/user/calquary/media/fintech-hero.
