@@ -864,3 +864,30 @@ cp -R index.html about.html contact.html privacy.html terms.html all-calculators
 cp -R css js tool category og-images es fr de pt it ja /tmp/calquary-deploy/
 wrangler pages deploy /tmp/calquary-deploy --project-name calquary --commit-dirty=true 2>&1 | tail -20
 - `2026-08-30 14:23:52` | FAILURE | ERROR | OTHER | Bash | Exit code 1
+- `2026-10-06 06:17:25` | FAILURE | ERROR | OTHER | Bash | Exit code 1
+- `2026-10-06 06:18:14` | GUARD | MEDIUM | SOFT BLOCKED: recursive/force rm → S=/tmp/claude-0/-home-user-calquary/8d42b2bd-db6a-5685-a208-51a3156a350f/scratchpad; python3 - <<'EOF'
+p="/tmp/claude-0/-home-user-calquary/8d42b2bd-db6a-5685-a208-51a3156a350f/scratchpad/filmburn.py"
+s=open(p).read()
+rep=[('''                edge_m = up(np.clip(1 - smooth(0.0, 0.5, np.abs(lx - 0.5) * 2 * -1 + 1), 0, 1))
+                a = (0.55 + 0.45 * edge_m)[..., None]''','''                edge_m = up(smooth(0.25, 0.5, np.abs(lx - 0.5)))
+                a = (0.82 + 0.18 * edge_m)[..., None]'''),
+('wob = 0.02 * np.sin(ly * 9 + t * 7)','wob = 0.008 * np.sin(ly * 7 + t * 5)'),
+('return m * 0.85, 3','return m * 0.85, 7'),
+('return m * fade, 6\n    if kind == "band"','return m * fade, 8\n    if kind == "band"'),
+('smooth(0.8, 1.0, ly) * 0.4, 5','smooth(0.8, 1.0, ly) * 0.4, 8'),
+('return m * fade, 6\n    return None','return m * fade, 8\n    return None'),
+('return m * (0.35 + 0.65 * fade), 4','return m * (0.35 + 0.65 * fade), 6'),
+('red = np.array([0.80, 0.27, 0.17]','red = np.array([0.78, 0.24, 0.15]'),
+('org = np.array([0.95, 0.52, 0.30]','org = np.array([0.93, 0.46, 0.28]'),
+('a = smooth(0.62, 0.85, m)','a = smooth(0.45, 0.92, m)'),
+('b = smooth(0.85, 1.0, m)','b = smooth(0.80, 1.05, m)'),
+('alpha = smooth(0.05, 0.55, m)','alpha = smooth(0.0, 0.6, m)'),
+]
+for a,b in rep:
+    assert a in s, a
+    s=s.replace(a,b)
+open(p,"w").write(s)
+EOF
+cd $S/prev && rm -f prev_*.png && python3 $S/filmburn.py 66 80 100 106 265 290 && ffmpeg -v error -y -pattern_type glob -i 'prev_*.png' -vf "scale=640:-1,tile=3x2" -frames:v 1 $S/prevsheet2.png
+- `2026-10-06 06:18:16` | FAILURE | ERROR | OTHER | Read | File does not exist. Note: your current working directory is /home/user/calquary.
+- `2026-10-06 06:24:08` | GUARD | LOW | WARNING: mv command allowed → S=/tmp/claude-0/-home-user-calquary/8d42b2bd-db6a-5685-a208-51a3156a350f/scratchpad; cd $S && mv vintage-film-overlay-1080p.mp4 master-crf12.mp4 && python3 filmburn.py 2>/dev/null | ffmpeg -v error -y -f rawvideo -pix_fmt rgb24 -s 1920x1080 -r 24 -i - -c:v libx264 -preset slow -crf 16 -maxrate 40M -bufsize 80M -tune grain -profile:v high -pix_fmt yuv420p -colorspace bt709 -color_primaries bt709 -color_trc bt709 -movflags +faststart $S/vintage-film-overlay-1080p.mp4 && ls -la $S/*.mp4 && ffmpeg -v error -y -i vintage-film-overlay-1080p.mp4 -vf "fps=1,scale=320:-1,tile=5x4" -frames:v 1 finalsheet.png
