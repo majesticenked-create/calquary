@@ -1,0 +1,844 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Fintech Hero Scene</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #04060b; overflow: hidden; }
+  canvas { display: block; }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<script>
+/*
+ * Procedural fintech hero background.
+ *
+ * Every animated quantity is a function of the loop phase p in [0,1) built only
+ * from integer-frequency periodic terms (or wrapped with frac()), so frame N is
+ * identical to frame 0 and the clip loops seamlessly. No glyphs are ever drawn:
+ * all "text" is abstract rounded bars, all indicators are geometric shapes.
+ */
+const TAU = Math.PI * 2;
+const frac = x => x - Math.floor(x);
+const clamp = (x, a, b) => Math.min(b, Math.max(a, x));
+const smooth = (e0, e1, x) => { const t = clamp((x - e0) / (e1 - e0), 0, 1); return t * t * (3 - 2 * t); };
+const lerp = (a, b, t) => a + (b - a) * t;
+function mulberry32(a) {
+  return function () {
+    a |= 0; a = a + 0x6D2B79F5 | 0;
+    let t = Math.imul(a ^ a >>> 15, 1 | a);
+    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+    return ((t ^ t >>> 14) >>> 0) / 4294967296;
+  };
+}
+
+const C = {
+  cyan: [108, 201, 255],
+  blue: [77, 141, 255],
+  teal: [70, 224, 196],
+  gold: [226, 201, 143],
+  silver: [201, 211, 227],
+  white: [255, 255, 255],
+};
+const rgba = (c, a) => `rgba(${c[0]},${c[1]},${c[2]},${a})`;
+
+/* ------------------------------------------------------------------ layouts */
+// Design units: 1920x1080 (horizontal) and 1080x1920 (vertical). Rendered at 2x.
+const LAYOUTS = {
+  h: {
+    W: 1920, H: 1080, seed: 7,
+    vp: { x: 1340, y: 560 },
+    text: { x: 90, y: 230, w: 900, h: 600 },          // keep-clean copy-space zone
+    leftShade: true,
+    globe: { x: 1500, y: 1330, r: 640 },
+    beam: { x0: 1900, y0: -100, x1: 1100, y1: 1200 },
+    panels: [
+      { kind: 'list',   x: 1230, y: 50,   w: 250, h: 170, depth: 1.9, blur: 7,  alpha: 0.5 },
+      { kind: 'multi',  x: 1430, y: 600,  w: 470, h: 280, depth: 1.6, blur: 5,  alpha: 0.7 },
+      { kind: 'line',   x: 1030, y: 272,  w: 640, h: 380, depth: 1.0, blur: 0,  alpha: 1 },
+      { kind: 'bars',   x: 920,  y: 735,  w: 470, h: 250, depth: 1.08, blur: 0, alpha: 1 },
+      { kind: 'ring',   x: 1560, y: 84,   w: 330, h: 200, depth: 0.88, blur: 0, alpha: 1 },
+      { kind: 'donut',  x: 1610, y: 840,  w: 420, h: 300, depth: 0.55, blur: 16, alpha: 0.55 },
+    ],
+    nodeRegions: [
+      { x: 960, y: 40, w: 940, h: 1000, n: 34 },
+      { x: 60, y: 880, w: 900, h: 170, n: 14 },
+      { x: 40, y: 40, w: 700, h: 150, n: 6 },
+    ],
+    particles: 230,
+  },
+  v: {
+    W: 1080, H: 1920, seed: 11,
+    vp: { x: 560, y: 1380 },
+    text: { x: 70, y: 200, w: 940, h: 760 },
+    leftShade: false,
+    globe: { x: 560, y: 2260, r: 700 },
+    beam: { x0: 1150, y0: 700, x1: 200, y1: 2000 },
+    panels: [
+      { kind: 'list',   x: 850,  y: 95,   w: 250, h: 170, depth: 1.9, blur: 8,  alpha: 0.42 },
+      { kind: 'multi',  x: 570,  y: 1560, w: 470, h: 280, depth: 1.6, blur: 5,  alpha: 0.7 },
+      { kind: 'line',   x: 90,   y: 1185, w: 640, h: 380, depth: 1.0, blur: 0,  alpha: 1 },
+      { kind: 'bars',   x: 60,   y: 1625, w: 470, h: 250, depth: 1.08, blur: 0, alpha: 1 },
+      { kind: 'ring',   x: 625,  y: 990,  w: 330, h: 200, depth: 0.88, blur: 0, alpha: 1 },
+      { kind: 'donut',  x: 690,  y: 1770, w: 420, h: 300, depth: 0.55, blur: 16, alpha: 0.55 },
+    ],
+    nodeRegions: [
+      { x: 30, y: 1000, w: 1020, h: 900, n: 36 },
+      { x: 20, y: 40, w: 1040, h: 140, n: 7 },
+      { x: 860, y: 180, w: 200, h: 760, n: 5 },
+    ],
+    particles: 230,
+  },
+};
+
+/* ------------------------------------------------------------- scene build */
+function build(L) {
+  const rnd = mulberry32(L.seed);
+  const S = {};
+  const inRect = (x, y, r, m = 0) => x > r.x - m && x < r.x + r.w + m && y > r.y - m && y < r.y + r.h + m;
+  const sharpPanels = L.panels.filter(p => !p.blur);
+
+  // Floating data nodes (3D-ish: depth drives parallax, size, layer)
+  S.nodes = [];
+  for (const reg of L.nodeRegions) {
+    let made = 0, guard = 0;
+    while (made < reg.n && guard++ < 2000) {
+      const x = reg.x + rnd() * reg.w, y = reg.y + rnd() * reg.h;
+      if (inRect(x, y, L.text, 30)) continue;
+      const z = 0.75 + rnd() * 1.1;
+      // nodes in front of the sharp panels must not sit on top of chart content
+      if (z < 1.05 && sharpPanels.some(p => inRect(x, y, p, 18))) continue;
+      S.nodes.push({
+        x, y, z,
+        ax: 6 + rnd() * 10, ay: 5 + rnd() * 8,
+        kx: 1 + (rnd() * 2 | 0), ky: 1 + (rnd() * 2 | 0),
+        px: rnd(), py: rnd(),
+        anchor: rnd() < 0.35,
+        phase: rnd(),
+        key: rnd() < 0.16,
+        gold: rnd() < 0.3,
+        r: 1.4 + rnd() * 1.6,
+      });
+      made++;
+    }
+  }
+  // Edges: connect each node to its two nearest neighbours within reach
+  S.edges = [];
+  const seen = new Set();
+  S.nodes.forEach((a, i) => {
+    const d = S.nodes.map((b, j) => ({ j, d: Math.hypot(a.x - b.x, a.y - b.y) }))
+      .filter(o => o.j !== i && o.d < 260).sort((u, v) => u.d - v.d).slice(0, 2);
+    for (const o of d) {
+      const k = i < o.j ? `${i}-${o.j}` : `${o.j}-${i}`;
+      if (seen.has(k)) continue;
+      seen.add(k);
+      S.edges.push({ a: i, b: o.j, pulse: rnd() < 0.38, pk: 1 + (rnd() * 2 | 0), pp: rnd(), dir: rnd() < 0.5 });
+    }
+  });
+
+  // Particles streaming slowly toward camera from the vanishing point
+  S.particles = [];
+  for (let i = 0; i < L.particles; i++) {
+    const th = rnd() * TAU;
+    const rho = 120 + Math.pow(rnd(), 0.7) * 1700;
+    S.particles.push({ th, rho, z0: rnd(), s: 0.6 + rnd() * 1.4, tint: rnd() < 0.15 ? C.gold : (rnd() < 0.5 ? C.cyan : C.silver), wob: rnd() });
+  }
+
+  // Far bokeh
+  S.bokeh = [];
+  for (let i = 0; i < 14; i++) {
+    let x, y, g = 0;
+    do { x = rnd() * L.W; y = rnd() * L.H; } while (inRect(x, y, L.text, -60) && g++ < 50);
+    S.bokeh.push({ x, y, r: 50 + rnd() * 170, a: 0.025 + rnd() * 0.05, c: rnd() < 0.2 ? C.gold : (rnd() < 0.5 ? C.blue : C.cyan), kx: 1, px: rnd(), ax: 20 + rnd() * 30 });
+  }
+
+  // Globe arcs (lat/lon in degrees)
+  S.arcs = [];
+  for (let i = 0; i < 9; i++) {
+    const la1 = -10 + rnd() * 60, lo1 = -70 + rnd() * 140;
+    const la2 = -10 + rnd() * 60, lo2 = lo1 + (rnd() < 0.5 ? -1 : 1) * (25 + rnd() * 45);
+    S.arcs.push({ la1, lo1, la2, lo2, start: i / 9 + rnd() * 0.05, dur: 0.42 + rnd() * 0.12, gold: rnd() < 0.3 });
+  }
+
+  // Per-panel random content seeds
+  S.panelSeeds = L.panels.map(() => Math.floor(rnd() * 1e9));
+  S.panelPhase = L.panels.map(() => rnd());
+  return S;
+}
+
+/* ---------------------------------------------------------------- canvases */
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+const tmp = document.createElement('canvas');
+const tctx = tmp.getContext('2d');
+const lay = document.createElement('canvas');
+const lctx = lay.getContext('2d');
+let SC = 2;            // pixel scale
+let grain = null;
+
+function makeGrain() {
+  const g = document.createElement('canvas');
+  g.width = g.height = 512;
+  const gc = g.getContext('2d');
+  const im = gc.createImageData(512, 512);
+  const r = mulberry32(99);
+  for (let i = 0; i < im.data.length; i += 4) {
+    const v = 128 + (r() - 0.5) * 2 * 60;
+    im.data[i] = im.data[i + 1] = im.data[i + 2] = v;
+    im.data[i + 3] = 255;
+  }
+  gc.putImageData(im, 0, 0);
+  return g;
+}
+
+function rr(c, x, y, w, h, r) {
+  r = Math.min(r, w / 2, h / 2);
+  c.beginPath();
+  c.moveTo(x + r, y);
+  c.arcTo(x + w, y, x + w, y + h, r);
+  c.arcTo(x + w, y + h, x, y + h, r);
+  c.arcTo(x, y + h, x, y, r);
+  c.arcTo(x, y, x + w, y, r);
+  c.closePath();
+}
+function bar(c, x, y, w, h, col) { rr(c, x, y, w, h, h / 2); c.fillStyle = col; c.fill(); }
+function glowDot(c, x, y, r, col, a, glow = 6) {
+  const g = c.createRadialGradient(x, y, 0, x, y, r * glow);
+  g.addColorStop(0, rgba(col, 0.55 * a));
+  g.addColorStop(0.25, rgba(col, 0.18 * a));
+  g.addColorStop(1, rgba(col, 0));
+  c.fillStyle = g;
+  c.beginPath(); c.arc(x, y, r * glow, 0, TAU); c.fill();
+  c.fillStyle = rgba([235, 247, 255], 0.95 * a);
+  c.beginPath(); c.arc(x, y, r, 0, TAU); c.fill();
+}
+// Percentage-style glyph drawn from geometry (two rings + slash) - not a font glyph.
+function pctGlyph(c, x, y, s, col) {
+  c.strokeStyle = col; c.lineWidth = s * 0.16; c.lineCap = 'round';
+  c.beginPath(); c.arc(x - s * 0.28, y - s * 0.28, s * 0.17, 0, TAU); c.stroke();
+  c.beginPath(); c.arc(x + s * 0.28, y + s * 0.28, s * 0.17, 0, TAU); c.stroke();
+  c.beginPath(); c.moveTo(x + s * 0.4, y - s * 0.45); c.lineTo(x - s * 0.4, y + s * 0.45); c.stroke();
+}
+function upTri(c, x, y, s, col) {
+  c.fillStyle = col; c.beginPath();
+  c.moveTo(x, y - s * 0.55); c.lineTo(x + s * 0.55, y + s * 0.4); c.lineTo(x - s * 0.55, y + s * 0.4); c.closePath(); c.fill();
+}
+
+/* ------------------------------------------------------------ panel bodies */
+// Smooth periodic series: shape fixed in u, amplitudes breathe with p, fine detail drifts.
+function series(seed, u, p, trend = 0.28) {
+  const r = mulberry32(seed);
+  let v = 0.5 + trend * (u - 0.5);
+  const ks = [1, 2, 3, 5, 7, 11];
+  const amps = [0.1, 0.065, 0.045, 0.03, 0.018, 0.011];
+  for (let i = 0; i < ks.length; i++) {
+    const ph = r() * TAU, mph = r() * TAU;
+    const k = ks[i];
+    if (k < 5) v += amps[i] * (1 + 0.4 * Math.sin(TAU * p + mph)) * Math.sin(TAU * k * u * 0.5 + ph);
+    else v += amps[i] * Math.sin(TAU * k * u * 0.5 + ph - TAU * p);
+  }
+  return v;
+}
+
+function header(c, pad, w, a, accent = C.cyan) {
+  c.strokeStyle = rgba(accent, 0.55 * a); c.lineWidth = 1.4;
+  c.beginPath(); c.arc(pad + 9, pad + 9, 8.5, 0, TAU); c.stroke();
+  c.fillStyle = rgba(accent, 0.8 * a); c.beginPath(); c.arc(pad + 9, pad + 9, 3, 0, TAU); c.fill();
+  bar(c, pad + 28, pad + 2, Math.min(118, w * 0.3), 7, rgba(C.white, 0.30 * a));
+  bar(c, pad + 28, pad + 14, Math.min(68, w * 0.18), 5, rgba(C.white, 0.12 * a));
+}
+
+function bodyLine(c, w, h, p, seed, a) {
+  const pad = 26;
+  header(c, pad, w, a);
+  // percentage-style pill
+  const px = w - pad - 92, py = pad - 2;
+  rr(c, px, py, 92, 26, 13); c.fillStyle = rgba(C.teal, 0.10 * a); c.fill();
+  c.strokeStyle = rgba(C.teal, 0.35 * a); c.lineWidth = 1; c.stroke();
+  upTri(c, px + 17, py + 13, 10, rgba(C.teal, 0.9 * a));
+  bar(c, px + 30, py + 10, 28, 6, rgba(C.teal, 0.55 * a));
+  pctGlyph(c, px + 72, py + 13, 11, rgba(C.teal, 0.8 * a));
+  // timeframe segmented control (abstract)
+  for (let i = 0; i < 4; i++) {
+    const sx = w - pad - 92 - 22 - (4 - i) * 30, act = i === 2;
+    rr(c, sx, py + 6, 24, 14, 7);
+    c.fillStyle = act ? rgba(C.white, 0.12 * a) : rgba(C.white, 0.0); c.fill();
+    bar(c, sx + 7, py + 11, 10, 4, rgba(C.white, (act ? 0.45 : 0.16) * a));
+  }
+
+  const x0 = pad, x1 = w - pad, y0 = pad + 62, y1 = h - pad - 22;
+  // grid
+  c.lineWidth = 1;
+  for (let i = 0; i <= 4; i++) {
+    const y = lerp(y0, y1, i / 4);
+    c.strokeStyle = rgba(C.white, 0.05 * a);
+    c.setLineDash([2, 6]); c.beginPath(); c.moveTo(x0, y); c.lineTo(x1, y); c.stroke();
+  }
+  c.setLineDash([]);
+  // x-axis tick placeholders
+  for (let i = 0; i < 6; i++) bar(c, lerp(x0, x1 - 26, i / 5), y1 + 12, 26, 4, rgba(C.white, 0.10 * a));
+
+  const N = 180;
+  const pts = [], cmp = [];
+  for (let i = 0; i <= N; i++) {
+    const u = i / N;
+    pts.push([lerp(x0, x1, u), lerp(y1, y0, series(seed, u, p))]);
+    cmp.push([lerp(x0, x1, u), lerp(y1, y0, series(seed + 17, u, p, 0.12) - 0.08)]);
+  }
+  // comparison line, dashed champagne
+  c.setLineDash([3, 5]); c.strokeStyle = rgba(C.gold, 0.32 * a); c.lineWidth = 1.2;
+  c.beginPath(); cmp.forEach(([x, y], i) => i ? c.lineTo(x, y) : c.moveTo(x, y)); c.stroke(); c.setLineDash([]);
+  // area
+  const g = c.createLinearGradient(0, y0, 0, y1);
+  g.addColorStop(0, rgba(C.cyan, 0.26 * a)); g.addColorStop(1, rgba(C.cyan, 0));
+  c.beginPath(); pts.forEach(([x, y], i) => i ? c.lineTo(x, y) : c.moveTo(x, y));
+  c.lineTo(x1, y1); c.lineTo(x0, y1); c.closePath(); c.fillStyle = g; c.fill();
+  // line with glow
+  c.save();
+  c.shadowColor = rgba(C.cyan, 0.8 * a); c.shadowBlur = 14 * SC;
+  const lg = c.createLinearGradient(x0, 0, x1, 0);
+  lg.addColorStop(0, rgba(C.blue, 0.6 * a)); lg.addColorStop(1, rgba(C.cyan, 1 * a));
+  c.strokeStyle = lg; c.lineWidth = 2.2; c.lineJoin = 'round';
+  c.beginPath(); pts.forEach(([x, y], i) => i ? c.lineTo(x, y) : c.moveTo(x, y)); c.stroke();
+  c.restore();
+
+  // crosshair + tooltip chip following the line
+  const cu = 0.58 + 0.24 * Math.sin(TAU * p);
+  const ci = Math.round(cu * N), [cx, cy] = pts[ci];
+  c.strokeStyle = rgba(C.white, 0.16 * a); c.setLineDash([2, 4]); c.lineWidth = 1;
+  c.beginPath(); c.moveTo(cx, y0 - 6); c.lineTo(cx, y1); c.stroke(); c.setLineDash([]);
+  const pr = frac(p * 3);
+  c.strokeStyle = rgba(C.cyan, 0.5 * (1 - pr) * a); c.lineWidth = 1.2;
+  c.beginPath(); c.arc(cx, cy, 5 + pr * 16, 0, TAU); c.stroke();
+  glowDot(c, cx, cy, 3.4, C.cyan, a, 5);
+  const tw = 86, th = 42;
+  const tx = clamp(cx - tw / 2, x0, x1 - tw), ty = clamp(cy - th - 18, y0 - 30, y1 - th);
+  rr(c, tx, ty, tw, th, 9); c.fillStyle = 'rgba(16,26,46,0.78)'; c.fill();
+  c.strokeStyle = rgba(C.white, 0.16 * a); c.lineWidth = 1; c.stroke();
+  bar(c, tx + 12, ty + 11, 46, 6, rgba(C.white, 0.5 * a));
+  bar(c, tx + 12, ty + 24, 30, 5, rgba(C.teal, 0.55 * a));
+  upTri(c, tx + 72, ty + 26, 8, rgba(C.teal, 0.8 * a));
+
+  // live head
+  const [hx, hy] = pts[N];
+  const hp = frac(p * 2 + 0.3);
+  c.strokeStyle = rgba(C.cyan, 0.45 * (1 - hp) * a);
+  c.beginPath(); c.arc(hx, hy, 4 + hp * 20, 0, TAU); c.stroke();
+  glowDot(c, hx, hy, 3, C.cyan, a, 6);
+}
+
+function bodyBars(c, w, h, p, seed, a) {
+  const pad = 24;
+  header(c, pad, w, a, C.teal);
+  const r = mulberry32(seed);
+  // legend dots (abstract)
+  for (let i = 0; i < 2; i++) {
+    const lx = w - pad - 110 + i * 58;
+    c.fillStyle = rgba(i ? C.gold : C.cyan, 0.8 * a); c.beginPath(); c.arc(lx, pad + 9, 3.2, 0, TAU); c.fill();
+    bar(c, lx + 9, pad + 6, 34, 6, rgba(C.white, 0.16 * a));
+  }
+  const n = 18, x0 = pad, x1 = w - pad, y0 = pad + 50, y1 = h - pad - 14;
+  const bw = (x1 - x0) / n;
+  const cur = (n - 1) * (0.5 + 0.38 * Math.sin(TAU * p + 1.1));
+  const tops = [];
+  c.strokeStyle = rgba(C.white, 0.08 * a); c.lineWidth = 1;
+  c.beginPath(); c.moveTo(x0, y1 + 0.5); c.lineTo(x1, y1 + 0.5); c.stroke();
+  for (let i = 0; i < n; i++) {
+    const base = 0.42 + 0.22 * Math.sin(i * 0.38 + 0.6) + 0.12 * Math.sin(i * 1.7 + 2.0) + 0.16 * r();
+    const v = clamp(base + 0.07 * Math.sin(TAU * p + i * 0.7) + 0.03 * Math.sin(TAU * 2 * p + i * 1.3), 0.08, 1);
+    const hh = v * (y1 - y0);
+    const x = x0 + i * bw + bw * 0.22, ww = bw * 0.56;
+    const hl = Math.exp(-Math.pow(i - cur, 2) / 1.2);
+    const g = c.createLinearGradient(0, y1 - hh, 0, y1);
+    g.addColorStop(0, rgba(C.cyan, (0.45 + 0.45 * hl) * a));
+    g.addColorStop(1, rgba(C.blue, 0.06 * a));
+    rr(c, x, y1 - hh, ww, hh, Math.min(4, ww / 2)); c.fillStyle = g; c.fill();
+    if (hl > 0.02) {
+      c.save(); c.shadowColor = rgba(C.cyan, 0.9 * hl * a); c.shadowBlur = 16 * SC;
+      c.fillStyle = rgba([220, 245, 255], 0.9 * hl * a);
+      c.beginPath(); c.arc(x + ww / 2, y1 - hh - 7, 2.4, 0, TAU); c.fill(); c.restore();
+    }
+    tops.push([x + ww / 2, y1 - hh]);
+  }
+  // smoothed trend over bars, champagne
+  c.strokeStyle = rgba(C.gold, 0.55 * a); c.lineWidth = 1.4;
+  c.beginPath();
+  tops.forEach(([x, y], i) => {
+    const ys = (tops[Math.max(0, i - 1)][1] + y * 2 + tops[Math.min(n - 1, i + 1)][1]) / 4 - 14;
+    i ? c.lineTo(x, ys) : c.moveTo(x, ys);
+  });
+  c.stroke();
+}
+
+function bodyRing(c, w, h, p, seed, a) {
+  const pad = 24;
+  const cx = pad + 62, cy = h / 2 + 4, R = 50;
+  c.lineWidth = 9; c.strokeStyle = rgba(C.white, 0.07 * a);
+  c.beginPath(); c.arc(cx, cy, R, 0, TAU); c.stroke();
+  const f = 0.68 + 0.06 * Math.sin(TAU * p + 0.4);
+  const a0 = -Math.PI / 2, a1 = a0 + f * TAU;
+  const g = c.createLinearGradient(cx - R, cy - R, cx + R, cy + R);
+  g.addColorStop(0, rgba(C.teal, a)); g.addColorStop(1, rgba(C.cyan, a));
+  c.save(); c.shadowColor = rgba(C.teal, 0.7 * a); c.shadowBlur = 12 * SC;
+  c.strokeStyle = g; c.lineCap = 'round';
+  c.beginPath(); c.arc(cx, cy, R, a0, a1); c.stroke(); c.restore();
+  glowDot(c, cx + R * Math.cos(a1), cy + R * Math.sin(a1), 3, C.teal, a, 5);
+  // inner thin ring
+  c.lineWidth = 1; c.strokeStyle = rgba(C.white, 0.1 * a);
+  c.beginPath(); c.arc(cx, cy, R - 16, 0, TAU); c.stroke();
+  pctGlyph(c, cx + 2, cy - 6, 20, rgba(C.white, 0.75 * a));
+  bar(c, cx - 16, cy + 14, 32, 5, rgba(C.teal, 0.5 * a));
+
+  const rx = cx + R + 30;
+  bar(c, rx, pad + 4, 96, 7, rgba(C.white, 0.3 * a));
+  bar(c, rx, pad + 17, 56, 5, rgba(C.white, 0.12 * a));
+  const cols = [C.cyan, C.teal, C.gold];
+  for (let i = 0; i < 3; i++) {
+    const y = pad + 52 + i * 38;
+    c.fillStyle = rgba(cols[i], 0.85 * a); c.beginPath(); c.arc(rx + 4, y + 3, 3.2, 0, TAU); c.fill();
+    bar(c, rx + 16, y, 70, 6, rgba(C.white, 0.18 * a));
+    // micro sparkline
+    c.strokeStyle = rgba(cols[i], 0.7 * a); c.lineWidth = 1.3; c.beginPath();
+    for (let k = 0; k <= 24; k++) {
+      const u = k / 24;
+      const yy = y + 4 - 8 * (series(seed + i * 31, u, p, 0.5) - 0.5) * 1.6;
+      const xx = rx + 100 + u * (w - pad - rx - 100);
+      k ? c.lineTo(xx, yy) : c.moveTo(xx, yy);
+    }
+    c.stroke();
+  }
+}
+
+function bodyMulti(c, w, h, p, seed, a) {
+  const pad = 24;
+  header(c, pad, w, a);
+  const x0 = pad, x1 = w - pad, y0 = pad + 44, y1 = h - pad;
+  const cols = [C.cyan, C.teal, C.gold];
+  for (let i = 0; i <= 3; i++) {
+    c.strokeStyle = rgba(C.white, 0.05 * a); c.lineWidth = 1;
+    const y = lerp(y0, y1, i / 3); c.beginPath(); c.moveTo(x0, y); c.lineTo(x1, y); c.stroke();
+  }
+  cols.forEach((col, j) => {
+    c.strokeStyle = rgba(col, 0.75 * a); c.lineWidth = 2; c.beginPath();
+    for (let k = 0; k <= 80; k++) {
+      const u = k / 80;
+      const y = lerp(y1, y0, series(seed + j * 7, u, p, 0.2 + j * 0.1) - 0.1 * j + 0.05);
+      k ? c.lineTo(lerp(x0, x1, u), y) : c.moveTo(lerp(x0, x1, u), y);
+    }
+    c.stroke();
+  });
+}
+
+function bodyList(c, w, h, p, seed, a) {
+  const pad = 20;
+  header(c, pad, w, a, C.gold);
+  for (let i = 0; i < 3; i++) {
+    const y = pad + 48 + i * 32;
+    rr(c, pad, y - 6, 22, 22, 7); c.fillStyle = rgba(C.white, 0.08 * a); c.fill();
+    bar(c, pad + 32, y, 90, 6, rgba(C.white, 0.22 * a));
+    bar(c, pad + 32, y + 10, 50, 4, rgba(C.white, 0.1 * a));
+    bar(c, w - pad - 40, y + 3, 40, 6, rgba(i === 1 ? C.gold : C.teal, 0.5 * a));
+  }
+}
+
+function bodyDonut(c, w, h, p, seed, a) {
+  const cx = w * 0.36, cy = h * 0.52, R = 82;
+  const segs = [[0.42, C.cyan], [0.26, C.teal], [0.18, C.gold], [0.14, C.blue]];
+  let s = -Math.PI / 2 + 0.25 * Math.sin(TAU * p);
+  c.lineWidth = 22;
+  for (const [f, col] of segs) {
+    c.strokeStyle = rgba(col, 0.75 * a);
+    c.beginPath(); c.arc(cx, cy, R, s + 0.04, s + f * TAU - 0.04); c.stroke(); s += f * TAU;
+  }
+  for (let i = 0; i < 4; i++) {
+    bar(c, w * 0.66, h * 0.3 + i * 34, 90, 8, rgba(C.white, 0.22 * a));
+  }
+}
+
+const BODIES = { line: bodyLine, bars: bodyBars, ring: bodyRing, multi: bodyMulti, list: bodyList, donut: bodyDonut };
+
+/* ------------------------------------------------------------ glass panels */
+function panelRect(L, P, i, p, cam) {
+  const ph = state.S.panelPhase[i];
+  const fx = 5 * Math.cos(TAU * (p + ph)), fy = 7 * Math.sin(TAU * (p + ph));
+  const par = 1 / P.depth;
+  return { x: P.x + fx - cam.x * par, y: P.y + fy - cam.y * par, w: P.w, h: P.h };
+}
+
+function glassShell(c, R, a, p, sharp) {
+  const rad = 18;
+  // tint
+  rr(c, R.x, R.y, R.w, R.h, rad);
+  c.fillStyle = `rgba(14,24,44,${0.42 * a})`; c.fill();
+  // glass gradient
+  const g = c.createLinearGradient(R.x, R.y, R.x + R.w, R.y + R.h);
+  g.addColorStop(0, `rgba(255,255,255,${0.085 * a})`);
+  g.addColorStop(0.5, `rgba(255,255,255,${0.03 * a})`);
+  g.addColorStop(1, `rgba(255,255,255,${0.05 * a})`);
+  c.fillStyle = g; c.fill();
+  // moving soft reflection band (clipped)
+  c.save(); rr(c, R.x, R.y, R.w, R.h, rad); c.clip();
+  const sx = R.x + R.w * (0.15 + 0.12 * Math.sin(TAU * p + R.x * 0.002));
+  const sg = c.createLinearGradient(sx - 160, R.y, sx + 160, R.y + R.h * 0.6);
+  sg.addColorStop(0, 'rgba(255,255,255,0)');
+  sg.addColorStop(0.5, `rgba(255,255,255,${0.045 * a})`);
+  sg.addColorStop(1, 'rgba(255,255,255,0)');
+  c.fillStyle = sg; c.fillRect(R.x, R.y, R.w, R.h);
+  c.restore();
+}
+
+function glassBorder(c, R, a) {
+  const rad = 18;
+  rr(c, R.x + 0.5, R.y + 0.5, R.w - 1, R.h - 1, rad);
+  const b = c.createLinearGradient(R.x, R.y, R.x + R.w, R.y + R.h);
+  b.addColorStop(0, `rgba(220,232,255,${0.42 * a})`);
+  b.addColorStop(0.35, `rgba(220,232,255,${0.08 * a})`);
+  b.addColorStop(0.75, `rgba(220,232,255,${0.05 * a})`);
+  b.addColorStop(1, `rgba(${C.gold},${0.22 * a})`);
+  c.strokeStyle = b; c.lineWidth = 1; c.stroke();
+  // top specular
+  const t = c.createLinearGradient(R.x, 0, R.x + R.w, 0);
+  t.addColorStop(0, 'rgba(255,255,255,0)');
+  t.addColorStop(0.3, `rgba(255,255,255,${0.35 * a})`);
+  t.addColorStop(0.7, `rgba(255,255,255,${0.08 * a})`);
+  t.addColorStop(1, 'rgba(255,255,255,0)');
+  c.strokeStyle = t; c.beginPath(); c.moveTo(R.x + 22, R.y + 1.5); c.lineTo(R.x + R.w - 22, R.y + 1.5); c.stroke();
+}
+
+function drawSharpPanel(L, P, i, p, cam) {
+  const R = panelRect(L, P, i, p, cam);
+  const a = P.alpha;
+  // shadow
+  ctx.save();
+  ctx.shadowColor = 'rgba(0,0,0,0.6)'; ctx.shadowBlur = 70 * SC; ctx.shadowOffsetY = 24 * SC;
+  rr(ctx, R.x, R.y, R.w, R.h, 18); ctx.fillStyle = 'rgba(6,10,20,0.9)'; ctx.fill();
+  ctx.restore();
+  // backdrop blur: copy region of current frame (before shadow) blurred into panel
+  ctx.save();
+  rr(ctx, R.x, R.y, R.w, R.h, 18); ctx.clip();
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  const pad = 60;
+  const sx = Math.max(0, (R.x - pad) * SC), sy = Math.max(0, (R.y - pad) * SC);
+  const sw = Math.min(canvas.width, (R.x + R.w + pad) * SC) - sx, sh = Math.min(canvas.height, (R.y + R.h + pad) * SC) - sy;
+  if (sw > 0 && sh > 0) {
+    ctx.filter = `blur(${22 * SC}px) saturate(140%) brightness(115%)`;
+    ctx.drawImage(tmp, sx, sy, sw, sh, sx, sy, sw, sh);
+    ctx.filter = 'none';
+  }
+  ctx.restore();
+  glassShell(ctx, R, a, p, true);
+  ctx.save(); ctx.translate(R.x, R.y);
+  rr(ctx, 0, 0, R.w, R.h, 18); ctx.clip();
+  BODIES[P.kind](ctx, R.w, R.h, p, state.S.panelSeeds[i], a);
+  ctx.restore();
+  glassBorder(ctx, R, a);
+}
+
+function drawBlurPanel(L, P, i, p, cam) {
+  const R = panelRect(L, P, i, p, cam);
+  const pad = P.blur * 4 + 10;
+  const bx = Math.floor(Math.max(0, (R.x - pad) * SC)), by = Math.floor(Math.max(0, (R.y - pad) * SC));
+  const bw = Math.ceil(Math.min(lay.width, (R.x + R.w + pad) * SC)) - bx, bh = Math.ceil(Math.min(lay.height, (R.y + R.h + pad) * SC)) - by;
+  if (bw <= 0 || bh <= 0) return;
+  lctx.setTransform(1, 0, 0, 1, 0, 0);
+  lctx.clearRect(bx, by, bw, bh);
+  lctx.setTransform(SC, 0, 0, SC, 0, 0);
+  glassShell(lctx, R, 1, p, false);
+  lctx.save(); lctx.translate(R.x, R.y); rr(lctx, 0, 0, R.w, R.h, 18); lctx.clip();
+  BODIES[P.kind](lctx, R.w, R.h, p, state.S.panelSeeds[i], 1);
+  lctx.restore();
+  glassBorder(lctx, R, 1);
+  ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.globalAlpha = P.alpha;
+  ctx.filter = `blur(${P.blur * SC}px)`;
+  ctx.drawImage(lay, bx, by, bw, bh, bx, by, bw, bh);
+  ctx.restore();
+}
+
+/* --------------------------------------------------------- environment fx */
+function textMask(L, x, y) {
+  // 1 inside the copy-space zone, soft falloff outside
+  const t = L.text, m = 120;
+  const dx = Math.max(t.x - x, 0, x - (t.x + t.w));
+  const dy = Math.max(t.y - y, 0, y - (t.y + t.h));
+  return 1 - smooth(0, m, Math.hypot(dx, dy));
+}
+
+function drawBackground(L, p, cam) {
+  const W = L.W, H = L.H;
+  ctx.fillStyle = '#04060b'; ctx.fillRect(0, 0, W, H);
+  // deep navy body glow around the activity side
+  let g = ctx.createRadialGradient(L.vp.x - cam.x * 0.3, L.vp.y, 0, L.vp.x, L.vp.y, Math.max(W, H) * 0.85);
+  g.addColorStop(0, 'rgba(22,44,92,0.55)');
+  g.addColorStop(0.45, 'rgba(12,24,52,0.35)');
+  g.addColorStop(1, 'rgba(4,6,11,0)');
+  ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  // charcoal-metal top sheen
+  g = ctx.createLinearGradient(0, 0, W * 0.6, H * 0.6);
+  g.addColorStop(0, 'rgba(160,175,200,0.05)'); g.addColorStop(1, 'rgba(160,175,200,0)');
+  ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  // teal low glow
+  g = ctx.createRadialGradient(L.globe.x, L.globe.y - L.globe.r * 0.9, 0, L.globe.x, L.globe.y - L.globe.r * 0.9, L.globe.r * 1.3);
+  g.addColorStop(0, 'rgba(40,140,170,0.10)'); g.addColorStop(1, 'rgba(40,140,170,0)');
+  ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+}
+
+function drawBokeh(L, p, cam) {
+  for (const b of state.S.bokeh) {
+    const x = b.x + b.ax * Math.sin(TAU * (p + b.px)) - cam.x * 0.3;
+    const y = b.y + b.ax * 0.5 * Math.cos(TAU * (p + b.px)) - cam.y * 0.3;
+    const a = b.a * (1 - 0.8 * textMask(L, x, y));
+    const g = ctx.createRadialGradient(x, y, 0, x, y, b.r);
+    g.addColorStop(0, rgba(b.c, a)); g.addColorStop(0.7, rgba(b.c, a * 0.5)); g.addColorStop(1, rgba(b.c, 0));
+    ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x, y, b.r, 0, TAU); ctx.fill();
+  }
+}
+
+function drawBeam(L, p) {
+  const B = L.beam;
+  const a = 0.035 + 0.012 * Math.sin(TAU * p);
+  ctx.save();
+  const dx = B.x1 - B.x0, dy = B.y1 - B.y0, len = Math.hypot(dx, dy);
+  const nx = -dy / len, ny = dx / len, wdt = 260;
+  const g = ctx.createLinearGradient(B.x0 + nx * wdt, B.y0 + ny * wdt, B.x0 - nx * wdt, B.y0 - ny * wdt);
+  g.addColorStop(0, 'rgba(180,210,255,0)'); g.addColorStop(0.5, `rgba(180,210,255,${a})`); g.addColorStop(1, 'rgba(180,210,255,0)');
+  ctx.fillStyle = g;
+  ctx.beginPath();
+  ctx.moveTo(B.x0 + nx * wdt * 0.4, B.y0 + ny * wdt * 0.4); ctx.lineTo(B.x0 - nx * wdt * 0.4, B.y0 - ny * wdt * 0.4);
+  ctx.lineTo(B.x1 - nx * wdt * 1.4, B.y1 - ny * wdt * 1.4); ctx.lineTo(B.x1 + nx * wdt * 1.4, B.y1 + ny * wdt * 1.4);
+  ctx.closePath(); ctx.fill();
+  ctx.restore();
+}
+
+// Dotted globe: grid step of STEP degrees, rotates exactly one step per loop -> seamless.
+const STEP = 5, TILT = 0.38;
+function globeProject(G, lat, lon, rot) {
+  const la = lat * Math.PI / 180, lo = (lon + rot) * Math.PI / 180;
+  let x = Math.cos(la) * Math.sin(lo), y = Math.sin(la), z = Math.cos(la) * Math.cos(lo);
+  const y2 = y * Math.cos(TILT) - z * Math.sin(TILT), z2 = y * Math.sin(TILT) + z * Math.cos(TILT);
+  return { x: G.x + x * G.r, y: G.y - y2 * G.r, z: z2 };
+}
+function drawGlobe(L, p, cam) {
+  const G = { x: L.globe.x - cam.x * 0.5, y: L.globe.y - cam.y * 0.5, r: L.globe.r };
+  const rot = STEP * p;
+  // atmosphere
+  let g = ctx.createRadialGradient(G.x, G.y, G.r * 0.92, G.x, G.y, G.r * 1.12);
+  g.addColorStop(0, 'rgba(70,150,255,0)'); g.addColorStop(0.35, 'rgba(70,150,255,0.10)'); g.addColorStop(1, 'rgba(70,150,255,0)');
+  ctx.fillStyle = g; ctx.beginPath(); ctx.arc(G.x, G.y, G.r * 1.12, 0, TAU); ctx.fill();
+  g = ctx.createRadialGradient(G.x, G.y - G.r * 0.3, G.r * 0.2, G.x, G.y, G.r);
+  g.addColorStop(0, 'rgba(10,22,46,0.55)'); g.addColorStop(1, 'rgba(6,12,26,0.35)');
+  ctx.fillStyle = g; ctx.beginPath(); ctx.arc(G.x, G.y, G.r, 0, TAU); ctx.fill();
+  ctx.strokeStyle = 'rgba(120,180,255,0.16)'; ctx.lineWidth = 1.2;
+  ctx.beginPath(); ctx.arc(G.x, G.y, G.r, 0, TAU); ctx.stroke();
+  // dots
+  for (let lat = -85; lat <= 85; lat += STEP) {
+    const cl = Math.cos(lat * Math.PI / 180);
+    for (let lon = -180; lon < 180; lon += STEP) {
+      const q = globeProject(G, lat, lon, rot);
+      if (q.z <= 0.02 || q.y > L.H + 4 || q.x < -4 || q.x > L.W + 4) continue;
+      const a = 0.62 * Math.pow(q.z, 1.2) * (0.35 + 0.65 * cl);
+      ctx.fillStyle = `rgba(120,175,255,${a})`;
+      const s = 0.8 + 0.9 * q.z * Math.sqrt(cl);
+      ctx.fillRect(q.x - s / 2, q.y - s / 2, s, s);
+    }
+  }
+  // arcs (great-circle with lift), each with its own wrapped lifetime
+  for (const A of state.S.arcs) {
+    const local = frac(p - A.start);
+    if (local > A.dur) continue;
+    const pAbs = A.start + local;              // unwrapped -> continuous rotation across loop seam
+    const r2 = STEP * pAbs;
+    const lt = local / A.dur;
+    const head = smooth(0, 0.6, lt), tail = smooth(0.4, 1, lt);
+    const env = smooth(0, 0.12, lt) * (1 - smooth(0.85, 1, lt));
+    const col = A.gold ? C.gold : C.cyan;
+    const pts = [];
+    for (let k = 0; k <= 60; k++) {
+      const s = k / 60;
+      const la = lerp(A.la1, A.la2, s), lo = lerp(A.lo1, A.lo2, s);
+      const q = globeProject(G, la, lo, r2);
+      const lift = 1 + 0.12 * Math.sin(Math.PI * s);
+      pts.push({ x: G.x + (q.x - G.x) * lift, y: G.y + (q.y - G.y) * lift, z: q.z, s });
+    }
+    ctx.lineWidth = 1.3;
+    for (let k = 1; k < pts.length; k++) {
+      const s = pts[k].s;
+      if (s < tail || s > head) continue;
+      const vis = smooth(0, 0.15, Math.min(pts[k].z, pts[k - 1].z));
+      if (vis <= 0) continue;
+      const fade = smooth(tail, tail + 0.25, s);
+      ctx.strokeStyle = rgba(col, 0.75 * env * vis * fade);
+      ctx.beginPath(); ctx.moveTo(pts[k - 1].x, pts[k - 1].y); ctx.lineTo(pts[k].x, pts[k].y); ctx.stroke();
+    }
+    const hk = Math.round(head * 60), hp = pts[hk];
+    if (hp.z > 0.05 && head > tail) glowDot(ctx, hp.x, hp.y, 1.8, col, env * smooth(0.05, 0.2, hp.z), 6);
+    for (const e of [pts[0], pts[60]]) {
+      if (e.z > 0.05) {
+        ctx.fillStyle = rgba(col, 0.7 * env * e.z);
+        ctx.beginPath(); ctx.arc(e.x, e.y, 2, 0, TAU); ctx.fill();
+      }
+    }
+  }
+}
+
+function nodePos(n, p, cam) {
+  return {
+    x: n.x + n.ax * Math.sin(TAU * (n.kx * p + n.px)) - cam.x / n.z,
+    y: n.y + n.ay * Math.cos(TAU * (n.ky * p + n.py)) - cam.y / n.z,
+  };
+}
+function nodeVis(n, p) {
+  if (n.anchor) return 1;
+  return smooth(0.1, 0.55, 0.5 + 0.5 * Math.cos(TAU * (p + n.phase)));
+}
+
+function drawNetwork(L, p, cam, near) {
+  const S = state.S;
+  const pos = S.nodes.map(n => nodePos(n, p, cam));
+  const vis = S.nodes.map(n => nodeVis(n, p));
+  const inLayer = n => near ? n.z < 1.05 : n.z >= 1.05;
+  ctx.lineWidth = 0.8;
+  for (const e of S.edges) {
+    const A = S.nodes[e.a], B = S.nodes[e.b];
+    if (!(inLayer(A) || inLayer(B)) || (near && !(inLayer(A) && inLayer(B)))) continue;
+    const pa = pos[e.a], pb = pos[e.b];
+    const v = Math.min(vis[e.a], vis[e.b]);
+    if (v <= 0.002) continue;
+    const mid = textMask(L, (pa.x + pb.x) / 2, (pa.y + pb.y) / 2);
+    const al = 0.26 * v * (1 - 0.9 * mid);
+    const g = ctx.createLinearGradient(pa.x, pa.y, pb.x, pb.y);
+    g.addColorStop(0, rgba(C.cyan, al)); g.addColorStop(0.5, rgba(C.silver, al * 0.55)); g.addColorStop(1, rgba(C.cyan, al));
+    ctx.strokeStyle = g;
+    ctx.beginPath(); ctx.moveTo(pa.x, pa.y); ctx.lineTo(pb.x, pb.y); ctx.stroke();
+    if (e.pulse) {
+      const u = frac(p * e.pk + e.pp), t = e.dir ? u : 1 - u;
+      const env = Math.sin(Math.PI * u) * v * (1 - 0.9 * mid);
+      glowDot(ctx, lerp(pa.x, pb.x, t), lerp(pa.y, pb.y, t), 1.3, C.cyan, env * 0.9, 5);
+    }
+  }
+  S.nodes.forEach((n, i) => {
+    if (!inLayer(n)) return;
+    const v = vis[i] * (1 - 0.9 * textMask(L, pos[i].x, pos[i].y));
+    if (v <= 0.002) return;
+    const col = n.gold ? C.gold : C.cyan;
+    const r = n.r / Math.sqrt(n.z);
+    if (n.key) {
+      for (let k = 0; k < 2; k++) {
+        const u = frac(p * 2 + n.phase + k * 0.5);
+        ctx.strokeStyle = rgba(col, 0.4 * (1 - u) * v); ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.arc(pos[i].x, pos[i].y, r + 4 + u * 22, 0, TAU); ctx.stroke();
+      }
+      glowDot(ctx, pos[i].x, pos[i].y, r * 1.2, col, v, 7);
+    } else {
+      glowDot(ctx, pos[i].x, pos[i].y, r * 0.8, col, v * 0.8, 4);
+    }
+  });
+}
+
+function drawParticles(L, p, cam, near) {
+  const zmin = 0.7, zmax = 4.2;
+  for (const q of state.S.particles) {
+    const z = zmax - (zmax - zmin) * frac(q.z0 + p);
+    if (near ? z >= 1.3 : z < 1.3) continue;
+    const x = L.vp.x + (q.rho * Math.cos(q.th)) / z - cam.x / z;
+    const y = L.vp.y + (q.rho * Math.sin(q.th)) * 0.75 / z - cam.y / z + 4 * Math.sin(TAU * (p + q.wob));
+    if (x < -40 || x > L.W + 40 || y < -40 || y > L.H + 40) continue;
+    const a = smooth(zmax, zmax - 0.9, z) * smooth(zmin, zmin + 0.6, z) * (1 - 0.88 * textMask(L, x, y));
+    if (a <= 0.003) continue;
+    const s = q.s * 1.6 / z;
+    if (near) {
+      const g = ctx.createRadialGradient(x, y, 0, x, y, s * 3.2);
+      g.addColorStop(0, rgba(q.tint, 0.32 * a)); g.addColorStop(1, rgba(q.tint, 0));
+      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x, y, s * 3.2, 0, TAU); ctx.fill();
+    } else {
+      ctx.fillStyle = rgba(q.tint, 0.55 * a);
+      ctx.beginPath(); ctx.arc(x, y, Math.max(0.45, s * 0.6), 0, TAU); ctx.fill();
+    }
+  }
+}
+
+function drawFinish(L, frame) {
+  const noGrain = window.NO_GRAIN;
+  const W = L.W, H = L.H;
+  if (L.leftShade) {
+    const g = ctx.createLinearGradient(0, 0, W * 0.62, 0);
+    g.addColorStop(0, 'rgba(3,5,10,0.45)'); g.addColorStop(1, 'rgba(3,5,10,0)');
+    ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  } else {
+    const g = ctx.createLinearGradient(0, 0, 0, H * 0.6);
+    g.addColorStop(0, 'rgba(3,5,10,0.45)'); g.addColorStop(1, 'rgba(3,5,10,0)');
+    ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  }
+  const v = ctx.createRadialGradient(W * 0.55, H * 0.5, Math.min(W, H) * 0.35, W * 0.55, H * 0.5, Math.hypot(W, H) * 0.62);
+  v.addColorStop(0, 'rgba(0,0,0,0)'); v.addColorStop(1, 'rgba(0,0,0,0.55)');
+  ctx.fillStyle = v; ctx.fillRect(0, 0, W, H);
+  // fine grain (dithers gradients against 8-bit banding); offset cycles with frame
+  if (noGrain) return;
+  ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.globalCompositeOperation = 'overlay'; ctx.globalAlpha = 0.05;
+  const r = mulberry32(1000 + frame);
+  const ox = -Math.floor(r() * 512), oy = -Math.floor(r() * 512);
+  for (let y = oy; y < canvas.height; y += 512) for (let x = ox; x < canvas.width; x += 512) ctx.drawImage(grain, x, y);
+  ctx.restore();
+}
+
+/* ------------------------------------------------------------------ frame */
+const state = { key: null, S: null, L: null };
+function setup(layoutKey, scale) {
+  const L = LAYOUTS[layoutKey];
+  SC = scale;
+  state.L = L; state.S = build(L); state.key = layoutKey;
+  for (const cv of [canvas, tmp, lay]) { cv.width = L.W * SC; cv.height = L.H * SC; }
+  canvas.style.width = (L.W * SC / devicePixelRatio) + 'px';
+  canvas.style.height = (L.H * SC / devicePixelRatio) + 'px';
+  if (!grain) grain = makeGrain();
+}
+
+function renderFrame(frame, total) {
+  const L = state.L, p = frame / total;
+  const cam = { x: 16 * Math.sin(TAU * p), y: 9 * Math.sin(TAU * 2 * p + 0.7) };
+  ctx.setTransform(SC, 0, 0, SC, 0, 0);
+  ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'source-over'; ctx.filter = 'none';
+  drawBackground(L, p, cam);
+  drawBokeh(L, p, cam);
+  drawBeam(L, p);
+  drawGlobe(L, p, cam);
+  drawParticles(L, p, cam, false);
+  drawNetwork(L, p, cam, false);
+  // panels back-to-front by depth
+  const order = L.panels.map((P, i) => i).sort((a, b) => L.panels[b].depth - L.panels[a].depth);
+  for (const i of order) {
+    const P = L.panels[i];
+    if (P.blur) {
+      drawBlurPanel(L, P, i, p, cam);
+    } else {
+      tctx.setTransform(1, 0, 0, 1, 0, 0);
+      tctx.clearRect(0, 0, tmp.width, tmp.height);
+      tctx.drawImage(canvas, 0, 0);
+      drawSharpPanel(L, P, i, p, cam);
+    }
+    ctx.setTransform(SC, 0, 0, SC, 0, 0);
+    if (P.depth >= 1.0 && P.depth < 1.05) drawNetwork(L, p, cam, true);
+  }
+  drawParticles(L, p, cam, true);
+  drawFinish(L, frame);
+  return true;
+}
+
+window.setup = setup;
+window.renderFrame = renderFrame;
+
+// Live preview: open scene.html?layout=h (or v) directly in a browser.
+const qs = new URLSearchParams(location.search);
+if (!qs.has('render')) {
+  const key = qs.get('layout') || 'h';
+  const L = LAYOUTS[key];
+  const scale = Math.min(innerWidth / L.W, innerHeight / L.H) * devicePixelRatio;
+  setup(key, scale);
+  const total = 360; let f = 0;
+  (function tick() { renderFrame(f, total); f = (f + 1) % total; requestAnimationFrame(tick); })();
+}
+</script>
+</body>
+</html>
