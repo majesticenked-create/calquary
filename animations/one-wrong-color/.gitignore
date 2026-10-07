@@ -1,0 +1,4 @@
+# rendered output
+*.mp4
+*.png
+node_modules/
