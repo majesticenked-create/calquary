@@ -864,3 +864,4 @@ cp -R index.html about.html contact.html privacy.html terms.html all-calculators
 cp -R css js tool category og-images es fr de pt it ja /tmp/calquary-deploy/
 wrangler pages deploy /tmp/calquary-deploy --project-name calquary --commit-dirty=true 2>&1 | tail -20
 - `2026-08-30 14:23:52` | FAILURE | ERROR | OTHER | Bash | Exit code 1
+- `2026-10-07 12:21:03` | FAILURE | ERROR | OTHER | Bash | Exit code 56
