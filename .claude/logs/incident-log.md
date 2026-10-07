@@ -864,3 +864,7 @@ cp -R index.html about.html contact.html privacy.html terms.html all-calculators
 cp -R css js tool category og-images es fr de pt it ja /tmp/calquary-deploy/
 wrangler pages deploy /tmp/calquary-deploy --project-name calquary --commit-dirty=true 2>&1 | tail -20
 - `2026-08-30 14:23:52` | FAILURE | ERROR | OTHER | Bash | Exit code 1
+- `2026-10-07 12:21:11` | GUARD | MEDIUM | SOFT BLOCKED: recursive/force rm → S=/tmp/claude-0/-home-user-calquary/6f92dd33-d6f7-54a5-8beb-b49796a8e825/scratchpad; f=$S/render/scene.html
+sed -i 's/const NX = 34; /const NX = 80; /; s/x <= 70; x += 1) seg(\[x, -8, GZ\], \[x, 26, GZ\]/x <= 130; x += 1) seg([x, -8, GZ], [x, 40, GZ]/; s/for (let y = -8; y <= 26; y += 1) seg(\[-12, y, GZ\], \[70, y, GZ\], \(.*\), 40);/for (let y = -8; y <= 40; y += 1) seg([-12, y, GZ], [130, y, GZ], \1, 70);/; s/x <= 70; x += 5) seg(\[x, -8, GZ\], \[x, 26, GZ\]/x <= 130; x += 5) seg([x, -8, GZ], [x, 40, GZ]/; s/const ZMIN = 6, ZMAX = 70;/const ZMIN = 6, ZMAX = 130;/' $f
+grep -n "NX = \|ZMAX =\|GZ\]" $f
+rm -rf $S/frames_out; cd $S/render && NODE_PATH=$(npm root -g) node render.js $S/frames_out 60 0,700 >/dev/null
